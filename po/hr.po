@@ -1,9 +1,11 @@
+# Translation of system-config-kickstart to Croatian
+# Copyright (C) Croatian team
+# Translators: Automatski Prijevod <>,Denis Lackovic <delacko@fly.srk.fer.hr>,Robert Sedak <robert.sedak@sk.tel.hr>,
 msgid ""
 msgstr ""
-"Project-Id-Version: redhat-config-kickstart 0\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: system-config-kickstart 0\n"
 "POT-Creation-Date: 2003-12-01 11:27-0500\n"
-"PO-Revision-Date: 2003-10-18 12:27+CEST\n"
+"PO-Revision-Date: 2003-12-14 17:49+CET\n"
 "Last-Translator: auto\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
 "MIME-Version: 1.0\n"
@@ -12,62 +14,62 @@ msgstr ""
 "X-Generator: TransDict server\n"
 
 #. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. XXX FIXME
-#. if opt == "--enableldaptls":
-#. self.
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. #
-#. # I18N
-#. #
-#. self.lang_support_list.set_selection_mode(SELECTION_MULTIPLE)
-#. self.messagebox = xml.get_widget("messagebox")
-#. populate language combo
-#. set default to English
-#. for lang in lang_list:
-#. self.lang_support_list.append([lang])
-#. populate mouse combo
-#. populate keyboard combo, add keyboards here
-#. set default to English
-#. set keyboard to current keymap
-#. set default mouse to generic ps/2
-#. populate time zone combo
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#.  #                                      Tammy Fox <tfox@redhat.com>
+#.  # This program is free software; you can redistribute it and/or modify
+#.  # it under the terms of the GNU General Public License as published by
+#.  # the Free Software Foundation; either version 2 of the License, or
+#.  # (at your option) any later version.
+#.  # This program is distributed in the hope that it will be useful,
+#.  # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#.  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#.  # GNU General Public License for more details.
+#.  # You should have received a copy of the GNU General Public License
+#.  # along with this program; if not, write to the Free Software
+#.  # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#.  XXX FIXME
+#.  if opt == "--enableldaptls":
+#.  self.
+#.  # Kickstart Configurator - A graphical kickstart file generator
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#.  #                                      Tammy Fox <tfox@redhat.com>
+#.  # This program is free software; you can redistribute it and/or modify
+#.  # it under the terms of the GNU General Public License as published by
+#.  # the Free Software Foundation; either version 2 of the License, or
+#.  # (at your option) any later version.
+#.  # This program is distributed in the hope that it will be useful,
+#.  # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#.  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#.  # GNU General Public License for more details.
+#.  # You should have received a copy of the GNU General Public License
+#.  # along with this program; if not, write to the Free Software
+#.  # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#.  #
+#.  # I18N
+#.  #
+#.  self.lang_support_list.set_selection_mode(SELECTION_MULTIPLE)
+#.  self.messagebox = xml.get_widget("messagebox")
+#.  populate language combo
+#.  set default to English
+#.  for lang in lang_list:
+#.  self.lang_support_list.append([lang])
+#.  populate mouse combo
+#.  populate keyboard combo, add keyboards here
+#.  set default to English
+#.  set keyboard to current keymap
+#.  set default mouse to generic ps/2
+#.  populate time zone combo
 #: ../src/basic.py:202
 msgid "Root passwords do not match."
 msgstr "Ne odgovaraju lozinke za root korisnika."
 
 #. zerombr and clearpart options
-#. We want to preserve all partitions, so don't write the clearpart line
-#. Prepart the clearpart line
-#. This is a raid device
-#. Check to see if the selection is actually a partition or one of the parent roots
+#.  We want to preserve all partitions, so don't write the clearpart line
+#.  Prepart the clearpart line
+#.  This is a raid device
+#.  Check to see if the selection is actually a partition or one of the parent roots
 #: ../src/basic.py:203 ../src/basic.py:223 ../src/install.py:213
 #: ../src/partition.py:301 ../src/partWindow.py:506 ../src/raidWindow.py:247
 msgid "Error"
@@ -78,88 +80,87 @@ msgid "Please select a root password."
 msgstr "Molim, označite lozinku root korisnika."
 
 #. set language
-#. set keyboard
-#. set mouse
-#. set timezone
-#. set the supported lang list
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. #
-#. # I18N
-#. #
-#. lilo stuff
-#. end of lilo stuff
+#.  set keyboard
+#.  set mouse
+#.  set timezone
+#.  set the supported lang list
+#.  # Kickstart Configurator - A graphical kickstart file generator
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#.  #                                      Tammy Fox <tfox@redhat.com>
+#.  # This program is free software; you can redistribute it and/or modify
+#.  # it under the terms of the GNU General Public License as published by
+#.  # the Free Software Foundation; either version 2 of the License, or
+#.  # (at your option) any later version.
+#.  # This program is distributed in the hope that it will be useful,
+#.  # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#.  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#.  # GNU General Public License for more details.
+#.  # You should have received a copy of the GNU General Public License
+#.  # along with this program; if not, write to the Free Software
+#.  # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#.  #
+#.  # I18N
+#.  #
+#.  lilo stuff
+#.  end of lilo stuff
 #: ../src/bootloader.py:132
 msgid "Grub passwords do not match.  Please try again."
 msgstr "Ne poklapaju se GRUB lozinke. Molim, pokušajte ponovo."
 
 #. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. #
-#. # I18N
-#. #
-#. create table with custom checklists
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#.  #                                      Tammy Fox <tfox@redhat.com>
+#.  # This program is free software; you can redistribute it and/or modify
+#.  # it under the terms of the GNU General Public License as published by
+#.  # the Free Software Foundation; either version 2 of the License, or
+#.  # (at your option) any later version.
+#.  # This program is distributed in the hope that it will be useful,
+#.  # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#.  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#.  # GNU General Public License for more details.
+#.  # You should have received a copy of the GNU General Public License
+#.  # along with this program; if not, write to the Free Software
+#.  # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#.  #
+#.  # I18N
+#.  #
+#.  create table with custom checklists
 #: ../src/firewall.py:57
 msgid "Trusted devices:"
 msgstr "Povjerljivi uređaji:"
 
 #: ../src/firewall.py:82
-#, fuzzy
 msgid "Trusted services:"
-msgstr "Povjerljivi uređaji:"
+msgstr "Servisi kojima se vjeruje:"
 
 #: ../src/firewall.py:114
 msgid "Other ports: (1029:tcp)"
 msgstr "Ostali portovi: (1029:tcp)"
 
 #. define languages, add languages here
-#. define mice, add mice here
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. Kickstart Configurator Installation Methods
-#. #
-#. # I18N
-#. #
-#. gray out package selection and partitions if upgrade
+#.  define mice, add mice here
+#.  # Kickstart Configurator - A graphical kickstart file generator
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#.  #                                      Tammy Fox <tfox@redhat.com>
+#.  # This program is free software; you can redistribute it and/or modify
+#.  # it under the terms of the GNU General Public License as published by
+#.  # the Free Software Foundation; either version 2 of the License, or
+#.  # (at your option) any later version.
+#.  # This program is distributed in the hope that it will be useful,
+#.  # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#.  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#.  # GNU General Public License for more details.
+#.  # You should have received a copy of the GNU General Public License
+#.  # along with this program; if not, write to the Free Software
+#.  # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#.  Kickstart Configurator Installation Methods
+#.  #
+#.  # I18N
+#.  #
+#.  gray out package selection and partitions if upgrade
 #: ../src/install.py:133
 msgid "Please enter an NFS server."
 msgstr "Molim, upišite NFS poslužitelj."
@@ -202,47 +203,47 @@ msgid "Please enter a hard drive partition."
 msgstr "Molim unesite particiju tvrdog diska."
 
 #. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. # Authors: Brent Fox <bfox@redhat.com>
-#. #          Tammy Fox <tfox@redhat.com>
-#. Patch contributed by Bill Huang - applied on 4/23/2001 for Japanese support
-#. #
-#. # I18N
-#. #
-#. #
-#. # Icon for windows
-#. #
-#. #
-#. # Pull in the Glade file
-#. #
+#.  # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
+#.  # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#.  #                                Tammy Fox <tfox@redhat.com>
+#.  # This program is free software; you can redistribute it and/or modify
+#.  # it under the terms of the GNU General Public License as published by
+#.  # the Free Software Foundation; either version 2 of the License, or
+#.  # (at your option) any later version.
+#.  # This program is distributed in the hope that it will be useful,
+#.  # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#.  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#.  # GNU General Public License for more details.
+#.  # You should have received a copy of the GNU General Public License
+#.  # along with this program; if not, write to the Free Software
+#.  # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#.  # Kickstart Configurator - A graphical kickstart file generator
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#.  #                                      Tammy Fox <tfox@redhat.com>
+#.  # This program is free software; you can redistribute it and/or modify
+#.  # it under the terms of the GNU General Public License as published by
+#.  # the Free Software Foundation; either version 2 of the License, or
+#.  # (at your option) any later version.
+#.  # This program is distributed in the hope that it will be useful,
+#.  # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#.  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#.  # GNU General Public License for more details.
+#.  # You should have received a copy of the GNU General Public License
+#.  # along with this program; if not, write to the Free Software
+#.  # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#.  # Authors: Brent Fox <bfox@redhat.com>
+#.  #          Tammy Fox <tfox@redhat.com>
+#.  Patch contributed by Bill Huang - applied on 4/23/2001 for Japanese support
+#.  #
+#.  # I18N
+#.  #
+#.  #
+#.  # Icon for windows
+#.  #
+#.  #
+#.  # Pull in the Glade file
+#.  #
 #: ../src/kickstartGui.py:86
 msgid "Kickstart"
 msgstr "Kickstart"
@@ -252,19 +253,19 @@ msgid "Create a kickstart file"
 msgstr "Stvori kickstart datoteku"
 
 #. bring in widgets from glade file
-#. populate category list
-#. bring in basic functions
-#. bring in bootloader functions
-#. bring in install functions
-#. bring in partitions functions
-#. bring in network functions
-#. bring in auth functions
-#. bring in firewall functions
-#. bring in X functions
-#. bring in package function
-#. self.packages_class = packages.headerList(xml)
-#. FIXME
-#. bring in scripts function
+#.  populate category list
+#.  bring in basic functions
+#.  bring in bootloader functions
+#.  bring in install functions
+#.  bring in partitions functions
+#.  bring in network functions
+#.  bring in auth functions
+#.  bring in firewall functions
+#.  bring in X functions
+#.  bring in package function
+#.  self.packages_class = packages.headerList(xml)
+#.  FIXME
+#.  bring in scripts function
 #: ../src/kickstartGui.py:138
 msgid "Subsection"
 msgstr "Podsekcija"
@@ -314,7 +315,7 @@ msgid "Post-Installation Script"
 msgstr "Skripta koja se izvršava nakon instalacije"
 
 #. show gui
-#. about box
+#.  about box
 #: ../src/kickstartGui.py:193
 msgid ""
 "Kickstart Configurator @VERSION@\n"
@@ -339,60 +340,59 @@ msgid "Help is not available."
 msgstr "Pomoć nije dostupna."
 
 #. get all buffers to save to file
-#. only do these things in installs, not upgrades
+#.  only do these things in installs, not upgrades
 #: ../src/kickstartGui.py:273
-#, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "Ne mogu pristupiti datoteci \"%s\"."
 
 #. show chosen options for preview
-#. show preview dialog window
-#. show file selection dialog
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. # 		     "device"		: None			,
-#. # 		     "deviceprobe"	: None			,
-#. # 		     "driverdisk"	: None			,
-#. "lang"		: self.kickstartData.setLang		,
-#. # 		     "lilo"		: self.kickstartData.setLilo		,
-#. # 		     "lilocheck"	: self.kickstartData.setLiloCheck	,
-#. #                      "volgroup"         : self.defineVolumeGroup,
-#. #                      "logvol"           : self.defineLogicalVolume,
-#. # 		     "xdisplay"		: None			,
-#. #                      "autostep"         : self.kickstartData.setAutoStep       ,
-#. #                      "firstboot"        : self.kickstartData.setFirstboot      ,
-#. Separate the file into main, package, pre and post lists
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. Kickstart Configurator Network Configuration
-#. #
-#. # I18N
-#. #
+#.  show preview dialog window
+#.  show file selection dialog
+#.  # Kickstart Configurator - A graphical kickstart file generator
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#.  # This program is free software; you can redistribute it and/or modify
+#.  # it under the terms of the GNU General Public License as published by
+#.  # the Free Software Foundation; either version 2 of the License, or
+#.  # (at your option) any later version.
+#.  # This program is distributed in the hope that it will be useful,
+#.  # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#.  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#.  # GNU General Public License for more details.
+#.  # You should have received a copy of the GNU General Public License
+#.  # along with this program; if not, write to the Free Software
+#.  # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#.  # 		     "device"		: None			,
+#.  # 		     "deviceprobe"	: None			,
+#.  # 		     "driverdisk"	: None			,
+#.  "lang"		: self.kickstartData.setLang		,
+#.  # 		     "lilo"		: self.kickstartData.setLilo		,
+#.  # 		     "lilocheck"	: self.kickstartData.setLiloCheck	,
+#.  #                      "volgroup"         : self.defineVolumeGroup,
+#.  #                      "logvol"           : self.defineLogicalVolume,
+#.  # 		     "xdisplay"		: None			,
+#.  #                      "autostep"         : self.kickstartData.setAutoStep       ,
+#.  #                      "firstboot"        : self.kickstartData.setFirstboot      ,
+#.  Separate the file into main, package, pre and post lists
+#.  # Kickstart Configurator - A graphical kickstart file generator
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#.  #                                      Tammy Fox <tfox@redhat.com>
+#.  # This program is free software; you can redistribute it and/or modify
+#.  # it under the terms of the GNU General Public License as published by
+#.  # the Free Software Foundation; either version 2 of the License, or
+#.  # (at your option) any later version.
+#.  # This program is distributed in the hope that it will be useful,
+#.  # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#.  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#.  # GNU General Public License for more details.
+#.  # You should have received a copy of the GNU General Public License
+#.  # along with this program; if not, write to the Free Software
+#.  # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#.  Kickstart Configurator Network Configuration
+#.  #
+#.  # I18N
+#.  #
 #: ../src/network.py:86
 msgid "Device"
 msgstr "Uređaj"
@@ -402,7 +402,7 @@ msgid "Network Type"
 msgstr "Vrsta mreže"
 
 #. Let's find the last eth device in the list and increment by one to
-#. fill in the option menu with the next device
+#.  fill in the option menu with the next device
 #: ../src/network.py:108 ../src/network.py:153 ../src/network.py:221
 #: ../src/network.py:272 ../src/network.py:413
 msgid "Static IP"
@@ -417,68 +417,67 @@ msgstr "Molim, popunite mrežne informacije"
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
-msgstr ""
-"Već postoji mrežni uređaj s imenom %s. Molim, izaberite drugo ime uređaja."
+msgstr "Mrežni uređaj s imenom %s već postoji. Molim odaberite drugo ime uređaja."
 
 #. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. Kickstart Configurator Package Selection
-#. #
-#. # I18N
-#. #
-#. Loop over the package list and see what was selected
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002 Brent Fox <bfox@redhat.com>
-#. #                                Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. Kickstart Configurator Partitions Data Structure
-#. self.onDisk = ""
-#. self.onDiskVal = ""
-#. self.onPart = ""
-#. self.onPartVal = ""
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. Kickstart Configurator Partitions Configuration
-#. #
-#. # I18N
-#. #
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#.  #                                      Tammy Fox <tfox@redhat.com>
+#.  # This program is free software; you can redistribute it and/or modify
+#.  # it under the terms of the GNU General Public License as published by
+#.  # the Free Software Foundation; either version 2 of the License, or
+#.  # (at your option) any later version.
+#.  # This program is distributed in the hope that it will be useful,
+#.  # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#.  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#.  # GNU General Public License for more details.
+#.  # You should have received a copy of the GNU General Public License
+#.  # along with this program; if not, write to the Free Software
+#.  # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#.  Kickstart Configurator Package Selection
+#.  #
+#.  # I18N
+#.  #
+#.  Loop over the package list and see what was selected
+#.  # Kickstart Configurator - A graphical kickstart file generator
+#.  # Copyright (C) 2000, 2001, 2002 Red Hat, Inc.
+#.  # Copyright (C) 2000, 2001, 2002 Brent Fox <bfox@redhat.com>
+#.  #                                Tammy Fox <tfox@redhat.com>
+#.  # This program is free software; you can redistribute it and/or modify
+#.  # it under the terms of the GNU General Public License as published by
+#.  # the Free Software Foundation; either version 2 of the License, or
+#.  # (at your option) any later version.
+#.  # This program is distributed in the hope that it will be useful,
+#.  # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#.  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#.  # GNU General Public License for more details.
+#.  # You should have received a copy of the GNU General Public License
+#.  # along with this program; if not, write to the Free Software
+#.  # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#.  Kickstart Configurator Partitions Data Structure
+#.  self.onDisk = ""
+#.  self.onDiskVal = ""
+#.  self.onPart = ""
+#.  self.onPartVal = ""
+#.  # Kickstart Configurator - A graphical kickstart file generator
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#.  #                                      Tammy Fox <tfox@redhat.com>
+#.  # This program is free software; you can redistribute it and/or modify
+#.  # it under the terms of the GNU General Public License as published by
+#.  # the Free Software Foundation; either version 2 of the License, or
+#.  # (at your option) any later version.
+#.  # This program is distributed in the hope that it will be useful,
+#.  # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#.  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#.  # GNU General Public License for more details.
+#.  # You should have received a copy of the GNU General Public License
+#.  # along with this program; if not, write to the Free Software
+#.  # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#.  Kickstart Configurator Partitions Configuration
+#.  #
+#.  # I18N
+#.  #
 #: ../src/partition.py:70
 msgid ""
 "Device/\n"
@@ -498,84 +497,84 @@ msgstr ""
 
 #: ../src/partition.py:75
 msgid "Type"
-msgstr "Vrsta"
+msgstr "Tip"
 
 #: ../src/partition.py:77
 msgid "Format"
-msgstr "Format"
+msgstr "Oblikovanje"
 
 #: ../src/partition.py:79
 msgid "Size (MB)"
-msgstr "Veličina (mb)"
+msgstr "Veličina (MB)"
 
 #. initialize the child classes
-#. #         #XXX-FIXME-FOR TESTING ONLY
-#. #         hard_drive_parent_iter = self.part_store.append(None)
-#. #         self.part_store.set_value(hard_drive_parent_iter, 0, (_("Hard Drives")))
-#. #         hda_iter = self.part_store.append(hard_drive_parent_iter)
-#. #         self.part_store.set_value(hda_iter, 0, (_("hda")))
-#. #         part_object = partEntry.partEntry()
-#. #         part_object.fsType = "raid"
-#. #         part_object.device = "Auto"
-#. #         part_object.raidNumber = "raid.01"
-#. #         part_object.format = 1
-#. #         part_object.size = 1
-#. #         part_iter = self.part_store.append(hda_iter)
-#. #         self.part_store.set_value(part_iter, 0, part_object.raidNumber)
-#. #         self.part_store.set_value(part_iter, 2, part_object.fsType)
-#. #         self.part_store.set_value(part_iter, 3, part_object.format)
-#. #         self.part_store.set_value(part_iter, 4, part_object.size)
-#. #         self.part_store.set_value(part_iter, 5, part_object)
-#. #         hdb_iter = self.part_store.append(hard_drive_parent_iter)
-#. #         self.part_store.set_value(hdb_iter, 0, (_("hdb")))
-#. #         part_object = partEntry.partEntry()
-#. #         part_object.fsType = "raid"
-#. #         part_object.device = "Auto"
-#. #         part_object.format = 1
-#. #         part_object.raidNumber = "raid.02"
-#. #         part_object.size = 1
-#. #         part_iter = self.part_store.append(hdb_iter)
-#. #         self.part_store.set_value(part_iter, 0, part_object.raidNumber)
-#. #         self.part_store.set_value(part_iter, 2, part_object.fsType)
-#. #         self.part_store.set_value(part_iter, 3, part_object.format)
-#. #         self.part_store.set_value(part_iter, 4, part_object.size)
-#. #         self.part_store.set_value(part_iter, 5, part_object)
-#. #         hdc_iter = self.part_store.append(hard_drive_parent_iter)
-#. #         self.part_store.set_value(hdc_iter, 0, (_("hdc")))
-#. #         part_object = partEntry.partEntry()
-#. #         part_object.fsType = "raid"
-#. #         part_object.device = "Auto"
-#. #         part_object.format = 1
-#. #         part_object.raidNumber = "raid.03"
-#. #         part_object.size = 1
-#. #         part_iter = self.part_store.append(hdc_iter)
-#. #         self.part_store.set_value(part_iter, 0, part_object.raidNumber)
-#. #         self.part_store.set_value(part_iter, 2, part_object.fsType)
-#. #         self.part_store.set_value(part_iter, 3, part_object.format)
-#. #         self.part_store.set_value(part_iter, 4, part_object.size)
-#. #         self.part_store.set_value(part_iter, 5, part_object)
+#.  #         #XXX-FIXME-FOR TESTING ONLY
+#.  #         hard_drive_parent_iter = self.part_store.append(None)
+#.  #         self.part_store.set_value(hard_drive_parent_iter, 0, (_("Hard Drives")))
+#.  #         hda_iter = self.part_store.append(hard_drive_parent_iter)
+#.  #         self.part_store.set_value(hda_iter, 0, (_("hda")))
+#.  #         part_object = partEntry.partEntry()
+#.  #         part_object.fsType = "raid"
+#.  #         part_object.device = "Auto"
+#.  #         part_object.raidNumber = "raid.01"
+#.  #         part_object.format = 1
+#.  #         part_object.size = 1
+#.  #         part_iter = self.part_store.append(hda_iter)
+#.  #         self.part_store.set_value(part_iter, 0, part_object.raidNumber)
+#.  #         self.part_store.set_value(part_iter, 2, part_object.fsType)
+#.  #         self.part_store.set_value(part_iter, 3, part_object.format)
+#.  #         self.part_store.set_value(part_iter, 4, part_object.size)
+#.  #         self.part_store.set_value(part_iter, 5, part_object)
+#.  #         hdb_iter = self.part_store.append(hard_drive_parent_iter)
+#.  #         self.part_store.set_value(hdb_iter, 0, (_("hdb")))
+#.  #         part_object = partEntry.partEntry()
+#.  #         part_object.fsType = "raid"
+#.  #         part_object.device = "Auto"
+#.  #         part_object.format = 1
+#.  #         part_object.raidNumber = "raid.02"
+#.  #         part_object.size = 1
+#.  #         part_iter = self.part_store.append(hdb_iter)
+#.  #         self.part_store.set_value(part_iter, 0, part_object.raidNumber)
+#.  #         self.part_store.set_value(part_iter, 2, part_object.fsType)
+#.  #         self.part_store.set_value(part_iter, 3, part_object.format)
+#.  #         self.part_store.set_value(part_iter, 4, part_object.size)
+#.  #         self.part_store.set_value(part_iter, 5, part_object)
+#.  #         hdc_iter = self.part_store.append(hard_drive_parent_iter)
+#.  #         self.part_store.set_value(hdc_iter, 0, (_("hdc")))
+#.  #         part_object = partEntry.partEntry()
+#.  #         part_object.fsType = "raid"
+#.  #         part_object.device = "Auto"
+#.  #         part_object.format = 1
+#.  #         part_object.raidNumber = "raid.03"
+#.  #         part_object.size = 1
+#.  #         part_iter = self.part_store.append(hdc_iter)
+#.  #         self.part_store.set_value(part_iter, 0, part_object.raidNumber)
+#.  #         self.part_store.set_value(part_iter, 2, part_object.fsType)
+#.  #         self.part_store.set_value(part_iter, 3, part_object.format)
+#.  #         self.part_store.set_value(part_iter, 4, part_object.size)
+#.  #         self.part_store.set_value(part_iter, 5, part_object)
 #: ../src/partition.py:149 ../src/partition.py:179
 msgid "Please select a partition from the list."
 msgstr "Molim, označite particiju s popisa."
 
 #. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. # Copyright (C) 2001, 2002, 2003 Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. #
-#. # I18N
-#. #
+#.  # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
+#.  # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#.  # Copyright (C) 2001, 2002, 2003 Tammy Fox <tfox@redhat.com>
+#.  # This program is free software; you can redistribute it and/or modify
+#.  # it under the terms of the GNU General Public License as published by
+#.  # the Free Software Foundation; either version 2 of the License, or
+#.  # (at your option) any later version.
+#.  # This program is distributed in the hope that it will be useful,
+#.  # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#.  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#.  # GNU General Public License for more details.
+#.  # You should have received a copy of the GNU General Public License
+#.  # along with this program; if not, write to the Free Software
+#.  # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#.  #
+#.  # I18N
+#.  #
 #: ../src/partWindow.py:83 system-config-kickstart.gladestrings:58
 msgid "ext2"
 msgstr "ext2"
@@ -594,8 +593,8 @@ msgid "swap"
 msgstr "swap"
 
 #. XXX - have to do this after the show_all due to a bug in gtkSpinButton, I suspect
-#. If the current iter is the only child, delete the parent and the child
-#. If there are other children, just delete this child
+#.  If the current iter is the only child, delete the parent and the child
+#.  If there are other children, just delete this child
 #: ../src/partWindow.py:256 ../src/partWindow.py:528 ../src/raidWindow.py:212
 msgid "Yes"
 msgstr "Da"
@@ -608,33 +607,29 @@ msgstr "Ne"
 #: ../src/partWindow.py:281 ../src/partWindow.py:296 ../src/partWindow.py:315
 #: ../src/partWindow.py:329
 msgid "Auto"
-msgstr "Auto"
+msgstr "Automatski"
 
 #: ../src/partWindow.py:290
 msgid "Hard Drives"
 msgstr "Tvrdi diskovi"
 
 #. # size stuff
-#. Let's do some error checking to make sure things make sense
-#. If it's a raid partition, run it through the checkRaid sanity checker
-#. this already has a raid number, leave it alone
-#. Erase any exiting raid data if we've edited a RAID partition to be non-RAID
-#. It's not raid, so move on
-#. If it's a swap partition, set fsType to be swap
-#. It's not raid and it's not swap, so it must be a regular partition
+#.  Let's do some error checking to make sure things make sense
+#.  If it's a raid partition, run it through the checkRaid sanity checker
+#.  this already has a raid number, leave it alone
+#.  Erase any exiting raid data if we've edited a RAID partition to be non-RAID
+#.  It's not raid, so move on
+#.  If it's a swap partition, set fsType to be swap
+#.  It's not raid and it's not swap, so it must be a regular partition
 #: ../src/partWindow.py:413
 msgid "Specify a mount point for the partition."
 msgstr "Odredi točku montiranja za particiju."
 
 #. Check to see if the mount point has already been used
-#. They are trying to use a mount point already in use.  Let's complain
+#.  They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:422
-#, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr ""
-"Već se koristi točka montiranja \"%s\". Molim, označite drugu točku "
-"montiranja."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr "Već se koristi točka montiranja \"%s\". Molim, označite drugu točku montiranja."
 
 #. This will scan the part_store and see if there are any duplicate mount points
 #: ../src/partWindow.py:442
@@ -642,12 +637,13 @@ msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
 msgstr ""
-"Za stvaranje nove RAID particije, morate odrediti ili ime tvrdog diska ili "
-"postojeće particije."
+"Kako bi stvorili novu particiju RAID polja, moraze odrediti ili ime tvrdog "
+"disk uređaja ili postojeću particiju."
+""
 
 #. If all the checks pass, then return
-#. Don't iterate if we're counting the object that's being edited
-#. the entry doesn't start with "hd" or "sd" so it's probably not valid
+#.  Don't iterate if we're counting the object that's being edited
+#.  the entry doesn't start with "hd" or "sd" so it's probably not valid
 #: ../src/partWindow.py:481
 msgid "Specify a device on which to create the partition."
 msgstr "Odredite uređaj na kojem će biti stvorena particija."
@@ -657,16 +653,17 @@ msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
 msgstr ""
-"Uređaj koji ste odredili nije ispravno ime uređaja. Molim, koristite "
-"ispravno ime uređaja kao što su \"hda1\" ili \"sda3\"."
+"Naziv uređaja, koji ste naveli, nije ispravan naziv. Molim, koristite "
+"ispravan naziv uređaja kao što je \"hda1\" ili \"sda3\"."
+""
 
 #: ../src/partWindow.py:493
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
 msgstr ""
-"Particija koju ste odredili ne završava s brojem. Particije moraju imati "
-"broj particije kao što su \"hda1\" ili \"sda3\"."
+"Particija, koju ste naveli, ne završava s brojem. Partivije moraju imati "
+"broj particije kao što je \"hda1\" ili \"sda3\"."
 
 #: ../src/partWindow.py:499
 msgid ""
@@ -674,75 +671,73 @@ msgid ""
 "Partitions must have a valid device name and partition number such as \"hda1"
 "\" or \"sda3\"."
 msgstr ""
-"Particija koju ste označili ne počinje s \"hd\" ili \"sd\". Particija mota "
-"imati ispravno iem uređaja i broj particije kao što je \"hda1\" ili \"sda3\"."
+"Particija, koju ste naveli, ne počinje s \"hd\" or \"sd\".  "
+"Particije moraju imati ispravan naziv uređaja i broj particije, kao što je"
+" \"hda1\" ili \"sda3\"."
+""
 
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. # raidOptionWindow.py - code for redhat-config-kickstart's raid dialog
-#. # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. # Copyright (C) 2001, 2002, 2003 Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. import raidWindow
-#. #
-#. # I18N
-#. #
-#. self.raidWindow = raidWindow.raidWindow(self.xml, self.part_store, self.part_view)
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#.  #                                      Tammy Fox <tfox@redhat.com>
+#.  # This program is free software; you can redistribute it and/or modify
+#.  # it under the terms of the GNU General Public License as published by
+#.  # the Free Software Foundation; either version 2 of the License, or
+#.  # (at your option) any later version.
+#.  # This program is distributed in the hope that it will be useful,
+#.  # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#.  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#.  # GNU General Public License for more details.
+#.  # You should have received a copy of the GNU General Public License
+#.  # along with this program; if not, write to the Free Software
+#.  # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#.  # raidOptionWindow.py - code for redhat-config-kickstart's raid dialog
+#.  # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
+#.  # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#.  # Copyright (C) 2001, 2002, 2003 Tammy Fox <tfox@redhat.com>
+#.  # This program is free software; you can redistribute it and/or modify
+#.  # it under the terms of the GNU General Public License as published by
+#.  # the Free Software Foundation; either version 2 of the License, or
+#.  # (at your option) any later version.
+#.  # This program is distributed in the hope that it will be useful,
+#.  # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#.  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#.  # GNU General Public License for more details.
+#.  # You should have received a copy of the GNU General Public License
+#.  # along with this program; if not, write to the Free Software
+#.  # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#.  import raidWindow
+#.  #
+#.  # I18N
+#.  #
+#.  self.raidWindow = raidWindow.raidWindow(self.xml, self.part_store, self.part_view)
 #: ../src/raidOptionsWindow.py:72
-#, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
-msgstr ""
-"Trenutno imate %d slobodnih programsku(ih) RAID particiju(a) za korištenje."
+msgstr "Trenutno imate %d slobodnih programsku(ih) RAID particiju(a) za korištenje."
 
 #. # raidWindow.py - code for redhat-config-kickstart's raid dialog
-#. # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. # Copyright (C) 2001, 2002, 2003 Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. #
-#. # I18N
-#. #
-#. it's a swap partition, so desensitize the mountPoint combo
+#.  # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
+#.  # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#.  # Copyright (C) 2001, 2002, 2003 Tammy Fox <tfox@redhat.com>
+#.  # This program is free software; you can redistribute it and/or modify
+#.  # it under the terms of the GNU General Public License as published by
+#.  # the Free Software Foundation; either version 2 of the License, or
+#.  # (at your option) any later version.
+#.  # This program is distributed in the hope that it will be useful,
+#.  # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#.  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#.  # GNU General Public License for more details.
+#.  # You should have received a copy of the GNU General Public License
+#.  # along with this program; if not, write to the Free Software
+#.  # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#.  #
+#.  # I18N
+#.  #
+#.  it's a swap partition, so desensitize the mountPoint combo
 #: ../src/raidWindow.py:172
-#, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
 msgstr "Morate označiti najmanje 2 particije kako bi koristili RAID %s"
 
 #: ../src/raidWindow.py:178
-#, fuzzy, python-format
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "Morate označiti najmanje 3 particije kako biste koristili RAID %S"
 
@@ -752,83 +747,82 @@ msgid "Raid Devices"
 msgstr "RAID uređaji"
 
 #. self.markRaidPartitions(raid_object)
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. save file
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. display choosen options in textview
-#. # 		baseSize = 10
-#. # 		baseFont = 'sans'
-#. # 		self.textTag = self.confirm_buffer.create_tag('text')
-#. # 		self.textTag.set_property('font', '%s %d' % (baseFont, baseSize))
-#. # 		self.textTag.set_property('pixels-above-lines', 1)
-#. # 		self.textTag.set_property('pixels-below-lines', 1)
-#. # 		self.confirm_buffer.apply_tag(self.textTag, self.confirm_buffer.get_start_iter(), self.confirm_buffer.get_end_iter())
-#. using hide because destroy crashes application after second instance
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. Kickstart Configurator Scripts
-#. !/usr/bin/python2
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003  Brent Fox <bfox@redhat.com>
-#. #                                       Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. #
-#. # I18N
-#. #
+#.  # Kickstart Configurator - A graphical kickstart file generator
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#.  #                                      Tammy Fox <tfox@redhat.com>
+#.  # This program is free software; you can redistribute it and/or modify
+#.  # it under the terms of the GNU General Public License as published by
+#.  # the Free Software Foundation; either version 2 of the License, or
+#.  # (at your option) any later version.
+#.  # This program is distributed in the hope that it will be useful,
+#.  # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#.  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#.  # GNU General Public License for more details.
+#.  # You should have received a copy of the GNU General Public License
+#.  # along with this program; if not, write to the Free Software
+#.  # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#.  save file
+#.  # Kickstart Configurator - A graphical kickstart file generator
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#.  #                                      Tammy Fox <tfox@redhat.com>
+#.  # This program is free software; you can redistribute it and/or modify
+#.  # it under the terms of the GNU General Public License as published by
+#.  # the Free Software Foundation; either version 2 of the License, or
+#.  # (at your option) any later version.
+#.  # This program is distributed in the hope that it will be useful,
+#.  # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#.  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#.  # GNU General Public License for more details.
+#.  # You should have received a copy of the GNU General Public License
+#.  # along with this program; if not, write to the Free Software
+#.  # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#.  display choosen options in textview
+#.  # 		baseSize = 10
+#.  # 		baseFont = 'sans'
+#.  # 		self.textTag = self.confirm_buffer.create_tag('text')
+#.  # 		self.textTag.set_property('font', '%s %d' % (baseFont, baseSize))
+#.  # 		self.textTag.set_property('pixels-above-lines', 1)
+#.  # 		self.textTag.set_property('pixels-below-lines', 1)
+#.  # 		self.confirm_buffer.apply_tag(self.textTag, self.confirm_buffer.get_start_iter(), self.confirm_buffer.get_end_iter())
+#.  using hide because destroy crashes application after second instance
+#.  # Kickstart Configurator - A graphical kickstart file generator
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#.  #                                Tammy Fox <tfox@redhat.com>
+#.  # This program is free software; you can redistribute it and/or modify
+#.  # it under the terms of the GNU General Public License as published by
+#.  # the Free Software Foundation; either version 2 of the License, or
+#.  # (at your option) any later version.
+#.  # This program is distributed in the hope that it will be useful,
+#.  # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#.  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#.  # GNU General Public License for more details.
+#.  # You should have received a copy of the GNU General Public License
+#.  # along with this program; if not, write to the Free Software
+#.  # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#.  Kickstart Configurator Scripts
+#.  !/usr/bin/python2
+#.  # Kickstart Configurator - A graphical kickstart file generator
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#.  # Copyright (C) 2000, 2001, 2002, 2003  Brent Fox <bfox@redhat.com>
+#.  #                                       Tammy Fox <tfox@redhat.com>
+#.  # This program is free software; you can redistribute it and/or modify
+#.  # it under the terms of the GNU General Public License as published by
+#.  # the Free Software Foundation; either version 2 of the License, or
+#.  # (at your option) any later version.
+#.  # This program is distributed in the hope that it will be useful,
+#.  # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#.  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#.  # GNU General Public License for more details.
+#.  # You should have received a copy of the GNU General Public License
+#.  # along with this program; if not, write to the Free Software
+#.  # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#.  #
+#.  # I18N
+#.  #
 #: ../src/system-config-kickstart.py:60
-#, fuzzy
 msgid ""
 "Usage: system-config-kickstart [--help] [--generate <filename>] "
 "[<kickstart_filename>]\n"
@@ -844,17 +838,13 @@ msgid ""
 "values from\n"
 "                        the kickstart file already filled in."
 msgstr ""
-"Uporaba: redhat-config-kickstart [--help] [--generate <datoteka>] "
-"[<kickstart_datoteka>]\n"
+"Uporaba: system-config-kickstart [--help] [--generate <datoteka>] [<kickstart_datoteka>]\n"
 "        \n"
 "--help                  Ispis ove poruke\n"
-"--generate <datoteka>   Stvaranje kickstart datoteke iz postavki trenutnog "
-"računala i\n"
-"                       zapisvanje u <datoteka>.  Ova postavka radi samo u "
-"konzoli, pa\n"
+"--generate <datoteka>   Stvaranje kickstart datoteke iz postavki trenutnog računala i\n"
+"                       zapisvanje u <datoteka>.  Ova postavka radi samo u konzoli, pa\n"
 "                        je korisna za servere koji nemaju pokrenute X-e.\n"
-"<kickstart_datoteka>    Ova opcija će uzrokovati pokretanje sučelja sa "
-"vrijednostima\n"
+"<kickstart_datoteka>    Ova opcija će uzrokovati pokretanje sučelja sa vrijednostima\n"
 "                        popunjenima iz kickstart datoteke."
 
 #: ../src/system-config-kickstart.py:77
@@ -862,35 +852,32 @@ msgid "Could not open display because no X server is running."
 msgstr "Ne mogu otvoriti zaslon je nije pokrenut X poslužitelj."
 
 #: ../src/system-config-kickstart.py:78
-#, fuzzy
 msgid "Try running 'system-config-kickstart --help' for a list of options."
-msgstr ""
-"Pokušajte pokrenuti 'redhat-config-kickstart --help' za dobijanje popisa "
-"opcija."
+msgstr "Pokušajte pokrenuti 'system-config-kickstart --help' kako biste vidjeli popis mogućnosti."
 
 #. !/usr/bin/python2
-#. !/usr/bin/python2
-#. profileSystem(data)
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. Kickstart Configurator X Configuration
-#. add color depths
-#. add resolutions
-#. add video card RAM sizes to option menu
-#. add video cards to list
+#.  !/usr/bin/python2
+#.  profileSystem(data)
+#.  # Kickstart Configurator - A graphical kickstart file generator
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#.  # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#.  #                                      Tammy Fox <tfox@redhat.com>
+#.  # This program is free software; you can redistribute it and/or modify
+#.  # it under the terms of the GNU General Public License as published by
+#.  # the Free Software Foundation; either version 2 of the License, or
+#.  # (at your option) any later version.
+#.  # This program is distributed in the hope that it will be useful,
+#.  # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#.  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#.  # GNU General Public License for more details.
+#.  # You should have received a copy of the GNU General Public License
+#.  # along with this program; if not, write to the Free Software
+#.  # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#.  Kickstart Configurator X Configuration
+#.  add color depths
+#.  add resolutions
+#.  add video card RAM sizes to option menu
+#.  add video cards to list
 #: ../src/xconfig.py:102
 msgid "Could not read video card database"
 msgstr "Nisam mogao pročitati bazu video kartica"
@@ -901,20 +888,19 @@ msgid "Could not read monitor database"
 msgstr "Ne mogu čitati bazu zaslona"
 
 #. disable xconfig notebook
-#. color depth - translate
-#. resolution
-#. default desktop
-#. startxonboot
-#. video card and monitor
-#. translate MB to KB
-#.
-#. * Translatable strings file generated by Glade.
-#. * Add this file to your project's POTFILES.in.
-#. * DO NOT compile it as part of your application.
-#.
+#.  color depth - translate
+#.  resolution
+#.  default desktop
+#.  startxonboot
+#.  video card and monitor
+#.  translate MB to KB
+#. 
+#.  * Translatable strings file generated by Glade.
+#.  * Add this file to your project's POTFILES.in.
+#.  * DO NOT compile it as part of your application.
 #: system-config-kickstart.gladestrings:7
 msgid "Save File"
-msgstr "Spremi"
+msgstr "Spremi datoteku"
 
 #: system-config-kickstart.gladestrings:8
 msgid "Partition Options"
@@ -1178,19 +1164,19 @@ msgstr "Spremi datoteku"
 
 #: system-config-kickstart.gladestrings:68
 msgid "_Quit"
-msgstr "Završi"
+msgstr "_Završi"
 
 #: system-config-kickstart.gladestrings:69
 msgid "_Help"
-msgstr "Pomoć"
+msgstr "_Pomoć"
 
 #: system-config-kickstart.gladestrings:70
 msgid "_Contents"
-msgstr "Sadržaj"
+msgstr "_Sadržaj"
 
 #: system-config-kickstart.gladestrings:71
 msgid "_About"
-msgstr "O programu"
+msgstr "_O"
 
 #: system-config-kickstart.gladestrings:73
 msgid "Default Language:"
@@ -1372,7 +1358,7 @@ msgstr "Koristi GRUB lozinku"
 
 #: system-config-kickstart.gladestrings:136
 msgid "Password:"
-msgstr "Zaporka:"
+msgstr "Lozinka:"
 
 #: system-config-kickstart.gladestrings:140
 msgid "Encrypt GRUB password"
@@ -1400,13 +1386,11 @@ msgstr "label174"
 
 #: system-config-kickstart.gladestrings:146
 msgid "Install boot loader on Master Boot Record (MBR)"
-msgstr ""
-"Instaliraj program za pokretanje na glavni zapis pokretanja sustava (MBR)"
+msgstr "Instaliraj program za pokretanje na glavni zapis pokretanja sustava (MBR)"
 
 #: system-config-kickstart.gladestrings:147
 msgid "Install boot loader on first sector of the boot partition"
-msgstr ""
-"Instaliraj program pokretanja sustava na prvi sektor pokretačke particije"
+msgstr "Instaliraj program pokretanja sustava na prvi sektor pokretačke particije"
 
 #: system-config-kickstart.gladestrings:148
 msgid "Kernel parameters:"
@@ -1450,15 +1434,15 @@ msgstr "Nemoj inicijalizirati naziv diska"
 
 #: system-config-kickstart.gladestrings:159
 msgid "_Add"
-msgstr "Dodaj"
+msgstr "_Dodaj"
 
 #: system-config-kickstart.gladestrings:160
 msgid "_Edit"
-msgstr "Uredi"
+msgstr "_Uredi"
 
 #: system-config-kickstart.gladestrings:161
 msgid "_Delete"
-msgstr "Obriši"
+msgstr "_Obriši"
 
 #: system-config-kickstart.gladestrings:162
 msgid "RAID"
@@ -1662,7 +1646,7 @@ msgstr "Uobičajena radna površina:"
 
 #: system-config-kickstart.gladestrings:227
 msgid "GNOME"
-msgstr "Gnome"
+msgstr "GNOME"
 
 #: system-config-kickstart.gladestrings:228
 msgid "KDE"
@@ -1682,7 +1666,7 @@ msgstr "Onemogućeno"
 
 #: system-config-kickstart.gladestrings:232
 msgid "Enabled"
-msgstr "Uključeno"
+msgstr "Omogućeno"
 
 #: system-config-kickstart.gladestrings:233
 msgid "Enabled in reconfiguration mode"
@@ -1710,7 +1694,7 @@ msgstr "Ispitaj za zaslon"
 
 #: system-config-kickstart.gladestrings:240
 msgid "Use custom monitor sync rates"
-msgstr ""
+msgstr "Koristite prilagođene učestalosti sinkroniziranja zaslona"
 
 #: system-config-kickstart.gladestrings:242
 msgid "Hz"
@@ -1730,7 +1714,7 @@ msgstr "Horizontalna sink.:"
 
 #: system-config-kickstart.gladestrings:247
 msgid "Monitor"
-msgstr "Monitor"
+msgstr "Zaslon"
 
 #: system-config-kickstart.gladestrings:249
 msgid "label88"
@@ -1778,8 +1762,8 @@ msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %pre command at the beginning."
 msgstr ""
-"Upozorenje: Greška u ovoj skripti bi mogla prouzročiti zakazivanje vaše "
-"kickstart instalacije. Nemojte uključiti %pre naredbu na početku."
+"Upozorenje: Greška u ovoj skripti mogla bi prouzročiti neuspjeh vaše "
+"kickstart instalacije. Nemojte uključiti naredbu %pre na početak."
 
 #: system-config-kickstart.gladestrings:261
 #: system-config-kickstart.gladestrings:268
@@ -1787,7 +1771,6 @@ msgid "Use an interpreter:"
 msgstr "Koristite prevoditelja:"
 
 #: system-config-kickstart.gladestrings:263
-#, c-format
 msgid "Type your %pre script below:"
 msgstr "Upišite ispod vašu %pre skriptu:"
 
@@ -1801,15 +1784,14 @@ msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %post command at the beginning."
 msgstr ""
-"Upozorenje: Greška u ovoj skripti bi mogla prouzročiti zakazivanje vaše "
-"kickstart instalacije. Nemojte uključiti %post naredbu na početku."
+"Upozorenje: Greška u ovoj skripti mogla bi prouzročiti neuspjeh vaše "
+"kickstart instalacije. Nemojte uključiti naredbu %post na početak."
 
 #: system-config-kickstart.gladestrings:267
 msgid "Run outside of the chroot environment"
 msgstr "Izvrši izvan chroot okruženja"
 
 #: system-config-kickstart.gladestrings:270
-#, c-format
 msgid "Type your %post script below:"
 msgstr "Dolje upišite vašu %post skriptu:"
 
@@ -1830,8 +1812,8 @@ msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
 msgstr ""
-"Izabrali ste sljedeće postavke. Pritisnite \"Spremi datoteku\" za spremanje "
-"kickstart datoteke."
+"Izabrali ste sljedeću konfiguraciju. Za spremanje kickstart datoteke "
+"pritisnite na \"Spremi datoteku\"."
 
 #: system-config-kickstart.gladestrings:276
 msgid "RAID Options"
@@ -1844,19 +1826,21 @@ msgid ""
 "reliability compared to using an individual drive.  For more information on "
 "using RAID devices please consult the kickstart documentation."
 msgstr ""
-"Programski RAID Vam omogućuje kombiniranje više diskova u jedan veći RAID "
-"uređaj. RAID uređaj može biti postavljen da omogućuje dodatnu brzinu i "
-"pouzdanost u usporedbi s pojedinačnim diskom. Za više informacije o "
-"korištenju RAID uređaja, molim, savjetujte se s kickstart dokumentacijom."
+"Programski RAID vam omogućuje združivanje nekoliko diskova u jedna veći RAID "
+"uređaj. Uređaj RAID može biti postavljen da omogućuje veću brzinu i pouzdanost "
+"u usporedbi s pojedniačnim duskovima. Molim, pogledajte dokumentaciju programa "
+"kickstart za više informacija o korištenju RAID uređaja."
+""
 
 #: system-config-kickstart.gladestrings:278
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
 msgstr ""
-"Za korištenje RAID-a morate prvo stvoriti najmanje dvije particije vrste "
-"'software RAID'. Nakon toga možete stvoriti RAID uređaj koje će biti "
+"Kako biste koristili RAID polje, morate prvo stvoriti najmanje dvije particije "
+"vrste 'programski RAID'. Tada možete stvoriti RAID uređaj koji može biti "
 "oblikovan i montiran."
+""
 
 #: system-config-kickstart.gladestrings:279
 msgid "Choose one of the following options:"
@@ -1913,8 +1897,3 @@ msgstr "Ime poslužitelja:"
 msgid "."
 msgstr "."
 
-#~ msgid "Specify hsync and vsync instead of monitor"
-#~ msgstr "Odredi hsync and vsync umjesto nadgledanja"
-
-#~ msgid "Allow incoming:"
-#~ msgstr "Omogući dolazno:"
