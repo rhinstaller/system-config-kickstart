@@ -96,18 +96,15 @@ class ksconfig_gui:
 		self.toplevel.show_all()
 
 		#bring in signals from glade file
- 		xml.signal_autoconnect (
-			{ "on_cancel_button_clicked" : gtk.mainquit,
-			  "on_exit_activate" : gtk.mainquit,
- 			  "select_category" : self.select_category,
-			  "on_about_activate" : self.on_about_activate,
-			  "on_activate_confirm_options" : self.on_activate_confirm_options,
-			  "on_help_button_clicked" : self.on_help_button_clicked,
-			  } )
+		xml.signal_connect("on_cancel_button_clicked", gtk.mainquit)
+		xml.signal_connect("on_exit_activate", gtk.mainquit)
+		xml.signal_connect("on_list_view_row_activated", self.on_list_view_row_activated)
+		xml.signal_connect("on_about_activate", self.on_about_activate)
+		xml.signal_connect("on_activate_confirm_options", self.on_activate_confirm_options)
+		xml.signal_connect("on_help_button_clicked", self.on_help_button_clicked)
 
 		#populate category list
 		self.category_view = xml.get_widget("list_view")
-		print self.category_view.parent
 		self.category_store = gtk.ListStore(gobject.TYPE_STRING)
 		self.category_view.set_model(self.category_store)
 
@@ -115,34 +112,24 @@ class ksconfig_gui:
 		col.set_sort_column_id(0)
 		self.category_view.append_column(col)
 
-		iter = self.category_store.append()
-		self.category_store.set_value(iter, 0, (_("Basic Configuration")))
-		iter = self.category_store.append()
-		self.category_store.set_value(iter, 0, (_("Boot Loader Options")))
-		iter = self.category_store.append()
-		self.category_store.set_value(iter, 0, (_("Installation Method")))
-		iter = self.category_store.append()
-		self.category_store.set_value(iter, 0, (_("Partition Information")))
-		iter = self.category_store.append()
-		self.category_store.set_value(iter, 0, (_("Network Configuration")))
-		iter = self.category_store.append()
-		self.category_store.set_value(iter, 0, (_("Authentication")))
-		iter = self.category_store.append()
-		self.category_store.set_value(iter, 0, (_("Firewall Configuration")))
-		iter = self.category_store.append()
-		self.category_store.set_value(iter, 0, (_("X Configuration")))
-		iter = self.category_store.append()
-		self.category_store.set_value(iter, 0, (_("Package Selection")))
-		iter = self.category_store.append()
-		self.category_store.set_value(iter, 0, (_("Pre-Installation Script")))
-		iter = self.category_store.append()
-		self.category_store.set_value(iter, 0, (_("Post-Installation Script")))
+		self.category_list = [ (_("Basic Configuration")), (_("Boot Loader Options")),
+				   (_("Installation Method")), (_("Partition Information")),
+				   (_("Network Configuration")), (_("Authentication")),
+				   (_("Firewall Configuration")), (_("X Configuration")),
+				   (_("Package Selection")), (_("Pre-Installation Script")),
+				   (_("Post-Installation Script")) ]
+
+		for item in self.category_list:
+			iter = self.category_store.append()
+			self.category_store.set_value(iter, 0, item)
 
 		gtk.mainloop ()
 
-	def select_category(self, event, row, column, data):
-		self.options_notebook.set_page(row)
-		return
+	def on_list_view_row_activated(self, tree_view):
+		data, iter = tree_view.get_selection().get_selected()
+		category = self.category_store.get_value(iter, 0)
+		row = self.category_list.index(category)
+		self.options_notebook.set_current_page(row)
 
 	#about box
 	def on_about_activate(self, args):
