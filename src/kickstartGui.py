@@ -1,9 +1,7 @@
-#!/usr/bin/python2.2
-
 ## Kickstart Configurator - A graphical kickstart file generator
-## Copyright (C) 2000, 2001, 2002 Red Hat, Inc.
-## Copyright (C) 2000, 2001, 2002 Brent Fox <bfox@redhat.com>
-##                                Tammy Fox <tfox@redhat.com>
+## Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+## Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+##                                      Tammy Fox <tfox@redhat.com>
 
 ## This program is free software; you can redistribute it and/or modify
 ## it under the terms of the GNU General Public License as published by
@@ -55,7 +53,7 @@ except ImportError:
 ## 
 from rhpl.translate import _, N_
 import rhpl.translate as translate
-domain = 'redhat-config-kickstart'
+domain = 'system-config-kickstart'
 translate.textdomain (domain)
 gtk.glade.bindtextdomain(domain)
 
@@ -64,7 +62,7 @@ gtk.glade.bindtextdomain(domain)
 ##
 iconPixbuf = None      
 try:
-    iconPixbuf = gtk.gdk.pixbuf_new_from_file("/usr/share/redhat-config-kickstart/pixmaps/redhat-config-kickstart.png")
+    iconPixbuf = gtk.gdk.pixbuf_new_from_file("/usr/share/system-config-kickstart/pixmaps/system-config-kickstart.png")
      
 except:
     pass
@@ -72,10 +70,10 @@ except:
 ##
 ## Pull in the Glade file
 ##
-if os.access("redhat-config-kickstart-gtk2.glade", os.F_OK):
-    xml = gtk.glade.XML ("redhat-config-kickstart-gtk2.glade", domain=domain)
+if os.access("system-config-kickstart-gtk2.glade", os.F_OK):
+    xml = gtk.glade.XML ("system-config-kickstart-gtk2.glade", domain=domain)
 else:
-    xml = gtk.glade.XML ("/usr/share/redhat-config-kickstart/redhat-config-kickstart-gtk2.glade", domain=domain)
+    xml = gtk.glade.XML ("/usr/share/system-config-kickstart/system-config-kickstart-gtk2.glade", domain=domain)
 
 
 class kickstartGui:
@@ -205,17 +203,17 @@ class kickstartGui:
 
     #display help manual
     def on_help_button_clicked (self, args):
-        help_pages = ["file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-basic.html",
-		      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-bootloader.html",
-		      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-install.html",
-		      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-partitions.html",
-		      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-network.html",
-		      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-auth.html",
-		      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-firewall.html",
-		      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-xconfig.html",
-		      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-pkgs.html",
-		      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-prescript.html",
-		      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-postinstall.html",
+        help_pages = ["file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-basic.html",
+		      "file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-bootloader.html",
+		      "file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-install.html",
+		      "file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-partitions.html",
+		      "file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-network.html",
+		      "file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-auth.html",
+		      "file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-firewall.html",
+		      "file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-xconfig.html",
+		      "file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-pkgs.html",
+		      "file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-prescript.html",
+		      "file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-postinstall.html",
 		      ]
 	page = (help_pages [self.options_notebook.get_current_page ()])
 
