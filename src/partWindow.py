@@ -196,6 +196,7 @@ class partWindow:
             fsTypeSelect = 0
         self.fsTypeCombo.list.select_item(fsTypeSelect)
         self.sizeCombo.set_text("1") 
+        self.sizeCombo.set_sensitive(gtk.TRUE)
         self.asPrimaryCheck.set_active(gtk.FALSE)
         self.onDiskCheck.set_active(gtk.FALSE)
         self.onDiskEntry.set_text("")
