@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.5.5
+Version: 2.5.6
 Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -58,6 +58,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Fri Mar  5 2004 Brent Fox <bfox@redhat.com> 2.5.6-1
+- don't crash on file with no bootloader line (bug #117593)
+
 * Thu Mar  4 2004 Brent Fox <bfox@redhat.com> 2.5.5-1
 - fix capitalization problem (bug #117490)
 
