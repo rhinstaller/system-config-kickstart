@@ -105,7 +105,7 @@ class packageWindow(GtkWindow):
             label.set_alignment (0.0, 0.5)
 
 #            print package_list[pkg]
-            pixname = "pixmaps/" + package_list[pkg]
+            pixname = "/usr/share/ksconfig/pixmaps/" + package_list[pkg]
 #            print pixname
 
             im = GdkImlib.Image (pixname)
