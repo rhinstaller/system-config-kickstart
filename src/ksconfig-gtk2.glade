@@ -1289,23 +1289,48 @@
 
 	      <child>
 		<widget class="GtkMenu" id="file2_menu">
-		  <property name="visible">True</property>
 
 		  <child>
-		    <widget class="GtkImageMenuItem" id="save1">
+		    <widget class="GtkImageMenuItem" id="save_file">
 		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">gtk-save</property>
+		      <property name="label" translatable="yes">_Save File</property>
 		      <property name="use_underline">True</property>
-		      <signal name="activate" handler="on_save1_activate"/>
+		      <signal name="activate" handler="on_activate_confirm_options" last_modification_time="Wed, 05 Jun 2002 02:42:47 GMT"/>
+		      <accelerator key="S" modifiers="GDK_CONTROL_MASK" signal="activate"/>
+
+		      <child internal-child="image">
+			<widget class="GtkImage" id="image17">
+			  <property name="visible">True</property>
+			  <property name="stock">gtk-save-as</property>
+			  <property name="icon_size">1</property>
+			  <property name="xalign">0.5</property>
+			  <property name="yalign">0.5</property>
+			  <property name="xpad">0</property>
+			  <property name="ypad">0</property>
+			</widget>
+		      </child>
 		    </widget>
 		  </child>
 
 		  <child>
-		    <widget class="GtkImageMenuItem" id="exit2">
+		    <widget class="GtkImageMenuItem" id="quit">
 		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">gtk-quit</property>
+		      <property name="label" translatable="yes">_Quit</property>
 		      <property name="use_underline">True</property>
-		      <signal name="activate" handler="on_exit2_activate"/>
+		      <signal name="activate" handler="on_exit_activate" last_modification_time="Wed, 05 Jun 2002 02:16:52 GMT"/>
+		      <accelerator key="Q" modifiers="GDK_CONTROL_MASK" signal="activate"/>
+
+		      <child internal-child="image">
+			<widget class="GtkImage" id="image18">
+			  <property name="visible">True</property>
+			  <property name="stock">gtk-quit</property>
+			  <property name="icon_size">1</property>
+			  <property name="xalign">0.5</property>
+			  <property name="yalign">0.5</property>
+			  <property name="xpad">0</property>
+			  <property name="ypad">0</property>
+			</widget>
+		      </child>
 		    </widget>
 		  </child>
 		</widget>
@@ -1321,14 +1346,25 @@
 
 	      <child>
 		<widget class="GtkMenu" id="help2_menu">
-		  <property name="visible">True</property>
 
 		  <child>
-		    <widget class="GtkImageMenuItem" id="about1">
+		    <widget class="GtkImageMenuItem" id="about">
 		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">gnome-stock-about</property>
+		      <property name="label" translatable="yes">_About</property>
 		      <property name="use_underline">True</property>
-		      <signal name="activate" handler="on_about1_activate"/>
+		      <signal name="activate" handler="on_about_activate" last_modification_time="Wed, 05 Jun 2002 02:13:16 GMT"/>
+
+		      <child internal-child="image">
+			<widget class="GtkImage" id="image19">
+			  <property name="visible">True</property>
+			  <property name="stock">gnome-stock-about</property>
+			  <property name="icon_size">1</property>
+			  <property name="xalign">0.5</property>
+			  <property name="yalign">0.5</property>
+			  <property name="xpad">0</property>
+			  <property name="ypad">0</property>
+			</widget>
+		      </child>
 		    </widget>
 		  </child>
 		</widget>
@@ -1386,8 +1422,7 @@
 	      <child>
 		<widget class="GtkNotebook" id="options_notebook">
 		  <property name="visible">True</property>
-		  <property name="can_focus">True</property>
-		  <property name="show_tabs">True</property>
+		  <property name="show_tabs">False</property>
 		  <property name="show_border">False</property>
 		  <property name="tab_pos">GTK_POS_TOP</property>
 		  <property name="scrollable">False</property>
@@ -2031,7 +2066,6 @@
 
 		  <child>
 		    <widget class="GtkFrame" id="frame11">
-		      <property name="border_width">4</property>
 		      <property name="visible">True</property>
 		      <property name="label_xalign">0</property>
 		      <property name="label_yalign">0.5</property>
@@ -5949,7 +5983,6 @@
 
 			  <child>
 			    <widget class="GtkFrame" id="frame7">
-			      <property name="border_width">6</property>
 			      <property name="visible">True</property>
 			      <property name="label_xalign">0</property>
 			      <property name="label_yalign">0.5</property>
@@ -6048,7 +6081,6 @@
 
 			  <child>
 			    <widget class="GtkFrame" id="customFrame">
-			      <property name="border_width">6</property>
 			      <property name="visible">True</property>
 			      <property name="label_xalign">0</property>
 			      <property name="label_yalign">0.5</property>
@@ -6265,6 +6297,7 @@
 
 			      <child>
 				<widget class="GtkVBox" id="vbox19">
+				  <property name="border_width">4</property>
 				  <property name="visible">True</property>
 				  <property name="homogeneous">False</property>
 				  <property name="spacing">0</property>
@@ -7124,23 +7157,69 @@
 		      <property name="shadow_type">GTK_SHADOW_ETCHED_IN</property>
 
 		      <child>
-			<widget class="GtkScrolledWindow" id="scrolledwindow11">
+			<widget class="GtkVBox" id="vbox25">
+			  <property name="border_width">4</property>
 			  <property name="visible">True</property>
-			  <property name="can_focus">True</property>
-			  <property name="hscrollbar_policy">GTK_POLICY_ALWAYS</property>
-			  <property name="vscrollbar_policy">GTK_POLICY_ALWAYS</property>
-			  <property name="shadow_type">GTK_SHADOW_NONE</property>
-			  <property name="window_placement">GTK_CORNER_TOP_LEFT</property>
+			  <property name="homogeneous">False</property>
+			  <property name="spacing">4</property>
 
 			  <child>
-			    <widget class="GtkTreeView" id="treeview4">
+			    <widget class="GtkLabel" id="label156">
+			      <property name="visible">True</property>
+			      <property name="label" translatable="yes">Select packages to install.</property>
+			      <property name="use_underline">False</property>
+			      <property name="use_markup">False</property>
+			      <property name="justify">GTK_JUSTIFY_CENTER</property>
+			      <property name="wrap">True</property>
+			      <property name="selectable">False</property>
+			      <property name="xalign">0.5</property>
+			      <property name="yalign">0.5</property>
+			      <property name="xpad">6</property>
+			      <property name="ypad">0</property>
+			    </widget>
+			    <packing>
+			      <property name="padding">0</property>
+			      <property name="expand">False</property>
+			      <property name="fill">False</property>
+			    </packing>
+			  </child>
+
+			  <child>
+			    <widget class="GtkHSeparator" id="hseparator16">
+			      <property name="visible">True</property>
+			    </widget>
+			    <packing>
+			      <property name="padding">8</property>
+			      <property name="expand">False</property>
+			      <property name="fill">False</property>
+			    </packing>
+			  </child>
+
+			  <child>
+			    <widget class="GtkScrolledWindow" id="scrolledwindow11">
 			      <property name="visible">True</property>
 			      <property name="can_focus">True</property>
-			      <property name="headers_visible">True</property>
-			      <property name="rules_hint">False</property>
-			      <property name="reorderable">False</property>
-			      <property name="enable_search">True</property>
+			      <property name="hscrollbar_policy">GTK_POLICY_ALWAYS</property>
+			      <property name="vscrollbar_policy">GTK_POLICY_ALWAYS</property>
+			      <property name="shadow_type">GTK_SHADOW_NONE</property>
+			      <property name="window_placement">GTK_CORNER_TOP_LEFT</property>
+
+			      <child>
+				<widget class="GtkTreeView" id="treeview4">
+				  <property name="visible">True</property>
+				  <property name="can_focus">True</property>
+				  <property name="headers_visible">True</property>
+				  <property name="rules_hint">False</property>
+				  <property name="reorderable">False</property>
+				  <property name="enable_search">True</property>
+				</widget>
+			      </child>
 			    </widget>
+			    <packing>
+			      <property name="padding">0</property>
+			      <property name="expand">True</property>
+			      <property name="fill">True</property>
+			    </packing>
 			  </child>
 			</widget>
 		      </child>
@@ -7148,7 +7227,7 @@
 		      <child>
 			<widget class="GtkLabel" id="label153">
 			  <property name="visible">True</property>
-			  <property name="label" translatable="yes">Package Group Selection</property>
+			  <property name="label" translatable="yes">Package Selection</property>
 			  <property name="use_underline">False</property>
 			  <property name="use_markup">False</property>
 			  <property name="justify">GTK_JUSTIFY_LEFT</property>
@@ -7209,11 +7288,11 @@
 			      <property name="label" translatable="yes">Warning: An error in this script might cause your kickstart installation to fail. Do not include the %pre command at the beginning.</property>
 			      <property name="use_underline">False</property>
 			      <property name="use_markup">False</property>
-			      <property name="justify">GTK_JUSTIFY_LEFT</property>
+			      <property name="justify">GTK_JUSTIFY_CENTER</property>
 			      <property name="wrap">True</property>
 			      <property name="selectable">False</property>
-			      <property name="xalign">2.98023e-08</property>
-			      <property name="yalign">0</property>
+			      <property name="xalign">0.5</property>
+			      <property name="yalign">0.5</property>
 			      <property name="xpad">6</property>
 			      <property name="ypad">0</property>
 			    </widget>
@@ -7359,8 +7438,8 @@
 			      <property name="justify">GTK_JUSTIFY_CENTER</property>
 			      <property name="wrap">True</property>
 			      <property name="selectable">False</property>
-			      <property name="xalign">0</property>
-			      <property name="yalign">0</property>
+			      <property name="xalign">0.5</property>
+			      <property name="yalign">0.5</property>
 			      <property name="xpad">6</property>
 			      <property name="ypad">0</property>
 			    </widget>
@@ -7580,6 +7659,7 @@
 
 	  <child>
 	    <widget class="GtkHButtonBox" id="hbuttonbox2">
+	      <property name="border_width">10</property>
 	      <property name="visible">True</property>
 	      <property name="layout_style">GTK_BUTTONBOX_END</property>
 	      <property name="spacing">30</property>
