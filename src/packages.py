@@ -26,7 +26,7 @@ import GtkExtra
 import string
 import checklist
 import libglade
-import rpm
+#import rpm
 import string
 
 
