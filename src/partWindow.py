@@ -277,7 +277,14 @@ class partWindow:
             self.win_reset()
             self.partitionDialog.hide()
 
+    def find_auto_parent(self, store, data, iter):
+        if self.part_store.get_value(iter, 0) == (_("Auto")):
+            self.auto_parent_iter = iter
+
     def addPartitionToTree(self, part_object, iter):
+        self.auto_parent_iter = None
+        self.part_store.foreach(self.find_auto_parent)
+
         if iter == None:
             self.hard_drive_parent_iter = self.part_store.append(None)
             self.part_store.set_value(self.hard_drive_parent_iter, 0, (_("Hard Drives")))
@@ -384,7 +391,8 @@ class partWindow:
                 if not self.checkRaid(part_object):
                     return None
             else:
-                print "this already has a raid number, leave it alone"
+#                print "this already has a raid number, leave it alone"
+                pass
 
         else:
             #Erase any exiting raid data if we've edited a RAID partition to be non-RAID
@@ -425,7 +433,6 @@ class partWindow:
             self.mp_is_unique = 1
 
     def checkRaid(self, part_object):
-        print "in checkRaid"
         device = part_object.device
         partition = part_object.partition
 
@@ -451,7 +458,6 @@ class partWindow:
                 part_object.raidNumber = "raid.%s" % str(tmpNum)
             
         #If all the checks pass, then return
-        print "returning in checkRaid"
         return 1
 
     def countRaid(self, store, data, iter, object):
