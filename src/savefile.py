@@ -66,7 +66,7 @@ class saveFile:
         def on_confirm_options_cancel_button(self, *args):
 		#using hide because destroy crashes application after second instance
 		self.dialog.hide()
-		return gtk.TRUE
+		return True
 
 	def saveFile_cb(self, *args):
 		self.dialog.hide()

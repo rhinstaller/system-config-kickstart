@@ -57,7 +57,7 @@ class scripts:
             self.kickstartData.setPreLine(None)
 
         pre_buffer = self.pre_textview.get_buffer()
-        data = pre_buffer.get_text(pre_buffer.get_start_iter(),pre_buffer.get_end_iter(),gtk.TRUE)
+        data = pre_buffer.get_text(pre_buffer.get_start_iter(),pre_buffer.get_end_iter(),True)
         data = string.strip(data)
 
         if data != "":
@@ -78,7 +78,7 @@ class scripts:
             self.kickstartData.setPostLine(post_command)
 
         post_buffer = self.post_textview.get_buffer()
-        data = post_buffer.get_text(post_buffer.get_start_iter(),post_buffer.get_end_iter(),gtk.TRUE)
+        data = post_buffer.get_text(post_buffer.get_start_iter(),post_buffer.get_end_iter(),True)
 
         data = string.strip(data)
 
@@ -95,7 +95,7 @@ class scripts:
 
             for opt, value in opts:
                 if opt == "--interpreter":
-                    self.pre_interpreter_checkbutton.set_active(gtk.TRUE)
+                    self.pre_interpreter_checkbutton.set_active(True)
                     self.pre_interpreter_entry.set_text(value)
             
         if self.kickstartData.getPreList():
@@ -112,11 +112,11 @@ class scripts:
 
             for opt, value in opts:
                 if opt == "--interpreter":
-                    self.interpreter_checkbutton.set_active(gtk.TRUE)
+                    self.interpreter_checkbutton.set_active(True)
                     self.interpreter_entry.set_text(value)
 
                 if opt == "--nochroot":
-                    self.chroot_checkbutton.set_active(gtk.TRUE)
+                    self.chroot_checkbutton.set_active(True)
             
         if self.kickstartData.getPostList():
             list = self.kickstartData.getPostList()

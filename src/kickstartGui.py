@@ -195,7 +195,7 @@ class kickstartGui:
 	dlg.set_default_size(100, 100)
 	dlg.set_position (gtk.WIN_POS_CENTER)
 	dlg.set_border_width(2)
-	dlg.set_modal(gtk.TRUE)
+	dlg.set_modal(True)
 	dlg.set_transient_for(self.toplevel)
 	dlg.set_icon(iconPixbuf)
 	rc = dlg.run()

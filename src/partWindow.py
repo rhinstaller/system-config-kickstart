@@ -106,26 +106,26 @@ class partWindow:
         index = self.fsTypesDict[key]
 
         if index == "swap":
-            self.mountPointCombo.set_sensitive(gtk.FALSE)
-            self.formatCheck.set_sensitive(gtk.FALSE)
-            self.swap_checkbutton.set_sensitive(gtk.TRUE)
-            if self.swap_checkbutton.get_active() == gtk.TRUE:
-                self.sizeOptionsTable.set_sensitive(gtk.FALSE)
+            self.mountPointCombo.set_sensitive(False)
+            self.formatCheck.set_sensitive(False)
+            self.swap_checkbutton.set_sensitive(True)
+            if self.swap_checkbutton.get_active() == True:
+                self.sizeOptionsTable.set_sensitive(False)
         else:
-            self.swap_checkbutton.set_sensitive(gtk.FALSE)
-            self.sizeOptionsTable.set_sensitive(gtk.TRUE)
+            self.swap_checkbutton.set_sensitive(False)
+            self.sizeOptionsTable.set_sensitive(True)
 
             if index == "raid":
-                self.mountPointCombo.set_sensitive(gtk.FALSE)
-                self.formatCheck.set_sensitive(gtk.TRUE)
+                self.mountPointCombo.set_sensitive(False)
+                self.formatCheck.set_sensitive(True)
             elif index == "lvm":
-                self.mountPointCombo.set_sensitive(gtk.FALSE)
+                self.mountPointCombo.set_sensitive(False)
             elif index == "PPC PReP Boot":
-                self.mountPointCombo.set_sensitive(gtk.FALSE)
+                self.mountPointCombo.set_sensitive(False)
                 self.sizeCombo.set_text("8")
             else:
-                self.mountPointCombo.set_sensitive(gtk.TRUE)
-                self.formatCheck.set_sensitive(gtk.TRUE)
+                self.mountPointCombo.set_sensitive(True)
+                self.formatCheck.set_sensitive(True)
 
     def on_setSizeRadio_toggled(self, *args):
         self.setSizeCombo.set_sensitive(self.setSizeRadio.get_active())
@@ -163,10 +163,10 @@ class partWindow:
         self.asPrimaryCheck.set_active(part_object.asPrimary)
 
         if part_object.partition:
-            self.onPartCheck.set_active(gtk.TRUE)
+            self.onPartCheck.set_active(True)
             self.onPartEntry.set_text(part_object.partition)
         elif part_object.device:
-            self.onDiskCheck.set_active(gtk.TRUE)
+            self.onDiskCheck.set_active(True)
             self.onDiskEntry.set_text(part_object.device)
 
         self.formatCheck.set_active(part_object.doFormat)        
@@ -177,50 +177,50 @@ class partWindow:
             index = self.fsTypes.index(curr)
         
             if index == 2:
-                self.mountPointCombo.set_sensitive(gtk.FALSE)
-                self.formatCheck.set_sensitive(gtk.FALSE)
+                self.mountPointCombo.set_sensitive(False)
+                self.formatCheck.set_sensitive(False)
 
         self.partitionDialog.show_all()
 
         if part_object.sizeStrategy == "fixed":
-            self.sizeFixedRadio.set_active(gtk.TRUE)
+            self.sizeFixedRadio.set_active(True)
         elif part_object.sizeStrategy == "grow":
-            self.setSizeRadio.set_active(gtk.TRUE)
+            self.setSizeRadio.set_active(True)
             self.setSizeCombo.set_text(part_object.setSizeVal)
         elif part_object.sizeStrategy == "max":
-            self.sizeMaxRadio.set_active(gtk.TRUE)
+            self.sizeMaxRadio.set_active(True)
         
         #XXX - have to do this after the show_all due to a bug in gtkSpinButton, I suspect
         if part_object.size == "recommended":
-            self.swap_checkbutton.set_active(gtk.TRUE)
+            self.swap_checkbutton.set_active(True)
         else:
             self.sizeCombo.set_text(str(part_object.size))
         
     def win_reset(self):
         self.mountPointCombo.entry.set_text("")
-        self.mountPointCombo.set_sensitive(gtk.TRUE)
+        self.mountPointCombo.set_sensitive(True)
         try:
             fsTypeSelect = self.fsTypes.index("ext3")
         except:
             fsTypeSelect = 0
         self.fsTypeCombo.list.select_item(fsTypeSelect)
         self.sizeCombo.set_text("1") 
-        self.sizeCombo.set_sensitive(gtk.TRUE)
-        self.asPrimaryCheck.set_active(gtk.FALSE)
-        self.onDiskCheck.set_active(gtk.FALSE)
+        self.sizeCombo.set_sensitive(True)
+        self.asPrimaryCheck.set_active(False)
+        self.onDiskCheck.set_active(False)
         self.onDiskEntry.set_text("")
-        self.onPartCheck.set_active(gtk.FALSE)
+        self.onPartCheck.set_active(False)
         self.onPartEntry.set_text("")
-        self.sizeFixedRadio.set_active(gtk.TRUE)
+        self.sizeFixedRadio.set_active(True)
         self.setSizeCombo.set_text("1")
-        self.swap_checkbutton.set_active(gtk.FALSE)
-        self.formatCheck.set_active(gtk.TRUE)
+        self.swap_checkbutton.set_active(False)
+        self.formatCheck.set_active(True)
         
     def on_part_cancel_button_clicked(self, *args):
         self.partOkButton.disconnect(self.ok_handler)
         self.win_reset()
         self.partitionDialog.hide()
-        return gtk.TRUE
+        return True
 
     def on_edit_ok_button_clicked(self, *args):
         part_object = self.part_store.get_value(self.current_iter, 5)
@@ -349,23 +349,23 @@ class partWindow:
         part_object.fsType = self.fsTypesDict[fsTypeKey]
 
         ## size stuff
-        if self.swap_checkbutton.get_active() == gtk.TRUE:
+        if self.swap_checkbutton.get_active() == True:
             part_object.size = "recommended"
             part_object.sizeStrategy = "fixed"
         else:
             part_object.size = self.sizeCombo.get_text()
 
-            if self.sizeFixedRadio.get_active() == gtk.TRUE:
+            if self.sizeFixedRadio.get_active() == True:
                 part_object.sizeStrategy = "fixed"
-            elif self.setSizeRadio.get_active() == gtk.TRUE:
+            elif self.setSizeRadio.get_active() == True:
                 part_object.sizeStrategy = "grow"
                 part_object.setSizeVal = self.setSizeCombo.get_text()
-            elif self.sizeMaxRadio.get_active() == gtk.TRUE:
+            elif self.sizeMaxRadio.get_active() == True:
                 part_object.sizeStrategy = "max"
 
         part_object.asPrimary = self.asPrimaryCheck.get_active()
 
-        if self.onDiskCheck.get_active() == gtk.TRUE:
+        if self.onDiskCheck.get_active() == True:
             device = self.onDiskEntry.get_text()
 
             if self.isDeviceValid(device) == 1:
@@ -373,7 +373,7 @@ class partWindow:
             else:
                 return None
 
-        if self.onPartCheck.get_active() == gtk.TRUE:
+        if self.onPartCheck.get_active() == True:
             part = self.onPartEntry.get_text()
 
             if self.isPartitionValid(part) == 1:
@@ -514,7 +514,7 @@ class partWindow:
         dlg.set_default_size(100, 100)
         dlg.set_position (gtk.WIN_POS_CENTER)
         dlg.set_border_width(2)
-        dlg.set_modal(gtk.TRUE)
+        dlg.set_modal(True)
         dlg.set_transient_for(self.partitionDialog)
         dlg.set_icon(kickstartGui.iconPixbuf)
         rc = dlg.run()

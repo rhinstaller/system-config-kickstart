@@ -51,7 +51,7 @@ class firewall:
         self.firewall_ports_entry = xml.get_widget("firewall_ports_entry")
         self.customTable = xml.get_widget("customTable")
         self.customFrame = xml.get_widget("customFrame")
-        self.upgrade_flag = gtk.FALSE
+        self.upgrade_flag = False
 
         self.securityOptionMenu.connect("changed", self.disable_firewall)
 
@@ -61,13 +61,13 @@ class firewall:
         self.customTable.attach (self.label1, 0, 1, 2, 3, gtk.FILL, gtk.FILL, 5, 5)
         
         self.trustedView = gtk.TreeView()
-        self.trustedView.set_headers_visible(gtk.FALSE)
+        self.trustedView.set_headers_visible(False)
         self.trustedView.set_model(trustedStore)
         checkbox = gtk.CellRendererToggle()
         checkbox.connect("toggled", self.item_toggled, trustedStore)
         col = gtk.TreeViewColumn('', checkbox, active = 0)
         col.set_fixed_width(20)
-        col.set_clickable(gtk.TRUE)
+        col.set_clickable(True)
         self.trustedView.append_column(col)
 
         col = gtk.TreeViewColumn("", gtk.CellRendererText(), text=1)
@@ -86,13 +86,13 @@ class firewall:
 
         self.incomingStore = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
         self.incomingView = gtk.TreeView()
-        self.incomingView.set_headers_visible(gtk.FALSE)        
+        self.incomingView.set_headers_visible(False)        
         self.incomingView.set_model(self.incomingStore)
         checkbox = gtk.CellRendererToggle()
         checkbox.connect("toggled", self.item_toggled, self.incomingStore)
         col = gtk.TreeViewColumn('', checkbox, active = 0)
         col.set_fixed_width(20)
-        col.set_clickable(gtk.TRUE)
+        col.set_clickable(True)
         self.incomingView.append_column(col)
 
         col = gtk.TreeViewColumn("", gtk.CellRendererText(), text=1)
@@ -103,7 +103,7 @@ class firewall:
 
         for item in self.list.keys():
             iter = self.incomingStore.append()
-            self.incomingStore.set_value(iter, 0, gtk.FALSE)
+            self.incomingStore.set_value(iter, 0, False)
             self.incomingStore.set_value(iter, 1, item)
 
         viewport = gtk.Viewport()
@@ -130,9 +130,9 @@ class firewall:
         state = self.securityOptionMenu.get_history()
         
         if state == 0:
-            self.customTable.set_sensitive (gtk.TRUE)
+            self.customTable.set_sensitive (True)
         else:
-            self.customTable.set_sensitive (gtk.FALSE)
+            self.customTable.set_sensitive (False)
 
     def toggle_row (self, list, row):
         (val, row_data, header) = list.get_row_data(row)
@@ -141,17 +141,17 @@ class firewall:
         list._update_row (row)
 
     def setSensitive(self, boolean):
-        if boolean == gtk.FALSE:
+        if boolean == False:
             self.firewall_vbox.hide()
             self.firewall_label_box.show()
-            self.upgrade_flag = gtk.TRUE
+            self.upgrade_flag = True
         else:
             self.firewall_vbox.show()
             self.firewall_label_box.hide()
-            self.upgrade_flag = gtk.FALSE
+            self.upgrade_flag = False
 
     def getData(self):
-        if self.upgrade_flag == gtk.TRUE:
+        if self.upgrade_flag == True:
             self.kickstartData.setFirewall(None)
             return
 
@@ -165,7 +165,7 @@ class firewall:
         iter = trustedStore.get_iter_first()
 
         while iter:
-            if trustedStore.get_value(iter, 0) == gtk.TRUE:
+            if trustedStore.get_value(iter, 0) == True:
                 buf = buf + "--trust=" + trustedStore.get_value(iter, 1) + " "
             iter = trustedStore.iter_next(iter)
 
@@ -173,7 +173,7 @@ class firewall:
         iter = self.incomingStore.get_iter_first()
 
         while iter:
-            if self.incomingStore.get_value(iter, 0) == gtk.TRUE:
+            if self.incomingStore.get_value(iter, 0) == True:
                 service = self.list[self.incomingStore.get_value(iter, 1)]
                 buf = buf + "--" + service + " "
             iter = self.incomingStore.iter_next(iter)
@@ -211,7 +211,7 @@ class firewall:
                     while iter:
                         service = self.list[self.incomingStore.get_value(iter, 1)]
                         if service == opt[2:]:
-                            self.incomingStore.set_value(iter, 0, gtk.TRUE)
+                            self.incomingStore.set_value(iter, 0, True)
                         iter = self.incomingStore.iter_next(iter)
 
                 if opt == "--trust":
@@ -220,7 +220,7 @@ class firewall:
                     while iter:
                         device = trustedStore.get_value(iter, 1) 
                         if device == value:
-                            trustedStore.set_value(iter, 0, gtk.TRUE)
+                            trustedStore.set_value(iter, 0, True)
                         iter = trustedStore.iter_next(iter)
 
                 if opt == "--port":

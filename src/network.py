@@ -83,7 +83,7 @@ class network:
 
         self.network_device_tree.set_model(self.network_device_store)
 
-        self.network_device_tree.set_property("headers-visible", gtk.TRUE)
+        self.network_device_tree.set_property("headers-visible", True)
         col = gtk.TreeViewColumn(_("Device"), gtk.CellRendererText(), text = 0)
         self.network_device_tree.append_column(col)
 
@@ -213,7 +213,7 @@ class network:
                 text = (_("Please fill in the network information"))
                 dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
                 dlg.set_position(gtk.WIN_POS_CENTER)
-                dlg.set_modal(gtk.TRUE)
+                dlg.set_modal(True)
                 rc = dlg.run()
                 dlg.destroy()
                 return None
@@ -251,7 +251,7 @@ class network:
             self.network_device_store.set_value(iter, 5, nameserverBuf)
 
         iter = firewall.trustedStore.append()
-        firewall.trustedStore.set_value(iter, 0, gtk.FALSE)
+        firewall.trustedStore.set_value(iter, 0, False)
         firewall.trustedStore.set_value(iter, 1, devName)        
 
         self.resetDialog()
@@ -319,7 +319,7 @@ class network:
                           "choose another device name" % devName))
                 dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
                 dlg.set_position(gtk.WIN_POS_CENTER)
-                dlg.set_modal(gtk.TRUE)
+                dlg.set_modal(True)
                 rc = dlg.run()
                 dlg.destroy()
                 return None
@@ -352,7 +352,7 @@ class network:
 
         self.network_ok_button.disconnect(self.handler)
         self.network_device_dialog.hide()
-        return gtk.TRUE
+        return True
 
     def getData(self):
         self.kickstartData.clearNetwork()
@@ -376,18 +376,18 @@ class network:
 
     def typeChanged(self, *args):
         if self.network_type_option_menu.get_history() == 1:
-            self.network_table.set_sensitive(gtk.TRUE)
+            self.network_table.set_sensitive(True)
         else:
-            self.network_table.set_sensitive(gtk.FALSE)            
+            self.network_table.set_sensitive(False)            
 
     def rowSelected(self, *args):
         store, iter = self.network_device_tree.get_selection().get_selected()
         if iter == None:
-            self.edit_device_button.set_sensitive(gtk.FALSE)
-            self.delete_device_button.set_sensitive(gtk.FALSE)
+            self.edit_device_button.set_sensitive(False)
+            self.delete_device_button.set_sensitive(False)
         else:
-            self.edit_device_button.set_sensitive(gtk.TRUE)
-            self.delete_device_button.set_sensitive(gtk.TRUE)
+            self.edit_device_button.set_sensitive(True)
+            self.delete_device_button.set_sensitive(True)
             
     def fillData(self):
         self.network_device_store.clear()
@@ -405,7 +405,7 @@ class network:
                 if opt == "--device":
                     self.network_device_store.set_value(iter, 0, value)
                     firewall_iter = firewall.trustedStore.append()
-                    firewall.trustedStore.set_value(firewall_iter, 0, gtk.FALSE)
+                    firewall.trustedStore.set_value(firewall_iter, 0, False)
                     firewall.trustedStore.set_value(firewall_iter, 1, value)
 
                 if opt == "--bootproto":

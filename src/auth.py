@@ -324,7 +324,7 @@ class auth:
             self.myLDAPClass.set_auth("No")	
 
     def setSensitive(self, boolean):
-        if boolean == gtk.FALSE:
+        if boolean == False:
             self.auth_vbox.hide()
             self.auth_label_box.show()
         else:
@@ -344,75 +344,75 @@ class auth:
             for opt, value in opts:
 
                 if opt == "--enablemd5cache":
-                    self.md5_checkbutton.set_active(gtk.TRUE)
+                    self.md5_checkbutton.set_active(True)
 
                 if opt == "--enableshadow" or opt == "--useshadow":
-                    self.shadow_passwd_checkbutton.set_active(gtk.TRUE)
+                    self.shadow_passwd_checkbutton.set_active(True)
 
                 if opt == "--enablenis":
-                    self.nisCheck.set_active(gtk.TRUE)
-                    self.nisBroadcastCheck.set_active(gtk.TRUE)
+                    self.nisCheck.set_active(True)
+                    self.nisBroadcastCheck.set_active(True)
 
                 if opt == "--nisdomain":
-                    self.nisCheck.set_active(gtk.TRUE)
+                    self.nisCheck.set_active(True)
                     self.nisDomainEntry.set_text(value)
-                    self.nisBroadcastCheck.set_active(gtk.TRUE)
+                    self.nisBroadcastCheck.set_active(True)
 
                 if opt == "--nisserver":
-                    self.nisCheck.set_active(gtk.TRUE)
+                    self.nisCheck.set_active(True)
                     self.nisServerEntry.set_text(value)
-                    self.nisBroadcastCheck.set_active(gtk.FALSE)
+                    self.nisBroadcastCheck.set_active(False)
 
                 if opt == "--enableldap":
-                    self.ldapCheck.set_active(gtk.TRUE)
+                    self.ldapCheck.set_active(True)
 
                 if opt == "--ldapserver":
                     self.ldapServerEntry.set_text(value)
-                    self.ldapCheck.set_active(gtk.TRUE)
+                    self.ldapCheck.set_active(True)
 
                 if opt == "--ldapbasedn":
                     self.ldapDNEntry.set_text(value)
-                    self.ldapCheck.set_active(gtk.TRUE)
+                    self.ldapCheck.set_active(True)
     #XXX FIXME
     #            if opt == "--enableldaptls":
     #                self.
 
                 if opt == "--enablekrb5":
-                    self.kerberosCheck.set_active(gtk.TRUE)
+                    self.kerberosCheck.set_active(True)
 
                 if opt == "--krb5realm":
                     self.kerberosRealmEntry.set_text(value)
-                    self.kerberosCheck.set_active(gtk.TRUE)
+                    self.kerberosCheck.set_active(True)
 
                 if opt == "--krb5kdc":
                     self.kerberosKDCEntry.set_text(value)
-                    self.kerberosCheck.set_active(gtk.TRUE)
+                    self.kerberosCheck.set_active(True)
 
                 if opt == "--krb5adminserver":
                     self.kerberosMasterEntry.set_text(value)
-                    self.kerberosCheck.set_active(gtk.TRUE)
+                    self.kerberosCheck.set_active(True)
 
                 if opt == "--enablehesiod":
-                    self.hesiodCheck.set_active(gtk.TRUE)
+                    self.hesiodCheck.set_active(True)
 
                 if opt == "--hesiodlhs":
                     self.hesiodLHSEntry.set_text(value)
-                    self.hesiodCheck.set_active(gtk.TRUE)
+                    self.hesiodCheck.set_active(True)
 
                 if opt == "--hesiodrhs":
                     self.hesiodRHSEntry.set_text(value)
-                    self.hesiodCheck.set_active(gtk.TRUE)
+                    self.hesiodCheck.set_active(True)
 
                 if opt == "--enablesmbauth":
-                    self.sambaCheck.set_active(gtk.TRUE)
+                    self.sambaCheck.set_active(True)
 
                 if opt == "--smbservers":
                     self.sambaServerEntry.set_text(value)
-                    self.sambaCheck.set_active(gtk.TRUE)
+                    self.sambaCheck.set_active(True)
 
                 if opt == "--smbworkgroup":
                     self.sambaWorkgroupEntry.set_text(value)
-                    self.sambaCheck.set_active(gtk.TRUE)                
+                    self.sambaCheck.set_active(True)                
 
                 if opt == "--enablecache":
-                    self.nscd_checkbutton.set_active(gtk.TRUE)
+                    self.nscd_checkbutton.set_active(True)
