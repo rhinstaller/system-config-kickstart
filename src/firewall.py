@@ -178,7 +178,6 @@ class firewall:
                     pass
 
             portlist = self.portsEntry.get_text()
-            print portlist
             ports = []
 
 ##             if portlist:
