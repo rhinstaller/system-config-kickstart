@@ -217,15 +217,9 @@ class basic:
         self.lang_support_store.set_value(iter, 0 , not val)
 
     def getData(self):
-        data = []
-#        data.append("")
-#        data.append("#System language")
+#        data = []
         lang = self.languageLookup(self.lang_combo.entry.get_text())
-#        print "lang is", lang
         self.kickstartData.setLang([self.languageLookup(self.lang_combo.entry.get_text())])
-#        data.append("lang " + lang)
-#        data.append("")
-        data.append("#Language modules to install")
 
         lang_list = []
         iter = self.lang_support_store.get_iter_first()
@@ -239,44 +233,18 @@ class basic:
 
         defaultLang = self.languageLookup(self.lang_combo.entry.get_text())
 
-        self.kickstartData.setLangsupport(list, defaultLang)
-        
+        self.kickstartData.setLangSupport(lang_list)
+        self.kickstartData.setDefaultLang(defaultLang)
 
-        if len(lang_list) == 0:
-            data.append("langsupport " + defaultLang)
-
-        elif len(lang_list) > 0:
-            list = string.join(lang_list, " ")
-            if len(lang_list) == 1:
-                if defaultLang in lang_list:
-                    data.append("langsupport " + defaultLang)
-                else:
-                    data.append("langsupport " + list + " --default " + defaultLang)
-                
-            else:
-                if defaultLang in lang_list:                
-                    data.append("langsupport " + list + " --default " + defaultLang)
-                else:
-                    list = list + " " + defaultLang
-                    data.append("langsupport " + list + " --default " + defaultLang)
-                
-        data.append("")
-        data.append("#System keyboard")
         keys = self.keyboard_dict.keys()
         keys.sort()
         for item in keys:
             if self.keyboard_dict[item][0] == self.keyboard_combo.entry.get_text():
-                data.append("keyboard " + item)
+                self.kickstartData.setKeyboard([item])
                 break
-        data.append("")
-        data.append("#System mouse")
-        data.append(self.mouseLookup(self.mouse_combo.entry.get_text()))
-        data.append("")
-        data.append("#System timezone")
-        data.append("timezone --utc " + self.timezone_combo.entry.get_text())
 
-        data.append("")
-        data.append("#Root password")
+        self.kickstartData.setMouse([self.mouseLookup(self.mouse_combo.entry.get_text())])
+        self.kickstartData.setTimezone(self.timezone_combo.entry.get_text())
 
         if self.root_passwd_entry.get_text() == "":
             dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, _("Please select a root password."))
@@ -294,7 +262,7 @@ class basic:
             self.view.get_selection().select_iter(iter)
             self.notebook.set_current_page(0)
             self.root_passwd_entry.grab_focus()
-            return
+            return None
             
         if self.encrypt_root_pw_checkbutton.get_active() == gtk.TRUE:
             pure = self.root_passwd_entry.get_text()
@@ -308,26 +276,28 @@ class basic:
             self.passwd = crypt.crypt (pure, salt)
 
             temp = unicode (self.passwd, 'iso-8859-1')
-            data.append("rootpw --iscrypted " + temp)
+            self.kickstartData.setRootPw(["--iscrypted " + temp])
 
         else:
             self.passwd = self.root_passwd_entry.get_text()
-            data.append("rootpw " + self.passwd)
+            self.kickstartData.setRootPw([self.passwd])            
 
         if self.reboot_checkbutton.get_active():
-            data.append("")
-            data.append("#Reboot after installation")
-            data.append("reboot")
-        if self.text_install_checkbutton.get_active():
-            data.append("")
-            data.append("#Use text mode install")
-            data.append("text")
-        if self.interactive_checkbutton.get_active():
-            data.append("")
-            data.append("#Use interactive kickstart installation method")
-            data.append("interactive")
+            self.kickstartData.setReboot(["reboot"])
+        else:
+            self.kickstartData.setReboot([None])
 
-        return data
+        if self.text_install_checkbutton.get_active():
+            self.kickstartData.setText(["text"])
+        else:
+            self.kickstartData.setText([None])
+
+        if self.interactive_checkbutton.get_active():
+            self.kickstartData.setInteractive(["interactive"])
+        else:
+            self.kickstartData.setInteractive([None])
+
+        return 0
 
     def languageLookup(self, args):
         return self.langDict [args]
@@ -336,7 +306,7 @@ class basic:
         if args == "Probe for Mouse":
             buf = "#Probe for Mouse"
         else:
-            buf = "mouse "
+            buf = ""
             if self.emulate_3_buttons.get_active() and self.mouseDict[args] != 'none':
                 buf = buf + "--emulthree "
             buf = buf + self.mouseDict [args]
@@ -351,8 +321,6 @@ class basic:
     def fillData(self):
         for lang in self.langDict.keys():
             if self.langDict[lang] == self.kickstartData.getLang():
-                print lang, self.langDict
-                print "lang is",  self.lang_list.index(lang)
                 self.lang_combo.list.select_item(self.lang_list.index(lang))
 #                self.lang_combo.entry.set_text(lang)
 
