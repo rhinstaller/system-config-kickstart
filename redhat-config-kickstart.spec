@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
-Version: 2.3.7
+Version: 2.3.8
 Release: 1
 URL: http://www.redhat.com
 License: GPL
@@ -56,6 +56,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Fri May 23 2003 Brent Fox <bfox@redhat.com> 2.3.8-1
+- remove midline comment for mouse in basic.py (bug #91502)
+
 * Wed May 21 2003 Brent Fox <bfox@redhat.com> 2.3.7-1
 - fall back to us keymap if the current keymap is not found (bug #88844)
 
