@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
-Version: 2.3.3
-Release: 5
+Version: 2.3.4
+Release: 1
 URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
@@ -56,6 +56,11 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Tue Nov 26 2002 Brent Fox <bfox@redhat.com> 2.3.4-1
+- Handle opening existing kickstart files
+- Handle multiple ethernet interfaces
+- Don't require rootpassword on upgrades
+
 * Tue Nov 05 2002 Brent Fox <bfox@redhat.com> 2.3.3-5
 - Remove Minimal and Everything options from packages.py since they aren't in comps.xml
 
