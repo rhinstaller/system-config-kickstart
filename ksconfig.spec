@@ -7,6 +7,8 @@ ExclusiveOS: Linux
 Group: System Environment/Base
 BuildRoot: %{_tmppath}/ksconfig-%{version}-root
 Source: ksconfig-%{version}.tar.gz
+ExclusiveArch: noarch
+Requires: pygtk
 
 %description
 ksconfig is a graphical tool for creating kickstart files.  It will allow you to set most of the
