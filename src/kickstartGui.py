@@ -79,7 +79,7 @@ else:
 class kickstartGui:
 	
     def destroy(self, args):
-        gtk.mainquit()
+        gtk.main_quit()
 
     def __init__ (self, file):
         self.xml = xml
@@ -153,7 +153,7 @@ class kickstartGui:
         self.open_menu.connect("activate", self.on_activate_open)
 	self.preview_menu.connect("activate", self.on_activate_preview_options)
 	self.save_menu.connect("activate", self.on_activate_save_options)
-	self.quit_menu.connect("activate", gtk.mainquit)
+	self.quit_menu.connect("activate", gtk.main_quit)
 	self.help_menu.connect("activate", self.on_help_button_clicked)
 	self.about_menu.connect("activate", self.on_about_activate)
 	self.category_view.connect("cursor_changed", self.on_list_view_row_activated)
@@ -166,7 +166,7 @@ class kickstartGui:
 	#show gui
 	self.toplevel.show()
 
-	gtk.mainloop ()
+	gtk.main()
 
     def on_notebook_changed(self, page, data, num):
         count = 0
