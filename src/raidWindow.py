@@ -53,6 +53,7 @@ class raidWindow:
         self.raid_level_menu = xml.get_widget("raid_level_menu")
         self.raid_partitions_view = xml.get_widget("raid_partitions_view")
         self.raid_spares_spin = xml.get_widget("raid_spares_spin")
+        self.raid_format_check = xml.get_widget("raid_format_check")
         self.raid_ok_button = xml.get_widget("raid_ok_button")
         self.raid_cancel_button = xml.get_widget("raid_cancel_button")        
 
@@ -108,7 +109,6 @@ class raidWindow:
         self.raid_object.raidDevice = raid_device
         self.raid_object.raidLevel = raid_level
         self.raid_object.fsType = fsType
-        self.raid_object.doFormat = 1
         self.raid_object.isRaidDevice = 1
         
         self.raid_partition_store.foreach(self.isRowToggled, mount_point)
@@ -137,7 +137,6 @@ class raidWindow:
                 self.raid_parent_iter = self.part_store.append(None)
                 self.part_store.set_value(self.raid_parent_iter, 0, (_("Raid Devices")))
 
-
             raid_device_iter = self.part_store.append(self.raid_parent_iter)
             self.part_store.set_value(raid_device_iter, 0, mount_point)
 
@@ -149,6 +148,9 @@ class raidWindow:
             self.part_store.set_value(raid_device_iter, 1, self.raid_object.mountPoint)
             self.part_store.set_value(raid_device_iter, 2, self.raid_object.fsType)
             self.part_store.set_value(raid_device_iter, 5, self.raid_object)
+
+            if self.raid_format_check.get_active() == gtk.TRUE:
+                self.raid_object.doFormat = 1
 
             if self.raid_object.doFormat == 1:
                 self.part_store.set_value(raid_device_iter, 3, (_("Yes")))
