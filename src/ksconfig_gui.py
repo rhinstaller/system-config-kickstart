@@ -49,7 +49,7 @@ import scripts
 
 ##
 ## I18N
-## bfox - not sure it this is correct
+##
 import gettext
 gettext.bindtextdomain ("ksconfig", "/usr/share/locale")
 gettext.textdomain ("ksconfig")
@@ -57,7 +57,7 @@ _=gettext.gettext
 
 xml = libglade.GladeXML ("/usr/share/ksconfig/ksconfig.glade", domain="ksconfig")
 
-VERSION = "1.9.4"
+VERSION = "1.9.5"
 
 class ksconfig_gui:
 	
