@@ -27,28 +27,53 @@ import gtk
 import signal
 import partWindow
 
+##
+## I18N
+##
+import gettext
+gettext.bindtextdomain ("redhat-config-kickstart", "/usr/share/locale")
+gettext.textdomain ("redhat-config-kickstart")
+_=gettext.gettext
+
 class raidOptionsWindow:
-    def __init__(self, xml, part_store, part_view):
+    def __init__(self, xml, part_store, part_view, partWindow):
         self.xml = xml
         self.part_store = part_store
         self.part_view = part_view
+        self.partWindow = partWindow
         
         self.raid_options_window = xml.get_widget("raid_options_window")
         self.raid_partition_radio = xml.get_widget("raid_partition_radio")
         self.raid_device_radio = xml.get_widget("raid_device_radio")
         self.raid_options_ok_button = xml.get_widget("raid_options_ok_button")
         self.raid_options_cancel_button = xml.get_widget("raid_options_cancel_button")        
+        self.message_label = xml.get_widget("message_label")
         self.raid_partition_radio.set_active(gtk.TRUE)
 
         self.raid_options_ok_button.connect("clicked", self.okClicked)
         self.raid_options_cancel_button.connect("clicked", self.destroy)
 
+        self.countRaidPartitions()
         self.raid_options_window.show_all()
 
+    def countRaidPartitions(self):
+        list = []
+        iter = self.part_store.get_iter_first()
+        while iter:
+            part_object = self.part_store.get_value(iter, 4)
+            print part_object.raidNumber
+            if part_object.raidNumber:
+                print "it has raid number ", part_object.raidNumber
+                list.append(part_object.raidNumber)
+            iter = self.part_store.iter_next(iter)
+
+        print list
+        self.message_label.set_text(_("You currently have %d software RAID partition(s) "
+                                      "free to use." % len(list)))
+        
     def okClicked(self, *args):
         if self.raid_partition_radio.get_active() == gtk.TRUE:
-            self.partWindow = partWindow.partWindow(self.xml, self.part_store, self.part_view, "software RAID")
-            self.partWindow.add_partition()
+            self.partWindow.add_partition("TYPE_RAID")
 
         self.raid_options_window.hide()
 
