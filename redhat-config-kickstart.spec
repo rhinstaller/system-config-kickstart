@@ -10,7 +10,7 @@ BuildRoot: %{_tmppath}/redhat-config-kickstart-%{version}-root
 BuildArch: noarch
 Source0: redhat-config-kickstart-%{version}.tar.gz
 Obsoletes: ksconfig
-Requires: pygtk2 
+Requires: pygtk2 >= 1.99.11
 Requires: pygtk2-libglade 
 Requires: python2
 Requires: hwdata
@@ -48,10 +48,13 @@ fi
 %config /etc/X11/applnk/System/redhat-config-kickstart.desktop
 
 %changelog
+* Fri Jul 19 2002 Brent Fox <bfox@redhat.com> 2.3.2-3
+- Added version dependency for pygtk2 API change
+
 * Fri Jul 19 2002 Tammy Fox <tfox@redhat.com>
 - Updated docs for latest interface and features
 
-* Thu Jul 18 2002 Brent Fox <bfox@redhat.com> 2.3.2-3
+* Thu Jul 18 2002 Brent Fox <bfox@redhat.com>
 - Added buttons for LVM and RAID.  I will wire them up later
 
 * Thu Jul 18 2002 Tammy Fox <tfox@redhat.com> 2.3.2-2
