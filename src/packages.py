@@ -31,6 +31,12 @@ class Packages:
 
     def __init__(self, xml):
         self.package_view = xml.get_widget("package_view")
+        self.resolve_deps_checkbutton = xml.get_widget("resolve_deps_checkbutton")
+        self.ignore_deps_checkbutton = xml.get_widget("ignore_deps_checkbutton")
+
+        self.resolve_deps_checkbutton.connect("toggled", self.on_resolve_deps_toggled)
+        self.ignore_deps_checkbutton.connect("toggled", self.on_ignore_deps_toggled)        
+        
         self.package_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
         self.package_view.set_model(self.package_store)
         self.checkbox = gtk.CellRendererToggle()
@@ -61,6 +67,14 @@ class Packages:
             iter = self.package_store.append()
             self.package_store.set_value(iter, 1, pkg)
 
+    def on_resolve_deps_toggled(self, *args):
+        active = self.resolve_deps_checkbutton.get_active()
+        self.ignore_deps_checkbutton.set_sensitive(not active)
+
+    def on_ignore_deps_toggled(self, *args):
+        active = self.ignore_deps_checkbutton.get_active()
+        self.resolve_deps_checkbutton.set_sensitive(not active)        
+
     def packageToggled(self, data, row):
         iter = self.package_store.get_iter((int(row),))
         val = self.package_store.get_value(iter, 0)
@@ -69,7 +83,13 @@ class Packages:
     def getData(self):
         data = []
         data.append("")
-        data.append("%packages")
+
+        if self.resolve_deps_checkbutton.get_active() == 1:
+            data.append("%packages --resolvedeps")
+        elif self.ignore_deps_checkbutton.get_active() == 1:
+            data.append("%packages --ignoredeps")
+        else:
+            data.append("%packages")            
 
         iter = self.package_store.get_iter_root()
         next = 1
