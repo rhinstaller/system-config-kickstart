@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
 Version: 2.3.8
-Release: 2
+Release: 3
 URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
@@ -56,6 +56,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Wed May 28 2003 Tammy Fox <tfox@redhat.com> 2.3.8-3
+- bump release and rebuild
+
 * Tue May 27 2003 Tammy Fox <tfox@redhat.com> 2.3.8-2
 - removed length argument to GtkTextBuffer.insert() call
   since it is deprecated
