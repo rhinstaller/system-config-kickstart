@@ -3441,31 +3441,40 @@
 
 	  <widget>
 	    <class>GtkFrame</class>
-	    <name>scripts_frame</name>
+	    <name>pre_frame</name>
 	    <border_width>6</border_width>
-	    <label>Pre and Post Scripts</label>
+	    <label>Pre-Installation Script</label>
 	    <label_xalign>0</label_xalign>
 	    <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
 
 	    <widget>
 	      <class>GtkVBox</class>
 	      <name>scripts_vbox</name>
-	      <border_width>6</border_width>
 	      <homogeneous>False</homogeneous>
 	      <spacing>0</spacing>
 
 	      <widget>
 		<class>GtkLabel</class>
 		<name>label92</name>
-		<label>Warning: An error in either of these scripts might cause kickstart installations to fail.</label>
+		<label>Warning: An error in this script might cause your kickstart installation to fail. Do not include the %pre command at the beginning.</label>
 		<justify>GTK_JUSTIFY_LEFT</justify>
 		<wrap>True</wrap>
-		<xalign>0.5</xalign>
-		<yalign>0.5</yalign>
-		<xpad>0</xpad>
+		<xalign>2.98023e-08</xalign>
+		<yalign>0</yalign>
+		<xpad>6</xpad>
 		<ypad>0</ypad>
 		<child>
 		  <padding>0</padding>
+		  <expand>False</expand>
+		  <fill>True</fill>
+		</child>
+	      </widget>
+
+	      <widget>
+		<class>GtkHSeparator</class>
+		<name>hseparator3</name>
+		<child>
+		  <padding>8</padding>
 		  <expand>False</expand>
 		  <fill>False</fill>
 		</child>
@@ -3474,7 +3483,7 @@
 	      <widget>
 		<class>GtkLabel</class>
 		<name>label90</name>
-		<label>%pre script</label>
+		<label>Type your %pre script below:</label>
 		<justify>GTK_JUSTIFY_CENTER</justify>
 		<wrap>False</wrap>
 		<xalign>0.5</xalign>
@@ -3503,17 +3512,144 @@
 
 		<widget>
 		  <class>GtkText</class>
-		  <name>text1</name>
+		  <name>pre_text</name>
 		  <can_focus>True</can_focus>
-		  <editable>False</editable>
+		  <editable>True</editable>
 		  <text></text>
 		</widget>
+	      </widget>
+	    </widget>
+	  </widget>
+
+	  <widget>
+	    <class>GtkLabel</class>
+	    <child_name>Notebook:tab</child_name>
+	    <name>label89</name>
+	    <label>label89</label>
+	    <justify>GTK_JUSTIFY_CENTER</justify>
+	    <wrap>False</wrap>
+	    <xalign>0.5</xalign>
+	    <yalign>0.5</yalign>
+	    <xpad>0</xpad>
+	    <ypad>0</ypad>
+	  </widget>
+
+	  <widget>
+	    <class>GtkFrame</class>
+	    <name>post_frame</name>
+	    <border_width>6</border_width>
+	    <label>Post-Installation Script</label>
+	    <label_xalign>0</label_xalign>
+	    <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
+
+	    <widget>
+	      <class>GtkVBox</class>
+	      <name>vbox13</name>
+	      <homogeneous>False</homogeneous>
+	      <spacing>0</spacing>
+
+	      <widget>
+		<class>GtkLabel</class>
+		<name>label94</name>
+		<label>Warning: An error in this script might cause your kickstart installation to fail. Do not include the %post command at the beginning.</label>
+		<justify>GTK_JUSTIFY_CENTER</justify>
+		<wrap>True</wrap>
+		<xalign>0</xalign>
+		<yalign>0</yalign>
+		<xpad>8</xpad>
+		<ypad>0</ypad>
+		<child>
+		  <padding>0</padding>
+		  <expand>False</expand>
+		  <fill>False</fill>
+		</child>
+	      </widget>
+
+	      <widget>
+		<class>GtkHSeparator</class>
+		<name>hseparator4</name>
+		<child>
+		  <padding>2</padding>
+		  <expand>False</expand>
+		  <fill>False</fill>
+		</child>
+	      </widget>
+
+	      <widget>
+		<class>GtkCheckButton</class>
+		<name>chroot_checkbutton</name>
+		<can_focus>True</can_focus>
+		<label>Run in chroot environment</label>
+		<active>False</active>
+		<draw_indicator>True</draw_indicator>
+		<child>
+		  <padding>0</padding>
+		  <expand>False</expand>
+		  <fill>False</fill>
+		</child>
+	      </widget>
+
+	      <widget>
+		<class>GtkHBox</class>
+		<name>hbox22</name>
+		<homogeneous>False</homogeneous>
+		<spacing>0</spacing>
+		<child>
+		  <padding>0</padding>
+		  <expand>False</expand>
+		  <fill>False</fill>
+		</child>
+
+		<widget>
+		  <class>GtkCheckButton</class>
+		  <name>interpreter_checkbutton</name>
+		  <can_focus>True</can_focus>
+		  <signal>
+		    <name>toggled</name>
+		    <handler>interpreter_cb</handler>
+		    <last_modification_time>Thu, 28 Jun 2001 02:15:28 GMT</last_modification_time>
+		  </signal>
+		  <label>Use an interpreter:</label>
+		  <active>False</active>
+		  <draw_indicator>True</draw_indicator>
+		  <child>
+		    <padding>0</padding>
+		    <expand>False</expand>
+		    <fill>False</fill>
+		  </child>
+		</widget>
+
+		<widget>
+		  <class>GtkEntry</class>
+		  <name>interpreter_entry</name>
+		  <sensitive>False</sensitive>
+		  <can_focus>True</can_focus>
+		  <editable>True</editable>
+		  <text_visible>True</text_visible>
+		  <text_max_length>0</text_max_length>
+		  <text></text>
+		  <child>
+		    <padding>0</padding>
+		    <expand>True</expand>
+		    <fill>True</fill>
+		  </child>
+		</widget>
+	      </widget>
+
+	      <widget>
+		<class>GtkHSeparator</class>
+		<name>hseparator5</name>
+		<child>
+		  <padding>4</padding>
+		  <expand>False</expand>
+		  <fill>False</fill>
+		</child>
 	      </widget>
 
 	      <widget>
 		<class>GtkLabel</class>
 		<name>label91</name>
-		<label>%post script</label>
+		<label>Type your %post script below:</label>
 		<justify>GTK_JUSTIFY_CENTER</justify>
 		<wrap>False</wrap>
 		<xalign>0.5</xalign>
@@ -3542,9 +3678,9 @@
 
 		<widget>
 		  <class>GtkText</class>
-		  <name>text2</name>
+		  <name>post_text</name>
 		  <can_focus>True</can_focus>
-		  <editable>False</editable>
+		  <editable>True</editable>
 		  <text></text>
 		</widget>
 	      </widget>
@@ -3554,8 +3690,8 @@
 	  <widget>
 	    <class>GtkLabel</class>
 	    <child_name>Notebook:tab</child_name>
-	    <name>label89</name>
-	    <label>label89</label>
+	    <name>label93</name>
+	    <label>label93</label>
 	    <justify>GTK_JUSTIFY_CENTER</justify>
 	    <wrap>False</wrap>
 	    <xalign>0.5</xalign>

@@ -42,6 +42,7 @@ import firewall
 import savefile
 import xconfig
 import packages
+import scripts
 
 xml = libglade.GladeXML ("./ksconfig.glade", domain="ksconfig")
 
@@ -73,7 +74,9 @@ class ksconfig_gui:
 		#bring in X functions
 		self.X_class = xconfig.xconfig(xml)
 		#bring in package function
-		self.packages_class = packages.headerList(xml)
+		self.packages_class = packages.headerList(xml)	
+		#bring in scripts function
+		self.scripts_class = scripts.scripts(xml)	
 
 		#show gui
 		self.toplevel.show_all()
@@ -97,7 +100,9 @@ class ksconfig_gui:
 		self.category_clist.append(["Firewall Configuration"])
 		self.category_clist.append(["X Configuration"])
 		self.category_clist.append(["Package Selection"])
-
+		self.category_clist.append(["Pre-Installation Script"])
+		self.category_clist.append(["Post-Installation Script"])		
+		
 		gtk.mainloop ()
 
 	def select_category(self, event, row, column, data):
@@ -125,7 +130,13 @@ class ksconfig_gui:
 			return
 		elif  self.category_clist.get_text(row,0)== "Package Selection":
 			self.options_notebook.set_page(7)
-			return		
+			return
+		elif  self.category_clist.get_text(row,0)== "Pre-Installation Script":
+			self.options_notebook.set_page(8)
+			return				
+		elif  self.category_clist.get_text(row,0)== "Post-Installation Script":
+			self.options_notebook.set_page(9)
+			return				
 
 	#about box
 	def on_about_activate(self, args):
