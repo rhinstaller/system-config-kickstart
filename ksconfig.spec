@@ -23,6 +23,7 @@ kickstart options.
 
 %install
 make INSTROOT=$RPM_BUILD_ROOT install
+#make install
 
 mkdir -p $RPM_BUILD_ROOT/etc/X11/applnk/System
 cat > $RPM_BUILD_ROOT/etc/X11/applnk/System/ksconfig.desktop << EOF
@@ -45,7 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 /usr/sbin/ksconfig
 /usr/share/ksconfig/*
-%{_mandir}/*/*
+%{_mandir}/man8/ksconfig*
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
