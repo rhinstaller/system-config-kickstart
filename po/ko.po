@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ko\n"
 "POT-Creation-Date: 2001-07-19 11:24-0400\n"
-"PO-Revision-Date: 2002-12-03 13:53+1000\n"
+"PO-Revision-Date: 2002-12-04 09:19+1000\n"
 "Last-Translator: Michelle Kim <mkim@redhat.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -625,10 +625,8 @@ msgid "_Automatically Resolve Dependencies"
 msgstr "패키지 간의 의존성 문제 자동으로 해결(_A)"
 
 #: ../src/partWindow.py:410
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr ""
-"\"%s\" 마운트 지점은 이미 사용중입니다.  다른 마운트 지점을 선택해 주십시오."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr "\"%s\" 마운트 지점은 이미 사용중입니다.  다른 마운트 지점을 선택해 주십시오."
 
 #: ../src/partWindow.py:255 ../src/partWindow.py:520 ../src/raidWindow.py:205
 msgid "No"
@@ -879,6 +877,15 @@ msgid ""
 "values from\n"
 "                        the kickstart file already filled in."
 msgstr ""
+"사용법: redhat-config-kickstart [--help] [--generate <filename>] "
+"[<kickstart_filename>]\n"
+"        \n"
+"--help                  이 메시지를 출력하기\n"
+"--generate <filename>   현재 시스템에서 킥스타트 파일을 생성하여\n"
+"                        <filename> 파일로 기록함.  이 옵션은 콘솔에서 실행되므로,\n"
+"                        현재 X가 실행 중이지 않은 서버에서 유용합니다.\n"
+"<kickstart_filename>    이 옵션을 사용하시면 킥스타트 파일에 이미 기입된 값을\n"
+"                        사용하여 GUI가 시작될 것입니다."
 
 #: redhat-config-kickstart.gladestrings:202
 msgid "Use broadcast to find NIS server"
@@ -1414,3 +1421,4 @@ msgstr "종료(_Q)"
 
 #~ msgid "Select a Video Card"
 #~ msgstr "비디오 카드 선택"
+
