@@ -48,6 +48,10 @@ class KickstartData:
     def setLangSupport(self, args):
         list = []
 
+        if args == None:
+            self.langsupport = []
+            return
+        
         for item in args:
             if item[:10] == "--default=":
                 self.setDefaultLang(item[10:])
@@ -449,3 +453,8 @@ class KickstartData:
                     file.append(line)
 
         return file
+
+    def printData(self):
+        file = self.getAll()
+        for line in file:
+            print line
