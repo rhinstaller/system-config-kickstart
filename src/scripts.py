@@ -98,12 +98,12 @@ class scripts:
                     self.pre_interpreter_checkbutton.set_active(gtk.TRUE)
                     self.pre_interpreter_entry.set_text(value)
             
-            if self.kickstartData.getPreList():
-                list = self.kickstartData.getPreList()
-                iter = self.pre_textview.get_buffer().get_iter_at_offset(0)
+        if self.kickstartData.getPreList():
+            list = self.kickstartData.getPreList()
+            iter = self.pre_textview.get_buffer().get_iter_at_offset(0)
 
-                for line in list:
-                    self.pre_textview.get_buffer().insert(iter, (line + "\n"))
+            for line in list:
+                self.pre_textview.get_buffer().insert(iter, (line + "\n"))
 
         if self.kickstartData.getPostLine():
             line = self.kickstartData.getPostLine()
@@ -118,12 +118,12 @@ class scripts:
                 if opt == "--nochroot":
                     self.chroot_checkbutton.set_active(gtk.TRUE)
             
-            if self.kickstartData.getPostList():
-                list = self.kickstartData.getPostList()
-                iter = self.post_textview.get_buffer().get_iter_at_offset(0)
+        if self.kickstartData.getPostList():
+            list = self.kickstartData.getPostList()
+            iter = self.post_textview.get_buffer().get_iter_at_offset(0)
 
-                for line in list:
-                    self.post_textview.get_buffer().insert(iter, (line + "\n"))
+            for line in list:
+                self.post_textview.get_buffer().insert(iter, (line + "\n"))
 
 
 

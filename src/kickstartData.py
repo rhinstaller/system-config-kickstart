@@ -382,10 +382,10 @@ class KickstartData:
         file.append("#System mouse")
 
         mouse = self.getMouse()
-        if "--emulthree" in mouse:
-            file.append("mouse " + string.join(mouse, " "))
-        else:
-            file.append("mouse " + self.getMouse()[0])
+        try:
+            file.append("mouse " + string.join(mouse), " ")
+        except:
+            file.append("mouse")
         file.append("#Sytem timezone")
         file.append("timezone " + self.getTimezone())
         file.append("#Root password")
@@ -418,7 +418,7 @@ class KickstartData:
 
         elif self.getNfs():
             file.append("#Use NFS installation Media")
-            file.append("nfs " + self.getNfs())
+            file.append("nfs " + string.join(self.getNfs(), " "))
 
         elif self.getHardDrive():
             file.append("#Use hard drive installation media")
