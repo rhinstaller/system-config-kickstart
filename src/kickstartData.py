@@ -289,6 +289,10 @@ class KickstartData:
             file.append("url --url " + self.getUrl())
             pass
 
+        if self.getBootloader():
+            file.append("#System bootloader configuration")
+            file.append("bootloader " + self.getBootloader())
+
         for line in file:
             print line
     
