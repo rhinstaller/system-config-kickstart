@@ -83,7 +83,7 @@ class firewall:
         viewport.add(sw)
         self.customTable.attach (viewport, 1, 2, 2, 3, gtk.EXPAND|gtk.FILL, gtk.FILL, 5, 5)
 
-        self.label2 = gtk.Label (_("Allow incoming:"))
+        self.label2 = gtk.Label (_("Trusted services:"))
         self.label2.set_alignment (0.0, 0.0)
 
         self.incomingStore = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
@@ -100,7 +100,7 @@ class firewall:
         col = gtk.TreeViewColumn("", gtk.CellRendererText(), text=1)
         self.incomingView.append_column(col)
 
-        self.list = {"DHCP":"dhcp", "SSH":"ssh", "Telnet":"telnet", "WWW (HTTP)":"http",
+        self.list = {"SSH":"ssh", "Telnet":"telnet", "WWW (HTTP)":"http",
                      "Mail (SMTP)":"smtp", "FTP":"ftp"}
 
         for item in self.list.keys():
