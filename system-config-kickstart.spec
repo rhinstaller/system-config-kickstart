@@ -61,6 +61,7 @@ fi
 %changelog
 * Thu Jun 17 2004 Brent Fox <bfox@redhat.com> - 2.5.11-3
 - comps name changed for KDE (bug #124612)
+- format of rhpl mouse dict changed (bug #125361)
 
 * Tue May 25 2004 Brent Fox <bfox@redhat.com> 2.5.11-2
 - handle missing mouse line (bug #124341)
