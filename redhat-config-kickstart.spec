@@ -48,9 +48,10 @@ fi
 %config /etc/X11/applnk/System/redhat-config-kickstart.desktop
 
 %changelog
-* Thu Jul 18 2002 Tammy Fox <tfox@redhat.com> 2.3.2-1
+* Thu Jul 18 2002 Tammy Fox <tfox@redhat.com> 2.3.2-2
 - Updated list of langs
 - Reimplemented keyboard list to use list from rhpl
+- Fix for iter_next change
 
 * Thu Jul 18 2002 Tammy Fox <tfox@redhat.com> 2.3.1-1
 - Fixed bug 69169
