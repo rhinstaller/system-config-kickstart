@@ -75,5 +75,10 @@ for (opt, value) in opts:
 if file:
     file = file[0]
 
-import kickstartGui
-kickstartGui.kickstartGui(file)
+try:
+    import kickstartGui
+    kickstartGui.kickstartGui(file)
+except:
+    print (_("Could not open display because no X server is running."))
+    print (_("Try running 'redhat-config-kickstart --help' for a list of options."))
+    sys.exit(0)
