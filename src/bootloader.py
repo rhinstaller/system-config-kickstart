@@ -104,19 +104,21 @@ class bootloader:
             length = len (params)
             if length > 0:
                 buf = buf + "--append " + params + " "
-            gp = string.strip (self.grub_password_entry.get_text())
-            length = len(gp)
-            if length > 0:
-                if self.grub_password_encrypt_checkbutton.get_active():
-                    salt = "$1$"
-                    saltLen = 8
-                    for i in range(saltLen):
-                        salt = salt + whrandom.choice (string.letters + string.digits + './')
-                    self.passwd = crypt.crypt (gp, salt)
-                    temp = unicode (self.passwd, 'iso-8859-1')
-                    buf = buf + "--md5pass=" + temp
-                else:
-                    buf = buf + "--password=" + gp + " "
+
+            if self.grub_radiobutton.get_active() == gtk.TRUE:
+                gp = string.strip (self.grub_password_entry.get_text())
+                length = len(gp)
+                if length > 0:
+                    if self.grub_password_encrypt_checkbutton.get_active():
+                        salt = "$1$"
+                        saltLen = 8
+                        for i in range(saltLen):
+                            salt = salt + whrandom.choice (string.letters + string.digits + './')
+                        self.passwd = crypt.crypt (gp, salt)
+                        temp = unicode (self.passwd, 'iso-8859-1')
+                        buf = buf + "--md5pass=" + temp
+                    else:
+                        buf = buf + "--password=" + gp + " "
         elif self.upgrade_bootloader_radio.get_active():
             buf = "bootloader --upgrade"
         else:
