@@ -130,7 +130,7 @@ class ksconfig_gui:
 	#about box
 	def on_about_activate(self, args):
 		aboutDialog = gnome.ui.GnomeAbout (_("Kickstart Configurator"), "@VERSION@",
-						   "Copyright (c) 2000, 2001 Red Hat, Inc.",
+						   "Copyright (c) 2000-2002 Red Hat, Inc.",
 						   ["Brent Fox <bfox@redhat.com>",
 						    "Tammy Fox <tfox@redhat.com>"],
 						   _("A graphical interface for creating a kickstart file."))
