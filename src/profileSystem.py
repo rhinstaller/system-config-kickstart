@@ -66,7 +66,7 @@ class ProfileSystem:
             model = string.replace(model, "'", "")        
 
             mouseDict = self.mouse.available()
-            a, b, c, d, protocol = mouseDict[model]
+            a, b, c, d, e, protocol = mouseDict[model]
 
             self.kickstartData.setMouse([protocol])
         else:
