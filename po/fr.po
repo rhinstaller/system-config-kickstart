@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "POT-Creation-Date: 2001-07-19 11:24-0400\n"
-"PO-Revision-Date: 2002-08-26 17:35+0200\n"
-"Last-Translator: \n"
-"Language-Team:  <en@li.org>\n"
+"PO-Revision-Date: 2002-12-10 21:58+1000\n"
+"Last-Translator: Jean-Paul AUBRY <jpaubry@redhat.com>\n"
+"Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -245,8 +245,7 @@ msgstr "Contrôleur de domaine Kerberos (KDC) :"
 
 #: redhat-config-kickstart.gladestrings:265
 msgid "Specify hsync and vsync instead of monitor"
-msgstr ""
-"Spécifier les rafraîchissements horizontal et vertical à la place du moniteur"
+msgstr "Spécifier les rafraîchissements horizontal et vertical à la place du moniteur"
 
 #: ../src/partWindow.py:88 ../src/partWindow.py:147
 msgid "software RAID"
@@ -421,7 +420,7 @@ msgstr "Spécifier un point de montage pour la partition."
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
-msgstr ""
+msgstr "Un périphérique réseau portant le nom %s existe déjà. Veuillez choisir un autre nom de périphérique. "
 
 #: redhat-config-kickstart.gladestrings:54
 msgid "md15"
@@ -595,8 +594,7 @@ msgstr "Supprimer le bloc de démarrage maître "
 
 #: ../src/raidWindow.py:169
 msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr ""
-"Il vous faut sélectionner au moins 3 partitions pour pouvoir utiliser RAIS %s"
+msgstr "Il vous faut sélectionner au moins 3 partitions pour pouvoir utiliser RAIS %s"
 
 #: ../src/partWindow.py:253 ../src/partWindow.py:518 ../src/raidWindow.py:203
 msgid "Yes"
@@ -627,8 +625,7 @@ msgid "_Automatically Resolve Dependencies"
 msgstr "_Résoudre automatiquement les dépendances"
 
 #: ../src/partWindow.py:410
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "Le point de montage \"%s\" est déjà utilisé. Veuillez sélectionner un autre "
 "point de montage."
@@ -807,12 +804,11 @@ msgstr "Périphérique RAID :"
 
 #: redhat-config-kickstart.gladestrings:139
 msgid "Install boot loader on Master Boot Record (MBR)"
-msgstr ""
-"Installer le chargeur de démarrage sur le chargeur de démarrage maître (MBR)"
+msgstr "Installer le chargeur de démarrage sur le chargeur de démarrage maître (MBR)"
 
 #: ../src/kickstartGui.py:257
 msgid "The file \"%s\" cannot be accessed."
-msgstr ""
+msgstr "Le fichier \"%s\" n'est pas accessible. "
 
 #: redhat-config-kickstart.gladestrings:13
 msgid "Size (MB):"
@@ -884,6 +880,17 @@ msgid ""
 "values from\n"
 "                        the kickstart file already filled in."
 msgstr ""
+"Utilisation: redhat-config-kickstart [--help] [--generate <filename>] "
+"[<kickstart_filename>]\n"
+"        \n"
+"--help                  Imprimer ce message\n"
+"--generate <filename>   Créer un fichier kickkstart à partir de votre machine actuelle "
+"et écrire\n"
+"                        ce dernier dans <filename>. Cette option tournant sur la console, "
+"elle est\n"
+"                        utile pour les serveurs dont l'exécution de X n'est pas actuellement en cours.\n"
+"<kickstart_filename>    Cette option entraînera le lancement de la GUI avec les valeurs\n"
+"                        déjà spécifiée dans le fichier kickstar."
 
 #: redhat-config-kickstart.gladestrings:202
 msgid "Use broadcast to find NIS server"
@@ -974,8 +981,7 @@ msgstr "Utiliser la taille swap recommandée"
 
 #: ../src/raidWindow.py:163
 msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr ""
-"Il vous faut sélectionner au moins 2 partitions pour povoir utiliser RAID %s"
+msgstr "Il vous faut sélectionner au moins 2 partitions pour povoir utiliser RAID %s"
 
 #: redhat-config-kickstart.gladestrings:263
 msgid "Video Card"
@@ -1055,7 +1061,7 @@ msgstr "Redémarrer le système après l'installation"
 
 #: ../src/network.py:197
 msgid "Please fill in the network information"
-msgstr ""
+msgstr "Veuillez fournir les informations réseau"
 
 #: ../src/raidOptionsWindow.py:75
 msgid "You currently have %d software RAID partition(s) free to use."
@@ -1072,9 +1078,8 @@ msgid "Static IP"
 msgstr "IP statique"
 
 #: ../src/network.py:90
-#, fuzzy
 msgid "Network Type"
-msgstr "Type de réseau :"
+msgstr "Type de réseau"
 
 #: ../src/kickstartGui.py:146 redhat-config-kickstart.gladestrings:283
 msgid "Package Selection"
@@ -1381,3 +1386,4 @@ msgstr "_Quitter"
 
 #~ msgid "onPart and onDisk can not be used at the same time."
 #~ msgstr "onPart et onDisk ne peuvent être utilisés en même temps."
+
