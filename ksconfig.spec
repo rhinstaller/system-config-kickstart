@@ -8,7 +8,7 @@ ExclusiveOS: Linux
 Group: System Environment/Base
 BuildRoot: %{_tmppath}/ksconfig-%{version}-root
 Source: ksconfig-%{version}.tar.gz
-#ExclusiveArch: noarch
+BuildArch: noarch
 Requires: pygtk
 
 %description
