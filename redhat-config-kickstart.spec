@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
-Version: 2.3.12
-Release: 2
+Version: 2.3.13
+Release: 1
 URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
@@ -56,6 +56,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Tue Jul 22 2003 Brent Fox <bfox@redhat.com> 2.3.13-1
+- fix gladefile bug
+
 * Tue Jul 22 2003 Brent Fox <bfox@redhat.com> 2.3.12-2
 - bump relnum and rebuild
 
