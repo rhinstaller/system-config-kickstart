@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
 Version: 2.3.2
-Release: 2
+Release: 3
 URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
@@ -48,6 +48,9 @@ fi
 %config /etc/X11/applnk/System/redhat-config-kickstart.desktop
 
 %changelog
+* Thu Jul 18 2002 Brent Fox <bfox@redhat.com> 2.3.2-3
+- Added buttons for LVM and RAID.  I will wire them up later
+
 * Thu Jul 18 2002 Tammy Fox <tfox@redhat.com> 2.3.2-2
 - Updated list of langs
 - Reimplemented keyboard list to use list from rhpl
