@@ -143,6 +143,7 @@ class xconfig:
         self.video_card_clist.set_sensitive(showLists)
         self.monitor_clist.set_sensitive(showLists)
         self.sync_button.set_sensitive(showLists)
+        self.videoram_combo.set_sensitive(showLists)
 
     def toggle_sync (self, args):
         sync_instead = self.sync_button.get_active()
