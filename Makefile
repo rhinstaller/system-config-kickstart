@@ -31,7 +31,7 @@ install:
 	for py in src/*.py ; do \
 		sed -e s,@VERSION@,$(VERSION),g $${py} > $(INSTROOT)$(PKGDATADIR)/`basename $${py}` ; \
 	done
-	install src/${PKGNAME}-gtk2.glade $(INSTROOT)$(PKGDATADIR)
+	install src/${PKGNAME}.glade $(INSTROOT)$(PKGDATADIR)
 	install pixmaps/*.png $(INSTROOT)$(PKGDATADIR)/pixmaps
 	install ${PKGNAME}.desktop $(INSTROOT)/usr/share/applications/${PKGNAME}.desktop
 	ln -sf /usr/sbin/${PKGNAME} $(INSTROOT)/usr/sbin/ksconfig
