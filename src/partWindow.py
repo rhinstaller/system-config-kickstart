@@ -193,7 +193,10 @@ class partWindow:
 
     def on_ok_button_clicked(self, *args):
         part_object = partEntry.partEntry()
-        self.getData(part_object)
+        result = self.getData(part_object)
+
+        if not result:
+            return
         
         iter = self.part_store.append()
         self.part_store.set_value(iter, 0, part_object.mountPoint)
@@ -248,9 +251,10 @@ class partWindow:
 
         #Let's do some error checking to make sure things make sense
         if part_object.fsType == "raid":
-            result = self.checkRaid(fsType, onDisk, onDiskVal, onPart, onPartVal)
+            result = self.checkRaid(part_object)
+
             if not result:
-                return
+                return None
             else:
                 part_object.fsType = result
 
@@ -267,7 +271,7 @@ class partWindow:
                     rc = dlg.run()
                     if rc == gtk.RESPONSE_OK:
                         dlg.hide()
-                    return
+                    return None
 
         if part_object.fsType == "swap":   
             part_object.fsType = "swap"
@@ -278,10 +282,18 @@ class partWindow:
                                              part_object.onPart, part_object.onPartVal)
 
         if not result:
-            return
+            return None
+        else:
+            return 1
+        
 
+    def checkRaid(self, part_object):
+        fsType = part_object.fsType
+        onDisk = part_object.onDisk
+        onDiskVal = part_object.onDiskVal
+        onPart = part_object.onPart
+        onPartVal = part_object.onPartVal
 
-    def checkRaid(self, fsType, onDisk, onDiskVal, onPart, onPartVal):
         mountPoint = ""            
         if not onDisk and not onPart:
             dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
@@ -324,20 +336,24 @@ class partWindow:
                 dlg.hide()
             return None
 
-        raidList = []
+        lastRaidNumber = ""
         iter = self.part_store.get_iter_first()        
         while iter:
-            print iter
             pyObject = self.part_store.get_value(iter, 4)
-            print "fsType is ", pyObject.fsType
             if pyObject.fsType == "raid":
-                raidNumber = pyObject.raidNumber
-                raidList.append(raidNumber)
+                lastRaidNumber = pyObject.raidNumber
             iter = self.part_store.iter_next(iter)        
 
-        if raidList == []:
+        if lastRaidNumber == "":
             fsType = "raid"
-
+            part_object.raidNumber = "01"
+        else:
+            tmpNum = int(lastRaidNumber) + 1
+            if tmpNum < 10:
+                part_object.raidNumber = "0%s" % str(tmpNum)
+            else:
+                part_object.raidNumber = str(tmpNum)
+            
         #If all the checks pass, then return
         return fsType
     
@@ -369,5 +385,5 @@ class partWindow:
             return None
         
         # Everything's good, so return
-        return
+        return 1
     
