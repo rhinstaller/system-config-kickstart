@@ -29,7 +29,7 @@ class partEntry:
         self.fixedSize = ""
         self.setSize = ""
         self.setSizeVal = ""
-        self.sizeStrategy = ""
+        self.sizeStrategy = "fixed"
         self.maxSize = ""
         self.asPrimary = ""
         self.device = None

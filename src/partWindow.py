@@ -26,6 +26,7 @@ import gtk
 import gtk.glade
 import string
 import signal
+import getopt
 import partEntry
 import kickstartGui
 
@@ -267,27 +268,11 @@ class partWindow:
 
         if result is None:
             return
-
-        iter = self.part_store.get_iter_first()
-        parent = None
-
-        iter = self.addPartitionToTree(part_object, iter)
-
-        self.part_store.set_value(iter, 1, part_object.mountPoint)
-        self.part_store.set_value(iter, 2, part_object.fsType)
-
-        if part_object.doFormat == 1:
-            self.part_store.set_value(iter, 3, (_("Yes")))
         else:
-            self.part_store.set_value(iter, 3, (_("No")))
-            
-        self.part_store.set_value(iter, 4, part_object.size)
-        self.part_store.set_value(iter, 5, part_object)
-
-        self.part_view.expand_all()
-        self.partOkButton.disconnect(self.ok_handler)
-        self.win_reset()
-        self.partitionDialog.hide()
+            self.setValues(part_object)
+            self.partOkButton.disconnect(self.ok_handler)
+            self.win_reset()
+            self.partitionDialog.hide()
 
     def addPartitionToTree(self, part_object, iter):
         if iter == None:
@@ -305,7 +290,7 @@ class partWindow:
             self.part_store.set_value(iter, 0, "")
             
         else:
-            #Now, ther's a device specified for this partition, so let's see if it already has a parent node
+            #Now, there's a device specified for this partition, so let's see if it already has a parent node
             if part_object.device in self.device_iter_dict.keys():
                 #There's already a device parent for this device.  Just add the info
                 device_iter = self.device_iter_dict[part_object.device]
@@ -523,15 +508,7 @@ class partWindow:
             dlg.hide()
         return None
 
-    def populateList(self, line):
-        print "in populateList", line
-        part_object = partEntry.partEntry()
-        result = self.parseLine(part_object, line)
-        print "result is", result
-        
-        if result is None:
-            return
-
+    def setValues(self, part_object):
         iter = self.part_store.get_iter_first()
         parent = None
 
@@ -550,9 +527,46 @@ class partWindow:
 
         self.part_view.expand_all()
         
-        print line
+    def populateList(self, line):
+        print "in populateList", line
+        part_object = partEntry.partEntry()
+        result = self.parseLine(part_object, line)
+        print "result is", result
+        
+        if result is None:
+            return
+        else:
+            self.setValues(part_object)
 
     def parseLine(self, part_object, line):
+        print "in parseLine"
         part_object.mountPoint = line[0]
+        opts, args = getopt.getopt(line[1:], "d:h", ["fstype=", "size=", "onpart", 
+                                                     "grow", "maxsize", "noformat", "onpart",
+                                                     "usepart", "ondisk", "ondrive", "asprimary"
+                                                     "bytes-per-inode", "start", "end", "badblocks"])
+        print opts, args
+
+        for (opt, value) in opts:
+            if opt == "--fstype":
+                part_object.fsType = value
+            if opt == "--size":
+                part_object.size = value
+
+            if opt == "onpart":
+                self.partition = value
+
+            if opt == "grow":
+                self.sizeStrategy = "max"
+
+            if opt == "maxsize":
+                self.sizeStrategy = "grow"
+                part_object.setSizeVal = value
+
+            if opt == "--noformat":
+                part_object.doFormat = 0
+            else:
+                part_object.doFormat = 1
+
 
         return 0
