@@ -218,7 +218,7 @@ class partWindow:
         part_object = self.part_store.get_value(self.current_iter, 5)
         result = self.getData(part_object)
 
-        if not result:
+        if result is None:
             return
 
         parent_iter = self.part_store.iter_parent(self.current_iter)
@@ -265,7 +265,7 @@ class partWindow:
         part_object = partEntry.partEntry()
         result = self.getData(part_object)
 
-        if not result:
+        if result is None:
             return
 
         iter = self.part_store.get_iter_first()
@@ -430,8 +430,8 @@ class partWindow:
 
                 part_object.mountPoint = mountPoint
 
-        print "returning 1"
-        return 1
+        print "returning 0"
+        return 0
 
     def checkMountPoint(self, store, data, iter, mountPoint):
         #This will scan the part_store and see if there are any duplicate mount points
@@ -522,3 +522,37 @@ class partWindow:
         if rc == gtk.RESPONSE_OK:
             dlg.hide()
         return None
+
+    def populateList(self, line):
+        print "in populateList", line
+        part_object = partEntry.partEntry()
+        result = self.parseLine(part_object, line)
+        print "result is", result
+        
+        if result is None:
+            return
+
+        iter = self.part_store.get_iter_first()
+        parent = None
+
+        iter = self.addPartitionToTree(part_object, iter)
+
+        self.part_store.set_value(iter, 1, part_object.mountPoint)
+        self.part_store.set_value(iter, 2, part_object.fsType)
+
+        if part_object.doFormat == 1:
+            self.part_store.set_value(iter, 3, (_("Yes")))
+        else:
+            self.part_store.set_value(iter, 3, (_("No")))
+            
+        self.part_store.set_value(iter, 4, part_object.size)
+        self.part_store.set_value(iter, 5, part_object)
+
+        self.part_view.expand_all()
+        
+        print line
+
+    def parseLine(self, part_object, line):
+        part_object.mountPoint = line[0]
+
+        return 0
