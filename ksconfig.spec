@@ -43,7 +43,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 /usr/sbin/ksconfig
 %{_mandir}/*/*
-%config(noreplace) /etc/X11/applnk/System/ksconfig.desktop
+%config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
 * Sat Jan 27 2001 Tammy Fox <tfox@redhat.com>
