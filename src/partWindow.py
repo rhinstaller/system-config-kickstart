@@ -22,13 +22,14 @@
 ## Authors: Brent Fox <bfox@redhat.com>
 ##          Tammy Fox <tfox@redhat.com>
 
-from gtk import *
-from gnome.ui import *
-import GtkExtra
-import string
 import gtk
+import gtk.glade
+#from gtk import *
+#from gnome.ui import *
+#import GtkExtra
+import string
 import signal
-import gnome.ui
+#import gnome.ui
 
 
 class partWindow:

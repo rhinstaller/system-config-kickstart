@@ -21,9 +21,11 @@
 
 #Kickstart Configurator Network Configuration
 
-from gtk import *
-import GtkExtra
-import libglade
+import gtk
+import gtk.glade
+#from gtk import *
+#import GtkExtra
+#import libglade
 
 class network:
 

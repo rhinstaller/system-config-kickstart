@@ -21,9 +21,8 @@
 
 #Kickstart Configurator Scripts
 
-from gtk import *
-import GtkExtra
-import libglade
+import gtk
+import gtk.glade
 
 class scripts:
 

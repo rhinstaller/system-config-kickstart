@@ -20,9 +20,11 @@
 ## Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 
-from gtk import *
-import GtkExtra
-import libglade
+import gtk
+import gtk.glade
+#from gtk import *
+#import GtkExtra
+#import libglade
 
 class nisData:
     def __init__(self, quit_cb=None):

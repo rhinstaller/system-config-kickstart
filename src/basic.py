@@ -21,15 +21,12 @@
 
 #Kickstart Configurator Basic Configuration
 
-from gtk import *
-import GtkExtra
-import libglade
+import gtk
+import gtk.glade
 import string
 import os
 import whrandom
 import crypt
-from gnome.ui import *
-import gnome.ui
 
 ##
 ## I18N
@@ -43,6 +40,7 @@ class basic:
 
     def __init__(self, xml):
         self.xml = xml
+        print dir(self.xml)
         self.lang_combo = xml.get_widget("lang_combo")
         self.keyboard_combo = xml.get_widget("keyboard_combo")
         self.mouse_combo = xml.get_widget("mouse_combo")
@@ -59,7 +57,7 @@ class basic:
         self.interactive_checkbutton = xml.get_widget("interactive_checkbutton")                
         self.encrypt_root_pw_checkbutton = xml.get_widget("encrypt_root_pw_checkbutton")
         self.lang_support_list = xml.get_widget("lang_support_list")
-        self.lang_support_list.set_selection_mode(SELECTION_MULTIPLE)
+#        self.lang_support_list.set_selection_mode(SELECTION_MULTIPLE)
 #        self.messagebox = xml.get_widget("messagebox")
 
         #define languages, add languages here
@@ -134,10 +132,10 @@ class basic:
         lang_combo.set_popdown_strings(lang_list)
         #set default to English
         lang_combo.list.select_item(4)
-        lang_combo.entry.set_editable(FALSE)
+        lang_combo.entry.set_editable(gtk.FALSE)
 
-        for lang in lang_list:
-            self.lang_support_list.append([lang])
+#        for lang in lang_list:
+#            self.lang_support_list.append([lang])
 
         #populate mouse combo
         mouse_list = ["Probe for Mouse"]
@@ -147,7 +145,7 @@ class basic:
             mouse_list.append(item)
         mouse_combo.set_popdown_strings(mouse_list)
         mouse_combo.list.select_item(0)
-        mouse_combo.entry.set_editable(FALSE)		
+        mouse_combo.entry.set_editable(gtk.FALSE)		
 
         #populate keyboard combo, add keyboards here
         self.keyboard_dict = { 'U.S. English': 'us',
@@ -206,7 +204,7 @@ class basic:
         keyboard_combo.set_popdown_strings(keyboard_list)
         #set default to English
         keyboard_combo.list.select_item(43)
-        keyboard_combo.entry.set_editable(FALSE)		
+        keyboard_combo.entry.set_editable(gtk.FALSE)		
 
         #set default mouse to generic ps/2
         mouse_combo.list.select_item(8)
@@ -238,7 +236,7 @@ class basic:
 
         timezone_combo.set_popdown_strings(list_items)
         timezone_combo.list.select_item(select)
-        timezone_combo.entry.set_editable(FALSE)		
+        timezone_combo.entry.set_editable(gtk.FALSE)		
 
         #bring in signals from glade file
         xml.signal_autoconnect (

@@ -21,9 +21,8 @@
 
 #Kickstart Configurator X Configuration
 
-from gtk import *
-import GtkExtra
-import libglade
+import gtk
+import gtk.glade
 import string
 
 class xconfig:
@@ -87,8 +86,8 @@ class xconfig:
             if len (line) > 4 and line[0:4] == 'NAME':
                 name = line[5:]
                 name_list = [name]
-                self.video_card_clist.append(name_list)
-                self.video_card_clist.sort()
+#                self.video_card_clist.append(name_list)
+#                self.video_card_clist.sort()
 
 
         #add monitors to list
@@ -117,24 +116,24 @@ class xconfig:
             hsync = string.strip(values[3])
             vsync = string.strip(values[4])
             model_list = [model]
-            self.monitor_clist.append(model_list)
+#            self.monitor_clist.append(model_list)
             #grab hsync and vsync from cards DB
             #FIXME
 
         #add color depths
         color_depths = ["8", "16", "24", "32"]
         self.color_depth_combo.set_popdown_strings(color_depths)
-        self.color_depth_combo.entry.set_editable(FALSE)
+        self.color_depth_combo.entry.set_editable(gtk.FALSE)
 
         #add resolutions
         resolutions = ["640x480", "800x600", "1024x768", "1152x864", "1280x1024", "1400x1050", "1600x1200"]
         self.resolution_combo.set_popdown_strings(resolutions)
-        self.resolution_combo.entry.set_editable(FALSE)
+        self.resolution_combo.entry.set_editable(gtk.FALSE)
         
         #add video card RAM sizes to option menu
         vram_list = ["256 KB", "512 KB", "1 MB", "2 MB", "4 MB", "8 MB", "16 MB", "32 MB", "64 MB"]
         self.videoram_combo.set_popdown_strings(vram_list)
-        self.videoram_combo.entry.set_editable(FALSE)
+        self.videoram_combo.entry.set_editable(gtk.FALSE)
 
     def on_card_probe_check_toggled(self, *args):
         self.card_vbox.set_sensitive(not self.card_probe_check.get_active())

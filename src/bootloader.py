@@ -21,9 +21,11 @@
 
 #Kickstart Configurator Bootloader Configuration
 
-from gtk import *
-import GtkExtra
-import libglade
+import gtk
+import gtk.glade
+#from gtk import *
+#import GtkExtra
+#import libglade
 import string
 import whrandom
 import crypt

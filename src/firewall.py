@@ -21,11 +21,9 @@
 
 #Kickstart Configurator Firewall Configuration
 
-from gtk import *
-import GtkExtra
+import gtk
+import gtk.glade
 import string
-import checklist
-import libglade
 import os
 
 ##
@@ -59,9 +57,9 @@ class firewall:
               })
 
         #create table with custom checklists
-        self.label1 = GtkLabel (_("Trusted devices:"))
+        self.label1 = gtk.Label (_("Trusted devices:"))
         self.label1.set_alignment (0.0, 0.0)
-        self.customTable.attach (self.label1, 0, 1, 2, 3, FILL, FILL, 5, 5)
+        self.customTable.attach (self.label1, 0, 1, 2, 3, gtk.FILL, gtk.FILL, 5, 5)
         
         if os.access("/proc/net/dev", os.R_OK):
             f = open ("/proc/net/dev")
@@ -79,42 +77,42 @@ class firewall:
         except:
             pass
 
-        self.trusted = checklist.CheckList(1)
-        self.trusted.connect ('button_press_event', self.trusted_select_row)
-        self.trusted.connect ("key_press_event", self.trusted_key_press)
-        self.customTable.attach (self.trusted, 1, 2, 2, 3, EXPAND|FILL, FILL, 5, 5)
+##         self.trusted = checklist.CheckList(1)
+##         self.trusted.connect ('button_press_event', self.trusted_select_row)
+##         self.trusted.connect ("key_press_event", self.trusted_key_press)
+##         self.customTable.attach (self.trusted, 1, 2, 2, 3, gtk.EXPAND|gtk.FILL, gtk.FILL, 5, 5)
 
-        for device in self.netdevices:
-            self.trusted.append_row((device, device), FALSE)
+##         for device in self.netdevices:
+##             self.trusted.append_row((device, device), gtk.FALSE)
 
-        self.label2 = GtkLabel (_("Allow incoming:"))
+        self.label2 = gtk.Label (_("Allow incoming:"))
         self.label2.set_alignment (0.0, 0.0)
-        self.incoming = checklist.CheckList(1)
-        self.incoming.connect ('button_press_event', self.incoming_select_row)
-        self.incoming.connect ("key_press_event", self.incoming_key_press)
-        self.customTable.attach (self.label2, 0, 1, 3, 4, FILL, FILL, 5, 5)
-        self.customTable.attach (self.incoming, 1, 2, 3, 4, EXPAND|FILL, FILL, 5, 5)
+#        self.incoming = checklist.CheckList(1)
+#        self.incoming.connect ('button_press_event', self.incoming_select_row)
+#        self.incoming.connect ("key_press_event", self.incoming_key_press)
+        self.customTable.attach (self.label2, 0, 1, 3, 4, gtk.FILL, gtk.FILL, 5, 5)
+#        self.customTable.attach (self.incoming, 1, 2, 3, 4, gtk.EXPAND|gtk.FILL, gtk.FILL, 5, 5)
 
         self.list = {"DHCP":"dhcp", "SSH":"ssh", "Telnet":"telnet", "WWW (HTTP)":"http",
                      "Mail (SMTP)":"smtp", "FTP":"ftp"}
 
-        for item in self.list.keys():
-            self.incoming.append_row ((item, item), FALSE)
+##        for item in self.list.keys():
+##            self.incoming.append_row ((item, item), gtk.FALSE)
 
 
-        self.label3 = GtkLabel (_("Other ports: (1029:tcp)"))
+        self.label3 = gtk.Label (_("Other ports: (1029:tcp)"))
         self.label3.set_alignment (0.0, 0.0)
-        self.portsEntry = GtkEntry ()
-        self.customTable.attach (self.label3, 0, 1, 4, 5, FILL, FILL, 5, 5)
-        self.customTable.attach (self.portsEntry, 1, 2, 4, 5, EXPAND|FILL, FILL, 5, 5)
+        self.portsEntry = gtk.Entry ()
+        self.customTable.attach (self.label3, 0, 1, 4, 5, gtk.FILL, gtk.FILL, 5, 5)
+        self.customTable.attach (self.portsEntry, 1, 2, 4, 5, gtk.EXPAND|gtk.FILL, gtk.FILL, 5, 5)
         
         #initialize custom options to not sensitive
-        self.label1.set_sensitive(FALSE)
-        self.label2.set_sensitive(FALSE)
-        self.label3.set_sensitive(FALSE)        
-        self.trusted.set_sensitive(FALSE)
-        self.incoming.set_sensitive(FALSE)
-        self.portsEntry.set_sensitive(FALSE)
+        self.label1.set_sensitive(gtk.FALSE)
+        self.label2.set_sensitive(gtk.FALSE)
+        self.label3.set_sensitive(gtk.FALSE)        
+#        self.trusted.set_sensitive(gtk.FALSE)
+#        self.incoming.set_sensitive(gtk.FALSE)
+        self.portsEntry.set_sensitive(gtk.FALSE)
         
     def disable_firewall (self, widget):
         active = not (self.securityNoneRadio.get_active())
@@ -124,31 +122,31 @@ class firewall:
         self.label1.set_sensitive(self.firewallCustomizeRadio.get_active())
         self.label2.set_sensitive(self.firewallCustomizeRadio.get_active())
         self.label3.set_sensitive(self.firewallCustomizeRadio.get_active())        
-        self.trusted.set_sensitive(self.firewallCustomizeRadio.get_active())
-        self.incoming.set_sensitive(self.firewallCustomizeRadio.get_active())
+#        self.trusted.set_sensitive(self.firewallCustomizeRadio.get_active())
+#        self.incoming.set_sensitive(self.firewallCustomizeRadio.get_active())
         self.portsEntry.set_sensitive(self.firewallCustomizeRadio.get_active())
     
-    def trusted_select_row(self, clist, event):
-        try:
-            row, col  = self.trusted.get_selection_info (event.x, event.y)
-            self.toggle_row(self.trusted, row)
-        except:
-            pass
+##     def trusted_select_row(self, clist, event):
+##         try:
+##             row, col  = self.trusted.get_selection_info (event.x, event.y)
+##             self.toggle_row(self.trusted, row)
+##         except:
+##             pass
 
-    def trusted_key_press (self, list, event):
-        if event.keyval == ord(" ") and self.trusted.focus_row != -1:
-            self.toggle_row (self.trusted, self.trusted.focus_row)
+##     def trusted_key_press (self, list, event):
+##         if event.keyval == ord(" ") and self.trusted.focus_row != -1:
+##             self.toggle_row (self.trusted, self.trusted.focus_row)
             
-    def incoming_select_row(self, clist, event):
-        try:
-            row, col  = self.incoming.get_selection_info (event.x, event.y)
-            self.toggle_row(self.incoming, row)
-        except:
-            pass    
+##     def incoming_select_row(self, clist, event):
+##         try:
+##             row, col  = self.incoming.get_selection_info (event.x, event.y)
+##             self.toggle_row(self.incoming, row)
+##         except:
+##             pass    
         
-    def incoming_key_press (self, list, event):
-        if event.keyval == ord(" ") and self.incoming.focus_row != -1:
-            self.toggle_row (self.incoming, self.incoming.focus_row)   
+##     def incoming_key_press (self, list, event):
+##         if event.keyval == ord(" ") and self.incoming.focus_row != -1:
+##             self.toggle_row (self.incoming, self.incoming.focus_row)   
 
     def toggle_row (self, list, row):
         (val, row_data, header) = list.get_row_data(row)
@@ -171,22 +169,22 @@ class firewall:
         if self.customizeRadio.get_active():
 
             numdev = len(self.netdevices)
-            for i in range(numdev):
-                (val, row_data, header) = self.trusted.get_row_data (i)
+ ##            for i in range(numdev):
+##                 (val, row_data, header) = self.trusted.get_row_data (i)
                     
-                if val == 1:
-                    buf = buf + "--trust " + self.netdevices[i] + " "
-                elif val == 0:
-                    pass
+##                 if val == 1:
+##                     buf = buf + "--trust " + self.netdevices[i] + " "
+##                 elif val == 0:
+##                     pass
 
             list_keys = self.list.keys()
             numserv = len(self.list)
-            for i in list_keys:
-                (val, row_data, header) = self.incoming.get_row_data (list_keys.index(i))
-                if val == 1:
-                    buf = buf + "--" + self.list[i] + " "
-                elif val == 0:
-                    pass
+##             for i in list_keys:
+##                 (val, row_data, header) = self.incoming.get_row_data (list_keys.index(i))
+##                 if val == 1:
+##                     buf = buf + "--" + self.list[i] + " "
+##                 elif val == 0:
+##                     pass
 
             portlist = self.portsEntry.get_text()
             ports = []

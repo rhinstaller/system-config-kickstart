@@ -22,16 +22,11 @@
 ## Authors: Brent Fox <bfox@redhat.com>
 ##          Tammy Fox <tfox@redhat.com>
 
-from gtk import *
-from gnome.ui import *
-import GtkExtra
+import gtk
+import gtk.glade
 import string
 import savedialog
-
-import gtk
 import signal
-import libglade
-import gnome.ui
 
 class saveFile:
 	

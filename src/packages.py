@@ -21,11 +21,8 @@
 
 #Kickstart Configurator Package Selection
 
-from gtk import *
-import GtkExtra
-import string
-import checklist
-import libglade
+import gtk
+import gtk.glade
 import string
 
 
@@ -49,7 +46,7 @@ class Packages:
         "Games and Entertainment", "Everything"]
 
         for pkg in packageList:
-            checkbox = GtkCheckButton(pkg)
+            checkbox = gtk.CheckButton(pkg)
             self.list.pack_start(checkbox)
 
 

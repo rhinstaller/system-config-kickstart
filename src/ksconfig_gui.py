@@ -24,15 +24,16 @@
 
 #Patch contributed by Bill Huang - applied on 4/23/2001 for Japanese support
 
-from gtk import *
-from gnome.ui import *
-import GtkExtra
+#from gtk import *
+#from gnome.ui import *
+#import GtkExtra
 
 import gtk
+import gtk.glade
 import signal
-import libglade
-import gnome.ui
-import gnome.help
+#import libglade
+#import gnome.ui
+#import gnome.help
 
 import basic
 import bootloader
@@ -55,7 +56,10 @@ gettext.bindtextdomain ("ksconfig", "/usr/share/locale")
 gettext.textdomain ("ksconfig")
 _=gettext.gettext
 
-xml = libglade.GladeXML ("/usr/share/ksconfig/ksconfig.glade", domain="ksconfig")
+#gtk.glade.bindtextdomain(domain)
+#xml = gtk.glade.XML ("/usr/share/ksconfig/ksconfig-gtk2.glade", domain="ksconfig")
+xml = gtk.glade.XML ("./ksconfig-gtk2.glade", domain="ksconfig")
+#xml = libglade.GladeXML ("/usr/share/ksconfig/ksconfig.glade", domain="ksconfig")
 #xml = libglade.GladeXML ("./ksconfig.glade", domain="ksconfig")
 
 class ksconfig_gui:
@@ -65,6 +69,8 @@ class ksconfig_gui:
 
 	def __init__ (self):
 		self.toplevel = xml.get_widget("main_window")
+		print self.toplevel
+#		self.toplevel.set_title("Foobar")
 		self.toplevel.connect ("destroy", self.destroy)
 
 		#bring in widgets from glade file
@@ -110,17 +116,18 @@ class ksconfig_gui:
 
 		#populate category list
 		self.category_clist = xml.get_widget("category_clist")
-		self.category_clist.append([_("Basic Configuration")])
-		self.category_clist.append([_("Boot Loader Options")])		
-		self.category_clist.append([_("Installation Method")])
-		self.category_clist.append([_("Partition Information")])
-		self.category_clist.append([_("Network Configuration")])
-		self.category_clist.append([_("Authentication")])
-		self.category_clist.append([_("Firewall Configuration")])
-		self.category_clist.append([_("X Configuration")])
-		self.category_clist.append([_("Package Selection")])
-		self.category_clist.append([_("Pre-Installation Script")])
-		self.category_clist.append([_("Post-Installation Script")])		
+## 		self.category_clist.append([_("Basic Configuration")])
+## 		self.category_clist.append([_("Boot Loader Options")])		
+## 		self.category_clist.append([_("Installation Method")])
+## 		self.category_clist.append([_("Partition Information")])
+## 		self.category_clist.append([_("Network Configuration")])
+## 		self.category_clist.append([_("Authentication")])
+## 		self.category_clist.append([_("Firewall Configuration")])
+## 		self.category_clist.append([_("X Configuration")])
+## 		self.category_clist.append([_("Package Selection")])
+## 		self.category_clist.append([_("Pre-Installation Script")])
+## 		self.category_clist.append([_("Post-Installation Script")])
+		
 		gtk.mainloop ()
 
 	def select_category(self, event, row, column, data):
