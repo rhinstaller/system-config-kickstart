@@ -25,8 +25,6 @@ POFILES		= $(wildcard *.po)
 MOFILES		= $(patsubst %.po,%.mo,$(POFILES))
 PYSRC		= $(wildcard ../src/*.py)
 SRCFILES	= $(PYSRC) ksconfig.gladestrings
-#SRCFILES	= $(PYSRC) configdlg.gladestrings gui.gladestrings \
-#	progress.gladestrings advisorywin.gladestrings
 
 all::  update-po $(MOFILES)
 
@@ -41,14 +39,6 @@ $(POTFILE): $(SRCFILES)
 	msghack --append $(NLSPACKAGE).po $(POTFILE) -o $(POTFILE)-; \
 	mv -f $(POTFILE)- $(POTFILE); \
 	rm -f $(NLSPACKAGE).po
-#	$(XGETTEXT) --keyword=N_ gui.gladestrings; \
-#	msghack --append $(NLSPACKAGE).po $(POTFILE) -o $(POTFILE)-; \
-#	mv -f $(POTFILE)- $(POTFILE); \
-#	rm -f $(NLSPACKAGE).po
-#	$(XGETTEXT) --keyword=N_ progress.gladestrings; \
-#	msghack --append $(NLSPACKAGE).po $(POTFILE) -o $(POTFILE)-; \
-#	mv -f $(POTFILE)- $(POTFILE); \
-#	rm -f $(NLSPACKAGE).po
 
 update-po: Makefile $(POTFILE) refresh-po
 
