@@ -140,6 +140,9 @@ class bootloader:
             if item[:10] == "--password":
                 self.grub_password_entry.set_text(item[10:])
 
+        if "--append" in list:
+            self.parameters_entry.set_text(list[list.index(item)])
+
         if "--md5pass" in list:
             self.grub_password_encrypt_checkbutton.set_active(gtk.TRUE)
 
