@@ -5,14 +5,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: redhat-config-kickstart\n"
-"PO-Revision-Date: 2002-08-22 12:12+1000\n"
+"PO-Revision-Date: 2002-12-16 16:07+1000\n"
 "Last-Translator: Ben Wu <hpwu@redhat.com>\n"
 "Language-Team: Chinese (Traditional) <i18n-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: pygettext.py 1.1\n"
-"X-Generator: KBabel 1.0beta1\n"
+"X-Generator: KBabel 1.1\n"
 
 #: redhat-config-kickstart.gladestrings:279
 msgid "IP Address:"
@@ -85,7 +85,7 @@ msgstr "label35"
 
 #: redhat-config-kickstart.gladestrings:162
 msgid "Delete Network Device"
-msgstr ""
+msgstr "刪除網路裝置"
 
 #: redhat-config-kickstart.gladestrings:255
 #: redhat-config-kickstart.gladestrings:262
@@ -118,9 +118,8 @@ msgid "Firewall Configuration"
 msgstr "防火牆組態設定"
 
 #: redhat-config-kickstart.gladestrings:73
-#, fuzzy
 msgid "Default Language:"
-msgstr "語言:"
+msgstr "預設語言:"
 
 #: ../src/partWindow.py:86 redhat-config-kickstart.gladestrings:59
 msgid "ext3"
@@ -249,9 +248,8 @@ msgid "Specify hsync and vsync instead of monitor"
 msgstr "請指定水平與垂直掃描頻率，而不是指定螢幕"
 
 #: redhat-config-kickstart.gladestrings:277
-#, fuzzy
 msgid "Network Device:"
-msgstr "網路類型:"
+msgstr "網路裝置:"
 
 #: ../src/partWindow.py:88 ../src/partWindow.py:147
 msgid "software RAID"
@@ -355,9 +353,8 @@ msgid "Root Password:"
 msgstr "系統管理者(root)密碼"
 
 #: redhat-config-kickstart.gladestrings:276
-#, fuzzy
 msgid "Network Device Information"
-msgstr "網路組態設定"
+msgstr "網路裝置資訊"
 
 #: redhat-config-kickstart.gladestrings:157
 msgid "RAID"
@@ -435,7 +432,7 @@ msgstr "請輸入一個 HTTP 伺服器的目錄。"
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
-msgstr ""
+msgstr "命名為 %s 名稱的網路裝置已經存在，請選擇另一個裝置名稱"
 
 #: redhat-config-kickstart.gladestrings:54
 msgid "md15"
@@ -597,7 +594,7 @@ msgstr "LDAP Base 名稱:"
 
 #: redhat-config-kickstart.gladestrings:85
 msgid "Use UTC clock"
-msgstr ""
+msgstr "使用 UTC 時鐘"
 
 #: ../src/raidWindow.py:169
 msgid "You must select at least 3 partitions in order to use RAID %s"
@@ -619,16 +616,14 @@ msgstr "FTP 目錄:"
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
-msgstr ""
-"要建立一個新的 RAID 分割區，您必須指定一個硬碟裝置名稱或一個現有的分割區。"
+msgstr "要建立一個新的 RAID 分割區，您必須指定一個硬碟裝置名稱或一個現有的分割區。"
 
 #: redhat-config-kickstart.gladestrings:259
 msgid "label89"
 msgstr "label89"
 
 #: ../src/partWindow.py:410
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "掛載點 \"%s\" 已經被使用。  請選擇另一個掛載點。"
 
 #: ../src/partWindow.py:255 ../src/partWindow.py:520 ../src/raidWindow.py:205
@@ -646,7 +641,7 @@ msgstr "光碟機"
 
 #: ../src/redhat-config-kickstart.py:83
 msgid "Try running 'redhat-config-kickstart --help' for a list of options."
-msgstr ""
+msgstr "請試著執行 'redhat-config-kickstart --help' 以取得一系列的選項。"
 
 #: redhat-config-kickstart.gladestrings:197
 msgid "Hesiod Authentication"
@@ -674,7 +669,7 @@ msgstr "選擇預設防火牆設定:"
 
 #: ../src/redhat-config-kickstart.py:82
 msgid "Could not open display because no X server is running."
-msgstr ""
+msgstr "顯示無法開啟，因為沒有任何的 X 伺服程式執行中。"
 
 #: redhat-config-kickstart.gladestrings:174
 msgid "NIS Authentication"
@@ -809,7 +804,7 @@ msgstr "安裝開機管理程式在 MBR"
 
 #: ../src/kickstartGui.py:257
 msgid "The file \"%s\" cannot be accessed."
-msgstr ""
+msgstr "無法存取 \"%s\" 檔案。"
 
 #: redhat-config-kickstart.gladestrings:13
 msgid "Size (MB):"
@@ -834,7 +829,7 @@ msgstr "裝置"
 
 #: redhat-config-kickstart.gladestrings:160
 msgid "Add Network Device"
-msgstr ""
+msgstr "新增網路裝置"
 
 #: ../src/firewall.py:141
 msgid "Other ports: (1029:tcp)"
@@ -883,6 +878,15 @@ msgid ""
 "values from\n"
 "                        the kickstart file already filled in."
 msgstr ""
+"Usage: redhat-config-kickstart [--help] [--generate <檔案名稱>] "
+"[<kickstart 檔案名稱>]\n"
+"        \n"
+"--help                  列出這段訊息\n"
+"--generate <檔案名稱>   從目前的機器產生一個 kickstart 檔案，並將它寫入到\n"
+"                        <檔案名稱>。 這個選項可在主控台執行，\n"
+"                        所以它在不執行 X 的伺服器上將很有用。\n"
+"<kickstart 檔案名稱>    這個選項將導致 GUI 啟動所指定之 kickstart \n"
+"                        檔案中的數值。"
 
 #: redhat-config-kickstart.gladestrings:171
 msgid "Use broadcast to find NIS server"
@@ -980,9 +984,8 @@ msgid "Video Card"
 msgstr "顯示卡"
 
 #: redhat-config-kickstart.gladestrings:65
-#, fuzzy
 msgid "_Open File"
-msgstr "儲存檔案(_S)"
+msgstr "開啟檔案(_O)"
 
 #: redhat-config-kickstart.gladestrings:89
 msgid "Basic Configuration (required)"
@@ -1058,7 +1061,7 @@ msgstr "安裝完後系統將重新啟動"
 
 #: ../src/network.py:197
 msgid "Please fill in the network information"
-msgstr ""
+msgstr "請填入網路資訊"
 
 #: ../src/raidOptionsWindow.py:75
 msgid "You currently have %d software RAID partition(s) free to use."
@@ -1074,9 +1077,8 @@ msgid "Static IP"
 msgstr "靜態 IP"
 
 #: ../src/network.py:90
-#, fuzzy
 msgid "Network Type"
-msgstr "網路類型:"
+msgstr "網路類型"
 
 #: ../src/kickstartGui.py:146 redhat-config-kickstart.gladestrings:252
 msgid "Package Selection"
@@ -1196,7 +1198,7 @@ msgstr "無法讀取顯示卡資料庫"
 
 #: redhat-config-kickstart.gladestrings:161
 msgid "Edit Network Device"
-msgstr ""
+msgstr "編輯網路裝置"
 
 #: redhat-config-kickstart.gladestrings:66
 msgid "_Preview"
@@ -1445,3 +1447,4 @@ msgstr "離開(_Q)"
 
 #~ msgid "Select a Video Card"
 #~ msgstr "選取顯示卡"
+
