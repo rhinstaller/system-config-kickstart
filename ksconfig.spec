@@ -12,7 +12,6 @@ Source: ksconfig-%{version}.tar.gz
 BuildArch: noarch
 Requires: pygtk
 Requires: redhat-logos
-Requires: anaconda
 
 %description
 ksconfig is a graphical tool for creating kickstart files.  It will allow you to set most of the kickstart options.
