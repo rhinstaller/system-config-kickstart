@@ -22,8 +22,9 @@ subdirs:
 
 install:
 	mkdir -p $(INSTROOT)/usr/sbin
+	mkdir -p $(INSTROOT)$(PKGDATADIR)
 	install ksconfig.py $(INSTROOT)/usr/sbin/ksconfig
-	install *.py $(INSTROOT)/$(PKGDATADIR)
+	install *.py $(INSTROOT)$(PKGDATADIR)
 	for d in $(SUBDIRS); do \
 	(cd $$d; $(MAKE) INSTROOT=$(INSTROOT) MANDIR=$(MANDIR) install) \
 		|| case "$(MFLAGS)" in *k*) fail=yes;; *) exit 1;; esac; \
