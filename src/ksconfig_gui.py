@@ -111,7 +111,7 @@ class ksconfig_gui:
 			  } )
 
 		#populate category list
-		self.category_clist = xml.get_widget(_("category_clist"))
+		self.category_clist = xml.get_widget("category_clist")
 		self.category_clist.append([_("Basic Configuration")])
 		self.category_clist.append([_("Boot Loader Options")])		
 		self.category_clist.append([_("Installation Method")])
@@ -131,7 +131,7 @@ class ksconfig_gui:
 
 	#about box
 	def on_about_activate(self, args):
-		aboutDialog = gnome.ui.GnomeAbout ("Kickstart Configurator", VERSION,
+		aboutDialog = gnome.ui.GnomeAbout (_("Kickstart Configurator"), VERSION,
 						   "Copyright (c) 2000, 2001 Red Hat, Inc.",
 						   ["Brent Fox <bfox@redhat.com>",
 						    "Tammy Fox <tfox@redhat.com>"],
