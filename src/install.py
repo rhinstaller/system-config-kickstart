@@ -114,13 +114,13 @@ class install:
             data.append("#Use FTP installation media")
             buf = "url"
             buf = buf + " --url ftp://" + self.ftpserver_entry.get_text()
-            buf = buf + self.ftpdir_entry.get_text()		
+            buf = buf + "/" + self.ftpdir_entry.get_text()		
             data.append(buf)
         elif self.http_radiobutton.get_active():
             data.append("#Use HTTP installation media")
             buf = "url"
             buf = buf + " --url http://" + self.httpserver_entry.get_text()
-            buf = buf + self.httpdir_entry.get_text()        
+            buf = buf + "/" + self.httpdir_entry.get_text()        
             data.append(buf)
         elif self.hd_radiobutton.get_active():
             data.append("#Use Hard drive installation media")
