@@ -277,15 +277,22 @@ class basic:
         defaultLang = self.languageLookup(self.lang_combo.entry.get_text())
 
         if len(lang_list) == 0:
-            data.append("langsupport " + defaultLang + " --default " + defaultLang)
+            data.append("langsupport " + defaultLang)
 
         elif len(lang_list) > 0:
             list = string.join(lang_list, " ")
-            if defaultLang in lang_list:                
-                data.append("langsupport " + list + " --default " + defaultLang)
+            if len(lang_list) == 1:
+                if defaultLang in lang_list:
+                    data.append("langsupport " + defaultLang)
+                else:
+                    data.append("langsupport " + list + " --default " + defaultLang)
+                
             else:
-                list = list + " " + defaultLang
-                data.append("langsupport " + list + " --default " + defaultLang)
+                if defaultLang in lang_list:                
+                    data.append("langsupport " + list + " --default " + defaultLang)
+                else:
+                    list = list + " " + defaultLang
+                    data.append("langsupport " + list + " --default " + defaultLang)
                 
         data.append("")
         data.append("#System keyboard")
