@@ -775,7 +775,7 @@
 	    <class>GtkFrame</class>
 	    <name>install_method_frame</name>
 	    <border_width>6</border_width>
-	    <label>Installation Method</label>
+	    <label>Installation Source</label>
 	    <label_xalign>0</label_xalign>
 	    <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
 
@@ -786,33 +786,33 @@
 	      <spacing>0</spacing>
 
 	      <widget>
+		<class>GtkLabel</class>
+		<name>label95</name>
+		<label>Choose the Installation Method:</label>
+		<justify>GTK_JUSTIFY_CENTER</justify>
+		<wrap>False</wrap>
+		<xalign>0</xalign>
+		<yalign>0</yalign>
+		<xpad>10</xpad>
+		<ypad>0</ypad>
+		<child>
+		  <padding>8</padding>
+		  <expand>False</expand>
+		  <fill>False</fill>
+		</child>
+	      </widget>
+
+	      <widget>
 		<class>GtkHBox</class>
 		<name>hbox2</name>
 		<border_width>8</border_width>
 		<homogeneous>False</homogeneous>
 		<spacing>9</spacing>
 		<child>
-		  <padding>0</padding>
+		  <padding>8</padding>
 		  <expand>False</expand>
 		  <fill>True</fill>
 		</child>
-
-		<widget>
-		  <class>GtkLabel</class>
-		  <name>label36</name>
-		  <label>Installation Method: </label>
-		  <justify>GTK_JUSTIFY_CENTER</justify>
-		  <wrap>False</wrap>
-		  <xalign>0.5</xalign>
-		  <yalign>0.5</yalign>
-		  <xpad>0</xpad>
-		  <ypad>0</ypad>
-		  <child>
-		    <padding>0</padding>
-		    <expand>False</expand>
-		    <fill>False</fill>
-		  </child>
-		</widget>
 
 		<widget>
 		  <class>GtkRadioButton</class>
@@ -939,7 +939,7 @@
 		<class>GtkHSeparator</class>
 		<name>hseparator1</name>
 		<child>
-		  <padding>15</padding>
+		  <padding>0</padding>
 		  <expand>False</expand>
 		  <fill>True</fill>
 		</child>
@@ -948,13 +948,14 @@
 	      <widget>
 		<class>GtkTable</class>
 		<name>install_method_table</name>
+		<border_width>6</border_width>
 		<rows>6</rows>
 		<columns>2</columns>
 		<homogeneous>False</homogeneous>
 		<row_spacing>5</row_spacing>
 		<column_spacing>12</column_spacing>
 		<child>
-		  <padding>6</padding>
+		  <padding>10</padding>
 		  <expand>False</expand>
 		  <fill>True</fill>
 		</child>
