@@ -10,10 +10,10 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-29 17:11-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <athai007@yahoo.com>\n"
+"Language-Team: LANGUAGE <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. # Kickstart Configurator - A graphical kickstart file generator
@@ -417,51 +417,51 @@ msgstr "Tạo Tệp Tự Cài(KickStart)"
 #. bring in scripts function
 #: ../src/kickstartGui.py:138
 msgid "Subsection"
-msgstr ""
+msgstr "Phần Phụ"
 
 #: ../src/kickstartGui.py:142
 msgid "Basic Configuration"
-msgstr ""
+msgstr "Cấu Hình Cơ Bản"
 
 #: ../src/kickstartGui.py:142
 msgid "Installation Method"
-msgstr ""
+msgstr "Phương Thức Cài Đặt"
 
 #: ../src/kickstartGui.py:143
 msgid "Boot Loader Options"
-msgstr ""
+msgstr "Cấu Hình Của Bộ Khởi Động"
 
 #: ../src/kickstartGui.py:143
 msgid "Partition Information"
-msgstr ""
+msgstr "Thông Tin Những Lát Dĩa Cứng"
 
 #: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:165
 msgid "Network Configuration"
-msgstr ""
+msgstr "Cấu Hình Mạng"
 
 #: ../src/kickstartGui.py:144
 msgid "Authentication"
-msgstr ""
+msgstr "Chứng Nhận"
 
 #: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:218
 msgid "Firewall Configuration"
-msgstr ""
+msgstr "Cấu Hình Màng Lửa"
 
 #: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:248
 msgid "Display Configuration"
-msgstr ""
+msgstr "Cấu Hình Bộ Hiển Thị"
 
 #: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:259
 msgid "Package Selection"
-msgstr ""
+msgstr "Chọn Gói"
 
 #: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:265
 msgid "Pre-Installation Script"
-msgstr ""
+msgstr "Trình Chạy Trước Khi Cài"
 
 #: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:272
 msgid "Post-Installation Script"
-msgstr ""
+msgstr "Trình Chạy Sau Khi Cài"
 
 #. show gui
 #. about box
@@ -473,22 +473,27 @@ msgid ""
 " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
 " A graphical interface for creating a kickstart file"
 msgstr ""
+"Kickstart Configurator @VERSION@\n"
+" Copyright (c) 2000-2002 Red Hat, Inc.\n"
+" Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
+" Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
+" Giao Diện giúp tạo lập một Trình Tự Cài"
 
 #: ../src/kickstartGui.py:194
 msgid "About Kickstart Configurator"
-msgstr ""
+msgstr "Sơ Lược Về Bộ Cấu Hình Tự Cài"
 
 #. display help manual
 #: ../src/kickstartGui.py:224
 msgid "Help is not available."
-msgstr ""
+msgstr "Không có phần Trợ Giúp."
 
 #. get all buffers to save to file
 #. only do these things in installs, not upgrades
 #: ../src/kickstartGui.py:273
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
-msgstr ""
+msgstr "Không mở được Tệp \"%s\"."
 
 #. show chosen options for preview
 #. show preview dialog window
@@ -540,22 +545,22 @@ msgstr ""
 #. #
 #: ../src/network.py:87
 msgid "Device"
-msgstr ""
+msgstr "Thiết Bị"
 
 #: ../src/network.py:90
 msgid "Network Type"
-msgstr ""
+msgstr "Loại Mạng"
 
 #. Let's find the last eth device in the list and increment by one to
 #. fill in the option menu with the next device
 #: ../src/network.py:109 ../src/network.py:155 ../src/network.py:223
 #: ../src/network.py:274 ../src/network.py:415
 msgid "Static IP"
-msgstr ""
+msgstr "IP Tĩnh"
 
 #: ../src/network.py:213
 msgid "Please fill in the network information"
-msgstr ""
+msgstr "Xin điền các thông số của mạng"
 
 #: ../src/network.py:318
 #, python-format
@@ -563,6 +568,7 @@ msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
 msgstr ""
+"Đã có một thiết bị cùng tên %s trên mạng.  Xin chọn tên khác Tên Thiết Bị"
 
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
@@ -628,6 +634,8 @@ msgid ""
 "Device/\n"
 "Partition Number"
 msgstr ""
+"Thiết Bị/\n"
+"Lát Dĩa Cứng"
 
 #. col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
 #: ../src/partition.py:75
@@ -635,18 +643,20 @@ msgid ""
 "Mount Point/\n"
 "RAID"
 msgstr ""
+"Nơi Gắn Tệp/\n"
+"RAID"
 
 #: ../src/partition.py:77
 msgid "Type"
-msgstr ""
+msgstr "Loại"
 
 #: ../src/partition.py:79
 msgid "Format"
-msgstr ""
+msgstr "Định Khuôn Dạng"
 
 #: ../src/partition.py:81
 msgid "Size (MB)"
-msgstr ""
+msgstr "Cỡ (MB)"
 
 #. initialize the child classes
 #. #         #XXX-FIXME-FOR TESTING ONLY
@@ -696,7 +706,7 @@ msgstr ""
 #. #         self.part_store.set_value(part_iter, 5, part_object)
 #: ../src/partition.py:151 ../src/partition.py:181
 msgid "Please select a partition from the list."
-msgstr ""
+msgstr "Xin chọn 1 Lát Dĩa từ danh sách."
 
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
@@ -718,49 +728,49 @@ msgstr ""
 #. #
 #: ../src/partWindow.py:83 system-config-kickstart.gladestrings:58
 msgid "ext2"
-msgstr ""
+msgstr "ext2"
 
 #: ../src/partWindow.py:83 system-config-kickstart.gladestrings:59
 msgid "ext3"
-msgstr ""
+msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
 #: ../src/partWindow.py:85 ../src/partWindow.py:148
 msgid "software RAID"
-msgstr ""
+msgstr "RAID mềm"
 
 #: ../src/partWindow.py:86 system-config-kickstart.gladestrings:60
 msgid "swap"
-msgstr ""
+msgstr "swap"
 
 #: ../src/partWindow.py:86 system-config-kickstart.gladestrings:61
 msgid "vfat"
-msgstr ""
+msgstr "vfat"
 
 #: ../src/partWindow.py:87
 msgid "PPC PReP Boot"
-msgstr ""
+msgstr "PPC PReP Boot"
 
 #. XXX - have to do this after the show_all due to a bug in gtkSpinButton, I suspect
 #. If the current iter is the only child, delete the parent and the child
 #. If there are other children, just delete this child
 #: ../src/partWindow.py:260 ../src/partWindow.py:535 ../src/raidWindow.py:212
 msgid "Yes"
-msgstr ""
+msgstr "Đúng"
 
 #: ../src/partWindow.py:262 ../src/partWindow.py:537 ../src/raidWindow.py:214
 msgid "No"
-msgstr ""
+msgstr "Sai"
 
 #. If they didn't specify a device, create a group called "Auto"
 #: ../src/partWindow.py:285 ../src/partWindow.py:300 ../src/partWindow.py:319
 #: ../src/partWindow.py:333
 msgid "Auto"
-msgstr ""
+msgstr "Tự Động"
 
 #: ../src/partWindow.py:294
 msgid "Hard Drives"
-msgstr ""
+msgstr "Dĩa Cứng"
 
 #. # size stuff
 #. Let's do some error checking to make sure things make sense
@@ -772,7 +782,7 @@ msgstr ""
 #. It's not raid and it's not swap, so it must be a regular partition
 #: ../src/partWindow.py:420
 msgid "Specify a mount point for the partition."
-msgstr ""
+msgstr "Xin chĩ rõ Thư Mục nào dùng để gắn Lát Dĩa Nầy."
 
 #. Check to see if the mount point has already been used
 #. They are trying to use a mount point already in use.  Let's complain
@@ -780,7 +790,7 @@ msgstr ""
 #, python-format
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr ""
+msgstr "Thư Mục \"%s\" đã được dùng.  Xin chọn Thư Mục khác."
 
 #. This will scan the part_store and see if there are any duplicate mount points
 #: ../src/partWindow.py:449
@@ -788,6 +798,8 @@ msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
 msgstr ""
+"Để tạo một Lát Dĩa RAID mới, bạn phải chỉ định tên của một dĩa cứnghoặc một "
+"Lát Dĩa(partition) cứng hiện có."
 
 #. If all the checks pass, then return
 #. Don't iterate if we're counting the object that's being edited
