@@ -24,6 +24,7 @@ import gtk.glade
 import gobject
 import string
 import getopt
+from rhpl.xhwstate import *
 
 class xconfig:
 
@@ -116,31 +117,33 @@ class xconfig:
                 self.card_store.set_value(iter, 0, name)
 
     def fill_monitor_list(self):
-        #add monitors to list
-        try:
-            monitorFile = open("/usr/share/hwdata/MonitorsDB", "r")
-        except:
-            raise RuntimeError, (_("Could not read monitor database"))
 
-        lines=monitorFile.readlines()
-        lines.sort()
-        monitorFile.close()
-        mon_list = []
+	hardware_state = XF86HardwareState(None)
+	db = hardware_state.monitor.readMonitorsDB()
+	l = db.keys()
+	l.sort()
+	mon_list = []
         
-        for line in lines:
-            line = string.strip (line)
+	#put Generic LCD and Generic CRT at the front of the list
+        tmp = l[l.index("Generic LCD Display")]
+        l.remove(l[l.index("Generic LCD Display")])
+        l = [tmp] + l
+                                                                                                                             
+        tmp = l[l.index("Generic CRT Display")]
+        l.remove(l[l.index("Generic CRT Display")])
+        l = [tmp] + l
 
-            if line and line[0] != "#":
-                values=string.split(line,";")
-                manufacturer = string.strip(values[0])
-                model = string.strip(values[1])
-                id = string.strip(values[2])
-                hsync = string.strip(values[3])
-                vsync = string.strip(values[4])
-                if model not in mon_list:
-                    mon_list.append(model)
-                    iter = self.monitor_store.append()
-                    self.monitor_store.set_value(iter, 0, model)
+        
+        for manufacturer in l:
+		for mon in db[manufacturer]:
+                        model = mon[0]
+                        id = mon[1]
+                        hsync = mon[2]
+                        vsync = mon[3]
+                        if model not in mon_list:
+                            mon_list.append(model)
+                            iter = self.monitor_store.append()
+                            self.monitor_store.set_value(iter, 0, model)
 
     def on_card_probe_check_toggled(self, *args):
         self.card_vbox.set_sensitive(not self.card_probe_check.get_active())
