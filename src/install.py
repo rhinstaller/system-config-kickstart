@@ -91,7 +91,7 @@ class install:
         elif self.http_radiobutton.get_active():
             buf = buf + "\n" + "url"
             buf = buf + " --url http://" + self.httpserver_entry.get_text()
-            buf = buf + self.httpdir.get_text()        
+            buf = buf + self.httpdir_entry.get_text()        
         elif self.hd_radiobutton.get_active():
             buf = buf + "\n" + "harddrive"
             buf = buf + " --dir " + self.hddir_entry.get_text()
