@@ -10,6 +10,8 @@
   <language>C</language>
   <gnome_support>True</gnome_support>
   <gettext_support>True</gettext_support>
+  <output_translatable_strings>True</output_translatable_strings>
+  <translatable_strings_file>ksconfig.gladestrings</translatable_strings_file>
 </project>
 
 <widget>
@@ -4118,7 +4120,7 @@
 		  <last_modification_time>Fri, 06 Jul 2001 01:12:14 GMT</last_modification_time>
 		</signal>
 		<label>Configure the X Window System</label>
-		<active>True</active>
+		<active>False</active>
 		<draw_indicator>True</draw_indicator>
 		<child>
 		  <padding>0</padding>
@@ -4130,6 +4132,7 @@
 	      <widget>
 		<class>GtkNotebook</class>
 		<name>xconfig_notebook</name>
+		<sensitive>False</sensitive>
 		<can_focus>True</can_focus>
 		<show_tabs>True</show_tabs>
 		<show_border>True</show_border>
