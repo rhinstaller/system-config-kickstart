@@ -23,13 +23,25 @@
 
 import gtk
 import gtk.glade
+import gobject
 import string
 
 
 class Packages:
 
     def __init__(self, xml):
-        self.list = xml.get_widget("list")
+        self.package_view = xml.get_widget("package_view")
+        self.package_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
+        self.package_view.set_model(self.package_store)
+        self.checkbox = gtk.CellRendererToggle()
+        col = gtk.TreeViewColumn('', self.checkbox, active = 0)
+        col.set_fixed_width(20)
+        col.set_clickable(gtk.TRUE)
+        self.checkbox.connect("toggled", self.packageToggled)
+        self.package_view.append_column(col)
+
+        col = gtk.TreeViewColumn("", gtk.CellRendererText(), text=1)
+        self.package_view.append_column(col)
 
         packageList = ["Printing Support","Classic X Window System",
         "X Window System","GNOME","KDE",
@@ -46,19 +58,26 @@ class Packages:
         "Games and Entertainment", "Everything"]
 
         for pkg in packageList:
-            checkbox = gtk.CheckButton(pkg)
-            self.list.pack_start(checkbox)
+            iter = self.package_store.append()
+            self.package_store.set_value(iter, 1, pkg)
 
+    def packageToggled(self, data, row):
+        iter = self.package_store.get_iter((int(row),))
+        val = self.package_store.get_value(iter, 0)
+        self.package_store.set_value(iter, 0 , not val)
 
     def getData(self):
         data = []
         data.append("")
         data.append("%packages")
 
-        boxes = self.list.children()
-        for box in boxes:
-            if box.get_active():
-                package = box.children()[0]
-                label = package.get()
-                data.append("@" + label) 
+        iter = self.package_store.get_iter_root()
+        next = 1
+
+        #Loop over the package list and see what was selected
+        while next:
+            if self.package_store.get_value(iter, 0) == gtk.TRUE:
+                data.append("@" + self.package_store.get_value(iter, 1))
+            next = self.package_store.iter_next(iter)
+
         return data
