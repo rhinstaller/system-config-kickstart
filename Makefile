@@ -45,7 +45,8 @@ install:
 archive:
 	cvs tag -F $(CVSTAG) .
 	@rm -rf /tmp/${PKGNAME}-$(VERSION) /tmp/${PKGNAME}
-	@cd /tmp; cvs export -r$(CVSTAG) ${PKGNAME}
+	@cvsroot=`cat CVS/Root` 2>/dev/null; \
+	cd /tmp; cvs -d$$cvsroot export -r$(CVSTAG) ${PKGNAME}; exit
 	@mv /tmp/${PKGNAME} /tmp/${PKGNAME}-$(VERSION)
 	@dir=$$PWD; cd /tmp; tar --bzip2 -cSpf $$dir/${PKGNAME}-$(VERSION).tar.bz2 ${PKGNAME}-$(VERSION)
 	@rm -rf /tmp/${PKGNAME}-$(VERSION)
