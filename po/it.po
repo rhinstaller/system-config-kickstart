@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "POT-Creation-Date: 2001-07-19 11:24-0400\n"
-"PO-Revision-Date: 2002-08-05 11:05GMT\n"
+"PO-Revision-Date: 2002-08-08 10:44GMT\n"
 "Last-Translator: Marisa <marisa@redhat.it>\n"
 "Language-Team:  <it@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -100,8 +100,8 @@ msgstr "Dimensioni opzionali aggiuntive"
 #: ../src/partWindow.py:483
 msgid ""
 "The partition you specified does not begin with \"hd\" or \"sd\".  "
-"Partitions must have a valid device name and partition number such as \"hda1"
-"\" or \"sda3\"."
+"Partitions must have a valid device name and partition number such as "
+"\"hda1\" or \"sda3\"."
 msgstr ""
 "La partizione specificata non inizia con \"hd\" o \"sd\". Le partizioni "
 "devono avere un nome e un numero valido quale \"hda1\" o \"sda3\"."
@@ -171,9 +171,8 @@ msgid "Use linear mode"
 msgstr "Utilizzare la modalità lineare"
 
 #: redhat-config-kickstart.gladestrings:147
-#, fuzzy
 msgid "Remove all existing partitions"
-msgstr "Rimuovere le partizioni esistenti:"
+msgstr "Rimuovere le partizioni esistenti"
 
 #: redhat-config-kickstart.gladestrings:258
 msgid "GNOME"
@@ -322,9 +321,8 @@ msgid "Boot Loader Options"
 msgstr "Opzioni del boot loader"
 
 #: redhat-config-kickstart.gladestrings:149
-#, fuzzy
 msgid "Preserve existing partitions"
-msgstr "Rimuovere le partizioni esistenti:"
+msgstr "Mantenere le partizioni esistenti"
 
 #: redhat-config-kickstart.gladestrings:127
 msgid "Upgrade existing boot loader"
@@ -505,14 +503,12 @@ msgid "md3"
 msgstr "md3"
 
 #: redhat-config-kickstart.gladestrings:148
-#, fuzzy
 msgid "Remove existing Linux partitions"
-msgstr "Rimuovere le partizioni esistenti:"
+msgstr "Rimuovere le partizioni Linux esistenti"
 
 #: redhat-config-kickstart.gladestrings:146
-#, fuzzy
 msgid "Do not clear Master Boot Record"
-msgstr "Eliminare il Master Boot Record:"
+msgstr "Non eliminare il Master Boot Record"
 
 #: redhat-config-kickstart.gladestrings:45
 msgid "md6"
@@ -531,9 +527,8 @@ msgid "Other ports: (1029:tcp)"
 msgstr "Altre porte: (1029:tcp)"
 
 #: redhat-config-kickstart.gladestrings:151
-#, fuzzy
 msgid "Do not initialize the disk label"
-msgstr "Inizializzare la disk label:"
+msgstr "Non inizializzare la disk label"
 
 #: redhat-config-kickstart.gladestrings:121
 msgid "Hard Drive Directory:"
@@ -592,9 +587,8 @@ msgid "LDAP Base Name: "
 msgstr "Nome di base LDAP:"
 
 #: redhat-config-kickstart.gladestrings:145
-#, fuzzy
 msgid "Clear Master Boot Record"
-msgstr "Eliminare il Master Boot Record:"
+msgstr "Eliminare il Master Boot Record"
 
 #: ../src/raidWindow.py:127
 msgid "You must select at least 3 partitions in order to use RAID %s"
@@ -628,6 +622,7 @@ msgstr "label89"
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
+"Il mount point \"%s\" è già in uso. Selezionare un altro mount point."
 
 #: ../src/partWindow.py:239 ../src/partWindow.py:267 ../src/raidWindow.py:156
 msgid "No"
@@ -808,10 +803,10 @@ msgstr "md5"
 
 #: redhat-config-kickstart.gladestrings:305
 msgid ""
-"Software RAID allows you to combine several disks into a larger RAID "
-"device.  A RAID device can be configured to provide additional speed and "
-"reliability compared to using an individual drive.  For more information on "
-"using RAID devices please consult the kickstart documentation."
+"Software RAID allows you to combine several disks into a larger RAID device. "
+" A RAID device can be configured to provide additional speed and reliability "
+"compared to using an individual drive.  For more information on using RAID "
+"devices please consult the kickstart documentation."
 msgstr ""
 "Il software RAID permette di unire diversi dischi in un unico dispositivo "
 "RAID. I dispositivi RAID possono essere configurati per fornire velocità e "
@@ -823,18 +818,16 @@ msgid "Encrypt root password"
 msgstr "Criptare password di root"
 
 #: redhat-config-kickstart.gladestrings:150
-#, fuzzy
 msgid "Initialize the disk label"
-msgstr "Inizializzare la disk label:"
+msgstr "Inizializzare la disk label"
 
 #: redhat-config-kickstart.gladestrings:208
 msgid "Enable LDAP"
 msgstr "Attiva LDAP"
 
 #: redhat-config-kickstart.gladestrings:90
-#, fuzzy
 msgid "Upgrade an existing installation"
-msgstr "Aggiornare il boot loader esistente"
+msgstr "Aggiornare l'installazione esistente"
 
 #: redhat-config-kickstart.gladestrings:203
 msgid "Use broadcast to find NIS server"
@@ -844,7 +837,7 @@ msgstr "Utilizzare il broadcast per trovare il server NIS"
 msgid "Please select a partition from the list."
 msgstr "Selezionare una partizione dall'elenco."
 
-#: ../src/basic.py:272 ../src/partition.py:299 ../src/partWindow.py:490
+#: ../src/basic.py:272 ../src/partWindow.py:490 ../src/partition.py:299
 #: ../src/raidWindow.py:190
 msgid "Error"
 msgstr "Errore"
@@ -1159,8 +1152,8 @@ msgid ""
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
 msgstr ""
 "Per utilizzare RAID, è necessario creare almeno due partizioni del tipo "
-"'software RAID'. Quindi è possibile creare un dispositivo RAID da formattare "
-"e montare."
+"'software RAID'. Quindi è possibile creare un dispositivo RAID da "
+"formattare e montare."
 
 #: redhat-config-kickstart.gladestrings:273
 msgid "Horizontal Sync:"
@@ -1183,9 +1176,8 @@ msgid "SMB Servers:"
 msgstr "Server SMB:"
 
 #: redhat-config-kickstart.gladestrings:89
-#, fuzzy
 msgid "Perform new installation"
-msgstr "Riavviare il sistema dopo l'installazione"
+msgstr "Eseguire una nuova installazione"
 
 #: redhat-config-kickstart.gladestrings:131
 msgid "Use GRUB password: "
@@ -1218,27 +1210,3 @@ msgstr "Salva su file"
 #: redhat-config-kickstart.gladestrings:67
 msgid "_Quit"
 msgstr "_Chiudi"
-
-#~ msgid "_Yes"
-#~ msgstr "_Sì"
-
-#~ msgid "A_ll"
-#~ msgstr "T_utti"
-
-#~ msgid "N_one"
-#~ msgstr "N_essuno"
-
-#~ msgid "L_inux"
-#~ msgstr "L_inux"
-
-#~ msgid "Upgrade"
-#~ msgstr "Aggiorna"
-
-#~ msgid "Install"
-#~ msgstr "Installa"
-
-#~ msgid "Message"
-#~ msgstr "Messaggio"
-
-#~ msgid "_No"
-#~ msgstr "_No"
