@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: ksconfig
-Version: 1.2
-Release: 2 
+Version: 1.9
+Release: 1 
 URL: http://www.redhat.com
 Copyright: GPL
 ExclusiveOS: Linux
@@ -21,7 +21,6 @@ ksconfig is a graphical tool for creating kickstart files.  It will allow you to
 
 %install
 make INSTROOT=$RPM_BUILD_ROOT install
-#make install
 
 mkdir -p $RPM_BUILD_ROOT/etc/X11/applnk/System
 cat > $RPM_BUILD_ROOT/etc/X11/applnk/System/ksconfig.desktop << EOF
@@ -49,6 +48,20 @@ rm -rf $RPM_BUILD_ROOT
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
+* Tue Jun 26 2001 Tammy Fox <tfox@redhat.com>
+- added emulate three buttons and probe for mouse options
+- added preview configuration window
+- started tab for X Configuration
+- modified basic.py to use dictionaries to store combo box selections
+
+* Sat Jun 23 2001 Brent Fox <bfox@redhat.com>
+- fixed auth callback for new interface
+- started working on new add/edit/delete partitions windows
+
+* Fri Jun 22 2001 Tammy Fox <tfox@redhat.com>
+- redesigned interface
+- redesigned code to be more modular
+
 * Wed Jun 13 2001 Tammy Fox <tfox@redhat.com>
 - added more info to man page
 
