@@ -55,9 +55,9 @@ class scripts:
         return buf
 
     def postData(self):
-        post_command = "%post"
+        post_command = "%post "
         if self.chroot_checkbutton.get_active():
-            post_command = post_command + " --nochroot  "
+            post_command = post_command + "--nochroot  "
         if self.interpreter_checkbutton.get_active():
             post_command = post_command + "--interpreter " + self.interpreter_entry.get_text()
         post_buffer = self.post_textview.get_buffer()
