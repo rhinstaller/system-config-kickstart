@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
-Version: 2.3.20
+Version: 2.3.21
 Release: 1
 URL: http://www.redhat.com
 License: GPL
@@ -56,6 +56,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Thu Feb 12 2004 Brent Fox <bfox@redhat.com> 2.3.21-1
+- fix import path in profileSystem.py (bug #108127)
+
 * Tue Oct 14 2003 Brent Fox <bfox@redhat.com> 2.3.20-1
 - remove SQL package group (bug #105619)
 
