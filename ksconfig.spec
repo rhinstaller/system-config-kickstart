@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: ksconfig
 Version: 2.0
-Release: 7
+Release: 8
 URL: http://www.redhat.com
 Copyright: GPL
 ExclusiveOS: Linux
@@ -49,6 +49,9 @@ fi
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
+* Mon May 13 2002 Brent Fox <bfox@redhat.com> 2.0-8
+- Fixed bug #64835 to make UK keyboard 'uk' not 'gb'
+
 * Mon Apr 15 2002 Trond Eivind Glomsrød <teg@redhat.com> 2.0-7
 - Update translations
 
