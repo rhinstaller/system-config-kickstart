@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.5.2
+Version: 2.5.3
 Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -17,6 +17,7 @@ Requires: pygtk2-libglade
 Requires: python2
 Requires: hwdata
 Requires: rhpl
+Requires: system-config-language
 
 %description
 Kickstart Configurator is a graphical tool for creating kickstart files.  
@@ -57,6 +58,10 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Tue Jan  6 2004 Brent Fox <bfox@redhat.com> 2.5.3-1
+- add a requires for system-config-language
+- get list of langs from system-config-language
+
 * Mon Dec  1 2003 Brent Fox <bfox@redhat.com> 2.5.2-1
 - change sync rate string (bug #107500)
 
