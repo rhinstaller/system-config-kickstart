@@ -96,7 +96,20 @@ class KickstartParser:
         if packageList != []:
             tokens = string.split(packageList[0])
             self.kickstartData.setPackage(tokens[1:])
-            self.kickstartData.setPackageList(packageList[1:])
+
+            groupList = []
+            individualList = []
+
+            for pkg in packageList[1:]:
+                if pkg[0] == "@":
+                    pkg = string.replace(pkg, "@", "")
+                    pkg = string.strip(pkg)
+                    groupList.append(pkg)
+                else:
+                    individualList.append(pkg)
+            
+            self.kickstartData.setPackageGroupList(groupList)
+            self.kickstartData.setIndividualPackageList(individualList)            
 
         if preList != []:
             tokens = string.split(preList[0])

@@ -185,7 +185,7 @@ class Packages:
         packageList = self.getPkgData(self.development_store, packageList)
         packageList = self.getPkgData(self.system_store, packageList)
 
-        self.kickstartData.setPackageList(packageList)
+        self.kickstartData.setPackageGroupList(packageList)
 
     def getPkgData(self, store, packageList):
         iter = store.get_iter_first()
@@ -216,7 +216,7 @@ class Packages:
                 elif opt == "--ignoredeps":
                     self.ignore_deps_radio.set_active(gtk.TRUE)
 
-        packageList = self.kickstartData.getPackageList()
+        packageList = self.kickstartData.getPackageGroupList()
 
         for package in packageList:
             package = string.replace(package, "@", "")

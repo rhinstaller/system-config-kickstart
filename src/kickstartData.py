@@ -33,7 +33,8 @@ class KickstartData:
         self.xconfig = None
         self.partList = []
         self.raidList = []
-        self.packageList = []
+        self.packageGroupList = []
+        self.individualPackageList = []
         self.preLine = None
         self.preList = []
         self.postLine = None
@@ -275,11 +276,18 @@ class KickstartData:
     def getPackage(self):
         return self.package
 
-    def setPackageList(self, args):
-        self.packageList = args
+    def setPackageGroupList(self, args):
+        print args
+        self.packageGroupList = args
 
-    def getPackageList(self):
-        return self.packageList
+    def getPackageGroupList(self):
+        return self.packageGroupList
+
+    def setIndividualPackageList(self, args):
+        self.individualPackageList = args
+
+    def getIndividualPackageList(self):
+        return self.individualPackageList
 
     def setPreLine(self, args):
         if args == None:
@@ -423,9 +431,13 @@ class KickstartData:
             file.append("#Package install information")
             file.append("%packages --" + string.join(self.getPackage(), " "))
 
-            if self.getPackageList() != []:
-                for package in self.getPackageList():
+            if self.getPackageGroupList() != []:
+                for package in self.getPackageGroupList():
                     file.append("@ %s" % package)
+
+            if self.getIndividualPackageList() != []:
+                for package in self.getIndividualPackageList():
+                    file.append(package)
 
         if self.getPreLine():
             file.append("%pre " + self.getPreLine())
