@@ -14,59 +14,79 @@ msgstr ""
 "Generated-By: pygettext.py 1.1\n"
 "X-Generator: KBabel 0.9.6\n"
 
-#: ksconfig.gladestrings:126
+#: ksconfig.gladestrings:43
+#, fuzzy
+msgid "_Quit"
+msgstr "编辑(_E)"
+
+#: ksconfig.gladestrings:202
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS："
 
-#: ksconfig.gladestrings:70
+#: ksconfig.gladestrings:128
 msgid "Initialize the Disk Label:"
 msgstr "初始化磁盘标签："
 
-#: ksconfig.gladestrings:77
+#: ksconfig.gladestrings:131
 msgid "_Add"
 msgstr "添加(_A)"
 
-#: ksconfig.gladestrings:29
+#: ksconfig.gladestrings:78
+#, fuzzy
+msgid "Use GRUB password: "
+msgstr "使用 GRUB 口令："
+
+#: ksconfig.gladestrings:223
+msgid "Security Level"
+msgstr "安全级别"
+
+#: ksconfig.gladestrings:67
 msgid "_First sector of boot partition"
 msgstr "引导分区的第一扇区(_F)"
 
-#: ksconfig.gladestrings:131
+#: ksconfig.gladestrings:209
 msgid "SMB Servers:"
 msgstr "SMB 服务器："
 
-#: ksconfig.gladestrings:208
+#: ksconfig.gladestrings:28
 msgid "Format partition"
 msgstr "格式化分区"
 
-#: ksconfig.gladestrings:56
+#: ksconfig.gladestrings:112
 msgid "HTTP Directory:"
 msgstr "HTTP 目录："
 
-#: ksconfig.gladestrings:205
-msgid "Use existing partition (onpart)"
-msgstr "使用现存分区 (onpart)"
-
-#: ksconfig.gladestrings:162
+#: ksconfig.gladestrings:248
 msgid "kHz"
 msgstr "千赫兹"
 
-#: ksconfig.gladestrings:164
+#: ksconfig.gladestrings:250
 msgid "Horizontal Sync:"
 msgstr "水平频率："
 
-#: ksconfig.gladestrings:23
+#: ksconfig.gladestrings:68
+#, fuzzy
+msgid "Choose boot loader: "
+msgstr "选择引导装载程序："
+
+#: ksconfig.gladestrings:64
 msgid "label28"
 msgstr "label28"
 
-#: ksconfig.gladestrings:47 ksconfig.gladestrings:60
+#: ../src/partWindow.py:370
+#, fuzzy
+msgid "Specify an existing partition to use."
+msgstr "使用现存分区 (onpart)"
+
+#: ksconfig.gladestrings:92 ksconfig.gladestrings:118
 msgid "Hard Drive"
 msgstr "硬盘驱动器"
 
-#: ksconfig.gladestrings:75
-msgid "Size (MB)"
-msgstr "大小 (MB)"
+#: ksconfig.gladestrings:243
+msgid "Probe for monitor"
+msgstr ""
 
-#: ksconfig.gladestrings:174
+#: ksconfig.gladestrings:265
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %post command at the beginning."
@@ -74,735 +94,901 @@ msgstr ""
 "警告：脚本中的错误可能会导致你的反冲启动安装失败。在起始处请不要包括 %post 命"
 "令。"
 
-#: ksconfig.gladestrings:50
+#: ksconfig.gladestrings:95
 msgid "NFS Directory:"
 msgstr "NFS 目录："
 
-#: ksconfig.gladestrings:136
+#: ksconfig.gladestrings:69
+#, fuzzy
+msgid "Install boot loader on: "
+msgstr "引导装载程序安装位置："
+
+#: ksconfig.gladestrings:217
 msgid "Name Switch Cache"
 msgstr "名称切换缓存区"
 
-#: ksconfig.gladestrings:42
+#: ksconfig.gladestrings:87
 msgid "Choose the Installation Method:"
 msgstr "选择安装方法："
 
-#: ksconfig.gladestrings:106
+#: ksconfig.gladestrings:41
+msgid "_Preview"
+msgstr ""
+
+#: ksconfig.gladestrings:255
+msgid "Automatically Resolve Dependencies"
+msgstr ""
+
+#: ksconfig.gladestrings:176
 msgid "Use MD5"
 msgstr "使用 MD5"
 
-#: ksconfig.gladestrings:182
+#: ksconfig.gladestrings:249
+msgid "Vertical Sync:"
+msgstr "垂直频率："
+
+#: ../src/basic.py:294
+#, fuzzy
+msgid "Please select a root password."
+msgstr "给根口令加密"
+
+#: ../src/ksconfig_gui.py:180
+msgid "Help is not available."
+msgstr ""
+
+#: ksconfig.gladestrings:274
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. Click Cancel to return to the program."
-msgstr "你已选定下列配置。点击储存文件来储存反冲启动文件，点击取消来回到本程序。"
+msgstr ""
+"你已选定下列配置。点击储存文件来储存反冲启动文件，点击取消来回到本程序。"
 
-#: ksconfig.gladestrings:130
+#: ksconfig.gladestrings:208
 msgid "Enable SMB Authentication"
 msgstr "启用 SMB 验证"
 
-#: ../src/ksconfig_gui.py:119
+#: ../src/ksconfig_gui.py:117
 msgid "Partition Information"
 msgstr "分区信息"
 
-#: ksconfig.gladestrings:154
+#: ksconfig.gladestrings:237
 msgid "Start the X Window System on boot"
 msgstr "在引导时启动 X 窗口系统"
 
-#: ksconfig.gladestrings:8
-msgid "_Save File..."
-msgstr "储存文件(_S)……"
+#: ../src/partWindow.py:299
+msgid "Specify a device on which to create the RAID partition."
+msgstr ""
 
-#: ksconfig.gladestrings:197 ksconfig.gladestrings:201
-msgid "1"
-msgstr "1"
-
-#: ksconfig.gladestrings:177
+#: ksconfig.gladestrings:269
 msgid "Type your %post script below:"
 msgstr "在下面键入你的 %post 脚本："
 
-#: ksconfig.gladestrings:38
+#: ksconfig.gladestrings:84
 msgid "label128"
 msgstr "label128"
 
-#: ksconfig.gladestrings:31
-msgid "Install Boot Loader on: "
-msgstr "引导装载程序安装位置："
+#: ksconfig.gladestrings:221
+msgid "Medium"
+msgstr "中级"
 
-#: ksconfig.gladestrings:143 ksconfig.gladestrings:145
+#: ksconfig.gladestrings:225 ksconfig.gladestrings:226
 msgid "Customize"
 msgstr "定制"
 
-#: ksconfig.gladestrings:53
+#: ksconfig.gladestrings:102
 msgid "FTP Directory:"
 msgstr "FTP 目录："
 
-#: ksconfig.gladestrings:202
-msgid "Make partition on specific drive (ondisk)"
-msgstr "在指定的驱动器上分区 (ondisk)"
-
-#: ../src/ksconfig_gui.py:139
-msgid "A graphical interface for creating a kickstart file."
-msgstr "用来创建反冲启动文件的图形化界面。"
-
-#: ksconfig.gladestrings:103
-msgid "Authentication Configuration"
-msgstr "验证配置"
-
-#: ../src/ksconfig_gui.py:124
-msgid "Package Selection"
-msgstr "选择软件包"
-
-#: ksconfig.gladestrings:73
-msgid "Mount Point"
-msgstr "挂载点"
-
-#: ksconfig.gladestrings:84
-msgid "Static IP"
-msgstr "静态 IP"
-
-#: ksconfig.gladestrings:15
-msgid "Mouse:"
-msgstr "鼠标："
-
-#: ksconfig.gladestrings:134
-msgid "Name Switch Cache Daemon (nscd) Authentication"
-msgstr "名称切换缓存区守护进程 (nscd) 验证"
-
-#: ksconfig.gladestrings:20
-msgid "Reboot system after installation"
-msgstr "安装后重新引导系统"
-
-#: ksconfig.gladestrings:39
-msgid "Installation Method (required)"
-msgstr "安装方法（需要的）"
-
-#: ksconfig.gladestrings:199
-msgid "3"
-msgstr "3"
-
-#: ksconfig.gladestrings:187 ksconfig.gladestrings:211
-msgid "Mount Point:"
-msgstr "挂载点："
-
-#: ksconfig.gladestrings:148
-msgid "Configure the X Window System"
-msgstr "配置 X 窗口系统"
-
-#: ksconfig.gladestrings:27
-msgid "_GRUB"
-msgstr "_GRUB"
-
-#: ../src/ksconfig_gui.py:123 ksconfig.gladestrings:147
-msgid "X Configuration"
-msgstr "X 配置"
-
-#: ksconfig.gladestrings:28
-msgid "_MBR"
-msgstr "_MBR"
-
-#: ksconfig.gladestrings:180
-msgid "Kickstart Configuration"
-msgstr "反冲启动配置"
-
-#: ksconfig.gladestrings:214
-msgid "Raid Members"
-msgstr "RAID 成员"
-
-#: ksconfig.gladestrings:83
-msgid "DHCP"
-msgstr "DHCP"
-
-#: ksconfig.gladestrings:185
-msgid "Cancel"
-msgstr "取消"
-
-#: ksconfig.gladestrings:78
-msgid "_Edit"
-msgstr "编辑(_E)"
-
-#: ksconfig.gladestrings:79
-msgid "_Delete"
-msgstr "删除(_D)"
-
-#: ksconfig.gladestrings:129
-msgid "SMB Authentication"
-msgstr "SMB 验证"
-
-#: ksconfig.gladestrings:155
-msgid "General"
-msgstr "常规"
-
-#: ksconfig.gladestrings:22
-msgid "Perform installation in interactive mode"
-msgstr "在互动模式中执行安装"
-
-#: ksconfig.gladestrings:52
-msgid "FTP Server:"
-msgstr "FTP 服务器："
-
-#: ksconfig.gladestrings:140
-msgid "High"
-msgstr "高级"
-
-#: ksconfig.gladestrings:104
-msgid "Authentication:"
-msgstr "验证："
-
-#: ksconfig.gladestrings:146
-msgid "label33"
-msgstr "label33"
-
-#: ksconfig.gladestrings:175
-msgid "Run outside of the chroot environment"
-msgstr "在 chroot 环境之外运行"
-
-#: ksconfig.gladestrings:195 ksconfig.gladestrings:203
-#: ksconfig.gladestrings:206
-msgid "         "
-msgstr "        "
-
-#: ksconfig.gladestrings:150
+#: ksconfig.gladestrings:232
 msgid "Resolution"
 msgstr "分辨率"
 
-#: ksconfig.gladestrings:12
+#: ksconfig.gladestrings:20
+msgid "Make partition on specific drive (ondisk)"
+msgstr "在指定的驱动器上分区 (ondisk)"
+
+#: ksconfig.gladestrings:218
+msgid "Authentication Configuration"
+msgstr "验证配置"
+
+#: ksconfig.gladestrings:236
+msgid "KDE"
+msgstr "KDE"
+
+#: ksconfig.gladestrings:254
+msgid "Select packages to install."
+msgstr ""
+
+#: ../src/ksconfig_gui.py:120 ksconfig.gladestrings:257
+msgid "Package Selection"
+msgstr "选择软件包"
+
+#: ../src/partition.py:74
+msgid "Mount Point"
+msgstr "挂载点"
+
+#: ../src/ksconfig_gui.py:121 ksconfig.gladestrings:270
+msgid "Post-Installation Script"
+msgstr "安装后脚本"
+
+#: ksconfig.gladestrings:51
+msgid "Mouse:"
+msgstr "鼠标："
+
+#: ksconfig.gladestrings:216
+msgid "Name Switch Cache Daemon (nscd) Authentication"
+msgstr "名称切换缓存区守护进程 (nscd) 验证"
+
+#: ksconfig.gladestrings:60
+msgid "Reboot system after installation"
+msgstr "安装后重新引导系统"
+
+#: ksconfig.gladestrings:119
+msgid "Installation Method (required)"
+msgstr "安装方法（需要的）"
+
+#: ksconfig.gladestrings:266
+msgid "Run outside of the chroot environment"
+msgstr "在 chroot 环境之外运行"
+
+#: ksconfig.gladestrings:105
+#, fuzzy
+msgid "FTP Username"
+msgstr "FTP 服务器："
+
+#: ksconfig.gladestrings:11 ksconfig.gladestrings:31
+msgid "Mount Point:"
+msgstr "挂载点："
+
+#: ksconfig.gladestrings:229
+msgid "Configure the X Window System"
+msgstr "配置 X 窗口系统"
+
+#: ksconfig.gladestrings:70
+msgid "_GRUB"
+msgstr "_GRUB"
+
+#: ksconfig.gladestrings:65
+#, fuzzy
+msgid "Install boot loader"
+msgstr "安装引导装载程序"
+
+#: ../src/ksconfig_gui.py:119 ksconfig.gladestrings:252
+msgid "X Configuration"
+msgstr "X 配置"
+
+#: ksconfig.gladestrings:66
+msgid "_MBR"
+msgstr "_MBR"
+
+#: ../src/partition.py:78
+#, fuzzy
+msgid "Size"
+msgstr "大小 (MB)"
+
+#: ksconfig.gladestrings:34
+msgid "Raid Members"
+msgstr "RAID 成员"
+
+#: ksconfig.gladestrings:81
+msgid "Upgrade Only Options:"
+msgstr ""
+
+#: ksconfig.gladestrings:137
+msgid "DHCP"
+msgstr "DHCP"
+
+#: ksconfig.gladestrings:256
+msgid "Ignore Dependencies"
+msgstr ""
+
+#: ksconfig.gladestrings:132
+msgid "_Edit"
+msgstr "编辑(_E)"
+
+#: ksconfig.gladestrings:133
+msgid "_Delete"
+msgstr "删除(_D)"
+
+#: ksconfig.gladestrings:213
+msgid "SMB Authentication"
+msgstr "SMB 验证"
+
+#: ksconfig.gladestrings:238
+msgid "General"
+msgstr "常规"
+
+#: ksconfig.gladestrings:138
+msgid "Static IP"
+msgstr "静态 IP"
+
+#: ksconfig.gladestrings:40
+msgid "_File"
+msgstr ""
+
+#: ksconfig.gladestrings:12 ksconfig.gladestrings:32
+msgid "Filesystem Type:"
+msgstr "文件系统类型："
+
+#: ksconfig.gladestrings:62
+msgid "Perform installation in interactive mode"
+msgstr "在互动模式中执行安装"
+
+#: ksconfig.gladestrings:101
+msgid "FTP Server:"
+msgstr "FTP 服务器："
+
+#: ksconfig.gladestrings:220
+msgid "High"
+msgstr "高级"
+
+#: ksconfig.gladestrings:174
+msgid "Authentication:"
+msgstr "验证："
+
+#: ksconfig.gladestrings:201
+msgid "Enable Hesiod Support"
+msgstr "启用 Hesiod 支持"
+
+#: ksconfig.gladestrings:24
+msgid "Use existing partition (onpart)"
+msgstr "使用现存分区 (onpart)"
+
+#: ../src/ksconfig_gui.py:149
+msgid ""
+"Kickstart Configurator @VERSION@\n"
+" Copyright (c) 2000-2002 Red Hat, Inc.\n"
+" Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
+" Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
+" A graphical interface for creating a kickstart file"
+msgstr ""
+
+#: ksconfig.gladestrings:48
 msgid "Language:"
 msgstr "语言："
 
-#: ksconfig.gladestrings:40
+#: ../src/basic.py:295 ../src/partWindow.py:257 ../src/partWindow.py:274
+#: ../src/partWindow.py:287 ../src/partWindow.py:300 ../src/partWindow.py:313
+#: ../src/partWindow.py:328 ../src/partWindow.py:345 ../src/partWindow.py:358
+#: ../src/partWindow.py:371
+msgid "Error"
+msgstr ""
+
+#: ksconfig.gladestrings:85
 msgid "Install"
 msgstr "安装"
 
-#: ksconfig.gladestrings:110
+#: ksconfig.gladestrings:180
 msgid "Use broadcast to find NIS server"
 msgstr "用广播寻找 NIS 服务器"
 
-#: ksconfig.gladestrings:167
-msgid "Package Group Selection"
-msgstr "软件包组的选择"
-
-#: ksconfig.gladestrings:172
+#: ksconfig.gladestrings:264
 msgid "label89"
 msgstr "label89"
 
-#: ksconfig.gladestrings:135
+#: ksconfig.gladestrings:215
 msgid "Enable nscd"
 msgstr "启用 nscd"
 
-#: ksconfig.gladestrings:114
+#: ksconfig.gladestrings:185
 msgid "Enable LDAP"
 msgstr "启用 LDAP"
 
-#: ksconfig.gladestrings:207
-msgid "Partition:"
-msgstr "分区："
+#: ../src/partWindow.py:286 ../src/partWindow.py:344
+msgid "onPart and onDisk can not be used at the same time."
+msgstr ""
 
-#: ksconfig.gladestrings:19
+#: ksconfig.gladestrings:49
 msgid "Encrypt root password"
 msgstr "给根口令加密"
 
-#: ksconfig.gladestrings:76
+#: ../src/partition.py:80
 msgid "Device"
 msgstr "设备"
 
-#: ksconfig.gladestrings:198
-msgid "2"
-msgstr "2"
-
-#: ksconfig.gladestrings:189
+#: ksconfig.gladestrings:13
 msgid "Size (MB):"
 msgstr "大小 (MB)："
 
-#: ksconfig.gladestrings:86 ksconfig.gladestrings:87 ksconfig.gladestrings:88
-#: ksconfig.gladestrings:89 ksconfig.gladestrings:90 ksconfig.gladestrings:91
-#: ksconfig.gladestrings:92 ksconfig.gladestrings:93 ksconfig.gladestrings:94
-#: ksconfig.gladestrings:95 ksconfig.gladestrings:96 ksconfig.gladestrings:97
+#: ksconfig.gladestrings:145 ksconfig.gladestrings:147
+#: ksconfig.gladestrings:149 ksconfig.gladestrings:152
+#: ksconfig.gladestrings:154 ksconfig.gladestrings:156
+#: ksconfig.gladestrings:159 ksconfig.gladestrings:161
+#: ksconfig.gladestrings:163 ksconfig.gladestrings:166
+#: ksconfig.gladestrings:168 ksconfig.gladestrings:170
 msgid "."
 msgstr "."
+
+#: ksconfig.gladestrings:9 ksconfig.gladestrings:10 ksconfig.gladestrings:23
+#: ksconfig.gladestrings:27 ksconfig.gladestrings:36 ksconfig.gladestrings:37
+#: ksconfig.gladestrings:38 ksconfig.gladestrings:47 ksconfig.gladestrings:52
+#: ksconfig.gladestrings:53 ksconfig.gladestrings:56 ksconfig.gladestrings:58
+#: ksconfig.gladestrings:73 ksconfig.gladestrings:79 ksconfig.gladestrings:96
+#: ksconfig.gladestrings:97 ksconfig.gladestrings:99 ksconfig.gladestrings:100
+#: ksconfig.gladestrings:103 ksconfig.gladestrings:106
+#: ksconfig.gladestrings:109 ksconfig.gladestrings:110
+#: ksconfig.gladestrings:114 ksconfig.gladestrings:115
+#: ksconfig.gladestrings:144 ksconfig.gladestrings:146
+#: ksconfig.gladestrings:148 ksconfig.gladestrings:150
+#: ksconfig.gladestrings:151 ksconfig.gladestrings:153
+#: ksconfig.gladestrings:155 ksconfig.gladestrings:157
+#: ksconfig.gladestrings:158 ksconfig.gladestrings:160
+#: ksconfig.gladestrings:162 ksconfig.gladestrings:164
+#: ksconfig.gladestrings:165 ksconfig.gladestrings:167
+#: ksconfig.gladestrings:169 ksconfig.gladestrings:171
+#: ksconfig.gladestrings:179 ksconfig.gladestrings:182
+#: ksconfig.gladestrings:186 ksconfig.gladestrings:187
+#: ksconfig.gladestrings:194 ksconfig.gladestrings:196
+#: ksconfig.gladestrings:198 ksconfig.gladestrings:203
+#: ksconfig.gladestrings:205 ksconfig.gladestrings:211
+#: ksconfig.gladestrings:212 ksconfig.gladestrings:231
+#: ksconfig.gladestrings:233 ksconfig.gladestrings:241
+#: ksconfig.gladestrings:245 ksconfig.gladestrings:247
+#: ksconfig.gladestrings:261 ksconfig.gladestrings:268
+msgid "*"
+msgstr ""
+
+#: ksconfig.gladestrings:21 ksconfig.gladestrings:25
+msgid "         "
+msgstr "        "
+
+#: ksconfig.gladestrings:141
+msgid "Netmask: "
+msgstr "子网掩码："
+
+#: ksconfig.gladestrings:190
+msgid "LDAP Authentication"
+msgstr "LDAP 验证"
+
+#: ksconfig.gladestrings:262
+msgid "Type your %pre script below:"
+msgstr "在下面键入你的 %pre 脚本："
+
+#: ksconfig.gladestrings:214
+msgid "SMB"
+msgstr "SMB"
+
+#: ksconfig.gladestrings:134
+msgid "Partition Information (required)"
+msgstr "分区信息（需要的）"
+
+#: ksconfig.gladestrings:183
+msgid "NIS Authentication"
+msgstr "NIS 验证"
+
+#: ../src/xconfig.py:90
+msgid "Could not read video card database"
+msgstr ""
+
+#: ksconfig.gladestrings:44 ksconfig.gladestrings:45
+msgid "_Help"
+msgstr ""
+
+#: ksconfig.gladestrings:224
+msgid "Use default firewall rules"
+msgstr "使用默认的防火墙规则"
+
+#: ksconfig.gladestrings:127
+msgid "Remove Partitions:"
+msgstr "删除分区："
+
+#: ksconfig.gladestrings:50
+msgid "Keyboard:"
+msgstr "键盘："
+
+#: ksconfig.gladestrings:206
+msgid "Hesiod Authentication"
+msgstr "Hesiod 验证"
+
+#: ksconfig.gladestrings:88 ksconfig.gladestrings:93
+msgid "CD-ROM"
+msgstr "光盘驱动器"
+
+#: ksconfig.gladestrings:143
+msgid "Name Server:"
+msgstr "名称服务器："
+
+#: ksconfig.gladestrings:130
+msgid "No"
+msgstr "否"
+
+#: ksconfig.gladestrings:86
+msgid "Upgrade"
+msgstr "升级"
+
+#: ksconfig.gladestrings:140
+msgid "IP Address:"
+msgstr "IP 地址："
+
+#: ksconfig.gladestrings:76
+msgid "Force use of lba32 mode"
+msgstr "强制使用 lba32 模式"
+
+#: ksconfig.gladestrings:35
+msgid "Number of spares:"
+msgstr "备件数量："
+
+#: ksconfig.gladestrings:129
+msgid "Yes"
+msgstr "是"
+
+#: ksconfig.gladestrings:177
+msgid "Enable NIS"
+msgstr "启用 NIS"
+
+#: ksconfig.gladestrings:204
+msgid "Hesiod RHS:"
+msgstr "Hesiod RHS："
+
+#: ksconfig.gladestrings:71
+msgid "_LILO"
+msgstr "_LILO"
+
+#: ksconfig.gladestrings:192
+msgid "Enable Kerberos 5 Authentication"
+msgstr "启用 Kerberos 5 验证"
+
+#: ksconfig.gladestrings:175
+msgid "Use Shadow Passwords"
+msgstr "使用屏蔽口令"
+
+#: ksconfig.gladestrings:94
+msgid "NFS Server:"
+msgstr "NFS 服务器："
+
+#: ksconfig.gladestrings:200
+msgid "Kerberos 5"
+msgstr "Kerberos 5"
+
+#: ksconfig.gladestrings:117
+msgid "Hard Drive Directory:"
+msgstr "硬盘驱动器目录："
+
+#: ../src/partition.py:76
+#, fuzzy
+msgid "Filesystem Type"
+msgstr "文件系统类型："
+
+#: ../src/firewall.py:101
+#, fuzzy
+msgid "Other ports: (1029:tcp)"
+msgstr "其它端口："
+
+#: ../src/firewall.py:86
+msgid "Allow incoming:"
+msgstr "允许接收："
+
+#: ksconfig.gladestrings:259
+msgid ""
+"Warning: An error in this script might cause your kickstart installation to "
+"fail. Do not include the %pre command at the beginning."
+msgstr ""
+"警告：脚本中的错误可能会导致反冲启动安装失败。在起始处请不要包括 %pre 命令。"
+
+#: ../src/ksconfig_gui.py:118 ksconfig.gladestrings:172
+msgid "Network Configuration"
+msgstr "网络配置"
+
+#: ksconfig.gladestrings:89 ksconfig.gladestrings:98
+msgid "NFS"
+msgstr "NFS"
+
+#: ksconfig.gladestrings:17
+msgid "Use recommended swap size"
+msgstr ""
+
+#: ../src/partWindow.py:256
+msgid "You must specify a size for the partition."
+msgstr ""
+
+#: ksconfig.gladestrings:199
+msgid "Kerberos 5 Authentication"
+msgstr "Kerberos 5 验证"
+
+#: ksconfig.gladestrings:19
+msgid "Force to be a primary partition (asprimary)"
+msgstr "强制为主分区 (asprimary)"
+
+#: ksconfig.gladestrings:90 ksconfig.gladestrings:108
+msgid "FTP"
+msgstr "FTP"
+
+#: ksconfig.gladestrings:120
+msgid "label35"
+msgstr "label35"
+
+#: ksconfig.gladestrings:195
+msgid "Kerberos Domain Controller (KDC):"
+msgstr "Kerberos 域控制器 (KDC)："
+
+#: ../src/partWindow.py:357
+msgid "Specify a device on which to create the partition."
+msgstr ""
+
+#: ksconfig.gladestrings:77
+msgid "GRUB Options:"
+msgstr "GRUB 选项："
+
+#: ksconfig.gladestrings:42
+#, fuzzy
+msgid "_Save File"
+msgstr "储存文件"
+
+#: ../src/ksconfig_gui.py:120 ksconfig.gladestrings:263
+msgid "Pre-Installation Script"
+msgstr "预安装脚本"
+
+#: ../src/ksconfig_gui.py:117
+msgid "Installation Method"
+msgstr "安装方法"
+
+#: ksconfig.gladestrings:210
+msgid "SMB Workgroup:"
+msgstr "SMB 工作组："
+
+#: ksconfig.gladestrings:126
+msgid "L_inux"
+msgstr "L_inux"
+
+#: ksconfig.gladestrings:7 ksconfig.gladestrings:273
+msgid "Save File"
+msgstr "储存文件"
+
+#: ksconfig.gladestrings:104
+#, fuzzy
+msgid "FTP Password"
+msgstr "根口令："
+
+#: ../src/partWindow.py:312
+msgid "Specify an existing partition on which to create the RAID partition."
+msgstr ""
+
+#: ksconfig.gladestrings:230
+msgid "Color Depth"
+msgstr "色彩深度"
 
 #: ../src/ksconfig_gui.py:116
 msgid "Basic Configuration"
 msgstr "基本配置"
 
-#: ksconfig.gladestrings:153
-msgid "KDE"
-msgstr "KDE"
-
-#: ksconfig.gladestrings:194
-msgid "Force to be a primary partition (asprimary)"
-msgstr "强制为主分区 (asprimary)"
-
-#: ksconfig.gladestrings:113
-msgid "LDAP Authentication"
-msgstr "LDAP 验证"
-
-#: ksconfig.gladestrings:171
-msgid "Type your %pre script below:"
-msgstr "在下面键入你的 %pre 脚本："
-
-#: ksconfig.gladestrings:133
-msgid "SMB"
-msgstr "SMB"
-
-#: ksconfig.gladestrings:62
-msgid "Partition Information (required)"
-msgstr "分区信息（需要的）"
-
-#: ksconfig.gladestrings:107
-msgid "NIS Authentication"
-msgstr "NIS 验证"
-
-#: ksconfig.gladestrings:179
-msgid "Save File..."
-msgstr "储存文件……"
-
-#: ksconfig.gladestrings:144
-msgid "Use default firewall rules"
-msgstr "使用默认的防火墙规则"
-
-#: ksconfig.gladestrings:69
-msgid "Remove Partitions:"
-msgstr "删除分区："
-
-#: ksconfig.gladestrings:14
-msgid "Keyboard:"
-msgstr "键盘："
-
-#: ksconfig.gladestrings:124
-msgid "Hesiod Authentication"
-msgstr "Hesiod 验证"
-
-#: ksconfig.gladestrings:43 ksconfig.gladestrings:48
-msgid "CD-ROM"
-msgstr "光盘驱动器"
-
-#: ksconfig.gladestrings:101
-msgid "Name Server:"
-msgstr "名称服务器："
-
-#: ksconfig.gladestrings:72
-msgid "No"
-msgstr "否"
-
-#: ../src/ksconfig_gui.py:120 ksconfig.gladestrings:81
-msgid "Network Configuration"
-msgstr "网络配置"
-
-#: ksconfig.gladestrings:41
-msgid "Upgrade"
-msgstr "升级"
-
-#: ksconfig.gladestrings:98
-msgid "IP Address:"
-msgstr "IP 地址："
-
-#: ksconfig.gladestrings:35
-msgid "Force use of lba32 mode"
-msgstr "强制使用 lba32 模式"
-
-#: ksconfig.gladestrings:215
-msgid "Number of spares:"
-msgstr "备件数量："
-
-#: ksconfig.gladestrings:71
-msgid "Yes"
-msgstr "是"
-
-#: ksconfig.gladestrings:108
-msgid "Enable NIS"
-msgstr "启用 NIS"
-
-#: ksconfig.gladestrings:127
-msgid "Hesiod RHS:"
-msgstr "Hesiod RHS："
-
-#: ksconfig.gladestrings:26
-msgid "_LILO"
-msgstr "_LILO"
-
-#: ksconfig.gladestrings:119
-msgid "Enable Kerberos 5 Authentication"
-msgstr "启用 Kerberos 5 验证"
-
-#: ksconfig.gladestrings:105
-msgid "Use Shadow Passwords"
-msgstr "使用屏蔽口令"
-
-#: ksconfig.gladestrings:49
-msgid "NFS Server:"
-msgstr "NFS 服务器："
-
-#: ksconfig.gladestrings:123
-msgid "Kerberos 5"
-msgstr "Kerberos 5"
-
-#: ksconfig.gladestrings:59
-msgid "Hard Drive Directory:"
-msgstr "硬盘驱动器目录："
-
-#: ../src/firewall.py:105
-msgid "Other ports:"
-msgstr "其它端口："
-
-#: ksconfig.gladestrings:118
-msgid "Kerberos 5 Authentication"
-msgstr "Kerberos 5 验证"
-
-#: ../src/firewall.py:90
-msgid "Allow incoming:"
-msgstr "允许接收："
-
-#: ksconfig.gladestrings:30
-msgid "Choose Boot Loader: "
-msgstr "选择引导装载程序："
-
-#: ksconfig.gladestrings:159
-msgid "Select a Monitor"
-msgstr "选择显示器"
-
-#: ksconfig.gladestrings:186
-msgid "Partition Options"
-msgstr "分区选项"
-
-#: ksconfig.gladestrings:44 ksconfig.gladestrings:51
-msgid "NFS"
-msgstr "NFS"
-
-#: ksconfig.gladestrings:37
-msgid "Use GRUB Password: "
-msgstr "使用 GRUB 口令："
-
-#: ksconfig.gladestrings:170
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %pre command at the beginning."
-msgstr "警告：脚本中的错误可能会导致反冲启动安装失败。在起始处请不要包括 %pre 命令。"
-
-#: ksconfig.gladestrings:188 ksconfig.gladestrings:212
-msgid "Filesystem Type:"
-msgstr "文件系统类型："
-
-#: ksconfig.gladestrings:99
-msgid "Netmask: "
-msgstr "子网掩码："
-
-#: ksconfig.gladestrings:85
-msgid "None"
-msgstr "无"
-
-#: ksconfig.gladestrings:45 ksconfig.gladestrings:54
-msgid "FTP"
-msgstr "FTP"
-
-#: ksconfig.gladestrings:139
-msgid "Security Level"
-msgstr "安全级别"
-
-#: ksconfig.gladestrings:116
-msgid "LDAP Base Name: "
-msgstr "LDAP 基础名称："
-
-#: ksconfig.gladestrings:36
-msgid "GRUB Options:"
-msgstr "GRUB 选项："
-
-#: ../src/ksconfig_gui.py:125 ksconfig.gladestrings:169
-msgid "Pre-Installation Script"
-msgstr "预安装脚本"
-
-#: ../src/ksconfig_gui.py:118
-msgid "Installation Method"
-msgstr "安装方法"
-
-#: ksconfig.gladestrings:132
-msgid "SMB Workgroup:"
-msgstr "SMB 工作组："
-
-#: ../src/ksconfig_gui.py:126 ksconfig.gladestrings:173
-msgid "Post-Installation Script"
-msgstr "安装后脚本"
-
-#: ksconfig.gladestrings:68
-msgid "L_inux"
-msgstr "L_inux"
-
-#: ksconfig.gladestrings:181 ksconfig.gladestrings:183
-msgid "Save File"
-msgstr "储存文件"
-
-#: ksconfig.gladestrings:163
-msgid "Vertical Sync:"
-msgstr "垂直频率："
-
-#: ksconfig.gladestrings:210
-msgid "Format Partition"
-msgstr "格式化分区"
-
-#: ksconfig.gladestrings:149
-msgid "Color Depth"
-msgstr "色彩深度"
-
-#: ksconfig.gladestrings:141
-msgid "Medium"
-msgstr "中级"
-
-#: ksconfig.gladestrings:178
+#: ksconfig.gladestrings:271
 msgid "label93"
 msgstr "label93"
 
-#: ksconfig.gladestrings:161
+#: ksconfig.gladestrings:246
 msgid "Hz"
 msgstr "赫兹"
 
-#: ksconfig.gladestrings:109
+#: ksconfig.gladestrings:178
 msgid "NIS Domain:"
 msgstr "NIS 域："
 
-#: ksconfig.gladestrings:74
-msgid "Type"
-msgstr "类型"
+#: ../src/xconfig.py:108
+msgid "Could not read monitor database"
+msgstr ""
 
-#: ksconfig.gladestrings:66
+#: ksconfig.gladestrings:124
 msgid "N_one"
 msgstr "无(_o)"
 
-#: ksconfig.gladestrings:61
-msgid "label35"
-msgstr "label35"
-
-#: ksconfig.gladestrings:17
+#: ksconfig.gladestrings:57
 msgid "Root Password:"
 msgstr "根口令："
 
-#: ksconfig.gladestrings:157
+#: ksconfig.gladestrings:240
 msgid "Video Card RAM: "
 msgstr "视频卡内存："
 
-#: ksconfig.gladestrings:55
+#: ksconfig.gladestrings:111
 msgid "HTTP Server:"
 msgstr "HTTP 服务器："
 
-#: ../src/ksconfig_gui.py:117 ksconfig.gladestrings:24
+#: ksconfig.gladestrings:30
+msgid "Format Partition"
+msgstr "格式化分区"
+
+#: ../src/ksconfig_gui.py:116 ksconfig.gladestrings:83
 msgid "Boot Loader Options"
 msgstr "引导装载程序选项"
 
-#: ksconfig.gladestrings:46 ksconfig.gladestrings:57
+#: ksconfig.gladestrings:82
+msgid "Upgrade bootloader"
+msgstr ""
+
+#: ksconfig.gladestrings:8
+msgid "Partition Options"
+msgstr "分区选项"
+
+#: ksconfig.gladestrings:91 ksconfig.gladestrings:113
 msgid "HTTP"
 msgstr "HTTP"
 
-#: ksconfig.gladestrings:63
+#: ksconfig.gladestrings:121
 msgid "Clear Master Boot Record:"
 msgstr "清除主引导记录："
 
-#: ../src/ksconfig_gui.py:121
-msgid "Authentication"
-msgstr "验证"
-
-#: ksconfig.gladestrings:67
+#: ksconfig.gladestrings:125
 msgid "A_ll"
 msgstr "全部(_l)"
 
-#: ksconfig.gladestrings:191
+#: ksconfig.gladestrings:14
 msgid "Fill to maximum allowable size"
 msgstr "使用全部可用空间"
 
-#: ksconfig.gladestrings:120
+#: ksconfig.gladestrings:193
 msgid "Kerberos Realm:"
 msgstr "Kerberos 领域："
 
-#: ksconfig.gladestrings:112
+#: ksconfig.gladestrings:184
 msgid "NIS"
 msgstr "NIS"
 
-#: ksconfig.gladestrings:33
+#: ksconfig.gladestrings:74
 msgid "LILO Options:"
 msgstr "LILO 选项："
 
-#: ksconfig.gladestrings:82
+#: ksconfig.gladestrings:136
 msgid "Network Type:"
 msgstr "网络类型："
 
-#: ksconfig.gladestrings:142
+#: ../src/partWindow.py:327
+msgid "Specify a mount point for the partition."
+msgstr ""
+
+#: ksconfig.gladestrings:222
 msgid "Disabled"
 msgstr "已禁用"
 
-#: ksconfig.gladestrings:166
-msgid "label88"
-msgstr "label88"
-
-#: ksconfig.gladestrings:58
-msgid "Hard Drive Partition:"
-msgstr "硬盘驱动器分区："
-
-#: ksconfig.gladestrings:21
-msgid "Perform installation in text mode (graphical is default)"
-msgstr "在文本模式中执行安装（默认为图形化模式）"
-
-#: ksconfig.gladestrings:160
-msgid "Specify hsync and vsync instead of monitor"
-msgstr "指定水平频率及垂直频率而不是显示器"
-
-#: ksconfig.gladestrings:184
-msgid "OK"
-msgstr "确定"
-
-#: ksconfig.gladestrings:128
-msgid "Hesiod"
-msgstr "Hesiod"
-
-#: ksconfig.gladestrings:11
-msgid "Basic Configuration (required)"
-msgstr "基本配置（需要的）"
-
-#: ksconfig.gladestrings:100
-msgid "Gateway:"
-msgstr "网关："
-
-#: ksconfig.gladestrings:196
-msgid "Force as primary number (1-4):"
-msgstr "强制为主数字 (1-4)："
-
-#: ksconfig.gladestrings:16
-msgid "Time Zone:"
-msgstr "时区："
-
-#: ksconfig.gladestrings:32
-msgid "Kernel parameters:"
-msgstr "内核参数："
-
-#: ksconfig.gladestrings:115
-msgid "LDAP Server: "
-msgstr "LDAP 服务器："
-
-#: ksconfig.gladestrings:10
-msgid "label1"
-msgstr "label1"
-
-#: ksconfig.gladestrings:152
-msgid "GNOME"
-msgstr "GNOME"
-
-#: ksconfig.gladestrings:204
-msgid "Drive:"
-msgstr "驱动器："
-
-#: ksconfig.gladestrings:25
-msgid "Install Boot Loader"
-msgstr "安装引导装载程序"
-
-#: ksconfig.gladestrings:34
-msgid "Use linear mode"
-msgstr "使用线形模式"
-
-#: ksconfig.gladestrings:111
-msgid "NIS Server:"
-msgstr "NIS 服务器："
-
-#: ../src/ksconfig_gui.py:135 ksconfig.gladestrings:7
-msgid "Kickstart Configurator"
-msgstr "反冲启动配置程序"
-
-#: ksconfig.gladestrings:9
-msgid "_Manual"
-msgstr "手工(_M)"
-
-#: ksconfig.gladestrings:117
-msgid "LDAP "
-msgstr "LDAP"
-
-#: ksconfig.gladestrings:192
-msgid "Fill all space up to (MB):"
-msgstr "指定空间大小 (MB)："
-
-#: ksconfig.gladestrings:200
-msgid "4"
-msgstr "4"
-
-#: ksconfig.gladestrings:213
-msgid "RAID Level:"
-msgstr "RAID 级别："
-
-#: ksconfig.gladestrings:193
-msgid "Fixed size"
-msgstr "固定大小"
-
-#: ../src/firewall.py:62
-msgid "Trusted devices:"
-msgstr "信任的设备："
-
-#: ksconfig.gladestrings:125
-msgid "Enable Hesiod Support"
-msgstr "启用 Hesiod 支持"
-
-#: ksconfig.gladestrings:121
-msgid "Kerberos Domain Controller (KDC):"
-msgstr "Kerberos 域控制器 (KDC)："
-
-#: ksconfig.gladestrings:176
+#: ksconfig.gladestrings:260 ksconfig.gladestrings:267
 msgid "Use an interpreter:"
 msgstr "使用解释器："
 
-#: ../src/ksconfig_gui.py:122 ksconfig.gladestrings:138
-msgid "Firewall Configuration"
-msgstr "防火墙配置"
+#: ksconfig.gladestrings:107
+msgid "Specify an FTP username and password"
+msgstr ""
 
-#: ksconfig.gladestrings:190
-msgid "Additional Size Options"
-msgstr "附加的大小选项"
+#: ksconfig.gladestrings:253
+msgid "label88"
+msgstr "label88"
 
-#: ksconfig.gladestrings:122
-msgid "Kerberos Master Server:"
-msgstr "Kerberos 主服务器："
+#: ksconfig.gladestrings:116
+msgid "Hard Drive Partition:"
+msgstr "硬盘驱动器分区："
 
-#: ksconfig.gladestrings:168
-msgid "label34"
-msgstr "label34"
+#: ksconfig.gladestrings:61
+msgid "Perform installation in text mode (graphical is default)"
+msgstr "在文本模式中执行安装（默认为图形化模式）"
 
-#: ksconfig.gladestrings:158
-msgid "Video Card"
-msgstr "视频卡"
-
-#: ksconfig.gladestrings:137
+#: ksconfig.gladestrings:219
 msgid "label32"
 msgstr "label32"
 
-#: ksconfig.gladestrings:102
+#: ../src/ksconfig_gui.py:112
+msgid "Subsection"
+msgstr ""
+
+#: ksconfig.gladestrings:244
+msgid "Specify hsync and vsync instead of monitor"
+msgstr "指定水平频率及垂直频率而不是显示器"
+
+#: ksconfig.gladestrings:207
+msgid "Hesiod"
+msgstr "Hesiod"
+
+#: ksconfig.gladestrings:242
+msgid "Video Card"
+msgstr "视频卡"
+
+#: ksconfig.gladestrings:63
+msgid "Basic Configuration (required)"
+msgstr "基本配置（需要的）"
+
+#: ksconfig.gladestrings:142
+msgid "Gateway:"
+msgstr "网关："
+
+#: ksconfig.gladestrings:239
+msgid "Probe for video card"
+msgstr ""
+
+#: ksconfig.gladestrings:22
+#, fuzzy
+msgid "Drive :"
+msgstr "驱动器："
+
+#: ksconfig.gladestrings:55
+msgid "Time Zone:"
+msgstr "时区："
+
+#: ksconfig.gladestrings:72
+msgid "Kernel parameters:"
+msgstr "内核参数："
+
+#: ksconfig.gladestrings:188
+msgid "LDAP Server: "
+msgstr "LDAP 服务器："
+
+#: ksconfig.gladestrings:272
+#, fuzzy
+msgid "Preview Options"
+msgstr "分区选项"
+
+#: ksconfig.gladestrings:235
+msgid "GNOME"
+msgstr "GNOME"
+
+#: ksconfig.gladestrings:75
+msgid "Use linear mode"
+msgstr "使用线形模式"
+
+#: ksconfig.gladestrings:181
+msgid "NIS Server:"
+msgstr "NIS 服务器："
+
+#: ksconfig.gladestrings:39
+msgid "Kickstart Configurator"
+msgstr "反冲启动配置程序"
+
+#: ksconfig.gladestrings:191
+msgid "LDAP "
+msgstr "LDAP"
+
+#: ksconfig.gladestrings:15
+msgid "Fill all space up to (MB):"
+msgstr "指定空间大小 (MB)："
+
+#: ksconfig.gladestrings:33
+msgid "RAID Level:"
+msgstr "RAID 级别："
+
+#: ksconfig.gladestrings:16
+msgid "Fixed size"
+msgstr "固定大小"
+
+#: ../src/firewall.py:58
+msgid "Trusted devices:"
+msgstr "信任的设备："
+
+#: ../src/ksconfig_gui.py:150
+#, fuzzy
+msgid "About Kickstart Configurator"
+msgstr "反冲启动配置程序"
+
+#: ksconfig.gladestrings:189
+msgid "LDAP Base Name: "
+msgstr "LDAP 基础名称："
+
+#: ksconfig.gladestrings:139
+msgid "None"
+msgstr "无"
+
+#: ksconfig.gladestrings:80
+#, fuzzy
+msgid "Encrypt GRUB password"
+msgstr "给根口令加密"
+
+#: ../src/ksconfig_gui.py:119 ksconfig.gladestrings:227
+msgid "Firewall Configuration"
+msgstr "防火墙配置"
+
+#: ../src/partWindow.py:271
+msgid ""
+"To create a new RAID partition, you must specify either a hard drive or an "
+"existing partition."
+msgstr ""
+
+#: ksconfig.gladestrings:18
+msgid "Additional Size Options"
+msgstr "附加的大小选项"
+
+#: ksconfig.gladestrings:197
+msgid "Kerberos Master Server:"
+msgstr "Kerberos 主服务器："
+
+#: ksconfig.gladestrings:258
+msgid "label34"
+msgstr "label34"
+
+#: ksconfig.gladestrings:228
+msgid "label33"
+msgstr "label33"
+
+#: ../src/ksconfig_gui.py:118
+msgid "Authentication"
+msgstr "验证"
+
+#: ksconfig.gladestrings:173
 msgid "label31"
 msgstr "label31"
 
-#: ksconfig.gladestrings:80
+#: ksconfig.gladestrings:135
 msgid "label30"
 msgstr "label30"
 
-#: ksconfig.gladestrings:65
+#: ksconfig.gladestrings:123
 msgid "_No"
 msgstr "否(_N)"
 
-#: ksconfig.gladestrings:64
+#: ksconfig.gladestrings:122
 msgid "_Yes"
 msgstr "是(_Y)"
 
-#: ksconfig.gladestrings:156
-msgid "Select a Video Card"
-msgstr "选择一张视频卡"
-
-#: ksconfig.gladestrings:209
+#: ksconfig.gladestrings:29
 msgid "Make RAID Device"
 msgstr "制作 RAID 设备"
 
-#: ksconfig.gladestrings:151
+#: ksconfig.gladestrings:234
 msgid "Default Desktop:"
 msgstr "默认的桌面："
 
-#: ksconfig.gladestrings:13
+#: ksconfig.gladestrings:59
 msgid "Language Support:"
 msgstr "语言支持："
 
-#: ksconfig.gladestrings:165
+#: ksconfig.gladestrings:251
 msgid "Monitor"
 msgstr "显示器"
 
-#: ksconfig.gladestrings:18
+#: ksconfig.gladestrings:46
+msgid "_About"
+msgstr ""
+
+#: ksconfig.gladestrings:26
+#, fuzzy
+msgid "Partition :"
+msgstr "分区："
+
+#: ksconfig.gladestrings:54
 msgid "Emulate 3 Buttons"
 msgstr "模拟三键"
 
+#~ msgid "_Save File..."
+#~ msgstr "储存文件(_S)……"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "A graphical interface for creating a kickstart file."
+#~ msgstr "用来创建反冲启动文件的图形化界面。"
+
+#~ msgid "3"
+#~ msgstr "3"
+
+#~ msgid "Kickstart Configuration"
+#~ msgstr "反冲启动配置"
+
+#~ msgid "Cancel"
+#~ msgstr "取消"
+
+#~ msgid "Package Group Selection"
+#~ msgstr "软件包组的选择"
+
+#~ msgid "2"
+#~ msgstr "2"
+
+#~ msgid "Save File..."
+#~ msgstr "储存文件……"
+
+#~ msgid "Select a Monitor"
+#~ msgstr "选择显示器"
+
+#~ msgid "Type"
+#~ msgstr "类型"
+
+#~ msgid "OK"
+#~ msgstr "确定"
+
+#~ msgid "Force as primary number (1-4):"
+#~ msgstr "强制为主数字 (1-4)："
+
+#~ msgid "label1"
+#~ msgstr "label1"
+
+#~ msgid "_Manual"
+#~ msgstr "手工(_M)"
+
+#~ msgid "4"
+#~ msgstr "4"
+
+#~ msgid "Select a Video Card"
+#~ msgstr "选择一张视频卡"
