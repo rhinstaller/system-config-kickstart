@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: redhat-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-29 17:11-0500\n"
-"PO-Revision-Date: 2005-02-05 22:54+0800\n"
+"PO-Revision-Date: 2005-02-07 20:03+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -17,15 +17,10 @@ msgstr ""
 "X-Generator: KBabel 1.0\n"
 
 #. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
 #. # This program is free software; you can redistribute it and/or modify
-#. # the Free Software Foundation; either version 2 of the License, or
 #. # This program is distributed in the hope that it will be useful,
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #. # You should have received a copy of the GNU General Public License
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #. if opt == "--enableldaptls":
-#. # I18N
 #: ../src/basic.py:71
 msgid "x86, AMD64, or Intel EM64T"
 msgstr "x86, AMD64, atau Intel EM64T"
@@ -47,16 +42,13 @@ msgid "IBM zSeries/s390"
 msgstr "IBM zSeries/s390"
 
 #. populate language combo
-#. for lang in lang_list:
 #. populate mouse combo
-#. set default to English
 #. set default mouse to generic ps/2
 #: ../src/basic.py:205
 msgid "Root passwords do not match."
 msgstr "Katalaluan root tidak sepadan."
 
 #. zerombr and clearpart options
-#. Prepart the clearpart line
 #. Check to see if the selection is actually a partition or one of the parent roots
 #: ../src/basic.py:206
 #: ../src/basic.py:225
@@ -72,17 +64,11 @@ msgid "Please select a root password."
 msgstr "Sila pilih katalaluan root."
 
 #. set platform
-#. set keyboard
 #. set timezone
-#. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
 #. # the Free Software Foundation; either version 2 of the License, or
-#. # This program is distributed in the hope that it will be useful,
 #. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # You should have received a copy of the GNU General Public License
 #. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. # I18N
 #: ../src/bootloader.py:76
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
@@ -93,7 +79,6 @@ msgid "Grub passwords do not match.  Please try again."
 msgstr "Katalaluan Grub tidak sepadan.  Sila cuba lagi."
 
 #. !/usr/bin/python2
-#. # I18N
 #: ../src/fedoraPackageGroupList.py:12
 #: ../src/RHELPackageGroupList.py:12
 msgid "X Window System"
@@ -238,15 +223,10 @@ msgid "Printing Support"
 msgstr "Sokongan Cetakan"
 
 #. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
 #. # This program is free software; you can redistribute it and/or modify
-#. # the Free Software Foundation; either version 2 of the License, or
 #. # This program is distributed in the hope that it will be useful,
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #. # You should have received a copy of the GNU General Public License
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #. # I18N
-#. create table with custom checklists
 #: ../src/firewall.py:60
 msgid "Trusted devices:"
 msgstr "Peranti dipercayai:"
@@ -260,17 +240,11 @@ msgid "Other ports: (1029:tcp)"
 msgstr "Port lain: (1029:tcp)"
 
 #. pull list of language from system-config-languages
-#. define mice, add mice here
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. #                                      Tammy Fox <tfox@redhat.com>
 #. # it under the terms of the GNU General Public License as published by
-#. # (at your option) any later version.
 #. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # GNU General Public License for more details.
 #. # along with this program; if not, write to the Free Software
-#. Kickstart Configurator Installation Methods
 #. # I18N
-#. gray out package selection and partitions if upgrade
 #. self.pkg_selection_frame.set_sensitive(install)
 #: ../src/install.py:134
 msgid "Please enter an NFS server."
@@ -314,25 +288,15 @@ msgid "Please enter a hard drive partition."
 msgstr "Sila masukkan partisyen cakera keras."
 
 #. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
 #. # This program is free software; you can redistribute it and/or modify
-#. # the Free Software Foundation; either version 2 of the License, or
 #. # This program is distributed in the hope that it will be useful,
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #. # You should have received a copy of the GNU General Public License
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. #                                      Tammy Fox <tfox@redhat.com>
 #. # it under the terms of the GNU General Public License as published by
-#. # (at your option) any later version.
 #. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # GNU General Public License for more details.
 #. # along with this program; if not, write to the Free Software
-#. # Authors: Brent Fox <bfox@redhat.com>
 #. Patch contributed by Bill Huang - applied on 4/23/2001 for Japanese support
-#. # I18N
 #. #
-#. # Pull in the Glade file
 #: ../src/kickstartGui.py:86
 msgid "Kickstart"
 msgstr "Kickstart"
@@ -342,11 +306,8 @@ msgid "Create a kickstart file"
 msgstr "Cipta fail kickstart"
 
 #. bring in widgets from glade file
-#. bring in basic functions
 #. bring in install functions
-#. bring in network functions
 #. bring in firewall functions
-#. bring in package function
 #. FIXME
 #: ../src/kickstartGui.py:138
 msgid "Subsection"
@@ -433,27 +394,16 @@ msgid "The file \"%s\" cannot be accessed."
 msgstr "fail s."
 
 #. show chosen options for preview
-#. show file selection dialog
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # This program is free software; you can redistribute it and/or modify
 #. # the Free Software Foundation; either version 2 of the License, or
-#. # This program is distributed in the hope that it will be useful,
 #. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # You should have received a copy of the GNU General Public License
 #. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. # 		     "deviceprobe"	: None			,
 #. "lang"		: self.kickstartData.setLang		,
-#. # 		     "lilocheck"	: self.kickstartData.setLiloCheck	,
 #. #                      "logvol"           : self.defineLogicalVolume,
-#. #                      "autostep"         : self.kickstartData.setAutoStep       ,
 #. Separate the file into main, package, pre and post lists
-#. #                                      Tammy Fox <tfox@redhat.com>
 #. # it under the terms of the GNU General Public License as published by
-#. # (at your option) any later version.
 #. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # GNU General Public License for more details.
 #. # along with this program; if not, write to the Free Software
-#. Kickstart Configurator Network Configuration
 #. # I18N
 #: ../src/network.py:87
 msgid "Device"
@@ -484,17 +434,11 @@ msgid "A network device with the name %s already exists.  Please choose another 
 msgstr "A unama s"
 
 #. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
 #. # This program is free software; you can redistribute it and/or modify
-#. # the Free Software Foundation; either version 2 of the License, or
 #. # This program is distributed in the hope that it will be useful,
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #. # You should have received a copy of the GNU General Public License
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #. #
-#. # Copyright (C) 2000, 2001, 2002 Brent Fox <bfox@redhat.com>
 #. self.onDisk = ""
-#. self.onPart = ""
 #: ../src/partition.py:72
 #, fuzzy
 msgid ""
@@ -523,19 +467,12 @@ msgid "Size (MB)"
 msgstr "Saiz (MB)"
 
 #. initialize the child classes
-#. #         hard_drive_parent_iter = self.part_store.append(None)
 #. #         hda_iter = self.part_store.append(hard_drive_parent_iter)
-#. #         part_object = partEntry.partEntry()
 #. #         part_object.device = "Auto"
-#. #         part_object.format = 1
 #. #         part_iter = self.part_store.append(hda_iter)
-#. #         self.part_store.set_value(part_iter, 2, part_object.fsType)
 #. #         self.part_store.set_value(part_iter, 4, part_object.size)
-#. #         hdb_iter = self.part_store.append(hard_drive_parent_iter)
 #. #         part_object.raidNumber = "raid.02"
-#. #         part_iter = self.part_store.append(hdb_iter)
 #. #         hdc_iter = self.part_store.append(hard_drive_parent_iter)
-#. #         part_object.raidNumber = "raid.03"
 #. #         part_iter = self.part_store.append(hdc_iter)
 #: ../src/partition.py:151
 #: ../src/partition.py:181
@@ -544,13 +481,9 @@ msgid "Please select a partition from the list."
 msgstr "daripada."
 
 #. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
 #. # This program is free software; you can redistribute it and/or modify
-#. # the Free Software Foundation; either version 2 of the License, or
 #. # This program is distributed in the hope that it will be useful,
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #. # You should have received a copy of the GNU General Public License
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #. # I18N
 #: ../src/partWindow.py:83
 #: system-config-kickstart.gladestrings:58
@@ -583,7 +516,6 @@ msgid "PPC PReP Boot"
 msgstr "Boot PPC PReP"
 
 #. XXX - have to do this after the show_all due to a bug in gtkSpinButton, I suspect
-#. If there are other children, just delete this child
 #: ../src/partWindow.py:260
 #: ../src/partWindow.py:535
 #: ../src/raidWindow.py:212
@@ -609,9 +541,7 @@ msgid "Hard Drives"
 msgstr "Pemacu Keras"
 
 #. # size stuff
-#. If it's a raid partition, run it through the checkRaid sanity checker
 #. Erase any exiting raid data if we've edited a RAID partition to be non-RAID
-#. If it's a swap partition, set fsType to be swap
 #: ../src/partWindow.py:420
 #, fuzzy
 msgid "Specify a mount point for the partition."
@@ -630,7 +560,6 @@ msgid "To create a new RAID partition, you must specify either a hard drive devi
 msgstr "Kepada RAD unama atau."
 
 #. If all the checks pass, then return
-#. the entry doesn't start with "hd" or "sd" so it's probably not valid
 #: ../src/partWindow.py:488
 #, fuzzy
 msgid "Specify a device on which to create the partition."
@@ -652,36 +581,23 @@ msgid "The partition you specified does not begin with \"hd\" or \"sd\".  Partit
 msgstr "atau Partisyen unama dan atau."
 
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. #                                      Tammy Fox <tfox@redhat.com>
 #. # it under the terms of the GNU General Public License as published by
-#. # (at your option) any later version.
 #. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # GNU General Public License for more details.
 #. # along with this program; if not, write to the Free Software
-#. # raidOptionWindow.py - code for system-config-kickstart's raid dialog
 #. # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
 #. # the Free Software Foundation; either version 2 of the License, or
-#. # This program is distributed in the hope that it will be useful,
 #. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # You should have received a copy of the GNU General Public License
 #. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. #
 #: ../src/raidOptionsWindow.py:72
 #, fuzzy, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
 msgstr "RAD s kepada."
 
 #. # raidWindow.py - code for redhat-config-kickstart's raid dialog
-#. # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
 #. # This program is free software; you can redistribute it and/or modify
-#. # the Free Software Foundation; either version 2 of the License, or
 #. # This program is distributed in the hope that it will be useful,
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #. # You should have received a copy of the GNU General Public License
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #. # I18N
-#. it's a swap partition, so desensitize the mountPoint combo
 #: ../src/raidWindow.py:172
 #, fuzzy, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
@@ -709,25 +625,15 @@ msgid "Network Servers (AS and ES only)"
 msgstr "Rangkaian Pelayan dan"
 
 #. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
 #. # This program is free software; you can redistribute it and/or modify
-#. # the Free Software Foundation; either version 2 of the License, or
 #. # This program is distributed in the hope that it will be useful,
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #. # You should have received a copy of the GNU General Public License
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #. # 		baseSize = 10
-#. # 		self.textTag = self.confirm_buffer.create_tag('text')
 #. # 		self.textTag.set_property('pixels-above-lines', 1)
-#. # 		self.confirm_buffer.apply_tag(self.textTag, self.confirm_buffer.get_start_iter(), self.confirm_buffer.get_end_iter())
 #. !/usr/bin/python2
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
 #. #                                       Tammy Fox <tfox@redhat.com>
-#. # it under the terms of the GNU General Public License as published by
 #. # (at your option) any later version.
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
 #. # GNU General Public License for more details.
-#. # along with this program; if not, write to the Free Software
 #. #
 #: ../src/system-config-kickstart.py:60
 #, fuzzy
@@ -759,17 +665,11 @@ msgid "Try running 'system-config-kickstart --help' for a list of options."
 msgstr "for _Aksi."
 
 #. !/usr/bin/python2
-#. profileSystem(data)
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. #                                      Tammy Fox <tfox@redhat.com>
 #. # it under the terms of the GNU General Public License as published by
-#. # (at your option) any later version.
 #. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # GNU General Public License for more details.
 #. # along with this program; if not, write to the Free Software
-#. Kickstart Configurator X Configuration
 #. add resolutions
-#. add video cards to list
 #: ../src/xconfig.py:104
 msgid "Could not read video card database"
 msgstr ""
@@ -780,11 +680,8 @@ msgid "Could not read monitor database"
 msgstr ""
 
 #. disable xconfig notebook
-#. resolution
 #. startxonboot
-#. translate MB to KB
 #. * Translatable strings file generated by Glade.
-#. * DO NOT compile it as part of your application.
 #: system-config-kickstart.gladestrings:7
 msgid "Save File"
 msgstr "Simpan Fail"
@@ -1055,7 +952,7 @@ msgstr "Buka"
 
 #: system-config-kickstart.gladestrings:66
 msgid "_Preview"
-msgstr ""
+msgstr "_Pralihat"
 
 #: system-config-kickstart.gladestrings:67
 #, fuzzy
@@ -1491,9 +1388,8 @@ msgid "Hesiod RHS:"
 msgstr "Hesiod:"
 
 #: system-config-kickstart.gladestrings:199
-#, fuzzy
 msgid "Hesiod Authentication"
-msgstr "Hesiod"
+msgstr "Pengesahan Hesiod"
 
 #: system-config-kickstart.gladestrings:200
 msgid "Hesiod"
@@ -1521,9 +1417,8 @@ msgid "SMB"
 msgstr "SMB"
 
 #: system-config-kickstart.gladestrings:208
-#, fuzzy
 msgid "Enable nscd"
-msgstr "Hidupkan"
+msgstr "Hidupkan nscd"
 
 #: system-config-kickstart.gladestrings:209
 #, fuzzy
@@ -1684,9 +1579,8 @@ msgid "_Automatically Resolve Dependencies"
 msgstr ""
 
 #: system-config-kickstart.gladestrings:252
-#, fuzzy
 msgid "_Ignore Dependencies"
-msgstr "Abaikan"
+msgstr "Aba_ikan Kebergantungan"
 
 #: system-config-kickstart.gladestrings:253
 msgid "Desktops"
@@ -1757,9 +1651,8 @@ msgid "label93"
 msgstr "label93"
 
 #: system-config-kickstart.gladestrings:274
-#, fuzzy
 msgid "Preview Options"
-msgstr "Prebiu"
+msgstr "Pilihan Pralihat"
 
 #: system-config-kickstart.gladestrings:275
 #, fuzzy
