@@ -48,4 +48,7 @@ xml = gtk.glade.XML ("/usr/share/redhat-config-kickstart/redhat-config-kickstart
 file = None
 opts, file = getopt.getopt(sys.argv[1:], "d:h")
 
+if file:
+    file = file[0]
+
 kickstartGui.kickstartGui(xml, file)
