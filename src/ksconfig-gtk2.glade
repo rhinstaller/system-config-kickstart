@@ -1320,7 +1320,8 @@
 	      <child>
 		<widget class="GtkNotebook" id="options_notebook">
 		  <property name="visible">True</property>
-		  <property name="show_tabs">False</property>
+		  <property name="can_focus">True</property>
+		  <property name="show_tabs">True</property>
 		  <property name="show_border">False</property>
 		  <property name="tab_pos">GTK_POS_TOP</property>
 		  <property name="scrollable">False</property>
@@ -1976,10 +1977,10 @@
 			  <property name="spacing">4</property>
 
 			  <child>
-			    <widget class="GtkCheckButton" id="install_bootloader_check">
+			    <widget class="GtkCheckButton" id="install_bootloader_checkbutton">
 			      <property name="visible">True</property>
 			      <property name="can_focus">True</property>
-			      <property name="label" translatable="yes">Install Boot Loader</property>
+			      <property name="label" translatable="yes">Install boot loader</property>
 			      <property name="use_underline">True</property>
 			      <property name="relief">GTK_RELIEF_NORMAL</property>
 			      <property name="active">True</property>
@@ -2014,49 +2015,6 @@
 			      <property name="column_spacing">4</property>
 
 			      <child>
-				<widget class="GtkRadioButton" id="lilo_radio">
-				  <property name="visible">True</property>
-				  <property name="can_focus">True</property>
-				  <property name="label" translatable="yes">_LILO</property>
-				  <property name="use_underline">True</property>
-				  <property name="relief">GTK_RELIEF_NORMAL</property>
-				  <property name="active">False</property>
-				  <property name="inconsistent">False</property>
-				  <property name="draw_indicator">True</property>
-				</widget>
-				<packing>
-				  <property name="left_attach">2</property>
-				  <property name="right_attach">3</property>
-				  <property name="top_attach">0</property>
-				  <property name="bottom_attach">1</property>
-				  <property name="x_options">fill</property>
-				  <property name="y_options">fill</property>
-				</packing>
-			      </child>
-
-			      <child>
-				<widget class="GtkRadioButton" id="grub_radio">
-				  <property name="visible">True</property>
-				  <property name="can_focus">True</property>
-				  <property name="label" translatable="yes">_GRUB</property>
-				  <property name="use_underline">True</property>
-				  <property name="relief">GTK_RELIEF_NORMAL</property>
-				  <property name="active">True</property>
-				  <property name="inconsistent">False</property>
-				  <property name="draw_indicator">True</property>
-				  <property name="group">lilo_radio</property>
-				</widget>
-				<packing>
-				  <property name="left_attach">1</property>
-				  <property name="right_attach">2</property>
-				  <property name="top_attach">0</property>
-				  <property name="bottom_attach">1</property>
-				  <property name="x_options">fill</property>
-				  <property name="y_options">fill</property>
-				</packing>
-			      </child>
-
-			      <child>
 				<widget class="GtkRadioButton" id="mbr_radiobutton">
 				  <property name="visible">True</property>
 				  <property name="can_focus">True</property>
@@ -2066,7 +2024,6 @@
 				  <property name="active">True</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
-				  <property name="group">lilo_radio</property>
 				</widget>
 				<packing>
 				  <property name="left_attach">1</property>
@@ -2088,7 +2045,7 @@
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
-				  <property name="group">lilo_radio</property>
+				  <property name="group">mbr_radiobutton</property>
 				</widget>
 				<packing>
 				  <property name="left_attach">2</property>
@@ -2103,7 +2060,7 @@
 			      <child>
 				<widget class="GtkLabel" id="choose_bootloader_label">
 				  <property name="visible">True</property>
-				  <property name="label" translatable="yes">Choose Boot Loader: </property>
+				  <property name="label" translatable="yes">Choose boot loader: </property>
 				  <property name="use_underline">False</property>
 				  <property name="use_markup">False</property>
 				  <property name="justify">GTK_JUSTIFY_CENTER</property>
@@ -2127,7 +2084,7 @@
 			      <child>
 				<widget class="GtkLabel" id="bootloader_location_label">
 				  <property name="visible">True</property>
-				  <property name="label" translatable="yes">Install Boot Loader on: </property>
+				  <property name="label" translatable="yes">Install boot loader on: </property>
 				  <property name="use_underline">False</property>
 				  <property name="use_markup">False</property>
 				  <property name="justify">GTK_JUSTIFY_CENTER</property>
@@ -2143,6 +2100,49 @@
 				  <property name="right_attach">1</property>
 				  <property name="top_attach">1</property>
 				  <property name="bottom_attach">2</property>
+				  <property name="x_options">fill</property>
+				  <property name="y_options"></property>
+				</packing>
+			      </child>
+
+			      <child>
+				<widget class="GtkRadioButton" id="grub_radiobutton">
+				  <property name="visible">True</property>
+				  <property name="can_focus">True</property>
+				  <property name="label" translatable="yes">_GRUB</property>
+				  <property name="use_underline">True</property>
+				  <property name="relief">GTK_RELIEF_NORMAL</property>
+				  <property name="active">True</property>
+				  <property name="inconsistent">False</property>
+				  <property name="draw_indicator">True</property>
+				</widget>
+				<packing>
+				  <property name="left_attach">1</property>
+				  <property name="right_attach">2</property>
+				  <property name="top_attach">0</property>
+				  <property name="bottom_attach">1</property>
+				  <property name="x_options">fill</property>
+				  <property name="y_options"></property>
+				</packing>
+			      </child>
+
+			      <child>
+				<widget class="GtkRadioButton" id="lilo_radiobutton">
+				  <property name="visible">True</property>
+				  <property name="can_focus">True</property>
+				  <property name="label" translatable="yes">_LILO</property>
+				  <property name="use_underline">True</property>
+				  <property name="relief">GTK_RELIEF_NORMAL</property>
+				  <property name="active">False</property>
+				  <property name="inconsistent">False</property>
+				  <property name="draw_indicator">True</property>
+				  <property name="group">grub_radiobutton</property>
+				</widget>
+				<packing>
+				  <property name="left_attach">2</property>
+				  <property name="right_attach">3</property>
+				  <property name="top_attach">0</property>
+				  <property name="bottom_attach">1</property>
 				  <property name="x_options">fill</property>
 				  <property name="y_options"></property>
 				</packing>
@@ -2326,7 +2326,7 @@
 				  <child>
 				    <widget class="GtkLabel" id="grub_password_label">
 				      <property name="visible">True</property>
-				      <property name="label" translatable="yes">Use GRUB Password: </property>
+				      <property name="label" translatable="yes">Use GRUB password: </property>
 				      <property name="use_underline">False</property>
 				      <property name="use_markup">False</property>
 				      <property name="justify">GTK_JUSTIFY_CENTER</property>
@@ -2371,7 +2371,7 @@
 			      </child>
 
 			      <child>
-				<widget class="GtkCheckButton" id="grub_password_encrypt">
+				<widget class="GtkCheckButton" id="grub_password_encrypt_checkbutton">
 				  <property name="visible">True</property>
 				  <property name="can_focus">True</property>
 				  <property name="label" translatable="yes">Encrypt GRUB password</property>
@@ -2387,6 +2387,58 @@
 				  <property name="fill">False</property>
 				</packing>
 			      </child>
+			    </widget>
+			    <packing>
+			      <property name="padding">0</property>
+			      <property name="expand">False</property>
+			      <property name="fill">False</property>
+			    </packing>
+			  </child>
+
+			  <child>
+			    <widget class="GtkHSeparator" id="hseparator18">
+			      <property name="visible">True</property>
+			    </widget>
+			    <packing>
+			      <property name="padding">0</property>
+			      <property name="expand">False</property>
+			      <property name="fill">False</property>
+			    </packing>
+			  </child>
+
+			  <child>
+			    <widget class="GtkLabel" id="bootloader_upgrade_label">
+			      <property name="visible">True</property>
+			      <property name="sensitive">False</property>
+			      <property name="label" translatable="yes">Upgrade Only Options:</property>
+			      <property name="use_underline">False</property>
+			      <property name="use_markup">False</property>
+			      <property name="justify">GTK_JUSTIFY_LEFT</property>
+			      <property name="wrap">False</property>
+			      <property name="selectable">False</property>
+			      <property name="xalign">0</property>
+			      <property name="yalign">0.5</property>
+			      <property name="xpad">0</property>
+			      <property name="ypad">0</property>
+			    </widget>
+			    <packing>
+			      <property name="padding">0</property>
+			      <property name="expand">False</property>
+			      <property name="fill">False</property>
+			    </packing>
+			  </child>
+
+			  <child>
+			    <widget class="GtkCheckButton" id="bootloader_upgrade_checkbutton">
+			      <property name="visible">True</property>
+			      <property name="sensitive">False</property>
+			      <property name="can_focus">True</property>
+			      <property name="label" translatable="yes">Upgrade bootloader</property>
+			      <property name="use_underline">True</property>
+			      <property name="relief">GTK_RELIEF_NORMAL</property>
+			      <property name="active">False</property>
+			      <property name="inconsistent">False</property>
+			      <property name="draw_indicator">True</property>
 			    </widget>
 			    <packing>
 			      <property name="padding">0</property>
@@ -7066,7 +7118,7 @@
 					</widget>
 					<packing>
 					  <property name="padding">0</property>
-					  <property name="expand">True</property>
+					  <property name="expand">False</property>
 					  <property name="fill">True</property>
 					</packing>
 				      </child>

@@ -33,10 +33,10 @@ import crypt
 class bootloader:
 
     def __init__(self, xml):
-        self.install_bootloader_check = xml.get_widget("install_bootloader_check")
+        self.install_bootloader_checkbutton = xml.get_widget("install_bootloader_checkbutton")
         self.bootloader_table = xml.get_widget("bootloader_table")
-        self.grub_radio = xml.get_widget("grub_radio")
-        self.lilo_radio = xml.get_widget("lilo_radio")
+        self.grub_radiobutton = xml.get_widget("grub_radiobutton")
+        self.lilo_radiobutton = xml.get_widget("lilo_radiobutton")
         self.mbr_radiobutton = xml.get_widget("mbr_radiobutton")               
         self.firstsector_radiobutton = xml.get_widget("firstsector_radiobutton")
         self.parameters_label = xml.get_widget("parameters_label")
@@ -47,12 +47,13 @@ class bootloader:
         self.grub_options_label = xml.get_widget("grub_options_label")
         self.grub_password_label = xml.get_widget("grub_password_label")
         self.grub_password_entry = xml.get_widget("grub_password_entry")
-        self.grub_password_encrypt = xml.get_widget("grub_password_encrypt")
+        self.grub_password_encrypt_checkbutton = xml.get_widget("grub_password_encrypt_checkbutton")
+        self.bootloader_upgrade_label = xml.get_widget("bootloader_upgrade_label")
+        self.bootloader_upgrade_checkbutton = xml.get_widget("bootloader_upgrade_checkbutton")        
 
-        self.install_bootloader_check.connect("toggled", self.toggled_bootloader)
-        self.grub_radio.connect("toggled", self.toggled_grub)
-        self.lilo_radio.connect("toggled", self.toggled_lilo)
-
+        self.install_bootloader_checkbutton.connect("toggled", self.toggled_bootloader)
+        self.grub_radiobutton.connect("toggled", self.toggled_grub)
+        self.lilo_radiobutton.connect("toggled", self.toggled_lilo)
 
     def toggled_bootloader (self, args):
         status = self.install_bootloader_checkbutton.get_active()
@@ -64,27 +65,30 @@ class bootloader:
         self.lba32_checkbutton.set_sensitive(status)
         self.grub_options_label.set_sensitive(status)        
         self.grub_password_label.set_sensitive(status)
-        self.grub_password_entry.set_sensitive(status)        
+        self.grub_password_entry.set_sensitive(status)
+        self.grub_password_encrypt_checkbutton.set_sensitive(status)
+        self.bootloader_upgrade_label.set_sensitive(not status)
+        self.bootloader_upgrade_checkbutton.set_sensitive(not status)
         if status:
-            status = self.lilo_radio.get_active()
+            status = self.lilo_radiobutton.get_active()
             if status:
                 self.grub_options_label.set_sensitive(not status)        
                 self.grub_password_label.set_sensitive(not status)
                 self.grub_password_entry.set_sensitive(not status)
-            status = self.grub_radio.get_active()
+            status = self.grub_radiobutton.get_active()
             if status:
                 self.lilo_options_label.set_sensitive(not status)
                 self.linear_checkbutton.set_sensitive(not status)
                 self.lba32_checkbutton.set_sensitive(not status)
 
     def toggled_lilo (self, args):
-        status = self.lilo_radio.get_active()
+        status = self.lilo_radiobutton.get_active()
         self.lilo_options_label.set_sensitive(status)
         self.linear_checkbutton.set_sensitive(status)
         self.lba32_checkbutton.set_sensitive(status)
 
     def toggled_grub (self, args):
-        status = self.grub_radio.get_active()
+        status = self.grub_radiobutton.get_active()
         self.grub_options_label.set_sensitive(status)        
         self.grub_password_label.set_sensitive(status)
         self.grub_password_entry.set_sensitive(status)        
@@ -93,10 +97,10 @@ class bootloader:
         data = []
         data.append("")
         data.append("#System bootloader configuration")
-        if self.install_bootloader_check.get_active():
+        if self.install_bootloader_checkbutton.get_active():
             buf = "bootloader "
             #lilo stuff
-            if self.lilo_radio.get_active():
+            if self.lilo_radiobutton.get_active():
                 buf = buf + "--useLilo "
                 if self.linear_checkbutton.get_active():
                     buf = buf + "--linear "
@@ -116,17 +120,20 @@ class bootloader:
             gp = string.strip (self.grub_password_entry.get_text())
             length = len(gp)
             if length > 0:
-                if self.grub_password_encrypt.get_active():
+                if self.grub_password_encrypt_checkbutton.get_active():
                     salt = "$1$"
                     saltLen = 8
                     for i in range(saltLen):
                         salt = salt + whrandom.choice (string.letters + string.digits + './')
                     self.passwd = crypt.crypt (gp, salt)
-                    buf = buf + "--md5pass=" + self.passwd
+                    temp = unicode (self.passwd, 'iso-8859-1')
+                    buf = buf + "--md5pass=" + temp
                 else:
                     buf = buf + "--password=" + gp + " "
+        elif self.bootloader_upgrade_checkbutton.get_active():
+            buf = "bootloader --upgrade"
         else:
-            buf = "\n" + "bootloader --location=none"
+            buf = "bootloader --location=none"
         data.append(buf)
         return data
         
