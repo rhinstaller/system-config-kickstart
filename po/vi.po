@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-29 17:11-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <athai007@yahoo.com>\n"
-"Language-Team: LANGUAGE <gnomevi-list@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2004-09-30 00:00-10\n"
+"Last-Translator: Anthony Thai <athai007@yahoo.com>\n"
+"Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -349,7 +349,7 @@ msgstr "Xin điền tên thư mục trên dĩa cứng."
 
 #: ../src/install.py:205
 msgid "Please enter a hard drive partition."
-msgstr "Xin điền tên một Lát(partition) dĩa cứng. "
+msgstr "Xin điền tên Vùng(partition) dĩa cứng. "
 
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
@@ -433,7 +433,7 @@ msgstr "Cấu Hình Của Bộ Khởi Động"
 
 #: ../src/kickstartGui.py:143
 msgid "Partition Information"
-msgstr "Thông Tin Những Lát Dĩa Cứng"
+msgstr "Thông Tin Những Vùng Dĩa Cứng"
 
 #: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:165
 msgid "Network Configuration"
@@ -635,7 +635,7 @@ msgid ""
 "Partition Number"
 msgstr ""
 "Thiết Bị/\n"
-"Lát Dĩa Cứng"
+"Vùng Dĩa Cứng Số"
 
 #. col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
 #: ../src/partition.py:75
@@ -706,7 +706,7 @@ msgstr "Cỡ (MB)"
 #. #         self.part_store.set_value(part_iter, 5, part_object)
 #: ../src/partition.py:151 ../src/partition.py:181
 msgid "Please select a partition from the list."
-msgstr "Xin chọn 1 Lát Dĩa từ danh sách."
+msgstr "Xin chọn 1 Vùng Dĩa từ danh sách."
 
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
@@ -782,7 +782,7 @@ msgstr "Dĩa Cứng"
 #. It's not raid and it's not swap, so it must be a regular partition
 #: ../src/partWindow.py:420
 msgid "Specify a mount point for the partition."
-msgstr "Xin chĩ rõ Thư Mục nào dùng để gắn Lát Dĩa Nầy."
+msgstr "Xin chĩ rõ Thư Mục nào dùng để gắn Vùng Dĩa Nầy."
 
 #. Check to see if the mount point has already been used
 #. They are trying to use a mount point already in use.  Let's complain
@@ -798,27 +798,31 @@ msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
 msgstr ""
-"Để tạo một Lát Dĩa RAID mới, bạn phải chỉ định tên của một dĩa cứnghoặc một "
-"Lát Dĩa(partition) cứng hiện có."
+"Để tạo một Vùng Dĩa RAID mới, bạn phải chỉ định tên của một dĩa cứng hoặc "
+"một Vùng Dĩa(partition) cứng hiện có."
 
 #. If all the checks pass, then return
 #. Don't iterate if we're counting the object that's being edited
 #. the entry doesn't start with "hd" or "sd" so it's probably not valid
 #: ../src/partWindow.py:488
 msgid "Specify a device on which to create the partition."
-msgstr ""
+msgstr "Chỉ định 1 dĩa cứng đễ tạo Vùng mới."
 
 #: ../src/partWindow.py:490
 msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
 msgstr ""
+"Tên của Thiết Bị mà bạn chỉ định không hợp lệ.  Xin dùng các tênhợp lệ như "
+"là  \"hda1\" hoặc \"sda3\". "
 
 #: ../src/partWindow.py:500
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
 msgstr ""
+"Tên Thiết Bị bạn chỉ định không được kết thúc bằng 1 chữ số.  Mọi Vùng Dĩa "
+"phãi kết thúc bằng số, thí dụ như  \"hda1\" hoặc \"sda3\"."
 
 #: ../src/partWindow.py:506
 msgid ""
@@ -826,6 +830,8 @@ msgid ""
 "Partitions must have a valid device name and partition number such as \"hda1"
 "\" or \"sda3\"."
 msgstr ""
+"Vùng Dĩa bạn chỉ định không bắt đầu bằng  \"hd\" hoặc \"sd\".  Mỗi Vùng cần "
+"phải có tên 1 Thiết Bị hợp lệ và số Vùng như \"hda1\" hoặc \"sda3\"."
 
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
 #. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
@@ -864,7 +870,7 @@ msgstr ""
 #: ../src/raidOptionsWindow.py:72
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
-msgstr ""
+msgstr "Hiện tại bạn có %d Vùng RAID mềm có thễ dùng."
 
 #. # raidWindow.py - code for redhat-config-kickstart's raid dialog
 #. # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
@@ -888,25 +894,25 @@ msgstr ""
 #: ../src/raidWindow.py:172
 #, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr ""
+msgstr "Bạn cần phải chọn ít nhất 2 Vùng Dĩa mới có thể dùng RAID %s"
 
 #: ../src/raidWindow.py:178
 #, python-format
 msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr ""
+msgstr "Bạn cần phải chọn ít nhất 3 Vùng Dĩa mới có thể dùng RAID %s"
 
 #. then this is a new raid device, not one we're just editing
 #: ../src/raidWindow.py:192 ../src/raidWindow.py:218
 msgid "Raid Devices"
-msgstr ""
+msgstr "Thiết Bị Raid"
 
 #: ../src/RHELPackageGroupList.py:26
 msgid "Server Configuration Tools (AS and ES only)"
-msgstr ""
+msgstr "Dụng Cụ Cấu Hình Máy Chủ (chỉ có AS và ES)"
 
 #: ../src/RHELPackageGroupList.py:34
 msgid "Network Servers (AS and ES only)"
-msgstr ""
+msgstr "Máy Chủ Mạng (chỉ có AS và ES)"
 
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
@@ -999,14 +1005,25 @@ msgid ""
 "values from\n"
 "                        the kickstart file already filled in."
 msgstr ""
+"Cách Dùng: system-config-kickstart [--help] [--generate <Tên_Tệp>] "
+"[<Tên_Tệp_Tự_Cài>]\n"
+"        \n"
+"--help                  In ra Thông Điệp này\n"
+"--generate <Tên_Tệp>    Tạo ra 1 tệp Tự Cài hiện hành của máy này và viết\n"
+"                        vào <Tên_Tệp>.  Lệnh này chạy trên Bàn Lệnh(Terminal)"
+"nên\n"
+"                        hữu dụng cho các Máy Chủ không có X Windows\n"
+"<Tên_Tệp_Tự_Cài>        Lệnh này sẽ làm cho bộ Giao Diện được khởi tạo với "
+"các\n"
+"                        giá trị đã nạp lấy ra từ Tệp Tự Cài."
 
 #: ../src/system-config-kickstart.py:77
 msgid "Could not open display because no X server is running."
-msgstr ""
+msgstr "Không thể khởi tạo màn hiển thị vì X Windows không chạy."
 
 #: ../src/system-config-kickstart.py:78
 msgid "Try running 'system-config-kickstart --help' for a list of options."
-msgstr ""
+msgstr "Chạy thử lệnh 'system-config-kickstart --help' để xem cách dùng."
 
 #. !/usr/bin/python2
 #. !/usr/bin/python2
@@ -1033,12 +1050,12 @@ msgstr ""
 #. add video cards to list
 #: ../src/xconfig.py:104
 msgid "Could not read video card database"
-msgstr ""
+msgstr "Không đọc được dữ liệu của Thẻ Hình(Video Card)"
 
 #. add monitors to list
 #: ../src/xconfig.py:122
 msgid "Could not read monitor database"
-msgstr ""
+msgstr "Không đọc được dữ liệu của Màn Hình"
 
 #. disable xconfig notebook
 #. color depth - translate
@@ -1054,11 +1071,11 @@ msgstr ""
 #.
 #: system-config-kickstart.gladestrings:7
 msgid "Save File"
-msgstr ""
+msgstr "Lưu Tệp"
 
 #: system-config-kickstart.gladestrings:8
 msgid "Partition Options"
-msgstr ""
+msgstr "Lựa Chọn Vùng Dĩa"
 
 #: system-config-kickstart.gladestrings:9
 #: system-config-kickstart.gladestrings:10
@@ -1125,44 +1142,44 @@ msgstr ""
 #: system-config-kickstart.gladestrings:11
 #: system-config-kickstart.gladestrings:32
 msgid "Mount Point:"
-msgstr ""
+msgstr "Thư Mục Đễ Gắn:"
 
 #: system-config-kickstart.gladestrings:12
 #: system-config-kickstart.gladestrings:37
 msgid "File System Type:"
-msgstr ""
+msgstr "Hệ Thống Tệp Loại:"
 
 #: system-config-kickstart.gladestrings:13
 msgid "Size (MB):"
-msgstr ""
+msgstr "Cỡ (MB):"
 
 #: system-config-kickstart.gladestrings:14
 msgid "Fill all unused space on disk"
-msgstr ""
+msgstr "Lấp đầy các chỗ chưa dùng trên dĩa"
 
 #: system-config-kickstart.gladestrings:15
 msgid "Grow to maximum of (MB):"
-msgstr ""
+msgstr "Tăng lên hết cỡ (MB):"
 
 #: system-config-kickstart.gladestrings:16
 msgid "Fixed size"
-msgstr ""
+msgstr "Kích Thước Tĩnh"
 
 #: system-config-kickstart.gladestrings:17
 msgid "Use recommended swap size"
-msgstr ""
+msgstr "Dùng Kích Thước đề nghị cho swap"
 
 #: system-config-kickstart.gladestrings:18
 msgid "Additional Size Options"
-msgstr ""
+msgstr "Các Chọn Lựa Cỡ Phụ"
 
 #: system-config-kickstart.gladestrings:19
 msgid "Force to be a primary partition (asprimary)"
-msgstr ""
+msgstr "Ép buộc làm Vùng chính(asprimary)"
 
 #: system-config-kickstart.gladestrings:20
 msgid "Make partition on specific drive (ondisk)"
-msgstr ""
+msgstr "Tạo Vùng trên dĩa được chỉ định (ondisk)"
 
 #: system-config-kickstart.gladestrings:21
 #: system-config-kickstart.gladestrings:26
@@ -1171,87 +1188,87 @@ msgstr ""
 
 #: system-config-kickstart.gladestrings:22
 msgid "Drive :"
-msgstr ""
+msgstr "Dĩa :"
 
 #: system-config-kickstart.gladestrings:24
 msgid "(for example: hda or sdc)"
-msgstr ""
+msgstr "(Thí dụ như: hda hay sdc)"
 
 #: system-config-kickstart.gladestrings:25
 msgid "Use existing partition (onpart)"
-msgstr ""
+msgstr "Dùng Vùng có sẵn (onpart)"
 
 #: system-config-kickstart.gladestrings:27
 msgid "Partition :"
-msgstr ""
+msgstr "Vùng :"
 
 #: system-config-kickstart.gladestrings:29
 msgid "(for example: hda1 or sdc3)"
-msgstr ""
+msgstr "(Thí dụ như: hda1 hay sdc3)"
 
 #: system-config-kickstart.gladestrings:30
 msgid "Format partition"
-msgstr ""
+msgstr "Định Khuôn (Format) Vùng"
 
 #: system-config-kickstart.gladestrings:31
 msgid "Make RAID Device"
-msgstr ""
+msgstr "Tạo Thiết Bị RAID"
 
 #: system-config-kickstart.gladestrings:34
 msgid "Number of spares:"
-msgstr ""
+msgstr "Số lượng dự bị:"
 
 #: system-config-kickstart.gladestrings:35
 msgid "Raid Members"
-msgstr ""
+msgstr "Hội Viên Của RAID"
 
 #: system-config-kickstart.gladestrings:36
 msgid "RAID Level:"
-msgstr ""
+msgstr "Cấp RAID:"
 
 #: system-config-kickstart.gladestrings:38
 msgid "RAID Device:"
-msgstr ""
+msgstr "Thiết Bị RAID:"
 
 #: system-config-kickstart.gladestrings:39
 msgid "md0"
-msgstr ""
+msgstr "md0"
 
 #: system-config-kickstart.gladestrings:40
 msgid "md1"
-msgstr ""
+msgstr "md1"
 
 #: system-config-kickstart.gladestrings:41
 msgid "md2"
-msgstr ""
+msgstr "md2"
 
 #: system-config-kickstart.gladestrings:42
 msgid "md3"
-msgstr ""
+msgstr "md3"
 
 #: system-config-kickstart.gladestrings:43
 msgid "md4"
-msgstr ""
+msgstr "md4"
 
 #: system-config-kickstart.gladestrings:44
 msgid "md5"
-msgstr ""
+msgstr "md5"
 
 #: system-config-kickstart.gladestrings:45
 msgid "md6"
-msgstr ""
+msgstr "md6"
 
 #: system-config-kickstart.gladestrings:46
 msgid "md7"
-msgstr ""
+msgstr "md7"
 
 #: system-config-kickstart.gladestrings:47
 msgid "md8"
-msgstr ""
+msgstr "md8"
 
 #: system-config-kickstart.gladestrings:48
 msgid "md9"
-msgstr ""
+msgstr "md9"
 
 #: system-config-kickstart.gladestrings:49
 msgid "md10"
@@ -1259,653 +1276,653 @@ msgstr ""
 
 #: system-config-kickstart.gladestrings:50
 msgid "md11"
-msgstr ""
+msgstr "md11"
 
 #: system-config-kickstart.gladestrings:51
 msgid "md12"
-msgstr ""
+msgstr "md12"
 
 #: system-config-kickstart.gladestrings:52
 msgid "md13"
-msgstr ""
+msgstr "md13"
 
 #: system-config-kickstart.gladestrings:53
 msgid "md14"
-msgstr ""
+msgstr "md14"
 
 #: system-config-kickstart.gladestrings:54
 msgid "md15"
-msgstr ""
+msgstr "md15"
 
 #: system-config-kickstart.gladestrings:55
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: system-config-kickstart.gladestrings:56
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #: system-config-kickstart.gladestrings:57
 msgid "5"
-msgstr ""
+msgstr "5"
 
 #: system-config-kickstart.gladestrings:62
 msgid "Format RAID device"
-msgstr ""
+msgstr "Định Khuôn(Format) RAID"
 
 #: system-config-kickstart.gladestrings:63
 msgid "Kickstart Configurator"
-msgstr ""
+msgstr "Trình Cấu Hình Tự Cài"
 
 #: system-config-kickstart.gladestrings:64
 msgid "_File"
-msgstr ""
+msgstr "_Tập Tin"
 
 #: system-config-kickstart.gladestrings:65
 msgid "_Open File"
-msgstr ""
+msgstr "_Mở"
 
 #: system-config-kickstart.gladestrings:66
 msgid "_Preview"
-msgstr ""
+msgstr "_Xem Trước"
 
 #: system-config-kickstart.gladestrings:67
 msgid "_Save File"
-msgstr ""
+msgstr "_Lưu"
 
 #: system-config-kickstart.gladestrings:68
 msgid "_Quit"
-msgstr ""
+msgstr "_Thoát"
 
 #: system-config-kickstart.gladestrings:69
 msgid "_Help"
-msgstr ""
+msgstr "Trợ _Giúp"
 
 #: system-config-kickstart.gladestrings:70
 msgid "_Contents"
-msgstr ""
+msgstr "_Nội Dung"
 
 #: system-config-kickstart.gladestrings:71
 msgid "_About"
-msgstr ""
+msgstr "Giới Thiệ_u"
 
 #: system-config-kickstart.gladestrings:73
 msgid "Default Language:"
-msgstr ""
+msgstr "Ngôn Ngữ Mặc Định:"
 
 #: system-config-kickstart.gladestrings:74
 msgid "Encrypt root password"
-msgstr ""
+msgstr "Mã hóa mật mã của root"
 
 #: system-config-kickstart.gladestrings:75
 msgid "Keyboard:"
-msgstr ""
+msgstr "Bàn Phím:"
 
 #: system-config-kickstart.gladestrings:76
 msgid "Mouse:"
-msgstr ""
+msgstr "Chuột:"
 
 #: system-config-kickstart.gladestrings:79
 msgid "Emulate 3 Buttons"
-msgstr ""
+msgstr "Mô phỏng Chuột 3 nút"
 
 #: system-config-kickstart.gladestrings:80
 msgid "Time Zone:"
-msgstr ""
+msgstr "Múi Giờ:"
 
 #: system-config-kickstart.gladestrings:82
 msgid "Root Password:"
-msgstr ""
+msgstr "Mật Mã của Root:"
 
 #: system-config-kickstart.gladestrings:84
 msgid "Language Support:"
-msgstr ""
+msgstr "Ngôn Ngữ Có thể Dùng:"
 
 #: system-config-kickstart.gladestrings:85
 msgid "Use UTC clock"
-msgstr ""
+msgstr "Dùng Giờ UTC"
 
 #: system-config-kickstart.gladestrings:86
 #: system-config-kickstart.gladestrings:137
 msgid "Confirm Password:"
-msgstr ""
+msgstr "Xác Nhận Mật Mã:"
 
 #: system-config-kickstart.gladestrings:88
 msgid "Target Architecture:"
-msgstr ""
+msgstr "Loại Máy Vi Tính:"
 
 #: system-config-kickstart.gladestrings:90
 msgid "Reboot system after installation"
-msgstr ""
+msgstr "Khởi động lại máy sau khi cài"
 
 #: system-config-kickstart.gladestrings:91
 msgid "Perform installation in text mode (graphical is default)"
-msgstr ""
+msgstr "Chạy Trình cài đặt bằng mốt Chữ (Mốt mặc định là Hình)"
 
 #: system-config-kickstart.gladestrings:92
 msgid "Perform installation in interactive mode"
-msgstr ""
+msgstr "Cài dặt bằng mốt Tác Động(Interactive)"
 
 #: system-config-kickstart.gladestrings:93
 msgid "Basic Configuration (required)"
-msgstr ""
+msgstr "Cấu Hình Căn Bản (Bắt Buộc)"
 
 #: system-config-kickstart.gladestrings:94
 msgid "label28"
-msgstr ""
+msgstr "label28"
 
 #: system-config-kickstart.gladestrings:95
 msgid "Perform new installation"
-msgstr ""
+msgstr "Cài mới hoàn toàn"
 
 #: system-config-kickstart.gladestrings:96
 msgid "Upgrade an existing installation"
-msgstr ""
+msgstr "Nâng cấp từ phần mềm đã cài trước"
 
 #: system-config-kickstart.gladestrings:97
 msgid "Choose the Installation Method:"
-msgstr ""
+msgstr "Chọn cách cài:"
 
 #: system-config-kickstart.gladestrings:98
 #: system-config-kickstart.gladestrings:103
 msgid "CD-ROM"
-msgstr ""
+msgstr "CD-ROM"
 
 #: system-config-kickstart.gladestrings:99
 #: system-config-kickstart.gladestrings:108
 msgid "NFS"
-msgstr ""
+msgstr "NFS"
 
 #: system-config-kickstart.gladestrings:100
 #: system-config-kickstart.gladestrings:118
 msgid "FTP"
-msgstr ""
+msgstr "FTP"
 
 #: system-config-kickstart.gladestrings:101
 #: system-config-kickstart.gladestrings:123
 msgid "HTTP"
-msgstr ""
+msgstr "HTTP"
 
 #: system-config-kickstart.gladestrings:102
 #: system-config-kickstart.gladestrings:128
 msgid "Hard Drive"
-msgstr ""
+msgstr "Dĩa Cứng"
 
 #: system-config-kickstart.gladestrings:104
 msgid "NFS Server:"
-msgstr ""
+msgstr "Máy Chủ NFS:"
 
 #: system-config-kickstart.gladestrings:105
 msgid "NFS Directory:"
-msgstr ""
+msgstr "Thư mục NFS:"
 
 #: system-config-kickstart.gladestrings:109
 msgid "FTP Server:"
-msgstr ""
+msgstr "Máy Chủ FTP:"
 
 #: system-config-kickstart.gladestrings:111
 msgid "FTP Directory:"
-msgstr ""
+msgstr "Thư mục FTP:"
 
 #: system-config-kickstart.gladestrings:113
 msgid "Specify an FTP username and password"
-msgstr ""
+msgstr "Chỉ định tên người dùng FTP và Mật Mã"
 
 #: system-config-kickstart.gladestrings:114
 msgid "FTP Username"
-msgstr ""
+msgstr "Tên Người dùng FtP"
 
 #: system-config-kickstart.gladestrings:115
 msgid "FTP Password"
-msgstr ""
+msgstr "Mật Mã FTP"
 
 #: system-config-kickstart.gladestrings:121
 msgid "HTTP Server:"
-msgstr ""
+msgstr "Máy Chủ HTTP:"
 
 #: system-config-kickstart.gladestrings:122
 msgid "HTTP Directory:"
-msgstr ""
+msgstr "Thư Mục HTTP:"
 
 #: system-config-kickstart.gladestrings:126
 msgid "Hard Drive Partition:"
-msgstr ""
+msgstr "Vùng(Partition) Dĩa Cứng:"
 
 #: system-config-kickstart.gladestrings:127
 msgid "Hard Drive Directory:"
-msgstr ""
+msgstr "Thư Mục Dĩa Cứng:"
 
 #: system-config-kickstart.gladestrings:129
 msgid "Installation Method (required)"
-msgstr ""
+msgstr "Cách Cài (bắt buộc)"
 
 #: system-config-kickstart.gladestrings:130
 msgid "label128"
-msgstr ""
+msgstr "label128"
 
 #: system-config-kickstart.gladestrings:131
 msgid "Install new boot loader"
-msgstr ""
+msgstr "Cài Bộ Khởi Động Mới"
 
 #: system-config-kickstart.gladestrings:132
 msgid "Do not install a boot loader"
-msgstr ""
+msgstr "Đừng Cài Bộ Khởi Động (Boot Loader)"
 
 #: system-config-kickstart.gladestrings:133
 msgid "Upgrade existing boot loader"
-msgstr ""
+msgstr "Nâng cấp Bộ Khởi Động cũ"
 
 #: system-config-kickstart.gladestrings:134
 msgid "GRUB Options:"
-msgstr ""
+msgstr "Chọn GRUB:"
 
 #: system-config-kickstart.gladestrings:135
 msgid "Use GRUB password"
-msgstr ""
+msgstr "Dùng Mật Mã của GRUB"
 
 #: system-config-kickstart.gladestrings:136
 msgid "Password:"
-msgstr ""
+msgstr "Mật Mã:"
 
 #: system-config-kickstart.gladestrings:140
 msgid "Encrypt GRUB password"
-msgstr ""
+msgstr "Mã hoá Mật Mã của GRUB"
 
 #: system-config-kickstart.gladestrings:141
 msgid "Install boot loader on Master Boot Record (MBR)"
-msgstr ""
+msgstr "Cài Bộ Khởi Động vào Master Boot Record (MBR)"
 
 #: system-config-kickstart.gladestrings:142
 msgid "Install boot loader on first sector of the boot partition"
-msgstr ""
+msgstr "Cài Bộ Khởi Động vào sector đầu tiên của dĩa khởi động"
 
 #: system-config-kickstart.gladestrings:143
 msgid "Kernel parameters:"
-msgstr ""
+msgstr "Tham số của Lõi (Kernel):"
 
 #: system-config-kickstart.gladestrings:145
 msgid "label216"
-msgstr ""
+msgstr "label216"
 
 #: system-config-kickstart.gladestrings:146
 msgid "Boot Loader Options (required)"
-msgstr ""
+msgstr "Chọn Lựa của Bộ Khởi Động(Bắt Buộc)"
 
 #: system-config-kickstart.gladestrings:147
 msgid "label35"
-msgstr ""
+msgstr "label35"
 
 #: system-config-kickstart.gladestrings:148
 msgid "Clear Master Boot Record"
-msgstr ""
+msgstr "Xóa Master Boot Record (MBR)"
 
 #: system-config-kickstart.gladestrings:149
 msgid "Do not clear Master Boot Record"
-msgstr ""
+msgstr "Đừng Xóa Master Boot Record (MBR)"
 
 #: system-config-kickstart.gladestrings:150
 msgid "Remove all existing partitions"
-msgstr ""
+msgstr "Gỡ bỏ hết các Vùng Dĩa(partitions) cũ"
 
 #: system-config-kickstart.gladestrings:151
 msgid "Remove existing Linux partitions"
-msgstr ""
+msgstr "Gỡ bỏ Vùng Dĩa Linux cũ"
 
 #: system-config-kickstart.gladestrings:152
 msgid "Preserve existing partitions"
-msgstr ""
+msgstr "Bảo tồn các Vùng Dĩa hiện có"
 
 #: system-config-kickstart.gladestrings:153
 msgid "Initialize the disk label"
-msgstr ""
+msgstr "Khởi tạo tên dĩa"
 
 #: system-config-kickstart.gladestrings:154
 msgid "Do not initialize the disk label"
-msgstr ""
+msgstr "Đừng tạo tên dĩa"
 
 #: system-config-kickstart.gladestrings:155
 msgid "_Add"
-msgstr ""
+msgstr "_Thêm"
 
 #: system-config-kickstart.gladestrings:156
 msgid "_Edit"
-msgstr ""
+msgstr "_Sửa"
 
 #: system-config-kickstart.gladestrings:157
 msgid "_Delete"
-msgstr ""
+msgstr "_Xóa"
 
 #: system-config-kickstart.gladestrings:158
 msgid "RAID"
-msgstr ""
+msgstr "RAID"
 
 #: system-config-kickstart.gladestrings:159
 msgid "Partition options are not applicable on upgrades."
-msgstr ""
+msgstr "Các lựa chọn Vùng Dĩa không phù hợp với nâng cấp."
 
 #: system-config-kickstart.gladestrings:160
 msgid "Partition Information (required)"
-msgstr ""
+msgstr "Thông Tin Vùng Dĩa (Bắt Buộc)"
 
 #: system-config-kickstart.gladestrings:161
 msgid "label30"
-msgstr ""
+msgstr "label30"
 
 #: system-config-kickstart.gladestrings:162
 msgid "_Add Network Device"
-msgstr ""
+msgstr "_Thêm Thiết Bị Mạng"
 
 #: system-config-kickstart.gladestrings:163
 msgid "_Edit Network Device"
-msgstr ""
+msgstr "_Sửa Thiết Bị Mạng"
 
 #: system-config-kickstart.gladestrings:164
 msgid "_Delete Network Device"
-msgstr ""
+msgstr "_Xóa Thiết Bị Mạng"
 
 #: system-config-kickstart.gladestrings:166
 msgid "label31"
-msgstr ""
+msgstr "label31"
 
 #: system-config-kickstart.gladestrings:167
 msgid "Authentication:"
-msgstr ""
+msgstr "Chứng Nhận:"
 
 #: system-config-kickstart.gladestrings:168
 msgid "Use Shadow Passwords"
-msgstr ""
+msgstr "Dùng Mật Mã Bóng"
 
 #: system-config-kickstart.gladestrings:169
 msgid "Use MD5"
-msgstr ""
+msgstr "Dùng MD5"
 
 #: system-config-kickstart.gladestrings:170
 msgid "Enable NIS"
-msgstr ""
+msgstr "Mở NIS"
 
 #: system-config-kickstart.gladestrings:171
 msgid "NIS Domain:"
-msgstr ""
+msgstr "Khu Vực NIS:"
 
 #: system-config-kickstart.gladestrings:173
 msgid "Use broadcast to find NIS server"
-msgstr ""
+msgstr "Dùng Quảng Bá(broadcast) để tìm Máy NIS"
 
 #: system-config-kickstart.gladestrings:174
 msgid "NIS Server:"
-msgstr ""
+msgstr "Máy Chủ NIS:"
 
 #: system-config-kickstart.gladestrings:176
 msgid "NIS Authentication"
-msgstr ""
+msgstr "Chứng Nhận NIS"
 
 #: system-config-kickstart.gladestrings:177
 msgid "NIS"
-msgstr ""
+msgstr "NIS"
 
 #: system-config-kickstart.gladestrings:178
 msgid "Enable LDAP"
-msgstr ""
+msgstr "Mở LDAP"
 
 #: system-config-kickstart.gladestrings:181
 msgid "LDAP Server: "
-msgstr ""
+msgstr "Máy Chủ LDAP: "
 
 #: system-config-kickstart.gladestrings:182
 msgid "LDAP Base Name: "
-msgstr ""
+msgstr "Tên gốc LDAP: "
 
 #: system-config-kickstart.gladestrings:183
 msgid "LDAP Authentication"
-msgstr ""
+msgstr "Chứng Nhận LDAP"
 
 #: system-config-kickstart.gladestrings:184
 msgid "LDAP "
-msgstr ""
+msgstr "LDAP "
 
 #: system-config-kickstart.gladestrings:185
 msgid "Enable Kerberos 5 Authentication"
-msgstr ""
+msgstr "Mở bộ Chứng Nhận Kerberos 5"
 
 #: system-config-kickstart.gladestrings:186
 msgid "Kerberos Realm:"
-msgstr ""
+msgstr "Khu Vực Kerberos:"
 
 #: system-config-kickstart.gladestrings:188
 msgid "Kerberos Domain Controller (KDC):"
-msgstr ""
+msgstr "Máy Quản Lý Khu Vực Kerberos (KDC):"
 
 #: system-config-kickstart.gladestrings:190
 msgid "Kerberos Master Server:"
-msgstr ""
+msgstr "Máy Chủ Kerberos chính:"
 
 #: system-config-kickstart.gladestrings:192
 msgid "Kerberos 5 Authentication"
-msgstr ""
+msgstr "Chứng Nhận Kerberos 5"
 
 #: system-config-kickstart.gladestrings:193
 msgid "Kerberos 5"
-msgstr ""
+msgstr "Kerberos 5"
 
 #: system-config-kickstart.gladestrings:194
 msgid "Enable Hesiod Support"
-msgstr ""
+msgstr "Mở Hesiod"
 
 #: system-config-kickstart.gladestrings:195
 msgid "Hesiod LHS:"
-msgstr ""
+msgstr "Hesiod LHS:"
 
 #: system-config-kickstart.gladestrings:197
 msgid "Hesiod RHS:"
-msgstr ""
+msgstr "Hesiod RHS:"
 
 #: system-config-kickstart.gladestrings:199
 msgid "Hesiod Authentication"
-msgstr ""
+msgstr "Chứng Nhận Hesiod"
 
 #: system-config-kickstart.gladestrings:200
 msgid "Hesiod"
-msgstr ""
+msgstr "Hesiod"
 
 #: system-config-kickstart.gladestrings:201
 msgid "Enable SMB Authentication"
-msgstr ""
+msgstr "Mở Bộ Chứng Nhận SMB"
 
 #: system-config-kickstart.gladestrings:202
 msgid "SMB Servers:"
-msgstr ""
+msgstr "Máy Chủ SMB:"
 
 #: system-config-kickstart.gladestrings:203
 msgid "SMB Workgroup:"
-msgstr ""
+msgstr "Nhóm SMB:"
 
 #: system-config-kickstart.gladestrings:206
 msgid "SMB Authentication"
-msgstr ""
+msgstr "Chứng Nhận SMB"
 
 #: system-config-kickstart.gladestrings:207
 msgid "SMB"
-msgstr ""
+msgstr "SMB"
 
 #: system-config-kickstart.gladestrings:208
 msgid "Enable nscd"
-msgstr ""
+msgstr "Mở nscd"
 
 #: system-config-kickstart.gladestrings:209
 msgid "Name Switch Cache Daemon (nscd) Authentication"
-msgstr ""
+msgstr "Chứng Nhận nscd"
 
 #: system-config-kickstart.gladestrings:210
 msgid "Name Switch Cache"
-msgstr ""
+msgstr "Name Switch Cache (nscd)"
 
 #: system-config-kickstart.gladestrings:211
 msgid "Authentication options are not applicable on upgrades."
-msgstr ""
+msgstr "Các chọn lựa Chứng Minh không ứng dụng cho Nâng Cấp."
 
 #: system-config-kickstart.gladestrings:212
 msgid "Authentication Configuration"
-msgstr ""
+msgstr "Cấu Hình Chứng Minh"
 
 #: system-config-kickstart.gladestrings:213
 msgid "label32"
-msgstr ""
+msgstr "label32"
 
 #: system-config-kickstart.gladestrings:214
 msgid "Security level:"
-msgstr ""
+msgstr "Mức Độ Bảo Mật:"
 
 #: system-config-kickstart.gladestrings:215
 msgid "Enable firewall"
-msgstr ""
+msgstr "Mở Màn Lửa"
 
 #: system-config-kickstart.gladestrings:216
 msgid "Disable firewall"
-msgstr ""
+msgstr "Tắt Màn Lửa"
 
 #: system-config-kickstart.gladestrings:217
 msgid "Firewall configuration is not applicable on upgrades."
-msgstr ""
+msgstr "Cấu Hình Màn Lửa không ứng dụng cho Nâng Cấp."
 
 #: system-config-kickstart.gladestrings:219
 msgid "label33"
-msgstr ""
+msgstr "label33"
 
 #: system-config-kickstart.gladestrings:220
 msgid "Configure the X Window System"
-msgstr ""
+msgstr "Cấu Hình Hệ Thống X Window"
 
 #: system-config-kickstart.gladestrings:221
 msgid "Color Depth"
-msgstr ""
+msgstr "Độ Sâu Màu"
 
 #: system-config-kickstart.gladestrings:223
 msgid "Resolution"
-msgstr ""
+msgstr "Độ Phân Giải"
 
 #: system-config-kickstart.gladestrings:225
 msgid "Default Desktop:"
-msgstr ""
+msgstr "Bàn (Desktop) Mặc Định:"
 
 #: system-config-kickstart.gladestrings:226
 msgid "GNOME"
-msgstr ""
+msgstr "GNOME"
 
 #: system-config-kickstart.gladestrings:227
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: system-config-kickstart.gladestrings:228
 msgid "Start the X Window System on boot"
-msgstr ""
+msgstr "Chạy X Window khi máy khởi động"
 
 #: system-config-kickstart.gladestrings:229
 msgid "On first boot, Setup Agent is: "
-msgstr ""
+msgstr "Lần khởi động đầu tiên, được bố trí bởi: "
 
 #: system-config-kickstart.gladestrings:230
 msgid "Disabled"
-msgstr ""
+msgstr "Tắt"
 
 #: system-config-kickstart.gladestrings:231
 msgid "Enabled"
-msgstr ""
+msgstr "Mở"
 
 #: system-config-kickstart.gladestrings:232
 msgid "Enabled in reconfiguration mode"
-msgstr ""
+msgstr "Mở trong mốt Tái Cấu Hình"
 
 #: system-config-kickstart.gladestrings:233
 msgid "General"
-msgstr ""
+msgstr "Thông Dụng"
 
 #: system-config-kickstart.gladestrings:234
 msgid "Probe for video card"
-msgstr ""
+msgstr "Dò tìm Thẻ Hình"
 
 #: system-config-kickstart.gladestrings:235
 msgid "Video Card RAM: "
-msgstr ""
+msgstr "Bộ Nhớ Thẻ Hình: "
 
 #: system-config-kickstart.gladestrings:237
 msgid "Video Card"
-msgstr ""
+msgstr "Thẻ Hình"
 
 #: system-config-kickstart.gladestrings:238
 msgid "Probe for monitor"
-msgstr ""
+msgstr "Dò tìm Màn Hình"
 
 #: system-config-kickstart.gladestrings:239
 msgid "Use custom monitor sync rates"
-msgstr ""
+msgstr "Dùng Tần Số Đồng Bộ (sync rates) Đặc Chế"
 
 #: system-config-kickstart.gladestrings:241
 msgid "Hz"
-msgstr ""
+msgstr "Hz"
 
 #: system-config-kickstart.gladestrings:243
 msgid "kHz"
-msgstr ""
+msgstr "kHz"
 
 #: system-config-kickstart.gladestrings:244
 msgid "Vertical Sync:"
-msgstr ""
+msgstr "Tần Số Dọc:"
 
 #: system-config-kickstart.gladestrings:245
 msgid "Horizontal Sync:"
-msgstr ""
+msgstr "Tần Số Ngang:"
 
 #: system-config-kickstart.gladestrings:246
 msgid "Monitor"
-msgstr ""
+msgstr "Màn Hình"
 
 #: system-config-kickstart.gladestrings:247
 msgid "Display configuration is not applicable on upgrades."
-msgstr ""
+msgstr "Cấu Hình Bộ Hiển Thị không được áp dụng khi nâng cấp."
 
 #: system-config-kickstart.gladestrings:249
 msgid "label88"
-msgstr ""
+msgstr "label88"
 
 #: system-config-kickstart.gladestrings:250
 msgid "Select packages to install."
-msgstr ""
+msgstr "Chọn Các gói đễ cài."
 
 #: system-config-kickstart.gladestrings:251
 msgid "_Automatically Resolve Dependencies"
-msgstr ""
+msgstr "_Tự Động phân giải Sự Phụ Thuộc giữa các gói"
 
 #: system-config-kickstart.gladestrings:252
 msgid "_Ignore Dependencies"
-msgstr ""
+msgstr "_Bỏ qua các Phụ Thuộc"
 
 #: system-config-kickstart.gladestrings:253
 msgid "Desktops"
-msgstr ""
+msgstr "Bàn"
 
 #: system-config-kickstart.gladestrings:254
 msgid "Applications"
-msgstr ""
+msgstr "Trình"
 
 #: system-config-kickstart.gladestrings:255
 msgid "Servers"
-msgstr ""
+msgstr "Máy Chủ"
 
 #: system-config-kickstart.gladestrings:256
 msgid "Development"
-msgstr ""
+msgstr "Lập Trình"
 
 #: system-config-kickstart.gladestrings:257
 msgid "System"
-msgstr ""
+msgstr "Hệ Thống"
 
 #: system-config-kickstart.gladestrings:258
 msgid "Package selection is not applicable on upgrades."
-msgstr ""
+msgstr "Không được phép chọn gói khi nâng cấp."
 
 #: system-config-kickstart.gladestrings:260
 msgid "label34"
-msgstr ""
+msgstr "label34"
 
 #: system-config-kickstart.gladestrings:261
 #, c-format
@@ -1913,20 +1930,22 @@ msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %pre command at the beginning."
 msgstr ""
+"Cảnh Báo: Lỗi trong Trình này có thể làm cho Chương Trình Cài Tự Động bị "
+"hỏng.  Không nên dùng lệnh %pre vào lúc đầu."
 
 #: system-config-kickstart.gladestrings:262
 #: system-config-kickstart.gladestrings:269
 msgid "Use an interpreter:"
-msgstr ""
+msgstr "Dùng Trình Phiên Dịch:"
 
 #: system-config-kickstart.gladestrings:264
 #, c-format
 msgid "Type your %pre script below:"
-msgstr ""
+msgstr "Gõ Trình %pre của bạn vào đây:"
 
 #: system-config-kickstart.gladestrings:266
 msgid "label89"
-msgstr ""
+msgstr "label89"
 
 #: system-config-kickstart.gladestrings:267
 #, c-format
@@ -1934,37 +1953,41 @@ msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %post command at the beginning."
 msgstr ""
+"Cảnh Báo: Lỗi trong Trình này có thể làm cho Chương Trình Cài Tự Động bị "
+"hỏng.  Không nên dùng lệnh %post vào lúc đầu."
 
 #: system-config-kickstart.gladestrings:268
 msgid "Run outside of the chroot environment"
-msgstr ""
+msgstr "Hoạt động ngoài phạm vi của chroot"
 
 #: system-config-kickstart.gladestrings:271
 #, c-format
 msgid "Type your %post script below:"
-msgstr ""
+msgstr "Gõ Trình %post của bạn vào đây:"
 
 #: system-config-kickstart.gladestrings:273
 msgid "label93"
-msgstr ""
+msgstr "label93"
 
 #: system-config-kickstart.gladestrings:274
 msgid "Preview Options"
-msgstr ""
+msgstr "Xem Trước các Lựa Chọn"
 
 #: system-config-kickstart.gladestrings:275
 msgid "_Save to File"
-msgstr ""
+msgstr "_Lưu vào Tệp"
 
 #: system-config-kickstart.gladestrings:276
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
 msgstr ""
+"Bạn đã chọn các Cấu Hình sau đây.  Nhấn vào nút Lưu đễ lưu vào Tệp Cài Tự "
+"Động."
 
 #: system-config-kickstart.gladestrings:277
 msgid "RAID Options"
-msgstr ""
+msgstr "Chọn Lựa RAID"
 
 #: system-config-kickstart.gladestrings:278
 msgid ""
@@ -1973,52 +1996,59 @@ msgid ""
 "reliability compared to using an individual drive.  For more information on "
 "using RAID devices please consult the kickstart documentation."
 msgstr ""
+"Phần mềm RAID cho phép bạn kết hợp nhiều dĩa cứng lại với nhau thành 1 dĩa "
+"RAID lớn hơn.  Một dĩa RAID có thể được cấu hình để gia tăng tốc độ hoặc độ "
+"tin cậy so với 1 dĩa riêng rẽ.  Muốn biết thêm chi tiết về các ứng dụng của "
+"RAID xin đọc thêm bài về Trình Cài Tự Động."
 
 #: system-config-kickstart.gladestrings:279
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
 msgstr ""
+"Nếu muốn dùng RAID, bạn phải tạo ít nhất là 2 Vùng Dĩa loại 'software "
+"RAID'.  Sau đó bạn mới có thể tạo ra 1 dĩa RAID mà bạn có thể Định Dạng và "
+"gắn(mount)."
 
 #: system-config-kickstart.gladestrings:280
 msgid "Choose one of the following options:"
-msgstr ""
+msgstr "Chọn 1 trong những phần sau đây:"
 
 #: system-config-kickstart.gladestrings:281
 msgid "Create a software RAID partition"
-msgstr ""
+msgstr "Tạo 1 Dĩa RAID Mềm"
 
 #: system-config-kickstart.gladestrings:282
 msgid "Create a RAID device [default = /dev/md0]"
-msgstr ""
+msgstr "Tạo 1 Thiết Bị RAID [Mặc Định = /dev/md0]"
 
 #: system-config-kickstart.gladestrings:283
 msgid "Network Device Information"
-msgstr ""
+msgstr "Thông Tin về Thiết Bị Mạng"
 
 #: system-config-kickstart.gladestrings:284
 msgid "Network Device:"
-msgstr ""
+msgstr "Thiết Bị Mạng:"
 
 #: system-config-kickstart.gladestrings:285
 msgid "Network Type:"
-msgstr ""
+msgstr "Loại Mạng:"
 
 #: system-config-kickstart.gladestrings:286
 msgid "IP Address:"
-msgstr ""
+msgstr "Địa Chỉ IP:"
 
 #: system-config-kickstart.gladestrings:287
 msgid "Netmask: "
-msgstr ""
+msgstr "Nạ Mạng:"
 
 #: system-config-kickstart.gladestrings:288
 msgid "Gateway:"
-msgstr ""
+msgstr "Cổng:"
 
 #: system-config-kickstart.gladestrings:289
 msgid "Name Server:"
-msgstr ""
+msgstr "Máy Chủ Tên:"
 
 #: system-config-kickstart.gladestrings:291
 #: system-config-kickstart.gladestrings:293
@@ -2033,4 +2063,4 @@ msgstr ""
 #: system-config-kickstart.gladestrings:314
 #: system-config-kickstart.gladestrings:316
 msgid "."
-msgstr ""
+msgstr "."
