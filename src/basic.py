@@ -47,9 +47,7 @@ gtk.glade.bindtextdomain(domain)
 
 class basic:
 
-    def __init__(self, xml, store, view, notebook, kickstartData):
-        self.store = store
-        self.view = view
+    def __init__(self, xml, notebook, kickstartData):
         self.notebook = notebook
         self.kickstartData = kickstartData
         self.xml = xml
@@ -61,6 +59,7 @@ class basic:
         self.utc_check_button = xml.get_widget("utc_check_button")
 
         self.root_passwd_entry = xml.get_widget("root_passwd_entry")
+        self.root_passwd_confirm_entry = xml.get_widget("root_passwd_confirm_entry")        
         self.emulate_3_buttons = xml.get_widget("emulate_3_buttons")
         self.lang_support_view = xml.get_widget("lang_support_view")
         self.reboot_checkbutton = xml.get_widget("reboot_checkbutton")
@@ -198,6 +197,27 @@ class basic:
         else:
             self.kickstartData.setTimezone([self.timezone_combo.entry.get_text()])
 
+
+        if self.root_passwd_entry.get_text() != self.root_passwd_confirm_entry.get_text():
+            dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, _("Root passwords do not match."))
+            dlg.set_title(_("Error"))
+            dlg.set_default_size(100, 100)
+            dlg.set_position (gtk.WIN_POS_CENTER)
+            dlg.set_icon(kickstartGui.iconPixbuf)
+            dlg.set_border_width(2)
+            dlg.set_modal(gtk.TRUE)
+            toplevel = self.xml.get_widget("main_window")
+            dlg.set_transient_for(toplevel)
+            dlg.run()
+            dlg.hide()
+            self.notebook.set_current_page(0)
+            self.root_passwd_entry.set_text("")
+            self.root_passwd_confirm_entry.set_text("")            
+            self.root_passwd_entry.grab_focus()
+            return None
+            
+
+
         if self.root_passwd_entry.get_text() == "" and doInstall:
             dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, _("Please select a root password."))
             dlg.set_title(_("Error"))
@@ -210,8 +230,6 @@ class basic:
             dlg.set_transient_for(toplevel)
             dlg.run()
             dlg.hide()
-            iter = self.store.get_iter_first()
-            self.view.get_selection().select_iter(iter)
             self.notebook.set_current_page(0)
             self.root_passwd_entry.grab_focus()
             return None
