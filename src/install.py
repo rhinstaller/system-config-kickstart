@@ -28,6 +28,9 @@ import libglade
 class install:
 
     def __init__(self, xml):
+        self.install_radiobutton = xml.get_widget("install_radiobutton")
+        self.upgrade_radiobutton = xml.get_widget("upgrade_radiobutton")
+
         self.cdrom_radiobutton = xml.get_widget("cdrom_radiobutton")
         self.nfs_radiobutton = xml.get_widget("nfs_radiobutton")
         self.ftp_radiobutton = xml.get_widget("ftp_radiobutton")
@@ -75,8 +78,12 @@ class install:
             self.install_notebook.set_page(4)
                                      
     def getData(self):
-        #specify to perform a fresh install
-        buf = "\n" + "install"
+        if self.install_radiobutton.get_active():
+            buf = "\n" + "install"
+        elif self.upgrade_radiobutton.get_active():
+            buf = "\n" + "upgrade"
+            #gray out package selection and partitions
+            
         if self.cdrom_radiobutton.get_active():
             buf = buf + "\n" + "cdrom"
         elif self.nfs_radiobutton.get_active():
