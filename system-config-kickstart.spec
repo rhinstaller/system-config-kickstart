@@ -60,6 +60,7 @@ fi
 %changelog
 * Fri Mar  5 2004 Brent Fox <bfox@redhat.com> 2.5.7-1
 - support PPC PReP partitions (bug #116847)
+- require Python2.3 for getopt.gnu_getopt() call
 
 * Fri Mar  5 2004 Brent Fox <bfox@redhat.com> 2.5.6-1
 - don't crash on file with no bootloader line (bug #117593)
