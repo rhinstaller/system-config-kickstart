@@ -2,13 +2,12 @@
 
 import string
 import getopt
-import kickstartData
 
-class KickstartFile:
-    def __init__(self):
+class KickstartParser:
+    def __init__(self, kickstartData, file):
         print "starting"
 
-        self.kickstartData = kickstartData.KickstartData()
+        self.kickstartData = kickstartData
 
 	self.handlers = { 
  		     "auth"		: self.kickstartData.setAuth  	        ,
@@ -53,15 +52,15 @@ class KickstartFile:
 		   }
 
 
-        self.readKickstartFile()
+        self.readKickstartFile(file)
         print "Lang is", self.kickstartData.getLang()
         print "Langsupport is", self.kickstartData.getLangsupport()
         print "Keyboard is", self.kickstartData.getKeyboard()
         print self.kickstartData.getMouse()
         print self.kickstartData.getTimezone()        
 
-    def readKickstartFile(self):
-        self.lines = open("ks.cfg", "r").readlines()
+    def readKickstartFile(self, file):
+        self.lines = open(file, "r").readlines()
 #        print self.lines
 
         for line in self.lines:
@@ -78,5 +77,7 @@ class KickstartFile:
                     if self.handlers[tokens[0]]:
 			self.handlers[tokens[0]](tokens[1:])                        
                     
-
-KickstartFile()
+import kickstartData
+data = kickstartData.KickstartData()
+KickstartParser(data, "ks.cfg")
+data.getAll()
