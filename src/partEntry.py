@@ -31,7 +31,7 @@ class partEntry:
         self.setSizeVal = ""
         self.sizeStrategy = "fixed"
         self.maxSize = ""
-        self.asPrimary = ""
+        self.asPrimary = 0
         self.device = None
         self.partition = None
 #        self.onDisk = ""
