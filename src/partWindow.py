@@ -196,7 +196,6 @@ class partWindow:
         part_object = self.part_store.get_value(self.current_iter, 5)
         self.getData(part_object)
 
-        self.part_store.set_value(self.current_iter, 0, part_object.device)
         self.part_store.set_value(self.current_iter, 1, part_object.mountPoint)
         self.part_store.set_value(self.current_iter, 2, part_object.fsType)
         if part_object.doFormat == 1:
