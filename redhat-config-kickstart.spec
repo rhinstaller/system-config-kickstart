@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
-Version: 2.3.9
+Version: 2.3.10
 Release: 1
 URL: http://www.redhat.com
 License: GPL
@@ -56,6 +56,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Thu Jul 10 2003 Brent Fox <bfox@redhat.com> 2.3.10-1
+- clear network data when opening a new ks file
+
 * Tue Jun  3 2003 Brent Fox <bfox@redhat.com> 2.3.9-1
 - fix most of bug #92102
 
