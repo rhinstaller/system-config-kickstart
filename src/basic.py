@@ -44,7 +44,8 @@ gtk.glade.bindtextdomain(domain)
 
 class basic:
 
-    def __init__(self, xml, notebook, kickstartData):
+    def __init__(self, parent_class, xml, notebook, kickstartData):
+        self.parent_class = parent_class
         self.notebook = notebook
         self.kickstartData = kickstartData
         self.xml = xml
@@ -64,8 +65,12 @@ class basic:
         self.interactive_checkbutton = xml.get_widget("interactive_checkbutton")                
         self.encrypt_root_pw_checkbutton = xml.get_widget("encrypt_root_pw_checkbutton")
         self.lang_support_list = xml.get_widget("lang_support_list")
-#        self.lang_support_list.set_selection_mode(SELECTION_MULTIPLE)
-#        self.messagebox = xml.get_widget("messagebox")
+        self.platform_combo = xml.get_widget("platform_combo")
+        self.platform_combo.entry.connect("changed", self.platformChanged)
+
+        self.platform_list =  [_("x86, AMD64, or Intel EM64T"), _("Intel Itanium"), _("IBM iSeries"),
+                               _("IBM pSeries"), _("IBM zSeries/s390")]
+        self.platform_combo.set_popdown_strings(self.platform_list)
 
         self.lang_support_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
         self.lang_support_view.set_model(self.lang_support_store)
@@ -249,6 +254,8 @@ class basic:
             self.passwd = self.root_passwd_entry.get_text()
             self.kickstartData.setRootPw([self.passwd])            
 
+        self.kickstartData.setPlatform(self.platform_combo.entry.get_text())
+
         if self.reboot_checkbutton.get_active():
             self.kickstartData.setReboot("reboot")
         else:
@@ -285,6 +292,11 @@ class basic:
             iter = self.lang_support_store.append()
             self.lang_support_store.set_value(iter, 0, gtk.FALSE)
             self.lang_support_store.set_value(iter, 1, lang)
+
+    def platformChanged(self, entry):
+        platform = entry.get_text()
+        if platform:
+            print "platformChanged", entry.get_text()
 
     def fillData(self):
         #set language
