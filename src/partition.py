@@ -43,7 +43,8 @@ class partition:
     def __init__(self, xml, kickstartData):
         self.xml = xml
         self.kickstartData = kickstartData
-        self.partition_frame = self.xml.get_widget("partition_frame")
+        self.partition_vbox = self.xml.get_widget("partition_vbox")
+        self.partition_label_box = self.xml.get_widget("partition_label_box")
         self.clear_mbr_yes_radiobutton = self.xml.get_widget("clear_mbr_yes_radiobutton")
         self.clear_mbr_no_radiobutton = self.xml.get_widget("clear_mbr_no_radiobutton")
         self.remove_parts_none_radiobutton = self.xml.get_widget("remove_parts_none_radiobutton")
@@ -319,7 +320,12 @@ class partition:
         self.initlabel_no_radiobutton.set_sensitive(not button.get_active())
 
     def setSensitive(self, boolean):
-        self.partition_frame.set_sensitive(boolean)
+        if boolean == gtk.FALSE:
+            self.partition_vbox.hide()
+            self.partition_label_box.show_all()
+        else:
+            self.partition_vbox.show_all()
+            self.partition_label_box.hide()
 
     def fillData(self):
         if self.kickstartData.getZeroMbr():

@@ -220,7 +220,6 @@ class basic:
             return None
             
 
-
         if self.root_passwd_entry.get_text() == "" and doInstall:
             dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, _("Please select a root password."))
             dlg.set_title(_("Error"))

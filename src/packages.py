@@ -39,7 +39,8 @@ class Packages:
 
     def __init__(self, xml, kickstartData):
         self.kickstartData = kickstartData
-        self.package_frame = xml.get_widget("package_frame")
+        self.package_vbox = xml.get_widget("package_vbox")
+        self.package_label_box = xml.get_widget("package_label_box")
         self.resolve_deps_radio = xml.get_widget("resolve_deps_radio")
         self.ignore_deps_radio = xml.get_widget("ignore_deps_radio")
 
@@ -187,7 +188,12 @@ class Packages:
             iter = store.iter_next(iter)
 
     def setSensitive(self, boolean):
-        self.package_frame.set_sensitive(boolean)
+        if boolean == gtk.FALSE:
+            self.package_vbox.hide()
+            self.package_label_box.show()
+        else:
+            self.package_vbox.show()
+            self.package_label_box.hide()
 
     def fillData(self):
         if self.kickstartData.getPackage():
