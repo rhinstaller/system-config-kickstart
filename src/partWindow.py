@@ -250,7 +250,7 @@ class partWindow:
             dlg.set_modal(gtk.TRUE)
             rc = dlg.run()
             if rc == gtk.RESPONSE_OK:
-                selectDialog.hide()
+                dlg.hide()
             return
 
         if fsType == "RAID":
