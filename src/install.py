@@ -29,7 +29,8 @@ import gtk.glade
 
 class install:
   
-    def __init__(self, xml):
+    def __init__(self, xml, bootloader_class):
+        self.bootloader_class = bootloader_class
         self.install_radiobutton = xml.get_widget("install_radiobutton")
         self.upgrade_radiobutton = xml.get_widget("upgrade_radiobutton")
         self.partitioning_frame = xml.get_widget("partitioning_frame")
@@ -87,6 +88,7 @@ class install:
         install = self.install_radiobutton.get_active()
         self.partitioning_frame.set_sensitive(install)
         self.pkg_selection_frame.set_sensitive(install)            
+        self.bootloader_class.upgrade_bootloader_radio.set_sensitive(not install)
 
     def setState (self, args):
         if self.cdrom_radiobutton.get_active():
