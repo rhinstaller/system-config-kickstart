@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: ksconfig
 Version: 1.9.7
-Release: 6
+Release: 7
 URL: http://www.redhat.com
 Copyright: GPL
 ExclusiveOS: Linux
@@ -49,6 +49,9 @@ fi
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
+* Thu Aug 09 2001 Tammy Fox <tfox@redhat.com>
+- Updated docs for encrypt root password option
+
 * Thu Aug 09 2001 Brent Fox <bfox@redhat.com>
 - Allow user to select plaintext or encrypted root password
 
