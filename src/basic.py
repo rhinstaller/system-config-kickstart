@@ -311,20 +311,25 @@ class basic:
         #set keyboard
         self.keyboard_combo.entry.set_text(self.keyboard_dict[self.kickstartData.getKeyboard()][0])
 
-        #set mouse
-        for mouse in self.mouseDict.keys():
-            mouseLine = self.kickstartData.getMouse()
+        mouseLine = self.kickstartData.getMouse()
 
-            if "--emulthree" in mouseLine:
-                self.emulate_3_buttons.set_active(gtk.TRUE)
-                mouseLine.remove("--emulthree")
+        if mouseLine == None:
+            self.mouse_combo.list.select_item(self.mouse_list.index("No - mouse"))
 
-            mouseTag = mouseLine[0]
+        else:
+            #set mouse
+            for mouse in self.mouseDict.keys():
 
-            (a, b, c, d, e, dictMouseTag) = self.mouseDict[mouse]
-            
-            if dictMouseTag == mouseTag:
-                self.mouse_combo.list.select_item(self.mouse_list.index(mouse))
+                if "--emulthree" in mouseLine:
+                    self.emulate_3_buttons.set_active(gtk.TRUE)
+                    mouseLine.remove("--emulthree")
+
+                mouseTag = mouseLine[0]
+
+                (a, b, c, d, e, dictMouseTag) = self.mouseDict[mouse]
+
+                if dictMouseTag == mouseTag:
+                    self.mouse_combo.list.select_item(self.mouse_list.index(mouse))
 
         #set timezone
         self.timezone_combo.list.select_item(self.timezone_list.index(self.kickstartData.getTimezone()))
