@@ -130,10 +130,9 @@ class partition:
         #partitioning table options
 #        num_raid = 0
 
-        next = 1
         iter = self.part_store.get_iter_root()
 
-        while next:
+        while iter:
             part_object = self.part_store.get_value(iter, 4)
 
 ##             if fsType == "RAID":
@@ -179,6 +178,6 @@ class partition:
                 buf = buf + "--noformat "
 
             data.append(buf)
-            next = self.part_store.iter_next(iter)
+            iter = self.part_store.iter_next(iter)
 
         return data
