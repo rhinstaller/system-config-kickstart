@@ -43,7 +43,7 @@ class partEntry:
     def setData (self, rowData):
         (mountPoint, fsType, sizeStrategy, size, sizeSetVal, asPrimary, 
          onDisk, onDiskVal, onPart, onPartVal, doFormat, raidType,
-         raidSpares, isRaidDevice) = rowData   
+         raidSpares, isRaidDevice, raidNumber) = rowData   
 
         self.mountPoint = mountPoint
         self.fsType = fsType
@@ -59,3 +59,4 @@ class partEntry:
         self.raidType = raidType
         self.raidSpares = raidSpares
         self.isRaidDevice = isRaidDevice
+        self.raidNumber = raidNumber
