@@ -546,14 +546,18 @@ class partWindow:
         part_object.mountPoint = line[0]
         opts, args = getopt.getopt(line[1:], "d:h", ["fstype=", "size=", "onpart", 
                                                      "grow", "maxsize", "noformat", "onpart",
-                                                     "usepart", "ondisk", "ondrive", "asprimary"
+                                                     "usepart", "ondisk=", "ondrive", "asprimary"
                                                      "bytes-per-inode", "start", "end", "badblocks"])
 
         for (opt, value) in opts:
             if opt == "--fstype":
                 part_object.fsType = value
+
             if opt == "--size":
                 part_object.size = value
+
+            if opt == "--ondisk":
+                part_object.device = value
 
             if opt == "onpart":
                 self.partition = value
@@ -569,6 +573,5 @@ class partWindow:
                 part_object.doFormat = 0
             else:
                 part_object.doFormat = 1
-
 
         return 0
