@@ -1,9 +1,37 @@
 #License: GPL
 #Copyright Red Hat Inc.  Jan 2001
 
-default: install
+VERSION=$(shell awk '/Version:/ { print $$2 }' ksconfig.spec)
+CVSTAG=r$(subst .,-,$(VERSION))
+SUBDIRS=man
+
+MANDIR=/usr/share/man
+
+default:
+
+subdirs:
+	for d in $(SUBDIRS); do \
+	(cd $$d; $(MAKE)) \
+	|| case "$(MFLAGS)" in *k*) fail=yes;; *) exit 1;; esac; \
+	done && test -z "$$fail"
 
 install:
-	mkdir -p $(RPM_BUILD_ROOT)/usr/sbin
-	install ksconfig.py $(RPM_BUILD_ROOT)/usr/sbin
+	mkdir -p $(INSTROOT)/usr/sbin
+	install ksconfig.py $(INSTROOT)/usr/sbin/ksconfig
+	for d in $(SUBDIRS); do \
+	(cd $$d; $(MAKE) INSTROOT=$(INSTROOT) MANDIR=$(MANDIR) install) \
+		|| case "$(MFLAGS)" in *k*) fail=yes;; *) exit 1;; esac; \
+	done && test -z "$$fail"
 
+archive:
+	cvs tag -F $(CVSTAG) .
+	@rm -rf /tmp/ksconfig-$(VERSION) /tmp/ksconfig
+	@cd /tmp; cvs export -r$(CVSTAG) ksconfig
+	@mv /tmp/ksconfig /tmp/ksconfig-$(VERSION)
+	@dir=$$PWD; cd /tmp; tar cvzf $$dir/ksconfig-$(VERSION).tar.gz ksconfig-$(VERSION)
+	@rm -rf /tmp/ksconfig-$(VERSION)
+	@echo "The archive is in ksconfig-$(VERSION).tar.gz"
+
+clean:
+	@rm -f *~
+	@rm -f *.pyc
