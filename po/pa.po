@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: pa VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-09-03 22:56+0200\n"
-"PO-Revision-Date: 2004-03-31 00:13+0530\n"
+"PO-Revision-Date: 2004-04-04 22:11+0530\n"
 "Last-Translator: Amanpreet Singh Alam <amanlinux@netscape.net>\n"
 "Language-Team: Punjabi <Project-Id-Version: gtranslator HEA>\n"
 "MIME-Version: 1.0\n"
@@ -469,6 +469,11 @@ msgid ""
 " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
 " A graphical interface for creating a kickstart file"
 msgstr ""
+"ਕਿੱਕਸਟਾਰਟ ਕੰਨਫੀਗਰੇਟਰ @ਵਰਜਨ@\n"
+" ਹੱਕ ਰਾਖਵੇ ਹਨ (c) ੨੦੦੦-੨੦੦੨ ਰੈਡ-ਹੈਟ\n"
+"  ਹੱਕ ਰਾਖਵੇ ਹਨ (c) ੨੦੦੦-੨੦੦੨ ਬਰਨਟ ਫਾਕਸ <bfox@redhat.com>\n"
+"  ਹੱਕ ਰਾਖਵੇ ਹਨ (c) ੨੦੦੦-੨੦੦੨ ਟਾਮੀ ਫਾਕਸ <tfox@redhat.com>\n"
+" ਕਿੱਕਸਟਾਰਟ ਫਾੲਿਲ ਬਣਾੳੁਣ ਲੲੀ ਗਰਾਫਿਕਲ ੲਿੰਟਰਫੇਸ ਹੈ ੤"
 
 #: ../src/kickstartGui.py:194
 msgid "About Kickstart Configurator"
@@ -484,7 +489,7 @@ msgstr "ਸਹਾੲਿਤਾ ੳੁਪਲੱਬਧ ਨਹੀ ਹੈ"
 #: ../src/kickstartGui.py:273
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
-msgstr ""
+msgstr "ਫਾੲਿਲ \"%s\" ਨੰੂ ਖੋਲਿਅਾ ਨਹੀ ਜਾ ਸਕਦਾ ਹੈ ੤"
 
 #. show chosen options for preview
 #. show preview dialog window
@@ -551,7 +556,7 @@ msgstr "ਸਥਿਰ IP"
 
 #: ../src/network.py:211
 msgid "Please fill in the network information"
-msgstr ""
+msgstr "ਕਿਰਪਾ ਕਰਕੇ ਨੈਟਵਰਕ ਜਾਣਕਾਰੀ ਭਰੋ"
 
 #: ../src/network.py:316
 #, python-format
@@ -559,6 +564,7 @@ msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
 msgstr ""
+"ਨੈਟਵਰਕ ਯੰਤਰ ਨਾੳੁ %s ਨਾਲ ਪਹਿਲ੾ ਹੀ ਮੌਜੂਦ ਹੈ ੤ ਕਿਰਪਾ ਕਰਕੇ ਵੱਖਰਾ ਯੰਤਰ ਚੁਣੋ "
 
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
@@ -696,7 +702,7 @@ msgstr "ਅਕਾਰ (ਅੈਮਬੀ)"
 #. #         self.part_store.set_value(part_iter, 5, part_object)
 #: ../src/partition.py:150 ../src/partition.py:180
 msgid "Please select a partition from the list."
-msgstr ""
+msgstr "ਕਿਰਪਾ ਕਰਕੇ ਸੂਚੀ ਵਿੱਚੋ ਭਾਗ ਚੁਣੋ ੤"
 
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
@@ -772,7 +778,7 @@ msgstr "ਹਾਰਡ-ਡਰਾੲਿਵ"
 #. It's not raid and it's not swap, so it must be a regular partition
 #: ../src/partWindow.py:420
 msgid "Specify a mount point for the partition."
-msgstr ""
+msgstr "ਭਾਗ ਦਾ ਮਾੳੂਟ ਸਥਿਤੀ ਨਿਰਧਾਰਿਤ ਕਰੋ ੤"
 
 #. Check to see if the mount point has already been used
 #. They are trying to use a mount point already in use.  Let's complain
@@ -781,6 +787,7 @@ msgstr ""
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
+"ਮਾੳੂਟ ਸਥਿਤੀ \"%s\" ਪਹਿਲ੾ ਹੀ ਮੌਜੂਦ ਹੈ ੤ ਕਿਰਪਾ ਕਰਕੇ ਹੋਰ ਮਾੳੂਟ ਸਥਿਤੀ ਦੀ ਚੋਣ ਕਰੋ ੤"
 
 #. This will scan the part_store and see if there are any duplicate mount points
 #: ../src/partWindow.py:449
@@ -788,25 +795,31 @@ msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
 msgstr ""
+"ਰੇਡ ਭਾਗ ਬਣਾੳੁ ਲੲੀ ਤੁਹਾਨੰੂ ਹਾਰਡ-ਡਰਾੲਿਵ ਯੰਤਰ ਦਾ ਨਾੳੁ ਜ੾ ਮੌਜੂਦ ਭਾਗ ਨੰੂ ਨਿਰਧਾਰਿਤ ਕਰੋ ੤"
+""
 
 #. If all the checks pass, then return
 #. Don't iterate if we're counting the object that's being edited
 #. the entry doesn't start with "hd" or "sd" so it's probably not valid
 #: ../src/partWindow.py:488
 msgid "Specify a device on which to create the partition."
-msgstr ""
+msgstr "ਯੰਤਰ ਨਿਰਧਾਰਿਤ ਕਰੋ ਜਿਸ ੳੁੱਪਰ ਭਾਗ ਬਣਾੳੁਣਾ ਹੈ ੤"
 
 #: ../src/partWindow.py:490
 msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
 msgstr ""
+"ਯੰਤਰ ਜੋ ਤੁਸੀ ਨਿਰਧਾਰਿਤ ਕੀਤਾ ਹੈ, ਦਾ ਨਾੳੁ ਜਾੲਿਜ਼ ਯੰਤਰ ਨਾੳੁ ਨਹੀ ਹੈ ੤ ਕਿਰਪਾ ਕਰਕੇ"
+"ੲਿੱਕ ਜਾੲਿਜ ਯੰਤਰ ਨਾੳੁ ਜਿਵੇ ਕਿ \"hda1\"  ਜ੾ \"sda3\" ਅਾਦਿ ਵਰਤੋ"
 
 #: ../src/partWindow.py:500
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
 msgstr ""
+"ਭਾਗ ਜੋ ਤੁਸੀ ਨਿਰਧਾਰਿਤ ਕੀਤਾ ਹੈ, ੲਿੱਕ ਅੰਕ ਨਾਲ ਖਤਮ ਨਹੀ ਹੰੁਦਾ ਹੈ ੤ ਭਾਗ ਦਾ ਨਾੳੁ"
+"ਭਾਗ ਨੰਬਰ ਜਿਵੇ ਕਿ \"hda1\"  ਜ੾ \"sda3\" ਅਾਦਿ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ ੤"
 
 #: ../src/partWindow.py:506
 msgid ""
@@ -814,6 +827,9 @@ msgid ""
 "Partitions must have a valid device name and partition number such as \"hda1"
 "\" or \"sda3\"."
 msgstr ""
+"ਭਾਗ, ਜੋ ਕਿ ਤੁਸੀ ਨਿਰਧਾਰਿਤ ਕੀਤੇ ਹਨ \"hd\" ਜ੾ \"sd\" ਨਾਲ ਅਾਰੰਭ ਨਹੀ ਹੁੰਦੇ ਹਨ ੤"
+"ਭਾਗ ਵਿੱਚ ਜਾੲਿਜ ਯੰਤਰ ਨਾੳੁ ਅਤੇ ਭਾਗ ਨੰਬਰ ਜਿਵੇ ਕਿ  \"hda1 \" ਜ੾ \"sda3\" ਅਾਦਿ"
+"ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ ੤"
 
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
 #. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
@@ -852,7 +868,7 @@ msgstr ""
 #: ../src/raidOptionsWindow.py:72
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
-msgstr ""
+msgstr "ਤੁਹਾਡੇ ਕੋਲ ੲਿਸ ਸਮੇ %d ਸਾਫਟਵੇਅਰ ਰੇਡ ਭਾਗ ਵਰਤਣ ਲੲੀ ਖਾਲੀ ਹਨ ੤"
 
 #. # raidWindow.py - code for redhat-config-kickstart's raid dialog
 #. # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
@@ -876,12 +892,12 @@ msgstr ""
 #: ../src/raidWindow.py:172
 #, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr ""
+msgstr "ਤੁਹਾਨੰੂ ਘੱਟੋ-ਘੱਟ 2 ਭਾਗ ਲੋੜੀਦੇ ਹਨ ਤ੾ ਕਿ ਰੇਡ %s ਬਣਾੲਿਅਾ ਜਾ ਸਕੇ "
 
 #: ../src/raidWindow.py:178
 #, python-format
 msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr ""
+msgstr "ਤੁਹਾਨੰੂ ਘੱਟੋ-ਘੱਟ 3 ਭਾਗ ਲੋੜੀਦੇ ਹਨ ਤ੾ ਕਿ ਰੇਡ %s ਬਣਾੲਿਅਾ ਜਾ ਸਕੇ "
 
 #. then this is a new raid device, not one we're just editing
 #: ../src/raidWindow.py:192 ../src/raidWindow.py:218
@@ -987,14 +1003,27 @@ msgid ""
 "values from\n"
 "                        the kickstart file already filled in."
 msgstr ""
+"ਵਰਤੋ: system-config-kickstart [--help] [--generate <ਫਾੲਿਲਨਾੳੁ>] "
+"[<ਕਿੱਕਸਟਾਰਟ ਫਾੲਿਲਨਾੳੁ>]\n"
+"        \n"
+"--help                  ੲਿਹ ਸੁਨੇਹਾ ਛਾਪੋ\n"
+"--generate <ਫਾੲਿਲਨਾੳੁ>  ਮੌਜੂਦਾ ਮਸ਼ੀਨ ਲੲੀ ਕਿੱਕਸਟਾਰਟ ਫਾੲਿਲ ਬਣਾੳੁ ਅਤੇ "
+"ਲਿਖੋ\n"
+"                         <ਫਾੲਿਲਨਾੳੁ> ੤ ੲਿਹ ਚੋਣ ਕੰਨਸੋਲ ਵਿੱਚ ਚਲਦੀ ਹੈ ਤ੾ ਕਿ"
+"ੲਿਹ \n"
+"                        ੳੁਹਨ੾ ਸਰਵਰ੾ ਲੲੀ ਲਾਭਦਾੲਿਕ ਰਹੇ ਜਿਹਨ੾ ਤੇ ੲਿਸ ਸਮੇ X ਚੱਲ"
+"ਨਹੀ ਰਿਹਾ ਹੈ ੤\n"
+"<ਕਿੱਕਸਟਾਰਟ ਫਾੲਿਲਨਾੳੁ>    ੲਿਹ ਚੋਣ GUI ਨੰੂ ਸ਼ੁਰੂ ਕਰਨ ਲੲੀ ਮਜ਼ਬੂਰ ਕਰੇਗੀ"
+"ਮੁੱਲ\n"
+"                      ਪਹਿਲ੾ ਹੀ ਭਰੀ ਕਿੱਕਸਟਾਰਟ ਫਾੲਿਲ ਵਿੱਚੋ ਲੈਕੇ"
 
 #: ../src/system-config-kickstart.py:77
 msgid "Could not open display because no X server is running."
-msgstr ""
+msgstr "ਦਰਿਸ਼ ਖੋਲ ਨਹੀ ਸਕਿਅਾ ਕਿੳੁਕਿ X ਸਰਵਰ ਚੱਲ ਨਹੀ ਸੀ ਰਿਹਾ ੤"
 
 #: ../src/system-config-kickstart.py:78
 msgid "Try running 'system-config-kickstart --help' for a list of options."
-msgstr ""
+msgstr "ਚੋਣ ਸੂਚੀ ਲੲੀ 'system-config-kickstart --help' ਨੰੂ ਚਲਾੳੁ ੤"
 
 #. !/usr/bin/python2
 #. !/usr/bin/python2
@@ -1021,12 +1050,12 @@ msgstr ""
 #. add video cards to list
 #: ../src/xconfig.py:102
 msgid "Could not read video card database"
-msgstr ""
+msgstr "ਵੀਡਿਓ ਕਾਰਡ ਡਾਟਾਬੇਸ ਪੜ੏ ਨਹੀ ਸਕਿਅਾ "
 
 #. add monitors to list
 #: ../src/xconfig.py:120
 msgid "Could not read monitor database"
-msgstr ""
+msgstr "ਮਾਨੀਟਰ ਡਾਟਾਬੇਸ ਪੜ੏ ਨਹੀ ਸਕਿਅਾ "
 
 #. disable xconfig notebook
 #. color depth - translate
@@ -1126,11 +1155,11 @@ msgstr "ਅਕਾਰ (ਅੈਮਬੀ)ਃ"
 
 #: system-config-kickstart.gladestrings:14
 msgid "Fill all unused space on disk"
-msgstr ""
+msgstr "ਨਾ-ਵਰਤੀ ਡਿਸਕ ਥ੾ ਨੰੂ ਭਰੋ"
 
 #: system-config-kickstart.gladestrings:15
 msgid "Grow to maximum of (MB):"
-msgstr ""
+msgstr "ਅਧਿਕਤਮ ਤੱਕ ਭਰੋ (ਅੈਮਬੀ):"
 
 #: system-config-kickstart.gladestrings:16
 msgid "Fixed size"
@@ -1138,19 +1167,19 @@ msgstr "ਨਿਸ਼ਚਿਤ ਅਕਾਰ"
 
 #: system-config-kickstart.gladestrings:17
 msgid "Use recommended swap size"
-msgstr ""
+msgstr "ਸਿਫਾਰਸ਼ੀ ਸਵੈਪ ਅਕਾਰ ਵਰਤੋ"
 
 #: system-config-kickstart.gladestrings:18
 msgid "Additional Size Options"
-msgstr ""
+msgstr "ਹੋਰ ਅਕਾਰ ਚੋਣ"
 
 #: system-config-kickstart.gladestrings:19
 msgid "Force to be a primary partition (asprimary)"
-msgstr ""
+msgstr "ਪ੍ਾੲਿਮਰੀ ਬਣਨ ਲੲੀ ਮਜ਼ਬੂਰ ਕਰੋ( ਪ੍ਾੲਿਮਰੀ )"
 
 #: system-config-kickstart.gladestrings:20
 msgid "Make partition on specific drive (ondisk)"
-msgstr ""
+msgstr "ਖਾਸ ਡਰਾੲਿਵ ਤੇ ਭਾਗ ਬਣਾੳੁ (ਡਿਸਕ ਤੇ)"
 
 #: system-config-kickstart.gladestrings:21
 #: system-config-kickstart.gladestrings:26
@@ -1163,11 +1192,11 @@ msgstr "ਡਰਾੲਿਵਃ"
 
 #: system-config-kickstart.gladestrings:24
 msgid "(for example: hda or sdc)"
-msgstr ""
+msgstr "(ੳੁਦਾਹਰਨ ਲੲੀ: hda ਜ੾ sdc)"
 
 #: system-config-kickstart.gladestrings:25
 msgid "Use existing partition (onpart)"
-msgstr ""
+msgstr "ਮੌਜੂਦਾ ਭਾਗ ਹੀ ਵਰਤੋ(ਭਾਗ ਤੇ)"
 
 #: system-config-kickstart.gladestrings:27
 msgid "Partition :"
@@ -1175,7 +1204,7 @@ msgstr "ਭਾਗਃ"
 
 #: system-config-kickstart.gladestrings:29
 msgid "(for example: hda1 or sdc3)"
-msgstr ""
+msgstr "(ੳੁਦਾਹਰਨ ਲੲੀ: hda1 ਜ੾ sdc3)"
 
 #: system-config-kickstart.gladestrings:30
 msgid "Format partition"
@@ -1323,7 +1352,7 @@ msgstr "ਮੂਲ ਭਾਸ਼ਾਃ"
 
 #: system-config-kickstart.gladestrings:74
 msgid "Encrypt root password"
-msgstr ""
+msgstr "ੲਿੰਕਿ੍ਪਡ ਰੂਟ ਗੁਪਤ-ਕੋਡ"
 
 #: system-config-kickstart.gladestrings:75
 msgid "Keyboard:"
@@ -1335,7 +1364,7 @@ msgstr "ਮਾੳੂਸਃ"
 
 #: system-config-kickstart.gladestrings:79
 msgid "Emulate 3 Buttons"
-msgstr ""
+msgstr "੩ ਬਟਨ੾ ਦੇ ਸਮਰੂਪ"
 
 #: system-config-kickstart.gladestrings:80
 msgid "Time Zone:"
@@ -1368,11 +1397,11 @@ msgstr "ੲਿੰਸਟਾਲੇਸ਼ਨ ਮਗਰੋ ਮੁੜ-ਚਾਲੂ"
 
 #: system-config-kickstart.gladestrings:91
 msgid "Perform installation in text mode (graphical is default)"
-msgstr ""
+msgstr "ਪਾਠ ਮੋਡ ਵਿੱਚ ੲਿੰਸਟਾਲੇਸ਼ਨ ਕਰੋ (ਗਰਾਫਿਕਲ ਮੂਲ ਹੈ)"
 
 #: system-config-kickstart.gladestrings:92
 msgid "Perform installation in interactive mode"
-msgstr ""
+msgstr "ਦਿਲ-ਖਿੱਚਵੇ ਮੋਡ ਵਿੱਚ ੲਿੰਸਟਾਲੇਸ਼ਨ ਕਰੋ"
 
 #: system-config-kickstart.gladestrings:93
 msgid "Basic Configuration (required)"
@@ -1437,7 +1466,7 @@ msgstr "FTP ਡਾੲਿਰੈਕਟਰੀ:"
 
 #: system-config-kickstart.gladestrings:113
 msgid "Specify an FTP username and password"
-msgstr ""
+msgstr "ੲਿੱਕ FTP ੳੁਪਭੋਗਤਾ ਨਾੳੁ ਅਤੇ ਗੁਪਤ-ਕੋਡ ਭਰੋ"
 
 #: system-config-kickstart.gladestrings:114
 msgid "FTP Username"
@@ -1497,15 +1526,15 @@ msgstr "ਗੁਪਤ-ਕੋਡਃ"
 
 #: system-config-kickstart.gladestrings:140
 msgid "Encrypt GRUB password"
-msgstr ""
+msgstr "ੲਿੰਕਿ੍ਪਡ ਗਰਬ ਗੁਪਤ-ਕੋਡ"
 
 #: system-config-kickstart.gladestrings:141
 msgid "Install boot loader on Master Boot Record (MBR)"
-msgstr ""
+msgstr "ਬੂਟ ਲੋਡਰ ਨੰੂ ਮਾਸਟਰ ਬੂਟ ਲੋਡਰ (MBR) ਤੇ ੲਿੰਸਟਾਲ ਕਰੋ"
 
 #: system-config-kickstart.gladestrings:142
 msgid "Install boot loader on first sector of the boot partition"
-msgstr ""
+msgstr "ਬੂਟ ਲੋਡਰ ਨੰੂ ਬੂਟ ਭਾਗ ਦੇ ਪਹਿਲੇ ਸੈਕਟਰ ਤੇ ੲਿੰਸਟਾਲ ਕਰੋ"
 
 #: system-config-kickstart.gladestrings:143
 msgid "Kernel parameters:"
@@ -1521,31 +1550,31 @@ msgstr "ਲੇਬਲ੩੫"
 
 #: system-config-kickstart.gladestrings:147
 msgid "Clear Master Boot Record"
-msgstr ""
+msgstr "ਮਾਸਟਰ ਬੂਟ ਰਿਕਾਰਡ ਸਾਫ ਕਰੋ"
 
 #: system-config-kickstart.gladestrings:148
 msgid "Do not clear Master Boot Record"
-msgstr ""
+msgstr "ਮਾਸਟਰ ਬੂਟ ਰਿਕਾਰਡ ਸਾਫ ਨਾ ਕਰੋ"
 
 #: system-config-kickstart.gladestrings:149
 msgid "Remove all existing partitions"
-msgstr ""
+msgstr "ਸਾਰੇ ਮੌਜੂਦਾ ਭਾਗ ਹਟਾ ਦਿੳੁ"
 
 #: system-config-kickstart.gladestrings:150
 msgid "Remove existing Linux partitions"
-msgstr ""
+msgstr "ਸਾਰੇ ਮੋਜੂਦ ਲਾੲੀਨੈਕਸ ਭਾਗ ਹਟਾ ਦਿੳੁ"
 
 #: system-config-kickstart.gladestrings:151
 msgid "Preserve existing partitions"
-msgstr ""
+msgstr "ਮੌਜੂਦਾ ਭਾਗ੾ ਨੰੂ ਸੁਰੱਖਿਅਤ ਰੱਖੋ"
 
 #: system-config-kickstart.gladestrings:152
 msgid "Initialize the disk label"
-msgstr ""
+msgstr "ਡਿਸਕ ਲੇਬਲ ਦੀ ਸ਼ੁਰੂ ਕਰੋ"
 
 #: system-config-kickstart.gladestrings:153
 msgid "Do not initialize the disk label"
-msgstr ""
+msgstr "ਡਿਸਕ ਲੇਬਲ ਦੀ ਸ਼ੁਰੂ ਨਾ ਕਰੋ"
 
 #: system-config-kickstart.gladestrings:154
 msgid "_Add"
@@ -1565,7 +1594,7 @@ msgstr "ਰੇਡ"
 
 #: system-config-kickstart.gladestrings:158
 msgid "Partition Information (required)"
-msgstr ""
+msgstr "ਭਾਗ ਜਾਣਕਾਰੀ (ਲੋੜੀਦੀ ਹੈ)"
 
 #: system-config-kickstart.gladestrings:159
 msgid "label30"
@@ -1593,7 +1622,7 @@ msgstr "ਪ੍ਮਾਣਕਿਤਾਃ"
 
 #: system-config-kickstart.gladestrings:166
 msgid "Use Shadow Passwords"
-msgstr ""
+msgstr "ਸੈਡੋ ਗੁਪਤ-ਕੋਡ ਵਰਤੋ"
 
 #: system-config-kickstart.gladestrings:167
 msgid "Use MD5"
@@ -1609,7 +1638,7 @@ msgstr "NIS ਡੋਮੇਨਃ"
 
 #: system-config-kickstart.gladestrings:171
 msgid "Use broadcast to find NIS server"
-msgstr ""
+msgstr "NIS ਸਰਵਰ ਦੀ ਖੋਜ ਲੲੀ ਬਰਾਡਕਾਸਟ ਕਰੋ"
 
 #: system-config-kickstart.gladestrings:172
 msgid "NIS Server:"
@@ -1645,51 +1674,51 @@ msgstr "LDAP"
 
 #: system-config-kickstart.gladestrings:183
 msgid "Enable Kerberos 5 Authentication"
-msgstr ""
+msgstr "ਕੀਰਬਰੋਸ 5 ਪ੍ਮਾਣਕਿਤਾ ਯੋਗ ਕਰੋ"
 
 #: system-config-kickstart.gladestrings:184
 msgid "Kerberos Realm:"
-msgstr ""
+msgstr "ਕੀਰਬਰੋਸ ਸੀਮਾ-ਖੇਤਰਃ"
 
 #: system-config-kickstart.gladestrings:186
 msgid "Kerberos Domain Controller (KDC):"
-msgstr ""
+msgstr "ਕੀਰਬਰੋਸ ਡੋਮੇਨ ਕੰਟਰੋਲ (KDC) ਃ"
 
 #: system-config-kickstart.gladestrings:188
 msgid "Kerberos Master Server:"
-msgstr ""
+msgstr "ਕੀਰਬਰੋਸ ਮਾਸਟਰ ਸਰਵਰਃ"
 
 #: system-config-kickstart.gladestrings:190
 msgid "Kerberos 5 Authentication"
-msgstr ""
+msgstr "ਕੀਰਬਰੋਸ 5 ਪ੍ਮਾਣਕਿਤਾ"
 
 #: system-config-kickstart.gladestrings:191
 msgid "Kerberos 5"
-msgstr ""
+msgstr "ਕੀਰਬਰੋਸ 5"
 
 #: system-config-kickstart.gladestrings:192
 msgid "Enable Hesiod Support"
-msgstr ""
+msgstr "ਹੀਸਾਓਡ ਸਹਾੲਿਤਾ ਯੋਗ ਕਰੋ"
 
 #: system-config-kickstart.gladestrings:193
 msgid "Hesiod LHS:"
-msgstr ""
+msgstr "ਹੀਸਾਓਡ LHS:"
 
 #: system-config-kickstart.gladestrings:195
 msgid "Hesiod RHS:"
-msgstr ""
+msgstr "ਹੀਸਾਓਡ RHS:"
 
 #: system-config-kickstart.gladestrings:197
 msgid "Hesiod Authentication"
-msgstr ""
+msgstr "ਹੀਸਾਓਡ ਪ੍ਮਾਣਕਿਤਾ"
 
 #: system-config-kickstart.gladestrings:198
 msgid "Hesiod"
-msgstr ""
+msgstr "ਹੀਸਾਓਡ"
 
 #: system-config-kickstart.gladestrings:199
 msgid "Enable SMB Authentication"
-msgstr ""
+msgstr "SMB ਪ੍ਮਾਣਕਿਤਾ ਯੋਗ"
 
 #: system-config-kickstart.gladestrings:200
 msgid "SMB Servers:"
@@ -1709,19 +1738,19 @@ msgstr "SMB"
 
 #: system-config-kickstart.gladestrings:206
 msgid "Enable nscd"
-msgstr ""
+msgstr "NSCD ਯੋਗ ਕਰੋ"
 
 #: system-config-kickstart.gladestrings:207
 msgid "Name Switch Cache Daemon (nscd) Authentication"
-msgstr ""
+msgstr "ਨਾੳੁ ਸਵਿਚ ਕੈਚੇ ਡਾੲੀਮੋਨ (NSCD) ਪ੍ਮਾਣਕਿਤਾ"
 
 #: system-config-kickstart.gladestrings:208
 msgid "Name Switch Cache"
-msgstr ""
+msgstr "ਨਾੳੁ ਸਵਿਚ ਕੈਚੇ"
 
 #: system-config-kickstart.gladestrings:209
 msgid "Authentication Configuration"
-msgstr ""
+msgstr "ੋਪ੍ਮਾਣਿਕਤਾ ਸੰਰਚਨਾ"
 
 #: system-config-kickstart.gladestrings:210
 msgid "label32"
@@ -1745,7 +1774,7 @@ msgstr "ਲੇਬਲ੩੩"
 
 #: system-config-kickstart.gladestrings:216
 msgid "Configure the X Window System"
-msgstr ""
+msgstr "X ਝਰੋਖਾ ਸਿਸਟਮ ਦੀ ਸੰਰਚਨਾ"
 
 #: system-config-kickstart.gladestrings:217
 msgid "Color Depth"
@@ -1769,11 +1798,11 @@ msgstr "ਕੇਡੀੲੀ"
 
 #: system-config-kickstart.gladestrings:224
 msgid "Start the X Window System on boot"
-msgstr ""
+msgstr "ਬੂਟ ਤੇ X ਸਿਸਟਮ ਸ਼ੁਰੂ ਕਰੋ"
 
 #: system-config-kickstart.gladestrings:225
 msgid "On first boot, Setup Agent is: "
-msgstr ""
+msgstr "ਪਹਿਲੇ ਬੂਟ ਸਮੇ, ਨਿਰਧਾਰਨ ੲੇਜੰਟ ਹੈਃਃ"
 
 #: system-config-kickstart.gladestrings:226
 msgid "Disabled"
@@ -1785,7 +1814,7 @@ msgstr "ਯੋਗ"
 
 #: system-config-kickstart.gladestrings:228
 msgid "Enabled in reconfiguration mode"
-msgstr ""
+msgstr "ਮੁੜ-ਸੰਰਚਿਤ ਮੋੜ ਵਿੱਚ ਯੋਗ"
 
 #: system-config-kickstart.gladestrings:229
 msgid "General"
@@ -1793,23 +1822,23 @@ msgstr "ਸਧਾਰਨ"
 
 #: system-config-kickstart.gladestrings:230
 msgid "Probe for video card"
-msgstr ""
+msgstr "ਵੀਡਿਓ ਕਾਰਡ ਦੀ ਖੋਜ"
 
 #: system-config-kickstart.gladestrings:231
 msgid "Video Card RAM: "
-msgstr ""
+msgstr "ਵੀਡਿਓ ਕਾਰਡ ਰੈਮਃ"
 
 #: system-config-kickstart.gladestrings:233
 msgid "Video Card"
-msgstr ""
+msgstr "ਵੀਡਿਓ ਕਾਰਡ"
 
 #: system-config-kickstart.gladestrings:234
 msgid "Probe for monitor"
-msgstr ""
+msgstr "ਮਾਨੀਟਰ ਲੲੀ ਖੋਜ"
 
 #: system-config-kickstart.gladestrings:235
 msgid "Use custom monitor sync rates"
-msgstr ""
+msgstr "ਸੋਧੇ ਮਾਨੀਟਰ ਲੲੀ ਸਮਰੂਪੀ(ਸਕਰੋਨਿੰਸ) ਮੁੱਲ ਵਰਤੋ"
 
 #: system-config-kickstart.gladestrings:237
 msgid "Hz"
@@ -1821,11 +1850,11 @@ msgstr "kHz"
 
 #: system-config-kickstart.gladestrings:240
 msgid "Vertical Sync:"
-msgstr ""
+msgstr "ਲੰਬਕਾਰੀ ਸਕਰੋਨਸਃ"
 
 #: system-config-kickstart.gladestrings:241
 msgid "Horizontal Sync:"
-msgstr ""
+msgstr "ਲੇਟਵ੾ ਸਕਰੋਨਸਃ"
 
 #: system-config-kickstart.gladestrings:242
 msgid "Monitor"
@@ -1837,15 +1866,15 @@ msgstr "ਲੇਬਲ੮੮"
 
 #: system-config-kickstart.gladestrings:245
 msgid "Select packages to install."
-msgstr ""
+msgstr "ੲਿੰਸਟਾਲ ਕਰਨ ਲੲੀ ਪੈਕੇਜ ਚੁਣੋ ੤"
 
 #: system-config-kickstart.gladestrings:246
 msgid "_Automatically Resolve Dependencies"
-msgstr ""
+msgstr "ਨਿਰਭਰਤਾ ਨੰੂ ਸਵੈ ਹੀ ਹੱਲ ਕਰੋ"
 
 #: system-config-kickstart.gladestrings:247
 msgid "_Ignore Dependencies"
-msgstr ""
+msgstr "ਨਿਰਭਰਤਾ ਨੰੂ ਅਣਡਿੱਠਾ ਕਰੋ"
 
 #: system-config-kickstart.gladestrings:248
 msgid "Desktops"
@@ -1877,16 +1906,18 @@ msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %pre command at the beginning."
 msgstr ""
+"ਚੇਤਾਵਨੀ: ੲਿਸ ਸਕਿ੍ਪਟ ਵਿੱਚ ਗਲਤੀ ਕਿੱਕਸਟਾਰਟ ੲਿੰਸਟਾਲੇਸ਼ਨ ਨੰੂ ਅਸਫਲ ਕਰ "
+"ਸਕਦੀ ਹੈ ੤ ਸ਼ੁਰੂ ਵੇਲੇ %pre ਕਮ੾ਡ ਸ਼ਾਮਿਲ ਨਾ ਕਰੋ ਃ"
 
 #: system-config-kickstart.gladestrings:256
 #: system-config-kickstart.gladestrings:263
 msgid "Use an interpreter:"
-msgstr ""
+msgstr "ੲਿੰਟਰਪਰੇਟਰ ਵਰਤੋਃ"
 
 #: system-config-kickstart.gladestrings:258
 #, c-format
 msgid "Type your %pre script below:"
-msgstr ""
+msgstr "ਅਾਪਣੀ %pre ਸਕਿ੍ਪਟ ਹੇਠ੾ ਲਿਖੋ:"
 
 #: system-config-kickstart.gladestrings:260
 msgid "label89"
@@ -1898,15 +1929,17 @@ msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %post command at the beginning."
 msgstr ""
+"ਚੇਤਾਵਨੀ: ੲਿਸ ਸਕਿ੍ਪਟ ਵਿੱਚ ਗਲਤੀ ਕਿੱਕਸਟਾਰਟ ੲਿੰਸਟਾਲੇਸ਼ਨ ਨੰੂ ਅਸਫਲ ਕਰ "
+"ਸਕਦੀ ਹੈ ੤ ਸ਼ੁਰੂ ਵੇਲੇ %post ਕਮ੾ਡ ਸ਼ਾਮਿਲ ਨਾ ਕਰੋ ਃ"
 
 #: system-config-kickstart.gladestrings:262
 msgid "Run outside of the chroot environment"
-msgstr ""
+msgstr "chroot ਵਾਤਾਵਰਣ ਦੇ ਬਾਹਰ ਚਲਾੳੁ"
 
 #: system-config-kickstart.gladestrings:265
 #, c-format
 msgid "Type your %post script below:"
-msgstr ""
+msgstr "ਅਾਪਣੀ %post ਸਕਿ੍ਪਟ ਹੇਠ੾ ਲਿਖੋ:"
 
 #: system-config-kickstart.gladestrings:267
 msgid "label93"
@@ -1925,6 +1958,8 @@ msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
 msgstr ""
+"ਤੁਸੀ ਹੇਠ ਲਿਖੀ ਸੰਰਚਨਾ ਦੀ ਚੋਣ ਕੀਤੀ ਹੈ ੤ ਫਾੲਿਲ ਸੰਭਾਲੋ ਨੰੂ ਕਿੱਕਸਟਾਰਟ ਫਾੲਿਲ ਨੂੰ "
+"ਸੰਭਾਲਣ ਲੲੀ ਵਰਤੋ ੤"
 
 #: system-config-kickstart.gladestrings:271
 msgid "RAID Options"
@@ -1937,24 +1972,29 @@ msgid ""
 "reliability compared to using an individual drive.  For more information on "
 "using RAID devices please consult the kickstart documentation."
 msgstr ""
+"ਸਾਫਟਵੇਅਰ ਰੇਡ ਤੁਹਾਨੰੂ ਕੲੀ ਡਿਸਕ੾ ਨੰੂ ੲਿੱਕ ਵੱਡੇ ਰੇਡ ਯੰਤਰ ਦੇ ਰੂਪ ਵਿੱਚ ਵਰਤਣ ਲੲੀ ਸਹਾੲਿਕ ਹੈ"
+"ੲਿੱਕ ਰੇਡ ਯੰਤਰ ਵੱਖਰੀ ਡਰਾੲਿਵ ਦੀ ਬਜਾੲੇ ਜਿਅਾਦਾ ਗਤੀ ਅਤੇ ਜਿਅਾਦਾ ਭਰੋਸੇਯੋਗਤਾ ੳੁਪਲੱਬਧ"
+"ਕਰਵਾੳੁਦਾ ਹੈ ੤ ਵਧੇਰੇ ਜਾਣਕਾਰੀ ਲੲੀ ਕਿੱਕਸਟਾਰਟ ਦਸਤਾਵੇਜ਼ ਦੀ ਸਹਾੲਿਤਾ ਲਵੋ ੤"
 
 #: system-config-kickstart.gladestrings:273
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
 msgstr ""
+"ਰੇਡ ਵਰਤਣ ਲੲੀ ਤੁਹਾਨੰੂ ਪਹਿਲਾ ਘੱਟੋ-ਘੱਟ ਦੋ ਭਾਗ 'ਸਾਫਟਵੇਅਰ ਰੇਡ' ਕਿਸਮ ਦੇ ਬਣਾੳੁਣੇ ਪੈਣਗੇ ੤ ਤਦ"
+"ਤੁਸੀ ੲਿੱਕ ਰੇਡ ਯੰਤਰ ਬਣਾ ਸਕਦੇ ਹੋ ਜੋ ਕਿ ਫਾਰਮਿਟ ਅਤੇ ਮਾੳੂਟ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ ੤"
 
 #: system-config-kickstart.gladestrings:274
 msgid "Choose one of the following options:"
-msgstr ""
+msgstr "ਹੇਠ ਲਿਖੀ ਚੋਣ ਵਿਚੋ ਚੁਣੋਃ"
 
 #: system-config-kickstart.gladestrings:275
 msgid "Create a software RAID partition"
-msgstr ""
+msgstr "ਸਾਫਟਵੇਅਰ ਰੇਡ ਭਾਗ ਬਣਾੳੁ"
 
 #: system-config-kickstart.gladestrings:276
 msgid "Create a RAID device [default = /dev/md0]"
-msgstr ""
+msgstr "ਸਾਫਟਵੇਅਰ ਯੰਤਰ ਭਾਗ ਬਣਾੳੁ [ਮੂਲ਼ = /dev/md0]"
 
 #: system-config-kickstart.gladestrings:277
 msgid "Network Device Information"
