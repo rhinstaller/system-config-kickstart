@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
 Version: 2.3.2
-Release: 3
+Release: 4
 URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
@@ -55,6 +55,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/redhat-config-kickstart.desktop
 
 %changelog
+* Thu Jul 25 2002 Brent Fox <bfox@redhat.com> 2.3.2-4
+- Fixed bug 68147
+
 * Fri Jul 19 2002 Brent Fox <bfox@redhat.com> 2.3.2-3
 - Added version dependency for pygtk2 API change
 
