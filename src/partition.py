@@ -123,8 +123,8 @@ class partition:
         for row in range(self.num_rows):
             rowData = self.partClist.get_row_data(row)
             (mountPoint, fsType, size, fixedSize, setSize,
-             setSizeVal, maxSize, asPrimary, asPrimaryNum,
-             asPrimaryVal, onDisk, onDiskVal, onPart, onPartVal,
+             setSizeVal, maxSize, asPrimary, 
+             onDisk, onDiskVal, onPart, onPartVal,
              doFormat, raidType, raidSpares, isRaidDevice) = rowData
 
 ##             if fsType == "RAID":
@@ -155,8 +155,8 @@ class partition:
             if asPrimary:
                 buf = buf + "--asprimary "
 
-            if asPrimaryNum:
-                buf = buf + "--onprimary %s " % (asPrimaryVal)
+#            if asPrimaryNum:
+#                buf = buf + "--onprimary %s " % (asPrimaryVal)
 
             if onDisk:
                 buf = buf + "--ondisk %s " % (onDiskVal)

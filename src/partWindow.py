@@ -40,9 +40,6 @@ class partWindow:
         self.fsTypeCombo = self.xml.get_widget("fsTypeCombo")
         self.sizeCombo = self.xml.get_widget("sizeCombo")
         self.asPrimaryCheck = self.xml.get_widget("asPrimaryCheck")
-        self.asPrimaryNumCheck = self.xml.get_widget("asPrimaryNumCheck")
-        self.asPrimaryNumCombo = self.xml.get_widget("asPrimaryNumCombo")
-        self.asPrimaryNumBox = self.xml.get_widget("asPrimaryNumBox")
         self.onDiskCheck = self.xml.get_widget("onDiskCheck")
         self.onDiskEntry = self.xml.get_widget("onDiskEntry")
         self.onDiskBox = self.xml.get_widget("onDiskBox")
@@ -58,16 +55,12 @@ class partWindow:
         self.ok_button = self.xml.get_widget("ok_part_button")
 
         self.fsTypeCombo.list.connect("selection-changed", self.on_fsTypeCombo_set_focus_child)
-#        self.fsTypeCombo.list.connect("key-release-event", self.on_fsTypeCombo_set_focus_child)
-#        self.fsTypeCombo.list.connect("button-release-event", self.on_fsTypeCombo_set_focus_child)
         
         self.xml.signal_autoconnect (
             { "on_cancel_part_button_clicked" : self.on_cancel_part_button_clicked,
               "on_sizeSetRadio_toggled" : self.on_sizeSetRadio_toggled,
               "on_onPartCheck_toggled" : self.on_onPartCheck_toggled,
               "on_onDiskCheck_toggled" : self.on_onDiskCheck_toggled,
-              "on_asPrimaryCheck_toggled" : self.on_asPrimaryCheck_toggled,
-              "on_asPrimaryNumCheck_toggled" : self.on_asPrimaryNumCheck_toggled,
               })
 
         mountPoints = ["/", "/boot", "/home", "/var", "/tmp", "/usr", "/opt"]
@@ -104,12 +97,6 @@ class partWindow:
         self.onDiskBox.set_sensitive(self.onDiskCheck.get_active())
         self.onPartCheck.set_sensitive(not self.onDiskCheck.get_active())
 
-    def on_asPrimaryCheck_toggled(self, *args):
-        self.asPrimaryNumBox.set_sensitive(self.asPrimaryCheck.get_active())
-
-    def on_asPrimaryNumCheck_toggled(self, *args):
-        self.asPrimaryNumCombo.set_sensitive(self.asPrimaryNumCheck.get_active())
-
     def add_partition(self):
         self.ok_handler = self.ok_button.connect("clicked", self.on_ok_button_clicked)
         self.win_reset()
@@ -121,13 +108,12 @@ class partWindow:
         self.win_reset()
 
         (mountPoint, fsType, size, fixedSize, setSize, setSizeVal, maxSize,
-         asPrimary, asPrimaryNum, asPrimaryVal, onDisk, onDiskVal, onPart,
+         asPrimary, onDisk, onDiskVal, onPart,
          onPartVal, doFormat, None, None, None) = rowData
         self.mountPointCombo.entry.set_text(mountPoint)
         self.fsTypeCombo.entry.set_text(fsType) 
         self.sizeCombo.set_text(size) 
         self.asPrimaryCheck.set_active(asPrimary)
-        self.asPrimaryNumCheck.set_active(asPrimaryNum)
         self.onDiskCheck.set_active(onDisk)
         self.onDiskEntry.set_text(str(onDiskVal))
         self.onPartCheck.set_active(onPart)
@@ -156,7 +142,6 @@ class partWindow:
         self.fsTypeCombo.list.select_item(1)
         self.sizeCombo.set_text("") 
         self.asPrimaryCheck.set_active(FALSE)
-        self.asPrimaryNumCheck.set_active(FALSE)
         self.onDiskCheck.set_active(FALSE)
         self.onDiskEntry.set_text("")
         self.onPartCheck.set_active(FALSE)
@@ -175,8 +160,8 @@ class partWindow:
 
         if rowData:
             (mountPoint, fsType, size, fixedSize, setSize,
-             setSizeVal, maxSize, asPrimary, asPrimaryNum,
-             asPrimaryVal, onDisk, onDiskVal, onPart, onPartVal,
+             setSizeVal, maxSize, asPrimary, 
+             onDisk, onDiskVal, onPart, onPartVal,
              doFormat, raidType, raidSpares, isRaidDevice) = rowData
 
             self.partClist.set_text(self.selected_row, 0, mountPoint)
@@ -194,8 +179,8 @@ class partWindow:
 
         if rowData:
             (mountPoint, fsType, size, fixedSize, setSize,
-             setSizeVal, maxSize, asPrimary, asPrimaryNum,
-             asPrimaryVal, onDisk, onDiskVal, onPart, onPartVal,
+             setSizeVal, maxSize, asPrimary, 
+             onDisk, onDiskVal, onPart, onPartVal,
              doFormat, raidType, raidSpares, isRaidDevice) = rowData
         
             row = self.partClist.append([mountPoint, fsType, size, onDiskVal])
@@ -209,8 +194,6 @@ class partWindow:
         onDiskVal = ""
         onPartVal = ""
         setSizeVal = ""
-        asPrimaryNum = 0
-        asPrimaryVal = ""
 
         mountPoint = self.mountPointCombo.entry.get_text()
         fsType = self.fsTypeCombo.entry.get_text()
@@ -223,11 +206,6 @@ class partWindow:
         maxSize = self.sizeMaxRadio.get_active()
 
         asPrimary = self.asPrimaryCheck.get_active()
-        if asPrimary:
-            asPrimaryNum = self.asPrimaryNumCheck.get_active()
-            if asPrimaryNum:
-                asPrimary = 0
-                asPrimaryVal = self.asPrimaryNumCombo.entry.get_text()
 
         onDisk = self.onDiskCheck.get_active()
         if onDisk == 1:
@@ -307,8 +285,8 @@ class partWindow:
             return
 
         rowData = [mountPoint, fsType, size, fixedSize, setSize,
-                   setSizeVal, maxSize, asPrimary, asPrimaryNum,
-                   asPrimaryVal, onDisk, onDiskVal, onPart, onPartVal,
+                   setSizeVal, maxSize, asPrimary, 
+                   onDisk, onDiskVal, onPart, onPartVal,
                    doFormat, "", "", ""]
 
         return rowData
