@@ -102,7 +102,7 @@ class xconfig:
             #FIXME
 
         #add color depths
-        color_depths = ["8", "16", "32", "64"]
+        color_depths = ["8", "16", "24", "32"]
         self.color_depth_combo.set_popdown_strings(color_depths)
         self.color_depth_combo.entry.set_editable(FALSE)
 
