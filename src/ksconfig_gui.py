@@ -72,7 +72,7 @@ class ksconfig_gui:
 		#bring in X functions
 ##		self.X_class = xconfig.xconfig(xml)
 		#bring in package function
-		self.packages_class = packages.packages(xml)
+		self.packages_class = packages.headerList(xml)
 
 		#show gui
 		self.toplevel.show_all()
