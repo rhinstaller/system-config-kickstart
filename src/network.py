@@ -315,7 +315,6 @@ class network:
         iter = self.network_device_store.get_iter_first()
         while iter:
             data = []
-            print "in while"
             if self.network_device_store.get_value(iter, 1) == "DHCP":
                 data.append("--bootproto=dhcp")
             elif self.network_device_store.get_value(iter, 1) == "BOOTP":
@@ -350,8 +349,6 @@ class network:
         networkList = self.kickstartData.getNetwork()
 
         for line in networkList:
-            print line
-
             opts, args = getopt.getopt(line, "d:h", ["bootproto=", "device=", "ip=", "gateway=",
                                                      "nameserver=", "nodns=", "netmask=",
                                                      "hostname="])
