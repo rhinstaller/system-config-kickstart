@@ -255,12 +255,15 @@ class basic:
         data.append("")
         data.append("#Language modules to install")
 
-        buf = ""
-        for lang in self.langSupportList:
-            buf = lang + " " + buf
-        data.append("langsupport " + buf)
-#        print self.lang_support_list.get_selection_info
-#        data.append("langsupport " + self.languageLookup(self.lang_support_combo.entry.get_text()))
+
+        if self.langSupportList != []:
+            buf = ""
+            for lang in self.langSupportList:
+                buf = lang + " " + buf
+            data.append("langsupport --default " + self.languageLookup(self.lang_combo.entry.get_text()) + " " + buf)
+        else:
+            data.append("langsupport --default " + self.languageLookup(self.lang_combo.entry.get_text()))
+
         data.append("")
         data.append("#System keyboard")
         data.append("keyboard " + self.keyboard_dict[self.keyboard_combo.entry.get_text()])
