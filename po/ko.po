@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ko\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-05 15:11-0500\n"
+"POT-Creation-Date: 2004-03-11 12:08-0500\n"
 "PO-Revision-Date: 2004-03-08 13:44+1000\n"
 "Last-Translator: Michelle J Kim <mkim@redhat.com>\n"
 "Language-Team:  <ko@li.org>\n"
@@ -110,6 +110,141 @@ msgstr "Root 암호를 선택해 주십시오."
 #: ../src/bootloader.py:132
 msgid "Grub passwords do not match.  Please try again."
 msgstr "Grub 암호가 일치하지 않습니다.  다시 입력해 주십시오."
+
+#. !/usr/bin/python2
+#. #
+#. # I18N
+#. #
+#: ../src/fedoraPackageGroupList.py:12 ../src/RHELPackageGroupList.py:12
+#, fuzzy
+msgid "X Window System"
+msgstr "X 윈도우 시스템 설정"
+
+#: ../src/fedoraPackageGroupList.py:13 ../src/RHELPackageGroupList.py:13
+msgid "GNOME Desktop Environment"
+msgstr ""
+
+#: ../src/fedoraPackageGroupList.py:14 ../src/RHELPackageGroupList.py:14
+msgid "KDE Desktop Environment"
+msgstr ""
+
+#: ../src/fedoraPackageGroupList.py:16 ../src/RHELPackageGroupList.py:16
+#, fuzzy
+msgid "Editors"
+msgstr "편집(_E)"
+
+#: ../src/fedoraPackageGroupList.py:17 ../src/RHELPackageGroupList.py:17
+msgid "Engineering and Scientific"
+msgstr ""
+
+#: ../src/fedoraPackageGroupList.py:18 ../src/RHELPackageGroupList.py:18
+msgid "Graphical Internet"
+msgstr ""
+
+#: ../src/fedoraPackageGroupList.py:19 ../src/RHELPackageGroupList.py:19
+msgid "Text-based Internet"
+msgstr ""
+
+#: ../src/fedoraPackageGroupList.py:20 ../src/RHELPackageGroupList.py:20
+msgid "Office/Productivity"
+msgstr ""
+
+#: ../src/fedoraPackageGroupList.py:21 ../src/RHELPackageGroupList.py:21
+msgid "Sound and Video"
+msgstr ""
+
+#: ../src/fedoraPackageGroupList.py:22 ../src/RHELPackageGroupList.py:22
+msgid "Graphics"
+msgstr ""
+
+#: ../src/fedoraPackageGroupList.py:23 ../src/RHELPackageGroupList.py:23
+msgid "Games and Entertainment"
+msgstr ""
+
+#: ../src/fedoraPackageGroupList.py:24 ../src/RHELPackageGroupList.py:24
+msgid "Authoring and Publishing"
+msgstr ""
+
+#: ../src/fedoraPackageGroupList.py:26
+#, fuzzy
+msgid "Server Configuration Tools"
+msgstr "X 설정"
+
+#: ../src/fedoraPackageGroupList.py:27 ../src/RHELPackageGroupList.py:27
+#, fuzzy
+msgid "Web Server"
+msgstr "네임서버:"
+
+#: ../src/fedoraPackageGroupList.py:28 ../src/RHELPackageGroupList.py:28
+#, fuzzy
+msgid "Mail Server"
+msgstr "네임서버:"
+
+#: ../src/fedoraPackageGroupList.py:29 ../src/RHELPackageGroupList.py:29
+msgid "Windows File Server"
+msgstr ""
+
+#: ../src/fedoraPackageGroupList.py:30 ../src/RHELPackageGroupList.py:30
+#, fuzzy
+msgid "DNS Name Server"
+msgstr "네임서버:"
+
+#: ../src/fedoraPackageGroupList.py:31 ../src/RHELPackageGroupList.py:31
+#, fuzzy
+msgid "FTP Server"
+msgstr "FTP 서버:"
+
+#: ../src/fedoraPackageGroupList.py:32 ../src/RHELPackageGroupList.py:32
+msgid "SQL Database Server"
+msgstr ""
+
+#: ../src/fedoraPackageGroupList.py:33 ../src/RHELPackageGroupList.py:33
+#, fuzzy
+msgid "News Server"
+msgstr "네임서버:"
+
+#: ../src/fedoraPackageGroupList.py:34
+#, fuzzy
+msgid "Network Servers"
+msgstr "네트워크 장치:"
+
+#: ../src/fedoraPackageGroupList.py:36 ../src/RHELPackageGroupList.py:36
+#, fuzzy
+msgid "Development Tools"
+msgstr "개발"
+
+#: ../src/fedoraPackageGroupList.py:37 ../src/RHELPackageGroupList.py:37
+#, fuzzy
+msgid "Kernel Development"
+msgstr "개발"
+
+#: ../src/fedoraPackageGroupList.py:38 ../src/RHELPackageGroupList.py:38
+#, fuzzy
+msgid "X Software Development"
+msgstr "개발"
+
+#: ../src/fedoraPackageGroupList.py:39 ../src/RHELPackageGroupList.py:39
+msgid "GNOME Software Development"
+msgstr ""
+
+#: ../src/fedoraPackageGroupList.py:40 ../src/RHELPackageGroupList.py:40
+#, fuzzy
+msgid "KDE Software Development"
+msgstr "개발"
+
+#: ../src/fedoraPackageGroupList.py:42 ../src/RHELPackageGroupList.py:42
+msgid "Administration Tools"
+msgstr ""
+
+#: ../src/fedoraPackageGroupList.py:43 ../src/RHELPackageGroupList.py:43
+#, fuzzy
+msgid "System Tools"
+msgstr "시스템"
+
+#: ../src/fedoraPackageGroupList.py:44 ../src/RHELPackageGroupList.py:44
+#, fuzzy
+msgid "Printing Support"
+msgstr "언어 지원:"
 
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
@@ -644,8 +779,10 @@ msgstr "해당 파티션에 대한 마운트 지점을 지정해 주십시오."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:429
 #, python-format
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr "\"%s\" 마운트 지점은 이미 사용중입니다.  다른 마운트 지점을 선택해 주십시오."
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr ""
+"\"%s\" 마운트 지점은 이미 사용중입니다.  다른 마운트 지점을 선택해 주십시오."
 
 #. This will scan the part_store and see if there are any duplicate mount points
 #: ../src/partWindow.py:449
@@ -761,7 +898,14 @@ msgstr "RAID %s을(를) 사용하시려면 최소한 3개의 파티션을 선택
 msgid "Raid Devices"
 msgstr "RAID 장치"
 
-#. self.markRaidPartitions(raid_object)
+#: ../src/RHELPackageGroupList.py:26
+msgid "Server Configuration Tools (AS and ES only)"
+msgstr ""
+
+#: ../src/RHELPackageGroupList.py:34
+msgid "Network Servers (AS and ES only)"
+msgstr ""
+
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
 #. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
@@ -2068,4 +2212,3 @@ msgstr "."
 
 #~ msgid "Select a Video Card"
 #~ msgstr "비디오 카드 선택"
-
