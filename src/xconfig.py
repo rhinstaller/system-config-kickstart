@@ -209,27 +209,29 @@ class xconfig:
                 if item[:2] != "--":
                     xList[xList.index(item)] = ("--" + item)
 
-            opts, args = getopt.getopt(xList, "d:h", ["noprobe", "card=",
-                                       "videoram=", "monitor=", "hsync=", "vsync=", "defaultdesktop=",
-                                       "startxonboot", "resolution=", "depth="])
-
-            for opt, value in opts:
+            for opt in xList:
+                opt = string.replace(opt, "=", " ")
+            
                 if opt == "--startxonboot":
                     self.startxonboot_checkbutton.set_active(gtk.TRUE)
 
-                if opt == "--defaultdesktop":
-                    if value == "GNOME":
+                if opt[:16] == "--defaultdesktop":
+                    value = opt[16:]
+                    if string.lower(value) == "gnome":
                         self.gnome_radiobutton.set_active(gtk.TRUE)
-                    if value == "KDE":
+                    if string.lower(value) == "kde":
                         self.kde_radiobutton.set_active(gtk.TRUE)
 
-                if opt == "--depth":
+                if opt[:7] == "--depth":
+                    value = opt[7:]
                     self.color_depth_combo.entry.set_text(value)
 
-                if opt == "--resolution":
-                    self.resoulution_combo.entry.set_text(value)
+                if opt[:12] == "--resolution":
+                    value = opt[12:]
+                    self.resolution_combo.entry.set_text(value)
 
-                if opt == "--card":
+                if opt[:6] == "--card":
+                    value = string.strip(opt[6:])
                     self.card_probe_check.set_active(gtk.FALSE)
                     value = string.replace(value, '"', '')
 
@@ -242,10 +244,12 @@ class xconfig:
                             self.card_view.scroll_to_cell(path, self.card_col, gtk.TRUE, 0.5, 0.5)
                         iter = self.card_store.iter_next(iter)
 
-                if opt == "--videoram":
+                if opt[:10] == "--videoram":
+                    value = opt[10:]
                     self.videoram_combo.entry.set_text(value)
 
-                if opt == "--monitor":
+                if opt[:9] == "--monitor":
+                    opt = string.strip(opt[9:])
                     self.monitor_probe_check.set_active(gtk.FALSE)
                     value = string.replace(value, '"', '')
 
@@ -258,10 +262,12 @@ class xconfig:
                             self.monitor_view.scroll_to_cell(path, self.monitor_col, gtk.TRUE, 0.5, 0.5)
                         iter = self.monitor_store.iter_next(iter)
 
-                if opt == "--hsync":
+                if opt[:7] == "--hsync":
+                    value = opt[7:]
                     self.sync_button.set_active(gtk.TRUE)
                     self.hsync_entry.set_text(value)
 
-                if opt == "--vsync":
+                if opt[:7] == "--vsync":
+                    value = opt[7:]
                     self.sync_button.set_active(gtk.TRUE)
                     self.vsync_entry.set_text(value)
