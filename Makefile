@@ -31,7 +31,7 @@ install:
 	for py in src/*.py ; do \
 		sed -e s,@VERSION@,$(VERSION),g $${py} > $(INSTROOT)$(PKGDATADIR)/`basename $${py}` ; \
 	done
-	install src/${PKGNAME}.glade $(INSTROOT)$(PKGDATADIR)
+	install src/${PKGNAME}-gtk2.glade $(INSTROOT)$(PKGDATADIR)
 	mkdir -p $(INSTROOT)$(DESKTOPDIR)
 	install -m 644 ${PKGNAME}.desktop $(INSTROOT)$(DESKTOPDIR)
 	for d in $(SUBDIRS); do \
