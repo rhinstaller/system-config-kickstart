@@ -95,7 +95,7 @@ class ksconfig_gui:
 		self.category_clist.append(["Basic Configuration"])
 		self.category_clist.append(["Installation Source"])
 		self.category_clist.append(["Partition Information"])
-		self.category_clist.append(["Networking Options"])
+		self.category_clist.append(["Network Configuration"])
 		self.category_clist.append(["Authentication"])
 		self.category_clist.append(["Firewall Configuration"])
 		self.category_clist.append(["X Configuration"])
@@ -116,7 +116,7 @@ class ksconfig_gui:
 		elif  self.category_clist.get_text(row,0)== "Partition Information":
 			self.options_notebook.set_page(2)
 			return
-		elif  self.category_clist.get_text(row,0)== "Networking Options":
+		elif  self.category_clist.get_text(row,0)== "Network Configuration":
 			self.options_notebook.set_page(3)
 			return
 		elif  self.category_clist.get_text(row,0)== "Authentication":
