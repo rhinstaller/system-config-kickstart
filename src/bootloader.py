@@ -122,7 +122,7 @@ class bootloader:
         else:
             buf = "--location=none"
 
-        self.kickstartData.setBootloader(buf)
+        self.kickstartData.setBootloader([buf])
         return 0
 
     def fillData(self):
