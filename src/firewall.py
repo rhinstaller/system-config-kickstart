@@ -174,7 +174,7 @@ class firewall:
         
     def fillData(self):
         if self.kickstartData.getFirewall():
-            opts, args = getopt.getopt(self.kickstartData.getFirewall(), "d:h", ["high", "medium",
+            opts, args = getopt.getopt(self.kickstartData.getFirewall(), "d:h", ["high", "medium", "enabled",
                                        "disabled", "trust=", "port=", "dhcp", "ssh", "telnet",
                                        "smtp", "http", "ftp"])
 
