@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: redhat-config-kickstart VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-29 17:11-0500\n"
-"PO-Revision-Date: 2004-03-27 09:57+0100\n"
+"PO-Revision-Date: 2004-03-31 22:38+0200\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -132,7 +132,7 @@ msgstr "Zadejte prosím heslo pro uživatele root."
 #: ../src/bootloader.py:76
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
-msgstr ""
+msgstr "Volby pro zavaděč nemají na platformě %s význam"
 
 #: ../src/bootloader.py:117
 msgid "Grub passwords do not match.  Please try again."
@@ -453,9 +453,8 @@ msgid "Firewall Configuration"
 msgstr "Nastavení firewallu"
 
 #: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:248
-#, fuzzy
 msgid "Display Configuration"
-msgstr "Nastavení X"
+msgstr "Nastavení zobrazování"
 
 #: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:259
 msgid "Package Selection"
@@ -1027,7 +1026,7 @@ msgstr ""
 
 #: ../src/system-config-kickstart.py:77
 msgid "Could not open display because no X server is running."
-msgstr "Nelze otevřít displej, protože neběží X server."
+msgstr "Nemohu otevřít displej, protože neběží X server."
 
 #: ../src/system-config-kickstart.py:78
 msgid "Try running 'system-config-kickstart --help' for a list of options."
@@ -1058,12 +1057,12 @@ msgstr "Pro seznam přepínačů zkuste spustit 'system-config-kickstart --help'
 #. add video cards to list
 #: ../src/xconfig.py:104
 msgid "Could not read video card database"
-msgstr "Nelze číst databázi grafických karet"
+msgstr "Nemohu číst databázi grafických karet"
 
 #. add monitors to list
 #: ../src/xconfig.py:122
 msgid "Could not read monitor database"
-msgstr "Nelze načíst databázi monitorů"
+msgstr "Nemohu číst databázi monitorů"
 
 #. disable xconfig notebook
 #. color depth - translate
@@ -1549,9 +1548,8 @@ msgid "Kernel parameters:"
 msgstr "Parametry jádra:"
 
 #: system-config-kickstart.gladestrings:145
-#, fuzzy
 msgid "label216"
-msgstr "label128"
+msgstr "label216"
 
 #: system-config-kickstart.gladestrings:146
 msgid "Boot Loader Options (required)"
@@ -1607,7 +1605,7 @@ msgstr "RAID"
 
 #: system-config-kickstart.gladestrings:159
 msgid "Partition options are not applicable on upgrades."
-msgstr ""
+msgstr "Volby pro oddíly nemají pro aktualizace význam."
 
 #: system-config-kickstart.gladestrings:160
 msgid "Partition Information (required)"
@@ -1767,7 +1765,7 @@ msgstr "Name Switch Cache"
 
 #: system-config-kickstart.gladestrings:211
 msgid "Authentication options are not applicable on upgrades."
-msgstr ""
+msgstr "Volby autentizace nemají pro aktualizace význam."
 
 #: system-config-kickstart.gladestrings:212
 msgid "Authentication Configuration"
@@ -1791,7 +1789,7 @@ msgstr "Zakázat firewall"
 
 #: system-config-kickstart.gladestrings:217
 msgid "Firewall configuration is not applicable on upgrades."
-msgstr ""
+msgstr "Nastavení firewallu nemá pro aktualizace význam."
 
 #: system-config-kickstart.gladestrings:219
 msgid "label33"
@@ -1887,7 +1885,7 @@ msgstr "Monitor"
 
 #: system-config-kickstart.gladestrings:247
 msgid "Display configuration is not applicable on upgrades."
-msgstr ""
+msgstr "Nastavení zobrazování nemá pro aktualizace význam."
 
 #: system-config-kickstart.gladestrings:249
 msgid "label88"
@@ -1927,7 +1925,7 @@ msgstr "Systém"
 
 #: system-config-kickstart.gladestrings:258
 msgid "Package selection is not applicable on upgrades."
-msgstr ""
+msgstr "Výběč balíčků nemá pro aktualizace význam."
 
 #: system-config-kickstart.gladestrings:260
 msgid "label34"
@@ -2073,9 +2071,6 @@ msgstr "DNS server:"
 #: system-config-kickstart.gladestrings:316
 msgid "."
 msgstr "."
-
-#~ msgid "LILO Options:"
-#~ msgstr "Volby pro LILO:"
 
 #~ msgid "Allow incoming:"
 #~ msgstr "Povolit příchozí:"
