@@ -11,7 +11,7 @@ translate.textdomain (domain)
 
 desktopsList = [N_("X Window System"),
                N_("GNOME Desktop Environment"),
-               N_("KDE Desktop Environment")
+               N_("KDE (K Desktop Environment)")
                 ]
 applicationsList = [N_("Editors"),
                     N_("Engineering and Scientific"),
