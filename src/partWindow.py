@@ -38,7 +38,6 @@ _=gettext.gettext
 
 class partWindow:
     def __init__(self, xml, part_store, part_view):
-        print "in partWindow init", xml
         self.part_store = part_store
         self.part_view = part_view
 
