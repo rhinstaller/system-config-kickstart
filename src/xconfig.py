@@ -35,6 +35,8 @@ class xconfig:
         self.video_card_clist = xml.get_widget("video_card_clist")
         self.monitor_swindow = xml.get_widget("monitor_swindow")
         self.monitor_clist = xml.get_widget("monitor_clist")
+        self.sync_button = xml.get_widget("sync_button")
+        self.sync_table = xml.get_widget("sync_table")        
         self.startx_on_boot_button = xml.get_widget("startx_on_boot_button")
         self.xconfig_notebook = xml.get_widget("xconfig_notebook")        
         self.hsync_entry = xml.get_widget("hsync_entry")
@@ -51,6 +53,7 @@ class xconfig:
               "toggle_vc_monitor" : self.toggle_vc_monitor,
               "select_monitor" : self.select_monitor,
               "select_videocard" : self.select_videocard,
+              "toggle_sync" : self.toggle_sync,
               })
 
         #add video cards to list
@@ -124,6 +127,13 @@ class xconfig:
         self.monitor_swindow.set_sensitive(showLists)
         self.video_card_clist.set_sensitive(showLists)
         self.monitor_clist.set_sensitive(showLists)
+        self.sync_button.set_sensitive(showLists)
+
+    def toggle_sync (self, args):
+        sync_instead = self.sync_button.get_active()
+        self.sync_table.set_sensitive(sync_instead)
+        self.monitor_swindow.set_sensitive(not sync_instead)
+        self.monitor_clist.set_sensitive(not sync_instead)        
 
     def select_monitor(self, event, row, column, data):
         self.selected_monitor_row = row
@@ -134,17 +144,18 @@ class xconfig:
     def getData(self):
         if self.config_x_button.get_active():
             buf = "\n" + "xconfig "
+            #video card and monitor
             if self.probe_x_button.get_active():
+                #Probe for monitor and video card
                 pass
             else:
-                #monitor 
-                buf = buf + " --monitor \"" + self.monitor_clist.get_text(self.selected_monitor_row,0) + "\""
-                #card
                 buf = buf + " --card \"" + self.video_card_clist.get_text(self.selected_vc_row,0) + "\""
-            #hsync
-            buf = buf + " --hsync " + self.hsync_entry.get_text()
-            #vsync 
-            buf = buf + " --vsync " + self.vsync_entry.get_text()           
+                if self.sync_button.get_active():
+                    buf = buf + " --hsync " + self.hsync_entry.get_text()
+                    buf = buf + " --vsync " + self.vsync_entry.get_text()
+                else:
+                    buf = buf + " --monitor \"" + self.monitor_clist.get_text(self.selected_monitor_row,0) + "\""
+
             #color depth - translate
             buf = buf + " --depth " + self.color_depth_combo.entry.get_text()
             #resolution
@@ -159,6 +170,7 @@ class xconfig:
                 buf = buf + "  --startxonboot"
         else:
             buf = "\n" + "#Do not configure the X Window System"
+            buf = buf + "\n" + "skipx"            
         return buf
 
 

@@ -779,9 +779,9 @@
 	    <widget>
 	      <class>GtkVBox</class>
 	      <name>vbox3</name>
-	      <border_width>6</border_width>
+	      <border_width>4</border_width>
 	      <homogeneous>False</homogeneous>
-	      <spacing>0</spacing>
+	      <spacing>4</spacing>
 
 	      <widget>
 		<class>GtkHBox</class>
@@ -1550,7 +1550,7 @@
 	      <name>part_info_vbox</name>
 	      <border_width>4</border_width>
 	      <homogeneous>False</homogeneous>
-	      <spacing>9</spacing>
+	      <spacing>4</spacing>
 
 	      <widget>
 		<class>GtkTable</class>
@@ -1926,8 +1926,9 @@
 	    <widget>
 	      <class>GtkVBox</class>
 	      <name>networking_vbox</name>
+	      <border_width>4</border_width>
 	      <homogeneous>False</homogeneous>
-	      <spacing>0</spacing>
+	      <spacing>4</spacing>
 
 	      <widget>
 		<class>GtkHBox</class>
@@ -2712,7 +2713,7 @@
 	    <widget>
 	      <class>GtkNotebook</class>
 	      <name>auth_notebook</name>
-	      <border_width>6</border_width>
+	      <border_width>4</border_width>
 	      <can_focus>True</can_focus>
 	      <show_tabs>True</show_tabs>
 	      <show_border>True</show_border>
@@ -3572,8 +3573,9 @@
 	    <widget>
 	      <class>GtkVBox</class>
 	      <name>vbox10</name>
+	      <border_width>4</border_width>
 	      <homogeneous>False</homogeneous>
-	      <spacing>0</spacing>
+	      <spacing>4</spacing>
 
 	      <widget>
 		<class>GtkFrame</class>
@@ -3743,8 +3745,9 @@
 	    <widget>
 	      <class>GtkVBox</class>
 	      <name>vbox14</name>
+	      <border_width>4</border_width>
 	      <homogeneous>False</homogeneous>
-	      <spacing>0</spacing>
+	      <spacing>4</spacing>
 
 	      <widget>
 		<class>GtkCheckButton</class>
@@ -3785,9 +3788,9 @@
 		<widget>
 		  <class>GtkVBox</class>
 		  <name>vbox15</name>
-		  <border_width>6</border_width>
+		  <border_width>4</border_width>
 		  <homogeneous>False</homogeneous>
-		  <spacing>0</spacing>
+		  <spacing>4</spacing>
 
 		  <widget>
 		    <class>GtkCheckButton</class>
@@ -3911,13 +3914,33 @@
 		<widget>
 		  <class>GtkVBox</class>
 		  <name>vbox16</name>
-		  <border_width>6</border_width>
+		  <border_width>4</border_width>
 		  <homogeneous>False</homogeneous>
-		  <spacing>6</spacing>
+		  <spacing>4</spacing>
+
+		  <widget>
+		    <class>GtkCheckButton</class>
+		    <name>sync_button</name>
+		    <can_focus>True</can_focus>
+		    <signal>
+		      <name>toggled</name>
+		      <handler>toggle_sync</handler>
+		      <last_modification_time>Fri, 06 Jul 2001 15:10:24 GMT</last_modification_time>
+		    </signal>
+		    <label>Specify hsync and vsync instead of monitor</label>
+		    <active>False</active>
+		    <draw_indicator>True</draw_indicator>
+		    <child>
+		      <padding>0</padding>
+		      <expand>False</expand>
+		      <fill>False</fill>
+		    </child>
+		  </widget>
 
 		  <widget>
 		    <class>GtkTable</class>
 		    <name>sync_table</name>
+		    <sensitive>False</sensitive>
 		    <rows>2</rows>
 		    <columns>3</columns>
 		    <homogeneous>False</homogeneous>
@@ -4415,6 +4438,7 @@
 	    <widget>
 	      <class>GtkScrolledWindow</class>
 	      <name>scrolledwindow3</name>
+	      <border_width>4</border_width>
 	      <hscrollbar_policy>GTK_POLICY_NEVER</hscrollbar_policy>
 	      <vscrollbar_policy>GTK_POLICY_ALWAYS</vscrollbar_policy>
 	      <hupdate_policy>GTK_UPDATE_CONTINUOUS</hupdate_policy>
@@ -4506,8 +4530,9 @@
 	    <widget>
 	      <class>GtkVBox</class>
 	      <name>scripts_vbox</name>
+	      <border_width>4</border_width>
 	      <homogeneous>False</homogeneous>
-	      <spacing>0</spacing>
+	      <spacing>4</spacing>
 
 	      <widget>
 		<class>GtkLabel</class>
@@ -4601,8 +4626,9 @@
 	    <widget>
 	      <class>GtkVBox</class>
 	      <name>vbox13</name>
+	      <border_width>4</border_width>
 	      <homogeneous>False</homogeneous>
-	      <spacing>0</spacing>
+	      <spacing>4</spacing>
 
 	      <widget>
 		<class>GtkLabel</class>
