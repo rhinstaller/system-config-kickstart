@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: ksconfig
 Version: 1.1
-Release: 2
+Release: 3
 URL: http://www.redhat.com
 Copyright: GPL
 ExclusiveOS: Linux
@@ -49,6 +49,9 @@ rm -rf $RPM_BUILD_ROOT
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
+* Fri Feb 23 2001 Tammy Fox <tfox@redhat.com>
+- moved package icons into package instead of requiring anaconda for them
+
 * Fri Feb 16 2001 Tammy Fox <tfox@redhat.com>
 - added scrollwindow around partition information
 - made all widgets except partition scrollwindow unexpandable so that when the main window is resized only the partition list gets bigger
