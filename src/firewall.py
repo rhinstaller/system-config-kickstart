@@ -53,6 +53,7 @@ class firewall:
         self.customTable = xml.get_widget("customTable")
         self.customFrame = xml.get_widget("customFrame")
         self.customizeRadio = xml.get_widget("firewallCustomizeRadio")
+        self.upgrade_flag = gtk.FALSE
 
         self.securityOptionMenu.connect("changed", self.disable_firewall)
 
@@ -120,7 +121,7 @@ class firewall:
         self.customTable.attach (self.label3, 0, 1, 4, 5, gtk.FILL, gtk.FILL, 5, 5)
         self.customTable.attach (self.portsEntry, 1, 2, 4, 5, gtk.EXPAND|gtk.FILL, gtk.FILL, 5, 5)
 
-        self.firewall_frame.show_all()
+        self.firewall_vbox.show_all()
 
     def item_toggled(self, data, row, store):
         iter = store.get_iter((int(row),))
@@ -145,11 +146,17 @@ class firewall:
         if boolean == gtk.FALSE:
             self.firewall_vbox.hide()
             self.firewall_label_box.show()
+            self.upgrade_flag = gtk.TRUE
         else:
             self.firewall_vbox.show()
             self.firewall_label_box.hide()
+            self.upgrade_flag = gtk.FALSE
 
     def getData(self):
+        if self.upgrade_flag == gtk.TRUE:
+            self.kickstartData.setFirewall(None)
+            return
+
         buf = ""
 
         if self.securityOptionMenu.get_history() == 0:
