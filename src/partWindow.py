@@ -1,8 +1,9 @@
 #!/usr/bin/python
 
-## userWindow - event handling code for userconf's user window
+## partWindow - event handling code for ksconfig's partitioning dialog
 ## Copyright (C) 2001 Red Hat, Inc.
 ## Copyright (C) 2001 Brent Fox <bfox@redhat.com>
+## Copyright (C) 2001 Tammy Fox <tfox@redhat.com>
 
 ## This program is free software; you can redistribute it and/or modify
 ## it under the terms of the GNU General Public License as published by
@@ -25,22 +26,16 @@ from gtk import *
 from gnome.ui import *
 import GtkExtra
 import string
-import savedialog
-
 import gtk
 import signal
 import gnome.ui
 
 
 class partWindow:
-    def destroy(self, args):
-        self.dialog.destroy()
-
     def __init__(self, xml, partClist):
         self.xml = xml
         self.partClist = partClist
         self.partitionDialog = self.xml.get_widget("partition_dialog")
-        self.partitionDialog.connect ("destroy", self.destroy)
         self.mountPointCombo = self.xml.get_widget("mountPointCombo")
         self.fsTypeCombo = self.xml.get_widget("fsTypeCombo")
         self.sizeCombo = self.xml.get_widget("sizeCombo")
@@ -58,69 +53,56 @@ class partWindow:
         self.sizeSetRadio = self.xml.get_widget("sizeSetRadio")
         self.sizeMaxRadio = self.xml.get_widget("sizeMaxRadio")
         self.maxSizeCombo = self.xml.get_widget("maxSizeCombo")
-        self.formatRadio = self.xml.get_widget("formatRadio")
+        self.formatCheck = self.xml.get_widget("formatCheck")
 
-#        self.fsTypeCombo.list.connect("selection-changed", self.on_fsTypeCombo_set_focus_child)
+        self.ok_button = self.xml.get_widget("ok_part_button")
+
+        self.fsTypeCombo.list.connect("selection-changed", self.on_fsTypeCombo_set_focus_child)
 #        self.fsTypeCombo.list.connect("key-release-event", self.on_fsTypeCombo_set_focus_child)
 #        self.fsTypeCombo.list.connect("button-release-event", self.on_fsTypeCombo_set_focus_child)
         
         self.xml.signal_autoconnect (
             { "on_cancel_part_button_clicked" : self.on_cancel_part_button_clicked,
-              "on_ok_button_clicked" : self.on_ok_button_clicked,
               "on_sizeSetRadio_toggled" : self.on_sizeSetRadio_toggled,
               "on_onPartCheck_toggled" : self.on_onPartCheck_toggled,
               "on_onDiskCheck_toggled" : self.on_onDiskCheck_toggled,
               "on_asPrimaryCheck_toggled" : self.on_asPrimaryCheck_toggled,
               "on_asPrimaryNumCheck_toggled" : self.on_asPrimaryNumCheck_toggled,
-#              "on_fsTypeCombo_set_focus_child" : self.on_fsTypeCombo_set_focus_child,
               })
-
-#        deviceList = ["/dev/hda", "/dev/hdb", "/dev/hdc", "/dev/hdb"]
-#        self.deviceCombo.set_popdown_strings(deviceList)
 
         mountPoints = ["/", "/boot", "/home", "/var", "/tmp", "/usr", "/opt"]
         self.mountPointCombo.set_popdown_strings(mountPoints)
 
-        self.fileTypes = ["ext2", "ext3", "reiserFS", "RAID partition", "Linux Swap"]
+#        self.fileTypes = ["ext2", "ext3", "RAID", "Linux Swap"]
+        self.fileTypes = ["ext2", "ext3", "Linux Swap"]
         self.fsTypeCombo.set_popdown_strings(self.fileTypes)
+        self.fsTypeCombo.list.select_item(0)
 
-        #if swap, disable mount points
+    def on_fsTypeCombo_set_focus_child(self, *args):
+        curr = self.fsTypeCombo.entry.get_text()
+        if curr in self.fileTypes:
+            index = self.fileTypes.index(curr)
 
-        self.win_reset()
-        self.partitionDialog.show_all()
+            if index == 2:
+                self.mountPointCombo.set_sensitive(FALSE)
+                self.formatCheck.set_sensitive(FALSE)
+#            elif index == 3:
+#                self.mountPointCombo.set_sensitive(FALSE)
+#                self.formatCheck.set_sensitive(TRUE)
+            else:
+                self.mountPointCombo.set_sensitive(TRUE)
+                self.formatCheck.set_sensitive(TRUE)
 
-##  FIXME --make this work later...no time now
-##     def on_fsTypeCombo_set_focus_child(self, *args):
-##         if self.mountPointCombo.entry.get_text() != "" and self.mountPointCombo.entry.get_text() != "<Not Applicable>":
-##             print "here"
-##             print self.mountPointCombo.entry.get_text()
-
-##             self.data = ""
-## #            self.data = self.mountPointCombo.entry.get_text()
-##         else:
-##             print "there"
-## #            self.data = ""
-##             self.data = self.mountPointCombo.entry.get_text()
-
-##         item = self.fsTypeCombo.entry.get_text()
-##         try:
-##             if self.fileTypes.index(item) == 3:
-##                 self.mountPointCombo.entry.set_text("<Not Applicable>")
-##                 self.mountPointCombo.set_sensitive(FALSE)
-##             else:
-##                 self.mountPointCombo.entry.set_text(self.data)
-##                 self.mountPointCombo.set_sensitive(TRUE)
-##         except:
-##             pass
-            
     def on_sizeSetRadio_toggled(self, *args):
         self.maxSizeCombo.set_sensitive(self.sizeSetRadio.get_active())
 
     def on_onPartCheck_toggled(self, *args):
         self.onPartBox.set_sensitive(self.onPartCheck.get_active())
+        self.onDiskCheck.set_sensitive(not self.onPartCheck.get_active())
 
     def on_onDiskCheck_toggled(self, *args):
         self.onDiskBox.set_sensitive(self.onDiskCheck.get_active())
+        self.onPartCheck.set_sensitive(not self.onDiskCheck.get_active())
 
     def on_asPrimaryCheck_toggled(self, *args):
         self.asPrimaryNumBox.set_sensitive(self.asPrimaryCheck.get_active())
@@ -128,9 +110,38 @@ class partWindow:
     def on_asPrimaryNumCheck_toggled(self, *args):
         self.asPrimaryNumCombo.set_sensitive(self.asPrimaryNumCheck.get_active())
 
+    def add_partition(self):
+        self.ok_handler = self.ok_button.connect("clicked", self.on_ok_button_clicked)
+        self.win_reset()
+        self.partitionDialog.show_all()
+
+    def edit_partition(self, rowData, selected_row):
+        self.selected_row = selected_row
+        self.ok_handler = self.ok_button.connect("clicked", self.on_edit_ok_button_clicked)
+        self.win_reset()
+
+        (mountPoint, fsType, size, fixedSize, setSize, setSizeVal, maxSize,
+         asPrimary, asPrimaryNum, asPrimaryVal, onDisk, onDiskVal, onPart,
+         onPartVal, doFormat, None, None, None) = rowData
+        self.mountPointCombo.entry.set_text(mountPoint)
+        self.fsTypeCombo.entry.set_text(fsType) 
+        self.sizeCombo.set_text(size) 
+        self.asPrimaryCheck.set_active(asPrimary)
+        self.asPrimaryNumCheck.set_active(asPrimaryNum)
+        self.onDiskCheck.set_active(onDisk)
+        self.onDiskEntry.set_text(str(onDiskVal))
+        self.onPartCheck.set_active(onPart)
+        self.onPartEntry.set_text(str(onPartVal))
+        self.sizeFixedRadio.set_active(fixedSize)
+        self.maxSizeCombo.set_text(str(maxSize))
+        self.formatCheck.set_active(doFormat)        
+        self.partitionDialog.show_all()
+
     def win_reset(self):
         self.mountPointCombo.entry.set_text("")
-        self.fsTypeCombo.entry.set_text("") 
+        self.mountPointCombo.set_sensitive(TRUE)
+#        self.fsTypeCombo.entry.set_text("") 
+        self.fsTypeCombo.list.select_item(1)
         self.sizeCombo.set_text("") 
         self.asPrimaryCheck.set_active(FALSE)
         self.asPrimaryNumCheck.set_active(FALSE)
@@ -140,18 +151,54 @@ class partWindow:
         self.onPartEntry.set_text("")
         self.sizeFixedRadio.set_active(TRUE)
         self.maxSizeCombo.set_text("1")
-        self.formatRadio.set_active(TRUE)
+        self.formatCheck.set_active(TRUE)
         
     def on_cancel_part_button_clicked(self, *args):
+        self.ok_button.disconnect(self.ok_handler)
         self.partitionDialog.hide()
         self.win_reset()
 
+    def on_edit_ok_button_clicked(self, *args):
+        rowData = self.getData()
+
+        if rowData:
+            (mountPoint, fsType, size, fixedSize, setSize,
+             setSizeVal, maxSize, asPrimary, asPrimaryNum,
+             asPrimaryVal, onDisk, onDiskVal, onPart, onPartVal,
+             doFormat, raidType, raidSpares, isRaidDevice) = rowData
+
+            self.partClist.set_text(self.selected_row, 0, mountPoint)
+            self.partClist.set_text(self.selected_row, 1, fsType)
+            self.partClist.set_text(self.selected_row, 2, size)
+            self.partClist.set_text(self.selected_row, 3, onDiskVal)
+            self.partClist.set_row_data(self.selected_row, rowData)
+            
+            self.ok_button.disconnect(self.ok_handler)
+            self.partitionDialog.hide()
+            self.win_reset()
+
     def on_ok_button_clicked(self, *args):
-        onDiskVal = 0
-        onPartVal = 0
-        setSizeVal = 0
+        rowData = self.getData()
+
+        if rowData:
+            (mountPoint, fsType, size, fixedSize, setSize,
+             setSizeVal, maxSize, asPrimary, asPrimaryNum,
+             asPrimaryVal, onDisk, onDiskVal, onPart, onPartVal,
+             doFormat, raidType, raidSpares, isRaidDevice) = rowData
+        
+            row = self.partClist.append([mountPoint, fsType, size, onDiskVal])
+            self.partClist.set_row_data(row, rowData)
+
+            self.ok_button.disconnect(self.ok_handler)
+            self.partitionDialog.hide()
+            self.win_reset()
+
+    def getData(self):
+        onDiskVal = ""
+        onPartVal = ""
+        setSizeVal = ""
         asPrimaryNum = 0
-        asPrimaryVal = 0
+        asPrimaryVal = ""
 
         mountPoint = self.mountPointCombo.entry.get_text()
         fsType = self.fsTypeCombo.entry.get_text()
@@ -160,7 +207,7 @@ class partWindow:
         fixedSize = self.sizeFixedRadio.get_active()
         setSize = self.sizeSetRadio.get_active()
         if setSize == 1:
-            setSizeVal = self.setSizeCombo.get_text()
+            setSizeVal = self.maxSizeCombo.get_text()
         maxSize = self.sizeMaxRadio.get_active()
 
         asPrimary = self.asPrimaryCheck.get_active()
@@ -178,31 +225,78 @@ class partWindow:
         if onPart == 1:
             onPartVal = self.onPartEntry.get_text()
 
-        doFormat = self.formatRadio.get_active()
+        doFormat = self.formatCheck.get_active()
 
-#        print mountPoint, fsType, size
-#        print "asPrimary ", asPrimary
-#        print "onDisk ", onDisk, " ", onDiskVal
-#        print "onPart ", onPart, " ", onPartVal
+        if size < 1 or size == "":
+            dlg = GnomeMessageBox("You must specify a size for the partition",
+                                  MESSAGE_BOX_ERROR, STOCK_BUTTON_OK, None)
+            dlg.run_and_close()            
+            return
 
-        rowData = [mountPoint, fsType, size, fixedSize, setSize, setSizeVal, maxSize,
-                   asPrimary, asPrimaryNum, asPrimaryVal, onDisk, onDiskVal, onPart, onPartVal, doFormat]
+        if fsType == "RAID":
+            mountPoint = ""            
+            if not onDisk and not onPart:
+                dlg = GnomeMessageBox("To create a new RAID partition, "
+                                      "you must specify either a hard drive "
+                                      "or an existing partition.",
+                                      MESSAGE_BOX_ERROR, STOCK_BUTTON_OK, None)
+                dlg.run_and_close()
+                return
+                
+            elif onDisk and onPart:
+                dlg = GnomeMessageBox("You cannot use onPart and onDisk at the same time",
+                                      MESSAGE_BOX_ERROR, STOCK_BUTTON_OK, None)
+                dlg.run_and_close()
+                return                
 
-        row = self.partClist.append([mountPoint, fsType, size, ""])
-        self.partClist.set_row_data(row, rowData)
+            elif onDisk and onDiskVal == "":
+                dlg = GnomeMessageBox("You must specify a device to create "
+                                      "the RAID partition on.",
+                                      MESSAGE_BOX_ERROR, STOCK_BUTTON_OK, None)
+                dlg.run_and_close()
+                return
 
-        self.partitionDialog.hide()
-        self.win_reset()
+            elif onPart and onPartVal == "":
+                dlg = GnomeMessageBox("You must specify an existing partition to create "
+                                      "the RAID partition on.",
+                                      MESSAGE_BOX_ERROR, STOCK_BUTTON_OK, None)
+                dlg.run_and_close()
+                return
 
-#    def showWin (self):
-#        print "showing win"
-#        self.partitionDialog.show_all()
+        elif fsType != "RAID":
+            if fsType != "Linux Swap":
+                if mountPoint == "":
+                    dlg = GnomeMessageBox("You must specify a mount point for the partition.",
+                                          MESSAGE_BOX_ERROR, STOCK_BUTTON_OK, None)
+                    dlg.run_and_close()
+                    return
+                return
 
+        if fsType == "Linux Swap":
+            mountPoint = ""
 
+        if onDisk and onPart:
+            dlg = GnomeMessageBox("You cannot use onPart and onDisk at the same time",
+                                  MESSAGE_BOX_ERROR, STOCK_BUTTON_OK, None)
+            dlg.run_and_close()
+            return                
 
+        if onDisk and onDiskVal == "":
+            dlg = GnomeMessageBox("You must specify a device to create "
+                                  "the partition on.",
+                                  MESSAGE_BOX_ERROR, STOCK_BUTTON_OK, None)
+            dlg.run_and_close()
+            return
 
+        elif onPart and onPartVal == "":
+            dlg = GnomeMessageBox("You must specify an existing partition to use.",
+                                  MESSAGE_BOX_ERROR, STOCK_BUTTON_OK, None)
+            dlg.run_and_close()
+            return
 
+        rowData = [mountPoint, fsType, size, fixedSize, setSize,
+                   setSizeVal, maxSize, asPrimary, asPrimaryNum,
+                   asPrimaryVal, onDisk, onDiskVal, onPart, onPartVal,
+                   doFormat, "", "", ""]
 
-
-
-
+        return rowData
