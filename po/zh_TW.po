@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zh_TW\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-12-01 11:27-0500\n"
+"POT-Creation-Date: 2004-01-06 16:57-0500\n"
 "PO-Revision-Date: 2003-12-02 10:06+1000\n"
 "Last-Translator: Ben Wu <hpwu@redhat.com>\n"
 "Language-Team: Traditional Chinese <i18n-list@redhat.com>\n"
@@ -66,7 +66,7 @@ msgstr ""
 #. set keyboard to current keymap
 #. set default mouse to generic ps/2
 #. populate time zone combo
-#: ../src/basic.py:202
+#: ../src/basic.py:199
 msgid "Root passwords do not match."
 msgstr "root 密碼不相符。"
 
@@ -75,12 +75,12 @@ msgstr "root 密碼不相符。"
 #. Prepart the clearpart line
 #. This is a raid device
 #. Check to see if the selection is actually a partition or one of the parent roots
-#: ../src/basic.py:203 ../src/basic.py:223 ../src/install.py:213
+#: ../src/basic.py:200 ../src/basic.py:220 ../src/install.py:213
 #: ../src/partition.py:301 ../src/partWindow.py:506 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "錯誤"
 
-#: ../src/basic.py:222
+#: ../src/basic.py:219
 msgid "Please select a root password."
 msgstr "請選擇一個 root 密碼。"
 
@@ -144,7 +144,8 @@ msgstr "信任的服務:"
 msgid "Other ports: (1029:tcp)"
 msgstr "其他埠: (1029:tcp)"
 
-#. define languages, add languages here
+#. pull list of language from system-config-languages
+#. Chop encoding off so we can compare to self.installedLangs
 #. define mice, add mice here
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
@@ -635,7 +636,8 @@ msgstr "請指定這個分割區的掛載點。"
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:422
 #, python-format
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "掛載點 \"%s\" 已經被使用。  請選擇另一個掛載點。"
 
 #. This will scan the part_store and see if there are any duplicate mount points
@@ -643,7 +645,8 @@ msgstr "掛載點 \"%s\" 已經被使用。  請選擇另一個掛載點。"
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
-msgstr "要建立一個新的 RAID 分割區，您必須指定一個硬碟裝置名稱或一個現有的分割區。"
+msgstr ""
+"要建立一個新的 RAID 分割區，您必須指定一個硬碟裝置名稱或一個現有的分割區。"
 
 #. If all the checks pass, then return
 #. Don't iterate if we're counting the object that's being edited
@@ -2054,4 +2057,3 @@ msgstr "。"
 
 #~ msgid "Select a Video Card"
 #~ msgstr "選取顯示卡"
-

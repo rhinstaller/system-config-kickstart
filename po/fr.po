@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-12-01 11:27-0500\n"
+"POT-Creation-Date: 2004-01-06 16:57-0500\n"
 "PO-Revision-Date: 2003-12-02 14:04+0100\n"
 "Last-Translator: Jean-Paul Aubry <jpaubry@redhat.com>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -65,7 +65,7 @@ msgstr ""
 #. set keyboard to current keymap
 #. set default mouse to generic ps/2
 #. populate time zone combo
-#: ../src/basic.py:202
+#: ../src/basic.py:199
 msgid "Root passwords do not match."
 msgstr "Les mots de passe root ne correspondent pas."
 
@@ -74,12 +74,12 @@ msgstr "Les mots de passe root ne correspondent pas."
 #. Prepart the clearpart line
 #. This is a raid device
 #. Check to see if the selection is actually a partition or one of the parent roots
-#: ../src/basic.py:203 ../src/basic.py:223 ../src/install.py:213
+#: ../src/basic.py:200 ../src/basic.py:220 ../src/install.py:213
 #: ../src/partition.py:301 ../src/partWindow.py:506 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "Erreur"
 
-#: ../src/basic.py:222
+#: ../src/basic.py:219
 msgid "Please select a root password."
 msgstr "Veuillez sélectionner un mot de passe root."
 
@@ -110,7 +110,8 @@ msgstr "Veuillez sélectionner un mot de passe root."
 #. end of lilo stuff
 #: ../src/bootloader.py:132
 msgid "Grub passwords do not match.  Please try again."
-msgstr "Les mots de passe Grub ne correspondent pas. Veuillez essayer de nouveau."
+msgstr ""
+"Les mots de passe Grub ne correspondent pas. Veuillez essayer de nouveau."
 
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
@@ -143,7 +144,8 @@ msgstr "Services sécurisés :"
 msgid "Other ports: (1029:tcp)"
 msgstr "Autres ports : (1029:tcp)"
 
-#. define languages, add languages here
+#. pull list of language from system-config-languages
+#. Chop encoding off so we can compare to self.installedLangs
 #. define mice, add mice here
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
@@ -636,7 +638,8 @@ msgstr "Spécifier un point de montage pour la partition."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:422
 #, python-format
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "Le point de montage \"%s\" est déjà utilisé. Veuillez sélectionner un autre "
 "point de montage."
@@ -750,7 +753,8 @@ msgstr "Vous devez sélectionner au moins 2 partitions afin d'utiliser RAID %s"
 #: ../src/raidWindow.py:178
 #, python-format
 msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr "Vous devez sélectionner au moins 3 partitions pour pouvoir utiliser RAID %s"
+msgstr ""
+"Vous devez sélectionner au moins 3 partitions pour pouvoir utiliser RAID %s"
 
 #. then this is a new raid device, not one we're just editing
 #: ../src/raidWindow.py:192 ../src/raidWindow.py:218
@@ -2037,4 +2041,3 @@ msgstr "."
 
 #~ msgid "onPart and onDisk can not be used at the same time."
 #~ msgstr "onPart et onDisk ne peuvent être utilisés en même temps."
-

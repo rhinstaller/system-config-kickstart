@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: redhat-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-12-01 11:27-0500\n"
+"POT-Creation-Date: 2004-01-06 16:57-0500\n"
 "PO-Revision-Date: 2003-12-02 08:51+1000\n"
 "Last-Translator: Sarah Wang <sarahs@redhat.com>\n"
 "Language-Team: Simplified Chinese <i18n@redhat.com>\n"
@@ -67,7 +67,7 @@ msgstr ""
 #. set keyboard to current keymap
 #. set default mouse to generic ps/2
 #. populate time zone combo
-#: ../src/basic.py:202
+#: ../src/basic.py:199
 msgid "Root passwords do not match."
 msgstr "根口令不匹配。"
 
@@ -76,12 +76,12 @@ msgstr "根口令不匹配。"
 #. Prepart the clearpart line
 #. This is a raid device
 #. Check to see if the selection is actually a partition or one of the parent roots
-#: ../src/basic.py:203 ../src/basic.py:223 ../src/install.py:213
+#: ../src/basic.py:200 ../src/basic.py:220 ../src/install.py:213
 #: ../src/partition.py:301 ../src/partWindow.py:506 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "错误"
 
-#: ../src/basic.py:222
+#: ../src/basic.py:219
 msgid "Please select a root password."
 msgstr "请选择根口令。"
 
@@ -145,7 +145,8 @@ msgstr "信任的服务："
 msgid "Other ports: (1029:tcp)"
 msgstr "其它端口：(1029:tcp)"
 
-#. define languages, add languages here
+#. pull list of language from system-config-languages
+#. Chop encoding off so we can compare to self.installedLangs
 #. define mice, add mice here
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
@@ -636,7 +637,8 @@ msgstr "为分区指定挂载点。"
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:422
 #, python-format
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "挂载点“%s”已被使用。请另选一个挂载点。"
 
 #. This will scan the part_store and see if there are any duplicate mount points
@@ -657,7 +659,8 @@ msgstr "指定要在其中创建分区的设备。"
 msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
-msgstr "您指定的设备不是有效的设备名。请使用一个有效的设备名，如“hda1”或“sda3”。"
+msgstr ""
+"您指定的设备不是有效的设备名。请使用一个有效的设备名，如“hda1”或“sda3”。"
 
 #: ../src/partWindow.py:493
 msgid ""
@@ -2053,4 +2056,3 @@ msgstr "."
 
 #~ msgid "Select a Video Card"
 #~ msgstr "选择一张视频卡"
-

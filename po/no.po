@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksconfig 1.92\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-12-01 11:27-0500\n"
+"POT-Creation-Date: 2004-01-06 16:57-0500\n"
 "PO-Revision-Date: 2003-12-18 00:22+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnu.org>\n"
 "Language-Team: Norwegian <no@li.org>\n"
@@ -62,7 +62,7 @@ msgstr ""
 #. set keyboard to current keymap
 #. set default mouse to generic ps/2
 #. populate time zone combo
-#: ../src/basic.py:202
+#: ../src/basic.py:199
 msgid "Root passwords do not match."
 msgstr "Passordene for root er ikke like."
 
@@ -71,12 +71,12 @@ msgstr "Passordene for root er ikke like."
 #. Prepart the clearpart line
 #. This is a raid device
 #. Check to see if the selection is actually a partition or one of the parent roots
-#: ../src/basic.py:203 ../src/basic.py:223 ../src/install.py:213
+#: ../src/basic.py:200 ../src/basic.py:220 ../src/install.py:213
 #: ../src/partition.py:301 ../src/partWindow.py:506 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "Feil"
 
-#: ../src/basic.py:222
+#: ../src/basic.py:219
 msgid "Please select a root password."
 msgstr "Vennligst velg et passord for root."
 
@@ -140,7 +140,8 @@ msgstr "Tjenester vi stoler på:"
 msgid "Other ports: (1029:tcp)"
 msgstr "Andre porter: (1029:tcp)"
 
-#. define languages, add languages here
+#. pull list of language from system-config-languages
+#. Chop encoding off so we can compare to self.installedLangs
 #. define mice, add mice here
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
@@ -849,8 +850,10 @@ msgstr ""
 "[<kickstart_filnavn>]\n"
 "\n"
 "--help                  Skriv ut denne meldingen\n"
-"--generate <filnavn>    Generer en kickstart-fil fra denne maskinen og skriv den\n"
-"                        til <filnavn>. Dette alternativet kan brukes fra konsollet\n"
+"--generate <filnavn>    Generer en kickstart-fil fra denne maskinen og skriv "
+"den\n"
+"                        til <filnavn>. Dette alternativet kan brukes fra "
+"konsollet\n"
 "                        så det er nyttig for tjenere hvor X ikke kjører\n"
 "<kickstart_filnavn>     Dette lar deg starte GUI'et med data fra filen"
 
@@ -860,7 +863,9 @@ msgstr "Kunne ikke åpne skjerm fordi ingen X-tjener kjører."
 
 #: ../src/system-config-kickstart.py:78
 msgid "Try running 'system-config-kickstart --help' for a list of options."
-msgstr "Prøv å kjøre «system-config-kickstart --help» for å få en liste med alternativer."
+msgstr ""
+"Prøv å kjøre «system-config-kickstart --help» for å få en liste med "
+"alternativer."
 
 #. !/usr/bin/python2
 #. !/usr/bin/python2

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-12-01 11:27-0500\n"
+"POT-Creation-Date: 2004-01-06 16:57-0500\n"
 "PO-Revision-Date: 2003-12-13 19:02+0100\n"
 "Last-Translator: Luis Mayoral <mayoral@linuxadicto.org>\n"
 "Language-Team: Español <es@li.org>\n"
@@ -68,7 +68,7 @@ msgstr ""
 #. set keyboard to current keymap
 #. set default mouse to generic ps/2
 #. populate time zone combo
-#: ../src/basic.py:202
+#: ../src/basic.py:199
 msgid "Root passwords do not match."
 msgstr "Las contraseñas de root no coinciden."
 
@@ -77,13 +77,13 @@ msgstr "Las contraseñas de root no coinciden."
 #. Prepart the clearpart line
 #. This is a raid device
 #. Check to see if the selection is actually a partition or one of the parent roots
-#: ../src/basic.py:203 ../src/basic.py:223 ../src/install.py:213
+#: ../src/basic.py:200 ../src/basic.py:220 ../src/install.py:213
 #: ../src/partition.py:301 ../src/partWindow.py:506 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "Error"
 
 # ksconfig.gladestrings:19
-#: ../src/basic.py:222
+#: ../src/basic.py:219
 msgid "Please select a root password."
 msgstr "Seleccione una contraseña de root"
 
@@ -150,7 +150,8 @@ msgstr "Servicios fiables:"
 msgid "Other ports: (1029:tcp)"
 msgstr "Otros puertos: (1029:tcp)"
 
-#. define languages, add languages here
+#. pull list of language from system-config-languages
+#. Chop encoding off so we can compare to self.installedLangs
 #. define mice, add mice here
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
@@ -665,7 +666,8 @@ msgstr "Especificar un punto de montaje para la partición."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:422
 #, python-format
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "El punto de montaje \"%s\" ya se está usando.  Seleccione otro punto de "
 "montaje."
@@ -896,7 +898,8 @@ msgstr ""
 
 #: ../src/system-config-kickstart.py:77
 msgid "Could not open display because no X server is running."
-msgstr "No se pudo abrir la pantalla porque el servidor X no se está ejecutando."
+msgstr ""
+"No se pudo abrir la pantalla porque el servidor X no se está ejecutando."
 
 #: ../src/system-config-kickstart.py:78
 msgid "Try running 'system-config-kickstart --help' for a list of options."
@@ -1512,7 +1515,8 @@ msgstr "Instalar el gestor de arranque en el Master Boot Record (MBR)"
 # ksconfig.gladestrings:29
 #: system-config-kickstart.gladestrings:147
 msgid "Install boot loader on first sector of the boot partition"
-msgstr "Instale el gestor de arranque en el primer sector de la partición de arranque"
+msgstr ""
+"Instale el gestor de arranque en el primer sector de la partición de arranque"
 
 # ksconfig.gladestrings:32
 #: system-config-kickstart.gladestrings:148
@@ -2159,4 +2163,3 @@ msgstr "."
 
 #~ msgid "Miscellaneous"
 #~ msgstr "Miscelánea"
-
