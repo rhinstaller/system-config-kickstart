@@ -40,6 +40,7 @@ import network
 import auth
 import firewall
 import savefile
+import xconfig
 import packages
 
 xml = libglade.GladeXML ("./ksconfig.glade", domain="ksconfig")
@@ -70,7 +71,7 @@ class ksconfig_gui:
 		#bring in firewall functions
 		self.firewall_class = firewall.firewall(xml)
 		#bring in X functions
-##		self.X_class = xconfig.xconfig(xml)
+		self.X_class = xconfig.xconfig(xml)
 		#bring in package function
 		self.packages_class = packages.headerList(xml)
 
@@ -144,7 +145,7 @@ class ksconfig_gui:
 		buf = buf + self.network_class.getData()
 		buf = buf + self.auth_class.getData()
 		buf = buf + self.firewall_class.getData()
-##              buf = buf + self.X_class.getData()
+		buf = buf + self.X_class.getData()
 ##	        buf = buf + self.packages_class.getData()
 
 	        #show confirm dialog window
