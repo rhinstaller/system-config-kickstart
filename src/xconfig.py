@@ -30,12 +30,8 @@ class xconfig:
 
     def __init__(self, xml):
         self.config_x_button = xml.get_widget("config_x_button")
-#        self.video_card_swindow = xml.get_widget("video_card_swindow")
-#        self.video_card_clist = xml.get_widget("video_card_clist")
         self.card_view = xml.get_widget("card_view")
         self.monitor_view = xml.get_widget("monitor_view")
-#        self.monitor_swindow = xml.get_widget("monitor_swindow")
-#        self.monitor_clist = xml.get_widget("monitor_clist")
         self.sync_button = xml.get_widget("sync_button")
         self.sync_table = xml.get_widget("sync_table")        
         self.startx_on_boot_button = xml.get_widget("startx_on_boot_button")
