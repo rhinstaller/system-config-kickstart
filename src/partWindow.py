@@ -377,10 +377,8 @@ class partWindow:
         if part_object.fsType == "raid":
             part_object.mountPoint = ""
             # If it's a raid partition, run it through the checkRaid sanity checker
-#            print part_object.raidNumber
             if part_object.raidNumber == "":
                 if not self.checkRaid(part_object):
-#                    print "returning None"
                     return None
             else:
                 print "this already has a raid number, leave it alone"
@@ -527,10 +525,8 @@ class partWindow:
         self.part_view.expand_all()
         
     def populateList(self, line):
-        print "in populateList", line
         part_object = partEntry.partEntry()
         result = self.parseLine(part_object, line)
-        print "result is", result
         
         if result is None:
             return
@@ -538,13 +534,11 @@ class partWindow:
             self.setValues(part_object)
 
     def parseLine(self, part_object, line):
-        print "in parseLine"
         part_object.mountPoint = line[0]
         opts, args = getopt.getopt(line[1:], "d:h", ["fstype=", "size=", "onpart", 
                                                      "grow", "maxsize", "noformat", "onpart",
                                                      "usepart", "ondisk", "ondrive", "asprimary"
                                                      "bytes-per-inode", "start", "end", "badblocks"])
-        print opts, args
 
         for (opt, value) in opts:
             if opt == "--fstype":
