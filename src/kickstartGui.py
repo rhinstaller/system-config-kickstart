@@ -109,15 +109,15 @@ class kickstartGui:
 	self.category_view.set_model(self.category_store)
 
 	#bring in basic functions
-	self.basic_class = basic.basic(xml, self.options_notebook, self.kickstartData)
+	self.basic_class = basic.basic(self, xml, self.options_notebook, self.kickstartData)
         
 	#bring in bootloader functions
 	self.bootloader_class = bootloader.bootloader(xml, self.options_notebook, self.kickstartData)
                                                       
 	#bring in install functions
-	self.install_class = install.install(xml, self.category_store,
+	self.install_class = install.install(self, xml, self.category_store,
 					     self.category_view, self.options_notebook,
-					     self.bootloader_class, self.kickstartData)
+					     self.kickstartData)
 	#bring in partitions functions
 	self.partition_class = partition.partition(xml, self.kickstartData)
 	#bring in network functions
@@ -308,3 +308,8 @@ class kickstartGui:
         self.X_class.fillData()
         self.packages_class.fillData()
         self.scripts_class.fillData()
+
+    def installTypeChanged(self, boolean):
+        self.partition_class.setSensitive(boolean)
+        self.packages_class.setSensitive(boolean)
+        self.bootloader_class.setSensitive(boolean)
