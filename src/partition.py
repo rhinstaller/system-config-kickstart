@@ -128,16 +128,8 @@ class partition:
         try:
             data, iter = self.part_view.get_selection().get_selected()
         except:
-            selectDialog = gtk.MessageDialog(None, 0, gtk.MESSAGE_INFO, gtk.BUTTONS_OK, _("Please select a partition from the list."))
-            selectDialog.set_title(_("Message"))
-            selectDialog.set_default_size(100, 100)
-            selectDialog.set_position (gtk.WIN_POS_CENTER)
-            selectDialog.set_border_width(2)
-            selectDialog.set_modal(gtk.TRUE)
-            rc = selectDialog.run()
-            if rc == gtk.RESPONSE_OK:
-                selectDialog.hide()
-            return
+            self.deviceNotValid(_("Please select a partition from the list."))
+
         self.part_store.remove(iter)
         self.part_view.get_selection().unselect_all()
 
@@ -149,17 +141,8 @@ class partition:
         try:
             data, iter = self.part_view.get_selection().get_selected()
         except:
-            selectDialog = gtk.MessageDialog(None, 0, gtk.MESSAGE_INFO, gtk.BUTTONS_OK, _("Please select a partition from the list."))
-            selectDialog.set_title(_("Message"))
-            selectDialog.set_default_size(100, 100)
-            selectDialog.set_position (gtk.WIN_POS_CENTER)
-            selectDialog.set_border_width(2)
-            selectDialog.set_modal(gtk.TRUE)
-            rc = selectDialog.run()
-            if rc == gtk.RESPONSE_OK:
-                selectDialog.hide()
-            return
-            
+            self.deviceNotValid(_("Please select a partition from the list."))
+
         self.partWindow.edit_partition(iter)
         self.part_view.get_selection().unselect_all()
 
@@ -271,3 +254,15 @@ class partition:
         else:
             self.edit_part_button.set_sensitive(gtk.TRUE)
             self.del_part_button.set_sensitive(gtk.TRUE)
+
+    def deviceNotValid(self, label):
+        dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, label)
+        dlg.set_title(_("Error"))
+        dlg.set_default_size(100, 100)
+        dlg.set_position (gtk.WIN_POS_CENTER)
+        dlg.set_border_width(2)
+        dlg.set_modal(gtk.TRUE)
+        rc = dlg.run()
+        if rc == gtk.RESPONSE_OK:
+            dlg.hide()
+        return None
