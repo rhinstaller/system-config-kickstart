@@ -61,7 +61,6 @@ class basic:
 #        self.messagebox = xml.get_widget("messagebox")
 
         self.lang_support_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
-        print self.lang_support_view
         self.lang_support_view.set_model(self.lang_support_store)
         self.checkbox = gtk.CellRendererToggle()
         col = gtk.TreeViewColumn('', self.checkbox, active = 0)
@@ -356,7 +355,6 @@ class basic:
         lang_list.sort()        
         
         for lang in lang_list:
-            print lang
             iter = self.lang_support_store.append()
             self.lang_support_store.set_value(iter, 0, gtk.FALSE)
             self.lang_support_store.set_value(iter, 1, lang)
