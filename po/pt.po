@@ -69,7 +69,7 @@ msgstr "label30"
 msgid "label31"
 msgstr "label31"
 
-#: ../src/kickstartGui.py:129
+#: ../src/kickstartGui.py:144
 msgid "Authentication"
 msgstr "Autenticação"
 
@@ -112,7 +112,7 @@ msgstr ""
 msgid "Install new boot loader"
 msgstr "Instalar um novo gestor de arranque"
 
-#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:248
+#: ../src/kickstartGui.py:145 redhat-config-kickstart.gladestrings:248
 msgid "Firewall Configuration"
 msgstr "Configuração da 'Firewall'"
 
@@ -132,7 +132,7 @@ msgstr "Cifrar senha do GRUB"
 msgid "Fill all unused space on disk"
 msgstr "Preencher todo o espaço livre no disco"
 
-#: ../src/kickstartGui.py:165
+#: ../src/kickstartGui.py:180
 msgid "About Kickstart Configurator"
 msgstr "Acerca do Configurador de Kickstarts"
 
@@ -313,7 +313,7 @@ msgstr "HTTP"
 msgid "Raid Devices"
 msgstr "Dispositivos RAID"
 
-#: ../src/kickstartGui.py:128
+#: ../src/kickstartGui.py:143
 msgid "Boot Loader Options"
 msgstr "Opções do Gestor de Arranque"
 
@@ -333,7 +333,7 @@ msgstr "Utilizar o LILO como gestor de arranque"
 msgid "HTTP Server:"
 msgstr "Servidor HTTP:"
 
-#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:194
+#: ../src/kickstartGui.py:144 redhat-config-kickstart.gladestrings:194
 msgid "Network Configuration"
 msgstr "Configuração da Rede"
 
@@ -369,7 +369,7 @@ msgstr "Hz"
 msgid "label93"
 msgstr "label93"
 
-#: ../src/kickstartGui.py:127
+#: ../src/kickstartGui.py:142
 msgid "Basic Configuration"
 msgstr "Configuração Básica"
 
@@ -401,11 +401,11 @@ msgstr "Grupo de Trabalho SMB:"
 msgid "SMB"
 msgstr "SMB"
 
-#: ../src/kickstartGui.py:127
+#: ../src/kickstartGui.py:142
 msgid "Installation Method"
 msgstr "Método de Instalação"
 
-#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:289
+#: ../src/kickstartGui.py:146 redhat-config-kickstart.gladestrings:289
 msgid "Pre-Installation Script"
 msgstr "'Script' de Pré-Instalação"
 
@@ -417,7 +417,9 @@ msgstr "Escolha o ponto onde montar a partição."
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
-msgstr "O dispositivo de rede com o nome %s já exite.  Por favor escolha outro nome para o dispositivo"
+msgstr ""
+"O dispositivo de rede com o nome %s já exite.  Por favor escolha outro nome "
+"para o dispositivo"
 
 #: redhat-config-kickstart.gladestrings:54
 msgid "md15"
@@ -505,9 +507,9 @@ msgstr "md3"
 msgid "md0"
 msgstr "md0"
 
-#: redhat-config-kickstart.gladestrings:146
-msgid "Do not clear Master Boot Record"
-msgstr "Não limpar o Master Boot Record:"
+#: redhat-config-kickstart.gladestrings:40
+msgid "md1"
+msgstr "md1"
 
 #: redhat-config-kickstart.gladestrings:45
 msgid "md6"
@@ -545,7 +547,7 @@ msgstr "Servidor NFS:"
 msgid "KDE"
 msgstr "KDE"
 
-#: ../src/kickstartGui.py:128
+#: ../src/kickstartGui.py:143
 msgid "Partition Information"
 msgstr "Informações de Particionamento"
 
@@ -708,9 +710,9 @@ msgstr "label88"
 msgid "Please enter a hard drive partition."
 msgstr "Insira uma partição do disco rígido."
 
-#: redhat-config-kickstart.gladestrings:40
-msgid "md1"
-msgstr "md1"
+#: redhat-config-kickstart.gladestrings:146
+msgid "Do not clear Master Boot Record"
+msgstr "Não limpar o Master Boot Record:"
 
 #: redhat-config-kickstart.gladestrings:243
 msgid "High"
@@ -804,7 +806,7 @@ msgstr "Dispositivo RAID:"
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "Instalar gestor de arranque no Master Boot Record (MBR)"
 
-#: ../src/kickstartGui.py:242
+#: ../src/kickstartGui.py:257
 msgid "The file \"%s\" cannot be accessed."
 msgstr "Não foi possível aceder ao ficheiro \"%s\""
 
@@ -862,6 +864,23 @@ msgstr "Activar LDAP"
 msgid "Upgrade an existing installation"
 msgstr "Actualizar uma instalação prévia"
 
+#: ../src/redhat-config-kickstart.py:68
+msgid ""
+"Usage: redhat-config-kickstart [--help] [--generate <filename>] "
+"[<kickstart_filename>]\n"
+"        \n"
+"--help                  Print out this message\n"
+"--generate <filename>   Generate a kickstart file from the current machine "
+"and write\n"
+"                        it to <filename>.  This option runs on the console, "
+"so it is\n"
+"                        useful for servers that do not have X currently "
+"running.\n"
+"<kickstart_filename>    This option will cause the GUI to launch with the "
+"values from\n"
+"                        the kickstart file already filled in."
+msgstr ""
+
 #: redhat-config-kickstart.gladestrings:202
 msgid "Use broadcast to find NIS server"
 msgstr "Utilizar 'broadcast' para encontrar servidor NIS"
@@ -875,7 +894,7 @@ msgstr "Erro"
 msgid "Language:"
 msgstr "Língua:"
 
-#: ../src/kickstartGui.py:164
+#: ../src/kickstartGui.py:179
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -981,11 +1000,11 @@ msgstr ""
 msgid "Raid Members"
 msgstr "Membros do Raid"
 
-#: ../src/kickstartGui.py:123
+#: ../src/kickstartGui.py:138
 msgid "Subsection"
 msgstr "Subsecção"
 
-#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:273
+#: ../src/kickstartGui.py:145 redhat-config-kickstart.gladestrings:273
 msgid "X Configuration"
 msgstr "Configuração do X"
 
@@ -1017,7 +1036,7 @@ msgstr "Nível de RAID:"
 msgid "FTP Username"
 msgstr "Utilizador de FTP"
 
-#: ../src/kickstartGui.py:132 redhat-config-kickstart.gladestrings:296
+#: ../src/kickstartGui.py:147 redhat-config-kickstart.gladestrings:296
 msgid "Post-Installation Script"
 msgstr "'Script' de Pós-Instalação"
 
@@ -1051,7 +1070,7 @@ msgstr "IP Estático"
 msgid "Network Type"
 msgstr "Tipo de Rede"
 
-#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:283
+#: ../src/kickstartGui.py:146 redhat-config-kickstart.gladestrings:283
 msgid "Package Selection"
 msgstr "Selecção de Pacotes"
 
@@ -1143,7 +1162,7 @@ msgstr "Autodetectar a placa gráfica"
 msgid "Monitor"
 msgstr "Monitor"
 
-#: ../src/kickstartGui.py:195
+#: ../src/kickstartGui.py:210
 msgid "Help is not available."
 msgstr "A ajuda não está disponível."
 

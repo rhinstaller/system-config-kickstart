@@ -70,7 +70,7 @@ msgstr "label30"
 msgid "label31"
 msgstr "label31"
 
-#: ../src/kickstartGui.py:129
+#: ../src/kickstartGui.py:144
 msgid "Authentication"
 msgstr "Auðkenning"
 
@@ -112,7 +112,7 @@ msgstr ""
 msgid "Install new boot loader"
 msgstr "Setja upp nýjann ræsistjóra"
 
-#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:248
+#: ../src/kickstartGui.py:145 redhat-config-kickstart.gladestrings:248
 msgid "Firewall Configuration"
 msgstr "Stillingar eldveggs"
 
@@ -132,7 +132,7 @@ msgstr "Dulrita GRUB lykilorðið"
 msgid "Fill all unused space on disk"
 msgstr "Nota allt laust pláss á disknum"
 
-#: ../src/kickstartGui.py:165
+#: ../src/kickstartGui.py:180
 msgid "About Kickstart Configurator"
 msgstr "Um hraðuppsetningarstillingatólið"
 
@@ -313,7 +313,7 @@ msgstr "HTTP"
 msgid "Raid Devices"
 msgstr "RAID tæki"
 
-#: ../src/kickstartGui.py:128
+#: ../src/kickstartGui.py:143
 msgid "Boot Loader Options"
 msgstr "Stillingar ræsistjóra"
 
@@ -333,7 +333,7 @@ msgstr "Nota LILO ræsistjórann"
 msgid "HTTP Server:"
 msgstr "HTTP þjónn:"
 
-#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:194
+#: ../src/kickstartGui.py:144 redhat-config-kickstart.gladestrings:194
 msgid "Network Configuration"
 msgstr "Stillingar nets"
 
@@ -369,7 +369,7 @@ msgstr "Hz"
 msgid "label93"
 msgstr "label93"
 
-#: ../src/kickstartGui.py:127
+#: ../src/kickstartGui.py:142
 msgid "Basic Configuration"
 msgstr "Almennar stillingar"
 
@@ -401,11 +401,11 @@ msgstr "SMB vinnuhópur:"
 msgid "SMB"
 msgstr "SMB"
 
-#: ../src/kickstartGui.py:127
+#: ../src/kickstartGui.py:142
 msgid "Installation Method"
 msgstr "Tegund uppsetningar"
 
-#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:289
+#: ../src/kickstartGui.py:146 redhat-config-kickstart.gladestrings:289
 msgid "Pre-Installation Script"
 msgstr "Skeljaforrit fyrir uppsetningu"
 
@@ -505,9 +505,9 @@ msgstr "md3"
 msgid "md0"
 msgstr "md0"
 
-#: redhat-config-kickstart.gladestrings:146
-msgid "Do not clear Master Boot Record"
-msgstr "Ekki hreinsa aðalræsifærsluna"
+#: redhat-config-kickstart.gladestrings:40
+msgid "md1"
+msgstr "md1"
 
 #: redhat-config-kickstart.gladestrings:45
 msgid "md6"
@@ -545,7 +545,7 @@ msgstr "NFS þjónn:"
 msgid "KDE"
 msgstr "KDE"
 
-#: ../src/kickstartGui.py:128
+#: ../src/kickstartGui.py:143
 msgid "Partition Information"
 msgstr "Disksneiðaupplýsingar"
 
@@ -709,9 +709,9 @@ msgstr "label88"
 msgid "Please enter a hard drive partition."
 msgstr "Vinsamlegast sláðu inn heiti disksneiðar."
 
-#: redhat-config-kickstart.gladestrings:40
-msgid "md1"
-msgstr "md1"
+#: redhat-config-kickstart.gladestrings:146
+msgid "Do not clear Master Boot Record"
+msgstr "Ekki hreinsa aðalræsifærsluna"
 
 #: redhat-config-kickstart.gladestrings:243
 msgid "High"
@@ -805,7 +805,7 @@ msgstr "RAID tæki:"
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "Setja ræsistjórann á aðalræsifærsluna (MBR)"
 
-#: ../src/kickstartGui.py:242
+#: ../src/kickstartGui.py:257
 msgid "The file \"%s\" cannot be accessed."
 msgstr ""
 
@@ -863,6 +863,23 @@ msgstr "Nota LDAP"
 msgid "Upgrade an existing installation"
 msgstr "Uppfæra núverandi kerfi"
 
+#: ../src/redhat-config-kickstart.py:68
+msgid ""
+"Usage: redhat-config-kickstart [--help] [--generate <filename>] "
+"[<kickstart_filename>]\n"
+"        \n"
+"--help                  Print out this message\n"
+"--generate <filename>   Generate a kickstart file from the current machine "
+"and write\n"
+"                        it to <filename>.  This option runs on the console, "
+"so it is\n"
+"                        useful for servers that do not have X currently "
+"running.\n"
+"<kickstart_filename>    This option will cause the GUI to launch with the "
+"values from\n"
+"                        the kickstart file already filled in."
+msgstr ""
+
 #: redhat-config-kickstart.gladestrings:202
 msgid "Use broadcast to find NIS server"
 msgstr "Kalla eftir NIS þjóni"
@@ -876,7 +893,7 @@ msgstr "Villa"
 msgid "Language:"
 msgstr "Tungumál:"
 
-#: ../src/kickstartGui.py:164
+#: ../src/kickstartGui.py:179
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -983,11 +1000,11 @@ msgstr ""
 msgid "Raid Members"
 msgstr "Raid drif"
 
-#: ../src/kickstartGui.py:123
+#: ../src/kickstartGui.py:138
 msgid "Subsection"
 msgstr "Undirflokkur"
 
-#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:273
+#: ../src/kickstartGui.py:145 redhat-config-kickstart.gladestrings:273
 msgid "X Configuration"
 msgstr "Stillingar X"
 
@@ -1019,7 +1036,7 @@ msgstr "RAID-stig:"
 msgid "FTP Username"
 msgstr "FTP notandanafn"
 
-#: ../src/kickstartGui.py:132 redhat-config-kickstart.gladestrings:296
+#: ../src/kickstartGui.py:147 redhat-config-kickstart.gladestrings:296
 msgid "Post-Installation Script"
 msgstr "Skeljaforrit eftir uppsetningu"
 
@@ -1054,7 +1071,7 @@ msgstr "Fast IP vistfang"
 msgid "Network Type"
 msgstr "Tegund nets:"
 
-#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:283
+#: ../src/kickstartGui.py:146 redhat-config-kickstart.gladestrings:283
 msgid "Package Selection"
 msgstr "Pakkaval"
 
@@ -1146,7 +1163,7 @@ msgstr "Leita að skjákorti"
 msgid "Monitor"
 msgstr "Skjár"
 
-#: ../src/kickstartGui.py:195
+#: ../src/kickstartGui.py:210
 msgid "Help is not available."
 msgstr "Hjálpin er ekki tiltæk."
 

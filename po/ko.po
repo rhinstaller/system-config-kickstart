@@ -71,7 +71,7 @@ msgstr "label30"
 msgid "label31"
 msgstr "label31"
 
-#: ../src/kickstartGui.py:129
+#: ../src/kickstartGui.py:144
 msgid "Authentication"
 msgstr "인증"
 
@@ -113,7 +113,7 @@ msgstr ""
 msgid "Install new boot loader"
 msgstr "새로운 부트로더 설치"
 
-#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:248
+#: ../src/kickstartGui.py:145 redhat-config-kickstart.gladestrings:248
 msgid "Firewall Configuration"
 msgstr "방화벽 설정"
 
@@ -133,7 +133,7 @@ msgstr "GRUB 암호 암호화"
 msgid "Fill all unused space on disk"
 msgstr "사용안된 디스크 공간 모두 채움"
 
-#: ../src/kickstartGui.py:165
+#: ../src/kickstartGui.py:180
 msgid "About Kickstart Configurator"
 msgstr "킥스타트 설정 프로그램에 대하여"
 
@@ -314,7 +314,7 @@ msgstr "HTTP"
 msgid "Raid Devices"
 msgstr "RAID 장치"
 
-#: ../src/kickstartGui.py:128
+#: ../src/kickstartGui.py:143
 msgid "Boot Loader Options"
 msgstr "부트로더 옵션"
 
@@ -334,7 +334,7 @@ msgstr "LILO를 부트로더로 사용"
 msgid "HTTP Server:"
 msgstr "HTTP 서버:"
 
-#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:194
+#: ../src/kickstartGui.py:144 redhat-config-kickstart.gladestrings:194
 msgid "Network Configuration"
 msgstr "네트워크 설정"
 
@@ -370,7 +370,7 @@ msgstr "Hz"
 msgid "label93"
 msgstr "label93"
 
-#: ../src/kickstartGui.py:127
+#: ../src/kickstartGui.py:142
 msgid "Basic Configuration"
 msgstr "기본 설정"
 
@@ -402,11 +402,11 @@ msgstr "SMB 작업그룹:"
 msgid "SMB"
 msgstr "SMB"
 
-#: ../src/kickstartGui.py:127
+#: ../src/kickstartGui.py:142
 msgid "Installation Method"
 msgstr "설치 방법"
 
-#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:289
+#: ../src/kickstartGui.py:146 redhat-config-kickstart.gladestrings:289
 msgid "Pre-Installation Script"
 msgstr "설치-전(Pre) 스크립트"
 
@@ -419,8 +419,8 @@ msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
 msgstr ""
-"%s 이름을 지닌 네트워크 장치가 이미 존재합니다.  다른 장치명을 "
-"선택해 주십시오."
+"%s 이름을 지닌 네트워크 장치가 이미 존재합니다.  다른 장치명을 선택해 주십시"
+"오."
 
 #: redhat-config-kickstart.gladestrings:54
 msgid "md15"
@@ -508,9 +508,9 @@ msgstr "md3"
 msgid "md0"
 msgstr "md0"
 
-#: redhat-config-kickstart.gladestrings:146
-msgid "Do not clear Master Boot Record"
-msgstr "마스터 부트 레코드 내용 삭제하지 않음"
+#: redhat-config-kickstart.gladestrings:40
+msgid "md1"
+msgstr "md1"
 
 #: redhat-config-kickstart.gladestrings:45
 msgid "md6"
@@ -548,7 +548,7 @@ msgstr "NFS 서버:"
 msgid "KDE"
 msgstr "KDE"
 
-#: ../src/kickstartGui.py:128
+#: ../src/kickstartGui.py:143
 msgid "Partition Information"
 msgstr "파티션 정보"
 
@@ -625,8 +625,10 @@ msgid "_Automatically Resolve Dependencies"
 msgstr "패키지 간의 의존성 문제 자동으로 해결(_A)"
 
 #: ../src/partWindow.py:410
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr "\"%s\" 마운트 지점은 이미 사용중입니다.  다른 마운트 지점을 선택해 주십시오."
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr ""
+"\"%s\" 마운트 지점은 이미 사용중입니다.  다른 마운트 지점을 선택해 주십시오."
 
 #: ../src/partWindow.py:255 ../src/partWindow.py:520 ../src/raidWindow.py:205
 msgid "No"
@@ -708,9 +710,9 @@ msgstr "label88"
 msgid "Please enter a hard drive partition."
 msgstr "하드 드라이브 파티션을 입력해 주십시오."
 
-#: redhat-config-kickstart.gladestrings:40
-msgid "md1"
-msgstr "md1"
+#: redhat-config-kickstart.gladestrings:146
+msgid "Do not clear Master Boot Record"
+msgstr "마스터 부트 레코드 내용 삭제하지 않음"
 
 #: redhat-config-kickstart.gladestrings:243
 msgid "High"
@@ -804,7 +806,7 @@ msgstr "RAID 장치:"
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "마스터 부트 레코드 (MBR)에 부트로더를 설치"
 
-#: ../src/kickstartGui.py:242
+#: ../src/kickstartGui.py:257
 msgid "The file \"%s\" cannot be accessed."
 msgstr "\"%s\" 파일을 읽을 수 없습니다."
 
@@ -861,6 +863,23 @@ msgstr "LDAP 사용"
 msgid "Upgrade an existing installation"
 msgstr "기존 설치 업그레이드"
 
+#: ../src/redhat-config-kickstart.py:68
+msgid ""
+"Usage: redhat-config-kickstart [--help] [--generate <filename>] "
+"[<kickstart_filename>]\n"
+"        \n"
+"--help                  Print out this message\n"
+"--generate <filename>   Generate a kickstart file from the current machine "
+"and write\n"
+"                        it to <filename>.  This option runs on the console, "
+"so it is\n"
+"                        useful for servers that do not have X currently "
+"running.\n"
+"<kickstart_filename>    This option will cause the GUI to launch with the "
+"values from\n"
+"                        the kickstart file already filled in."
+msgstr ""
+
 #: redhat-config-kickstart.gladestrings:202
 msgid "Use broadcast to find NIS server"
 msgstr "NIS 서버를 찾기 위해 브로드캐스트 사용"
@@ -874,7 +893,7 @@ msgstr "오류"
 msgid "Language:"
 msgstr "언어:"
 
-#: ../src/kickstartGui.py:164
+#: ../src/kickstartGui.py:179
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -980,11 +999,11 @@ msgstr ""
 msgid "Raid Members"
 msgstr "RAID 요소(Member)"
 
-#: ../src/kickstartGui.py:123
+#: ../src/kickstartGui.py:138
 msgid "Subsection"
 msgstr "하부 섹션"
 
-#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:273
+#: ../src/kickstartGui.py:145 redhat-config-kickstart.gladestrings:273
 msgid "X Configuration"
 msgstr "X 설정"
 
@@ -1016,7 +1035,7 @@ msgstr "RAID 레벨:"
 msgid "FTP Username"
 msgstr "FTP 사용자명:"
 
-#: ../src/kickstartGui.py:132 redhat-config-kickstart.gladestrings:296
+#: ../src/kickstartGui.py:147 redhat-config-kickstart.gladestrings:296
 msgid "Post-Installation Script"
 msgstr "설치-후(Post) 스크립트"
 
@@ -1050,7 +1069,7 @@ msgstr "고정 IP 주소"
 msgid "Network Type"
 msgstr "네트워크 유형"
 
-#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:283
+#: ../src/kickstartGui.py:146 redhat-config-kickstart.gladestrings:283
 msgid "Package Selection"
 msgstr "패키지 선택"
 
@@ -1142,7 +1161,7 @@ msgstr "비디오 카드 검색"
 msgid "Monitor"
 msgstr "모니터"
 
-#: ../src/kickstartGui.py:195
+#: ../src/kickstartGui.py:210
 msgid "Help is not available."
 msgstr "도움말 자료가 없습니다."
 
@@ -1395,4 +1414,3 @@ msgstr "종료(_Q)"
 
 #~ msgid "Select a Video Card"
 #~ msgstr "비디오 카드 선택"
-

@@ -71,7 +71,7 @@ msgstr "label30"
 msgid "label31"
 msgstr "label31"
 
-#: ../src/kickstartGui.py:129
+#: ../src/kickstartGui.py:144
 msgid "Authentication"
 msgstr "認證"
 
@@ -113,7 +113,7 @@ msgstr ""
 msgid "Install new boot loader"
 msgstr "安裝新的開機管理程式"
 
-#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:248
+#: ../src/kickstartGui.py:145 redhat-config-kickstart.gladestrings:248
 msgid "Firewall Configuration"
 msgstr "防火牆組態設定"
 
@@ -133,7 +133,7 @@ msgstr "編譯 GRUB 密碼"
 msgid "Fill all unused space on disk"
 msgstr "填滿磁碟上所有的剩餘空間"
 
-#: ../src/kickstartGui.py:165
+#: ../src/kickstartGui.py:180
 msgid "About Kickstart Configurator"
 msgstr "關於 Kickstart 設定程式"
 
@@ -312,7 +312,7 @@ msgstr "HTTP"
 msgid "Raid Devices"
 msgstr "RAID 裝置"
 
-#: ../src/kickstartGui.py:128
+#: ../src/kickstartGui.py:143
 msgid "Boot Loader Options"
 msgstr "開機管理程式選項"
 
@@ -332,7 +332,7 @@ msgstr "使用 LILO 當作開機管理程式"
 msgid "HTTP Server:"
 msgstr "HTTP 伺服器:"
 
-#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:194
+#: ../src/kickstartGui.py:144 redhat-config-kickstart.gladestrings:194
 msgid "Network Configuration"
 msgstr "網路組態設定"
 
@@ -368,7 +368,7 @@ msgstr "赫茲"
 msgid "label93"
 msgstr "label93"
 
-#: ../src/kickstartGui.py:127
+#: ../src/kickstartGui.py:142
 msgid "Basic Configuration"
 msgstr "基本組態設定"
 
@@ -400,11 +400,11 @@ msgstr "SMB 群組:"
 msgid "SMB"
 msgstr "SMB"
 
-#: ../src/kickstartGui.py:127
+#: ../src/kickstartGui.py:142
 msgid "Installation Method"
 msgstr "安裝方式"
 
-#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:289
+#: ../src/kickstartGui.py:146 redhat-config-kickstart.gladestrings:289
 msgid "Pre-Installation Script"
 msgstr "前置安裝程式碼"
 
@@ -504,9 +504,9 @@ msgstr "md3"
 msgid "md0"
 msgstr "md0"
 
-#: redhat-config-kickstart.gladestrings:146
-msgid "Do not clear Master Boot Record"
-msgstr "不要清除 MBR"
+#: redhat-config-kickstart.gladestrings:40
+msgid "md1"
+msgstr "md1"
 
 #: redhat-config-kickstart.gladestrings:45
 msgid "md6"
@@ -544,7 +544,7 @@ msgstr "NFS 伺服器:"
 msgid "KDE"
 msgstr "KDE"
 
-#: ../src/kickstartGui.py:128
+#: ../src/kickstartGui.py:143
 msgid "Partition Information"
 msgstr "分割區資訊"
 
@@ -704,9 +704,9 @@ msgstr "label88"
 msgid "Please enter a hard drive partition."
 msgstr "請輸入一個硬碟分割區。"
 
-#: redhat-config-kickstart.gladestrings:40
-msgid "md1"
-msgstr "md1"
+#: redhat-config-kickstart.gladestrings:146
+msgid "Do not clear Master Boot Record"
+msgstr "不要清除 MBR"
 
 #: redhat-config-kickstart.gladestrings:243
 msgid "High"
@@ -800,7 +800,7 @@ msgstr "RAID 裝置:"
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "安裝開機管理程式在 MBR"
 
-#: ../src/kickstartGui.py:242
+#: ../src/kickstartGui.py:257
 msgid "The file \"%s\" cannot be accessed."
 msgstr ""
 
@@ -856,6 +856,23 @@ msgstr "啟用 LDAP"
 msgid "Upgrade an existing installation"
 msgstr "升級目前的安裝"
 
+#: ../src/redhat-config-kickstart.py:68
+msgid ""
+"Usage: redhat-config-kickstart [--help] [--generate <filename>] "
+"[<kickstart_filename>]\n"
+"        \n"
+"--help                  Print out this message\n"
+"--generate <filename>   Generate a kickstart file from the current machine "
+"and write\n"
+"                        it to <filename>.  This option runs on the console, "
+"so it is\n"
+"                        useful for servers that do not have X currently "
+"running.\n"
+"<kickstart_filename>    This option will cause the GUI to launch with the "
+"values from\n"
+"                        the kickstart file already filled in."
+msgstr ""
+
 #: redhat-config-kickstart.gladestrings:202
 msgid "Use broadcast to find NIS server"
 msgstr "使用廣播方式搜尋 NIS 伺服器"
@@ -869,7 +886,7 @@ msgstr "錯誤"
 msgid "Language:"
 msgstr "語言:"
 
-#: ../src/kickstartGui.py:164
+#: ../src/kickstartGui.py:179
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -975,11 +992,11 @@ msgstr ""
 msgid "Raid Members"
 msgstr "Raid 的成員"
 
-#: ../src/kickstartGui.py:123
+#: ../src/kickstartGui.py:138
 msgid "Subsection"
 msgstr "小單元"
 
-#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:273
+#: ../src/kickstartGui.py:145 redhat-config-kickstart.gladestrings:273
 msgid "X Configuration"
 msgstr "X 組態設定"
 
@@ -1011,7 +1028,7 @@ msgstr "RAID 等級:"
 msgid "FTP Username"
 msgstr "FTP 使用者名稱"
 
-#: ../src/kickstartGui.py:132 redhat-config-kickstart.gladestrings:296
+#: ../src/kickstartGui.py:147 redhat-config-kickstart.gladestrings:296
 msgid "Post-Installation Script"
 msgstr "後續安裝程式碼"
 
@@ -1046,7 +1063,7 @@ msgstr "靜態 IP"
 msgid "Network Type"
 msgstr "網路類型:"
 
-#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:283
+#: ../src/kickstartGui.py:146 redhat-config-kickstart.gladestrings:283
 msgid "Package Selection"
 msgstr "選取套件"
 
@@ -1138,7 +1155,7 @@ msgstr "偵測顯示卡"
 msgid "Monitor"
 msgstr "螢幕"
 
-#: ../src/kickstartGui.py:195
+#: ../src/kickstartGui.py:210
 msgid "Help is not available."
 msgstr "無法取得輔助說明。"
 

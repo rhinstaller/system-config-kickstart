@@ -83,7 +83,7 @@ msgid "label31"
 msgstr "etiqueta31"
 
 # ../src/ksconfig_gui.py:121
-#: ../src/kickstartGui.py:129
+#: ../src/kickstartGui.py:144
 msgid "Authentication"
 msgstr "Autenticación"
 
@@ -134,7 +134,7 @@ msgid "Install new boot loader"
 msgstr "Instalar el nuevo gestor de arranque"
 
 # ../src/ksconfig_gui.py:122 ksconfig.gladestrings:138
-#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:248
+#: ../src/kickstartGui.py:145 redhat-config-kickstart.gladestrings:248
 msgid "Firewall Configuration"
 msgstr "Configuración del cortafuegos"
 
@@ -157,7 +157,7 @@ msgid "Fill all unused space on disk"
 msgstr "Rellenar todo el espacio del disco"
 
 # ../src/ksconfig_gui.py:135 ksconfig.gladestrings:7
-#: ../src/kickstartGui.py:165
+#: ../src/kickstartGui.py:180
 msgid "About Kickstart Configurator"
 msgstr "Acerca del configurador de Kickstart"
 
@@ -372,7 +372,7 @@ msgid "Raid Devices"
 msgstr "Dispositivos Raid"
 
 # ../src/ksconfig_gui.py:117 ksconfig.gladestrings:24
-#: ../src/kickstartGui.py:128
+#: ../src/kickstartGui.py:143
 msgid "Boot Loader Options"
 msgstr "Opciones del gestor de arranque"
 
@@ -395,7 +395,7 @@ msgid "HTTP Server:"
 msgstr "Servidor HTTP:"
 
 # ../src/ksconfig_gui.py:120 ksconfig.gladestrings:81
-#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:194
+#: ../src/kickstartGui.py:144 redhat-config-kickstart.gladestrings:194
 msgid "Network Configuration"
 msgstr "Configuración de red"
 
@@ -436,7 +436,7 @@ msgid "label93"
 msgstr "etiqueta93"
 
 # ../src/ksconfig_gui.py:116
-#: ../src/kickstartGui.py:127
+#: ../src/kickstartGui.py:142
 msgid "Basic Configuration"
 msgstr "Configuración básica"
 
@@ -475,12 +475,12 @@ msgid "SMB"
 msgstr "SMB"
 
 # ../src/ksconfig_gui.py:118
-#: ../src/kickstartGui.py:127
+#: ../src/kickstartGui.py:142
 msgid "Installation Method"
 msgstr "Método de instalación"
 
 # ../src/ksconfig_gui.py:125 ksconfig.gladestrings:169
-#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:289
+#: ../src/kickstartGui.py:146 redhat-config-kickstart.gladestrings:289
 msgid "Pre-Installation Script"
 msgstr "Script de pre-instalación"
 
@@ -590,10 +590,9 @@ msgstr "md3"
 msgid "md0"
 msgstr "md0"
 
-# ksconfig.gladestrings:63
-#: redhat-config-kickstart.gladestrings:146
-msgid "Do not clear Master Boot Record"
-msgstr "No borrar el Master Boot Record"
+#: redhat-config-kickstart.gladestrings:40
+msgid "md1"
+msgstr "md1"
 
 #: redhat-config-kickstart.gladestrings:45
 msgid "md6"
@@ -637,7 +636,7 @@ msgid "KDE"
 msgstr "KDE"
 
 # ../src/ksconfig_gui.py:119
-#: ../src/kickstartGui.py:128
+#: ../src/kickstartGui.py:143
 msgid "Partition Information"
 msgstr "Información de las particiones"
 
@@ -726,7 +725,8 @@ msgid "_Automatically Resolve Dependencies"
 msgstr "Resolver dependencias de forma _automática"
 
 #: ../src/partWindow.py:410
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "El punto de montaje \"%s\" ya se está usando.  Seleccione otro punto de "
 "montaje."
@@ -827,9 +827,10 @@ msgstr "etiqueta88"
 msgid "Please enter a hard drive partition."
 msgstr "Introduzca una partición de disco duro."
 
-#: redhat-config-kickstart.gladestrings:40
-msgid "md1"
-msgstr "md1"
+# ksconfig.gladestrings:63
+#: redhat-config-kickstart.gladestrings:146
+msgid "Do not clear Master Boot Record"
+msgstr "No borrar el Master Boot Record"
 
 # ksconfig.gladestrings:140
 #: redhat-config-kickstart.gladestrings:243
@@ -932,7 +933,7 @@ msgstr "Dispositivo RAID:"
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "Instalar el gestor de arranque en el Master Boot Record (MBR)"
 
-#: ../src/kickstartGui.py:242
+#: ../src/kickstartGui.py:257
 msgid "The file \"%s\" cannot be accessed."
 msgstr "El archivo \"%s\" no se puede accesar."
 
@@ -998,6 +999,23 @@ msgstr "Activar LDAP"
 msgid "Upgrade an existing installation"
 msgstr "Actualizar una instalación existente"
 
+#: ../src/redhat-config-kickstart.py:68
+msgid ""
+"Usage: redhat-config-kickstart [--help] [--generate <filename>] "
+"[<kickstart_filename>]\n"
+"        \n"
+"--help                  Print out this message\n"
+"--generate <filename>   Generate a kickstart file from the current machine "
+"and write\n"
+"                        it to <filename>.  This option runs on the console, "
+"so it is\n"
+"                        useful for servers that do not have X currently "
+"running.\n"
+"<kickstart_filename>    This option will cause the GUI to launch with the "
+"values from\n"
+"                        the kickstart file already filled in."
+msgstr ""
+
 # ksconfig.gladestrings:110
 #: redhat-config-kickstart.gladestrings:202
 msgid "Use broadcast to find NIS server"
@@ -1013,7 +1031,7 @@ msgstr "Error"
 msgid "Language:"
 msgstr "Idioma:"
 
-#: ../src/kickstartGui.py:164
+#: ../src/kickstartGui.py:179
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -1134,12 +1152,12 @@ msgstr ""
 msgid "Raid Members"
 msgstr "Mienbros Raid"
 
-#: ../src/kickstartGui.py:123
+#: ../src/kickstartGui.py:138
 msgid "Subsection"
 msgstr "Subsección"
 
 # ../src/ksconfig_gui.py:123 ksconfig.gladestrings:147
-#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:273
+#: ../src/kickstartGui.py:145 redhat-config-kickstart.gladestrings:273
 msgid "X Configuration"
 msgstr "Configuración de las X"
 
@@ -1178,7 +1196,7 @@ msgid "FTP Username"
 msgstr "Nombre de usuario FTP"
 
 # ../src/ksconfig_gui.py:126 ksconfig.gladestrings:173
-#: ../src/kickstartGui.py:132 redhat-config-kickstart.gladestrings:296
+#: ../src/kickstartGui.py:147 redhat-config-kickstart.gladestrings:296
 msgid "Post-Installation Script"
 msgstr "Script de post-instalación"
 
@@ -1220,7 +1238,7 @@ msgid "Network Type"
 msgstr "Tipo de red"
 
 # ../src/ksconfig_gui.py:124
-#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:283
+#: ../src/kickstartGui.py:146 redhat-config-kickstart.gladestrings:283
 msgid "Package Selection"
 msgstr "Selección de paquetes"
 
@@ -1326,7 +1344,7 @@ msgstr "Probar la tarjeta de vídeo"
 msgid "Monitor"
 msgstr "Monitor"
 
-#: ../src/kickstartGui.py:195
+#: ../src/kickstartGui.py:210
 msgid "Help is not available."
 msgstr "La ayuda no está disponible."
 
@@ -1378,7 +1396,8 @@ msgstr "Medio"
 # ksconfig.gladestrings:29
 #: redhat-config-kickstart.gladestrings:140
 msgid "Install boot loader on first sector of the boot partition"
-msgstr "Instale el gestor de arranque en el primer sector de la partición de arranque"
+msgstr ""
+"Instale el gestor de arranque en el primer sector de la partición de arranque"
 
 # ksconfig.gladestrings:47 ksconfig.gladestrings:60
 #: redhat-config-kickstart.gladestrings:96
@@ -1474,4 +1493,3 @@ msgstr "_Salir"
 
 #~ msgid "Miscellaneous"
 #~ msgstr "Miscelánea"
-

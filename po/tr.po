@@ -68,7 +68,7 @@ msgstr "etiket30"
 msgid "label31"
 msgstr "etiket31"
 
-#: ../src/kickstartGui.py:129
+#: ../src/kickstartGui.py:144
 msgid "Authentication"
 msgstr "Kimlik Sınaması"
 
@@ -111,7 +111,7 @@ msgstr ""
 msgid "Install new boot loader"
 msgstr "Yeni bir önyükleyici kurar"
 
-#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:248
+#: ../src/kickstartGui.py:145 redhat-config-kickstart.gladestrings:248
 msgid "Firewall Configuration"
 msgstr "Güvenlik Duvarı Yapılandırması"
 
@@ -131,7 +131,7 @@ msgstr "GRUB parolasını şifrele"
 msgid "Fill all unused space on disk"
 msgstr "Diskteki boş alanın tamamını kullan"
 
-#: ../src/kickstartGui.py:165
+#: ../src/kickstartGui.py:180
 msgid "About Kickstart Configurator"
 msgstr "Kickstart Yapılandırıcı Hakkında"
 
@@ -312,7 +312,7 @@ msgstr "HTTP"
 msgid "Raid Devices"
 msgstr "RAID Aygıtları"
 
-#: ../src/kickstartGui.py:128
+#: ../src/kickstartGui.py:143
 msgid "Boot Loader Options"
 msgstr "Önyükleme Yükleyicisi Seçenekleri"
 
@@ -332,7 +332,7 @@ msgstr "Önyükleyici olarak LILO kullanılır"
 msgid "HTTP Server:"
 msgstr "HTTP Sunucusu:"
 
-#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:194
+#: ../src/kickstartGui.py:144 redhat-config-kickstart.gladestrings:194
 msgid "Network Configuration"
 msgstr "Ağ Yapılandırması"
 
@@ -368,7 +368,7 @@ msgstr "Hz"
 msgid "label93"
 msgstr "etiket93"
 
-#: ../src/kickstartGui.py:127
+#: ../src/kickstartGui.py:142
 msgid "Basic Configuration"
 msgstr "Temel Yapılandırma"
 
@@ -400,11 +400,11 @@ msgstr "SMB Altgrubu:"
 msgid "SMB"
 msgstr "SMB"
 
-#: ../src/kickstartGui.py:127
+#: ../src/kickstartGui.py:142
 msgid "Installation Method"
 msgstr "Kurulum Yöntemi"
 
-#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:289
+#: ../src/kickstartGui.py:146 redhat-config-kickstart.gladestrings:289
 msgid "Pre-Installation Script"
 msgstr "Kurulum Öncesi Betiği"
 
@@ -504,9 +504,9 @@ msgstr "md3"
 msgid "md0"
 msgstr "md0"
 
-#: redhat-config-kickstart.gladestrings:146
-msgid "Do not clear Master Boot Record"
-msgstr "Ana Önyükleme Kaydını (MBR) temizlemez"
+#: redhat-config-kickstart.gladestrings:40
+msgid "md1"
+msgstr "md1"
 
 #: redhat-config-kickstart.gladestrings:45
 msgid "md6"
@@ -544,7 +544,7 @@ msgstr "NFS Sunucu:"
 msgid "KDE"
 msgstr "KDE"
 
-#: ../src/kickstartGui.py:128
+#: ../src/kickstartGui.py:143
 msgid "Partition Information"
 msgstr "Disk Bölümleme Bilgileri"
 
@@ -707,9 +707,9 @@ msgstr "etiket88"
 msgid "Please enter a hard drive partition."
 msgstr ""
 
-#: redhat-config-kickstart.gladestrings:40
-msgid "md1"
-msgstr "md1"
+#: redhat-config-kickstart.gladestrings:146
+msgid "Do not clear Master Boot Record"
+msgstr "Ana Önyükleme Kaydını (MBR) temizlemez"
 
 #: redhat-config-kickstart.gladestrings:243
 msgid "High"
@@ -803,7 +803,7 @@ msgstr "RAID Aygıtı:"
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "Önyükleyiciyi Ana Önyükleme Kaydına (MBR) kurar"
 
-#: ../src/kickstartGui.py:242
+#: ../src/kickstartGui.py:257
 msgid "The file \"%s\" cannot be accessed."
 msgstr ""
 
@@ -860,6 +860,23 @@ msgstr "LDAP etkinleştirilsin"
 msgid "Upgrade an existing installation"
 msgstr "Mevcut kurulumu günceller"
 
+#: ../src/redhat-config-kickstart.py:68
+msgid ""
+"Usage: redhat-config-kickstart [--help] [--generate <filename>] "
+"[<kickstart_filename>]\n"
+"        \n"
+"--help                  Print out this message\n"
+"--generate <filename>   Generate a kickstart file from the current machine "
+"and write\n"
+"                        it to <filename>.  This option runs on the console, "
+"so it is\n"
+"                        useful for servers that do not have X currently "
+"running.\n"
+"<kickstart_filename>    This option will cause the GUI to launch with the "
+"values from\n"
+"                        the kickstart file already filled in."
+msgstr ""
+
 #: redhat-config-kickstart.gladestrings:202
 msgid "Use broadcast to find NIS server"
 msgstr "NIS sunucusunu bulmak için yayınlama kullan"
@@ -873,7 +890,7 @@ msgstr "Hata"
 msgid "Language:"
 msgstr "Dil:"
 
-#: ../src/kickstartGui.py:164
+#: ../src/kickstartGui.py:179
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -980,11 +997,11 @@ msgstr ""
 msgid "Raid Members"
 msgstr "Raid Üyeleri"
 
-#: ../src/kickstartGui.py:123
+#: ../src/kickstartGui.py:138
 msgid "Subsection"
 msgstr "Altbölüm"
 
-#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:273
+#: ../src/kickstartGui.py:145 redhat-config-kickstart.gladestrings:273
 msgid "X Configuration"
 msgstr "X Yapılandırması"
 
@@ -1016,7 +1033,7 @@ msgstr "RAID Düzeyi:"
 msgid "FTP Username"
 msgstr "FTP Kullanıcı adı"
 
-#: ../src/kickstartGui.py:132 redhat-config-kickstart.gladestrings:296
+#: ../src/kickstartGui.py:147 redhat-config-kickstart.gladestrings:296
 msgid "Post-Installation Script"
 msgstr "Kurulum Sonrası betiği"
 
@@ -1051,7 +1068,7 @@ msgstr "Statik IP"
 msgid "Network Type"
 msgstr "Ağ Türü:"
 
-#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:283
+#: ../src/kickstartGui.py:146 redhat-config-kickstart.gladestrings:283
 msgid "Package Selection"
 msgstr "Paket Seçimi"
 
@@ -1144,7 +1161,7 @@ msgstr "Ekran kartını algıla"
 msgid "Monitor"
 msgstr "Monitör"
 
-#: ../src/kickstartGui.py:195
+#: ../src/kickstartGui.py:210
 msgid "Help is not available."
 msgstr "Bu konuda yardım yok."
 
