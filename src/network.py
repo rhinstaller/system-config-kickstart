@@ -372,12 +372,12 @@ class network:
         networkList = self.kickstartData.getNetwork()
 
         for line in networkList:
+            iter = self.network_device_store.append()
             opts, args = getopt.getopt(line, "d:h", ["bootproto=", "device=", "ip=", "gateway=",
                                                      "nameserver=", "nodns=", "netmask=",
                                                      "hostname="])
             
             for opt, value in opts:
-                iter = self.network_device_store.append()
                 self.network_device_store.set_value(iter, 0, "eth0")
 
                 if opt == "--device":
