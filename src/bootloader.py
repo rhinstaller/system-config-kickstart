@@ -86,16 +86,6 @@ class bootloader:
     def getData (self):
         if self.install_bootloader_radio.get_active():
             buf = ""
-            #lilo stuff
-            if self.lilo_radiobutton.get_active():
-                buf = "--useLilo "
-                if self.linear_checkbutton.get_active():
-                    buf = buf + "--linear "
-                else:
-                    buf = buf + "--nolinear "
-                if self.lba32_checkbutton.get_active():
-                    buf = buf + "--lba32 "
-            #end of lilo stuff
             if self.mbr_radiobutton.get_active():
                 buf = buf + "--location=mbr "
             elif self.firstsector_radiobutton.get_active():
@@ -172,15 +162,3 @@ class bootloader:
         if "--upgrade" in list:
             self.upgrade_bootloader_radio.set_active(gtk.TRUE)
             
-        if "--useLilo" in list:
-            self.lilo_radiobutton.set_active(gtk.TRUE)
-
-            if "--linear" in list:
-                self.linear_checkbutton.set_active(gtk.TRUE)
-
-            if "--nolinear" in list:
-                self.linear_checkbutton.set_active(gtk.FALSE)
-
-            if "--lba32" in list:
-                self.lba32_checkbutton.set_active(gtk.TRUE)
-
