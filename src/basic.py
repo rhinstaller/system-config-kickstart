@@ -92,7 +92,7 @@ class basic:
         self.lang_combo.set_popdown_strings(self.lang_list)
 
         #set default to English
-        self.lang_combo.list.select_item(4)
+        self.lang_combo.list.select_item(5)
         self.lang_combo.entry.set_editable(gtk.FALSE)
 
         self.populateLangSupport()
