@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
 Version: 2.3.5
-Release: 9
+Release: 10
 URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
@@ -56,6 +56,8 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Thu Jan 16 2003 Brent Fox <bfox@redhat.com> 2.3.5-10
+- replace xconfig.py getopt calls with manual parsing (bug #80592)
 * Thu Jan  9 2003 Brent Fox <bfox@redhat.com> 2.3.5-9
 - fix bug while parsing network section of kickstart file
 * Tue Jan  7 2003 Brent Fox <bfox@redhat.com> 2.3.5-8
