@@ -67,7 +67,8 @@ class partition:
         self.part_view.set_model(self.part_store)
         col = gtk.TreeViewColumn(_("Device/\nPartition Number"), gtk.CellRendererText(), text=0)
         self.part_view.append_column(col)
-        col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
+#        col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
+        col = gtk.TreeViewColumn(_("Mount Point/\nRAID"), gtk.CellRendererText(), text=1)
         self.part_view.append_column(col)
         col = gtk.TreeViewColumn(_("Type"), gtk.CellRendererText(), text=2)
         self.part_view.append_column(col)
@@ -141,9 +142,8 @@ class partition:
         self.part_view.expand_all()
 
     def delPartition(self, *args):
-        try:
-            data, iter = self.part_view.get_selection().get_selected()
-        except:
+        data, iter = self.part_view.get_selection().get_selected()
+        if iter == None:
             self.deviceNotValid(_("Please select a partition from the list."))
 
         parent = self.part_store.iter_parent(iter)
