@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
 Version: 2.3.2
-Release: 13
+Release: 14
 URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
@@ -55,6 +55,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Wed Aug 14 2002 Brent Fox <bfox@redhat.com> 2.3.2-14
+- Rebuild with the latest docs and translations
+
 * Wed Aug 14 2002 Brent Fox <bfox@redhat.com> 2.3.2-13
 - Allow raid parititions and raid devices to be unformatted
 
