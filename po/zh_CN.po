@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ksconfig1.1\n"
-"PO-Revision-Date: 2002-12-03 09:03GMT+10:00\n"
+"PO-Revision-Date: 2002-12-05 11:09GMT+10:00\n"
 "Last-Translator: Sarah Smith <sarahs@redhat.com>\n"
 "Language-Team: Simplified Chinese <i18n@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -617,8 +617,7 @@ msgid "_Automatically Resolve Dependencies"
 msgstr "自动解决依赖关系(_A)"
 
 #: ../src/partWindow.py:410
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "挂载点“%s”已被使用。请另选一个挂载点。"
 
 #: ../src/partWindow.py:255 ../src/partWindow.py:520 ../src/raidWindow.py:205
@@ -869,6 +868,15 @@ msgid ""
 "values from\n"
 "                        the kickstart file already filled in."
 msgstr ""
+"用法：redhat-config-kickstart [--help] [--generate <filename>] "
+"[<kickstart_filename>]\n"
+"        \n"
+"--help                  显示该帮助消息\n"
+"--generate <filename>   从当前机器中生成一个 kickstart 文件，\n"
+"                        然后写入 <filename>。该选项在控制台上运行，\n"
+"                        对于不运行 X 的服务器较有帮助。\n"
+"<kickstart_filename>    该选项会导致 GUI 使用 kickstart 已经\n"
+"                        填充的值来启动。"
 
 #: redhat-config-kickstart.gladestrings:202
 msgid "Use broadcast to find NIS server"
@@ -1159,8 +1167,7 @@ msgstr "没有帮助。"
 msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
-msgstr ""
-"您指定的设备不是有效的设备名。请使用一个有效的设备名，如“hda1”或“sda3”。"
+msgstr "您指定的设备不是有效的设备名。请使用一个有效的设备名，如“hda1”或“sda3”。"
 
 #: ../src/install.py:152
 msgid "Please enter an FTP user name."
@@ -1404,3 +1411,4 @@ msgstr "退出(_Q)"
 
 #~ msgid "Select a Video Card"
 #~ msgstr "选择一张视频卡"
+
