@@ -24,6 +24,7 @@
 from gtk import *
 import GtkExtra
 import libglade
+import string
 
 class basic:
 
@@ -39,6 +40,121 @@ class basic:
         self.shadow_passwd_checkbutton = xml.get_widget("shadow_passwd_checkbutton")
         self.md5_checkbutton = xml.get_widget("md5_checkbutton")
         self.emulate_3_buttons = xml.get_widget("emulate_3_buttons")
+        lang_combo = xml.get_widget("lang_combo")
+        lang_support_combo = xml.get_widget("lang_support_combo")
+        mouse_combo = xml.get_widget("mouse_combo")
+        keyboard_combo = xml.get_widget("keyboard_combo")		
+        timezone_combo = xml.get_widget("timezone_combo")
+
+        #populate language combo
+        list_items = [ "Czech", "English", "French", "German", "Hungarian",
+                       "Icelandic", "Italian","Japanese", "Norwegian", "Romanian",
+                       "Russian", "Serbian", "Slovak", "Slovenian", "Spanish",
+                       "Swedish", "Turkish", "Ukrainian" ]
+        lang_combo.set_popdown_strings(list_items)
+        lang_combo.list.select_item(1)
+        lang_combo.entry.set_editable(FALSE)
+
+        #populate language support combo
+        lang_support_combo.set_popdown_strings(list_items)
+        lang_support_combo.list.select_item(1)
+        lang_support_combo.entry.set_editable(FALSE)				
+        
+        #populate keyboard combo
+        list_items = [ "azerty", "be-latin1", "be2-latin1",
+                       "fr-latin0", "fr-pc", "fr", "wangbe", "ANSI-dvorak",
+                       "dvorak-1", "dvorak-r", "dvorak", "pc-dvorak-latin1",
+                       "tr_f-latin5", "trf", "bg", "cf", "cz-lat2-prog",
+                       "cz-lat2", "defkeymap", "defkeymap_V1.0", "dk-latin1",
+                       "dk.emacs", "emacs2", "es", "fi-latin1", "fi",
+                       "gr-pc", "gr", "hebrew", "hu101", "is-latin",
+                       "it-ibm", "it", "it2", "jp106", "la-latin1", "lt",
+                       "lt.l4", "nl", "no-latin1", "no", "pc110", "pl",
+                       "pt-latin1", "pt-old", "ro", "ru-cp1251", "ru-ms",
+                       "ru-yawerty", "ru", "ru1", "ru2", "ru_win",
+                       "se-latin1", "sk-prog-qwerty", "sk-prog", "sk-qwerty",
+                       "tr_q-latin5", "tralt", "trf", "trq", "ua", "uk",
+                       "us", "croat", "cz-us-qwerty", "de-latin1-nodeadkeys",
+                       "de-latin1", "de", "fr_CH-latin1", "fr_CH", "hu",
+                       "sg-latin1-lk450", "sg-latin1", "sg",
+                       "sk-prog-qwertz", "sk-qwertz", "slovene" ]
+        keyboard_combo.set_popdown_strings(list_items)
+        keyboard_combo.list.select_item(63)
+        keyboard_combo.entry.set_editable(FALSE)		
+
+        #populate mouse combo
+        list_items = [ "No Mouse",
+                       "ALPS GlidePoint (PS/2)",
+                       "ASCII MieMouse (serial)",
+                       "ASCII MieMouse (PS/2)",
+                       "ATI Bus Mouse",
+                       "Generic Mouse (serial)",
+                       "Generic 3 Button Mouse (serial)",
+                       "Generic Mouse (PS/2)",
+                       "Generic 3 Button Mouse (PS/2)",
+                       "Generic Mouse (USB)",
+                       "Generic 3 Button Mouse (USB)",
+                       "Genius NetMouse (serial)",
+                       "Genius NetMouse (PS/2)",
+                       "Genius NetMouse Pro (PS/2)",
+                       "Genius NetScroll (PS/2)",
+                       "Kensington Thinking Mouse (serial)",
+                       "Kensington Thinking Mouse (PS/2)",
+                       "Logitech Mouse (serial, old C7 type)",
+                       "Logitech CC Series (serial)",
+                       "Logitech Bus Mouse",
+                       "Logitech MouseMan/FirstMouse (serial)",
+                       "Logitech MouseMan/FirstMouse (PS/2)",
+                       "Logitech MouseMan+/FirstMouse+ (serial)",
+                       "Logitech MouseMan+/FirstMouse+ (PS/2)",
+                       "Logitech MouseMan Wheel (USB)",
+                       "Microsoft compatible (serial)",
+                       "Microsoft Rev 2.1A or higher (serial)",
+                       "Microsoft IntelliMouse (serial)",
+                       "Microsoft IntelliMouse (PS/2)",
+                       "Microsoft IntelliMouse (USB)",
+                       "Microsoft Bus Mouse",
+                       "Mouse Systems (serial)",
+                       "MM Series (serial)",
+                       "MM HitTablet (serial)"
+                       ]
+        
+        mouse_combo.set_popdown_strings(list_items)
+        mouse_combo.list.select_item(0)
+        mouse_combo.entry.set_editable(FALSE)		
+        
+        #populate time zone combo
+        tz = open ("/usr/share/zoneinfo/zone.tab", "r")
+        lines = tz.readlines()
+        tz.close()
+        list_items = []
+
+        clockfile = open ("/etc/sysconfig/clock", "r")
+        clocklines = clockfile.readlines()
+        clockfile.close()
+        for line in clocklines:
+                if line[:4] == "ZONE":
+                        tmp = string.split(line, "=")
+                        zone = tmp[1]
+                        zone = zone[1:-2]
+
+        for line in lines:
+                if line[:1] == "#":
+                        pass
+                else:
+                        tokens = string.split(line)
+                        list_items.append(tokens[2])
+
+        list_items.sort()
+
+        #--Search timezone list for default
+        if zone in list_items:
+                select = list_items.index(zone)
+
+        timezone_combo.set_popdown_strings(list_items)
+        timezone_combo.list.select_item(select)
+        timezone_combo.entry.set_editable(FALSE)		
+
 
     def getData(self):
         buf = ""

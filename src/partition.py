@@ -47,8 +47,16 @@ class partition:
               "delPartition" : self.delPartition,
               })
 
-	class counterClass:
+        #populate partitions table with default values
+        bootPartition = ["/boot", "ext2", "35", "No"]
+        self.partClist.append(bootPartition)
+        swapPartition = ["", "Linux Swap", "128", "No"]
+        self.partClist.append(swapPartition)
+        rootPartition = ["/", "ext2", "1000", "Yes"]
+        self.partClist.append(rootPartition)
 
+        #keep track of the number of partitions
+	class counterClass:
             def setCounter(self, start):
                 self.rowCount = start
             def increment(self):
