@@ -24,21 +24,57 @@
 
 import sys
 import signal
-import gettext
 import getopt
 import os
-import kickstartGui
 
 if __name__ == "__main__":
     signal.signal (signal.SIGINT, signal.SIG_DFL)
 
+##
+## I18N
+##
+import gettext
 domain = 'redhat-config-kickstart'
-gettext.bindtextdomain(domain, '/usr/share/locale')
+gettext.bindtextdomain (domain, "/usr/share/locale")
+gettext.textdomain (domain)
+_=gettext.gettext
 
+def useCliMode(value):
+    import kickstartData
+    import profileSystem
+    data = kickstartData.KickstartData()
+    profileSystem = profileSystem.ProfileSystem(data)
+    file = data.getAll()
+    fd = open(value, "w")
+
+    for line in file:
+        fd.write(line + "\n")
+
+    fd.close()
+
+    
 file = None
-opts, file = getopt.getopt(sys.argv[1:], "d:h")
+opts, file = getopt.getopt(sys.argv[1:], "g:h", ["generate=", "help"])
+
 
 if file:
     file = file[0]
+    
+for (opt, value) in opts:
+    if opt == "--generate" or opt == "-g":
+        useCliMode(value)
+        sys.exit(1)
+    if opt == "--help" or opt == "-h":
+        print _("""Usage: redhat-config-kickstart [--help] [--generate <filename>] [<kickstart_filename>]
+        
+--help                  Print out this message
+--generate <filename>   Generate a kickstart file from the current machine and write
+                        it to <filename>.  This option runs on the console, so it is
+                        useful for servers that do not have X currently running.
+<kickstart_filename>    This option will cause the GUI to launch with the values from
+                        the kickstart file already filled in.""")
+        sys.exit(1)
 
+
+import kickstartGui
 kickstartGui.kickstartGui(file)
