@@ -2422,86 +2422,55 @@
 
 	  <widget>
 	    <class>GtkFrame</class>
-	    <name>auth_frame</name>
-	    <border_width>6</border_width>
-	    <label>Authentication Methods</label>
+	    <name>frame9</name>
+	    <label>Authentication Configuration</label>
 	    <label_xalign>0</label_xalign>
 	    <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
 
 	    <widget>
-	      <class>GtkVBox</class>
-	      <name>vbox4</name>
-	      <homogeneous>False</homogeneous>
-	      <spacing>0</spacing>
+	      <class>GtkNotebook</class>
+	      <name>auth_notebook</name>
+	      <can_focus>True</can_focus>
+	      <show_tabs>True</show_tabs>
+	      <show_border>True</show_border>
+	      <tab_pos>GTK_POS_TOP</tab_pos>
+	      <scrollable>False</scrollable>
+	      <tab_hborder>2</tab_hborder>
+	      <tab_vborder>2</tab_vborder>
+	      <popup_enable>False</popup_enable>
 
 	      <widget>
 		<class>GtkFrame</class>
-		<name>frame2</name>
+		<name>nis_frame</name>
 		<border_width>2</border_width>
 		<label>NIS Authentication</label>
 		<label_xalign>0</label_xalign>
 		<shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
-		<child>
-		  <padding>0</padding>
-		  <expand>True</expand>
-		  <fill>True</fill>
-		</child>
 
 		<widget>
 		  <class>GtkVBox</class>
 		  <name>nis_vbox</name>
+		  <border_width>6</border_width>
 		  <homogeneous>False</homogeneous>
-		  <spacing>0</spacing>
+		  <spacing>9</spacing>
 
 		  <widget>
-		    <class>GtkHBox</class>
-		    <name>hbox8</name>
-		    <homogeneous>False</homogeneous>
-		    <spacing>9</spacing>
+		    <class>GtkCheckButton</class>
+		    <name>nisCheck</name>
+		    <can_focus>True</can_focus>
+		    <signal>
+		      <name>toggled</name>
+		      <handler>enableNIS</handler>
+		      <last_modification_time>Wed, 20 Jun 2001 19:48:01 GMT</last_modification_time>
+		    </signal>
+		    <label>Enable NIS</label>
+		    <active>False</active>
+		    <draw_indicator>True</draw_indicator>
 		    <child>
 		      <padding>0</padding>
-		      <expand>True</expand>
-		      <fill>True</fill>
+		      <expand>False</expand>
+		      <fill>False</fill>
 		    </child>
-
-		    <widget>
-		      <class>GtkCheckButton</class>
-		      <name>nisCheck</name>
-		      <can_focus>True</can_focus>
-		      <signal>
-			<name>toggled</name>
-			<handler>enableNIS</handler>
-			<last_modification_time>Wed, 20 Jun 2001 19:48:01 GMT</last_modification_time>
-		      </signal>
-		      <label>Enable NIS</label>
-		      <active>False</active>
-		      <draw_indicator>True</draw_indicator>
-		      <child>
-			<padding>0</padding>
-			<expand>False</expand>
-			<fill>False</fill>
-		      </child>
-		    </widget>
-
-		    <widget>
-		      <class>GtkCheckButton</class>
-		      <name>nisBroadcastCheck</name>
-		      <sensitive>False</sensitive>
-		      <can_focus>True</can_focus>
-		      <signal>
-			<name>toggled</name>
-			<handler>BroadcastCheck_cb</handler>
-			<last_modification_time>Wed, 20 Jun 2001 19:48:14 GMT</last_modification_time>
-		      </signal>
-		      <label>Use broadcast to find NIS server</label>
-		      <active>False</active>
-		      <draw_indicator>True</draw_indicator>
-		      <child>
-			<padding>0</padding>
-			<expand>False</expand>
-			<fill>False</fill>
-		      </child>
-		    </widget>
 		  </widget>
 
 		  <widget>
@@ -2511,7 +2480,7 @@
 		    <spacing>9</spacing>
 		    <child>
 		      <padding>0</padding>
-		      <expand>True</expand>
+		      <expand>False</expand>
 		      <fill>True</fill>
 		    </child>
 
@@ -2551,13 +2520,33 @@
 		  </widget>
 
 		  <widget>
+		    <class>GtkCheckButton</class>
+		    <name>nisBroadcastCheck</name>
+		    <sensitive>False</sensitive>
+		    <can_focus>True</can_focus>
+		    <signal>
+		      <name>toggled</name>
+		      <handler>BroadcastCheck_cb</handler>
+		      <last_modification_time>Wed, 20 Jun 2001 19:48:14 GMT</last_modification_time>
+		    </signal>
+		    <label>Use broadcast to find NIS server</label>
+		    <active>False</active>
+		    <draw_indicator>True</draw_indicator>
+		    <child>
+		      <padding>0</padding>
+		      <expand>False</expand>
+		      <fill>False</fill>
+		    </child>
+		  </widget>
+
+		  <widget>
 		    <class>GtkHBox</class>
 		    <name>hbox10</name>
 		    <homogeneous>False</homogeneous>
 		    <spacing>9</spacing>
 		    <child>
 		      <padding>0</padding>
-		      <expand>True</expand>
+		      <expand>False</expand>
 		      <fill>True</fill>
 		    </child>
 
@@ -2599,23 +2588,32 @@
 	      </widget>
 
 	      <widget>
+		<class>GtkLabel</class>
+		<child_name>Notebook:tab</child_name>
+		<name>label75</name>
+		<label>NIS</label>
+		<justify>GTK_JUSTIFY_CENTER</justify>
+		<wrap>False</wrap>
+		<xalign>0.5</xalign>
+		<yalign>0.5</yalign>
+		<xpad>0</xpad>
+		<ypad>0</ypad>
+	      </widget>
+
+	      <widget>
 		<class>GtkFrame</class>
-		<name>frame3</name>
+		<name>ldap_frame</name>
 		<border_width>2</border_width>
 		<label>LDAP Authentication</label>
 		<label_xalign>0</label_xalign>
 		<shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
-		<child>
-		  <padding>0</padding>
-		  <expand>True</expand>
-		  <fill>True</fill>
-		</child>
 
 		<widget>
 		  <class>GtkVBox</class>
 		  <name>vbox6</name>
+		  <border_width>6</border_width>
 		  <homogeneous>False</homogeneous>
-		  <spacing>0</spacing>
+		  <spacing>9</spacing>
 
 		  <widget>
 		    <class>GtkCheckButton</class>
@@ -2643,7 +2641,7 @@
 		    <spacing>9</spacing>
 		    <child>
 		      <padding>0</padding>
-		      <expand>True</expand>
+		      <expand>False</expand>
 		      <fill>True</fill>
 		    </child>
 
@@ -2705,7 +2703,7 @@
 		    <spacing>9</spacing>
 		    <child>
 		      <padding>0</padding>
-		      <expand>True</expand>
+		      <expand>False</expand>
 		      <fill>True</fill>
 		    </child>
 
@@ -2751,7 +2749,7 @@
 		    <spacing>9</spacing>
 		    <child>
 		      <padding>0</padding>
-		      <expand>True</expand>
+		      <expand>False</expand>
 		      <fill>True</fill>
 		    </child>
 
@@ -2793,23 +2791,32 @@
 	      </widget>
 
 	      <widget>
+		<class>GtkLabel</class>
+		<child_name>Notebook:tab</child_name>
+		<name>label76</name>
+		<label>LDAP </label>
+		<justify>GTK_JUSTIFY_CENTER</justify>
+		<wrap>False</wrap>
+		<xalign>0.5</xalign>
+		<yalign>0.5</yalign>
+		<xpad>0</xpad>
+		<ypad>0</ypad>
+	      </widget>
+
+	      <widget>
 		<class>GtkFrame</class>
-		<name>frame4</name>
+		<name>kerberos_frame</name>
 		<border_width>2</border_width>
 		<label>Kerberos 5 Authentication</label>
 		<label_xalign>0</label_xalign>
 		<shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
-		<child>
-		  <padding>0</padding>
-		  <expand>True</expand>
-		  <fill>True</fill>
-		</child>
 
 		<widget>
 		  <class>GtkVBox</class>
 		  <name>vbox7</name>
+		  <border_width>6</border_width>
 		  <homogeneous>False</homogeneous>
-		  <spacing>0</spacing>
+		  <spacing>9</spacing>
 
 		  <widget>
 		    <class>GtkCheckButton</class>
@@ -2837,7 +2844,7 @@
 		    <spacing>9</spacing>
 		    <child>
 		      <padding>0</padding>
-		      <expand>True</expand>
+		      <expand>False</expand>
 		      <fill>True</fill>
 		    </child>
 
@@ -2883,7 +2890,7 @@
 		    <spacing>9</spacing>
 		    <child>
 		      <padding>0</padding>
-		      <expand>True</expand>
+		      <expand>False</expand>
 		      <fill>True</fill>
 		    </child>
 
@@ -2929,7 +2936,7 @@
 		    <spacing>9</spacing>
 		    <child>
 		      <padding>0</padding>
-		      <expand>True</expand>
+		      <expand>False</expand>
 		      <fill>True</fill>
 		    </child>
 
@@ -2971,23 +2978,32 @@
 	      </widget>
 
 	      <widget>
+		<class>GtkLabel</class>
+		<child_name>Notebook:tab</child_name>
+		<name>label77</name>
+		<label>Kerberos 5</label>
+		<justify>GTK_JUSTIFY_CENTER</justify>
+		<wrap>False</wrap>
+		<xalign>0.5</xalign>
+		<yalign>0.5</yalign>
+		<xpad>0</xpad>
+		<ypad>0</ypad>
+	      </widget>
+
+	      <widget>
 		<class>GtkFrame</class>
-		<name>frame5</name>
+		<name>hesiod_frame</name>
 		<border_width>2</border_width>
 		<label>Hesiod Authentication</label>
 		<label_xalign>0</label_xalign>
 		<shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
-		<child>
-		  <padding>0</padding>
-		  <expand>True</expand>
-		  <fill>True</fill>
-		</child>
 
 		<widget>
 		  <class>GtkVBox</class>
 		  <name>vbox8</name>
+		  <border_width>6</border_width>
 		  <homogeneous>False</homogeneous>
-		  <spacing>0</spacing>
+		  <spacing>9</spacing>
 
 		  <widget>
 		    <class>GtkCheckButton</class>
@@ -3015,7 +3031,7 @@
 		    <spacing>9</spacing>
 		    <child>
 		      <padding>0</padding>
-		      <expand>True</expand>
+		      <expand>False</expand>
 		      <fill>True</fill>
 		    </child>
 
@@ -3061,7 +3077,7 @@
 		    <spacing>9</spacing>
 		    <child>
 		      <padding>0</padding>
-		      <expand>True</expand>
+		      <expand>False</expand>
 		      <fill>True</fill>
 		    </child>
 
@@ -3103,23 +3119,32 @@
 	      </widget>
 
 	      <widget>
+		<class>GtkLabel</class>
+		<child_name>Notebook:tab</child_name>
+		<name>label78</name>
+		<label>Hesiod</label>
+		<justify>GTK_JUSTIFY_CENTER</justify>
+		<wrap>False</wrap>
+		<xalign>0.5</xalign>
+		<yalign>0.5</yalign>
+		<xpad>0</xpad>
+		<ypad>0</ypad>
+	      </widget>
+
+	      <widget>
 		<class>GtkFrame</class>
-		<name>frame6</name>
+		<name>samba_frame</name>
 		<border_width>2</border_width>
 		<label>Samba Authentication</label>
 		<label_xalign>0</label_xalign>
 		<shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
-		<child>
-		  <padding>0</padding>
-		  <expand>True</expand>
-		  <fill>True</fill>
-		</child>
 
 		<widget>
 		  <class>GtkVBox</class>
 		  <name>vbox9</name>
+		  <border_width>6</border_width>
 		  <homogeneous>False</homogeneous>
-		  <spacing>0</spacing>
+		  <spacing>9</spacing>
 
 		  <widget>
 		    <class>GtkCheckButton</class>
@@ -3147,7 +3172,7 @@
 		    <spacing>9</spacing>
 		    <child>
 		      <padding>0</padding>
-		      <expand>True</expand>
+		      <expand>False</expand>
 		      <fill>True</fill>
 		    </child>
 
@@ -3193,7 +3218,7 @@
 		    <spacing>9</spacing>
 		    <child>
 		      <padding>0</padding>
-		      <expand>True</expand>
+		      <expand>False</expand>
 		      <fill>True</fill>
 		    </child>
 
@@ -3232,6 +3257,19 @@
 		    </widget>
 		  </widget>
 		</widget>
+	      </widget>
+
+	      <widget>
+		<class>GtkLabel</class>
+		<child_name>Notebook:tab</child_name>
+		<name>label79</name>
+		<label>Samba</label>
+		<justify>GTK_JUSTIFY_CENTER</justify>
+		<wrap>False</wrap>
+		<xalign>0.5</xalign>
+		<yalign>0.5</yalign>
+		<xpad>0</xpad>
+		<ypad>0</ypad>
 	      </widget>
 	    </widget>
 	  </widget>
