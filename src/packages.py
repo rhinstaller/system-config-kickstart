@@ -27,98 +27,28 @@ import string
 import checklist
 import libglade
 import rpm
-import comps
-
-CHECK_CHAIN	= 0
-FORCE_SELECT	= 1
-FORCE_UNSELECT	= 2
-
-class Package:
-    def __getitem__(self, item):
-	return self.h[item]
-
-    def __repr__(self):
-	return "%s" % self.name
-
-    def select(self):
-	self.state = FORCE_SELECT
-	self.selected = 1
-
-    def unselect(self):
-	self.state = FORCE_UNSELECT
-	self.selected = 0
-
-    def isSelected(self):
-	return self.selected
-
-    def updateSelectionCache(self):
-	if self.state == FORCE_SELECT or self.state == FORCE_UNSELECT:
-	    return
-
-	self.selected = 0
-	for chain in self.chains:
-	    on = 1
-	    for comp in chain:
-		if not comp.isSelected(justManual = 0):
-		    on = 0
-                else:
-                    if comp.pkgDict[self] != None:
-                        on = 0
-                        for expr in comp.pkgDict[self]:
-                            if comp.set.exprMatch (expr):
-                                on = 1
-	    if on: 
-		self.selected = 1
-
-    def getState(self):
-	return (self.state, self.selected)
-
-    def setState(self, state):
-	(self.state, self.selected) = state
-
-    def addSelectionChain(self, chain):
-	self.chains.append(chain)
-
-    def __init__(self, header):
-	self.h = header
-	self.chains = []
-	self.selected = 0
-	self.state = CHECK_CHAIN
-	self.name = header[rpm.RPMTAG_NAME]
-	self.size = header[rpm.RPMTAG_SIZE]
+import string
 
 
+class Packages:
 
-
-class headerList:
-
-    def keys(self):
-        return self.packages.keys()
-    
     def __init__(self, xml):
-        print "here"
-        hdlist = rpm.readHeaderListFromFile("hdlist")
-        noscore = 0
-        
-#        print hdlist
-        self.hdlist = hdlist
-	self.packages = {}
-	newCompat = []
- 	for h in hdlist:
- 	    name = h[rpm.RPMTAG_NAME]
+        list = xml.get_widget("list")
 
-            self.packages[name] = Package(h)
-#            print self.packages[name]
+        packageList = ["Printing Support","Classic X Window System",
+        "X Window System","GNOME","KDE",
+        "Sound and Multimedia Support","Network Support",
+        "Dialup Support","Messaging and Web Tools",
+        "Graphics and Image Manipulation","News Server",
+        "NFS File Server","Windows File Server",
+        "Anonymous FTP Server","SQL Database Server",
+        "Web Server","Router / Firewall","DNS Name Server",
+        "Network Managed Workstation","Authoring and Publishing",
+        "Emacs","Utilities","Legacy Application Support",
+        "Software Development","Kernel Development",
+        "Windows Compatibility / Interoperability",
+        "Games and Entertainment", "Everything"]
 
-            score1 = rpm.archscore(h['arch'])
-            if (score1):
-		if self.packages.has_key(name):
-		    score2 = rpm.archscore(self.packages[name].h['arch'])
-		    if (score1 < score2):
-			newCompat.append(self.packages[name])
-			self.packages[name] = Package(h)
-		    else:
-			newCompat.append(Package(h))
-		else:
-		    self.packages[name] = Package(h)                
-        print self.packages
+        for pkg in packageList:
+            checkbox = GtkCheckButton(pkg)
+            list.pack_start(checkbox)

@@ -74,7 +74,8 @@ class ksconfig_gui:
 		#bring in X functions
 		self.X_class = xconfig.xconfig(xml)
 		#bring in package function
-		self.packages_class = packages.headerList(xml)	
+#		self.packages_class = packages.headerList(xml)
+		self.packages_class = packages.Packages(xml)	
 		#bring in scripts function
 		self.scripts_class = scripts.scripts(xml)	
 

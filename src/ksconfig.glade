@@ -3689,7 +3689,73 @@
 	    <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
 
 	    <widget>
-	      <class>Placeholder</class>
+	      <class>GtkScrolledWindow</class>
+	      <name>scrolledwindow3</name>
+	      <hscrollbar_policy>GTK_POLICY_NEVER</hscrollbar_policy>
+	      <vscrollbar_policy>GTK_POLICY_ALWAYS</vscrollbar_policy>
+	      <hupdate_policy>GTK_UPDATE_CONTINUOUS</hupdate_policy>
+	      <vupdate_policy>GTK_UPDATE_CONTINUOUS</vupdate_policy>
+
+	      <widget>
+		<class>GtkViewport</class>
+		<name>viewport1</name>
+		<shadow_type>GTK_SHADOW_IN</shadow_type>
+
+		<widget>
+		  <class>GtkVBox</class>
+		  <name>list</name>
+		  <homogeneous>False</homogeneous>
+		  <spacing>0</spacing>
+
+		  <widget>
+		    <class>Placeholder</class>
+		  </widget>
+
+		  <widget>
+		    <class>Placeholder</class>
+		  </widget>
+
+		  <widget>
+		    <class>Placeholder</class>
+		  </widget>
+
+		  <widget>
+		    <class>Placeholder</class>
+		  </widget>
+
+		  <widget>
+		    <class>Placeholder</class>
+		  </widget>
+
+		  <widget>
+		    <class>Placeholder</class>
+		  </widget>
+
+		  <widget>
+		    <class>Placeholder</class>
+		  </widget>
+
+		  <widget>
+		    <class>Placeholder</class>
+		  </widget>
+
+		  <widget>
+		    <class>Placeholder</class>
+		  </widget>
+
+		  <widget>
+		    <class>Placeholder</class>
+		  </widget>
+
+		  <widget>
+		    <class>Placeholder</class>
+		  </widget>
+
+		  <widget>
+		    <class>Placeholder</class>
+		  </widget>
+		</widget>
+	      </widget>
 	    </widget>
 	  </widget>
 
@@ -3722,6 +3788,7 @@
 	      <widget>
 		<class>GtkLabel</class>
 		<name>label92</name>
+		<width>400</width>
 		<label>Warning: An error in this script might cause your kickstart installation to fail. Do not include the %pre command at the beginning.</label>
 		<justify>GTK_JUSTIFY_LEFT</justify>
 		<wrap>True</wrap>
@@ -3816,6 +3883,7 @@
 	      <widget>
 		<class>GtkLabel</class>
 		<name>label94</name>
+		<width>400</width>
 		<label>Warning: An error in this script might cause your kickstart installation to fail. Do not include the %post command at the beginning.</label>
 		<justify>GTK_JUSTIFY_CENTER</justify>
 		<wrap>True</wrap>
