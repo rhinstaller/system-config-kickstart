@@ -26,6 +26,7 @@ import string
 import gtk
 import signal
 import partWindow
+import raidWindow
 
 ##
 ## I18N
@@ -41,7 +42,7 @@ class raidOptionsWindow:
         self.part_store = part_store
         self.part_view = part_view
         self.partWindow = partWindow
-        
+
         self.raid_options_window = xml.get_widget("raid_options_window")
         self.raid_partition_radio = xml.get_widget("raid_partition_radio")
         self.raid_device_radio = xml.get_widget("raid_device_radio")
@@ -53,6 +54,8 @@ class raidOptionsWindow:
         self.raid_options_ok_button.connect("clicked", self.okClicked)
         self.raid_options_cancel_button.connect("clicked", self.destroy)
 
+#        self.raidWindow = raidWindow.raidWindow(self.xml, self.part_store, self.part_view)
+
         self.countRaidPartitions()
         self.raid_options_window.show_all()
 
@@ -61,19 +64,19 @@ class raidOptionsWindow:
         iter = self.part_store.get_iter_first()
         while iter:
             part_object = self.part_store.get_value(iter, 4)
-            print part_object.raidNumber
             if part_object.raidNumber:
-                print "it has raid number ", part_object.raidNumber
                 list.append(part_object.raidNumber)
             iter = self.part_store.iter_next(iter)
 
-        print list
         self.message_label.set_text(_("You currently have %d software RAID partition(s) "
                                       "free to use." % len(list)))
         
     def okClicked(self, *args):
         if self.raid_partition_radio.get_active() == gtk.TRUE:
             self.partWindow.add_partition("TYPE_RAID")
+        else:
+            self.raidWindow = raidWindow.raidWindow(self.xml, self.part_store, self.part_view)
+            #            self.raidWindow.add_partition()
 
         self.raid_options_window.hide()
 

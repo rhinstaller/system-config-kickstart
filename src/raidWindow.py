@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-## raidWindow - event handling code for redhat-config-kickstart's raid dialog
+## raidWindow - code for redhat-config-kickstart's raid dialog
 ## Copyright (C) 2001, 2002 Red Hat, Inc.
 ## Copyright (C) 2001, 2002 Brent Fox <bfox@redhat.com>
 ## Copyright (C) 2001, 2002 Tammy Fox <tfox@redhat.com>
@@ -22,131 +22,80 @@
 ## Authors: Brent Fox <bfox@redhat.com>
 ##          Tammy Fox <tfox@redhat.com>
 
-from gtk import *
-from gnome.ui import *
-import GtkExtra
 import string
 import gtk
+import gobject
 import signal
-import gnome.ui
+import partWindow
+import raidWindow
+
+##
+## I18N
+##
+import gettext
+gettext.bindtextdomain ("redhat-config-kickstart", "/usr/share/locale")
+gettext.textdomain ("redhat-config-kickstart")
+_=gettext.gettext
 
 class raidWindow:
-    def __init__(self, xml, partClist):
+    def __init__(self, xml, part_store, part_view):
         self.xml = xml
-        self.partClist = partClist
-        self.raidDialog = xml.get_widget("raid_dialog")
+        self.part_store = part_store
+        self.part_view = part_view
+        
+        self.raid_window = xml.get_widget("raid_window")
         self.raid_mp_combo = xml.get_widget("raid_mp_combo")
-        self.raid_fstype_combo = xml.get_widget("raid_fstype_combo")
-        self.raid_type_combo = xml.get_widget("raid_type_combo")
-        self.raid_members_clist = xml.get_widget("raid_members_clist")
-        self.raid_spares_combo = xml.get_widget("raid_spares_combo")
-        self.raid_format_check = xml.get_widget("raid_format_check")
-        self.raid_format_check.set_active(FALSE)
-        self.raid_members_selected = []
+        self.raid_fsType_menu = xml.get_widget("raid_fsType_menu")
+        self.raid_device_menu = xml.get_widget("raid_device_menu")
+        self.raid_level_menu = xml.get_widget("raid_level_menu")
+        self.raid_partitions_view = xml.get_widget("raid_partitions_view")
+        self.raid_spares_spin = xml.get_widget("raid_spares_spin")
+        self.raid_ok_button = xml.get_widget("raid_ok_button")
+        self.raid_cancel_button = xml.get_widget("raid_cancel_button")        
 
-        mountPoints = ["/", "/boot", "/home", "/var", "/tmp", "/usr", "/opt"]
-        self.raid_mp_combo.set_popdown_strings(mountPoints)
+        self.raid_partition_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING,
+                                                  gobject.TYPE_STRING)
 
-        self.fileTypes = ["ext2", "ext3", "Linux Swap"]
-        self.raid_fstype_combo.set_popdown_strings(self.fileTypes)
+        self.checkbox = gtk.CellRendererToggle()
+        col = gtk.TreeViewColumn('', self.checkbox, active = 0)
+        col.set_fixed_width(20)
+        col.set_clickable(gtk.TRUE)
+        self.checkbox.connect("toggled", self.partitionToggled)
+        self.raid_partitions_view.append_column(col)
 
-        self.raidLevels = ["RAID 0", "RAID 1", "RAID 5"]
-        self.raid_type_combo.set_popdown_strings(self.raidLevels)
+        col = gtk.TreeViewColumn("", gtk.CellRendererText(), text=1)
+        self.raid_partitions_view.append_column(col)
 
-        self.xml.signal_autoconnect (
-            { "on_raid_cancel_button_clicked" : self.on_raid_cancel_button_clicked,
-              "on_raid_ok_button_clicked" : self.on_raid_ok_button_clicked,
-              "on_raid_members_clist_select_row" : self.on_raid_members_clist_select_row,
-              "on_raid_members_clist_unselect_row" : self.on_raid_members_clist_unselect_row,
-              })
+        col = gtk.TreeViewColumn("", gtk.CellRendererText(), text=2)
+        self.raid_partitions_view.append_column(col)
 
-    def on_raid_cancel_button_clicked(self, *args):
-        self.win_reset()
-        self.raidDialog.hide()
+        self.raid_partitions_view.set_model(self.raid_partition_store)
 
-    def on_raid_ok_button_clicked(self, *args):
-        print self.get_data()
+        self.raid_ok_button.connect("clicked", self.okClicked)
+        self.raid_cancel_button.connect("clicked", self.destroy)
 
-        self.win_reset()
-        self.raidDialog.hide()
+        self.fillRaidList()
+        self.raid_window.show_all()
 
-    def on_raid_members_clist_select_row(self, data, row, col, event):
-        print row
-        device = self.raid_members_clist.get_text(row, 0)
-        self.raid_members_selected.append(device)
-        print self.raid_members_selected
-        
-    def on_raid_members_clist_unselect_row(self, data, row, col, event):
-        device = self.raid_members_clist.get_text(row, 0)
-        self.raid_members_selected.remove(device)
-        print self.raid_members_selected
+    def fillRaidList(self):
+        iter = self.part_store.get_iter_first()
+        while iter:
+            part_object = self.part_store.get_value(iter, 4)
+            if part_object.raidNumber:
+                new_iter = self.raid_partition_store.append()
+                self.raid_partition_store.set_value(new_iter, 0, gtk.FALSE)
+                self.raid_partition_store.set_value(new_iter, 1, part_object.fsType)
+                self.raid_partition_store.set_value(new_iter, 2, part_object.raidNumber)
+            iter = self.part_store.iter_next(iter)
 
-    def win_reset(self):
-        self.raid_mp_combo.entry.set_text("") 
-        self.raid_fstype_combo.entry.set_text("")
-        self.raid_fstype_combo.list.select_item(1)
-#        self.raid_type_combo.entry.set_text("")  
-        self.raid_type_combo.list.select_item(0)
-        self.raid_members_clist.clear()
-        self.raid_spares_combo.set_text("")
-        self.raid_format_check.set_active(TRUE)
-                
-    def add_raid(self, num_rows):
-        self.win_reset()
-        self.num_raid_members = 0
+    def partitionToggled(self, data, row):
+        iter = self.raid_partition_store.get_iter((int(row),))
+        val = self.raid_partition_store.get_value(iter, 0)
+        self.raid_partition_store.set_value(iter, 0 , not val)
 
-        for i in range(num_rows):
-#            print i
-#            print self.partClist.get_row_data(0)
-            rowData = self.partClist.get_row_data(i)
-        
-            (mountPoint, fsType, size, fixedSize, setSize,
-             setSizeVal, maxSize, asPrimary, asPrimaryNum,
-             asPrimaryVal, onDisk, onDiskVal, onPart, onPartVal,
-             doFormat, raidType, raidSpares, isRaidDevice) = rowData
+    def okClicked(self, *args):
+        self.raid_window.hide()
 
-            if fsType == "RAID":
-                print "raid partition found"
-                self.num_raid_members = self.num_raid_members + 1
-                if onDiskVal != "":
-                    self.raid_members_clist.append([onDiskVal])
-                elif onPartVal != "":
-                    self.raid_members_clist.append([onPartVal])
-
-
-        self.raidDialog.show_all()
-
-    def get_data(self):
-        mountPoint = self.raid_mp_combo.entry.get_text()
-        fsType = self.raid_fstype_combo.entry.get_text()
-        raidType = self.raid_type_combo.entry.get_text()
-#        self.raid_members_clist
-        raidSpares = self.raid_spares_combo.get_text()
-        doFormat = self.raid_format_check.get_active()
-        isRaidDevice = 1
-
-        size = None 
-        fixedSize = None 
-        setSize = None 
-        setSizeVal = None
-        maxSize = None
-        asPrimary = None
-        asPrimaryNum = None
-        asPrimaryVal = None
-        onDisk = None
-        onDiskVal = None
-        onPart = None
-        onPartVal = None
-
-        for i in range(self.num_raid_members):
-            print self.raid_members_clist.get_text(i, 0)
-
-
-
-
-        rowData = [mountPoint, fsType, size, fixedSize, setSize,
-                   setSizeVal, maxSize, asPrimary, asPrimaryNum,
-                   asPrimaryVal, onDisk, onDiskVal, onPart, onPartVal,
-                   doFormat, raidType, raidSpares, isRaidDevice]
-        
-        return rowData
+    def destroy(self, *args):
+        self.raid_window.hide()
+    
