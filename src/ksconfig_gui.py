@@ -158,6 +158,7 @@ class ksconfig_gui:
 		buf = buf + self.firewall_class.getData()
 		buf = buf + self.X_class.getData()
 ##	        buf = buf + self.packages_class.getData()
-
+		buf = buf + self.scripts_class.getData()
+		
 	        #show confirm dialog window
 		confirmDialog = savefile.saveFile (buf)

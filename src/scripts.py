@@ -28,8 +28,11 @@ import libglade
 class scripts:
 
     def __init__(self, xml):
+        self.chroot_checkbutton = xml.get_widget("chroot_checkbutton")
         self.interpreter_checkbutton = xml.get_widget("interpreter_checkbutton")
-        self.interpreter_entry = xml.get_widget("interpreter_entry")        
+        self.interpreter_entry = xml.get_widget("interpreter_entry")
+        self.pre_text = xml.get_widget("pre_text")
+        self.post_text = xml.get_widget("post_text")
         #bring in signals from glade file
         xml.signal_autoconnect (
             { "interpreter_cb" : self.interpreter_cb,
@@ -38,9 +41,30 @@ class scripts:
     def interpreter_cb(self, args):
         self.interpreter_entry.set_sensitive(self.interpreter_checkbutton.get_active())
 
-    def getData(self, args):
-        buf = "\n" + "xconfig "
-        #options: noprobe, card, monitor, hsync, vsync, defaultdesktop=,startxonboot
+    def getData(self):
+        buf = self.preData() + self.postData()
+        return buf
+
+    def preData(self):
+        length = self.pre_text.get_length()
+        if length > 0:
+            data = self.pre_text.get_chars(0,length)
+            buf = "\n" + "%pre" + "\n" + data
+        else:
+            buf = ""
         return buf
 
 
+    def postData(self):
+        post_command = "%post"
+        if self.chroot_checkbutton.get_active():
+            post_command = post_command + " --nochroot  "
+        if self.interpreter_checkbutton.get_active():
+            post_command = post_command + "--interpreter " + self.interpreter_entry.get_text()
+        length = self.post_text.get_length()
+        if length > 0:
+            data = self.post_text.get_chars(0,length)
+            buf = "\n" + post_command + "\n" + data
+        else:
+            buf = ""
+        return buf
