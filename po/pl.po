@@ -18,17 +18,138 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
 
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                      Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. XXX FIXME
+#. if opt == "--enableldaptls":
+#. self.
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                      Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. #
+#. # I18N
+#. #
+#: ../src/basic.py:71
+msgid "x86, AMD64, or Intel EM64T"
+msgstr "x86, AMD64 lub Intel EM64T"
+
+#: ../src/basic.py:71
+msgid "Intel Itanium"
+msgstr "Intel Itanium"
+
+#: ../src/basic.py:71
+msgid "IBM iSeries"
+msgstr "IBM Seria i"
+
+#: ../src/basic.py:72
+msgid "IBM pSeries"
+msgstr "IBM Seria p"
+
+#: ../src/basic.py:72
+msgid "IBM zSeries/s390"
+msgstr "IBM Seria z/s390"
+
+#. populate language combo
+#. set default to English
+#. for lang in lang_list:
+#. self.lang_support_list.append([lang])
+#. populate mouse combo
+#. populate keyboard combo, add keyboards here
+#. set default to English
+#. set keyboard to current keymap
+#. set default mouse to generic ps/2
+#. populate time zone combo
+#: ../src/basic.py:205
+msgid "Root passwords do not match."
+msgstr "Hasła roota się nie zgadzają."
+
+#. zerombr and clearpart options
+#. We want to preserve all partitions, so don't write the clearpart line
+#. Prepart the clearpart line
+#. This is a raid device
+#. Check to see if the selection is actually a partition or one of the parent roots
+#: ../src/basic.py:206 ../src/basic.py:225 ../src/install.py:214
+#: ../src/partition.py:305 ../src/partWindow.py:513 ../src/raidWindow.py:247
+msgid "Error"
+msgstr "Błąd"
+
+#: ../src/basic.py:224
+msgid "Please select a root password."
+msgstr "Proszę podać hasło roota."
+
+#. set platform
+#. set language
+#. set keyboard
+#. set mouse
+#. set timezone
+#. set the supported lang list
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                      Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. #
+#. # I18N
+#. #
+#: ../src/bootloader.py:76
+#, python-format
+msgid "Bootloader options are not applicable to the %s platform"
+msgstr "Opcje bootloadera nie do zastosowania w przypadku platformy %s"
+
+#: ../src/bootloader.py:117
+msgid "Grub passwords do not match.  Please try again."
+msgstr "Hasła Gruba nie zgadzają się.  Proszę spróbować ponownie."
+
+#. !/usr/bin/python2
+#. #
+#. # I18N
+#. #
 #: ../src/RHELPackageGroupList.py:12
 msgid "X Window System"
 msgstr "X Window System"
 
 #: ../src/RHELPackageGroupList.py:13
 msgid "GNOME Desktop Environment"
-msgstr "Środowisko Biurek GNOME"
+msgstr "Środowisko graficzne GNOME"
 
 #: ../src/RHELPackageGroupList.py:14
 msgid "KDE (K Desktop Environment)"
-msgstr "Środowisko Biurek KDE"
+msgstr "Środowisko graficzne KDE"
 
 #: ../src/RHELPackageGroupList.py:16
 msgid "Editors"
@@ -36,7 +157,7 @@ msgstr "Edytory"
 
 #: ../src/RHELPackageGroupList.py:17
 msgid "Engineering and Scientific"
-msgstr "Inżynieria i Nauka"
+msgstr "Inżynieria i nauka"
 
 #: ../src/RHELPackageGroupList.py:18
 msgid "Graphical Internet"
@@ -52,7 +173,7 @@ msgstr "Biuro/Praca biurowa"
 
 #: ../src/RHELPackageGroupList.py:21
 msgid "Sound and Video"
-msgstr "Dźwięk i Wideo"
+msgstr "Multimedia"
 
 #: ../src/RHELPackageGroupList.py:22
 msgid "Graphics"
@@ -60,15 +181,15 @@ msgstr "Grafika"
 
 #: ../src/RHELPackageGroupList.py:23
 msgid "Games and Entertainment"
-msgstr "Gry i Rozrywka"
+msgstr "Gry i rozrywka"
 
 #: ../src/RHELPackageGroupList.py:24
 msgid "Authoring and Publishing"
-msgstr "Pisanie i Publikowanie"
+msgstr "Pisanie i publikowanie"
 
 #: ../src/RHELPackageGroupList.py:26
 msgid "Server Configuration Tools (AS and ES only)"
-msgstr "Narzędzia Konfiguracyjne Serwera (tylko AS i ES)"
+msgstr "Narzędzia konfiguracyjne serwera (tylko AS i ES)"
 
 #: ../src/RHELPackageGroupList.py:27
 msgid "Web Server"
@@ -76,15 +197,15 @@ msgstr "Serwer WWW"
 
 #: ../src/RHELPackageGroupList.py:28
 msgid "Mail Server"
-msgstr "Serwer Pocztowy"
+msgstr "Serwer pocztowy"
 
 #: ../src/RHELPackageGroupList.py:29
 msgid "Windows File Server"
-msgstr "Serwer Plików Windows"
+msgstr "Serwer plików Windows"
 
 #: ../src/RHELPackageGroupList.py:30
 msgid "DNS Name Server"
-msgstr "Serwer Nazw DNS"
+msgstr "Serwer nazw DNS"
 
 #: ../src/RHELPackageGroupList.py:31
 msgid "FTP Server"
@@ -92,31 +213,31 @@ msgstr "Serwer FTP"
 
 #: ../src/RHELPackageGroupList.py:32
 msgid "SQL Database Server"
-msgstr "Serwer Bazy Danych SQL"
+msgstr "Serwer bazy danych SQL"
 
 #: ../src/RHELPackageGroupList.py:33
 msgid "News Server"
-msgstr "Serwer Grup Dyskusyjnych"
+msgstr "Serwer grup dyskusyjnych"
 
 #: ../src/RHELPackageGroupList.py:34
 msgid "Network Servers (AS and ES only)"
-msgstr "Serwery Sieciowe (tylko AS i ES)"
+msgstr "Serwery sieciowe (tylko AS i ES)"
 
 #: ../src/RHELPackageGroupList.py:36
 msgid "Development Tools"
-msgstr "Narzędzia Programistyczne"
+msgstr "Narzędzia programistyczne"
 
 #: ../src/RHELPackageGroupList.py:37
 msgid "Kernel Development"
-msgstr "Oprogramowywanie Jądra"
+msgstr "Oprogramowywanie jądra"
 
 #: ../src/RHELPackageGroupList.py:38
 msgid "X Software Development"
-msgstr "Tworzenie Aplikacji X Windows"
+msgstr "Tworzenie aplikacji X Window"
 
 #: ../src/RHELPackageGroupList.py:39
 msgid "GNOME Software Development"
-msgstr "Narzędzia Programistyczne GNOME"
+msgstr "Narzędzia programistyczne GNOME"
 
 #: ../src/RHELPackageGroupList.py:40
 msgid "KDE Software Development"
@@ -128,11 +249,11 @@ msgstr "Narzędzia administracyjne"
 
 #: ../src/RHELPackageGroupList.py:43
 msgid "System Tools"
-msgstr "Narzędzia Systemowe"
+msgstr "Narzędzia systemowe"
 
 #: ../src/RHELPackageGroupList.py:44
 msgid "Printing Support"
-msgstr "Wsparcie Drukowania"
+msgstr "Wsparcie dla drukowania"
 
 #: ../src/basic.py:72
 msgid "x86, AMD64, or Intel EM64T"
@@ -243,23 +364,23 @@ msgstr "Podsekcja"
 
 #: ../src/kickstartGui.py:142
 msgid "Basic Configuration"
-msgstr "Konfiguracja Podstawowa"
+msgstr "Konfiguracja podstawowa"
 
 #: ../src/kickstartGui.py:142
 msgid "Installation Method"
-msgstr "Metoda Instalacji"
+msgstr "Metoda instalacji"
 
 #: ../src/kickstartGui.py:143
 msgid "Boot Loader Options"
-msgstr "Opcje Boot Loader'a"
+msgstr "Opcje bootloadera"
 
 #: ../src/kickstartGui.py:143
 msgid "Partition Information"
-msgstr "Informacje o Partycji"
+msgstr "Informacje o partycji"
 
 #: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:165
 msgid "Network Configuration"
-msgstr "Konfiguracja Sieci"
+msgstr "Konfiguracja sieci"
 
 #: ../src/kickstartGui.py:144
 msgid "Authentication"
@@ -267,23 +388,23 @@ msgstr "Autentykacja"
 
 #: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:218
 msgid "Firewall Configuration"
-msgstr "Konfiguracja Firewall'a"
+msgstr "Konfiguracja firewalla"
 
 #: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:248
 msgid "Display Configuration"
-msgstr "Konfiguracja Ekranu"
+msgstr "Konfiguracja ekranu"
 
 #: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:258
 msgid "Package Selection"
-msgstr "Wybór Pakietów"
+msgstr "Wybór pakietów"
 
 #: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:264
 msgid "Pre-Installation Script"
-msgstr "Skrypt Pre-instalacyjny"
+msgstr "Skrypt preinstalacyjny"
 
 #: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:271
 msgid "Post-Installation Script"
-msgstr "Skrypt Post-Instalacyjny"
+msgstr "Skrypt postinstalacyjny"
 
 #: ../src/kickstartGui.py:193
 msgid ""
@@ -293,15 +414,15 @@ msgid ""
 " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
 " A graphical interface for creating a kickstart file"
 msgstr ""
-"Kickstart Konfigurator @VERSION@\n"
+"Konfigurator kickstart @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
 " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
 " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-" Graficzny interfejs do tworzenia pliku konfiguracyjnego kikstart"
+" Graficzny interfejs do tworzenia pliku konfiguracyjnego kickstart"
 
 #: ../src/kickstartGui.py:194
 msgid "About Kickstart Configurator"
-msgstr "Informacje o Konfiguratorze Kickstart"
+msgstr "Informacje o Konfiguratorze kickstart"
 
 #: ../src/kickstartGui.py:224
 msgid "Help is not available."
@@ -318,7 +439,7 @@ msgstr "Urządzenie"
 
 #: ../src/network.py:90
 msgid "Network Type"
-msgstr "Typ Sieci"
+msgstr "Typ sieci"
 
 #: ../src/network.py:109 ../src/network.py:155 ../src/network.py:223
 #: ../src/network.py:274 ../src/network.py:415
@@ -338,6 +459,86 @@ msgstr ""
 "Urządzenie sieciowe o nazwie %s już istnieje.  Proszę wybrać inną nazwę "
 "urządzenia"
 
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                      Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. Kickstart Configurator Package Selection
+#. #
+#. # I18N
+#. #
+#. Loop over the package list and see what was selected
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002 Brent Fox <bfox@redhat.com>
+#. #                                Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. Kickstart Configurator Partitions Data Structure
+#. self.onDisk = ""
+#. self.onDiskVal = ""
+#. self.onPart = ""
+#. self.onPartVal = ""
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                      Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. Kickstart Configurator Partitions Configuration
+#. #
+#. # I18N
+#. #
+#: ../src/partition.py:72
+msgid ""
+"Device/\n"
+"Partition Number"
+msgstr ""
+"Urządzenie/\n"
+"Numer partycji"
+
+#. col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
+#: ../src/partition.py:75
+msgid ""
+"Mount Point/\n"
+"RAID"
+msgstr ""
+"Punkt montowania/\n"
+"RAID"
+
+#: ../src/partition.py:77
+msgid "Type"
+msgstr "Typ"
+
 #: ../src/packageGroupList.py:18
 msgid "Could not start because there is no /usr/share/comps/"
 msgstr "Nie można wystartować ponieważ brak /usr/share/comps/"
@@ -349,6 +550,83 @@ msgstr "plik /comps.xml"
 #: ../src/packageGroupList.py:19
 msgid "Please make sure the comps package is installed."
 msgstr "Proszę się upewnić że pakiet comps został zainstalowany"
+
+#: ../src/partition.py:79
+msgid "Format"
+msgstr "Formatuj"
+
+#: ../src/partition.py:81
+msgid "Size (MB)"
+msgstr "Rozmiar (MB)"
+
+#. initialize the child classes
+#. #         #XXX-FIXME-FOR TESTING ONLY
+#. #         hard_drive_parent_iter = self.part_store.append(None)
+#. #         self.part_store.set_value(hard_drive_parent_iter, 0, (_("Hard Drives")))
+#. #         hda_iter = self.part_store.append(hard_drive_parent_iter)
+#. #         self.part_store.set_value(hda_iter, 0, (_("hda")))
+#. #         part_object = partEntry.partEntry()
+#. #         part_object.fsType = "raid"
+#. #         part_object.device = "Auto"
+#. #         part_object.raidNumber = "raid.01"
+#. #         part_object.format = 1
+#. #         part_object.size = 1
+#. #         part_iter = self.part_store.append(hda_iter)
+#. #         self.part_store.set_value(part_iter, 0, part_object.raidNumber)
+#. #         self.part_store.set_value(part_iter, 2, part_object.fsType)
+#. #         self.part_store.set_value(part_iter, 3, part_object.format)
+#. #         self.part_store.set_value(part_iter, 4, part_object.size)
+#. #         self.part_store.set_value(part_iter, 5, part_object)
+#. #         hdb_iter = self.part_store.append(hard_drive_parent_iter)
+#. #         self.part_store.set_value(hdb_iter, 0, (_("hdb")))
+#. #         part_object = partEntry.partEntry()
+#. #         part_object.fsType = "raid"
+#. #         part_object.device = "Auto"
+#. #         part_object.format = 1
+#. #         part_object.raidNumber = "raid.02"
+#. #         part_object.size = 1
+#. #         part_iter = self.part_store.append(hdb_iter)
+#. #         self.part_store.set_value(part_iter, 0, part_object.raidNumber)
+#. #         self.part_store.set_value(part_iter, 2, part_object.fsType)
+#. #         self.part_store.set_value(part_iter, 3, part_object.format)
+#. #         self.part_store.set_value(part_iter, 4, part_object.size)
+#. #         self.part_store.set_value(part_iter, 5, part_object)
+#. #         hdc_iter = self.part_store.append(hard_drive_parent_iter)
+#. #         self.part_store.set_value(hdc_iter, 0, (_("hdc")))
+#. #         part_object = partEntry.partEntry()
+#. #         part_object.fsType = "raid"
+#. #         part_object.device = "Auto"
+#. #         part_object.format = 1
+#. #         part_object.raidNumber = "raid.03"
+#. #         part_object.size = 1
+#. #         part_iter = self.part_store.append(hdc_iter)
+#. #         self.part_store.set_value(part_iter, 0, part_object.raidNumber)
+#. #         self.part_store.set_value(part_iter, 2, part_object.fsType)
+#. #         self.part_store.set_value(part_iter, 3, part_object.format)
+#. #         self.part_store.set_value(part_iter, 4, part_object.size)
+#. #         self.part_store.set_value(part_iter, 5, part_object)
+#: ../src/partition.py:151 ../src/partition.py:181
+msgid "Please select a partition from the list."
+msgstr "Wybierz partycję z listy."
+
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. # Copyright (C) 2001, 2002, 2003 Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. #
+#. # I18N
+#. #
 
 #: ../src/partWindow.py:83 system-config-kickstart.gladestrings:58
 msgid "ext2"
@@ -390,7 +668,7 @@ msgstr "Auto"
 
 #: ../src/partWindow.py:294
 msgid "Hard Drives"
-msgstr "Dyski Twarde"
+msgstr "Dyski twarde"
 
 #: ../src/partWindow.py:420
 msgid "Specify a mount point for the partition."
@@ -407,12 +685,12 @@ msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
 msgstr ""
-"Aby utworzyć nowa partycję RAID musisz podać nazwę urządzenia twardego dysku "
+"Aby utworzyć nową partycję RAID musisz podać nazwę urządzenia twardego dysku "
 "lub istniejącej partycji."
 
 #: ../src/partWindow.py:488
 msgid "Specify a device on which to create the partition."
-msgstr "Wskaż urządzenie na którym utworzyć partycje."
+msgstr "Wskaż urządzenie na którym chcesz utworzyć partycje."
 
 #: ../src/partWindow.py:490
 msgid ""
@@ -492,6 +770,90 @@ msgstr "Musisz wybrać przynajmniej trzy partycje aby użyć RAID %s"
 msgid "Raid Devices"
 msgstr "Urządzenia Raid"
 
+#: ../src/RHELPackageGroupList.py:26
+msgid "Server Configuration Tools (AS and ES only)"
+msgstr "Narzędzia konfiguracyjne serwera (tylko AS i ES)"
+
+#: ../src/RHELPackageGroupList.py:34
+msgid "Network Servers (AS and ES only)"
+msgstr "Serwery sieciowe (tylko AS i ES)"
+
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                      Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. save file
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                      Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. display choosen options in textview
+#. # 		baseSize = 10
+#. # 		baseFont = 'sans'
+#. # 		self.textTag = self.confirm_buffer.create_tag('text')
+#. # 		self.textTag.set_property('font', '%s %d' % (baseFont, baseSize))
+#. # 		self.textTag.set_property('pixels-above-lines', 1)
+#. # 		self.textTag.set_property('pixels-below-lines', 1)
+#. # 		self.confirm_buffer.apply_tag(self.textTag, self.confirm_buffer.get_start_iter(), self.confirm_buffer.get_end_iter())
+#. using hide because destroy crashes application after second instance
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. Kickstart Configurator Scripts
+#. !/usr/bin/python2
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003  Brent Fox <bfox@redhat.com>
+#. #                                       Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. #
+#. # I18N
+#. #
+
 #: ../src/system-config-kickstart.py:60
 msgid ""
 "Usage: system-config-kickstart [--help] [--generate <filename>] "
@@ -522,7 +884,7 @@ msgstr ""
 
 #: ../src/system-config-kickstart.py:77
 msgid "Could not open display because no X server is running."
-msgstr "Nie można otworzyć ekranu ponieważ nie działa serwer X."
+msgstr "Nie można otworzyć ekranu, ponieważ nie działa serwer X."
 
 #: ../src/system-config-kickstart.py:78
 msgid "Try running 'system-config-kickstart --help' for a list of options."
@@ -530,7 +892,7 @@ msgstr "Spróbuj uruchomić 'system-config-kickstart --help' aby otrzymać list�
 
 #: ../src/xconfig.py:106
 msgid "Could not read video card database"
-msgstr "Nie można odczytać bazy kart wideo"
+msgstr "Nie można odczytać bazy kart graficznych"
 
 #.
 #. * Translatable strings file generated by Glade.
@@ -539,11 +901,11 @@ msgstr "Nie można odczytać bazy kart wideo"
 #.
 #: system-config-kickstart.gladestrings:7
 msgid "Save File"
-msgstr "Zapisz Plik"
+msgstr "Zapisz plik"
 
 #: system-config-kickstart.gladestrings:8
 msgid "Partition Options"
-msgstr "Opcje Partycji"
+msgstr "Opcje partycji"
 
 #: system-config-kickstart.gladestrings:9
 #: system-config-kickstart.gladestrings:10
@@ -610,12 +972,12 @@ msgstr "*"
 #: system-config-kickstart.gladestrings:11
 #: system-config-kickstart.gladestrings:32
 msgid "Mount Point:"
-msgstr "Punkt Montowania:"
+msgstr "Punkt montowania:"
 
 #: system-config-kickstart.gladestrings:12
 #: system-config-kickstart.gladestrings:37
 msgid "File System Type:"
-msgstr "Typ Systemu Plików:"
+msgstr "Typ systemu plików:"
 
 #: system-config-kickstart.gladestrings:13
 msgid "Size (MB):"
@@ -635,11 +997,11 @@ msgstr "Stały rozmiar"
 
 #: system-config-kickstart.gladestrings:17
 msgid "Use recommended swap size"
-msgstr "Użyj zalecanej wielkości swap'a"
+msgstr "Użyj zalecanej wielkości swapu"
 
 #: system-config-kickstart.gladestrings:18
 msgid "Additional Size Options"
-msgstr "Dodatkowe Opcje Ustalania Wielkości"
+msgstr "Dodatkowe opcje ustalania wielkości"
 
 #: system-config-kickstart.gladestrings:19
 msgid "Force to be a primary partition (asprimary)"
@@ -680,7 +1042,7 @@ msgstr "Formatuj partycje"
 
 #: system-config-kickstart.gladestrings:31
 msgid "Make RAID Device"
-msgstr "Utwórz Urządzenia RAID"
+msgstr "Utwórz urządzenia RAID"
 
 #: system-config-kickstart.gladestrings:34
 msgid "Number of spares:"
@@ -688,7 +1050,7 @@ msgstr "Liczba dysków zapasowych:"
 
 #: system-config-kickstart.gladestrings:35
 msgid "Raid Members"
-msgstr "Składniki Raid"
+msgstr "Składniki raid"
 
 #: system-config-kickstart.gladestrings:36
 msgid "RAID Level:"
@@ -780,7 +1142,7 @@ msgstr "Formatuj urządzenie RAID"
 
 #: system-config-kickstart.gladestrings:63
 msgid "Kickstart Configurator"
-msgstr "Konfigurator Kickstart"
+msgstr "Konfigurator kickstart"
 
 #: system-config-kickstart.gladestrings:64
 msgid "_File"
@@ -788,7 +1150,7 @@ msgstr "_Plik"
 
 #: system-config-kickstart.gladestrings:65
 msgid "_Open File"
-msgstr "_Otwórz Plik"
+msgstr "_Otwórz plik"
 
 #: system-config-kickstart.gladestrings:66
 msgid "_Preview"
@@ -796,7 +1158,7 @@ msgstr "Pod_gląd"
 
 #: system-config-kickstart.gladestrings:67
 msgid "_Save File"
-msgstr "Zapi_sz Plik"
+msgstr "Zapi_sz plik"
 
 #: system-config-kickstart.gladestrings:68
 msgid "_Quit"
@@ -812,15 +1174,15 @@ msgstr "Zawar_tość"
 
 #: system-config-kickstart.gladestrings:71
 msgid "_About"
-msgstr "_Informacje o"
+msgstr "Informacje _o"
 
 #: system-config-kickstart.gladestrings:73
 msgid "Default Language:"
-msgstr "Domyślny Język:"
+msgstr "Domyślny język:"
 
 #: system-config-kickstart.gladestrings:74
 msgid "Encrypt root password"
-msgstr "Szyfruj hasło root'a"
+msgstr "Szyfruj hasło roota"
 
 #: system-config-kickstart.gladestrings:75
 msgid "Keyboard:"
@@ -836,15 +1198,15 @@ msgstr "Emuluj 3 klawisze"
 
 #: system-config-kickstart.gladestrings:80
 msgid "Time Zone:"
-msgstr "Strefa Czasowa:"
+msgstr "Strefa czasowa:"
 
 #: system-config-kickstart.gladestrings:82
 msgid "Root Password:"
-msgstr "Hasło Root'a:"
+msgstr "Hasło roota:"
 
 #: system-config-kickstart.gladestrings:84
 msgid "Language Support:"
-msgstr "Wsparcie Języka:"
+msgstr "Wsparcie języka:"
 
 #: system-config-kickstart.gladestrings:85
 msgid "Use UTC clock"
@@ -853,11 +1215,11 @@ msgstr "Użyj czasu UTC"
 #: system-config-kickstart.gladestrings:86
 #: system-config-kickstart.gladestrings:137
 msgid "Confirm Password:"
-msgstr "Potwierdź Hasło:"
+msgstr "Potwierdź hasło:"
 
 #: system-config-kickstart.gladestrings:88
 msgid "Target Architecture:"
-msgstr "Docelowa Architektura:"
+msgstr "Docelowa architektura:"
 
 #: system-config-kickstart.gladestrings:90
 msgid "Reboot system after installation"
@@ -865,15 +1227,15 @@ msgstr "Restartuj system po instalacji"
 
 #: system-config-kickstart.gladestrings:91
 msgid "Perform installation in text mode (graphical is default)"
-msgstr "Wykonaj instalacje w trybie tekstowym (graficzny jest domyślny)"
+msgstr "Wykonaj instalację w trybie tekstowym (graficzny jest domyślny)"
 
 #: system-config-kickstart.gladestrings:92
 msgid "Perform installation in interactive mode"
-msgstr "Wykonaj instalacje w trybie interaktywnym"
+msgstr "Wykonaj instalację w trybie interaktywnym"
 
 #: system-config-kickstart.gladestrings:93
 msgid "Basic Configuration (required)"
-msgstr "Konfiguracja Podstawowa (wymagana)"
+msgstr "Konfiguracja podstawowa (wymagana)"
 
 #: system-config-kickstart.gladestrings:94
 msgid "label28"
@@ -881,15 +1243,15 @@ msgstr "label28"
 
 #: system-config-kickstart.gladestrings:95
 msgid "Perform new installation"
-msgstr "Wykonaj nową instalacje"
+msgstr "Wykonaj nową instalację"
 
 #: system-config-kickstart.gladestrings:96
 msgid "Upgrade an existing installation"
-msgstr "Aktualizuj istniejącą instalacje"
+msgstr "Aktualizuj istniejącą instalację"
 
 #: system-config-kickstart.gladestrings:97
 msgid "Choose the Installation Method:"
-msgstr "Wybierz Metode Instalacji:"
+msgstr "Wybierz metodę instalacji:"
 
 #: system-config-kickstart.gladestrings:98
 #: system-config-kickstart.gladestrings:103
@@ -914,7 +1276,7 @@ msgstr "HTTP"
 #: system-config-kickstart.gladestrings:102
 #: system-config-kickstart.gladestrings:128
 msgid "Hard Drive"
-msgstr "Dysk Twardy"
+msgstr "Dysk twardy"
 
 #: system-config-kickstart.gladestrings:104
 msgid "NFS Server:"
@@ -954,15 +1316,15 @@ msgstr "Katalog HTTP:"
 
 #: system-config-kickstart.gladestrings:126
 msgid "Hard Drive Partition:"
-msgstr "Partycja Dysku Twardego:"
+msgstr "Partycja dysku twardego:"
 
 #: system-config-kickstart.gladestrings:127
 msgid "Hard Drive Directory:"
-msgstr "Katalog Dysku Twardego:"
+msgstr "Katalog dysku twardego:"
 
 #: system-config-kickstart.gladestrings:129
 msgid "Installation Method (required)"
-msgstr "Metoda Instalacji (wymagane)"
+msgstr "Metoda instalacji (wymagane)"
 
 #: system-config-kickstart.gladestrings:130
 msgid "label128"
@@ -970,23 +1332,23 @@ msgstr "label128"
 
 #: system-config-kickstart.gladestrings:131
 msgid "Install new boot loader"
-msgstr "Instaluj nowy boot loader"
+msgstr "Instaluj nowy bootloader"
 
 #: system-config-kickstart.gladestrings:132
 msgid "Do not install a boot loader"
-msgstr "Nie instaluj boot loader'a"
+msgstr "Nie instaluj bootloadera"
 
 #: system-config-kickstart.gladestrings:133
 msgid "Upgrade existing boot loader"
-msgstr "Aktualizuj istniejący boot loader"
+msgstr "Aktualizuj istniejący bootloader"
 
 #: system-config-kickstart.gladestrings:134
 msgid "GRUB Options:"
-msgstr "Opcje GRUB'a:"
+msgstr "Opcje GRUBa:"
 
 #: system-config-kickstart.gladestrings:135
 msgid "Use GRUB password"
-msgstr "Użyj hasła GRUB'a"
+msgstr "Użyj hasła GRUBa"
 
 #: system-config-kickstart.gladestrings:136
 msgid "Password:"
@@ -994,19 +1356,19 @@ msgstr "Hasło:"
 
 #: system-config-kickstart.gladestrings:140
 msgid "Encrypt GRUB password"
-msgstr "Szyfruj hasło GRUB'a"
+msgstr "Szyfruj hasło GRUBa"
 
 #: system-config-kickstart.gladestrings:141
 msgid "Install boot loader on Master Boot Record (MBR)"
-msgstr "Instaluj boot loader w Master Boot Record (MBR)"
+msgstr "Instaluj bootloader w Master Boot Record (MBR)"
 
 #: system-config-kickstart.gladestrings:142
 msgid "Install boot loader on first sector of the boot partition"
-msgstr "Instaluj boot loader na pierwszym sektorze partycji startowej"
+msgstr "Instaluj bootloader na pierwszym sektorze partycji startowej"
 
 #: system-config-kickstart.gladestrings:143
 msgid "Kernel parameters:"
-msgstr "Parametry Jądra:"
+msgstr "Parametry jądra:"
 
 #: system-config-kickstart.gladestrings:145
 msgid "label216"
@@ -1014,7 +1376,7 @@ msgstr "label216"
 
 #: system-config-kickstart.gladestrings:146
 msgid "Boot Loader Options (required)"
-msgstr "Opcje Boot Loader'a (wymagane)"
+msgstr "Opcje bootloadera (wymagane)"
 
 #: system-config-kickstart.gladestrings:147
 msgid "label35"
@@ -1050,7 +1412,7 @@ msgstr "Nie inicjalizuj etykiety dysku"
 
 #: system-config-kickstart.gladestrings:155
 msgid "_Add"
-msgstr "_Dodaj"
+msgstr "Dod_aj"
 
 #: system-config-kickstart.gladestrings:156
 msgid "_Edit"
@@ -1066,11 +1428,11 @@ msgstr "RAID"
 
 #: system-config-kickstart.gladestrings:159
 msgid "Partition options are not applicable on upgrades."
-msgstr "Opcje partycji nie stosują się przy aktualizacji."
+msgstr "Opcji partycji nie stosuje się przy aktualizacji."
 
 #: system-config-kickstart.gladestrings:160
 msgid "Partition Information (required)"
-msgstr "Informacje o Partycji (wymagane)"
+msgstr "Informacje o partycji (wymagane)"
 
 #: system-config-kickstart.gladestrings:161
 msgid "label30"
@@ -1078,15 +1440,15 @@ msgstr "label30"
 
 #: system-config-kickstart.gladestrings:162
 msgid "_Add Network Device"
-msgstr "_Dodaj Urządzenie Sieciowe"
+msgstr "Dod_aj urządzenie sieciowe"
 
 #: system-config-kickstart.gladestrings:163
 msgid "_Edit Network Device"
-msgstr "_Edytuj Urządzenie Sieciowe"
+msgstr "_Edytuj urządzenie sieciowe"
 
 #: system-config-kickstart.gladestrings:164
 msgid "_Delete Network Device"
-msgstr "_Usuń Urządzenie Sieciowe"
+msgstr "_Usuń urządzenie sieciowe"
 
 #: system-config-kickstart.gladestrings:166
 msgid "label31"
@@ -1098,7 +1460,7 @@ msgstr "Autentykacja:"
 
 #: system-config-kickstart.gladestrings:168
 msgid "Use Shadow Passwords"
-msgstr "Użyj Plik Haseł Shadow"
+msgstr "Użyj pliku haseł shadow"
 
 #: system-config-kickstart.gladestrings:169
 msgid "Use MD5"
@@ -1138,7 +1500,7 @@ msgstr "Serwer LDAP"
 
 #: system-config-kickstart.gladestrings:182
 msgid "LDAP Base Name: "
-msgstr "LDAP Nazwa Podstawowa: "
+msgstr "Nazwa podstawowa LDAP: "
 
 #: system-config-kickstart.gladestrings:183
 msgid "LDAP Authentication"
@@ -1150,23 +1512,23 @@ msgstr "LDAP "
 
 #: system-config-kickstart.gladestrings:185
 msgid "Enable Kerberos 5 Authentication"
-msgstr "Włącz Autentykacje Kerberos 5"
+msgstr "Włącz autentykację Kerberos 5"
 
 #: system-config-kickstart.gladestrings:186
 msgid "Kerberos Realm:"
-msgstr "Obszar Kerberosa:"
+msgstr "Obszar kerberosa:"
 
 #: system-config-kickstart.gladestrings:188
 msgid "Kerberos Domain Controller (KDC):"
-msgstr "Kontroler Domeny Kerberosa (KDC):"
+msgstr "Kontroler domeny kerberosa (KDC):"
 
 #: system-config-kickstart.gladestrings:190
 msgid "Kerberos Master Server:"
-msgstr "Główny Serwer Kerberosa:"
+msgstr "Główny serwer kerberosa:"
 
 #: system-config-kickstart.gladestrings:192
 msgid "Kerberos 5 Authentication"
-msgstr "Autentykacja Kerberos 5"
+msgstr "Autentykacja kerberos 5"
 
 #: system-config-kickstart.gladestrings:193
 msgid "Kerberos 5"
@@ -1174,7 +1536,7 @@ msgstr "Kerberos 5"
 
 #: system-config-kickstart.gladestrings:194
 msgid "Enable Hesiod Support"
-msgstr "Włącz Wsparcie Hesoida"
+msgstr "Włącz wsparcie Hesoida"
 
 #: system-config-kickstart.gladestrings:195
 msgid "Hesiod LHS:"
@@ -1194,7 +1556,7 @@ msgstr "Hesiod"
 
 #: system-config-kickstart.gladestrings:201
 msgid "Enable SMB Authentication"
-msgstr "Włącz Autentykacja SMB"
+msgstr "Włącz autentykacja SMB"
 
 #: system-config-kickstart.gladestrings:202
 msgid "SMB Servers:"
@@ -1202,7 +1564,7 @@ msgstr "Serwery SMB:"
 
 #: system-config-kickstart.gladestrings:203
 msgid "SMB Workgroup:"
-msgstr "Grupa Robocza SMB:"
+msgstr "Grupa robocza SMB:"
 
 #: system-config-kickstart.gladestrings:206
 msgid "SMB Authentication"
@@ -1226,11 +1588,11 @@ msgstr "Name Switch Cache"
 
 #: system-config-kickstart.gladestrings:211
 msgid "Authentication options are not applicable on upgrades."
-msgstr "Opcji Autentykacji nie stosuje się przy aktualizacji."
+msgstr "Opcji autentykacji nie stosuje się przy aktualizacji."
 
 #: system-config-kickstart.gladestrings:212
 msgid "Authentication Configuration"
-msgstr "Konfiguracja Autentykacji"
+msgstr "Konfiguracja autentykacji"
 
 #: system-config-kickstart.gladestrings:213
 msgid "label32"
@@ -1242,15 +1604,15 @@ msgstr "Poziom bezpieczeństwa:"
 
 #: system-config-kickstart.gladestrings:215
 msgid "Enable firewall"
-msgstr "Włącz firewall'a"
+msgstr "Włącz firewall"
 
 #: system-config-kickstart.gladestrings:216
 msgid "Disable firewall"
-msgstr "Wyłącz firewall'a"
+msgstr "Wyłącz firewall"
 
 #: system-config-kickstart.gladestrings:217
 msgid "Firewall configuration is not applicable on upgrades."
-msgstr "Konfiguracji firewall'a nie stosuje się przy aktualizacji."
+msgstr "Konfiguracji firewalla nie stosuje się przy aktualizacji."
 
 #: system-config-kickstart.gladestrings:219
 msgid "label33"
@@ -1258,7 +1620,7 @@ msgstr "label33"
 
 #: system-config-kickstart.gladestrings:220
 msgid "Configure the X Window System"
-msgstr "Konfiguruj System X Window"
+msgstr "Konfiguruj system X Window"
 
 #: system-config-kickstart.gladestrings:221
 msgid "Color Depth"
@@ -1270,7 +1632,7 @@ msgstr "Rozdzielczość"
 
 #: system-config-kickstart.gladestrings:225
 msgid "Default Desktop:"
-msgstr "Domyślny Pulpit:"
+msgstr "Domyślne środowisko:"
 
 #: system-config-kickstart.gladestrings:226
 msgid "GNOME"
@@ -1282,11 +1644,11 @@ msgstr "KDE"
 
 #: system-config-kickstart.gladestrings:228
 msgid "Start the X Window System on boot"
-msgstr "Uruchom System X Window przy starcie"
+msgstr "Uruchom system X Window przy starcie"
 
 #: system-config-kickstart.gladestrings:229
 msgid "On first boot, Setup Agent is: "
-msgstr "Przy pierwszym starcie, Agent Ustawień: "
+msgstr "Przy pierwszym starcie, Agent ustawień będzie: "
 
 #: system-config-kickstart.gladestrings:230
 msgid "Disabled"
@@ -1306,11 +1668,11 @@ msgstr "Ogólne"
 
 #: system-config-kickstart.gladestrings:234
 msgid "Probe for video card"
-msgstr "Wykrywaj kartę wideo"
+msgstr "Wykrywaj kartę graficzną"
 
 #: system-config-kickstart.gladestrings:235
 msgid "Video Card RAM: "
-msgstr "RAM Karty Wideo: "
+msgstr "RAM karty graficznej: "
 
 #: system-config-kickstart.gladestrings:237
 msgid "Video Card"
@@ -1334,11 +1696,11 @@ msgstr "kHz"
 
 #: system-config-kickstart.gladestrings:244
 msgid "Vertical Sync:"
-msgstr "Pionowa Synchronizacja:"
+msgstr "Pionowa synchronizacja:"
 
 #: system-config-kickstart.gladestrings:245
 msgid "Horizontal Sync:"
-msgstr "Pozioma Synchronizacja:"
+msgstr "Pozioma synchronizacja:"
 
 #: system-config-kickstart.gladestrings:246
 msgid "Monitor"
@@ -1358,11 +1720,15 @@ msgstr "Wybierz pakiety do instalacji."
 
 #: system-config-kickstart.gladestrings:251
 msgid "_Install Everything"
-msgstr "_Instaluj Wszystko"
+msgstr "_Instaluj wszystko"
 
 #: system-config-kickstart.gladestrings:252
+msgid "_Ignore Dependencies"
+msgstr "_Ignoruj zależności"
+
+#: system-config-kickstart.gladestrings:253
 msgid "Desktops"
-msgstr "Biurka"
+msgstr "Środowiska"
 
 #: system-config-kickstart.gladestrings:253
 msgid "Applications"
@@ -1405,7 +1771,7 @@ msgstr "Użyj interpretera:"
 #: system-config-kickstart.gladestrings:263
 #, c-format
 msgid "Type your %pre script below:"
-msgstr "Wpisz tutajswój %pre skrypt:"
+msgstr "Wpisz tutaj swój %pre skrypt:"
 
 #: system-config-kickstart.gladestrings:265
 msgid "label89"
@@ -1435,18 +1801,18 @@ msgstr "label93"
 
 #: system-config-kickstart.gladestrings:273
 msgid "Preview Options"
-msgstr "Podgląd Opcji"
+msgstr "Podgląd opcji"
 
 #: system-config-kickstart.gladestrings:274
 msgid "_Save to File"
-msgstr "Zapi_sz do Pliku"
+msgstr "Zapi_sz do pliku"
 
 #: system-config-kickstart.gladestrings:275
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
 msgstr ""
-"Wybrałeś następującą konfigurację. Kliknij Zapisz do Pliku aby zapisać ją do "
+"Wybrałeś następującą konfigurację. Kliknij Zapisz do pliku aby zapisać ją do "
 "pliku konfiguracyjnego kickstart. "
 
 #: system-config-kickstart.gladestrings:276
@@ -1488,15 +1854,15 @@ msgstr "Utwórz urządzenie RAID [domyślnie = /dev/md0]"
 
 #: system-config-kickstart.gladestrings:282
 msgid "Network Device Information"
-msgstr "Informacje o Urządzeniu Sieciowym"
+msgstr "Informacje o urządzeniu sieciowym"
 
 #: system-config-kickstart.gladestrings:283
 msgid "Network Device:"
-msgstr "Urządzenie Sieciowe:"
+msgstr "Urządzenie sieciowe:"
 
 #: system-config-kickstart.gladestrings:284
 msgid "Network Type:"
-msgstr "Typ Sieci:"
+msgstr "Typ sieci:"
 
 #: system-config-kickstart.gladestrings:285
 msgid "IP Address:"
@@ -1512,7 +1878,7 @@ msgstr "Brama:"
 
 #: system-config-kickstart.gladestrings:288
 msgid "Name Server:"
-msgstr "Serwer Nazw:"
+msgstr "Serwer nazw:"
 
 #: system-config-kickstart.gladestrings:290
 #: system-config-kickstart.gladestrings:292
