@@ -26,6 +26,8 @@ import GtkExtra
 import libglade
 import string
 import os
+import whrandom
+import crypt
 
 class basic:
 
@@ -194,7 +196,15 @@ class basic:
         buf = buf + "\n" + "keyboard " + self.keyboard_combo.entry.get_text()
         buf = buf + "\n" + self.mouseLookup(self.mouse_combo.entry.get_text())
         buf = buf + "\n" + "timezone --utc " + self.timezone_combo.entry.get_text()
-        buf = buf + "\n" + "rootpw " + self.root_passwd_entry.get_text()
+
+        salt = (whrandom.choice (string.letters +
+                                 string.digits + './') + 
+                whrandom.choice (string.letters +
+                                 string.digits + './'))
+
+        self.crypt = crypt.crypt (self.root_passwd_entry.get_text(), salt)
+
+        buf = buf + "\n" + "rootpw --iscrypted " + self.crypt
         if self.reboot_checkbutton.get_active():
             buf = buf + "\n" + "reboot"
         if self.text_install_checkbutton.get_active():
