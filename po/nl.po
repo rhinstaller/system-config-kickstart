@@ -1,7 +1,7 @@
 # Translation of redhat-config-kickstart to Dutch.
 # Copyright (C) 2002 Taco Witte
 # Taco Witte <T.C.Witte@phys.uu.nl>, 2002.
-# Tino Meinen <a.t.meinen@chello.nl>, 2003.
+# Tino Meinen <a.t.meinen@chello.nl>, 2003, 2004.
 # Peter van Egdom <p.van.egdom@chello.nl>, 2003, 2004.
 #
 msgid ""
@@ -9,13 +9,12 @@ msgstr ""
 "Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-29 17:11-0500\n"
-"PO-Revision-Date: 2004-03-16 20:20+0100\n"
-"Last-Translator: Peter van Egdom <p.van.egdom@chello.nl>\n"
+"PO-Revision-Date: 2004-04-06 15:05+0200\n"
+"Last-Translator: Tino Meinen <a.t.meinen@chello.nl>\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3.1\n"
 
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
@@ -55,25 +54,23 @@ msgstr ""
 #. #
 #: ../src/basic.py:71
 msgid "x86, AMD64, or Intel EM64T"
-msgstr ""
+msgstr "x86, AMD64, of Intel EM64T"
 
 #: ../src/basic.py:71
 msgid "Intel Itanium"
-msgstr ""
+msgstr "Intel Itanium"
 
 #: ../src/basic.py:71
-#, fuzzy
 msgid "IBM iSeries"
-msgstr "SMB-servers:"
+msgstr "IBM iSeries"
 
 #: ../src/basic.py:72
-#, fuzzy
 msgid "IBM pSeries"
-msgstr "SMB-servers:"
+msgstr "IBM pSeries"
 
 #: ../src/basic.py:72
 msgid "IBM zSeries/s390"
-msgstr ""
+msgstr "IBM zSeries/s390"
 
 #. populate language combo
 #. set default to English
@@ -130,7 +127,7 @@ msgstr "Selecteer alstublieft een root wachtwoord."
 #: ../src/bootloader.py:76
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
-msgstr ""
+msgstr "Bootloades-opties zijn niet van toepassing bij het %s platform"
 
 #: ../src/bootloader.py:117
 msgid "Grub passwords do not match.  Please try again."
@@ -163,11 +160,11 @@ msgstr "Engineering en wetenschappelijk"
 
 #: ../src/fedoraPackageGroupList.py:18 ../src/RHELPackageGroupList.py:18
 msgid "Graphical Internet"
-msgstr "Grafisch Internet"
+msgstr "Grafisch internet"
 
 #: ../src/fedoraPackageGroupList.py:19 ../src/RHELPackageGroupList.py:19
 msgid "Text-based Internet"
-msgstr "Tekst-gebaseerd Internet"
+msgstr "Tekst-gebaseerd internet"
 
 #: ../src/fedoraPackageGroupList.py:20 ../src/RHELPackageGroupList.py:20
 msgid "Office/Productivity"
@@ -318,6 +315,12 @@ msgstr "Andere poorten: (1029:tcp)"
 msgid "Please enter an NFS server."
 msgstr "Voer alstublieft een NFS-server in."
 
+# 'voer alstublieft' is niet mooi. in het nederlands laten we de vertaling
+# van 'please' weg. (de engelsen gebruiken overal 'please' voor)
+#
+# Geef een NFS map
+# Een NFS map opgeven
+# Een NFS map invoeren
 #: ../src/install.py:137
 msgid "Please enter an NFS directory."
 msgstr "Voer alstublieft een NFS map in."
@@ -451,10 +454,12 @@ msgstr "Aanmeldingscontrole"
 msgid "Firewall Configuration"
 msgstr "Firewall configuratie"
 
+# Was: X configuratie
+# weergave configuratie
+# grafische configuratie
 #: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:248
-#, fuzzy
 msgid "Display Configuration"
-msgstr "X Configuratie"
+msgstr "Display configuratie"
 
 #: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:259
 msgid "Package Selection"
@@ -1404,7 +1409,7 @@ msgstr "Bevestig wachtwoord:"
 
 #: system-config-kickstart.gladestrings:88
 msgid "Target Architecture:"
-msgstr ""
+msgstr "Doel-architectuur:"
 
 #: system-config-kickstart.gladestrings:90
 msgid "Reboot system after installation"
@@ -1556,9 +1561,8 @@ msgid "Kernel parameters:"
 msgstr "Kernel parameters:"
 
 #: system-config-kickstart.gladestrings:145
-#, fuzzy
 msgid "label216"
-msgstr "label28"
+msgstr "label216"
 
 #: system-config-kickstart.gladestrings:146
 msgid "Boot Loader Options (required)"
@@ -1614,7 +1618,7 @@ msgstr "RAID"
 
 #: system-config-kickstart.gladestrings:159
 msgid "Partition options are not applicable on upgrades."
-msgstr ""
+msgstr "Partitie-opties zijn niet van toepassing bij upgrades."
 
 #: system-config-kickstart.gladestrings:160
 msgid "Partition Information (required)"
@@ -1774,7 +1778,7 @@ msgstr "Name Switch Cache"
 
 #: system-config-kickstart.gladestrings:211
 msgid "Authentication options are not applicable on upgrades."
-msgstr ""
+msgstr "Aanmeldingscontrole-opties zijn niet van toepassing bij upgrades."
 
 #: system-config-kickstart.gladestrings:212
 msgid "Authentication Configuration"
@@ -1798,7 +1802,7 @@ msgstr "Zet firewall uit"
 
 #: system-config-kickstart.gladestrings:217
 msgid "Firewall configuration is not applicable on upgrades."
-msgstr ""
+msgstr "Firewall configuratie is niet van toepassing bij upgrades."
 
 #: system-config-kickstart.gladestrings:219
 msgid "label33"
@@ -1894,7 +1898,7 @@ msgstr "Beeldscherm"
 
 #: system-config-kickstart.gladestrings:247
 msgid "Display configuration is not applicable on upgrades."
-msgstr ""
+msgstr "Diplay-configuratie is niet van toepassing bij upgrades."
 
 #: system-config-kickstart.gladestrings:249
 msgid "label88"
@@ -1934,7 +1938,7 @@ msgstr "Systeem"
 
 #: system-config-kickstart.gladestrings:258
 msgid "Package selection is not applicable on upgrades."
-msgstr ""
+msgstr "Pakket-selectie is niet van toepassing bij upgrades."
 
 #: system-config-kickstart.gladestrings:260
 msgid "label34"
@@ -2081,49 +2085,3 @@ msgstr "Naamserver:"
 #: system-config-kickstart.gladestrings:316
 msgid "."
 msgstr "."
-
-#~ msgid "Use GRUB for the boot loader"
-#~ msgstr "GRUB gebruiken als bootloader"
-
-#~ msgid "Use LILO for the boot loader"
-#~ msgstr "LILO gebruiken als bootloader"
-
-#~ msgid "label173"
-#~ msgstr "label173"
-
-#~ msgid "LILO Options:"
-#~ msgstr "LILO opties:"
-
-#~ msgid "Use linear mode"
-#~ msgstr "Lineaire modus gebruiken"
-
-#~ msgid "Force use of lba32 mode"
-#~ msgstr "Gebruik van lba32 modus forceren"
-
-#~ msgid "label174"
-#~ msgstr "label174"
-
-#~ msgid "Specify hsync and vsync instead of monitor"
-#~ msgstr "In plaats van beeldscherm, hsync en vsync aangeven"
-
-#~ msgid "Allow incoming:"
-#~ msgstr "Inkomend toestaan:"
-
-#~ msgid "Use default firewall rules"
-#~ msgstr "Standaard firewall regels gebruiken"
-
-#~ msgid "Select the default firewall level:"
-#~ msgstr "Selecteer het standaard firewall niveau:"
-
-#~ msgid "High"
-#~ msgstr "Hoog"
-
-#~ msgid "Customize"
-#~ msgstr "Aanpassen"
-
-#~ msgid "Medium"
-#~ msgstr "Midden"
-
-#, fuzzy
-#~ msgid "DIsabled"
-#~ msgstr "Uitgezet"
