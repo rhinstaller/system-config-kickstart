@@ -162,7 +162,7 @@ class xconfig:
             if self.firstboot_optionmenu.get_history() == 0:
                 self.kickstartData.setFirstboot(None)
             elif self.firstboot_optionmenu.get_history() == 1:
-                self.kickstartData.setFirstboot(["--enabled"])
+                self.kickstartData.setFirstboot(["--enable"])
             elif self.firstboot_optionmenu.get_history() == 2:
                 self.kickstartData.setFirstboot(["--reconfig"])
 
@@ -210,7 +210,7 @@ class xconfig:
         elif self.kickstartData.getXconfig():
             self.config_x_button.set_active(gtk.TRUE)
 
-            if self.kickstartData.getFirstboot() == "--enabled":
+            if self.kickstartData.getFirstboot() == "--enable":
                 self.firstboot_optionmenu.set_history(1)
             elif self.kickstartData.getFirstboot() == "--reconfig":
                 self.firstboot_optionmenu.set_history(2)
