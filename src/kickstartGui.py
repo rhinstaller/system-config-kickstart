@@ -114,7 +114,7 @@ class kickstartGui:
 	self.basic_class = basic.basic(xml, self.category_store,
 				       self.category_view, self.options_notebook, self.kickstartData)
 	#bring in bootloader functions
-	self.bootloader_class = bootloader.bootloader(xml, self.kickstartData)
+	self.bootloader_class = bootloader.bootloader(xml, self.kickstartData, self.options_notebook)
 	#bring in install functions
 	self.install_class = install.install(xml, self.category_store,
 					     self.category_view, self.options_notebook,
@@ -224,7 +224,8 @@ class kickstartGui:
         if self.install_class.getData() is None:
             return None
         
-	self.bootloader_class.getData()
+        if self.bootloader_class.getData() is None:
+            return None
 
         doInstall = self.install_radiobutton.get_active()
 
