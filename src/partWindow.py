@@ -60,8 +60,8 @@ class partWindow:
         self.onPartEntry = xml.get_widget("onPartEntry")
         self.onPartBox = xml.get_widget("onPartBox")
         self.sizeFixedRadio = xml.get_widget("sizeFixedRadio")
-        self.sizeSetRadio = xml.get_widget("sizeSetRadio")
-        self.sizeSetCombo = xml.get_widget("sizeSetCombo")
+        self.setSizeRadio = xml.get_widget("setSizeRadio")
+        self.setSizeCombo = xml.get_widget("setSizeCombo")
         self.sizeMaxRadio = xml.get_widget("sizeMaxRadio")
         self.formatCheck = xml.get_widget("formatCheck")
         self.partCancelButton = xml.get_widget("part_cancel_button")
@@ -71,7 +71,7 @@ class partWindow:
 
         self.fsTypeCombo.list.connect("selection-changed", self.on_fsTypeCombo_set_focus_child)
         self.partCancelButton.connect("clicked", self.on_part_cancel_button_clicked)
-        self.sizeSetRadio.connect("toggled", self.on_sizeSetRadio_toggled)
+        self.setSizeRadio.connect("toggled", self.on_setSizeRadio_toggled)
         self.sizeMaxRadio.connect("toggled", self.on_sizeMaxRadio_toggled)
         self.onPartCheck.connect("toggled", self.on_onPartCheck_toggled)
         self.onDiskCheck.connect("toggled", self.on_onDiskCheck_toggled)
@@ -124,8 +124,8 @@ class partWindow:
                 self.mountPointCombo.set_sensitive(gtk.TRUE)
                 self.formatCheck.set_sensitive(gtk.TRUE)
 
-    def on_sizeSetRadio_toggled(self, *args):
-        self.sizeSetCombo.set_sensitive(self.sizeSetRadio.get_active())
+    def on_setSizeRadio_toggled(self, *args):
+        self.setSizeCombo.set_sensitive(self.setSizeRadio.get_active())
 
     def on_sizeMaxRadio_toggled(self, *args):
         self.sizeCombo.set_sensitive(not self.sizeMaxRadio.get_active())
@@ -170,8 +170,8 @@ class partWindow:
         if part_object.sizeStrategy == "fixed":
             self.sizeFixedRadio.set_active(gtk.TRUE)
         elif part_object.sizeStrategy == "grow":
-            self.sizeSetRadio.set_active(gtk.TRUE)
-            self.sizeSetCombo.set_text(part_object.sizeSetVal)
+            self.setSizeRadio.set_active(gtk.TRUE)
+            self.setSizeCombo.set_text(part_object.setSizeVal)
         elif part_object.sizeStrategy == "max":
             self.sizeMaxRadio.set_active(gtk.TRUE)
         
@@ -203,7 +203,7 @@ class partWindow:
         self.onPartCheck.set_active(gtk.FALSE)
         self.onPartEntry.set_text("")
         self.sizeFixedRadio.set_active(gtk.TRUE)
-        self.sizeSetCombo.set_text("1")
+        self.setSizeCombo.set_text("1")
         self.formatCheck.set_active(gtk.TRUE)
         
     def on_part_cancel_button_clicked(self, *args):
@@ -354,9 +354,9 @@ class partWindow:
 
         if self.sizeFixedRadio.get_active() == gtk.TRUE:
             part_object.sizeStrategy = "fixed"
-        elif self.sizeSetRadio.get_active() == gtk.TRUE:
+        elif self.setSizeRadio.get_active() == gtk.TRUE:
             part_object.sizeStrategy = "grow"
-            part_object.setSizeVal = self.sizeSetCombo.get_text()
+            part_object.setSizeVal = self.setSizeCombo.get_text()
         elif self.sizeMaxRadio.get_active() == gtk.TRUE:
             part_object.sizeStrategy = "max"
 

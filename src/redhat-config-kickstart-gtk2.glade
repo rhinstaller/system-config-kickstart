@@ -44,6 +44,7 @@
 
   <child internal-child="vbox">
     <widget class="GtkVBox" id="dialog-vbox2">
+      <property name="border_width">2</property>
       <property name="visible">True</property>
       <property name="homogeneous">False</property>
       <property name="spacing">8</property>
@@ -348,7 +349,7 @@
 		      <property name="column_spacing">4</property>
 
 		      <child>
-			<widget class="GtkSpinButton" id="sizeSetCombo">
+			<widget class="GtkSpinButton" id="setSizeCombo">
 			  <property name="visible">True</property>
 			  <property name="sensitive">False</property>
 			  <property name="can_focus">True</property>
@@ -391,7 +392,7 @@
 		      </child>
 
 		      <child>
-			<widget class="GtkRadioButton" id="sizeSetRadio">
+			<widget class="GtkRadioButton" id="setSizeRadio">
 			  <property name="visible">True</property>
 			  <property name="can_focus">True</property>
 			  <property name="label" translatable="yes">Grow to maximum of (MB):</property>
