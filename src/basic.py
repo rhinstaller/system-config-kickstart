@@ -277,7 +277,7 @@ class basic:
 
     def mouseLookup(self, args):
         if args == "Probe for Mouse":
-            buf = "#Probe for Mouse"
+            buf = ""
         else:
             buf = ""
             if self.emulate_3_buttons.get_active() and self.mouseDict[args] != 'none':
