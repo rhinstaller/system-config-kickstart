@@ -31,9 +31,9 @@ class firewall:
     
     def __init__(self, xml):
 
-        self.securityRadio1 = xml.get_widget("securityRadio1")
-        self.securityRadio2 = xml.get_widget("securityRadio2")
-        self.securityRadio3 = xml.get_widget("securityRadio3")
+        self.securityHighRadio = xml.get_widget("securityHighRadio")
+        self.securityMediumRadio = xml.get_widget("securityMediumRadio")
+        self.securityNoneRadio = xml.get_widget("securityNoneRadio")
         self.firewallDefaultRadio = xml.get_widget("firewallDefaultRadio")
         self.firewallCustomizeRadio = xml.get_widget("firewallCustomizeRadio")        
         self.trusted_devices_label = xml.get_widget("trusted_devices_label")
@@ -42,6 +42,7 @@ class firewall:
         self.firewall_ports_entry = xml.get_widget("firewall_ports_entry")
         self.customTable = xml.get_widget("customTable")
         self.customFrame = xml.get_widget("customFrame")
+        self.customizeRadio = xml.get_widget("firewallCustomizeRadio")
 
         xml.signal_autoconnect (
             { "disable_firewall" : self.disable_firewall,
@@ -89,9 +90,9 @@ class firewall:
 
         self.label3 = GtkLabel ("Other ports:")
         self.label3.set_alignment (0.2, 0.0)
-        self.ports = GtkEntry ()
+        self.portsEntry = GtkEntry ()
         self.customTable.attach (self.label3, 0, 1, 4, 5, FILL, FILL, 5, 5)
-        self.customTable.attach (self.ports, 1, 2, 4, 5, EXPAND|FILL, FILL, 5, 5)
+        self.customTable.attach (self.portsEntry, 1, 2, 4, 5, EXPAND|FILL, FILL, 5, 5)
         
         #initialize custom options to not sensitive
         self.label1.set_sensitive(FALSE)
@@ -99,10 +100,10 @@ class firewall:
         self.label3.set_sensitive(FALSE)        
         self.trusted.set_sensitive(FALSE)
         self.incoming.set_sensitive(FALSE)
-        self.ports.set_sensitive(FALSE)
+        self.portsEntry.set_sensitive(FALSE)
         
     def disable_firewall (self, widget):
-        active = not (self.securityRadio3.get_active())
+        active = not (self.securityNoneRadio.get_active())
         self.customFrame.set_sensitive (active)
 
     def enable_custom (self, widget):
@@ -111,7 +112,7 @@ class firewall:
         self.label3.set_sensitive(self.firewallCustomizeRadio.get_active())        
         self.trusted.set_sensitive(self.firewallCustomizeRadio.get_active())
         self.incoming.set_sensitive(self.firewallCustomizeRadio.get_active())
-        self.ports.set_sensitive(self.firewallCustomizeRadio.get_active())
+        self.portsEntry.set_sensitive(self.firewallCustomizeRadio.get_active())
     
     def trusted_select_row(self, clist, event):
         try:
@@ -141,19 +142,21 @@ class firewall:
         list.set_row_data(row, (val, row_data, header))
         list._update_row (row)
 
-    def getData(self):
-        return self.data
+#    def getData(self):
+#        self.grabData()
+#        return self.data
 
-    def grabData(self):
+#    def grabData(self):
+    def getData(self):
         buf = "firewall "
-        if self.securityRadio1.get_active():
+        if self.securityHighRadio.get_active():
             buf = buf + "--high "
-        elif self.securityRadio2.get_active():
+        elif self.securityMediumRadio.get_active():
             buf = buf + "--medium "
-        elif self.securityRadio3.get_active():
+        elif self.securityNoneRadio.get_active():
             buf = buf + "--disabled "        
 
-        if self.customize.get_active():
+        if self.customizeRadio.get_active():
 
             numdev = len(self.netdevices)
             for i in range(numdev):
@@ -173,4 +176,25 @@ class firewall:
                 elif val == 0:
                     pass
 
+            portlist = self.portsEntry.get_text()
+            print portlist
+            ports = []
+
+##             if portlist:
+##                 ports = string.split(portlist,',')
+##                 for port in ports:
+##                     port = string.strip(port)
+##                     try:
+##                         if not string.index(port,':'):
+##                             port = '%s:tcp' % port
+##                     except:
+##                         pass
+##                     ports.append(port)
+
+##             print ports
+
+
+
         self.data = buf
+
+        return self.data
