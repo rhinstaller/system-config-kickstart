@@ -31,22 +31,21 @@ class basic:
 
     def __init__(self, xml):
         self.xml = xml
-        self.lang_combo = self.xml.get_widget("lang_combo")
-        self.lang_support_combo = self.xml.get_widget("lang_support_combo")
-        self.keyboard_combo = self.xml.get_widget("keyboard_combo")
-        self.mouse_combo = self.xml.get_widget("mouse_combo")
-        self.timezone_combo = self.xml.get_widget("timezone_combo")
-        self.root_passwd_entry = self.xml.get_widget("root_passwd_entry")
-        self.lilo_mbr_radiobutton = self.xml.get_widget("lilo_mbr_radiobutton")
-        self.lilo_none_radiobutton = self.xml.get_widget("lilo_none_radiobutton")
-        self.shadow_passwd_checkbutton = self.xml.get_widget("shadow_passwd_checkbutton")
-        self.md5_checkbutton = self.xml.get_widget("md5_checkbutton")
-        self.emulate_3_buttons = self.xml.get_widget("emulate_3_buttons")
-        lang_combo = self.xml.get_widget("lang_combo")
-        lang_support_combo = self.xml.get_widget("lang_support_combo")
-        mouse_combo = self.xml.get_widget("mouse_combo")
-        keyboard_combo = self.xml.get_widget("keyboard_combo")		
-        timezone_combo = self.xml.get_widget("timezone_combo")
+        self.lang_combo = xml.get_widget("lang_combo")
+        self.lang_support_combo = xml.get_widget("lang_support_combo")
+        self.keyboard_combo = xml.get_widget("keyboard_combo")
+        self.mouse_combo = xml.get_widget("mouse_combo")
+        self.timezone_combo = xml.get_widget("timezone_combo")
+        self.root_passwd_entry = xml.get_widget("root_passwd_entry")
+        self.lilo_mbr_radiobutton = xml.get_widget("lilo_mbr_radiobutton")
+        self.lilo_none_radiobutton = xml.get_widget("lilo_none_radiobutton")
+        self.emulate_3_buttons = xml.get_widget("emulate_3_buttons")
+        lang_combo = xml.get_widget("lang_combo")
+        lang_support_combo = xml.get_widget("lang_support_combo")
+        mouse_combo = xml.get_widget("mouse_combo")
+        keyboard_combo = xml.get_widget("keyboard_combo")		
+        timezone_combo = xml.get_widget("timezone_combo")
+        self.reboot_checkbutton = xml.get_widget("reboot_checkbutton")
 
         #define languages, add languages here
         self.langDict = {"Czech" : "cs_CZ",
@@ -194,11 +193,8 @@ class basic:
             buf = buf + "\n" + "lilo --location mbr"
         elif self.lilo_none_radiobutton.get_active():
             buf = buf + "\n" + "lilo --location none"
-        buf = buf + "\n" + "auth "
-        if self.shadow_passwd_checkbutton.get_active():
-            buf = buf + " --useshadow"
-        if self.md5_checkbutton.get_active():
-            buf = buf + " --enablemd5"
+        if self.reboot_checkbutton.get_active():
+            buf = buf + "\n" + "reboot"
         return buf
 
     def languageLookup(self, args):

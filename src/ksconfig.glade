@@ -703,60 +703,17 @@
 	      </widget>
 
 	      <widget>
-		<class>GtkHBox</class>
-		<name>auth_hbox</name>
-		<homogeneous>False</homogeneous>
-		<spacing>9</spacing>
+		<class>GtkCheckButton</class>
+		<name>reboot_checkbutton</name>
+		<can_focus>True</can_focus>
+		<label>Reboot system after installation</label>
+		<active>True</active>
+		<draw_indicator>True</draw_indicator>
 		<child>
 		  <padding>0</padding>
-		  <expand>True</expand>
-		  <fill>True</fill>
+		  <expand>False</expand>
+		  <fill>False</fill>
 		</child>
-
-		<widget>
-		  <class>GtkLabel</class>
-		  <name>auth_label</name>
-		  <label>Authentication:</label>
-		  <justify>GTK_JUSTIFY_CENTER</justify>
-		  <wrap>False</wrap>
-		  <xalign>0.5</xalign>
-		  <yalign>0.5</yalign>
-		  <xpad>0</xpad>
-		  <ypad>0</ypad>
-		  <child>
-		    <padding>0</padding>
-		    <expand>False</expand>
-		    <fill>False</fill>
-		  </child>
-		</widget>
-
-		<widget>
-		  <class>GtkCheckButton</class>
-		  <name>shadow_passwd_checkbutton</name>
-		  <can_focus>True</can_focus>
-		  <label>Use Shadow Passwords</label>
-		  <active>True</active>
-		  <draw_indicator>True</draw_indicator>
-		  <child>
-		    <padding>0</padding>
-		    <expand>False</expand>
-		    <fill>False</fill>
-		  </child>
-		</widget>
-
-		<widget>
-		  <class>GtkCheckButton</class>
-		  <name>md5_checkbutton</name>
-		  <can_focus>True</can_focus>
-		  <label>Use MD5</label>
-		  <active>True</active>
-		  <draw_indicator>True</draw_indicator>
-		  <child>
-		    <padding>0</padding>
-		    <expand>False</expand>
-		    <fill>False</fill>
-		  </child>
-		</widget>
 	      </widget>
 	    </widget>
 	  </widget>
@@ -777,7 +734,7 @@
 	  <widget>
 	    <class>GtkFrame</class>
 	    <name>install_method_frame</name>
-	    <label>Installation Method</label>
+	    <label>Installation Method (required)</label>
 	    <label_xalign>0</label_xalign>
 	    <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
 
@@ -2718,403 +2675,275 @@
 	    <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
 
 	    <widget>
-	      <class>GtkNotebook</class>
-	      <name>auth_notebook</name>
+	      <class>GtkVBox</class>
+	      <name>vbox20</name>
 	      <border_width>4</border_width>
-	      <can_focus>True</can_focus>
-	      <show_tabs>True</show_tabs>
-	      <show_border>True</show_border>
-	      <tab_pos>GTK_POS_TOP</tab_pos>
-	      <scrollable>False</scrollable>
-	      <tab_hborder>2</tab_hborder>
-	      <tab_vborder>2</tab_vborder>
-	      <popup_enable>False</popup_enable>
+	      <homogeneous>False</homogeneous>
+	      <spacing>4</spacing>
 
 	      <widget>
-		<class>GtkFrame</class>
-		<name>nis_frame</name>
-		<border_width>2</border_width>
-		<label>NIS Authentication</label>
-		<label_xalign>0</label_xalign>
-		<shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
+		<class>GtkHBox</class>
+		<name>auth_hbox</name>
+		<homogeneous>False</homogeneous>
+		<spacing>9</spacing>
+		<child>
+		  <padding>0</padding>
+		  <expand>False</expand>
+		  <fill>False</fill>
+		</child>
 
 		<widget>
-		  <class>GtkVBox</class>
-		  <name>nis_vbox</name>
-		  <border_width>6</border_width>
-		  <homogeneous>False</homogeneous>
-		  <spacing>9</spacing>
+		  <class>GtkLabel</class>
+		  <name>auth_label</name>
+		  <label>Authentication:</label>
+		  <justify>GTK_JUSTIFY_CENTER</justify>
+		  <wrap>False</wrap>
+		  <xalign>0.5</xalign>
+		  <yalign>0.5</yalign>
+		  <xpad>0</xpad>
+		  <ypad>0</ypad>
+		  <child>
+		    <padding>0</padding>
+		    <expand>False</expand>
+		    <fill>False</fill>
+		  </child>
+		</widget>
 
-		  <widget>
-		    <class>GtkCheckButton</class>
-		    <name>nisCheck</name>
-		    <can_focus>True</can_focus>
-		    <signal>
-		      <name>toggled</name>
-		      <handler>enableNIS</handler>
-		      <last_modification_time>Wed, 20 Jun 2001 19:48:01 GMT</last_modification_time>
-		    </signal>
-		    <label>Enable NIS</label>
-		    <active>False</active>
-		    <draw_indicator>True</draw_indicator>
-		    <child>
-		      <padding>0</padding>
-		      <expand>False</expand>
-		      <fill>False</fill>
-		    </child>
-		  </widget>
+		<widget>
+		  <class>GtkCheckButton</class>
+		  <name>shadow_passwd_checkbutton</name>
+		  <can_focus>True</can_focus>
+		  <label>Use Shadow Passwords</label>
+		  <active>True</active>
+		  <draw_indicator>True</draw_indicator>
+		  <child>
+		    <padding>0</padding>
+		    <expand>False</expand>
+		    <fill>False</fill>
+		  </child>
+		</widget>
 
-		  <widget>
-		    <class>GtkHBox</class>
-		    <name>hbox9</name>
-		    <homogeneous>False</homogeneous>
-		    <spacing>9</spacing>
-		    <child>
-		      <padding>0</padding>
-		      <expand>False</expand>
-		      <fill>True</fill>
-		    </child>
-
-		    <widget>
-		      <class>GtkLabel</class>
-		      <name>nisDomainLabel</name>
-		      <sensitive>False</sensitive>
-		      <label>NIS Domain:</label>
-		      <justify>GTK_JUSTIFY_CENTER</justify>
-		      <wrap>False</wrap>
-		      <xalign>0.5</xalign>
-		      <yalign>0.5</yalign>
-		      <xpad>0</xpad>
-		      <ypad>0</ypad>
-		      <child>
-			<padding>0</padding>
-			<expand>False</expand>
-			<fill>False</fill>
-		      </child>
-		    </widget>
-
-		    <widget>
-		      <class>GtkEntry</class>
-		      <name>nisDomainEntry</name>
-		      <sensitive>False</sensitive>
-		      <can_focus>True</can_focus>
-		      <editable>True</editable>
-		      <text_visible>True</text_visible>
-		      <text_max_length>0</text_max_length>
-		      <text></text>
-		      <child>
-			<padding>0</padding>
-			<expand>True</expand>
-			<fill>True</fill>
-		      </child>
-		    </widget>
-		  </widget>
-
-		  <widget>
-		    <class>GtkCheckButton</class>
-		    <name>nisBroadcastCheck</name>
-		    <sensitive>False</sensitive>
-		    <can_focus>True</can_focus>
-		    <signal>
-		      <name>toggled</name>
-		      <handler>BroadcastCheck_cb</handler>
-		      <last_modification_time>Wed, 20 Jun 2001 19:48:14 GMT</last_modification_time>
-		    </signal>
-		    <label>Use broadcast to find NIS server</label>
-		    <active>False</active>
-		    <draw_indicator>True</draw_indicator>
-		    <child>
-		      <padding>0</padding>
-		      <expand>False</expand>
-		      <fill>False</fill>
-		    </child>
-		  </widget>
-
-		  <widget>
-		    <class>GtkHBox</class>
-		    <name>hbox10</name>
-		    <homogeneous>False</homogeneous>
-		    <spacing>9</spacing>
-		    <child>
-		      <padding>0</padding>
-		      <expand>False</expand>
-		      <fill>True</fill>
-		    </child>
-
-		    <widget>
-		      <class>GtkLabel</class>
-		      <name>nisServerLabel</name>
-		      <sensitive>False</sensitive>
-		      <label>NIS Server:</label>
-		      <justify>GTK_JUSTIFY_CENTER</justify>
-		      <wrap>False</wrap>
-		      <xalign>0.5</xalign>
-		      <yalign>0.5</yalign>
-		      <xpad>0</xpad>
-		      <ypad>0</ypad>
-		      <child>
-			<padding>0</padding>
-			<expand>False</expand>
-			<fill>False</fill>
-		      </child>
-		    </widget>
-
-		    <widget>
-		      <class>GtkEntry</class>
-		      <name>nisServerEntry</name>
-		      <sensitive>False</sensitive>
-		      <can_focus>True</can_focus>
-		      <editable>True</editable>
-		      <text_visible>True</text_visible>
-		      <text_max_length>0</text_max_length>
-		      <text></text>
-		      <child>
-			<padding>0</padding>
-			<expand>True</expand>
-			<fill>True</fill>
-		      </child>
-		    </widget>
-		  </widget>
+		<widget>
+		  <class>GtkCheckButton</class>
+		  <name>md5_checkbutton</name>
+		  <can_focus>True</can_focus>
+		  <label>Use MD5</label>
+		  <active>True</active>
+		  <draw_indicator>True</draw_indicator>
+		  <child>
+		    <padding>0</padding>
+		    <expand>False</expand>
+		    <fill>False</fill>
+		  </child>
 		</widget>
 	      </widget>
 
 	      <widget>
-		<class>GtkLabel</class>
-		<child_name>Notebook:tab</child_name>
-		<name>label75</name>
-		<label>NIS</label>
-		<justify>GTK_JUSTIFY_CENTER</justify>
-		<wrap>False</wrap>
-		<xalign>0.5</xalign>
-		<yalign>0.5</yalign>
-		<xpad>0</xpad>
-		<ypad>0</ypad>
-	      </widget>
-
-	      <widget>
-		<class>GtkFrame</class>
-		<name>ldap_frame</name>
-		<border_width>2</border_width>
-		<label>LDAP Authentication</label>
-		<label_xalign>0</label_xalign>
-		<shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
+		<class>GtkNotebook</class>
+		<name>auth_notebook</name>
+		<border_width>4</border_width>
+		<can_focus>True</can_focus>
+		<show_tabs>True</show_tabs>
+		<show_border>True</show_border>
+		<tab_pos>GTK_POS_TOP</tab_pos>
+		<scrollable>False</scrollable>
+		<tab_hborder>2</tab_hborder>
+		<tab_vborder>2</tab_vborder>
+		<popup_enable>False</popup_enable>
+		<child>
+		  <padding>0</padding>
+		  <expand>True</expand>
+		  <fill>True</fill>
+		</child>
 
 		<widget>
-		  <class>GtkVBox</class>
-		  <name>vbox6</name>
-		  <border_width>6</border_width>
-		  <homogeneous>False</homogeneous>
-		  <spacing>9</spacing>
+		  <class>GtkFrame</class>
+		  <name>nis_frame</name>
+		  <border_width>2</border_width>
+		  <label>NIS Authentication</label>
+		  <label_xalign>0</label_xalign>
+		  <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
 
 		  <widget>
-		    <class>GtkCheckButton</class>
-		    <name>ldapCheck</name>
-		    <can_focus>True</can_focus>
-		    <signal>
-		      <name>toggled</name>
-		      <handler>enableLDAP</handler>
-		      <last_modification_time>Wed, 20 Jun 2001 19:48:32 GMT</last_modification_time>
-		    </signal>
-		    <label>Enable LDAP</label>
-		    <active>False</active>
-		    <draw_indicator>True</draw_indicator>
-		    <child>
-		      <padding>0</padding>
-		      <expand>False</expand>
-		      <fill>False</fill>
-		    </child>
-		  </widget>
-
-		  <widget>
-		    <class>GtkTable</class>
-		    <name>table1</name>
-		    <rows>2</rows>
-		    <columns>2</columns>
+		    <class>GtkVBox</class>
+		    <name>nis_vbox</name>
+		    <border_width>6</border_width>
 		    <homogeneous>False</homogeneous>
-		    <row_spacing>4</row_spacing>
-		    <column_spacing>4</column_spacing>
-		    <child>
-		      <padding>0</padding>
-		      <expand>False</expand>
-		      <fill>True</fill>
-		    </child>
+		    <spacing>9</spacing>
 
 		    <widget>
-		      <class>GtkEntry</class>
-		      <name>ldapServerEntry</name>
+		      <class>GtkCheckButton</class>
+		      <name>nisCheck</name>
+		      <can_focus>True</can_focus>
+		      <signal>
+			<name>toggled</name>
+			<handler>enableNIS</handler>
+			<last_modification_time>Wed, 20 Jun 2001 19:48:01 GMT</last_modification_time>
+		      </signal>
+		      <label>Enable NIS</label>
+		      <active>False</active>
+		      <draw_indicator>True</draw_indicator>
+		      <child>
+			<padding>0</padding>
+			<expand>False</expand>
+			<fill>False</fill>
+		      </child>
+		    </widget>
+
+		    <widget>
+		      <class>GtkHBox</class>
+		      <name>hbox9</name>
+		      <homogeneous>False</homogeneous>
+		      <spacing>9</spacing>
+		      <child>
+			<padding>0</padding>
+			<expand>False</expand>
+			<fill>True</fill>
+		      </child>
+
+		      <widget>
+			<class>GtkLabel</class>
+			<name>nisDomainLabel</name>
+			<sensitive>False</sensitive>
+			<label>NIS Domain:</label>
+			<justify>GTK_JUSTIFY_CENTER</justify>
+			<wrap>False</wrap>
+			<xalign>0.5</xalign>
+			<yalign>0.5</yalign>
+			<xpad>0</xpad>
+			<ypad>0</ypad>
+			<child>
+			  <padding>0</padding>
+			  <expand>False</expand>
+			  <fill>False</fill>
+			</child>
+		      </widget>
+
+		      <widget>
+			<class>GtkEntry</class>
+			<name>nisDomainEntry</name>
+			<sensitive>False</sensitive>
+			<can_focus>True</can_focus>
+			<editable>True</editable>
+			<text_visible>True</text_visible>
+			<text_max_length>0</text_max_length>
+			<text></text>
+			<child>
+			  <padding>0</padding>
+			  <expand>True</expand>
+			  <fill>True</fill>
+			</child>
+		      </widget>
+		    </widget>
+
+		    <widget>
+		      <class>GtkCheckButton</class>
+		      <name>nisBroadcastCheck</name>
 		      <sensitive>False</sensitive>
 		      <can_focus>True</can_focus>
-		      <editable>True</editable>
-		      <text_visible>True</text_visible>
-		      <text_max_length>0</text_max_length>
-		      <text></text>
+		      <signal>
+			<name>toggled</name>
+			<handler>BroadcastCheck_cb</handler>
+			<last_modification_time>Wed, 20 Jun 2001 19:48:14 GMT</last_modification_time>
+		      </signal>
+		      <label>Use broadcast to find NIS server</label>
+		      <active>False</active>
+		      <draw_indicator>True</draw_indicator>
 		      <child>
-			<left_attach>1</left_attach>
-			<right_attach>2</right_attach>
-			<top_attach>0</top_attach>
-			<bottom_attach>1</bottom_attach>
-			<xpad>0</xpad>
-			<ypad>0</ypad>
-			<xexpand>True</xexpand>
-			<yexpand>False</yexpand>
-			<xshrink>False</xshrink>
-			<yshrink>False</yshrink>
-			<xfill>True</xfill>
-			<yfill>False</yfill>
+			<padding>0</padding>
+			<expand>False</expand>
+			<fill>False</fill>
 		      </child>
 		    </widget>
 
 		    <widget>
-		      <class>GtkEntry</class>
-		      <name>ldapDNEntry</name>
-		      <sensitive>False</sensitive>
-		      <can_focus>True</can_focus>
-		      <editable>True</editable>
-		      <text_visible>True</text_visible>
-		      <text_max_length>0</text_max_length>
-		      <text></text>
+		      <class>GtkHBox</class>
+		      <name>hbox10</name>
+		      <homogeneous>False</homogeneous>
+		      <spacing>9</spacing>
 		      <child>
-			<left_attach>1</left_attach>
-			<right_attach>2</right_attach>
-			<top_attach>1</top_attach>
-			<bottom_attach>2</bottom_attach>
-			<xpad>0</xpad>
-			<ypad>0</ypad>
-			<xexpand>True</xexpand>
-			<yexpand>False</yexpand>
-			<xshrink>False</xshrink>
-			<yshrink>False</yshrink>
-			<xfill>True</xfill>
-			<yfill>False</yfill>
+			<padding>0</padding>
+			<expand>False</expand>
+			<fill>True</fill>
 		      </child>
-		    </widget>
 
-		    <widget>
-		      <class>GtkLabel</class>
-		      <name>ldapLabel1</name>
-		      <sensitive>False</sensitive>
-		      <label>LDAP Server: </label>
-		      <justify>GTK_JUSTIFY_CENTER</justify>
-		      <wrap>False</wrap>
-		      <xalign>7.45058e-09</xalign>
-		      <yalign>0.5</yalign>
-		      <xpad>0</xpad>
-		      <ypad>0</ypad>
-		      <child>
-			<left_attach>0</left_attach>
-			<right_attach>1</right_attach>
-			<top_attach>0</top_attach>
-			<bottom_attach>1</bottom_attach>
+		      <widget>
+			<class>GtkLabel</class>
+			<name>nisServerLabel</name>
+			<sensitive>False</sensitive>
+			<label>NIS Server:</label>
+			<justify>GTK_JUSTIFY_CENTER</justify>
+			<wrap>False</wrap>
+			<xalign>0.5</xalign>
+			<yalign>0.5</yalign>
 			<xpad>0</xpad>
 			<ypad>0</ypad>
-			<xexpand>False</xexpand>
-			<yexpand>False</yexpand>
-			<xshrink>False</xshrink>
-			<yshrink>False</yshrink>
-			<xfill>True</xfill>
-			<yfill>False</yfill>
-		      </child>
-		    </widget>
+			<child>
+			  <padding>0</padding>
+			  <expand>False</expand>
+			  <fill>False</fill>
+			</child>
+		      </widget>
 
-		    <widget>
-		      <class>GtkLabel</class>
-		      <name>ldapLabel2</name>
-		      <sensitive>False</sensitive>
-		      <label>LDAP Base Name: </label>
-		      <justify>GTK_JUSTIFY_CENTER</justify>
-		      <wrap>False</wrap>
-		      <xalign>7.45058e-09</xalign>
-		      <yalign>0.5</yalign>
-		      <xpad>0</xpad>
-		      <ypad>0</ypad>
-		      <child>
-			<left_attach>0</left_attach>
-			<right_attach>1</right_attach>
-			<top_attach>1</top_attach>
-			<bottom_attach>2</bottom_attach>
-			<xpad>0</xpad>
-			<ypad>0</ypad>
-			<xexpand>False</xexpand>
-			<yexpand>False</yexpand>
-			<xshrink>False</xshrink>
-			<yshrink>False</yshrink>
-			<xfill>True</xfill>
-			<yfill>False</yfill>
-		      </child>
+		      <widget>
+			<class>GtkEntry</class>
+			<name>nisServerEntry</name>
+			<sensitive>False</sensitive>
+			<can_focus>True</can_focus>
+			<editable>True</editable>
+			<text_visible>True</text_visible>
+			<text_max_length>0</text_max_length>
+			<text></text>
+			<child>
+			  <padding>0</padding>
+			  <expand>True</expand>
+			  <fill>True</fill>
+			</child>
+		      </widget>
 		    </widget>
 		  </widget>
 		</widget>
-	      </widget>
-
-	      <widget>
-		<class>GtkLabel</class>
-		<child_name>Notebook:tab</child_name>
-		<name>label76</name>
-		<label>LDAP </label>
-		<justify>GTK_JUSTIFY_CENTER</justify>
-		<wrap>False</wrap>
-		<xalign>0.5</xalign>
-		<yalign>0.5</yalign>
-		<xpad>0</xpad>
-		<ypad>0</ypad>
-	      </widget>
-
-	      <widget>
-		<class>GtkFrame</class>
-		<name>kerberos_frame</name>
-		<border_width>2</border_width>
-		<label>Kerberos 5 Authentication</label>
-		<label_xalign>0</label_xalign>
-		<shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
 
 		<widget>
-		  <class>GtkVBox</class>
-		  <name>vbox7</name>
-		  <border_width>6</border_width>
-		  <homogeneous>False</homogeneous>
-		  <spacing>9</spacing>
+		  <class>GtkLabel</class>
+		  <child_name>Notebook:tab</child_name>
+		  <name>label75</name>
+		  <label>NIS</label>
+		  <justify>GTK_JUSTIFY_CENTER</justify>
+		  <wrap>False</wrap>
+		  <xalign>0.5</xalign>
+		  <yalign>0.5</yalign>
+		  <xpad>0</xpad>
+		  <ypad>0</ypad>
+		</widget>
+
+		<widget>
+		  <class>GtkFrame</class>
+		  <name>ldap_frame</name>
+		  <border_width>2</border_width>
+		  <label>LDAP Authentication</label>
+		  <label_xalign>0</label_xalign>
+		  <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
 
 		  <widget>
-		    <class>GtkCheckButton</class>
-		    <name>kerberosCheck</name>
-		    <can_focus>True</can_focus>
-		    <signal>
-		      <name>toggled</name>
-		      <handler>enableKerberos</handler>
-		      <last_modification_time>Wed, 20 Jun 2001 19:48:43 GMT</last_modification_time>
-		    </signal>
-		    <label>Enable Kerberos 5 Authentication</label>
-		    <active>False</active>
-		    <draw_indicator>True</draw_indicator>
-		    <child>
-		      <padding>0</padding>
-		      <expand>False</expand>
-		      <fill>False</fill>
-		    </child>
-		  </widget>
-
-		  <widget>
-		    <class>GtkHBox</class>
-		    <name>hbox18</name>
+		    <class>GtkVBox</class>
+		    <name>vbox6</name>
+		    <border_width>6</border_width>
 		    <homogeneous>False</homogeneous>
 		    <spacing>9</spacing>
-		    <child>
-		      <padding>0</padding>
-		      <expand>False</expand>
-		      <fill>True</fill>
-		    </child>
 
 		    <widget>
-		      <class>GtkLabel</class>
-		      <name>kerberosLabel1</name>
-		      <sensitive>False</sensitive>
-		      <label>Kerberos Realm:</label>
-		      <justify>GTK_JUSTIFY_CENTER</justify>
-		      <wrap>False</wrap>
-		      <xalign>0.5</xalign>
-		      <yalign>0.5</yalign>
-		      <xpad>0</xpad>
-		      <ypad>0</ypad>
+		      <class>GtkCheckButton</class>
+		      <name>ldapCheck</name>
+		      <can_focus>True</can_focus>
+		      <signal>
+			<name>toggled</name>
+			<handler>enableLDAP</handler>
+			<last_modification_time>Wed, 20 Jun 2001 19:48:32 GMT</last_modification_time>
+		      </signal>
+		      <label>Enable LDAP</label>
+		      <active>False</active>
+		      <draw_indicator>True</draw_indicator>
 		      <child>
 			<padding>0</padding>
 			<expand>False</expand>
@@ -3123,185 +2952,166 @@
 		    </widget>
 
 		    <widget>
-		      <class>GtkEntry</class>
-		      <name>kerberosRealmEntry</name>
-		      <sensitive>False</sensitive>
-		      <can_focus>True</can_focus>
-		      <editable>True</editable>
-		      <text_visible>True</text_visible>
-		      <text_max_length>0</text_max_length>
-		      <text></text>
-		      <child>
-			<padding>0</padding>
-			<expand>True</expand>
-			<fill>True</fill>
-		      </child>
-		    </widget>
-		  </widget>
-
-		  <widget>
-		    <class>GtkHBox</class>
-		    <name>hbox19</name>
-		    <homogeneous>False</homogeneous>
-		    <spacing>9</spacing>
-		    <child>
-		      <padding>0</padding>
-		      <expand>False</expand>
-		      <fill>True</fill>
-		    </child>
-
-		    <widget>
-		      <class>GtkLabel</class>
-		      <name>kerberosLabel2</name>
-		      <sensitive>False</sensitive>
-		      <label>Kerberos Domain Controller (KDC):</label>
-		      <justify>GTK_JUSTIFY_CENTER</justify>
-		      <wrap>False</wrap>
-		      <xalign>0.5</xalign>
-		      <yalign>0.5</yalign>
-		      <xpad>0</xpad>
-		      <ypad>0</ypad>
+		      <class>GtkTable</class>
+		      <name>table1</name>
+		      <rows>2</rows>
+		      <columns>2</columns>
+		      <homogeneous>False</homogeneous>
+		      <row_spacing>4</row_spacing>
+		      <column_spacing>4</column_spacing>
 		      <child>
 			<padding>0</padding>
 			<expand>False</expand>
-			<fill>False</fill>
-		      </child>
-		    </widget>
-
-		    <widget>
-		      <class>GtkEntry</class>
-		      <name>kerberosKDCEntry</name>
-		      <sensitive>False</sensitive>
-		      <can_focus>True</can_focus>
-		      <editable>True</editable>
-		      <text_visible>True</text_visible>
-		      <text_max_length>0</text_max_length>
-		      <text></text>
-		      <child>
-			<padding>0</padding>
-			<expand>True</expand>
 			<fill>True</fill>
 		      </child>
-		    </widget>
-		  </widget>
 
-		  <widget>
-		    <class>GtkHBox</class>
-		    <name>hbox20</name>
-		    <homogeneous>False</homogeneous>
-		    <spacing>9</spacing>
-		    <child>
-		      <padding>0</padding>
-		      <expand>False</expand>
-		      <fill>True</fill>
-		    </child>
+		      <widget>
+			<class>GtkEntry</class>
+			<name>ldapServerEntry</name>
+			<sensitive>False</sensitive>
+			<can_focus>True</can_focus>
+			<editable>True</editable>
+			<text_visible>True</text_visible>
+			<text_max_length>0</text_max_length>
+			<text></text>
+			<child>
+			  <left_attach>1</left_attach>
+			  <right_attach>2</right_attach>
+			  <top_attach>0</top_attach>
+			  <bottom_attach>1</bottom_attach>
+			  <xpad>0</xpad>
+			  <ypad>0</ypad>
+			  <xexpand>True</xexpand>
+			  <yexpand>False</yexpand>
+			  <xshrink>False</xshrink>
+			  <yshrink>False</yshrink>
+			  <xfill>True</xfill>
+			  <yfill>False</yfill>
+			</child>
+		      </widget>
 
-		    <widget>
-		      <class>GtkLabel</class>
-		      <name>kerberosLabel3</name>
-		      <sensitive>False</sensitive>
-		      <label>Kerberos Master Server:</label>
-		      <justify>GTK_JUSTIFY_CENTER</justify>
-		      <wrap>False</wrap>
-		      <xalign>0.5</xalign>
-		      <yalign>0.5</yalign>
-		      <xpad>0</xpad>
-		      <ypad>0</ypad>
-		      <child>
-			<padding>0</padding>
-			<expand>False</expand>
-			<fill>False</fill>
-		      </child>
-		    </widget>
+		      <widget>
+			<class>GtkEntry</class>
+			<name>ldapDNEntry</name>
+			<sensitive>False</sensitive>
+			<can_focus>True</can_focus>
+			<editable>True</editable>
+			<text_visible>True</text_visible>
+			<text_max_length>0</text_max_length>
+			<text></text>
+			<child>
+			  <left_attach>1</left_attach>
+			  <right_attach>2</right_attach>
+			  <top_attach>1</top_attach>
+			  <bottom_attach>2</bottom_attach>
+			  <xpad>0</xpad>
+			  <ypad>0</ypad>
+			  <xexpand>True</xexpand>
+			  <yexpand>False</yexpand>
+			  <xshrink>False</xshrink>
+			  <yshrink>False</yshrink>
+			  <xfill>True</xfill>
+			  <yfill>False</yfill>
+			</child>
+		      </widget>
 
-		    <widget>
-		      <class>GtkEntry</class>
-		      <name>kerberosMasterEntry</name>
-		      <sensitive>False</sensitive>
-		      <can_focus>True</can_focus>
-		      <editable>True</editable>
-		      <text_visible>True</text_visible>
-		      <text_max_length>0</text_max_length>
-		      <text></text>
-		      <child>
-			<padding>0</padding>
-			<expand>True</expand>
-			<fill>True</fill>
-		      </child>
+		      <widget>
+			<class>GtkLabel</class>
+			<name>ldapLabel1</name>
+			<sensitive>False</sensitive>
+			<label>LDAP Server: </label>
+			<justify>GTK_JUSTIFY_CENTER</justify>
+			<wrap>False</wrap>
+			<xalign>7.45058e-09</xalign>
+			<yalign>0.5</yalign>
+			<xpad>0</xpad>
+			<ypad>0</ypad>
+			<child>
+			  <left_attach>0</left_attach>
+			  <right_attach>1</right_attach>
+			  <top_attach>0</top_attach>
+			  <bottom_attach>1</bottom_attach>
+			  <xpad>0</xpad>
+			  <ypad>0</ypad>
+			  <xexpand>False</xexpand>
+			  <yexpand>False</yexpand>
+			  <xshrink>False</xshrink>
+			  <yshrink>False</yshrink>
+			  <xfill>True</xfill>
+			  <yfill>False</yfill>
+			</child>
+		      </widget>
+
+		      <widget>
+			<class>GtkLabel</class>
+			<name>ldapLabel2</name>
+			<sensitive>False</sensitive>
+			<label>LDAP Base Name: </label>
+			<justify>GTK_JUSTIFY_CENTER</justify>
+			<wrap>False</wrap>
+			<xalign>7.45058e-09</xalign>
+			<yalign>0.5</yalign>
+			<xpad>0</xpad>
+			<ypad>0</ypad>
+			<child>
+			  <left_attach>0</left_attach>
+			  <right_attach>1</right_attach>
+			  <top_attach>1</top_attach>
+			  <bottom_attach>2</bottom_attach>
+			  <xpad>0</xpad>
+			  <ypad>0</ypad>
+			  <xexpand>False</xexpand>
+			  <yexpand>False</yexpand>
+			  <xshrink>False</xshrink>
+			  <yshrink>False</yshrink>
+			  <xfill>True</xfill>
+			  <yfill>False</yfill>
+			</child>
+		      </widget>
 		    </widget>
 		  </widget>
 		</widget>
-	      </widget>
-
-	      <widget>
-		<class>GtkLabel</class>
-		<child_name>Notebook:tab</child_name>
-		<name>label77</name>
-		<label>Kerberos 5</label>
-		<justify>GTK_JUSTIFY_CENTER</justify>
-		<wrap>False</wrap>
-		<xalign>0.5</xalign>
-		<yalign>0.5</yalign>
-		<xpad>0</xpad>
-		<ypad>0</ypad>
-	      </widget>
-
-	      <widget>
-		<class>GtkFrame</class>
-		<name>hesiod_frame</name>
-		<border_width>2</border_width>
-		<label>Hesiod Authentication</label>
-		<label_xalign>0</label_xalign>
-		<shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
 
 		<widget>
-		  <class>GtkVBox</class>
-		  <name>vbox8</name>
-		  <border_width>6</border_width>
-		  <homogeneous>False</homogeneous>
-		  <spacing>9</spacing>
+		  <class>GtkLabel</class>
+		  <child_name>Notebook:tab</child_name>
+		  <name>label76</name>
+		  <label>LDAP </label>
+		  <justify>GTK_JUSTIFY_CENTER</justify>
+		  <wrap>False</wrap>
+		  <xalign>0.5</xalign>
+		  <yalign>0.5</yalign>
+		  <xpad>0</xpad>
+		  <ypad>0</ypad>
+		</widget>
+
+		<widget>
+		  <class>GtkFrame</class>
+		  <name>kerberos_frame</name>
+		  <border_width>2</border_width>
+		  <label>Kerberos 5 Authentication</label>
+		  <label_xalign>0</label_xalign>
+		  <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
 
 		  <widget>
-		    <class>GtkCheckButton</class>
-		    <name>hesiodCheck</name>
-		    <can_focus>True</can_focus>
-		    <signal>
-		      <name>toggled</name>
-		      <handler>enableHesiod</handler>
-		      <last_modification_time>Wed, 20 Jun 2001 19:48:53 GMT</last_modification_time>
-		    </signal>
-		    <label>Enable Hesiod Support</label>
-		    <active>False</active>
-		    <draw_indicator>True</draw_indicator>
-		    <child>
-		      <padding>0</padding>
-		      <expand>False</expand>
-		      <fill>False</fill>
-		    </child>
-		  </widget>
-
-		  <widget>
-		    <class>GtkHBox</class>
-		    <name>hbox16</name>
+		    <class>GtkVBox</class>
+		    <name>vbox7</name>
+		    <border_width>6</border_width>
 		    <homogeneous>False</homogeneous>
 		    <spacing>9</spacing>
-		    <child>
-		      <padding>0</padding>
-		      <expand>False</expand>
-		      <fill>True</fill>
-		    </child>
 
 		    <widget>
-		      <class>GtkLabel</class>
-		      <name>hesiodLabel1</name>
-		      <sensitive>False</sensitive>
-		      <label>Hesiod LHS:</label>
-		      <justify>GTK_JUSTIFY_CENTER</justify>
-		      <wrap>False</wrap>
-		      <xalign>0.5</xalign>
-		      <yalign>0.5</yalign>
-		      <xpad>0</xpad>
-		      <ypad>0</ypad>
+		      <class>GtkCheckButton</class>
+		      <name>kerberosCheck</name>
+		      <can_focus>True</can_focus>
+		      <signal>
+			<name>toggled</name>
+			<handler>enableKerberos</handler>
+			<last_modification_time>Wed, 20 Jun 2001 19:48:43 GMT</last_modification_time>
+		      </signal>
+		      <label>Enable Kerberos 5 Authentication</label>
+		      <active>False</active>
+		      <draw_indicator>True</draw_indicator>
 		      <child>
 			<padding>0</padding>
 			<expand>False</expand>
@@ -3310,44 +3120,185 @@
 		    </widget>
 
 		    <widget>
-		      <class>GtkEntry</class>
-		      <name>hesiodLHSEntry</name>
-		      <sensitive>False</sensitive>
-		      <can_focus>True</can_focus>
-		      <editable>True</editable>
-		      <text_visible>True</text_visible>
-		      <text_max_length>0</text_max_length>
-		      <text></text>
+		      <class>GtkHBox</class>
+		      <name>hbox18</name>
+		      <homogeneous>False</homogeneous>
+		      <spacing>9</spacing>
 		      <child>
 			<padding>0</padding>
-			<expand>True</expand>
+			<expand>False</expand>
 			<fill>True</fill>
 		      </child>
-		    </widget>
-		  </widget>
 
-		  <widget>
-		    <class>GtkHBox</class>
-		    <name>hbox17</name>
-		    <homogeneous>False</homogeneous>
-		    <spacing>9</spacing>
-		    <child>
-		      <padding>0</padding>
-		      <expand>False</expand>
-		      <fill>True</fill>
-		    </child>
+		      <widget>
+			<class>GtkLabel</class>
+			<name>kerberosLabel1</name>
+			<sensitive>False</sensitive>
+			<label>Kerberos Realm:</label>
+			<justify>GTK_JUSTIFY_CENTER</justify>
+			<wrap>False</wrap>
+			<xalign>0.5</xalign>
+			<yalign>0.5</yalign>
+			<xpad>0</xpad>
+			<ypad>0</ypad>
+			<child>
+			  <padding>0</padding>
+			  <expand>False</expand>
+			  <fill>False</fill>
+			</child>
+		      </widget>
+
+		      <widget>
+			<class>GtkEntry</class>
+			<name>kerberosRealmEntry</name>
+			<sensitive>False</sensitive>
+			<can_focus>True</can_focus>
+			<editable>True</editable>
+			<text_visible>True</text_visible>
+			<text_max_length>0</text_max_length>
+			<text></text>
+			<child>
+			  <padding>0</padding>
+			  <expand>True</expand>
+			  <fill>True</fill>
+			</child>
+		      </widget>
+		    </widget>
 
 		    <widget>
-		      <class>GtkLabel</class>
-		      <name>hesiodLabel2</name>
-		      <sensitive>False</sensitive>
-		      <label>Hesiod RHS:</label>
-		      <justify>GTK_JUSTIFY_CENTER</justify>
-		      <wrap>False</wrap>
-		      <xalign>0.5</xalign>
-		      <yalign>0.5</yalign>
-		      <xpad>0</xpad>
-		      <ypad>0</ypad>
+		      <class>GtkHBox</class>
+		      <name>hbox19</name>
+		      <homogeneous>False</homogeneous>
+		      <spacing>9</spacing>
+		      <child>
+			<padding>0</padding>
+			<expand>False</expand>
+			<fill>True</fill>
+		      </child>
+
+		      <widget>
+			<class>GtkLabel</class>
+			<name>kerberosLabel2</name>
+			<sensitive>False</sensitive>
+			<label>Kerberos Domain Controller (KDC):</label>
+			<justify>GTK_JUSTIFY_CENTER</justify>
+			<wrap>False</wrap>
+			<xalign>0.5</xalign>
+			<yalign>0.5</yalign>
+			<xpad>0</xpad>
+			<ypad>0</ypad>
+			<child>
+			  <padding>0</padding>
+			  <expand>False</expand>
+			  <fill>False</fill>
+			</child>
+		      </widget>
+
+		      <widget>
+			<class>GtkEntry</class>
+			<name>kerberosKDCEntry</name>
+			<sensitive>False</sensitive>
+			<can_focus>True</can_focus>
+			<editable>True</editable>
+			<text_visible>True</text_visible>
+			<text_max_length>0</text_max_length>
+			<text></text>
+			<child>
+			  <padding>0</padding>
+			  <expand>True</expand>
+			  <fill>True</fill>
+			</child>
+		      </widget>
+		    </widget>
+
+		    <widget>
+		      <class>GtkHBox</class>
+		      <name>hbox20</name>
+		      <homogeneous>False</homogeneous>
+		      <spacing>9</spacing>
+		      <child>
+			<padding>0</padding>
+			<expand>False</expand>
+			<fill>True</fill>
+		      </child>
+
+		      <widget>
+			<class>GtkLabel</class>
+			<name>kerberosLabel3</name>
+			<sensitive>False</sensitive>
+			<label>Kerberos Master Server:</label>
+			<justify>GTK_JUSTIFY_CENTER</justify>
+			<wrap>False</wrap>
+			<xalign>0.5</xalign>
+			<yalign>0.5</yalign>
+			<xpad>0</xpad>
+			<ypad>0</ypad>
+			<child>
+			  <padding>0</padding>
+			  <expand>False</expand>
+			  <fill>False</fill>
+			</child>
+		      </widget>
+
+		      <widget>
+			<class>GtkEntry</class>
+			<name>kerberosMasterEntry</name>
+			<sensitive>False</sensitive>
+			<can_focus>True</can_focus>
+			<editable>True</editable>
+			<text_visible>True</text_visible>
+			<text_max_length>0</text_max_length>
+			<text></text>
+			<child>
+			  <padding>0</padding>
+			  <expand>True</expand>
+			  <fill>True</fill>
+			</child>
+		      </widget>
+		    </widget>
+		  </widget>
+		</widget>
+
+		<widget>
+		  <class>GtkLabel</class>
+		  <child_name>Notebook:tab</child_name>
+		  <name>label77</name>
+		  <label>Kerberos 5</label>
+		  <justify>GTK_JUSTIFY_CENTER</justify>
+		  <wrap>False</wrap>
+		  <xalign>0.5</xalign>
+		  <yalign>0.5</yalign>
+		  <xpad>0</xpad>
+		  <ypad>0</ypad>
+		</widget>
+
+		<widget>
+		  <class>GtkFrame</class>
+		  <name>hesiod_frame</name>
+		  <border_width>2</border_width>
+		  <label>Hesiod Authentication</label>
+		  <label_xalign>0</label_xalign>
+		  <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
+
+		  <widget>
+		    <class>GtkVBox</class>
+		    <name>vbox8</name>
+		    <border_width>6</border_width>
+		    <homogeneous>False</homogeneous>
+		    <spacing>9</spacing>
+
+		    <widget>
+		      <class>GtkCheckButton</class>
+		      <name>hesiodCheck</name>
+		      <can_focus>True</can_focus>
+		      <signal>
+			<name>toggled</name>
+			<handler>enableHesiod</handler>
+			<last_modification_time>Wed, 20 Jun 2001 19:48:53 GMT</last_modification_time>
+		      </signal>
+		      <label>Enable Hesiod Support</label>
+		      <active>False</active>
+		      <draw_indicator>True</draw_indicator>
 		      <child>
 			<padding>0</padding>
 			<expand>False</expand>
@@ -3356,203 +3307,279 @@
 		    </widget>
 
 		    <widget>
-		      <class>GtkEntry</class>
-		      <name>hesiodRHSEntry</name>
-		      <sensitive>False</sensitive>
+		      <class>GtkHBox</class>
+		      <name>hbox16</name>
+		      <homogeneous>False</homogeneous>
+		      <spacing>9</spacing>
+		      <child>
+			<padding>0</padding>
+			<expand>False</expand>
+			<fill>True</fill>
+		      </child>
+
+		      <widget>
+			<class>GtkLabel</class>
+			<name>hesiodLabel1</name>
+			<sensitive>False</sensitive>
+			<label>Hesiod LHS:</label>
+			<justify>GTK_JUSTIFY_CENTER</justify>
+			<wrap>False</wrap>
+			<xalign>0.5</xalign>
+			<yalign>0.5</yalign>
+			<xpad>0</xpad>
+			<ypad>0</ypad>
+			<child>
+			  <padding>0</padding>
+			  <expand>False</expand>
+			  <fill>False</fill>
+			</child>
+		      </widget>
+
+		      <widget>
+			<class>GtkEntry</class>
+			<name>hesiodLHSEntry</name>
+			<sensitive>False</sensitive>
+			<can_focus>True</can_focus>
+			<editable>True</editable>
+			<text_visible>True</text_visible>
+			<text_max_length>0</text_max_length>
+			<text></text>
+			<child>
+			  <padding>0</padding>
+			  <expand>True</expand>
+			  <fill>True</fill>
+			</child>
+		      </widget>
+		    </widget>
+
+		    <widget>
+		      <class>GtkHBox</class>
+		      <name>hbox17</name>
+		      <homogeneous>False</homogeneous>
+		      <spacing>9</spacing>
+		      <child>
+			<padding>0</padding>
+			<expand>False</expand>
+			<fill>True</fill>
+		      </child>
+
+		      <widget>
+			<class>GtkLabel</class>
+			<name>hesiodLabel2</name>
+			<sensitive>False</sensitive>
+			<label>Hesiod RHS:</label>
+			<justify>GTK_JUSTIFY_CENTER</justify>
+			<wrap>False</wrap>
+			<xalign>0.5</xalign>
+			<yalign>0.5</yalign>
+			<xpad>0</xpad>
+			<ypad>0</ypad>
+			<child>
+			  <padding>0</padding>
+			  <expand>False</expand>
+			  <fill>False</fill>
+			</child>
+		      </widget>
+
+		      <widget>
+			<class>GtkEntry</class>
+			<name>hesiodRHSEntry</name>
+			<sensitive>False</sensitive>
+			<can_focus>True</can_focus>
+			<editable>True</editable>
+			<text_visible>True</text_visible>
+			<text_max_length>0</text_max_length>
+			<text></text>
+			<child>
+			  <padding>0</padding>
+			  <expand>True</expand>
+			  <fill>True</fill>
+			</child>
+		      </widget>
+		    </widget>
+		  </widget>
+		</widget>
+
+		<widget>
+		  <class>GtkLabel</class>
+		  <child_name>Notebook:tab</child_name>
+		  <name>label78</name>
+		  <label>Hesiod</label>
+		  <justify>GTK_JUSTIFY_CENTER</justify>
+		  <wrap>False</wrap>
+		  <xalign>0.5</xalign>
+		  <yalign>0.5</yalign>
+		  <xpad>0</xpad>
+		  <ypad>0</ypad>
+		</widget>
+
+		<widget>
+		  <class>GtkFrame</class>
+		  <name>samba_frame</name>
+		  <border_width>2</border_width>
+		  <label>Samba Authentication</label>
+		  <label_xalign>0</label_xalign>
+		  <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
+
+		  <widget>
+		    <class>GtkVBox</class>
+		    <name>vbox9</name>
+		    <border_width>6</border_width>
+		    <homogeneous>False</homogeneous>
+		    <spacing>9</spacing>
+
+		    <widget>
+		      <class>GtkCheckButton</class>
+		      <name>sambaCheck</name>
 		      <can_focus>True</can_focus>
-		      <editable>True</editable>
-		      <text_visible>True</text_visible>
-		      <text_max_length>0</text_max_length>
-		      <text></text>
+		      <signal>
+			<name>toggled</name>
+			<handler>enableSamba</handler>
+			<last_modification_time>Wed, 20 Jun 2001 19:51:39 GMT</last_modification_time>
+		      </signal>
+		      <label>Enable SMB Authentication</label>
+		      <active>False</active>
+		      <draw_indicator>True</draw_indicator>
+		      <child>
+			<padding>0</padding>
+			<expand>False</expand>
+			<fill>False</fill>
+		      </child>
+		    </widget>
+
+		    <widget>
+		      <class>GtkTable</class>
+		      <name>table4</name>
+		      <rows>2</rows>
+		      <columns>2</columns>
+		      <homogeneous>False</homogeneous>
+		      <row_spacing>4</row_spacing>
+		      <column_spacing>4</column_spacing>
 		      <child>
 			<padding>0</padding>
 			<expand>True</expand>
 			<fill>True</fill>
 		      </child>
+
+		      <widget>
+			<class>GtkLabel</class>
+			<name>sambaLabel1</name>
+			<sensitive>False</sensitive>
+			<label>SMB Servers:</label>
+			<justify>GTK_JUSTIFY_CENTER</justify>
+			<wrap>False</wrap>
+			<xalign>0</xalign>
+			<yalign>0.5</yalign>
+			<xpad>0</xpad>
+			<ypad>0</ypad>
+			<child>
+			  <left_attach>0</left_attach>
+			  <right_attach>1</right_attach>
+			  <top_attach>0</top_attach>
+			  <bottom_attach>1</bottom_attach>
+			  <xpad>0</xpad>
+			  <ypad>0</ypad>
+			  <xexpand>False</xexpand>
+			  <yexpand>False</yexpand>
+			  <xshrink>False</xshrink>
+			  <yshrink>False</yshrink>
+			  <xfill>True</xfill>
+			  <yfill>False</yfill>
+			</child>
+		      </widget>
+
+		      <widget>
+			<class>GtkLabel</class>
+			<name>sambaLabel2</name>
+			<sensitive>False</sensitive>
+			<label>SMB Workgroup:</label>
+			<justify>GTK_JUSTIFY_CENTER</justify>
+			<wrap>False</wrap>
+			<xalign>0.5</xalign>
+			<yalign>0.5</yalign>
+			<xpad>0</xpad>
+			<ypad>0</ypad>
+			<child>
+			  <left_attach>0</left_attach>
+			  <right_attach>1</right_attach>
+			  <top_attach>1</top_attach>
+			  <bottom_attach>2</bottom_attach>
+			  <xpad>0</xpad>
+			  <ypad>0</ypad>
+			  <xexpand>False</xexpand>
+			  <yexpand>False</yexpand>
+			  <xshrink>False</xshrink>
+			  <yshrink>False</yshrink>
+			  <xfill>True</xfill>
+			  <yfill>False</yfill>
+			</child>
+		      </widget>
+
+		      <widget>
+			<class>GtkEntry</class>
+			<name>sambaServerEntry</name>
+			<sensitive>False</sensitive>
+			<can_focus>True</can_focus>
+			<editable>True</editable>
+			<text_visible>True</text_visible>
+			<text_max_length>0</text_max_length>
+			<text></text>
+			<child>
+			  <left_attach>1</left_attach>
+			  <right_attach>2</right_attach>
+			  <top_attach>0</top_attach>
+			  <bottom_attach>1</bottom_attach>
+			  <xpad>0</xpad>
+			  <ypad>0</ypad>
+			  <xexpand>True</xexpand>
+			  <yexpand>False</yexpand>
+			  <xshrink>False</xshrink>
+			  <yshrink>False</yshrink>
+			  <xfill>True</xfill>
+			  <yfill>False</yfill>
+			</child>
+		      </widget>
+
+		      <widget>
+			<class>GtkEntry</class>
+			<name>sambaWorkgroupEntry</name>
+			<sensitive>False</sensitive>
+			<can_focus>True</can_focus>
+			<editable>True</editable>
+			<text_visible>True</text_visible>
+			<text_max_length>0</text_max_length>
+			<text></text>
+			<child>
+			  <left_attach>1</left_attach>
+			  <right_attach>2</right_attach>
+			  <top_attach>1</top_attach>
+			  <bottom_attach>2</bottom_attach>
+			  <xpad>0</xpad>
+			  <ypad>0</ypad>
+			  <xexpand>True</xexpand>
+			  <yexpand>False</yexpand>
+			  <xshrink>False</xshrink>
+			  <yshrink>False</yshrink>
+			  <xfill>True</xfill>
+			  <yfill>False</yfill>
+			</child>
+		      </widget>
 		    </widget>
 		  </widget>
 		</widget>
-	      </widget>
-
-	      <widget>
-		<class>GtkLabel</class>
-		<child_name>Notebook:tab</child_name>
-		<name>label78</name>
-		<label>Hesiod</label>
-		<justify>GTK_JUSTIFY_CENTER</justify>
-		<wrap>False</wrap>
-		<xalign>0.5</xalign>
-		<yalign>0.5</yalign>
-		<xpad>0</xpad>
-		<ypad>0</ypad>
-	      </widget>
-
-	      <widget>
-		<class>GtkFrame</class>
-		<name>samba_frame</name>
-		<border_width>2</border_width>
-		<label>Samba Authentication</label>
-		<label_xalign>0</label_xalign>
-		<shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
 
 		<widget>
-		  <class>GtkVBox</class>
-		  <name>vbox9</name>
-		  <border_width>6</border_width>
-		  <homogeneous>False</homogeneous>
-		  <spacing>9</spacing>
-
-		  <widget>
-		    <class>GtkCheckButton</class>
-		    <name>sambaCheck</name>
-		    <can_focus>True</can_focus>
-		    <signal>
-		      <name>toggled</name>
-		      <handler>enableSamba</handler>
-		      <last_modification_time>Wed, 20 Jun 2001 19:51:39 GMT</last_modification_time>
-		    </signal>
-		    <label>Enable SMB Authentication</label>
-		    <active>False</active>
-		    <draw_indicator>True</draw_indicator>
-		    <child>
-		      <padding>0</padding>
-		      <expand>False</expand>
-		      <fill>False</fill>
-		    </child>
-		  </widget>
-
-		  <widget>
-		    <class>GtkTable</class>
-		    <name>table4</name>
-		    <rows>2</rows>
-		    <columns>2</columns>
-		    <homogeneous>False</homogeneous>
-		    <row_spacing>4</row_spacing>
-		    <column_spacing>4</column_spacing>
-		    <child>
-		      <padding>0</padding>
-		      <expand>True</expand>
-		      <fill>True</fill>
-		    </child>
-
-		    <widget>
-		      <class>GtkLabel</class>
-		      <name>sambaLabel1</name>
-		      <sensitive>False</sensitive>
-		      <label>SMB Servers:</label>
-		      <justify>GTK_JUSTIFY_CENTER</justify>
-		      <wrap>False</wrap>
-		      <xalign>0</xalign>
-		      <yalign>0.5</yalign>
-		      <xpad>0</xpad>
-		      <ypad>0</ypad>
-		      <child>
-			<left_attach>0</left_attach>
-			<right_attach>1</right_attach>
-			<top_attach>0</top_attach>
-			<bottom_attach>1</bottom_attach>
-			<xpad>0</xpad>
-			<ypad>0</ypad>
-			<xexpand>False</xexpand>
-			<yexpand>False</yexpand>
-			<xshrink>False</xshrink>
-			<yshrink>False</yshrink>
-			<xfill>True</xfill>
-			<yfill>False</yfill>
-		      </child>
-		    </widget>
-
-		    <widget>
-		      <class>GtkLabel</class>
-		      <name>sambaLabel2</name>
-		      <sensitive>False</sensitive>
-		      <label>SMB Workgroup:</label>
-		      <justify>GTK_JUSTIFY_CENTER</justify>
-		      <wrap>False</wrap>
-		      <xalign>0.5</xalign>
-		      <yalign>0.5</yalign>
-		      <xpad>0</xpad>
-		      <ypad>0</ypad>
-		      <child>
-			<left_attach>0</left_attach>
-			<right_attach>1</right_attach>
-			<top_attach>1</top_attach>
-			<bottom_attach>2</bottom_attach>
-			<xpad>0</xpad>
-			<ypad>0</ypad>
-			<xexpand>False</xexpand>
-			<yexpand>False</yexpand>
-			<xshrink>False</xshrink>
-			<yshrink>False</yshrink>
-			<xfill>True</xfill>
-			<yfill>False</yfill>
-		      </child>
-		    </widget>
-
-		    <widget>
-		      <class>GtkEntry</class>
-		      <name>sambaServerEntry</name>
-		      <sensitive>False</sensitive>
-		      <can_focus>True</can_focus>
-		      <editable>True</editable>
-		      <text_visible>True</text_visible>
-		      <text_max_length>0</text_max_length>
-		      <text></text>
-		      <child>
-			<left_attach>1</left_attach>
-			<right_attach>2</right_attach>
-			<top_attach>0</top_attach>
-			<bottom_attach>1</bottom_attach>
-			<xpad>0</xpad>
-			<ypad>0</ypad>
-			<xexpand>True</xexpand>
-			<yexpand>False</yexpand>
-			<xshrink>False</xshrink>
-			<yshrink>False</yshrink>
-			<xfill>True</xfill>
-			<yfill>False</yfill>
-		      </child>
-		    </widget>
-
-		    <widget>
-		      <class>GtkEntry</class>
-		      <name>sambaWorkgroupEntry</name>
-		      <sensitive>False</sensitive>
-		      <can_focus>True</can_focus>
-		      <editable>True</editable>
-		      <text_visible>True</text_visible>
-		      <text_max_length>0</text_max_length>
-		      <text></text>
-		      <child>
-			<left_attach>1</left_attach>
-			<right_attach>2</right_attach>
-			<top_attach>1</top_attach>
-			<bottom_attach>2</bottom_attach>
-			<xpad>0</xpad>
-			<ypad>0</ypad>
-			<xexpand>True</xexpand>
-			<yexpand>False</yexpand>
-			<xshrink>False</xshrink>
-			<yshrink>False</yshrink>
-			<xfill>True</xfill>
-			<yfill>False</yfill>
-		      </child>
-		    </widget>
-		  </widget>
+		  <class>GtkLabel</class>
+		  <child_name>Notebook:tab</child_name>
+		  <name>label79</name>
+		  <label>SMB</label>
+		  <justify>GTK_JUSTIFY_CENTER</justify>
+		  <wrap>False</wrap>
+		  <xalign>0.5</xalign>
+		  <yalign>0.5</yalign>
+		  <xpad>0</xpad>
+		  <ypad>0</ypad>
 		</widget>
-	      </widget>
-
-	      <widget>
-		<class>GtkLabel</class>
-		<child_name>Notebook:tab</child_name>
-		<name>label79</name>
-		<label>SMB</label>
-		<justify>GTK_JUSTIFY_CENTER</justify>
-		<wrap>False</wrap>
-		<xalign>0.5</xalign>
-		<yalign>0.5</yalign>
-		<xpad>0</xpad>
-		<ypad>0</ypad>
 	      </widget>
 	    </widget>
 	  </widget>

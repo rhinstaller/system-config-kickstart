@@ -210,7 +210,11 @@ class auth:
         else:
             self.mySambaClass.set_enabled(self.sambaCheck.get_active())
 
-        buf = " "
+        buf = "\n" + "auth "
+        if self.shadow_passwd_checkbutton.get_active():
+            buf = buf + " --useshadow "
+        if self.md5_checkbutton.get_active():
+            buf = buf + " --enablemd5 "
         buf = buf + self.myNisClass.return_data()
         buf = buf + self.myLDAPClass.return_data()
         buf = buf + self.myKerberosClass.return_data()
@@ -255,6 +259,8 @@ class auth:
         self.sambaLabel2 = xml.get_widget("sambaLabel2")
         self.sambaServerEntry = xml.get_widget("sambaServerEntry")
         self.sambaWorkgroupEntry = xml.get_widget("sambaWorkgroupEntry")
+        self.shadow_passwd_checkbutton = xml.get_widget("shadow_passwd_checkbutton")
+        self.md5_checkbutton = xml.get_widget("md5_checkbutton")
 
         xml.signal_autoconnect (
             { "enableNIS" : self.enableNIS,
