@@ -90,8 +90,11 @@ class bootloader:
         self.grub_password_entry.set_sensitive(status)        
 
     def getData (self):
+        data = []
+        data.append("")
+        data.append("#System bootloader configuration")
         if self.install_bootloader_checkbutton.get_active():
-            buf = "\n" + "bootloader "
+            buf = "bootloader "
             #lilo stuff
             if self.choose_lilo_radiobutton.get_active():
                 buf = buf + "--useLilo "
@@ -116,5 +119,6 @@ class bootloader:
                 buf = buf + "--password=" + gp + " "
         else:
             buf = "\n" + "bootloader --location=none"
-        return buf
+        data.append(buf)
+        return data
         

@@ -157,7 +157,10 @@ class firewall:
         list._update_row (row)
 
     def getData(self):
-        buf = "\n" + "firewall "
+        data = []
+        data.append("")
+        data.append("#Firewall configuration")
+        buf = "firewall "
         if self.securityHighRadio.get_active():
             buf = buf + "--high "
         elif self.securityMediumRadio.get_active():
@@ -201,4 +204,5 @@ class firewall:
 
 ##             print ports
 
-        return buf
+        data.append(buf)
+        return data

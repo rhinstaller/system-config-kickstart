@@ -58,8 +58,12 @@ class saveFile:
 		#clear out previous text
 		self.confirm_options_textbox.set_point(0)
 		self.confirm_options_textbox.forward_delete(self.confirm_options_textbox.get_length())
-		#insert current configuration
-		self.confirm_options_textbox.insert_defaults(self.buf) 
+
+		for line in self.buf:
+			self.confirm_options_textbox.insert_defaults(line + "\n") 
+##		#insert current configuration
+##		self.confirm_options_textbox.insert_defaults(self.buf) 
+
 		self.confirm_options_textbox.thaw()           
 		self.dialog.show_all()
 

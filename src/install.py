@@ -26,7 +26,7 @@ import GtkExtra
 import libglade
 
 class install:
-
+  
     def __init__(self, xml):
         self.install_radiobutton = xml.get_widget("install_radiobutton")
         self.upgrade_radiobutton = xml.get_widget("upgrade_radiobutton")
@@ -58,7 +58,7 @@ class install:
         self.httpdir_entry = xml.get_widget("httpdir_entry")
 
         self.install_notebook = xml.get_widget("install_notebook")
-
+        
         xml.signal_autoconnect (
             { "setState" : self.setState,
               "toggleInstall" : self.toggleInstall,
@@ -87,26 +87,41 @@ class install:
             self.install_notebook.set_page(4)
                                      
     def getData(self):
+        data = []
+        data.append("")
         if self.install_radiobutton.get_active():
-            buf = "\n" + "install"
+            data.append("#Install Red Hat Linux instead of upgrade")
+            data.append("install")
         elif self.upgrade_radiobutton.get_active():
-            buf = "\n" + "upgrade"
+            data.append("#Upgrade existing installation")
+            data.append("upgrade")
+
+        data.append("")
         if self.cdrom_radiobutton.get_active():
-            buf = buf + "\n" + "cdrom"
+            data.append("#Use CDROM installation media")
+            data.append("cdrom")
         elif self.nfs_radiobutton.get_active():
-            buf = buf + "\n" + "nfs"
+            data.append("#Use NFS installation media")
+            buf = "nfs"
             buf = buf + " --server " + self.nfsserver_entry.get_text()
             buf = buf + " --dir " + self.nfsdir_entry.get_text()
+            data.append(buf)
         elif self.ftp_radiobutton.get_active():
-            buf = buf + "\n" + "url"
+            data.append("#Use FTP installation media")
+            buf = "url"
             buf = buf + " --url ftp://" + self.ftpserver_entry.get_text()
             buf = buf + self.ftpdir_entry.get_text()		
+            data.append(buf)
         elif self.http_radiobutton.get_active():
-            buf = buf + "\n" + "url"
+            data.append("#Use HTTP installation media")
+            buf = "url"
             buf = buf + " --url http://" + self.httpserver_entry.get_text()
             buf = buf + self.httpdir_entry.get_text()        
+            data.append(buf)
         elif self.hd_radiobutton.get_active():
-            buf = buf + "\n" + "harddrive"
+            data.append("#Use Hard drive installation media")
+            buf = "harddrive"
             buf = buf + " --dir " + self.hddir_entry.get_text()
             buf = buf + " --partition " + self.hdpart_entry.get_text()        
-        return buf
+            data.append(buf)
+        return data

@@ -34,14 +34,15 @@ class basic:
     def __init__(self, xml):
         self.xml = xml
         self.lang_combo = xml.get_widget("lang_combo")
-        self.lang_support_combo = xml.get_widget("lang_support_combo")
+#        self.lang_support_combo = xml.get_widget("lang_support_combo")
+#        self.lang_support_combo.list.set_selection_mode(SELECTION_MULTIPLE)
         self.keyboard_combo = xml.get_widget("keyboard_combo")
         self.mouse_combo = xml.get_widget("mouse_combo")
         self.timezone_combo = xml.get_widget("timezone_combo")
         self.root_passwd_entry = xml.get_widget("root_passwd_entry")
         self.emulate_3_buttons = xml.get_widget("emulate_3_buttons")
         lang_combo = xml.get_widget("lang_combo")
-        lang_support_combo = xml.get_widget("lang_support_combo")
+#        lang_support_combo = xml.get_widget("lang_support_combo")
         mouse_combo = xml.get_widget("mouse_combo")
         keyboard_combo = xml.get_widget("keyboard_combo")		
         timezone_combo = xml.get_widget("timezone_combo")
@@ -49,7 +50,8 @@ class basic:
         self.text_install_checkbutton = xml.get_widget("text_install_checkbutton")
         self.interactive_checkbutton = xml.get_widget("interactive_checkbutton")                
         self.encrypt_root_pw_checkbutton = xml.get_widget("encrypt_root_pw_checkbutton")
-
+        self.lang_support_list = xml.get_widget("lang_support_list")
+        self.lang_support_list.set_selection_mode(SELECTION_MULTIPLE)
 
         #define languages, add languages here
         self.langDict = {"Chinese(Mainland)" :  "zh_CN.GB2312",
@@ -115,6 +117,8 @@ class basic:
                            "Sun Mouse" : "sun",
                            }
 
+        self.langSupportList = []
+
         #populate language combo
         lang_list = self.langDict.keys()
         lang_list.sort()
@@ -124,10 +128,14 @@ class basic:
         lang_combo.entry.set_editable(FALSE)
 
         #populate language support combo
-        lang_support_combo.set_popdown_strings(lang_list)
+#        lang_support_combo.set_popdown_strings(lang_list)
+
+        for lang in lang_list:
+            self.lang_support_list.append([lang])
+
         #set default to English
-        lang_support_combo.list.select_item(4)
-        lang_support_combo.entry.set_editable(FALSE)				
+#        lang_support_combo.list.select_item(4)
+#        lang_support_combo.entry.set_editable(FALSE)				
         
         #populate mouse combo
         mouse_list = ["Probe for Mouse"]
@@ -227,14 +235,44 @@ class basic:
         timezone_combo.list.select_item(select)
         timezone_combo.entry.set_editable(FALSE)		
 
-    def getData(self):
-        buf = ""
-        buf = buf + "\n" + "lang " + self.languageLookup(self.lang_combo.entry.get_text())
-        buf = buf + "\n" + "langsupport " + self.languageLookup(self.lang_support_combo.entry.get_text())
-        buf = buf + "\n" + "keyboard " + self.keyboard_dict[self.keyboard_combo.entry.get_text()]
-        buf = buf + "\n" + self.mouseLookup(self.mouse_combo.entry.get_text())
-        buf = buf + "\n" + "timezone --utc " + self.timezone_combo.entry.get_text()
+        #bring in signals from glade file
+        xml.signal_autoconnect (
+                { "on_lang_support_list_select_row" : self.on_lang_support_list_select_row,
+                  "on_lang_support_list_unselect_row" : self.on_lang_support_list_unselect_row,
+                  } )
 
+    def on_lang_support_list_select_row(self, *args):
+        self.langSupportList.append(self.langDict[self.lang_support_list.get_text(args[1], args[2])])
+
+    def on_lang_support_list_unselect_row(self, *args):
+        self.langSupportList.remove(self.langDict[self.lang_support_list.get_text(args[1], args[2])])
+
+    def getData(self):
+        data = []
+        data.append("")
+        data.append("#System language")
+        data.append("lang " + self.languageLookup(self.lang_combo.entry.get_text()))
+        data.append("")
+        data.append("#Language modules to install")
+
+        buf = ""
+        for lang in self.langSupportList:
+            buf = lang + " " + buf
+        data.append("langsupport " + buf)
+#        print self.lang_support_list.get_selection_info
+#        data.append("langsupport " + self.languageLookup(self.lang_support_combo.entry.get_text()))
+        data.append("")
+        data.append("#System keyboard")
+        data.append("keyboard " + self.keyboard_dict[self.keyboard_combo.entry.get_text()])
+        data.append("")
+        data.append("#System mouse")
+        data.append(self.mouseLookup(self.mouse_combo.entry.get_text()))
+        data.append("")
+        data.append("#System timezone")
+        data.append("timezone --utc " + self.timezone_combo.entry.get_text())
+
+        data.append("")
+        data.append("#Root password")
         if self.encrypt_root_pw_checkbutton.get_active():
             pure = self.root_passwd_entry.get_text()
 
@@ -242,22 +280,29 @@ class basic:
             saltLen = 8
 
             for i in range(saltLen):
-                salt = salt + whrandom.choice (string.letters +
-                                               string.digits + './')
+                salt = salt + whrandom.choice (string.letters + string.digits + './')
 
             self.passwd = crypt.crypt (pure, salt)
-            buf = buf + "\n" + "rootpw --iscrypted " + self.passwd
+            data.append("rootpw --iscrypted " + self.passwd)
+            
         else:
             self.passwd = self.root_passwd_entry.get_text()
-            buf = buf + "\n" + "rootpw " + self.passwd
+            data.append("rootpw " + self.passwd)
 
         if self.reboot_checkbutton.get_active():
-            buf = buf + "\n" + "reboot"
+            data.append("")
+            data.append("#Reboot after installation")
+            data.append("reboot")
         if self.text_install_checkbutton.get_active():
-            buf = buf + "\n" + "text"
+            data.append("")
+            data.append("#Use text mode install")
+            data.append("text")
         if self.interactive_checkbutton.get_active():
-            buf = buf + "\n" + "interactive"            
-        return buf
+            data.append("")
+            data.append("#Use interactive kickstart installation method")
+            data.append("interactive")
+
+        return data
 
     def languageLookup(self, args):
         return self.langDict [args]

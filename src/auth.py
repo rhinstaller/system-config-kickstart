@@ -173,6 +173,9 @@ class sambaData:
       
 class auth:
     def getData(self):
+        data = []
+        data.append("")
+        data.append("#System authorization information")
         if (self.nisCheck.get_active()):
             self.myNisClass.set_domain(self.nisDomainEntry.get_text())
             self.myNisClass.set_server(self.nisServerEntry.get_text())
@@ -210,7 +213,7 @@ class auth:
         else:
             self.mySambaClass.set_enabled(self.sambaCheck.get_active())
 
-        buf = "\n" + "auth "
+        buf = "auth "
         if self.shadow_passwd_checkbutton.get_active():
             buf = buf + " --useshadow "
         if self.md5_checkbutton.get_active():
@@ -222,7 +225,8 @@ class auth:
         buf = buf + self.mySambaClass.return_data()
         if (self.nscd_checkbutton.get_active()):
             buf = buf + "--enablecache"
-        return buf
+        data.append(buf)
+        return data
     
     def __init__(self, xml):
 

@@ -89,25 +89,34 @@ class partition:
 #        self.raidWindow.add_raid(self.num_rows)
 
     def getData(self):
-        buf = ""
+        data = []
+        data.append("")
 
         #zerombr and clearpart options
         if self.clear_mbr_yes_radiobutton.get_active():
-            buf = buf + "\n" + "zerombr yes"
+            data.append("#Clear the Master Boot Record")
+            data.append("zerombr yes")
         elif self.clear_mbr_no_radiobutton.get_active():
             pass
         if self.remove_parts_none_radiobutton.get_active():
             pass
         else:
-            buf = "\n" + "clearpart "
+            buf = "clearpart "
+            data.append("")
             if self.remove_parts_all_radiobutton.get_active():
+                data.append("#Clear all partitions from the disk")
                 buf = buf + "--all "
             elif self.remove_parts_Linux_radiobutton.get_active():
+                data.append("#Clear only Linux partitions from the disk")
                 buf = buf + "--linux "
             if self.initlabel_yes_radiobutton.get_active():
                 buf = buf + "--initlabel "
             elif self.initlabel_no_radiobutton.get_active():
                 pass
+            data.append(buf)
+
+        data.append("")
+        data.append("#Disk partitioning information")
 
         #partitioning table options
 #        num_raid = 0
@@ -129,7 +138,7 @@ class partition:
 ##                 buf = buf + "\n" + "part %s " % (mountPoint)
 ##                 buf = buf + "--fstype " + fsType + " " 
 
-            buf = buf + "\n" + "part %s " % (mountPoint)
+            buf = "part %s " % (mountPoint)
 
             if fsType == "swap":
                 buf = buf + "swap "
@@ -158,4 +167,6 @@ class partition:
             if not doFormat:
                 buf = buf + "--noformat "
 
-        return buf
+            data.append(buf)
+
+        return data

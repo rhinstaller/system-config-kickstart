@@ -53,12 +53,17 @@ class network:
           } )
 
     def getData(self):
-        buf = ""
+        data = []
+        data.append("")
+
         if self.dhcp_radiobutton.get_active():
-            buf = buf + "\n" + "network --bootproto dhcp"
-            return buf
+            data.append("#Use DHCP networking")
+            buf = "network --bootproto dhcp"
+            data.append(buf)
+            return data
         elif self.ip_radiobutton.get_active():
-            buf = buf + "\n" + "network --bootproto static "
+            data.append("#Use static networking")
+            buf = "network --bootproto static "
             
             ipBuf = (" --ip %s.%s.%s.%s " % (self.ip_entry1.get_text(),
                                              self.ip_entry2.get_text(),
@@ -83,9 +88,10 @@ class network:
                                            self.nameserver_entry3.get_text(),
                                            self.nameserver_entry4.get_text()))
             buf = buf + ipBuf + netmaskBuf + gatewayBuf + nameserverBuf
-            return buf
+            data.append(buf)
+            return data
         else:
-            return buf
+            return data
 
     def toggleIP(self, args):
         self.ip_entry1.set_sensitive(self.ip_radiobutton.get_active())
