@@ -64,7 +64,7 @@ class partition:
         self.part_view.set_model(self.part_store)
         col = gtk.TreeViewColumn(_("Mount Point"), gtk.CellRendererText(), text=0)
         self.part_view.append_column(col)
-        col = gtk.TreeViewColumn(_("Filesystem Type"), gtk.CellRendererText(), text=1)
+        col = gtk.TreeViewColumn(_("File System Type"), gtk.CellRendererText(), text=1)
         self.part_view.append_column(col)
         col = gtk.TreeViewColumn(_("Size"), gtk.CellRendererText(), text=2)
         self.part_view.append_column(col)

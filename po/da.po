@@ -13,13 +13,11 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
-#: redhat-config-kickstart.gladestrings:140
-msgid "IP Address:"
-msgstr "IP-adresse:"
-
-#: redhat-config-kickstart.gladestrings:54
-msgid "Emulate 3 Buttons"
-msgstr "Emulér 3 knapper"
+#: redhat-config-kickstart.gladestrings:12
+#: redhat-config-kickstart.gladestrings:32
+#, fuzzy
+msgid "File System Type:"
+msgstr "Filsystemtype:"
 
 #: redhat-config-kickstart.gladestrings:26
 msgid "Partition :"
@@ -48,6 +46,10 @@ msgstr "Lav RAID-enhed"
 #: redhat-config-kickstart.gladestrings:122
 msgid "_Yes"
 msgstr "_Ja"
+
+#: redhat-config-kickstart.gladestrings:54
+msgid "Emulate 3 Buttons"
+msgstr "Emulér 3 knapper"
 
 #: redhat-config-kickstart.gladestrings:30
 msgid "Format Partition"
@@ -255,9 +257,9 @@ msgstr "HTTP-server:"
 msgid "Video Card RAM: "
 msgstr "RAM på skærmkort:"
 
-#: ../src/kickstartGui.py:105
-msgid "Subsection"
-msgstr "Underafdeling"
+#: redhat-config-kickstart.gladestrings:123
+msgid "_No"
+msgstr "_Nej"
 
 #: redhat-config-kickstart.gladestrings:124
 msgid "N_one"
@@ -300,18 +302,13 @@ msgstr "Adgangskode for FTP:"
 msgid "Save File"
 msgstr "Gem fil"
 
-#: redhat-config-kickstart.gladestrings:12
-#: redhat-config-kickstart.gladestrings:32
-msgid "Filesystem Type:"
-msgstr "Filsystemtype:"
+#: redhat-config-kickstart.gladestrings:126
+msgid "L_inux"
+msgstr "L_inux"
 
 #: redhat-config-kickstart.gladestrings:210
 msgid "SMB Workgroup:"
 msgstr "SMB-arbejdsgruppe:"
-
-#: redhat-config-kickstart.gladestrings:126
-msgid "L_inux"
-msgstr "L_inux"
 
 #: ../src/kickstartGui.py:110
 msgid "Installation Method"
@@ -455,9 +452,9 @@ msgstr "Antal reservediske:"
 msgid "FTP Directory:"
 msgstr "FTP-katalog:"
 
-#: ../src/partition.py:67
-msgid "Filesystem Type"
-msgstr "Filsystemtype:"
+#: redhat-config-kickstart.gladestrings:140
+msgid "IP Address:"
+msgstr "IP-adresse:"
 
 #: redhat-config-kickstart.gladestrings:264
 msgid "label89"
@@ -491,6 +488,10 @@ msgstr "Tastatur:"
 #: redhat-config-kickstart.gladestrings:127
 msgid "Remove Partitions:"
 msgstr "Fjern partitioner:"
+
+#: redhat-config-kickstart.gladestrings:57
+msgid "Root Password:"
+msgstr "Adgangskode for root:"
 
 #: redhat-config-kickstart.gladestrings:224
 msgid "Use default firewall rules"
@@ -614,6 +615,11 @@ msgstr "."
 msgid "Size (MB):"
 msgstr "Størrelse (Mb):"
 
+#: ../src/partition.py:67
+#, fuzzy
+msgid "File System Type"
+msgstr "Filsystemtype:"
+
 #: ../src/firewall.py:86
 msgid "Allow incoming:"
 msgstr "Tillad indkommende:"
@@ -731,9 +737,9 @@ msgstr "Valgmuligheder for kun opgradering:"
 msgid "Raid Members"
 msgstr "RAID-medlemmer"
 
-#: redhat-config-kickstart.gladestrings:57
-msgid "Root Password:"
-msgstr "Adgangskode for root:"
+#: ../src/kickstartGui.py:105
+msgid "Subsection"
+msgstr "Underafdeling"
 
 #: redhat-config-kickstart.gladestrings:66
 msgid "_MBR"
@@ -983,10 +989,6 @@ msgstr "Netværkskonfiguration"
 #: redhat-config-kickstart.gladestrings:76
 msgid "Force use of lba32 mode"
 msgstr "Tvungen brug af lba32-modus"
-
-#: redhat-config-kickstart.gladestrings:123
-msgid "_No"
-msgstr "_Nej"
 
 #: redhat-config-kickstart.gladestrings:43
 msgid "_Quit"
