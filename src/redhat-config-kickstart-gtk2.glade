@@ -2315,6 +2315,7 @@
 				  <property name="active">True</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
+				  <property name="group">mbr_radiobutton</property>
 				</widget>
 				<packing>
 				  <property name="left_attach">1</property>
@@ -2336,7 +2337,7 @@
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
-				  <property name="group">grub_radiobutton</property>
+				  <property name="group">mbr_radiobutton</property>
 				</widget>
 				<packing>
 				  <property name="left_attach">2</property>
@@ -3814,7 +3815,6 @@
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
-				  <property name="group">clear_mbr_no_radiobutton</property>
 				</widget>
 				<packing>
 				  <property name="left_attach">3</property>
@@ -3836,7 +3836,7 @@
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
-				  <property name="group">clear_mbr_no_radiobutton</property>
+				  <property name="group">remove_parts_Linux_radiobutton</property>
 				</widget>
 				<packing>
 				  <property name="left_attach">2</property>
@@ -3858,7 +3858,6 @@
 				  <property name="active">True</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
-				  <property name="group">clear_mbr_no_radiobutton</property>
 				</widget>
 				<packing>
 				  <property name="left_attach">2</property>
@@ -3902,7 +3901,7 @@
 				  <property name="active">True</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
-				  <property name="group">clear_mbr_no_radiobutton</property>
+				  <property name="group">remove_parts_Linux_radiobutton</property>
 				</widget>
 				<packing>
 				  <property name="left_attach">1</property>
@@ -3924,7 +3923,7 @@
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
-				  <property name="group">clear_mbr_no_radiobutton</property>
+				  <property name="group">initlabel_no_radiobutton</property>
 				</widget>
 				<packing>
 				  <property name="left_attach">1</property>
@@ -8330,6 +8329,7 @@
 
   <child internal-child="vbox">
     <widget class="GtkVBox" id="vbox28">
+      <property name="border_width">2</property>
       <property name="visible">True</property>
       <property name="homogeneous">False</property>
       <property name="spacing">8</property>
