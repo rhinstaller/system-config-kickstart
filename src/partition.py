@@ -164,8 +164,10 @@ class partition:
                      if grandchildren == 0:
                          self.part_store.remove(grandparent)
 
-        else:
-            self.part_store.remove(iter)
+            else:
+                #If there are other items in that branch, only remove the selected item
+                self.part_store.remove(iter)
+
         self.part_view.get_selection().unselect_all()
 
     def addPartition(self, *args):
