@@ -141,7 +141,7 @@ class hesiodData:
         if self.enabled == 0:
             return ""
         else:
-            return " --enablehesiod --hesiodlhs " + self.hesiodLHS + " --hesiodRHS " + self.hesiodRHS
+            return " --enablehesiod --hesiodlhs " + self.hesiodLHS + " --hesiodrhs " + self.hesiodRHS
 
 class sambaData:
 	def __init__(self, quit_cb=None):
