@@ -61,6 +61,7 @@ fi
 %changelog
 * Tue May 25 2004 Brent Fox <bfox@redhat.com> 2.5.11-2
 - handle missing mouse line (bug #124341)
+- use N_ instead of _ in packages.py (bug #124144)
 - remove code for dead firewall widgets (bug #124342)
 
 * Wed Apr 28 2004 Brent Fox <bfox@redhat.com> 2.5.11-1
