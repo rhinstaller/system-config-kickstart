@@ -205,27 +205,28 @@ class kickstartGui:
 
     #get all buffers to save to file
     def getAllData(self, *args):
-        if self.basic_class.getData() is None:
-            return
-
         if self.install_class.getData() is None:
-            return
+            return None
         
 	self.bootloader_class.getData()
 
-	#only write partition info if performing an install
-        if self.install_radiobutton.get_active():
-            self.partition_class.getData()
+        doInstall = self.install_radiobutton.get_active()
+
+        if self.basic_class.getData(doInstall) is None:
+            return None
 
 	self.network_class.getData()
 	self.auth_class.getData()
 	self.firewall_class.getData()
 	self.X_class.getData()
 
-	if self.install_radiobutton.get_active():
+        #only do these things in installs, not upgrades
+	if doInstall:
+            self.partition_class.getData()
             self.packages_class.getData()
 
 	self.scripts_class.getData()
+        return 0
 
     def on_activate_open(self, *args):
         fs = gtk.FileSelection()
@@ -248,23 +249,22 @@ class kickstartGui:
 
     #show chosen options for preview
     def on_activate_preview_options (self, *args):
-        self.getAllData()
-        list = self.kickstartData.getAll()
-
-	if list:
-	    #show preview dialog window
-	    previewDialog = savefile.saveFile (list, self.xml)
-	else:
-	    return
+        if self.getAllData() != None:
+            list = self.kickstartData.getAll()
+            if list:
+	        #show preview dialog window
+                previewDialog = savefile.saveFile (list, self.xml)
+            else:
+                return
 
     def on_activate_save_options (self, *args):
-        self.getAllData()
-        list = self.kickstartData.getAll()
-	if list:
-	    #show file selection dialog
-	    fileDialog = savedialog.saveDialog(list, self.xml)
-	else:
-	    return		
+        if self.getAllData() != None:
+            list = self.kickstartData.getAll()
+            if list:
+                #show file selection dialog
+                fileDialog = savedialog.saveDialog(list, self.xml)
+            else:
+                return		
 
     def fillData(self):
         self.basic_class.fillData()
