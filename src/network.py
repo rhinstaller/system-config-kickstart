@@ -36,6 +36,8 @@ domain = 'redhat-config-kickstart'
 translate.textdomain (domain)
 gtk.glade.bindtextdomain(domain)
 
+import firewall
+
 class network:
 
     def __init__(self, xml, kickstartData):
@@ -208,8 +210,6 @@ class network:
             self.gw_entry3.get_text() == "" or self.gw_entry4.get_text() == "" or \
             self.nameserver_entry1.get_text() == "" or self.nameserver_entry2.get_text() == "" or \
             self.nameserver_entry3.get_text() == "" or self.nameserver_entry4.get_text() == "":
-                print "uh uh"
-
                 text = (_("Please fill in the network information"))
                 dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
                 dlg.set_position(gtk.WIN_POS_CENTER)
@@ -221,7 +221,7 @@ class network:
             iter = self.network_device_store.append()
             self.network_device_store.set_value(iter, 0, devName)
             self.network_device_store.set_value(iter, 1, _("Static IP"))
-        
+
             ipBuf = ("%s.%s.%s.%s" %
                      (self.ip_entry1.get_text(),
                       self.ip_entry2.get_text(),
@@ -249,6 +249,10 @@ class network:
                               self.nameserver_entry3.get_text(),
                               self.nameserver_entry4.get_text()))     
             self.network_device_store.set_value(iter, 5, nameserverBuf)
+
+        iter = firewall.trustedStore.append()
+        firewall.trustedStore.set_value(iter, 0, gtk.FALSE)
+        firewall.trustedStore.set_value(iter, 1, devName)        
 
         self.resetDialog()
         
@@ -390,6 +394,8 @@ class network:
 
         for line in networkList:
             iter = self.network_device_store.append()
+
+            
             opts, args = getopt.getopt(line, "d:h", ["bootproto=", "device=", "ip=", "gateway=",
                                                      "nameserver=", "nodns=", "netmask=",
                                                      "hostname="])
@@ -397,6 +403,9 @@ class network:
             for opt, value in opts:
                 if opt == "--device":
                     self.network_device_store.set_value(iter, 0, value)
+                    firewall_iter = firewall.trustedStore.append()
+                    firewall.trustedStore.set_value(firewall_iter, 0, gtk.FALSE)
+                    firewall.trustedStore.set_value(firewall_iter, 1, value)
 
                 if opt == "--bootproto":
                     if value == "dhcp":
@@ -417,4 +426,5 @@ class network:
 
                 if opt == "--nameserver":
                     self.network_device_store.set_value(iter, 5, value)
+
 

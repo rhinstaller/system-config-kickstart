@@ -37,6 +37,9 @@ domain = 'redhat-config-kickstart'
 translate.textdomain (domain)
 gtk.glade.bindtextdomain(domain)
 
+trustedStore = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
+
+
 class firewall:
     
     def __init__(self, xml, kickstartData):
@@ -78,12 +81,14 @@ class firewall:
         except:
             pass
 
-        self.trustedStore = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
+#        self.trustedStore = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
         self.trustedView = gtk.TreeView()
         self.trustedView.set_headers_visible(gtk.FALSE)
-        self.trustedView.set_model(self.trustedStore)
+#        self.trustedView.set_model(self.trustedStore)
+        self.trustedView.set_model(trustedStore)
         checkbox = gtk.CellRendererToggle()
-        checkbox.connect("toggled", self.item_toggled, self.trustedStore)
+#        checkbox.connect("toggled", self.item_toggled, self.trustedStore)
+        checkbox.connect("toggled", self.item_toggled, trustedStore)
         col = gtk.TreeViewColumn('', checkbox, active = 0)
         col.set_fixed_width(20)
         col.set_clickable(gtk.TRUE)
@@ -92,17 +97,12 @@ class firewall:
         col = gtk.TreeViewColumn("", gtk.CellRendererText(), text=1)
         self.trustedView.append_column(col)
 
-        for device in self.netdevices:
-            iter = self.trustedStore.append()
-            self.trustedStore.set_value(iter, 0, gtk.FALSE)
-            self.trustedStore.set_value(iter, 1, device)
-
-##         self.trusted = checklist.CheckList(1)
-##         self.trusted.connect ('button_press_event', self.trusted_select_row)
-##         self.trusted.connect ("key_press_event", self.trusted_key_press)
+        sw = gtk.ScrolledWindow()
+        sw.set_policy(gtk.POLICY_AUTOMATIC, gtk.POLICY_AUTOMATIC)
+        sw.add(self.trustedView)
         viewport = gtk.Viewport()
         viewport.set_shadow_type(gtk.SHADOW_ETCHED_IN)
-        viewport.add(self.trustedView)
+        viewport.add(sw)
         self.customTable.attach (viewport, 1, 2, 2, 3, gtk.EXPAND|gtk.FILL, gtk.FILL, 5, 5)
 
         self.label2 = gtk.Label (_("Allow incoming:"))
@@ -118,8 +118,6 @@ class firewall:
         col.set_fixed_width(20)
         col.set_clickable(gtk.TRUE)
         self.incomingView.append_column(col)
-#        self.incoming.connect ('button_press_event', self.incoming_select_row)
-#        self.incoming.connect ("key_press_event", self.incoming_key_press)
 
         col = gtk.TreeViewColumn("", gtk.CellRendererText(), text=1)
         self.incomingView.append_column(col)
@@ -183,12 +181,12 @@ class firewall:
 
         if self.customizeRadio.get_active():
 
-            iter = self.trustedStore.get_iter_first()
+            iter = trustedStore.get_iter_first()
 
             while iter:
-                if self.trustedStore.get_value(iter, 0) == gtk.TRUE:
-                    buf = buf + "--trust=" + self.trustedStore.get_value(iter, 1) + " "
-                iter = self.trustedStore.iter_next(iter)
+                if trustedStore.get_value(iter, 0) == gtk.TRUE:
+                    buf = buf + "--trust=" + trustedStore.get_value(iter, 1) + " "
+                iter = trustedStore.iter_next(iter)
 
 
             iter = self.incomingStore.get_iter_first()
@@ -224,7 +222,7 @@ class firewall:
                     self.securityNoneRadio.set_active(gtk.TRUE)
 
                 if opt=="--dhcp" or opt=="--ssh" or opt=="--telnet" or opt=="--smtp" or opt=="--http" or opt=="--ftp":
-
+                    self.firewallCustomizeRadio.set_active(gtk.TRUE)
                     iter = self.incomingStore.get_iter_first()
 
                     while iter:
@@ -236,13 +234,18 @@ class firewall:
                 if opt == "--trust":
                     self.firewallCustomizeRadio.set_active(gtk.TRUE)
 
-                    iter = self.trustedStore.get_iter_first()
+##                     iter = trustedStore.append()
+##                     trustedStore.set_value(iter, 0, gtk.TRUE)
+##                     trustedStore.set_value(iter, 1, value)
+
+                    iter = trustedStore.get_iter_first()
 
                     while iter:
-                        device = self.trustedStore.get_value(iter, 1) 
+                        device = trustedStore.get_value(iter, 1) 
+                        print device, value
                         if device == value:
-                            self.trustedStore.set_value(iter, 0, gtk.TRUE)
-                        iter = self.trustedStore.iter_next(iter)
+                            trustedStore.set_value(iter, 0, gtk.TRUE)
+                        iter = trustedStore.iter_next(iter)
 
                 if opt == "--port":
                     self.firewallCustomizeRadio.set_active(gtk.TRUE)                    
