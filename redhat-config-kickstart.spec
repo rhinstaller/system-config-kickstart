@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
-Version: 2.3.10
-Release: 2
+Version: 2.3.11
+Release: 1
 URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
@@ -56,6 +56,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Fri Jul 18 2003 Brent Fox <bfox@redhat.com> 2.3.11-1
+- add the 'recommeded' swap ks flag (bug #98156)
+
 * Thu Jul 10 2003 Brent Fox <bfox@redhat.com> 2.3.10-2
 - bump relnum and rebuild
 
