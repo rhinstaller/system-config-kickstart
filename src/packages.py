@@ -33,7 +33,7 @@ import string
 class Packages:
 
     def __init__(self, xml):
-        list = xml.get_widget("list")
+        self.list = xml.get_widget("list")
 
         packageList = ["Printing Support","Classic X Window System",
         "X Window System","GNOME","KDE",
@@ -51,4 +51,18 @@ class Packages:
 
         for pkg in packageList:
             checkbox = GtkCheckButton(pkg)
-            list.pack_start(checkbox)
+            self.list.pack_start(checkbox)
+
+
+    def getData(self):
+        buf = ""
+        buf = buf + "\n" + "%packages"
+
+        boxes = self.list.children()
+        for box in boxes:
+            if box.get_active():
+                package = box.children()[0]
+                label = package.get()
+                buf = buf + "\n" + "@" + label
+
+        return buf

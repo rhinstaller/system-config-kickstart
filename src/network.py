@@ -53,10 +53,8 @@ class network:
           } )
 
     def getData(self):
-        print "getData"
         buf = ""
         if self.dhcp_radiobutton.get_active():
-            print "here"
             buf = buf + "\n" + "network --bootproto dhcp"
             return buf
         elif self.ip_radiobutton.get_active():

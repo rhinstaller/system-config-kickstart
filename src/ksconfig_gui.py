@@ -162,8 +162,8 @@ class ksconfig_gui:
 		buf = buf + self.firewall_class.getData()
 		buf = buf + self.X_class.getData()	
 		#only write pkg info if performing an install	
-##		if self.install_radiobutton.get_active():	
-##			buf = buf + self.packages_class.getData()
+		if self.install_radiobutton.get_active():	
+			buf = buf + self.packages_class.getData()
 		buf = buf + self.scripts_class.getData()
 		
 	        #show confirm dialog window
