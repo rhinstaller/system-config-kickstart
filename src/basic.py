@@ -347,11 +347,11 @@ class basic:
             self.lang_support_store.set_value(iter, 1, lang)
 
     def fillData(self):
-#        for lang in self.langDict.keys():
-#            if self.langDict[lang] == self.kickstartData.getLang():
-#                self.lang_combo.entry.set_text(lang)
+        for lang in self.langDict.keys():
+            if self.langDict[lang] == self.kickstartData.getLang():
+                self.lang_combo.entry.set_text(lang)
 
         print self.keyboard_dict
         print self.keyboard_dict[self.kickstartData.getKeyboard()]
-#        self.keyboard_combo.entry.set_text(self.keyboard_dict[self.kickstartData.getKeyboard()][0])
+        self.keyboard_combo.entry.set_text(self.keyboard_dict[self.kickstartData.getKeyboard()][0])
                                  
