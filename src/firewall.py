@@ -26,6 +26,7 @@ import gtk.glade
 import gobject
 import string
 import os
+import getopt
 
 ##
 ## I18N
@@ -37,8 +38,8 @@ _=gettext.gettext
 
 class firewall:
     
-    def __init__(self, xml):
-
+    def __init__(self, xml, kickstartData):
+        self.kickstartData = kickstartData
         self.securityHighRadio = xml.get_widget("securityHighRadio")
         self.securityMediumRadio = xml.get_widget("securityMediumRadio")
         self.securityNoneRadio = xml.get_widget("securityNoneRadio")
@@ -171,16 +172,13 @@ class firewall:
         list._update_row (row)
 
     def getData(self):
-        data = []
-        data.append("")
-        data.append("#Firewall configuration")
-        buf = "firewall "
+        buf = ""
         if self.securityHighRadio.get_active():
-            buf = buf + "--high "
+            buf = "--high "
         elif self.securityMediumRadio.get_active():
-            buf = buf + "--medium "
+            buf = "--medium "
         elif self.securityNoneRadio.get_active():
-            buf = buf + "--disabled "        
+            buf = "--disabled "        
 
         if self.customizeRadio.get_active():
 
@@ -188,7 +186,7 @@ class firewall:
 
             while iter:
                 if self.trustedStore.get_value(iter, 0) == gtk.TRUE:
-                    buf = buf + "--trust " + self.trustedStore.get_value(iter, 1) + " "
+                    buf = buf + "--trust=" + self.trustedStore.get_value(iter, 1) + " "
                 iter = self.trustedStore.iter_next(iter)
 
 
@@ -204,7 +202,48 @@ class firewall:
             ports = []
             
             if portlist != "":
-                buf = buf + '--port ' + portlist
+                buf = buf + '--port=' + portlist
             
-        data.append(buf)
-        return data
+        self.kickstartData.setFirewall([buf])
+        
+    def fillData(self):
+        if self.kickstartData.getFirewall():
+            opts, args = getopt.getopt(self.kickstartData.getFirewall(), "d:h", ["high", "medium",
+                                       "disabled", "trust=", "port=", "dhcp", "ssh", "telnet",
+                                       "smtp", "http", "ftp"])
+
+            for opt, value in opts:
+                if opt == "--high":
+                    self.securityHighRadio.set_active(gtk.TRUE)
+
+                if opt == "--medium":
+                    self.securityMediumRadio.set_active(gtk.TRUE)
+
+                if opt == "--disabled":
+                    self.securityNoneRadio.set_active(gtk.TRUE)
+
+                if opt=="--dhcp" or opt=="--ssh" or opt=="--telnet" or opt=="--smtp" or opt=="--http" or opt=="--ftp":
+
+                    iter = self.incomingStore.get_iter_first()
+
+                    while iter:
+                        service = self.list[self.incomingStore.get_value(iter, 1)]
+                        if service == opt[2:]:
+                            self.incomingStore.set_value(iter, 0, gtk.TRUE)
+                        iter = self.incomingStore.iter_next(iter)
+
+                if opt == "--trust":
+                    self.firewallCustomizeRadio.set_active(gtk.TRUE)
+
+                    iter = self.trustedStore.get_iter_first()
+
+                    while iter:
+                        device = self.trustedStore.get_value(iter, 1) 
+                        if device == value:
+                            self.trustedStore.set_value(iter, 0, gtk.TRUE)
+                        iter = self.trustedStore.iter_next(iter)
+
+                if opt == "--port":
+                    self.firewallCustomizeRadio.set_active(gtk.TRUE)                    
+                    current = self.portsEntry.get_text()
+                    self.portsEntry.set_text(value)
