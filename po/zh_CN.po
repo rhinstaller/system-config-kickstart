@@ -70,7 +70,7 @@ msgstr "选择引导装载程序："
 msgid "label28"
 msgstr "label28"
 
-#: ../src/partWindow.py:370
+#: ../src/partWindow.py:359
 msgid "Specify an existing partition to use."
 msgstr "指定要使用的现存分区。"
 
@@ -134,7 +134,8 @@ msgstr "没有帮助。"
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. Click Cancel to return to the program."
-msgstr "你已选定下列配置。点击储存文件来储存反冲启动文件，点击取消来回到本程序。"
+msgstr ""
+"你已选定下列配置。点击储存文件来储存反冲启动文件，点击取消来回到本程序。"
 
 #: ksconfig.gladestrings:208
 msgid "Enable SMB Authentication"
@@ -148,7 +149,7 @@ msgstr "分区信息"
 msgid "Start the X Window System on boot"
 msgstr "在引导时启动 X 窗口系统"
 
-#: ../src/partWindow.py:299
+#: ../src/partWindow.py:288
 msgid "Specify a device on which to create the RAID partition."
 msgstr "指定要创建 RAID 分区的设备。"
 
@@ -196,7 +197,7 @@ msgstr "选择要安装的软件包。"
 msgid "Package Selection"
 msgstr "选择软件包"
 
-#: ../src/partition.py:74
+#: ../src/partition.py:65
 msgid "Mount Point"
 msgstr "挂载点"
 
@@ -252,7 +253,7 @@ msgstr "X 配置"
 msgid "_MBR"
 msgstr "_MBR"
 
-#: ../src/partition.py:78
+#: ../src/partition.py:69
 msgid "Size"
 msgstr "大小"
 
@@ -342,10 +343,10 @@ msgstr ""
 msgid "Language:"
 msgstr "语言："
 
-#: ../src/basic.py:295 ../src/partWindow.py:257 ../src/partWindow.py:274
-#: ../src/partWindow.py:287 ../src/partWindow.py:300 ../src/partWindow.py:313
-#: ../src/partWindow.py:328 ../src/partWindow.py:345 ../src/partWindow.py:358
-#: ../src/partWindow.py:371
+#: ../src/basic.py:295 ../src/partWindow.py:246 ../src/partWindow.py:263
+#: ../src/partWindow.py:276 ../src/partWindow.py:289 ../src/partWindow.py:302
+#: ../src/partWindow.py:317 ../src/partWindow.py:334 ../src/partWindow.py:347
+#: ../src/partWindow.py:360
 msgid "Error"
 msgstr "错误"
 
@@ -369,7 +370,7 @@ msgstr "启用 nscd"
 msgid "Enable LDAP"
 msgstr "启用 LDAP"
 
-#: ../src/partWindow.py:286 ../src/partWindow.py:344
+#: ../src/partWindow.py:275 ../src/partWindow.py:333
 msgid "onPart and onDisk can not be used at the same time."
 msgstr "onPart 和 onDisk 不能被同时使用。"
 
@@ -377,7 +378,7 @@ msgstr "onPart 和 onDisk 不能被同时使用。"
 msgid "Encrypt root password"
 msgstr "给根口令加密"
 
-#: ../src/partition.py:80
+#: ../src/partition.py:71
 msgid "Device"
 msgstr "设备"
 
@@ -539,7 +540,7 @@ msgstr "Kerberos 5"
 msgid "Hard Drive Directory:"
 msgstr "硬盘驱动器目录："
 
-#: ../src/partition.py:76
+#: ../src/partition.py:67
 msgid "Filesystem Type"
 msgstr "文件系统类型"
 
@@ -555,7 +556,8 @@ msgstr "允许接收："
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %pre command at the beginning."
-msgstr "警告：脚本中的错误可能会导致反冲启动安装失败。在起始处请不要包括 %pre 命令。"
+msgstr ""
+"警告：脚本中的错误可能会导致反冲启动安装失败。在起始处请不要包括 %pre 命令。"
 
 #: ../src/ksconfig_gui.py:118 ksconfig.gladestrings:172
 msgid "Network Configuration"
@@ -569,7 +571,7 @@ msgstr "NFS"
 msgid "Use recommended swap size"
 msgstr "使用不推荐的交换区大小"
 
-#: ../src/partWindow.py:256
+#: ../src/partWindow.py:245
 msgid "You must specify a size for the partition."
 msgstr "你必须为分区指定大小。"
 
@@ -593,7 +595,7 @@ msgstr "label35"
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Kerberos 域控制器 (KDC)："
 
-#: ../src/partWindow.py:357
+#: ../src/partWindow.py:346
 msgid "Specify a device on which to create the partition."
 msgstr "指定要在其中创建分区的设备。"
 
@@ -629,7 +631,7 @@ msgstr "储存文件"
 msgid "FTP Password"
 msgstr "FTP 口令"
 
-#: ../src/partWindow.py:312
+#: ../src/partWindow.py:301
 msgid "Specify an existing partition on which to create the RAID partition."
 msgstr "指定要在其中创建 RAID 分区的现存分区。"
 
@@ -721,7 +723,7 @@ msgstr "LILO 选项："
 msgid "Network Type:"
 msgstr "网络类型："
 
-#: ../src/partWindow.py:327
+#: ../src/partWindow.py:316
 msgid "Specify a mount point for the partition."
 msgstr "为分区指定挂载点。"
 
@@ -857,7 +859,7 @@ msgstr "给 GRUB 口令加密"
 msgid "Firewall Configuration"
 msgstr "防火墙配置"
 
-#: ../src/partWindow.py:271
+#: ../src/partWindow.py:260
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive or an "
 "existing partition."
@@ -977,4 +979,3 @@ msgstr "模拟三键"
 
 #~ msgid "Select a Video Card"
 #~ msgstr "选择一张视频卡"
-
