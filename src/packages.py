@@ -78,6 +78,10 @@ class Packages:
         self.systems_view = xml.get_widget("systems_treeview")
         self.systems_view.get_selection().set_mode(gtk.SELECTION_NONE)
 
+        self.package_vbox = xml.get_widget("package_vbox")
+        self.package_everything_checkbutton = xml.get_widget("package_everything_checkbutton")
+        self.package_everything_checkbutton.connect("toggled", self.toggled_everything_checkbutton)
+
         self.desktops_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING, gobject.TYPE_STRING)
         self.desktops_view.set_model(self.desktops_store)
 
@@ -99,20 +103,12 @@ class Packages:
         self.create_columns(self.development_view, self.development_store)
         self.create_columns(self.systems_view, self.system_store)
 
-        if os.access("/etc/fedora-release", os.F_OK) == 1:
-            import fedoraPackageGroupList
-            desktopsList = fedoraPackageGroupList.desktopsList
-            applicationsList = fedoraPackageGroupList.applicationsList
-            serversList = fedoraPackageGroupList.serversList
-            developmentList = fedoraPackageGroupList.developmentList
-            systemList = fedoraPackageGroupList.systemList
-        else:
-            import RHELPackageGroupList
-            desktopsList = RHELPackageGroupList.desktopsList
-            applicationsList = RHELPackageGroupList.applicationsList
-            serversList = RHELPackageGroupList.serversList
-            developmentList = RHELPackageGroupList.developmentList
-            systemList = RHELPackageGroupList.systemList
+        import packageGroupList
+        desktopsList = packageGroupList.desktopsList
+        applicationsList = packageGroupList.applicationsList
+        serversList = packageGroupList.serversList
+        developmentList = packageGroupList.developmentList
+        systemList = packageGroupList.systemList
 
         for pkg in desktopsList:
             iter = self.desktops_store.append()
@@ -138,6 +134,10 @@ class Packages:
             iter = self.system_store.append()
             self.system_store.set_value(iter, 1, pkg[0])
             self.system_store.set_value(iter, 2, pkg[1])            
+
+    def toggled_everything_checkbutton (self, args):
+        self.package_vbox.set_sensitive(not self.package_everything_checkbutton.get_active())
+        self.kickstartData.setEverything(self.package_everything_checkbutton.get_active())
 
     def create_columns(self, view, store):
         self.checkbox = gtk.CellRendererToggle()
@@ -194,14 +194,17 @@ class Packages:
             self.package_label_box.hide()
 
     def fillData(self):
-        packageList = self.kickstartData.getPackageGroupList()
+        if self.kickstartData.getEverything():
+            self.package_vbox.set_sensitive(False)
+            self.package_everything_checkbutton.set_active(gtk.TRUE)
+        else:
+            packageList = self.kickstartData.getPackageGroupList()
 
-        for package in packageList:
-            package = string.replace(package, "@", "")
-            package = string.strip(package)
-            self.lookupPackageInList(package, self.desktops_store)
-            self.lookupPackageInList(package, self.applications_store)
-            self.lookupPackageInList(package, self.servers_store)
-            self.lookupPackageInList(package, self.development_store)
-            self.lookupPackageInList(package, self.system_store)
-            
+            for package in packageList:
+                package = string.replace(package, "@", "")
+                package = string.strip(package)
+                self.lookupPackageInList(package, self.desktops_store)
+                self.lookupPackageInList(package, self.applications_store)
+                self.lookupPackageInList(package, self.servers_store)
+                self.lookupPackageInList(package, self.development_store)
+                self.lookupPackageInList(package, self.system_store)

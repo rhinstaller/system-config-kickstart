@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.5.17
+Version: 2.5.18
 Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -60,7 +60,12 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
-* Thu Dec 02 2004 Chris Lumens <clumens@redhat.com> - 2.5.16-1
+* Fri Dec 10 2004 Chris Lumens <clumens@redhat.com> - 2.5.18-1
+- Get package group lists and their translations out of the comps.xml file
+  instead of reying on a built-in (and out of date) list.
+- Added an "Install Everything" button (#134679).
+
+* Thu Dec 02 2004 Chris Lumens <clumens@redhat.com> - 2.5.17-1
 - Remove obsolete dependency resolution radio buttons.
 
 * Tue Nov 23 2004 Chris Lumens <clumens@redhat.com> - 2.5.16-1
