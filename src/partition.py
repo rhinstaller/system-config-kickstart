@@ -116,8 +116,7 @@ class partition:
                 selectDialog.hide()
             return
             
-        part_object = self.part_store.get_value(iter, 4)
-        self.partWindow.edit_partition(iter, part_object)
+        self.partWindow.edit_partition(iter)
 
 #    def raidPartition(self, *args):
 #        self.raidWindow.add_raid(self.num_rows)
