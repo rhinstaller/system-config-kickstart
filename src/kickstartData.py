@@ -277,7 +277,6 @@ class KickstartData:
         return self.package
 
     def setPackageGroupList(self, args):
-        print args
         self.packageGroupList = args
 
     def getPackageGroupList(self):
@@ -347,7 +346,7 @@ class KickstartData:
         else:
             file.append("mouse " + self.getMouse()[0])
         file.append("#Sytem timezone")
-        file.append("timezone --utc " + self.getTimezone())
+        file.append("timezone " + self.getTimezone())
         file.append("#Root password")
         file.append("rootpw " + self.getRootPw())
 
