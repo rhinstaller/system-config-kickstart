@@ -1,10 +1,11 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML
 ><HEAD
 ><TITLE
 >Network Configuration</TITLE
 ><META
 NAME="GENERATOR"
-CONTENT="Modular DocBook HTML Stylesheet Version 1.64
+CONTENT="Modular DocBook HTML Stylesheet Version 1.73
 "><LINK
 REL="HOME"
 TITLE="Kickstart Configurator"
@@ -25,6 +26,7 @@ ALINK="#0000FF"
 ><DIV
 CLASS="NAVHEADER"
 ><TABLE
+SUMMARY="Header navigation table"
 WIDTH="100%"
 BORDER="0"
 CELLPADDING="0"
@@ -33,10 +35,7 @@ CELLSPACING="0"
 ><TH
 COLSPAN="3"
 ALIGN="center"
-><B
-CLASS="APPLICATION"
->Kickstart Configurator</B
-></TH
+>Kickstart Configurator</TH
 ></TR
 ><TR
 ><TD
@@ -45,6 +44,7 @@ ALIGN="left"
 VALIGN="bottom"
 ><A
 HREF="ksconfig-partitions.html"
+ACCESSKEY="P"
 >Prev</A
 ></TD
 ><TD
@@ -58,6 +58,7 @@ ALIGN="right"
 VALIGN="bottom"
 ><A
 HREF="ksconfig-auth.html"
+ACCESSKEY="N"
 >Next</A
 ></TD
 ></TR
@@ -70,25 +71,22 @@ CLASS="CHAPTER"
 ><H1
 ><A
 NAME="KSCONFIG-NETWORK"
->Chapter 6. <B
-CLASS="GUILABEL"
->Network Configuration</B
-></A
+>Chapter 6. Network Configuration</A
 ></H1
 ><DIV
 CLASS="FIGURE"
 ><A
 NAME="KSCONFIG-NETWORK-FIG"
 ></A
+><DIV
+CLASS="MEDIAOBJECT"
 ><P
 ><IMG
-SRC="./figs/ksconfig/ksconfig-network.gif"></P
+SRC="./figs/ksconfig/ksconfig-network.png"></P
+></DIV
 ><P
 ><B
->Figure 6-1. <B
-CLASS="APPLICATION"
->Kickstart Configurator</B
-> - Network Configuration</B
+>Figure 6-1. Network Configuration</B
 ></P
 ></DIV
 ><P
@@ -103,27 +101,28 @@ CLASS="GUIBUTTON"
 	<B
 CLASS="GUIBUTTON"
 >None</B
->. If there is not an ethernet card in
+>. If there is not an Ethernet card in
 	the system, choose <B
 CLASS="GUIBUTTON"
 >None</B
 >. 
       </P
 ><P
->	Networking is only required if you choose a networking-type
-	installation method (NFS or FTP). If you are unsure which to choose,
-	choose <B
+>	Networking is only required if you choose a networking-type installation
+	method (NFS or FTP). If you are unsure which to choose, choose
+	<B
 CLASS="GUIBUTTON"
 >None</B
->. Networking can always be
-	configured after installation with <B
+>. Networking can always be configured after
+	installation with the <B
 CLASS="APPLICATION"
->Network
-	  Configurator</B
-> (<TT
+>Red Hat Network
+	Configurator</B
+> using the command
+	(<TT
 CLASS="COMMAND"
 >redhat-config-network</TT
->).
+>.
       </P
 ><P
 >	If you select <B
@@ -139,6 +138,7 @@ CLASS="NAVFOOTER"
 ><HR
 ALIGN="LEFT"
 WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
 WIDTH="100%"
 BORDER="0"
 CELLPADDING="0"
@@ -150,6 +150,7 @@ ALIGN="left"
 VALIGN="top"
 ><A
 HREF="ksconfig-partitions.html"
+ACCESSKEY="P"
 >Prev</A
 ></TD
 ><TD
@@ -158,6 +159,7 @@ ALIGN="center"
 VALIGN="top"
 ><A
 HREF="index.html"
+ACCESSKEY="H"
 >Home</A
 ></TD
 ><TD
@@ -166,6 +168,7 @@ ALIGN="right"
 VALIGN="top"
 ><A
 HREF="ksconfig-auth.html"
+ACCESSKEY="N"
 >Next</A
 ></TD
 ></TR
@@ -174,10 +177,7 @@ HREF="ksconfig-auth.html"
 WIDTH="33%"
 ALIGN="left"
 VALIGN="top"
-><B
-CLASS="GUILABEL"
->Partition Information</B
-></TD
+>Partition Information</TD
 ><TD
 WIDTH="34%"
 ALIGN="center"
@@ -187,10 +187,7 @@ VALIGN="top"
 WIDTH="33%"
 ALIGN="right"
 VALIGN="top"
-><B
-CLASS="GUILABEL"
->Authentication</B
-></TD
+>Authentication</TD
 ></TR
 ></TABLE
 ></DIV

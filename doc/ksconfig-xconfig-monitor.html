@@ -1,10 +1,11 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML
 ><HEAD
 ><TITLE
 >Monitor</TITLE
 ><META
 NAME="GENERATOR"
-CONTENT="Modular DocBook HTML Stylesheet Version 1.64
+CONTENT="Modular DocBook HTML Stylesheet Version 1.73
 "><LINK
 REL="HOME"
 TITLE="Kickstart Configurator"
@@ -14,7 +15,7 @@ TITLE="X Configuration"
 HREF="ksconfig-xconfig.html"><LINK
 REL="PREVIOUS"
 TITLE="Video Card"
-HREF="xconfig-videocard.html"><LINK
+HREF="ksconfig-xconfig-videocard.html"><LINK
 REL="NEXT"
 TITLE="Package Selection"
 HREF="ksconfig-pkgs.html"></HEAD
@@ -28,6 +29,7 @@ ALINK="#0000FF"
 ><DIV
 CLASS="NAVHEADER"
 ><TABLE
+SUMMARY="Header navigation table"
 WIDTH="100%"
 BORDER="0"
 CELLPADDING="0"
@@ -36,10 +38,7 @@ CELLSPACING="0"
 ><TH
 COLSPAN="3"
 ALIGN="center"
-><B
-CLASS="APPLICATION"
->Kickstart Configurator</B
-></TH
+>Kickstart Configurator</TH
 ></TR
 ><TR
 ><TD
@@ -47,23 +46,22 @@ WIDTH="10%"
 ALIGN="left"
 VALIGN="bottom"
 ><A
-HREF="xconfig-videocard.html"
+HREF="ksconfig-xconfig-videocard.html"
+ACCESSKEY="P"
 >Prev</A
 ></TD
 ><TD
 WIDTH="80%"
 ALIGN="center"
 VALIGN="bottom"
->Chapter 9. <B
-CLASS="GUILABEL"
->X Configuration</B
-></TD
+>Chapter 9. X Configuration</TD
 ><TD
 WIDTH="10%"
 ALIGN="right"
 VALIGN="bottom"
 ><A
 HREF="ksconfig-pkgs.html"
+ACCESSKEY="N"
 >Next</A
 ></TD
 ></TR
@@ -76,7 +74,7 @@ CLASS="SECT1"
 ><H1
 CLASS="SECT1"
 ><A
-NAME="XCONFIG-MONITOR"
+NAME="KSCONFIG-XCONFIG-MONITOR"
 >Monitor</A
 ></H1
 ><P
@@ -85,11 +83,30 @@ NAME="XCONFIG-MONITOR"
 CLASS="GUILABEL"
 >Monitor</B
 > tab shown in <A
-HREF="xconfig-monitor.html#XCONFIG-MONITOR-FIG"
+HREF="ksconfig-xconfig-monitor.html#XCONFIG-MONITOR-FIG"
 >Figure 9-3</A
-> and select the monitor for the
-	  system. You can specify the horizontal and vertical sync rates instead
-	  of specifying a monitor by checking the <B
+>.
+	</P
+><P
+>	  <B
+CLASS="GUIBUTTON"
+>Probe for monitor</B
+> is selected by
+	  default. Accept this default if you want the installation program to
+	  probe for the monitor during installation. Probing works for most
+	  modern monitors. If you select this option and the installation
+	  program can not successfully probe the monitor, the installation
+	  program will stop at the monitor configuration screen. To continue
+	  the installation process, select your monitor from the list and
+	  click <B
+CLASS="GUIBUTTON"
+>Next</B
+>.
+	</P
+><P
+>	  Alternatively, you can select your monitor from the list.  You can
+	  also specify the horizontal and vertical sync rates instead of
+	  specifying a monitor by checking the <B
 CLASS="GUIBUTTON"
 >Specify hysnc and
 	  vsync instead of monitor</B
@@ -102,15 +119,15 @@ CLASS="FIGURE"
 ><A
 NAME="XCONFIG-MONITOR-FIG"
 ></A
+><DIV
+CLASS="MEDIAOBJECT"
 ><P
 ><IMG
-SRC="./figs/ksconfig/ksconfig-xconfig-monitor.gif"></P
+SRC="./figs/ksconfig/ksconfig-xconfig-monitor.png"></P
+></DIV
 ><P
 ><B
->Figure 9-3. <B
-CLASS="APPLICATION"
->Kickstart Configurator</B
-> - X Configuration</B
+>Figure 9-3. X Configuration - Monitor</B
 ></P
 ></DIV
 ></DIV
@@ -119,6 +136,7 @@ CLASS="NAVFOOTER"
 ><HR
 ALIGN="LEFT"
 WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
 WIDTH="100%"
 BORDER="0"
 CELLPADDING="0"
@@ -129,7 +147,8 @@ WIDTH="33%"
 ALIGN="left"
 VALIGN="top"
 ><A
-HREF="xconfig-videocard.html"
+HREF="ksconfig-xconfig-videocard.html"
+ACCESSKEY="P"
 >Prev</A
 ></TD
 ><TD
@@ -138,6 +157,7 @@ ALIGN="center"
 VALIGN="top"
 ><A
 HREF="index.html"
+ACCESSKEY="H"
 >Home</A
 ></TD
 ><TD
@@ -146,6 +166,7 @@ ALIGN="right"
 VALIGN="top"
 ><A
 HREF="ksconfig-pkgs.html"
+ACCESSKEY="N"
 >Next</A
 ></TD
 ></TR
@@ -161,16 +182,14 @@ ALIGN="center"
 VALIGN="top"
 ><A
 HREF="ksconfig-xconfig.html"
+ACCESSKEY="U"
 >Up</A
 ></TD
 ><TD
 WIDTH="33%"
 ALIGN="right"
 VALIGN="top"
-><B
-CLASS="GUILABEL"
->Package Selection</B
-></TD
+>Package Selection</TD
 ></TR
 ></TABLE
 ></DIV

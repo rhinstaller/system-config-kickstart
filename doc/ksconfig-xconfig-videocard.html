@@ -1,10 +1,11 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML
 ><HEAD
 ><TITLE
 >Video Card</TITLE
 ><META
 NAME="GENERATOR"
-CONTENT="Modular DocBook HTML Stylesheet Version 1.64
+CONTENT="Modular DocBook HTML Stylesheet Version 1.73
 "><LINK
 REL="HOME"
 TITLE="Kickstart Configurator"
@@ -17,7 +18,7 @@ TITLE="X Configuration"
 HREF="ksconfig-xconfig.html"><LINK
 REL="NEXT"
 TITLE="Monitor"
-HREF="xconfig-monitor.html"></HEAD
+HREF="ksconfig-xconfig-monitor.html"></HEAD
 ><BODY
 CLASS="SECT1"
 BGCOLOR="#FFFFFF"
@@ -28,6 +29,7 @@ ALINK="#0000FF"
 ><DIV
 CLASS="NAVHEADER"
 ><TABLE
+SUMMARY="Header navigation table"
 WIDTH="100%"
 BORDER="0"
 CELLPADDING="0"
@@ -36,10 +38,7 @@ CELLSPACING="0"
 ><TH
 COLSPAN="3"
 ALIGN="center"
-><B
-CLASS="APPLICATION"
->Kickstart Configurator</B
-></TH
+>Kickstart Configurator</TH
 ></TR
 ><TR
 ><TD
@@ -48,22 +47,21 @@ ALIGN="left"
 VALIGN="bottom"
 ><A
 HREF="ksconfig-xconfig.html"
+ACCESSKEY="P"
 >Prev</A
 ></TD
 ><TD
 WIDTH="80%"
 ALIGN="center"
 VALIGN="bottom"
->Chapter 9. <B
-CLASS="GUILABEL"
->X Configuration</B
-></TD
+>Chapter 9. X Configuration</TD
 ><TD
 WIDTH="10%"
 ALIGN="right"
 VALIGN="bottom"
 ><A
-HREF="xconfig-monitor.html"
+HREF="ksconfig-xconfig-monitor.html"
+ACCESSKEY="N"
 >Next</A
 ></TD
 ></TR
@@ -76,38 +74,55 @@ CLASS="SECT1"
 ><H1
 CLASS="SECT1"
 ><A
-NAME="XCONFIG-VIDEOCARD"
+NAME="KSCONFIG-XCONFIG-VIDEOCARD"
 >Video Card</A
 ></H1
 ><P
->	  Select the video card from the list on the <B
+>	  <B
+CLASS="GUIBUTTON"
+>Probe for video card</B
+> is selected by
+	  default. Accept this default if you want the installation program to
+	  probe for the video card during installation. Probing works for most
+	  modern video cards. If you select this option and the installation
+	  program can not successfully probe the video card, the installation
+	  program will stop at the video card configuration screen. To continue
+	  the installation process, select your video card from the list and
+	  click <B
+CLASS="GUIBUTTON"
+>Next</B
+>.
+	</P
+><P
+>	  Alternatively, you can select the video card from the list on the
+	  <B
 CLASS="GUILABEL"
->Video
-	  Card</B
+>Video Card</B
 > tab as shown in <A
-HREF="xconfig-videocard.html#XCONFIG-VIDEOCARD-FIG"
+HREF="ksconfig-xconfig-videocard.html#XCONFIG-VIDEOCARD-FIG"
 >Figure 9-2</A
 >. Also select the amount of video RAM
 	  the selected video card has from the <B
 CLASS="GUILABEL"
 >Video Card
 	  RAM</B
-> pulldown menu.
+> pulldown menu. These values will be used by the
+	  installation program to configure the X Window System.
 	</P
 ><DIV
 CLASS="FIGURE"
 ><A
 NAME="XCONFIG-VIDEOCARD-FIG"
 ></A
+><DIV
+CLASS="MEDIAOBJECT"
 ><P
 ><IMG
-SRC="./figs/ksconfig/ksconfig-xconfig-videocard.gif"></P
+SRC="./figs/ksconfig/ksconfig-xconfig-videocard.png"></P
+></DIV
 ><P
 ><B
->Figure 9-2. <B
-CLASS="APPLICATION"
->Kickstart Configurator</B
-> - X Configuration</B
+>Figure 9-2. X Configuration - Video Card</B
 ></P
 ></DIV
 ></DIV
@@ -116,6 +131,7 @@ CLASS="NAVFOOTER"
 ><HR
 ALIGN="LEFT"
 WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
 WIDTH="100%"
 BORDER="0"
 CELLPADDING="0"
@@ -127,6 +143,7 @@ ALIGN="left"
 VALIGN="top"
 ><A
 HREF="ksconfig-xconfig.html"
+ACCESSKEY="P"
 >Prev</A
 ></TD
 ><TD
@@ -135,6 +152,7 @@ ALIGN="center"
 VALIGN="top"
 ><A
 HREF="index.html"
+ACCESSKEY="H"
 >Home</A
 ></TD
 ><TD
@@ -142,7 +160,8 @@ WIDTH="33%"
 ALIGN="right"
 VALIGN="top"
 ><A
-HREF="xconfig-monitor.html"
+HREF="ksconfig-xconfig-monitor.html"
+ACCESSKEY="N"
 >Next</A
 ></TD
 ></TR
@@ -151,16 +170,14 @@ HREF="xconfig-monitor.html"
 WIDTH="33%"
 ALIGN="left"
 VALIGN="top"
-><B
-CLASS="GUILABEL"
->X Configuration</B
-></TD
+>X Configuration</TD
 ><TD
 WIDTH="34%"
 ALIGN="center"
 VALIGN="top"
 ><A
 HREF="ksconfig-xconfig.html"
+ACCESSKEY="U"
 >Up</A
 ></TD
 ><TD

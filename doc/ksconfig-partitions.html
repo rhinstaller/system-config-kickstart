@@ -1,10 +1,11 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML
 ><HEAD
 ><TITLE
 >Partition Information</TITLE
 ><META
 NAME="GENERATOR"
-CONTENT="Modular DocBook HTML Stylesheet Version 1.64
+CONTENT="Modular DocBook HTML Stylesheet Version 1.73
 "><LINK
 REL="HOME"
 TITLE="Kickstart Configurator"
@@ -25,6 +26,7 @@ ALINK="#0000FF"
 ><DIV
 CLASS="NAVHEADER"
 ><TABLE
+SUMMARY="Header navigation table"
 WIDTH="100%"
 BORDER="0"
 CELLPADDING="0"
@@ -33,10 +35,7 @@ CELLSPACING="0"
 ><TH
 COLSPAN="3"
 ALIGN="center"
-><B
-CLASS="APPLICATION"
->Kickstart Configurator</B
-></TH
+>Kickstart Configurator</TH
 ></TR
 ><TR
 ><TD
@@ -45,6 +44,7 @@ ALIGN="left"
 VALIGN="bottom"
 ><A
 HREF="ksconfig-install.html"
+ACCESSKEY="P"
 >Prev</A
 ></TD
 ><TD
@@ -58,6 +58,7 @@ ALIGN="right"
 VALIGN="bottom"
 ><A
 HREF="ksconfig-network.html"
+ACCESSKEY="N"
 >Next</A
 ></TD
 ></TR
@@ -70,25 +71,22 @@ CLASS="CHAPTER"
 ><H1
 ><A
 NAME="KSCONFIG-PARTITIONS"
->Chapter 5. <B
-CLASS="GUILABEL"
->Partition Information</B
-></A
+>Chapter 5. Partition Information</A
 ></H1
 ><DIV
 CLASS="FIGURE"
 ><A
 NAME="KSCONFIG-PARTITIONS-FIG"
 ></A
+><DIV
+CLASS="MEDIAOBJECT"
 ><P
 ><IMG
-SRC="./figs/ksconfig/ksconfig-partitions.gif"></P
+SRC="./figs/ksconfig/ksconfig-partitions.png"></P
+></DIV
 ><P
 ><B
->Figure 5-1. <B
-CLASS="APPLICATION"
->Kickstart Configurator</B
-> - Partition Information</B
+>Figure 5-1. Partition Information</B
 ></P
 ></DIV
 ><P
@@ -96,7 +94,7 @@ CLASS="APPLICATION"
 CLASS="GUIBUTTON"
 >Yes</B
 >
-	beside the option on the top of the page. You can choose to keep the
+	beside the option on the top of the window. You can choose to keep the
 	existing partitions, remove all the existing partitions, or remove all
 	the existing Linux partitions by selecting
 	<B
@@ -148,10 +146,8 @@ CLASS="GUILABEL"
 >Partition Options</B
 > window shown in
 	  <A
-HREF="ksconfig-partitions.html#KSCONFIG-CREATE-PART"
->the section called <I
->Creating Partitions</I
-></A
+HREF="ksconfig-partitions.html#KSCONFIG-ADD-PART-FIG"
+>Figure 5-2</A
 > will appear. Choose mount point,
 	  filesystem type, and partition size for the new partition. Optionally,
 	  you can also choose from the following:
@@ -161,14 +157,21 @@ HREF="ksconfig-partitions.html#KSCONFIG-CREATE-PART"
 ><UL
 ><LI
 ><P
->	      Additional Size Options &#8212; Choose to
+><B
+CLASS="GUILABEL"
+>Additional Size Options</B
+> &#8212; Choose to
 	      make the partition a fixed size, up to a chosen size, or fill the
 	      remaining space on the hard drive.
 	    </P
 ></LI
 ><LI
 ><P
->	      Force the partition to be created as a primary partition. For example, to
+>Force the partition to be created as a primary partition.</P
+></LI
+><LI
+><P
+>Create the partition on a specific hard drive. For example, to
 	      make the partition on the first IDE hard disk
 	      (<TT
 CLASS="FILENAME"
@@ -188,7 +191,7 @@ CLASS="FILENAME"
 ></LI
 ><LI
 ><P
->	      Create the partition on a specific hard drive. For example, to make the partition on
+>Use an existing partition. For example, to make the partition on
 	      the first partition on the first IDE hard disk
 	      (<TT
 CLASS="FILENAME"
@@ -208,13 +211,7 @@ CLASS="FILENAME"
 ></LI
 ><LI
 ><P
->	      Use an existing partition.
-	    </P
-></LI
-><LI
-><P
->	      Format the partition as the chosen filesystem type.
-	    </P
+>Format the partition as the chosen filesystem type.</P
 ></LI
 ></UL
 ><DIV
@@ -222,15 +219,15 @@ CLASS="FIGURE"
 ><A
 NAME="KSCONFIG-ADD-PART-FIG"
 ></A
+><DIV
+CLASS="MEDIAOBJECT"
 ><P
 ><IMG
-SRC="./figs/ksconfig/ksconfig-part-options.gif"></P
+SRC="./figs/ksconfig/ksconfig-part-options.png"></P
+></DIV
 ><P
 ><B
->Figure 5-2. <B
-CLASS="APPLICATION"
->Kickstart Configurator</B
-> - Creating Partitions</B
+>Figure 5-2. Creating Partitions</B
 ></P
 ></DIV
 ><P
@@ -264,6 +261,7 @@ CLASS="NAVFOOTER"
 ><HR
 ALIGN="LEFT"
 WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
 WIDTH="100%"
 BORDER="0"
 CELLPADDING="0"
@@ -275,6 +273,7 @@ ALIGN="left"
 VALIGN="top"
 ><A
 HREF="ksconfig-install.html"
+ACCESSKEY="P"
 >Prev</A
 ></TD
 ><TD
@@ -283,6 +282,7 @@ ALIGN="center"
 VALIGN="top"
 ><A
 HREF="index.html"
+ACCESSKEY="H"
 >Home</A
 ></TD
 ><TD
@@ -291,6 +291,7 @@ ALIGN="right"
 VALIGN="top"
 ><A
 HREF="ksconfig-network.html"
+ACCESSKEY="N"
 >Next</A
 ></TD
 ></TR
@@ -299,10 +300,7 @@ HREF="ksconfig-network.html"
 WIDTH="33%"
 ALIGN="left"
 VALIGN="top"
-><B
-CLASS="GUILABEL"
->Installation Method</B
-></TD
+>Installation Method</TD
 ><TD
 WIDTH="34%"
 ALIGN="center"
@@ -312,10 +310,7 @@ VALIGN="top"
 WIDTH="33%"
 ALIGN="right"
 VALIGN="top"
-><B
-CLASS="GUILABEL"
->Network Configuration</B
-></TD
+>Network Configuration</TD
 ></TR
 ></TABLE
 ></DIV
