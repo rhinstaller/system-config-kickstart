@@ -40,7 +40,6 @@ import savedialog
 import xconfig
 import packages
 import scripts
-import helpBrowser
 import os
 import kickstartData
 import kickstartParser
@@ -203,7 +202,8 @@ class kickstartGui:
 		      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-postinstall.html",
 		      ]
 	page = (help_pages [self.options_notebook.get_current_page ()])
-	path = helpBrowser.find_browser()
+
+	path = "/usr/bin/htmlview"
 
 	if path == None:
 	    dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_WARNING, gtk.BUTTONS_OK,
