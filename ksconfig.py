@@ -90,6 +90,13 @@ def saveFile_cb(args):
 		pass
 
 
+#	try:
+        print firewallWin.getData()
+#		buf = buf + firewallWin.getData()
+#	except:
+#		print "problem"
+#		pass
+
 	#	buf = buf + auth.myNisClass.return_data()
 	#	buf = buf + auth.myLDAPClass.return_data()
 	#	buf = buf + auth.myKerberosClass.return_data()

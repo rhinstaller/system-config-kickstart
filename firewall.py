@@ -14,8 +14,7 @@ import checklist
 
 class firewallWindow (GtkWindow):
     def okClicked(self, args):
-        print"OK clicked"
-        self.getData()
+        self.grabData()
         self.destroy()
 
     def cancelClicked(self, args):
@@ -23,6 +22,9 @@ class firewallWindow (GtkWindow):
 
 
     def getData(self):
+        return self.data
+
+    def grabData(self):
         buf = "firewall "
         if self.securityRadio1.get_active():
             buf = buf + "--high "
@@ -32,37 +34,27 @@ class firewallWindow (GtkWindow):
             buf = buf + "--disabled "        
 
         if self.customize.get_active():
-#            print self.netdevices
-
 
             numdev = len(self.netdevices)
             for i in range(numdev):
                 (val, row_data, header) = self.trusted.get_row_data (i)
-#                print val, row_data, header
                     
                 if val == 1:
-#                    print "adding ", self.netdevices[i]
                     buf = buf + "--trust " + self.netdevices[i] + " "
-#                        self.todo.firewall.trustdevs.append(device)
                 elif val == 0:
-                    print "need to remove ", self.netdevices[i]
                     pass
 
-
+            list_keys = self.list.keys()
             numserv = len(self.list)
-            for i in range(numserv):
-                (val, row_data, header) = self.incoming.get_row_data (i)
-#                print val, row_data, header
-                    
+            for i in list_keys:
+                (val, row_data, header) = self.incoming.get_row_data (list_keys.index(i))
                 if val == 1:
-#                    print "adding ", self.list[i]
                     buf = buf + "--" + self.list[i] + " "
-#                        self.todo.firewall.trustdevs.append(device)
                 elif val == 0:
-#                    print "need to remove ", self.list[i]
                     pass
 
-#        print buf
+        self.data = buf
+
 
     def activate_firewall (self, widget):
         active = not (self.securityRadio3.get_active())
@@ -98,7 +90,6 @@ class firewallWindow (GtkWindow):
 
         
     def __init__(self):
-        print "Firewall Button clicked"
         GtkWindow.__init__(self, WINDOW_TOPLEVEL)
         self.set_modal(TRUE)
         self.set_border_width(6)
@@ -117,7 +108,7 @@ class firewallWindow (GtkWindow):
         self.securityRadio1 = GtkRadioButton(None, "High")
         securityHbox.pack_start(self.securityRadio1)
 
-        self.securityRadio2 = GtkRadioButton(self.securityRadio1, "Low")
+        self.securityRadio2 = GtkRadioButton(self.securityRadio1, "Medium")
         securityHbox.pack_start(self.securityRadio2)
 
         self.securityRadio3 = GtkRadioButton(self.securityRadio1, "Disabled")
@@ -154,7 +145,6 @@ class firewallWindow (GtkWindow):
             dev = string.strip (line[0:6])
             if dev != "lo":
                 self.netdevices.append(dev)
-        print self.netdevices
 
         self.trusted = checklist.CheckList(1)
         self.trusted.connect ('button_press_event', self.trusted_select_row)
@@ -176,7 +166,7 @@ class firewallWindow (GtkWindow):
                      "Mail (SMTP)":"smtp", "FTP":"ftp"}
 
         for item in self.list.keys():
-            self.incoming.append_row ((item, ""), FALSE)
+            self.incoming.append_row ((item, item), FALSE)
 
 
         label = GtkLabel ("Other ports:")
