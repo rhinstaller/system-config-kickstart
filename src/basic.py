@@ -250,7 +250,12 @@ class basic:
                 
         data.append("")
         data.append("#System keyboard")
-        data.append("keyboard " + self.keyboard_dict[self.keyboard_combo.entry.get_text()])
+        keys = self.keyboard_dict.keys()
+        keys.sort()
+        for item in keys:
+            if self.keyboard_dict[item][0] == self.keyboard_combo.entry.get_text():
+                data.append("keyboard " + self.keyboard_dict[item][1])
+                break
         data.append("")
         data.append("#System mouse")
         data.append(self.mouseLookup(self.mouse_combo.entry.get_text()))
