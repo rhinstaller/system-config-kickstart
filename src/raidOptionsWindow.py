@@ -70,7 +70,7 @@ class raidOptionsWindow:
 
         num = len(self.list)
         self.message_label.set_text(_("You currently have %d software RAID partition(s) "
-                                      "free to use." % num))
+                                      "free to use.") % num)
         if num > 1:
             self.raid_device_radio.set_active(gtk.TRUE)
             self.raid_device_radio.set_sensitive(gtk.TRUE)
