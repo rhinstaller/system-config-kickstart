@@ -361,19 +361,17 @@ class partWindow:
             return None
 
         self.lastRaidNumber = ""
-
-
         self.part_store.foreach(self.countRaid)
 
         if self.lastRaidNumber == "":
             fsType = "raid"
-            part_object.raidNumber = "01"
+            part_object.raidNumber = "raid.01"
         else:
             tmpNum = int(self.lastRaidNumber) + 1
             if tmpNum < 10:
-                part_object.raidNumber = "0%s" % str(tmpNum)
+                part_object.raidNumber = "raid.0%s" % str(tmpNum)
             else:
-                part_object.raidNumber = str(tmpNum)
+                part_object.raidNumber = "raid.%s" % str(tmpNum)
             
         #If all the checks pass, then return
         return fsType
@@ -382,9 +380,10 @@ class partWindow:
         print "in countRaid"
         part_object = self.part_store.get_value(iter, 5)
         if part_object and part_object.fsType == "raid":
-            if self.lastRaidNumber < part_object.raidNumber:
-                print "setting raid number to", part_object.raidNumber
-                self.lastRaidNumber = part_object.raidNumber
+            tag, number = string.split(part_object.raidNumber, '.')
+            if self.lastRaidNumber < number:
+#                print "setting raid number to", part_object.raidNumber
+                self.lastRaidNumber = number
 
     
     def isDeviceValid(self, device):
