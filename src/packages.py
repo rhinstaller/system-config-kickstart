@@ -24,6 +24,7 @@ import gtk.glade
 import gobject
 import string
 import getopt
+import os
 
 ##
 ## I18N
@@ -98,40 +99,20 @@ class Packages:
         self.create_columns(self.development_view, self.development_store)
         self.create_columns(self.systems_view, self.system_store)
 
-        desktopsList = ["X Window System",
-                       "GNOME Desktop Environment",
-                       "KDE Desktop Environment"
-                        ]
-        applicationsList = ["Editors",
-                            "Engineering and Scientific",
-                            "Graphical Internet",
-                            "Text-based Internet",
-                            "Office/Productivity",
-                            "Sound and Video",
-                            "Graphics",
-                            "Games and Entertainment",
-                            "Authoring and Publishing"
-                            ]
-        serversList = ["Server Configuration Tools",                       
-                       "Web Server",
-                       "Mail Server",
-                       "Windows File Server",
-                       "DNS Name Server", 
-                       "FTP Server",
-                       "SQL Database Server",
-                       "News Server",
-                       "Network Servers"
-                       ]
-        developmentList = ["Development Tools",
-                           "Kernel Development",
-                           "X Software Development",                       
-                           "GNOME Software Development",
-                           "KDE Software Development"
-                           ]
-        systemList = ["Administration Tools",
-                      "System Tools",
-                      "Printing Support"
-                      ]
+        if os.access("/etc/fedora-release2", os.F_OK) == 1:
+            import fedoraPackageGroupList
+            desktopsList = fedoraPackageGroupList.desktopsList
+            applicationsList = fedoraPackageGroupList.applicationsList
+            serversList = fedoraPackageGroupList.serversList
+            developmentList = fedoraPackageGroupList.developmentList
+            systemList = fedoraPackageGroupList.systemList
+        else:
+            import RHELPackageGroupList
+            desktopsList = RHELPackageGroupList.desktopsList
+            applicationsList = RHELPackageGroupList.applicationsList
+            serversList = RHELPackageGroupList.serversList
+            developmentList = RHELPackageGroupList.developmentList
+            systemList = RHELPackageGroupList.systemList
 
         for pkg in desktopsList:
             iter = self.desktops_store.append()
