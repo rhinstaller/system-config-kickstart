@@ -35,6 +35,7 @@ class install:
         self.upgrade_radiobutton = xml.get_widget("upgrade_radiobutton")
         self.partitioning_frame = xml.get_widget("partitioning_frame")
         self.pkg_selection_frame = xml.get_widget("pkg_selection_frame")
+        self.install_option_vbox = xml.get_widget("install_option_vbox")
 
         self.cdrom_radiobutton = xml.get_widget("cdrom_radiobutton")
         self.nfs_radiobutton = xml.get_widget("nfs_radiobutton")
@@ -88,6 +89,8 @@ class install:
         install = self.install_radiobutton.get_active()
         self.partitioning_frame.set_sensitive(install)
         self.pkg_selection_frame.set_sensitive(install)            
+        self.install_option_vbox.set_sensitive(install)
+        self.install_notebook.set_sensitive(install)
         self.bootloader_class.upgrade_bootloader_radio.set_sensitive(not install)
 
     def setState (self, args):
