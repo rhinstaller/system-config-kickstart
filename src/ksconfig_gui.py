@@ -41,6 +41,7 @@ import network
 import auth
 import firewall
 import savefile
+import packages
 
 xml = libglade.GladeXML ("./ksconfig.glade", domain="ksconfig")
 
@@ -76,6 +77,9 @@ class ksconfig_gui:
 
 		#bring in firewall functions
 		self.firewall_class = firewall.firewall(xml)
+
+		#bring in package function
+		self.packages_class = packages.packages(xml)
 
 		#show gui
 		self.toplevel.show_all()
@@ -217,7 +221,7 @@ class ksconfig_gui:
 
 	#about box
 	def on_about_activate(self, args):
-		aboutDialog = gnome.ui.GnomeAbout ("Kickstart Configurator", "2.0",
+		aboutDialog = gnome.ui.GnomeAbout ("Kickstart Configurator", "1.95",
 						   "Copyright (c) 2000, 2001 Red Hat, Inc.",
 						   ["Brent Fox <bfox@redhat.com>",
 						    "Tammy Fox <tfox@redhat.com>"],
@@ -237,5 +241,7 @@ class ksconfig_gui:
 #	    print buf
 	    buf = buf + self.auth_class.getData()
 	    print buf
+#	    buf = buf + self.firewall_class.getData()
+#	    print buf
 	    
-#	    confirmDialog = savefile.saveFile ()
+	    confirmDialog = savefile.saveFile ()
