@@ -24,15 +24,88 @@
 from gtk import *
 import GtkExtra
 import libglade
+import string
 
 class xconfig:
 
     def __init__(self, xml):
-        print "in xconfig"
+        self.config_x_button = xml.get_widget("config_x_button")
+        self.probe_x_button = xml.get_widget("probe_x_button")
+        self.video_card_swindow = xml.get_widget("video_card_swindow")
+        self.video_card_clist = xml.get_widget("video_card_clist")
+        self.monitor_swindow = xml.get_widget("monitor_swindow")
+        self.monitor_clist = xml.get_widget("monitor_clist")
+        self.startx_on_boot_button = xml.get_widget("startx_on_boot_button")
+        self.xconfig_notebook = xml.get_widget("xconfig_notebook")        
+
+        xml.signal_autoconnect (
+            { "toggleXconfig" : self.toggleXconfig,
+              "toggle_vc_monitor": self.toggle_vc_monitor,
+              })
+
+        #add video cards to list
+        cardsFile = open("Cards")
+        lines = cardsFile.readlines ()
+        cardsFile.close ()
+        card = {}
+        Video_cardslist = {}
+        name = None
+        for line in lines:
+            line = string.strip (line)
+            if not line and name:
+                Video_cardslist[name] = card
+                name = None
+                continue
+            #skip comments
+            if line and line[0] == '#':
+                continue
+            if len (line) > 4 and line[0:4] == 'NAME':
+                name = line[5:]
+                name_list = [name]
+                self.video_card_clist.append(name_list)
+
+
+        #add monitors to list
+        monitorFile = open("MonitorsDB", "r")
+        lines=monitorFile.readlines()
+        monitorFile.close()
+        
+        monitors = []
+        for line in lines:
+            line = string.strip (line)
+            if not line:
+                continue
+            if line and line[0] == "#":
+                continue
+            values=string.split(line,";")
+            manufacturer = string.strip(values[0])
+            model = string.strip(values[1])
+            id = string.strip(values[2])
+            hsync = string.strip(values[3])
+            vsync = string.strip(values[4])
+            model_list = [model]
+            self.monitor_clist.append(model_list)
+            #grab hsync and vsync from cards DB
+            #FIXME
+        
+    def toggleXconfig (self, args):
+        config = self.config_x_button.get_active()
+        #disable xconfig notebook
+        self.xconfig_notebook.set_sensitive(config)
+
+    def toggle_vc_monitor (self, args):
+        config = self.probe_x_button.get_active()
+        print config
+        self.video_card_swindow.set_sensitive(config)
+        self.monitor_swindow.set_sensitive(config)
+        self.video_card_list.set_sensitive(config)
+        self.monitor_list.set_sensitive(config)
 
     def getData(self):
-        buf = "\n" + "xconfig "
-        #options: noprobe, card, monitor, hsync, vsync, defaultdesktop=,startxonboot
+        if self.config_x_button.get_active():
+            buf = "\n" + "xconfig "
+        else:
+            buf = "\n" + "#Do not configure the X Window System"
         return buf
 
 
