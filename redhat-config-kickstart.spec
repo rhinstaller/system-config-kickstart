@@ -48,6 +48,9 @@ fi
 %config /etc/X11/applnk/System/redhat-config-kickstart.desktop
 
 %changelog
+* Fri Jul 19 2002 Tammy Fox <tfox@redhat.com>
+- Updated docs for latest interface and features
+
 * Thu Jul 18 2002 Brent Fox <bfox@redhat.com> 2.3.2-3
 - Added buttons for LVM and RAID.  I will wire them up later
 
