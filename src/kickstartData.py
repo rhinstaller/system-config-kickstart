@@ -354,9 +354,15 @@ class KickstartData:
 
         file.append("#Language modules to install")
         if len(self.langsupport) == 0:
-            file.append("langsupport --default=" + self.getDefaultLang())
+            file.append("langsupport " + self.getDefaultLang())
 
-        elif len(self.langsupport) > 0:
+        elif len(self.langsupport) == 1:
+            if self.getDefaultLang() in self.getLangSupport():
+                file.append("langsupport " + self.langsupport[0])
+            else:
+                file.append("langsupport " + self.langsupport[0] + " --default=" + self.getDefaultLang())
+
+        elif len(self.langsupport) > 1:
             if self.getDefaultLang() in self.getLangSupport():
                 self.langsupport.remove(self.getDefaultLang())
                             
