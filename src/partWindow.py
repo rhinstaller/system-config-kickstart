@@ -351,16 +351,7 @@ class partWindow:
                 #It's not raid and it's not swap, so it must be a regular partition
                 part_object.mountPoint = self.mountPointCombo.entry.get_text()
                 if part_object.mountPoint == "":
-                    dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
-                                            _("Specify a mount point for the partition."))
-                    dlg.set_title(_("Error"))
-                    dlg.set_default_size(100, 100)
-                    dlg.set_position (gtk.WIN_POS_CENTER)
-                    dlg.set_border_width(2)
-                    dlg.set_modal(gtk.TRUE)
-                    rc = dlg.run()
-                    if rc == gtk.RESPONSE_OK:
-                        dlg.hide()
+                    self.deviceNotValid(_("Specify a mount point for the partition."))
                     return None
 
         return 1
