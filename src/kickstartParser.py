@@ -5,8 +5,6 @@ import getopt
 
 class KickstartParser:
     def __init__(self, kickstartData, file):
-        print "starting"
-
         self.kickstartData = kickstartData
 
 	self.handlers = { 
@@ -56,7 +54,6 @@ class KickstartParser:
 
     def readKickstartFile(self, file):
         self.lines = open(file, "r").readlines()
-#        print self.lines
 
         for line in self.lines:
             line = string.strip(line)
