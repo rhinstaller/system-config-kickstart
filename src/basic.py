@@ -216,8 +216,7 @@ class basic:
         val = self.lang_support_store.get_value(iter, 0)
         self.lang_support_store.set_value(iter, 0 , not val)
 
-    def getData(self):
-#        data = []
+    def getData(self, doInstall):
         lang = self.languageLookup(self.lang_combo.entry.get_text())
         self.kickstartData.setLang([self.languageLookup(self.lang_combo.entry.get_text())])
 
@@ -244,9 +243,9 @@ class basic:
                 break
 
         self.kickstartData.setMouse([self.mouseLookup(self.mouse_combo.entry.get_text())])
-        self.kickstartData.setTimezone(self.timezone_combo.entry.get_text())
+        self.kickstartData.setTimezone([self.timezone_combo.entry.get_text()])
 
-        if self.root_passwd_entry.get_text() == "":
+        if self.root_passwd_entry.get_text() == "" and doInstall:
             dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, _("Please select a root password."))
             dlg.set_title(_("Error"))
             dlg.set_default_size(100, 100)
@@ -263,7 +262,7 @@ class basic:
             self.notebook.set_current_page(0)
             self.root_passwd_entry.grab_focus()
             return None
-            
+
         if self.encrypt_root_pw_checkbutton.get_active() == gtk.TRUE:
             pure = self.root_passwd_entry.get_text()
 
@@ -288,10 +287,8 @@ class basic:
             self.kickstartData.setReboot(None)
 
         if self.text_install_checkbutton.get_active():
-            print "setting to text"
             self.kickstartData.setText("text")
         else:
-            print "setting text to None"
             self.kickstartData.setText(None)
 
         if self.interactive_checkbutton.get_active():
