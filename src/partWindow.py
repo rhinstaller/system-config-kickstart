@@ -58,12 +58,15 @@ class partWindow:
         self.formatCheck = xml.get_widget("formatCheck")
         self.partCancelButton = xml.get_widget("part_cancel_button")
         self.partOkButton = xml.get_widget("part_ok_button")
+        self.sizeOptionsTable = xml.get_widget("size_options_table")
+        self.swap_checkbutton = xml.get_widget("swap_checkbutton")
 
         self.fsTypeCombo.list.connect("selection-changed", self.on_fsTypeCombo_set_focus_child)
         self.partCancelButton.connect("clicked", self.on_part_cancel_button_clicked)
         self.sizeSetRadio.connect("toggled", self.on_sizeSetRadio_toggled)
         self.onPartCheck.connect("toggled", self.on_onPartCheck_toggled)
         self.onDiskCheck.connect("toggled", self.on_onDiskCheck_toggled)
+        self.swap_checkbutton.connect("toggled", self.on_swap_recommended_toggled)
         
         mountPoints = ["/", "/boot", "/home", "/var", "/tmp", "/usr", "/opt"]
         self.mountPointCombo.set_popdown_strings(mountPoints)
@@ -81,12 +84,14 @@ class partWindow:
             if index == 2:
                 self.mountPointCombo.set_sensitive(gtk.FALSE)
                 self.formatCheck.set_sensitive(gtk.FALSE)
+                self.swap_checkbutton.set_sensitive(gtk.TRUE)
 #            elif index == 3:
 #                self.mountPointCombo.set_sensitive(gtk.FALSE)
 #                self.formatCheck.set_sensitive(gtk.TRUE)
             else:
                 self.mountPointCombo.set_sensitive(gtk.TRUE)
                 self.formatCheck.set_sensitive(gtk.TRUE)
+                self.swap_checkbutton.set_sensitive(gtk.FALSE)
 
     def on_sizeSetRadio_toggled(self, *args):
         self.maxSizeCombo.set_sensitive(self.sizeSetRadio.get_active())
@@ -208,6 +213,10 @@ class partWindow:
             self.partitionDialog.hide()
             self.win_reset()
 
+    def on_swap_recommended_toggled(self, *args):
+        active = self.swap_checkbutton.get_active()
+        self.sizeOptionsTable.set_sensitive(not active)
+
     def getData(self):
         onDiskVal = ""
         onPartVal = ""
@@ -215,13 +224,21 @@ class partWindow:
 
         mountPoint = self.mountPointCombo.entry.get_text()
         fsType = self.fsTypeCombo.entry.get_text()
+
+##      size stuff
+
         size = self.sizeCombo.get_text()
+
+        if self.swap_checkbutton.get_active() == 1:
+            size = "recommended"
 
         fixedSize = self.sizeFixedRadio.get_active()
         setSize = self.sizeSetRadio.get_active()
         if setSize == 1:
             setSizeVal = self.maxSizeCombo.get_text()
         maxSize = self.sizeMaxRadio.get_active()
+
+##
 
         asPrimary = self.asPrimaryCheck.get_active()
 

@@ -180,7 +180,10 @@ class partition:
             else:
                 buf = buf + "--fstype " + fsType + " " 
 
-            buf = buf + "--size %s " % (size)
+            if size == "recommended":
+                buf = buf + "--recommended"
+            else:
+                buf = buf + "--size %s " % (size)
 
             if setSize:
                 buf = buf + "--grow --maxsize %s " % (setSizeVal)
