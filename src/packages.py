@@ -101,7 +101,7 @@ class Packages:
         self.create_columns(self.development_view, self.development_store)
         self.create_columns(self.systems_view, self.system_store)
 
-        if os.access("/etc/fedora-release2", os.F_OK) == 1:
+        if os.access("/etc/fedora-release", os.F_OK) == 1:
             import fedoraPackageGroupList
             desktopsList = fedoraPackageGroupList.desktopsList
             applicationsList = fedoraPackageGroupList.applicationsList
