@@ -22,7 +22,7 @@ class KickstartData:
         self.bootloader = None
         self.zerombr = None
         self.clearpart = None
-        self.network = None
+        self.networkList = []
         self.auth = None
         self.firewall = None
         self.skipx = None
@@ -199,10 +199,13 @@ class KickstartData:
         return self.clearpart
 
     def setNetwork(self, args):
-        self.network = args
+        self.networkList.append(args)
 
     def getNetwork(self):
-        return self.network
+        return self.networkList
+
+    def clearNetwork(self):
+        self.networkList = []
 
     def setAuth(self, args):
         self.auth = args
@@ -386,7 +389,6 @@ class KickstartData:
             file.append("#Partition clearing information")
             file.append("clearpart " + string.join(self.getClearPart(), " "))
 
-
         if self.getPartitions() != []:
             file.append("#Disk partitioning information")
             for line in self.getPartitions():
@@ -395,6 +397,11 @@ class KickstartData:
         if self.getAuth():
             file.append("#System authorization infomation")
             file.append("auth " + string.join(self.getAuth(), " "))
+
+        if self.getNetwork():
+            file.append("#Network information")
+            for line in self.networkList:
+                file.append("network " + string.join(line, " "))
 
         if self.getFirewall():
             file.append("#Firewall configuration")
