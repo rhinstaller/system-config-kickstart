@@ -1,14 +1,13 @@
 # translation of ko.po to Korean
-#
-# 번 역 자: Michelle Kim 김지은 (mkim@redhat.com)
-# Michelle Kim <mkim@brisbane.redhat.com>, 2002
+# Copyright (C) 2002 Red Hat, Inc
+# Michelle Kim <mkim@redhat.com>, 2002
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ko\n"
 "POT-Creation-Date: 2001-07-19 11:24-0400\n"
-"PO-Revision-Date: 2002-07-26 16:58+1000\n"
-"Last-Translator: Michelle Kim <mkim@brisbane.redhat.com>\n"
+"PO-Revision-Date: 2002-08-02 12:41+1000\n"
+"Last-Translator: Michelle Kim <mkim@redhat.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,6 +53,8 @@ msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
 msgstr ""
+"지정하신 파티션명이 숫자로 끝나지 않습니다.  파티션명에는 "
+"\"hda1\"나 \"sda3\"와 같은 파티션 번호가 포함되어야 합니다."
 
 #: redhat-config-kickstart.gladestrings:152
 msgid "_Yes"
@@ -106,6 +107,9 @@ msgid ""
 "Partitions must have a valid device name and partition number such as \"hda1"
 "\" or \"sda3\"."
 msgstr ""
+"지정하신 파티션명이 \"hd\"나 \"sd\"로 시작하지 않습니다. "
+"파티션명은 \"hda1\"나 \"sda3\"처럼 유효한 장치명과 파티션 번호로 "
+"구성되어야 합니다."
 
 #: redhat-config-kickstart.gladestrings:277
 msgid "Monitor"
@@ -145,7 +149,7 @@ msgstr "수정된(Fixed) 용량"
 
 #: redhat-config-kickstart.gladestrings:55
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: ../src/partWindow.py:83 redhat-config-kickstart.gladestrings:61
 msgid "swap"
@@ -177,7 +181,7 @@ msgstr "GNOME"
 
 #: redhat-config-kickstart.gladestrings:24
 msgid "(for example: hda or sdc)"
-msgstr ""
+msgstr "(예, hda 또는 sdc)"
 
 #: redhat-config-kickstart.gladestrings:298
 msgid "Preview Options"
@@ -264,18 +268,16 @@ msgid "Disabled"
 msgstr "사용하지 않음"
 
 #: redhat-config-kickstart.gladestrings:138
-#, fuzzy
 msgid "label174"
-msgstr "label1"
+msgstr "label174"
 
 #: ../src/partWindow.py:356
 msgid "Specify a mount point for the partition."
 msgstr "해당 파티션에 대한 마운트 지점을 지정해 주십시오."
 
 #: redhat-config-kickstart.gladestrings:134
-#, fuzzy
 msgid "label173"
-msgstr "label1"
+msgstr "label173"
 
 #: redhat-config-kickstart.gladestrings:301
 msgid "RAID Options"
@@ -311,9 +313,8 @@ msgid "HTTP"
 msgstr "HTTP"
 
 #: ../src/raidWindow.py:136 ../src/raidWindow.py:161
-#, fuzzy
 msgid "Raid Devices"
-msgstr "RAID 장치:"
+msgstr "RAID 장치"
 
 #: ../src/kickstartGui.py:109
 msgid "Boot Loader Options"
@@ -324,13 +325,12 @@ msgid "Automatically Resolve Dependencies"
 msgstr "패키지 간의 의존성 문제 자동으로 해결"
 
 #: redhat-config-kickstart.gladestrings:127
-#, fuzzy
 msgid "Upgrade existing boot loader"
-msgstr "기존 부트 로더 설정 업그레이드"
+msgstr "기존 부트 로더 업그레이드"
 
 #: redhat-config-kickstart.gladestrings:129
 msgid "Use LILO for the boot loader"
-msgstr ""
+msgstr "LILO를 부트로더로 사용"
 
 #: redhat-config-kickstart.gladestrings:115
 msgid "HTTP Server:"
@@ -451,11 +451,12 @@ msgid "None"
 msgstr "없음"
 
 #: ../src/partition.py:71
-#, fuzzy
 msgid ""
 "Mount Point/\n"
 "RAID/Volume"
-msgstr "마운트할 지점"
+msgstr ""
+"마운트 지점/\n"
+"RAID/볼륨"
 
 #: redhat-config-kickstart.gladestrings:156
 msgid "_Edit"
@@ -552,7 +553,7 @@ msgstr "Kerberos 5 인증 사용"
 
 #: redhat-config-kickstart.gladestrings:128
 msgid "Use GRUB for the boot loader"
-msgstr ""
+msgstr "GRUB을 부트로더로 사용"
 
 #: ../src/partWindow.py:82 redhat-config-kickstart.gladestrings:60
 msgid "physical volume (LVM)"
@@ -580,7 +581,7 @@ msgstr "이름 기반의 LDAP: "
 
 #: ../src/raidWindow.py:125
 msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr ""
+msgstr "RAID %s을(를) 사용하시려면 최소한 3개의 파티션을 선택하셔야 합니다."
 
 #: ../src/partWindow.py:203 ../src/partWindow.py:270 ../src/raidWindow.py:152
 #: redhat-config-kickstart.gladestrings:154
@@ -596,13 +597,12 @@ msgid "FTP Directory:"
 msgstr "FTP 디렉토리:"
 
 #: ../src/partWindow.py:376
-#, fuzzy
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
 msgstr ""
-"새로운 RAID 파티션을 생성하기 위해서는 반드시 하드 드라이브 또는 기존의 파티"
-"션을 지정하셔야 합니다. "
+"새로운 RAID 파티션을 생성하기 위해서는 반드시 하드 드라이브 또는 "
+"기존의 파티션을 지정하셔야 합니다. "
 
 #: redhat-config-kickstart.gladestrings:290
 msgid "label89"
@@ -613,9 +613,8 @@ msgid "Upgrade"
 msgstr "업그레이드"
 
 #: redhat-config-kickstart.gladestrings:125
-#, fuzzy
 msgid "Install new boot loader"
-msgstr "부트로더 설치"
+msgstr "새로운 부트로더 설치"
 
 #: ../src/partWindow.py:205 ../src/partWindow.py:272 ../src/raidWindow.py:154
 #: redhat-config-kickstart.gladestrings:151
@@ -672,7 +671,6 @@ msgid "Type your %pre script below:"
 msgstr "%pre 스크립트를 입력해 주십시요:"
 
 #: ../src/partWindow.py:225
-#, fuzzy
 msgid "Hard Drives"
 msgstr "하드 드라이브"
 
@@ -749,9 +747,8 @@ msgid "RAID Device:"
 msgstr "RAID 장치:"
 
 #: redhat-config-kickstart.gladestrings:139
-#, fuzzy
 msgid "Install boot loader on Master Boot Record (MBR)"
-msgstr "부트로더가 설치될 위치:"
+msgstr "마스터 부트 레코드 (MBR)에 부트로더를 설치"
 
 #: redhat-config-kickstart.gladestrings:171
 #: redhat-config-kickstart.gladestrings:173
@@ -845,9 +842,8 @@ msgstr ""
 " 킥스타트 파일을 생성하는데 사용되는 그래픽 인터페이스"
 
 #: redhat-config-kickstart.gladestrings:143
-#, fuzzy
 msgid "Boot Loader Options (required)"
-msgstr "부트로더 옵션"
+msgstr "부트로더 옵션 (필수)"
 
 #: redhat-config-kickstart.gladestrings:25
 msgid "Use existing partition (onpart)"
@@ -862,9 +858,8 @@ msgid "Authentication:"
 msgstr "인증:"
 
 #: ../src/partition.py:77
-#, fuzzy
 msgid "Size (MB)"
-msgstr "용량 (MB):"
+msgstr "용량 (MB)"
 
 #: redhat-config-kickstart.gladestrings:105
 msgid "FTP Server:"
@@ -888,7 +883,7 @@ msgstr "파일(_F)"
 
 #: redhat-config-kickstart.gladestrings:29
 msgid "(for example: hda1 or sdc3)"
-msgstr ""
+msgstr "(예, hda1 또는 sdc3)"
 
 #: redhat-config-kickstart.gladestrings:264
 msgid "General"
@@ -900,7 +895,7 @@ msgstr "삭제(_D)"
 
 #: ../src/raidWindow.py:119
 msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr ""
+msgstr "RAID %s을(를) 사용하시려면 최소한 2개의 파티션을 선택하셔야 합니다."
 
 #: redhat-config-kickstart.gladestrings:268
 msgid "Video Card"
@@ -923,6 +918,8 @@ msgid ""
 "Device/\n"
 "Partition Number"
 msgstr ""
+"장치/\n"
+"파티션 번호"
 
 #: redhat-config-kickstart.gladestrings:35
 msgid "Raid Members"
@@ -949,9 +946,8 @@ msgid "Resolution"
 msgstr "해상도"
 
 #: redhat-config-kickstart.gladestrings:126
-#, fuzzy
 msgid "Do not install a boot loader"
-msgstr "부트로더 설치"
+msgstr "부트로더를 설치하지 않음"
 
 #: redhat-config-kickstart.gladestrings:36
 msgid "RAID Level:"
@@ -1015,7 +1011,7 @@ msgstr "지정된 드라이브에 파티션 생성"
 
 #: ../src/partition.py:75
 msgid "Format"
-msgstr ""
+msgstr "포맷"
 
 #: redhat-config-kickstart.gladestrings:251
 #: redhat-config-kickstart.gladestrings:252
@@ -1044,7 +1040,7 @@ msgstr "부팅시 X 윈도우 시스템 시작"
 
 #: redhat-config-kickstart.gladestrings:57
 msgid "5"
-msgstr ""
+msgstr "5"
 
 #: redhat-config-kickstart.gladestrings:244
 msgid "Authentication Configuration"
@@ -1100,11 +1096,12 @@ msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name  such as \"hda1\" or \"sda3\"."
 msgstr ""
+"지정하신 장치명이 올바르지 않습니다. \"hda1\"나 \"sda3\"와 같은 "
+"올바른 장치명을 사용해 주십시오."
 
 #: redhat-config-kickstart.gladestrings:140
-#, fuzzy
 msgid "Install boot loader on first sector of the boot partition"
-msgstr "부트 파티션의 첫번째 섹터(_F)"
+msgstr "부트 파티션의 첫번째 섹터에 부트로더를 설치"
 
 #: redhat-config-kickstart.gladestrings:96
 #: redhat-config-kickstart.gladestrings:122
@@ -1169,7 +1166,7 @@ msgstr "디스크 레이블 초기화:"
 
 #: ../src/partWindow.py:231 ../src/partWindow.py:250 ../src/partWindow.py:264
 msgid "Auto"
-msgstr ""
+msgstr "자동"
 
 #: redhat-config-kickstart.gladestrings:228
 msgid "Hesiod LHS:"
@@ -1289,3 +1286,4 @@ msgstr "종료(_Q)"
 
 #~ msgid "Select a Video Card"
 #~ msgstr "비디오 카드 선택"
+
