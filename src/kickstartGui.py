@@ -207,8 +207,6 @@ class kickstartGui:
 
     #get all buffers to save to file
     def getAllData(self, *args):
-        list = []
-
         if self.basic_class.getData() is None:
             return
 
@@ -235,13 +233,12 @@ class kickstartGui:
 
 	self.scripts_class.getData()
 
-        self.kickstartData.getAll()
-
-	return list
-
     #show chosen options for preview
     def on_activate_preview_options (self, *args):
-        list = self.getAllData()
+        self.getAllData()
+        list = self.kickstartData.getAll()
+
+
 	if list:
 	    #show preview dialog window
 	    previewDialog = savefile.saveFile (list, self.xml)
@@ -249,7 +246,8 @@ class kickstartGui:
 	    return
 
     def on_activate_save_options (self, *args):
-        list = self.getAllData()
+        self.getAllData()
+        list = self.kickstartData.getAll()
 	if list:
 	    #show file selection dialog
 	    fileDialog = savedialog.saveDialog(list, self.xml)
