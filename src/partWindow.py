@@ -24,12 +24,8 @@
 
 import gtk
 import gtk.glade
-#from gtk import *
-#from gnome.ui import *
-#import GtkExtra
 import string
 import signal
-#import gnome.ui
 
 
 class partWindow:
