@@ -92,6 +92,7 @@ class bootloader:
         self.grub_options_label.set_sensitive(status)        
         self.grub_password_label.set_sensitive(status)
         self.grub_password_entry.set_sensitive(status)        
+        self.grub_password_encrypt_checkbutton.set_sensitive(status)
 
     def getData (self):
         data = []
