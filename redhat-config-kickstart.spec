@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
 Version: 2.3.22
-Release: 1
+Release: 2
 URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
@@ -57,6 +57,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Tue Mar  9 2004 Brent Fox <bfox@redhat.com> 2.3.22-2
+- don't crash if no bootloader info in file (bug #117593)
+
 * Tue Mar  2 2004 Brent Fox <bfox@redhat.com> 2.3.22-1
 - add a Requires for redhat-config-language
 
