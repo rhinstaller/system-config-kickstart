@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.5.12
-Release: 4
+Version: 2.5.13
+Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
 ExclusiveOS: Linux
@@ -12,6 +12,7 @@ Source0: %{name}-%{version}.tar.bz2
 Obsoletes: ksconfig
 Obsoletes: redhat-config-kickstart
 BuildRequires: desktop-file-utils
+BuildRequires: intltool
 Requires: pygtk2 >= 1.99.11
 Requires: pygtk2-libglade 
 Requires: python >= 2.3.3
@@ -59,6 +60,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Tue Sep 07 2004 Paul Nasrat <pnasrat@redhat.com> - 2.5.13-1
+- i18n .desktop 
+
 * Mon Sep 06 2004 Paul Nasrat <pnasrat@redhat.com> - 2.5.12-4
 - PyGTK API fix
 

@@ -21,7 +21,7 @@ subdirs:
 	|| case "$(MFLAGS)" in *k*) fail=yes;; *) exit 1;; esac; \
 	done && test -z "$$fail"
 
-install:
+install: ${PKGNAME}.desktop
 	mkdir -p $(INSTROOT)/usr/sbin
 	mkdir -p $(INSTROOT)$(PKGDATADIR)
 	mkdir -p $(INSTROOT)$(PKGDATADIR)/pixmaps
@@ -58,7 +58,7 @@ snapsrc: archive
 local:
 	@rm -rf ${PKGNAME}-$(VERSION).tar.bz2
 	@rm -rf /tmp/${PKGNAME}-$(VERSION) /tmp/${PKGNAME}
-	@cd /tmp; cp -a ~/redhat/${PKGNAME} ${PKGNAME}
+	@dir=$$PWD; cd /tmp; cp -a $$dir ${PKGNAME}
 	@mv /tmp/${PKGNAME} /tmp/${PKGNAME}-$(VERSION)
 	@dir=$$PWD; cd /tmp; tar --bzip2 -cSpf $$dir/${PKGNAME}-$(VERSION).tar.bz2 ${PKGNAME}-$(VERSION)
 	@rm -rf /tmp/${PKGNAME}-$(VERSION)	
@@ -68,3 +68,7 @@ clean:
 	@rm -f *~
 	@rm -f src/*~
 	@rm -f src/*.pyc
+	@rm -f ${PKGNAME}.desktop
+
+%.desktop: %.desktop.in
+	@intltool-merge -d -u po/ $< $@
