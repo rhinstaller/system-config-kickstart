@@ -85,6 +85,8 @@ class kickstartGui:
 
     def __init__ (self, file):
         self.xml = xml
+        name_tag = (_("Kickstart"))
+        comment_tag = (_("Create a kickstart file"))
 
         self.kickstartData = kickstartData.KickstartData()
 
