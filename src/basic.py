@@ -140,26 +140,62 @@ class basic:
         mouse_combo.entry.set_editable(FALSE)		
 
         #populate keyboard combo, add keyboards here
-        keyboard_list = [ "azerty", "be-latin1", "be2-latin1",
-                       "fr-latin0", "fr-pc", "fr", "wangbe", "ANSI-dvorak",
-                       "dvorak-1", "dvorak-r", "dvorak", "pc-dvorak-latin1",
-                       "tr_f-latin5", "trf", "bg", "cf", "cz-lat2-prog",
-                       "cz-lat2", "defkeymap", "defkeymap_V1.0", "dk-latin1",
-                       "dk.emacs", "emacs2", "es", "fi-latin1", "fi",
-                       "gr-pc", "gr", "hebrew", "hu101", "is-latin",
-                       "it-ibm", "it", "it2", "jp106", "la-latin1", "lt",
-                       "lt.l4", "nl", "no-latin1", "no", "pc110", "pl",
-                       "pt-latin1", "pt-old", "ro", "ru-cp1251", "ru-ms",
-                       "ru-yawerty", "ru", "ru1", "ru2", "ru_win",
-                       "se-latin1", "sk-prog-qwerty", "sk-prog", "sk-qwerty",
-                       "tr_q-latin5", "tralt", "trf", "trq", "ua", "uk",
-                       "us", "croat", "cz-us-qwerty", "de-latin1-nodeadkeys",
-                       "de-latin1", "de", "fr_CH-latin1", "fr_CH", "hu",
-                       "sg-latin1-lk450", "sg-latin1", "sg",
-                       "sk-prog-qwertz", "sk-qwertz", "slovene" ]
+        self.keyboard_dict = { 'U.S. English': 'us',
+                          'Swiss German': 'de_CH',
+                          'Swiss French': 'fr_CH',
+                          'PC-98xx Series': 'nec/jp',
+                          'Polish': 'pl',
+                          'Canadian': 'ca',
+                          'Spanish': 'es',
+                          'Slovak': 'sk',
+                          'Macedonian': 'mk',
+                          'United Kingdom':'gb',
+                          'Belarusian': 'by',
+                          'Japanese': 'jp',
+                          'German': 'de',
+                          'Czech': 'cz',
+                          'Portuguese':
+                          'pt',
+                          'Turkish': 'tr',
+                          'Croatian': 'hr',
+                          'U.S. English w/ deadkeys': 'us_intl',
+                          'Serbian': 'sr',
+                          'Latvian': 'lv',
+                          'Ukrainian': 'ua',
+                          'Greek': 'el',
+                          'Norwegian': 'no',
+                          'Lithuanian qwerty programmers': 'lt_p',
+                          'Finnish': 'fi',
+                          'Czech (qwerty)': 'cz_qwerty',
+                          'Dvorak': 'dvorak',
+                          'Thai': 'th',
+                          'Russian': 'ru',
+                          'Armenian': 'am',
+                          'Azerbaidjani': 'az',
+                          'Lithuanian qwerty "numeric"': 'lt',
+                          'Slovak (qwerty)': 'sk_qwerty',
+                          'French': 'fr',
+                          'Lithuanian azerty standard': 'lt_std',
+                          'Hungarian': 'hu',
+                          'Bulgarian': 'bg',
+                          'Danish': 'dk',
+                          'Belgian': 'be',
+                          'U.S. English w/ISO9995-3': 'en_US',
+                          'Brazilian': 'br',
+                          'Slovenian': 'si',
+                          'Italian': 'it',
+                          'Romanian': 'ro',
+                          'Vietnamese': 'vn',
+                          'Estonian': 'ee',
+                          'Icelandic': 'is',
+                          'Israeli': 'il',
+                          'Swedish': 'se'}
+       
+        keyboard_list = self.keyboard_dict.keys()
+        keyboard_list.sort()
         keyboard_combo.set_popdown_strings(keyboard_list)
         #set default to English
-        keyboard_combo.list.select_item(63)
+        keyboard_combo.list.select_item(43)
         keyboard_combo.entry.set_editable(FALSE)		
 
         #populate time zone combo
@@ -195,7 +231,7 @@ class basic:
         buf = ""
         buf = buf + "\n" + "lang " + self.languageLookup(self.lang_combo.entry.get_text())
         buf = buf + "\n" + "langsupport " + self.languageLookup(self.lang_support_combo.entry.get_text())
-        buf = buf + "\n" + "keyboard " + self.keyboard_combo.entry.get_text()
+        buf = buf + "\n" + "keyboard " + self.keyboard_dict[self.keyboard_combo.entry.get_text()]
         buf = buf + "\n" + self.mouseLookup(self.mouse_combo.entry.get_text())
         buf = buf + "\n" + "timezone --utc " + self.timezone_combo.entry.get_text()
 
