@@ -436,7 +436,7 @@ if zone in list_items:
 	select = list_items.index(zone)
 
 timeCombo.set_popdown_strings(list_items)
-timeCombo.list.select_item(select)
+#timeCombo.list.select_item(select)
 timeCombo.entry.set_editable(FALSE)
 
 #-------------------Root Password----------------#
