@@ -60,6 +60,7 @@ class xconfig:
         self.monitor_view.set_model(self.monitor_store)
         self.monitor_col = gtk.TreeViewColumn("", gtk.CellRendererText(), text = 0)
         self.monitor_view.append_column(self.monitor_col)
+        self.upgrade_flag = gtk.FALSE
 
         self.config_x_button.connect("toggled", self.toggleXconfig)
         self.monitor_probe_check.connect("toggled", self.on_monitor_probe_check_toggled)
@@ -161,11 +162,18 @@ class xconfig:
         if boolean == gtk.FALSE:
             self.xconfig_vbox.hide()
             self.xconfig_label_box.show()
+            self.upgrade_flag = gtk.TRUE
         else:
             self.xconfig_vbox.show()
             self.xconfig_label_box.hide()
+            self.upgrade_flag = gtk.FALSE
 
     def getData(self):
+        if self.upgrade_flag == gtk.TRUE:
+            self.kickstartData.setXconfig(None)
+            self.kickstartData.setFirstboot(None)
+            return
+
         if self.config_x_button.get_active():
             if self.firstboot_optionmenu.get_history() == 0:
                 self.kickstartData.setFirstboot(None)
