@@ -135,7 +135,7 @@ class xconfig:
         if self.config_x_button.get_active():
             buf = "\n" + "xconfig "
             if self.probe_x_button.get_active():
-                continue
+                pass
             else:
                 #monitor 
                 buf = buf + " --monitor \"" + self.monitor_clist.get_text(self.selected_monitor_row,0) + "\""
