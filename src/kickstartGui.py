@@ -141,7 +141,7 @@ class kickstartGui:
                                         _("Kickstart Configurator @VERSION@\n Copyright (c) 2000-2002 Red Hat, Inc.\n Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n A graphical interface for creating a kickstart file"))
 		dlg.set_title(_("About Kickstart Configurator"))
 		dlg.set_default_size(100, 100)
-		dlg.set_position (gtk.WIN_POS_CENTER)
+		dlg.set_position (gtk.CENTER)
 		dlg.set_border_width(2)
 		dlg.set_modal(gtk.TRUE)
 		rc = dlg.run()

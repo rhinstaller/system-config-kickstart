@@ -77,10 +77,22 @@ class partition:
 
 
     def delPartition(self, *args):
-        data, iter = self.part_view.get_selection().get_selected()
+        try:
+            data, iter = self.part_view.get_selection().get_selected()
+        except:
+            selectDialog = gtk.MessageDialog(None, 0, gtk.MESSAGE_INFO, gtk.BUTTONS_OK, _("Please select a partition from the list."))
+            selectDialog.set_title(_("Message"))
+            selectDialog.set_default_size(100, 100)
+            selectDialog.set_position (gtk.WIN_POS_CENTER)
+            selectDialog.set_border_width(2)
+            selectDialog.set_modal(gtk.TRUE)
+            rc = selectDialog.run()
+            if rc == gtk.RESPONSE_OK:
+                selectDialog.hide()
+            return
         self.part_store.remove(iter)
-        self.edit_part_button.set_state(STATE_INSENSITIVE)
-        self.del_part_button.set_state(STATE_INSENSITIVE)
+        self.edit_part_button.set_sensitive(gtk.FALSE)
+        self.del_part_button.set_sensitive(gtk.FALSE)
 
     def addPartition(self, *args):
         self.partWindow.add_partition()
@@ -90,7 +102,20 @@ class partition:
         self.part_view.get_selection().unselect_all()
 
     def editPartition(self, *args):
-        data, iter = self.part_view.get_selection().get_selected()
+        try:
+            data, iter = self.part_view.get_selection().get_selected()
+        except:
+            selectDialog = gtk.MessageDialog(None, 0, gtk.MESSAGE_INFO, gtk.BUTTONS_OK, _("Please select a partition from the list."))
+            selectDialog.set_title(_("Message"))
+            selectDialog.set_default_size(100, 100)
+            selectDialog.set_position (gtk.WIN_POS_CENTER)
+            selectDialog.set_border_width(2)
+            selectDialog.set_modal(gtk.TRUE)
+            rc = selectDialog.run()
+            if rc == gtk.RESPONSE_OK:
+                selectDialog.hide()
+            return
+            
         part_object = self.part_store.get_value(iter, 4)
         self.partWindow.edit_partition(iter, part_object)
 
