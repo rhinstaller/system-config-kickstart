@@ -65,13 +65,9 @@ def saveFile_cb(args):
 
 
 	try:
-#		networkData = networkWin.getData()
-#                print "HERE>>>>>>>>"
-#		print networkWin.getData()
 		buf = buf + networkWin.getData()
 	except:
 		pass
-
 
 	buf = buf + "\n" + "install"
 
@@ -82,7 +78,6 @@ def saveFile_cb(args):
 
 		if authCheck2.get_active():
 			buf = buf + " --enablemd5"
-
 
 	try:
 		buf = buf + authWin.getData()
