@@ -45,6 +45,7 @@ class partWindow:
         self.partitionDialog.connect ("destroy", self.destroy)
         self.deviceCombo = xml.get_widget("deviceCombo")
         self.mountPointCombo = xml.get_widget("mountPointCombo")
+        self.fsTypeCombo = xml.get_widget("fsTypeCombo")
 
         xml.signal_autoconnect (
             { "on_cancel_part_clicked" : self.on_cancel_part_clicked,
@@ -53,10 +54,13 @@ class partWindow:
         deviceList = ["/dev/hda", "/dev/hdb", "/dev/hdc", "/dev/hdb"]
         self.deviceCombo.set_popdown_strings(deviceList)
 
-        mountPoints = ["/", "/boot", "/home", "/var", "/tmp", "/usr", "/opt", "swap"]
+        mountPoints = ["/", "/boot", "/home", "/var", "/tmp", "/usr", "/opt"]
         self.mountPointCombo.set_popdown_strings(mountPoints)
 
-        #if swap, disable other options
+        fileTypes = ["ext2", "Linux Swap"]
+        self.fsTypeCombo.set_popdown_strings(fileTypes)
+
+        #if swap, disable mount points
 
         self.partitionDialog.show_all()
 
