@@ -169,15 +169,7 @@ class partWindow:
         elif part_object.device:
             self.onDiskCheck.set_active(gtk.TRUE)
             self.onDiskEntry.set_text(part_object.device)
-            
-        if part_object.sizeStrategy == "fixed":
-            self.sizeFixedRadio.set_active(gtk.TRUE)
-        elif part_object.sizeStrategy == "grow":
-            self.setSizeRadio.set_active(gtk.TRUE)
-            self.setSizeCombo.set_text(part_object.setSizeVal)
-        elif part_object.sizeStrategy == "max":
-            self.sizeMaxRadio.set_active(gtk.TRUE)
-        
+
         self.formatCheck.set_active(part_object.doFormat)        
 
         fsTypeKey = self.fsTypeCombo.entry.get_text()
@@ -190,6 +182,15 @@ class partWindow:
                 self.formatCheck.set_sensitive(gtk.FALSE)
 
         self.partitionDialog.show_all()
+
+        if part_object.sizeStrategy == "fixed":
+            self.sizeFixedRadio.set_active(gtk.TRUE)
+        elif part_object.sizeStrategy == "grow":
+            self.setSizeRadio.set_active(gtk.TRUE)
+            self.setSizeCombo.set_text(part_object.setSizeVal)
+        elif part_object.sizeStrategy == "max":
+            self.sizeMaxRadio.set_active(gtk.TRUE)
+        
         #XXX - have to do this after the show_all due to a bug in gtkSpinButton, I suspect
         if part_object.size == "recommended":
             self.swap_checkbutton.set_active(gtk.TRUE)
@@ -548,8 +549,8 @@ class partWindow:
             self.setValues(part_object)
 
     def parseLine(self, part_object, line):
-        opts, args = getopt.getopt(line[1:], "d:h", ["recommended", "fstype=", "size=", "onpart",
-                                                     "grow", "maxsize", "noformat",
+        opts, args = getopt.getopt(line[1:], "d:h", ["recommended", "fstype=", "size=", "onpart=",
+                                                     "grow", "maxsize=", "noformat",
                                                      "usepart", "ondisk=", "ondrive", "asprimary"
                                                      "bytes-per-inode", "start", "end", "badblocks"
                                                      ])
@@ -571,14 +572,14 @@ class partWindow:
             if opt == "--ondisk":
                 part_object.device = value
 
-            if opt == "onpart":
+            if opt == "--onpart":
                 self.partition = value
 
-            if opt == "grow":
-                self.sizeStrategy = "max"
+            if opt == "--grow":
+                part_object.sizeStrategy = "max"
 
-            if opt == "maxsize":
-                self.sizeStrategy = "grow"
+            if opt == "--maxsize":
+                part_object.sizeStrategy = "grow"
                 part_object.setSizeVal = value
 
             if opt == "--noformat":
