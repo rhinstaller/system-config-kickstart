@@ -448,8 +448,4 @@ class KickstartData:
                 for line in self.getPostList():
                     file.append(line)
 
-        for line in file:
-            print line
-
-
-#        return file
+        return file
