@@ -1,24 +1,26 @@
+# translation of it.po to 
 # translation of it.po to Italian
 # translation of it.po to
 # translation of it.po to italiano
-# Copyright (C) 2001, 2004 Free Software Foundation, Inc.
+# Copyright (C) 2001, 2004, 2005 Free Software Foundation, Inc.
 # Bettina De Monti <bdemonti@redhat.it>, 2001.
 # Luca Ferrari <alexluca@inwind.it>, 2004.
 # Paolo Dona' <vik@3jv.com>, 2004.
-# Francesco Valente <fvalen@redhat.com>, 2004
+# Francesco Valente <fvalen@redhat.com>, 2004.
+# Lorenzo Stobbione <lorenzo.stobbione@clsengineering.it>, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: it\n"
 "POT-Creation-Date: 2004-12-09 10:13-0500\n"
-"PO-Revision-Date: 2004-03-31 10:14+1000\n"
-"Last-Translator: Francesco Valente <fvalen@redhat.com>\n"
-"Language-Team: Italian <i18n-list@redhat.com>\n"
+"PO-Revision-Date: 2005-02-19 14:12+0100\n"
+"Last-Translator: Lorenzo Stobbione <lorenzo.stobbione@clsengineering.it>\n"
+"Language-Team:  <fedora-trans-it@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Report-Msgid-Bugs-To: \n"
-"X-Generator: KBabel 1.0\n"
+"X-Generator: KBabel 1.3.1\n"
 
 #: ../src/RHELPackageGroupList.py:12
 msgid "X Window System"
@@ -29,9 +31,8 @@ msgid "GNOME Desktop Environment"
 msgstr "GNOME Desktop Environment"
 
 #: ../src/RHELPackageGroupList.py:14
-#, fuzzy
 msgid "KDE (K Desktop Environment)"
-msgstr "KDE Desktop Environment"
+msgstr "KDE (K Desktop Environment)"
 
 #: ../src/RHELPackageGroupList.py:16
 msgid "Editors"
@@ -343,15 +344,15 @@ msgstr ""
 
 #: ../src/packageGroupList.py:18
 msgid "Could not start because there is no /usr/share/comps/"
-msgstr ""
+msgstr "Impossibile avviare kickstart poiché la directory /usr/share/comps/ è mancante."
 
 #: ../src/packageGroupList.py:18
 msgid "/comps.xml file."
-msgstr ""
+msgstr "file /comps.xml "
 
 #: ../src/packageGroupList.py:19
 msgid "Please make sure the comps package is installed."
-msgstr ""
+msgstr "Si prega di verificare che il pacchetto comps sia installato."
 
 #: ../src/partWindow.py:83 system-config-kickstart.gladestrings:58
 msgid "ext2"
@@ -402,8 +403,7 @@ msgstr "Specificare un mount point per la partizione."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:429
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "Il mount point \"%s\" è già in uso. Selezionare un altro mount point."
 
 #: ../src/partWindow.py:449
@@ -872,8 +872,7 @@ msgstr "Riavviare il sistema dopo l'installazione"
 
 #: system-config-kickstart.gladestrings:91
 msgid "Perform installation in text mode (graphical is default)"
-msgstr ""
-"Eseguire l'installazione in modalità testo (quella grafica è di default)"
+msgstr "Eseguire l'installazione in modalità testo (quella grafica è di default)"
 
 #: system-config-kickstart.gladestrings:92
 msgid "Perform installation in interactive mode"
@@ -1074,8 +1073,7 @@ msgstr "RAID"
 
 #: system-config-kickstart.gladestrings:159
 msgid "Partition options are not applicable on upgrades."
-msgstr ""
-"Non sono applicabili con gli aggiornamenti le opzioni per la partizione."
+msgstr "Non sono applicabili con gli aggiornamenti le opzioni per la partizione."
 
 #: system-config-kickstart.gladestrings:160
 msgid "Partition Information (required)"
@@ -1235,8 +1233,7 @@ msgstr "Name Switch Cache"
 
 #: system-config-kickstart.gladestrings:211
 msgid "Authentication options are not applicable on upgrades."
-msgstr ""
-"Le opzioni per l'autenticazione non sono applicabili con gli aggiornamenti"
+msgstr "Le opzioni per l'autenticazione non sono applicabili con gli aggiornamenti"
 
 #: system-config-kickstart.gladestrings:212
 msgid "Authentication Configuration"
@@ -1368,7 +1365,7 @@ msgstr "Selezionare i pacchetti da installare."
 
 #: system-config-kickstart.gladestrings:251
 msgid "_Install Everything"
-msgstr ""
+msgstr "_Installazione completa"
 
 #: system-config-kickstart.gladestrings:252
 msgid "Desktops"
@@ -1539,72 +1536,3 @@ msgstr "Server di nomi:"
 msgid "."
 msgstr "."
 
-#~ msgid "Server Configuration Tools"
-#~ msgstr "Strumenti Configurazione Server"
-
-#~ msgid "Network Servers"
-#~ msgstr "Network Servers"
-
-#~ msgid "Could not read monitor database"
-#~ msgstr "Impossibile leggere il database del monitor"
-
-#~ msgid "_Automatically Resolve Dependencies"
-#~ msgstr "_Risolvi automaticamente le dipendenze"
-
-#~ msgid "_Ignore Dependencies"
-#~ msgstr "_Ignora le dipendenze"
-
-#~ msgid "Use GRUB for the boot loader"
-#~ msgstr "Utilizzare GRUB per il boot loader"
-
-#~ msgid "Use LILO for the boot loader"
-#~ msgstr "Utilizzare LILO per il boot loader"
-
-#~ msgid "label173"
-#~ msgstr "label173"
-
-#~ msgid "LILO Options:"
-#~ msgstr "Opzioni di LILO:"
-
-#~ msgid "Use linear mode"
-#~ msgstr "Utilizzare la modalità lineare"
-
-#~ msgid "Force use of lba32 mode"
-#~ msgstr "Forzare utilizzo modalità lba32"
-
-#~ msgid "label174"
-#~ msgstr "label174"
-
-#~ msgid "Specify hsync and vsync instead of monitor"
-#~ msgstr "Specificare sincO e sincV anziché il monitor"
-
-#~ msgid "Allow incoming:"
-#~ msgstr "Permettere in ingresso:"
-
-#~ msgid "Use default firewall rules"
-#~ msgstr "Utilizza regole di default per il firewall"
-
-#~ msgid "Select the default firewall level:"
-#~ msgstr "Seleziona il livello di default per il firewall:"
-
-#~ msgid "High"
-#~ msgstr "Alto"
-
-#~ msgid "Customize"
-#~ msgstr "Personalizza"
-
-#~ msgid "Medium"
-#~ msgstr "Medio"
-
-#, fuzzy
-#~ msgid "DIsabled"
-#~ msgstr "Disattivato"
-
-#~ msgid "None"
-#~ msgstr "Nessuno"
-
-#~ msgid "DHCP"
-#~ msgstr "DHCP"
-
-#~ msgid "Miscellaneous"
-#~ msgstr "Miscellanea"
