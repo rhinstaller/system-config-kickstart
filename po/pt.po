@@ -8,8 +8,8 @@ msgstr ""
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <morais@kde.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: UTF-8\n"
 "PO-Creation-Date: Mon Aug 13 16:08:22 2001\n"
 
 #: redhat-config-kickstart.gladestrings:166
@@ -78,7 +78,7 @@ msgstr "Autenticação"
 msgid "label33"
 msgstr "label33"
 
-#: redhat-config-kickstart.gladestrings:284
+#: redhat-config-kickstart.gladestrings:290
 msgid "label34"
 msgstr "label34"
 
@@ -86,8 +86,8 @@ msgstr "label34"
 msgid "label35"
 msgstr "label35"
 
-#: redhat-config-kickstart.gladestrings:286
-#: redhat-config-kickstart.gladestrings:293
+#: redhat-config-kickstart.gladestrings:292
+#: redhat-config-kickstart.gladestrings:299
 msgid "Use an interpreter:"
 msgstr "Utilizar um interpretador:"
 
@@ -149,7 +149,7 @@ msgstr "0"
 msgid "swap"
 msgstr "swap"
 
-#: redhat-config-kickstart.gladestrings:292
+#: redhat-config-kickstart.gladestrings:298
 msgid "Run outside of the chroot environment"
 msgstr "Executar foram do ambiente chroot"
 
@@ -177,13 +177,22 @@ msgstr "GNOME"
 msgid "(for example: hda or sdc)"
 msgstr "(por exemplo: hda ou sdc)"
 
-#: redhat-config-kickstart.gladestrings:298
+#: redhat-config-kickstart.gladestrings:304
 msgid "Preview Options"
 msgstr "Previsão das Opções"
 
 #: redhat-config-kickstart.gladestrings:214
 msgid "LDAP Server: "
 msgstr "Servidor LDAP: "
+
+#: redhat-config-kickstart.gladestrings:306
+#, fuzzy
+msgid ""
+"You have choosen the following configuration. Click Save File to save the "
+"kickstart file. "
+msgstr ""
+"Escolheu a seguinte configuração. Carregue em Gravar Ficheiro para gravar o "
+"ficheiro kickstart. Carregue em Cancel para voltar ao programa."
 
 #: redhat-config-kickstart.gladestrings:141
 msgid "Kernel parameters:"
@@ -193,7 +202,7 @@ msgstr "Parâmetros do kernel:"
 msgid "md14"
 msgstr "md14"
 
-#: redhat-config-kickstart.gladestrings:305
+#: redhat-config-kickstart.gladestrings:311
 msgid "Create a software RAID partition"
 msgstr "Criar uma partição de RAID software"
 
@@ -220,6 +229,10 @@ msgstr "Utilizar MD5"
 #: redhat-config-kickstart.gladestrings:233
 msgid "Hesiod"
 msgstr "Hesiod"
+
+#: redhat-config-kickstart.gladestrings:283
+msgid "Desktops"
+msgstr ""
 
 #: redhat-config-kickstart.gladestrings:221
 msgid "Kerberos Domain Controller (KDC):"
@@ -273,7 +286,7 @@ msgstr "Escolha o ponto onde montar a partição."
 msgid "label173"
 msgstr "label173"
 
-#: redhat-config-kickstart.gladestrings:301
+#: redhat-config-kickstart.gladestrings:307
 msgid "RAID Options"
 msgstr "Opções RAID"
 
@@ -358,7 +371,7 @@ msgstr "Domínio NIS:"
 msgid "Hz"
 msgstr "Hz"
 
-#: redhat-config-kickstart.gladestrings:297
+#: redhat-config-kickstart.gladestrings:303
 msgid "label93"
 msgstr "label93"
 
@@ -379,13 +392,16 @@ msgid "FTP Password"
 msgstr "Senha de FTP"
 
 #: redhat-config-kickstart.gladestrings:7
-#: redhat-config-kickstart.gladestrings:299
 msgid "Save File"
 msgstr "Gravar Ficheiro"
 
 #: redhat-config-kickstart.gladestrings:149
 msgid "L_inux"
 msgstr "L_inux"
+
+#: redhat-config-kickstart.gladestrings:288
+msgid "Miscellaneous"
+msgstr ""
 
 #: redhat-config-kickstart.gladestrings:236
 msgid "SMB Workgroup:"
@@ -399,7 +415,7 @@ msgstr "Método de Instalação"
 msgid "Make LVM Partition"
 msgstr "Crirar Partição LVM"
 
-#: ../src/kickstartGui.py:112 redhat-config-kickstart.gladestrings:289
+#: ../src/kickstartGui.py:112 redhat-config-kickstart.gladestrings:295
 msgid "Pre-Installation Script"
 msgstr "'Script' de Pré-Instalação"
 
@@ -430,6 +446,10 @@ msgstr "md12"
 #: redhat-config-kickstart.gladestrings:52
 msgid "md13"
 msgstr "md13"
+
+#: redhat-config-kickstart.gladestrings:287
+msgid "System"
+msgstr ""
 
 #: redhat-config-kickstart.gladestrings:94
 #: redhat-config-kickstart.gladestrings:112
@@ -473,7 +493,7 @@ msgstr "NFS"
 msgid "Network Configuration"
 msgstr "Configuração de Rede"
 
-#: redhat-config-kickstart.gladestrings:285
+#: redhat-config-kickstart.gladestrings:291
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %pre command at the beginning."
@@ -553,7 +573,7 @@ msgstr "volume físico (LVM)"
 msgid "Network Type:"
 msgstr "Tipo de Rede:"
 
-#: redhat-config-kickstart.gladestrings:291
+#: redhat-config-kickstart.gladestrings:297
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %post command at the beginning."
@@ -594,7 +614,7 @@ msgstr ""
 "Para criar uma nova partição RAID tem de escolher o nome do dispositivo de "
 "um disco rígido ou uma partição existente."
 
-#: redhat-config-kickstart.gladestrings:290
+#: redhat-config-kickstart.gladestrings:296
 msgid "label89"
 msgstr "label89"
 
@@ -656,7 +676,7 @@ msgstr "SMB"
 msgid "label88"
 msgstr "label88"
 
-#: redhat-config-kickstart.gladestrings:288
+#: redhat-config-kickstart.gladestrings:294
 msgid "Type your %pre script below:"
 msgstr "Insira o 'script' %pre aqui:"
 
@@ -671,6 +691,11 @@ msgstr "Discos Rígidos"
 #: redhat-config-kickstart.gladestrings:216
 msgid "LDAP Authentication"
 msgstr "Autenticação LDAP"
+
+#: redhat-config-kickstart.gladestrings:284
+#, fuzzy
+msgid "Applications"
+msgstr "Autenticação"
 
 #: redhat-config-kickstart.gladestrings:21
 #: redhat-config-kickstart.gladestrings:26
@@ -731,8 +756,8 @@ msgstr "         "
 #: redhat-config-kickstart.gladestrings:267
 #: redhat-config-kickstart.gladestrings:271
 #: redhat-config-kickstart.gladestrings:273
-#: redhat-config-kickstart.gladestrings:287
-#: redhat-config-kickstart.gladestrings:294
+#: redhat-config-kickstart.gladestrings:293
+#: redhat-config-kickstart.gladestrings:300
 msgid "*"
 msgstr "*"
 
@@ -780,7 +805,7 @@ msgstr "Montar em:"
 msgid "md5"
 msgstr "md5"
 
-#: redhat-config-kickstart.gladestrings:302
+#: redhat-config-kickstart.gladestrings:308
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -976,11 +1001,11 @@ msgstr "Tem actualmente %s partições de RAID por software disponíveis."
 msgid "Mouse:"
 msgstr "Rato:"
 
-#: ../src/kickstartGui.py:113 redhat-config-kickstart.gladestrings:296
+#: ../src/kickstartGui.py:113 redhat-config-kickstart.gladestrings:302
 msgid "Post-Installation Script"
 msgstr "'Script' de Pós-Instalação"
 
-#: ../src/kickstartGui.py:112 redhat-config-kickstart.gladestrings:283
+#: ../src/kickstartGui.py:112 redhat-config-kickstart.gladestrings:289
 msgid "Package Selection"
 msgstr "Selecção de Pacotes"
 
@@ -988,13 +1013,17 @@ msgstr "Selecção de Pacotes"
 msgid "Select packages to install."
 msgstr "Escolha o pacotes a instalar."
 
-#: redhat-config-kickstart.gladestrings:306
+#: redhat-config-kickstart.gladestrings:312
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "Criar um dispositivo RAID [por omissão = /dev/md0]"
 
 #: redhat-config-kickstart.gladestrings:225
 msgid "Kerberos 5 Authentication"
 msgstr "Autenticação Kerberos 5"
+
+#: redhat-config-kickstart.gladestrings:286
+msgid "Development"
+msgstr ""
 
 #: ../src/partition.py:131 ../src/partition.py:152
 msgid "Please select a partition from the list."
@@ -1025,7 +1054,7 @@ msgstr "Nível de Segurança"
 msgid "label128"
 msgstr "label128"
 
-#: redhat-config-kickstart.gladestrings:295
+#: redhat-config-kickstart.gladestrings:301
 msgid "Type your %post script below:"
 msgstr "Insira o 'script' %post aqui:"
 
@@ -1045,7 +1074,7 @@ msgstr "5"
 msgid "Authentication Configuration"
 msgstr "Configuração da Autenticação"
 
-#: redhat-config-kickstart.gladestrings:304
+#: redhat-config-kickstart.gladestrings:310
 msgid "Choose one of the following options:"
 msgstr "Escolha uma das seguintes opções:"
 
@@ -1053,13 +1082,10 @@ msgstr "Escolha uma das seguintes opções:"
 msgid "Enable SMB Authentication"
 msgstr "Activar Autenticação SMB"
 
-#: redhat-config-kickstart.gladestrings:300
-msgid ""
-"You have choosen the following configuration. Click Save File to save the "
-"kickstart file. Click Cancel to return to the program."
-msgstr ""
-"Escolheu a seguinte configuração. Carregue em Gravar Ficheiro para gravar o "
-"ficheiro kickstart. Carregue em Cancel para voltar ao programa."
+#: redhat-config-kickstart.gladestrings:285
+#, fuzzy
+msgid "Servers"
+msgstr "Servidores SMB:"
 
 #: ../src/kickstartGui.py:172
 msgid "Help is not available."
@@ -1123,7 +1149,7 @@ msgstr "label28"
 msgid "Message"
 msgstr "Mensagem"
 
-#: redhat-config-kickstart.gladestrings:303
+#: redhat-config-kickstart.gladestrings:309
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -1179,6 +1205,11 @@ msgstr "Aumentar até ao máximo de (MB):"
 #: redhat-config-kickstart.gladestrings:137
 msgid "Force use of lba32 mode"
 msgstr "Forçar a utilização do modo lba32"
+
+#: redhat-config-kickstart.gladestrings:305
+#, fuzzy
+msgid "Save to File"
+msgstr "Gravar Ficheiro"
 
 #: redhat-config-kickstart.gladestrings:148
 msgid "_No"
