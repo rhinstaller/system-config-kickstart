@@ -57,7 +57,7 @@ class KickstartData:
         self.preList = []
         self.postLine = None
         self.postList = []
-        self.platform = "x86"
+        self.platform = "x86, AMD64, or Intel EM64T"
 
     def setLang(self, args):
         self.lang = args[0]
