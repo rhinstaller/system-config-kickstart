@@ -31,9 +31,9 @@ msgstr "分割區 ："
 msgid "_About"
 msgstr "關於(_A)"
 
-#: redhat-config-kickstart.gladestrings:246
-msgid "High"
-msgstr "高"
+#: redhat-config-kickstart.gladestrings:155
+msgid "_Add"
+msgstr "新增(_A)"
 
 #: redhat-config-kickstart.gladestrings:83
 msgid "Language Support:"
@@ -94,10 +94,6 @@ msgstr "使用編譯器："
 #: redhat-config-kickstart.gladestrings:18
 msgid "Additional Size Options"
 msgstr "其他的磁區大小選項"
-
-#: redhat-config-kickstart.gladestrings:266
-msgid "Video Card RAM: "
-msgstr "顯示卡記憶體："
 
 #: ../src/partWindow.py:427
 msgid ""
@@ -335,9 +331,9 @@ msgstr ""
 msgid "HTTP Server:"
 msgstr "HTTP 伺服器："
 
-#: ../src/kickstartGui.py:110 redhat-config-kickstart.gladestrings:198
-msgid "Network Configuration"
-msgstr "網路組態設定"
+#: redhat-config-kickstart.gladestrings:266
+msgid "Video Card RAM: "
+msgstr "顯示卡記憶體："
 
 #: redhat-config-kickstart.gladestrings:81
 msgid "Root Password:"
@@ -416,10 +412,6 @@ msgstr "儲存檔案(_S)"
 msgid "md15"
 msgstr "md15"
 
-#: redhat-config-kickstart.gladestrings:69
-msgid "_Help Contents"
-msgstr "說明內容(_H)"
-
 #: redhat-config-kickstart.gladestrings:130
 msgid "GRUB Options:"
 msgstr "GRUB 選項："
@@ -477,9 +469,9 @@ msgstr "md9"
 msgid "NFS"
 msgstr "NFS"
 
-#: redhat-config-kickstart.gladestrings:8
-msgid "Partition Options"
-msgstr "分割區選項"
+#: ../src/kickstartGui.py:110 redhat-config-kickstart.gladestrings:198
+msgid "Network Configuration"
+msgstr "網路組態設定"
 
 #: redhat-config-kickstart.gladestrings:285
 msgid ""
@@ -667,6 +659,10 @@ msgstr "label88"
 #: redhat-config-kickstart.gladestrings:288
 msgid "Type your %pre script below:"
 msgstr "在以下輸入 %pre 程式碼："
+
+#: redhat-config-kickstart.gladestrings:246
+msgid "High"
+msgstr "高"
 
 #: ../src/partWindow.py:225
 #, fuzzy
@@ -1005,6 +1001,10 @@ msgstr "Kerberos 5 認證"
 msgid "Please select a partition from the list."
 msgstr "請從清單中選擇一個分割區。"
 
+#: redhat-config-kickstart.gladestrings:8
+msgid "Partition Options"
+msgstr "分割區選項"
+
 #: redhat-config-kickstart.gladestrings:20
 msgid "Make partition on specific drive (ondisk)"
 msgstr "在特定磁碟機上建立分割區 (ondisk)"
@@ -1066,6 +1066,12 @@ msgstr ""
 msgid "Help is not available."
 msgstr "無法取得輔助說明。"
 
+#: ../src/partWindow.py:411
+msgid ""
+"The device you specified is not a valid device name. Please use a valid "
+"device name such as \"hda1\" or \"sda3\"."
+msgstr ""
+
 #: ../src/basic.py:269
 msgid "Please select a root password."
 msgstr "請選擇一個 root 密碼。"
@@ -1090,11 +1096,9 @@ msgstr "名稱置換緩衝(Name Switch Cache)"
 msgid "NFS Directory:"
 msgstr "NFS 目錄："
 
-#: ../src/partWindow.py:411
-msgid ""
-"The device you specified is not a valid device name. Please use a valid "
-"device name  such as \"hda1\" or \"sda3\"."
-msgstr ""
+#: redhat-config-kickstart.gladestrings:247
+msgid "Medium"
+msgstr "中"
 
 #: redhat-config-kickstart.gladestrings:140
 #, fuzzy
@@ -1117,10 +1121,6 @@ msgstr "label28"
 #: ../src/partition.py:132 ../src/partition.py:153
 msgid "Message"
 msgstr "訊息"
-
-#: redhat-config-kickstart.gladestrings:247
-msgid "Medium"
-msgstr "中"
 
 #: redhat-config-kickstart.gladestrings:303
 msgid ""
@@ -1154,9 +1154,10 @@ msgstr "SMB 伺服器："
 msgid "Use GRUB password: "
 msgstr "使用 GRUB 密碼： "
 
-#: redhat-config-kickstart.gladestrings:155
-msgid "_Add"
-msgstr "新增(_A)"
+#: redhat-config-kickstart.gladestrings:69
+#, fuzzy
+msgid "_Contents"
+msgstr "說明內容(_H)"
 
 #: redhat-config-kickstart.gladestrings:147
 msgid "Initialize the Disk Label:"

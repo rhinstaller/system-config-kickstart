@@ -30,9 +30,9 @@ msgstr "Disksneið :"
 msgid "_About"
 msgstr "_Um"
 
-#: redhat-config-kickstart.gladestrings:246
-msgid "High"
-msgstr "Hátt"
+#: redhat-config-kickstart.gladestrings:155
+msgid "_Add"
+msgstr "_Bæta við"
 
 #: redhat-config-kickstart.gladestrings:83
 msgid "Language Support:"
@@ -93,10 +93,6 @@ msgstr "Nota túlk:"
 #: redhat-config-kickstart.gladestrings:18
 msgid "Additional Size Options"
 msgstr "Frekari stærðaarrofar"
-
-#: redhat-config-kickstart.gladestrings:266
-msgid "Video Card RAM: "
-msgstr "Skjáminni:"
 
 #: ../src/partWindow.py:427
 msgid ""
@@ -334,9 +330,9 @@ msgstr ""
 msgid "HTTP Server:"
 msgstr "HTTP þjónn:"
 
-#: ../src/kickstartGui.py:110 redhat-config-kickstart.gladestrings:198
-msgid "Network Configuration"
-msgstr "Stillingar nets"
+#: redhat-config-kickstart.gladestrings:266
+msgid "Video Card RAM: "
+msgstr "Skjáminni:"
 
 #: redhat-config-kickstart.gladestrings:81
 msgid "Root Password:"
@@ -415,10 +411,6 @@ msgstr "_Vista skrá"
 msgid "md15"
 msgstr "md15"
 
-#: redhat-config-kickstart.gladestrings:69
-msgid "_Help Contents"
-msgstr "Yfirlist _hjálpar"
-
 #: redhat-config-kickstart.gladestrings:130
 msgid "GRUB Options:"
 msgstr "GRUB rofar:"
@@ -476,9 +468,9 @@ msgstr "md9"
 msgid "NFS"
 msgstr "NFS"
 
-#: redhat-config-kickstart.gladestrings:8
-msgid "Partition Options"
-msgstr "Stillingar disksneiða"
+#: ../src/kickstartGui.py:110 redhat-config-kickstart.gladestrings:198
+msgid "Network Configuration"
+msgstr "Stillingar nets"
 
 #: redhat-config-kickstart.gladestrings:285
 msgid ""
@@ -668,6 +660,10 @@ msgstr "label88"
 #: redhat-config-kickstart.gladestrings:288
 msgid "Type your %pre script below:"
 msgstr "Sláðu inn %pre skeljaforritið þitt hér:"
+
+#: redhat-config-kickstart.gladestrings:246
+msgid "High"
+msgstr "Hátt"
 
 #: ../src/partWindow.py:225
 #, fuzzy
@@ -1007,6 +1003,10 @@ msgstr "Kerberos 5 auðkenning"
 msgid "Please select a partition from the list."
 msgstr "Vinsamlegast veldu disksneið úr listanum."
 
+#: redhat-config-kickstart.gladestrings:8
+msgid "Partition Options"
+msgstr "Stillingar disksneiða"
+
 #: redhat-config-kickstart.gladestrings:20
 msgid "Make partition on specific drive (ondisk)"
 msgstr "Búa sneiðina til á tilteknum disk (ondisk)"
@@ -1068,6 +1068,12 @@ msgstr ""
 msgid "Help is not available."
 msgstr "Hjálpin er ekki tiltæk."
 
+#: ../src/partWindow.py:411
+msgid ""
+"The device you specified is not a valid device name. Please use a valid "
+"device name such as \"hda1\" or \"sda3\"."
+msgstr ""
+
 #: ../src/basic.py:269
 msgid "Please select a root password."
 msgstr "Vinsamlegast veldu rótarlykilorð."
@@ -1092,11 +1098,9 @@ msgstr "Biðminni nafnaþjónsrofa"
 msgid "NFS Directory:"
 msgstr "NFS mappa:"
 
-#: ../src/partWindow.py:411
-msgid ""
-"The device you specified is not a valid device name. Please use a valid "
-"device name  such as \"hda1\" or \"sda3\"."
-msgstr ""
+#: redhat-config-kickstart.gladestrings:247
+msgid "Medium"
+msgstr "Miðlungs"
 
 #: redhat-config-kickstart.gladestrings:140
 #, fuzzy
@@ -1119,10 +1123,6 @@ msgstr "label28"
 #: ../src/partition.py:132 ../src/partition.py:153
 msgid "Message"
 msgstr "Skilaboð"
-
-#: redhat-config-kickstart.gladestrings:247
-msgid "Medium"
-msgstr "Miðlungs"
 
 #: redhat-config-kickstart.gladestrings:303
 msgid ""
@@ -1157,9 +1157,10 @@ msgstr "SMB þjónar:"
 msgid "Use GRUB password: "
 msgstr "Nota GRUB lykilorð: "
 
-#: redhat-config-kickstart.gladestrings:155
-msgid "_Add"
-msgstr "_Bæta við"
+#: redhat-config-kickstart.gladestrings:69
+#, fuzzy
+msgid "_Contents"
+msgstr "Yfirlist _hjálpar"
 
 #: redhat-config-kickstart.gladestrings:147
 msgid "Initialize the Disk Label:"

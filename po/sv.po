@@ -31,9 +31,9 @@ msgstr "Partition:"
 msgid "_About"
 msgstr "_Om"
 
-#: redhat-config-kickstart.gladestrings:246
-msgid "High"
-msgstr "Hög"
+#: redhat-config-kickstart.gladestrings:155
+msgid "_Add"
+msgstr "_Lägg till"
 
 #: redhat-config-kickstart.gladestrings:83
 msgid "Language Support:"
@@ -97,10 +97,6 @@ msgstr "Använd en tolk:"
 msgid "Additional Size Options"
 msgstr "Ytterligare storleksalternativ"
 
-#: redhat-config-kickstart.gladestrings:266
-msgid "Video Card RAM: "
-msgstr "Grafikkortsminne: "
-
 #: ../src/partWindow.py:427
 msgid ""
 "The partition you specified does not begin with \"hd\" or \"sd\".  "
@@ -108,8 +104,8 @@ msgid ""
 "\" or \"sda3\"."
 msgstr ""
 "Partitionen som du angav börjar inte med \"hd\" eller \"sd\". Partitioner "
-"måste ha ett giltigt enhetsnamn och partitionsnummer som exempelvis "
-"\"hda1\" eller \"sda3\"."
+"måste ha ett giltigt enhetsnamn och partitionsnummer som exempelvis \"hda1\" "
+"eller \"sda3\"."
 
 #: redhat-config-kickstart.gladestrings:277
 msgid "Monitor"
@@ -337,9 +333,9 @@ msgstr "Använd LILO som startprogram"
 msgid "HTTP Server:"
 msgstr "HTTP-server:"
 
-#: ../src/kickstartGui.py:110 redhat-config-kickstart.gladestrings:198
-msgid "Network Configuration"
-msgstr "Nätverkskonfiguration"
+#: redhat-config-kickstart.gladestrings:266
+msgid "Video Card RAM: "
+msgstr "Grafikkortsminne: "
 
 #: redhat-config-kickstart.gladestrings:81
 msgid "Root Password:"
@@ -418,10 +414,6 @@ msgstr "_Spara fil"
 msgid "md15"
 msgstr "md15"
 
-#: redhat-config-kickstart.gladestrings:69
-msgid "_Help Contents"
-msgstr "_Hjälpinnehåll"
-
 #: redhat-config-kickstart.gladestrings:130
 msgid "GRUB Options:"
 msgstr "GRUB-alternativ:"
@@ -480,9 +472,9 @@ msgstr "md9"
 msgid "NFS"
 msgstr "NFS"
 
-#: redhat-config-kickstart.gladestrings:8
-msgid "Partition Options"
-msgstr "Partitionsalternativ"
+#: ../src/kickstartGui.py:110 redhat-config-kickstart.gladestrings:198
+msgid "Network Configuration"
+msgstr "Nätverkskonfiguration"
 
 #: redhat-config-kickstart.gladestrings:285
 msgid ""
@@ -602,8 +594,8 @@ msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
 msgstr ""
-"För att skapa en ny RAID-partition måste du antingen ange enhetsnamnet på "
-"en hårddisk eller en befintlig partition."
+"För att skapa en ny RAID-partition måste du antingen ange enhetsnamnet på en "
+"hårddisk eller en befintlig partition."
 
 #: redhat-config-kickstart.gladestrings:290
 msgid "label89"
@@ -670,6 +662,10 @@ msgstr "label88"
 #: redhat-config-kickstart.gladestrings:288
 msgid "Type your %pre script below:"
 msgstr "Skriv in ditt %pre-skript nedan:"
+
+#: redhat-config-kickstart.gladestrings:246
+msgid "High"
+msgstr "Hög"
 
 #: ../src/partWindow.py:225
 msgid "Hard Drives"
@@ -897,8 +893,7 @@ msgstr "_Ta bort"
 
 #: ../src/raidWindow.py:119
 msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr ""
-"Du måste välja åtminstone 2 partitioner för att kunna använda RAID %s"
+msgstr "Du måste välja åtminstone 2 partitioner för att kunna använda RAID %s"
 
 #: redhat-config-kickstart.gladestrings:268
 msgid "Video Card"
@@ -1009,6 +1004,10 @@ msgstr "Kerberos 5-autentisering"
 msgid "Please select a partition from the list."
 msgstr "Välj en partition från listan."
 
+#: redhat-config-kickstart.gladestrings:8
+msgid "Partition Options"
+msgstr "Partitionsalternativ"
+
 #: redhat-config-kickstart.gladestrings:20
 msgid "Make partition on specific drive (ondisk)"
 msgstr "Skapa partition på specifik enhet (ondisk)"
@@ -1070,6 +1069,14 @@ msgstr ""
 msgid "Help is not available."
 msgstr "Hjälp är inte tillgänglig."
 
+#: ../src/partWindow.py:411
+msgid ""
+"The device you specified is not a valid device name. Please use a valid "
+"device name such as \"hda1\" or \"sda3\"."
+msgstr ""
+"Enheten som du angav är inte ett giltigt enetsnamn. Ange ett giltigt "
+"enhetsnamn som exempelvis \"hda1\" eller \"sda3\"."
+
 #: ../src/basic.py:269
 msgid "Please select a root password."
 msgstr "Välj ett rootlösenord."
@@ -1094,20 +1101,9 @@ msgstr "Namnväxlingscache"
 msgid "NFS Directory:"
 msgstr "NFS-katalog:"
 
-#: ../src/partWindow.py:411
-msgid ""
-"The device you specified is not a valid device name. Please use a valid "
-"device name  such as \"hda1\" or \"sda3\"."
-msgstr ""
-"Enheten som du angav är inte ett giltigt enetsnamn. Ange ett giltigt "
-"enhetsnamn som exempelvis \"hda1\" eller \"sda3\"."
-
-msgid ""
-"The device you specified is not a valid device name. Please use a valid "
-"device name such as \"hda1\" or \"sda3\"."
-msgstr ""
-"Enheten som du angav är inte ett giltigt enetsnamn. Ange ett giltigt "
-"enhetsnamn som exempelvis \"hda1\" eller \"sda3\"."
+#: redhat-config-kickstart.gladestrings:247
+msgid "Medium"
+msgstr "Mellan"
 
 #: redhat-config-kickstart.gladestrings:140
 msgid "Install boot loader on first sector of the boot partition"
@@ -1129,10 +1125,6 @@ msgstr "label28"
 #: ../src/partition.py:132 ../src/partition.py:153
 msgid "Message"
 msgstr "Meddelande"
-
-#: redhat-config-kickstart.gladestrings:247
-msgid "Medium"
-msgstr "Mellan"
 
 #: redhat-config-kickstart.gladestrings:303
 msgid ""
@@ -1167,9 +1159,10 @@ msgstr "SMB-servrar:"
 msgid "Use GRUB password: "
 msgstr "Använd GRUB-lösenord: "
 
-#: redhat-config-kickstart.gladestrings:155
-msgid "_Add"
-msgstr "_Lägg till"
+#: redhat-config-kickstart.gladestrings:69
+#, fuzzy
+msgid "_Contents"
+msgstr "_Hjälpinnehåll"
 
 #: redhat-config-kickstart.gladestrings:147
 msgid "Initialize the Disk Label:"
@@ -1198,6 +1191,13 @@ msgstr "_Nej"
 #: redhat-config-kickstart.gladestrings:67
 msgid "_Quit"
 msgstr "_Avsluta"
+
+#~ msgid ""
+#~ "The device you specified is not a valid device name. Please use a valid "
+#~ "device name  such as \"hda1\" or \"sda3\"."
+#~ msgstr ""
+#~ "Enheten som du angav är inte ett giltigt enetsnamn. Ange ett giltigt "
+#~ "enhetsnamn som exempelvis \"hda1\" eller \"sda3\"."
 
 #~ msgid "RAID 5"
 #~ msgstr "RAID 5"

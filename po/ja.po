@@ -32,9 +32,9 @@ msgstr "パーティション :"
 msgid "_About"
 msgstr "関連情報(_A)"
 
-#: redhat-config-kickstart.gladestrings:246
-msgid "High"
-msgstr "高"
+#: redhat-config-kickstart.gladestrings:155
+msgid "_Add"
+msgstr "追加(_A)"
 
 #: redhat-config-kickstart.gladestrings:83
 msgid "Language Support:"
@@ -54,8 +54,8 @@ msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
 msgstr ""
-"指定されたパーティションは、番号では終了しません。パーティションは、 "
-" \"hda1\" や \"sda3\"などのパーティション番号を持つ必要があります。"
+"指定されたパーティションは、番号では終了しません。パーティションは、  \"hda1"
+"\" や \"sda3\"などのパーティション番号を持つ必要があります。"
 
 #: redhat-config-kickstart.gladestrings:152
 msgid "_Yes"
@@ -98,19 +98,15 @@ msgstr "インタプリタを使う:"
 msgid "Additional Size Options"
 msgstr "追加サイズオプション"
 
-#: redhat-config-kickstart.gladestrings:266
-msgid "Video Card RAM: "
-msgstr "ビデオカードRAM: "
-
 #: ../src/partWindow.py:427
 msgid ""
 "The partition you specified does not begin with \"hd\" or \"sd\".  "
 "Partitions must have a valid device name and partition number such as \"hda1"
 "\" or \"sda3\"."
 msgstr ""
-"指定されたパーティションは、\"hd\" や \"sd\"では始まりません。パーティションは "
-"\"hda1\"や\"sda3\"などの有効なデバイス名とパーティション番号を持つ "
-"必要があります。"
+"指定されたパーティションは、\"hd\" や \"sd\"では始まりません。パーティション"
+"は \"hda1\"や\"sda3\"などの有効なデバイス名とパーティション番号を持つ 必要が"
+"あります。"
 
 #: redhat-config-kickstart.gladestrings:277
 msgid "Monitor"
@@ -337,9 +333,9 @@ msgstr "ブートローダーとしてLILOを使用"
 msgid "HTTP Server:"
 msgstr "HTTPサーバ:"
 
-#: ../src/kickstartGui.py:110 redhat-config-kickstart.gladestrings:198
-msgid "Network Configuration"
-msgstr "ネットワーク設定"
+#: redhat-config-kickstart.gladestrings:266
+msgid "Video Card RAM: "
+msgstr "ビデオカードRAM: "
 
 #: redhat-config-kickstart.gladestrings:81
 msgid "Root Password:"
@@ -418,10 +414,6 @@ msgstr "ファイルの保存(_S)"
 msgid "md15"
 msgstr "md15"
 
-#: redhat-config-kickstart.gladestrings:69
-msgid "_Help Contents"
-msgstr "ヘルプの内容(_H)"
-
 #: redhat-config-kickstart.gladestrings:130
 msgid "GRUB Options:"
 msgstr "GRUBオプション:"
@@ -480,9 +472,9 @@ msgstr "md9"
 msgid "NFS"
 msgstr "NFS"
 
-#: redhat-config-kickstart.gladestrings:8
-msgid "Partition Options"
-msgstr "パーティションオプション"
+#: ../src/kickstartGui.py:110 redhat-config-kickstart.gladestrings:198
+msgid "Network Configuration"
+msgstr "ネットワーク設定"
 
 #: redhat-config-kickstart.gladestrings:285
 msgid ""
@@ -602,8 +594,8 @@ msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
 msgstr ""
-"新しいRAIDパーティションを作成するには、ハードドライブ のデバイス名か "
-"又は既存のパーティションを指定する必要があります。"
+"新しいRAIDパーティションを作成するには、ハードドライブ のデバイス名か 又は既"
+"存のパーティションを指定する必要があります。"
 
 #: redhat-config-kickstart.gladestrings:290
 msgid "label89"
@@ -670,6 +662,10 @@ msgstr "label88"
 #: redhat-config-kickstart.gladestrings:288
 msgid "Type your %pre script below:"
 msgstr "%pre スクリプトを下に入力してください:"
+
+#: redhat-config-kickstart.gladestrings:246
+msgid "High"
+msgstr "高"
 
 #: ../src/partWindow.py:225
 msgid "Hard Drives"
@@ -896,7 +892,8 @@ msgstr "削除(_D)"
 
 #: ../src/raidWindow.py:119
 msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr "RAID %sを使用するには、最低2つのパーティションを選択する必要があります。"
+msgstr ""
+"RAID %sを使用するには、最低2つのパーティションを選択する必要があります。"
 
 #: redhat-config-kickstart.gladestrings:268
 msgid "Video Card"
@@ -1006,6 +1003,10 @@ msgstr "ケルベロス5認証"
 msgid "Please select a partition from the list."
 msgstr "一覧からパーティションを選択して下さい。"
 
+#: redhat-config-kickstart.gladestrings:8
+msgid "Partition Options"
+msgstr "パーティションオプション"
+
 #: redhat-config-kickstart.gladestrings:20
 msgid "Make partition on specific drive (ondisk)"
 msgstr "指定したドライブにパーティションを作る(ディスク上)"
@@ -1068,6 +1069,15 @@ msgstr ""
 msgid "Help is not available."
 msgstr "ヘルプは使用できません。"
 
+#: ../src/partWindow.py:411
+#, fuzzy
+msgid ""
+"The device you specified is not a valid device name. Please use a valid "
+"device name such as \"hda1\" or \"sda3\"."
+msgstr ""
+"指定されたデバイスは有効なデバイス名ではありません。\"hda1\" や \"sda3\"など "
+"有効なデバイス名を使用してください。"
+
 #: ../src/basic.py:269
 msgid "Please select a root password."
 msgstr "rootパスワードを選択して下さい。"
@@ -1092,13 +1102,9 @@ msgstr "NSCD"
 msgid "NFS Directory:"
 msgstr "NFSディレクトリ:"
 
-#: ../src/partWindow.py:411
-msgid ""
-"The device you specified is not a valid device name. Please use a valid "
-"device name  such as \"hda1\" or \"sda3\"."
-msgstr ""
-"指定されたデバイスは有効なデバイス名ではありません。\"hda1\" や \"sda3\"など "
-"有効なデバイス名を使用してください。"
+#: redhat-config-kickstart.gladestrings:247
+msgid "Medium"
+msgstr "中"
 
 #: redhat-config-kickstart.gladestrings:140
 msgid "Install boot loader on first sector of the boot partition"
@@ -1120,10 +1126,6 @@ msgstr "label28"
 #: ../src/partition.py:132 ../src/partition.py:153
 msgid "Message"
 msgstr "メッセージ"
-
-#: redhat-config-kickstart.gladestrings:247
-msgid "Medium"
-msgstr "中"
 
 #: redhat-config-kickstart.gladestrings:303
 msgid ""
@@ -1158,9 +1160,10 @@ msgstr "SMBサーバ:"
 msgid "Use GRUB password: "
 msgstr "GRUBパスワードを使用:  "
 
-#: redhat-config-kickstart.gladestrings:155
-msgid "_Add"
-msgstr "追加(_A)"
+#: redhat-config-kickstart.gladestrings:69
+#, fuzzy
+msgid "_Contents"
+msgstr "ヘルプの内容(_H)"
 
 #: redhat-config-kickstart.gladestrings:147
 msgid "Initialize the Disk Label:"
@@ -1299,4 +1302,3 @@ msgstr "停止(_Q)"
 #~ "2\n"
 #~ "3\n"
 #~ "4\n"
-

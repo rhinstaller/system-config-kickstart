@@ -31,9 +31,9 @@ msgstr "Partizione:"
 msgid "_About"
 msgstr "_Info"
 
-#: redhat-config-kickstart.gladestrings:246
-msgid "High"
-msgstr "Alto"
+#: redhat-config-kickstart.gladestrings:155
+msgid "_Add"
+msgstr "_Aggiungi"
 
 #: redhat-config-kickstart.gladestrings:83
 msgid "Language Support:"
@@ -94,10 +94,6 @@ msgstr "Usa un interprete:"
 #: redhat-config-kickstart.gladestrings:18
 msgid "Additional Size Options"
 msgstr "Dimensioni opzionali aggiuntive"
-
-#: redhat-config-kickstart.gladestrings:266
-msgid "Video Card RAM: "
-msgstr "RAM della scheda video:"
 
 #: ../src/partWindow.py:427
 msgid ""
@@ -336,9 +332,9 @@ msgstr ""
 msgid "HTTP Server:"
 msgstr "Server HTTP:"
 
-#: ../src/kickstartGui.py:110 redhat-config-kickstart.gladestrings:198
-msgid "Network Configuration"
-msgstr "Configurazione di rete"
+#: redhat-config-kickstart.gladestrings:266
+msgid "Video Card RAM: "
+msgstr "RAM della scheda video:"
 
 #: redhat-config-kickstart.gladestrings:81
 msgid "Root Password:"
@@ -417,10 +413,6 @@ msgstr "_Salva file"
 msgid "md15"
 msgstr "md15"
 
-#: redhat-config-kickstart.gladestrings:69
-msgid "_Help Contents"
-msgstr "_Contenuto della guida"
-
 #: redhat-config-kickstart.gladestrings:130
 msgid "GRUB Options:"
 msgstr "Opzioni di GRUB:"
@@ -478,9 +470,9 @@ msgstr "md9"
 msgid "NFS"
 msgstr "NFS"
 
-#: redhat-config-kickstart.gladestrings:8
-msgid "Partition Options"
-msgstr "Opzioni di partizione"
+#: ../src/kickstartGui.py:110 redhat-config-kickstart.gladestrings:198
+msgid "Network Configuration"
+msgstr "Configurazione di rete"
 
 #: redhat-config-kickstart.gladestrings:285
 msgid ""
@@ -670,6 +662,10 @@ msgstr "label88"
 #: redhat-config-kickstart.gladestrings:288
 msgid "Type your %pre script below:"
 msgstr "Digitare lo script %pre qui sotto:"
+
+#: redhat-config-kickstart.gladestrings:246
+msgid "High"
+msgstr "Alto"
 
 #: ../src/partWindow.py:225
 #, fuzzy
@@ -1009,6 +1005,10 @@ msgstr "Autenticazione di Kerberos 5"
 msgid "Please select a partition from the list."
 msgstr "Selezionare una partizione dall'elenco."
 
+#: redhat-config-kickstart.gladestrings:8
+msgid "Partition Options"
+msgstr "Opzioni di partizione"
+
 #: redhat-config-kickstart.gladestrings:20
 msgid "Make partition on specific drive (ondisk)"
 msgstr "Creare partizione su dispositivo specifico (ondisk)"
@@ -1070,6 +1070,12 @@ msgstr ""
 msgid "Help is not available."
 msgstr "L'help non è disponibile."
 
+#: ../src/partWindow.py:411
+msgid ""
+"The device you specified is not a valid device name. Please use a valid "
+"device name such as \"hda1\" or \"sda3\"."
+msgstr ""
+
 #: ../src/basic.py:269
 msgid "Please select a root password."
 msgstr "Selezionare una password di root."
@@ -1094,11 +1100,9 @@ msgstr "Name Switch Cache"
 msgid "NFS Directory:"
 msgstr "Directory NFS:"
 
-#: ../src/partWindow.py:411
-msgid ""
-"The device you specified is not a valid device name. Please use a valid "
-"device name  such as \"hda1\" or \"sda3\"."
-msgstr ""
+#: redhat-config-kickstart.gladestrings:247
+msgid "Medium"
+msgstr "Medio"
 
 #: redhat-config-kickstart.gladestrings:140
 #, fuzzy
@@ -1121,10 +1125,6 @@ msgstr "label28"
 #: ../src/partition.py:132 ../src/partition.py:153
 msgid "Message"
 msgstr "Messaggio"
-
-#: redhat-config-kickstart.gladestrings:247
-msgid "Medium"
-msgstr "Medio"
 
 #: redhat-config-kickstart.gladestrings:303
 msgid ""
@@ -1159,9 +1159,10 @@ msgstr "Server SMB:"
 msgid "Use GRUB password: "
 msgstr "Usare la password di GRUB:"
 
-#: redhat-config-kickstart.gladestrings:155
-msgid "_Add"
-msgstr "_Aggiungi"
+#: redhat-config-kickstart.gladestrings:69
+#, fuzzy
+msgid "_Contents"
+msgstr "_Contenuto della guida"
 
 #: redhat-config-kickstart.gladestrings:147
 msgid "Initialize the Disk Label:"

@@ -409,7 +409,7 @@ class partWindow:
                 self.deviceNotValid(_("Specify a device on which to create the partition."))
             else:
                 self.deviceNotValid(_("The device you specified is not a valid device name. "
-                                         "Please use a valid device name  "
+                                         "Please use a valid device name "
                                          "such as \"hda1\" or \"sda3\"."))
             return
 
