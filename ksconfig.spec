@@ -23,7 +23,8 @@ make INSTROOT=$RPM_BUILD_ROOT install
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f %{name}.lang
+#%files -f %{name}.lang
+%files
 %defattr(-,root,root)
 /usr/sbin/ksconfig
 %{_mandir}/*/*
