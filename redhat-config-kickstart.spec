@@ -56,6 +56,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Wed Oct 16 2002 Tammy Fox <tfox@redhat.com>
+- Set modal windows to transient as well so they can't get hidden
+
 * Mon Oct 14 2002 Brent Fox <bfox@redhat.com> 2.3.3-4
 - Fix bug 75001.  Fix some reset states in partWindow.py
 
