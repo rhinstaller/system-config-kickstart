@@ -15,7 +15,7 @@ TITLE="Boot Loader Options"
 HREF="redhat-config-kickstart-bootloader.html"><LINK
 REL="NEXT"
 TITLE="Network Configuration"
-HREF="redhat-config-kickstart-network.html"></HEAD
+HREF="redhat-config-kickstart-network.html"></HEAD><link rel="stylesheet" type="text/css" href="rhdocs-man.css"
 ><BODY
 CLASS="CHAPTER"
 BGCOLOR="#FFFFFF"
@@ -91,23 +91,23 @@ SRC="./figs/ksconfig-partitions.png"></P
 ></DIV
 ><P
 >	Select whether or not to clear the Master Boot Record (MBR). You can
-	also choose to remove all the existing partitions, remove all the
+	also choose to remove all existing partitions, remove all 
 	existing Linux partitions, or preserve existing partitions.
       </P
 ><P
 >	You can initialize the disk label to the default for the architecture of
-	the system (<TT
+        the system (for example, <TT
 CLASS="COMMAND"
 >msdos</TT
-> for x86 and <TT
+> for x86 and
+	<TT
 CLASS="COMMAND"
 >gpt</TT
->
-	for Itanium). Select <B
+> for Itanium). Select <B
 CLASS="GUILABEL"
->Initialize the disk label</B
-> if
-	you are installing on a brand new hard drive.
+>Initialize the
+	disk label</B
+> if you are installing on a brand new hard drive.
       </P
 ><DIV
 CLASS="SECT1"
@@ -222,7 +222,7 @@ CLASS="GUIBUTTON"
 > button. The same
 	  <B
 CLASS="GUILABEL"
->Partitions Options</B
+>Partition Options</B
 > window that appears when you
 	  add a partition appears, except it contains the values for the
 	  selected partition. Modify the partition options and click
@@ -280,7 +280,7 @@ CLASS="GUILABEL"
 >Software RAID</B
 > as the file system
 		type. Also, you must specify a hard drive on which to make the
-		partition or an existing partition to use.</P
+		partition or specify an existing partition to use.</P
 ></LI
 ></OL
 ><DIV

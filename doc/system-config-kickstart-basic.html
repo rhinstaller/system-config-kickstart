@@ -15,7 +15,7 @@ TITLE="Introduction"
 HREF="intro.html"><LINK
 REL="NEXT"
 TITLE="Installation Method"
-HREF="redhat-config-kickstart-install.html"></HEAD
+HREF="redhat-config-kickstart-install.html"></HEAD><link rel="stylesheet" type="text/css" href="rhdocs-man.css"
 ><BODY
 CLASS="CHAPTER"
 BGCOLOR="#FFFFFF"
@@ -116,13 +116,13 @@ CLASS="GUIMENUITEM"
 CLASS="GUIMENUITEM"
 >Probe for
 	  Mouse</B
-> the installation program will try to autodetect
+>, the installation program will try to autodetect
 	the mouse. Probing works for most modern mice.
       </P
 ><P
 >	If you have a two-button button mouse, you can emulate a three-button mouse
 	by selecting <B
-CLASS="GUIBUTTON"
+CLASS="GUILABEL"
 >Emulate 3 Buttons</B
 >. If this option
 	is selected, simultaneously clicking the left and right mouse buttons
@@ -133,7 +133,11 @@ CLASS="GUIBUTTON"
 CLASS="GUIMENU"
 >Time Zone</B
 > menu, choose the time zone to
-	use for the system.
+	use for the system. To configure the system to use UTC, select <B
+CLASS="GUILABEL"
+>Use
+	UTC clock</B
+>.
       </P
 ><P
 >	Enter the desired root password for the system in the <B
@@ -142,7 +146,7 @@ CLASS="GUILABEL"
 	  Password</B
 > text entry box. If you want to save the password
 	as an encrypted password in the file, select <B
-CLASS="GUIBUTTON"
+CLASS="GUILABEL"
 >Encrypt root
 	  password</B
 >. When the file is saved, the plaintext password
@@ -191,8 +195,8 @@ CLASS="GUILABEL"
       </P
 ><P
 >	You can perform a kickstart installation in
-	interactive mode. This means that the installation program will use all
-	the options pre-configured in the kickstart file, but it will allow you
+	interactive mode. This means that the installation program uses all
+	the options pre-configured in the kickstart file, but it allows you
 	to preview the options in each screen before you can continue to the
 	next screen. To continue to the next screen, click the
 	<B
@@ -205,7 +209,7 @@ CLASS="GUIBUTTON"
 CLASS="GUILABEL"
 >Perform installation in
 	interactive mode</B
-> button.
+> option.
       </P
 ></DIV
 ><DIV

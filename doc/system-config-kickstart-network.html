@@ -15,7 +15,7 @@ TITLE="Partition Information"
 HREF="redhat-config-kickstart-partitions.html"><LINK
 REL="NEXT"
 TITLE="Authentication"
-HREF="redhat-config-kickstart-auth.html"></HEAD
+HREF="redhat-config-kickstart-auth.html"></HEAD><link rel="stylesheet" type="text/css" href="rhdocs-man.css"
 ><BODY
 CLASS="CHAPTER"
 BGCOLOR="#FFFFFF"
@@ -90,46 +90,41 @@ SRC="./figs/ksconfig-network.png"></P
 ></P
 ></DIV
 ><P
->	There are three network configuration options:
-	<B
-CLASS="GUIBUTTON"
->DHCP</B
->, <B
-CLASS="GUIBUTTON"
->Static IP</B
->, and
-	<B
-CLASS="GUIBUTTON"
->None</B
->. If there is not an Ethernet card in
-	the system, choose <B
-CLASS="GUIBUTTON"
->None</B
->. 
-      </P
+>      If the system to be installed via kickstart does not have an Ethernet card
+      in the system, do not configure one on the <B
+CLASS="GUILABEL"
+>Network
+      Configuration</B
+> page.
+    </P
 ><P
->	Networking is only required if you choose a networking-type installation
-	method (NFS, FTP, or HTTP). If you are unsure which to choose, choose
-	<B
-CLASS="GUIBUTTON"
->None</B
->. Networking can always be configured after
-	installation with the <B
+>        Networking is only required if you choose a networking-based
+        installation method (NFS, FTP, or HTTP). Networking can always be
+        configured after installation with the
+        <B
 CLASS="APPLICATION"
 >Network Administration Tool</B
 >
-	(<TT
+        (<TT
 CLASS="COMMAND"
 >redhat-config-network</TT
 >).
-      </P
+       </P
 ><P
->	If you select <B
+>        For each Ethernet card on the system, click <B
 CLASS="GUIBUTTON"
->Static IP</B
->, you must provide
-	additional networking information in the table below the network
-	types. 
+>Add Network
+        Device</B
+> and select the network device and network type of the
+        device. Select <B
+CLASS="GUILABEL"
+>eth0</B
+> as the network device for the
+        first Ethernet card, select <B
+CLASS="GUILABEL"
+>eth1</B
+> for the second
+        Ethernet card, and so on.
       </P
 ></DIV
 ><DIV

@@ -15,7 +15,7 @@ TITLE="Pre-Installation Script"
 HREF="redhat-config-kickstart-prescript.html"><LINK
 REL="NEXT"
 TITLE="Use an Interpreter"
-HREF="redhat-config-kickstart-interpreter.html"></HEAD
+HREF="redhat-config-kickstart-interpreter.html"></HEAD><link rel="stylesheet" type="text/css" href="rhdocs-man.css"
 ><BODY
 CLASS="CHAPTER"
 BGCOLOR="#FFFFFF"
@@ -92,7 +92,8 @@ SRC="./figs/ksconfig-postscript.png"></P
 ><P
 >	You can also add commands to execute on the system after the
 	installation is completed. If you have properly configured the network
-	in the kickstart file, the network is enabled. If you would like to
+	in the kickstart file, the network is enabled, and the script can
+      include commands to access resources on the network. If you would like to
 	include a post-installation script, type it in the text area. 
       </P
 ><DIV
@@ -145,8 +146,8 @@ CLASS="COMMAND"
 > section:
       </P
 ><TABLE
-BORDER="0"
-BGCOLOR="#E0E0E0"
+CLASS="SCREEN"
+BGCOLOR="#DCDCDC"
 WIDTH="100%"
 ><TR
 ><TD
@@ -192,7 +193,7 @@ VALIGN="TOP"
 ><P
 >More examples can be found in the <I
 CLASS="CITETITLE"
->Official Red Hat Linux Customization Guide</I
+>Red Hat Linux Customization Guide</I
 >.</P
 ></TD
 ></TR
@@ -208,7 +209,7 @@ NAME="REDHAT-CONFIG-KICKSTART-NOCHROOT"
 >Chroot Environment</H1
 ><P
 >	  If you want your post-installation script to run outside of the chroot
-	  environment, click the checkbutton next to this option on the top of
+	  environment, click the checkbox next to this option on the top of
 	  the <B
 CLASS="GUILABEL"
 >Post-Installation</B
@@ -267,15 +268,15 @@ CLASS="FILENAME"
 ></DIV
 ><P
 >	  For example, if you check the <B
-CLASS="GUIBUTTON"
+CLASS="GUILABEL"
 >Run outside of the chroot
 	    environment</B
 > button, the previous example needs to be changed
 	  to the following:
 	</P
 ><TABLE
-BORDER="0"
-BGCOLOR="#E0E0E0"
+CLASS="SCREEN"
+BGCOLOR="#DCDCDC"
 WIDTH="100%"
 ><TR
 ><TD

@@ -15,7 +15,7 @@ TITLE="Basic Configuration"
 HREF="redhat-config-kickstart-basic.html"><LINK
 REL="NEXT"
 TITLE="Boot Loader Options"
-HREF="redhat-config-kickstart-bootloader.html"></HEAD
+HREF="redhat-config-kickstart-bootloader.html"></HEAD><link rel="stylesheet" type="text/css" href="rhdocs-man.css"
 ><BODY
 CLASS="CHAPTER"
 BGCOLOR="#FFFFFF"
@@ -94,7 +94,7 @@ SRC="./figs/ksconfig-install.png"></P
 CLASS="GUILABEL"
 >Installation Method</B
 > screen allows you to choose
-	whether you want to perform a full installation or an upgrade. If you
+	whether you want to perform a new installation or an upgrade. If you
 	choose upgrade, the <B
 CLASS="GUILABEL"
 >Partition Information</B
@@ -115,20 +115,20 @@ CLASS="GUILABEL"
 ><LI
 ><P
 ><B
-CLASS="GUIBUTTON"
+CLASS="GUILABEL"
 >CD-ROM</B
-> &#8212; Choose this option if you wish
+> &#8212; Choose this option 
 	    to install Red Hat Linux from the Red Hat Linux CD-ROMs.
 	  </P
 ></LI
 ><LI
 ><P
 ><B
-CLASS="GUIBUTTON"
+CLASS="GUILABEL"
 >NFS</B
-> &#8212; Choose this option if you wish to
+> &#8212; Choose this option to
 	    install Red Hat Linux from an NFS shared directory. Two text entry boxes for
-	    the NFS server and NFS directory will appear. Enter the
+	    the NFS server and NFS directory appear. Enter the
 	    fully-qualified domain name or IP address of the NFS server. For the
 	    NFS directory, enter the name of the NFS directory that contains the
 	    <TT
@@ -138,47 +138,22 @@ CLASS="FILENAME"
 	    For example, if your NFS server contains the directory
 	    <TT
 CLASS="FILENAME"
->/mirrors/redhat/i386/RedHat</TT
+>/mirrors/redhat/i386/RedHat/</TT
 >, enter
 	    <TT
 CLASS="FILENAME"
->/mirrors/redhat/i386</TT
+>/mirrors/redhat/i386/</TT
 > for the NFS directory.
 	  </P
 ></LI
 ><LI
 ><P
 ><B
-CLASS="GUIBUTTON"
+CLASS="GUILABEL"
 >FTP</B
-> &#8212; Choose this option if you wish to
-	    install Red Hat Linux from an FTP server. Two text entry boxes for
-	    the FTP server and FTP directory will appear. Enter the
-	    fully-qualified domain name or IP address of the FTP server. For the
-	    FTP directory, enter the name of the FTP directory that contains the
-	    <TT
-CLASS="FILENAME"
->RedHat</TT
-> directory. For example, if your FTP
-	    server contains the directory
-	    <TT
-CLASS="FILENAME"
->/mirrors/redhat/i386/RedHat</TT
->, enter
-	    <TT
-CLASS="FILENAME"
->/mirrors/redhat/i386</TT
-> for the FTP directory.
-	  </P
-></LI
-><LI
-><P
-><B
-CLASS="GUIBUTTON"
->HTTP</B
-> &#8212; Choose this option if you wish
+> &#8212; Choose this option 
 	    to install Red Hat Linux from an HTTP server. Two text entry boxes for
-	    the HTTP server and HTTP directory will appear. Enter the
+	    the HTTP server and HTTP directory appear. Enter the
 	    fully-qualified domain name or IP address of the HTTP server. For the
 	    HTTP directory, enter the name of the HTTP directory that contains the
 	    <TT
@@ -188,29 +163,37 @@ CLASS="FILENAME"
 	    server contains the directory
 	    <TT
 CLASS="FILENAME"
->/mirrors/redhat/i386/RedHat</TT
+>/mirrors/redhat/i386/RedHat/</TT
 >, enter
 	    <TT
 CLASS="FILENAME"
->/mirrors/redhat/i386</TT
+>/mirrors/redhat/i386/</TT
 > for the HTTP directory.
 	  </P
 ></LI
 ><LI
 ><P
 ><B
-CLASS="GUIBUTTON"
+CLASS="GUILABEL"
 >Hard Drive</B
-> &#8212; Choose this option if you
-	    wish to install Red Hat Linux from a hard drive. Two text entry boxes for
-	    hard drive partition and hard drive directory will appear. Hard
+> &#8212; Choose this option
+	    to install Red Hat Linux from a hard drive. Two text entry boxes for
+	    hard drive partition and hard drive directory appear. Hard
 	    drive installations require the use of ISO (or CD-ROM) images. Be
 	    sure to verify that the ISO images are intact before you start the
 	    installation. To verify them, use an <TT
 CLASS="COMMAND"
 >md5sum</TT
 >
-	    program. Enter the hard drive partition that contains the ISO images
+	    program as well as the <TT
+CLASS="COMMAND"
+>linux mediacheck</TT
+> boot
+	    option as discussed in the <I
+CLASS="CITETITLE"
+>Red Hat Linux Installation Guide</I
+>.
+	    Enter the hard drive partition that contains the ISO images
 	    (for example, <TT
 CLASS="FILENAME"
 >/dev/hda1</TT

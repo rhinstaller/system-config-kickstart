@@ -15,7 +15,7 @@ TITLE="Installation Method"
 HREF="redhat-config-kickstart-install.html"><LINK
 REL="NEXT"
 TITLE="Partition Information"
-HREF="redhat-config-kickstart-partitions.html"></HEAD
+HREF="redhat-config-kickstart-partitions.html"></HEAD><link rel="stylesheet" type="text/css" href="rhdocs-man.css"
 ><BODY
 CLASS="CHAPTER"
 BGCOLOR="#FFFFFF"
@@ -96,7 +96,7 @@ CLASS="GUILABEL"
 >Do not
 	install a boot loader</B
 >. If you choose not to install a boot
-	loader, make sure you create a boot disk or have another way to boot
+	loader, make sure you create a boot diskette or have another way to boot
 	(such as a third-party boot loader) your system.
       </P
 ><P
@@ -141,23 +141,23 @@ CLASS="USERINPUT"
 > is the CD-ROM device).
       </P
 ><P
->	If you choose LILO as the boot loader, choose whether you want to use
-	linear mode and whether you want to force the use of lba32 mode.
-      </P
-><P
 >	If you choose GRUB as the boot loader, you can password protect it by
 	configuring a GRUB password. Enter a password in the <B
 CLASS="GUILABEL"
 >Use GRUB
 	password</B
-> text entry area. If you want to save the password as
+> text entry area. To save the password as
 	an encrypted password in the file, select <B
-CLASS="GUIBUTTON"
+CLASS="GUILABEL"
 >Encrypt GRUB
 	password</B
 >. When the file is saved, the plaintext password
 	that you typed will be encrypted and written to the kickstart file. Do
 	not type an already encrypted password and select to encrypt it.
+      </P
+><P
+>	If you choose LILO as the boot loader, choose whether you want to use
+	linear mode and whether you want to force the use of lba32 mode.
       </P
 ><P
 >	If you selected to <B
