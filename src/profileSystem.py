@@ -25,14 +25,14 @@ import string
 import sys
 import os
 sys.path.append("/usr/share/redhat-config-language")
-import languageBackend
+import language_backend
 import rhpl.keyboard as keyboard
 import rhpl.mouse as mouse
 
 class ProfileSystem:
     def __init__(self, kickstartData):
         self.kickstartData = kickstartData
-        self.languageBackend = languageBackend.languageBackend()
+        self.languageBackend = language_backend.LanguageBackend()
         self.mouse = mouse.Mouse(skipProbe = 1)
         
         self.getLang()
