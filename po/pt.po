@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ksconfig\n"
-"PO-Revision-Date: 2002-07-26 11:20+0100\n"
+"PO-Revision-Date: 2002-08-02 10:54+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <morais@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -50,7 +50,7 @@ msgstr "Criar Dispositivo RAID"
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
-msgstr ""
+msgstr "A partição que escolheu não acaba num número. As partições devem ter um número, como por exemplo \"hda1\" ou \"sda3\"."
 
 #: redhat-config-kickstart.gladestrings:152
 msgid "_Yes"
@@ -102,7 +102,7 @@ msgid ""
 "The partition you specified does not begin with \"hd\" or \"sd\".  "
 "Partitions must have a valid device name and partition number such as \"hda1"
 "\" or \"sda3\"."
-msgstr ""
+msgstr "A partição que escolheu não começa com \"hd\" ou \"sd\".  As partições devem ser compostas por um nome de dispositivo e um número de partição, como por exemplo \"hda1\" ou \"sda3\"."
 
 #: redhat-config-kickstart.gladestrings:277
 msgid "Monitor"
@@ -142,7 +142,7 @@ msgstr "Tamanho fixo"
 
 #: redhat-config-kickstart.gladestrings:55
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: ../src/partWindow.py:83 redhat-config-kickstart.gladestrings:61
 msgid "swap"
@@ -174,7 +174,7 @@ msgstr "GNOME"
 
 #: redhat-config-kickstart.gladestrings:24
 msgid "(for example: hda or sdc)"
-msgstr ""
+msgstr "(por exemplo: hda ou sdc)"
 
 #: redhat-config-kickstart.gladestrings:298
 msgid "Preview Options"
@@ -261,18 +261,16 @@ msgid "Disabled"
 msgstr "Inactivo"
 
 #: redhat-config-kickstart.gladestrings:138
-#, fuzzy
 msgid "label174"
-msgstr "label31"
+msgstr "label174"
 
 #: ../src/partWindow.py:356
 msgid "Specify a mount point for the partition."
 msgstr "Escolha o ponto onde montar a partição."
 
 #: redhat-config-kickstart.gladestrings:134
-#, fuzzy
 msgid "label173"
-msgstr "label30"
+msgstr "label173"
 
 #: redhat-config-kickstart.gladestrings:301
 msgid "RAID Options"
@@ -308,9 +306,8 @@ msgid "HTTP"
 msgstr "HTTP"
 
 #: ../src/raidWindow.py:136 ../src/raidWindow.py:161
-#, fuzzy
 msgid "Raid Devices"
-msgstr "Dispositivo RAID:"
+msgstr "Dispositivos RAID"
 
 #: ../src/kickstartGui.py:109
 msgid "Boot Loader Options"
@@ -321,13 +318,12 @@ msgid "Automatically Resolve Dependencies"
 msgstr "Resolver Dependências Automáticamente"
 
 #: redhat-config-kickstart.gladestrings:127
-#, fuzzy
 msgid "Upgrade existing boot loader"
-msgstr "Actualizar a configuração do gestor de arranque"
+msgstr "Actualizar o gestor de arranque existente"
 
 #: redhat-config-kickstart.gladestrings:129
 msgid "Use LILO for the boot loader"
-msgstr ""
+msgstr "Utilizar o LILO como gestor de arranque"
 
 #: redhat-config-kickstart.gladestrings:115
 msgid "HTTP Server:"
@@ -347,7 +343,7 @@ msgstr "Nenh_um"
 
 #: ../src/partition.py:73
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 #: ../src/xconfig.py:109
 msgid "Could not read monitor database"
@@ -448,11 +444,12 @@ msgid "None"
 msgstr "Nenhuma"
 
 #: ../src/partition.py:71
-#, fuzzy
 msgid ""
 "Mount Point/\n"
 "RAID/Volume"
-msgstr "Montar em"
+msgstr ""
+"Montar em/\n"
+"RAID/Volume"
 
 #: redhat-config-kickstart.gladestrings:156
 msgid "_Edit"
@@ -549,7 +546,7 @@ msgstr "Activar Autenticação Kerberos 5"
 
 #: redhat-config-kickstart.gladestrings:128
 msgid "Use GRUB for the boot loader"
-msgstr ""
+msgstr "Utilizar o GRUB como gestor de arranque"
 
 #: ../src/partWindow.py:82 redhat-config-kickstart.gladestrings:60
 msgid "physical volume (LVM)"
@@ -577,7 +574,7 @@ msgstr "Nome Base LDAP:"
 
 #: ../src/raidWindow.py:125
 msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr ""
+msgstr "Tem que seleccionar pelo menos 3 partições para utilizar RAID %s"
 
 #: ../src/partWindow.py:203 ../src/partWindow.py:270 ../src/raidWindow.py:152
 #: redhat-config-kickstart.gladestrings:154
@@ -593,13 +590,10 @@ msgid "FTP Directory:"
 msgstr "Directoria FTP:"
 
 #: ../src/partWindow.py:376
-#, fuzzy
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
-msgstr ""
-"Para criar uma nova partição RAID tem de escolher um disco rígido ou uma "
-"partição existente."
+msgstr "Para criar uma nova partição RAID tem de escolher o nome do dispositivo de um disco rígido ou uma partição existente."
 
 #: redhat-config-kickstart.gladestrings:290
 msgid "label89"
@@ -610,9 +604,8 @@ msgid "Upgrade"
 msgstr "Actualização"
 
 #: redhat-config-kickstart.gladestrings:125
-#, fuzzy
 msgid "Install new boot loader"
-msgstr "Instalar gestor de arranque"
+msgstr "Instalar um novo gestor de arranque"
 
 #: ../src/partWindow.py:205 ../src/partWindow.py:272 ../src/raidWindow.py:154
 #: redhat-config-kickstart.gladestrings:151
@@ -669,9 +662,8 @@ msgid "Type your %pre script below:"
 msgstr "Insira o 'script' %pre aqui:"
 
 #: ../src/partWindow.py:225
-#, fuzzy
 msgid "Hard Drives"
-msgstr "Disco Rígido"
+msgstr "Discos Rígidos"
 
 #: redhat-config-kickstart.gladestrings:216
 msgid "LDAP Authentication"
@@ -746,9 +738,8 @@ msgid "RAID Device:"
 msgstr "Dispositivo RAID:"
 
 #: redhat-config-kickstart.gladestrings:139
-#, fuzzy
 msgid "Install boot loader on Master Boot Record (MBR)"
-msgstr "Instalar gestor de arranque em: "
+msgstr "Instalar gestor de arranque no Master Boot Record (MBR)"
 
 #: redhat-config-kickstart.gladestrings:171
 #: redhat-config-kickstart.gladestrings:173
@@ -843,9 +834,8 @@ msgstr ""
 " Uma interface gráfica para criar ficheiros kickstart"
 
 #: redhat-config-kickstart.gladestrings:143
-#, fuzzy
 msgid "Boot Loader Options (required)"
-msgstr "Opções do Gestor de Arranque"
+msgstr "Opções do Gestor de Arranque (necessário)"
 
 #: redhat-config-kickstart.gladestrings:25
 msgid "Use existing partition (onpart)"
@@ -860,9 +850,8 @@ msgid "Authentication:"
 msgstr "Autenticação:"
 
 #: ../src/partition.py:77
-#, fuzzy
 msgid "Size (MB)"
-msgstr "Tamanho (MB):"
+msgstr "Tamanho (MB)"
 
 #: redhat-config-kickstart.gladestrings:105
 msgid "FTP Server:"
@@ -886,7 +875,7 @@ msgstr "_Ficheiro"
 
 #: redhat-config-kickstart.gladestrings:29
 msgid "(for example: hda1 or sdc3)"
-msgstr ""
+msgstr "(por exemplo: hda1 ou sdc3)"
 
 #: redhat-config-kickstart.gladestrings:264
 msgid "General"
@@ -898,7 +887,7 @@ msgstr "_Apagar"
 
 #: ../src/raidWindow.py:119
 msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr ""
+msgstr "Tem que seleccionar pelo menos 2 partições para utilizar RAID %s"
 
 #: redhat-config-kickstart.gladestrings:268
 msgid "Video Card"
@@ -921,6 +910,8 @@ msgid ""
 "Device/\n"
 "Partition Number"
 msgstr ""
+"Dispositivo/\n"
+"Número da Partição"
 
 #: redhat-config-kickstart.gladestrings:35
 msgid "Raid Members"
@@ -947,9 +938,8 @@ msgid "Resolution"
 msgstr "Resolução"
 
 #: redhat-config-kickstart.gladestrings:126
-#, fuzzy
 msgid "Do not install a boot loader"
-msgstr "Instalar gestor de arranque"
+msgstr "Não instalar um gestor de arranque"
 
 #: redhat-config-kickstart.gladestrings:36
 msgid "RAID Level:"
@@ -1013,7 +1003,7 @@ msgstr "Criar partição no disco especificado (ondisk)"
 
 #: ../src/partition.py:75
 msgid "Format"
-msgstr ""
+msgstr "Formatar"
 
 #: redhat-config-kickstart.gladestrings:251
 #: redhat-config-kickstart.gladestrings:252
@@ -1034,7 +1024,7 @@ msgstr "Insira o 'script' %post aqui:"
 
 #: redhat-config-kickstart.gladestrings:56
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #: redhat-config-kickstart.gladestrings:263
 msgid "Start the X Window System on boot"
@@ -1042,7 +1032,7 @@ msgstr "Iniciar o X ao arrancar"
 
 #: redhat-config-kickstart.gladestrings:57
 msgid "5"
-msgstr ""
+msgstr "5"
 
 #: redhat-config-kickstart.gladestrings:244
 msgid "Authentication Configuration"
@@ -1096,12 +1086,11 @@ msgstr "Directoria NFS:"
 msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name  such as \"hda1\" or \"sda3\"."
-msgstr ""
+msgstr "O dispositivo que escolheu não é válido. Por favor utilize um nome de dispositivo válido como por exemplo \"hda1\" ou \"sda3."
 
 #: redhat-config-kickstart.gladestrings:140
-#, fuzzy
 msgid "Install boot loader on first sector of the boot partition"
-msgstr "_Primeiro sector da partição de arranque"
+msgstr "Instalar o gestor de arranque no primeiro sector da partição de arranque"
 
 #: redhat-config-kickstart.gladestrings:96
 #: redhat-config-kickstart.gladestrings:122
@@ -1167,7 +1156,7 @@ msgstr "Inicializar a Etiqueta do Disco:"
 
 #: ../src/partWindow.py:231 ../src/partWindow.py:250 ../src/partWindow.py:264
 msgid "Auto"
-msgstr ""
+msgstr "Auto"
 
 #: redhat-config-kickstart.gladestrings:228
 msgid "Hesiod LHS:"
@@ -1188,48 +1177,3 @@ msgstr "_Não"
 #: redhat-config-kickstart.gladestrings:67
 msgid "_Quit"
 msgstr "_Sair"
-
-#~ msgid "RAID 5"
-#~ msgstr "RAID 5"
-
-#~ msgid "RAID 0"
-#~ msgstr "RAID 0"
-
-#~ msgid "RAID 1"
-#~ msgstr "RAID 1"
-
-#~ msgid "Specify an existing partition on which to create the RAID partition."
-#~ msgstr "Escolha uma partição já existente onde criar a partição RAID."
-
-#~ msgid "_LILO"
-#~ msgstr "_LILO"
-
-#~ msgid "Size"
-#~ msgstr "Tamanho"
-
-#~ msgid "Existing Partition"
-#~ msgstr "Partições Actuais"
-
-#~ msgid "File System Type"
-#~ msgstr "Tipo de Sistema de Ficheiros"
-
-#~ msgid "Device"
-#~ msgstr "Dispositivo"
-
-#~ msgid "Upgrade Only Options:"
-#~ msgstr "Opções Apenas para Actualizações:"
-
-#~ msgid "_MBR"
-#~ msgstr "_MBR"
-
-#~ msgid "_GRUB"
-#~ msgstr "_GRUB"
-
-#~ msgid "Specify a device on which to create the RAID partition."
-#~ msgstr "Escolha o dispositivo onde criar a partição RAID."
-
-#~ msgid "Specify an existing partition to use."
-#~ msgstr "Escolha uma partição existente a utilizar."
-
-#~ msgid "Choose boot loader: "
-#~ msgstr "Escolha o gestor de arranque: "
