@@ -62,6 +62,7 @@ class ksconfig_gui:
 		gtk.mainquit()
 
 	def __init__ (self, xml):
+		self.xml = xml
 		self.toplevel = xml.get_widget("main_window")
 		self.toplevel.connect ("destroy", self.destroy)
 
@@ -207,4 +208,4 @@ class ksconfig_gui:
 		list = list + self.scripts_class.getData()
 
  	        #show confirm dialog window
-		confirmDialog = savefile.saveFile (list, xml)
+		confirmDialog = savefile.saveFile (list, self.xml)

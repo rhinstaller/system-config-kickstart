@@ -23,6 +23,7 @@
 
 import gtk
 import gtk.glade
+import gobject
 import string
 import os
 import whrandom
@@ -47,7 +48,7 @@ class basic:
         self.root_passwd_entry = xml.get_widget("root_passwd_entry")
         self.emulate_3_buttons = xml.get_widget("emulate_3_buttons")
         lang_combo = xml.get_widget("lang_combo")
-#        lang_support_combo = xml.get_widget("lang_support_combo")
+        self.lang_support_view = xml.get_widget("lang_support_view")
         mouse_combo = xml.get_widget("mouse_combo")
         keyboard_combo = xml.get_widget("keyboard_combo")		
         timezone_combo = xml.get_widget("timezone_combo")
@@ -58,6 +59,19 @@ class basic:
         self.lang_support_list = xml.get_widget("lang_support_list")
 #        self.lang_support_list.set_selection_mode(SELECTION_MULTIPLE)
 #        self.messagebox = xml.get_widget("messagebox")
+
+        self.lang_support_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
+        print self.lang_support_view
+        self.lang_support_view.set_model(self.lang_support_store)
+        self.checkbox = gtk.CellRendererToggle()
+        col = gtk.TreeViewColumn('', self.checkbox, active = 0)
+        col.set_fixed_width(20)
+        col.set_clickable(gtk.TRUE)
+        self.checkbox.connect("toggled", self.langToggled)
+        self.lang_support_view.append_column(col)
+
+        col = gtk.TreeViewColumn("", gtk.CellRendererText(), text=1)
+        self.lang_support_view.append_column(col)
 
         #define languages, add languages here
         self.langDict = {"Chinese(Mainland)" :  "zh_CN.GB2312",
@@ -123,8 +137,6 @@ class basic:
                            "Sun Mouse" : "sun",
                            }
 
-        self.langSupportList = []
-
         #populate language combo
         lang_list = self.langDict.keys()
         lang_list.sort()
@@ -133,6 +145,7 @@ class basic:
         lang_combo.list.select_item(4)
         lang_combo.entry.set_editable(gtk.FALSE)
 
+        self.populateLangSupport()
 #        for lang in lang_list:
 #            self.lang_support_list.append([lang])
 
@@ -237,17 +250,10 @@ class basic:
         timezone_combo.list.select_item(select)
         timezone_combo.entry.set_editable(gtk.FALSE)		
 
-        #bring in signals from glade file
-#        xml.signal_autoconnect (
-#                { "on_lang_support_list_select_row" : self.on_lang_support_list_select_row,
-#                  "on_lang_support_list_unselect_row" : self.on_lang_support_list_unselect_row,
-#                  } )
-
-    def on_lang_support_list_select_row(self, *args):
-        self.langSupportList.append(self.langDict[self.lang_support_list.get_text(args[1], args[2])])
-
-    def on_lang_support_list_unselect_row(self, *args):
-        self.langSupportList.remove(self.langDict[self.lang_support_list.get_text(args[1], args[2])])
+    def langToggled(self, data, row):
+        iter = self.lang_support_store.get_iter((int(row),))
+        val = self.lang_support_store.get_value(iter, 0)
+        self.lang_support_store.set_value(iter, 0 , not val)
 
     def getData(self):
         data = []
@@ -258,16 +264,19 @@ class basic:
         data.append("")
         data.append("#Language modules to install")
 
-        if lang not in self.langSupportList:
-            self.langSupportList.append(lang)
+        lang_list = []
+        iter = self.lang_support_store.get_iter_root()
+        next = 1
 
-        if self.langSupportList != []:
-            buf = ""
-            for lang in self.langSupportList:
-                buf = lang + " " + buf
-            data.append("langsupport --default " + self.languageLookup(self.lang_combo.entry.get_text()) + " " + buf)
-        else:
-            data.append("langsupport --default " + self.languageLookup(self.lang_combo.entry.get_text()))
+        while next:
+            if self.lang_support_store.get_value(iter, 0) == gtk.TRUE:
+                lang = self.lang_support_store.get_value(iter, 1) 
+                lang_list.append(self.langDict[lang])
+
+            next = self.lang_support_store.iter_next(iter)
+
+        list = string.join(lang_list, " ")
+        data.append("langsupport " + list + " --default " + self.languageLookup(self.lang_combo.entry.get_text()))
 
         data.append("")
         data.append("#System keyboard")
@@ -310,8 +319,6 @@ class basic:
             temp = unicode (self.passwd, 'iso-8859-1')
             data.append("rootpw --iscrypted " + temp)
 
-#            data.append("rootpw --iscrypted " + self.passwd)
-            
         else:
             self.passwd = self.root_passwd_entry.get_text()
             data.append("rootpw " + self.passwd)
@@ -344,4 +351,12 @@ class basic:
             buf = buf + self.mouseDict [args]
         return buf
 
-
+    def populateLangSupport(self):
+        lang_list = self.langDict.keys()
+        lang_list.sort()        
+        
+        for lang in lang_list:
+            print lang
+            iter = self.lang_support_store.append()
+            self.lang_support_store.set_value(iter, 0, gtk.FALSE)
+            self.lang_support_store.set_value(iter, 1, lang)
