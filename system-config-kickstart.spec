@@ -26,7 +26,7 @@ Kickstart Configurator is a graphical tool for creating kickstart files.
 
 %install
 make INSTROOT=$RPM_BUILD_ROOT install
-desktop-file-install --vendor redhat --delete-original      \
+desktop-file-install --vendor system --delete-original      \
   --dir $RPM_BUILD_ROOT%{_datadir}/applications             \
   --add-category Application \
   --add-category System \
