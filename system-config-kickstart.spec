@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.5.16.1
+Version: 2.5.16.2
 Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -60,6 +60,10 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Wed Mar 23 2005 Chris Lumens <clumens@redhat.com> 2.5.16.2-1
+- Backported feature addition from 2.5.21-2 to have an option for SELinux
+  on the firewall config page (#148996).
+
 * Tue Jan 04 2005 Chris Lumens <clumens@redhat.com> - 2.5.16.1-1
 - Backported fix from 2.5.18-1 in devel to get package group lists and
   their translations out of the comps.xml file instead of relying on a

@@ -53,6 +53,7 @@ class KickstartParser:
 ##                      "logvol"           : self.defineLogicalVolume,
  		     "reboot"		: self.kickstartData.setReboot		,
  		     "rootpw"		: self.kickstartData.setRootPw		,
+ 		     "selinux"		: self.kickstartData.setSELinux,
  		     "skipx"		: self.kickstartData.setSkipX		,
  		     "text"		: self.kickstartData.setText		,
  		     "timezone"		: self.kickstartData.setTimezone	,

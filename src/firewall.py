@@ -44,6 +44,7 @@ class firewall:
         self.firewall_vbox = xml.get_widget("firewall_vbox")
         self.firewall_label_box = xml.get_widget("firewall_label_box")
         self.securityOptionMenu = xml.get_widget("securityOptionMenu")
+	self.selinuxOptionMenu = xml.get_widget("selinuxOptionMenu")
         self.firewallDefaultRadio = xml.get_widget("firewallDefaultRadio")
         self.trusted_devices_label = xml.get_widget("trusted_devices_label")
         self.allow_incoming_label = xml.get_widget("allow_incoming_label")
@@ -185,6 +186,13 @@ class firewall:
             buf = buf + '--port=' + portlist
             
         self.kickstartData.setFirewall([buf])
+
+        if self.selinuxOptionMenu.get_history() == 0:
+            self.kickstartData.setSELinux("--enforcing")
+        elif self.selinuxOptionMenu.get_history() == 1:
+            self.kickstartData.setSELinux("--permissive")
+        elif self.selinuxOptionMenu.get_history() == 2:
+            self.kickstartData.setSELinux("--disabled")
         
     def fillData(self):
         if self.kickstartData.getFirewall():
@@ -226,3 +234,16 @@ class firewall:
                 if opt == "--port":
                     current = self.portsEntry.get_text()
                     self.portsEntry.set_text(value)
+
+	if self.kickstartData.getSELinux():
+            opts, args = getopt.getopt(self.kickstartData.getSELinux(), "", ["disabled", "permissive", "enforcing"])
+
+            for opt, value in opts:
+                if opt == "--disabled":
+                    self.selinuxOptionMenu.set_history(2)
+
+                if opt == "--permissive":
+                    self.selinuxOptionMenu.set_history(1)
+
+                if opt == "--enforcing":
+                    self.selinuxOptionMenu.set_history(0)
