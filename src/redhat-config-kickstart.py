@@ -37,8 +37,7 @@ except ImportError:
 if __name__ == "__main__":
     signal.signal (signal.SIGINT, signal.SIG_DFL)
 
-#xml = gtk.glade.XML ("/usr/share/redhat-config-kickstart/redhat-config-kickstart-gtk2.glade", domain="redhat-config-kickstart")
-xml = gtk.glade.XML ("redhat-config-kickstart-gtk2.glade", domain="redhat-config-kickstart")
+xml = gtk.glade.XML ("/usr/share/redhat-config-kickstart/redhat-config-kickstart-gtk2.glade", domain="redhat-config-kickstart")
 
 kickstartGui.kickstartGui(xml)
 
