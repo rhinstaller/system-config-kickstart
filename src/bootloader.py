@@ -103,9 +103,9 @@ class bootloader:
                     buf = buf + "--lba32 "
             #end of lilo stuff
             if self.mbr_radiobutton.get_active():
-                buf = buf + "--location mbr "
+                buf = buf + "--location=mbr "
             elif self.firstsector_radiobutton.get_active():
-                buf = buf + "--location partition "                
+                buf = buf + "--location=partition "                
             params = string.strip (self.parameters_entry.get_text())
             length = len (params)
             if length > 0:
@@ -115,6 +115,6 @@ class bootloader:
             if length > 0:
                 buf = buf + "--password=" + gp + " "
         else:
-            buf = "\n" + "bootloader --location none"
+            buf = "\n" + "bootloader --location=none"
         return buf
         
