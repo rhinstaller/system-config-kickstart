@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: ksconfig
 Version: 1.9.7
-Release: 0
+Release: 1
 URL: http://www.redhat.com
 Copyright: GPL
 ExclusiveOS: Linux
@@ -9,8 +9,14 @@ Group: System Environment/Base
 BuildRoot: %{_tmppath}/ksconfig-%{version}-root
 BuildArch: noarch
 Source: ksconfig-%{version}.tar.gz
-Requires: pygnome pygtk pygtk-libglade pygnome-libglade
+BuildRequires: python-devel
+BuildRequires:gnome-libs-devel
+Requires: pygnome 
+Requires: pygtk 
+Requires: pygtk-libglade 
+Requires: pygnome-libglade
 Requires: python >= 1.5.2
+Requires: usermode
 
 %description
 ksconfig is a graphical tool for creating kickstart files.  
