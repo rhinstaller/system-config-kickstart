@@ -1,0 +1,294 @@
+<HTML
+><HEAD
+><TITLE
+>Partition Information</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.64
+"><LINK
+REL="HOME"
+TITLE="Kickstart Configurator"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="Installation Method"
+HREF="ksconfig-install.html"><LINK
+REL="NEXT"
+TITLE="Network Configuration"
+HREF="ksconfig-network.html"></HEAD
+><BODY
+CLASS="CHAPTER"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><B
+CLASS="APPLICATION"
+>Kickstart Configurator</B
+></TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="ksconfig-install.html"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="ksconfig-network.html"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="CHAPTER"
+><H1
+><A
+NAME="KSCONFIG-PARTITIONS"
+>Chapter 5. <B
+CLASS="GUILABEL"
+>Partition Information</B
+></A
+></H1
+><DIV
+CLASS="FIGURE"
+><A
+NAME="KSCONFIG-PARTITIONS-FIG"
+></A
+><P
+><IMG
+SRC="./figs/ksconfig/ksconfig-partitions.gif"></P
+><P
+><B
+>Figure 5-1. <B
+CLASS="APPLICATION"
+>Kickstart Configurator</B
+> - Partition Information</B
+></P
+></DIV
+><P
+>	To clear the Master Boot Record, select <B
+CLASS="GUIBUTTON"
+>Yes</B
+>
+	beside the option on the top of the page. You can choose to keep the
+	existing partitions, remove all the existing partitions, or remove all
+	the existing Linux partitions by selecting
+	<B
+CLASS="GUIBUTTON"
+>None</B
+>, <B
+CLASS="GUIBUTTON"
+>All</B
+>,
+	<B
+CLASS="GUIBUTTON"
+>Linux</B
+>, respectively, next to <B
+CLASS="GUILABEL"
+>Remove
+	  Partitions</B
+>.
+      </P
+><P
+>	Starting with Red Hat Linux 7.2, you can initialize the disk label to the
+	default for the architecture of the system (<TT
+CLASS="COMMAND"
+>msdos</TT
+> for
+	x86 and <TT
+CLASS="COMMAND"
+>gpt</TT
+> for Itanium). Choose
+	<B
+CLASS="GUIBUTTON"
+>Yes</B
+> if you are installing on a brand new hard drive.
+      </P
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="KSCONFIG-CREATE-PART"
+>Creating Partitions</A
+></H1
+><P
+>	  To create a partition, click the <B
+CLASS="GUIBUTTON"
+>Add</B
+>
+	  button. The <B
+CLASS="GUILABEL"
+>Partition Options</B
+> window shown in
+	  <A
+HREF="ksconfig-partitions.html#KSCONFIG-CREATE-PART"
+>the section called <I
+>Creating Partitions</I
+></A
+> will appear. Choose mount point,
+	  filesystem type, and partition size for the new partition. Optionally,
+	  you can also choose the following options:
+	</P
+><P
+></P
+><UL
+><LI
+><P
+>	      Additional Size Options &#8212; Choose to
+	      make the partition a fixed size, up to a chosen size, or fill the
+	      remaining space on the hard drive.
+	    </P
+></LI
+><LI
+><P
+>	      Force the partition to be created as a primary partition.
+	    </P
+></LI
+><LI
+><P
+>	      Create the partition on a specific hard drive.
+	    </P
+></LI
+><LI
+><P
+>	      Use an existing partition.
+	    </P
+></LI
+><LI
+><P
+>	      Format the partition as the chosen filesystem type.
+	    </P
+></LI
+></UL
+><DIV
+CLASS="FIGURE"
+><A
+NAME="KSCONFIG-ADD-PART-FIG"
+></A
+><P
+><IMG
+SRC="./figs/ksconfig/ksconfig-part-options.gif"></P
+><P
+><B
+>Figure 5-2. <B
+CLASS="APPLICATION"
+>Kickstart Configurator</B
+> - Creating Partitions</B
+></P
+></DIV
+><P
+>	  To edit an existing partition, select the partition from the list and
+	  click the <B
+CLASS="GUIBUTTON"
+>Edit</B
+> button. The same
+	  <B
+CLASS="GUILABEL"
+>Partitions Options</B
+> window that appears when you
+	  add a partition appears, except it contains the values for the
+	  selected partition. Modify the partition options and click
+	  <B
+CLASS="GUIBUTTON"
+>Ok</B
+>.
+	</P
+><P
+>	  To delete an existing partition, select the partition from the list
+	  and click the <B
+CLASS="GUIBUTTON"
+>Delete</B
+> button.
+	</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="ksconfig-install.html"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="ksconfig-network.html"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><B
+CLASS="GUILABEL"
+>Installation Method</B
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><B
+CLASS="GUILABEL"
+>Network Configuration</B
+></TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

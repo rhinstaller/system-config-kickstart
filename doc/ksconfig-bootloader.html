@@ -1,0 +1,222 @@
+<HTML
+><HEAD
+><TITLE
+>Boot Loader Options</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.64
+"><LINK
+REL="HOME"
+TITLE="Kickstart Configurator"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="Basic Configuration"
+HREF="ksconfig-basic.html"><LINK
+REL="NEXT"
+TITLE="Installation Method"
+HREF="ksconfig-install.html"></HEAD
+><BODY
+CLASS="CHAPTER"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><B
+CLASS="APPLICATION"
+>Kickstart Configurator</B
+></TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="ksconfig-basic.html"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="ksconfig-install.html"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="CHAPTER"
+><H1
+><A
+NAME="KSCONFIG-BOOTLOADER"
+>Chapter 3. <B
+CLASS="GUILABEL"
+>Boot Loader Options</B
+></A
+></H1
+><DIV
+CLASS="FIGURE"
+><A
+NAME="KSCONFIG-BOOTLOADER-FIG"
+></A
+><P
+><IMG
+SRC="./figs/ksconfig/ksconfig-bootloader.gif"></P
+><P
+><B
+>Figure 3-1. <B
+CLASS="APPLICATION"
+>Kickstart Configurator</B
+> -
+	  Boot Loader Options</B
+></P
+></DIV
+><P
+>	Starting with Red Hat Linux 7.2, you have the option of installing GRUB or LILO
+	as the bootloader. If you do not want to install a boot loader, uncheck
+	the <B
+CLASS="GUILABEL"
+>Install Boot Loader</B
+> checkbutton. If you choose
+	not to install a boot loader, make sure you create a boot disk or have
+	another way to boot (such as a third party boot loader) your Red Hat Linux
+	system.
+      </P
+><P
+>	If you choose to install a boot loader, you must also choose which
+	bootloader to install (GRUB or LILO) and where to
+	to install the bootloader (the Master Boot Record or
+	the first sector of the <TT
+CLASS="FILENAME"
+>/boot</TT
+> partition). Install
+	the boot loader on the MBR if you plan to use it as your boot loader. If
+	you are using a different boot loader, install LILO or GRUB on the first
+	sector of the <TT
+CLASS="FILENAME"
+>/boot</TT
+> partition and configure the
+	other boot loader to boot Red Hat Linux.
+      </P
+><P
+>	If you need to pass any special parameters to the kernel to be used when
+	the system boots, enter them in the <B
+CLASS="GUILABEL"
+>Kernel
+	parameters</B
+> text field. For example, if you have an IDE CD-ROM
+	burner, you can tell the kernel to use the SCSI emulation driver that
+	must be loaded before using <B
+CLASS="APPLICATION"
+>cdrecord</B
+> by typing
+	<TT
+CLASS="USERINPUT"
+><B
+>hdd=ide-scsi</B
+></TT
+> as a kernel parameter (where
+	<TT
+CLASS="USERINPUT"
+><B
+>hdd</B
+></TT
+> is the CD-ROM device).
+      </P
+><P
+>	If you choose LILO as the bootloader, choose whether you want to use
+	linear mode and whether you want to force the use of lba32 mode.
+      </P
+><P
+>	If you choose GRUB as the bootloader, you can password protect it by
+	configuring a GRUB password. Enter a password in the <B
+CLASS="GUILABEL"
+>Use GRUB
+	Password</B
+> text entry area.
+      </P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="ksconfig-basic.html"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="ksconfig-install.html"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><B
+CLASS="GUILABEL"
+>Basic Configuration</B
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><B
+CLASS="GUILABEL"
+>Installation Method</B
+></TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>
