@@ -1,16 +1,18 @@
 Summary: A graphical interface for making kickstart files.
 Name: ksconfig
-Version: 1.0
-Release: 2
+Version: 1.1
+Release: 1
 URL: http://www.redhat.com
 Copyright: GPL
 ExclusiveOS: Linux
 Group: System Environment/Base
 BuildRoot: %{_tmppath}/ksconfig-%{version}-root
+BuildArch: noarch
 Source: ksconfig-%{version}.tar.gz
 BuildArch: noarch
 Requires: pygtk
 Requires: redhat-logos
+Requires: anaconda
 
 %description
 ksconfig is a graphical tool for creating kickstart files.  It will allow you to set most of the 
@@ -42,10 +44,16 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root)
 /usr/sbin/ksconfig
+/usr/share/ksconfig/*
 %{_mandir}/*/*
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
+* Thurs Feb 08 2001 Brent Fox <bfox@redhat.com>
+- made code modular
+- improved package selection screen
+- implemented firewall screen
+
 * Sat Jan 27 2001 Tammy Fox <tfox@redhat.com>
 - added file dialog box
 - cleaned up code
