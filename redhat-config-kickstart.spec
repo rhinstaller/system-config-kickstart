@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
 Version: 2.3.5
-Release: 3
+Release: 4
 URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
@@ -56,6 +56,8 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Fri Dec 13 2002 Brent Fox <bfox@redhat.com> 2.3.5-4
+- Change string from Language to Default Language (bug #70189)
 * Wed Dec 11 2002 Brent Fox <bfox@redhat.com> 2.3.5-3
 - Add a button for utc clocks (bug #70188)
 * Tue Dec 10 2002 Brent Fox <bfox@redhat.com> 2.3.5-2
