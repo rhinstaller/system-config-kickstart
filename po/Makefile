@@ -6,7 +6,7 @@
 TOP	 = ../..
 
 # What is this package?
-NLSPACKAGE	= ksconfig
+NLSPACKAGE	= redhat-config-kickstart
 POTFILE		= $(NLSPACKAGE).pot
 INSTALL		= /usr/bin/install -c
 INSTALL_DATA	= $(INSTALL) -m 644
@@ -27,7 +27,7 @@ MSGFMT		= msgfmt --statistics --verbose
 POFILES		= $(wildcard *.po)
 MOFILES		= $(patsubst %.po,%.mo,$(POFILES))
 PYSRC		= $(wildcard ../src/*.py)
-SRCFILES	= $(PYSRC) ksconfig.gladestrings
+SRCFILES	= $(PYSRC) $(NLSPACKAGE).gladestrings
 
 all::  update-po $(MOFILES)
 
