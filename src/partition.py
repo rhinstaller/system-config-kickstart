@@ -337,3 +337,8 @@ class partition:
                 
         else:
             self.remove_parts_none_radiobutton.set_active(gtk.TRUE)
+
+        if self.kickstartData.getPartitions() != []:
+            print self.kickstartData.getPartitions()
+            for line in self.kickstartData.getPartitions():
+                self.partWindow.populateList(line)
