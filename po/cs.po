@@ -90,7 +90,7 @@ msgstr ""
 msgid "Additional Size Options"
 msgstr "Doplòující volby velikosti"
 
-#: ../src/partWindow.py:302
+#: ../src/partWindow.py:304
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive or an "
 "existing partition."
@@ -192,6 +192,10 @@ msgstr "Brána:"
 msgid "Force to be a primary partition (asprimary)"
 msgstr "Nastavit oddíl jako primární (asprimary)"
 
+#: redhat-config-kickstart.gladestrings:200
+msgid "Use MD5"
+msgstr "Pou¾ít MD5"
+
 #: redhat-config-kickstart.gladestrings:231
 msgid "Hesiod"
 msgstr "Hesiod"
@@ -212,7 +216,7 @@ msgstr "Pou¾ít implicitní pravidla firewallu"
 msgid "software RAID"
 msgstr ""
 
-#: ../src/partWindow.py:365
+#: ../src/partWindow.py:367
 msgid "Specify a device on which to create the partition."
 msgstr "Zadejte zaøízení, na kterém má být oddíl vytvoøen."
 
@@ -236,7 +240,7 @@ msgstr "Zadejte u¾ivatelské jméno a heslo pro FTP"
 msgid "Disabled"
 msgstr "Zakázáno"
 
-#: ../src/partWindow.py:267
+#: ../src/partWindow.py:269
 msgid "Specify a mount point for the partition."
 msgstr "Zadejte pøipojovací bod pro tento oddíl"
 
@@ -283,7 +287,7 @@ msgstr "Vymazat MBR"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: ../src/partWindow.py:330
+#: ../src/partWindow.py:332
 msgid "Specify an existing partition on which to create the RAID partition."
 msgstr "Zadejte, na kterém z existujících oddílù má být vytvoøen RAID oddíl."
 
@@ -369,16 +373,16 @@ msgstr "Formátovat oddíl"
 msgid "Pre-Installation Script"
 msgstr "Pøedinstalaèní skript"
 
-#: redhat-config-kickstart.gladestrings:252
-msgid "label33"
-msgstr "label33"
-
 #: redhat-config-kickstart.gladestrings:64
 msgid "_Save File"
 msgstr "_Ulo¾it soubor"
 
 #: redhat-config-kickstart.gladestrings:52
 msgid "md15"
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:67
+msgid "_Help Contents"
 msgstr ""
 
 #: redhat-config-kickstart.gladestrings:96
@@ -584,9 +588,9 @@ msgstr "Hesiod autentizace"
 msgid "Keyboard:"
 msgstr "Klávesnice:"
 
-#: ../src/xconfig.py:90
-msgid "Could not read video card database"
-msgstr "Nelze èíst datábázi grafických karet"
+#: redhat-config-kickstart.gladestrings:252
+msgid "label33"
+msgstr "label33"
 
 #: redhat-config-kickstart.gladestrings:144
 #, fuzzy
@@ -594,7 +598,6 @@ msgid "Remove Existing Partitions:"
 msgstr "Odstranit oddíly:"
 
 #: redhat-config-kickstart.gladestrings:66
-#: redhat-config-kickstart.gladestrings:67
 msgid "_Help"
 msgstr "_Nápovìda"
 
@@ -605,6 +608,11 @@ msgstr "NIS autentizace"
 #: redhat-config-kickstart.gladestrings:237
 msgid "SMB Authentication"
 msgstr "SMB autentizace"
+
+#: ../src/partition.py:78
+#, fuzzy
+msgid "Existing Partition"
+msgstr "Odstranit oddíly:"
 
 #: redhat-config-kickstart.gladestrings:158
 msgid "Partition Information (required)"
@@ -763,9 +771,9 @@ msgstr "Pro nalezení NIS serveru pou¾ít broadcast"
 msgid "Install"
 msgstr "Instalovat"
 
-#: ../src/basic.py:270 ../src/partWindow.py:268 ../src/partWindow.py:305
-#: ../src/partWindow.py:318 ../src/partWindow.py:331 ../src/partWindow.py:366
-#: ../src/partWindow.py:379
+#: ../src/basic.py:270 ../src/partWindow.py:270 ../src/partWindow.py:307
+#: ../src/partWindow.py:320 ../src/partWindow.py:333 ../src/partWindow.py:368
+#: ../src/partWindow.py:381
 msgid "Error"
 msgstr "Chyba"
 
@@ -908,7 +916,7 @@ msgstr "Metoda instalace (povinné)"
 msgid "Reboot system after installation"
 msgstr "Restartovat po instalaci systém"
 
-#: ../src/raidOptionsWindow.py:71
+#: ../src/raidOptionsWindow.py:73
 msgid "You currently have %d software RAID partition(s) free to use."
 msgstr ""
 
@@ -936,7 +944,7 @@ msgstr ""
 msgid "Kerberos 5 Authentication"
 msgstr "Kerberos 5 autentizace"
 
-#: ../src/partition.py:88 ../src/partition.py:120
+#: ../src/partition.py:91 ../src/partition.py:123
 #, fuzzy
 msgid "Please select a partition from the list."
 msgstr "Zadejte prosím heslo pro u¾ivatele root."
@@ -970,7 +978,7 @@ msgstr "Vyplòte %post skript:"
 msgid "Video Card"
 msgstr "Video karta"
 
-#: ../src/partWindow.py:317
+#: ../src/partWindow.py:319
 msgid "Specify a device on which to create the RAID partition."
 msgstr "Zadejte, na kterém zaøízení má být vytvoøen RAID oddíl."
 
@@ -1010,9 +1018,9 @@ msgstr "Nápovìda není k dispozici."
 msgid "Please select a root password."
 msgstr "Zadejte prosím heslo pro u¾ivatele root."
 
-#: redhat-config-kickstart.gladestrings:200
-msgid "Use MD5"
-msgstr "Pou¾ít MD5"
+#: ../src/xconfig.py:90
+msgid "Could not read video card database"
+msgstr "Nelze èíst datábázi grafických karet"
 
 #: redhat-config-kickstart.gladestrings:63
 msgid "_Preview"
@@ -1047,7 +1055,7 @@ msgstr "Detekce monitoru"
 msgid "Hard Drive"
 msgstr "Pevný disk"
 
-#: ../src/partWindow.py:378
+#: ../src/partWindow.py:380
 msgid "Specify an existing partition to use."
 msgstr "Zadejte, který existující oddíl pou¾ít."
 
@@ -1059,7 +1067,7 @@ msgstr "label128"
 msgid "Choose boot loader: "
 msgstr "Vyberte zavadìè: "
 
-#: ../src/partition.py:89 ../src/partition.py:121
+#: ../src/partition.py:92 ../src/partition.py:124
 msgid "Message"
 msgstr ""
 

@@ -88,7 +88,7 @@ msgstr "RAID 1"
 msgid "Additional Size Options"
 msgstr "其他的磁區大小選項"
 
-#: ../src/partWindow.py:302
+#: ../src/partWindow.py:304
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive or an "
 "existing partition."
@@ -186,6 +186,10 @@ msgstr "閘道器："
 msgid "Force to be a primary partition (asprimary)"
 msgstr "強制成為主要分割區 (asprimary)"
 
+#: redhat-config-kickstart.gladestrings:200
+msgid "Use MD5"
+msgstr "使用 MD5"
+
 #: redhat-config-kickstart.gladestrings:231
 msgid "Hesiod"
 msgstr "Hesiod"
@@ -206,7 +210,7 @@ msgstr "使用預設防火牆設定"
 msgid "software RAID"
 msgstr "軟體 RAID"
 
-#: ../src/partWindow.py:365
+#: ../src/partWindow.py:367
 msgid "Specify a device on which to create the partition."
 msgstr "請指定要用來建立分割區的裝置。"
 
@@ -230,7 +234,7 @@ msgstr "請指定一個 FTP 使用者名稱與密碼"
 msgid "Disabled"
 msgstr "已停用"
 
-#: ../src/partWindow.py:267
+#: ../src/partWindow.py:269
 msgid "Specify a mount point for the partition."
 msgstr "請指定這個分割區的掛載點。"
 
@@ -276,7 +280,7 @@ msgstr "清除主要開機磁區："
 msgid "HTTP"
 msgstr "HTTP"
 
-#: ../src/partWindow.py:330
+#: ../src/partWindow.py:332
 msgid "Specify an existing partition on which to create the RAID partition."
 msgstr "請指定一個現有的分割區來建立 RAID 分割區。"
 
@@ -361,10 +365,6 @@ msgstr "建立 LVM 分割區"
 msgid "Pre-Installation Script"
 msgstr "前置安裝程式碼"
 
-#: redhat-config-kickstart.gladestrings:252
-msgid "label33"
-msgstr "label33"
-
 #: redhat-config-kickstart.gladestrings:64
 msgid "_Save File"
 msgstr "儲存檔案(_S)"
@@ -372,6 +372,10 @@ msgstr "儲存檔案(_S)"
 #: redhat-config-kickstart.gladestrings:52
 msgid "md15"
 msgstr "md15"
+
+#: redhat-config-kickstart.gladestrings:67
+msgid "_Help Contents"
+msgstr ""
 
 #: redhat-config-kickstart.gladestrings:96
 msgid "GRUB Options:"
@@ -576,16 +580,15 @@ msgstr "Hesiod 認證"
 msgid "Keyboard:"
 msgstr "鍵盤："
 
-#: ../src/xconfig.py:90
-msgid "Could not read video card database"
-msgstr "無法讀取顯示卡資料庫"
+#: redhat-config-kickstart.gladestrings:252
+msgid "label33"
+msgstr "label33"
 
 #: redhat-config-kickstart.gladestrings:144
 msgid "Remove Existing Partitions:"
 msgstr "移除既有的分割區："
 
 #: redhat-config-kickstart.gladestrings:66
-#: redhat-config-kickstart.gladestrings:67
 msgid "_Help"
 msgstr "輔助說明(_H)"
 
@@ -596,6 +599,11 @@ msgstr "NIS 認證"
 #: redhat-config-kickstart.gladestrings:237
 msgid "SMB Authentication"
 msgstr "SMB 認證"
+
+#: ../src/partition.py:78
+#, fuzzy
+msgid "Existing Partition"
+msgstr "移除既有的分割區："
 
 #: redhat-config-kickstart.gladestrings:158
 msgid "Partition Information (required)"
@@ -755,9 +763,9 @@ msgstr "使用廣播方式搜尋 NIS 伺服器"
 msgid "Install"
 msgstr "安裝"
 
-#: ../src/basic.py:270 ../src/partWindow.py:268 ../src/partWindow.py:305
-#: ../src/partWindow.py:318 ../src/partWindow.py:331 ../src/partWindow.py:366
-#: ../src/partWindow.py:379
+#: ../src/basic.py:270 ../src/partWindow.py:270 ../src/partWindow.py:307
+#: ../src/partWindow.py:320 ../src/partWindow.py:333 ../src/partWindow.py:368
+#: ../src/partWindow.py:381
 msgid "Error"
 msgstr "錯誤"
 
@@ -900,7 +908,7 @@ msgstr "安裝方式 (必要的)"
 msgid "Reboot system after installation"
 msgstr "安裝完後系統將重新啟動"
 
-#: ../src/raidOptionsWindow.py:71
+#: ../src/raidOptionsWindow.py:73
 msgid "You currently have %d software RAID partition(s) free to use."
 msgstr "目前您有 %d 軟體 RAID 分割區可以使用。"
 
@@ -928,7 +936,7 @@ msgstr "建立一個 RAID 裝置 [default = /dev/md0]"
 msgid "Kerberos 5 Authentication"
 msgstr "Kerberos 5 認證"
 
-#: ../src/partition.py:88 ../src/partition.py:120
+#: ../src/partition.py:91 ../src/partition.py:123
 msgid "Please select a partition from the list."
 msgstr "請從清單中選擇一個分割區。"
 
@@ -961,7 +969,7 @@ msgstr "在以下輸入您的 %post 程式碼："
 msgid "Video Card"
 msgstr "顯示卡"
 
-#: ../src/partWindow.py:317
+#: ../src/partWindow.py:319
 msgid "Specify a device on which to create the RAID partition."
 msgstr "請指定要用來建立 RAID 分割區的裝置。"
 
@@ -1001,9 +1009,9 @@ msgstr "無法取得輔助說明。"
 msgid "Please select a root password."
 msgstr "請選擇一個 root 密碼。"
 
-#: redhat-config-kickstart.gladestrings:200
-msgid "Use MD5"
-msgstr "使用 MD5"
+#: ../src/xconfig.py:90
+msgid "Could not read video card database"
+msgstr "無法讀取顯示卡資料庫"
 
 #: redhat-config-kickstart.gladestrings:63
 msgid "_Preview"
@@ -1038,7 +1046,7 @@ msgstr "偵測螢幕"
 msgid "Hard Drive"
 msgstr "硬碟"
 
-#: ../src/partWindow.py:378
+#: ../src/partWindow.py:380
 msgid "Specify an existing partition to use."
 msgstr "指定一個現有的分割區來使用。"
 
@@ -1050,7 +1058,7 @@ msgstr "label28"
 msgid "Choose boot loader: "
 msgstr "選取開機管理程式： "
 
-#: ../src/partition.py:89 ../src/partition.py:121
+#: ../src/partition.py:92 ../src/partition.py:124
 msgid "Message"
 msgstr "訊息"
 

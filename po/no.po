@@ -87,7 +87,7 @@ msgstr ""
 msgid "Additional Size Options"
 msgstr "Flere alternativer for størrelse"
 
-#: ../src/partWindow.py:302
+#: ../src/partWindow.py:304
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive or an "
 "existing partition."
@@ -188,6 +188,10 @@ msgstr "Gateway:"
 msgid "Force to be a primary partition (asprimary)"
 msgstr "Tvungen primær-partisjon (asprimary)"
 
+#: redhat-config-kickstart.gladestrings:200
+msgid "Use MD5"
+msgstr "Bruk MD5"
+
 #: redhat-config-kickstart.gladestrings:231
 msgid "Hesiod"
 msgstr "Hesiod"
@@ -208,7 +212,7 @@ msgstr "Bruk standard brannveggregler"
 msgid "software RAID"
 msgstr ""
 
-#: ../src/partWindow.py:365
+#: ../src/partWindow.py:367
 msgid "Specify a device on which to create the partition."
 msgstr "Spesifiser enheten du vil opprette partisjonen på."
 
@@ -232,7 +236,7 @@ msgstr "Spesifiser brukernavn og passord for FTP"
 msgid "Disabled"
 msgstr "Deaktivert"
 
-#: ../src/partWindow.py:267
+#: ../src/partWindow.py:269
 msgid "Specify a mount point for the partition."
 msgstr "Spesifiser monteringspunkt for partisjonen."
 
@@ -279,7 +283,7 @@ msgstr "Nullstill Master Boot Record:"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: ../src/partWindow.py:330
+#: ../src/partWindow.py:332
 msgid "Specify an existing partition on which to create the RAID partition."
 msgstr ""
 "Spesifiser en eksisterende partisjon hvor du vil opprette RAID-partisjonen."
@@ -365,16 +369,16 @@ msgstr "Lag LVM-partisjon"
 msgid "Pre-Installation Script"
 msgstr "Pre-installasjons skript"
 
-#: redhat-config-kickstart.gladestrings:252
-msgid "label33"
-msgstr "etikett33"
-
 #: redhat-config-kickstart.gladestrings:64
 msgid "_Save File"
 msgstr "_Lagre fil"
 
 #: redhat-config-kickstart.gladestrings:52
 msgid "md15"
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:67
+msgid "_Help Contents"
 msgstr ""
 
 #: redhat-config-kickstart.gladestrings:96
@@ -580,9 +584,9 @@ msgstr "Hesiod-autentisering"
 msgid "Keyboard:"
 msgstr "Tastatur:"
 
-#: ../src/xconfig.py:90
-msgid "Could not read video card database"
-msgstr "Kunne ikke lese skjermkortdatabasen"
+#: redhat-config-kickstart.gladestrings:252
+msgid "label33"
+msgstr "etikett33"
 
 #: redhat-config-kickstart.gladestrings:144
 #, fuzzy
@@ -590,7 +594,6 @@ msgid "Remove Existing Partitions:"
 msgstr "Fjern partisjoner:"
 
 #: redhat-config-kickstart.gladestrings:66
-#: redhat-config-kickstart.gladestrings:67
 msgid "_Help"
 msgstr "_Hjelp"
 
@@ -601,6 +604,11 @@ msgstr "NIS-autentisering"
 #: redhat-config-kickstart.gladestrings:237
 msgid "SMB Authentication"
 msgstr "SMB-autentisering"
+
+#: ../src/partition.py:78
+#, fuzzy
+msgid "Existing Partition"
+msgstr "Fjern partisjoner:"
 
 #: redhat-config-kickstart.gladestrings:158
 msgid "Partition Information (required)"
@@ -758,9 +766,9 @@ msgstr "Bruk kringkasting for å finne NIS-tjener"
 msgid "Install"
 msgstr "Installer"
 
-#: ../src/basic.py:270 ../src/partWindow.py:268 ../src/partWindow.py:305
-#: ../src/partWindow.py:318 ../src/partWindow.py:331 ../src/partWindow.py:366
-#: ../src/partWindow.py:379
+#: ../src/basic.py:270 ../src/partWindow.py:270 ../src/partWindow.py:307
+#: ../src/partWindow.py:320 ../src/partWindow.py:333 ../src/partWindow.py:368
+#: ../src/partWindow.py:381
 msgid "Error"
 msgstr "Feil"
 
@@ -903,7 +911,7 @@ msgstr "Installasjonsmetode (krevet)"
 msgid "Reboot system after installation"
 msgstr "Start systemet på nytt etter installasjonen"
 
-#: ../src/raidOptionsWindow.py:71
+#: ../src/raidOptionsWindow.py:73
 msgid "You currently have %d software RAID partition(s) free to use."
 msgstr ""
 
@@ -931,7 +939,7 @@ msgstr ""
 msgid "Kerberos 5 Authentication"
 msgstr "Kerberos 5-autentisering"
 
-#: ../src/partition.py:88 ../src/partition.py:120
+#: ../src/partition.py:91 ../src/partition.py:123
 msgid "Please select a partition from the list."
 msgstr "Vennligst velg en partisjon fra listen."
 
@@ -964,7 +972,7 @@ msgstr "Skriv inn ditt %post-skript under:"
 msgid "Video Card"
 msgstr "Skjermkort:"
 
-#: ../src/partWindow.py:317
+#: ../src/partWindow.py:319
 msgid "Specify a device on which to create the RAID partition."
 msgstr "Spesifiser en enhet hvor du vil opprette RAID-partisjonen."
 
@@ -1004,9 +1012,9 @@ msgstr "Hjelp er ikke tilgjengelig."
 msgid "Please select a root password."
 msgstr "Vennligst velg et passord for root."
 
-#: redhat-config-kickstart.gladestrings:200
-msgid "Use MD5"
-msgstr "Bruk MD5"
+#: ../src/xconfig.py:90
+msgid "Could not read video card database"
+msgstr "Kunne ikke lese skjermkortdatabasen"
 
 #: redhat-config-kickstart.gladestrings:63
 msgid "_Preview"
@@ -1041,7 +1049,7 @@ msgstr "Søk etter skjerm"
 msgid "Hard Drive"
 msgstr "Harddisk"
 
-#: ../src/partWindow.py:378
+#: ../src/partWindow.py:380
 msgid "Specify an existing partition to use."
 msgstr "Spesifiser en eksisterende partisjon som skal brukes."
 
@@ -1053,7 +1061,7 @@ msgstr "etikett28"
 msgid "Choose boot loader: "
 msgstr "Velg oppstartslaster: "
 
-#: ../src/partition.py:89 ../src/partition.py:121
+#: ../src/partition.py:92 ../src/partition.py:124
 msgid "Message"
 msgstr "Melding"
 

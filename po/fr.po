@@ -88,7 +88,7 @@ msgstr ""
 msgid "Additional Size Options"
 msgstr "Options de taille supplémentaires"
 
-#: ../src/partWindow.py:302
+#: ../src/partWindow.py:304
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive or an "
 "existing partition."
@@ -189,6 +189,10 @@ msgstr "Passerelle :"
 msgid "Force to be a primary partition (asprimary)"
 msgstr "Configurer comme partition primaire (asprimary)"
 
+#: redhat-config-kickstart.gladestrings:200
+msgid "Use MD5"
+msgstr "Utiliser MD5"
+
 #: redhat-config-kickstart.gladestrings:231
 msgid "Hesiod"
 msgstr "Hesiod"
@@ -210,7 +214,7 @@ msgstr "Utiliser les règles de pare-feu par défaut"
 msgid "software RAID"
 msgstr ""
 
-#: ../src/partWindow.py:365
+#: ../src/partWindow.py:367
 msgid "Specify a device on which to create the partition."
 msgstr "Spécifier un périphérique sur lequel créer la partition."
 
@@ -234,7 +238,7 @@ msgstr "Spécifier un nom d'utilisateur et un mot de passe FTP"
 msgid "Disabled"
 msgstr "Désactivé"
 
-#: ../src/partWindow.py:267
+#: ../src/partWindow.py:269
 msgid "Specify a mount point for the partition."
 msgstr "Spécifier un point de montage pour la partition."
 
@@ -281,7 +285,7 @@ msgstr "Supprimer le bloc de démarrage maître :"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: ../src/partWindow.py:330
+#: ../src/partWindow.py:332
 msgid "Specify an existing partition on which to create the RAID partition."
 msgstr ""
 "Spécifier une partition existante sur laquelle créer la partition RAID."
@@ -367,16 +371,16 @@ msgstr "Créer la partititon LVM"
 msgid "Pre-Installation Script"
 msgstr "Script de pré-installation"
 
-#: redhat-config-kickstart.gladestrings:252
-msgid "label33"
-msgstr "label33"
-
 #: redhat-config-kickstart.gladestrings:64
 msgid "_Save File"
 msgstr "_Sauvegarder le fichier"
 
 #: redhat-config-kickstart.gladestrings:52
 msgid "md15"
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:67
+msgid "_Help Contents"
 msgstr ""
 
 #: redhat-config-kickstart.gladestrings:96
@@ -582,9 +586,9 @@ msgstr "Authentification de Hesiod"
 msgid "Keyboard:"
 msgstr "Clavier :"
 
-#: ../src/xconfig.py:90
-msgid "Could not read video card database"
-msgstr "Impossible de lire la base de données de la carte vidéo"
+#: redhat-config-kickstart.gladestrings:252
+msgid "label33"
+msgstr "label33"
 
 #: redhat-config-kickstart.gladestrings:144
 #, fuzzy
@@ -592,7 +596,6 @@ msgid "Remove Existing Partitions:"
 msgstr "Supprimer les partitions :"
 
 #: redhat-config-kickstart.gladestrings:66
-#: redhat-config-kickstart.gladestrings:67
 msgid "_Help"
 msgstr "_Aide"
 
@@ -603,6 +606,11 @@ msgstr "Authentification NIS"
 #: redhat-config-kickstart.gladestrings:237
 msgid "SMB Authentication"
 msgstr "Authentification SMB"
+
+#: ../src/partition.py:78
+#, fuzzy
+msgid "Existing Partition"
+msgstr "Supprimer les partitions :"
 
 #: redhat-config-kickstart.gladestrings:158
 msgid "Partition Information (required)"
@@ -760,9 +768,9 @@ msgstr "Utiliser la diffusion pour trouver le serveur NIS"
 msgid "Install"
 msgstr "Installer"
 
-#: ../src/basic.py:270 ../src/partWindow.py:268 ../src/partWindow.py:305
-#: ../src/partWindow.py:318 ../src/partWindow.py:331 ../src/partWindow.py:366
-#: ../src/partWindow.py:379
+#: ../src/basic.py:270 ../src/partWindow.py:270 ../src/partWindow.py:307
+#: ../src/partWindow.py:320 ../src/partWindow.py:333 ../src/partWindow.py:368
+#: ../src/partWindow.py:381
 msgid "Error"
 msgstr "Erreur"
 
@@ -905,7 +913,7 @@ msgstr "Méthode d'installation (requise)"
 msgid "Reboot system after installation"
 msgstr "Redémarrer le système après l'installation"
 
-#: ../src/raidOptionsWindow.py:71
+#: ../src/raidOptionsWindow.py:73
 msgid "You currently have %d software RAID partition(s) free to use."
 msgstr ""
 
@@ -933,7 +941,7 @@ msgstr ""
 msgid "Kerberos 5 Authentication"
 msgstr "Authentification de Kerberos 5"
 
-#: ../src/partition.py:88 ../src/partition.py:120
+#: ../src/partition.py:91 ../src/partition.py:123
 msgid "Please select a partition from the list."
 msgstr "Veuillez sélectionner une partition dans la liste."
 
@@ -966,7 +974,7 @@ msgstr "Entrez votre script %post ici :"
 msgid "Video Card"
 msgstr "Carte vidéo"
 
-#: ../src/partWindow.py:317
+#: ../src/partWindow.py:319
 msgid "Specify a device on which to create the RAID partition."
 msgstr ""
 "Spécifier le périphérique sur lequel vous voulez créer la partition RAID."
@@ -1008,9 +1016,9 @@ msgstr "L'aide n'est pas disponible."
 msgid "Please select a root password."
 msgstr "Choisir le mot de passe root."
 
-#: redhat-config-kickstart.gladestrings:200
-msgid "Use MD5"
-msgstr "Utiliser MD5"
+#: ../src/xconfig.py:90
+msgid "Could not read video card database"
+msgstr "Impossible de lire la base de données de la carte vidéo"
 
 #: redhat-config-kickstart.gladestrings:63
 msgid "_Preview"
@@ -1045,7 +1053,7 @@ msgstr "Essai du moniteur"
 msgid "Hard Drive"
 msgstr "Disque dur"
 
-#: ../src/partWindow.py:378
+#: ../src/partWindow.py:380
 msgid "Specify an existing partition to use."
 msgstr "Utiliser la partition existante."
 
@@ -1057,7 +1065,7 @@ msgstr "label28"
 msgid "Choose boot loader: "
 msgstr "Choisir le chargeur de démarrage :"
 
-#: ../src/partition.py:89 ../src/partition.py:121
+#: ../src/partition.py:92 ../src/partition.py:124
 msgid "Message"
 msgstr "Message"
 

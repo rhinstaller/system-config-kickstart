@@ -89,7 +89,7 @@ msgstr "RAID 1"
 msgid "Additional Size Options"
 msgstr "追加サイズオプション"
 
-#: ../src/partWindow.py:302
+#: ../src/partWindow.py:304
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive or an "
 "existing partition."
@@ -189,6 +189,10 @@ msgstr "ゲートウェイ:"
 msgid "Force to be a primary partition (asprimary)"
 msgstr "プライマリパーティションにする(asprimary)"
 
+#: redhat-config-kickstart.gladestrings:200
+msgid "Use MD5"
+msgstr "MD5を使う"
+
 #: redhat-config-kickstart.gladestrings:231
 msgid "Hesiod"
 msgstr "Hesiod"
@@ -209,7 +213,7 @@ msgstr "デフォルトのファイアウォールルールを使う"
 msgid "software RAID"
 msgstr "ソフトウェアRAID"
 
-#: ../src/partWindow.py:365
+#: ../src/partWindow.py:367
 msgid "Specify a device on which to create the partition."
 msgstr "パーティションを作成するデバイスを指定"
 
@@ -233,7 +237,7 @@ msgstr "FTPのユーザー名とパスワードを指定して下さい。"
 msgid "Disabled"
 msgstr "なし"
 
-#: ../src/partWindow.py:267
+#: ../src/partWindow.py:269
 msgid "Specify a mount point for the partition."
 msgstr "パーティション用のマウントポイントを指定して下さい。"
 
@@ -279,7 +283,7 @@ msgstr "マスターブートレコードの消去:"
 msgid "HTTP"
 msgstr "HTTP"
 
-#: ../src/partWindow.py:330
+#: ../src/partWindow.py:332
 msgid "Specify an existing partition on which to create the RAID partition."
 msgstr "RAIDパーティションを作成する既存パーティションを指定して下さい。"
 
@@ -364,10 +368,6 @@ msgstr "LVMパーティションを作成"
 msgid "Pre-Installation Script"
 msgstr "インストール前の スクリプト"
 
-#: redhat-config-kickstart.gladestrings:252
-msgid "label33"
-msgstr "label33"
-
 #: redhat-config-kickstart.gladestrings:64
 msgid "_Save File"
 msgstr "ファイルの保存(_S)"
@@ -375,6 +375,10 @@ msgstr "ファイルの保存(_S)"
 #: redhat-config-kickstart.gladestrings:52
 msgid "md15"
 msgstr "md15"
+
+#: redhat-config-kickstart.gladestrings:67
+msgid "_Help Contents"
+msgstr ""
 
 #: redhat-config-kickstart.gladestrings:96
 msgid "GRUB Options:"
@@ -579,16 +583,15 @@ msgstr "Hesiod認証"
 msgid "Keyboard:"
 msgstr "キーボード:"
 
-#: ../src/xconfig.py:90
-msgid "Could not read video card database"
-msgstr "ビデオカードのデータベースを読み込むことが出来ませんでした。"
+#: redhat-config-kickstart.gladestrings:252
+msgid "label33"
+msgstr "label33"
 
 #: redhat-config-kickstart.gladestrings:144
 msgid "Remove Existing Partitions:"
 msgstr "既存のパーティションを削除："
 
 #: redhat-config-kickstart.gladestrings:66
-#: redhat-config-kickstart.gladestrings:67
 msgid "_Help"
 msgstr "ヘルプ(_H) "
 
@@ -599,6 +602,11 @@ msgstr "NIS認証"
 #: redhat-config-kickstart.gladestrings:237
 msgid "SMB Authentication"
 msgstr "SMB認証"
+
+#: ../src/partition.py:78
+#, fuzzy
+msgid "Existing Partition"
+msgstr "既存のパーティションを削除："
 
 #: redhat-config-kickstart.gladestrings:158
 msgid "Partition Information (required)"
@@ -759,9 +767,9 @@ msgstr "NISサーバの検索にブロードキャストを使う"
 msgid "Install"
 msgstr "インストール"
 
-#: ../src/basic.py:270 ../src/partWindow.py:268 ../src/partWindow.py:305
-#: ../src/partWindow.py:318 ../src/partWindow.py:331 ../src/partWindow.py:366
-#: ../src/partWindow.py:379
+#: ../src/basic.py:270 ../src/partWindow.py:270 ../src/partWindow.py:307
+#: ../src/partWindow.py:320 ../src/partWindow.py:333 ../src/partWindow.py:368
+#: ../src/partWindow.py:381
 msgid "Error"
 msgstr "エラー"
 
@@ -904,7 +912,7 @@ msgstr "インストール方法(必須)"
 msgid "Reboot system after installation"
 msgstr "インストール後にシステムを再起動"
 
-#: ../src/raidOptionsWindow.py:71
+#: ../src/raidOptionsWindow.py:73
 msgid "You currently have %d software RAID partition(s) free to use."
 msgstr "現在使用出来る%d ソフトウェアRAIDパーティションがあります。"
 
@@ -932,7 +940,7 @@ msgstr "RAIDデバイスを作成 [default = /dev/md0]"
 msgid "Kerberos 5 Authentication"
 msgstr "ケルベロス5認証"
 
-#: ../src/partition.py:88 ../src/partition.py:120
+#: ../src/partition.py:91 ../src/partition.py:123
 msgid "Please select a partition from the list."
 msgstr "一覧からパーティションを選択して下さい。"
 
@@ -965,7 +973,7 @@ msgstr "%post スクリプトを下に入力してください:"
 msgid "Video Card"
 msgstr "ビデオカード"
 
-#: ../src/partWindow.py:317
+#: ../src/partWindow.py:319
 msgid "Specify a device on which to create the RAID partition."
 msgstr "RAIDパーティションを作成するデバイスを指定。"
 
@@ -1006,9 +1014,9 @@ msgstr "ヘルプは使用できません。"
 msgid "Please select a root password."
 msgstr "rootパスワードを選択して下さい。"
 
-#: redhat-config-kickstart.gladestrings:200
-msgid "Use MD5"
-msgstr "MD5を使う"
+#: ../src/xconfig.py:90
+msgid "Could not read video card database"
+msgstr "ビデオカードのデータベースを読み込むことが出来ませんでした。"
 
 #: redhat-config-kickstart.gladestrings:63
 msgid "_Preview"
@@ -1043,7 +1051,7 @@ msgstr "モニタの調査"
 msgid "Hard Drive"
 msgstr "ハードドライブ"
 
-#: ../src/partWindow.py:378
+#: ../src/partWindow.py:380
 msgid "Specify an existing partition to use."
 msgstr "使用する既存のパーティションを指定"
 
@@ -1055,7 +1063,7 @@ msgstr "label28"
 msgid "Choose boot loader: "
 msgstr "ブートローダの選択: "
 
-#: ../src/partition.py:89 ../src/partition.py:121
+#: ../src/partition.py:92 ../src/partition.py:124
 msgid "Message"
 msgstr "メッセージ"
 
