@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-29 17:11-0500\n"
-"PO-Revision-Date: 2004-07-09 19:48+0400\n"
+"PO-Revision-Date: 2004-07-12 19:09+0400\n"
 "Last-Translator: Victor Ashik <vashik@mail.ru>\n"
 "Language-Team: Russian <fedora-trans-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -97,9 +97,8 @@ msgid "Error"
 msgstr "Ошибка"
 
 #: ../src/basic.py:224
-#, fuzzy
 msgid "Please select a root password."
-msgstr "Зашифровать пароль root"
+msgstr "Задайте пароль root."
 
 #. set platform
 #. set language
@@ -1178,7 +1177,6 @@ msgid "         "
 msgstr "         "
 
 #: system-config-kickstart.gladestrings:22
-#, fuzzy
 msgid "Drive :"
 msgstr "Устройство:"
 
@@ -1191,9 +1189,8 @@ msgid "Use existing partition (onpart)"
 msgstr "Использовать существующий раздел (onpart)"
 
 #: system-config-kickstart.gladestrings:27
-#, fuzzy
 msgid "Partition :"
-msgstr "Раздел:"
+msgstr "Раздел :"
 
 #: system-config-kickstart.gladestrings:29
 msgid "(for example: hda1 or sdc3)"
@@ -1220,9 +1217,8 @@ msgid "RAID Level:"
 msgstr "Уровень RAID:"
 
 #: system-config-kickstart.gladestrings:38
-#, fuzzy
 msgid "RAID Device:"
-msgstr "Создать устройство RAID"
+msgstr "Устройство RAID:"
 
 #: system-config-kickstart.gladestrings:39
 msgid "md0"
@@ -1989,17 +1985,17 @@ msgid ""
 "device.  A RAID device can be configured to provide additional speed and "
 "reliability compared to using an individual drive.  For more information on "
 "using RAID devices please consult the kickstart documentation."
-msgstr ""
+msgstr "Программный RAID позволяет вам объединять несколько дисков в устройство RAID большего размера. Устройство RAID может быть настроено для повышения производительности и надежности по сравнению с отдельным диском. За дополнительной информацией по использованию устройств RAID обратитесь к документации kickstart."
 
 #: system-config-kickstart.gladestrings:279
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
-msgstr ""
+msgstr "Для использования RAID вы должны сперва создать не меньше двух разделов типа 'программный RAID'. После этого вы можете создать устройство RAID, которое может быть отформатировано и смонтировано."
 
 #: system-config-kickstart.gladestrings:280
 msgid "Choose one of the following options:"
-msgstr "Выберите одну из следующих опций:"
+msgstr "Выберите один из следующих вариантов:"
 
 #: system-config-kickstart.gladestrings:281
 msgid "Create a software RAID partition"
@@ -2007,7 +2003,7 @@ msgstr "Создать программный раздел RAID"
 
 #: system-config-kickstart.gladestrings:282
 msgid "Create a RAID device [default = /dev/md0]"
-msgstr "Создать устройство RAID [по-умолчанию = /dev/md0]"
+msgstr "Создать устройство RAID [по умолчанию = /dev/md0]"
 
 #: system-config-kickstart.gladestrings:283
 msgid "Network Device Information"
