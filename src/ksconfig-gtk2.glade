@@ -35,8 +35,8 @@
 <widget class="GtkDialog" id="partition_dialog">
   <property name="border_width">4</property>
   <property name="title" translatable="yes">Partition Options</property>
-  <property name="type">GTK_WINDOW_POPUP</property>
-  <property name="window_position">GTK_WIN_POS_NONE</property>
+  <property name="type">GTK_WINDOW_TOPLEVEL</property>
+  <property name="window_position">GTK_WIN_POS_CENTER</property>
   <property name="modal">True</property>
   <property name="resizable">True</property>
   <property name="destroy_with_parent">False</property>
@@ -526,7 +526,7 @@
 	      <child>
 		<widget class="GtkLabel" id="label123">
 		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">Drive:</property>
+		  <property name="label" translatable="yes">Drive :</property>
 		  <property name="use_underline">False</property>
 		  <property name="use_markup">False</property>
 		  <property name="justify">GTK_JUSTIFY_CENTER</property>
@@ -619,7 +619,7 @@
 	      <child>
 		<widget class="GtkLabel" id="label125">
 		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">Partition:</property>
+		  <property name="label" translatable="yes">Partition :</property>
 		  <property name="use_underline">False</property>
 		  <property name="use_markup">False</property>
 		  <property name="justify">GTK_JUSTIFY_CENTER</property>
@@ -3540,10 +3540,10 @@
 			      <property name="window_placement">GTK_CORNER_TOP_LEFT</property>
 
 			      <child>
-				<widget class="GtkTreeView" id="treeview8">
+				<widget class="GtkTreeView" id="part_view">
 				  <property name="visible">True</property>
 				  <property name="can_focus">True</property>
-				  <property name="headers_visible">False</property>
+				  <property name="headers_visible">True</property>
 				  <property name="rules_hint">False</property>
 				  <property name="reorderable">False</property>
 				  <property name="enable_search">True</property>

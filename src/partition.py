@@ -23,11 +23,17 @@
 
 import gtk
 import gtk.glade
-#from gtk import *
-#import GtkExtra
-#import libglade
+import gobject
 import partWindow
 #import raidWindow
+
+##
+## I18N
+##
+import gettext
+gettext.bindtextdomain ("ksconfig", "/usr/share/locale")
+gettext.textdomain ("ksconfig")
+_=gettext.gettext
 
 class partition:
     def __init__(self, xml):
@@ -40,7 +46,7 @@ class partition:
         self.remove_parts_Linux_radiobutton = self.xml.get_widget("remove_parts_Linux_radiobutton")
         self.initlabel_yes_radiobutton = self.xml.get_widget("initlabel_yes_radiobutton")
         self.initlabel_no_radiobutton = self.xml.get_widget("initlabel_no_radiobutton")        
-        self.partClist = self.xml.get_widget("partClist")
+        self.part_view = self.xml.get_widget("part_view")
         self.add_part_button = self.xml.get_widget("add_part_button")
         self.edit_part_button = self.xml.get_widget("edit_part_button")
         self.del_part_button = self.xml.get_widget("del_part_button")
@@ -48,30 +54,53 @@ class partition:
 #        self.partitionDialog = self.xml.get_widget("partition_dialog")
         self.checkbox = self.xml.get_widget("checkbox2")
 
-        #temp until edit partitions finished
-#        self.edit_partition_dialog = self.xml.get_widget("edit_partition_dialog")
-        self.partWindow = partWindow.partWindow(self.xml, self.partClist)
-#        self.raidWindow = raidWindow.raidWindow(self.xml, self.partClist)
-
         self.add_part_button.connect("clicked", self.addPartition)
         self.edit_part_button.connect("clicked", self.editPartition)
         self.del_part_button.connect("clicked", self.delPartition)
 
-        self.xml.signal_autoconnect (
-            { "select_clist" : self.select_clist,
+#         (mountPoint, fsType, size, fixedSize, setSize,
+#             setSizeVal, maxSize, asPrimary, 
+#             onDisk, onDiskVal, onPart, onPartVal,
+#             doFormat, raidType, raidSpares, isRaidDevice)
+
+        self.part_store = gtk.ListStore(gobject.TYPE_STRING, gobject.TYPE_STRING, gobject.TYPE_STRING,
+                                        gobject.TYPE_STRING, gobject.TYPE_STRING, gobject.TYPE_STRING,
+                                        gobject.TYPE_STRING, gobject.TYPE_STRING, gobject.TYPE_STRING,
+                                        gobject.TYPE_STRING, gobject.TYPE_STRING, gobject.TYPE_STRING,
+                                        gobject.TYPE_STRING, gobject.TYPE_STRING, gobject.TYPE_STRING,
+                                        gobject.TYPE_STRING)
+
+        self.part_view.set_model(self.part_store)
+        col = gtk.TreeViewColumn(_("Mount Point"), gtk.CellRendererText(), text=0)
+        self.part_view.append_column(col)
+        col = gtk.TreeViewColumn(_("Filesystem Type"), gtk.CellRendererText(), text=1)
+        self.part_view.append_column(col)
+        col = gtk.TreeViewColumn(_("Size"), gtk.CellRendererText(), text=2)
+        self.part_view.append_column(col)
+        col = gtk.TreeViewColumn(_("Device"), gtk.CellRendererText(), text=9)
+        self.part_view.append_column(col)
+
+        #temp until edit partitions finished
+        self.partWindow = partWindow.partWindow(self.xml, self.part_store, self.part_view)
+#        self.raidWindow = raidWindow.raidWindow(self.xml, self.part_view)
+
+
+
+#        self.xml.signal_autoconnect (
+#            { "select_clist" : self.select_clist,
 #              "unselect_clist" : self.unselect_clist,
 #              "addPartition" : self.addPartition,
 #              "editPartition" : self.editPartition,
 #              "delPartition" : self.delPartition,
 #              "raidPartition" : self.raidPartition, 
-              })
+#              })
 
 #    def select_clist(self, r, c, event):
     def select_clist(self, *args ):
         widget, r, c, event = args
         self.selected_row = r
-        self.edit_part_button.set_sensitive(TRUE)
-        self.del_part_button.set_sensitive(TRUE)
+        self.edit_part_button.set_sensitive(gtk.TRUE)
+        self.del_part_button.set_sensitive(gtk.TRUE)
 
     def delPartition(self, *args):
         self.num_rows = self.num_rows - 1
@@ -82,10 +111,11 @@ class partition:
     def addPartition(self, *args):
         self.num_rows = self.num_rows + 1
         self.partWindow.add_partition()
-        self.edit_part_button.set_sensitive(TRUE)
-        self.del_part_button.set_sensitive(TRUE)
-#        self.raid_part_button.set_sensitive(TRUE)
-        self.partClist.unselect_all()
+        self.edit_part_button.set_sensitive(gtk.TRUE)
+        self.del_part_button.set_sensitive(gtk.TRUE)
+#        self.raid_part_button.set_sensitive(gtk.TRUE)
+#        self.partClist.unselect_all()
+        self.part_view.get_selection().unselect_all()
 
     def editPartition(self, *args):
         rowData = self.partClist.get_row_data(self.selected_row)

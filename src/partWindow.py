@@ -27,10 +27,19 @@ import gtk.glade
 import string
 import signal
 
+##
+## I18N
+##
+import gettext
+gettext.bindtextdomain ("ksconfig", "/usr/share/locale")
+gettext.textdomain ("ksconfig")
+_=gettext.gettext
 
 class partWindow:
-    def __init__(self, xml, partClist):
-        self.partClist = partClist
+    def __init__(self, xml, part_store, part_view):
+#        self.partClist = partClist
+        self.part_store = part_store
+        self.part_view = part_view
         self.partitionDialog = xml.get_widget("partition_dialog")
         self.mountPointCombo = xml.get_widget("mountPointCombo")
         self.fsTypeCombo = xml.get_widget("fsTypeCombo")
@@ -91,13 +100,13 @@ class partWindow:
         self.onPartCheck.set_sensitive(not self.onDiskCheck.get_active())
 
     def add_partition(self):
-        self.ok_handler = self.ok_button.connect("clicked", self.on_ok_button_clicked)
+        self.ok_handler = self.partOkButton.connect("clicked", self.on_ok_button_clicked)
         self.win_reset()
         self.partitionDialog.show_all()
 
     def edit_partition(self, rowData, selected_row):
         self.selected_row = selected_row
-        self.ok_handler = self.ok_button.connect("clicked", self.on_edit_ok_button_clicked)
+        self.ok_handler = self.partOkButton.connect("clicked", self.on_edit_ok_button_clicked)
         self.win_reset()
 
         (mountPoint, fsType, size, fixedSize, setSize, setSizeVal, maxSize,
@@ -142,7 +151,7 @@ class partWindow:
         self.formatCheck.set_active(gtk.TRUE)
         
     def on_part_cancel_button_clicked(self, *args):
-        self.ok_button.disconnect(self.ok_handler)
+        self.partOkButton.disconnect(self.ok_handler)
         self.partitionDialog.hide()
         self.win_reset()
 
@@ -161,7 +170,7 @@ class partWindow:
             self.partClist.set_text(self.selected_row, 3, onDiskVal)
             self.partClist.set_row_data(self.selected_row, rowData)
             
-            self.ok_button.disconnect(self.ok_handler)
+            self.partOkButton.disconnect(self.ok_handler)
             self.partitionDialog.hide()
             self.win_reset()
 
@@ -173,11 +182,29 @@ class partWindow:
              setSizeVal, maxSize, asPrimary, 
              onDisk, onDiskVal, onPart, onPartVal,
              doFormat, raidType, raidSpares, isRaidDevice) = rowData
-        
-            row = self.partClist.append([mountPoint, fsType, size, onDiskVal])
-            self.partClist.set_row_data(row, rowData)
 
-            self.ok_button.disconnect(self.ok_handler)
+            iter = self.part_store.append()
+            self.part_store.set_value(iter, 0, mountPoint)
+            self.part_store.set_value(iter, 1, fsType)
+            self.part_store.set_value(iter, 2, size)
+            self.part_store.set_value(iter, 3, fixedSize)
+            self.part_store.set_value(iter, 4, setSize)
+            self.part_store.set_value(iter, 5, setSizeVal)
+            self.part_store.set_value(iter, 6, maxSize)
+            self.part_store.set_value(iter, 7, asPrimary)
+            self.part_store.set_value(iter, 8, onDisk)
+            self.part_store.set_value(iter, 9, onDiskVal)
+            self.part_store.set_value(iter, 10, onPart)
+            self.part_store.set_value(iter, 11, onPartVal)
+            self.part_store.set_value(iter, 12, doFormat)
+            self.part_store.set_value(iter, 13, raidType)
+            self.part_store.set_value(iter, 14, raidSpares)
+            self.part_store.set_value(iter, 15, isRaidDevice)
+            
+#            row = self.partClist.append([mountPoint, fsType, size, onDiskVal])
+#            self.partClist.set_row_data(row, rowData)
+
+            self.partOkButton.disconnect(self.ok_handler)
             self.partitionDialog.hide()
             self.win_reset()
 
