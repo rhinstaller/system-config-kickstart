@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.5.0
+Version: 2.5.1
 Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -57,6 +57,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Wed Nov 19 2003 Brent Fox <bfox@redhat.com> 2.5.1-1
+- rebuild
+
 * Wed Nov 12 2003 Brent Fox <bfox@redhat.com> 2.5.0-1
 - rename to system-config-kickstart
 - change for Python2.3
