@@ -36,7 +36,8 @@ class saveFile:
         def __init__ (self, buf, xml):
 		self.xml = xml
 		self.buf = buf
-		self.dialog = self.xml.get_widget("confirm_options_dialog")
+
+		self.dialog = self.xml.get_widget("preview_options_dialog")
 		self.textview = self.xml.get_widget("confirm_options_textview")
 		self.confirm_options_ok_button = xml.get_widget("confirm_options_ok_button")
 		self.confirm_options_cancel_button = xml.get_widget("confirm_options_cancel_button")

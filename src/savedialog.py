@@ -49,7 +49,6 @@ class saveDialog:
 
 		self.dialog.show_all()
 
-
 	#save file
         def saveFile(self, *args):		
 		self.dialog.filePath = self.dialog.get_filename()
