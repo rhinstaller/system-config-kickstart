@@ -6,16 +6,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: redhat-config-kickstart\n"
-"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-05 15:11-0500\n"
-"PO-Revision-Date: 2004-02-11 16:03+1000\n"
-"Last-Translator: Sarah Wang <sarahs@redhat.com>\n"
+"PO-Revision-Date: 2004-03-11 11:16+0800\n"
+"Last-Translator: hutuworm <hutuworm@hutuworm.org>\n"
 "Language-Team: Simplified Chinese <i18n@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: pygettext.py 1.1\n"
-"X-Generator: KBabel 1.0\n"
 
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
@@ -74,8 +71,12 @@ msgstr "根口令不匹配。"
 #. Prepart the clearpart line
 #. This is a raid device
 #. Check to see if the selection is actually a partition or one of the parent roots
-#: ../src/basic.py:200 ../src/basic.py:220 ../src/install.py:213
-#: ../src/partition.py:303 ../src/partWindow.py:513 ../src/raidWindow.py:247
+#: ../src/basic.py:200
+#: ../src/basic.py:220
+#: ../src/install.py:213
+#: ../src/partition.py:303
+#: ../src/partWindow.py:513
+#: ../src/raidWindow.py:247
 msgid "Error"
 msgstr "错误"
 
@@ -291,7 +292,8 @@ msgstr "引导装载程序选项"
 msgid "Partition Information"
 msgstr "分区信息"
 
-#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:168
+#: ../src/kickstartGui.py:144
+#: system-config-kickstart.gladestrings:168
 msgid "Network Configuration"
 msgstr "网络配置"
 
@@ -299,23 +301,28 @@ msgstr "网络配置"
 msgid "Authentication"
 msgstr "验证"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:219
+#: ../src/kickstartGui.py:145
+#: system-config-kickstart.gladestrings:219
 msgid "Firewall Configuration"
 msgstr "防火墙配置"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:248
+#: ../src/kickstartGui.py:145
+#: system-config-kickstart.gladestrings:248
 msgid "X Configuration"
 msgstr "X 配置"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:258
+#: ../src/kickstartGui.py:146
+#: system-config-kickstart.gladestrings:258
 msgid "Package Selection"
 msgstr "软件包选择"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:264
+#: ../src/kickstartGui.py:146
+#: system-config-kickstart.gladestrings:264
 msgid "Pre-Installation Script"
 msgstr "预安装脚本"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:271
+#: ../src/kickstartGui.py:147
+#: system-config-kickstart.gladestrings:271
 msgid "Post-Installation Script"
 msgstr "安装后脚本"
 
@@ -409,8 +416,11 @@ msgstr "网络类型"
 
 #. Let's find the last eth device in the list and increment by one to
 #. fill in the option menu with the next device
-#: ../src/network.py:108 ../src/network.py:153 ../src/network.py:221
-#: ../src/network.py:272 ../src/network.py:413
+#: ../src/network.py:108
+#: ../src/network.py:153
+#: ../src/network.py:221
+#: ../src/network.py:272
+#: ../src/network.py:413
 msgid "Static IP"
 msgstr "静态 IP"
 
@@ -420,9 +430,7 @@ msgstr "请填充网络信息"
 
 #: ../src/network.py:316
 #, python-format
-msgid ""
-"A network device with the name %s already exists.  Please choose another "
-"device name"
+msgid "A network device with the name %s already exists.  Please choose another device name"
 msgstr "名称为 %s 的网络设备已经存在。请另选一个设备名称。"
 
 #. # Kickstart Configurator - A graphical kickstart file generator
@@ -559,7 +567,8 @@ msgstr "大小(MB)"
 #. #         self.part_store.set_value(part_iter, 3, part_object.format)
 #. #         self.part_store.set_value(part_iter, 4, part_object.size)
 #. #         self.part_store.set_value(part_iter, 5, part_object)
-#: ../src/partition.py:149 ../src/partition.py:179
+#: ../src/partition.py:149
+#: ../src/partition.py:179
 msgid "Please select a partition from the list."
 msgstr "请从列表中选择分区。"
 
@@ -581,44 +590,55 @@ msgstr "请从列表中选择分区。"
 #. #
 #. # I18N
 #. #
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:58
+#: ../src/partWindow.py:83
+#: system-config-kickstart.gladestrings:58
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:59
+#: ../src/partWindow.py:83
+#: system-config-kickstart.gladestrings:59
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:85 ../src/partWindow.py:148
+#: ../src/partWindow.py:85
+#: ../src/partWindow.py:148
 msgid "software RAID"
 msgstr "软件 RAID"
 
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:60
+#: ../src/partWindow.py:86
+#: system-config-kickstart.gladestrings:60
 msgid "swap"
 msgstr "交换"
 
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:61
+#: ../src/partWindow.py:86
+#: system-config-kickstart.gladestrings:61
 msgid "vfat"
 msgstr "vfat"
 
 #: ../src/partWindow.py:87
 msgid "PPC PReP Boot"
-msgstr ""
+msgstr "PPC PReP 启动"
 
 #. XXX - have to do this after the show_all due to a bug in gtkSpinButton, I suspect
 #. If the current iter is the only child, delete the parent and the child
 #. If there are other children, just delete this child
-#: ../src/partWindow.py:260 ../src/partWindow.py:535 ../src/raidWindow.py:212
+#: ../src/partWindow.py:260
+#: ../src/partWindow.py:535
+#: ../src/raidWindow.py:212
 msgid "Yes"
 msgstr "是"
 
-#: ../src/partWindow.py:262 ../src/partWindow.py:537 ../src/raidWindow.py:214
+#: ../src/partWindow.py:262
+#: ../src/partWindow.py:537
+#: ../src/raidWindow.py:214
 msgid "No"
 msgstr "否"
 
 #. If they didn't specify a device, create a group called "Auto"
-#: ../src/partWindow.py:285 ../src/partWindow.py:300 ../src/partWindow.py:319
+#: ../src/partWindow.py:285
+#: ../src/partWindow.py:300
+#: ../src/partWindow.py:319
 #: ../src/partWindow.py:333
 msgid "Auto"
 msgstr "自动"
@@ -643,15 +663,12 @@ msgstr "为分区指定挂载点。"
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:429
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "挂载点“%s”已被使用。请另选一个挂载点。"
 
 #. This will scan the part_store and see if there are any duplicate mount points
 #: ../src/partWindow.py:449
-msgid ""
-"To create a new RAID partition, you must specify either a hard drive device "
-"name or an existing partition."
+msgid "To create a new RAID partition, you must specify either a hard drive device name or an existing partition."
 msgstr "要创建新的 RAID 分区，您必须指定一个硬盘驱动器设备名称或一个现存分区。"
 
 #. If all the checks pass, then return
@@ -662,26 +679,16 @@ msgid "Specify a device on which to create the partition."
 msgstr "指定要在其中创建分区的设备。"
 
 #: ../src/partWindow.py:490
-msgid ""
-"The device you specified is not a valid device name. Please use a valid "
-"device name such as \"hda1\" or \"sda3\"."
-msgstr ""
-"您指定的设备不是有效的设备名。请使用一个有效的设备名，如“hda1”或“sda3”。"
+msgid "The device you specified is not a valid device name. Please use a valid device name such as \"hda1\" or \"sda3\"."
+msgstr "您指定的设备不是有效的设备名。请使用一个有效的设备名，如“hda1”或“sda3”。"
 
 #: ../src/partWindow.py:500
-msgid ""
-"The partition you specified does not end in a number.  Partitions must have "
-"a partition number such as \"hda1\" or \"sda3\"."
+msgid "The partition you specified does not end in a number.  Partitions must have a partition number such as \"hda1\" or \"sda3\"."
 msgstr "您指定的分区不以数字结尾。分区必须有一个分区号码，如“hda1”或“sda3”。"
 
 #: ../src/partWindow.py:506
-msgid ""
-"The partition you specified does not begin with \"hd\" or \"sd\".  "
-"Partitions must have a valid device name and partition number such as \"hda1"
-"\" or \"sda3\"."
-msgstr ""
-"您指定的分区不以“hd”或“sd”开头。分区必须有一个有效的设备名称和分区号码，"
-"如“hda1”或“sda3”。"
+msgid "The partition you specified does not begin with \"hd\" or \"sd\".  Partitions must have a valid device name and partition number such as \"hda1\" or \"sda3\"."
+msgstr "您指定的分区不以“hd”或“sd”开头。分区必须有一个有效的设备名称和分区号码，如“hda1”或“sda3”。"
 
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
 #. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
@@ -752,7 +759,8 @@ msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "您必须至少选择 3 个分区来使用 RAID %s"
 
 #. then this is a new raid device, not one we're just editing
-#: ../src/raidWindow.py:192 ../src/raidWindow.py:218
+#: ../src/raidWindow.py:192
+#: ../src/raidWindow.py:218
 msgid "Raid Devices"
 msgstr "RAID 设备"
 
@@ -834,22 +842,16 @@ msgstr "RAID 设备"
 #. #
 #: ../src/system-config-kickstart.py:60
 msgid ""
-"Usage: system-config-kickstart [--help] [--generate <filename>] "
-"[<kickstart_filename>]\n"
+"Usage: system-config-kickstart [--help] [--generate <filename>] [<kickstart_filename>]\n"
 "        \n"
 "--help                  Print out this message\n"
-"--generate <filename>   Generate a kickstart file from the current machine "
-"and write\n"
-"                        it to <filename>.  This option runs on the console, "
-"so it is\n"
-"                        useful for servers that do not have X currently "
-"running.\n"
-"<kickstart_filename>    This option will cause the GUI to launch with the "
-"values from\n"
+"--generate <filename>   Generate a kickstart file from the current machine and write\n"
+"                        it to <filename>.  This option runs on the console, so it is\n"
+"                        useful for servers that do not have X currently running.\n"
+"<kickstart_filename>    This option will cause the GUI to launch with the values from\n"
 "                        the kickstart file already filled in."
 msgstr ""
-"用法：system-config-kickstart [--help] [--generate <filename>] "
-"[<kickstart_filename>]\n"
+"用法：system-config-kickstart [--help] [--generate <filename>] [<kickstart_filename>]\n"
 "        \n"
 "--help                  显示该帮助消息\n"
 "--generate <filename>   从当前机器中生成一个 kickstart 文件，\n"
@@ -1766,12 +1768,8 @@ msgstr "标签34"
 
 #: system-config-kickstart.gladestrings:260
 #, c-format
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %pre command at the beginning."
-msgstr ""
-"警告：脚本中的错误可能会导致 Kickstart 安装失败。在起始处请不要包括 %pre 命"
-"令。"
+msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %pre command at the beginning."
+msgstr "警告：脚本中的错误可能会导致 Kickstart 安装失败。在起始处请不要包括 %pre 命令。"
 
 #: system-config-kickstart.gladestrings:261
 #: system-config-kickstart.gladestrings:268
@@ -1789,12 +1787,8 @@ msgstr "标签89"
 
 #: system-config-kickstart.gladestrings:266
 #, c-format
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %post command at the beginning."
-msgstr ""
-"警告：脚本中的错误可能会导致您的 Kickstart 安装失败。在起始处请不要包括 %"
-"post 命令。"
+msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %post command at the beginning."
+msgstr "警告：脚本中的错误可能会导致您的 Kickstart 安装失败。在起始处请不要包括 %post 命令。"
 
 #: system-config-kickstart.gladestrings:267
 msgid "Run outside of the chroot environment"
@@ -1814,14 +1808,11 @@ msgid "Preview Options"
 msgstr "预览选项"
 
 #: system-config-kickstart.gladestrings:274
-#, fuzzy
 msgid "_Save to File"
-msgstr "保存到文件"
+msgstr "保存到文件(_S)"
 
 #: system-config-kickstart.gladestrings:275
-msgid ""
-"You have choosen the following configuration. Click Save File to save the "
-"kickstart file. "
+msgid "You have choosen the following configuration. Click Save File to save the kickstart file. "
 msgstr "您已选定下列配置。点击保存文件来保存 kickstart 文件。"
 
 #: system-config-kickstart.gladestrings:276
@@ -1829,23 +1820,12 @@ msgid "RAID Options"
 msgstr "RAID 选项"
 
 #: system-config-kickstart.gladestrings:277
-msgid ""
-"Software RAID allows you to combine several disks into a larger RAID "
-"device.  A RAID device can be configured to provide additional speed and "
-"reliability compared to using an individual drive.  For more information on "
-"using RAID devices please consult the kickstart documentation."
-msgstr ""
-"软件 RAID 允许您把几个磁盘组合成一个大型 RAID 设备。与单独驱动器相比，RAID 设"
-"备可以被配置来提供额外的速度和可靠性。关于使用 RAID 的详细信息，请参考 "
-"kickstart 文档。"
+msgid "Software RAID allows you to combine several disks into a larger RAID device.  A RAID device can be configured to provide additional speed and reliability compared to using an individual drive.  For more information on using RAID devices please consult the kickstart documentation."
+msgstr "软件 RAID 允许您把几个磁盘组合成一个大型 RAID 设备。与单独驱动器相比，RAID 设备可以被配置来提供额外的速度和可靠性。关于使用 RAID 的详细信息，请参考 kickstart 文档。"
 
 #: system-config-kickstart.gladestrings:278
-msgid ""
-"To use RAID you must first create at least two partitions of type 'software "
-"RAID'.  Then you can create a RAID device which can be formatted and mounted."
-msgstr ""
-"要使用 RAID，您必须首先至少创建两个类型为“软件 RAID”的分区。然后，您才可以创"
-"建能够被格式化并挂载的 RAID 设备。"
+msgid "To use RAID you must first create at least two partitions of type 'software RAID'.  Then you can create a RAID device which can be formatted and mounted."
+msgstr "要使用 RAID，您必须首先至少创建两个类型为“软件 RAID”的分区。然后，您才可以创建能够被格式化并挂载的 RAID 设备。"
 
 #: system-config-kickstart.gladestrings:279
 msgid "Choose one of the following options:"
@@ -1901,3 +1881,4 @@ msgstr "名称服务器："
 #: system-config-kickstart.gladestrings:315
 msgid "."
 msgstr "."
+
