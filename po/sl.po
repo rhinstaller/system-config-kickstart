@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: redhat-config-kickstart 2.3.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-26 18:21-0500\n"
+"POT-Creation-Date: 2004-03-29 17:11-0500\n"
 "PO-Revision-Date: 2003-09-27 22:57+0200\n"
 "Last-Translator: Roman Maurer <roman@lugos.si>\n"
 "Language-Team: Slovenian <translation-team-sl@lists.sourceforge.net>\n"
@@ -93,15 +93,16 @@ msgstr ""
 #. Prepart the clearpart line
 #. This is a raid device
 #. Check to see if the selection is actually a partition or one of the parent roots
-#: ../src/basic.py:206 ../src/basic.py:226 ../src/install.py:214
-#: ../src/partition.py:304 ../src/partWindow.py:513 ../src/raidWindow.py:247
+#: ../src/basic.py:206 ../src/basic.py:225 ../src/install.py:214
+#: ../src/partition.py:305 ../src/partWindow.py:513 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "Napaka"
 
-#: ../src/basic.py:225
+#: ../src/basic.py:224
 msgid "Please select a root password."
 msgstr "Prosim, izberite geslo skrbnika sistema."
 
+#. set platform
 #. set language
 #. set keyboard
 #. set mouse
@@ -125,9 +126,12 @@ msgstr "Prosim, izberite geslo skrbnika sistema."
 #. #
 #. # I18N
 #. #
-#. lilo stuff
-#. end of lilo stuff
-#: ../src/bootloader.py:122
+#: ../src/bootloader.py:76
+#, python-format
+msgid "Bootloader options are not applicable to the %s platform"
+msgstr ""
+
+#: ../src/bootloader.py:117
 msgid "Grub passwords do not match.  Please try again."
 msgstr ""
 
@@ -285,16 +289,16 @@ msgstr "Jezikovna podpora:"
 #. # I18N
 #. #
 #. create table with custom checklists
-#: ../src/firewall.py:57
+#: ../src/firewall.py:60
 msgid "Trusted devices:"
 msgstr "Zaupne naprave:"
 
-#: ../src/firewall.py:82
+#: ../src/firewall.py:85
 #, fuzzy
 msgid "Trusted services:"
 msgstr "Zaupne naprave:"
 
-#: ../src/firewall.py:114
+#: ../src/firewall.py:117
 msgid "Other ports: (1029:tcp)"
 msgstr "Druga vrata: (1029:tcp)"
 
@@ -449,7 +453,7 @@ msgstr "Izbire zagonskega nalagalnika"
 msgid "Partition Information"
 msgstr "Podatki o razdelku"
 
-#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:163
+#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:165
 msgid "Network Configuration"
 msgstr "Prikrojitev mreže"
 
@@ -457,23 +461,24 @@ msgstr "Prikrojitev mreže"
 msgid "Authentication"
 msgstr "Avtentikacija"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:214
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:218
 msgid "Firewall Configuration"
 msgstr "Prikrojitev požarnega zidu"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:243
-msgid "X Configuration"
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:248
+#, fuzzy
+msgid "Display Configuration"
 msgstr "Prikrojitev X"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:253
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:259
 msgid "Package Selection"
 msgstr "Izbira paketov"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:259
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:265
 msgid "Pre-Installation Script"
 msgstr "Prednamestitveni skript"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:266
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:272
 msgid "Post-Installation Script"
 msgstr "Ponamestitveni skript"
 
@@ -557,26 +562,26 @@ msgstr "Ni moč dostopati do datoteke \"%s\"."
 #. #
 #. # I18N
 #. #
-#: ../src/network.py:86
+#: ../src/network.py:87
 msgid "Device"
 msgstr "Naprava"
 
-#: ../src/network.py:89
+#: ../src/network.py:90
 msgid "Network Type"
 msgstr "Vrsta omrežja"
 
 #. Let's find the last eth device in the list and increment by one to
 #. fill in the option menu with the next device
-#: ../src/network.py:108 ../src/network.py:153 ../src/network.py:221
-#: ../src/network.py:272 ../src/network.py:413
+#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:223
+#: ../src/network.py:274 ../src/network.py:415
 msgid "Static IP"
 msgstr "Statični IP"
 
-#: ../src/network.py:211
+#: ../src/network.py:213
 msgid "Please fill in the network information"
 msgstr "Prosim, vnesite podatke o omrežju"
 
-#: ../src/network.py:316
+#: ../src/network.py:318
 #, python-format
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
@@ -643,7 +648,7 @@ msgstr ""
 #. #
 #. # I18N
 #. #
-#: ../src/partition.py:71
+#: ../src/partition.py:72
 msgid ""
 "Device/\n"
 "Partition Number"
@@ -652,7 +657,7 @@ msgstr ""
 "Številka razdelka"
 
 #. col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
-#: ../src/partition.py:74
+#: ../src/partition.py:75
 msgid ""
 "Mount Point/\n"
 "RAID"
@@ -660,15 +665,15 @@ msgstr ""
 "Točka priklopa/\n"
 "RAID"
 
-#: ../src/partition.py:76
+#: ../src/partition.py:77
 msgid "Type"
 msgstr "Vrsta"
 
-#: ../src/partition.py:78
+#: ../src/partition.py:79
 msgid "Format"
 msgstr "Formatiraj"
 
-#: ../src/partition.py:80
+#: ../src/partition.py:81
 msgid "Size (MB)"
 msgstr "Velikost (MB)"
 
@@ -718,7 +723,7 @@ msgstr "Velikost (MB)"
 #. #         self.part_store.set_value(part_iter, 3, part_object.format)
 #. #         self.part_store.set_value(part_iter, 4, part_object.size)
 #. #         self.part_store.set_value(part_iter, 5, part_object)
-#: ../src/partition.py:150 ../src/partition.py:180
+#: ../src/partition.py:151 ../src/partition.py:181
 msgid "Please select a partition from the list."
 msgstr "Prosim, izberite razdelek s seznama."
 
@@ -1069,12 +1074,12 @@ msgstr "Poskusite pognati 'redhat-config-kickstart --help' za seznam izbir."
 #. add resolutions
 #. add video card RAM sizes to option menu
 #. add video cards to list
-#: ../src/xconfig.py:102
+#: ../src/xconfig.py:104
 msgid "Could not read video card database"
 msgstr "Ni moč brati zbirke podatkov o grafičnih karticah"
 
 #. add monitors to list
-#: ../src/xconfig.py:120
+#: ../src/xconfig.py:122
 msgid "Could not read monitor database"
 msgstr "Ni moč brati zbirke podatkov o monitorjih"
 
@@ -1123,40 +1128,40 @@ msgstr "Izbire za razdelke"
 #: system-config-kickstart.gladestrings:138
 #: system-config-kickstart.gladestrings:139
 #: system-config-kickstart.gladestrings:144
-#: system-config-kickstart.gladestrings:170
-#: system-config-kickstart.gladestrings:173
-#: system-config-kickstart.gladestrings:177
-#: system-config-kickstart.gladestrings:178
-#: system-config-kickstart.gladestrings:185
+#: system-config-kickstart.gladestrings:172
+#: system-config-kickstart.gladestrings:175
+#: system-config-kickstart.gladestrings:179
+#: system-config-kickstart.gladestrings:180
 #: system-config-kickstart.gladestrings:187
 #: system-config-kickstart.gladestrings:189
-#: system-config-kickstart.gladestrings:194
+#: system-config-kickstart.gladestrings:191
 #: system-config-kickstart.gladestrings:196
-#: system-config-kickstart.gladestrings:202
-#: system-config-kickstart.gladestrings:203
-#: system-config-kickstart.gladestrings:218
-#: system-config-kickstart.gladestrings:220
-#: system-config-kickstart.gladestrings:232
+#: system-config-kickstart.gladestrings:198
+#: system-config-kickstart.gladestrings:204
+#: system-config-kickstart.gladestrings:205
+#: system-config-kickstart.gladestrings:222
+#: system-config-kickstart.gladestrings:224
 #: system-config-kickstart.gladestrings:236
-#: system-config-kickstart.gladestrings:238
-#: system-config-kickstart.gladestrings:257
-#: system-config-kickstart.gladestrings:264
-#: system-config-kickstart.gladestrings:284
-#: system-config-kickstart.gladestrings:286
-#: system-config-kickstart.gladestrings:288
+#: system-config-kickstart.gladestrings:240
+#: system-config-kickstart.gladestrings:242
+#: system-config-kickstart.gladestrings:263
+#: system-config-kickstart.gladestrings:270
 #: system-config-kickstart.gladestrings:290
-#: system-config-kickstart.gladestrings:291
-#: system-config-kickstart.gladestrings:293
-#: system-config-kickstart.gladestrings:295
+#: system-config-kickstart.gladestrings:292
+#: system-config-kickstart.gladestrings:294
+#: system-config-kickstart.gladestrings:296
 #: system-config-kickstart.gladestrings:297
-#: system-config-kickstart.gladestrings:298
-#: system-config-kickstart.gladestrings:300
-#: system-config-kickstart.gladestrings:302
+#: system-config-kickstart.gladestrings:299
+#: system-config-kickstart.gladestrings:301
+#: system-config-kickstart.gladestrings:303
 #: system-config-kickstart.gladestrings:304
-#: system-config-kickstart.gladestrings:305
-#: system-config-kickstart.gladestrings:307
-#: system-config-kickstart.gladestrings:309
+#: system-config-kickstart.gladestrings:306
+#: system-config-kickstart.gladestrings:308
+#: system-config-kickstart.gladestrings:310
 #: system-config-kickstart.gladestrings:311
+#: system-config-kickstart.gladestrings:313
+#: system-config-kickstart.gladestrings:315
+#: system-config-kickstart.gladestrings:317
 msgid "*"
 msgstr "*"
 
@@ -1565,370 +1570,395 @@ msgid "Kernel parameters:"
 msgstr "Parametri jedra:"
 
 #: system-config-kickstart.gladestrings:145
+#, fuzzy
+msgid "label216"
+msgstr "oznaka28"
+
+#: system-config-kickstart.gladestrings:146
 msgid "Boot Loader Options (required)"
 msgstr "Izbire zagonskega nalagalnika (nujno)"
 
-#: system-config-kickstart.gladestrings:146
+#: system-config-kickstart.gladestrings:147
 msgid "label35"
 msgstr "oznaka35"
 
-#: system-config-kickstart.gladestrings:147
+#: system-config-kickstart.gladestrings:148
 msgid "Clear Master Boot Record"
 msgstr "Zbriši glavni zagonski zapis (MBR)"
 
-#: system-config-kickstart.gladestrings:148
+#: system-config-kickstart.gladestrings:149
 msgid "Do not clear Master Boot Record"
 msgstr "Ne počisti glavnega zagonskega zapisa (MBR)"
 
-#: system-config-kickstart.gladestrings:149
+#: system-config-kickstart.gladestrings:150
 msgid "Remove all existing partitions"
 msgstr "Odstrani vse obstoječe razdelke"
 
-#: system-config-kickstart.gladestrings:150
+#: system-config-kickstart.gladestrings:151
 msgid "Remove existing Linux partitions"
 msgstr "Odstrani obstoječe razdelke za Linux"
 
-#: system-config-kickstart.gladestrings:151
+#: system-config-kickstart.gladestrings:152
 msgid "Preserve existing partitions"
 msgstr "Obdrži obstoječe razdelke"
 
-#: system-config-kickstart.gladestrings:152
+#: system-config-kickstart.gladestrings:153
 msgid "Initialize the disk label"
 msgstr "Inicializiraj oznako diska"
 
-#: system-config-kickstart.gladestrings:153
+#: system-config-kickstart.gladestrings:154
 msgid "Do not initialize the disk label"
 msgstr "Ne inicializiraj oznake diska"
 
-#: system-config-kickstart.gladestrings:154
+#: system-config-kickstart.gladestrings:155
 msgid "_Add"
 msgstr "_Dodaj"
 
-#: system-config-kickstart.gladestrings:155
+#: system-config-kickstart.gladestrings:156
 msgid "_Edit"
 msgstr "_Uredi"
 
-#: system-config-kickstart.gladestrings:156
+#: system-config-kickstart.gladestrings:157
 msgid "_Delete"
 msgstr "_Zbriši"
 
-#: system-config-kickstart.gladestrings:157
+#: system-config-kickstart.gladestrings:158
 msgid "RAID"
 msgstr "RAID"
 
-#: system-config-kickstart.gladestrings:158
+#: system-config-kickstart.gladestrings:159
+msgid "Partition options are not applicable on upgrades."
+msgstr ""
+
+#: system-config-kickstart.gladestrings:160
 msgid "Partition Information (required)"
 msgstr "Podatki o razdelku (nujni)"
 
-#: system-config-kickstart.gladestrings:159
+#: system-config-kickstart.gladestrings:161
 msgid "label30"
 msgstr "oznaka30"
 
-#: system-config-kickstart.gladestrings:160
+#: system-config-kickstart.gladestrings:162
 #, fuzzy
 msgid "_Add Network Device"
 msgstr "Dodaj mrežno napravo"
 
-#: system-config-kickstart.gladestrings:161
+#: system-config-kickstart.gladestrings:163
 #, fuzzy
 msgid "_Edit Network Device"
 msgstr "Uredi mrežno napravo"
 
-#: system-config-kickstart.gladestrings:162
+#: system-config-kickstart.gladestrings:164
 #, fuzzy
 msgid "_Delete Network Device"
 msgstr "Zbriši mrežno napravo"
 
-#: system-config-kickstart.gladestrings:164
+#: system-config-kickstart.gladestrings:166
 msgid "label31"
 msgstr "oznaka31"
 
-#: system-config-kickstart.gladestrings:165
+#: system-config-kickstart.gladestrings:167
 msgid "Authentication:"
 msgstr "Avtentikacija:"
 
-#: system-config-kickstart.gladestrings:166
+#: system-config-kickstart.gladestrings:168
 msgid "Use Shadow Passwords"
 msgstr "Uporabi senčna gesla"
 
-#: system-config-kickstart.gladestrings:167
+#: system-config-kickstart.gladestrings:169
 msgid "Use MD5"
 msgstr "Uporabljaj MD5"
 
-#: system-config-kickstart.gladestrings:168
+#: system-config-kickstart.gladestrings:170
 msgid "Enable NIS"
 msgstr "Omogoči NIS"
 
-#: system-config-kickstart.gladestrings:169
+#: system-config-kickstart.gladestrings:171
 msgid "NIS Domain:"
 msgstr "Domena NIS:"
 
-#: system-config-kickstart.gladestrings:171
+#: system-config-kickstart.gladestrings:173
 msgid "Use broadcast to find NIS server"
 msgstr "Uporabi razpršeno oddajanje za iskanje strežnika NIS"
 
-#: system-config-kickstart.gladestrings:172
+#: system-config-kickstart.gladestrings:174
 msgid "NIS Server:"
 msgstr "Strežnik NIS:"
 
-#: system-config-kickstart.gladestrings:174
+#: system-config-kickstart.gladestrings:176
 msgid "NIS Authentication"
 msgstr "Avtentikacija NIS"
 
-#: system-config-kickstart.gladestrings:175
+#: system-config-kickstart.gladestrings:177
 msgid "NIS"
 msgstr "NIS"
 
-#: system-config-kickstart.gladestrings:176
+#: system-config-kickstart.gladestrings:178
 msgid "Enable LDAP"
 msgstr "Omogoči LDAP"
 
-#: system-config-kickstart.gladestrings:179
+#: system-config-kickstart.gladestrings:181
 msgid "LDAP Server: "
 msgstr "Strežnik LDAP: "
 
-#: system-config-kickstart.gladestrings:180
+#: system-config-kickstart.gladestrings:182
 msgid "LDAP Base Name: "
 msgstr "Osnovno ime za LDAP: "
 
-#: system-config-kickstart.gladestrings:181
+#: system-config-kickstart.gladestrings:183
 msgid "LDAP Authentication"
 msgstr "Avtentikacija LDAP"
 
-#: system-config-kickstart.gladestrings:182
+#: system-config-kickstart.gladestrings:184
 msgid "LDAP "
 msgstr "LDAP "
 
-#: system-config-kickstart.gladestrings:183
+#: system-config-kickstart.gladestrings:185
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Omogoči avtentikacijo Kerberos 5"
 
-#: system-config-kickstart.gladestrings:184
+#: system-config-kickstart.gladestrings:186
 msgid "Kerberos Realm:"
 msgstr ""
 
-#: system-config-kickstart.gladestrings:186
+#: system-config-kickstart.gladestrings:188
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Krmilnik domene Kerberos (KDC):"
 
-#: system-config-kickstart.gladestrings:188
+#: system-config-kickstart.gladestrings:190
 msgid "Kerberos Master Server:"
 msgstr "Glavni strežnik za Kerberos:"
 
-#: system-config-kickstart.gladestrings:190
+#: system-config-kickstart.gladestrings:192
 msgid "Kerberos 5 Authentication"
 msgstr "Avtentikacija Kerberos 5"
 
-#: system-config-kickstart.gladestrings:191
+#: system-config-kickstart.gladestrings:193
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: system-config-kickstart.gladestrings:192
+#: system-config-kickstart.gladestrings:194
 msgid "Enable Hesiod Support"
 msgstr "Omogoči podporo za Hesiod"
 
-#: system-config-kickstart.gladestrings:193
+#: system-config-kickstart.gladestrings:195
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS:"
 
-#: system-config-kickstart.gladestrings:195
+#: system-config-kickstart.gladestrings:197
 msgid "Hesiod RHS:"
 msgstr "Hesiod RHS:"
 
-#: system-config-kickstart.gladestrings:197
+#: system-config-kickstart.gladestrings:199
 msgid "Hesiod Authentication"
 msgstr "Avtentikacija Hesiod"
 
-#: system-config-kickstart.gladestrings:198
+#: system-config-kickstart.gladestrings:200
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: system-config-kickstart.gladestrings:199
+#: system-config-kickstart.gladestrings:201
 msgid "Enable SMB Authentication"
 msgstr "Omogoči avtentikacijo SMB"
 
-#: system-config-kickstart.gladestrings:200
+#: system-config-kickstart.gladestrings:202
 msgid "SMB Servers:"
 msgstr "Strežniki SMB:"
 
-#: system-config-kickstart.gladestrings:201
+#: system-config-kickstart.gladestrings:203
 msgid "SMB Workgroup:"
 msgstr "Delovna skupina SMB:"
 
-#: system-config-kickstart.gladestrings:204
+#: system-config-kickstart.gladestrings:206
 msgid "SMB Authentication"
 msgstr "Avtentikacija SMB"
 
-#: system-config-kickstart.gladestrings:205
+#: system-config-kickstart.gladestrings:207
 msgid "SMB"
 msgstr "SMB"
 
-#: system-config-kickstart.gladestrings:206
+#: system-config-kickstart.gladestrings:208
 msgid "Enable nscd"
 msgstr "Omogoči nscd"
 
-#: system-config-kickstart.gladestrings:207
+#: system-config-kickstart.gladestrings:209
 msgid "Name Switch Cache Daemon (nscd) Authentication"
 msgstr "Avtentikacija za nscd (Name Switch Cache Daemon)"
 
-#: system-config-kickstart.gladestrings:208
+#: system-config-kickstart.gladestrings:210
 msgid "Name Switch Cache"
 msgstr ""
 
-#: system-config-kickstart.gladestrings:209
-msgid "Authentication Configuration"
-msgstr "Prikrojitev avtentikacije"
-
-#: system-config-kickstart.gladestrings:210
-msgid "label32"
-msgstr "oznaka32"
-
 #: system-config-kickstart.gladestrings:211
-msgid "Security level:"
+msgid "Authentication options are not applicable on upgrades."
 msgstr ""
 
 #: system-config-kickstart.gladestrings:212
-msgid "Enable firewall"
-msgstr ""
+msgid "Authentication Configuration"
+msgstr "Prikrojitev avtentikacije"
 
 #: system-config-kickstart.gladestrings:213
-msgid "Disable firewall"
+msgid "label32"
+msgstr "oznaka32"
+
+#: system-config-kickstart.gladestrings:214
+msgid "Security level:"
 msgstr ""
 
 #: system-config-kickstart.gladestrings:215
+msgid "Enable firewall"
+msgstr ""
+
+#: system-config-kickstart.gladestrings:216
+msgid "Disable firewall"
+msgstr ""
+
+#: system-config-kickstart.gladestrings:217
+msgid "Firewall configuration is not applicable on upgrades."
+msgstr ""
+
+#: system-config-kickstart.gladestrings:219
 msgid "label33"
 msgstr "oznaka33"
 
-#: system-config-kickstart.gladestrings:216
+#: system-config-kickstart.gladestrings:220
 msgid "Configure the X Window System"
 msgstr "Prikroji okenski sistem X"
 
-#: system-config-kickstart.gladestrings:217
+#: system-config-kickstart.gladestrings:221
 msgid "Color Depth"
 msgstr "Barvna globina"
 
-#: system-config-kickstart.gladestrings:219
+#: system-config-kickstart.gladestrings:223
 msgid "Resolution"
 msgstr "Ločljivost"
 
-#: system-config-kickstart.gladestrings:221
+#: system-config-kickstart.gladestrings:225
 msgid "Default Desktop:"
 msgstr "Privzeto namizje:"
 
-#: system-config-kickstart.gladestrings:222
+#: system-config-kickstart.gladestrings:226
 msgid "GNOME"
 msgstr "GNOME"
 
-#: system-config-kickstart.gladestrings:223
+#: system-config-kickstart.gladestrings:227
 msgid "KDE"
 msgstr "KDE"
 
-#: system-config-kickstart.gladestrings:224
+#: system-config-kickstart.gladestrings:228
 msgid "Start the X Window System on boot"
 msgstr "Ob zagonu poženi okenski sistem X"
 
-#: system-config-kickstart.gladestrings:225
+#: system-config-kickstart.gladestrings:229
 msgid "On first boot, Setup Agent is: "
 msgstr ""
 
-#: system-config-kickstart.gladestrings:226
+#: system-config-kickstart.gladestrings:230
 msgid "Disabled"
 msgstr "Onemogočeno"
 
-#: system-config-kickstart.gladestrings:227
+#: system-config-kickstart.gladestrings:231
 #, fuzzy
 msgid "Enabled"
 msgstr "Omogoči nscd"
 
-#: system-config-kickstart.gladestrings:228
+#: system-config-kickstart.gladestrings:232
 msgid "Enabled in reconfiguration mode"
 msgstr ""
 
-#: system-config-kickstart.gladestrings:229
+#: system-config-kickstart.gladestrings:233
 msgid "General"
 msgstr "Splošno"
 
-#: system-config-kickstart.gladestrings:230
+#: system-config-kickstart.gladestrings:234
 msgid "Probe for video card"
 msgstr "Zaznaj grafično kartico"
 
-#: system-config-kickstart.gladestrings:231
+#: system-config-kickstart.gladestrings:235
 msgid "Video Card RAM: "
 msgstr "RAM grafične kartice: "
 
-#: system-config-kickstart.gladestrings:233
+#: system-config-kickstart.gladestrings:237
 msgid "Video Card"
 msgstr "Grafična kartica"
 
-#: system-config-kickstart.gladestrings:234
+#: system-config-kickstart.gladestrings:238
 msgid "Probe for monitor"
 msgstr "Zaznaj monitor"
 
-#: system-config-kickstart.gladestrings:235
+#: system-config-kickstart.gladestrings:239
 msgid "Use custom monitor sync rates"
 msgstr ""
 
-#: system-config-kickstart.gladestrings:237
+#: system-config-kickstart.gladestrings:241
 msgid "Hz"
 msgstr "Hz"
 
-#: system-config-kickstart.gladestrings:239
+#: system-config-kickstart.gladestrings:243
 msgid "kHz"
 msgstr "kHz"
 
-#: system-config-kickstart.gladestrings:240
+#: system-config-kickstart.gladestrings:244
 msgid "Vertical Sync:"
 msgstr "Navpična sinhronizacija:"
 
-#: system-config-kickstart.gladestrings:241
+#: system-config-kickstart.gladestrings:245
 msgid "Horizontal Sync:"
 msgstr "Vodoravna sinhronizacija:"
 
-#: system-config-kickstart.gladestrings:242
+#: system-config-kickstart.gladestrings:246
 msgid "Monitor"
 msgstr "Monitor"
 
-#: system-config-kickstart.gladestrings:244
+#: system-config-kickstart.gladestrings:247
+msgid "Display configuration is not applicable on upgrades."
+msgstr ""
+
+#: system-config-kickstart.gladestrings:249
 msgid "label88"
 msgstr "oznaka88"
 
-#: system-config-kickstart.gladestrings:245
+#: system-config-kickstart.gladestrings:250
 msgid "Select packages to install."
 msgstr "Izberite pakete za namestitev."
 
-#: system-config-kickstart.gladestrings:246
+#: system-config-kickstart.gladestrings:251
 msgid "_Automatically Resolve Dependencies"
 msgstr "_Samodejno razreši odvisnosti"
 
-#: system-config-kickstart.gladestrings:247
+#: system-config-kickstart.gladestrings:252
 msgid "_Ignore Dependencies"
 msgstr "_Prezri odvisnosti"
 
-#: system-config-kickstart.gladestrings:248
+#: system-config-kickstart.gladestrings:253
 msgid "Desktops"
 msgstr "Namizja"
 
-#: system-config-kickstart.gladestrings:249
+#: system-config-kickstart.gladestrings:254
 msgid "Applications"
 msgstr "Programi"
 
-#: system-config-kickstart.gladestrings:250
+#: system-config-kickstart.gladestrings:255
 msgid "Servers"
 msgstr "Strežniki"
 
-#: system-config-kickstart.gladestrings:251
+#: system-config-kickstart.gladestrings:256
 msgid "Development"
 msgstr "Razvoj"
 
-#: system-config-kickstart.gladestrings:252
+#: system-config-kickstart.gladestrings:257
 msgid "System"
 msgstr "Sistem"
 
-#: system-config-kickstart.gladestrings:254
+#: system-config-kickstart.gladestrings:258
+msgid "Package selection is not applicable on upgrades."
+msgstr ""
+
+#: system-config-kickstart.gladestrings:260
 msgid "label34"
 msgstr "oznaka34"
 
-#: system-config-kickstart.gladestrings:255
+#: system-config-kickstart.gladestrings:261
 #, c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1937,21 +1967,21 @@ msgstr ""
 "Pozor: Napaka v tem skriptu lahko povzroči, da bo vaša namestitev za\n"
 "hitri zagon spodletela.  Na začetku ne vključujte ukaza %pre."
 
-#: system-config-kickstart.gladestrings:256
-#: system-config-kickstart.gladestrings:263
+#: system-config-kickstart.gladestrings:262
+#: system-config-kickstart.gladestrings:269
 msgid "Use an interpreter:"
 msgstr "Uporabi tolmač:"
 
-#: system-config-kickstart.gladestrings:258
+#: system-config-kickstart.gladestrings:264
 #, c-format
 msgid "Type your %pre script below:"
 msgstr "Spodaj napišite svoj %pre-skript:"
 
-#: system-config-kickstart.gladestrings:260
+#: system-config-kickstart.gladestrings:266
 msgid "label89"
 msgstr "oznaka89"
 
-#: system-config-kickstart.gladestrings:261
+#: system-config-kickstart.gladestrings:267
 #, c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1960,29 +1990,29 @@ msgstr ""
 "Pozor: Napaka v tem skriptu lahko povzroči spodletelo namestitev za hitri "
 "zagon.  Na začetku ne vključujte ukaza %post."
 
-#: system-config-kickstart.gladestrings:262
+#: system-config-kickstart.gladestrings:268
 msgid "Run outside of the chroot environment"
 msgstr "Poganjaj izven okolja chroot"
 
-#: system-config-kickstart.gladestrings:265
+#: system-config-kickstart.gladestrings:271
 #, c-format
 msgid "Type your %post script below:"
 msgstr "Spodaj vpišite svoj %post-skript:"
 
-#: system-config-kickstart.gladestrings:267
+#: system-config-kickstart.gladestrings:273
 msgid "label93"
 msgstr "oznaka93"
 
-#: system-config-kickstart.gladestrings:268
+#: system-config-kickstart.gladestrings:274
 msgid "Preview Options"
 msgstr "Predogled izbir"
 
-#: system-config-kickstart.gladestrings:269
+#: system-config-kickstart.gladestrings:275
 #, fuzzy
 msgid "_Save to File"
 msgstr "Shrani v datoteko"
 
-#: system-config-kickstart.gladestrings:270
+#: system-config-kickstart.gladestrings:276
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
@@ -1990,11 +2020,11 @@ msgstr ""
 "Izbrali ste naslednjo sestavo.  Kliknite \"Shrani datoteko\" in shranite "
 "datoteko za hitri zagon."
 
-#: system-config-kickstart.gladestrings:271
+#: system-config-kickstart.gladestrings:277
 msgid "RAID Options"
 msgstr "Izbire za RAID"
 
-#: system-config-kickstart.gladestrings:272
+#: system-config-kickstart.gladestrings:278
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -2006,7 +2036,7 @@ msgstr ""
 "posamezni pogon.  Za več podatkov o rabi naprav RAID, prosim, berite "
 "dokumentacijo za Kickstart."
 
-#: system-config-kickstart.gladestrings:273
+#: system-config-kickstart.gladestrings:279
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -2015,58 +2045,58 @@ msgstr ""
 "RAID'.  Potem lahko izdelate napravo RAID, ki je lahko formatirana in "
 "priklopljena."
 
-#: system-config-kickstart.gladestrings:274
+#: system-config-kickstart.gladestrings:280
 msgid "Choose one of the following options:"
 msgstr "Izberite eno od naslednjih izbir:"
 
-#: system-config-kickstart.gladestrings:275
+#: system-config-kickstart.gladestrings:281
 msgid "Create a software RAID partition"
 msgstr "Izdelaj programski razdelek RAID"
 
-#: system-config-kickstart.gladestrings:276
+#: system-config-kickstart.gladestrings:282
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "Izdelaj napravo RAID [privzeta = /dev/md0]"
 
-#: system-config-kickstart.gladestrings:277
+#: system-config-kickstart.gladestrings:283
 msgid "Network Device Information"
 msgstr "Podatki o mrežni napravi"
 
-#: system-config-kickstart.gladestrings:278
+#: system-config-kickstart.gladestrings:284
 msgid "Network Device:"
 msgstr "Omrežna naprava:"
 
-#: system-config-kickstart.gladestrings:279
+#: system-config-kickstart.gladestrings:285
 msgid "Network Type:"
 msgstr "Vrsta omrežja:"
 
-#: system-config-kickstart.gladestrings:280
+#: system-config-kickstart.gladestrings:286
 msgid "IP Address:"
 msgstr "Naslov IP:"
 
-#: system-config-kickstart.gladestrings:281
+#: system-config-kickstart.gladestrings:287
 msgid "Netmask: "
 msgstr "Mrežna maska: "
 
-#: system-config-kickstart.gladestrings:282
+#: system-config-kickstart.gladestrings:288
 msgid "Gateway:"
 msgstr "Prehod:"
 
-#: system-config-kickstart.gladestrings:283
+#: system-config-kickstart.gladestrings:289
 msgid "Name Server:"
 msgstr "Imenski strežnik:"
 
-#: system-config-kickstart.gladestrings:285
-#: system-config-kickstart.gladestrings:287
-#: system-config-kickstart.gladestrings:289
-#: system-config-kickstart.gladestrings:292
-#: system-config-kickstart.gladestrings:294
-#: system-config-kickstart.gladestrings:296
-#: system-config-kickstart.gladestrings:299
-#: system-config-kickstart.gladestrings:301
-#: system-config-kickstart.gladestrings:303
-#: system-config-kickstart.gladestrings:306
-#: system-config-kickstart.gladestrings:308
-#: system-config-kickstart.gladestrings:310
+#: system-config-kickstart.gladestrings:291
+#: system-config-kickstart.gladestrings:293
+#: system-config-kickstart.gladestrings:295
+#: system-config-kickstart.gladestrings:298
+#: system-config-kickstart.gladestrings:300
+#: system-config-kickstart.gladestrings:302
+#: system-config-kickstart.gladestrings:305
+#: system-config-kickstart.gladestrings:307
+#: system-config-kickstart.gladestrings:309
+#: system-config-kickstart.gladestrings:312
+#: system-config-kickstart.gladestrings:314
+#: system-config-kickstart.gladestrings:316
 msgid "."
 msgstr "."
 

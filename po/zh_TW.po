@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zh_TW\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-26 18:21-0500\n"
+"POT-Creation-Date: 2004-03-29 17:11-0500\n"
 "PO-Revision-Date: 2004-03-18 10:45+1000\n"
 "Last-Translator: Ben Wu <hpwu@redhat.com>\n"
 "Language-Team: Traditional Chinese <fedora-trans-zh_tw@redhat.com>\n"
@@ -95,15 +95,16 @@ msgstr "root 密碼不相符。"
 #. Prepart the clearpart line
 #. This is a raid device
 #. Check to see if the selection is actually a partition or one of the parent roots
-#: ../src/basic.py:206 ../src/basic.py:226 ../src/install.py:214
-#: ../src/partition.py:304 ../src/partWindow.py:513 ../src/raidWindow.py:247
+#: ../src/basic.py:206 ../src/basic.py:225 ../src/install.py:214
+#: ../src/partition.py:305 ../src/partWindow.py:513 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "錯誤"
 
-#: ../src/basic.py:225
+#: ../src/basic.py:224
 msgid "Please select a root password."
 msgstr "請選擇一個 root 密碼。"
 
+#. set platform
 #. set language
 #. set keyboard
 #. set mouse
@@ -127,9 +128,12 @@ msgstr "請選擇一個 root 密碼。"
 #. #
 #. # I18N
 #. #
-#. lilo stuff
-#. end of lilo stuff
-#: ../src/bootloader.py:122
+#: ../src/bootloader.py:76
+#, python-format
+msgid "Bootloader options are not applicable to the %s platform"
+msgstr ""
+
+#: ../src/bootloader.py:117
 msgid "Grub passwords do not match.  Please try again."
 msgstr "Grub 密碼不相符，請再試一次。"
 
@@ -272,15 +276,15 @@ msgstr "列印支援"
 #. # I18N
 #. #
 #. create table with custom checklists
-#: ../src/firewall.py:57
+#: ../src/firewall.py:60
 msgid "Trusted devices:"
 msgstr "可信任的裝置:"
 
-#: ../src/firewall.py:82
+#: ../src/firewall.py:85
 msgid "Trusted services:"
 msgstr "信任的服務:"
 
-#: ../src/firewall.py:114
+#: ../src/firewall.py:117
 msgid "Other ports: (1029:tcp)"
 msgstr "其他埠: (1029:tcp)"
 
@@ -435,7 +439,7 @@ msgstr "開機管理程式選項"
 msgid "Partition Information"
 msgstr "分割區資訊"
 
-#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:163
+#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:165
 msgid "Network Configuration"
 msgstr "網路組態設定"
 
@@ -443,23 +447,24 @@ msgstr "網路組態設定"
 msgid "Authentication"
 msgstr "認證"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:214
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:218
 msgid "Firewall Configuration"
 msgstr "防火牆組態設定"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:243
-msgid "X Configuration"
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:248
+#, fuzzy
+msgid "Display Configuration"
 msgstr "X 組態設定"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:253
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:259
 msgid "Package Selection"
 msgstr "選取套件"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:259
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:265
 msgid "Pre-Installation Script"
 msgstr "前置安裝程式碼"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:266
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:272
 msgid "Post-Installation Script"
 msgstr "後續安裝程式碼"
 
@@ -543,26 +548,26 @@ msgstr "無法存取 \"%s\" 檔案。"
 #. #
 #. # I18N
 #. #
-#: ../src/network.py:86
+#: ../src/network.py:87
 msgid "Device"
 msgstr "裝置"
 
-#: ../src/network.py:89
+#: ../src/network.py:90
 msgid "Network Type"
 msgstr "網路類型"
 
 #. Let's find the last eth device in the list and increment by one to
 #. fill in the option menu with the next device
-#: ../src/network.py:108 ../src/network.py:153 ../src/network.py:221
-#: ../src/network.py:272 ../src/network.py:413
+#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:223
+#: ../src/network.py:274 ../src/network.py:415
 msgid "Static IP"
 msgstr "靜態 IP"
 
-#: ../src/network.py:211
+#: ../src/network.py:213
 msgid "Please fill in the network information"
 msgstr "請填入網路資訊"
 
-#: ../src/network.py:316
+#: ../src/network.py:318
 #, python-format
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
@@ -628,7 +633,7 @@ msgstr "命名為 %s 名稱的網路裝置已經存在，請選擇另一個裝�
 #. #
 #. # I18N
 #. #
-#: ../src/partition.py:71
+#: ../src/partition.py:72
 msgid ""
 "Device/\n"
 "Partition Number"
@@ -637,7 +642,7 @@ msgstr ""
 "分割區號碼"
 
 #. col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
-#: ../src/partition.py:74
+#: ../src/partition.py:75
 msgid ""
 "Mount Point/\n"
 "RAID"
@@ -645,15 +650,15 @@ msgstr ""
 "掛載點/\n"
 "RAID"
 
-#: ../src/partition.py:76
+#: ../src/partition.py:77
 msgid "Type"
 msgstr "類型"
 
-#: ../src/partition.py:78
+#: ../src/partition.py:79
 msgid "Format"
 msgstr "格式化"
 
-#: ../src/partition.py:80
+#: ../src/partition.py:81
 msgid "Size (MB)"
 msgstr "大小 (MB)"
 
@@ -703,7 +708,7 @@ msgstr "大小 (MB)"
 #. #         self.part_store.set_value(part_iter, 3, part_object.format)
 #. #         self.part_store.set_value(part_iter, 4, part_object.size)
 #. #         self.part_store.set_value(part_iter, 5, part_object)
-#: ../src/partition.py:150 ../src/partition.py:180
+#: ../src/partition.py:151 ../src/partition.py:181
 msgid "Please select a partition from the list."
 msgstr "請從清單中選擇一個分割區。"
 
@@ -1044,12 +1049,12 @@ msgstr "請試著執行 'system-config-kickstart --help' 以取得一系列的�
 #. add resolutions
 #. add video card RAM sizes to option menu
 #. add video cards to list
-#: ../src/xconfig.py:102
+#: ../src/xconfig.py:104
 msgid "Could not read video card database"
 msgstr "無法讀取顯示卡資料庫"
 
 #. add monitors to list
-#: ../src/xconfig.py:120
+#: ../src/xconfig.py:122
 msgid "Could not read monitor database"
 msgstr "無法讀取螢幕資料庫"
 
@@ -1098,40 +1103,40 @@ msgstr "分割區選項"
 #: system-config-kickstart.gladestrings:138
 #: system-config-kickstart.gladestrings:139
 #: system-config-kickstart.gladestrings:144
-#: system-config-kickstart.gladestrings:170
-#: system-config-kickstart.gladestrings:173
-#: system-config-kickstart.gladestrings:177
-#: system-config-kickstart.gladestrings:178
-#: system-config-kickstart.gladestrings:185
+#: system-config-kickstart.gladestrings:172
+#: system-config-kickstart.gladestrings:175
+#: system-config-kickstart.gladestrings:179
+#: system-config-kickstart.gladestrings:180
 #: system-config-kickstart.gladestrings:187
 #: system-config-kickstart.gladestrings:189
-#: system-config-kickstart.gladestrings:194
+#: system-config-kickstart.gladestrings:191
 #: system-config-kickstart.gladestrings:196
-#: system-config-kickstart.gladestrings:202
-#: system-config-kickstart.gladestrings:203
-#: system-config-kickstart.gladestrings:218
-#: system-config-kickstart.gladestrings:220
-#: system-config-kickstart.gladestrings:232
+#: system-config-kickstart.gladestrings:198
+#: system-config-kickstart.gladestrings:204
+#: system-config-kickstart.gladestrings:205
+#: system-config-kickstart.gladestrings:222
+#: system-config-kickstart.gladestrings:224
 #: system-config-kickstart.gladestrings:236
-#: system-config-kickstart.gladestrings:238
-#: system-config-kickstart.gladestrings:257
-#: system-config-kickstart.gladestrings:264
-#: system-config-kickstart.gladestrings:284
-#: system-config-kickstart.gladestrings:286
-#: system-config-kickstart.gladestrings:288
+#: system-config-kickstart.gladestrings:240
+#: system-config-kickstart.gladestrings:242
+#: system-config-kickstart.gladestrings:263
+#: system-config-kickstart.gladestrings:270
 #: system-config-kickstart.gladestrings:290
-#: system-config-kickstart.gladestrings:291
-#: system-config-kickstart.gladestrings:293
-#: system-config-kickstart.gladestrings:295
+#: system-config-kickstart.gladestrings:292
+#: system-config-kickstart.gladestrings:294
+#: system-config-kickstart.gladestrings:296
 #: system-config-kickstart.gladestrings:297
-#: system-config-kickstart.gladestrings:298
-#: system-config-kickstart.gladestrings:300
-#: system-config-kickstart.gladestrings:302
+#: system-config-kickstart.gladestrings:299
+#: system-config-kickstart.gladestrings:301
+#: system-config-kickstart.gladestrings:303
 #: system-config-kickstart.gladestrings:304
-#: system-config-kickstart.gladestrings:305
-#: system-config-kickstart.gladestrings:307
-#: system-config-kickstart.gladestrings:309
+#: system-config-kickstart.gladestrings:306
+#: system-config-kickstart.gladestrings:308
+#: system-config-kickstart.gladestrings:310
 #: system-config-kickstart.gladestrings:311
+#: system-config-kickstart.gladestrings:313
+#: system-config-kickstart.gladestrings:315
+#: system-config-kickstart.gladestrings:317
 msgid "*"
 msgstr "*"
 
@@ -1537,366 +1542,391 @@ msgid "Kernel parameters:"
 msgstr "核心參數:"
 
 #: system-config-kickstart.gladestrings:145
+#, fuzzy
+msgid "label216"
+msgstr "label28"
+
+#: system-config-kickstart.gladestrings:146
 msgid "Boot Loader Options (required)"
 msgstr "開機管理程式選項（必要的）"
 
-#: system-config-kickstart.gladestrings:146
+#: system-config-kickstart.gladestrings:147
 msgid "label35"
 msgstr "label35"
 
-#: system-config-kickstart.gladestrings:147
+#: system-config-kickstart.gladestrings:148
 msgid "Clear Master Boot Record"
 msgstr "清除 MBR"
 
-#: system-config-kickstart.gladestrings:148
+#: system-config-kickstart.gladestrings:149
 msgid "Do not clear Master Boot Record"
 msgstr "不要清除 MBR"
 
-#: system-config-kickstart.gladestrings:149
+#: system-config-kickstart.gladestrings:150
 msgid "Remove all existing partitions"
 msgstr "移除所有既有的分割區"
 
-#: system-config-kickstart.gladestrings:150
+#: system-config-kickstart.gladestrings:151
 msgid "Remove existing Linux partitions"
 msgstr "移除既有的 Linux 分割區"
 
-#: system-config-kickstart.gladestrings:151
+#: system-config-kickstart.gladestrings:152
 msgid "Preserve existing partitions"
 msgstr "保留既有的分割區"
 
-#: system-config-kickstart.gladestrings:152
+#: system-config-kickstart.gladestrings:153
 msgid "Initialize the disk label"
 msgstr "初始化磁碟標籤"
 
-#: system-config-kickstart.gladestrings:153
+#: system-config-kickstart.gladestrings:154
 msgid "Do not initialize the disk label"
 msgstr "不要初始化磁碟標籤"
 
-#: system-config-kickstart.gladestrings:154
+#: system-config-kickstart.gladestrings:155
 msgid "_Add"
 msgstr "新增(_A)"
 
-#: system-config-kickstart.gladestrings:155
+#: system-config-kickstart.gladestrings:156
 msgid "_Edit"
 msgstr "編輯(_E)"
 
-#: system-config-kickstart.gladestrings:156
+#: system-config-kickstart.gladestrings:157
 msgid "_Delete"
 msgstr "刪除(_D)"
 
-#: system-config-kickstart.gladestrings:157
+#: system-config-kickstart.gladestrings:158
 msgid "RAID"
 msgstr "RAID"
 
-#: system-config-kickstart.gladestrings:158
+#: system-config-kickstart.gladestrings:159
+msgid "Partition options are not applicable on upgrades."
+msgstr ""
+
+#: system-config-kickstart.gladestrings:160
 msgid "Partition Information (required)"
 msgstr "分割區資訊 (必要的)"
 
-#: system-config-kickstart.gladestrings:159
+#: system-config-kickstart.gladestrings:161
 msgid "label30"
 msgstr "label30"
 
-#: system-config-kickstart.gladestrings:160
+#: system-config-kickstart.gladestrings:162
 msgid "_Add Network Device"
 msgstr "新增網路裝置(_A)"
 
-#: system-config-kickstart.gladestrings:161
+#: system-config-kickstart.gladestrings:163
 msgid "_Edit Network Device"
 msgstr "編輯網路裝置(_E)"
 
-#: system-config-kickstart.gladestrings:162
+#: system-config-kickstart.gladestrings:164
 msgid "_Delete Network Device"
 msgstr "刪除網路裝置(_D)"
 
-#: system-config-kickstart.gladestrings:164
+#: system-config-kickstart.gladestrings:166
 msgid "label31"
 msgstr "label31"
 
-#: system-config-kickstart.gladestrings:165
+#: system-config-kickstart.gladestrings:167
 msgid "Authentication:"
 msgstr "認證:"
 
-#: system-config-kickstart.gladestrings:166
+#: system-config-kickstart.gladestrings:168
 msgid "Use Shadow Passwords"
 msgstr "使用 Shadow 密碼"
 
-#: system-config-kickstart.gladestrings:167
+#: system-config-kickstart.gladestrings:169
 msgid "Use MD5"
 msgstr "使用 MD5"
 
-#: system-config-kickstart.gladestrings:168
+#: system-config-kickstart.gladestrings:170
 msgid "Enable NIS"
 msgstr "啟用 NIS"
 
-#: system-config-kickstart.gladestrings:169
+#: system-config-kickstart.gladestrings:171
 msgid "NIS Domain:"
 msgstr "NIS 網域:"
 
-#: system-config-kickstart.gladestrings:171
+#: system-config-kickstart.gladestrings:173
 msgid "Use broadcast to find NIS server"
 msgstr "使用廣播方式搜尋 NIS 伺服器"
 
-#: system-config-kickstart.gladestrings:172
+#: system-config-kickstart.gladestrings:174
 msgid "NIS Server:"
 msgstr "NIS 伺服器:"
 
-#: system-config-kickstart.gladestrings:174
+#: system-config-kickstart.gladestrings:176
 msgid "NIS Authentication"
 msgstr "NIS 認證"
 
-#: system-config-kickstart.gladestrings:175
+#: system-config-kickstart.gladestrings:177
 msgid "NIS"
 msgstr "NIS"
 
-#: system-config-kickstart.gladestrings:176
+#: system-config-kickstart.gladestrings:178
 msgid "Enable LDAP"
 msgstr "啟用 LDAP"
 
-#: system-config-kickstart.gladestrings:179
+#: system-config-kickstart.gladestrings:181
 msgid "LDAP Server: "
 msgstr "LDAP 伺服器:"
 
-#: system-config-kickstart.gladestrings:180
+#: system-config-kickstart.gladestrings:182
 msgid "LDAP Base Name: "
 msgstr "LDAP Base 名稱:"
 
-#: system-config-kickstart.gladestrings:181
+#: system-config-kickstart.gladestrings:183
 msgid "LDAP Authentication"
 msgstr "LDAP 認證"
 
-#: system-config-kickstart.gladestrings:182
+#: system-config-kickstart.gladestrings:184
 msgid "LDAP "
 msgstr "LDAP"
 
-#: system-config-kickstart.gladestrings:183
+#: system-config-kickstart.gladestrings:185
 msgid "Enable Kerberos 5 Authentication"
 msgstr "啟用 Kerberos 5 認證"
 
-#: system-config-kickstart.gladestrings:184
+#: system-config-kickstart.gladestrings:186
 msgid "Kerberos Realm:"
 msgstr "Kerberos Realm:"
 
-#: system-config-kickstart.gladestrings:186
+#: system-config-kickstart.gladestrings:188
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Kerberos 網域控制器 (KDC):"
 
-#: system-config-kickstart.gladestrings:188
+#: system-config-kickstart.gladestrings:190
 msgid "Kerberos Master Server:"
 msgstr "Kerberos 主要伺服器:"
 
-#: system-config-kickstart.gladestrings:190
+#: system-config-kickstart.gladestrings:192
 msgid "Kerberos 5 Authentication"
 msgstr "Kerberos 5 認證"
 
-#: system-config-kickstart.gladestrings:191
+#: system-config-kickstart.gladestrings:193
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: system-config-kickstart.gladestrings:192
+#: system-config-kickstart.gladestrings:194
 msgid "Enable Hesiod Support"
 msgstr "啟動 Hesiod 支援"
 
-#: system-config-kickstart.gladestrings:193
+#: system-config-kickstart.gladestrings:195
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS:"
 
-#: system-config-kickstart.gladestrings:195
+#: system-config-kickstart.gladestrings:197
 msgid "Hesiod RHS:"
 msgstr "Hesiod RHS:"
 
-#: system-config-kickstart.gladestrings:197
+#: system-config-kickstart.gladestrings:199
 msgid "Hesiod Authentication"
 msgstr "Hesiod 認證"
 
-#: system-config-kickstart.gladestrings:198
+#: system-config-kickstart.gladestrings:200
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: system-config-kickstart.gladestrings:199
+#: system-config-kickstart.gladestrings:201
 msgid "Enable SMB Authentication"
 msgstr "啟用 SMB 認證"
 
-#: system-config-kickstart.gladestrings:200
+#: system-config-kickstart.gladestrings:202
 msgid "SMB Servers:"
 msgstr "SMB 伺服器:"
 
-#: system-config-kickstart.gladestrings:201
+#: system-config-kickstart.gladestrings:203
 msgid "SMB Workgroup:"
 msgstr "SMB 群組:"
 
-#: system-config-kickstart.gladestrings:204
+#: system-config-kickstart.gladestrings:206
 msgid "SMB Authentication"
 msgstr "SMB 認證"
 
-#: system-config-kickstart.gladestrings:205
+#: system-config-kickstart.gladestrings:207
 msgid "SMB"
 msgstr "SMB"
 
-#: system-config-kickstart.gladestrings:206
+#: system-config-kickstart.gladestrings:208
 msgid "Enable nscd"
 msgstr "啟用 nscd"
 
-#: system-config-kickstart.gladestrings:207
+#: system-config-kickstart.gladestrings:209
 msgid "Name Switch Cache Daemon (nscd) Authentication"
 msgstr "Name Switch Cache Daemon (nscd) 認證"
 
-#: system-config-kickstart.gladestrings:208
+#: system-config-kickstart.gladestrings:210
 msgid "Name Switch Cache"
 msgstr "名稱置換快取(Name Switch Cache)"
 
-#: system-config-kickstart.gladestrings:209
+#: system-config-kickstart.gladestrings:211
+msgid "Authentication options are not applicable on upgrades."
+msgstr ""
+
+#: system-config-kickstart.gladestrings:212
 msgid "Authentication Configuration"
 msgstr "認證組態設定"
 
-#: system-config-kickstart.gladestrings:210
+#: system-config-kickstart.gladestrings:213
 msgid "label32"
 msgstr "label32"
 
-#: system-config-kickstart.gladestrings:211
+#: system-config-kickstart.gladestrings:214
 msgid "Security level:"
 msgstr "安全等級:"
 
-#: system-config-kickstart.gladestrings:212
+#: system-config-kickstart.gladestrings:215
 msgid "Enable firewall"
 msgstr "啟用防火牆"
 
-#: system-config-kickstart.gladestrings:213
+#: system-config-kickstart.gladestrings:216
 msgid "Disable firewall"
 msgstr "停用防火牆"
 
-#: system-config-kickstart.gladestrings:215
+#: system-config-kickstart.gladestrings:217
+msgid "Firewall configuration is not applicable on upgrades."
+msgstr ""
+
+#: system-config-kickstart.gladestrings:219
 msgid "label33"
 msgstr "label33"
 
-#: system-config-kickstart.gladestrings:216
+#: system-config-kickstart.gladestrings:220
 msgid "Configure the X Window System"
 msgstr "設定 X 視窗系統"
 
-#: system-config-kickstart.gladestrings:217
+#: system-config-kickstart.gladestrings:221
 msgid "Color Depth"
 msgstr "彩度"
 
-#: system-config-kickstart.gladestrings:219
+#: system-config-kickstart.gladestrings:223
 msgid "Resolution"
 msgstr "解析度"
 
-#: system-config-kickstart.gladestrings:221
+#: system-config-kickstart.gladestrings:225
 msgid "Default Desktop:"
 msgstr "預設桌面:"
 
-#: system-config-kickstart.gladestrings:222
+#: system-config-kickstart.gladestrings:226
 msgid "GNOME"
 msgstr "GNOME"
 
-#: system-config-kickstart.gladestrings:223
+#: system-config-kickstart.gladestrings:227
 msgid "KDE"
 msgstr "KDE"
 
-#: system-config-kickstart.gladestrings:224
+#: system-config-kickstart.gladestrings:228
 msgid "Start the X Window System on boot"
 msgstr "開機時啟動 X 視窗系統"
 
-#: system-config-kickstart.gladestrings:225
+#: system-config-kickstart.gladestrings:229
 msgid "On first boot, Setup Agent is: "
 msgstr "在第一次開機時，設定代理程式為： "
 
-#: system-config-kickstart.gladestrings:226
+#: system-config-kickstart.gladestrings:230
 msgid "Disabled"
 msgstr "已停用"
 
-#: system-config-kickstart.gladestrings:227
+#: system-config-kickstart.gladestrings:231
 msgid "Enabled"
 msgstr "已啟用"
 
-#: system-config-kickstart.gladestrings:228
+#: system-config-kickstart.gladestrings:232
 msgid "Enabled in reconfiguration mode"
 msgstr "在重新設定模式已啟用"
 
-#: system-config-kickstart.gladestrings:229
+#: system-config-kickstart.gladestrings:233
 msgid "General"
 msgstr "一般"
 
-#: system-config-kickstart.gladestrings:230
+#: system-config-kickstart.gladestrings:234
 msgid "Probe for video card"
 msgstr "偵測顯示卡"
 
-#: system-config-kickstart.gladestrings:231
+#: system-config-kickstart.gladestrings:235
 msgid "Video Card RAM: "
 msgstr "顯示卡記憶體:"
 
-#: system-config-kickstart.gladestrings:233
+#: system-config-kickstart.gladestrings:237
 msgid "Video Card"
 msgstr "顯示卡"
 
-#: system-config-kickstart.gladestrings:234
+#: system-config-kickstart.gladestrings:238
 msgid "Probe for monitor"
 msgstr "偵測螢幕"
 
-#: system-config-kickstart.gladestrings:235
+#: system-config-kickstart.gladestrings:239
 msgid "Use custom monitor sync rates"
 msgstr "使用自訂的螢幕掃描頻率"
 
-#: system-config-kickstart.gladestrings:237
+#: system-config-kickstart.gladestrings:241
 msgid "Hz"
 msgstr "赫茲"
 
-#: system-config-kickstart.gladestrings:239
+#: system-config-kickstart.gladestrings:243
 msgid "kHz"
 msgstr "仟赫茲"
 
-#: system-config-kickstart.gladestrings:240
+#: system-config-kickstart.gladestrings:244
 msgid "Vertical Sync:"
 msgstr "垂直掃描頻率:"
 
-#: system-config-kickstart.gladestrings:241
+#: system-config-kickstart.gladestrings:245
 msgid "Horizontal Sync:"
 msgstr "水平掃描頻率:"
 
-#: system-config-kickstart.gladestrings:242
+#: system-config-kickstart.gladestrings:246
 msgid "Monitor"
 msgstr "螢幕"
 
-#: system-config-kickstart.gladestrings:244
+#: system-config-kickstart.gladestrings:247
+msgid "Display configuration is not applicable on upgrades."
+msgstr ""
+
+#: system-config-kickstart.gladestrings:249
 msgid "label88"
 msgstr "label88"
 
-#: system-config-kickstart.gladestrings:245
+#: system-config-kickstart.gladestrings:250
 msgid "Select packages to install."
 msgstr "選取要安裝的套件。"
 
-#: system-config-kickstart.gladestrings:246
+#: system-config-kickstart.gladestrings:251
 msgid "_Automatically Resolve Dependencies"
 msgstr "自動解決相依性問題(_A)"
 
-#: system-config-kickstart.gladestrings:247
+#: system-config-kickstart.gladestrings:252
 msgid "_Ignore Dependencies"
 msgstr "忽略相依性問題(_I)"
 
-#: system-config-kickstart.gladestrings:248
+#: system-config-kickstart.gladestrings:253
 msgid "Desktops"
 msgstr "桌面"
 
-#: system-config-kickstart.gladestrings:249
+#: system-config-kickstart.gladestrings:254
 msgid "Applications"
 msgstr "應用程式"
 
-#: system-config-kickstart.gladestrings:250
+#: system-config-kickstart.gladestrings:255
 msgid "Servers"
 msgstr "伺服器"
 
-#: system-config-kickstart.gladestrings:251
+#: system-config-kickstart.gladestrings:256
 msgid "Development"
 msgstr "程式開發"
 
-#: system-config-kickstart.gladestrings:252
+#: system-config-kickstart.gladestrings:257
 msgid "System"
 msgstr "系統"
 
-#: system-config-kickstart.gladestrings:254
+#: system-config-kickstart.gladestrings:258
+msgid "Package selection is not applicable on upgrades."
+msgstr ""
+
+#: system-config-kickstart.gladestrings:260
 msgid "label34"
 msgstr "label34"
 
-#: system-config-kickstart.gladestrings:255
+#: system-config-kickstart.gladestrings:261
 #, c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1905,21 +1935,21 @@ msgstr ""
 "警告: 程式碼中的錯誤也許會導致 kickstart 安裝程式失敗。在開始時請勿使用 %pre "
 "指令。"
 
-#: system-config-kickstart.gladestrings:256
-#: system-config-kickstart.gladestrings:263
+#: system-config-kickstart.gladestrings:262
+#: system-config-kickstart.gladestrings:269
 msgid "Use an interpreter:"
 msgstr "使用編譯器:"
 
-#: system-config-kickstart.gladestrings:258
+#: system-config-kickstart.gladestrings:264
 #, c-format
 msgid "Type your %pre script below:"
 msgstr "在以下輸入 %pre 程式碼:"
 
-#: system-config-kickstart.gladestrings:260
+#: system-config-kickstart.gladestrings:266
 msgid "label89"
 msgstr "label89"
 
-#: system-config-kickstart.gladestrings:261
+#: system-config-kickstart.gladestrings:267
 #, c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1928,38 +1958,38 @@ msgstr ""
 "警告:程式碼中的錯誤也許會導致 kickstart 安裝程式失敗。開始時不要使用 %post 指"
 "令。"
 
-#: system-config-kickstart.gladestrings:262
+#: system-config-kickstart.gladestrings:268
 msgid "Run outside of the chroot environment"
 msgstr "在 chroot 環境之外執行"
 
-#: system-config-kickstart.gladestrings:265
+#: system-config-kickstart.gladestrings:271
 #, c-format
 msgid "Type your %post script below:"
 msgstr "在以下輸入您的 %post 程式碼:"
 
-#: system-config-kickstart.gladestrings:267
+#: system-config-kickstart.gladestrings:273
 msgid "label93"
 msgstr "label93"
 
-#: system-config-kickstart.gladestrings:268
+#: system-config-kickstart.gladestrings:274
 msgid "Preview Options"
 msgstr "預視選項"
 
-#: system-config-kickstart.gladestrings:269
+#: system-config-kickstart.gladestrings:275
 msgid "_Save to File"
 msgstr "儲存到檔案(_S)"
 
-#: system-config-kickstart.gladestrings:270
+#: system-config-kickstart.gladestrings:276
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
 msgstr "您已選取下列的組態設定。請按下 『儲存檔案』 來儲存 kickstart 檔案。"
 
-#: system-config-kickstart.gladestrings:271
+#: system-config-kickstart.gladestrings:277
 msgid "RAID Options"
 msgstr "RAID 選項"
 
-#: system-config-kickstart.gladestrings:272
+#: system-config-kickstart.gladestrings:278
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -1970,7 +2000,7 @@ msgstr ""
 "設定為提供比使用單一磁碟更快的速度與較佳的可靠性。 如需關於使用 RAID 裝置的更"
 "多資訊，請參閱 kickstart 的說明文件。"
 
-#: system-config-kickstart.gladestrings:273
+#: system-config-kickstart.gladestrings:279
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -1978,58 +2008,58 @@ msgstr ""
 "如要使用 RAID，您必須建立至少兩個 '軟體 RAID' 類型的分割區。 然後您可以建立一"
 "個可格式化與可掛載的 RAID 裝置。"
 
-#: system-config-kickstart.gladestrings:274
+#: system-config-kickstart.gladestrings:280
 msgid "Choose one of the following options:"
 msgstr "選擇下列的其中一種選項:"
 
-#: system-config-kickstart.gladestrings:275
+#: system-config-kickstart.gladestrings:281
 msgid "Create a software RAID partition"
 msgstr "建立一個軟體 RAID 分割區"
 
-#: system-config-kickstart.gladestrings:276
+#: system-config-kickstart.gladestrings:282
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "建立一個 RAID 裝置 [default = /dev/md0]"
 
-#: system-config-kickstart.gladestrings:277
+#: system-config-kickstart.gladestrings:283
 msgid "Network Device Information"
 msgstr "網路裝置資訊"
 
-#: system-config-kickstart.gladestrings:278
+#: system-config-kickstart.gladestrings:284
 msgid "Network Device:"
 msgstr "網路裝置:"
 
-#: system-config-kickstart.gladestrings:279
+#: system-config-kickstart.gladestrings:285
 msgid "Network Type:"
 msgstr "網路類型:"
 
-#: system-config-kickstart.gladestrings:280
+#: system-config-kickstart.gladestrings:286
 msgid "IP Address:"
 msgstr "IP 位址:"
 
-#: system-config-kickstart.gladestrings:281
+#: system-config-kickstart.gladestrings:287
 msgid "Netmask: "
 msgstr "Netmask:"
 
-#: system-config-kickstart.gladestrings:282
+#: system-config-kickstart.gladestrings:288
 msgid "Gateway:"
 msgstr "閘道器:"
 
-#: system-config-kickstart.gladestrings:283
+#: system-config-kickstart.gladestrings:289
 msgid "Name Server:"
 msgstr "名稱伺服器:"
 
-#: system-config-kickstart.gladestrings:285
-#: system-config-kickstart.gladestrings:287
-#: system-config-kickstart.gladestrings:289
-#: system-config-kickstart.gladestrings:292
-#: system-config-kickstart.gladestrings:294
-#: system-config-kickstart.gladestrings:296
-#: system-config-kickstart.gladestrings:299
-#: system-config-kickstart.gladestrings:301
-#: system-config-kickstart.gladestrings:303
-#: system-config-kickstart.gladestrings:306
-#: system-config-kickstart.gladestrings:308
-#: system-config-kickstart.gladestrings:310
+#: system-config-kickstart.gladestrings:291
+#: system-config-kickstart.gladestrings:293
+#: system-config-kickstart.gladestrings:295
+#: system-config-kickstart.gladestrings:298
+#: system-config-kickstart.gladestrings:300
+#: system-config-kickstart.gladestrings:302
+#: system-config-kickstart.gladestrings:305
+#: system-config-kickstart.gladestrings:307
+#: system-config-kickstart.gladestrings:309
+#: system-config-kickstart.gladestrings:312
+#: system-config-kickstart.gladestrings:314
+#: system-config-kickstart.gladestrings:316
 msgid "."
 msgstr "。"
 

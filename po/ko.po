@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ko\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-26 18:21-0500\n"
+"POT-Creation-Date: 2004-03-29 17:11-0500\n"
 "PO-Revision-Date: 2004-03-08 13:44+1000\n"
 "Last-Translator: Michelle J Kim <mkim@redhat.com>\n"
 "Language-Team:  <ko@li.org>\n"
@@ -93,15 +93,16 @@ msgstr "Root 암호가 일치하지 않습니다."
 #. Prepart the clearpart line
 #. This is a raid device
 #. Check to see if the selection is actually a partition or one of the parent roots
-#: ../src/basic.py:206 ../src/basic.py:226 ../src/install.py:214
-#: ../src/partition.py:304 ../src/partWindow.py:513 ../src/raidWindow.py:247
+#: ../src/basic.py:206 ../src/basic.py:225 ../src/install.py:214
+#: ../src/partition.py:305 ../src/partWindow.py:513 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "오류"
 
-#: ../src/basic.py:225
+#: ../src/basic.py:224
 msgid "Please select a root password."
 msgstr "Root 암호를 선택해 주십시오."
 
+#. set platform
 #. set language
 #. set keyboard
 #. set mouse
@@ -125,9 +126,12 @@ msgstr "Root 암호를 선택해 주십시오."
 #. #
 #. # I18N
 #. #
-#. lilo stuff
-#. end of lilo stuff
-#: ../src/bootloader.py:122
+#: ../src/bootloader.py:76
+#, python-format
+msgid "Bootloader options are not applicable to the %s platform"
+msgstr ""
+
+#: ../src/bootloader.py:117
 msgid "Grub passwords do not match.  Please try again."
 msgstr "Grub 암호가 일치하지 않습니다.  다시 입력해 주십시오."
 
@@ -285,15 +289,15 @@ msgstr "언어 지원:"
 #. # I18N
 #. #
 #. create table with custom checklists
-#: ../src/firewall.py:57
+#: ../src/firewall.py:60
 msgid "Trusted devices:"
 msgstr "신뢰하는 장치:"
 
-#: ../src/firewall.py:82
+#: ../src/firewall.py:85
 msgid "Trusted services:"
 msgstr "신뢰하는 서비스:"
 
-#: ../src/firewall.py:114
+#: ../src/firewall.py:117
 msgid "Other ports: (1029:tcp)"
 msgstr "그 외의 포트: (1029:tcp)"
 
@@ -448,7 +452,7 @@ msgstr "부트로더 옵션"
 msgid "Partition Information"
 msgstr "파티션 정보"
 
-#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:163
+#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:165
 msgid "Network Configuration"
 msgstr "네트워크 설정"
 
@@ -456,23 +460,24 @@ msgstr "네트워크 설정"
 msgid "Authentication"
 msgstr "인증"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:214
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:218
 msgid "Firewall Configuration"
 msgstr "방화벽 설정"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:243
-msgid "X Configuration"
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:248
+#, fuzzy
+msgid "Display Configuration"
 msgstr "X 설정"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:253
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:259
 msgid "Package Selection"
 msgstr "패키지 선택"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:259
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:265
 msgid "Pre-Installation Script"
 msgstr "설치-전(Pre) 스크립트"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:266
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:272
 msgid "Post-Installation Script"
 msgstr "설치-후(Post) 스크립트"
 
@@ -556,26 +561,26 @@ msgstr "\"%s\" 파일을 읽을 수 없습니다."
 #. #
 #. # I18N
 #. #
-#: ../src/network.py:86
+#: ../src/network.py:87
 msgid "Device"
 msgstr "장치"
 
-#: ../src/network.py:89
+#: ../src/network.py:90
 msgid "Network Type"
 msgstr "네트워크 유형"
 
 #. Let's find the last eth device in the list and increment by one to
 #. fill in the option menu with the next device
-#: ../src/network.py:108 ../src/network.py:153 ../src/network.py:221
-#: ../src/network.py:272 ../src/network.py:413
+#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:223
+#: ../src/network.py:274 ../src/network.py:415
 msgid "Static IP"
 msgstr "고정 IP 주소"
 
-#: ../src/network.py:211
+#: ../src/network.py:213
 msgid "Please fill in the network information"
 msgstr "네트워크 정보를 입력해 주십시오."
 
-#: ../src/network.py:316
+#: ../src/network.py:318
 #, python-format
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
@@ -643,7 +648,7 @@ msgstr ""
 #. #
 #. # I18N
 #. #
-#: ../src/partition.py:71
+#: ../src/partition.py:72
 msgid ""
 "Device/\n"
 "Partition Number"
@@ -652,7 +657,7 @@ msgstr ""
 "파티션 번호"
 
 #. col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
-#: ../src/partition.py:74
+#: ../src/partition.py:75
 msgid ""
 "Mount Point/\n"
 "RAID"
@@ -660,15 +665,15 @@ msgstr ""
 "마운트 지점/\n"
 "RAID"
 
-#: ../src/partition.py:76
+#: ../src/partition.py:77
 msgid "Type"
 msgstr "유형"
 
-#: ../src/partition.py:78
+#: ../src/partition.py:79
 msgid "Format"
 msgstr "포맷"
 
-#: ../src/partition.py:80
+#: ../src/partition.py:81
 msgid "Size (MB)"
 msgstr "용량 (MB)"
 
@@ -718,7 +723,7 @@ msgstr "용량 (MB)"
 #. #         self.part_store.set_value(part_iter, 3, part_object.format)
 #. #         self.part_store.set_value(part_iter, 4, part_object.size)
 #. #         self.part_store.set_value(part_iter, 5, part_object)
-#: ../src/partition.py:150 ../src/partition.py:180
+#: ../src/partition.py:151 ../src/partition.py:181
 msgid "Please select a partition from the list."
 msgstr "목록에서 파티션을 선택해 주십시오."
 
@@ -1065,12 +1070,12 @@ msgstr ""
 #. add resolutions
 #. add video card RAM sizes to option menu
 #. add video cards to list
-#: ../src/xconfig.py:102
+#: ../src/xconfig.py:104
 msgid "Could not read video card database"
 msgstr "비디오 카드 데이터베이스를 검색할 수 없습니다"
 
 #. add monitors to list
-#: ../src/xconfig.py:120
+#: ../src/xconfig.py:122
 msgid "Could not read monitor database"
 msgstr "모니터 데이터베이스를 검색할 수 없습니다"
 
@@ -1119,40 +1124,40 @@ msgstr "파티션 옵션"
 #: system-config-kickstart.gladestrings:138
 #: system-config-kickstart.gladestrings:139
 #: system-config-kickstart.gladestrings:144
-#: system-config-kickstart.gladestrings:170
-#: system-config-kickstart.gladestrings:173
-#: system-config-kickstart.gladestrings:177
-#: system-config-kickstart.gladestrings:178
-#: system-config-kickstart.gladestrings:185
+#: system-config-kickstart.gladestrings:172
+#: system-config-kickstart.gladestrings:175
+#: system-config-kickstart.gladestrings:179
+#: system-config-kickstart.gladestrings:180
 #: system-config-kickstart.gladestrings:187
 #: system-config-kickstart.gladestrings:189
-#: system-config-kickstart.gladestrings:194
+#: system-config-kickstart.gladestrings:191
 #: system-config-kickstart.gladestrings:196
-#: system-config-kickstart.gladestrings:202
-#: system-config-kickstart.gladestrings:203
-#: system-config-kickstart.gladestrings:218
-#: system-config-kickstart.gladestrings:220
-#: system-config-kickstart.gladestrings:232
+#: system-config-kickstart.gladestrings:198
+#: system-config-kickstart.gladestrings:204
+#: system-config-kickstart.gladestrings:205
+#: system-config-kickstart.gladestrings:222
+#: system-config-kickstart.gladestrings:224
 #: system-config-kickstart.gladestrings:236
-#: system-config-kickstart.gladestrings:238
-#: system-config-kickstart.gladestrings:257
-#: system-config-kickstart.gladestrings:264
-#: system-config-kickstart.gladestrings:284
-#: system-config-kickstart.gladestrings:286
-#: system-config-kickstart.gladestrings:288
+#: system-config-kickstart.gladestrings:240
+#: system-config-kickstart.gladestrings:242
+#: system-config-kickstart.gladestrings:263
+#: system-config-kickstart.gladestrings:270
 #: system-config-kickstart.gladestrings:290
-#: system-config-kickstart.gladestrings:291
-#: system-config-kickstart.gladestrings:293
-#: system-config-kickstart.gladestrings:295
+#: system-config-kickstart.gladestrings:292
+#: system-config-kickstart.gladestrings:294
+#: system-config-kickstart.gladestrings:296
 #: system-config-kickstart.gladestrings:297
-#: system-config-kickstart.gladestrings:298
-#: system-config-kickstart.gladestrings:300
-#: system-config-kickstart.gladestrings:302
+#: system-config-kickstart.gladestrings:299
+#: system-config-kickstart.gladestrings:301
+#: system-config-kickstart.gladestrings:303
 #: system-config-kickstart.gladestrings:304
-#: system-config-kickstart.gladestrings:305
-#: system-config-kickstart.gladestrings:307
-#: system-config-kickstart.gladestrings:309
+#: system-config-kickstart.gladestrings:306
+#: system-config-kickstart.gladestrings:308
+#: system-config-kickstart.gladestrings:310
 #: system-config-kickstart.gladestrings:311
+#: system-config-kickstart.gladestrings:313
+#: system-config-kickstart.gladestrings:315
+#: system-config-kickstart.gladestrings:317
 msgid "*"
 msgstr "*"
 
@@ -1558,366 +1563,391 @@ msgid "Kernel parameters:"
 msgstr "커널 매개변수:"
 
 #: system-config-kickstart.gladestrings:145
+#, fuzzy
+msgid "label216"
+msgstr "label28"
+
+#: system-config-kickstart.gladestrings:146
 msgid "Boot Loader Options (required)"
 msgstr "부트로더 옵션 (필수)"
 
-#: system-config-kickstart.gladestrings:146
+#: system-config-kickstart.gladestrings:147
 msgid "label35"
 msgstr "label35"
 
-#: system-config-kickstart.gladestrings:147
+#: system-config-kickstart.gladestrings:148
 msgid "Clear Master Boot Record"
 msgstr "마스터 부트 레코드 내용 삭제"
 
-#: system-config-kickstart.gladestrings:148
+#: system-config-kickstart.gladestrings:149
 msgid "Do not clear Master Boot Record"
 msgstr "마스터 부트 레코드 내용 삭제하지 않음"
 
-#: system-config-kickstart.gladestrings:149
+#: system-config-kickstart.gladestrings:150
 msgid "Remove all existing partitions"
 msgstr "모든 기존 파티션 삭제"
 
-#: system-config-kickstart.gladestrings:150
+#: system-config-kickstart.gladestrings:151
 msgid "Remove existing Linux partitions"
 msgstr "기존 Linux 파티션 삭제"
 
-#: system-config-kickstart.gladestrings:151
+#: system-config-kickstart.gladestrings:152
 msgid "Preserve existing partitions"
 msgstr "기존 파티션 보존"
 
-#: system-config-kickstart.gladestrings:152
+#: system-config-kickstart.gladestrings:153
 msgid "Initialize the disk label"
 msgstr "디스크 레이블 초기화"
 
-#: system-config-kickstart.gladestrings:153
+#: system-config-kickstart.gladestrings:154
 msgid "Do not initialize the disk label"
 msgstr "디스크 레이블 초기화하지 않음"
 
-#: system-config-kickstart.gladestrings:154
+#: system-config-kickstart.gladestrings:155
 msgid "_Add"
 msgstr "추가(_A)"
 
-#: system-config-kickstart.gladestrings:155
+#: system-config-kickstart.gladestrings:156
 msgid "_Edit"
 msgstr "편집(_E)"
 
-#: system-config-kickstart.gladestrings:156
+#: system-config-kickstart.gladestrings:157
 msgid "_Delete"
 msgstr "삭제(_D)"
 
-#: system-config-kickstart.gladestrings:157
+#: system-config-kickstart.gladestrings:158
 msgid "RAID"
 msgstr "RAID"
 
-#: system-config-kickstart.gladestrings:158
+#: system-config-kickstart.gladestrings:159
+msgid "Partition options are not applicable on upgrades."
+msgstr ""
+
+#: system-config-kickstart.gladestrings:160
 msgid "Partition Information (required)"
 msgstr "파티션 정보 (필수사항)"
 
-#: system-config-kickstart.gladestrings:159
+#: system-config-kickstart.gladestrings:161
 msgid "label30"
 msgstr "label30"
 
-#: system-config-kickstart.gladestrings:160
+#: system-config-kickstart.gladestrings:162
 msgid "_Add Network Device"
 msgstr "네트워크 장치 추가(_A)"
 
-#: system-config-kickstart.gladestrings:161
+#: system-config-kickstart.gladestrings:163
 msgid "_Edit Network Device"
 msgstr "네트워크 장치 편집(_E)"
 
-#: system-config-kickstart.gladestrings:162
+#: system-config-kickstart.gladestrings:164
 msgid "_Delete Network Device"
 msgstr "네트워크 장치 삭제(_D)"
 
-#: system-config-kickstart.gladestrings:164
+#: system-config-kickstart.gladestrings:166
 msgid "label31"
 msgstr "label31"
 
-#: system-config-kickstart.gladestrings:165
+#: system-config-kickstart.gladestrings:167
 msgid "Authentication:"
 msgstr "인증:"
 
-#: system-config-kickstart.gladestrings:166
+#: system-config-kickstart.gladestrings:168
 msgid "Use Shadow Passwords"
 msgstr "섀도우 암호 사용"
 
-#: system-config-kickstart.gladestrings:167
+#: system-config-kickstart.gladestrings:169
 msgid "Use MD5"
 msgstr "MD5 사용"
 
-#: system-config-kickstart.gladestrings:168
+#: system-config-kickstart.gladestrings:170
 msgid "Enable NIS"
 msgstr "NIS 사용"
 
-#: system-config-kickstart.gladestrings:169
+#: system-config-kickstart.gladestrings:171
 msgid "NIS Domain:"
 msgstr "NIS 도메인:"
 
-#: system-config-kickstart.gladestrings:171
+#: system-config-kickstart.gladestrings:173
 msgid "Use broadcast to find NIS server"
 msgstr "NIS 서버를 찾기 위해 브로드캐스트 사용"
 
-#: system-config-kickstart.gladestrings:172
+#: system-config-kickstart.gladestrings:174
 msgid "NIS Server:"
 msgstr "NIS 서버:"
 
-#: system-config-kickstart.gladestrings:174
+#: system-config-kickstart.gladestrings:176
 msgid "NIS Authentication"
 msgstr "NIS 인증"
 
-#: system-config-kickstart.gladestrings:175
+#: system-config-kickstart.gladestrings:177
 msgid "NIS"
 msgstr "NIS"
 
-#: system-config-kickstart.gladestrings:176
+#: system-config-kickstart.gladestrings:178
 msgid "Enable LDAP"
 msgstr "LDAP 사용"
 
-#: system-config-kickstart.gladestrings:179
+#: system-config-kickstart.gladestrings:181
 msgid "LDAP Server: "
 msgstr "LDAP 서버: "
 
-#: system-config-kickstart.gladestrings:180
+#: system-config-kickstart.gladestrings:182
 msgid "LDAP Base Name: "
 msgstr "이름 기반의 LDAP: "
 
-#: system-config-kickstart.gladestrings:181
+#: system-config-kickstart.gladestrings:183
 msgid "LDAP Authentication"
 msgstr "LDAP 인증"
 
-#: system-config-kickstart.gladestrings:182
+#: system-config-kickstart.gladestrings:184
 msgid "LDAP "
 msgstr "LDAP "
 
-#: system-config-kickstart.gladestrings:183
+#: system-config-kickstart.gladestrings:185
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Kerberos 5 인증 사용"
 
-#: system-config-kickstart.gladestrings:184
+#: system-config-kickstart.gladestrings:186
 msgid "Kerberos Realm:"
 msgstr "Kerberos Realm:"
 
-#: system-config-kickstart.gladestrings:186
+#: system-config-kickstart.gladestrings:188
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Kerberos 도메인 컨트롤러 (KDC):"
 
-#: system-config-kickstart.gladestrings:188
+#: system-config-kickstart.gladestrings:190
 msgid "Kerberos Master Server:"
 msgstr "Kerberos 메인 서버:"
 
-#: system-config-kickstart.gladestrings:190
+#: system-config-kickstart.gladestrings:192
 msgid "Kerberos 5 Authentication"
 msgstr "Kerberos 5 인증"
 
-#: system-config-kickstart.gladestrings:191
+#: system-config-kickstart.gladestrings:193
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: system-config-kickstart.gladestrings:192
+#: system-config-kickstart.gladestrings:194
 msgid "Enable Hesiod Support"
 msgstr "Hesiod 지원 사용"
 
-#: system-config-kickstart.gladestrings:193
+#: system-config-kickstart.gladestrings:195
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS:"
 
-#: system-config-kickstart.gladestrings:195
+#: system-config-kickstart.gladestrings:197
 msgid "Hesiod RHS:"
 msgstr "Hesiod RHS:"
 
-#: system-config-kickstart.gladestrings:197
+#: system-config-kickstart.gladestrings:199
 msgid "Hesiod Authentication"
 msgstr "Hesiod 인증"
 
-#: system-config-kickstart.gladestrings:198
+#: system-config-kickstart.gladestrings:200
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: system-config-kickstart.gladestrings:199
+#: system-config-kickstart.gladestrings:201
 msgid "Enable SMB Authentication"
 msgstr "SMB 인증 사용"
 
-#: system-config-kickstart.gladestrings:200
+#: system-config-kickstart.gladestrings:202
 msgid "SMB Servers:"
 msgstr "SMB 서버:"
 
-#: system-config-kickstart.gladestrings:201
+#: system-config-kickstart.gladestrings:203
 msgid "SMB Workgroup:"
 msgstr "SMB 작업그룹:"
 
-#: system-config-kickstart.gladestrings:204
+#: system-config-kickstart.gladestrings:206
 msgid "SMB Authentication"
 msgstr "SMB 인증"
 
-#: system-config-kickstart.gladestrings:205
+#: system-config-kickstart.gladestrings:207
 msgid "SMB"
 msgstr "SMB"
 
-#: system-config-kickstart.gladestrings:206
+#: system-config-kickstart.gladestrings:208
 msgid "Enable nscd"
 msgstr "nscd 사용"
 
-#: system-config-kickstart.gladestrings:207
+#: system-config-kickstart.gladestrings:209
 msgid "Name Switch Cache Daemon (nscd) Authentication"
 msgstr "Name Switch Cache Daemon (nscd) 인증"
 
-#: system-config-kickstart.gladestrings:208
+#: system-config-kickstart.gladestrings:210
 msgid "Name Switch Cache"
 msgstr "Name Switch Cache"
 
-#: system-config-kickstart.gladestrings:209
+#: system-config-kickstart.gladestrings:211
+msgid "Authentication options are not applicable on upgrades."
+msgstr ""
+
+#: system-config-kickstart.gladestrings:212
 msgid "Authentication Configuration"
 msgstr "인증 설정"
 
-#: system-config-kickstart.gladestrings:210
+#: system-config-kickstart.gladestrings:213
 msgid "label32"
 msgstr "label32"
 
-#: system-config-kickstart.gladestrings:211
+#: system-config-kickstart.gladestrings:214
 msgid "Security level:"
 msgstr "보안 수준:"
 
-#: system-config-kickstart.gladestrings:212
+#: system-config-kickstart.gladestrings:215
 msgid "Enable firewall"
 msgstr "방화벽 사용"
 
-#: system-config-kickstart.gladestrings:213
+#: system-config-kickstart.gladestrings:216
 msgid "Disable firewall"
 msgstr "방화벽을 사용하지 않음"
 
-#: system-config-kickstart.gladestrings:215
+#: system-config-kickstart.gladestrings:217
+msgid "Firewall configuration is not applicable on upgrades."
+msgstr ""
+
+#: system-config-kickstart.gladestrings:219
 msgid "label33"
 msgstr "label33"
 
-#: system-config-kickstart.gladestrings:216
+#: system-config-kickstart.gladestrings:220
 msgid "Configure the X Window System"
 msgstr "X 윈도우 시스템 설정"
 
-#: system-config-kickstart.gladestrings:217
+#: system-config-kickstart.gladestrings:221
 msgid "Color Depth"
 msgstr "색상 수"
 
-#: system-config-kickstart.gladestrings:219
+#: system-config-kickstart.gladestrings:223
 msgid "Resolution"
 msgstr "해상도"
 
-#: system-config-kickstart.gladestrings:221
+#: system-config-kickstart.gladestrings:225
 msgid "Default Desktop:"
 msgstr "기본 데스크탑:"
 
-#: system-config-kickstart.gladestrings:222
+#: system-config-kickstart.gladestrings:226
 msgid "GNOME"
 msgstr "GNOME"
 
-#: system-config-kickstart.gladestrings:223
+#: system-config-kickstart.gladestrings:227
 msgid "KDE"
 msgstr "KDE"
 
-#: system-config-kickstart.gladestrings:224
+#: system-config-kickstart.gladestrings:228
 msgid "Start the X Window System on boot"
 msgstr "부팅시 X 윈도우 시스템 시작"
 
-#: system-config-kickstart.gladestrings:225
+#: system-config-kickstart.gladestrings:229
 msgid "On first boot, Setup Agent is: "
 msgstr "첫 부팅시, 설정 에이전트는: "
 
-#: system-config-kickstart.gladestrings:226
+#: system-config-kickstart.gladestrings:230
 msgid "Disabled"
 msgstr "사용하지 않음"
 
-#: system-config-kickstart.gladestrings:227
+#: system-config-kickstart.gladestrings:231
 msgid "Enabled"
 msgstr "활성화"
 
-#: system-config-kickstart.gladestrings:228
+#: system-config-kickstart.gladestrings:232
 msgid "Enabled in reconfiguration mode"
 msgstr "재설정 모드에서 사용 가능"
 
-#: system-config-kickstart.gladestrings:229
+#: system-config-kickstart.gladestrings:233
 msgid "General"
 msgstr "일반(General)"
 
-#: system-config-kickstart.gladestrings:230
+#: system-config-kickstart.gladestrings:234
 msgid "Probe for video card"
 msgstr "비디오 카드 검색"
 
-#: system-config-kickstart.gladestrings:231
+#: system-config-kickstart.gladestrings:235
 msgid "Video Card RAM: "
 msgstr "비디오 카드의 램 용량: "
 
-#: system-config-kickstart.gladestrings:233
+#: system-config-kickstart.gladestrings:237
 msgid "Video Card"
 msgstr "비디오 카드"
 
-#: system-config-kickstart.gladestrings:234
+#: system-config-kickstart.gladestrings:238
 msgid "Probe for monitor"
 msgstr "모니터 검색"
 
-#: system-config-kickstart.gladestrings:235
+#: system-config-kickstart.gladestrings:239
 msgid "Use custom monitor sync rates"
 msgstr "사용자 설정 모니터 동기율을 사용"
 
-#: system-config-kickstart.gladestrings:237
+#: system-config-kickstart.gladestrings:241
 msgid "Hz"
 msgstr "Hz"
 
-#: system-config-kickstart.gladestrings:239
+#: system-config-kickstart.gladestrings:243
 msgid "kHz"
 msgstr "kHz"
 
-#: system-config-kickstart.gladestrings:240
+#: system-config-kickstart.gladestrings:244
 msgid "Vertical Sync:"
 msgstr "수직 동기:"
 
-#: system-config-kickstart.gladestrings:241
+#: system-config-kickstart.gladestrings:245
 msgid "Horizontal Sync:"
 msgstr "수평동기:"
 
-#: system-config-kickstart.gladestrings:242
+#: system-config-kickstart.gladestrings:246
 msgid "Monitor"
 msgstr "모니터"
 
-#: system-config-kickstart.gladestrings:244
+#: system-config-kickstart.gladestrings:247
+msgid "Display configuration is not applicable on upgrades."
+msgstr ""
+
+#: system-config-kickstart.gladestrings:249
 msgid "label88"
 msgstr "label88"
 
-#: system-config-kickstart.gladestrings:245
+#: system-config-kickstart.gladestrings:250
 msgid "Select packages to install."
 msgstr "설치될 패키지를 선택해 주십시오."
 
-#: system-config-kickstart.gladestrings:246
+#: system-config-kickstart.gladestrings:251
 msgid "_Automatically Resolve Dependencies"
 msgstr "패키지 간의 의존성 문제 자동으로 해결(_A)"
 
-#: system-config-kickstart.gladestrings:247
+#: system-config-kickstart.gladestrings:252
 msgid "_Ignore Dependencies"
 msgstr "패키지 간의 의존성 무시(_I)"
 
-#: system-config-kickstart.gladestrings:248
+#: system-config-kickstart.gladestrings:253
 msgid "Desktops"
 msgstr "데스크탑"
 
-#: system-config-kickstart.gladestrings:249
+#: system-config-kickstart.gladestrings:254
 msgid "Applications"
 msgstr "응용 프로그램"
 
-#: system-config-kickstart.gladestrings:250
+#: system-config-kickstart.gladestrings:255
 msgid "Servers"
 msgstr "서버"
 
-#: system-config-kickstart.gladestrings:251
+#: system-config-kickstart.gladestrings:256
 msgid "Development"
 msgstr "개발"
 
-#: system-config-kickstart.gladestrings:252
+#: system-config-kickstart.gladestrings:257
 msgid "System"
 msgstr "시스템"
 
-#: system-config-kickstart.gladestrings:254
+#: system-config-kickstart.gladestrings:258
+msgid "Package selection is not applicable on upgrades."
+msgstr ""
+
+#: system-config-kickstart.gladestrings:260
 msgid "label34"
 msgstr "label34"
 
-#: system-config-kickstart.gladestrings:255
+#: system-config-kickstart.gladestrings:261
 #, c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1926,21 +1956,21 @@ msgstr ""
 "주의: 이 스크립트에서 오류가 발생시에는 킥스타트 설치가 실패할 수 있습니다. "
 "초기에 %pre 명령을 포함시키지 마십시요."
 
-#: system-config-kickstart.gladestrings:256
-#: system-config-kickstart.gladestrings:263
+#: system-config-kickstart.gladestrings:262
+#: system-config-kickstart.gladestrings:269
 msgid "Use an interpreter:"
 msgstr "해석기(interpreter) 사용:"
 
-#: system-config-kickstart.gladestrings:258
+#: system-config-kickstart.gladestrings:264
 #, c-format
 msgid "Type your %pre script below:"
 msgstr "%pre 스크립트를 입력해 주십시요:"
 
-#: system-config-kickstart.gladestrings:260
+#: system-config-kickstart.gladestrings:266
 msgid "label89"
 msgstr "label89"
 
-#: system-config-kickstart.gladestrings:261
+#: system-config-kickstart.gladestrings:267
 #, c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1949,28 +1979,28 @@ msgstr ""
 "주의: 이 스크립트에서 오류가 발생시에는 킥스타트 설치가 실패할 수 있습니다. "
 "초기에 %post 명령을 포함시키지 마십시요."
 
-#: system-config-kickstart.gladestrings:262
+#: system-config-kickstart.gladestrings:268
 msgid "Run outside of the chroot environment"
 msgstr "chroot 환경 밖(outside)에서 실행"
 
-#: system-config-kickstart.gladestrings:265
+#: system-config-kickstart.gladestrings:271
 #, c-format
 msgid "Type your %post script below:"
 msgstr "%post 스크립트를 입력해 주십시요:"
 
-#: system-config-kickstart.gladestrings:267
+#: system-config-kickstart.gladestrings:273
 msgid "label93"
 msgstr "label93"
 
-#: system-config-kickstart.gladestrings:268
+#: system-config-kickstart.gladestrings:274
 msgid "Preview Options"
 msgstr "미리보기 옵션"
 
-#: system-config-kickstart.gladestrings:269
+#: system-config-kickstart.gladestrings:275
 msgid "_Save to File"
 msgstr "파일로 저장(_S)"
 
-#: system-config-kickstart.gladestrings:270
+#: system-config-kickstart.gladestrings:276
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
@@ -1978,11 +2008,11 @@ msgstr ""
 "여러분은 다음의 설정을 선택하셨습니다. 킥스타트 파일을 저장하시려면, [파일 저"
 "장] 버튼을 클릭하십시요."
 
-#: system-config-kickstart.gladestrings:271
+#: system-config-kickstart.gladestrings:277
 msgid "RAID Options"
 msgstr "RAID 옵션"
 
-#: system-config-kickstart.gladestrings:272
+#: system-config-kickstart.gladestrings:278
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -1994,7 +2024,7 @@ msgstr ""
 "와 놓은 신뢰성을 얻을 수 있습니다.  RAID 장치 사용법에 대한 보다 많은 정보를 "
 "원하신다면, 킥스타트 문서 자료를 참조해 보십시오."
 
-#: system-config-kickstart.gladestrings:273
+#: system-config-kickstart.gladestrings:279
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -2002,58 +2032,58 @@ msgstr ""
 "RAID를 사용하기 위해서는, 우선 최소한 두개의 '소프트웨어 RAID' 유형 파티션을 "
 "만드셔야 합니다. 그 후 RAID 장치를 만들어 포맷하거나 마운트하실 수 있습니다."
 
-#: system-config-kickstart.gladestrings:274
+#: system-config-kickstart.gladestrings:280
 msgid "Choose one of the following options:"
 msgstr "다음 중 한가지 옵션을 선택해 주십시오:"
 
-#: system-config-kickstart.gladestrings:275
+#: system-config-kickstart.gladestrings:281
 msgid "Create a software RAID partition"
 msgstr "소프트웨어 RAID 파티션 만들기"
 
-#: system-config-kickstart.gladestrings:276
+#: system-config-kickstart.gladestrings:282
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "RAID 장치 만들기 [기본 = /dev/md0]"
 
-#: system-config-kickstart.gladestrings:277
+#: system-config-kickstart.gladestrings:283
 msgid "Network Device Information"
 msgstr "네트워크 장치 정보"
 
-#: system-config-kickstart.gladestrings:278
+#: system-config-kickstart.gladestrings:284
 msgid "Network Device:"
 msgstr "네트워크 장치:"
 
-#: system-config-kickstart.gladestrings:279
+#: system-config-kickstart.gladestrings:285
 msgid "Network Type:"
 msgstr "네트워크 유형:"
 
-#: system-config-kickstart.gladestrings:280
+#: system-config-kickstart.gladestrings:286
 msgid "IP Address:"
 msgstr "IP 주소:"
 
-#: system-config-kickstart.gladestrings:281
+#: system-config-kickstart.gladestrings:287
 msgid "Netmask: "
 msgstr "넷매스크: "
 
-#: system-config-kickstart.gladestrings:282
+#: system-config-kickstart.gladestrings:288
 msgid "Gateway:"
 msgstr "게이트웨이:"
 
-#: system-config-kickstart.gladestrings:283
+#: system-config-kickstart.gladestrings:289
 msgid "Name Server:"
 msgstr "네임서버:"
 
-#: system-config-kickstart.gladestrings:285
-#: system-config-kickstart.gladestrings:287
-#: system-config-kickstart.gladestrings:289
-#: system-config-kickstart.gladestrings:292
-#: system-config-kickstart.gladestrings:294
-#: system-config-kickstart.gladestrings:296
-#: system-config-kickstart.gladestrings:299
-#: system-config-kickstart.gladestrings:301
-#: system-config-kickstart.gladestrings:303
-#: system-config-kickstart.gladestrings:306
-#: system-config-kickstart.gladestrings:308
-#: system-config-kickstart.gladestrings:310
+#: system-config-kickstart.gladestrings:291
+#: system-config-kickstart.gladestrings:293
+#: system-config-kickstart.gladestrings:295
+#: system-config-kickstart.gladestrings:298
+#: system-config-kickstart.gladestrings:300
+#: system-config-kickstart.gladestrings:302
+#: system-config-kickstart.gladestrings:305
+#: system-config-kickstart.gladestrings:307
+#: system-config-kickstart.gladestrings:309
+#: system-config-kickstart.gladestrings:312
+#: system-config-kickstart.gladestrings:314
+#: system-config-kickstart.gladestrings:316
 msgid "."
 msgstr "."
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksconfig 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-26 18:21-0500\n"
+"POT-Creation-Date: 2004-03-29 17:11-0500\n"
 "PO-Revision-Date: Mon Aug 13 16:08:22 2001\n"
 "Last-Translator: Richard Allen <ra@ra.is>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"
@@ -92,15 +92,16 @@ msgstr "Rótarlykilorðin er ekki eins."
 #. Prepart the clearpart line
 #. This is a raid device
 #. Check to see if the selection is actually a partition or one of the parent roots
-#: ../src/basic.py:206 ../src/basic.py:226 ../src/install.py:214
-#: ../src/partition.py:304 ../src/partWindow.py:513 ../src/raidWindow.py:247
+#: ../src/basic.py:206 ../src/basic.py:225 ../src/install.py:214
+#: ../src/partition.py:305 ../src/partWindow.py:513 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "Villa"
 
-#: ../src/basic.py:225
+#: ../src/basic.py:224
 msgid "Please select a root password."
 msgstr "Vinsamlegast veldu rótarlykilorð."
 
+#. set platform
 #. set language
 #. set keyboard
 #. set mouse
@@ -124,9 +125,12 @@ msgstr "Vinsamlegast veldu rótarlykilorð."
 #. #
 #. # I18N
 #. #
-#. lilo stuff
-#. end of lilo stuff
-#: ../src/bootloader.py:122
+#: ../src/bootloader.py:76
+#, python-format
+msgid "Bootloader options are not applicable to the %s platform"
+msgstr ""
+
+#: ../src/bootloader.py:117
 msgid "Grub passwords do not match.  Please try again."
 msgstr "Grub lykilorðin stemma ekki. Vinsamlegast reyndu aftur."
 
@@ -269,15 +273,15 @@ msgstr "Prentstuðningur"
 #. # I18N
 #. #
 #. create table with custom checklists
-#: ../src/firewall.py:57
+#: ../src/firewall.py:60
 msgid "Trusted devices:"
 msgstr "Treyst tæki:"
 
-#: ../src/firewall.py:82
+#: ../src/firewall.py:85
 msgid "Trusted services:"
 msgstr "Traustar þjónustur:"
 
-#: ../src/firewall.py:114
+#: ../src/firewall.py:117
 msgid "Other ports: (1029:tcp)"
 msgstr "Aðrar gáttir: (1029:tcp)"
 
@@ -432,7 +436,7 @@ msgstr "Stillingar ræsistjóra"
 msgid "Partition Information"
 msgstr "Disksneiðaupplýsingar"
 
-#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:163
+#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:165
 msgid "Network Configuration"
 msgstr "Stillingar nets"
 
@@ -440,23 +444,24 @@ msgstr "Stillingar nets"
 msgid "Authentication"
 msgstr "Auðkenning"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:214
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:218
 msgid "Firewall Configuration"
 msgstr "Stillingar eldveggs"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:243
-msgid "X Configuration"
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:248
+#, fuzzy
+msgid "Display Configuration"
 msgstr "Stillingar X"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:253
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:259
 msgid "Package Selection"
 msgstr "Pakkaval"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:259
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:265
 msgid "Pre-Installation Script"
 msgstr "Skeljaforrit fyrir uppsetningu"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:266
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:272
 msgid "Post-Installation Script"
 msgstr "Skeljaforrit eftir uppsetningu"
 
@@ -540,26 +545,26 @@ msgstr "Ekki var hægt að opna skrána \"%s\"."
 #. #
 #. # I18N
 #. #
-#: ../src/network.py:86
+#: ../src/network.py:87
 msgid "Device"
 msgstr "Tæki"
 
-#: ../src/network.py:89
+#: ../src/network.py:90
 msgid "Network Type"
 msgstr "Tegund nets"
 
 #. Let's find the last eth device in the list and increment by one to
 #. fill in the option menu with the next device
-#: ../src/network.py:108 ../src/network.py:153 ../src/network.py:221
-#: ../src/network.py:272 ../src/network.py:413
+#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:223
+#: ../src/network.py:274 ../src/network.py:415
 msgid "Static IP"
 msgstr "Fast IP vistfang"
 
-#: ../src/network.py:211
+#: ../src/network.py:213
 msgid "Please fill in the network information"
 msgstr "Vinsamlegast gefðu upp netstillingar"
 
-#: ../src/network.py:316
+#: ../src/network.py:318
 #, python-format
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
@@ -625,7 +630,7 @@ msgstr "Netkort með heitinu %s er þegar til. Vinsamlegast veldu annað heiti"
 #. #
 #. # I18N
 #. #
-#: ../src/partition.py:71
+#: ../src/partition.py:72
 msgid ""
 "Device/\n"
 "Partition Number"
@@ -634,7 +639,7 @@ msgstr ""
 "Númer disksneiðar"
 
 #. col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
-#: ../src/partition.py:74
+#: ../src/partition.py:75
 msgid ""
 "Mount Point/\n"
 "RAID"
@@ -642,15 +647,15 @@ msgstr ""
 "Tengipunktur/\n"
 "RAID"
 
-#: ../src/partition.py:76
+#: ../src/partition.py:77
 msgid "Type"
 msgstr "Tegund"
 
-#: ../src/partition.py:78
+#: ../src/partition.py:79
 msgid "Format"
 msgstr "Forsníða"
 
-#: ../src/partition.py:80
+#: ../src/partition.py:81
 msgid "Size (MB)"
 msgstr "Stærð (MB)"
 
@@ -700,7 +705,7 @@ msgstr "Stærð (MB)"
 #. #         self.part_store.set_value(part_iter, 3, part_object.format)
 #. #         self.part_store.set_value(part_iter, 4, part_object.size)
 #. #         self.part_store.set_value(part_iter, 5, part_object)
-#: ../src/partition.py:150 ../src/partition.py:180
+#: ../src/partition.py:151 ../src/partition.py:181
 msgid "Please select a partition from the list."
 msgstr "Vinsamlegast veldu disksneið úr listanum."
 
@@ -1052,12 +1057,12 @@ msgstr ""
 #. add resolutions
 #. add video card RAM sizes to option menu
 #. add video cards to list
-#: ../src/xconfig.py:102
+#: ../src/xconfig.py:104
 msgid "Could not read video card database"
 msgstr "Gat ekki lesið skjákortagrunninn"
 
 #. add monitors to list
-#: ../src/xconfig.py:120
+#: ../src/xconfig.py:122
 msgid "Could not read monitor database"
 msgstr "Gat ekki lesið skjáagrunninn"
 
@@ -1106,40 +1111,40 @@ msgstr "Stillingar disksneiða"
 #: system-config-kickstart.gladestrings:138
 #: system-config-kickstart.gladestrings:139
 #: system-config-kickstart.gladestrings:144
-#: system-config-kickstart.gladestrings:170
-#: system-config-kickstart.gladestrings:173
-#: system-config-kickstart.gladestrings:177
-#: system-config-kickstart.gladestrings:178
-#: system-config-kickstart.gladestrings:185
+#: system-config-kickstart.gladestrings:172
+#: system-config-kickstart.gladestrings:175
+#: system-config-kickstart.gladestrings:179
+#: system-config-kickstart.gladestrings:180
 #: system-config-kickstart.gladestrings:187
 #: system-config-kickstart.gladestrings:189
-#: system-config-kickstart.gladestrings:194
+#: system-config-kickstart.gladestrings:191
 #: system-config-kickstart.gladestrings:196
-#: system-config-kickstart.gladestrings:202
-#: system-config-kickstart.gladestrings:203
-#: system-config-kickstart.gladestrings:218
-#: system-config-kickstart.gladestrings:220
-#: system-config-kickstart.gladestrings:232
+#: system-config-kickstart.gladestrings:198
+#: system-config-kickstart.gladestrings:204
+#: system-config-kickstart.gladestrings:205
+#: system-config-kickstart.gladestrings:222
+#: system-config-kickstart.gladestrings:224
 #: system-config-kickstart.gladestrings:236
-#: system-config-kickstart.gladestrings:238
-#: system-config-kickstart.gladestrings:257
-#: system-config-kickstart.gladestrings:264
-#: system-config-kickstart.gladestrings:284
-#: system-config-kickstart.gladestrings:286
-#: system-config-kickstart.gladestrings:288
+#: system-config-kickstart.gladestrings:240
+#: system-config-kickstart.gladestrings:242
+#: system-config-kickstart.gladestrings:263
+#: system-config-kickstart.gladestrings:270
 #: system-config-kickstart.gladestrings:290
-#: system-config-kickstart.gladestrings:291
-#: system-config-kickstart.gladestrings:293
-#: system-config-kickstart.gladestrings:295
+#: system-config-kickstart.gladestrings:292
+#: system-config-kickstart.gladestrings:294
+#: system-config-kickstart.gladestrings:296
 #: system-config-kickstart.gladestrings:297
-#: system-config-kickstart.gladestrings:298
-#: system-config-kickstart.gladestrings:300
-#: system-config-kickstart.gladestrings:302
+#: system-config-kickstart.gladestrings:299
+#: system-config-kickstart.gladestrings:301
+#: system-config-kickstart.gladestrings:303
 #: system-config-kickstart.gladestrings:304
-#: system-config-kickstart.gladestrings:305
-#: system-config-kickstart.gladestrings:307
-#: system-config-kickstart.gladestrings:309
+#: system-config-kickstart.gladestrings:306
+#: system-config-kickstart.gladestrings:308
+#: system-config-kickstart.gladestrings:310
 #: system-config-kickstart.gladestrings:311
+#: system-config-kickstart.gladestrings:313
+#: system-config-kickstart.gladestrings:315
+#: system-config-kickstart.gladestrings:317
 msgid "*"
 msgstr "*"
 
@@ -1545,366 +1550,391 @@ msgid "Kernel parameters:"
 msgstr "Kjarnaviðföng:"
 
 #: system-config-kickstart.gladestrings:145
+#, fuzzy
+msgid "label216"
+msgstr "label28"
+
+#: system-config-kickstart.gladestrings:146
 msgid "Boot Loader Options (required)"
 msgstr "Stillingar ræsistjóra (nauðsynlegar)"
 
-#: system-config-kickstart.gladestrings:146
+#: system-config-kickstart.gladestrings:147
 msgid "label35"
 msgstr "label35"
 
-#: system-config-kickstart.gladestrings:147
+#: system-config-kickstart.gladestrings:148
 msgid "Clear Master Boot Record"
 msgstr "Hreinsa aðalræsifærsluna"
 
-#: system-config-kickstart.gladestrings:148
+#: system-config-kickstart.gladestrings:149
 msgid "Do not clear Master Boot Record"
 msgstr "Ekki hreinsa aðalræsifærsluna"
 
-#: system-config-kickstart.gladestrings:149
+#: system-config-kickstart.gladestrings:150
 msgid "Remove all existing partitions"
 msgstr "Fjarlægja allar disksneiðar"
 
-#: system-config-kickstart.gladestrings:150
+#: system-config-kickstart.gladestrings:151
 msgid "Remove existing Linux partitions"
 msgstr "Fjarlægja Linux disksneiðar"
 
-#: system-config-kickstart.gladestrings:151
+#: system-config-kickstart.gladestrings:152
 msgid "Preserve existing partitions"
 msgstr "Varðveita disksneiðar"
 
-#: system-config-kickstart.gladestrings:152
+#: system-config-kickstart.gladestrings:153
 msgid "Initialize the disk label"
 msgstr "Frumstilla diskmerkinguna"
 
-#: system-config-kickstart.gladestrings:153
+#: system-config-kickstart.gladestrings:154
 msgid "Do not initialize the disk label"
 msgstr "Ekki frumstilla diskmerkinguna"
 
-#: system-config-kickstart.gladestrings:154
+#: system-config-kickstart.gladestrings:155
 msgid "_Add"
 msgstr "_Bæta við"
 
-#: system-config-kickstart.gladestrings:155
+#: system-config-kickstart.gladestrings:156
 msgid "_Edit"
 msgstr "_Sýsla"
 
-#: system-config-kickstart.gladestrings:156
+#: system-config-kickstart.gladestrings:157
 msgid "_Delete"
 msgstr "_Eyða"
 
-#: system-config-kickstart.gladestrings:157
+#: system-config-kickstart.gladestrings:158
 msgid "RAID"
 msgstr "RAID"
 
-#: system-config-kickstart.gladestrings:158
+#: system-config-kickstart.gladestrings:159
+msgid "Partition options are not applicable on upgrades."
+msgstr ""
+
+#: system-config-kickstart.gladestrings:160
 msgid "Partition Information (required)"
 msgstr "Upplýsingar um disksneiðar (nauðsynlegar)"
 
-#: system-config-kickstart.gladestrings:159
+#: system-config-kickstart.gladestrings:161
 msgid "label30"
 msgstr "label30"
 
-#: system-config-kickstart.gladestrings:160
+#: system-config-kickstart.gladestrings:162
 msgid "_Add Network Device"
 msgstr "_Bæta við netkorti"
 
-#: system-config-kickstart.gladestrings:161
+#: system-config-kickstart.gladestrings:163
 msgid "_Edit Network Device"
 msgstr "_Breyta netkorti"
 
-#: system-config-kickstart.gladestrings:162
+#: system-config-kickstart.gladestrings:164
 msgid "_Delete Network Device"
 msgstr "_Eyða netkorti"
 
-#: system-config-kickstart.gladestrings:164
+#: system-config-kickstart.gladestrings:166
 msgid "label31"
 msgstr "label31"
 
-#: system-config-kickstart.gladestrings:165
+#: system-config-kickstart.gladestrings:167
 msgid "Authentication:"
 msgstr "Auðkenning:"
 
-#: system-config-kickstart.gladestrings:166
+#: system-config-kickstart.gladestrings:168
 msgid "Use Shadow Passwords"
 msgstr "Nota falin lykilorð"
 
-#: system-config-kickstart.gladestrings:167
+#: system-config-kickstart.gladestrings:169
 msgid "Use MD5"
 msgstr "Nota MD5"
 
-#: system-config-kickstart.gladestrings:168
+#: system-config-kickstart.gladestrings:170
 msgid "Enable NIS"
 msgstr "Nota NIS"
 
-#: system-config-kickstart.gladestrings:169
+#: system-config-kickstart.gladestrings:171
 msgid "NIS Domain:"
 msgstr "NIS lén:"
 
-#: system-config-kickstart.gladestrings:171
+#: system-config-kickstart.gladestrings:173
 msgid "Use broadcast to find NIS server"
 msgstr "Kalla eftir NIS þjóni"
 
-#: system-config-kickstart.gladestrings:172
+#: system-config-kickstart.gladestrings:174
 msgid "NIS Server:"
 msgstr "NIS þjónn:"
 
-#: system-config-kickstart.gladestrings:174
+#: system-config-kickstart.gladestrings:176
 msgid "NIS Authentication"
 msgstr "NIS auðkenning"
 
-#: system-config-kickstart.gladestrings:175
+#: system-config-kickstart.gladestrings:177
 msgid "NIS"
 msgstr "NIS"
 
-#: system-config-kickstart.gladestrings:176
+#: system-config-kickstart.gladestrings:178
 msgid "Enable LDAP"
 msgstr "Nota LDAP"
 
-#: system-config-kickstart.gladestrings:179
+#: system-config-kickstart.gladestrings:181
 msgid "LDAP Server: "
 msgstr "LDAP þjónn: "
 
-#: system-config-kickstart.gladestrings:180
+#: system-config-kickstart.gladestrings:182
 msgid "LDAP Base Name: "
 msgstr "LDAP grunnnafn: "
 
-#: system-config-kickstart.gladestrings:181
+#: system-config-kickstart.gladestrings:183
 msgid "LDAP Authentication"
 msgstr "LDAP auðkenning"
 
-#: system-config-kickstart.gladestrings:182
+#: system-config-kickstart.gladestrings:184
 msgid "LDAP "
 msgstr "LDAP "
 
-#: system-config-kickstart.gladestrings:183
+#: system-config-kickstart.gladestrings:185
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Nota Kerberos 5 auðkenningu"
 
-#: system-config-kickstart.gladestrings:184
+#: system-config-kickstart.gladestrings:186
 msgid "Kerberos Realm:"
 msgstr "Kerberos svæði:"
 
-#: system-config-kickstart.gladestrings:186
+#: system-config-kickstart.gladestrings:188
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Kerberos lénsstjóri (KDC):"
 
-#: system-config-kickstart.gladestrings:188
+#: system-config-kickstart.gladestrings:190
 msgid "Kerberos Master Server:"
 msgstr "Kerberos aðalþjónn:"
 
-#: system-config-kickstart.gladestrings:190
+#: system-config-kickstart.gladestrings:192
 msgid "Kerberos 5 Authentication"
 msgstr "Kerberos 5 auðkenning"
 
-#: system-config-kickstart.gladestrings:191
+#: system-config-kickstart.gladestrings:193
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: system-config-kickstart.gladestrings:192
+#: system-config-kickstart.gladestrings:194
 msgid "Enable Hesiod Support"
 msgstr "Nota Hesiod stuðning"
 
-#: system-config-kickstart.gladestrings:193
+#: system-config-kickstart.gladestrings:195
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS:"
 
-#: system-config-kickstart.gladestrings:195
+#: system-config-kickstart.gladestrings:197
 msgid "Hesiod RHS:"
 msgstr "Hesiod RHS:"
 
-#: system-config-kickstart.gladestrings:197
+#: system-config-kickstart.gladestrings:199
 msgid "Hesiod Authentication"
 msgstr "Hesiod auðkenning"
 
-#: system-config-kickstart.gladestrings:198
+#: system-config-kickstart.gladestrings:200
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: system-config-kickstart.gladestrings:199
+#: system-config-kickstart.gladestrings:201
 msgid "Enable SMB Authentication"
 msgstr "Nota SMB auðkenningu"
 
-#: system-config-kickstart.gladestrings:200
+#: system-config-kickstart.gladestrings:202
 msgid "SMB Servers:"
 msgstr "SMB þjónar:"
 
-#: system-config-kickstart.gladestrings:201
+#: system-config-kickstart.gladestrings:203
 msgid "SMB Workgroup:"
 msgstr "SMB vinnuhópur:"
 
-#: system-config-kickstart.gladestrings:204
+#: system-config-kickstart.gladestrings:206
 msgid "SMB Authentication"
 msgstr "SMB auðkenning"
 
-#: system-config-kickstart.gladestrings:205
+#: system-config-kickstart.gladestrings:207
 msgid "SMB"
 msgstr "SMB"
 
-#: system-config-kickstart.gladestrings:206
+#: system-config-kickstart.gladestrings:208
 msgid "Enable nscd"
 msgstr "Nota nscd"
 
-#: system-config-kickstart.gladestrings:207
+#: system-config-kickstart.gladestrings:209
 msgid "Name Switch Cache Daemon (nscd) Authentication"
 msgstr "Name Switch Cache púkastillingar (nscd)"
 
-#: system-config-kickstart.gladestrings:208
+#: system-config-kickstart.gladestrings:210
 msgid "Name Switch Cache"
 msgstr "Biðminni nafnaþjónsrofa"
 
-#: system-config-kickstart.gladestrings:209
+#: system-config-kickstart.gladestrings:211
+msgid "Authentication options are not applicable on upgrades."
+msgstr ""
+
+#: system-config-kickstart.gladestrings:212
 msgid "Authentication Configuration"
 msgstr "Stillingar auðkenningar"
 
-#: system-config-kickstart.gladestrings:210
+#: system-config-kickstart.gladestrings:213
 msgid "label32"
 msgstr "label32"
 
-#: system-config-kickstart.gladestrings:211
+#: system-config-kickstart.gladestrings:214
 msgid "Security level:"
 msgstr "Öryggisstig:"
 
-#: system-config-kickstart.gladestrings:212
+#: system-config-kickstart.gladestrings:215
 msgid "Enable firewall"
 msgstr "Virkja eldvegginn"
 
-#: system-config-kickstart.gladestrings:213
+#: system-config-kickstart.gladestrings:216
 msgid "Disable firewall"
 msgstr "Slökkva á eldveggnum"
 
-#: system-config-kickstart.gladestrings:215
+#: system-config-kickstart.gladestrings:217
+msgid "Firewall configuration is not applicable on upgrades."
+msgstr ""
+
+#: system-config-kickstart.gladestrings:219
 msgid "label33"
 msgstr "label33"
 
-#: system-config-kickstart.gladestrings:216
+#: system-config-kickstart.gladestrings:220
 msgid "Configure the X Window System"
 msgstr "Stilla X gluggakerfið"
 
-#: system-config-kickstart.gladestrings:217
+#: system-config-kickstart.gladestrings:221
 msgid "Color Depth"
 msgstr "Litadýpt"
 
-#: system-config-kickstart.gladestrings:219
+#: system-config-kickstart.gladestrings:223
 msgid "Resolution"
 msgstr "Upplausn"
 
-#: system-config-kickstart.gladestrings:221
+#: system-config-kickstart.gladestrings:225
 msgid "Default Desktop:"
 msgstr "Sjálfgefið skjáborð:"
 
-#: system-config-kickstart.gladestrings:222
+#: system-config-kickstart.gladestrings:226
 msgid "GNOME"
 msgstr "GNOME"
 
-#: system-config-kickstart.gladestrings:223
+#: system-config-kickstart.gladestrings:227
 msgid "KDE"
 msgstr "KDE"
 
-#: system-config-kickstart.gladestrings:224
+#: system-config-kickstart.gladestrings:228
 msgid "Start the X Window System on boot"
 msgstr "Ræsa X gluggakerfið við ræsingu"
 
-#: system-config-kickstart.gladestrings:225
+#: system-config-kickstart.gladestrings:229
 msgid "On first boot, Setup Agent is: "
 msgstr "Í fyrstu ræsingu er uppsetningarálfurinn: "
 
-#: system-config-kickstart.gladestrings:226
+#: system-config-kickstart.gladestrings:230
 msgid "Disabled"
 msgstr "Óvirkt"
 
-#: system-config-kickstart.gladestrings:227
+#: system-config-kickstart.gladestrings:231
 msgid "Enabled"
 msgstr "Virkt"
 
-#: system-config-kickstart.gladestrings:228
+#: system-config-kickstart.gladestrings:232
 msgid "Enabled in reconfiguration mode"
 msgstr "Virkjað í endurstillingaham"
 
-#: system-config-kickstart.gladestrings:229
+#: system-config-kickstart.gladestrings:233
 msgid "General"
 msgstr "Almennt"
 
-#: system-config-kickstart.gladestrings:230
+#: system-config-kickstart.gladestrings:234
 msgid "Probe for video card"
 msgstr "Leita að skjákorti"
 
-#: system-config-kickstart.gladestrings:231
+#: system-config-kickstart.gladestrings:235
 msgid "Video Card RAM: "
 msgstr "Skjáminni:"
 
-#: system-config-kickstart.gladestrings:233
+#: system-config-kickstart.gladestrings:237
 msgid "Video Card"
 msgstr "Skjákort"
 
-#: system-config-kickstart.gladestrings:234
+#: system-config-kickstart.gladestrings:238
 msgid "Probe for monitor"
 msgstr "Leita að skjá"
 
-#: system-config-kickstart.gladestrings:235
+#: system-config-kickstart.gladestrings:239
 msgid "Use custom monitor sync rates"
 msgstr "Nota sérsniðin tíðnisvið"
 
-#: system-config-kickstart.gladestrings:237
+#: system-config-kickstart.gladestrings:241
 msgid "Hz"
 msgstr "Hz"
 
-#: system-config-kickstart.gladestrings:239
+#: system-config-kickstart.gladestrings:243
 msgid "kHz"
 msgstr "kHz"
 
-#: system-config-kickstart.gladestrings:240
+#: system-config-kickstart.gladestrings:244
 msgid "Vertical Sync:"
 msgstr "Lóðrétt samhæfing:"
 
-#: system-config-kickstart.gladestrings:241
+#: system-config-kickstart.gladestrings:245
 msgid "Horizontal Sync:"
 msgstr "Lárétt samhæfing:"
 
-#: system-config-kickstart.gladestrings:242
+#: system-config-kickstart.gladestrings:246
 msgid "Monitor"
 msgstr "Skjár"
 
-#: system-config-kickstart.gladestrings:244
+#: system-config-kickstart.gladestrings:247
+msgid "Display configuration is not applicable on upgrades."
+msgstr ""
+
+#: system-config-kickstart.gladestrings:249
 msgid "label88"
 msgstr "label88"
 
-#: system-config-kickstart.gladestrings:245
+#: system-config-kickstart.gladestrings:250
 msgid "Select packages to install."
 msgstr "Veldu pakka til uppsetningar"
 
-#: system-config-kickstart.gladestrings:246
+#: system-config-kickstart.gladestrings:251
 msgid "_Automatically Resolve Dependencies"
 msgstr "_Uppfylla forkröfur sjálfkrafa"
 
-#: system-config-kickstart.gladestrings:247
+#: system-config-kickstart.gladestrings:252
 msgid "_Ignore Dependencies"
 msgstr "_Hunsa þarfir pakka"
 
-#: system-config-kickstart.gladestrings:248
+#: system-config-kickstart.gladestrings:253
 msgid "Desktops"
 msgstr "Skjáborð"
 
-#: system-config-kickstart.gladestrings:249
+#: system-config-kickstart.gladestrings:254
 msgid "Applications"
 msgstr "Forrit"
 
-#: system-config-kickstart.gladestrings:250
+#: system-config-kickstart.gladestrings:255
 msgid "Servers"
 msgstr "Þjónar"
 
-#: system-config-kickstart.gladestrings:251
+#: system-config-kickstart.gladestrings:256
 msgid "Development"
 msgstr "Þróun"
 
-#: system-config-kickstart.gladestrings:252
+#: system-config-kickstart.gladestrings:257
 msgid "System"
 msgstr "Kerfis"
 
-#: system-config-kickstart.gladestrings:254
+#: system-config-kickstart.gladestrings:258
+msgid "Package selection is not applicable on upgrades."
+msgstr ""
+
+#: system-config-kickstart.gladestrings:260
 msgid "label34"
 msgstr "label34"
 
-#: system-config-kickstart.gladestrings:255
+#: system-config-kickstart.gladestrings:261
 #, c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1913,21 +1943,21 @@ msgstr ""
 "Aðvörun: villa í þessu skeljaforriti getur valdið því að hraðuppsettning "
 "bregst. Ekki nota %pre skipunina til að byrja með."
 
-#: system-config-kickstart.gladestrings:256
-#: system-config-kickstart.gladestrings:263
+#: system-config-kickstart.gladestrings:262
+#: system-config-kickstart.gladestrings:269
 msgid "Use an interpreter:"
 msgstr "Nota túlk:"
 
-#: system-config-kickstart.gladestrings:258
+#: system-config-kickstart.gladestrings:264
 #, c-format
 msgid "Type your %pre script below:"
 msgstr "Sláðu inn %pre skeljaforritið þitt hér:"
 
-#: system-config-kickstart.gladestrings:260
+#: system-config-kickstart.gladestrings:266
 msgid "label89"
 msgstr "label89"
 
-#: system-config-kickstart.gladestrings:261
+#: system-config-kickstart.gladestrings:267
 #, c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1936,28 +1966,28 @@ msgstr ""
 "Aðvörun: villa í þessu skeljaforriti getur valdið því að hraðuppsettning "
 "bregst. Ekki nota %post skipunina til að byrja með."
 
-#: system-config-kickstart.gladestrings:262
+#: system-config-kickstart.gladestrings:268
 msgid "Run outside of the chroot environment"
 msgstr "Keyra utan chroot umhverfissins"
 
-#: system-config-kickstart.gladestrings:265
+#: system-config-kickstart.gladestrings:271
 #, c-format
 msgid "Type your %post script below:"
 msgstr "Sláðu inn %post skeljaforritið þitt hér:"
 
-#: system-config-kickstart.gladestrings:267
+#: system-config-kickstart.gladestrings:273
 msgid "label93"
 msgstr "label93"
 
-#: system-config-kickstart.gladestrings:268
+#: system-config-kickstart.gladestrings:274
 msgid "Preview Options"
 msgstr "Rofar forsýningar"
 
-#: system-config-kickstart.gladestrings:269
+#: system-config-kickstart.gladestrings:275
 msgid "_Save to File"
 msgstr "_Vista í skrá"
 
-#: system-config-kickstart.gladestrings:270
+#: system-config-kickstart.gladestrings:276
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
@@ -1965,11 +1995,11 @@ msgstr ""
 "Þú hefur kosið eftirfarandi stillingar. Veldu Vista í skrá til að vista "
 "hraðuppsetningarstillingum."
 
-#: system-config-kickstart.gladestrings:271
+#: system-config-kickstart.gladestrings:277
 msgid "RAID Options"
 msgstr "Stillingar RAID"
 
-#: system-config-kickstart.gladestrings:272
+#: system-config-kickstart.gladestrings:278
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -1981,7 +2011,7 @@ msgstr ""
 "eitt stakt drif. Eg þig langar að lesa meira um RAID tæki getur þú lesið "
 "kickstart handbókina."
 
-#: system-config-kickstart.gladestrings:273
+#: system-config-kickstart.gladestrings:279
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -1990,58 +2020,58 @@ msgstr ""
 "gerðinni 'software RAID'. Þá býrðu til RAID tæki sem hægt er að forsníða og "
 "tengja inn í skráarkerfið."
 
-#: system-config-kickstart.gladestrings:274
+#: system-config-kickstart.gladestrings:280
 msgid "Choose one of the following options:"
 msgstr "Veldu einn af eftirfarandi rofum:"
 
-#: system-config-kickstart.gladestrings:275
+#: system-config-kickstart.gladestrings:281
 msgid "Create a software RAID partition"
 msgstr "Búa til RAID disksneið"
 
-#: system-config-kickstart.gladestrings:276
+#: system-config-kickstart.gladestrings:282
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "Búa til RAID tæki [sjálfgefið = /dev/md0]"
 
-#: system-config-kickstart.gladestrings:277
+#: system-config-kickstart.gladestrings:283
 msgid "Network Device Information"
 msgstr "Upplýsingar um netkort"
 
-#: system-config-kickstart.gladestrings:278
+#: system-config-kickstart.gladestrings:284
 msgid "Network Device:"
 msgstr "Netkort:"
 
-#: system-config-kickstart.gladestrings:279
+#: system-config-kickstart.gladestrings:285
 msgid "Network Type:"
 msgstr "Tegund nets:"
 
-#: system-config-kickstart.gladestrings:280
+#: system-config-kickstart.gladestrings:286
 msgid "IP Address:"
 msgstr "IP vistfang:"
 
-#: system-config-kickstart.gladestrings:281
+#: system-config-kickstart.gladestrings:287
 msgid "Netmask: "
 msgstr "Netmöskvi: "
 
-#: system-config-kickstart.gladestrings:282
+#: system-config-kickstart.gladestrings:288
 msgid "Gateway:"
 msgstr "Gátt:"
 
-#: system-config-kickstart.gladestrings:283
+#: system-config-kickstart.gladestrings:289
 msgid "Name Server:"
 msgstr "Nafnaþjónn:"
 
-#: system-config-kickstart.gladestrings:285
-#: system-config-kickstart.gladestrings:287
-#: system-config-kickstart.gladestrings:289
-#: system-config-kickstart.gladestrings:292
-#: system-config-kickstart.gladestrings:294
-#: system-config-kickstart.gladestrings:296
-#: system-config-kickstart.gladestrings:299
-#: system-config-kickstart.gladestrings:301
-#: system-config-kickstart.gladestrings:303
-#: system-config-kickstart.gladestrings:306
-#: system-config-kickstart.gladestrings:308
-#: system-config-kickstart.gladestrings:310
+#: system-config-kickstart.gladestrings:291
+#: system-config-kickstart.gladestrings:293
+#: system-config-kickstart.gladestrings:295
+#: system-config-kickstart.gladestrings:298
+#: system-config-kickstart.gladestrings:300
+#: system-config-kickstart.gladestrings:302
+#: system-config-kickstart.gladestrings:305
+#: system-config-kickstart.gladestrings:307
+#: system-config-kickstart.gladestrings:309
+#: system-config-kickstart.gladestrings:312
+#: system-config-kickstart.gladestrings:314
+#: system-config-kickstart.gladestrings:316
 msgid "."
 msgstr "."
 
