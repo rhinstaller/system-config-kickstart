@@ -125,7 +125,10 @@ class basic:
         kbd.read()
         currentKeymap = kbd.get()
 	#set keyboard to current keymap
-        self.keyboard_combo.entry.set_text(self.keyboard_dict[currentKeymap][0])
+        try:
+            self.keyboard_combo.entry.set_text(self.keyboard_dict[currentKeymap][0])
+        except:
+            self.keyboard_combo.entry.set_text(self.keyboard_dict["us"][0])
 
         #set default mouse to generic ps/2
         self.mouse_combo.list.select_item(8)
