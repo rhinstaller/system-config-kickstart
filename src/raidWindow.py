@@ -25,6 +25,7 @@
 import string
 import gtk
 import gobject
+import getopt
 import signal
 import partWindow
 import raidWindow
@@ -91,7 +92,6 @@ class raidWindow:
         self.raid_fsType_menu.connect("changed", self.on_raid_fsType_menu_changed)
 
     def on_raid_fsType_menu_changed(self, *args):
-        print self.raid_fsType_menu.get_children()[0].get_text()
         if self.raid_fsType_menu.get_children()[0].get_text() == "swap":
             #it's a swap partition, so desensitize the mountPoint combo
             self.raid_mp_combo.set_sensitive(gtk.FALSE)
@@ -106,7 +106,6 @@ class raidWindow:
         self.raid_window.show_all()
 
     def editDevice(self, iter, part_object):
-        print "edit device"
         self.original_iter = iter
         self.raid_partition_store.clear()
         self.raid_mp_combo.entry.set_text(part_object.mountPoint)
@@ -132,17 +131,15 @@ class raidWindow:
         self.raid_window.show_all()
 
     def countRaidPartitions(self, store, data, iter, raidPartitions = None):
-        print "in countRaidPartitions"
         part_object = self.part_store.get_value(iter, 5)
+
         if part_object and part_object.raidNumber:
-            print "appending"
             new_iter = self.raid_partition_store.append()
 
             if raidPartitions and part_object.raidNumber in raidPartitions:
                 self.raid_partition_store.set_value(new_iter, 0, gtk.TRUE)
             else:
                 self.raid_partition_store.set_value(new_iter, 0, gtk.FALSE)
-
                 
             self.raid_partition_store.set_value(new_iter, 1, part_object.raidNumber)
             self.raid_partition_store.set_value(new_iter, 2, iter)
@@ -154,8 +151,6 @@ class raidWindow:
         self.raid_partition_store.set_value(iter, 0 , not val)
 
     def okClicked(self, *args):
-        self.partition_list = []
-
         fsType = self.raid_fsType_menu.get_children()[0].get_text()
         if fsType == "swap":
             mount_point = "swap"
@@ -165,25 +160,31 @@ class raidWindow:
         raid_device = self.raid_device_menu.get_children()[0].get_text()
         raid_level = self.raid_level_menu.get_children()[0].get_text()
 
-        self.raid_object = partEntry.partEntry()
-        self.raid_object.mountPoint = mount_point
-        self.raid_object.raidDevice = raid_device
-        self.raid_object.raidLevel = raid_level
-        self.raid_object.fsType = fsType
-        self.raid_object.isRaidDevice = 1
-        
-        self.raid_partition_store.foreach(self.isRowToggled, mount_point)
+        raid_object = partEntry.partEntry()
+        raid_object.mountPoint = mount_point
+        raid_object.raidDevice = raid_device
+        raid_object.raidLevel = raid_level
+        raid_object.fsType = fsType
+        raid_object.isRaidDevice = 1
 
-        if raid_level == "0" or raid_level == "1":
+        self.partition_list = []
+        self.addRaidDeviceToTree(raid_object)
+
+        self.raid_window.hide()
+
+    def addRaidDeviceToTree(self, raid_object):        
+        self.raid_partition_store.foreach(self.isRowToggled, raid_object)
+
+        if raid_object.raidLevel == "0" or raid_object.raidLevel == "1":
             if len(self.partition_list) < 2:
                 device_is_valid = self.deviceNotValid(_("You must select at least 2 partitions in order to use "
-                                      "RAID %s" % raid_level))
+                                      "RAID %s" % raid_object.raidLevel))
             else:
                 device_is_valid = 1
-        elif raid_level == "5":
+        elif raid_object.raidLevel == "5":
             if len(self.partition_list) < 3:
                 device_is_valid = self.deviceNotValid(_("You must select at least 3 partitions in order to use "
-                                      "RAID %s" % raid_level))
+                                      "RAID %s" % raid_object.raidLevel))
             else:
                 device_is_valid = 1
 
@@ -199,7 +200,7 @@ class raidWindow:
                     self.part_store.set_value(self.raid_parent_iter, 0, (_("Raid Devices")))
 
                 raid_device_iter = self.part_store.append(self.raid_parent_iter)
-                self.part_store.set_value(raid_device_iter, 0, mount_point)
+                self.part_store.set_value(raid_device_iter, 0, raid_object.mountPoint)
 
                 self.num_raid_devices = None
                 self.part_store.foreach(self.countRaidDevices)
@@ -207,48 +208,45 @@ class raidWindow:
             if self.original_iter:
                 raid_device_iter = self.original_iter
                 
-            self.part_store.set_value(raid_device_iter, 0, self.raid_object.raidDevice)
-            self.part_store.set_value(raid_device_iter, 1, self.raid_object.mountPoint)
-            self.part_store.set_value(raid_device_iter, 2, self.raid_object.fsType)
-            self.part_store.set_value(raid_device_iter, 5, self.raid_object)
+            self.part_store.set_value(raid_device_iter, 0, raid_object.raidDevice)
+            self.part_store.set_value(raid_device_iter, 1, raid_object.mountPoint)
+            self.part_store.set_value(raid_device_iter, 2, raid_object.fsType)
+            self.part_store.set_value(raid_device_iter, 5, raid_object)
 
             if self.raid_format_check.get_active() == gtk.TRUE:
-                self.raid_object.doFormat = 1
+                raid_object.doFormat = 1
 
-            if self.raid_object.doFormat == 1:
+            if raid_object.doFormat == 1:
                 self.part_store.set_value(raid_device_iter, 3, (_("Yes")))
             else:
                 self.part_store.set_value(raid_device_iter, 3, (_("No")))
-
-            self.part_view.expand_all()
-            self.raid_window.hide()
+        self.part_view.expand_all()
 
     def checkForRaidParent(self, store, data, iter):
         if self.part_store.get_value(iter, 0) == (_("Raid Devices")):
             self.raid_parent_iter = iter
 
-    def isRowToggled(self, store, data, iter, mount_point):
+    def isRowToggled(self, store, data, iter, raid_object):
         if self.raid_partition_store.get_value(iter, 0) == gtk.TRUE:
             self.partition_list.append(self.raid_partition_store.get_value(iter, 1))
             partition_iter = self.raid_partition_store.get_value(iter,2)
             part_object = self.raid_partition_store.get_value(iter, 3)
 
-            self.raid_object.raidPartitions.append(part_object.raidNumber)
-            self.raid_object.raidPartitionObjects.append(part_object)
-            self.part_store.set_value(partition_iter, 1, self.raid_object.raidDevice)
+            raid_object.raidPartitions.append(part_object.raidNumber)
+            raid_object.raidPartitionObjects.append(part_object)
+            self.part_store.set_value(partition_iter, 1, raid_object.raidDevice)
 
         elif self.raid_partition_store.get_value(iter, 0) == gtk.FALSE:
             partition_iter = self.raid_partition_store.get_value(iter,2)
             part_object = self.raid_partition_store.get_value(iter, 3)            
-            if part_object.raidNumber in self.original_partitions:
-                part_object.raidDevice = ""
-                self.part_store.set_value(partition_iter, 1, "")
-                
+            if self.original_partitions:
+                if part_object.raidNumber in self.original_partitions:
+                    part_object.raidDevice = ""
+                    self.part_store.set_value(partition_iter, 1, "")
 
     def countRaidDevices(self, store, data, iter):
         part_object = self.part_store.get_value(iter, 5)
         if part_object:
-            print "part_object.device is", part_object.device
             if part_object.device and part_object.device[:2] == 'md':
                 self.num_raid_devices = self.num_raid_devices + 1
         
@@ -268,3 +266,51 @@ class raidWindow:
     def destroy(self, *args):
         self.raid_window.hide()
         return gtk.TRUE
+
+    def populateRaid(self, line):
+        raid_object = partEntry.partEntry()
+        raid_object.isRaidDevice = 1
+        self.original_iter = None
+        result = self.parseRaidLine(raid_object, line)
+
+        if result is None:
+            return
+        else:
+#            self.markRaidPartitions(raid_object)
+            self.raid_partition_store.foreach(self.markRaidPartitions, raid_object)
+            self.addRaidDeviceToTree(raid_object)
+
+    def parseRaidLine(self, raid_object, line):
+        opts, raidPartitions = getopt.getopt(line[1:], "d:h", ["level=", "device=", "spares=", "fstype=", "noformat"])
+
+        for (opt, value) in opts:
+            if line[0] == "swap":
+                raid_object.fsType = "swap"
+                raid_object.mountPoint = ""
+            elif opt == "--fstype":
+                raid_object.fsType = value
+                raid_object.mountPoint = line[0]
+
+            if opt == "--level":
+                raid_object.raidLevel = value
+            if opt == "--device":
+                raid_object.raidDevice = value
+            if opt == "--noformat":
+                raid_object.doFormat = 0
+            else:
+                raid_object.doFormat = 1
+
+        self.partition_list = raidPartitions
+        raid_object.raidPartitions = raidPartitions
+
+        self.raid_partition_store.clear()
+        self.part_store.foreach(self.countRaidPartitions)
+
+        return 0
+    
+    def markRaidPartitions(self, store, data, iter, raid_object):
+        if self.raid_partition_store.get_value(iter, 1) in raid_object.raidPartitions:
+
+            partition_iter = self.raid_partition_store.get_value(iter, 2)
+            part_object = self.raid_partition_store.get_value(iter, 3)
+            self.part_store.set_value(partition_iter, 1, raid_object.raidDevice)
