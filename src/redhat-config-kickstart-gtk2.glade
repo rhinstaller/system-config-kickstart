@@ -1417,6 +1417,15 @@
 		<widget class="GtkMenu" id="file2_menu">
 
 		  <child>
+		    <widget class="GtkMenuItem" id="open_menu">
+		      <property name="visible">True</property>
+		      <property name="label" translatable="yes">_Open File</property>
+		      <property name="use_underline">True</property>
+		      <accelerator key="O" modifiers="GDK_CONTROL_MASK" signal="activate"/>
+		    </widget>
+		  </child>
+
+		  <child>
 		    <widget class="GtkMenuItem" id="preview_menu">
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">_Preview</property>
@@ -1433,7 +1442,7 @@
 		      <accelerator key="S" modifiers="GDK_CONTROL_MASK" signal="activate"/>
 
 		      <child internal-child="image">
-			<widget class="GtkImage" id="image69">
+			<widget class="GtkImage" id="image90">
 			  <property name="visible">True</property>
 			  <property name="stock">gtk-save-as</property>
 			  <property name="icon_size">1</property>
@@ -1454,7 +1463,7 @@
 		      <accelerator key="Q" modifiers="GDK_CONTROL_MASK" signal="activate"/>
 
 		      <child internal-child="image">
-			<widget class="GtkImage" id="image70">
+			<widget class="GtkImage" id="image91">
 			  <property name="visible">True</property>
 			  <property name="stock">gtk-quit</property>
 			  <property name="icon_size">1</property>
@@ -1488,7 +1497,7 @@
 		      <accelerator key="H" modifiers="GDK_CONTROL_MASK" signal="activate"/>
 
 		      <child internal-child="image">
-			<widget class="GtkImage" id="image71">
+			<widget class="GtkImage" id="image92">
 			  <property name="visible">True</property>
 			  <property name="stock">gtk-help</property>
 			  <property name="icon_size">1</property>
@@ -1508,7 +1517,7 @@
 		      <property name="use_underline">True</property>
 
 		      <child internal-child="image">
-			<widget class="GtkImage" id="image72">
+			<widget class="GtkImage" id="image93">
 			  <property name="visible">True</property>
 			  <property name="stock">gnome-stock-about</property>
 			  <property name="icon_size">1</property>
