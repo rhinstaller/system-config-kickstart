@@ -777,6 +777,7 @@
 
   <child internal-child="vbox">
     <widget class="GtkVBox" id="dialog-vbox3">
+      <property name="border_width">2</property>
       <property name="visible">True</property>
       <property name="homogeneous">False</property>
       <property name="spacing">8</property>
@@ -3736,7 +3737,7 @@
 				<widget class="GtkRadioButton" id="clear_mbr_yes_radiobutton">
 				  <property name="visible">True</property>
 				  <property name="can_focus">True</property>
-				  <property name="label" translatable="yes">_Clear Master Boot Record</property>
+				  <property name="label" translatable="yes">Clear Master Boot Record</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
 				  <property name="active">False</property>
@@ -3754,7 +3755,7 @@
 				<widget class="GtkRadioButton" id="clear_mbr_no_radiobutton">
 				  <property name="visible">True</property>
 				  <property name="can_focus">True</property>
-				  <property name="label" translatable="yes">_Do not clear Master Boot Record</property>
+				  <property name="label" translatable="yes">Do not clear Master Boot Record</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
 				  <property name="active">True</property>
@@ -3797,7 +3798,7 @@
 				<widget class="GtkRadioButton" id="remove_parts_all_radiobutton">
 				  <property name="visible">True</property>
 				  <property name="can_focus">True</property>
-				  <property name="label" translatable="yes">_Remove all existing partitions</property>
+				  <property name="label" translatable="yes">Remove all existing partitions</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
 				  <property name="active">False</property>
@@ -3815,7 +3816,7 @@
 				<widget class="GtkRadioButton" id="remove_parts_Linux_radiobutton">
 				  <property name="visible">True</property>
 				  <property name="can_focus">True</property>
-				  <property name="label" translatable="yes">Remove existing _Linux partitions</property>
+				  <property name="label" translatable="yes">Remove existing Linux partitions</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
 				  <property name="active">False</property>
@@ -3834,7 +3835,7 @@
 				<widget class="GtkRadioButton" id="remove_parts_none_radiobutton">
 				  <property name="visible">True</property>
 				  <property name="can_focus">True</property>
-				  <property name="label" translatable="yes">_Preserve existing partitions</property>
+				  <property name="label" translatable="yes">Preserve existing partitions</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
 				  <property name="active">True</property>
@@ -3877,7 +3878,7 @@
 				<widget class="GtkRadioButton" id="initlabel_yes_radiobutton">
 				  <property name="visible">True</property>
 				  <property name="can_focus">True</property>
-				  <property name="label" translatable="yes">_Initialize the disk label</property>
+				  <property name="label" translatable="yes">Initialize the disk label</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
 				  <property name="active">False</property>
