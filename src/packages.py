@@ -29,11 +29,12 @@ import getopt
 
 ##
 ## I18N
-##
-import gettext
-gettext.bindtextdomain ("redhat-config-kickstart", "/usr/share/locale")
-gettext.textdomain ("redhat-config-kickstart")
-_=gettext.gettext
+## 
+from rhpl.translate import _, N_
+import rhpl.translate as translate
+domain = 'redhat-config-kickstart'
+translate.textdomain (domain)
+gtk.glade.bindtextdomain(domain)
 
 class Packages:
 

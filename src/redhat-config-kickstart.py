@@ -32,12 +32,11 @@ if __name__ == "__main__":
 
 ##
 ## I18N
-##
-import gettext
+## 
+from rhpl.translate import _, N_
+import rhpl.translate as translate
 domain = 'redhat-config-kickstart'
-gettext.bindtextdomain (domain, "/usr/share/locale")
-gettext.textdomain (domain)
-_=gettext.gettext
+translate.textdomain (domain)
 
 def useCliMode(value):
     import kickstartData
