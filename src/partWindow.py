@@ -161,7 +161,6 @@ class partWindow:
             if part_object.fsType == self.fsTypesDict[type]:
                 fsType = type
         self.fsTypeCombo.entry.set_text(fsType) 
-        self.sizeCombo.set_text(part_object.size) 
         self.asPrimaryCheck.set_active(part_object.asPrimary)
 
         if part_object.partition:
@@ -191,7 +190,9 @@ class partWindow:
                 self.formatCheck.set_sensitive(gtk.FALSE)
 
         self.partitionDialog.show_all()
-
+        #XXX - have to do this after the show_all due to a bug in gtkSpinButton, I suspect
+        self.sizeCombo.set_text(part_object.size)
+        
     def win_reset(self):
         self.mountPointCombo.entry.set_text("")
         self.mountPointCombo.set_sensitive(gtk.TRUE)
