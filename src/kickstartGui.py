@@ -45,18 +45,24 @@ import os
 import kickstartData
 import kickstartParser
 
+try:
+    from gtk import _disable_gdk_threading
+    _disable_gdk_threading()
+except ImportError:
+    pass
+
 ##
 ## I18N
 ##
 import gettext
-gettext.bindtextdomain ("redhat-config-kickstart", "/usr/share/locale")
-gettext.textdomain ("redhat-config-kickstart")
+domain = 'redhat-config-kickstart'
+gettext.bindtextdomain (domain, "/usr/share/locale")
+gettext.textdomain (domain)
 _=gettext.gettext
 
 ##
 ## Icon for windows
 ##
-
 iconPixbuf = None      
 try:
     iconPixbuf = gtk.gdk.pixbuf_new_from_file("/usr/share/redhat-config-kickstart/pixmaps/redhat-config-kickstart.png")
@@ -64,12 +70,21 @@ try:
 except:
     pass
 
+##
+## Pull in the Glade file
+##
+if os.access("redhat-config-kickstart-gtk2.glade", os.F_OK):
+    xml = gtk.glade.XML ("redhat-config-kickstart-gtk2.glade", domain=domain)
+else:
+    xml = gtk.glade.XML ("/usr/share/redhat-config-kickstart/redhat-config-kickstart-gtk2.glade", domain=domain)
+
+
 class kickstartGui:
 	
     def destroy(self, args):
         gtk.mainquit()
 
-    def __init__ (self, xml, file):
+    def __init__ (self, file):
         self.xml = xml
 
         self.kickstartData = kickstartData.KickstartData()
