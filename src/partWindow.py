@@ -215,7 +215,7 @@ class partWindow:
 
         doFormat = self.formatCheck.get_active()
 
-        if size < 1 or size == "":
+        if size < 1 or size == "" and onPart == gtk.FALSE:
             dlg = GnomeMessageBox("You must specify a size for the partition",
                                   MESSAGE_BOX_ERROR, STOCK_BUTTON_OK, None)
             dlg.run_and_close()            
