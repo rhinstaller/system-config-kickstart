@@ -15,7 +15,7 @@ TITLE="Introduction"
 HREF="intro.html"><LINK
 REL="NEXT"
 TITLE="Installation Method"
-HREF="redhat-config-kickstart-install.html"></HEAD><link rel="stylesheet" type="text/css" href="rhdocs-man.css"
+HREF="redhat-config-kickstart-install.html"></HEAD
 ><BODY
 CLASS="CHAPTER"
 BGCOLOR="#FFFFFF"
@@ -90,8 +90,8 @@ SRC="./figs/ksconfig-basic.png"></P
 ></P
 ></DIV
 ><P
->	Choose the language to use during the installation from the
-	<B
+>	Choose the language to use during the installation and as the default
+	language after installation from the <B
 CLASS="GUIMENU"
 >Language</B
 > menu.
@@ -150,11 +150,28 @@ CLASS="GUIBUTTON"
 	not type an already encrypted password and select to encrypt it.
       </P
 ><P
->	Choose one or more languages to install and use after installation from
-	the <B
+>	To install languages in addition to the one selected from the
+	<B
+CLASS="GUILABEL"
+>Language</B
+> pulldown menu. check them in the
+	<B
 CLASS="GUIMENU"
 >Language Support</B
-> list.
+> list. The language selected from the
+	<B
+CLASS="GUILABEL"
+>Language</B
+> pulldown menu is used by default after
+	installation; however, the default can be changed with the
+	<B
+CLASS="APPLICATION"
+>Language Configuration Tool</B
+>
+	(<TT
+CLASS="COMMAND"
+>redhat-config-language</TT
+>) after installation.
       </P
 ><P
 >	Choosing <B
