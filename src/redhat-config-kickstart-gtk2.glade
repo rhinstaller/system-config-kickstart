@@ -778,6 +778,7 @@
 
   <child internal-child="vbox">
     <widget class="GtkVBox" id="dialog-vbox3">
+      <property name="border_width">2</property>
       <property name="visible">True</property>
       <property name="homogeneous">False</property>
       <property name="spacing">8</property>
@@ -1234,7 +1235,7 @@
 		  <child>
 		    <widget class="GtkMenuItem" id="raid_0_menu_item">
 		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">RAID 0</property>
+		      <property name="label" translatable="yes">0</property>
 		      <property name="use_underline">True</property>
 		      <signal name="activate" handler="on_RAID 0_activate" last_modification_time="Tue, 23 Jul 2002 15:17:14 GMT"/>
 		    </widget>
@@ -1243,7 +1244,7 @@
 		  <child>
 		    <widget class="GtkMenuItem" id="raid_1_menu_item">
 		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">RAID 1</property>
+		      <property name="label" translatable="yes">1</property>
 		      <property name="use_underline">True</property>
 		      <signal name="activate" handler="on_RAID 1_activate" last_modification_time="Tue, 23 Jul 2002 15:17:14 GMT"/>
 		    </widget>
@@ -1252,7 +1253,7 @@
 		  <child>
 		    <widget class="GtkMenuItem" id="raid_5_menu_item">
 		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">RAID 5</property>
+		      <property name="label" translatable="yes">5</property>
 		      <property name="use_underline">True</property>
 		      <signal name="activate" handler="on_RAID 5_activate" last_modification_time="Tue, 23 Jul 2002 15:17:14 GMT"/>
 		    </widget>
@@ -1346,13 +1347,20 @@
 	      <property name="window_placement">GTK_CORNER_TOP_LEFT</property>
 
 	      <child>
-		<widget class="GtkTreeView" id="raid_partitions_view">
+		<widget class="GtkViewport" id="viewport1">
 		  <property name="visible">True</property>
-		  <property name="can_focus">True</property>
-		  <property name="headers_visible">False</property>
-		  <property name="rules_hint">False</property>
-		  <property name="reorderable">False</property>
-		  <property name="enable_search">True</property>
+		  <property name="shadow_type">GTK_SHADOW_IN</property>
+
+		  <child>
+		    <widget class="GtkTreeView" id="raid_partitions_view">
+		      <property name="visible">True</property>
+		      <property name="can_focus">True</property>
+		      <property name="headers_visible">False</property>
+		      <property name="rules_hint">False</property>
+		      <property name="reorderable">False</property>
+		      <property name="enable_search">True</property>
+		    </widget>
+		  </child>
 		</widget>
 	      </child>
 	    </widget>
