@@ -1136,7 +1136,6 @@
 <widget class="GtkWindow" id="main_window">
   <property name="width_request">640</property>
   <property name="height_request">480</property>
-  <property name="visible">True</property>
   <property name="title" translatable="yes">Kickstart Configurator</property>
   <property name="type">GTK_WINDOW_TOPLEVEL</property>
   <property name="window_position">GTK_WIN_POS_NONE</property>
@@ -1312,8 +1311,7 @@
 	      <child>
 		<widget class="GtkNotebook" id="options_notebook">
 		  <property name="visible">True</property>
-		  <property name="can_focus">True</property>
-		  <property name="show_tabs">True</property>
+		  <property name="show_tabs">False</property>
 		  <property name="show_border">False</property>
 		  <property name="tab_pos">GTK_POS_TOP</property>
 		  <property name="scrollable">False</property>

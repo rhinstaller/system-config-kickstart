@@ -102,9 +102,6 @@ class ksconfig_gui:
 		#bring in scripts function
 		self.scripts_class = scripts.scripts(xml)	
 
-		#show gui
-		self.toplevel.show_all()
-
 		#populate category list
 		self.category_view = xml.get_widget("list_view")
 		self.category_store = gtk.ListStore(gobject.TYPE_STRING)
@@ -142,6 +139,8 @@ class ksconfig_gui:
 #		xml.signal_connect("on_activate_confirm_options", self.on_activate_confirm_options)
 #		xml.signal_connect("on_help_button_clicked", self.on_help_button_clicked)
 
+		#show gui
+		self.toplevel.show_all()
 
 		gtk.mainloop ()
 
