@@ -69,6 +69,12 @@ fi
   their translations out of the comps.xml file instead of relying on a
   built-in list (#143094).
 
+* Tue Nov 24 2004 Chris Lumens <clumens@redhat.com> - 2.5.16-2
+- Bump revision number.
+
+* Tue Nov 24 2004 Chris Lumens <clumens@redhat.com> - 2.5.16-1
+- Rebuilt for RHEL4 to fix problems listed below.
+
 * Tue Nov 23 2004 Chris Lumens <clumens@redhat.com> - 2.5.16-1
 - Fix display in indic locale (#138310) and (#138601)
 - Monitor order (#127477)
