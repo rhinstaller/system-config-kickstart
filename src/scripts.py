@@ -45,14 +45,9 @@ class scripts:
         data = []
         data.append("")
         data.append(self.preData())
-#        data.append("")
         data.append(self.postData())
-
-#        buf = self.preData() + self.postData()
-#        data.append(buf)
         return data
     
-
     def preData(self):
         length = self.pre_text.get_length()
         if length > 0:
@@ -61,7 +56,6 @@ class scripts:
         else:
             buf = ""
         return buf
-
 
     def postData(self):
         post_command = "%post"
