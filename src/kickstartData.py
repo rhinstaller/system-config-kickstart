@@ -30,6 +30,7 @@ class KickstartData:
         self.pre = None
         self.post = None
         self.upgrade = None
+        self.xconfig = None
         self.partList = []
         self.raidList = []
 
@@ -212,7 +213,10 @@ class KickstartData:
         return self.firewall
 
     def setSkipX(self, args):
-        self.skipx = args
+        if args == None:
+            self.skipx = None
+        else:
+            self.skipx = "skipx"
 
     def getSkipX(self):
         return self.skipx
@@ -246,6 +250,16 @@ class KickstartData:
 
     def clearRaidList(self):
         self.raidList = []
+
+    def setXconfig(self, args):
+        print "in setXconfig"
+        if args == None:
+            self.xconfig = None
+        else:
+            self.xconfig = args
+
+    def getXconfig(self):
+        return self.xconfig
 
     def getAll(self):
         print "in getAll\n\n"
@@ -343,6 +357,14 @@ class KickstartData:
         if self.getFirewall():
             file.append("#Firewall configuration")
             file.append("firewall " + string.join(self.getFirewall(), " "))
+
+        if self.getXconfig():
+            file.append("#XWindows configuration information")
+            file.append("xconfig " + string.join(self.getXconfig(), " "))
+
+        if self.getSkipX():
+            file.append("#Do not configure XWindows")
+            file.append("skipx")
 
         for line in file:
             print line
