@@ -224,7 +224,7 @@ class auth:
         buf = buf + self.myHesiodClass.return_data()
         buf = buf + self.mySambaClass.return_data()
         if (self.nscd_checkbutton.get_active()):
-            buf = buf + "--enablecache"
+            buf = buf + " --enablecache"
         data.append(buf)
         return data
     
