@@ -29,6 +29,7 @@ class partEntry:
         self.fixedSize = ""
         self.setSize = ""
         self.setSizeVal = ""
+        self.sizeStrategy = ""
         self.maxSize = ""
         self.asPrimary = ""
         self.onDisk = ""
@@ -39,24 +40,3 @@ class partEntry:
         self.raidType = ""
         self.raidSpares = ""
         self.isRaidDevice = ""
-
-    def setData (self, rowData):
-        (mountPoint, fsType, sizeStrategy, size, sizeSetVal, asPrimary, 
-         onDisk, onDiskVal, onPart, onPartVal, doFormat, raidType,
-         raidSpares, isRaidDevice, raidNumber) = rowData   
-
-        self.mountPoint = mountPoint
-        self.fsType = fsType
-        self.sizeStrategy = sizeStrategy
-        self.size = size
-        self.sizeSetVal = sizeSetVal
-        self.asPrimary = asPrimary
-        self.onDisk = onDisk
-        self.onDiskVal = onDiskVal
-        self.onPart = onPart
-        self.onPartVal = onPartVal
-        self.doFormat = doFormat
-        self.raidType = raidType
-        self.raidSpares = raidSpares
-        self.isRaidDevice = isRaidDevice
-        self.raidNumber = raidNumber
