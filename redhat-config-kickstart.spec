@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
 Version: 2.3.6
-Release: 2
+Release: 3
 URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
@@ -56,6 +56,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Fri Feb 21 2003 Brent Fox <bfox@redhat.com> 2.3.6-3
+- delete partitions properly (bug #84747)
+
 * Tue Feb 11 2003 Brent Fox <bfox@redhat.com> 2.3.6-2
 - rebuild with latest docs and translations
 
