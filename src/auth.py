@@ -220,6 +220,8 @@ class auth:
         buf = buf + self.myKerberosClass.return_data()
         buf = buf + self.myHesiodClass.return_data()
         buf = buf + self.mySambaClass.return_data()
+        if (self.nscd_checkbutton.get_active()):
+            buf = buf + "--enablecache"
         return buf
     
     def __init__(self, xml):
@@ -259,6 +261,7 @@ class auth:
         self.sambaLabel2 = xml.get_widget("sambaLabel2")
         self.sambaServerEntry = xml.get_widget("sambaServerEntry")
         self.sambaWorkgroupEntry = xml.get_widget("sambaWorkgroupEntry")
+        self.nscd_checkbutton = xml.get_widget("nscd_checkbutton")
         self.shadow_passwd_checkbutton = xml.get_widget("shadow_passwd_checkbutton")
         self.md5_checkbutton = xml.get_widget("md5_checkbutton")
 
