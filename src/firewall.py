@@ -28,6 +28,14 @@ import checklist
 import libglade
 import os
 
+##
+## I18N
+##
+import gettext
+gettext.bindtextdomain ("ksconfig", "/usr/share/locale")
+gettext.textdomain ("ksconfig")
+_=gettext.gettext
+
 class firewall:
     
     def __init__(self, xml):
@@ -51,7 +59,7 @@ class firewall:
               })
 
         #create table with custom checklists
-        self.label1 = GtkLabel ("Trusted devices:")
+        self.label1 = GtkLabel (_("Trusted devices:"))
         self.label1.set_alignment (0.2, 0.0)
         self.customTable.attach (self.label1, 0, 1, 2, 3, FILL, FILL, 5, 5)
         
@@ -79,7 +87,7 @@ class firewall:
         for device in self.netdevices:
             self.trusted.append_row((device, device), FALSE)
 
-        self.label2 = GtkLabel ("Allow incoming:")
+        self.label2 = GtkLabel (_("Allow incoming:"))
         self.label2.set_alignment (0.2, 0.0)
         self.incoming = checklist.CheckList(1)
         self.incoming.connect ('button_press_event', self.incoming_select_row)
@@ -94,7 +102,7 @@ class firewall:
             self.incoming.append_row ((item, item), FALSE)
 
 
-        self.label3 = GtkLabel ("Other ports:")
+        self.label3 = GtkLabel (_("Other ports:"))
         self.label3.set_alignment (0.2, 0.0)
         self.portsEntry = GtkEntry ()
         self.customTable.attach (self.label3, 0, 1, 4, 5, FILL, FILL, 5, 5)
