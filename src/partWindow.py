@@ -1,9 +1,7 @@
-#!/usr/bin/python2.2
-
-## partWindow - event handling code for redhat-config-kickstart's partitioning dialog
-## Copyright (C) 2001, 2002 Red Hat, Inc.
-## Copyright (C) 2001, 2002 Brent Fox <bfox@redhat.com>
-## Copyright (C) 2001, 2002 Tammy Fox <tfox@redhat.com>
+## Kickstart Configurator - A graphical kickstart file generator
+## Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
+## Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+## Copyright (C) 2001, 2002, 2003 Tammy Fox <tfox@redhat.com>
 
 ## This program is free software; you can redistribute it and/or modify
 ## it under the terms of the GNU General Public License as published by
@@ -19,9 +17,6 @@
 ## along with this program; if not, write to the Free Software
 ## Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-## Authors: Brent Fox <bfox@redhat.com>
-##          Tammy Fox <tfox@redhat.com>
-
 import gtk
 import gtk.glade
 import string
@@ -35,7 +30,7 @@ import kickstartGui
 ## 
 from rhpl.translate import _, N_
 import rhpl.translate as translate
-domain = 'redhat-config-kickstart'
+domain = 'system-config-kickstart'
 translate.textdomain (domain)
 gtk.glade.bindtextdomain(domain)
 

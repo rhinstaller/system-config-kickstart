@@ -1,9 +1,7 @@
-#!/usr/bin/env python
-
 ## Kickstart Configurator - A graphical kickstart file generator
-## Copyright (C) 2000, 2001, 2002 Red Hat, Inc.
-## Copyright (C) 2000, 2001, 2002 Brent Fox <bfox@redhat.com>
-##                                Tammy Fox <tfox@redhat.com>
+## Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+## Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+##                                      Tammy Fox <tfox@redhat.com>
 
 ## This program is free software; you can redistribute it and/or modify
 ## it under the terms of the GNU General Public License as published by
@@ -32,7 +30,7 @@ import getopt
 ## 
 from rhpl.translate import _, N_
 import rhpl.translate as translate
-domain = 'redhat-config-kickstart'
+domain = 'system-config-kickstart'
 translate.textdomain (domain)
 gtk.glade.bindtextdomain(domain)
 

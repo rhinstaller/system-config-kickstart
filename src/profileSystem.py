@@ -1,8 +1,6 @@
-#!/usr/bin/python2.2
-
-## Copyright (C) 2000, 2001, 2002 Red Hat, Inc.
-## Copyright (C) 2000, 2001, 2002 Brent Fox <bfox@redhat.com>
-##                                Tammy Fox <tfox@redhat.com>
+## Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+## Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+##                                      Tammy Fox <tfox@redhat.com>
 
 ## This program is free software; you can redistribute it and/or modify
 ## it under the terms of the GNU General Public License as published by
@@ -18,13 +16,10 @@
 ## along with this program; if not, write to the Free Software
 ## Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-## Authors: Brent Fox <bfox@redhat.com>
-##          Tammy Fox <tfox@redhat.com>
-
 import string
 import sys
 import os
-sys.path.append("/usr/share/redhat-config-language")
+sys.path.append("/usr/share/system-config-language")
 import language_backend
 import rhpl.keyboard as keyboard
 import rhpl.mouse as mouse

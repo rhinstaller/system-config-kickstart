@@ -1,5 +1,3 @@
-#!/usr/bin/python2.2
-
 ## Kickstart Configurator - A graphical kickstart file generator
 ## Copyright (C) 2000, 2001, 2002 Red Hat, Inc.
 ## Copyright (C) 2000, 2001, 2002 Brent Fox <bfox@redhat.com>

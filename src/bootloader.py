@@ -1,9 +1,7 @@
-#!/usr/bin/env python
-
 ## Kickstart Configurator - A graphical kickstart file generator
-## Copyright (C) 2000, 200, 20021 Red Hat, Inc.
-## Copyright (C) 2000, 2001, 2002 Brent Fox <bfox@redhat.com>
-##                                Tammy Fox <tfox@redhat.com>
+## Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+## Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+##                                      Tammy Fox <tfox@redhat.com>
 
 ## This program is free software; you can redistribute it and/or modify
 ## it under the terms of the GNU General Public License as published by
@@ -19,8 +17,6 @@
 ## along with this program; if not, write to the Free Software
 ## Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-#Kickstart Configurator Bootloader Configuration
-
 import gtk
 import gtk.glade
 import string
@@ -32,7 +28,7 @@ import crypt
 ## 
 from rhpl.translate import _, N_
 import rhpl.translate as translate
-domain = 'redhat-config-kickstart'
+domain = 'system-config-kickstart'
 translate.textdomain (domain)
 gtk.glade.bindtextdomain(domain)
 

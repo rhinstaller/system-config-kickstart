@@ -70,10 +70,10 @@ except:
 ##
 ## Pull in the Glade file
 ##
-if os.access("system-config-kickstart-gtk2.glade", os.F_OK):
-    xml = gtk.glade.XML ("system-config-kickstart-gtk2.glade", domain=domain)
+if os.access("system-config-kickstart.glade", os.F_OK):
+    xml = gtk.glade.XML ("system-config-kickstart.glade", domain=domain)
 else:
-    xml = gtk.glade.XML ("/usr/share/system-config-kickstart/system-config-kickstart-gtk2.glade", domain=domain)
+    xml = gtk.glade.XML ("/usr/share/system-config-kickstart/system-config-kickstart.glade", domain=domain)
 
 
 class kickstartGui:
