@@ -47,6 +47,7 @@ fi
 %files
 %defattr(-,root,root)
 %doc COPYING
+%doc doc/*
 /usr/sbin/ksconfig
 %dir /usr/share/ksconfig
 /usr/share/ksconfig/*
@@ -54,9 +55,10 @@ fi
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
-* Tue Jul 18 2001 Tammy Fox <tfox@redhat.com>
-- added i18n stuff
+* Wed Jul 18 2001 Tammy Fox <tfox@redhat.com>
+- added po directory
 - added grub password and initialize the disk label
+- added help manual and function to display it
 
 * Mon Jul 16 2001 Brent Fox <bfox@redhat.com>
 - finished partitioning page

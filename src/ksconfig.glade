@@ -1023,6 +1023,33 @@
 	      </widget>
 
 	      <widget>
+		<class>GtkHSeparator</class>
+		<name>hseparator15</name>
+		<child>
+		  <padding>0</padding>
+		  <expand>False</expand>
+		  <fill>False</fill>
+		</child>
+	      </widget>
+
+	      <widget>
+		<class>GtkLabel</class>
+		<name>grub_options_label</name>
+		<label>GRUB Options:</label>
+		<justify>GTK_JUSTIFY_CENTER</justify>
+		<wrap>False</wrap>
+		<xalign>0</xalign>
+		<yalign>0.5</yalign>
+		<xpad>0</xpad>
+		<ypad>0</ypad>
+		<child>
+		  <padding>0</padding>
+		  <expand>False</expand>
+		  <fill>False</fill>
+		</child>
+	      </widget>
+
+	      <widget>
 		<class>GtkVBox</class>
 		<name>vbox23</name>
 		<homogeneous>False</homogeneous>
@@ -1034,74 +1061,47 @@
 		</child>
 
 		<widget>
-		  <class>GtkHSeparator</class>
-		  <name>hseparator15</name>
-		  <child>
-		    <padding>5</padding>
-		    <expand>False</expand>
-		    <fill>False</fill>
-		  </child>
-		</widget>
-
-		<widget>
-		  <class>GtkLabel</class>
-		  <name>grub_options_label</name>
-		  <label>GRUB Options:</label>
-		  <justify>GTK_JUSTIFY_CENTER</justify>
-		  <wrap>False</wrap>
-		  <xalign>0</xalign>
-		  <yalign>0.5</yalign>
-		  <xpad>0</xpad>
-		  <ypad>0</ypad>
+		  <class>GtkHBox</class>
+		  <name>hbox37</name>
+		  <homogeneous>False</homogeneous>
+		  <spacing>9</spacing>
 		  <child>
 		    <padding>0</padding>
 		    <expand>False</expand>
 		    <fill>False</fill>
 		  </child>
-		</widget>
-	      </widget>
 
-	      <widget>
-		<class>GtkHBox</class>
-		<name>hbox37</name>
-		<homogeneous>False</homogeneous>
-		<spacing>9</spacing>
-		<child>
-		  <padding>0</padding>
-		  <expand>True</expand>
-		  <fill>True</fill>
-		</child>
+		  <widget>
+		    <class>GtkLabel</class>
+		    <name>grub_password_label</name>
+		    <label>Use GRUB Password: </label>
+		    <justify>GTK_JUSTIFY_CENTER</justify>
+		    <wrap>False</wrap>
+		    <xalign>0.5</xalign>
+		    <yalign>0.5</yalign>
+		    <xpad>0</xpad>
+		    <ypad>0</ypad>
+		    <child>
+		      <padding>0</padding>
+		      <expand>False</expand>
+		      <fill>False</fill>
+		    </child>
+		  </widget>
 
-		<widget>
-		  <class>GtkLabel</class>
-		  <name>grub_password_label</name>
-		  <label>Use GRUB Password: </label>
-		  <justify>GTK_JUSTIFY_CENTER</justify>
-		  <wrap>False</wrap>
-		  <xalign>0.5</xalign>
-		  <yalign>0.5</yalign>
-		  <xpad>0</xpad>
-		  <ypad>0</ypad>
-		  <child>
-		    <padding>0</padding>
-		    <expand>False</expand>
-		    <fill>False</fill>
-		  </child>
-		</widget>
-
-		<widget>
-		  <class>GtkEntry</class>
-		  <name>grub_password_entry</name>
-		  <can_focus>True</can_focus>
-		  <editable>True</editable>
-		  <text_visible>False</text_visible>
-		  <text_max_length>0</text_max_length>
-		  <text></text>
-		  <child>
-		    <padding>0</padding>
-		    <expand>False</expand>
-		    <fill>False</fill>
-		  </child>
+		  <widget>
+		    <class>GtkEntry</class>
+		    <name>grub_password_entry</name>
+		    <can_focus>True</can_focus>
+		    <editable>True</editable>
+		    <text_visible>False</text_visible>
+		    <text_max_length>0</text_max_length>
+		    <text></text>
+		    <child>
+		      <padding>0</padding>
+		      <expand>False</expand>
+		      <fill>False</fill>
+		    </child>
+		  </widget>
 		</widget>
 	      </widget>
 	    </widget>
@@ -4140,7 +4140,7 @@
 		    <name>securityHighRadio</name>
 		    <can_focus>True</can_focus>
 		    <label>High</label>
-		    <active>True</active>
+		    <active>False</active>
 		    <draw_indicator>True</draw_indicator>
 		    <group>firewall_group</group>
 		    <child>
@@ -4155,7 +4155,7 @@
 		    <name>securityMediumRadio</name>
 		    <can_focus>True</can_focus>
 		    <label>Medium</label>
-		    <active>False</active>
+		    <active>True</active>
 		    <draw_indicator>True</draw_indicator>
 		    <group>firewall_group</group>
 		    <child>

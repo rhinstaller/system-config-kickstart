@@ -32,6 +32,7 @@ import gtk
 import signal
 import libglade
 import gnome.ui
+import gnome.help
 
 import basic
 import bootloader
@@ -45,6 +46,7 @@ import xconfig
 import packages
 import scripts
 
+
 ##
 ## I18N
 ##
@@ -54,6 +56,8 @@ gettext.textdomain ("ksconfig")
 _=gettext.gettext
 
 xml = libglade.GladeXML ("/usr/share/ksconfig/ksconfig.glade", domain="ksconfig")
+
+VERSION = "1.9.4"
 
 class ksconfig_gui:
 	
@@ -102,6 +106,8 @@ class ksconfig_gui:
  			  "select_category" : self.select_category,
 			  "on_about_activate" : self.on_about_activate,
 			  "on_activate_confirm_options" : self.on_activate_confirm_options,
+			  "on_help_button_clicked" : self.on_help_button_clicked,
+			  
 			  } )
 
 		#populate category list
@@ -158,12 +164,30 @@ class ksconfig_gui:
 
 	#about box
 	def on_about_activate(self, args):
-		aboutDialog = gnome.ui.GnomeAbout ("Kickstart Configurator", "1.9",
+		aboutDialog = gnome.ui.GnomeAbout ("Kickstart Configurator", VERSION,
 						   "Copyright (c) 2000, 2001 Red Hat, Inc.",
 						   ["Brent Fox <bfox@redhat.com>",
 						    "Tammy Fox <tfox@redhat.com>"],
-						   _("A graphical interface for creating a basic kickstart file."))
+						   _("A graphical interface for creating a kickstart file."))
 		aboutDialog.run_and_close()
+
+	#display help manual
+	def on_help_button_clicked (self, args):
+	
+		help_pages = ["file:///usr/share/doc/ksconfig-" + VERSION + "ksconfig-basic.html",
+			      "file:///usr/share/doc/ksconfig-" + VERSION + "ksconfig-bootloader.html",
+			      "file:///usr/share/doc/ksconfig-" + VERSION + "ksconfig-install.html",
+			      "file:///usr/share/doc/ksconfig-" + VERSION + "ksconfig-partitions.html",
+			      "file:///usr/share/doc/ksconfig-" + VERSION + "ksconfig-network.html",
+			      "file:///usr/share/doc/ksconfig-" + VERSION + "ksconfig-auth.html",
+			      "file:///usr/share/doc/ksconfig-" + VERSION + "ksconfig-firewall.html",
+			      "file:///usr/share/doc/ksconfig-" + VERSION + "ksconfig-xconfig.html",
+			      "file:///usr/share/doc/ksconfig-" + VERSION + "ksconfig-pkgs.html",
+			      "file:///usr/share/doc/ksconfig-" + VERSION + "ksconfig-prescript.html",
+			      "file:///usr/share/doc/ksconfig-" + VERSION + "ksconfig-postscript.html",
+			      ]
+		print self.options_notebook.get_current_page ()
+		gnome.help.goto (help_pages [self.options_notebook.get_current_page ()])
 
 	#show choosen options for confirmation
 	def on_activate_confirm_options (self, *args):
