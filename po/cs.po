@@ -32,9 +32,9 @@ msgstr "Oddíl:"
 msgid "_About"
 msgstr "O _programu"
 
-#: redhat-config-kickstart.gladestrings:243
-msgid "High"
-msgstr "Vysoká"
+#: redhat-config-kickstart.gladestrings:152
+msgid "_Add"
+msgstr "_Přidat"
 
 #: redhat-config-kickstart.gladestrings:83
 msgid "Language Support:"
@@ -48,7 +48,7 @@ msgstr "Implicitní desktop:"
 msgid "Make RAID Device"
 msgstr "Vytvořit RAID zařízení"
 
-#: ../src/partWindow.py:501
+#: ../src/partWindow.py:483
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -72,7 +72,7 @@ msgstr "label30"
 msgid "label31"
 msgstr "label31"
 
-#: ../src/kickstartGui.py:128
+#: ../src/kickstartGui.py:129
 msgid "Authentication"
 msgstr "Autentizace"
 
@@ -97,7 +97,11 @@ msgstr "Použít interpret:"
 msgid "Additional Size Options"
 msgstr "Doplňující volby velikosti"
 
-#: ../src/partWindow.py:507
+#: redhat-config-kickstart.gladestrings:261
+msgid "Video Card RAM: "
+msgstr "Paměť videokarty: "
+
+#: ../src/partWindow.py:489
 msgid ""
 "The partition you specified does not begin with \"hd\" or \"sd\".  "
 "Partitions must have a valid device name and partition number such as \"hda1"
@@ -110,15 +114,15 @@ msgstr ""
 msgid "Install new boot loader"
 msgstr "Nainstalovat nový zavaděč"
 
-#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:248
+#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:248
 msgid "Firewall Configuration"
 msgstr "Nastavení firewallu"
 
-#: ../src/partWindow.py:85 redhat-config-kickstart.gladestrings:59
+#: ../src/partWindow.py:86 redhat-config-kickstart.gladestrings:59
 msgid "ext3"
 msgstr "ext3"
 
-#: ../src/partWindow.py:85 redhat-config-kickstart.gladestrings:58
+#: ../src/partWindow.py:86 redhat-config-kickstart.gladestrings:58
 msgid "ext2"
 msgstr "ext2"
 
@@ -130,11 +134,11 @@ msgstr "Šifrovat heslo pro GRUB"
 msgid "Fill all unused space on disk"
 msgstr "Vyplnit všechno volné místo na disku"
 
-#: ../src/kickstartGui.py:167
+#: ../src/kickstartGui.py:165
 msgid "About Kickstart Configurator"
 msgstr "O programu Nastavení kickstartu"
 
-#: ../src/firewall.py:59
+#: ../src/firewall.py:60
 msgid "Trusted devices:"
 msgstr "Bezpečná zařízení:"
 
@@ -146,7 +150,7 @@ msgstr "Pevná velikost"
 msgid "0"
 msgstr "0"
 
-#: ../src/partWindow.py:88 redhat-config-kickstart.gladestrings:60
+#: ../src/partWindow.py:89 redhat-config-kickstart.gladestrings:60
 msgid "swap"
 msgstr "swap"
 
@@ -242,11 +246,11 @@ msgstr "Doménový kontrolér pro Kerberos (KDC):"
 msgid "Specify hsync and vsync instead of monitor"
 msgstr "Určit horiz. a vert. frekvenci místo monitoru"
 
-#: ../src/partWindow.py:87 ../src/partWindow.py:146
+#: ../src/partWindow.py:88 ../src/partWindow.py:147
 msgid "software RAID"
 msgstr "softwarový RAID"
 
-#: ../src/partWindow.py:489
+#: ../src/partWindow.py:471
 msgid "Specify a device on which to create the partition."
 msgstr "Zadejte zařízení, na kterém má být oddíl vytvořen."
 
@@ -311,7 +315,7 @@ msgstr "HTTP"
 msgid "Raid Devices"
 msgstr "RAID zařízení"
 
-#: ../src/kickstartGui.py:127
+#: ../src/kickstartGui.py:128
 msgid "Boot Loader Options"
 msgstr "Volby pro zavaděč"
 
@@ -331,9 +335,9 @@ msgstr "Použít zavaděč systému LILO"
 msgid "HTTP Server:"
 msgstr "HTTP server:"
 
-#: redhat-config-kickstart.gladestrings:261
-msgid "Video Card RAM: "
-msgstr "Paměť videokarty: "
+#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:194
+msgid "Network Configuration"
+msgstr "Nastavení sítě"
 
 #: redhat-config-kickstart.gladestrings:81
 msgid "Root Password:"
@@ -351,7 +355,7 @@ msgstr "Vytvořit zařízení RAID [implicitní = /dev/md0]"
 msgid "Type"
 msgstr "Typ"
 
-#: ../src/xconfig.py:109
+#: ../src/xconfig.py:111
 msgid "Could not read monitor database"
 msgstr "Nelze načíst databázi monitorů"
 
@@ -367,7 +371,7 @@ msgstr "Hz"
 msgid "label93"
 msgstr "label93"
 
-#: ../src/kickstartGui.py:126
+#: ../src/kickstartGui.py:127
 msgid "Basic Configuration"
 msgstr "Základní nastavení"
 
@@ -399,21 +403,23 @@ msgstr "SMB skupina:"
 msgid "SMB"
 msgstr "SMB"
 
-#: ../src/kickstartGui.py:126
+#: ../src/kickstartGui.py:127
 msgid "Installation Method"
 msgstr "Metoda instalace"
 
-#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:289
+#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:289
 msgid "Pre-Installation Script"
 msgstr "Předinstalační skript"
 
-#: ../src/partWindow.py:418
+#: ../src/partWindow.py:401
 msgid "Specify a mount point for the partition."
 msgstr "Zadejte místo připojení tento oddíl"
 
-#: redhat-config-kickstart.gladestrings:53
-msgid "md14"
-msgstr "md14"
+#: ../src/network.py:298
+msgid ""
+"A network device with the name %s already exists.  Please choose another "
+"device name"
+msgstr ""
 
 #: redhat-config-kickstart.gladestrings:54
 msgid "md15"
@@ -460,9 +466,9 @@ msgstr "_Upravit"
 msgid "Netmask: "
 msgstr "Síť. maska: "
 
-#: ../src/install.py:136
-msgid "Please enter an NFS directory."
-msgstr "Zadejte prosím adresář NFS."
+#: redhat-config-kickstart.gladestrings:61
+msgid "vfat"
+msgstr "vfat"
 
 #: redhat-config-kickstart.gladestrings:47
 msgid "md8"
@@ -477,9 +483,9 @@ msgstr "md9"
 msgid "NFS"
 msgstr "NFS"
 
-#: ../src/kickstartGui.py:128 redhat-config-kickstart.gladestrings:194
-msgid "Network Configuration"
-msgstr "Nastavení sítě"
+#: redhat-config-kickstart.gladestrings:8
+msgid "Partition Options"
+msgstr "Volby pro oddíly"
 
 #: redhat-config-kickstart.gladestrings:285
 msgid ""
@@ -497,9 +503,9 @@ msgstr "md2"
 msgid "md3"
 msgstr "md3"
 
-#: redhat-config-kickstart.gladestrings:148
-msgid "Remove existing Linux partitions"
-msgstr "Odstranit existující linuxové oddíly"
+#: redhat-config-kickstart.gladestrings:39
+msgid "md0"
+msgstr "md0"
 
 #: redhat-config-kickstart.gladestrings:146
 msgid "Do not clear Master Boot Record"
@@ -541,7 +547,7 @@ msgstr "NFS server:"
 msgid "KDE"
 msgstr "KDE"
 
-#: ../src/kickstartGui.py:127
+#: ../src/kickstartGui.py:128
 msgid "Partition Information"
 msgstr "Informace oddílech"
 
@@ -589,8 +595,7 @@ msgstr "Vymazat hlavní zaváděcí záznam"
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "Pro použití RAID %s musíte zvolit alespoň 3 oddíly"
 
-#: ../src/partWindow.py:252 ../src/partWindow.py:280 ../src/partWindow.py:544
-#: ../src/raidWindow.py:203
+#: ../src/partWindow.py:253 ../src/partWindow.py:518 ../src/raidWindow.py:203
 msgid "Yes"
 msgstr "Ano"
 
@@ -602,7 +607,7 @@ msgstr "Počet rezerv:"
 msgid "FTP Directory:"
 msgstr "FTP adresář:"
 
-#: ../src/partWindow.py:449
+#: ../src/partWindow.py:431
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -618,14 +623,13 @@ msgstr "label89"
 msgid "_Automatically Resolve Dependencies"
 msgstr "Závislosti řešit _automaticky"
 
-#: ../src/partWindow.py:427
+#: ../src/partWindow.py:410
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "Místo připojení \"%s\" je již použito. Zvolte prosím jiné místo připojení."
 
-#: ../src/partWindow.py:254 ../src/partWindow.py:282 ../src/partWindow.py:546
-#: ../src/raidWindow.py:205
+#: ../src/partWindow.py:255 ../src/partWindow.py:520 ../src/raidWindow.py:205
 msgid "No"
 msgstr "Ne"
 
@@ -637,6 +641,10 @@ msgstr "DNS server:"
 #: redhat-config-kickstart.gladestrings:97
 msgid "CD-ROM"
 msgstr "CD-ROM"
+
+#: redhat-config-kickstart.gladestrings:53
+msgid "md14"
+msgstr "md14"
 
 #: redhat-config-kickstart.gladestrings:228
 msgid "Hesiod Authentication"
@@ -670,13 +678,28 @@ msgstr "NIS autentizace"
 msgid "SMB Authentication"
 msgstr "SMB autentizace"
 
+#: redhat-config-kickstart.gladestrings:167
+#: redhat-config-kickstart.gladestrings:169
+#: redhat-config-kickstart.gladestrings:171
+#: redhat-config-kickstart.gladestrings:174
+#: redhat-config-kickstart.gladestrings:176
+#: redhat-config-kickstart.gladestrings:178
+#: redhat-config-kickstart.gladestrings:181
+#: redhat-config-kickstart.gladestrings:183
+#: redhat-config-kickstart.gladestrings:185
+#: redhat-config-kickstart.gladestrings:188
+#: redhat-config-kickstart.gladestrings:190
+#: redhat-config-kickstart.gladestrings:192
+msgid "."
+msgstr "."
+
 #: redhat-config-kickstart.gladestrings:156
 msgid "Partition Information (required)"
 msgstr "Informace o oddílech (povinné)"
 
-#: redhat-config-kickstart.gladestrings:39
-msgid "md0"
-msgstr "md0"
+#: redhat-config-kickstart.gladestrings:148
+msgid "Remove existing Linux partitions"
+msgstr "Odstranit existující linuxové oddíly"
 
 #: redhat-config-kickstart.gladestrings:274
 msgid "label88"
@@ -690,7 +713,11 @@ msgstr "Zadejte prosím oddíl na disku."
 msgid "md1"
 msgstr "md1"
 
-#: ../src/partWindow.py:295
+#: redhat-config-kickstart.gladestrings:243
+msgid "High"
+msgstr "Vysoká"
+
+#: ../src/partWindow.py:280
 msgid "Hard Drives"
 msgstr "Pevné disky"
 
@@ -778,20 +805,9 @@ msgstr "RAID zařízení:"
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "Zavaděč instalovat do hlavního zaváděcího záznamu (MBR) "
 
-#: redhat-config-kickstart.gladestrings:167
-#: redhat-config-kickstart.gladestrings:169
-#: redhat-config-kickstart.gladestrings:171
-#: redhat-config-kickstart.gladestrings:174
-#: redhat-config-kickstart.gladestrings:176
-#: redhat-config-kickstart.gladestrings:178
-#: redhat-config-kickstart.gladestrings:181
-#: redhat-config-kickstart.gladestrings:183
-#: redhat-config-kickstart.gladestrings:185
-#: redhat-config-kickstart.gladestrings:188
-#: redhat-config-kickstart.gladestrings:190
-#: redhat-config-kickstart.gladestrings:192
-msgid "."
-msgstr "."
+#: ../src/kickstartGui.py:242
+msgid "The file \"%s\" cannot be accessed."
+msgstr ""
 
 #: redhat-config-kickstart.gladestrings:13
 msgid "Size (MB):"
@@ -801,7 +817,7 @@ msgstr "Velikost (MB):"
 msgid "Use Shadow Passwords"
 msgstr "Použít stínová hesla"
 
-#: ../src/firewall.py:106
+#: ../src/firewall.py:107
 msgid "Allow incoming:"
 msgstr "Povolit příchozí:"
 
@@ -810,7 +826,11 @@ msgstr "Povolit příchozí:"
 msgid "Mount Point:"
 msgstr "Místo připojení:"
 
-#: ../src/firewall.py:140
+#: ../src/network.py:87
+msgid "Device"
+msgstr "Zařízení"
+
+#: ../src/firewall.py:141
 msgid "Other ports: (1029:tcp)"
 msgstr "Ostatní porty: (1029:tcp)"
 
@@ -846,16 +866,8 @@ msgstr "Aktualizovat existující instalaci"
 msgid "Use broadcast to find NIS server"
 msgstr "Pro nalezení NIS serveru použít broadcast"
 
-#: redhat-config-kickstart.gladestrings:8
-msgid "Partition Options"
-msgstr "Volby pro oddíly"
-
-#: ../src/partition.py:150 ../src/partition.py:178
-msgid "Please select a partition from the list."
-msgstr "Vyberte prosím oddíl ze seznamu."
-
-#: ../src/basic.py:251 ../src/install.py:197 ../src/partition.py:300
-#: ../src/partWindow.py:514 ../src/raidWindow.py:241
+#: ../src/basic.py:197 ../src/install.py:197 ../src/partition.py:299
+#: ../src/partWindow.py:496 ../src/raidWindow.py:241
 msgid "Error"
 msgstr "Chyba"
 
@@ -863,7 +875,7 @@ msgstr "Chyba"
 msgid "Language:"
 msgstr "Jazyk:"
 
-#: ../src/kickstartGui.py:166
+#: ../src/kickstartGui.py:164
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -949,9 +961,9 @@ msgstr "Video karta"
 msgid "Basic Configuration (required)"
 msgstr "Základní nastavení (povinné)"
 
-#: redhat-config-kickstart.gladestrings:61
-msgid "vfat"
-msgstr "vfat"
+#: ../src/install.py:136
+msgid "Please enter an NFS directory."
+msgstr "Zadejte prosím adresář NFS."
 
 #: redhat-config-kickstart.gladestrings:159
 msgid "DHCP"
@@ -969,11 +981,11 @@ msgstr ""
 msgid "Raid Members"
 msgstr "Členové RAID"
 
-#: ../src/kickstartGui.py:122
+#: ../src/kickstartGui.py:123
 msgid "Subsection"
 msgstr "Podoblast"
 
-#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:273
+#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:273
 msgid "X Configuration"
 msgstr "Nastavení X"
 
@@ -1005,9 +1017,9 @@ msgstr "Úroveň RAIDu:"
 msgid "FTP Username"
 msgstr "Uživatelské jméno pro FTP:"
 
-#: redhat-config-kickstart.gladestrings:160
-msgid "Static IP"
-msgstr "Statická IP"
+#: ../src/kickstartGui.py:132 redhat-config-kickstart.gladestrings:296
+msgid "Post-Installation Script"
+msgstr "Poinstalační skript"
 
 #: redhat-config-kickstart.gladestrings:123
 msgid "Installation Method (required)"
@@ -1017,6 +1029,10 @@ msgstr "Metoda instalace (povinné)"
 msgid "Reboot system after installation"
 msgstr "Restartovat po instalaci systém"
 
+#: ../src/network.py:197
+msgid "Please fill in the network information"
+msgstr ""
+
 #: ../src/raidOptionsWindow.py:75
 msgid "You currently have %d software RAID partition(s) free to use."
 msgstr "Aktuálně máte k dispozici %d oddílů softwarového RAID."
@@ -1025,11 +1041,18 @@ msgstr "Aktuálně máte k dispozici %d oddílů softwarového RAID."
 msgid "Mouse:"
 msgstr "Myš:"
 
-#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:296
-msgid "Post-Installation Script"
-msgstr "Poinstalační skript"
+#: ../src/network.py:109 ../src/network.py:137 ../src/network.py:207
+#: ../src/network.py:254 ../src/network.py:390
+#: redhat-config-kickstart.gladestrings:160
+msgid "Static IP"
+msgstr "Statická IP"
 
-#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:283
+#: ../src/network.py:90
+#, fuzzy
+msgid "Network Type"
+msgstr "Typ sítě:"
+
+#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:283
 msgid "Package Selection"
 msgstr "Výběr balíčků"
 
@@ -1049,9 +1072,9 @@ msgstr "Inicializovat jmenovku disku"
 msgid "Development"
 msgstr "Vývoj"
 
-#: redhat-config-kickstart.gladestrings:69
-msgid "_Contents"
-msgstr "_Obsah"
+#: ../src/partition.py:150 ../src/partition.py:178
+msgid "Please select a partition from the list."
+msgstr "Vyberte prosím oddíl ze seznamu."
 
 #: redhat-config-kickstart.gladestrings:78
 msgid "Emulate 3 Buttons"
@@ -1121,11 +1144,11 @@ msgstr "Detekovat videokartu"
 msgid "Monitor"
 msgstr "Monitor"
 
-#: ../src/kickstartGui.py:197
+#: ../src/kickstartGui.py:195
 msgid "Help is not available."
 msgstr "Nápověda není k dispozici."
 
-#: ../src/partWindow.py:491
+#: ../src/partWindow.py:473
 msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
@@ -1137,11 +1160,11 @@ msgstr ""
 msgid "Please enter an FTP user name."
 msgstr "Zadejte prosím jméno uživatele pro FTP."
 
-#: ../src/basic.py:250
+#: ../src/basic.py:196
 msgid "Please select a root password."
 msgstr "Zadejte prosím heslo pro uživatele root."
 
-#: ../src/xconfig.py:91
+#: ../src/xconfig.py:93
 msgid "Could not read video card database"
 msgstr "Nelze číst databázi grafických karet"
 
@@ -1219,11 +1242,11 @@ msgstr "Provést novou instalaci"
 msgid "Use GRUB password: "
 msgstr "Použít heslo pro GRUB: "
 
-#: redhat-config-kickstart.gladestrings:152
-msgid "_Add"
-msgstr "_Přidat"
+#: redhat-config-kickstart.gladestrings:69
+msgid "_Contents"
+msgstr "_Obsah"
 
-#: ../src/partWindow.py:301 ../src/partWindow.py:320 ../src/partWindow.py:334
+#: ../src/partWindow.py:286 ../src/partWindow.py:305 ../src/partWindow.py:319
 msgid "Auto"
 msgstr "Auto"
 
@@ -1286,9 +1309,6 @@ msgstr "_Konec"
 
 #~ msgid "File System Type"
 #~ msgstr "Typ souborového systému"
-
-#~ msgid "Device"
-#~ msgstr "Zařízení"
 
 #~ msgid "Upgrade Only Options:"
 #~ msgstr "Volby pro aktualizaci:"

@@ -30,9 +30,9 @@ msgstr "Disksneið :"
 msgid "_About"
 msgstr "_Um"
 
-#: redhat-config-kickstart.gladestrings:243
-msgid "High"
-msgstr "Hátt"
+#: redhat-config-kickstart.gladestrings:152
+msgid "_Add"
+msgstr "_Bæta við"
 
 #: redhat-config-kickstart.gladestrings:83
 msgid "Language Support:"
@@ -46,7 +46,7 @@ msgstr "Sjálfgefið skjáborð:"
 msgid "Make RAID Device"
 msgstr "Búa til RAID tæki"
 
-#: ../src/partWindow.py:501
+#: ../src/partWindow.py:483
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -70,7 +70,7 @@ msgstr "label30"
 msgid "label31"
 msgstr "label31"
 
-#: ../src/kickstartGui.py:128
+#: ../src/kickstartGui.py:129
 msgid "Authentication"
 msgstr "Auðkenning"
 
@@ -95,7 +95,11 @@ msgstr "Nota túlk:"
 msgid "Additional Size Options"
 msgstr "Frekari stærðaarrofar"
 
-#: ../src/partWindow.py:507
+#: redhat-config-kickstart.gladestrings:261
+msgid "Video Card RAM: "
+msgstr "Skjáminni:"
+
+#: ../src/partWindow.py:489
 msgid ""
 "The partition you specified does not begin with \"hd\" or \"sd\".  "
 "Partitions must have a valid device name and partition number such as \"hda1"
@@ -108,15 +112,15 @@ msgstr ""
 msgid "Install new boot loader"
 msgstr "Setja upp nýjann ræsistjóra"
 
-#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:248
+#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:248
 msgid "Firewall Configuration"
 msgstr "Stillingar eldveggs"
 
-#: ../src/partWindow.py:85 redhat-config-kickstart.gladestrings:59
+#: ../src/partWindow.py:86 redhat-config-kickstart.gladestrings:59
 msgid "ext3"
 msgstr "ext3"
 
-#: ../src/partWindow.py:85 redhat-config-kickstart.gladestrings:58
+#: ../src/partWindow.py:86 redhat-config-kickstart.gladestrings:58
 msgid "ext2"
 msgstr "ext2"
 
@@ -128,11 +132,11 @@ msgstr "Dulrita GRUB lykilorðið"
 msgid "Fill all unused space on disk"
 msgstr "Nota allt laust pláss á disknum"
 
-#: ../src/kickstartGui.py:167
+#: ../src/kickstartGui.py:165
 msgid "About Kickstart Configurator"
 msgstr "Um hraðuppsetningarstillingatólið"
 
-#: ../src/firewall.py:59
+#: ../src/firewall.py:60
 msgid "Trusted devices:"
 msgstr "Treyst tæki:"
 
@@ -144,7 +148,7 @@ msgstr "Föst stærð"
 msgid "0"
 msgstr "0"
 
-#: ../src/partWindow.py:88 redhat-config-kickstart.gladestrings:60
+#: ../src/partWindow.py:89 redhat-config-kickstart.gladestrings:60
 msgid "swap"
 msgstr "diskminni"
 
@@ -240,11 +244,11 @@ msgstr "Kerberos lénsstjóri (KDC):"
 msgid "Specify hsync and vsync instead of monitor"
 msgstr "Gefðu upp samhæfingagildi í stað skjás"
 
-#: ../src/partWindow.py:87 ../src/partWindow.py:146
+#: ../src/partWindow.py:88 ../src/partWindow.py:147
 msgid "software RAID"
 msgstr "RAID í hugbúnaði"
 
-#: ../src/partWindow.py:489
+#: ../src/partWindow.py:471
 msgid "Specify a device on which to create the partition."
 msgstr "Veldu disk til þess að búa til sneiðina á."
 
@@ -309,7 +313,7 @@ msgstr "HTTP"
 msgid "Raid Devices"
 msgstr "RAID tæki"
 
-#: ../src/kickstartGui.py:127
+#: ../src/kickstartGui.py:128
 msgid "Boot Loader Options"
 msgstr "Stillingar ræsistjóra"
 
@@ -329,9 +333,9 @@ msgstr "Nota LILO ræsistjórann"
 msgid "HTTP Server:"
 msgstr "HTTP þjónn:"
 
-#: redhat-config-kickstart.gladestrings:261
-msgid "Video Card RAM: "
-msgstr "Skjáminni:"
+#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:194
+msgid "Network Configuration"
+msgstr "Stillingar nets"
 
 #: redhat-config-kickstart.gladestrings:81
 msgid "Root Password:"
@@ -349,7 +353,7 @@ msgstr "Búa til RAID tæki [sjálfgefið = /dev/md0]"
 msgid "Type"
 msgstr "Tegund"
 
-#: ../src/xconfig.py:109
+#: ../src/xconfig.py:111
 msgid "Could not read monitor database"
 msgstr "Gat ekki lesið skjáagrunninn"
 
@@ -365,7 +369,7 @@ msgstr "Hz"
 msgid "label93"
 msgstr "label93"
 
-#: ../src/kickstartGui.py:126
+#: ../src/kickstartGui.py:127
 msgid "Basic Configuration"
 msgstr "Almennar stillingar"
 
@@ -397,21 +401,23 @@ msgstr "SMB vinnuhópur:"
 msgid "SMB"
 msgstr "SMB"
 
-#: ../src/kickstartGui.py:126
+#: ../src/kickstartGui.py:127
 msgid "Installation Method"
 msgstr "Tegund uppsetningar"
 
-#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:289
+#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:289
 msgid "Pre-Installation Script"
 msgstr "Skeljaforrit fyrir uppsetningu"
 
-#: ../src/partWindow.py:418
+#: ../src/partWindow.py:401
 msgid "Specify a mount point for the partition."
 msgstr "Veldu tengipunkt fyrir sneiðina."
 
-#: redhat-config-kickstart.gladestrings:53
-msgid "md14"
-msgstr "md14"
+#: ../src/network.py:298
+msgid ""
+"A network device with the name %s already exists.  Please choose another "
+"device name"
+msgstr ""
 
 #: redhat-config-kickstart.gladestrings:54
 msgid "md15"
@@ -458,9 +464,9 @@ msgstr "_Sýsla"
 msgid "Netmask: "
 msgstr "Netmöskvi: "
 
-#: ../src/install.py:136
-msgid "Please enter an NFS directory."
-msgstr "Vinsamlegast sláðu inn heiti NFS möppu."
+#: redhat-config-kickstart.gladestrings:61
+msgid "vfat"
+msgstr "vfat"
 
 #: redhat-config-kickstart.gladestrings:47
 msgid "md8"
@@ -475,9 +481,9 @@ msgstr "md9"
 msgid "NFS"
 msgstr "NFS"
 
-#: ../src/kickstartGui.py:128 redhat-config-kickstart.gladestrings:194
-msgid "Network Configuration"
-msgstr "Stillingar nets"
+#: redhat-config-kickstart.gladestrings:8
+msgid "Partition Options"
+msgstr "Stillingar disksneiða"
 
 #: redhat-config-kickstart.gladestrings:285
 msgid ""
@@ -495,9 +501,9 @@ msgstr "md2"
 msgid "md3"
 msgstr "md3"
 
-#: redhat-config-kickstart.gladestrings:148
-msgid "Remove existing Linux partitions"
-msgstr "Fjarlægja Linux disksneiðar"
+#: redhat-config-kickstart.gladestrings:39
+msgid "md0"
+msgstr "md0"
 
 #: redhat-config-kickstart.gladestrings:146
 msgid "Do not clear Master Boot Record"
@@ -539,7 +545,7 @@ msgstr "NFS þjónn:"
 msgid "KDE"
 msgstr "KDE"
 
-#: ../src/kickstartGui.py:127
+#: ../src/kickstartGui.py:128
 msgid "Partition Information"
 msgstr "Disksneiðaupplýsingar"
 
@@ -588,8 +594,7 @@ msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr ""
 "Þú verður að velja að minnsta kosti 3 disksneiðar til að búa til RAID %s"
 
-#: ../src/partWindow.py:252 ../src/partWindow.py:280 ../src/partWindow.py:544
-#: ../src/raidWindow.py:203
+#: ../src/partWindow.py:253 ../src/partWindow.py:518 ../src/raidWindow.py:203
 msgid "Yes"
 msgstr "Já"
 
@@ -601,7 +606,7 @@ msgstr "Fjöldi varadrifa:"
 msgid "FTP Directory:"
 msgstr "FTP mappa:"
 
-#: ../src/partWindow.py:449
+#: ../src/partWindow.py:431
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -617,15 +622,14 @@ msgstr "label89"
 msgid "_Automatically Resolve Dependencies"
 msgstr "_Uppfylla forkröfur sjálfkrafa"
 
-#: ../src/partWindow.py:427
+#: ../src/partWindow.py:410
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "Tengipunkturinn \"%s\" er þegar í notkun. Vinsamlegast veldu annan "
 "tengipunkt."
 
-#: ../src/partWindow.py:254 ../src/partWindow.py:282 ../src/partWindow.py:546
-#: ../src/raidWindow.py:205
+#: ../src/partWindow.py:255 ../src/partWindow.py:520 ../src/raidWindow.py:205
 msgid "No"
 msgstr "Nei"
 
@@ -637,6 +641,10 @@ msgstr "Nafnaþjónn:"
 #: redhat-config-kickstart.gladestrings:97
 msgid "CD-ROM"
 msgstr "Geisladrif"
+
+#: redhat-config-kickstart.gladestrings:53
+msgid "md14"
+msgstr "md14"
 
 #: redhat-config-kickstart.gladestrings:228
 msgid "Hesiod Authentication"
@@ -670,13 +678,28 @@ msgstr "NIS auðkenning"
 msgid "SMB Authentication"
 msgstr "SMB auðkenning"
 
+#: redhat-config-kickstart.gladestrings:167
+#: redhat-config-kickstart.gladestrings:169
+#: redhat-config-kickstart.gladestrings:171
+#: redhat-config-kickstart.gladestrings:174
+#: redhat-config-kickstart.gladestrings:176
+#: redhat-config-kickstart.gladestrings:178
+#: redhat-config-kickstart.gladestrings:181
+#: redhat-config-kickstart.gladestrings:183
+#: redhat-config-kickstart.gladestrings:185
+#: redhat-config-kickstart.gladestrings:188
+#: redhat-config-kickstart.gladestrings:190
+#: redhat-config-kickstart.gladestrings:192
+msgid "."
+msgstr "."
+
 #: redhat-config-kickstart.gladestrings:156
 msgid "Partition Information (required)"
 msgstr "Upplýsingar um disksneiðar (nauðsynlegar)"
 
-#: redhat-config-kickstart.gladestrings:39
-msgid "md0"
-msgstr "md0"
+#: redhat-config-kickstart.gladestrings:148
+msgid "Remove existing Linux partitions"
+msgstr "Fjarlægja Linux disksneiðar"
 
 #: redhat-config-kickstart.gladestrings:274
 msgid "label88"
@@ -690,7 +713,11 @@ msgstr "Vinsamlegast sláðu inn heiti disksneiðar."
 msgid "md1"
 msgstr "md1"
 
-#: ../src/partWindow.py:295
+#: redhat-config-kickstart.gladestrings:243
+msgid "High"
+msgstr "Hátt"
+
+#: ../src/partWindow.py:280
 msgid "Hard Drives"
 msgstr "Harðir diskar"
 
@@ -778,20 +805,9 @@ msgstr "RAID tæki:"
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "Setja ræsistjórann á aðalræsifærsluna (MBR)"
 
-#: redhat-config-kickstart.gladestrings:167
-#: redhat-config-kickstart.gladestrings:169
-#: redhat-config-kickstart.gladestrings:171
-#: redhat-config-kickstart.gladestrings:174
-#: redhat-config-kickstart.gladestrings:176
-#: redhat-config-kickstart.gladestrings:178
-#: redhat-config-kickstart.gladestrings:181
-#: redhat-config-kickstart.gladestrings:183
-#: redhat-config-kickstart.gladestrings:185
-#: redhat-config-kickstart.gladestrings:188
-#: redhat-config-kickstart.gladestrings:190
-#: redhat-config-kickstart.gladestrings:192
-msgid "."
-msgstr "."
+#: ../src/kickstartGui.py:242
+msgid "The file \"%s\" cannot be accessed."
+msgstr ""
 
 #: redhat-config-kickstart.gladestrings:13
 msgid "Size (MB):"
@@ -801,7 +817,7 @@ msgstr "Stærð (MB):"
 msgid "Use Shadow Passwords"
 msgstr "Nota falin lykilorð"
 
-#: ../src/firewall.py:106
+#: ../src/firewall.py:107
 msgid "Allow incoming:"
 msgstr "Leyfa tengingar inn:"
 
@@ -810,7 +826,12 @@ msgstr "Leyfa tengingar inn:"
 msgid "Mount Point:"
 msgstr "Tengipunktur:"
 
-#: ../src/firewall.py:140
+#: ../src/network.py:87
+#, fuzzy
+msgid "Device"
+msgstr "RAID tæki"
+
+#: ../src/firewall.py:141
 msgid "Other ports: (1029:tcp)"
 msgstr "Önnur port: (1029:tcp)"
 
@@ -846,16 +867,8 @@ msgstr "Uppfæra núverandi kerfi"
 msgid "Use broadcast to find NIS server"
 msgstr "Kalla eftir NIS þjóni"
 
-#: redhat-config-kickstart.gladestrings:8
-msgid "Partition Options"
-msgstr "Stillingar disksneiða"
-
-#: ../src/partition.py:150 ../src/partition.py:178
-msgid "Please select a partition from the list."
-msgstr "Vinsamlegast veldu disksneið úr listanum."
-
-#: ../src/basic.py:251 ../src/install.py:197 ../src/partition.py:300
-#: ../src/partWindow.py:514 ../src/raidWindow.py:241
+#: ../src/basic.py:197 ../src/install.py:197 ../src/partition.py:299
+#: ../src/partWindow.py:496 ../src/raidWindow.py:241
 msgid "Error"
 msgstr "Villa"
 
@@ -863,7 +876,7 @@ msgstr "Villa"
 msgid "Language:"
 msgstr "Tungumál:"
 
-#: ../src/kickstartGui.py:166
+#: ../src/kickstartGui.py:164
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -950,9 +963,9 @@ msgstr "Skjákort"
 msgid "Basic Configuration (required)"
 msgstr "Grunnstillingar (nauðsynlegar)"
 
-#: redhat-config-kickstart.gladestrings:61
-msgid "vfat"
-msgstr "vfat"
+#: ../src/install.py:136
+msgid "Please enter an NFS directory."
+msgstr "Vinsamlegast sláðu inn heiti NFS möppu."
 
 #: redhat-config-kickstart.gladestrings:159
 msgid "DHCP"
@@ -970,11 +983,11 @@ msgstr ""
 msgid "Raid Members"
 msgstr "Raid drif"
 
-#: ../src/kickstartGui.py:122
+#: ../src/kickstartGui.py:123
 msgid "Subsection"
 msgstr "Undirflokkur"
 
-#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:273
+#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:273
 msgid "X Configuration"
 msgstr "Stillingar X"
 
@@ -1006,9 +1019,9 @@ msgstr "RAID-stig:"
 msgid "FTP Username"
 msgstr "FTP notandanafn"
 
-#: redhat-config-kickstart.gladestrings:160
-msgid "Static IP"
-msgstr "Fast IP vistfang"
+#: ../src/kickstartGui.py:132 redhat-config-kickstart.gladestrings:296
+msgid "Post-Installation Script"
+msgstr "Skeljaforrit eftir uppsetningu"
 
 #: redhat-config-kickstart.gladestrings:123
 msgid "Installation Method (required)"
@@ -1018,6 +1031,10 @@ msgstr "Tegund uppsetningar (nauðsynlegt)"
 msgid "Reboot system after installation"
 msgstr "Endurræsa vélina eftir uppsetningu"
 
+#: ../src/network.py:197
+msgid "Please fill in the network information"
+msgstr ""
+
 #: ../src/raidOptionsWindow.py:75
 msgid "You currently have %d software RAID partition(s) free to use."
 msgstr "Þú ert núna með %d RAID disksneiðar sem eru ekki í notkun."
@@ -1026,11 +1043,18 @@ msgstr "Þú ert núna með %d RAID disksneiðar sem eru ekki í notkun."
 msgid "Mouse:"
 msgstr "Mús:"
 
-#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:296
-msgid "Post-Installation Script"
-msgstr "Skeljaforrit eftir uppsetningu"
+#: ../src/network.py:109 ../src/network.py:137 ../src/network.py:207
+#: ../src/network.py:254 ../src/network.py:390
+#: redhat-config-kickstart.gladestrings:160
+msgid "Static IP"
+msgstr "Fast IP vistfang"
 
-#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:283
+#: ../src/network.py:90
+#, fuzzy
+msgid "Network Type"
+msgstr "Tegund nets:"
+
+#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:283
 msgid "Package Selection"
 msgstr "Pakkaval"
 
@@ -1050,9 +1074,9 @@ msgstr "Frumstilla diskmerkinguna"
 msgid "Development"
 msgstr "Þróun"
 
-#: redhat-config-kickstart.gladestrings:69
-msgid "_Contents"
-msgstr "_Yfirlit"
+#: ../src/partition.py:150 ../src/partition.py:178
+msgid "Please select a partition from the list."
+msgstr "Vinsamlegast veldu disksneið úr listanum."
 
 #: redhat-config-kickstart.gladestrings:78
 msgid "Emulate 3 Buttons"
@@ -1122,11 +1146,11 @@ msgstr "Leita að skjákorti"
 msgid "Monitor"
 msgstr "Skjár"
 
-#: ../src/kickstartGui.py:197
+#: ../src/kickstartGui.py:195
 msgid "Help is not available."
 msgstr "Hjálpin er ekki tiltæk."
 
-#: ../src/partWindow.py:491
+#: ../src/partWindow.py:473
 msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
@@ -1138,11 +1162,11 @@ msgstr ""
 msgid "Please enter an FTP user name."
 msgstr "Vinsamlegast sláðu inn heiti FTP notanda."
 
-#: ../src/basic.py:250
+#: ../src/basic.py:196
 msgid "Please select a root password."
 msgstr "Vinsamlegast veldu rótarlykilorð."
 
-#: ../src/xconfig.py:91
+#: ../src/xconfig.py:93
 msgid "Could not read video card database"
 msgstr "Gat ekki lesið skjákortagrunninn"
 
@@ -1220,11 +1244,11 @@ msgstr "Setja upp aftur"
 msgid "Use GRUB password: "
 msgstr "Nota GRUB lykilorð: "
 
-#: redhat-config-kickstart.gladestrings:152
-msgid "_Add"
-msgstr "_Bæta við"
+#: redhat-config-kickstart.gladestrings:69
+msgid "_Contents"
+msgstr "_Yfirlit"
 
-#: ../src/partWindow.py:301 ../src/partWindow.py:320 ../src/partWindow.py:334
+#: ../src/partWindow.py:286 ../src/partWindow.py:305 ../src/partWindow.py:319
 msgid "Auto"
 msgstr "Sjálfvirkt"
 

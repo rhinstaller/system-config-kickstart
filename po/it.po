@@ -31,9 +31,9 @@ msgstr "Partizione:"
 msgid "_About"
 msgstr "_Info"
 
-#: redhat-config-kickstart.gladestrings:243
-msgid "High"
-msgstr "Alto"
+#: redhat-config-kickstart.gladestrings:152
+msgid "_Add"
+msgstr "_Aggiungi"
 
 #: redhat-config-kickstart.gladestrings:83
 msgid "Language Support:"
@@ -47,7 +47,7 @@ msgstr "Desktop di default"
 msgid "Make RAID Device"
 msgstr "Crea dispositivo RAID"
 
-#: ../src/partWindow.py:501
+#: ../src/partWindow.py:483
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -71,7 +71,7 @@ msgstr "label30"
 msgid "label31"
 msgstr "label31"
 
-#: ../src/kickstartGui.py:128
+#: ../src/kickstartGui.py:129
 msgid "Authentication"
 msgstr "Autenticazione"
 
@@ -96,7 +96,11 @@ msgstr "Usa un interprete:"
 msgid "Additional Size Options"
 msgstr "Dimensioni opzionali aggiuntive"
 
-#: ../src/partWindow.py:507
+#: redhat-config-kickstart.gladestrings:261
+msgid "Video Card RAM: "
+msgstr "RAM della scheda video:"
+
+#: ../src/partWindow.py:489
 msgid ""
 "The partition you specified does not begin with \"hd\" or \"sd\".  "
 "Partitions must have a valid device name and partition number such as \"hda1"
@@ -109,15 +113,15 @@ msgstr ""
 msgid "Install new boot loader"
 msgstr "Installare il nuovo boot loader"
 
-#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:248
+#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:248
 msgid "Firewall Configuration"
 msgstr "Configurazione del firewall"
 
-#: ../src/partWindow.py:85 redhat-config-kickstart.gladestrings:59
+#: ../src/partWindow.py:86 redhat-config-kickstart.gladestrings:59
 msgid "ext3"
 msgstr "ext3"
 
-#: ../src/partWindow.py:85 redhat-config-kickstart.gladestrings:58
+#: ../src/partWindow.py:86 redhat-config-kickstart.gladestrings:58
 msgid "ext2"
 msgstr "ext2"
 
@@ -129,11 +133,11 @@ msgstr "Criptare password di GRUB"
 msgid "Fill all unused space on disk"
 msgstr "Occupare tutto lo spazio libero su disco"
 
-#: ../src/kickstartGui.py:167
+#: ../src/kickstartGui.py:165
 msgid "About Kickstart Configurator"
 msgstr "Informazioni su Kickstart Configurator"
 
-#: ../src/firewall.py:59
+#: ../src/firewall.py:60
 msgid "Trusted devices:"
 msgstr "Periferiche fidate:"
 
@@ -145,7 +149,7 @@ msgstr "Dimensioni stabilite"
 msgid "0"
 msgstr "0"
 
-#: ../src/partWindow.py:88 redhat-config-kickstart.gladestrings:60
+#: ../src/partWindow.py:89 redhat-config-kickstart.gladestrings:60
 msgid "swap"
 msgstr "swap"
 
@@ -241,11 +245,11 @@ msgstr "Kerberos Domain Controller (KDC):"
 msgid "Specify hsync and vsync instead of monitor"
 msgstr "Specificare sincO e sincV anziché il monitor"
 
-#: ../src/partWindow.py:87 ../src/partWindow.py:146
+#: ../src/partWindow.py:88 ../src/partWindow.py:147
 msgid "software RAID"
 msgstr "software RAID"
 
-#: ../src/partWindow.py:489
+#: ../src/partWindow.py:471
 msgid "Specify a device on which to create the partition."
 msgstr "Specificare il dispositivo su cui creare la partizione."
 
@@ -311,7 +315,7 @@ msgstr "HTTP"
 msgid "Raid Devices"
 msgstr "Dispositivi RAID"
 
-#: ../src/kickstartGui.py:127
+#: ../src/kickstartGui.py:128
 msgid "Boot Loader Options"
 msgstr "Opzioni del boot loader"
 
@@ -331,9 +335,9 @@ msgstr "Utilizzare LILO per il boot loader"
 msgid "HTTP Server:"
 msgstr "Server HTTP:"
 
-#: redhat-config-kickstart.gladestrings:261
-msgid "Video Card RAM: "
-msgstr "RAM della scheda video:"
+#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:194
+msgid "Network Configuration"
+msgstr "Configurazione di rete"
 
 #: redhat-config-kickstart.gladestrings:81
 msgid "Root Password:"
@@ -351,7 +355,7 @@ msgstr "Creare un dispositivo RAID [default = /dev/md0]"
 msgid "Type"
 msgstr "Tipo"
 
-#: ../src/xconfig.py:109
+#: ../src/xconfig.py:111
 msgid "Could not read monitor database"
 msgstr "Impossibile leggere il database del monitor"
 
@@ -367,7 +371,7 @@ msgstr "Hz"
 msgid "label93"
 msgstr "label93"
 
-#: ../src/kickstartGui.py:126
+#: ../src/kickstartGui.py:127
 msgid "Basic Configuration"
 msgstr "Configurazione di base"
 
@@ -399,21 +403,23 @@ msgstr "Gruppo di lavoro SMB:"
 msgid "SMB"
 msgstr "SMB"
 
-#: ../src/kickstartGui.py:126
+#: ../src/kickstartGui.py:127
 msgid "Installation Method"
 msgstr "Metodo di installazione"
 
-#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:289
+#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:289
 msgid "Pre-Installation Script"
 msgstr "Script di pre-installazione"
 
-#: ../src/partWindow.py:418
+#: ../src/partWindow.py:401
 msgid "Specify a mount point for the partition."
 msgstr "Specificare un mount point per la partizione."
 
-#: redhat-config-kickstart.gladestrings:53
-msgid "md14"
-msgstr "md14"
+#: ../src/network.py:298
+msgid ""
+"A network device with the name %s already exists.  Please choose another "
+"device name"
+msgstr ""
 
 #: redhat-config-kickstart.gladestrings:54
 msgid "md15"
@@ -460,9 +466,9 @@ msgstr "_Modifica"
 msgid "Netmask: "
 msgstr "Maschera di rete:"
 
-#: ../src/install.py:136
-msgid "Please enter an NFS directory."
-msgstr "Specificare una directory NFS."
+#: redhat-config-kickstart.gladestrings:61
+msgid "vfat"
+msgstr "vfat"
 
 #: redhat-config-kickstart.gladestrings:47
 msgid "md8"
@@ -477,9 +483,9 @@ msgstr "md9"
 msgid "NFS"
 msgstr "NFS"
 
-#: ../src/kickstartGui.py:128 redhat-config-kickstart.gladestrings:194
-msgid "Network Configuration"
-msgstr "Configurazione di rete"
+#: redhat-config-kickstart.gladestrings:8
+msgid "Partition Options"
+msgstr "Opzioni di partizione"
 
 #: redhat-config-kickstart.gladestrings:285
 msgid ""
@@ -497,9 +503,9 @@ msgstr "md2"
 msgid "md3"
 msgstr "md3"
 
-#: redhat-config-kickstart.gladestrings:148
-msgid "Remove existing Linux partitions"
-msgstr "Rimuovere le partizioni Linux esistenti"
+#: redhat-config-kickstart.gladestrings:39
+msgid "md0"
+msgstr "md0"
 
 #: redhat-config-kickstart.gladestrings:146
 msgid "Do not clear Master Boot Record"
@@ -541,7 +547,7 @@ msgstr "Server NFS:"
 msgid "KDE"
 msgstr "KDE"
 
-#: ../src/kickstartGui.py:127
+#: ../src/kickstartGui.py:128
 msgid "Partition Information"
 msgstr "Informazioni sulle partizioni"
 
@@ -589,8 +595,7 @@ msgstr "Eliminare il Master Boot Record"
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "E' necessario selezionare almeno 3 partizioni per utilizzare RAID %s"
 
-#: ../src/partWindow.py:252 ../src/partWindow.py:280 ../src/partWindow.py:544
-#: ../src/raidWindow.py:203
+#: ../src/partWindow.py:253 ../src/partWindow.py:518 ../src/raidWindow.py:203
 msgid "Yes"
 msgstr "Sì"
 
@@ -602,7 +607,7 @@ msgstr "Numero di spare:"
 msgid "FTP Directory:"
 msgstr "Directory FTP:"
 
-#: ../src/partWindow.py:449
+#: ../src/partWindow.py:431
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -618,13 +623,12 @@ msgstr "label89"
 msgid "_Automatically Resolve Dependencies"
 msgstr "_Risolvi automaticamente le dipendenze"
 
-#: ../src/partWindow.py:427
+#: ../src/partWindow.py:410
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "Il mount point \"%s\" è già in uso. Selezionare un altro mount point."
 
-#: ../src/partWindow.py:254 ../src/partWindow.py:282 ../src/partWindow.py:546
-#: ../src/raidWindow.py:205
+#: ../src/partWindow.py:255 ../src/partWindow.py:520 ../src/raidWindow.py:205
 msgid "No"
 msgstr "No"
 
@@ -636,6 +640,10 @@ msgstr "Server di nomi:"
 #: redhat-config-kickstart.gladestrings:97
 msgid "CD-ROM"
 msgstr "CD-ROM"
+
+#: redhat-config-kickstart.gladestrings:53
+msgid "md14"
+msgstr "md14"
 
 #: redhat-config-kickstart.gladestrings:228
 msgid "Hesiod Authentication"
@@ -669,13 +677,28 @@ msgstr "Autenticazione di NIS"
 msgid "SMB Authentication"
 msgstr "Autenticazione SMB"
 
+#: redhat-config-kickstart.gladestrings:167
+#: redhat-config-kickstart.gladestrings:169
+#: redhat-config-kickstart.gladestrings:171
+#: redhat-config-kickstart.gladestrings:174
+#: redhat-config-kickstart.gladestrings:176
+#: redhat-config-kickstart.gladestrings:178
+#: redhat-config-kickstart.gladestrings:181
+#: redhat-config-kickstart.gladestrings:183
+#: redhat-config-kickstart.gladestrings:185
+#: redhat-config-kickstart.gladestrings:188
+#: redhat-config-kickstart.gladestrings:190
+#: redhat-config-kickstart.gladestrings:192
+msgid "."
+msgstr "."
+
 #: redhat-config-kickstart.gladestrings:156
 msgid "Partition Information (required)"
 msgstr "Informazioni sulla partizione (richieste)"
 
-#: redhat-config-kickstart.gladestrings:39
-msgid "md0"
-msgstr "md0"
+#: redhat-config-kickstart.gladestrings:148
+msgid "Remove existing Linux partitions"
+msgstr "Rimuovere le partizioni Linux esistenti"
 
 #: redhat-config-kickstart.gladestrings:274
 msgid "label88"
@@ -689,7 +712,11 @@ msgstr "Inserire una partizione per il disco fisso."
 msgid "md1"
 msgstr "md1"
 
-#: ../src/partWindow.py:295
+#: redhat-config-kickstart.gladestrings:243
+msgid "High"
+msgstr "Alto"
+
+#: ../src/partWindow.py:280
 msgid "Hard Drives"
 msgstr "Dischi fissi"
 
@@ -777,20 +804,9 @@ msgstr "Dispositivo RAID:"
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "Installare il boot loader su Master Boot Record (MBR)"
 
-#: redhat-config-kickstart.gladestrings:167
-#: redhat-config-kickstart.gladestrings:169
-#: redhat-config-kickstart.gladestrings:171
-#: redhat-config-kickstart.gladestrings:174
-#: redhat-config-kickstart.gladestrings:176
-#: redhat-config-kickstart.gladestrings:178
-#: redhat-config-kickstart.gladestrings:181
-#: redhat-config-kickstart.gladestrings:183
-#: redhat-config-kickstart.gladestrings:185
-#: redhat-config-kickstart.gladestrings:188
-#: redhat-config-kickstart.gladestrings:190
-#: redhat-config-kickstart.gladestrings:192
-msgid "."
-msgstr "."
+#: ../src/kickstartGui.py:242
+msgid "The file \"%s\" cannot be accessed."
+msgstr ""
 
 #: redhat-config-kickstart.gladestrings:13
 msgid "Size (MB):"
@@ -800,7 +816,7 @@ msgstr "Dimensioni (MB):"
 msgid "Use Shadow Passwords"
 msgstr "Utilizza le password shadow"
 
-#: ../src/firewall.py:106
+#: ../src/firewall.py:107
 msgid "Allow incoming:"
 msgstr "Permettere in ingresso:"
 
@@ -809,7 +825,12 @@ msgstr "Permettere in ingresso:"
 msgid "Mount Point:"
 msgstr "Mount Point:"
 
-#: ../src/firewall.py:140
+#: ../src/network.py:87
+#, fuzzy
+msgid "Device"
+msgstr "Dispositivi RAID"
+
+#: ../src/firewall.py:141
 msgid "Other ports: (1029:tcp)"
 msgstr "Altre porte: (1029:tcp)"
 
@@ -845,16 +866,8 @@ msgstr "Aggiornare l'installazione esistente"
 msgid "Use broadcast to find NIS server"
 msgstr "Utilizzare il broadcast per trovare il server NIS"
 
-#: redhat-config-kickstart.gladestrings:8
-msgid "Partition Options"
-msgstr "Opzioni di partizione"
-
-#: ../src/partition.py:150 ../src/partition.py:178
-msgid "Please select a partition from the list."
-msgstr "Selezionare una partizione dall'elenco."
-
-#: ../src/basic.py:251 ../src/install.py:197 ../src/partition.py:300
-#: ../src/partWindow.py:514 ../src/raidWindow.py:241
+#: ../src/basic.py:197 ../src/install.py:197 ../src/partition.py:299
+#: ../src/partWindow.py:496 ../src/raidWindow.py:241
 msgid "Error"
 msgstr "Errore"
 
@@ -862,7 +875,7 @@ msgstr "Errore"
 msgid "Language:"
 msgstr "Lingua:"
 
-#: ../src/kickstartGui.py:166
+#: ../src/kickstartGui.py:164
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -948,9 +961,9 @@ msgstr "Scheda video"
 msgid "Basic Configuration (required)"
 msgstr "Configurazione di base (richiesta)"
 
-#: redhat-config-kickstart.gladestrings:61
-msgid "vfat"
-msgstr "vfat"
+#: ../src/install.py:136
+msgid "Please enter an NFS directory."
+msgstr "Specificare una directory NFS."
 
 #: redhat-config-kickstart.gladestrings:159
 msgid "DHCP"
@@ -968,11 +981,11 @@ msgstr ""
 msgid "Raid Members"
 msgstr "Componenti del RAID"
 
-#: ../src/kickstartGui.py:122
+#: ../src/kickstartGui.py:123
 msgid "Subsection"
 msgstr "Sottosezione"
 
-#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:273
+#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:273
 msgid "X Configuration"
 msgstr "Configurazione di X"
 
@@ -1004,9 +1017,9 @@ msgstr "Livello RAID:"
 msgid "FTP Username"
 msgstr "Nome utente FTP"
 
-#: redhat-config-kickstart.gladestrings:160
-msgid "Static IP"
-msgstr "IP statico"
+#: ../src/kickstartGui.py:132 redhat-config-kickstart.gladestrings:296
+msgid "Post-Installation Script"
+msgstr "Script post-installazione"
 
 #: redhat-config-kickstart.gladestrings:123
 msgid "Installation Method (required)"
@@ -1016,6 +1029,10 @@ msgstr "Metodo di installazione (richiesto)"
 msgid "Reboot system after installation"
 msgstr "Riavviare il sistema dopo l'installazione"
 
+#: ../src/network.py:197
+msgid "Please fill in the network information"
+msgstr ""
+
 #: ../src/raidOptionsWindow.py:75
 msgid "You currently have %d software RAID partition(s) free to use."
 msgstr "Attualmente sono disponibili %d partizioni del software RAID."
@@ -1024,11 +1041,18 @@ msgstr "Attualmente sono disponibili %d partizioni del software RAID."
 msgid "Mouse:"
 msgstr "Mouse:"
 
-#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:296
-msgid "Post-Installation Script"
-msgstr "Script post-installazione"
+#: ../src/network.py:109 ../src/network.py:137 ../src/network.py:207
+#: ../src/network.py:254 ../src/network.py:390
+#: redhat-config-kickstart.gladestrings:160
+msgid "Static IP"
+msgstr "IP statico"
 
-#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:283
+#: ../src/network.py:90
+#, fuzzy
+msgid "Network Type"
+msgstr "Tipo di rete:"
+
+#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:283
 msgid "Package Selection"
 msgstr "Selezione dei pacchetti"
 
@@ -1048,9 +1072,9 @@ msgstr "Inizializzare la disk label"
 msgid "Development"
 msgstr "Sviluppo"
 
-#: redhat-config-kickstart.gladestrings:69
-msgid "_Contents"
-msgstr "_Contenuto"
+#: ../src/partition.py:150 ../src/partition.py:178
+msgid "Please select a partition from the list."
+msgstr "Selezionare una partizione dall'elenco."
 
 #: redhat-config-kickstart.gladestrings:78
 msgid "Emulate 3 Buttons"
@@ -1120,11 +1144,11 @@ msgstr "Ricerca della scheda video"
 msgid "Monitor"
 msgstr "Monitor"
 
-#: ../src/kickstartGui.py:197
+#: ../src/kickstartGui.py:195
 msgid "Help is not available."
 msgstr "L'help non è disponibile."
 
-#: ../src/partWindow.py:491
+#: ../src/partWindow.py:473
 msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
@@ -1136,11 +1160,11 @@ msgstr ""
 msgid "Please enter an FTP user name."
 msgstr "Inserire un nome utente FTP."
 
-#: ../src/basic.py:250
+#: ../src/basic.py:196
 msgid "Please select a root password."
 msgstr "Selezionare una password di root."
 
-#: ../src/xconfig.py:91
+#: ../src/xconfig.py:93
 msgid "Could not read video card database"
 msgstr "Impossibile leggere il database della scheda video"
 
@@ -1218,11 +1242,11 @@ msgstr "Eseguire una nuova installazione"
 msgid "Use GRUB password: "
 msgstr "Usare la password di GRUB:"
 
-#: redhat-config-kickstart.gladestrings:152
-msgid "_Add"
-msgstr "_Aggiungi"
+#: redhat-config-kickstart.gladestrings:69
+msgid "_Contents"
+msgstr "_Contenuto"
 
-#: ../src/partWindow.py:301 ../src/partWindow.py:320 ../src/partWindow.py:334
+#: ../src/partWindow.py:286 ../src/partWindow.py:305 ../src/partWindow.py:319
 msgid "Auto"
 msgstr "Auto"
 

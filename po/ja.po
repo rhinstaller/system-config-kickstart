@@ -33,9 +33,9 @@ msgstr "パーティション:"
 msgid "_About"
 msgstr "情報(_A)"
 
-#: redhat-config-kickstart.gladestrings:243
-msgid "High"
-msgstr "高"
+#: redhat-config-kickstart.gladestrings:152
+msgid "_Add"
+msgstr "追加(_A)"
 
 #: redhat-config-kickstart.gladestrings:83
 msgid "Language Support:"
@@ -49,7 +49,7 @@ msgstr "デフォルトデスクトップ:"
 msgid "Make RAID Device"
 msgstr "RAIDデバイスの作成"
 
-#: ../src/partWindow.py:501
+#: ../src/partWindow.py:483
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -73,7 +73,7 @@ msgstr "label30"
 msgid "label31"
 msgstr "label31"
 
-#: ../src/kickstartGui.py:128
+#: ../src/kickstartGui.py:129
 msgid "Authentication"
 msgstr "認証"
 
@@ -98,7 +98,11 @@ msgstr "インタプリタを使う:"
 msgid "Additional Size Options"
 msgstr "追加サイズオプション"
 
-#: ../src/partWindow.py:507
+#: redhat-config-kickstart.gladestrings:261
+msgid "Video Card RAM: "
+msgstr "ビデオカードRAM: "
+
+#: ../src/partWindow.py:489
 msgid ""
 "The partition you specified does not begin with \"hd\" or \"sd\".  "
 "Partitions must have a valid device name and partition number such as \"hda1"
@@ -112,15 +116,15 @@ msgstr ""
 msgid "Install new boot loader"
 msgstr "新しいブートローダをインストール"
 
-#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:248
+#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:248
 msgid "Firewall Configuration"
 msgstr "ファイアウォール設定"
 
-#: ../src/partWindow.py:85 redhat-config-kickstart.gladestrings:59
+#: ../src/partWindow.py:86 redhat-config-kickstart.gladestrings:59
 msgid "ext3"
 msgstr "ext3"
 
-#: ../src/partWindow.py:85 redhat-config-kickstart.gladestrings:58
+#: ../src/partWindow.py:86 redhat-config-kickstart.gladestrings:58
 msgid "ext2"
 msgstr "ext2"
 
@@ -132,11 +136,11 @@ msgstr "GRUBパスワードを暗号化"
 msgid "Fill all unused space on disk"
 msgstr "ディスク上の全ての未使用領域を埋める"
 
-#: ../src/kickstartGui.py:167
+#: ../src/kickstartGui.py:165
 msgid "About Kickstart Configurator"
 msgstr "キックスタート設定の情報"
 
-#: ../src/firewall.py:59
+#: ../src/firewall.py:60
 msgid "Trusted devices:"
 msgstr "信頼されるデバイス:"
 
@@ -148,7 +152,7 @@ msgstr "指定したサイズ"
 msgid "0"
 msgstr "0"
 
-#: ../src/partWindow.py:88 redhat-config-kickstart.gladestrings:60
+#: ../src/partWindow.py:89 redhat-config-kickstart.gladestrings:60
 msgid "swap"
 msgstr "swap"
 
@@ -244,11 +248,11 @@ msgstr "Kerberosドメインコントローラ(KDC):"
 msgid "Specify hsync and vsync instead of monitor"
 msgstr "水平同期周波数と垂直同期周波数を直接指定する"
 
-#: ../src/partWindow.py:87 ../src/partWindow.py:146
+#: ../src/partWindow.py:88 ../src/partWindow.py:147
 msgid "software RAID"
 msgstr "ソフトウェアRAID"
 
-#: ../src/partWindow.py:489
+#: ../src/partWindow.py:471
 msgid "Specify a device on which to create the partition."
 msgstr "パーティションを作成するデバイスを指定"
 
@@ -313,7 +317,7 @@ msgstr "HTTP"
 msgid "Raid Devices"
 msgstr "Raidデバイス"
 
-#: ../src/kickstartGui.py:127
+#: ../src/kickstartGui.py:128
 msgid "Boot Loader Options"
 msgstr "ブートローダオプション"
 
@@ -333,9 +337,9 @@ msgstr "ブートローダーとしてLILOを使用"
 msgid "HTTP Server:"
 msgstr "HTTPサーバ:"
 
-#: redhat-config-kickstart.gladestrings:261
-msgid "Video Card RAM: "
-msgstr "ビデオカードRAM: "
+#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:194
+msgid "Network Configuration"
+msgstr "ネットワーク設定"
 
 #: redhat-config-kickstart.gladestrings:81
 msgid "Root Password:"
@@ -353,7 +357,7 @@ msgstr "RAIDデバイスを作成 [default = /dev/md0]"
 msgid "Type"
 msgstr "タイプ"
 
-#: ../src/xconfig.py:109
+#: ../src/xconfig.py:111
 msgid "Could not read monitor database"
 msgstr "モニターのデータベースを読み込み出来ませんでした。"
 
@@ -369,7 +373,7 @@ msgstr "Hz"
 msgid "label93"
 msgstr "label93"
 
-#: ../src/kickstartGui.py:126
+#: ../src/kickstartGui.py:127
 msgid "Basic Configuration"
 msgstr "基本設定"
 
@@ -401,21 +405,23 @@ msgstr "SMBワークグループ:"
 msgid "SMB"
 msgstr "SMB"
 
-#: ../src/kickstartGui.py:126
+#: ../src/kickstartGui.py:127
 msgid "Installation Method"
 msgstr "インストール方法"
 
-#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:289
+#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:289
 msgid "Pre-Installation Script"
 msgstr "インストール前のスクリプト"
 
-#: ../src/partWindow.py:418
+#: ../src/partWindow.py:401
 msgid "Specify a mount point for the partition."
 msgstr "パーティション用のマウントポイントを指定して下さい。"
 
-#: redhat-config-kickstart.gladestrings:53
-msgid "md14"
-msgstr "md14"
+#: ../src/network.py:298
+msgid ""
+"A network device with the name %s already exists.  Please choose another "
+"device name"
+msgstr ""
 
 #: redhat-config-kickstart.gladestrings:54
 msgid "md15"
@@ -462,9 +468,9 @@ msgstr "編集(_E)"
 msgid "Netmask: "
 msgstr "ネットマスク:"
 
-#: ../src/install.py:136
-msgid "Please enter an NFS directory."
-msgstr "NFSディレクトリを入力して下さい。"
+#: redhat-config-kickstart.gladestrings:61
+msgid "vfat"
+msgstr "vfat"
 
 #: redhat-config-kickstart.gladestrings:47
 msgid "md8"
@@ -479,9 +485,9 @@ msgstr "md9"
 msgid "NFS"
 msgstr "NFS"
 
-#: ../src/kickstartGui.py:128 redhat-config-kickstart.gladestrings:194
-msgid "Network Configuration"
-msgstr "ネットワーク設定"
+#: redhat-config-kickstart.gladestrings:8
+msgid "Partition Options"
+msgstr "パーティションオプション"
 
 #: redhat-config-kickstart.gladestrings:285
 msgid ""
@@ -499,9 +505,9 @@ msgstr "md2"
 msgid "md3"
 msgstr "md3"
 
-#: redhat-config-kickstart.gladestrings:148
-msgid "Remove existing Linux partitions"
-msgstr "既存のLinuxパーティションを削除"
+#: redhat-config-kickstart.gladestrings:39
+msgid "md0"
+msgstr "md0"
 
 #: redhat-config-kickstart.gladestrings:146
 msgid "Do not clear Master Boot Record"
@@ -543,7 +549,7 @@ msgstr "NFSサーバ:"
 msgid "KDE"
 msgstr "KDE"
 
-#: ../src/kickstartGui.py:127
+#: ../src/kickstartGui.py:128
 msgid "Partition Information"
 msgstr "パーティション情報"
 
@@ -591,8 +597,7 @@ msgstr "マスターブートレコードを消去"
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "RAID %sを使用するには最低3つのパーティションを選択する必要があります。"
 
-#: ../src/partWindow.py:252 ../src/partWindow.py:280 ../src/partWindow.py:544
-#: ../src/raidWindow.py:203
+#: ../src/partWindow.py:253 ../src/partWindow.py:518 ../src/raidWindow.py:203
 msgid "Yes"
 msgstr "はい"
 
@@ -604,7 +609,7 @@ msgstr "スペアの数:"
 msgid "FTP Directory:"
 msgstr "FTPディレクトリ:"
 
-#: ../src/partWindow.py:449
+#: ../src/partWindow.py:431
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -620,15 +625,14 @@ msgstr "label89"
 msgid "_Automatically Resolve Dependencies"
 msgstr "自動的に依存関係を解決(_A)"
 
-#: ../src/partWindow.py:427
+#: ../src/partWindow.py:410
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "マウントポイント\"%s\"は既に使用中です。他のマウントポイントを使用して下さ"
 "い。"
 
-#: ../src/partWindow.py:254 ../src/partWindow.py:282 ../src/partWindow.py:546
-#: ../src/raidWindow.py:205
+#: ../src/partWindow.py:255 ../src/partWindow.py:520 ../src/raidWindow.py:205
 msgid "No"
 msgstr "いいえ"
 
@@ -640,6 +644,10 @@ msgstr "ネームサーバ:"
 #: redhat-config-kickstart.gladestrings:97
 msgid "CD-ROM"
 msgstr "CD-ROM"
+
+#: redhat-config-kickstart.gladestrings:53
+msgid "md14"
+msgstr "md14"
 
 #: redhat-config-kickstart.gladestrings:228
 msgid "Hesiod Authentication"
@@ -673,13 +681,28 @@ msgstr "NIS認証"
 msgid "SMB Authentication"
 msgstr "SMB認証"
 
+#: redhat-config-kickstart.gladestrings:167
+#: redhat-config-kickstart.gladestrings:169
+#: redhat-config-kickstart.gladestrings:171
+#: redhat-config-kickstart.gladestrings:174
+#: redhat-config-kickstart.gladestrings:176
+#: redhat-config-kickstart.gladestrings:178
+#: redhat-config-kickstart.gladestrings:181
+#: redhat-config-kickstart.gladestrings:183
+#: redhat-config-kickstart.gladestrings:185
+#: redhat-config-kickstart.gladestrings:188
+#: redhat-config-kickstart.gladestrings:190
+#: redhat-config-kickstart.gladestrings:192
+msgid "."
+msgstr "."
+
 #: redhat-config-kickstart.gladestrings:156
 msgid "Partition Information (required)"
 msgstr "パーティション情報(必須)"
 
-#: redhat-config-kickstart.gladestrings:39
-msgid "md0"
-msgstr "md0"
+#: redhat-config-kickstart.gladestrings:148
+msgid "Remove existing Linux partitions"
+msgstr "既存のLinuxパーティションを削除"
 
 #: redhat-config-kickstart.gladestrings:274
 msgid "label88"
@@ -693,7 +716,11 @@ msgstr "ハードドライブのパーティションを入力して下さい。
 msgid "md1"
 msgstr "md1"
 
-#: ../src/partWindow.py:295
+#: redhat-config-kickstart.gladestrings:243
+msgid "High"
+msgstr "高"
+
+#: ../src/partWindow.py:280
 msgid "Hard Drives"
 msgstr "ハードドライブ"
 
@@ -781,20 +808,9 @@ msgstr "RAIDデバイス:"
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "マスターブートレコード(MBR)にブートローダーをインストール "
 
-#: redhat-config-kickstart.gladestrings:167
-#: redhat-config-kickstart.gladestrings:169
-#: redhat-config-kickstart.gladestrings:171
-#: redhat-config-kickstart.gladestrings:174
-#: redhat-config-kickstart.gladestrings:176
-#: redhat-config-kickstart.gladestrings:178
-#: redhat-config-kickstart.gladestrings:181
-#: redhat-config-kickstart.gladestrings:183
-#: redhat-config-kickstart.gladestrings:185
-#: redhat-config-kickstart.gladestrings:188
-#: redhat-config-kickstart.gladestrings:190
-#: redhat-config-kickstart.gladestrings:192
-msgid "."
-msgstr "."
+#: ../src/kickstartGui.py:242
+msgid "The file \"%s\" cannot be accessed."
+msgstr ""
 
 #: redhat-config-kickstart.gladestrings:13
 msgid "Size (MB):"
@@ -804,7 +820,7 @@ msgstr "サイズ(MB):"
 msgid "Use Shadow Passwords"
 msgstr "シャドウパスワードを使う"
 
-#: ../src/firewall.py:106
+#: ../src/firewall.py:107
 msgid "Allow incoming:"
 msgstr "進入を許可:"
 
@@ -813,7 +829,11 @@ msgstr "進入を許可:"
 msgid "Mount Point:"
 msgstr "マウントポイント:"
 
-#: ../src/firewall.py:140
+#: ../src/network.py:87
+msgid "Device"
+msgstr "デバイス"
+
+#: ../src/firewall.py:141
 msgid "Other ports: (1029:tcp)"
 msgstr "他のポート: (1029:tcp)"
 
@@ -849,16 +869,8 @@ msgstr "既存のインストールをアップグレード "
 msgid "Use broadcast to find NIS server"
 msgstr "NISサーバの検索にブロードキャストを使う"
 
-#: redhat-config-kickstart.gladestrings:8
-msgid "Partition Options"
-msgstr "パーティションオプション"
-
-#: ../src/partition.py:150 ../src/partition.py:178
-msgid "Please select a partition from the list."
-msgstr "一覧からパーティションを選択して下さい。"
-
-#: ../src/basic.py:251 ../src/install.py:197 ../src/partition.py:300
-#: ../src/partWindow.py:514 ../src/raidWindow.py:241
+#: ../src/basic.py:197 ../src/install.py:197 ../src/partition.py:299
+#: ../src/partWindow.py:496 ../src/raidWindow.py:241
 msgid "Error"
 msgstr "エラー"
 
@@ -866,7 +878,7 @@ msgstr "エラー"
 msgid "Language:"
 msgstr "言語:"
 
-#: ../src/kickstartGui.py:166
+#: ../src/kickstartGui.py:164
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -953,9 +965,9 @@ msgstr "ビデオカード"
 msgid "Basic Configuration (required)"
 msgstr "基本設定(必須)"
 
-#: redhat-config-kickstart.gladestrings:61
-msgid "vfat"
-msgstr "vfat"
+#: ../src/install.py:136
+msgid "Please enter an NFS directory."
+msgstr "NFSディレクトリを入力して下さい。"
 
 #: redhat-config-kickstart.gladestrings:159
 msgid "DHCP"
@@ -973,11 +985,11 @@ msgstr ""
 msgid "Raid Members"
 msgstr "RAIDメンバー"
 
-#: ../src/kickstartGui.py:122
+#: ../src/kickstartGui.py:123
 msgid "Subsection"
 msgstr "サブセクション"
 
-#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:273
+#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:273
 msgid "X Configuration"
 msgstr "Xの設定"
 
@@ -1009,9 +1021,9 @@ msgstr "RAIDレベル:"
 msgid "FTP Username"
 msgstr "FTPユーザー名"
 
-#: redhat-config-kickstart.gladestrings:160
-msgid "Static IP"
-msgstr "固定IP"
+#: ../src/kickstartGui.py:132 redhat-config-kickstart.gladestrings:296
+msgid "Post-Installation Script"
+msgstr "インストール後のスクリプト"
 
 #: redhat-config-kickstart.gladestrings:123
 msgid "Installation Method (required)"
@@ -1021,6 +1033,10 @@ msgstr "インストール方法(必須)"
 msgid "Reboot system after installation"
 msgstr "インストール後にシステムを再起動"
 
+#: ../src/network.py:197
+msgid "Please fill in the network information"
+msgstr ""
+
 #: ../src/raidOptionsWindow.py:75
 msgid "You currently have %d software RAID partition(s) free to use."
 msgstr "現在使用出来る%d ソフトウェアRAIDパーティションがあります。"
@@ -1029,11 +1045,18 @@ msgstr "現在使用出来る%d ソフトウェアRAIDパーティションが�
 msgid "Mouse:"
 msgstr "マウス:"
 
-#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:296
-msgid "Post-Installation Script"
-msgstr "インストール後のスクリプト"
+#: ../src/network.py:109 ../src/network.py:137 ../src/network.py:207
+#: ../src/network.py:254 ../src/network.py:390
+#: redhat-config-kickstart.gladestrings:160
+msgid "Static IP"
+msgstr "固定IP"
 
-#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:283
+#: ../src/network.py:90
+#, fuzzy
+msgid "Network Type"
+msgstr "ネットワークタイプ:"
+
+#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:283
 msgid "Package Selection"
 msgstr "パッケージの選択"
 
@@ -1053,9 +1076,9 @@ msgstr "ディスクラベルを初期化"
 msgid "Development"
 msgstr "開発"
 
-#: redhat-config-kickstart.gladestrings:69
-msgid "_Contents"
-msgstr "目次(_C)"
+#: ../src/partition.py:150 ../src/partition.py:178
+msgid "Please select a partition from the list."
+msgstr "一覧からパーティションを選択して下さい。"
 
 #: redhat-config-kickstart.gladestrings:78
 msgid "Emulate 3 Buttons"
@@ -1125,11 +1148,11 @@ msgstr "ビデオカードの調査"
 msgid "Monitor"
 msgstr "モニタ"
 
-#: ../src/kickstartGui.py:197
+#: ../src/kickstartGui.py:195
 msgid "Help is not available."
 msgstr "ヘルプは使用できません。"
 
-#: ../src/partWindow.py:491
+#: ../src/partWindow.py:473
 msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
@@ -1141,11 +1164,11 @@ msgstr ""
 msgid "Please enter an FTP user name."
 msgstr "FTPのユーザー名を入力して下さい。"
 
-#: ../src/basic.py:250
+#: ../src/basic.py:196
 msgid "Please select a root password."
 msgstr "rootパスワードを選択して下さい。"
 
-#: ../src/xconfig.py:91
+#: ../src/xconfig.py:93
 msgid "Could not read video card database"
 msgstr "ビデオカードのデータベースを読み込むことが出来ませんでした。"
 
@@ -1223,11 +1246,11 @@ msgstr "新規インストールを実行"
 msgid "Use GRUB password: "
 msgstr "GRUBパスワードを使用:  "
 
-#: redhat-config-kickstart.gladestrings:152
-msgid "_Add"
-msgstr "追加(_A)"
+#: redhat-config-kickstart.gladestrings:69
+msgid "_Contents"
+msgstr "目次(_C)"
 
-#: ../src/partWindow.py:301 ../src/partWindow.py:320 ../src/partWindow.py:334
+#: ../src/partWindow.py:286 ../src/partWindow.py:305 ../src/partWindow.py:319
 msgid "Auto"
 msgstr "自動"
 
@@ -1307,9 +1330,6 @@ msgstr "終了(_Q)"
 
 #~ msgid "File System Type"
 #~ msgstr "ファイル システム タイプ"
-
-#~ msgid "Device"
-#~ msgstr "デバイス"
 
 #~ msgid "Upgrade Only Options:"
 #~ msgstr "オプションのみをアップグレード:"
