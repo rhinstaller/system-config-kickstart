@@ -122,6 +122,23 @@ class partition:
 ##         self.part_store.set_value(part_iter, 4, part_object.size)
 ##         self.part_store.set_value(part_iter, 5, part_object)
 
+##         hdc_iter = self.part_store.append(hard_drive_parent_iter)
+##         self.part_store.set_value(hdc_iter, 0, (_("hdc")))
+
+##         part_object = partEntry.partEntry()
+##         part_object.fsType = "raid"
+##         part_object.device = "Auto"
+##         part_object.format = 1
+##         part_object.raidNumber = "raid.03"
+##         part_object.size = 1
+
+##         part_iter = self.part_store.append(hdc_iter)
+##         self.part_store.set_value(part_iter, 0, part_object.raidNumber)
+##         self.part_store.set_value(part_iter, 2, part_object.fsType)
+##         self.part_store.set_value(part_iter, 3, part_object.format)
+##         self.part_store.set_value(part_iter, 4, part_object.size)
+##         self.part_store.set_value(part_iter, 5, part_object)
+
         self.part_view.expand_all()
 
     def delPartition(self, *args):
@@ -130,7 +147,22 @@ class partition:
         except:
             self.deviceNotValid(_("Please select a partition from the list."))
 
-        self.part_store.remove(iter)
+        parent = self.part_store.iter_parent(iter)
+        if parent:
+            children = self.part_store.iter_n_children(parent)
+            if children == 1:
+                 #If the item is the only one in the list, remove it and the parent.
+                 grandparent = self.part_store.iter_parent(parent)
+                 self.part_store.remove(iter)
+                 self.part_store.remove(parent)            
+
+                 if grandparent:
+                     grandchildren = self.part_store.iter_n_children(grandparent)
+                     if grandchildren == 0:
+                         self.part_store.remove(grandparent)
+
+        else:
+            self.part_store.remove(iter)
         self.part_view.get_selection().unselect_all()
 
     def addPartition(self, *args):
@@ -247,13 +279,19 @@ class partition:
             self.partDataBuf.append(buf)
             
     def rowSelected(self, *args):
-        store, selection = self.part_view.get_selection().get_selected()
-        if selection == None:
+        store, iter = self.part_view.get_selection().get_selected()
+        if iter == None:
             self.edit_part_button.set_sensitive(gtk.FALSE)
             self.del_part_button.set_sensitive(gtk.FALSE)
         else:
-            self.edit_part_button.set_sensitive(gtk.TRUE)
-            self.del_part_button.set_sensitive(gtk.TRUE)
+            part_object = self.part_store.get_value(iter, 5)
+            #Check to see if the selection is actually a partition or one of the parent roots
+            if part_object == None:
+                self.edit_part_button.set_sensitive(gtk.FALSE)
+                self.del_part_button.set_sensitive(gtk.FALSE)
+            else:                
+                self.edit_part_button.set_sensitive(gtk.TRUE)
+                self.del_part_button.set_sensitive(gtk.TRUE)
 
     def deviceNotValid(self, label):
         dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, label)
