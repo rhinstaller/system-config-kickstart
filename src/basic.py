@@ -168,7 +168,6 @@ class basic:
         kbd = keyboard.Keyboard()
         kbd.read()
         currentKeymap = kbd.get()
-        print currentKeymap
 	#set keyboard to current keymap
         keyboard_combo.entry.set_text(self.keyboard_dict[currentKeymap][0])
 
