@@ -11,13 +11,13 @@ msgstr ""
 "Project-Id-Version: ja\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-29 17:11-0500\n"
-"PO-Revision-Date: 2004-03-18 19:01+0900\n"
-"Last-Translator: Tadashi Jokagi <fedora@elf.no-ip.org>\n"
-"Language-Team: Japanese <i18n-list@redhat.com>\n"
+"PO-Revision-Date: 2004-04-08 16:00GMT+10:00\n"
+"Last-Translator: Kiyoto James Hashida <khashida@redhat.com>\n"
+"Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0.2\n"
+"X-Generator: KBabel 1.3\n"
 
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
@@ -57,25 +57,23 @@ msgstr ""
 #. #
 #: ../src/basic.py:71
 msgid "x86, AMD64, or Intel EM64T"
-msgstr ""
+msgstr "x86, AMD64, 又は Intel EM64T"
 
 #: ../src/basic.py:71
 msgid "Intel Itanium"
-msgstr ""
+msgstr "Intel Itanium"
 
 #: ../src/basic.py:71
-#, fuzzy
 msgid "IBM iSeries"
-msgstr "SMBサーバ:"
+msgstr "IBM iSeries"
 
 #: ../src/basic.py:72
-#, fuzzy
 msgid "IBM pSeries"
-msgstr "SMBサーバ:"
+msgstr "IBM pSeries"
 
 #: ../src/basic.py:72
 msgid "IBM zSeries/s390"
-msgstr ""
+msgstr "IBM zSeries/s390"
 
 #. populate language combo
 #. set default to English
@@ -132,7 +130,7 @@ msgstr "rootパスワードを選択して下さい。"
 #: ../src/bootloader.py:76
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
-msgstr ""
+msgstr "ブートローダーオプションは %s プラットフォームに対して適用されません"
 
 #: ../src/bootloader.py:117
 msgid "Grub passwords do not match.  Please try again."
@@ -453,9 +451,8 @@ msgid "Firewall Configuration"
 msgstr "ファイアウォール設定"
 
 #: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:248
-#, fuzzy
 msgid "Display Configuration"
-msgstr "Xの設定"
+msgstr "ディスプレー設定"
 
 #: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:259
 msgid "Package Selection"
@@ -795,8 +792,7 @@ msgstr "パーティション用のマウントポイントを指定して下さ
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:429
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "マウントポイント\"%s\"は既に使用中です。他のマウントポイントを使用して下さ"
 "い。"
@@ -904,8 +900,7 @@ msgstr "現在使用出来る%d ソフトウェアRAIDパーティションが�
 #: ../src/raidWindow.py:172
 #, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr ""
-"RAID %sを使用するには、最低2つのパーティションを選択する必要があります。"
+msgstr "RAID %sを使用するには、最低2つのパーティションを選択する必要があります。"
 
 #: ../src/raidWindow.py:178
 #, python-format
@@ -1036,8 +1031,7 @@ msgstr "Xサーバが起動していない為、ディスプレーを開けま�
 
 #: ../src/system-config-kickstart.py:78
 msgid "Try running 'system-config-kickstart --help' for a list of options."
-msgstr ""
-"オプション一覧には'system-config-kickstart --help'を実行して見て下さい。"
+msgstr "オプション一覧には'system-config-kickstart --help'を実行して見て下さい。"
 
 #. !/usr/bin/python2
 #. !/usr/bin/python2
@@ -1403,7 +1397,7 @@ msgstr "パスワードの確認:"
 
 #: system-config-kickstart.gladestrings:88
 msgid "Target Architecture:"
-msgstr ""
+msgstr "ターゲットアーキテクチャー: "
 
 #: system-config-kickstart.gladestrings:90
 msgid "Reboot system after installation"
@@ -1555,9 +1549,8 @@ msgid "Kernel parameters:"
 msgstr "カーネルパラメータ:"
 
 #: system-config-kickstart.gladestrings:145
-#, fuzzy
 msgid "label216"
-msgstr "label28"
+msgstr "label216"
 
 #: system-config-kickstart.gladestrings:146
 msgid "Boot Loader Options (required)"
@@ -1613,7 +1606,7 @@ msgstr "RAID"
 
 #: system-config-kickstart.gladestrings:159
 msgid "Partition options are not applicable on upgrades."
-msgstr ""
+msgstr "パーティションのオプションはアップグレードでは適用されません。"
 
 #: system-config-kickstart.gladestrings:160
 msgid "Partition Information (required)"
@@ -1773,7 +1766,7 @@ msgstr "名前変換用キャッシュ(Name Switch Cache)"
 
 #: system-config-kickstart.gladestrings:211
 msgid "Authentication options are not applicable on upgrades."
-msgstr ""
+msgstr "認証のオプションはアップグレードでは適用されません。"
 
 #: system-config-kickstart.gladestrings:212
 msgid "Authentication Configuration"
@@ -1797,7 +1790,7 @@ msgstr "ファイアウォール無効"
 
 #: system-config-kickstart.gladestrings:217
 msgid "Firewall configuration is not applicable on upgrades."
-msgstr ""
+msgstr "ファイヤーウォールの設定はアップグレードでは適用されません。"
 
 #: system-config-kickstart.gladestrings:219
 msgid "label33"
@@ -1893,7 +1886,7 @@ msgstr "モニタ"
 
 #: system-config-kickstart.gladestrings:247
 msgid "Display configuration is not applicable on upgrades."
-msgstr ""
+msgstr "ディスプレーの設定はアップグレードでは適用されません。"
 
 #: system-config-kickstart.gladestrings:249
 msgid "label88"
@@ -1933,7 +1926,7 @@ msgstr "システム"
 
 #: system-config-kickstart.gladestrings:258
 msgid "Package selection is not applicable on upgrades."
-msgstr ""
+msgstr "パッケージの選択はアップグレードでは適用されません。"
 
 #: system-config-kickstart.gladestrings:260
 msgid "label34"
@@ -2268,3 +2261,4 @@ msgstr "."
 #~ "2\n"
 #~ "3\n"
 #~ "4\n"
+
