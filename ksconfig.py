@@ -5,7 +5,8 @@
 #Written by Brent Fox (bfox@redhat.com) and Tammy Fox (tfox@redhat.com)
 #Created August 10, 2000 Brent Fox
 #Last Modified: February 16, 2001 Tammy Fox
-
+#License: This software package is licensed under the GNU General Public 
+#License (GPL).  A copy of the GNU GPL should be distributed with this package. # Refer to the file 'COPYING' or www.gnu.org for more licensing information.
 
 from gtk import *
 import GtkExtra
