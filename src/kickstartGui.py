@@ -115,7 +115,7 @@ class kickstartGui:
 	#bring in package function
         #self.packages_class = packages.headerList(xml)
 	#FIXME
-	self.packages_class = packages.Packages(xml)	
+	self.packages_class = packages.Packages(xml, self.kickstartData)
 	#bring in scripts function
 	self.scripts_class = scripts.scripts(xml)	
 	
@@ -264,3 +264,4 @@ class kickstartGui:
         self.auth_class.fillData()
         self.firewall_class.fillData()
         self.X_class.fillData()
+        self.packages_class.fillData()
