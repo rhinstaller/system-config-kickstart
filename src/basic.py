@@ -25,6 +25,7 @@ import string
 import os
 import whrandom
 import crypt
+import getopt
 
 from rhpl import keyboard_models
 import rhpl.keyboard as keyboard
@@ -242,13 +243,16 @@ class basic:
             salt = "$1$"
             saltLen = 8
 
-            for i in range(saltLen):
-                salt = salt + whrandom.choice (string.letters + string.digits + './')
+            if not pure.startswith(salt):
+                for i in range(saltLen):
+                    salt = salt + whrandom.choice (string.letters + string.digits + './')
 
-            self.passwd = crypt.crypt (pure, salt)
+                self.passwd = crypt.crypt (pure, salt)
 
-            temp = unicode (self.passwd, 'iso-8859-1')
-            self.kickstartData.setRootPw(["--iscrypted " + temp])
+                temp = unicode (self.passwd, 'iso-8859-1')
+                self.kickstartData.setRootPw(["--iscrypted " + temp])
+            else:
+                self.kickstartData.setRootPw(["--iscrypted " + pure])
 
         else:
             self.passwd = self.root_passwd_entry.get_text()
@@ -366,3 +370,16 @@ class basic:
 
         if self.kickstartData.getInteractive():
             self.interactive_checkbutton.set_active(gtk.TRUE)
+
+        if self.kickstartData.getRootPw():
+            self.encrypt_root_pw_checkbutton.set_active(gtk.FALSE)
+            line = self.kickstartData.getRootPw()
+            (opts, args) = getopt.getopt(line.split(), "", ["iscrypted"])
+
+            for opt, value in opts:
+                if opt == "--iscrypted":
+                    self.encrypt_root_pw_checkbutton.set_active(gtk.TRUE)
+
+            self.root_passwd_entry.set_text(args[0])
+            self.root_passwd_confirm_entry.set_text(args[0])
+
