@@ -70,6 +70,6 @@ class saveFile:
 	def saveFile_cb(self, *args):
 
 		self.dialog.hide()
- 		fileDialog = savedialog.saveDialog(self.buf)		
+ 		fileDialog = savedialog.saveDialog(self.buf, self.xml)		
 
 
