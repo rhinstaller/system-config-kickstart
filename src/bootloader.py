@@ -152,6 +152,9 @@ class bootloader:
     def fillData(self):
         list = self.kickstartData.getBootloader()
 
+        if list == None:
+            return
+
         for item in list:
             if item[:11] == "--location=":
                 if item[11:] == "none":
