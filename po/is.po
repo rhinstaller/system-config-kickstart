@@ -52,6 +52,8 @@ msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
 msgstr ""
+"Disksneiðin sem þú gafst upp endar ekki á tölustaf. Disksneiðar verða að hafa "
+"disksneiðanúmer eins  og til dæmis \"hda1\" eða \"sda3\"."
 
 #: redhat-config-kickstart.gladestrings:152
 msgid "_Yes"
@@ -100,6 +102,9 @@ msgid ""
 "Partitions must have a valid device name and partition number such as \"hda1"
 "\" or \"sda3\"."
 msgstr ""
+"Disksneiðin sem þú gafst upp byrjar ekki á \"hd\" eða \"sd\". "
+"Disksneiðar verða að hafa gild tækjaheiti eins og til dæmis \"hda1\" eða "
+"\"sda3\"."
 
 #: redhat-config-kickstart.gladestrings:277
 msgid "Monitor"
@@ -139,7 +144,7 @@ msgstr "Föst stærð"
 
 #: redhat-config-kickstart.gladestrings:55
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: ../src/partWindow.py:83 redhat-config-kickstart.gladestrings:61
 msgid "swap"
@@ -171,7 +176,7 @@ msgstr "GNOME"
 
 #: redhat-config-kickstart.gladestrings:24
 msgid "(for example: hda or sdc)"
-msgstr ""
+msgstr "(til dæmis: hda eða sdc)"
 
 #: redhat-config-kickstart.gladestrings:304
 msgid "Preview Options"
@@ -182,13 +187,12 @@ msgid "LDAP Server: "
 msgstr "LDAP þjónn: "
 
 #: redhat-config-kickstart.gladestrings:306
-#, fuzzy
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
 msgstr ""
-"Þú hefur kosið eftirfarandi stillingar. Veldu Vista skrá til að vista "
-"hraðuppsetningarstillingum eða hætta við til að fara til baka."
+"Þú hefur kosið eftirfarandi stillingar. Veldu Vista í skrá til að vista "
+"hraðuppsetningarstillingum."
 
 #: redhat-config-kickstart.gladestrings:141
 msgid "Kernel parameters:"
@@ -228,7 +232,7 @@ msgstr "Hesiod"
 
 #: redhat-config-kickstart.gladestrings:283
 msgid "Desktops"
-msgstr ""
+msgstr "Skjáborð"
 
 #: redhat-config-kickstart.gladestrings:221
 msgid "Kerberos Domain Controller (KDC):"
@@ -271,18 +275,16 @@ msgid "Disabled"
 msgstr "Óvirkt"
 
 #: redhat-config-kickstart.gladestrings:138
-#, fuzzy
 msgid "label174"
-msgstr "label31"
+msgstr "label174"
 
 #: ../src/partWindow.py:356
 msgid "Specify a mount point for the partition."
 msgstr "Veldu tengipunkt fyrir sneiðina."
 
 #: redhat-config-kickstart.gladestrings:134
-#, fuzzy
 msgid "label173"
-msgstr "label30"
+msgstr "label173"
 
 #: redhat-config-kickstart.gladestrings:307
 msgid "RAID Options"
@@ -309,9 +311,8 @@ msgid "A_ll"
 msgstr "A_llar"
 
 #: redhat-config-kickstart.gladestrings:145
-#, fuzzy
 msgid "Clear Master Boot Record:"
-msgstr "Hreynsa aðalræsifærsluna:"
+msgstr "Hreinsa aðalræsifærsluna:"
 
 #: redhat-config-kickstart.gladestrings:95
 #: redhat-config-kickstart.gladestrings:117
@@ -319,9 +320,8 @@ msgid "HTTP"
 msgstr "HTTP"
 
 #: ../src/raidWindow.py:136 ../src/raidWindow.py:161
-#, fuzzy
 msgid "Raid Devices"
-msgstr "RAID tæki:"
+msgstr "RAID tæki"
 
 #: ../src/kickstartGui.py:109
 msgid "Boot Loader Options"
@@ -332,13 +332,12 @@ msgid "Automatically Resolve Dependencies"
 msgstr "Uppfylla forkröfur sjálfkrafa"
 
 #: redhat-config-kickstart.gladestrings:127
-#, fuzzy
 msgid "Upgrade existing boot loader"
-msgstr "Uppfæra stillingar núverandi ræsistjóra"
+msgstr "Uppfæra núverandi ræsistjóra"
 
 #: redhat-config-kickstart.gladestrings:129
 msgid "Use LILO for the boot loader"
-msgstr ""
+msgstr "Nota LILO ræsistjórann"
 
 #: redhat-config-kickstart.gladestrings:115
 msgid "HTTP Server:"
@@ -358,7 +357,7 @@ msgstr "En_gar"
 
 #: ../src/partition.py:73
 msgid "Type"
-msgstr ""
+msgstr "Tegund"
 
 #: ../src/xconfig.py:109
 msgid "Could not read monitor database"
@@ -402,7 +401,7 @@ msgstr "L_inux"
 
 #: redhat-config-kickstart.gladestrings:288
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Ýmislegt"
 
 #: redhat-config-kickstart.gladestrings:236
 msgid "SMB Workgroup:"
@@ -450,7 +449,7 @@ msgstr "md13"
 
 #: redhat-config-kickstart.gladestrings:287
 msgid "System"
-msgstr ""
+msgstr "Kerfis"
 
 #: redhat-config-kickstart.gladestrings:94
 #: redhat-config-kickstart.gladestrings:112
@@ -462,11 +461,12 @@ msgid "None"
 msgstr "Ekkert"
 
 #: ../src/partition.py:71
-#, fuzzy
 msgid ""
 "Mount Point/\n"
 "RAID/Volume"
-msgstr "Tengipunktur"
+msgstr ""
+"Tengipunktur/\n"
+"RAID/Volume"
 
 #: redhat-config-kickstart.gladestrings:156
 msgid "_Edit"
@@ -563,7 +563,7 @@ msgstr "Nota Kerberos 5 auðkenningu"
 
 #: redhat-config-kickstart.gladestrings:128
 msgid "Use GRUB for the boot loader"
-msgstr ""
+msgstr "Nota GRUB ræsistjórann"
 
 #: ../src/partWindow.py:82 redhat-config-kickstart.gladestrings:60
 msgid "physical volume (LVM)"
@@ -591,7 +591,7 @@ msgstr "LDAP grunnnafn: "
 
 #: ../src/raidWindow.py:125
 msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr ""
+msgstr "Þú verður að velja að minnsta kosti 3 disksneiðar til að búa til RAID %s"
 
 #: ../src/partWindow.py:203 ../src/partWindow.py:270 ../src/raidWindow.py:152
 #: redhat-config-kickstart.gladestrings:154
@@ -607,7 +607,6 @@ msgid "FTP Directory:"
 msgstr "FTP mappa:"
 
 #: ../src/partWindow.py:376
-#, fuzzy
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -624,9 +623,8 @@ msgid "Upgrade"
 msgstr "Uppfæra"
 
 #: redhat-config-kickstart.gladestrings:125
-#, fuzzy
 msgid "Install new boot loader"
-msgstr "Setja upp ræsistjórann"
+msgstr "Setja upp nýjann ræsistjóra"
 
 #: ../src/partWindow.py:205 ../src/partWindow.py:272 ../src/raidWindow.py:154
 #: redhat-config-kickstart.gladestrings:151
@@ -651,7 +649,6 @@ msgid "Keyboard:"
 msgstr "Lyklaborð:"
 
 #: redhat-config-kickstart.gladestrings:146
-#, fuzzy
 msgid "Remove Existing Partitions:"
 msgstr "Fjarlægja disksneiðar:"
 
@@ -688,18 +685,16 @@ msgid "High"
 msgstr "Hátt"
 
 #: ../src/partWindow.py:225
-#, fuzzy
 msgid "Hard Drives"
-msgstr "Harður diskur"
+msgstr "Harðir diskar"
 
 #: redhat-config-kickstart.gladestrings:216
 msgid "LDAP Authentication"
 msgstr "LDAP auðkenning"
 
 #: redhat-config-kickstart.gladestrings:284
-#, fuzzy
 msgid "Applications"
-msgstr "Auðkenning"
+msgstr "Forrit"
 
 #: redhat-config-kickstart.gladestrings:21
 #: redhat-config-kickstart.gladestrings:26
@@ -770,9 +765,8 @@ msgid "RAID Device:"
 msgstr "RAID tæki:"
 
 #: redhat-config-kickstart.gladestrings:139
-#, fuzzy
 msgid "Install boot loader on Master Boot Record (MBR)"
-msgstr "Setja ræsistjórann á: "
+msgstr "Setja ræsistjórann á aðalræsifærsluna (MBR)"
 
 #: redhat-config-kickstart.gladestrings:171
 #: redhat-config-kickstart.gladestrings:173
@@ -866,9 +860,8 @@ msgstr ""
 " Myndrænt tól til að búa til hraðuppsetningarskrár (kickstart)"
 
 #: redhat-config-kickstart.gladestrings:143
-#, fuzzy
 msgid "Boot Loader Options (required)"
-msgstr "Stillingar ræsistjóra"
+msgstr "Stillingar ræsistjóra (nauðsynlegar)"
 
 #: redhat-config-kickstart.gladestrings:25
 msgid "Use existing partition (onpart)"
@@ -883,9 +876,8 @@ msgid "Authentication:"
 msgstr "Auðkenning:"
 
 #: ../src/partition.py:77
-#, fuzzy
 msgid "Size (MB)"
-msgstr "Stærð (MB):"
+msgstr "Stærð (MB)"
 
 #: redhat-config-kickstart.gladestrings:105
 msgid "FTP Server:"
@@ -909,7 +901,7 @@ msgstr "_Skrá"
 
 #: redhat-config-kickstart.gladestrings:29
 msgid "(for example: hda1 or sdc3)"
-msgstr ""
+msgstr "(til dæmis: hda1 eða sdc3)"
 
 #: redhat-config-kickstart.gladestrings:264
 msgid "General"
@@ -921,7 +913,7 @@ msgstr "_Eyða"
 
 #: ../src/raidWindow.py:119
 msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr ""
+msgstr "Þú verður að velja að minnsta kosti 2 disksneiðar til að búa til RAID %s"
 
 #: redhat-config-kickstart.gladestrings:268
 msgid "Video Card"
@@ -944,6 +936,8 @@ msgid ""
 "Device/\n"
 "Partition Number"
 msgstr ""
+"Tæki/\n"
+"Númer disksneiðar"
 
 #: redhat-config-kickstart.gladestrings:35
 msgid "Raid Members"
@@ -970,9 +964,8 @@ msgid "Resolution"
 msgstr "Upplausn"
 
 #: redhat-config-kickstart.gladestrings:126
-#, fuzzy
 msgid "Do not install a boot loader"
-msgstr "Setja upp ræsistjórann"
+msgstr "Setja ekki upp ræsistjórann"
 
 #: redhat-config-kickstart.gladestrings:36
 msgid "RAID Level:"
@@ -1028,7 +1021,7 @@ msgstr "Kerberos 5 auðkenning"
 
 #: redhat-config-kickstart.gladestrings:286
 msgid "Development"
-msgstr ""
+msgstr "Þróun"
 
 #: ../src/partition.py:131 ../src/partition.py:152
 msgid "Please select a partition from the list."
@@ -1044,7 +1037,7 @@ msgstr "Búa sneiðina til á tilteknum disk (ondisk)"
 
 #: ../src/partition.py:75
 msgid "Format"
-msgstr ""
+msgstr "Forsníða"
 
 #: redhat-config-kickstart.gladestrings:251
 #: redhat-config-kickstart.gladestrings:252
@@ -1065,7 +1058,7 @@ msgstr "Sláðu inn %post skeljaforritið þitt hér:"
 
 #: redhat-config-kickstart.gladestrings:56
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #: redhat-config-kickstart.gladestrings:263
 msgid "Start the X Window System on boot"
@@ -1073,7 +1066,7 @@ msgstr "Ræsa X gluggakerfið við ræsingu"
 
 #: redhat-config-kickstart.gladestrings:57
 msgid "5"
-msgstr ""
+msgstr "5"
 
 #: redhat-config-kickstart.gladestrings:244
 msgid "Authentication Configuration"
@@ -1088,9 +1081,8 @@ msgid "Enable SMB Authentication"
 msgstr "Nota SMB auðkenningu"
 
 #: redhat-config-kickstart.gladestrings:285
-#, fuzzy
 msgid "Servers"
-msgstr "SMB þjónar:"
+msgstr "Þjónar"
 
 #: ../src/kickstartGui.py:172
 msgid "Help is not available."
@@ -1101,6 +1093,8 @@ msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
 msgstr ""
+"Tækið sem þú gafst upp er ekki gilt heiti tækis. Vinsamlegast notaðu "
+"tækjaheiti eins og til dæmis \"hda1\" eða \"sda3\"."
 
 #: ../src/basic.py:269
 msgid "Please select a root password."
@@ -1131,9 +1125,8 @@ msgid "Medium"
 msgstr "Miðlungs"
 
 #: redhat-config-kickstart.gladestrings:140
-#, fuzzy
 msgid "Install boot loader on first sector of the boot partition"
-msgstr "_Fyrsta geira ræsidisksneiðar"
+msgstr "Setja ræsistjórann á fyrsta geira ræsidisksneiðar"
 
 #: redhat-config-kickstart.gladestrings:96
 #: redhat-config-kickstart.gladestrings:122
@@ -1186,18 +1179,16 @@ msgid "Use GRUB password: "
 msgstr "Nota GRUB lykilorð: "
 
 #: redhat-config-kickstart.gladestrings:69
-#, fuzzy
 msgid "_Contents"
-msgstr "Yfirlist _hjálpar"
+msgstr "_Yfirlit"
 
 #: redhat-config-kickstart.gladestrings:147
-#, fuzzy
 msgid "Initialize the Disk Label:"
 msgstr "Frumstilla diskmerkingu:"
 
 #: ../src/partWindow.py:231 ../src/partWindow.py:250 ../src/partWindow.py:264
 msgid "Auto"
-msgstr ""
+msgstr "Sjálfvirkt"
 
 #: redhat-config-kickstart.gladestrings:228
 msgid "Hesiod LHS:"
@@ -1212,9 +1203,8 @@ msgid "Force use of lba32 mode"
 msgstr "Nota lba32 ham"
 
 #: redhat-config-kickstart.gladestrings:305
-#, fuzzy
 msgid "Save to File"
-msgstr "Vista skrá"
+msgstr "Vista í skrá"
 
 #: redhat-config-kickstart.gladestrings:148
 msgid "_No"
@@ -1223,64 +1213,3 @@ msgstr "_Nei"
 #: redhat-config-kickstart.gladestrings:67
 msgid "_Quit"
 msgstr "_Hætta"
-
-#, fuzzy
-#~ msgid "Preserve existing partitions"
-#~ msgstr "Fjarlægja disksneiðar:"
-
-#, fuzzy
-#~ msgid "Remove existing Linux partitions"
-#~ msgstr "Fjarlægja disksneiðar:"
-
-#, fuzzy
-#~ msgid "Do not clear Master Boot Record"
-#~ msgstr "Hreynsa aðalræsifærsluna:"
-
-#, fuzzy
-#~ msgid "Do not initialize the disk label"
-#~ msgstr "Frumstilla diskmerkingu:"
-
-#~ msgid "RAID 5"
-#~ msgstr "RAID 5"
-
-#~ msgid "RAID 0"
-#~ msgstr "RAID 0"
-
-#~ msgid "RAID 1"
-#~ msgstr "RAID 1"
-
-#~ msgid "Specify an existing partition on which to create the RAID partition."
-#~ msgstr "Veldu disksneið sem þegar er til sem þú vilt búa til RAID sneið í."
-
-#~ msgid "_LILO"
-#~ msgstr "_LILO"
-
-#~ msgid "Size"
-#~ msgstr "Stærð"
-
-#~ msgid "Existing Partition"
-#~ msgstr "Disksneið er til"
-
-#~ msgid "File System Type"
-#~ msgstr "Tegund skráarkerfis"
-
-#~ msgid "Device"
-#~ msgstr "Tæki"
-
-#~ msgid "Upgrade Only Options:"
-#~ msgstr "Rofar uppfærslu:"
-
-#~ msgid "_MBR"
-#~ msgstr "_MBR"
-
-#~ msgid "_GRUB"
-#~ msgstr "_GRUB"
-
-#~ msgid "Specify a device on which to create the RAID partition."
-#~ msgstr "Veldi disk sem þú vilt búa til RAID sneið á."
-
-#~ msgid "Specify an existing partition to use."
-#~ msgstr "Veldu sneið til notkunar sem þegar er til."
-
-#~ msgid "Choose boot loader: "
-#~ msgstr "Veldu ræsistjóra: "
