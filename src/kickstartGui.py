@@ -103,7 +103,7 @@ class kickstartGui:
 					     self.category_view, self.options_notebook,
 					     self.bootloader_class, self.kickstartData)
 	#bring in partitions functions
-	self.partition_class = partition.partition(xml)
+	self.partition_class = partition.partition(xml, self.kickstartData)
 	#bring in network functions
 	self.network_class = network.network(xml)
 	#bring in auth functions
@@ -255,3 +255,4 @@ class kickstartGui:
         self.basic_class.fillData()
         self.install_class.fillData()
         self.bootloader_class.fillData()
+        self.partition_class.fillData()
