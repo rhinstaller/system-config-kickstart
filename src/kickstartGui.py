@@ -101,7 +101,7 @@ class kickstartGui:
 	#bring in install functions
 	self.install_class = install.install(xml, self.category_store,
 					     self.category_view, self.options_notebook,
-					     self.bootloader_class)
+					     self.bootloader_class, self.kickstartData)
 	#bring in partitions functions
 	self.partition_class = partition.partition(xml)
 	#bring in network functions
@@ -211,13 +211,10 @@ class kickstartGui:
 
         if self.basic_class.getData() is None:
             return
-        
-	data = self.install_class.getData()
-	if data:
-		list = list + self.install_class.getData()
-	else:
-		return
 
+        if self.install_class.getData() is None:
+            return
+        
 	list = list + self.bootloader_class.getData()
 
 	#only write partition info if performing an install
@@ -256,4 +253,4 @@ class kickstartGui:
 
     def fillData(self):
         self.basic_class.fillData()
-    
+        self.install_class.fillData()
