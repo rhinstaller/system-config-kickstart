@@ -97,3 +97,13 @@ class KickstartParser:
             tokens = string.split(packageList[0])
             self.kickstartData.setPackage(tokens[1:])
             self.kickstartData.setPackageList(packageList[1:])
+
+        if preList != []:
+            tokens = string.split(preList[0])
+            self.kickstartData.setPreLine(tokens[1:])
+            self.kickstartData.setPreList(preList[1:])
+        
+        if postList != []:
+            tokens = string.split(postList[0])
+            self.kickstartData.setPostLine(tokens[1:])
+            self.kickstartData.setPostList(postList[1:])
