@@ -98,14 +98,16 @@ class partition:
             pass
         if self.remove_parts_none_radiobutton.get_active():
             pass
-        elif self.remove_parts_all_radiobutton.get_active():
-            buf = buf + "\n" + "clearpart --all"
-        elif self.remove_parts_Linux_radiobutton.get_active():
-            buf = buf + "\n" + "clearpart --linux"
-        if self.initlabel_yes_radiobutton.get_active():
-            buf = buf + "\n" + "clearpart --initlabel"
-        elif self.initlabel_no_radiobutton.get_active():
-            pass
+        else:
+            buf = "\n" + "clearpart "
+            if self.remove_parts_all_radiobutton.get_active():
+                buf = buf + "--all "
+            elif self.remove_parts_Linux_radiobutton.get_active():
+                buf = buf + "--linux "
+            if self.initlabel_yes_radiobutton.get_active():
+                buf = buf + "--initlabel "
+            elif self.initlabel_no_radiobutton.get_active():
+                pass
 
         #partitioning table options
 #        num_raid = 0
@@ -126,6 +128,13 @@ class partition:
 ##             else:
 ##                 buf = buf + "\n" + "part %s " % (mountPoint)
 ##                 buf = buf + "--fstype " + fsType + " " 
+
+            buf = buf + "\n" + "part %s " % (mountPoint)
+
+            if fsType == "swap":
+                buf = buf + "swap "
+            else:
+                buf = buf + "--fstype " + fsType + " " 
 
             buf = buf + "--size %s " % (size)
 
