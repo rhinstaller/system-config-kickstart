@@ -327,7 +327,7 @@ class basic:
             buf = "#Probe for Mouse"
         else:
             buf = "mouse "
-            if self.emulate_3_buttons.get_active():
+            if self.emulate_3_buttons.get_active() and self.mouseDict[args] != 'none':
                 buf = buf + "--emulthree "
             buf = buf + self.mouseDict [args]
         return buf
