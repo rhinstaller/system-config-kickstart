@@ -75,7 +75,6 @@ class Packages:
         self.miscellaneous_label = xml.get_widget("miscellaneous_label")
         self.miscellaneous_label.set_markup("<span foreground='white'><big><b>%s</b></big></span>" % (self.miscellaneous_label.get(),))
 
-        style = gtk.Style()
         self.desktops_view = xml.get_widget("desktops_view")
         self.desktops_view.get_selection().set_mode(gtk.SELECTION_NONE)
         self.applications_view = xml.get_widget("applications_treeview")
