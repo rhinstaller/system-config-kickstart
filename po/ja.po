@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksconfig 1.9.3\n"
 "POT-Creation-Date: 2001-07-18 20:48-0400\n"
-"PO-Revision-Date: 2002-07-26 17:02GMT+10:00\n"
+"PO-Revision-Date: 2002-08-02 14:23GMT+10:00\n"
 "Last-Translator: James Hashida <khashida@redhat.com>\n"
 "Language-Team: Japanese <i18-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -54,6 +54,8 @@ msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
 msgstr ""
+"指定されたパーティションは、番号では終了しません。パーティションは、 "
+" \"hda1\" や \"sda3\"などのパーティション番号を持つ必要があります。"
 
 #: redhat-config-kickstart.gladestrings:152
 msgid "_Yes"
@@ -106,6 +108,9 @@ msgid ""
 "Partitions must have a valid device name and partition number such as \"hda1"
 "\" or \"sda3\"."
 msgstr ""
+"指定されたパーティションは、\"hd\" や \"sd\"では始まりません。パーティションは "
+"\"hda1\"や\"sda3\"などの有効なデバイス名とパーティション番号を持つ "
+"必要があります。"
 
 #: redhat-config-kickstart.gladestrings:277
 msgid "Monitor"
@@ -145,7 +150,7 @@ msgstr "指定したサイズ"
 
 #: redhat-config-kickstart.gladestrings:55
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: ../src/partWindow.py:83 redhat-config-kickstart.gladestrings:61
 msgid "swap"
@@ -177,7 +182,7 @@ msgstr "GNOME"
 
 #: redhat-config-kickstart.gladestrings:24
 msgid "(for example: hda or sdc)"
-msgstr ""
+msgstr "(例えば、hda 又は sdc)"
 
 #: redhat-config-kickstart.gladestrings:298
 msgid "Preview Options"
@@ -264,18 +269,16 @@ msgid "Disabled"
 msgstr "なし"
 
 #: redhat-config-kickstart.gladestrings:138
-#, fuzzy
 msgid "label174"
-msgstr "label1"
+msgstr "label174"
 
 #: ../src/partWindow.py:356
 msgid "Specify a mount point for the partition."
 msgstr "パーティション用のマウントポイントを指定して下さい。"
 
 #: redhat-config-kickstart.gladestrings:134
-#, fuzzy
 msgid "label173"
-msgstr "label1"
+msgstr "label173"
 
 #: redhat-config-kickstart.gladestrings:301
 msgid "RAID Options"
@@ -311,9 +314,8 @@ msgid "HTTP"
 msgstr "HTTP"
 
 #: ../src/raidWindow.py:136 ../src/raidWindow.py:161
-#, fuzzy
 msgid "Raid Devices"
-msgstr "RAIDデバイス："
+msgstr "Raidデバイス"
 
 #: ../src/kickstartGui.py:109
 msgid "Boot Loader Options"
@@ -324,13 +326,12 @@ msgid "Automatically Resolve Dependencies"
 msgstr "自動的に依存関係を解決"
 
 #: redhat-config-kickstart.gladestrings:127
-#, fuzzy
 msgid "Upgrade existing boot loader"
-msgstr "既存のブートローダー設定をアップグレード "
+msgstr "既存のブートローダーをアップグレード "
 
 #: redhat-config-kickstart.gladestrings:129
 msgid "Use LILO for the boot loader"
-msgstr ""
+msgstr "ブートローダーとしてLILOを使用"
 
 #: redhat-config-kickstart.gladestrings:115
 msgid "HTTP Server:"
@@ -451,11 +452,12 @@ msgid "None"
 msgstr "なし"
 
 #: ../src/partition.py:71
-#, fuzzy
 msgid ""
 "Mount Point/\n"
 "RAID/Volume"
-msgstr "マウントポイント"
+msgstr ""
+"マウントポイント/ \n"
+"RAID/ボリューム"
 
 #: redhat-config-kickstart.gladestrings:156
 msgid "_Edit"
@@ -552,7 +554,7 @@ msgstr "ケルベロス5認証有効"
 
 #: redhat-config-kickstart.gladestrings:128
 msgid "Use GRUB for the boot loader"
-msgstr ""
+msgstr "ブートローダーとしてGRUBを使用"
 
 #: ../src/partWindow.py:82 redhat-config-kickstart.gladestrings:60
 msgid "physical volume (LVM)"
@@ -580,7 +582,7 @@ msgstr "LDAPベース名: "
 
 #: ../src/raidWindow.py:125
 msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr ""
+msgstr "RAID %sを使用するには最低3つのパーティションを選択する必要があります。"
 
 #: ../src/partWindow.py:203 ../src/partWindow.py:270 ../src/raidWindow.py:152
 #: redhat-config-kickstart.gladestrings:154
@@ -596,13 +598,12 @@ msgid "FTP Directory:"
 msgstr "FTPディレクトリ:"
 
 #: ../src/partWindow.py:376
-#, fuzzy
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
 msgstr ""
-"新しいRAIDパーティションを作成する為には、ハードディスクドライブ又は 既存の"
-"パーティションを指定する必要があります。"
+"新しいRAIDパーティションを作成するには、ハードドライブ のデバイス名か "
+"又は既存のパーティションを指定する必要があります。"
 
 #: redhat-config-kickstart.gladestrings:290
 msgid "label89"
@@ -613,9 +614,8 @@ msgid "Upgrade"
 msgstr "アップグレード"
 
 #: redhat-config-kickstart.gladestrings:125
-#, fuzzy
 msgid "Install new boot loader"
-msgstr "ブートローダをインストール"
+msgstr "新しいブートローダをインストール"
 
 #: ../src/partWindow.py:205 ../src/partWindow.py:272 ../src/raidWindow.py:154
 #: redhat-config-kickstart.gladestrings:151
@@ -672,9 +672,8 @@ msgid "Type your %pre script below:"
 msgstr "%pre スクリプトを下に入力してください:"
 
 #: ../src/partWindow.py:225
-#, fuzzy
 msgid "Hard Drives"
-msgstr "ハードドライブ"
+msgstr "ハード ドライブ"
 
 #: redhat-config-kickstart.gladestrings:216
 msgid "LDAP Authentication"
@@ -749,9 +748,8 @@ msgid "RAID Device:"
 msgstr "RAIDデバイス："
 
 #: redhat-config-kickstart.gladestrings:139
-#, fuzzy
 msgid "Install boot loader on Master Boot Record (MBR)"
-msgstr "にブートローダをインストール: "
+msgstr "マスターブートレコード(MBR)にブートローダーをインストール "
 
 #: redhat-config-kickstart.gladestrings:171
 #: redhat-config-kickstart.gladestrings:173
@@ -845,9 +843,8 @@ msgstr ""
 "キックスタートファイル作成用のグラフィカルなインターフェイス"
 
 #: redhat-config-kickstart.gladestrings:143
-#, fuzzy
 msgid "Boot Loader Options (required)"
-msgstr "ブートローダオプション"
+msgstr "ブートローダーオプション(必須)"
 
 #: redhat-config-kickstart.gladestrings:25
 msgid "Use existing partition (onpart)"
@@ -862,9 +859,8 @@ msgid "Authentication:"
 msgstr "認証:"
 
 #: ../src/partition.py:77
-#, fuzzy
 msgid "Size (MB)"
-msgstr "サイズ(MB):"
+msgstr "サイズ(MB)"
 
 #: redhat-config-kickstart.gladestrings:105
 msgid "FTP Server:"
@@ -888,7 +884,7 @@ msgstr "ファイル(_F)"
 
 #: redhat-config-kickstart.gladestrings:29
 msgid "(for example: hda1 or sdc3)"
-msgstr ""
+msgstr "(例えば: hda1 又は sdc3)"
 
 #: redhat-config-kickstart.gladestrings:264
 msgid "General"
@@ -900,7 +896,7 @@ msgstr "削除(_D)"
 
 #: ../src/raidWindow.py:119
 msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr ""
+msgstr "RAID %sを使用するには、最低2つのパーティションを選択する必要があります。"
 
 #: redhat-config-kickstart.gladestrings:268
 msgid "Video Card"
@@ -923,6 +919,8 @@ msgid ""
 "Device/\n"
 "Partition Number"
 msgstr ""
+"デバイス/ \n"
+"パーティション番号"
 
 #: redhat-config-kickstart.gladestrings:35
 msgid "Raid Members"
@@ -949,9 +947,8 @@ msgid "Resolution"
 msgstr "解像度"
 
 #: redhat-config-kickstart.gladestrings:126
-#, fuzzy
 msgid "Do not install a boot loader"
-msgstr "ブートローダをインストール"
+msgstr "ブートローダをインストールしない"
 
 #: redhat-config-kickstart.gladestrings:36
 msgid "RAID Level:"
@@ -1015,7 +1012,7 @@ msgstr "指定したドライブにパーティションを作る(ディスク�
 
 #: ../src/partition.py:75
 msgid "Format"
-msgstr ""
+msgstr "フォーマット"
 
 #: redhat-config-kickstart.gladestrings:251
 #: redhat-config-kickstart.gladestrings:252
@@ -1044,7 +1041,7 @@ msgstr "ブート時にXウィンドウシステムを起動する"
 
 #: redhat-config-kickstart.gladestrings:57
 msgid "5"
-msgstr ""
+msgstr "5"
 
 #: redhat-config-kickstart.gladestrings:244
 msgid "Authentication Configuration"
@@ -1100,11 +1097,12 @@ msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name  such as \"hda1\" or \"sda3\"."
 msgstr ""
+"指定されたデバイスは有効なデバイス名ではありません。\"hda1\" や \"sda3\"など "
+"有効なデバイス名を使用してください。"
 
 #: redhat-config-kickstart.gladestrings:140
-#, fuzzy
 msgid "Install boot loader on first sector of the boot partition"
-msgstr "先頭セクタ(_F)"
+msgstr "ブートパーティションの先頭セクター上にブートローダーをインストール"
 
 #: redhat-config-kickstart.gladestrings:96
 #: redhat-config-kickstart.gladestrings:122
@@ -1170,7 +1168,7 @@ msgstr "ディスクラベルの初期化:"
 
 #: ../src/partWindow.py:231 ../src/partWindow.py:250 ../src/partWindow.py:264
 msgid "Auto"
-msgstr ""
+msgstr "自動"
 
 #: redhat-config-kickstart.gladestrings:228
 msgid "Hesiod LHS:"
@@ -1301,3 +1299,4 @@ msgstr "停止(_Q)"
 #~ "2\n"
 #~ "3\n"
 #~ "4\n"
+
