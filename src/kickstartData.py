@@ -30,6 +30,8 @@ class KickstartData:
         self.pre = None
         self.post = None
         self.upgrade = None
+        self.partList = []
+        self.raidList = []
 
     def setLang(self, args):
         self.lang = args[0]
@@ -167,6 +169,7 @@ class KickstartData:
         return self.url
 
     def setBootloader(self, args):
+        print "in setBootloader", args
         self.bootloader = args
 
     def getBootloader(self):
@@ -217,6 +220,20 @@ class KickstartData:
 
     def getUpgrade(self):
         return self.upgrade
+
+    def definePartition(self, args):
+        print "in definePartition"
+        print args
+        self.partList.append(args)
+
+    def getPartitions(self):
+        return self.partList
+
+    def defineRaid(self, args):
+        self.raidList.append(args)
+
+    def getRaid(self):
+        return self.raidList
 
     def getAll(self):
         print "in getAll\n\n"
@@ -291,10 +308,16 @@ class KickstartData:
 
         if self.getBootloader():
             file.append("#System bootloader configuration")
-            file.append("bootloader " + self.getBootloader())
+            file.append("bootloader " + self.getBootloader()[0])
+
+        if self.getPartitions() != []:
+            file.append("#Disk partitioning information")
+            for line in self.getPartitions():
+                file.append("part " + string.join(line, " "))
+
 
         for line in file:
             print line
-    
+
 
 #        return file
