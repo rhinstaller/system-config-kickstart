@@ -49,7 +49,7 @@ fi
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
-* Wek May 22 2002 Brent Fox <bfox@redhat.com> 2.0-9
+* Wed May 22 2002 Brent Fox <bfox@redhat.com> 2.0-9
 - Fixed bug #65323 to handle partition minimum size better
 
 * Mon May 13 2002 Brent Fox <bfox@redhat.com> 2.0-8
