@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
 Version: 2.5.21
-Release: 2
+Release: 4
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
 ExclusiveOS: Linux
@@ -19,6 +19,7 @@ Requires: python >= 2.3.3
 Requires: hwdata
 Requires: rhpl
 Requires: system-config-language
+Prereq: gtk2 >= 2.6
 
 %description
 Kickstart Configurator is a graphical tool for creating kickstart files.  
@@ -40,9 +41,21 @@ desktop-file-install --vendor system --delete-original      \
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post
+touch --no-create %{_datadir}/icons/hicolor
+if [ -x /usr/bin/gtk-update-icon-cache ]; then
+  gtk-update-icon-cache %{_datadir}/icons/hicolor
+fi
+
 %preun
 if [ -d /usr/share/%{name} ] ; then
   rm -rf /usr/share/%{name}/*.pyc
+fi
+
+%postun
+touch --no-create %{_datadir}/icons/hicolor
+if [ -x /usr/bin/gtk-update-icon-cache ]; then
+  gtk-update-icon-cache %{_datadir}/icons/hicolor
 fi
 
 %files -f %{name}.lang
@@ -60,6 +73,12 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Mon Mar 28 2005 Christopher Aillon <caillon@redhat.com>
+- rebuilt
+
+* Fri Mar 25 2005 Christopher Aillon <caillon@redhat.com> 2.5.21-3
+- Update the GTK+ theme icon cache on (un)install
+
 * Wed Mar 23 2005 Chris Lumens <clumens@redhat.com> 2.5.21-2
 - Rebuilt translation files.
 
