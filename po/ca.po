@@ -1,15 +1,15 @@
 # Catalan translations for redhat-config-kickstart package.
-# Copyright (C) 2004 Free Software Foundation
+# Copyright (C) 2004, 2005 Free Software Foundation
 # This file is distributed under the same license as the
 #      redhat-config-kickstart package.
 # Àngels Sala <m_angels15@yahoo.es>, 2004.
-# Josep Puigdemont <baldrick@terra.es>, 2004.
+# Josep Puigdemont <baldrick@terra.es>, 2004, 2005
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: redhat-config-kickstart\n"
 "POT-Creation-Date: 2004-12-09 10:13-0500\n"
-"PO-Revision-Date: 2004-03-31 14:59+0200\n"
+"PO-Revision-Date: 2005-02-22 09:51+0100\n"
 "Last-Translator: Josep Puigdemont <baldrick@terra.es>\n"
 "Language-Team: Catalan <fedora@softcatala.net>\n"
 "MIME-Version: 1.0\n"
@@ -26,9 +26,8 @@ msgid "GNOME Desktop Environment"
 msgstr "Entorn d'escriptori GNOME"
 
 #: ../src/RHELPackageGroupList.py:14
-#, fuzzy
 msgid "KDE (K Desktop Environment)"
-msgstr "Entorn d'escriptori KDE"
+msgstr "KDE (Entorn d'escriptori K)"
 
 #: ../src/RHELPackageGroupList.py:16
 msgid "Editors"
@@ -44,7 +43,7 @@ msgstr "Internet gràfica"
 
 #: ../src/RHELPackageGroupList.py:19
 msgid "Text-based Internet"
-msgstr "Internet en mode texte"
+msgstr "Internet en mode text"
 
 #: ../src/RHELPackageGroupList.py:20
 msgid "Office/Productivity"
@@ -176,7 +175,8 @@ msgstr ""
 
 #: ../src/bootloader.py:117
 msgid "Grub passwords do not match.  Please try again."
-msgstr "Les contrasenyes pel Grub no coincideixen. Proveu-ho una altra vegada."
+msgstr ""
+"Les contrasenyes per al Grub no coincideixen. Proveu-ho una altra vegada."
 
 #. create table with custom checklists
 #: ../src/firewall.py:59
@@ -342,15 +342,16 @@ msgstr ""
 
 #: ../src/packageGroupList.py:18
 msgid "Could not start because there is no /usr/share/comps/"
-msgstr ""
+msgstr "No s'ha pogut iniciar perquè el fitxer /usr/share/comps/"
 
+# NOTE: this is combined with the previous string.
 #: ../src/packageGroupList.py:18
 msgid "/comps.xml file."
-msgstr ""
+msgstr "/comps.xml no existeix."
 
 #: ../src/packageGroupList.py:19
 msgid "Please make sure the comps package is installed."
-msgstr ""
+msgstr "Assegureu-vos que el paquet comps està instal·lat"
 
 #: ../src/partWindow.py:83 system-config-kickstart.gladestrings:58
 msgid "ext2"
@@ -404,8 +405,7 @@ msgstr "Especifiqueu un punt de muntatge per a la partició."
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
-"El punt de muntatge \"%s\" ja s'està utilitzant. Seleccioneu un altre punt "
-"de muntatge."
+"El punt de muntatge \"%s\" ja s'està utilitzant, seleccioneu-ne un altre."
 
 #: ../src/partWindow.py:449
 msgid ""
@@ -424,8 +424,8 @@ msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
 msgstr ""
-"El dispositiu especificat no és vàlid. Utilitzeu un nom de dispositiu vàlid "
-"com \"hda1\" o \"sda3\"."
+"El dispositiu especificat no és vàlid, utilitzeu-ne un de vàlid com \"hda1\" "
+"o \"sda3\"."
 
 #: ../src/partWindow.py:500
 msgid ""
@@ -514,19 +514,18 @@ msgid ""
 "values from\n"
 "                        the kickstart file already filled in."
 msgstr ""
-"Ús: system-config-kickstart [--help] [--generate <nom de fitxer>] [<nom de "
-"fitxer_de l'inici ràpid>]\n"
+"Forma d'ús: system-config-kickstart [--help] [--generate <fitxer>] [<fitxer "
+"d'inici ràpid>]\n"
 "        \n"
 "--help                  Mostra aquest missatge\n"
-"--generate <nom de fitxer>   Genereu un fitxer de l'inici ràpid d'aquesta "
-"màquina i escriviu-lo\n"
-"                        a <nom de fitxer>.  Aquesta opció s'executa des de "
-"la consola, per tant és\n"
-"                        útil per a servidors que no estan executant l'X "
-"actualment.\n"
-"<nom de fitxer_de l'inici ràpid>    Aquesta opció farà que la GUI s'executi "
-"amb els valors del\n"
-"                        fitxer de l'inici ràpid ja completat."
+"--generate <fitxer>     Genereu un fitxer de l'inici ràpid d'aquesta "
+"màquina\n"
+"                        i escriviu-lo a <fitxer>.  Aquesta opció s'executa\n"
+"                        des de la consola, per tant és útil per a servidors\n"
+"                        que no estan executant l'X actualment.\n"
+"<fitxer d'inici ràpid>  Aquesta opció farà que la GUI s'executi amb els "
+"valors\n"
+"                        del fitxer de l'inici ràpid ja completat."
 
 #: ../src/system-config-kickstart.py:77
 msgid "Could not open display because no X server is running."
@@ -831,7 +830,7 @@ msgstr "Idioma predeterminat:"
 
 #: system-config-kickstart.gladestrings:74
 msgid "Encrypt root password"
-msgstr "Encripta la contrasenya del superusuari"
+msgstr "Xifra la contrasenya del superusuari"
 
 #: system-config-kickstart.gladestrings:75
 msgid "Keyboard:"
@@ -876,7 +875,7 @@ msgstr "Arranca de nou el sistema després de la instal·lació"
 
 #: system-config-kickstart.gladestrings:91
 msgid "Perform installation in text mode (graphical is default)"
-msgstr "Realitza la instal·lació en mode de text (gràfic per defecte)"
+msgstr "Realitza la instal·lació en mode text (gràfic per defecte)"
 
 #: system-config-kickstart.gladestrings:92
 msgid "Perform installation in interactive mode"
@@ -1005,7 +1004,7 @@ msgstr "Contrasenya:"
 
 #: system-config-kickstart.gladestrings:140
 msgid "Encrypt GRUB password"
-msgstr "Encripta la contrasenya del GRUB"
+msgstr "Xifra la contrasenya del GRUB"
 
 #: system-config-kickstart.gladestrings:141
 msgid "Install boot loader on Master Boot Record (MBR)"
@@ -1037,11 +1036,11 @@ msgstr "label35"
 
 #: system-config-kickstart.gladestrings:148
 msgid "Clear Master Boot Record"
-msgstr "Esborra el registre mestre de l'arrencada"
+msgstr "Neteja el registre mestre de l'arrencada"
 
 #: system-config-kickstart.gladestrings:149
 msgid "Do not clear Master Boot Record"
-msgstr "No esborris el registre mestre de l'arrencada"
+msgstr "No netegis el registre mestre de l'arrencada"
 
 #: system-config-kickstart.gladestrings:150
 msgid "Remove all existing partitions"
@@ -1373,7 +1372,7 @@ msgstr "Seleccioneu els paquets informàtics per instal·lar."
 
 #: system-config-kickstart.gladestrings:251
 msgid "_Install Everything"
-msgstr ""
+msgstr "_Instal·la-ho tot"
 
 #: system-config-kickstart.gladestrings:252
 msgid "Desktops"
@@ -1397,7 +1396,7 @@ msgstr "Sistema"
 
 #: system-config-kickstart.gladestrings:257
 msgid "Package selection is not applicable on upgrades."
-msgstr "La selecció de paquets no és aplicable en les actualitzacions."
+msgstr "La selecció de paquets no és aplicable a les actualitzacions."
 
 #: system-config-kickstart.gladestrings:259
 msgid "label34"
@@ -1415,7 +1414,7 @@ msgstr ""
 #: system-config-kickstart.gladestrings:261
 #: system-config-kickstart.gladestrings:268
 msgid "Use an interpreter:"
-msgstr "Utilitzeu un intèrpret:"
+msgstr "Utilitza un intèrpret:"
 
 #: system-config-kickstart.gladestrings:263
 #, c-format
