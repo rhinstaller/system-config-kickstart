@@ -125,16 +125,9 @@ class basic:
         lang_combo.list.select_item(4)
         lang_combo.entry.set_editable(FALSE)
 
-        #populate language support combo
-#        lang_support_combo.set_popdown_strings(lang_list)
-
         for lang in lang_list:
             self.lang_support_list.append([lang])
 
-        #set default to English
-#        lang_support_combo.list.select_item(4)
-#        lang_support_combo.entry.set_editable(FALSE)				
-        
         #populate mouse combo
         mouse_list = ["Probe for Mouse"]
         dict_list = self.mouseDict.keys()
@@ -203,6 +196,9 @@ class basic:
         #set default to English
         keyboard_combo.list.select_item(43)
         keyboard_combo.entry.set_editable(FALSE)		
+
+        #set default mouse to generic ps/2
+        mouse_combo.list.select_item(8)
 
         #populate time zone combo
         if os.access("/usr/share/zoneinfo/zone.tab", os.R_OK):
