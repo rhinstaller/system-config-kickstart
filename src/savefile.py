@@ -38,7 +38,7 @@ xml = libglade.GladeXML ("./ksconfig.glade", "confirm_options_dialog", domain="k
 class saveFile:
 	
 	def destroy(self, args):
-            self.dialog.destroy()
+		self.dialog.destroy()
 
         def __init__ (self, buf):
 		self.buf = buf
