@@ -390,6 +390,7 @@ class network:
             self.delete_device_button.set_sensitive(gtk.TRUE)
             
     def fillData(self):
+        self.network_device_store.clear()
         networkList = self.kickstartData.getNetwork()
 
         for line in networkList:

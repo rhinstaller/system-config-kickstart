@@ -267,6 +267,7 @@ class kickstartGui:
 
         if result == gtk.RESPONSE_OK:
             if os.access(file, os.R_OK) == 1:
+                self.kickstartData.clearNetwork()
                 self.kickstartParser = kickstartParser.KickstartParser(self.kickstartData, file)
                 self.fillData()
             else:
