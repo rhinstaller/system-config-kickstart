@@ -301,7 +301,6 @@ class basic:
             if rc == gtk.RESPONSE_OK:
                 dlg.hide()
             self.root_passwd_entry.grab_focus()
-            self.root_passwd_entry.show()
             return
             
         if self.encrypt_root_pw_checkbutton.get_active() == gtk.TRUE:
