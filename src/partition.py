@@ -267,8 +267,10 @@ class partition:
                 if part_object.fsType:
                     buf = buf + " --fstype " + part_object.fsType + " " 
 
+                if not part_object.doFormat:
+                    buf = buf + "--noformat "
+
                 if part_object.raidPartitions != None:
-                    print part_object.raidPartitions
                     partitions = string.join(part_object.raidPartitions, " ")
                     buf = buf + partitions + " "
 
