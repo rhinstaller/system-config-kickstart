@@ -1,13 +1,13 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
-Version: 2.2
-Release: 2
+Version: 2.3
+Release: 1
 URL: http://www.redhat.com
 ExclusiveOS: Linux
 Group: System Environment/Base
 BuildRoot: %{_tmppath}/redhat-config-kickstart-%{version}-root
 BuildArch: noarch
-Source: redhat-config-kickstart-%{version}.tar.gz
+Source0: redhat-config-kickstart-%{version}.tar.gz
 Obsoletes: ksconfig
 Requires: pygtk2 
 Requires: pygtk2-libglade 
@@ -46,6 +46,9 @@ fi
 %config /etc/X11/applnk/System/redhat-config-kickstart.desktop
 
 %changelog
+* Wed Jul 10 2002 Brent Fox <bfox@redhat.com> 2.3-1
+- Renamed ksconfig to redhat-config-kickstart
+
 * Fri Jun 28 2002 Brent Fox <bfox@redhat.com> 2.2-2
 - Fix bug 66258
 
