@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
-Version: 2.3.21
+Version: 2.3.22
 Release: 1
 URL: http://www.redhat.com
 License: GPL
@@ -11,6 +11,7 @@ BuildArch: noarch
 Source0: %{name}-%{version}.tar.bz2
 Obsoletes: ksconfig
 BuildRequires: desktop-file-utils
+Requires: redhat-config-language
 Requires: pygtk2 >= 1.99.11
 Requires: pygtk2-libglade 
 Requires: python2
@@ -56,6 +57,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Tue Mar  2 2004 Brent Fox <bfox@redhat.com> 2.3.22-1
+- add a Requires for redhat-config-language
+
 * Thu Feb 12 2004 Brent Fox <bfox@redhat.com> 2.3.21-1
 - fix import path in profileSystem.py (bug #108127)
 
