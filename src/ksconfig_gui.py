@@ -58,7 +58,7 @@ _=gettext.gettext
 xml = libglade.GladeXML ("/usr/share/ksconfig/ksconfig.glade", domain="ksconfig")
 #xml = libglade.GladeXML ("./ksconfig.glade", domain="ksconfig")
 
-VERSION = "1.9.9"
+VERSION = "2.0"
 
 class ksconfig_gui:
 	
@@ -168,7 +168,7 @@ class ksconfig_gui:
 		list = list + self.bootloader_class.getData()
 		list = list + self.install_class.getData()
 
-## 		#only write partition info if performing an install
+ 		#only write partition info if performing an install
  		if self.install_radiobutton.get_active():
  			list = list + self.partition_class.getData()
  		list = list + self.network_class.getData()
