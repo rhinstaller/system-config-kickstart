@@ -24,8 +24,11 @@
 import gtk
 import gtk.glade
 import gobject
+import string
+
 import partWindow
 import raidOptionsWindow
+import partEntry
 
 ##
 ## I18N
@@ -77,6 +80,47 @@ class partition:
         #initialize the child classes
         self.partWindow = partWindow.partWindow(self.xml, self.part_store, self.part_view)
         self.raidOptionsWindow = raidOptionsWindow.raidOptionsWindow(self.xml, self.part_store, self.part_view, self.partWindow)
+
+
+##         #XXX-FIXME-FOR TESTING ONLY
+##         hard_drive_parent_iter = self.part_store.append(None)
+##         self.part_store.set_value(hard_drive_parent_iter, 0, (_("Hard Drives")))
+
+##         hda_iter = self.part_store.append(hard_drive_parent_iter)
+##         self.part_store.set_value(hda_iter, 0, (_("hda")))
+
+##         part_object = partEntry.partEntry()
+##         part_object.fsType = "raid"
+##         part_object.device = "Auto"
+##         part_object.raidNumber = "raid.01"
+##         part_object.format = 1
+##         part_object.size = 1
+
+##         part_iter = self.part_store.append(hda_iter)
+##         self.part_store.set_value(part_iter, 0, part_object.raidNumber)
+##         self.part_store.set_value(part_iter, 2, part_object.fsType)
+##         self.part_store.set_value(part_iter, 3, part_object.format)
+##         self.part_store.set_value(part_iter, 4, part_object.size)
+##         self.part_store.set_value(part_iter, 5, part_object)
+
+##         hdb_iter = self.part_store.append(hard_drive_parent_iter)
+##         self.part_store.set_value(hdb_iter, 0, (_("hdb")))
+
+##         part_object = partEntry.partEntry()
+##         part_object.fsType = "raid"
+##         part_object.device = "Auto"
+##         part_object.format = 1
+##         part_object.raidNumber = "raid.02"
+##         part_object.size = 1
+
+##         part_iter = self.part_store.append(hdb_iter)
+##         self.part_store.set_value(part_iter, 0, part_object.raidNumber)
+##         self.part_store.set_value(part_iter, 2, part_object.fsType)
+##         self.part_store.set_value(part_iter, 3, part_object.format)
+##         self.part_store.set_value(part_iter, 4, part_object.size)
+##         self.part_store.set_value(part_iter, 5, part_object)
+
+        self.part_view.expand_all()
 
     def delPartition(self, *args):
         try:
@@ -166,36 +210,56 @@ class partition:
         part_object = self.part_store.get_value(iter, 5)
 
         if part_object:
-            buf = "part %s" % (part_object.mountPoint)
 
-            if part_object.fsType == "swap":
-                buf = buf + "swap "
-            elif part_object.fsType == "raid":
-                buf = buf + "raid.%s " % part_object.raidNumber
+            if part_object.isRaidDevice == None:
+                buf = "part %s" % (part_object.mountPoint)
+                
+                if part_object.fsType == "swap":
+                    buf = buf + "swap "
+                elif part_object.fsType == "raid":
+                    buf = buf + "raid.%s " % part_object.raidNumber
+                else:
+                    buf = buf + " --fstype " + part_object.fsType + " " 
+
+                if part_object.size == "recommended":
+                    buf = buf + "--recommended "
+                else:
+                    buf = buf + "--size %s " % (part_object.size)
+
+                if part_object.sizeStrategy == "grow":
+                    buf = buf + "--grow --maxsize %s " % (part_object.setSizeVal)
+                elif part_object.sizeStrategy == "max":
+                    buf = buf + "--grow "
+
+                if part_object.asPrimary:
+                    buf = buf + "--asprimary "
+
+                if part_object.partition:
+                    buf = buf + "--onpart %s " % (part_object.partition)
+
+                elif part_object.device:
+                    buf = buf + "--ondisk %s " % (part_object.device)
+
+                if not part_object.doFormat:
+                    buf = buf + "--noformat "
+
             else:
-                buf = buf + " --fstype " + part_object.fsType + " " 
+                #This is a raid device
+                buf = "raid %s" % (part_object.mountPoint)
 
-            if part_object.size == "recommended":
-                buf = buf + "--recommended "
-            else:
-                buf = buf + "--size %s " % (part_object.size)
+                if part_object.raidLevel:
+                    buf = buf + " --level=%s" % part_object.raidLevel + " "
 
-            if part_object.sizeStrategy == "grow":
-                buf = buf + "--grow --maxsize %s " % (part_object.setSizeVal)
-            elif part_object.sizeStrategy == "max":
-                buf = buf + "--grow "
+                if part_object.raidDevice:
+                    buf = buf + " --device=%s" % part_object.raidDevice + " "
 
-            if part_object.asPrimary:
-                buf = buf + "--asprimary "
+                if part_object.fsType:
+                    buf = buf + " --fstype " + part_object.fsType + " " 
 
-            if part_object.partition:
-                buf = buf + "--onpart %s " % (part_object.partition)
-
-            elif part_object.device:
-                buf = buf + "--ondisk %s " % (part_object.device)
-
-            if not part_object.doFormat:
-                buf = buf + "--noformat "
+                if part_object.raidPartitions != None:
+                    print part_object.raidPartitions
+                    partitions = string.join(part_object.raidPartitions, " ")
+                    buf = buf + partitions + " "
 
             self.partDataBuf.append(buf)
             
