@@ -11,10 +11,8 @@ BuildArch: noarch
 Source: ksconfig-%{version}.tar.gz
 BuildRequires: python-devel
 BuildRequires:gnome-libs-devel
-Requires: pygnome 
 Requires: pygtk 
 Requires: pygtk-libglade 
-Requires: pygnome-libglade
 Requires: python >= 1.5.2
 Requires: usermode
 
