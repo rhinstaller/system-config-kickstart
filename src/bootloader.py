@@ -40,11 +40,15 @@ class bootloader:
         self.lilo_options_label = xml.get_widget("lilo_options_label")
         self.linear_checkbutton = xml.get_widget("linear_checkbutton")
         self.lba32_checkbutton = xml.get_widget("lba32_checkbutton")
+        self.grub_options_label = xml.get_widget("grub_options_label")
+        self.grub_password_label = xml.get_widget("grub_password_label")
+        self.grub_password_entry = xml.get_widget("grub_password_entry")
 
         #bring in signals from glade file
         xml.signal_autoconnect (
             { "toggled_bootloader" : self.toggled_bootloader,
               "toggled_lilo" : self.toggled_lilo,
+              "toggled_grub" : self.toggled_grub,
               })
 
     def toggled_bootloader (self, args):
@@ -55,12 +59,35 @@ class bootloader:
         self.lilo_options_label.set_sensitive(status)
         self.linear_checkbutton.set_sensitive(status)
         self.lba32_checkbutton.set_sensitive(status)
+        self.grub_options_label.set_sensitive(status)        
+        self.grub_password_label.set_sensitive(status)
+        self.grub_password_entry.set_sensitive(status)        
+        if status:
+            print "install boot loader"
+            status = self.choose_lilo_radiobutton.get_active()
+            if status:
+                print "lilo active" 
+                self.grub_options_label.set_sensitive(not status)        
+                self.grub_password_label.set_sensitive(not status)
+                self.grub_password_entry.set_sensitive(not status)
+            status = self.choose_grub_radiobutton.get_active()
+            if status:
+                print "grub active"                 
+                self.lilo_options_label.set_sensitive(not status)
+                self.linear_checkbutton.set_sensitive(not status)
+                self.lba32_checkbutton.set_sensitive(not status)
 
     def toggled_lilo (self, args):
         status = self.choose_lilo_radiobutton.get_active()
         self.lilo_options_label.set_sensitive(status)
         self.linear_checkbutton.set_sensitive(status)
         self.lba32_checkbutton.set_sensitive(status)
+
+    def toggled_grub (self, args):
+        status = self.choose_grub_radiobutton.get_active()
+        self.grub_options_label.set_sensitive(status)        
+        self.grub_password_label.set_sensitive(status)
+        self.grub_password_entry.set_sensitive(status)        
 
     def getData (self):
         if self.install_bootloader_checkbutton.get_active():
@@ -77,12 +104,16 @@ class bootloader:
             #end of lilo stuff
             if self.mbr_radiobutton.get_active():
                 buf = buf + "--location mbr "
-            elif self.firstssector_radiobutton.get_active():
+            elif self.firstsector_radiobutton.get_active():
                 buf = buf + "--location partition "                
             params = string.strip (self.parameters_entry.get_text())
             length = len (params)
             if length > 0:
-                buf = buf + "--append " + params
+                buf = buf + "--append " + params + " "
+            gp = string.strip (self.grub_password_entry.get_text())
+            length = len(gp)
+            if length > 0:
+                buf = buf + "--password=" + gp + " "
         else:
             buf = "\n" + "bootloader --location none"
         return buf
