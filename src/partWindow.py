@@ -386,17 +386,19 @@ class partWindow:
 
         #Let's do some error checking to make sure things make sense
         if part_object.fsType == "raid":
+            part_object.mountPoint = ""
             # If it's a raid partition, run it through the checkRaid sanity checker
-            result = self.checkRaid(part_object)
-
-            if not result:
-                return None
+            print part_object.raidNumber
+            if part_object.raidNumber == "":
+                if not self.checkRaid(part_object):
+                    print "returning None"
+                    return None
             else:
-                part_object.fsType = result
+                print "this already has a raid number, leave it alone"
 
         else:
             #Erase any exiting raid data if we've edited a RAID partition to be non-RAID
-            part_object.raidNumber = None
+            part_object.raidNumber = ""
             
             #It's not raid, so move on
             if part_object.fsType == "swap":   
@@ -424,6 +426,7 @@ class partWindow:
 
                 part_object.mountPoint = mountPoint
 
+        print "returning 1"
         return 1
 
     def checkMountPoint(self, store, data, iter, mountPoint):
@@ -433,7 +436,7 @@ class partWindow:
             self.mp_is_unique = 1
 
     def checkRaid(self, part_object):
-        fsType = part_object.fsType
+        print "in checkRaid"
         device = part_object.device
         partition = part_object.partition
 
@@ -444,11 +447,12 @@ class partWindow:
             return None
 
         self.lastRaidNumber = ""
-        self.part_store.foreach(self.countRaid)
+        self.part_store.foreach(self.countRaid, part_object)
 
         if self.lastRaidNumber == "":
-            fsType = "raid"
             part_object.raidNumber = "raid.01"
+        elif self.lastRaidNumber == None:
+            pass
         elif part_object.raidNumber != None:
             tmpNum = 0
             tmpNum = int(self.lastRaidNumber) + 1
@@ -458,10 +462,15 @@ class partWindow:
                 part_object.raidNumber = "raid.%s" % str(tmpNum)
             
         #If all the checks pass, then return
-        return fsType
+        print "returning in checkRaid"
+        return 1
 
-    def countRaid(self, store, data, iter):
+    def countRaid(self, store, data, iter, object):
         part_object = self.part_store.get_value(iter, 5)
+        if object == part_object:
+            #Don't iterate if we're counting the object that's being edited
+            return None
+
         if part_object and part_object.fsType == "raid":
             tag, number = string.split(part_object.raidNumber, '.')
             if self.lastRaidNumber < number:

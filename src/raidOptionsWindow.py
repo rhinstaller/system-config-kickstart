@@ -26,7 +26,7 @@ import string
 import gtk
 import signal
 import partWindow
-import raidWindow
+#import raidWindow
 import kickstartGui
 
 ##
@@ -38,11 +38,12 @@ gettext.textdomain ("redhat-config-kickstart")
 _=gettext.gettext
 
 class raidOptionsWindow:
-    def __init__(self, xml, part_store, part_view, partWindow):
+    def __init__(self, xml, part_store, part_view, partWindow, raidWindow):
         self.xml = xml
         self.part_store = part_store
         self.part_view = part_view
         self.partWindow = partWindow
+        self.raidWindow = raidWindow
 
         self.raid_options_window = xml.get_widget("raid_options_window")
         self.raid_options_window.set_icon(kickstartGui.iconPixbuf)
@@ -54,7 +55,7 @@ class raidOptionsWindow:
         self.message_label = xml.get_widget("message_label")
         self.raid_partition_radio.set_active(gtk.TRUE)
 
-        self.raidWindow = raidWindow.raidWindow(self.xml, self.part_store, self.part_view)
+#        self.raidWindow = raidWindow.raidWindow(self.xml, self.part_store, self.part_view)
 
         self.raid_options_ok_button.connect("clicked", self.okClicked)
         self.raid_options_cancel_button.connect("clicked", self.destroy)

@@ -28,6 +28,7 @@ import string
 
 import partWindow
 import raidOptionsWindow
+import raidWindow
 import partEntry
 import kickstartGui
 
@@ -81,8 +82,8 @@ class partition:
 
         #initialize the child classes
         self.partWindow = partWindow.partWindow(self.xml, self.part_store, self.part_view)
-        self.raidOptionsWindow = raidOptionsWindow.raidOptionsWindow(self.xml, self.part_store, self.part_view, self.partWindow)
-
+        self.raidWindow = raidWindow.raidWindow(self.xml, self.part_store, self.part_view)
+        self.raidOptionsWindow = raidOptionsWindow.raidOptionsWindow(self.xml, self.part_store, self.part_view, self.partWindow, self.raidWindow)
 
 ##         #XXX-FIXME-FOR TESTING ONLY
 ##         hard_drive_parent_iter = self.part_store.append(None)
@@ -174,7 +175,14 @@ class partition:
         except:
             self.deviceNotValid(_("Please select a partition from the list."))
 
-        self.partWindow.edit_partition(iter)
+        part_object = self.part_store.get_value(iter, 5)
+        print part_object.isRaidDevice
+
+        if part_object.isRaidDevice:
+            print "it's a raid device"
+            self.raidWindow.editDevice(part_object)
+        else:
+            self.partWindow.edit_partition(iter)
         self.part_view.get_selection().unselect_all()
 
     def raidPartition(self, *args):
@@ -228,7 +236,7 @@ class partition:
                 if part_object.fsType == "swap":
                     buf = buf + "swap "
                 elif part_object.fsType == "raid":
-                    buf = buf + " " + part_object.raidNumber
+                    buf = buf + " " + part_object.raidNumber + " "
                 else:
                     buf = buf + " --fstype " + part_object.fsType + " " 
 

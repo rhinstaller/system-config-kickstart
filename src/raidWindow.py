@@ -83,9 +83,15 @@ class raidWindow:
         self.part_store.foreach(self.countRaidPartitions)
         self.raid_window.show_all()
 
+    def editDevice(self, part_object):
+        print "edit device"
+        print part_object.mountPoint
+
     def countRaidPartitions(self, store, data, iter):
+        print "in countRaidPartitions"
         part_object = self.part_store.get_value(iter, 5)
         if part_object and part_object.raidNumber:
+            print "appending"
             new_iter = self.raid_partition_store.append()
             self.raid_partition_store.set_value(new_iter, 0, gtk.FALSE)
             self.raid_partition_store.set_value(new_iter, 1, part_object.raidNumber)
