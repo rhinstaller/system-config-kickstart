@@ -28,6 +28,7 @@ import gtk
 import gtk.glade
 import gettext
 import getopt
+import os
 import kickstartGui
 
 try:
@@ -43,7 +44,10 @@ domain = 'redhat-config-kickstart'
 gettext.bindtextdomain(domain, '/usr/share/locale')
 gtk.glade.bindtextdomain(domain)
 
-xml = gtk.glade.XML ("/usr/share/redhat-config-kickstart/redhat-config-kickstart-gtk2.glade", domain=domain)
+if os.access("redhat-config-kickstart-gtk2.glade", os.F_OK):
+    xml = gtk.glade.XML ("redhat-config-kickstart-gtk2.glade", domain=domain)
+else:
+    xml = gtk.glade.XML ("/usr/share/redhat-config-kickstart/redhat-config-kickstart-gtk2.glade", domain=domain)
 
 file = None
 opts, file = getopt.getopt(sys.argv[1:], "d:h")
