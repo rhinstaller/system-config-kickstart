@@ -458,7 +458,6 @@ class partWindow:
                 part_object.raidNumber = "raid.%s" % str(tmpNum)
             
         #If all the checks pass, then return
-        print fsType
         return fsType
 
     def countRaid(self, store, data, iter):
