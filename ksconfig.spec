@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: ksconfig
 Version: 1.1
-Release: 1
+Release: 2
 URL: http://www.redhat.com
 Copyright: GPL
 ExclusiveOS: Linux
@@ -15,8 +15,7 @@ Requires: redhat-logos
 Requires: anaconda
 
 %description
-ksconfig is a graphical tool for creating kickstart files.  It will allow you to set most of the 
-kickstart options.
+ksconfig is a graphical tool for creating kickstart files.  It will allow you to set most of the kickstart options.
 
 %prep
 %setup -q
@@ -50,6 +49,11 @@ rm -rf $RPM_BUILD_ROOT
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
+* Fri Feb 16 2001 Tammy Fox <tfox@redhat.com>
+- added scrollwindow around partition information
+- made all widgets except partition scrollwindow unexpandable so that when the main window is resized only the partition list gets bigger
+- increased release number
+
 * Wed Feb 14 2001 Brent Fox <bfox@redhat.com>
 - fixed bug with the firewall screen
 
