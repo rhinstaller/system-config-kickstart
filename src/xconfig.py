@@ -36,7 +36,6 @@ class xconfig:
         self.monitor_view = xml.get_widget("monitor_view")
         self.sync_button = xml.get_widget("sync_button")
         self.sync_table = xml.get_widget("sync_table")        
-        self.startx_on_boot_button = xml.get_widget("startx_on_boot_button")
         self.xconfig_notebook = xml.get_widget("xconfig_notebook")        
         self.hsync_entry = xml.get_widget("hsync_entry")
         self.vsync_entry = xml.get_widget("vsync_entry")
@@ -46,6 +45,7 @@ class xconfig:
         self.gnome_radiobutton = xml.get_widget("gnome_radiobutton")
         self.kde_radiobutton = xml.get_widget("kde_radiobutton")
         self.startxonboot_checkbutton = xml.get_widget("startxonboot_checkbutton")
+        self.firstboot_checkbutton = xml.get_widget("firstboot_checkbutton")
         self.card_vbox = xml.get_widget("card_vbox")
         self.monitor_vbox = xml.get_widget("monitor_vbox")
         self.card_probe_check = xml.get_widget("card_probe_check")
@@ -173,6 +173,9 @@ class xconfig:
             #startxonboot
             if self.startxonboot_checkbutton.get_active():
                 buf = buf + " --startxonboot"
+
+            if self.firstboot_checkbutton.get_active():
+                buf = buf + "--firstboot"
 
             if not self.card_probe_check.get_active():
                 #video card and monitor
