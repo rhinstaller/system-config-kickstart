@@ -176,7 +176,7 @@ class partition:
                 buf = buf + " --fstype " + part_object.fsType + " " 
 
             if part_object.size == "recommended":
-                buf = buf + "--recommended"
+                buf = buf + "--recommended "
             else:
                 buf = buf + "--size %s " % (part_object.size)
 

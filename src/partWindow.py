@@ -272,7 +272,6 @@ class partWindow:
         setSizeVal = ""
         raidPartition = None
 
-        part_object.mountPoint = self.mountPointCombo.entry.get_text()
         fsTypeKey = self.fsTypeCombo.entry.get_text()
         part_object.fsType = self.fsTypesDict[fsTypeKey]
 
@@ -317,6 +316,7 @@ class partWindow:
 
         #Let's do some error checking to make sure things make sense
         if part_object.fsType == "raid":
+            # If it's a raid partition, run it through the checkRaid sanity checker
             result = self.checkRaid(part_object)
 
             if not result:
@@ -324,8 +324,16 @@ class partWindow:
             else:
                 part_object.fsType = result
 
-        elif part_object.fsType != "RAID":
-            if part_object.fsType != "swap":
+        else:
+            #It's not raid, so move on
+            if part_object.fsType == "swap":   
+                #If it's a swap partition, set fsType to be swap
+                part_object.fsType = "swap"
+                part_object.mountPoint = ""
+
+            else:
+                #It's not raid and it's not swap, so it must be a regular partition
+                part_object.mountPoint = self.mountPointCombo.entry.get_text()
                 if part_object.mountPoint == "":
                     dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
                                             _("Specify a mount point for the partition."))
@@ -338,10 +346,6 @@ class partWindow:
                     if rc == gtk.RESPONSE_OK:
                         dlg.hide()
                     return None
-
-        if part_object.fsType == "swap":   
-            part_object.fsType = "swap"
-            part_object.mountPoint = ""
 
         return 1
 
@@ -360,18 +364,6 @@ class partWindow:
 
 
         self.part_store.foreach(self.countRaid)
-
-#        iter = self.part_store.get_iter_first()        
-
-
-                
-
-##         while iter:
-##             print iter
-##             pyObject = self.part_store.get_value(iter, 5)
-##             if pyObject and pyObject.fsType == "raid":
-##                 lastRaidNumber = pyObject.raidNumber
-##             iter = self.part_store.iter_next(iter)        
 
         if self.lastRaidNumber == "":
             fsType = "raid"

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2.2
 
 ## raidOptionWindow - code for redhat-config-kickstart's raid dialog
 ## Copyright (C) 2001, 2002 Red Hat, Inc.
@@ -61,15 +61,11 @@ class raidOptionsWindow:
         self.raid_options_window.show_all()
 
     def countRaidPartitions(self):
-        list = []
-        iter = self.part_store.get_iter_first()
-        while iter:
-            part_object = self.part_store.get_value(iter, 5)
-            if part_object.raidNumber:
-                list.append(part_object.raidNumber)
-            iter = self.part_store.iter_next(iter)
+        self.list = []
 
-        num = len(list)
+        self.part_store.foreach(self.walkStore)
+
+        num = len(self.list)
         self.message_label.set_text(_("You currently have %d software RAID partition(s) "
                                       "free to use." % num))
         if num > 1:
@@ -78,6 +74,11 @@ class raidOptionsWindow:
         else:
             self.raid_partition_radio.set_active(gtk.TRUE)
             self.raid_device_radio.set_sensitive(gtk.FALSE)
+
+    def walkStore(self, store, data, iter):
+        part_object = self.part_store.get_value(iter, 5)
+        if part_object and part_object.raidNumber:
+            self.list.append(part_object.raidNumber)
         
     def okClicked(self, *args):
         if self.raid_partition_radio.get_active() == gtk.TRUE:
