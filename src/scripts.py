@@ -30,14 +30,19 @@ class scripts:
         self.chroot_checkbutton = xml.get_widget("chroot_checkbutton")
         self.interpreter_checkbutton = xml.get_widget("interpreter_checkbutton")
         self.interpreter_entry = xml.get_widget("interpreter_entry")
+        self.pre_interpreter_checkbutton = xml.get_widget("pre_interpreter_checkbutton")
+        self.pre_interpreter_entry = xml.get_widget("pre_interpreter_entry")
         self.pre_textview = xml.get_widget("pre_textview")
         self.post_textview = xml.get_widget("post_textview")
 
         self.interpreter_checkbutton.connect("toggled", self.interpreter_cb)
+        self.pre_interpreter_checkbutton.connect("toggled", self.pre_interpreter_cb)        
 
     def interpreter_cb(self, args):
         self.interpreter_entry.set_sensitive(self.interpreter_checkbutton.get_active())
 
+    def pre_interpreter_cb(self, args):
+        self.pre_interpreter_entry.set_sensitive(self.pre_interpreter_checkbutton.get_active())        
     def getData(self):
         data = []
         data.append("")
@@ -46,10 +51,13 @@ class scripts:
         return data
     
     def preData(self):
+        pre_command = "%pre "
+        if self.pre_interpreter_checkbutton.get_active():
+            pre_command = pre_command + "--interpreter " + self.pre_interpreter_entry.get_text()
         pre_buffer = self.pre_textview.get_buffer()
         data = pre_buffer.get_text(pre_buffer.get_start_iter(),pre_buffer.get_end_iter(),gtk.FALSE)
         if data != "":
-            buf = "%pre" + "\n" + data
+            buf = "\n" + pre_command + "\n" + data
         else:
             buf = ""
         return buf
