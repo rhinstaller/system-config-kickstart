@@ -16,7 +16,7 @@ msgstr ""
 "X-Generator: KBabel 1.0beta1\n"
 
 #: redhat-config-kickstart.gladestrings:12
-#: redhat-config-kickstart.gladestrings:32
+#: redhat-config-kickstart.gladestrings:35
 msgid "File System Type:"
 msgstr "ファイル システム タイプ:"
 
@@ -24,72 +24,72 @@ msgstr "ファイル システム タイプ:"
 msgid "Partition :"
 msgstr "パーティション :"
 
-#: redhat-config-kickstart.gladestrings:46
+#: redhat-config-kickstart.gladestrings:68
 msgid "_About"
 msgstr "関連情報(_A)"
 
-#: redhat-config-kickstart.gladestrings:222
+#: redhat-config-kickstart.gladestrings:244
 msgid "High"
 msgstr "高"
 
-#: redhat-config-kickstart.gladestrings:59
+#: redhat-config-kickstart.gladestrings:81
 msgid "Language Support:"
 msgstr "サポート言語:"
 
-#: redhat-config-kickstart.gladestrings:236
+#: redhat-config-kickstart.gladestrings:258
 msgid "Default Desktop:"
 msgstr "デフォルトデスクトップ:"
 
 #: redhat-config-kickstart.gladestrings:29
+#: redhat-config-kickstart.gladestrings:156
 msgid "Make RAID Device"
 msgstr "RAIDデバイスの作成"
 
-#: redhat-config-kickstart.gladestrings:122
+#: redhat-config-kickstart.gladestrings:150
 msgid "_Yes"
 msgstr "はい(_Y)"
 
-#: redhat-config-kickstart.gladestrings:54
+#: redhat-config-kickstart.gladestrings:76
 msgid "Emulate 3 Buttons"
 msgstr "3ボタンのエミュレーション"
 
-#: redhat-config-kickstart.gladestrings:30
-msgid "Format Partition"
-msgstr "パーティションのフォーマット"
-
-#: redhat-config-kickstart.gladestrings:137
+#: redhat-config-kickstart.gladestrings:159
 msgid "label30"
 msgstr "label30"
 
-#: redhat-config-kickstart.gladestrings:175
+#: redhat-config-kickstart.gladestrings:197
 msgid "label31"
 msgstr "label31"
 
-#: ../src/kickstartGui.py:110
+#: ../src/kickstartGui.py:111
 msgid "Authentication"
 msgstr "認証"
 
-#: redhat-config-kickstart.gladestrings:230
-msgid "label33"
-msgstr "label33"
+#: redhat-config-kickstart.gladestrings:55
+msgid "RAID 5"
+msgstr ""
 
-#: redhat-config-kickstart.gladestrings:260
+#: redhat-config-kickstart.gladestrings:282
 msgid "label34"
 msgstr "label34"
 
-#: redhat-config-kickstart.gladestrings:120
+#: redhat-config-kickstart.gladestrings:142
 msgid "label35"
 msgstr "label35"
 
-#: redhat-config-kickstart.gladestrings:262
-#: redhat-config-kickstart.gladestrings:269
-msgid "Use an interpreter:"
-msgstr "インタプリタを使う:"
+#: redhat-config-kickstart.gladestrings:53
+msgid "RAID 0"
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:54
+msgid "RAID 1"
+msgstr ""
 
 #: redhat-config-kickstart.gladestrings:18
 msgid "Additional Size Options"
 msgstr "追加サイズオプション"
 
-#: ../src/partWindow.py:260
+#: ../src/partWindow.py:302
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive or an "
 "existing partition."
@@ -97,19 +97,27 @@ msgstr ""
 "新しいRAIDパーティションを作成する為には、ハードディスクドライブ又は 既存の"
 "パーティションを指定する必要があります。"
 
-#: ../src/kickstartGui.py:111 redhat-config-kickstart.gladestrings:229
+#: ../src/kickstartGui.py:112 redhat-config-kickstart.gladestrings:251
 msgid "Firewall Configuration"
 msgstr "ファイアウォール設定"
 
-#: redhat-config-kickstart.gladestrings:80
+#: ../src/partWindow.py:76 redhat-config-kickstart.gladestrings:57
+msgid "ext3"
+msgstr ""
+
+#: ../src/partWindow.py:76 redhat-config-kickstart.gladestrings:56
+msgid "ext2"
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:102
 msgid "Encrypt GRUB password"
 msgstr "GRUBパスワードを暗号化"
 
-#: redhat-config-kickstart.gladestrings:197
-msgid "Kerberos Domain Controller (KDC):"
-msgstr "ケルベロスドメインコントローラ(KDC):"
+#: redhat-config-kickstart.gladestrings:14
+msgid "Fill all unused space on disk"
+msgstr "ディスク上の全ての未使用領域を埋める"
 
-#: ../src/kickstartGui.py:141
+#: ../src/kickstartGui.py:142
 msgid "About Kickstart Configurator"
 msgstr "キックスタート設定について"
 
@@ -121,55 +129,60 @@ msgstr "信頼されるデバイス:"
 msgid "Fixed size"
 msgstr "指定したサイズ"
 
-#: redhat-config-kickstart.gladestrings:268
+#: ../src/partWindow.py:78 redhat-config-kickstart.gladestrings:59
+msgid "swap"
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:290
 msgid "Run outside of the chroot environment"
 msgstr "chroot環境の外で実行"
 
-#: redhat-config-kickstart.gladestrings:183
+#: redhat-config-kickstart.gladestrings:205
 msgid "NIS Server:"
 msgstr "NISサーバ:"
 
-#: redhat-config-kickstart.gladestrings:39
+#: redhat-config-kickstart.gladestrings:61
 msgid "Kickstart Configurator"
 msgstr "キックスタート設定ツール"
 
-#: redhat-config-kickstart.gladestrings:75
+#: redhat-config-kickstart.gladestrings:97
 msgid "Use linear mode"
 msgstr "リニアモードを使う"
 
-#: redhat-config-kickstart.gladestrings:231
-msgid "Configure the X Window System"
-msgstr "Xウィンドウシステムの設定"
-
-#: redhat-config-kickstart.gladestrings:237
+#: redhat-config-kickstart.gladestrings:259
 msgid "GNOME"
 msgstr "GNOME"
 
-#: redhat-config-kickstart.gladestrings:274
+#: redhat-config-kickstart.gladestrings:296
 msgid "Preview Options"
 msgstr "オプションをプレビューする"
 
-#: redhat-config-kickstart.gladestrings:190
+#: redhat-config-kickstart.gladestrings:212
 msgid "LDAP Server: "
 msgstr "LDAPサーバ: "
 
-#: redhat-config-kickstart.gladestrings:72
+#: redhat-config-kickstart.gladestrings:94
 msgid "Kernel parameters:"
 msgstr "カーネルパラメータ:"
 
-#: redhat-config-kickstart.gladestrings:55
-msgid "Time Zone:"
-msgstr "タイムゾーン:"
+#: redhat-config-kickstart.gladestrings:51
+msgid "md14"
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:303
+#, fuzzy
+msgid "Create a software RAID partition"
+msgstr "RAIDパーティションを作成"
 
 #: redhat-config-kickstart.gladestrings:22
 msgid "Drive :"
 msgstr "ドライブ :"
 
-#: redhat-config-kickstart.gladestrings:241
+#: redhat-config-kickstart.gladestrings:263
 msgid "Probe for video card"
 msgstr "ビデオカードの調査"
 
-#: redhat-config-kickstart.gladestrings:144
+#: redhat-config-kickstart.gladestrings:166
 msgid "Gateway:"
 msgstr "ゲートウェイ:"
 
@@ -177,96 +190,122 @@ msgstr "ゲートウェイ:"
 msgid "Force to be a primary partition (asprimary)"
 msgstr "プライマリパーティションにする(asprimary)"
 
-#: redhat-config-kickstart.gladestrings:209
+#: redhat-config-kickstart.gladestrings:231
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: redhat-config-kickstart.gladestrings:246
+#: redhat-config-kickstart.gladestrings:219
+msgid "Kerberos Domain Controller (KDC):"
+msgstr "ケルベロスドメインコントローラ(KDC):"
+
+#: redhat-config-kickstart.gladestrings:268
 msgid "Specify hsync and vsync instead of monitor"
 msgstr "水平周波数と垂直周波数を直接指定する"
 
-#: redhat-config-kickstart.gladestrings:61
+#: redhat-config-kickstart.gladestrings:248
+msgid "Use default firewall rules"
+msgstr "デフォルトのファイアウォールルールを使う"
+
+#: ../src/partWindow.py:77 ../src/partWindow.py:125
+msgid "software RAID"
+msgstr ""
+
+#: ../src/partWindow.py:365
+msgid "Specify a device on which to create the partition."
+msgstr "パーティションを作成するデバイスを指定"
+
+#: redhat-config-kickstart.gladestrings:83
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "テキストモードでインストールを実行(デフォルトはグラフィカル)"
 
-#: redhat-config-kickstart.gladestrings:116
+#: redhat-config-kickstart.gladestrings:138
 msgid "Hard Drive Partition:"
 msgstr "ハードドライブパーティション:"
 
-#: redhat-config-kickstart.gladestrings:221
+#: redhat-config-kickstart.gladestrings:243
 msgid "label32"
 msgstr "label32"
 
-#: redhat-config-kickstart.gladestrings:107
+#: redhat-config-kickstart.gladestrings:129
 msgid "Specify an FTP username and password"
 msgstr "FTPのユーザー名とパスワードを指定して下さい。"
 
-#: redhat-config-kickstart.gladestrings:224
+#: redhat-config-kickstart.gladestrings:246
 msgid "Disabled"
 msgstr "なし"
 
-#: ../src/partWindow.py:316
+#: ../src/partWindow.py:267
 msgid "Specify a mount point for the partition."
 msgstr "パーティション用のマウントポイントを指定して下さい。"
 
-#: redhat-config-kickstart.gladestrings:138
+#: redhat-config-kickstart.gladestrings:160
 msgid "Network Type:"
 msgstr "ネットワークタイプ:"
 
-#: redhat-config-kickstart.gladestrings:74
+#: redhat-config-kickstart.gladestrings:299
+#, fuzzy
+msgid "RAID Options"
+msgstr "LILOオプション:"
+
+#: redhat-config-kickstart.gladestrings:96
 msgid "LILO Options:"
 msgstr "LILOオプション:"
 
-#: redhat-config-kickstart.gladestrings:186
+#: redhat-config-kickstart.gladestrings:208
 msgid "NIS"
 msgstr "NIS"
 
-#: redhat-config-kickstart.gladestrings:195
+#: redhat-config-kickstart.gladestrings:284
+#: redhat-config-kickstart.gladestrings:291
+msgid "Use an interpreter:"
+msgstr "インタプリタを使う:"
+
+#: redhat-config-kickstart.gladestrings:217
 msgid "Kerberos Realm:"
 msgstr "ケルベロス領域"
 
-#: redhat-config-kickstart.gladestrings:199
+#: redhat-config-kickstart.gladestrings:221
 msgid "Kerberos Master Server:"
 msgstr "ケルベロスマスターサーバ:"
 
-#: redhat-config-kickstart.gladestrings:125
+#: redhat-config-kickstart.gladestrings:148
 msgid "A_ll"
 msgstr "すべて(_L)"
 
-#: redhat-config-kickstart.gladestrings:121
+#: redhat-config-kickstart.gladestrings:143
 msgid "Clear Master Boot Record:"
 msgstr "マスターブートレコードの消去:"
 
-#: redhat-config-kickstart.gladestrings:91
 #: redhat-config-kickstart.gladestrings:113
+#: redhat-config-kickstart.gladestrings:135
 msgid "HTTP"
 msgstr "HTTP"
 
-#: ../src/partWindow.py:301
+#: ../src/partWindow.py:330
 msgid "Specify an existing partition on which to create the RAID partition."
 msgstr "RAIDパーティションを作成する既存パーティションを指定して下さい。"
 
-#: ../src/kickstartGui.py:108 redhat-config-kickstart.gladestrings:83
+#: ../src/kickstartGui.py:109 redhat-config-kickstart.gladestrings:105
 msgid "Boot Loader Options"
 msgstr "ブートローダオプション"
 
-#: redhat-config-kickstart.gladestrings:257
+#: redhat-config-kickstart.gladestrings:279
 msgid "Automatically Resolve Dependencies"
 msgstr "自動的に依存関係を解決"
 
-#: redhat-config-kickstart.gladestrings:111
+#: redhat-config-kickstart.gladestrings:133
 msgid "HTTP Server:"
 msgstr "HTTPサーバ:"
 
-#: redhat-config-kickstart.gladestrings:242
+#: redhat-config-kickstart.gladestrings:264
 msgid "Video Card RAM: "
 msgstr "ビデオカードRAM: "
 
-#: redhat-config-kickstart.gladestrings:123
+#: redhat-config-kickstart.gladestrings:146
 msgid "_No"
 msgstr "いいえ(_N)"
 
-#: redhat-config-kickstart.gladestrings:124
+#: redhat-config-kickstart.gladestrings:151
 msgid "N_one"
 msgstr "なし(_o)"
 
@@ -274,110 +313,130 @@ msgstr "なし(_o)"
 msgid "Could not read monitor database"
 msgstr "モニターのデータベースを読み込み出来ませんでした。"
 
-#: redhat-config-kickstart.gladestrings:180
+#: redhat-config-kickstart.gladestrings:202
 msgid "NIS Domain:"
 msgstr "NISドメイン:"
 
-#: redhat-config-kickstart.gladestrings:248
+#: redhat-config-kickstart.gladestrings:270
 msgid "Hz"
 msgstr "Hz"
 
-#: redhat-config-kickstart.gladestrings:273
+#: redhat-config-kickstart.gladestrings:295
 msgid "label93"
 msgstr "label93"
 
-#: ../src/kickstartGui.py:108
+#: ../src/kickstartGui.py:109
 msgid "Basic Configuration"
 msgstr "基本設定"
 
-#: redhat-config-kickstart.gladestrings:191
-msgid "LDAP Base Name: "
-msgstr "LDAPベース名: "
+#: redhat-config-kickstart.gladestrings:254
+msgid "Color Depth"
+msgstr "カラーの深さ"
 
-#: redhat-config-kickstart.gladestrings:133
+#: redhat-config-kickstart.gladestrings:155
 msgid "_Delete"
 msgstr "削除(_D)"
 
-#: redhat-config-kickstart.gladestrings:104
+#: redhat-config-kickstart.gladestrings:126
 msgid "FTP Password"
 msgstr "FTP パスワード:"
 
 #: redhat-config-kickstart.gladestrings:7
-#: redhat-config-kickstart.gladestrings:275
+#: redhat-config-kickstart.gladestrings:297
 msgid "Save File"
 msgstr "ファイルの保存"
 
-#: redhat-config-kickstart.gladestrings:126
+#: redhat-config-kickstart.gladestrings:147
 msgid "L_inux"
 msgstr "L_inux"
 
-#: redhat-config-kickstart.gladestrings:212
+#: redhat-config-kickstart.gladestrings:234
 msgid "SMB Workgroup:"
 msgstr "SMBワークグループ:"
 
-#: ../src/kickstartGui.py:109
+#: ../src/kickstartGui.py:110
 msgid "Installation Method"
 msgstr "インストール方法"
 
-#: redhat-config-kickstart.gladestrings:135
+#: redhat-config-kickstart.gladestrings:157
 msgid "Make LVM Partition"
 msgstr "LVMパーティションを作成"
 
-#: ../src/kickstartGui.py:112 redhat-config-kickstart.gladestrings:265
+#: ../src/kickstartGui.py:113 redhat-config-kickstart.gladestrings:287
 msgid "Pre-Installation Script"
 msgstr "インストール前の スクリプト"
 
-#: redhat-config-kickstart.gladestrings:42
+#: redhat-config-kickstart.gladestrings:252
+msgid "label33"
+msgstr "label33"
+
+#: redhat-config-kickstart.gladestrings:64
 msgid "_Save File"
 msgstr "ファイルの保存(_S)"
 
-#: redhat-config-kickstart.gladestrings:77
+#: redhat-config-kickstart.gladestrings:52
+msgid "md15"
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:99
 msgid "GRUB Options:"
 msgstr "GRUBオプション:"
 
-#: ../src/partWindow.py:346
-msgid "Specify a device on which to create the partition."
-msgstr "パーティションを作成するデバイスを指定"
+#: redhat-config-kickstart.gladestrings:47
+msgid "md10"
+msgstr ""
 
-#: ../src/xconfig.py:90
-msgid "Could not read video card database"
-msgstr "ビデオカードのデータベースを読み込むことが出来ませんでした。"
+#: redhat-config-kickstart.gladestrings:48
+msgid "md11"
+msgstr ""
 
-#: redhat-config-kickstart.gladestrings:225
-msgid "Security Level"
-msgstr "セキュリティレベル"
+#: redhat-config-kickstart.gladestrings:49
+msgid "md12"
+msgstr ""
 
-#: redhat-config-kickstart.gladestrings:90
-#: redhat-config-kickstart.gladestrings:108
+#: redhat-config-kickstart.gladestrings:50
+msgid "md13"
+msgstr ""
+
+#: ../src/kickstartGui.py:105
+msgid "Subsection"
+msgstr "サブセクション "
+
+#: redhat-config-kickstart.gladestrings:112
+#: redhat-config-kickstart.gladestrings:130
 msgid "FTP"
 msgstr "FTP"
 
-#: redhat-config-kickstart.gladestrings:141
+#: redhat-config-kickstart.gladestrings:163
 msgid "None"
 msgstr "なし"
 
-#: redhat-config-kickstart.gladestrings:132
+#: redhat-config-kickstart.gladestrings:154
 msgid "_Edit"
 msgstr "編集(_E)"
 
-#: redhat-config-kickstart.gladestrings:143
+#: redhat-config-kickstart.gladestrings:165
 msgid "Netmask: "
 msgstr "ネットマスク:"
 
-#: ../src/partWindow.py:245
-msgid "You must specify a size for the partition."
-msgstr "パーティションのサイズを指定する必要があります。"
+#: redhat-config-kickstart.gladestrings:45
+msgid "md8"
+msgstr ""
 
-#: redhat-config-kickstart.gladestrings:89
-#: redhat-config-kickstart.gladestrings:98
+#: redhat-config-kickstart.gladestrings:46
+msgid "md9"
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:111
+#: redhat-config-kickstart.gladestrings:120
 msgid "NFS"
 msgstr "NFS"
 
-#: redhat-config-kickstart.gladestrings:8
-msgid "Partition Options"
-msgstr "パーティションオプション"
+#: ../src/kickstartGui.py:111 redhat-config-kickstart.gladestrings:196
+msgid "Network Configuration"
+msgstr "ネットワーク設定"
 
-#: redhat-config-kickstart.gladestrings:261
+#: redhat-config-kickstart.gladestrings:283
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %pre command at the beginning."
@@ -385,47 +444,75 @@ msgstr ""
 "注意: このスクリプトでエラーが発生するとキックスタートインストールは失敗しま"
 "す。%pre コマンドを最初に書かないでください。"
 
-#: ../src/partition.py:65
-msgid "Mount Point"
-msgstr "マウントポイント"
+#: redhat-config-kickstart.gladestrings:39
+msgid "md2"
+msgstr ""
 
-#: redhat-config-kickstart.gladestrings:201
-msgid "Kerberos 5 Authentication"
-msgstr "ケルベロス5認証"
+#: redhat-config-kickstart.gladestrings:40
+msgid "md3"
+msgstr ""
 
-#: redhat-config-kickstart.gladestrings:117
+#: redhat-config-kickstart.gladestrings:37
+msgid "md0"
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:38
+msgid "md1"
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:43
+msgid "md6"
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:44
+msgid "md7"
+msgstr ""
+
+#: ../src/firewall.py:86
+msgid "Allow incoming:"
+msgstr "アクセスの許可:"
+
+#: ../src/firewall.py:101
+msgid "Other ports: (1029:tcp)"
+msgstr "他のポート: (1029:tcp)"
+
+#: redhat-config-kickstart.gladestrings:139
 msgid "Hard Drive Directory:"
 msgstr "ハードドライブディレクトリ:"
 
-#: redhat-config-kickstart.gladestrings:202
+#: redhat-config-kickstart.gladestrings:224
 msgid "Kerberos 5"
 msgstr "ケルベロス5"
 
-#: redhat-config-kickstart.gladestrings:94
+#: redhat-config-kickstart.gladestrings:116
 msgid "NFS Server:"
 msgstr "NFSサーバ:"
 
-#: redhat-config-kickstart.gladestrings:238
+#: redhat-config-kickstart.gladestrings:260
 msgid "KDE"
 msgstr "KDE"
 
-#: redhat-config-kickstart.gladestrings:177
+#: redhat-config-kickstart.gladestrings:199
 msgid "Use Shadow Passwords"
 msgstr "シャドウパスワードを使う"
 
-#: redhat-config-kickstart.gladestrings:251
+#: redhat-config-kickstart.gladestrings:273
 msgid "Vertical Sync:"
 msgstr "垂直同期:"
 
-#: redhat-config-kickstart.gladestrings:194
+#: redhat-config-kickstart.gladestrings:216
 msgid "Enable Kerberos 5 Authentication"
 msgstr "ケルベロス5認証有効"
 
-#: redhat-config-kickstart.gladestrings:71
+#: redhat-config-kickstart.gladestrings:93
 msgid "_LILO"
 msgstr "_LILO"
 
-#: redhat-config-kickstart.gladestrings:267
+#: ../src/partWindow.py:77 redhat-config-kickstart.gladestrings:58
+msgid "physical volume (LVM)"
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:289
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %post command at the beginning."
@@ -433,109 +520,106 @@ msgstr ""
 "注意: このスクリプトでエラーが発生するとキックスタートインストールは失敗しま"
 "す。%post コマンドを最初に書かないでください。"
 
-#: redhat-config-kickstart.gladestrings:206
+#: redhat-config-kickstart.gladestrings:228
 msgid "Hesiod RHS:"
 msgstr "Hesiod RHS:"
 
-#: redhat-config-kickstart.gladestrings:14
-msgid "Fill all unused space on disk"
-msgstr "ディスク上の全ての未使用領域を埋める"
+#: redhat-config-kickstart.gladestrings:213
+msgid "LDAP Base Name: "
+msgstr "LDAPベース名: "
 
-#: redhat-config-kickstart.gladestrings:179
+#: redhat-config-kickstart.gladestrings:201
 msgid "Enable NIS"
 msgstr "NIS有効"
 
-#: redhat-config-kickstart.gladestrings:129
+#: redhat-config-kickstart.gladestrings:152
 msgid "Yes"
 msgstr "はい"
 
-#: ../src/partition.py:69
+#: ../src/partition.py:74
 msgid "Size"
 msgstr "サイズ"
 
-#: redhat-config-kickstart.gladestrings:35
+#: redhat-config-kickstart.gladestrings:32
 msgid "Number of spares:"
 msgstr "スペアの数:"
 
-#: redhat-config-kickstart.gladestrings:102
+#: redhat-config-kickstart.gladestrings:124
 msgid "FTP Directory:"
 msgstr "FTPディレクトリ:"
 
-#: redhat-config-kickstart.gladestrings:142
+#: redhat-config-kickstart.gladestrings:164
 msgid "IP Address:"
 msgstr "IPアドレス:"
 
-#: redhat-config-kickstart.gladestrings:266
+#: redhat-config-kickstart.gladestrings:288
 msgid "label89"
 msgstr "label89"
 
-#: redhat-config-kickstart.gladestrings:86
+#: redhat-config-kickstart.gladestrings:108
 msgid "Upgrade"
 msgstr "アップグレード"
 
-#: redhat-config-kickstart.gladestrings:130
+#: redhat-config-kickstart.gladestrings:149
 msgid "No"
 msgstr "いいえ"
 
-#: redhat-config-kickstart.gladestrings:145
+#: redhat-config-kickstart.gladestrings:167
 msgid "Name Server:"
 msgstr "ネームサーバ:"
 
-#: redhat-config-kickstart.gladestrings:88
-#: redhat-config-kickstart.gladestrings:93
+#: redhat-config-kickstart.gladestrings:110
+#: redhat-config-kickstart.gladestrings:115
 msgid "CD-ROM"
 msgstr "CD-ROM"
 
-#: redhat-config-kickstart.gladestrings:208
+#: redhat-config-kickstart.gladestrings:230
 msgid "Hesiod Authentication"
 msgstr "Hesiod認証"
 
-#: redhat-config-kickstart.gladestrings:50
+#: redhat-config-kickstart.gladestrings:72
 msgid "Keyboard:"
 msgstr "キーボード:"
 
-#: redhat-config-kickstart.gladestrings:127
-msgid "Remove Partitions:"
+#: ../src/xconfig.py:90
+msgid "Could not read video card database"
+msgstr "ビデオカードのデータベースを読み込むことが出来ませんでした。"
+
+#: redhat-config-kickstart.gladestrings:144
+#, fuzzy
+msgid "Remove Existing Partitions:"
 msgstr "削除するパーティション:"
 
-#: redhat-config-kickstart.gladestrings:57
-msgid "Root Password:"
-msgstr "rootパスワード:"
-
-#: redhat-config-kickstart.gladestrings:226
-msgid "Use default firewall rules"
-msgstr "デフォルトのファイアウォールルールを使う"
-
-#: redhat-config-kickstart.gladestrings:44
-#: redhat-config-kickstart.gladestrings:45
+#: redhat-config-kickstart.gladestrings:66
+#: redhat-config-kickstart.gladestrings:67
 msgid "_Help"
 msgstr "ヘルプ(_H) "
 
-#: redhat-config-kickstart.gladestrings:185
+#: redhat-config-kickstart.gladestrings:207
 msgid "NIS Authentication"
 msgstr "NIS認証"
 
-#: redhat-config-kickstart.gladestrings:215
+#: redhat-config-kickstart.gladestrings:237
 msgid "SMB Authentication"
 msgstr "SMB認証"
 
-#: redhat-config-kickstart.gladestrings:136
+#: redhat-config-kickstart.gladestrings:158
 msgid "Partition Information (required)"
 msgstr "パーティション情報(必須)"
 
-#: redhat-config-kickstart.gladestrings:216
+#: redhat-config-kickstart.gladestrings:238
 msgid "SMB"
 msgstr "SMB"
 
-#: redhat-config-kickstart.gladestrings:255
+#: redhat-config-kickstart.gladestrings:277
 msgid "label88"
 msgstr "label88"
 
-#: redhat-config-kickstart.gladestrings:264
+#: redhat-config-kickstart.gladestrings:286
 msgid "Type your %pre script below:"
 msgstr "%pre スクリプトを下に入力してください:"
 
-#: redhat-config-kickstart.gladestrings:192
+#: redhat-config-kickstart.gladestrings:214
 msgid "LDAP Authentication"
 msgstr "LDAP 認証"
 
@@ -548,75 +632,78 @@ msgstr "         "
 #: redhat-config-kickstart.gladestrings:10
 #: redhat-config-kickstart.gladestrings:23
 #: redhat-config-kickstart.gladestrings:27
-#: redhat-config-kickstart.gladestrings:36
-#: redhat-config-kickstart.gladestrings:37
-#: redhat-config-kickstart.gladestrings:38
-#: redhat-config-kickstart.gladestrings:47
-#: redhat-config-kickstart.gladestrings:52
-#: redhat-config-kickstart.gladestrings:53
-#: redhat-config-kickstart.gladestrings:56
-#: redhat-config-kickstart.gladestrings:58
-#: redhat-config-kickstart.gladestrings:73
-#: redhat-config-kickstart.gladestrings:79
-#: redhat-config-kickstart.gladestrings:96
-#: redhat-config-kickstart.gladestrings:97
-#: redhat-config-kickstart.gladestrings:99
-#: redhat-config-kickstart.gladestrings:100
-#: redhat-config-kickstart.gladestrings:103
-#: redhat-config-kickstart.gladestrings:106
-#: redhat-config-kickstart.gladestrings:109
-#: redhat-config-kickstart.gladestrings:110
-#: redhat-config-kickstart.gladestrings:114
-#: redhat-config-kickstart.gladestrings:115
-#: redhat-config-kickstart.gladestrings:146
-#: redhat-config-kickstart.gladestrings:148
-#: redhat-config-kickstart.gladestrings:150
-#: redhat-config-kickstart.gladestrings:152
-#: redhat-config-kickstart.gladestrings:153
-#: redhat-config-kickstart.gladestrings:155
-#: redhat-config-kickstart.gladestrings:157
-#: redhat-config-kickstart.gladestrings:159
-#: redhat-config-kickstart.gladestrings:160
-#: redhat-config-kickstart.gladestrings:162
-#: redhat-config-kickstart.gladestrings:164
-#: redhat-config-kickstart.gladestrings:166
-#: redhat-config-kickstart.gladestrings:167
-#: redhat-config-kickstart.gladestrings:169
-#: redhat-config-kickstart.gladestrings:171
-#: redhat-config-kickstart.gladestrings:173
-#: redhat-config-kickstart.gladestrings:181
-#: redhat-config-kickstart.gladestrings:184
-#: redhat-config-kickstart.gladestrings:188
-#: redhat-config-kickstart.gladestrings:189
-#: redhat-config-kickstart.gladestrings:196
-#: redhat-config-kickstart.gladestrings:198
-#: redhat-config-kickstart.gladestrings:200
-#: redhat-config-kickstart.gladestrings:205
-#: redhat-config-kickstart.gladestrings:207
-#: redhat-config-kickstart.gladestrings:213
-#: redhat-config-kickstart.gladestrings:214
-#: redhat-config-kickstart.gladestrings:233
-#: redhat-config-kickstart.gladestrings:235
-#: redhat-config-kickstart.gladestrings:243
-#: redhat-config-kickstart.gladestrings:247
-#: redhat-config-kickstart.gladestrings:249
-#: redhat-config-kickstart.gladestrings:263
-#: redhat-config-kickstart.gladestrings:270
-msgid "*"
-msgstr "* "
-
-#: redhat-config-kickstart.gladestrings:147
-#: redhat-config-kickstart.gladestrings:149
-#: redhat-config-kickstart.gladestrings:151
-#: redhat-config-kickstart.gladestrings:154
-#: redhat-config-kickstart.gladestrings:156
-#: redhat-config-kickstart.gladestrings:158
-#: redhat-config-kickstart.gladestrings:161
-#: redhat-config-kickstart.gladestrings:163
-#: redhat-config-kickstart.gladestrings:165
+#: redhat-config-kickstart.gladestrings:31
+#: redhat-config-kickstart.gladestrings:69
+#: redhat-config-kickstart.gladestrings:74
+#: redhat-config-kickstart.gladestrings:75
+#: redhat-config-kickstart.gladestrings:78
+#: redhat-config-kickstart.gladestrings:80
+#: redhat-config-kickstart.gladestrings:95
+#: redhat-config-kickstart.gladestrings:101
+#: redhat-config-kickstart.gladestrings:118
+#: redhat-config-kickstart.gladestrings:119
+#: redhat-config-kickstart.gladestrings:121
+#: redhat-config-kickstart.gladestrings:122
+#: redhat-config-kickstart.gladestrings:125
+#: redhat-config-kickstart.gladestrings:128
+#: redhat-config-kickstart.gladestrings:131
+#: redhat-config-kickstart.gladestrings:132
+#: redhat-config-kickstart.gladestrings:136
+#: redhat-config-kickstart.gladestrings:137
 #: redhat-config-kickstart.gladestrings:168
 #: redhat-config-kickstart.gladestrings:170
 #: redhat-config-kickstart.gladestrings:172
+#: redhat-config-kickstart.gladestrings:174
+#: redhat-config-kickstart.gladestrings:175
+#: redhat-config-kickstart.gladestrings:177
+#: redhat-config-kickstart.gladestrings:179
+#: redhat-config-kickstart.gladestrings:181
+#: redhat-config-kickstart.gladestrings:182
+#: redhat-config-kickstart.gladestrings:184
+#: redhat-config-kickstart.gladestrings:186
+#: redhat-config-kickstart.gladestrings:188
+#: redhat-config-kickstart.gladestrings:189
+#: redhat-config-kickstart.gladestrings:191
+#: redhat-config-kickstart.gladestrings:193
+#: redhat-config-kickstart.gladestrings:195
+#: redhat-config-kickstart.gladestrings:203
+#: redhat-config-kickstart.gladestrings:206
+#: redhat-config-kickstart.gladestrings:210
+#: redhat-config-kickstart.gladestrings:211
+#: redhat-config-kickstart.gladestrings:218
+#: redhat-config-kickstart.gladestrings:220
+#: redhat-config-kickstart.gladestrings:222
+#: redhat-config-kickstart.gladestrings:227
+#: redhat-config-kickstart.gladestrings:229
+#: redhat-config-kickstart.gladestrings:235
+#: redhat-config-kickstart.gladestrings:236
+#: redhat-config-kickstart.gladestrings:255
+#: redhat-config-kickstart.gladestrings:257
+#: redhat-config-kickstart.gladestrings:265
+#: redhat-config-kickstart.gladestrings:269
+#: redhat-config-kickstart.gladestrings:271
+#: redhat-config-kickstart.gladestrings:285
+#: redhat-config-kickstart.gladestrings:292
+msgid "*"
+msgstr "* "
+
+#: redhat-config-kickstart.gladestrings:36
+#, fuzzy
+msgid "RAID Device:"
+msgstr "RAIDデバイスの作成"
+
+#: redhat-config-kickstart.gladestrings:169
+#: redhat-config-kickstart.gladestrings:171
+#: redhat-config-kickstart.gladestrings:173
+#: redhat-config-kickstart.gladestrings:176
+#: redhat-config-kickstart.gladestrings:178
+#: redhat-config-kickstart.gladestrings:180
+#: redhat-config-kickstart.gladestrings:183
+#: redhat-config-kickstart.gladestrings:185
+#: redhat-config-kickstart.gladestrings:187
+#: redhat-config-kickstart.gladestrings:190
+#: redhat-config-kickstart.gladestrings:192
+#: redhat-config-kickstart.gladestrings:194
 msgid "."
 msgstr "."
 
@@ -624,58 +711,65 @@ msgstr "."
 msgid "Size (MB):"
 msgstr "サイズ(MB):"
 
-#: ../src/partition.py:67
+#: ../src/partition.py:72
 msgid "File System Type"
 msgstr "ファイル システム タイプ"
 
-#: ../src/firewall.py:86
-msgid "Allow incoming:"
-msgstr "アクセスの許可:"
+#: ../src/partition.py:70
+msgid "Mount Point"
+msgstr "マウントポイント"
 
-#: ../src/partition.py:71
+#: ../src/partition.py:76
 msgid "Device"
 msgstr "デバイス"
 
-#: ../src/firewall.py:101
-msgid "Other ports: (1029:tcp)"
-msgstr "他のポート: (1029:tcp)"
+#: redhat-config-kickstart.gladestrings:42
+msgid "md5"
+msgstr ""
 
-#: redhat-config-kickstart.gladestrings:49
+#: redhat-config-kickstart.gladestrings:300
+msgid ""
+"Software RAID allows you to combine several disks into a larger RAID "
+"device.  A RAID device can be configured to provide additional speed and "
+"reliability compared to using an individual drive.  For more information on "
+"using RAID devices please consult the kickstart documentation."
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:71
 msgid "Encrypt root password"
 msgstr "rootパスワードを暗号化"
 
-#: ../src/partWindow.py:275 ../src/partWindow.py:333
-msgid "onPart and onDisk can not be used at the same time."
-msgstr "onPart とonDiskは 同時に使用できません。"
-
-#: redhat-config-kickstart.gladestrings:187
+#: redhat-config-kickstart.gladestrings:209
 msgid "Enable LDAP"
 msgstr "LDAP有効"
 
-#: redhat-config-kickstart.gladestrings:217
+#: redhat-config-kickstart.gladestrings:239
 msgid "Enable nscd"
 msgstr "nscd有効"
 
-#: redhat-config-kickstart.gladestrings:182
+#: ../src/kickstartGui.py:110
+msgid "Partition Information"
+msgstr "パーティション情報"
+
+#: redhat-config-kickstart.gladestrings:204
 msgid "Use broadcast to find NIS server"
 msgstr "NISサーバの検索にブロードキャストを使う"
 
-#: redhat-config-kickstart.gladestrings:85
+#: redhat-config-kickstart.gladestrings:107
 msgid "Install"
 msgstr "インストール"
 
-#: ../src/basic.py:270 ../src/partWindow.py:246 ../src/partWindow.py:263
-#: ../src/partWindow.py:276 ../src/partWindow.py:289 ../src/partWindow.py:302
-#: ../src/partWindow.py:317 ../src/partWindow.py:334 ../src/partWindow.py:347
-#: ../src/partWindow.py:360
+#: ../src/basic.py:270 ../src/partWindow.py:268 ../src/partWindow.py:305
+#: ../src/partWindow.py:318 ../src/partWindow.py:331 ../src/partWindow.py:366
+#: ../src/partWindow.py:379
 msgid "Error"
 msgstr "エラー"
 
-#: redhat-config-kickstart.gladestrings:48
+#: redhat-config-kickstart.gladestrings:70
 msgid "Language:"
 msgstr "言語:"
 
-#: ../src/kickstartGui.py:140
+#: ../src/kickstartGui.py:141
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -693,31 +787,35 @@ msgstr ""
 msgid "Use existing partition (onpart)"
 msgstr "存在するパーティションを使う(一部)"
 
-#: redhat-config-kickstart.gladestrings:203
+#: redhat-config-kickstart.gladestrings:225
 msgid "Enable Hesiod Support"
 msgstr "Hesiodサポート有効"
 
-#: redhat-config-kickstart.gladestrings:176
+#: redhat-config-kickstart.gladestrings:198
 msgid "Authentication:"
 msgstr "認証:"
 
-#: redhat-config-kickstart.gladestrings:101
+#: redhat-config-kickstart.gladestrings:123
 msgid "FTP Server:"
 msgstr "FTPサーバ:"
 
-#: redhat-config-kickstart.gladestrings:62
+#: redhat-config-kickstart.gladestrings:84
 msgid "Perform installation in interactive mode"
 msgstr "インタラクティブモードでインストールを実行"
 
-#: redhat-config-kickstart.gladestrings:193
+#: redhat-config-kickstart.gladestrings:215
 msgid "LDAP "
 msgstr "LDAP "
 
-#: redhat-config-kickstart.gladestrings:40
+#: redhat-config-kickstart.gladestrings:28
+msgid "Format partition"
+msgstr "パーティションのフォーマット"
+
+#: redhat-config-kickstart.gladestrings:62
 msgid "_File"
 msgstr "ファイル(_F)"
 
-#: redhat-config-kickstart.gladestrings:240
+#: redhat-config-kickstart.gladestrings:262
 msgid "General"
 msgstr "一般"
 
@@ -725,149 +823,173 @@ msgstr "一般"
 msgid "Use recommended swap size"
 msgstr "推奨のスワップファイルサイズを使用"
 
-#: redhat-config-kickstart.gladestrings:63
+#: redhat-config-kickstart.gladestrings:85
 msgid "Basic Configuration (required)"
 msgstr "基本設定(必須)"
 
-#: ../src/kickstartGui.py:109
-msgid "Partition Information"
-msgstr "パーティション情報"
+#: redhat-config-kickstart.gladestrings:60
+msgid "vfat"
+msgstr ""
 
-#: redhat-config-kickstart.gladestrings:139
+#: redhat-config-kickstart.gladestrings:161
 msgid "DHCP"
 msgstr "DHCP"
 
-#: redhat-config-kickstart.gladestrings:81
+#: redhat-config-kickstart.gladestrings:103
 msgid "Upgrade Only Options:"
 msgstr "オプションのみをアップグレード:"
 
-#: redhat-config-kickstart.gladestrings:34
+#: redhat-config-kickstart.gladestrings:33
 msgid "Raid Members"
 msgstr "RAIDメンバ"
 
-#: ../src/kickstartGui.py:104
-msgid "Subsection"
-msgstr "サブセクション "
+#: redhat-config-kickstart.gladestrings:79
+msgid "Root Password:"
+msgstr "rootパスワード:"
 
-#: redhat-config-kickstart.gladestrings:66
+#: redhat-config-kickstart.gladestrings:88
 msgid "_MBR"
 msgstr "_MBR"
 
-#: ../src/kickstartGui.py:111 redhat-config-kickstart.gladestrings:254
+#: ../src/kickstartGui.py:112 redhat-config-kickstart.gladestrings:276
 msgid "X Configuration"
 msgstr "Xの設定"
 
-#: redhat-config-kickstart.gladestrings:65
+#: redhat-config-kickstart.gladestrings:87
 msgid "Install boot loader"
 msgstr "ブートローダをインストール"
 
-#: redhat-config-kickstart.gladestrings:70
+#: redhat-config-kickstart.gladestrings:92
 msgid "_GRUB"
 msgstr "_GRUB"
 
-#: redhat-config-kickstart.gladestrings:134
-msgid "Make RAID Partition"
-msgstr "RAIDパーティションを作成"
+#: redhat-config-kickstart.gladestrings:240
+msgid "Name Switch Cache Daemon (nscd) Authentication"
+msgstr "ネームスイッチキャッシュドメイン(nscd)認証"
 
-#: redhat-config-kickstart.gladestrings:234
+#: redhat-config-kickstart.gladestrings:253
+msgid "Configure the X Window System"
+msgstr "Xウィンドウシステムの設定"
+
+#: redhat-config-kickstart.gladestrings:256
 msgid "Resolution"
 msgstr "解像度"
 
 #: redhat-config-kickstart.gladestrings:11
-#: redhat-config-kickstart.gladestrings:31
+#: redhat-config-kickstart.gladestrings:30
 msgid "Mount Point:"
 msgstr "マウントポイント:"
 
-#: redhat-config-kickstart.gladestrings:51
-msgid "Mouse:"
-msgstr "マウス:"
-
-#: redhat-config-kickstart.gladestrings:258
-msgid "Ignore Dependencies"
-msgstr "依存関係を無視する"
-
-#: redhat-config-kickstart.gladestrings:105
-msgid "FTP Username"
-msgstr "FTPユーザー名"
-
-#: ../src/kickstartGui.py:113 redhat-config-kickstart.gladestrings:272
-msgid "Post-Installation Script"
-msgstr "インストール後のスクリプト"
-
-#: redhat-config-kickstart.gladestrings:119
-msgid "Installation Method (required)"
-msgstr "インストール方法(必須)"
-
-#: redhat-config-kickstart.gladestrings:60
-msgid "Reboot system after installation"
-msgstr "インストール後にシステムを再起動"
-
-#: redhat-config-kickstart.gladestrings:218
-msgid "Name Switch Cache Daemon (nscd) Authentication"
-msgstr "ネームスイッチキャッシュドメイン(nscd)認証"
-
-#: redhat-config-kickstart.gladestrings:33
+#: redhat-config-kickstart.gladestrings:34
 msgid "RAID Level:"
 msgstr "RAIDレベル:"
 
-#: redhat-config-kickstart.gladestrings:140
+#: redhat-config-kickstart.gladestrings:280
+msgid "Ignore Dependencies"
+msgstr "依存関係を無視する"
+
+#: redhat-config-kickstart.gladestrings:127
+msgid "FTP Username"
+msgstr "FTPユーザー名"
+
+#: redhat-config-kickstart.gladestrings:162
 msgid "Static IP"
 msgstr "固定IP"
 
-#: ../src/kickstartGui.py:112 redhat-config-kickstart.gladestrings:259
+#: redhat-config-kickstart.gladestrings:141
+msgid "Installation Method (required)"
+msgstr "インストール方法(必須)"
+
+#: redhat-config-kickstart.gladestrings:82
+msgid "Reboot system after installation"
+msgstr "インストール後にシステムを再起動"
+
+#: ../src/raidOptionsWindow.py:71
+msgid "You currently have %d software RAID partition(s) free to use."
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:73
+msgid "Mouse:"
+msgstr "マウス:"
+
+#: ../src/kickstartGui.py:114 redhat-config-kickstart.gladestrings:294
+msgid "Post-Installation Script"
+msgstr "インストール後のスクリプト"
+
+#: ../src/kickstartGui.py:113 redhat-config-kickstart.gladestrings:281
 msgid "Package Selection"
 msgstr "パッケージの選択"
 
-#: redhat-config-kickstart.gladestrings:256
+#: redhat-config-kickstart.gladestrings:278
 msgid "Select packages to install."
 msgstr "インストールするパッケージを選択"
 
-#: redhat-config-kickstart.gladestrings:220
-msgid "Authentication Configuration"
-msgstr "認証設定"
+#: redhat-config-kickstart.gladestrings:304
+msgid "Create a RAID device [default = /dev/md0]"
+msgstr ""
 
-#: ../src/partition.py:83 ../src/partition.py:108
+#: redhat-config-kickstart.gladestrings:223
+msgid "Kerberos 5 Authentication"
+msgstr "ケルベロス5認証"
+
+#: ../src/partition.py:88 ../src/partition.py:120
 msgid "Please select a partition from the list."
 msgstr "一覧からパーティションを選択して下さい。"
+
+#: redhat-config-kickstart.gladestrings:8
+msgid "Partition Options"
+msgstr "パーティションオプション"
 
 #: redhat-config-kickstart.gladestrings:20
 msgid "Make partition on specific drive (ondisk)"
 msgstr "指定したドライブにパーティションを作る(ディスク上)"
 
-#: redhat-config-kickstart.gladestrings:227
-#: redhat-config-kickstart.gladestrings:228
+#: redhat-config-kickstart.gladestrings:249
+#: redhat-config-kickstart.gladestrings:250
 msgid "Customize"
 msgstr "カスタマイズ"
 
-#: redhat-config-kickstart.gladestrings:84
+#: redhat-config-kickstart.gladestrings:247
+msgid "Security Level"
+msgstr "セキュリティレベル"
+
+#: redhat-config-kickstart.gladestrings:106
 msgid "label128"
 msgstr "label128"
 
-#: redhat-config-kickstart.gladestrings:271
+#: redhat-config-kickstart.gladestrings:293
 msgid "Type your %post script below:"
 msgstr "%post スクリプトを下に入力してください:"
 
-#: redhat-config-kickstart.gladestrings:244
+#: redhat-config-kickstart.gladestrings:266
 msgid "Video Card"
 msgstr "ビデオカード"
 
-#: ../src/partWindow.py:288
+#: ../src/partWindow.py:317
 msgid "Specify a device on which to create the RAID partition."
 msgstr "RAIDパーティションを作成するデバイスを指定。"
 
-#: redhat-config-kickstart.gladestrings:239
+#: redhat-config-kickstart.gladestrings:261
 msgid "Start the X Window System on boot"
 msgstr "ブート時にXウィンドウシステムを起動する"
 
-#: redhat-config-kickstart.gladestrings:210
+#: redhat-config-kickstart.gladestrings:242
+msgid "Authentication Configuration"
+msgstr "認証設定"
+
+#: redhat-config-kickstart.gladestrings:302
+msgid "Choose one of the following options:"
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:232
 msgid "Enable SMB Authentication"
 msgstr "SMB認証有効"
 
-#: redhat-config-kickstart.gladestrings:253
+#: redhat-config-kickstart.gladestrings:275
 msgid "Monitor"
 msgstr "モニタ"
 
-#: redhat-config-kickstart.gladestrings:276
+#: redhat-config-kickstart.gladestrings:298
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. Click Cancel to return to the program."
@@ -876,7 +998,7 @@ msgstr ""
 "ファイルを保存してください。キャンセルをクリックするとプログラムを終了しま"
 "す。"
 
-#: ../src/kickstartGui.py:169
+#: ../src/kickstartGui.py:170
 msgid "Help is not available."
 msgstr "ヘルプは使用できません。"
 
@@ -884,100 +1006,102 @@ msgstr "ヘルプは使用できません。"
 msgid "Please select a root password."
 msgstr "rootパスワードを選択して下さい。"
 
-#: redhat-config-kickstart.gladestrings:178
+#: redhat-config-kickstart.gladestrings:200
 msgid "Use MD5"
 msgstr "MD5を使う"
 
-#: redhat-config-kickstart.gladestrings:41
+#: redhat-config-kickstart.gladestrings:63
 msgid "_Preview"
 msgstr "プレビュー(_p)"
 
-#: redhat-config-kickstart.gladestrings:87
+#: redhat-config-kickstart.gladestrings:109
 msgid "Choose the Installation Method:"
 msgstr "インストール方法の選択"
 
-#: redhat-config-kickstart.gladestrings:219
+#: redhat-config-kickstart.gladestrings:241
 msgid "Name Switch Cache"
 msgstr "NSCD"
 
-#: redhat-config-kickstart.gladestrings:69
+#: redhat-config-kickstart.gladestrings:91
 msgid "Install boot loader on: "
 msgstr "にブートローダをインストール: "
 
-#: redhat-config-kickstart.gladestrings:95
+#: redhat-config-kickstart.gladestrings:117
 msgid "NFS Directory:"
 msgstr "NFSディレクトリ:"
 
-#: redhat-config-kickstart.gladestrings:223
+#: redhat-config-kickstart.gladestrings:245
 msgid "Medium"
 msgstr "中"
 
-#: redhat-config-kickstart.gladestrings:245
+#: redhat-config-kickstart.gladestrings:267
 msgid "Probe for monitor"
 msgstr "モニタの調査"
 
-#: redhat-config-kickstart.gladestrings:92
-#: redhat-config-kickstart.gladestrings:118
+#: redhat-config-kickstart.gladestrings:114
+#: redhat-config-kickstart.gladestrings:140
 msgid "Hard Drive"
 msgstr "ハードドライブ"
 
-#: ../src/partWindow.py:359
+#: ../src/partWindow.py:378
 msgid "Specify an existing partition to use."
 msgstr "使用する既存のパーティションを指定"
 
-#: redhat-config-kickstart.gladestrings:64
+#: redhat-config-kickstart.gladestrings:86
 msgid "label28"
 msgstr "label28"
 
-#: redhat-config-kickstart.gladestrings:68
+#: redhat-config-kickstart.gladestrings:90
 msgid "Choose boot loader: "
 msgstr "ブートローダの選択: "
 
-#: ../src/partition.py:84 ../src/partition.py:109
+#: ../src/partition.py:89 ../src/partition.py:121
 msgid "Message"
 msgstr "メッセージ"
 
-#: redhat-config-kickstart.gladestrings:82
+#: redhat-config-kickstart.gladestrings:104
 msgid "Upgrade existing boot loader configuration"
 msgstr "既存のブートローダー設定をアップグレード "
 
-#: redhat-config-kickstart.gladestrings:232
-msgid "Color Depth"
-msgstr "カラーの深さ"
+#: redhat-config-kickstart.gladestrings:301
+msgid ""
+"To use RAID you must first create at least two partitions of type 'software "
+"RAID'.  Then you can create a RAID device which can be formatted and mounted."
+msgstr ""
 
-#: redhat-config-kickstart.gladestrings:252
+#: redhat-config-kickstart.gladestrings:274
 msgid "Horizontal Sync:"
 msgstr "水平周波数:"
 
-#: redhat-config-kickstart.gladestrings:250
+#: redhat-config-kickstart.gladestrings:272
 msgid "kHz"
 msgstr "kHz"
 
-#: redhat-config-kickstart.gladestrings:112
+#: redhat-config-kickstart.gladestrings:134
 msgid "HTTP Directory:"
 msgstr "HTTPディレクトリ:"
 
-#: redhat-config-kickstart.gladestrings:28
-msgid "Format partition"
-msgstr "パーティションのフォーマット"
+#: redhat-config-kickstart.gladestrings:77
+msgid "Time Zone:"
+msgstr "タイムゾーン:"
 
-#: redhat-config-kickstart.gladestrings:211
+#: redhat-config-kickstart.gladestrings:233
 msgid "SMB Servers:"
 msgstr "SMBサーバ:"
 
-#: redhat-config-kickstart.gladestrings:67
+#: redhat-config-kickstart.gladestrings:89
 msgid "_First sector of boot partition"
 msgstr "先頭セクタ(_F)"
 
-#: redhat-config-kickstart.gladestrings:78
+#: redhat-config-kickstart.gladestrings:100
 msgid "Use GRUB password: "
 msgstr "GRUBパスワードを使用:  "
 
-#: redhat-config-kickstart.gladestrings:131
+#: redhat-config-kickstart.gladestrings:153
 msgid "_Add"
 msgstr "追加(_A)"
 
-#: redhat-config-kickstart.gladestrings:128
+#: redhat-config-kickstart.gladestrings:145
 msgid "Initialize the Disk Label:"
 msgstr "ディスクラベルの初期化:"
 
@@ -985,21 +1109,30 @@ msgstr "ディスクラベルの初期化:"
 msgid "Grow to maximum of (MB):"
 msgstr "最大サイズ(MB)まで増加:"
 
-#: redhat-config-kickstart.gladestrings:204
+#: redhat-config-kickstart.gladestrings:226
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS:"
 
-#: ../src/kickstartGui.py:110 redhat-config-kickstart.gladestrings:174
-msgid "Network Configuration"
-msgstr "ネットワーク設定"
-
-#: redhat-config-kickstart.gladestrings:76
+#: redhat-config-kickstart.gladestrings:98
 msgid "Force use of lba32 mode"
 msgstr "LBA32モードを強制する"
 
-#: redhat-config-kickstart.gladestrings:43
+#: redhat-config-kickstart.gladestrings:41
+msgid "md4"
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:65
 msgid "_Quit"
 msgstr "停止(_Q)"
+
+#~ msgid "Format Partition"
+#~ msgstr "パーティションのフォーマット"
+
+#~ msgid "You must specify a size for the partition."
+#~ msgstr "パーティションのサイズを指定する必要があります。"
+
+#~ msgid "onPart and onDisk can not be used at the same time."
+#~ msgstr "onPart とonDiskは 同時に使用できません。"
 
 #~ msgid "Fill to maximum allowable size"
 #~ msgstr "可能な最大サイズを使用"
@@ -1065,4 +1198,3 @@ msgstr "停止(_Q)"
 #~ "2\n"
 #~ "3\n"
 #~ "4\n"
-
