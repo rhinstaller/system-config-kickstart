@@ -49,24 +49,8 @@ archive:
 	@rm -rf /tmp/${PKGNAME}-$(VERSION)
 	@echo "The archive is in ${PKGNAME}-$(VERSION).tar.bz2"
 
-snapsrc: create-snapshot
-	@rpmbuild -ta --nodeps $(PKGNAME)-$(VERSION).tar.bz2
-
-create-snapshot:
-	@rm -rf /tmp/$(PKGNAME)
-	@rm -rf /tmp/$(PKGNAME)-$(VERSION)
-	@tag=`cvs status Makefile | awk ' /Sticky Tag/ { print $$3 } '` 2> /dev/null; \
-        [ x"$$tag" = x"(none)" ] && tag=HEAD; \
-        echo "*** Pulling off $$tag!"; \
-        cd /tmp ; cvs -Q -d $(CVSROOT) export -r $$tag $(PKGNAME) || echo "Um... export aborted."
-	@mv /tmp/$(PKGNAME) /tmp/$(PKGNAME)-$(VERSION)
-	@cd /tmp ; tar --bzip2 -cSpf $(PKGNAME)-$(VERSION).tar.bz2 $(PKGNAME)-$(VERSION)
-	@rm -rf /tmp/$(PKGNAME)-$(VERSION)
-	@cp /tmp/$(PKGNAME)-$(VERSION).tar.bz2 .
-	@rm -f /tmp/$(PKGNAME)-$(VERSION).tar.bz2
-	@echo ""
-	@echo "The final archive is in $(PKGNAME)-$(VERSION).tar.bz2"
-
+snapsrc: archive
+	@rpmbuild -ta $(PKGNAME)-$(VERSION).tar.bz2
 
 local:
 	@rm -rf ${PKGNAME}-$(VERSION).tar.bz2
