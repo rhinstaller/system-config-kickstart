@@ -215,10 +215,17 @@ class raidWindow:
             partition_iter = self.raid_partition_store.get_value(iter,2)
             part_object = self.raid_partition_store.get_value(iter, 3)
 
-#            raid_number = part_object.raidNumber
             self.raid_object.raidPartitions.append(part_object.raidNumber)
             self.raid_object.raidPartitionObjects.append(part_object)
             self.part_store.set_value(partition_iter, 1, self.raid_object.raidDevice)
+
+        elif self.raid_partition_store.get_value(iter, 0) == gtk.FALSE:
+            partition_iter = self.raid_partition_store.get_value(iter,2)
+            part_object = self.raid_partition_store.get_value(iter, 3)            
+            if part_object.raidNumber in self.original_partitions:
+                part_object.raidDevice = ""
+                self.part_store.set_value(partition_iter, 1, "")
+                
 
     def countRaidDevices(self, store, data, iter):
         part_object = self.part_store.get_value(iter, 5)
