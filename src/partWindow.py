@@ -81,12 +81,20 @@ class partWindow:
         self.mountPointCombo.set_popdown_strings(mountPoints)
 
         self.fsTypesDict = { _("ext2"):"ext2", _("ext3"):"ext3",
-                               _("physical volume (LVM)"):"lvm", _("software RAID"):"raid",
+#                               _("physical volume (LVM)"):"lvm",
+                               _("software RAID"):"raid",
                                _("swap"):"swap", "vfat":"vfat"}
         
         self.fsTypes = self.fsTypesDict.keys()
+        self.fsTypes.sort()
         self.fsTypeCombo.set_popdown_strings(self.fsTypes)
-        self.fsTypeCombo.list.select_item(0)
+
+        try:
+            fsTypeSelect = self.fsTypes.index("ext3")
+        except:
+            fsTypeSelect = 0
+        
+        self.fsTypeCombo.list.select_item(fsTypeSelect)
 
     def on_fsTypeCombo_set_focus_child(self, *args):
         key = self.fsTypeCombo.entry.get_text()
@@ -183,7 +191,11 @@ class partWindow:
     def win_reset(self):
         self.mountPointCombo.entry.set_text("")
         self.mountPointCombo.set_sensitive(gtk.TRUE)
-        self.fsTypeCombo.list.select_item(1)
+        try:
+            fsTypeSelect = self.fsTypes.index("ext3")
+        except:
+            fsTypeSelect = 0
+        self.fsTypeCombo.list.select_item(fsTypeSelect)
         self.sizeCombo.set_text("1") 
         self.asPrimaryCheck.set_active(gtk.FALSE)
         self.onDiskCheck.set_active(gtk.FALSE)
