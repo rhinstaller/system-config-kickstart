@@ -26,6 +26,7 @@ install:
 	mkdir -p $(INSTROOT)$(PKGDATADIR)
 	mkdir -p $(INSTROOT)$(PKGDATADIR)/pixmaps
 	mkdir -p $(INSTROOT)/usr/share/applications
+	mkdir -p $(INSTROOT)/usr/share/icons/hicolor/48x48/apps
 	install ${PKGNAME} $(INSTROOT)/usr/sbin/${PKGNAME}
 	install src/*.py $(INSTROOT)$(PKGDATADIR)
 	for py in src/*.py ; do \
@@ -33,6 +34,7 @@ install:
 	done
 	install src/${PKGNAME}.glade $(INSTROOT)$(PKGDATADIR)
 	install pixmaps/*.png $(INSTROOT)$(PKGDATADIR)/pixmaps
+	install pixmaps/${PKGNAME}.png $(INSTROOT)/usr/share/icons/hicolor/48x48/apps
 	install ${PKGNAME}.desktop $(INSTROOT)/usr/share/applications/${PKGNAME}.desktop
 	ln -sf /usr/sbin/${PKGNAME} $(INSTROOT)/usr/sbin/ksconfig
 	for d in $(SUBDIRS); do \
