@@ -3678,10 +3678,9 @@
 
 			  <child>
 			    <widget class="GtkHBox" id="network_config_hbox">
-			      <property name="border_width">8</property>
 			      <property name="visible">True</property>
 			      <property name="homogeneous">False</property>
-			      <property name="spacing">9</property>
+			      <property name="spacing">7</property>
 
 			      <child>
 				<widget class="GtkLabel" id="network_type_label">
@@ -3763,7 +3762,7 @@
 			    <packing>
 			      <property name="padding">3</property>
 			      <property name="expand">False</property>
-			      <property name="fill">True</property>
+			      <property name="fill">False</property>
 			    </packing>
 			  </child>
 
@@ -3774,13 +3773,12 @@
 			    <packing>
 			      <property name="padding">15</property>
 			      <property name="expand">False</property>
-			      <property name="fill">True</property>
+			      <property name="fill">False</property>
 			    </packing>
 			  </child>
 
 			  <child>
 			    <widget class="GtkTable" id="network_table">
-			      <property name="border_width">7</property>
 			      <property name="visible">True</property>
 			      <property name="n_rows">4</property>
 			      <property name="n_columns">2</property>
@@ -7035,9 +7033,9 @@
 			      <property name="justify">GTK_JUSTIFY_CENTER</property>
 			      <property name="wrap">True</property>
 			      <property name="selectable">False</property>
-			      <property name="xalign">0.5</property>
-			      <property name="yalign">0.5</property>
-			      <property name="xpad">6</property>
+			      <property name="xalign">0</property>
+			      <property name="yalign">0.48</property>
+			      <property name="xpad">0</property>
 			      <property name="ypad">0</property>
 			    </widget>
 			    <packing>
@@ -7147,6 +7145,7 @@
 
 			  <child>
 			    <widget class="GtkLabel" id="label92">
+			      <property name="width_request">416</property>
 			      <property name="visible">True</property>
 			      <property name="label" translatable="yes">Warning: An error in this script might cause your kickstart installation to fail. Do not include the %pre command at the beginning.</property>
 			      <property name="use_underline">False</property>
@@ -7154,15 +7153,15 @@
 			      <property name="justify">GTK_JUSTIFY_CENTER</property>
 			      <property name="wrap">True</property>
 			      <property name="selectable">False</property>
-			      <property name="xalign">0.5</property>
+			      <property name="xalign">0</property>
 			      <property name="yalign">0.5</property>
-			      <property name="xpad">6</property>
+			      <property name="xpad">0</property>
 			      <property name="ypad">0</property>
 			    </widget>
 			    <packing>
 			      <property name="padding">0</property>
 			      <property name="expand">False</property>
-			      <property name="fill">True</property>
+			      <property name="fill">False</property>
 			    </packing>
 			  </child>
 
@@ -7356,6 +7355,7 @@
 
 			  <child>
 			    <widget class="GtkLabel" id="label94">
+			      <property name="width_request">416</property>
 			      <property name="visible">True</property>
 			      <property name="label" translatable="yes">Warning: An error in this script might cause your kickstart installation to fail. Do not include the %post command at the beginning.</property>
 			      <property name="use_underline">False</property>
@@ -7363,9 +7363,9 @@
 			      <property name="justify">GTK_JUSTIFY_CENTER</property>
 			      <property name="wrap">True</property>
 			      <property name="selectable">False</property>
-			      <property name="xalign">0.5</property>
+			      <property name="xalign">0</property>
 			      <property name="yalign">0.5</property>
-			      <property name="xpad">6</property>
+			      <property name="xpad">0</property>
 			      <property name="ypad">0</property>
 			    </widget>
 			    <packing>
