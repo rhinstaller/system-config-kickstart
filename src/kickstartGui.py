@@ -97,7 +97,7 @@ class kickstartGui:
 	self.basic_class = basic.basic(xml, self.category_store,
 				       self.category_view, self.options_notebook, self.kickstartData)
 	#bring in bootloader functions
-	self.bootloader_class = bootloader.bootloader(xml)		
+	self.bootloader_class = bootloader.bootloader(xml, self.kickstartData)
 	#bring in install functions
 	self.install_class = install.install(xml, self.category_store,
 					     self.category_view, self.options_notebook,
@@ -215,7 +215,7 @@ class kickstartGui:
         if self.install_class.getData() is None:
             return
         
-	list = list + self.bootloader_class.getData()
+	self.bootloader_class.getData()
 
 	#only write partition info if performing an install
 	if self.install_radiobutton.get_active():
@@ -254,3 +254,4 @@ class kickstartGui:
     def fillData(self):
         self.basic_class.fillData()
         self.install_class.fillData()
+        self.bootloader_class.fillData()
