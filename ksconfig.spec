@@ -45,8 +45,7 @@ fi
 %dir /usr/share/ksconfig
 /usr/share/ksconfig/*
 %{_mandir}/man8/ksconfig*
-#%lang(ja) %{_mandir}/ja/man8/ksconfig*
-#%lang(ja) %{_datadir}/locale/ja/LC_MESSAGES/ksconfig.mo
+%lang(ja) %{_mandir}/ja/man8/ksconfig*
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
