@@ -7,6 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: redhat-config-kickstart\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2003-12-01 11:27-0500\n"
 "PO-Revision-Date: 2003-11-14 13:47+1000\n"
 "Last-Translator: Sarah Saiying Wang <sarahs@redhat.com>\n"
 "Language-Team: Simplified Chinese <i18n@redhat.com>\n"
@@ -16,85 +18,653 @@ msgstr ""
 "Generated-By: pygettext.py 1.1\n"
 "X-Generator: KBabel 1.0\n"
 
-#: system-config-kickstart.gladestrings:285
-msgid "IP Address:"
-msgstr "IP 地址："
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                      Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. XXX FIXME
+#. if opt == "--enableldaptls":
+#. self.
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                      Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. #
+#. # I18N
+#. #
+#. self.lang_support_list.set_selection_mode(SELECTION_MULTIPLE)
+#. self.messagebox = xml.get_widget("messagebox")
+#. populate language combo
+#. set default to English
+#. for lang in lang_list:
+#. self.lang_support_list.append([lang])
+#. populate mouse combo
+#. populate keyboard combo, add keyboards here
+#. set default to English
+#. set keyboard to current keymap
+#. set default mouse to generic ps/2
+#. populate time zone combo
+#: ../src/basic.py:202
+msgid "Root passwords do not match."
+msgstr "根口令不匹配。"
 
-#: system-config-kickstart.gladestrings:12
-#: system-config-kickstart.gladestrings:37
-msgid "File System Type:"
-msgstr "文件系统类型："
+#. zerombr and clearpart options
+#. We want to preserve all partitions, so don't write the clearpart line
+#. Prepart the clearpart line
+#. This is a raid device
+#. Check to see if the selection is actually a partition or one of the parent roots
+#: ../src/basic.py:203 ../src/basic.py:223 ../src/install.py:213
+#: ../src/partition.py:301 ../src/partWindow.py:506 ../src/raidWindow.py:247
+msgid "Error"
+msgstr "错误"
 
-#: system-config-kickstart.gladestrings:27
-msgid "Partition :"
-msgstr "分区："
+#: ../src/basic.py:222
+msgid "Please select a root password."
+msgstr "请选择根口令。"
 
-#: system-config-kickstart.gladestrings:71
-msgid "_About"
-msgstr "关于(_A)"
+#. set language
+#. set keyboard
+#. set mouse
+#. set timezone
+#. set the supported lang list
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                      Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. #
+#. # I18N
+#. #
+#. lilo stuff
+#. end of lilo stuff
+#: ../src/bootloader.py:132
+msgid "Grub passwords do not match.  Please try again."
+msgstr "GRUB 口令不匹配。请重新输入。"
 
-#: system-config-kickstart.gladestrings:159
-msgid "_Add"
-msgstr "添加(_A)"
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                      Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. #
+#. # I18N
+#. #
+#. create table with custom checklists
+#: ../src/firewall.py:57
+msgid "Trusted devices:"
+msgstr "信任的设备："
 
-#: system-config-kickstart.gladestrings:84
-msgid "Language Support:"
-msgstr "语言支持："
+#: ../src/firewall.py:82
+msgid "Trusted services:"
+msgstr "信任的服务："
 
-#: system-config-kickstart.gladestrings:226
-msgid "Default Desktop:"
-msgstr "默认的桌面："
+#: ../src/firewall.py:114
+msgid "Other ports: (1029:tcp)"
+msgstr "其它端口：(1029:tcp)"
 
-#: system-config-kickstart.gladestrings:31
-msgid "Make RAID Device"
-msgstr "制作 RAID 设备"
+#. define languages, add languages here
+#. define mice, add mice here
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                      Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. Kickstart Configurator Installation Methods
+#. #
+#. # I18N
+#. #
+#. gray out package selection and partitions if upgrade
+#: ../src/install.py:133
+msgid "Please enter an NFS server."
+msgstr "请输入 NFS 服务器。"
+
+#: ../src/install.py:136
+msgid "Please enter an NFS directory."
+msgstr "请输入 NFS 目录。"
+
+#: ../src/install.py:146
+msgid "Please enter an FTP server."
+msgstr "请输入 FTP 服务器。"
+
+#: ../src/install.py:153
+msgid "Please enter an FTP directory."
+msgstr "请输入 FTP 目录。"
+
+#: ../src/install.py:159
+msgid "Please enter an FTP user name."
+msgstr "请输入 FTP 用户名。"
+
+#: ../src/install.py:162
+msgid "Please enter an FTP password."
+msgstr "请输入 FTP 口令。"
+
+#: ../src/install.py:177
+msgid "Please enter an HTTP server."
+msgstr "请输入 HTTP 服务器。"
+
+#: ../src/install.py:180
+msgid "Please enter an HTTP server directory."
+msgstr "请输入 HTTP 服务器目录。"
+
+#. strip the "http://" out
+#: ../src/install.py:201
+msgid "Please enter a hard drive directory."
+msgstr "请输入硬盘驱动器目录。"
+
+#: ../src/install.py:204
+msgid "Please enter a hard drive partition."
+msgstr "请输入一个硬盘驱动器分区。"
+
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                      Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. # Authors: Brent Fox <bfox@redhat.com>
+#. #          Tammy Fox <tfox@redhat.com>
+#. Patch contributed by Bill Huang - applied on 4/23/2001 for Japanese support
+#. #
+#. # I18N
+#. #
+#. #
+#. # Icon for windows
+#. #
+#. #
+#. # Pull in the Glade file
+#. #
+#: ../src/kickstartGui.py:86
+msgid "Kickstart"
+msgstr "Kickstart"
+
+#: ../src/kickstartGui.py:87
+msgid "Create a kickstart file"
+msgstr "创建一个 kickstart 文件"
+
+#. bring in widgets from glade file
+#. populate category list
+#. bring in basic functions
+#. bring in bootloader functions
+#. bring in install functions
+#. bring in partitions functions
+#. bring in network functions
+#. bring in auth functions
+#. bring in firewall functions
+#. bring in X functions
+#. bring in package function
+#. self.packages_class = packages.headerList(xml)
+#. FIXME
+#. bring in scripts function
+#: ../src/kickstartGui.py:138
+msgid "Subsection"
+msgstr "子段"
+
+#: ../src/kickstartGui.py:142
+msgid "Basic Configuration"
+msgstr "基本配置"
+
+#: ../src/kickstartGui.py:142
+msgid "Installation Method"
+msgstr "安装方法"
+
+#: ../src/kickstartGui.py:143
+msgid "Boot Loader Options"
+msgstr "引导装载程序选项"
+
+#: ../src/kickstartGui.py:143
+msgid "Partition Information"
+msgstr "分区信息"
+
+#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:168
+msgid "Network Configuration"
+msgstr "网络配置"
+
+#: ../src/kickstartGui.py:144
+msgid "Authentication"
+msgstr "验证"
+
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:219
+msgid "Firewall Configuration"
+msgstr "防火墙配置"
+
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:248
+msgid "X Configuration"
+msgstr "X 配置"
+
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:258
+msgid "Package Selection"
+msgstr "软件包选择"
+
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:264
+msgid "Pre-Installation Script"
+msgstr "预安装脚本"
+
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:271
+msgid "Post-Installation Script"
+msgstr "安装后脚本"
+
+#. show gui
+#. about box
+#: ../src/kickstartGui.py:193
+msgid ""
+"Kickstart Configurator @VERSION@\n"
+" Copyright (c) 2000-2002 Red Hat, Inc.\n"
+" Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
+" Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
+" A graphical interface for creating a kickstart file"
+msgstr ""
+"Kickstart 配置程序  @VERSION@\n"
+" 版权 (c) 2000-2002 Red Hat, Inc.\n"
+" 版权 (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
+" 版权 (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
+"创建 Kickstart 文件的图形化界面"
+
+#: ../src/kickstartGui.py:194
+msgid "About Kickstart Configurator"
+msgstr "关于 Kickstart 配置程序"
+
+#. display help manual
+#: ../src/kickstartGui.py:224
+msgid "Help is not available."
+msgstr "没有帮助。"
+
+#. get all buffers to save to file
+#. only do these things in installs, not upgrades
+#: ../src/kickstartGui.py:273
+#, python-format
+msgid "The file \"%s\" cannot be accessed."
+msgstr "文件“%s”无法被存取。"
+
+#. show chosen options for preview
+#. show preview dialog window
+#. show file selection dialog
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. # 		     "device"		: None			,
+#. # 		     "deviceprobe"	: None			,
+#. # 		     "driverdisk"	: None			,
+#. "lang"		: self.kickstartData.setLang		,
+#. # 		     "lilo"		: self.kickstartData.setLilo		,
+#. # 		     "lilocheck"	: self.kickstartData.setLiloCheck	,
+#. #                      "volgroup"         : self.defineVolumeGroup,
+#. #                      "logvol"           : self.defineLogicalVolume,
+#. # 		     "xdisplay"		: None			,
+#. #                      "autostep"         : self.kickstartData.setAutoStep       ,
+#. #                      "firstboot"        : self.kickstartData.setFirstboot      ,
+#. Separate the file into main, package, pre and post lists
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                      Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. Kickstart Configurator Network Configuration
+#. #
+#. # I18N
+#. #
+#: ../src/network.py:86
+msgid "Device"
+msgstr "设备"
+
+#: ../src/network.py:89
+msgid "Network Type"
+msgstr "网络类型"
+
+#. Let's find the last eth device in the list and increment by one to
+#. fill in the option menu with the next device
+#: ../src/network.py:108 ../src/network.py:153 ../src/network.py:221
+#: ../src/network.py:272 ../src/network.py:413
+msgid "Static IP"
+msgstr "静态 IP"
+
+#: ../src/network.py:211
+msgid "Please fill in the network information"
+msgstr "请填充网络信息"
+
+#: ../src/network.py:316
+#, python-format
+msgid ""
+"A network device with the name %s already exists.  Please choose another "
+"device name"
+msgstr "名称为 %s 的网络设备已经存在。请另选一个设备名称。"
+
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                      Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. Kickstart Configurator Package Selection
+#. #
+#. # I18N
+#. #
+#. Loop over the package list and see what was selected
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002 Brent Fox <bfox@redhat.com>
+#. #                                Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. Kickstart Configurator Partitions Data Structure
+#. self.onDisk = ""
+#. self.onDiskVal = ""
+#. self.onPart = ""
+#. self.onPartVal = ""
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                      Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. Kickstart Configurator Partitions Configuration
+#. #
+#. # I18N
+#. #
+#: ../src/partition.py:70
+msgid ""
+"Device/\n"
+"Partition Number"
+msgstr ""
+"设备/\n"
+"分区号码"
+
+#. col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
+#: ../src/partition.py:73
+msgid ""
+"Mount Point/\n"
+"RAID"
+msgstr ""
+"挂载点/\n"
+"RAID"
+
+#: ../src/partition.py:75
+msgid "Type"
+msgstr "类型"
+
+#: ../src/partition.py:77
+msgid "Format"
+msgstr "格式"
+
+#: ../src/partition.py:79
+msgid "Size (MB)"
+msgstr "大小(MB)"
+
+#. initialize the child classes
+#. #         #XXX-FIXME-FOR TESTING ONLY
+#. #         hard_drive_parent_iter = self.part_store.append(None)
+#. #         self.part_store.set_value(hard_drive_parent_iter, 0, (_("Hard Drives")))
+#. #         hda_iter = self.part_store.append(hard_drive_parent_iter)
+#. #         self.part_store.set_value(hda_iter, 0, (_("hda")))
+#. #         part_object = partEntry.partEntry()
+#. #         part_object.fsType = "raid"
+#. #         part_object.device = "Auto"
+#. #         part_object.raidNumber = "raid.01"
+#. #         part_object.format = 1
+#. #         part_object.size = 1
+#. #         part_iter = self.part_store.append(hda_iter)
+#. #         self.part_store.set_value(part_iter, 0, part_object.raidNumber)
+#. #         self.part_store.set_value(part_iter, 2, part_object.fsType)
+#. #         self.part_store.set_value(part_iter, 3, part_object.format)
+#. #         self.part_store.set_value(part_iter, 4, part_object.size)
+#. #         self.part_store.set_value(part_iter, 5, part_object)
+#. #         hdb_iter = self.part_store.append(hard_drive_parent_iter)
+#. #         self.part_store.set_value(hdb_iter, 0, (_("hdb")))
+#. #         part_object = partEntry.partEntry()
+#. #         part_object.fsType = "raid"
+#. #         part_object.device = "Auto"
+#. #         part_object.format = 1
+#. #         part_object.raidNumber = "raid.02"
+#. #         part_object.size = 1
+#. #         part_iter = self.part_store.append(hdb_iter)
+#. #         self.part_store.set_value(part_iter, 0, part_object.raidNumber)
+#. #         self.part_store.set_value(part_iter, 2, part_object.fsType)
+#. #         self.part_store.set_value(part_iter, 3, part_object.format)
+#. #         self.part_store.set_value(part_iter, 4, part_object.size)
+#. #         self.part_store.set_value(part_iter, 5, part_object)
+#. #         hdc_iter = self.part_store.append(hard_drive_parent_iter)
+#. #         self.part_store.set_value(hdc_iter, 0, (_("hdc")))
+#. #         part_object = partEntry.partEntry()
+#. #         part_object.fsType = "raid"
+#. #         part_object.device = "Auto"
+#. #         part_object.format = 1
+#. #         part_object.raidNumber = "raid.03"
+#. #         part_object.size = 1
+#. #         part_iter = self.part_store.append(hdc_iter)
+#. #         self.part_store.set_value(part_iter, 0, part_object.raidNumber)
+#. #         self.part_store.set_value(part_iter, 2, part_object.fsType)
+#. #         self.part_store.set_value(part_iter, 3, part_object.format)
+#. #         self.part_store.set_value(part_iter, 4, part_object.size)
+#. #         self.part_store.set_value(part_iter, 5, part_object)
+#: ../src/partition.py:149 ../src/partition.py:179
+msgid "Please select a partition from the list."
+msgstr "请从列表中选择分区。"
+
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. # Copyright (C) 2001, 2002, 2003 Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. #
+#. # I18N
+#. #
+#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:58
+msgid "ext2"
+msgstr "ext2"
+
+#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:59
+msgid "ext3"
+msgstr "ext3"
+
+#. _("physical volume (LVM)"):"lvm",
+#: ../src/partWindow.py:85 ../src/partWindow.py:144
+msgid "software RAID"
+msgstr "软件 RAID"
+
+#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:60
+msgid "swap"
+msgstr "交换"
+
+#. XXX - have to do this after the show_all due to a bug in gtkSpinButton, I suspect
+#. If the current iter is the only child, delete the parent and the child
+#. If there are other children, just delete this child
+#: ../src/partWindow.py:256 ../src/partWindow.py:528 ../src/raidWindow.py:212
+msgid "Yes"
+msgstr "是"
+
+#: ../src/partWindow.py:258 ../src/partWindow.py:530 ../src/raidWindow.py:214
+msgid "No"
+msgstr "否"
+
+#. If they didn't specify a device, create a group called "Auto"
+#: ../src/partWindow.py:281 ../src/partWindow.py:296 ../src/partWindow.py:315
+#: ../src/partWindow.py:329
+msgid "Auto"
+msgstr "自动"
+
+#: ../src/partWindow.py:290
+msgid "Hard Drives"
+msgstr "硬盘驱动器"
+
+#. # size stuff
+#. Let's do some error checking to make sure things make sense
+#. If it's a raid partition, run it through the checkRaid sanity checker
+#. this already has a raid number, leave it alone
+#. Erase any exiting raid data if we've edited a RAID partition to be non-RAID
+#. It's not raid, so move on
+#. If it's a swap partition, set fsType to be swap
+#. It's not raid and it's not swap, so it must be a regular partition
+#: ../src/partWindow.py:413
+msgid "Specify a mount point for the partition."
+msgstr "为分区指定挂载点。"
+
+#. Check to see if the mount point has already been used
+#. They are trying to use a mount point already in use.  Let's complain
+#: ../src/partWindow.py:422
+#, python-format
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr "挂载点“%s”已被使用。请另选一个挂载点。"
+
+#. This will scan the part_store and see if there are any duplicate mount points
+#: ../src/partWindow.py:442
+msgid ""
+"To create a new RAID partition, you must specify either a hard drive device "
+"name or an existing partition."
+msgstr "要创建新的 RAID 分区，您必须指定一个硬盘驱动器设备名称或一个现存分区。"
+
+#. If all the checks pass, then return
+#. Don't iterate if we're counting the object that's being edited
+#. the entry doesn't start with "hd" or "sd" so it's probably not valid
+#: ../src/partWindow.py:481
+msgid "Specify a device on which to create the partition."
+msgstr "指定要在其中创建分区的设备。"
+
+#: ../src/partWindow.py:483
+msgid ""
+"The device you specified is not a valid device name. Please use a valid "
+"device name such as \"hda1\" or \"sda3\"."
+msgstr ""
+"您指定的设备不是有效的设备名。请使用一个有效的设备名，如“hda1”或“sda3”。"
 
 #: ../src/partWindow.py:493
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
 msgstr "您指定的分区不以数字结尾。分区必须有一个分区号码，如“hda1”或“sda3”。"
-
-#: system-config-kickstart.gladestrings:62
-msgid "Format RAID device"
-msgstr "格式化 RAID 设备"
-
-#: system-config-kickstart.gladestrings:164
-msgid "label30"
-msgstr "标签30"
-
-#: system-config-kickstart.gladestrings:169
-msgid "label31"
-msgstr "标签31"
-
-#: ../src/kickstartGui.py:144
-msgid "Authentication"
-msgstr "验证"
-
-#: system-config-kickstart.gladestrings:220
-msgid "label33"
-msgstr "标签33"
-
-#: ../src/system-config-kickstart.py:78
-msgid "Try running 'system-config-kickstart --help' for a list of options."
-msgstr "请试用“system-config-kickstart --help”来获得选项列表。"
-
-#: system-config-kickstart.gladestrings:151
-msgid "label35"
-msgstr "标签35"
-
-#: system-config-kickstart.gladestrings:261
-#: system-config-kickstart.gladestrings:268
-msgid "Use an interpreter:"
-msgstr "使用解释器："
-
-#: system-config-kickstart.gladestrings:18
-msgid "Additional Size Options"
-msgstr "附加的大小选项"
-
-#: system-config-kickstart.gladestrings:217
-msgid "Enable firewall"
-msgstr "启用防火墙"
 
 #: ../src/partWindow.py:499
 msgid ""
@@ -105,553 +675,155 @@ msgstr ""
 "您指定的分区不以“hd”或“sd”开头。分区必须有一个有效的设备名称和分区号码，"
 "如“hda1”或“sda3”。"
 
-#: system-config-kickstart.gladestrings:129
-msgid "Install new boot loader"
-msgstr "安装新引导装载程序"
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                      Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. # raidOptionWindow.py - code for redhat-config-kickstart's raid dialog
+#. # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. # Copyright (C) 2001, 2002, 2003 Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. import raidWindow
+#. #
+#. # I18N
+#. #
+#. self.raidWindow = raidWindow.raidWindow(self.xml, self.part_store, self.part_view)
+#: ../src/raidOptionsWindow.py:72
+#, python-format
+msgid "You currently have %d software RAID partition(s) free to use."
+msgstr "目前，您还有 %d 个空闲的软件 RAID 分区可以使用。"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:219
-msgid "Firewall Configuration"
-msgstr "防火墙配置"
+#. # raidWindow.py - code for redhat-config-kickstart's raid dialog
+#. # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. # Copyright (C) 2001, 2002, 2003 Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. #
+#. # I18N
+#. #
+#. it's a swap partition, so desensitize the mountPoint combo
+#: ../src/raidWindow.py:172
+#, python-format
+msgid "You must select at least 2 partitions in order to use RAID %s"
+msgstr "您必须至少选择两个分区来使用 RAID %s"
 
-#: system-config-kickstart.gladestrings:73
-msgid "Default Language:"
-msgstr "默认语言："
+#: ../src/raidWindow.py:178
+#, python-format
+msgid "You must select at least 3 partitions in order to use RAID %s"
+msgstr "您必须至少选择 3 个分区来使用 RAID %s"
 
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:59
-msgid "ext3"
-msgstr "ext3"
-
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:58
-msgid "ext2"
-msgstr "ext2"
-
-#: system-config-kickstart.gladestrings:140
-msgid "Encrypt GRUB password"
-msgstr "给 GRUB 口令加密"
-
-#: system-config-kickstart.gladestrings:14
-msgid "Fill all unused space on disk"
-msgstr "使用磁盘上全部未用空间"
-
-#: ../src/kickstartGui.py:194
-msgid "About Kickstart Configurator"
-msgstr "关于 Kickstart 配置程序"
-
-#: ../src/firewall.py:57
-msgid "Trusted devices:"
-msgstr "信任的设备："
-
-#: system-config-kickstart.gladestrings:16
-msgid "Fixed size"
-msgstr "固定大小"
-
-#: system-config-kickstart.gladestrings:55
-msgid "0"
-msgstr "0"
-
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:60
-msgid "swap"
-msgstr "交换"
-
-#: system-config-kickstart.gladestrings:197
-msgid "Enable Hesiod Support"
-msgstr "启用 Hesiod 支持"
-
-#: system-config-kickstart.gladestrings:177
-msgid "NIS Server:"
-msgstr "NIS 服务器："
-
-#: system-config-kickstart.gladestrings:239
-msgid "Probe for monitor"
-msgstr "探测显示器"
-
-#: system-config-kickstart.gladestrings:63
-msgid "Kickstart Configurator"
-msgstr "Kickstart 配置程序"
-
-#: system-config-kickstart.gladestrings:143
-msgid "Use linear mode"
-msgstr "使用线形模式"
-
-#: system-config-kickstart.gladestrings:154
-msgid "Remove all existing partitions"
-msgstr "删除所有现存分区"
-
-#: system-config-kickstart.gladestrings:227
-msgid "GNOME"
-msgstr "GNOME"
-
-#: system-config-kickstart.gladestrings:24
-msgid "(for example: hda or sdc)"
-msgstr "(譬如：hda 或 sdc)"
-
-#: system-config-kickstart.gladestrings:273
-msgid "Preview Options"
-msgstr "预览选项"
-
-#: system-config-kickstart.gladestrings:184
-msgid "LDAP Server: "
-msgstr "LDAP 服务器："
-
-#: ../src/kickstartGui.py:87
-msgid "Create a kickstart file"
-msgstr "创建一个 kickstart 文件"
-
-#: system-config-kickstart.gladestrings:275
-msgid ""
-"You have choosen the following configuration. Click Save File to save the "
-"kickstart file. "
-msgstr "您已选定下列配置。点击保存文件来保存 kickstart 文件。"
-
-#: system-config-kickstart.gladestrings:148
-msgid "Kernel parameters:"
-msgstr "内核参数："
-
-#: system-config-kickstart.gladestrings:80
-msgid "Time Zone:"
-msgstr "时区："
-
-#: system-config-kickstart.gladestrings:86
-#: system-config-kickstart.gladestrings:137
-msgid "Confirm Password:"
-msgstr "确认口令："
-
-#: system-config-kickstart.gladestrings:22
-msgid "Drive :"
-msgstr "驱动器："
-
-#: system-config-kickstart.gladestrings:236
-msgid "Video Card RAM: "
-msgstr "视频卡内存："
-
-#: system-config-kickstart.gladestrings:235
-msgid "Probe for video card"
-msgstr "探测视频卡"
-
-#: system-config-kickstart.gladestrings:167
-msgid "_Delete Network Device"
-msgstr "删除网络设备(_D)"
-
-#: system-config-kickstart.gladestrings:287
-msgid "Gateway:"
-msgstr "网关："
-
-#: system-config-kickstart.gladestrings:240
-msgid "Specify hsync and vsync instead of monitor"
-msgstr "指定水平频率及垂直频率而不是显示器"
-
-#: system-config-kickstart.gladestrings:172
-msgid "Use MD5"
-msgstr "使用 MD5"
-
-#: system-config-kickstart.gladestrings:203
-msgid "Hesiod"
-msgstr "Hesiod"
-
-#: system-config-kickstart.gladestrings:253
-msgid "Desktops"
-msgstr "桌面"
-
-#: system-config-kickstart.gladestrings:191
-msgid "Kerberos Domain Controller (KDC):"
-msgstr "Kerberos 域控制器(KDC)："
-
-#: ../src/basic.py:202
-msgid "Root passwords do not match."
-msgstr "根口令不匹配。"
-
-#: system-config-kickstart.gladestrings:283
-msgid "Network Device:"
-msgstr "网络设备："
-
-#: ../src/partWindow.py:85 ../src/partWindow.py:144
-msgid "software RAID"
-msgstr "软件 RAID"
-
-#: ../src/partWindow.py:481
-msgid "Specify a device on which to create the partition."
-msgstr "指定要在其中创建分区的设备。"
-
-#: system-config-kickstart.gladestrings:89
-msgid "Perform installation in text mode (graphical is default)"
-msgstr "在文本模式中执行安装(默认为图形化模式)"
-
-#: system-config-kickstart.gladestrings:124
-msgid "Hard Drive Partition:"
-msgstr "硬盘驱动器分区："
-
-#: ../src/install.py:201
-msgid "Please enter a hard drive directory."
-msgstr "请输入硬盘驱动器目录。"
-
-#: system-config-kickstart.gladestrings:111
-msgid "Specify an FTP username and password"
-msgstr "指定 FTP 用户名和口令"
-
-#: system-config-kickstart.gladestrings:231
-msgid "Disabled"
-msgstr "已禁用"
-
-#: system-config-kickstart.gladestrings:145
-msgid "label174"
-msgstr "标签174"
-
-#: ../src/install.py:180
-msgid "Please enter an HTTP server directory."
-msgstr "请输入 HTTP 服务器目录。"
-
-#: system-config-kickstart.gladestrings:141
-msgid "label173"
-msgstr "标签173"
-
-#: system-config-kickstart.gladestrings:276
-msgid "RAID Options"
-msgstr "RAID 选项"
-
-#: system-config-kickstart.gladestrings:142
-msgid "LILO Options:"
-msgstr "LILO 选项："
-
-#: system-config-kickstart.gladestrings:180
-msgid "NIS"
-msgstr "NIS"
-
-#: system-config-kickstart.gladestrings:189
-msgid "Kerberos Realm:"
-msgstr "Kerberos 领域："
-
-#: system-config-kickstart.gladestrings:193
-msgid "Kerberos Master Server:"
-msgstr "Kerberos 主服务器："
-
-#: system-config-kickstart.gladestrings:99
-#: system-config-kickstart.gladestrings:121
-msgid "HTTP"
-msgstr "HTTP"
-
+#. then this is a new raid device, not one we're just editing
 #: ../src/raidWindow.py:192 ../src/raidWindow.py:218
 msgid "Raid Devices"
 msgstr "RAID 设备"
 
-#: ../src/kickstartGui.py:143
-msgid "Boot Loader Options"
-msgstr "引导装载程序选项"
-
-#: system-config-kickstart.gladestrings:156
-msgid "Preserve existing partitions"
-msgstr "保留现存分区"
-
-#: system-config-kickstart.gladestrings:131
-msgid "Upgrade existing boot loader"
-msgstr "升级现存引导装载程序"
-
-#: system-config-kickstart.gladestrings:133
-msgid "Use LILO for the boot loader"
-msgstr "使用 LILO 引导装载程序"
-
-#: system-config-kickstart.gladestrings:119
-msgid "HTTP Server:"
-msgstr "HTTP 服务器："
-
-#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:168
-msgid "Network Configuration"
-msgstr "网络配置"
-
-#: system-config-kickstart.gladestrings:286
-msgid "Netmask: "
-msgstr "子网掩码："
-
-#: system-config-kickstart.gladestrings:165
-msgid "_Add Network Device"
-msgstr "添加网络设备(_A)"
-
-#: system-config-kickstart.gladestrings:82
-msgid "Root Password:"
-msgstr "根口令："
-
-#: system-config-kickstart.gladestrings:282
-msgid "Network Device Information"
-msgstr "网络设备信息"
-
-#: system-config-kickstart.gladestrings:162
-msgid "RAID"
-msgstr "RAID "
-
-#: system-config-kickstart.gladestrings:281
-msgid "Create a RAID device [default = /dev/md0]"
-msgstr "创建 RAID 设备 [default = /dev/md0]"
-
-#: ../src/partition.py:75
-msgid "Type"
-msgstr "类型"
-
-#: ../src/xconfig.py:120
-msgid "Could not read monitor database"
-msgstr "无法读取显示器数据库"
-
-#: system-config-kickstart.gladestrings:174
-msgid "NIS Domain:"
-msgstr "NIS 域："
-
-#: system-config-kickstart.gladestrings:242
-msgid "Hz"
-msgstr "赫兹"
-
-#: system-config-kickstart.gladestrings:272
-msgid "label93"
-msgstr "标签93"
-
-#: ../src/firewall.py:82
-msgid "Trusted services:"
-msgstr "信任的服务："
-
-#: ../src/kickstartGui.py:142
-msgid "Basic Configuration"
-msgstr "基本配置"
-
-#: system-config-kickstart.gladestrings:222
-msgid "Color Depth"
-msgstr "色彩深度"
-
-#: system-config-kickstart.gladestrings:161
-msgid "_Delete"
-msgstr "删除(_D)"
-
-#: system-config-kickstart.gladestrings:113
-msgid "FTP Password"
-msgstr "FTP 口令"
-
-#: system-config-kickstart.gladestrings:7
-msgid "Save File"
-msgstr "保存文件"
-
-#: ../src/install.py:133
-msgid "Please enter an NFS server."
-msgstr "请输入 NFS 服务器。"
-
-#: system-config-kickstart.gladestrings:206
-msgid "SMB Workgroup:"
-msgstr "SMB 工作组："
-
-#: system-config-kickstart.gladestrings:210
-msgid "SMB"
-msgstr "SMB"
-
-#: ../src/kickstartGui.py:142
-msgid "Installation Method"
-msgstr "安装方法"
-
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:264
-msgid "Pre-Installation Script"
-msgstr "预安装脚本"
-
-#: ../src/partWindow.py:413
-msgid "Specify a mount point for the partition."
-msgstr "为分区指定挂载点。"
-
-#: ../src/network.py:316
-msgid ""
-"A network device with the name %s already exists.  Please choose another "
-"device name"
-msgstr "名称为 %s 的网络设备已经存在。请另选一个设备名称。"
-
-#: system-config-kickstart.gladestrings:54
-msgid "md15"
-msgstr "md15"
-
-#: system-config-kickstart.gladestrings:134
-msgid "GRUB Options:"
-msgstr "GRUB 选项："
-
-#: system-config-kickstart.gladestrings:49
-msgid "md10"
-msgstr "md10"
-
-#: system-config-kickstart.gladestrings:50
-msgid "md11"
-msgstr "md11"
-
-#: system-config-kickstart.gladestrings:51
-msgid "md12"
-msgstr "md12"
-
-#: system-config-kickstart.gladestrings:52
-msgid "md13"
-msgstr "md13"
-
-#: system-config-kickstart.gladestrings:257
-msgid "System"
-msgstr "系统"
-
-#: system-config-kickstart.gladestrings:98
-#: system-config-kickstart.gladestrings:116
-msgid "FTP"
-msgstr "FTP"
-
-#: system-config-kickstart.gladestrings:19
-msgid "Force to be a primary partition (asprimary)"
-msgstr "强制为主分区(asprimary)"
-
-#: system-config-kickstart.gladestrings:160
-msgid "_Edit"
-msgstr "编辑(_E)"
-
-#: system-config-kickstart.gladestrings:251
-msgid "_Automatically Resolve Dependencies"
-msgstr "自动解决依赖关系(_A)"
-
-#: ../src/install.py:136
-msgid "Please enter an NFS directory."
-msgstr "请输入 NFS 目录。"
-
-#: system-config-kickstart.gladestrings:47
-msgid "md8"
-msgstr "md8"
-
-#: system-config-kickstart.gladestrings:48
-msgid "md9"
-msgstr "md9"
-
-#: system-config-kickstart.gladestrings:97
-#: system-config-kickstart.gladestrings:106
-msgid "NFS"
-msgstr "NFS"
-
-#: system-config-kickstart.gladestrings:8
-msgid "Partition Options"
-msgstr "分区选项"
-
-#: system-config-kickstart.gladestrings:233
-msgid "Enabled in reconfiguration mode"
-msgstr "在重新配置模式中被启用"
-
-#: system-config-kickstart.gladestrings:41
-msgid "md2"
-msgstr "md2"
-
-#: system-config-kickstart.gladestrings:42
-msgid "md3"
-msgstr "md3"
-
-#: system-config-kickstart.gladestrings:39
-msgid "md0"
-msgstr "md0"
-
-#: system-config-kickstart.gladestrings:40
-msgid "md1"
-msgstr "md1"
-
-#: system-config-kickstart.gladestrings:45
-msgid "md6"
-msgstr "md6"
-
-#: system-config-kickstart.gladestrings:46
-msgid "md7"
-msgstr "md7"
-
-#: system-config-kickstart.gladestrings:43
-msgid "md4"
-msgstr "md4"
-
-#: system-config-kickstart.gladestrings:44
-msgid "md5"
-msgstr "md5"
-
-#: system-config-kickstart.gladestrings:158
-msgid "Do not initialize the disk label"
-msgstr "不要初始化磁盘标签"
-
-#: system-config-kickstart.gladestrings:125
-msgid "Hard Drive Directory:"
-msgstr "硬盘驱动器目录："
-
-#: system-config-kickstart.gladestrings:260
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %pre command at the beginning."
-msgstr ""
-"警告：脚本中的错误可能会导致 Kickstart 安装失败。在起始处请不要包括 %pre 命"
-"令。"
-
-#: ../src/kickstartGui.py:86
-msgid "Kickstart"
-msgstr "Kickstart"
-
-#: system-config-kickstart.gladestrings:196
-msgid "Kerberos 5"
-msgstr "Kerberos 5"
-
-#: system-config-kickstart.gladestrings:102
-msgid "NFS Server:"
-msgstr "NFS 服务器："
-
-#: system-config-kickstart.gladestrings:228
-msgid "KDE"
-msgstr "KDE"
-
-#: ../src/kickstartGui.py:143
-msgid "Partition Information"
-msgstr "分区信息"
-
-#: system-config-kickstart.gladestrings:245
-msgid "Vertical Sync:"
-msgstr "垂直频率："
-
-#: system-config-kickstart.gladestrings:188
-msgid "Enable Kerberos 5 Authentication"
-msgstr "启用 Kerberos 5 验证"
-
-#: system-config-kickstart.gladestrings:132
-msgid "Use GRUB for the boot loader"
-msgstr "使用 GRUB 引导装载程序"
-
-#: system-config-kickstart.gladestrings:255
-msgid "Servers"
-msgstr "服务器"
-
-#: system-config-kickstart.gladestrings:215
-msgid "label32"
-msgstr "标签32"
-
-#: system-config-kickstart.gladestrings:200
-msgid "Hesiod RHS:"
-msgstr "Hesiod RHS："
-
-#: system-config-kickstart.gladestrings:185
-msgid "LDAP Base Name: "
-msgstr "LDAP 基准名称："
-
-#: system-config-kickstart.gladestrings:85
-msgid "Use UTC clock"
-msgstr "使用 UTC 时钟"
-
-#: ../src/raidWindow.py:178
-msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr "您必须至少选择 3 个分区来使用 RAID %s"
-
-#: ../src/partWindow.py:256 ../src/partWindow.py:528 ../src/raidWindow.py:212
-msgid "Yes"
-msgstr "是"
-
-#: system-config-kickstart.gladestrings:34
-msgid "Number of spares:"
-msgstr "备件数量："
-
-#: system-config-kickstart.gladestrings:100
-#: system-config-kickstart.gladestrings:126
-msgid "Hard Drive"
-msgstr "硬盘驱动器"
-
-#: ../src/partWindow.py:442
-msgid ""
-"To create a new RAID partition, you must specify either a hard drive device "
-"name or an existing partition."
-msgstr "要创建新的 RAID 分区，您必须指定一个硬盘驱动器设备名称或一个现存分区。"
-
-#: system-config-kickstart.gladestrings:265
-msgid "label89"
-msgstr "标签89"
-
+#. self.markRaidPartitions(raid_object)
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                      Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. save file
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                      Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. display choosen options in textview
+#. # 		baseSize = 10
+#. # 		baseFont = 'sans'
+#. # 		self.textTag = self.confirm_buffer.create_tag('text')
+#. # 		self.textTag.set_property('font', '%s %d' % (baseFont, baseSize))
+#. # 		self.textTag.set_property('pixels-above-lines', 1)
+#. # 		self.textTag.set_property('pixels-below-lines', 1)
+#. # 		self.confirm_buffer.apply_tag(self.textTag, self.confirm_buffer.get_start_iter(), self.confirm_buffer.get_end_iter())
+#. using hide because destroy crashes application after second instance
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. Kickstart Configurator Scripts
+#. !/usr/bin/python2
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003  Brent Fox <bfox@redhat.com>
+#. #                                       Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. #
+#. # I18N
+#. #
 #: ../src/system-config-kickstart.py:60
 msgid ""
 "Usage: system-config-kickstart [--help] [--generate <filename>] "
@@ -678,110 +850,65 @@ msgstr ""
 "<kickstart_filename>    该选项会导致 GUI 使用 kickstart 已经\n"
 "                        填充的值来启动。"
 
-#: ../src/partWindow.py:422
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr "挂载点“%s”已被使用。请另选一个挂载点。"
-
-#: ../src/partWindow.py:258 ../src/partWindow.py:530 ../src/raidWindow.py:214
-msgid "No"
-msgstr "否"
-
-#: system-config-kickstart.gladestrings:288
-msgid "Name Server:"
-msgstr "名称服务器："
-
-#: system-config-kickstart.gladestrings:96
-#: system-config-kickstart.gladestrings:101
-msgid "CD-ROM"
-msgstr "光盘驱动器"
-
-#: system-config-kickstart.gladestrings:53
-msgid "md14"
-msgstr "md14"
-
-#: system-config-kickstart.gladestrings:202
-msgid "Hesiod Authentication"
-msgstr "Hesiod 验证"
-
-#: system-config-kickstart.gladestrings:75
-msgid "Keyboard:"
-msgstr "键盘："
-
-#: ../src/install.py:153
-msgid "Please enter an FTP directory."
-msgstr "请输入 FTP 目录。"
-
-#: system-config-kickstart.gladestrings:69
-msgid "_Help"
-msgstr "帮助(_H)"
-
 #: ../src/system-config-kickstart.py:77
 msgid "Could not open display because no X server is running."
 msgstr "X 服务器不在运行，因此无法打开显示。"
 
-#: system-config-kickstart.gladestrings:179
-msgid "NIS Authentication"
-msgstr "NIS 验证"
+#: ../src/system-config-kickstart.py:78
+msgid "Try running 'system-config-kickstart --help' for a list of options."
+msgstr "请试用“system-config-kickstart --help”来获得选项列表。"
 
-#: system-config-kickstart.gladestrings:209
-msgid "SMB Authentication"
-msgstr "SMB 验证"
+#. !/usr/bin/python2
+#. !/usr/bin/python2
+#. profileSystem(data)
+#. # Kickstart Configurator - A graphical kickstart file generator
+#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
+#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
+#. #                                      Tammy Fox <tfox@redhat.com>
+#. # This program is free software; you can redistribute it and/or modify
+#. # it under the terms of the GNU General Public License as published by
+#. # the Free Software Foundation; either version 2 of the License, or
+#. # (at your option) any later version.
+#. # This program is distributed in the hope that it will be useful,
+#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#. # GNU General Public License for more details.
+#. # You should have received a copy of the GNU General Public License
+#. # along with this program; if not, write to the Free Software
+#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#. Kickstart Configurator X Configuration
+#. add color depths
+#. add resolutions
+#. add video card RAM sizes to option menu
+#. add video cards to list
+#: ../src/xconfig.py:102
+msgid "Could not read video card database"
+msgstr "无法读取视频卡数据库"
 
-#: system-config-kickstart.gladestrings:290
-#: system-config-kickstart.gladestrings:292
-#: system-config-kickstart.gladestrings:294
-#: system-config-kickstart.gladestrings:297
-#: system-config-kickstart.gladestrings:299
-#: system-config-kickstart.gladestrings:301
-#: system-config-kickstart.gladestrings:304
-#: system-config-kickstart.gladestrings:306
-#: system-config-kickstart.gladestrings:308
-#: system-config-kickstart.gladestrings:311
-#: system-config-kickstart.gladestrings:313
-#: system-config-kickstart.gladestrings:315
-msgid "."
-msgstr "."
+#. add monitors to list
+#: ../src/xconfig.py:120
+msgid "Could not read monitor database"
+msgstr "无法读取显示器数据库"
 
-#: system-config-kickstart.gladestrings:163
-msgid "Partition Information (required)"
-msgstr "分区信息需(必需)"
+#. disable xconfig notebook
+#. color depth - translate
+#. resolution
+#. default desktop
+#. startxonboot
+#. video card and monitor
+#. translate MB to KB
+#.
+#. * Translatable strings file generated by Glade.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
+#: system-config-kickstart.gladestrings:7
+msgid "Save File"
+msgstr "保存文件"
 
-#: system-config-kickstart.gladestrings:155
-msgid "Remove existing Linux partitions"
-msgstr "删除现存 Linux 分区"
-
-#: system-config-kickstart.gladestrings:230
-msgid "On first boot, Setup Agent is: "
-msgstr "在首次引导时，设置代理是："
-
-#: system-config-kickstart.gladestrings:249
-msgid "label88"
-msgstr "标签88"
-
-#: ../src/install.py:204
-msgid "Please enter a hard drive partition."
-msgstr "请输入一个硬盘驱动器分区。"
-
-#: system-config-kickstart.gladestrings:153
-msgid "Do not clear Master Boot Record"
-msgstr "不要清除主引导记录"
-
-#: ../src/partWindow.py:290
-msgid "Hard Drives"
-msgstr "硬盘驱动器"
-
-#: system-config-kickstart.gladestrings:186
-msgid "LDAP Authentication"
-msgstr "LDAP 验证"
-
-#: system-config-kickstart.gladestrings:254
-msgid "Applications"
-msgstr "应用程序"
-
-#: system-config-kickstart.gladestrings:21
-#: system-config-kickstart.gladestrings:26
-msgid "         "
-msgstr "         "
+#: system-config-kickstart.gladestrings:8
+msgid "Partition Options"
+msgstr "分区选项"
 
 #: system-config-kickstart.gladestrings:9
 #: system-config-kickstart.gladestrings:10
@@ -844,42 +971,857 @@ msgstr "         "
 msgid "*"
 msgstr "*"
 
-#: system-config-kickstart.gladestrings:38
-msgid "RAID Device:"
-msgstr "RAID 设备："
-
-#: system-config-kickstart.gladestrings:146
-msgid "Install boot loader on Master Boot Record (MBR)"
-msgstr "在主引导记录(MBR)上安装引导装载程序"
-
-#: system-config-kickstart.gladestrings:259
-msgid "label34"
-msgstr "标签34"
-
-#: ../src/kickstartGui.py:273
-msgid "The file \"%s\" cannot be accessed."
-msgstr "文件“%s”无法被存取。"
-
-#: system-config-kickstart.gladestrings:13
-msgid "Size (MB):"
-msgstr "大小(MB)："
-
-#: system-config-kickstart.gladestrings:171
-msgid "Use Shadow Passwords"
-msgstr "使用屏蔽口令"
-
 #: system-config-kickstart.gladestrings:11
 #: system-config-kickstart.gladestrings:32
 msgid "Mount Point:"
 msgstr "挂载点："
 
-#: ../src/network.py:86
-msgid "Device"
-msgstr "设备"
+#: system-config-kickstart.gladestrings:12
+#: system-config-kickstart.gladestrings:37
+msgid "File System Type:"
+msgstr "文件系统类型："
 
-#: ../src/firewall.py:114
-msgid "Other ports: (1029:tcp)"
-msgstr "其它端口：(1029:tcp)"
+#: system-config-kickstart.gladestrings:13
+msgid "Size (MB):"
+msgstr "大小(MB)："
+
+#: system-config-kickstart.gladestrings:14
+msgid "Fill all unused space on disk"
+msgstr "使用磁盘上全部未用空间"
+
+#: system-config-kickstart.gladestrings:15
+msgid "Grow to maximum of (MB):"
+msgstr "使用空间的最大限度为(MB)："
+
+#: system-config-kickstart.gladestrings:16
+msgid "Fixed size"
+msgstr "固定大小"
+
+#: system-config-kickstart.gladestrings:17
+msgid "Use recommended swap size"
+msgstr "使用不推荐的交换区大小"
+
+#: system-config-kickstart.gladestrings:18
+msgid "Additional Size Options"
+msgstr "附加的大小选项"
+
+#: system-config-kickstart.gladestrings:19
+msgid "Force to be a primary partition (asprimary)"
+msgstr "强制为主分区(asprimary)"
+
+#: system-config-kickstart.gladestrings:20
+msgid "Make partition on specific drive (ondisk)"
+msgstr "在指定的驱动器上分区(ondisk)"
+
+#: system-config-kickstart.gladestrings:21
+#: system-config-kickstart.gladestrings:26
+msgid "         "
+msgstr "         "
+
+#: system-config-kickstart.gladestrings:22
+msgid "Drive :"
+msgstr "驱动器："
+
+#: system-config-kickstart.gladestrings:24
+msgid "(for example: hda or sdc)"
+msgstr "(譬如：hda 或 sdc)"
+
+#: system-config-kickstart.gladestrings:25
+msgid "Use existing partition (onpart)"
+msgstr "使用现存分区 (onpart)"
+
+#: system-config-kickstart.gladestrings:27
+msgid "Partition :"
+msgstr "分区："
+
+#: system-config-kickstart.gladestrings:29
+msgid "(for example: hda1 or sdc3)"
+msgstr "(譬如：hda1 或 sdc3)"
+
+#: system-config-kickstart.gladestrings:30
+msgid "Format partition"
+msgstr "格式化分区"
+
+#: system-config-kickstart.gladestrings:31
+msgid "Make RAID Device"
+msgstr "制作 RAID 设备"
+
+#: system-config-kickstart.gladestrings:34
+msgid "Number of spares:"
+msgstr "备件数量："
+
+#: system-config-kickstart.gladestrings:35
+msgid "Raid Members"
+msgstr "RAID 成员"
+
+#: system-config-kickstart.gladestrings:36
+msgid "RAID Level:"
+msgstr "RAID 级别："
+
+#: system-config-kickstart.gladestrings:38
+msgid "RAID Device:"
+msgstr "RAID 设备："
+
+#: system-config-kickstart.gladestrings:39
+msgid "md0"
+msgstr "md0"
+
+#: system-config-kickstart.gladestrings:40
+msgid "md1"
+msgstr "md1"
+
+#: system-config-kickstart.gladestrings:41
+msgid "md2"
+msgstr "md2"
+
+#: system-config-kickstart.gladestrings:42
+msgid "md3"
+msgstr "md3"
+
+#: system-config-kickstart.gladestrings:43
+msgid "md4"
+msgstr "md4"
+
+#: system-config-kickstart.gladestrings:44
+msgid "md5"
+msgstr "md5"
+
+#: system-config-kickstart.gladestrings:45
+msgid "md6"
+msgstr "md6"
+
+#: system-config-kickstart.gladestrings:46
+msgid "md7"
+msgstr "md7"
+
+#: system-config-kickstart.gladestrings:47
+msgid "md8"
+msgstr "md8"
+
+#: system-config-kickstart.gladestrings:48
+msgid "md9"
+msgstr "md9"
+
+#: system-config-kickstart.gladestrings:49
+msgid "md10"
+msgstr "md10"
+
+#: system-config-kickstart.gladestrings:50
+msgid "md11"
+msgstr "md11"
+
+#: system-config-kickstart.gladestrings:51
+msgid "md12"
+msgstr "md12"
+
+#: system-config-kickstart.gladestrings:52
+msgid "md13"
+msgstr "md13"
+
+#: system-config-kickstart.gladestrings:53
+msgid "md14"
+msgstr "md14"
+
+#: system-config-kickstart.gladestrings:54
+msgid "md15"
+msgstr "md15"
+
+#: system-config-kickstart.gladestrings:55
+msgid "0"
+msgstr "0"
+
+#: system-config-kickstart.gladestrings:56
+msgid "1"
+msgstr "1"
+
+#: system-config-kickstart.gladestrings:57
+msgid "5"
+msgstr "5"
+
+#: system-config-kickstart.gladestrings:61
+msgid "vfat"
+msgstr "vfat"
+
+#: system-config-kickstart.gladestrings:62
+msgid "Format RAID device"
+msgstr "格式化 RAID 设备"
+
+#: system-config-kickstart.gladestrings:63
+msgid "Kickstart Configurator"
+msgstr "Kickstart 配置程序"
+
+#: system-config-kickstart.gladestrings:64
+msgid "_File"
+msgstr "文件(_F)"
+
+#: system-config-kickstart.gladestrings:65
+msgid "_Open File"
+msgstr "打开文件(_O)"
+
+#: system-config-kickstart.gladestrings:66
+msgid "_Preview"
+msgstr "预览(_P)"
+
+#: system-config-kickstart.gladestrings:67
+msgid "_Save File"
+msgstr "保存文件(_S)"
+
+#: system-config-kickstart.gladestrings:68
+msgid "_Quit"
+msgstr "退出(_Q)"
+
+#: system-config-kickstart.gladestrings:69
+msgid "_Help"
+msgstr "帮助(_H)"
+
+#: system-config-kickstart.gladestrings:70
+msgid "_Contents"
+msgstr "内容(_C)"
+
+#: system-config-kickstart.gladestrings:71
+msgid "_About"
+msgstr "关于(_A)"
+
+#: system-config-kickstart.gladestrings:73
+msgid "Default Language:"
+msgstr "默认语言："
+
+#: system-config-kickstart.gladestrings:74
+msgid "Encrypt root password"
+msgstr "给根口令加密"
+
+#: system-config-kickstart.gladestrings:75
+msgid "Keyboard:"
+msgstr "键盘："
+
+#: system-config-kickstart.gladestrings:76
+msgid "Mouse:"
+msgstr "鼠标："
+
+#: system-config-kickstart.gladestrings:79
+msgid "Emulate 3 Buttons"
+msgstr "模拟三键"
+
+#: system-config-kickstart.gladestrings:80
+msgid "Time Zone:"
+msgstr "时区："
+
+#: system-config-kickstart.gladestrings:82
+msgid "Root Password:"
+msgstr "根口令："
+
+#: system-config-kickstart.gladestrings:84
+msgid "Language Support:"
+msgstr "语言支持："
+
+#: system-config-kickstart.gladestrings:85
+msgid "Use UTC clock"
+msgstr "使用 UTC 时钟"
+
+#: system-config-kickstart.gladestrings:86
+#: system-config-kickstart.gladestrings:137
+msgid "Confirm Password:"
+msgstr "确认口令："
+
+#: system-config-kickstart.gladestrings:88
+msgid "Reboot system after installation"
+msgstr "安装后重新引导系统"
+
+#: system-config-kickstart.gladestrings:89
+msgid "Perform installation in text mode (graphical is default)"
+msgstr "在文本模式中执行安装(默认为图形化模式)"
+
+#: system-config-kickstart.gladestrings:90
+msgid "Perform installation in interactive mode"
+msgstr "在互动模式中执行安装"
+
+#: system-config-kickstart.gladestrings:91
+msgid "Basic Configuration (required)"
+msgstr "基本配置(必需)"
+
+#: system-config-kickstart.gladestrings:92
+msgid "label28"
+msgstr "标签28"
+
+#: system-config-kickstart.gladestrings:93
+msgid "Perform new installation"
+msgstr "执行新安装"
+
+#: system-config-kickstart.gladestrings:94
+msgid "Upgrade an existing installation"
+msgstr "升级现有安装"
+
+#: system-config-kickstart.gladestrings:95
+msgid "Choose the Installation Method:"
+msgstr "选择安装方法："
+
+#: system-config-kickstart.gladestrings:96
+#: system-config-kickstart.gladestrings:101
+msgid "CD-ROM"
+msgstr "光盘驱动器"
+
+#: system-config-kickstart.gladestrings:97
+#: system-config-kickstart.gladestrings:106
+msgid "NFS"
+msgstr "NFS"
+
+#: system-config-kickstart.gladestrings:98
+#: system-config-kickstart.gladestrings:116
+msgid "FTP"
+msgstr "FTP"
+
+#: system-config-kickstart.gladestrings:99
+#: system-config-kickstart.gladestrings:121
+msgid "HTTP"
+msgstr "HTTP"
+
+#: system-config-kickstart.gladestrings:100
+#: system-config-kickstart.gladestrings:126
+msgid "Hard Drive"
+msgstr "硬盘驱动器"
+
+#: system-config-kickstart.gladestrings:102
+msgid "NFS Server:"
+msgstr "NFS 服务器："
+
+#: system-config-kickstart.gladestrings:103
+msgid "NFS Directory:"
+msgstr "NFS 目录："
+
+#: system-config-kickstart.gladestrings:107
+msgid "FTP Server:"
+msgstr "FTP 服务器："
+
+#: system-config-kickstart.gladestrings:109
+msgid "FTP Directory:"
+msgstr "FTP 目录："
+
+#: system-config-kickstart.gladestrings:111
+msgid "Specify an FTP username and password"
+msgstr "指定 FTP 用户名和口令"
+
+#: system-config-kickstart.gladestrings:112
+msgid "FTP Username"
+msgstr "FTP 用户名"
+
+#: system-config-kickstart.gladestrings:113
+msgid "FTP Password"
+msgstr "FTP 口令"
+
+#: system-config-kickstart.gladestrings:119
+msgid "HTTP Server:"
+msgstr "HTTP 服务器："
+
+#: system-config-kickstart.gladestrings:120
+msgid "HTTP Directory:"
+msgstr "HTTP 目录："
+
+#: system-config-kickstart.gladestrings:124
+msgid "Hard Drive Partition:"
+msgstr "硬盘驱动器分区："
+
+#: system-config-kickstart.gladestrings:125
+msgid "Hard Drive Directory:"
+msgstr "硬盘驱动器目录："
+
+#: system-config-kickstart.gladestrings:127
+msgid "Installation Method (required)"
+msgstr "安装方法(必需)"
+
+#: system-config-kickstart.gladestrings:128
+msgid "label128"
+msgstr "标签128"
+
+#: system-config-kickstart.gladestrings:129
+msgid "Install new boot loader"
+msgstr "安装新引导装载程序"
+
+#: system-config-kickstart.gladestrings:130
+msgid "Do not install a boot loader"
+msgstr "不安装引导装载程序"
+
+#: system-config-kickstart.gladestrings:131
+msgid "Upgrade existing boot loader"
+msgstr "升级现存引导装载程序"
+
+#: system-config-kickstart.gladestrings:132
+msgid "Use GRUB for the boot loader"
+msgstr "使用 GRUB 引导装载程序"
+
+#: system-config-kickstart.gladestrings:133
+msgid "Use LILO for the boot loader"
+msgstr "使用 LILO 引导装载程序"
+
+#: system-config-kickstart.gladestrings:134
+msgid "GRUB Options:"
+msgstr "GRUB 选项："
+
+#: system-config-kickstart.gladestrings:135
+msgid "Use GRUB password"
+msgstr "使用 GRUB 口令"
+
+#: system-config-kickstart.gladestrings:136
+msgid "Password:"
+msgstr "口令："
+
+#: system-config-kickstart.gladestrings:140
+msgid "Encrypt GRUB password"
+msgstr "给 GRUB 口令加密"
+
+#: system-config-kickstart.gladestrings:141
+msgid "label173"
+msgstr "标签173"
+
+#: system-config-kickstart.gladestrings:142
+msgid "LILO Options:"
+msgstr "LILO 选项："
+
+#: system-config-kickstart.gladestrings:143
+msgid "Use linear mode"
+msgstr "使用线形模式"
+
+#: system-config-kickstart.gladestrings:144
+msgid "Force use of lba32 mode"
+msgstr "强制使用 lba32 模式"
+
+#: system-config-kickstart.gladestrings:145
+msgid "label174"
+msgstr "标签174"
+
+#: system-config-kickstart.gladestrings:146
+msgid "Install boot loader on Master Boot Record (MBR)"
+msgstr "在主引导记录(MBR)上安装引导装载程序"
+
+#: system-config-kickstart.gladestrings:147
+msgid "Install boot loader on first sector of the boot partition"
+msgstr "在引导分区的第一扇区上安装引导装载程序"
+
+#: system-config-kickstart.gladestrings:148
+msgid "Kernel parameters:"
+msgstr "内核参数："
+
+#: system-config-kickstart.gladestrings:150
+msgid "Boot Loader Options (required)"
+msgstr "引导装载程序选项(必需)"
+
+#: system-config-kickstart.gladestrings:151
+msgid "label35"
+msgstr "标签35"
+
+#: system-config-kickstart.gladestrings:152
+msgid "Clear Master Boot Record"
+msgstr "清除主引导记录"
+
+#: system-config-kickstart.gladestrings:153
+msgid "Do not clear Master Boot Record"
+msgstr "不要清除主引导记录"
+
+#: system-config-kickstart.gladestrings:154
+msgid "Remove all existing partitions"
+msgstr "删除所有现存分区"
+
+#: system-config-kickstart.gladestrings:155
+msgid "Remove existing Linux partitions"
+msgstr "删除现存 Linux 分区"
+
+#: system-config-kickstart.gladestrings:156
+msgid "Preserve existing partitions"
+msgstr "保留现存分区"
+
+#: system-config-kickstart.gladestrings:157
+msgid "Initialize the disk label"
+msgstr "初始化磁盘标签"
+
+#: system-config-kickstart.gladestrings:158
+msgid "Do not initialize the disk label"
+msgstr "不要初始化磁盘标签"
+
+#: system-config-kickstart.gladestrings:159
+msgid "_Add"
+msgstr "添加(_A)"
+
+#: system-config-kickstart.gladestrings:160
+msgid "_Edit"
+msgstr "编辑(_E)"
+
+#: system-config-kickstart.gladestrings:161
+msgid "_Delete"
+msgstr "删除(_D)"
+
+#: system-config-kickstart.gladestrings:162
+msgid "RAID"
+msgstr "RAID "
+
+#: system-config-kickstart.gladestrings:163
+msgid "Partition Information (required)"
+msgstr "分区信息需(必需)"
+
+#: system-config-kickstart.gladestrings:164
+msgid "label30"
+msgstr "标签30"
+
+#: system-config-kickstart.gladestrings:165
+msgid "_Add Network Device"
+msgstr "添加网络设备(_A)"
+
+#: system-config-kickstart.gladestrings:166
+msgid "_Edit Network Device"
+msgstr "编辑网络设备(_E)"
+
+#: system-config-kickstart.gladestrings:167
+msgid "_Delete Network Device"
+msgstr "删除网络设备(_D)"
+
+#: system-config-kickstart.gladestrings:169
+msgid "label31"
+msgstr "标签31"
+
+#: system-config-kickstart.gladestrings:170
+msgid "Authentication:"
+msgstr "验证："
+
+#: system-config-kickstart.gladestrings:171
+msgid "Use Shadow Passwords"
+msgstr "使用屏蔽口令"
+
+#: system-config-kickstart.gladestrings:172
+msgid "Use MD5"
+msgstr "使用 MD5"
+
+#: system-config-kickstart.gladestrings:173
+msgid "Enable NIS"
+msgstr "启用 NIS"
+
+#: system-config-kickstart.gladestrings:174
+msgid "NIS Domain:"
+msgstr "NIS 域："
+
+#: system-config-kickstart.gladestrings:176
+msgid "Use broadcast to find NIS server"
+msgstr "用广播寻找 NIS 服务器"
+
+#: system-config-kickstart.gladestrings:177
+msgid "NIS Server:"
+msgstr "NIS 服务器："
+
+#: system-config-kickstart.gladestrings:179
+msgid "NIS Authentication"
+msgstr "NIS 验证"
+
+#: system-config-kickstart.gladestrings:180
+msgid "NIS"
+msgstr "NIS"
+
+#: system-config-kickstart.gladestrings:181
+msgid "Enable LDAP"
+msgstr "启用 LDAP"
+
+#: system-config-kickstart.gladestrings:184
+msgid "LDAP Server: "
+msgstr "LDAP 服务器："
+
+#: system-config-kickstart.gladestrings:185
+msgid "LDAP Base Name: "
+msgstr "LDAP 基准名称："
+
+#: system-config-kickstart.gladestrings:186
+msgid "LDAP Authentication"
+msgstr "LDAP 验证"
+
+#: system-config-kickstart.gladestrings:187
+msgid "LDAP "
+msgstr "LDAP"
+
+#: system-config-kickstart.gladestrings:188
+msgid "Enable Kerberos 5 Authentication"
+msgstr "启用 Kerberos 5 验证"
+
+#: system-config-kickstart.gladestrings:189
+msgid "Kerberos Realm:"
+msgstr "Kerberos 领域："
+
+#: system-config-kickstart.gladestrings:191
+msgid "Kerberos Domain Controller (KDC):"
+msgstr "Kerberos 域控制器(KDC)："
+
+#: system-config-kickstart.gladestrings:193
+msgid "Kerberos Master Server:"
+msgstr "Kerberos 主服务器："
+
+#: system-config-kickstart.gladestrings:195
+msgid "Kerberos 5 Authentication"
+msgstr "Kerberos 5 验证"
+
+#: system-config-kickstart.gladestrings:196
+msgid "Kerberos 5"
+msgstr "Kerberos 5"
+
+#: system-config-kickstart.gladestrings:197
+msgid "Enable Hesiod Support"
+msgstr "启用 Hesiod 支持"
+
+#: system-config-kickstart.gladestrings:198
+msgid "Hesiod LHS:"
+msgstr "Hesiod LHS："
+
+#: system-config-kickstart.gladestrings:200
+msgid "Hesiod RHS:"
+msgstr "Hesiod RHS："
+
+#: system-config-kickstart.gladestrings:202
+msgid "Hesiod Authentication"
+msgstr "Hesiod 验证"
+
+#: system-config-kickstart.gladestrings:203
+msgid "Hesiod"
+msgstr "Hesiod"
+
+#: system-config-kickstart.gladestrings:204
+msgid "Enable SMB Authentication"
+msgstr "启用 SMB 验证"
+
+#: system-config-kickstart.gladestrings:205
+msgid "SMB Servers:"
+msgstr "SMB 服务器："
+
+#: system-config-kickstart.gladestrings:206
+msgid "SMB Workgroup:"
+msgstr "SMB 工作组："
+
+#: system-config-kickstart.gladestrings:209
+msgid "SMB Authentication"
+msgstr "SMB 验证"
+
+#: system-config-kickstart.gladestrings:210
+msgid "SMB"
+msgstr "SMB"
+
+#: system-config-kickstart.gladestrings:211
+msgid "Enable nscd"
+msgstr "启用 nscd"
+
+#: system-config-kickstart.gladestrings:212
+msgid "Name Switch Cache Daemon (nscd) Authentication"
+msgstr "名称切换缓存区守护进程(nscd)验证"
+
+#: system-config-kickstart.gladestrings:213
+msgid "Name Switch Cache"
+msgstr "名称切换缓存区"
+
+#: system-config-kickstart.gladestrings:214
+msgid "Authentication Configuration"
+msgstr "验证配置"
+
+#: system-config-kickstart.gladestrings:215
+msgid "label32"
+msgstr "标签32"
+
+#: system-config-kickstart.gladestrings:216
+msgid "Security level:"
+msgstr "安全级别："
+
+#: system-config-kickstart.gladestrings:217
+msgid "Enable firewall"
+msgstr "启用防火墙"
+
+#: system-config-kickstart.gladestrings:218
+msgid "Disable firewall"
+msgstr "禁用防火墙"
+
+#: system-config-kickstart.gladestrings:220
+msgid "label33"
+msgstr "标签33"
+
+#: system-config-kickstart.gladestrings:221
+msgid "Configure the X Window System"
+msgstr "配置 X 窗口系统"
+
+#: system-config-kickstart.gladestrings:222
+msgid "Color Depth"
+msgstr "色彩深度"
+
+#: system-config-kickstart.gladestrings:224
+msgid "Resolution"
+msgstr "分辨率"
+
+#: system-config-kickstart.gladestrings:226
+msgid "Default Desktop:"
+msgstr "默认的桌面："
+
+#: system-config-kickstart.gladestrings:227
+msgid "GNOME"
+msgstr "GNOME"
+
+#: system-config-kickstart.gladestrings:228
+msgid "KDE"
+msgstr "KDE"
+
+#: system-config-kickstart.gladestrings:229
+msgid "Start the X Window System on boot"
+msgstr "在引导时启动 X 窗口系统"
+
+#: system-config-kickstart.gladestrings:230
+msgid "On first boot, Setup Agent is: "
+msgstr "在首次引导时，设置代理是："
+
+#: system-config-kickstart.gladestrings:231
+msgid "Disabled"
+msgstr "已禁用"
+
+#: system-config-kickstart.gladestrings:232
+msgid "Enabled"
+msgstr "已启用"
+
+#: system-config-kickstart.gladestrings:233
+msgid "Enabled in reconfiguration mode"
+msgstr "在重新配置模式中被启用"
+
+#: system-config-kickstart.gladestrings:234
+msgid "General"
+msgstr "常规"
+
+#: system-config-kickstart.gladestrings:235
+msgid "Probe for video card"
+msgstr "探测视频卡"
+
+#: system-config-kickstart.gladestrings:236
+msgid "Video Card RAM: "
+msgstr "视频卡内存："
+
+#: system-config-kickstart.gladestrings:238
+msgid "Video Card"
+msgstr "视频卡"
+
+#: system-config-kickstart.gladestrings:239
+msgid "Probe for monitor"
+msgstr "探测显示器"
+
+#: system-config-kickstart.gladestrings:240
+msgid "Use custom monitor sync rates"
+msgstr ""
+
+#: system-config-kickstart.gladestrings:242
+msgid "Hz"
+msgstr "赫兹"
+
+#: system-config-kickstart.gladestrings:244
+msgid "kHz"
+msgstr "千赫兹"
+
+#: system-config-kickstart.gladestrings:245
+msgid "Vertical Sync:"
+msgstr "垂直频率："
+
+#: system-config-kickstart.gladestrings:246
+msgid "Horizontal Sync:"
+msgstr "水平频率："
+
+#: system-config-kickstart.gladestrings:247
+msgid "Monitor"
+msgstr "显示器"
+
+#: system-config-kickstart.gladestrings:249
+msgid "label88"
+msgstr "标签88"
+
+#: system-config-kickstart.gladestrings:250
+msgid "Select packages to install."
+msgstr "选择要安装的软件包。"
+
+#: system-config-kickstart.gladestrings:251
+msgid "_Automatically Resolve Dependencies"
+msgstr "自动解决依赖关系(_A)"
+
+#: system-config-kickstart.gladestrings:252
+msgid "_Ignore Dependencies"
+msgstr "忽略依赖关系(_I)"
+
+#: system-config-kickstart.gladestrings:253
+msgid "Desktops"
+msgstr "桌面"
+
+#: system-config-kickstart.gladestrings:254
+msgid "Applications"
+msgstr "应用程序"
+
+#: system-config-kickstart.gladestrings:255
+msgid "Servers"
+msgstr "服务器"
+
+#: system-config-kickstart.gladestrings:256
+msgid "Development"
+msgstr "开发"
+
+#: system-config-kickstart.gladestrings:257
+msgid "System"
+msgstr "系统"
+
+#: system-config-kickstart.gladestrings:259
+msgid "label34"
+msgstr "标签34"
+
+#: system-config-kickstart.gladestrings:260
+#, c-format
+msgid ""
+"Warning: An error in this script might cause your kickstart installation to "
+"fail. Do not include the %pre command at the beginning."
+msgstr ""
+"警告：脚本中的错误可能会导致 Kickstart 安装失败。在起始处请不要包括 %pre 命"
+"令。"
+
+#: system-config-kickstart.gladestrings:261
+#: system-config-kickstart.gladestrings:268
+msgid "Use an interpreter:"
+msgstr "使用解释器："
+
+#: system-config-kickstart.gladestrings:263
+#, c-format
+msgid "Type your %pre script below:"
+msgstr "在下面键入您的 %pre 脚本："
+
+#: system-config-kickstart.gladestrings:265
+msgid "label89"
+msgstr "标签89"
+
+#: system-config-kickstart.gladestrings:266
+#, c-format
+msgid ""
+"Warning: An error in this script might cause your kickstart installation to "
+"fail. Do not include the %post command at the beginning."
+msgstr ""
+"警告：脚本中的错误可能会导致您的 Kickstart 安装失败。在起始处请不要包括 %"
+"post 命令。"
+
+#: system-config-kickstart.gladestrings:267
+msgid "Run outside of the chroot environment"
+msgstr "在 chroot 环境之外运行"
+
+#: system-config-kickstart.gladestrings:270
+#, c-format
+msgid "Type your %post script below:"
+msgstr "在下面键入您的 %post 脚本："
+
+#: system-config-kickstart.gladestrings:272
+msgid "label93"
+msgstr "标签93"
+
+#: system-config-kickstart.gladestrings:273
+msgid "Preview Options"
+msgstr "预览选项"
+
+#: system-config-kickstart.gladestrings:274
+msgid "Save to File"
+msgstr "保存到文件"
+
+#: system-config-kickstart.gladestrings:275
+msgid ""
+"You have choosen the following configuration. Click Save File to save the "
+"kickstart file. "
+msgstr "您已选定下列配置。点击保存文件来保存 kickstart 文件。"
+
+#: system-config-kickstart.gladestrings:276
+msgid "RAID Options"
+msgstr "RAID 选项"
 
 #: system-config-kickstart.gladestrings:277
 msgid ""
@@ -892,380 +1834,6 @@ msgstr ""
 "备可以被配置来提供额外的速度和可靠性。关于使用 RAID 的详细信息，请参考 "
 "kickstart 文档。"
 
-#: system-config-kickstart.gladestrings:74
-msgid "Encrypt root password"
-msgstr "给根口令加密"
-
-#: system-config-kickstart.gladestrings:135
-msgid "Use GRUB password"
-msgstr "使用 GRUB 口令"
-
-#: ../src/install.py:146
-msgid "Please enter an FTP server."
-msgstr "请输入 FTP 服务器。"
-
-#: system-config-kickstart.gladestrings:181
-msgid "Enable LDAP"
-msgstr "启用 LDAP"
-
-#: system-config-kickstart.gladestrings:94
-msgid "Upgrade an existing installation"
-msgstr "升级现有安装"
-
-#: system-config-kickstart.gladestrings:232
-msgid "Enabled"
-msgstr "已启用"
-
-#: system-config-kickstart.gladestrings:176
-msgid "Use broadcast to find NIS server"
-msgstr "用广播寻找 NIS 服务器"
-
-#: ../src/basic.py:203 ../src/basic.py:223 ../src/install.py:213
-#: ../src/partition.py:301 ../src/partWindow.py:506 ../src/raidWindow.py:247
-msgid "Error"
-msgstr "错误"
-
-#: system-config-kickstart.gladestrings:218
-msgid "Disable firewall"
-msgstr "禁用防火墙"
-
-#: ../src/kickstartGui.py:193
-msgid ""
-"Kickstart Configurator @VERSION@\n"
-" Copyright (c) 2000-2002 Red Hat, Inc.\n"
-" Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-" Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-" A graphical interface for creating a kickstart file"
-msgstr ""
-"Kickstart 配置程序  @VERSION@\n"
-" 版权 (c) 2000-2002 Red Hat, Inc.\n"
-" 版权 (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-" 版权 (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-"创建 Kickstart 文件的图形化界面"
-
-#: system-config-kickstart.gladestrings:150
-msgid "Boot Loader Options (required)"
-msgstr "引导装载程序选项(必需)"
-
-#: system-config-kickstart.gladestrings:25
-msgid "Use existing partition (onpart)"
-msgstr "使用现存分区 (onpart)"
-
-#: system-config-kickstart.gladestrings:211
-msgid "Enable nscd"
-msgstr "启用 nscd"
-
-#: ../src/bootloader.py:132
-msgid "Grub passwords do not match.  Please try again."
-msgstr "GRUB 口令不匹配。请重新输入。"
-
-#: system-config-kickstart.gladestrings:170
-msgid "Authentication:"
-msgstr "验证："
-
-#: ../src/partition.py:79
-msgid "Size (MB)"
-msgstr "大小(MB)"
-
-#: system-config-kickstart.gladestrings:107
-msgid "FTP Server:"
-msgstr "FTP 服务器："
-
-#: system-config-kickstart.gladestrings:90
-msgid "Perform installation in interactive mode"
-msgstr "在互动模式中执行安装"
-
-#: system-config-kickstart.gladestrings:187
-msgid "LDAP "
-msgstr "LDAP"
-
-#: system-config-kickstart.gladestrings:64
-msgid "_File"
-msgstr "文件(_F)"
-
-#: system-config-kickstart.gladestrings:29
-msgid "(for example: hda1 or sdc3)"
-msgstr "(譬如：hda1 或 sdc3)"
-
-#: system-config-kickstart.gladestrings:234
-msgid "General"
-msgstr "常规"
-
-#: system-config-kickstart.gladestrings:252
-msgid "_Ignore Dependencies"
-msgstr "忽略依赖关系(_I)"
-
-#: system-config-kickstart.gladestrings:17
-msgid "Use recommended swap size"
-msgstr "使用不推荐的交换区大小"
-
-#: system-config-kickstart.gladestrings:267
-msgid "Run outside of the chroot environment"
-msgstr "在 chroot 环境之外运行"
-
-#: ../src/raidWindow.py:172
-msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr "您必须至少选择两个分区来使用 RAID %s"
-
-#: system-config-kickstart.gladestrings:238
-msgid "Video Card"
-msgstr "视频卡"
-
-#: system-config-kickstart.gladestrings:65
-msgid "_Open File"
-msgstr "打开文件(_O)"
-
-#: system-config-kickstart.gladestrings:91
-msgid "Basic Configuration (required)"
-msgstr "基本配置(必需)"
-
-#: system-config-kickstart.gladestrings:61
-msgid "vfat"
-msgstr "vfat"
-
-#: system-config-kickstart.gladestrings:263
-msgid "Type your %pre script below:"
-msgstr "在下面键入您的 %pre 脚本："
-
-#: ../src/partition.py:70
-msgid ""
-"Device/\n"
-"Partition Number"
-msgstr ""
-"设备/\n"
-"分区号码"
-
-#: system-config-kickstart.gladestrings:35
-msgid "Raid Members"
-msgstr "RAID 成员"
-
-#: ../src/kickstartGui.py:138
-msgid "Subsection"
-msgstr "子段"
-
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:248
-msgid "X Configuration"
-msgstr "X 配置"
-
-#: system-config-kickstart.gladestrings:212
-msgid "Name Switch Cache Daemon (nscd) Authentication"
-msgstr "名称切换缓存区守护进程(nscd)验证"
-
-#: system-config-kickstart.gladestrings:221
-msgid "Configure the X Window System"
-msgstr "配置 X 窗口系统"
-
-#: system-config-kickstart.gladestrings:224
-msgid "Resolution"
-msgstr "分辨率"
-
-#: system-config-kickstart.gladestrings:130
-msgid "Do not install a boot loader"
-msgstr "不安装引导装载程序"
-
-#: ../src/install.py:177
-msgid "Please enter an HTTP server."
-msgstr "请输入 HTTP 服务器。"
-
-#: system-config-kickstart.gladestrings:36
-msgid "RAID Level:"
-msgstr "RAID 级别："
-
-#: system-config-kickstart.gladestrings:112
-msgid "FTP Username"
-msgstr "FTP 用户名"
-
-#: ../src/network.py:108 ../src/network.py:153 ../src/network.py:221
-#: ../src/network.py:272 ../src/network.py:413
-msgid "Static IP"
-msgstr "静态 IP"
-
-#: system-config-kickstart.gladestrings:127
-msgid "Installation Method (required)"
-msgstr "安装方法(必需)"
-
-#: system-config-kickstart.gladestrings:88
-msgid "Reboot system after installation"
-msgstr "安装后重新引导系统"
-
-#: ../src/network.py:211
-msgid "Please fill in the network information"
-msgstr "请填充网络信息"
-
-#: ../src/raidOptionsWindow.py:72
-msgid "You currently have %d software RAID partition(s) free to use."
-msgstr "目前，您还有 %d 个空闲的软件 RAID 分区可以使用。"
-
-#: system-config-kickstart.gladestrings:76
-msgid "Mouse:"
-msgstr "鼠标："
-
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:271
-msgid "Post-Installation Script"
-msgstr "安装后脚本"
-
-#: ../src/network.py:89
-msgid "Network Type"
-msgstr "网络类型"
-
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:258
-msgid "Package Selection"
-msgstr "软件包选择"
-
-#: system-config-kickstart.gladestrings:250
-msgid "Select packages to install."
-msgstr "选择要安装的软件包。"
-
-#: system-config-kickstart.gladestrings:195
-msgid "Kerberos 5 Authentication"
-msgstr "Kerberos 5 验证"
-
-#: system-config-kickstart.gladestrings:157
-msgid "Initialize the disk label"
-msgstr "初始化磁盘标签"
-
-#: system-config-kickstart.gladestrings:256
-msgid "Development"
-msgstr "开发"
-
-#: ../src/partition.py:149 ../src/partition.py:179
-msgid "Please select a partition from the list."
-msgstr "请从列表中选择分区。"
-
-#: system-config-kickstart.gladestrings:79
-msgid "Emulate 3 Buttons"
-msgstr "模拟三键"
-
-#: system-config-kickstart.gladestrings:20
-msgid "Make partition on specific drive (ondisk)"
-msgstr "在指定的驱动器上分区(ondisk)"
-
-#: ../src/partition.py:73
-msgid ""
-"Mount Point/\n"
-"RAID"
-msgstr ""
-"挂载点/\n"
-"RAID"
-
-#: ../src/partition.py:77
-msgid "Format"
-msgstr "格式"
-
-#: system-config-kickstart.gladestrings:67
-msgid "_Save File"
-msgstr "保存文件(_S)"
-
-#: system-config-kickstart.gladestrings:284
-msgid "Network Type:"
-msgstr "网络类型："
-
-#: system-config-kickstart.gladestrings:128
-msgid "label128"
-msgstr "标签128"
-
-#: system-config-kickstart.gladestrings:270
-msgid "Type your %post script below:"
-msgstr "在下面键入您的 %post 脚本："
-
-#: system-config-kickstart.gladestrings:56
-msgid "1"
-msgstr "1"
-
-#: ../src/install.py:162
-msgid "Please enter an FTP password."
-msgstr "请输入 FTP 口令。"
-
-#: system-config-kickstart.gladestrings:229
-msgid "Start the X Window System on boot"
-msgstr "在引导时启动 X 窗口系统"
-
-#: system-config-kickstart.gladestrings:57
-msgid "5"
-msgstr "5"
-
-#: system-config-kickstart.gladestrings:214
-msgid "Authentication Configuration"
-msgstr "验证配置"
-
-#: system-config-kickstart.gladestrings:279
-msgid "Choose one of the following options:"
-msgstr "选择下列选项之一："
-
-#: system-config-kickstart.gladestrings:204
-msgid "Enable SMB Authentication"
-msgstr "启用 SMB 验证"
-
-#: system-config-kickstart.gladestrings:247
-msgid "Monitor"
-msgstr "显示器"
-
-#: ../src/kickstartGui.py:224
-msgid "Help is not available."
-msgstr "没有帮助。"
-
-#: ../src/partWindow.py:483
-msgid ""
-"The device you specified is not a valid device name. Please use a valid "
-"device name such as \"hda1\" or \"sda3\"."
-msgstr "您指定的设备不是有效的设备名。请使用一个有效的设备名，如“hda1”或“sda3”。"
-
-#: ../src/install.py:159
-msgid "Please enter an FTP user name."
-msgstr "请输入 FTP 用户名。"
-
-#: ../src/basic.py:222
-msgid "Please select a root password."
-msgstr "请选择根口令。"
-
-#: ../src/xconfig.py:102
-msgid "Could not read video card database"
-msgstr "无法读取视频卡数据库"
-
-#: system-config-kickstart.gladestrings:66
-msgid "_Preview"
-msgstr "预览(_P)"
-
-#: system-config-kickstart.gladestrings:95
-msgid "Choose the Installation Method:"
-msgstr "选择安装方法："
-
-#: system-config-kickstart.gladestrings:213
-msgid "Name Switch Cache"
-msgstr "名称切换缓存区"
-
-#: system-config-kickstart.gladestrings:152
-msgid "Clear Master Boot Record"
-msgstr "清除主引导记录"
-
-#: system-config-kickstart.gladestrings:103
-msgid "NFS Directory:"
-msgstr "NFS 目录："
-
-#: system-config-kickstart.gladestrings:266
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %post command at the beginning."
-msgstr ""
-"警告：脚本中的错误可能会导致您的 Kickstart 安装失败。在起始处请不要包括 %"
-"post 命令。"
-
-#: system-config-kickstart.gladestrings:147
-msgid "Install boot loader on first sector of the boot partition"
-msgstr "在引导分区的第一扇区上安装引导装载程序"
-
-#: system-config-kickstart.gladestrings:109
-msgid "FTP Directory:"
-msgstr "FTP 目录："
-
-#: system-config-kickstart.gladestrings:173
-msgid "Enable NIS"
-msgstr "启用 NIS"
-
-#: system-config-kickstart.gladestrings:92
-msgid "label28"
-msgstr "标签28"
-
 #: system-config-kickstart.gladestrings:278
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
@@ -1274,74 +1842,63 @@ msgstr ""
 "要使用 RAID，您必须首先至少创建两个类型为“软件 RAID”的分区。然后，您才可以创"
 "建能够被格式化并挂载的 RAID 设备。"
 
-#: system-config-kickstart.gladestrings:246
-msgid "Horizontal Sync:"
-msgstr "水平频率："
-
-#: system-config-kickstart.gladestrings:244
-msgid "kHz"
-msgstr "千赫兹"
-
-#: system-config-kickstart.gladestrings:120
-msgid "HTTP Directory:"
-msgstr "HTTP 目录："
-
-#: system-config-kickstart.gladestrings:30
-msgid "Format partition"
-msgstr "格式化分区"
-
-#: system-config-kickstart.gladestrings:205
-msgid "SMB Servers:"
-msgstr "SMB 服务器："
-
-#: system-config-kickstart.gladestrings:166
-msgid "_Edit Network Device"
-msgstr "编辑网络设备(_E)"
-
-#: system-config-kickstart.gladestrings:136
-msgid "Password:"
-msgstr "口令："
-
-#: system-config-kickstart.gladestrings:93
-msgid "Perform new installation"
-msgstr "执行新安装"
+#: system-config-kickstart.gladestrings:279
+msgid "Choose one of the following options:"
+msgstr "选择下列选项之一："
 
 #: system-config-kickstart.gladestrings:280
 msgid "Create a software RAID partition"
 msgstr "制作软件 RAID 分区"
 
-#: system-config-kickstart.gladestrings:70
-msgid "_Contents"
-msgstr "内容(_C)"
+#: system-config-kickstart.gladestrings:281
+msgid "Create a RAID device [default = /dev/md0]"
+msgstr "创建 RAID 设备 [default = /dev/md0]"
 
-#: system-config-kickstart.gladestrings:216
-msgid "Security level:"
-msgstr "安全级别："
+#: system-config-kickstart.gladestrings:282
+msgid "Network Device Information"
+msgstr "网络设备信息"
 
-#: ../src/partWindow.py:281 ../src/partWindow.py:296 ../src/partWindow.py:315
-#: ../src/partWindow.py:329
-msgid "Auto"
-msgstr "自动"
+#: system-config-kickstart.gladestrings:283
+msgid "Network Device:"
+msgstr "网络设备："
 
-#: system-config-kickstart.gladestrings:198
-msgid "Hesiod LHS:"
-msgstr "Hesiod LHS："
+#: system-config-kickstart.gladestrings:284
+msgid "Network Type:"
+msgstr "网络类型："
 
-#: system-config-kickstart.gladestrings:15
-msgid "Grow to maximum of (MB):"
-msgstr "使用空间的最大限度为(MB)："
+#: system-config-kickstart.gladestrings:285
+msgid "IP Address:"
+msgstr "IP 地址："
 
-#: system-config-kickstart.gladestrings:144
-msgid "Force use of lba32 mode"
-msgstr "强制使用 lba32 模式"
+#: system-config-kickstart.gladestrings:286
+msgid "Netmask: "
+msgstr "子网掩码："
 
-#: system-config-kickstart.gladestrings:274
-msgid "Save to File"
-msgstr "保存到文件"
+#: system-config-kickstart.gladestrings:287
+msgid "Gateway:"
+msgstr "网关："
 
-#: system-config-kickstart.gladestrings:68
-msgid "_Quit"
-msgstr "退出(_Q)"
+#: system-config-kickstart.gladestrings:288
+msgid "Name Server:"
+msgstr "名称服务器："
+
+#: system-config-kickstart.gladestrings:290
+#: system-config-kickstart.gladestrings:292
+#: system-config-kickstart.gladestrings:294
+#: system-config-kickstart.gladestrings:297
+#: system-config-kickstart.gladestrings:299
+#: system-config-kickstart.gladestrings:301
+#: system-config-kickstart.gladestrings:304
+#: system-config-kickstart.gladestrings:306
+#: system-config-kickstart.gladestrings:308
+#: system-config-kickstart.gladestrings:311
+#: system-config-kickstart.gladestrings:313
+#: system-config-kickstart.gladestrings:315
+msgid "."
+msgstr "."
+
+#~ msgid "Specify hsync and vsync instead of monitor"
+#~ msgstr "指定水平频率及垂直频率而不是显示器"
 
 #~ msgid "Allow incoming:"
 #~ msgstr "允许进入："
@@ -1497,4 +2054,3 @@ msgstr "退出(_Q)"
 
 #~ msgid "Select a Video Card"
 #~ msgstr "选择一张视频卡"
-

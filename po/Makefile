@@ -25,7 +25,7 @@ MSGFMT		= msgfmt --statistics --verbose
 POFILES		= $(wildcard *.po)
 MOFILES		= $(patsubst %.po,%.mo,$(POFILES))
 PYSRC		= $(wildcard ../src/*.py)
-SRCFILES 	= $(PYSRC)
+SRCFILES 	= $(PYSRC) system-config-kickstart.gladestrings
 
 #default:: clean
 
