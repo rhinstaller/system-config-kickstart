@@ -133,29 +133,34 @@ class ksconfig_gui:
 
 	#about box
 	def on_about_activate(self, args):
-		aboutDialog = gnome.ui.GnomeAbout (_("Kickstart Configurator"), "@VERSION@",
-						   "Copyright (c) 2000-2002 Red Hat, Inc.",
-						   ["Brent Fox <bfox@redhat.com>",
-						    "Tammy Fox <tfox@redhat.com>"],
-						   _("A graphical interface for creating a kickstart file."))
-		aboutDialog.run_and_close()
+		print "on about"
+		dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_INFO, gtk.BUTTONS_OK,
+                                        _("Kickstart Configurator @VERSION@\n Copyright (c) 2000-2002 Red Hat, Inc.\n Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com> Tammy Fox <tfox@redhat.com>\n A graphical interface for creating a kickstart file"))
+		dlg.set_title(_("Error"))
+		dlg.set_default_size(100, 100)
+		dlg.set_position (gtk.WIN_POS_CENTER)
+		dlg.set_border_width(2)
+		dlg.set_modal(gtk.TRUE)
+		rc = dlg.run()
+		if rc == gtk.RESPONSE_OK:
+			dlg.hide()
 
 	#display help manual
 	def on_help_button_clicked (self, args):
-	
-		help_pages = ["file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-basic.html",
-			      "file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-bootloader.html",
-			      "file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-install.html",
-			      "file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-partitions.html",
-			      "file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-network.html",
-			      "file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-auth.html",
-			      "file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-firewall.html",
-			      "file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-xconfig.html",
-			      "file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-pkgs.html",
-			      "file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-prescript.html",
-			      "file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-postinstall.html",
-			      ]
-		gnome.help.goto (help_pages [self.options_notebook.get_current_page ()])
+		print "you clicked help"
+## 		help_pages = ["file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-basic.html",
+## 			      "file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-bootloader.html",
+## 			      "file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-install.html",
+## 			      "file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-partitions.html",
+## 			      "file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-network.html",
+## 			      "file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-auth.html",
+## 			      "file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-firewall.html",
+## 			      "file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-xconfig.html",
+## 			      "file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-pkgs.html",
+## 			      "file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-prescript.html",
+## 			      "file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-postinstall.html",
+## 			      ]
+## 		gnome.help.goto (help_pages [self.options_notebook.get_current_page ()])
 
 	#show choosen options for confirmation
 	def on_activate_confirm_options (self, *args):
