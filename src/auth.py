@@ -331,9 +331,9 @@ class auth:
 
         opts, args = getopt.getopt(self.kickstartData.getAuth(), "d:h", ["enablemd5", "enablenis",
                                    "nisdomain=", "nisserver=", "useshadow", "enableshadow",
-                                   "enableldap", "ldapserver", "ldapbasedn", "enableldaptls",
-                                   "enablekrb5", "krb5realm=", "krb5kdc=", "krb5adminserver",
-                                   "enablehesiod", "hesiodlhs", "hesiodrhs", "enablesmbauth",
+                                   "enableldap", "ldapserver=", "ldapbasedn=", "enableldaptls",
+                                   "enablekrb5", "krb5realm=", "krb5kdc=", "krb5adminserver=",
+                                   "enablehesiod", "hesiodlhs=", "hesiodrhs=", "enablesmbauth",
                                    "smbservers=", "smbworkgroup=", "enablecache"])
 
         print opts
@@ -410,3 +410,6 @@ class auth:
             if opt == "--smbworkgroup":
                 self.sambaWorkgroupEntry.set_text(value)
                 self.sambaCheck.set_active(gtk.TRUE)                
+
+            if opt == "--enablecache":
+                self.nscd_checkbutton.set_active(gtk.TRUE)
