@@ -37,28 +37,28 @@ class basic:
         self.lilo_mbr_radiobutton = xml.get_widget("lilo_mbr_radiobutton")
         self.lilo_none_radiobutton = xml.get_widget("lilo_none_radiobutton")
         self.shadow_passwd_checkbutton = xml.get_widget("shadow_passwd_checkbutton")
-        md5_checkbutton = xml.get_widget("md5_checkbutton")
+        self.md5_checkbutton = xml.get_widget("md5_checkbutton")
 
     def getData(self):
         buf = ""
-##         print self.lang_combo.entry.get_text()
-##         buf = buf + "\n" + self.languageLookup(self.lang_combo.entry.get_text())
-##         buf = buf + "\n" + self.languagesupportLookup(self.lang_support_combo.entry.get_text())
-##         buf = buf + "\n" + "keyboard " + self.keyboard_combo.entry.get_text()
-##         buf = buf + "\n" + self.mouseLookup(self.mouse_combo.entry.get_text())
-##         buf = buf + "\n" + "timezone --utc " + self.timezone_combo.entry.get_text()
-##         buf = buf + "\n" + "rootpw " + self.root_passwd_entry.get_text()
-##         if self.lilo_mbr_radiobutton.get_active():
-##             buf = buf + "\n" + "lilo --location mbr"
-##         elif self.lilo_none_radiobutton.get_active():
-##             buf = buf + "\n" + "lilo --location none"
-##         if self.shadow_passwd_checkbutton.get_active():
-##             buf = buf + " --useshadow"
-##         if self.md5_checkbutton.get_active():
-##             buf = buf + " --enablemd5"
+        print self.lang_combo.entry.get_text()
+        buf = buf + "\n" + self.languageLookup(self.lang_combo.entry.get_text())
+        buf = buf + "\n" + self.languagesupportLookup(self.lang_support_combo.entry.get_text())
+        buf = buf + "\n" + "keyboard " + self.keyboard_combo.entry.get_text()
+        buf = buf + "\n" + self.mouseLookup(self.mouse_combo.entry.get_text())
+        buf = buf + "\n" + "timezone --utc " + self.timezone_combo.entry.get_text()
+        buf = buf + "\n" + "rootpw " + self.root_passwd_entry.get_text()
+        if self.lilo_mbr_radiobutton.get_active():
+            buf = buf + "\n" + "lilo --location mbr"
+        elif self.lilo_none_radiobutton.get_active():
+            buf = buf + "\n" + "lilo --location none"
+        if self.shadow_passwd_checkbutton.get_active():
+            buf = buf + " --useshadow"
+        if self.md5_checkbutton.get_active():
+            buf = buf + " --enablemd5"
         return buf
 
-    def languageLookup(args):
+    def languageLookup(self, args):
             if args == 'Czech':
                     return "lang cs_CZ"
             if args == 'English':
@@ -96,7 +96,7 @@ class basic:
             if args == 'Japanese':
                     return "lang ja_JP.eucJP"
 
-    def languagesupportLookup(args):
+    def languagesupportLookup(self, args):
             if args == 'Czech':
                     return "langsupport cs_CZ"
             if args == 'English':
@@ -134,15 +134,15 @@ class basic:
             if args == 'Japanese':
                     return "langsupport ja_JP.eucJP"
 
-    def keyboardLookup(args):
+    def keyboardLookup(self, args):
             if args == 'us':
                     return "keyboard us"
 
-    def mouseLookup(args):
+    def mouseLookup(self, args):
             if args:	
                     return "mouse generic3ps/2"
 
-    def timezoneLookup(args):
+    def timezoneLookup(self, args):
             if args == 'US Eastern':
                     return "timezone --utc US/Eastern"
             elif args == 'US Central':

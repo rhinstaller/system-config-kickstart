@@ -31,21 +31,14 @@ class nisData:
         self.nisdomain = ''
         self.nisserver = ''
         self.broadcast = "OFF"
-        self.disabled = "TRUE"
-
-#        self.myNisClass = nisData()
-#        self.myLDAPClass = ldapData()
-#        self.myKerberosClass = kerberosData()
-#        self.myHesiodClass = hesiodData()
+        self.enabled = 0
 
     def set_domain(self, name):
         self.nisdomain = name
     def set_server(self, name):
         self.nisserver = name
-    def set_disabled(self):
-        self.disabled = "TRUE"
-    def set_enabled(self):
-        self.disabled = "FALSE"
+    def set_enabled(self, val):
+        self.enabled = val
     def set_broadcast(self, name):
         self.broadcast = name
     def return_domain(self):
@@ -57,7 +50,7 @@ class nisData:
     def return_broadcast(self):
         return self.broadcast
     def return_data(self):
-        if (self.disabled == 'TRUE'):
+        if self.enabled == 0:
             return ""
         else:
             if (self.return_broadcast() == 'ON'):
@@ -73,17 +66,18 @@ class ldapData:
         self.ldapAuth = "YES"
         self.ldapServer = ''
         self.ldapDN = ''
-        self.disabled = "TRUE"
+        self.enabled = 0
     def set_auth(self, name):
         self.ldapAuth = name
     def set_server(self, name):
         self.ldapServer = name
     def set_DN(self, name):
         self.ldapDN = name
-    def set_disabled(self):
-        self.disabled = "TRUE"
-    def set_enabled(self):
-        self.disabled = "FALSE"
+#    def set_disabled(self):
+#        self.disabled = "TRUE"
+    def set_enabled(self, val):
+        print val
+        self.enabled = val
     def return_auth(self):
         return self.ldapAuth
     def return_server(self):
@@ -93,7 +87,7 @@ class ldapData:
     def return_status(self):
         return self.disabled
     def return_data(self):
-        if (self.disabled == 'TRUE'):
+        if self.enabled == 0:
             return ""
         else:
             if (self.ldapAuth == 'YES'):
@@ -190,6 +184,47 @@ class sambaData:
 
       
 class auth:
+    def getData(self):
+        if (self.nisCheck.get_active()):
+            self.myNisClass.set_domain(self.nisDomainEntry.get_text())
+            self.myNisClass.set_server(self.nisServerEntry.get_text())
+
+            if (self.nisBroadcastCheck.get_active()):
+                self.myNisClass.set_broadcast("ON")
+            else:
+                self.myNisClass.set_broadcast("OFF")
+
+        else:
+            self.myNisClass.set_enabled(self.nisCheck.get_active())
+
+        if (self.ldapCheck.get_active()):
+            self.myLDAPClass.set_server(self.ldapServerEntry.get_text())
+            self.myLDAPClass.set_DN(self.ldapDNEntry.get_text())
+        else:
+            self.myLDAPClass.set_enabled(self.ldapCheck.get_active())
+
+
+##         if (self.kerberosCheck.get_active()):
+##             self.myKerberosClass.set_realm(self.kerberosRealmEntry.get_text())
+##             self.myKerberosClass.set_KDC(self.kerberosKDCEntry.get_text())
+##             self.myKerberosClass.set_master(self.kerberosMasterEntry.get_text())
+##         else:
+##             self.myKerberosClass.set_disabled()
+
+
+##         if (self.hesiodCheck.get_active()):
+##             self.myHesiodClass.set_LHS(self.hesiodLHSEntry.get_text())
+##             self.myHesiodClass.set_RHS(self.hesiodRHSEntry.get_text())
+##         else:
+##             self.myHesiodClass.set_disabled()
+
+
+        buf = ""
+        buf = buf + self.myNisClass.return_data()
+        buf = buf + self.myLDAPClass.return_data()
+#        buf = buf + self.myKerberosClass.return_data()
+#        buf = buf + self.myHesiodClass.return_data()
+        return buf
     
     def __init__(self, xml):
 
@@ -247,7 +282,7 @@ class auth:
         self.nisServerLabel.set_sensitive(self.nisCheck.get_active())
         self.nisBroadcastCheck.set_sensitive(self.nisCheck.get_active())	
         self.nisServerEntry.set_sensitive(self.nisCheck.get_active())
-        self.myNisClass.set_enabled()
+        self.myNisClass.set_enabled(self.nisCheck.get_active())
         
     def BroadcastCheck_cb(self, args):
         if (self.nisBroadcastCheck.get_active() == 1):
@@ -264,7 +299,7 @@ class auth:
             self.ldapLabel3.set_sensitive(self.ldapCheck.get_active())
             self.ldapServerEntry.set_sensitive(self.ldapCheck.get_active())
             self.ldapDNEntry.set_sensitive(self.ldapCheck.get_active())				
-            self.myLDAPClass.set_enabled()
+            self.myLDAPClass.set_enabled(self.ldapCheck.get_active())
 
     def enableKerberos(self, args):
             self.kerberosLabel1.set_sensitive(self.kerberosCheck.get_active())

@@ -28,7 +28,9 @@ import libglade
 class network:
 
     def __init__(self, xml):
+        self.dhcp_radiobutton = xml.get_widget("dhcp_radiobutton")
         self.ip_radiobutton = xml.get_widget("ip_radiobutton")
+        self.none_radiobutton = xml.get_widget("none_radiobutton")
         self.ip_entry1 = xml.get_widget("ip_entry1")
         self.ip_entry2 = xml.get_widget("ip_entry2")
         self.ip_entry3 = xml.get_widget("ip_entry3")
@@ -51,36 +53,40 @@ class network:
           } )
 
     def getData(self):
+        print "getData"
         buf = ""
-        if self.networkRadio1.get_active():
+        if self.dhcp_radiobutton.get_active():
+            print "here"
             buf = buf + "\n" + "network --bootproto dhcp"
             return buf
-        elif self.networkRadio2.get_active():
+        elif self.ip_radiobutton.get_active():
             buf = buf + "\n" + "network --bootproto static "
             
-            ipBuf = (" --ip %s.%s.%s.%s " % (self.ipEntry1.get_text(),
-                                             self.ipEntry2.get_text(),
-                                             self.ipEntry3.get_text(),
-                                             self.ipEntry4.get_text())) 
+            ipBuf = (" --ip %s.%s.%s.%s " % (self.ip_entry1.get_text(),
+                                             self.ip_entry2.get_text(),
+                                             self.ip_entry3.get_text(),
+                                             self.ip_entry4.get_text())) 
 
             netmaskBuf = (" --netmask %s.%s.%s.%s " %
-                                           (self.netmaskEntry1.get_text(),
-                                           self.netmaskEntry2.get_text(),
-                                           self.netmaskEntry3.get_text(),
-                                           self.netmaskEntry4.get_text()))
+                                           (self.netmask_entry1.get_text(),
+                                           self.netmask_entry2.get_text(),
+                                           self.netmask_entry3.get_text(),
+                                           self.netmask_entry4.get_text()))
 
             gatewayBuf = (" --gateway %s.%s.%s.%s " %
-                                           (self.gatewayEntry1.get_text(),
-                                           self.gatewayEntry2.get_text(),
-                                           self.gatewayEntry3.get_text(),
-                                           self.gatewayEntry4.get_text()))
+                                           (self.gw_entry1.get_text(),
+                                           self.gw_entry2.get_text(),
+                                           self.gw_entry3.get_text(),
+                                           self.gw_entry4.get_text()))
 
             nameserverBuf = (" --nameserver %s.%s.%s.%s " %
-                                           (self.dnsEntry1.get_text(),
-                                           self.dnsEntry2.get_text(),
-                                           self.dnsEntry3.get_text(),
-                                           self.dnsEntry4.get_text()))
+                                           (self.nameserver_entry1.get_text(),
+                                           self.nameserver_entry2.get_text(),
+                                           self.nameserver_entry3.get_text(),
+                                           self.nameserver_entry4.get_text()))
             buf = buf + ipBuf + netmaskBuf + gatewayBuf + nameserverBuf
+            return buf
+        else:
             return buf
 
     def toggleIP(self, args):
