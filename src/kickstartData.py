@@ -417,19 +417,32 @@ class KickstartData:
                     file.append("@ %s" % package)
 
         if self.getPreLine():
-            file.append(self.getPreLine())
+            file.append("%pre " + self.getPreLine())
+
             if self.getPreList != []:
+                for line in self.getPreList():
+                    file.append(line)
+        else:
+            if self.getPreList() != []:
+                file.append("%pre")
                 for line in self.getPreList():
                     file.append(line)
 
         if self.getPostLine():
-            file.append(self.getPostLine())
+            file.append("%post " + self.getPostLine())
+
             if self.getPostList != []:
                 for line in self.getPostList():
                     file.append(line)
 
-#        for line in file:
-#            print line
+        else:
+            if self.getPostList() != []:
+                file.append("%post")
+                for line in self.getPostList():
+                    file.append(line)
+
+        for line in file:
+            print line
 
 
 #        return file
