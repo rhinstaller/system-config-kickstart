@@ -9,37 +9,37 @@ domain = 'system-config-kickstart'
 translate.textdomain (domain)
 
 
-desktopsList = [_("X Window System"),
-               _("GNOME Desktop Environment"),
-               _("KDE Desktop Environment")
+desktopsList = [N_("X Window System"),
+               N_("GNOME Desktop Environment"),
+               N_("KDE Desktop Environment")
                 ]
-applicationsList = [_("Editors"),
-                    _("Engineering and Scientific"),
-                    _("Graphical Internet"),
-                    _("Text-based Internet"),
-                    _("Office/Productivity"),
-                    _("Sound and Video"),
-                    _("Graphics"),
-                    _("Games and Entertainment"),
-                    _("Authoring and Publishing")
+applicationsList = [N_("Editors"),
+                    N_("Engineering and Scientific"),
+                    N_("Graphical Internet"),
+                    N_("Text-based Internet"),
+                    N_("Office/Productivity"),
+                    N_("Sound and Video"),
+                    N_("Graphics"),
+                    N_("Games and Entertainment"),
+                    N_("Authoring and Publishing")
                     ]
-serversList = [_("Server Configuration Tools (AS and ES only)"),
-               _("Web Server"),
-               _("Mail Server"),
-               _("Windows File Server"),
-               _("DNS Name Server"), 
-               _("FTP Server"),
-               _("SQL Database Server"),
-               _("News Server"),
-               _("Network Servers (AS and ES only)")
+serversList = [N_("Server Configuration Tools (AS and ES only)"),
+               N_("Web Server"),
+               N_("Mail Server"),
+               N_("Windows File Server"),
+               N_("DNS Name Server"), 
+               N_("FTP Server"),
+               N_("SQL Database Server"),
+               N_("News Server"),
+               N_("Network Servers (AS and ES only)")
                ]
-developmentList = [_("Development Tools"),
-                   _("Kernel Development"),
-                   _("X Software Development"),
-                   _("GNOME Software Development"),
-                   _("KDE Software Development")
+developmentList = [N_("Development Tools"),
+                   N_("Kernel Development"),
+                   N_("X Software Development"),
+                   N_("GNOME Software Development"),
+                   N_("KDE Software Development")
                    ]
-systemList = [_("Administration Tools"),
-              _("System Tools"),
-              _("Printing Support")
+systemList = [N_("Administration Tools"),
+              N_("System Tools"),
+              N_("Printing Support")
               ]
