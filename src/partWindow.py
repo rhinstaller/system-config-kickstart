@@ -18,7 +18,8 @@
 ## along with this program; if not, write to the Free Software
 ## Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-## Author: Brent Fox
+## Authors: Brent Fox <bfox@redhat.com>
+##          Tammy Fox <tfox@redhat.com>
 
 from gtk import *
 from gnome.ui import *
@@ -43,10 +44,24 @@ class partWindow:
         self.partitionDialog = xml.get_widget("partition_dialog")
         self.partitionDialog.connect ("destroy", self.destroy)
         self.deviceCombo = xml.get_widget("deviceCombo")
+        self.mountPointCombo = xml.get_widget("mountPointCombo")
 
-        self.deviceCombo.set_text("foodog")
+        xml.signal_autoconnect (
+            { "on_cancel_part_clicked" : self.on_cancel_part_clicked,
+              })
+
+        deviceList = ["/dev/hda", "/dev/hdb", "/dev/hdc", "/dev/hdb"]
+        self.deviceCombo.set_popdown_strings(deviceList)
+
+        mountPoints = ["/", "/boot", "/home", "/var", "/tmp", "/usr", "/opt", "swap"]
+        self.mountPointCombo.set_popdown_strings(mountPoints)
+
+        #if swap, disable other options
 
         self.partitionDialog.show_all()
+
+    def on_cancel_part_clicked(self, *args):
+        self.partitionDialog.hide()
 
 #    def showWin (self):
 #        print "showing win"
