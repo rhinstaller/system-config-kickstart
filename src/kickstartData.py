@@ -60,13 +60,16 @@ class KickstartData:
         return self.keyboard
 
     def setMouse(self, args):
-        self.mouse = args[0]
+        self.mouse = args
 
     def getMouse(self):
         return self.mouse
 
     def setText(self, args):
-        self.text = args
+        if args == None:
+            self.text = None
+        else:
+            self.text = "text"
 
     def getText(self):
         return self.text
@@ -84,7 +87,10 @@ class KickstartData:
         return self.rootpw
 
     def setReboot(self, args):
-        self.reboot = args
+        if args == None:
+            self.reboot = None
+        else:
+            self.reboot = "reboot"
 
     def getReboot(self):
         return self.reboot 
@@ -96,7 +102,10 @@ class KickstartData:
         return self.install
 
     def setInteractive(self, args):
-        self.interactive = args
+        if args == None:
+            self.interactive = None
+        else:
+            self.interactive = "interactive"
 
     def getInteractive(self):
         return self.interactive
@@ -171,7 +180,12 @@ class KickstartData:
         file.append("#System keyboard")
         file.append("keyboard " + self.getKeyboard())
         file.append("#System mouse")
-        file.append("mouse " + self.getMouse())
+
+        mouse = self.getMouse()
+        if "--emulthree" in mouse:
+            file.append("mouse " + string.join(mouse, " "))
+        else:
+            file.append("mouse " + self.getMouse()[0])
         file.append("#Sytem timezone")
         file.append("timezone --utc " + self.getTimezone())
         file.append("#Root password")
