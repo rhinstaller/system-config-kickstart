@@ -46,22 +46,90 @@ class basic:
         keyboard_combo = xml.get_widget("keyboard_combo")		
         timezone_combo = xml.get_widget("timezone_combo")
 
+        #define languages, add languages here
+        self.langDict = {"Czech" : "cs_CZ",
+                         "English" : "en_US",
+                         "French" : "fr_FR",
+                         "German" : "de_DE",
+                         "Hungarian" : "hu_HU",
+                         "Icelandic" : "is_IS",
+                         "Italian" : "it_IT",
+                         "Japanese" : "ja_JP.eucJP",
+                         "Norwegian" : "no_NO",
+                         "Romanian" : "ro_RO",
+                         "Russian" : "ru_RU.K0I8-R",
+                         "Serbian" : "sr_YU",
+                         "Slovak" : "sk_SK",
+                         "Slovenian" : "sl_SI",
+                         "Spanish" : "es_ES",
+                         "Swedish" : "sv_SE",
+                         "Turkish" : "tr_TR",
+                         "Ukrainian" : "tr_TR",
+                    }
+
+        #define mice, add mice here
+        self.mouseDict = { "No Mouse" : "none",
+                           "ALPS GlidePoint (PS/2)" : "alpsps/2",
+                           "ASCII MieMouse (serial)" : "ascii",
+                           "ASCII MieMouse (PS/2)" : "asciips/2",
+                           "ATI Bus Mouse" : "atibm",
+                           "Generic Mouse (serial)" : "generic",
+                           "Generic 3 Button Mouse (serial)" : "generic3",
+                           "Generic Mouse (PS/2)" : "genericps/2",
+                           "Generic 3 Button Mouse (PS/2)" : "generic3ps/2",
+                           "Generic Mouse (USB)" : "genericusb",
+                           "Generic 3 Button Mouse (USB)" : "generic3usb",
+                           "Genius NetMouse (serial)" : "geniusnm",
+                           "Genius NetMouse (PS/2)" : "geniusnmps/2",
+                           "Genius NetMouse Pro (PS/2)" : "geniusnmps/2",
+                           "Genius NetScroll (PS/2)" : "geniusnsps/2",
+                           "Kensington Thinking Mouse (serial)" : "thinking",
+                           "Kensington Thinking Mouse (PS/2)" : "thinkingps/2",
+                           "Logitech Mouse (serial, old C7 type)" : "logitech",
+                           "Logitech CC Series (serial)" : "logitechcc",
+                           "Logitech Bus Mouse" : "logibm",
+                           "Logitech MouseMan/FirstMouse (serial)" : "logimman",
+                           "Logitech MouseMan/FirstMouse (PS/2)" : "logimmanps/2",
+                           "Logitech MouseMan+/FirstMouse+ (serial)" : "logimman+",
+                           "Logitech MouseMan+/FirstMouse+ (PS/2)" : "logimman+ps/2",
+                           "Logitech MouseMan Wheel (USB)" : "generic3usb",
+                           "Microsoft compatible (serial)" : "microsoft",
+                           "Microsoft Rev 2.1A or higher (serial)" : "msnew",
+                           "Microsoft IntelliMouse (serial)" : "msintelli",
+                           "Microsoft IntelliMouse (PS/2)" : "msintellips/2",
+                           "Microsoft IntelliMouse (USB)" : "generic3usb",
+                           "Microsoft Bus Mouse" : "msbm",
+                           "Mouse Systems (serial)" : "mousesystems",
+                           "MM Series (serial)" : "mmseries",
+                           "MM HitTablet (serial)" : "mmhittab",
+                           }
+
         #populate language combo
-        list_items = [ "Czech", "English", "French", "German", "Hungarian",
-                       "Icelandic", "Italian","Japanese", "Norwegian", "Romanian",
-                       "Russian", "Serbian", "Slovak", "Slovenian", "Spanish",
-                       "Swedish", "Turkish", "Ukrainian" ]
-        lang_combo.set_popdown_strings(list_items)
+        lang_list = self.langDict.keys()
+        lang_list.sort()
+        lang_combo.set_popdown_strings(lang_list)
+        #set default to English
         lang_combo.list.select_item(1)
         lang_combo.entry.set_editable(FALSE)
 
         #populate language support combo
-        lang_support_combo.set_popdown_strings(list_items)
+        lang_support_combo.set_popdown_strings(lang_list)
+        #set default to English
         lang_support_combo.list.select_item(1)
         lang_support_combo.entry.set_editable(FALSE)				
         
-        #populate keyboard combo
-        list_items = [ "azerty", "be-latin1", "be2-latin1",
+        #populate mouse combo
+        mouse_list = ["Probe for Mouse"]
+        dict_list = self.mouseDict.keys()
+        dict_list.sort()
+        for item in dict_list:
+            mouse_list.append(item)
+        mouse_combo.set_popdown_strings(mouse_list)
+        mouse_combo.list.select_item(0)
+        mouse_combo.entry.set_editable(FALSE)		
+
+        #populate keyboard combo, add keyboards here
+        keyboard_list = [ "azerty", "be-latin1", "be2-latin1",
                        "fr-latin0", "fr-pc", "fr", "wangbe", "ANSI-dvorak",
                        "dvorak-1", "dvorak-r", "dvorak", "pc-dvorak-latin1",
                        "tr_f-latin5", "trf", "bg", "cf", "cz-lat2-prog",
@@ -78,51 +146,11 @@ class basic:
                        "de-latin1", "de", "fr_CH-latin1", "fr_CH", "hu",
                        "sg-latin1-lk450", "sg-latin1", "sg",
                        "sk-prog-qwertz", "sk-qwertz", "slovene" ]
-        keyboard_combo.set_popdown_strings(list_items)
+        keyboard_combo.set_popdown_strings(keyboard_list)
+        #set default to English
         keyboard_combo.list.select_item(63)
         keyboard_combo.entry.set_editable(FALSE)		
 
-        #populate mouse combo
-        list_items = [ "No Mouse",
-                       "ALPS GlidePoint (PS/2)",
-                       "ASCII MieMouse (serial)",
-                       "ASCII MieMouse (PS/2)",
-                       "ATI Bus Mouse",
-                       "Generic Mouse (serial)",
-                       "Generic 3 Button Mouse (serial)",
-                       "Generic Mouse (PS/2)",
-                       "Generic 3 Button Mouse (PS/2)",
-                       "Generic Mouse (USB)",
-                       "Generic 3 Button Mouse (USB)",
-                       "Genius NetMouse (serial)",
-                       "Genius NetMouse (PS/2)",
-                       "Genius NetMouse Pro (PS/2)",
-                       "Genius NetScroll (PS/2)",
-                       "Kensington Thinking Mouse (serial)",
-                       "Kensington Thinking Mouse (PS/2)",
-                       "Logitech Mouse (serial, old C7 type)",
-                       "Logitech CC Series (serial)",
-                       "Logitech Bus Mouse",
-                       "Logitech MouseMan/FirstMouse (serial)",
-                       "Logitech MouseMan/FirstMouse (PS/2)",
-                       "Logitech MouseMan+/FirstMouse+ (serial)",
-                       "Logitech MouseMan+/FirstMouse+ (PS/2)",
-                       "Logitech MouseMan Wheel (USB)",
-                       "Microsoft compatible (serial)",
-                       "Microsoft Rev 2.1A or higher (serial)",
-                       "Microsoft IntelliMouse (serial)",
-                       "Microsoft IntelliMouse (PS/2)",
-                       "Microsoft IntelliMouse (USB)",
-                       "Microsoft Bus Mouse",
-                       "Mouse Systems (serial)",
-                       "MM Series (serial)",
-                       "MM HitTablet (serial)"
-                       ]
-        
-        mouse_combo.set_popdown_strings(list_items)
-        mouse_combo.list.select_item(0)
-        mouse_combo.entry.set_editable(FALSE)		
-        
         #populate time zone combo
         tz = open ("/usr/share/zoneinfo/zone.tab", "r")
         lines = tz.readlines()
@@ -155,20 +183,19 @@ class basic:
         timezone_combo.list.select_item(select)
         timezone_combo.entry.set_editable(FALSE)		
 
-
     def getData(self):
         buf = ""
-        print self.lang_combo.entry.get_text()
-        buf = buf + "\n" + self.languageLookup(self.lang_combo.entry.get_text())
-        buf = buf + "\n" + self.languagesupportLookup(self.lang_support_combo.entry.get_text())
+        buf = buf + "\n" + "lang " + self.languageLookup(self.lang_combo.entry.get_text())
+        buf = buf + "\n" + "langsupport " + self.languageLookup(self.lang_support_combo.entry.get_text())
         buf = buf + "\n" + "keyboard " + self.keyboard_combo.entry.get_text()
-        buf = buf + "\n" + "mouse " + self.mouseLookup(self.mouse_combo.entry.get_text())
+        buf = buf + "\n" + self.mouseLookup(self.mouse_combo.entry.get_text())
         buf = buf + "\n" + "timezone --utc " + self.timezone_combo.entry.get_text()
         buf = buf + "\n" + "rootpw " + self.root_passwd_entry.get_text()
         if self.lilo_mbr_radiobutton.get_active():
             buf = buf + "\n" + "lilo --location mbr"
         elif self.lilo_none_radiobutton.get_active():
             buf = buf + "\n" + "lilo --location none"
+        buf = buf + "\n" + "auth "
         if self.shadow_passwd_checkbutton.get_active():
             buf = buf + " --useshadow"
         if self.md5_checkbutton.get_active():
@@ -176,103 +203,17 @@ class basic:
         return buf
 
     def languageLookup(self, args):
-            if args == 'Czech':
-                    return "lang cs_CZ"
-            if args == 'English':
-                    return "lang en_US"
-            if args == 'French':
-                    return "lang fr_FR"
-            if args == 'German':
-                    return "lang de_DE"
-            if args == 'Hungarian':
-                    return "lang hu_HU"
-            if args == 'Icelandic':
-                    return "lang is_IS"
-            if args == 'Italian':
-                    return "lang it_IT"
-            if args == 'Norwegian':
-                    return "lang no_NO"
-            if args == 'Romanian':
-                    return "lang ro_RO"
-            if args == 'Russian':
-                    return "lang ru_RU.K0I8-R"
-            if args == 'Serbian':		
-                    return "lang sr_YU"
-            if args == 'Slovak':		
-                    return "lang sk_SK"
-            if args == 'Slovenian':
-                    return "lang sl_SI"
-            if args == 'Spanish':
-                    return "lang es_ES"
-            if args == 'Swedish':
-                    return "lang sv_SV"
-            if args == 'Turkish':
-                    return "lang tr_TR"
-            if args == 'Ukrainian':
-                    return "lang uk_UA.KOI8-U"
-            if args == 'Japanese':
-                    return "lang ja_JP.eucJP"
-
-    def languagesupportLookup(self, args):
-            if args == 'Czech':
-                    return "langsupport cs_CZ"
-            if args == 'English':
-                    return "langsupport en_US"
-            if args == 'French':
-                    return "langsupport fr_FR"
-            if args == 'German':
-                    return "langsupport de_DE"
-            if args == 'Hungarian':
-                    return "langsupport hu_HU"
-            if args == 'Icelandic':
-                    return "langsupport is_IS"
-            if args == 'Italian':
-                    return "langsupport it_IT"
-            if args == 'Norwegian':
-                    return "langsupport no_NO"
-            if args == 'Romanian':
-                    return "langsupport ro_RO"
-            if args == 'Russian':
-                    return "langsupport ru_RU.K0I8-R"
-            if args == 'Serbian':
-                    return "langsupport sr_YU"
-            if args == 'Slovak':
-                    return "langsupport sk_SK"
-            if args == 'Slovenian':
-                    return "langsupport sl_SI"
-            if args == 'Spanish':
-                    return "langsupport es_ES"
-            if args == 'Swedish':
-                    return "langsupport sv_SV"
-            if args == 'Turkish':
-                    return "langsupport tr_TR"
-            if args == 'Ukrainian':
-                    return "langsupport uk_UA.KOI8-U"
-            if args == 'Japanese':
-                    return "langsupport ja_JP.eucJP"
-
-    def keyboardLookup(self, args):
-            if args == 'us':
-                    return "keyboard us"
+        return self.langDict [args]
 
     def mouseLookup(self, args):
-             buf = ""
-#            if args:	
-#                    return "mouse generic3ps/2"
-             #translate mouse to driver from mouseconfig
-                          
-             #check emulate 3 buttons checkbutton
-             if self.emulate_3_buttons.get_active():
-                 buf = buf + "--emulthree"
-             return buf
+        buf = ""
+        if args == "Probe for Mouse":
+            return buf
+        else:
+            buf = "mouse "
+            if self.emulate_3_buttons.get_active():
+                buf = buf + "--emulthree "
+            buf = buf + self.mouseDict [args]
+        return buf
 
-    def timezoneLookup(self, args):
-            if args == 'US Eastern':
-                    return "timezone --utc US/Eastern"
-            elif args == 'US Central':
-                    return "timezone --utc US/Central"
-            elif args == 'US Mountain':
-                    return "timezone --utc US/Mountain"
-            elif args == 'US Pacific':
-			return "timezone --utc US/Pacific"        
 
