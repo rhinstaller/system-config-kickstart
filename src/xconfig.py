@@ -85,6 +85,17 @@ class xconfig:
         self.videoram_combo.set_popdown_strings(vram_list)
         self.videoram_combo.entry.set_editable(gtk.FALSE)
 
+        self.ramsize_dict = {"256 KB" : "256",
+                             "512 KB" : "512",
+                             "1 MB" : "1024",
+                             "2 MB" : "2048",
+                             "4 MB" : "4096",
+                             "8 MB" : "8192",
+                             "16 MB" : "16384",
+                             "32 MB" : "32768",
+                             "64 MB" : "65536",
+                             }
+
     def fill_card_list(self):
         #add video cards to list
         try:
@@ -170,17 +181,7 @@ class xconfig:
                 buf = buf + " --card=\"" + card + "\""
 
                 #translate MB to KB 
-                ramsize_dict = {"256 KB" : "256",
-                                "512 KB" : "512",
-                                "1 MB" : "1024",
-                                "2 MB" : "2048",
-                                "4 MB" : "4096",
-                                "8 MB" : "8192",
-                                "16 MB" : "16384",
-                                "32 MB" : "32768",
-                                "64 MB" : "65536",
-                                }
-                buf = buf + " --videoram=" + ramsize_dict [self.videoram_combo.entry.get_text()]
+                buf = buf + " --videoram=" + self.ramsize_dict [self.videoram_combo.entry.get_text()]
 
             if not self.monitor_probe_check.get_active():
                 if self.sync_button.get_active():
@@ -246,7 +247,10 @@ class xconfig:
 
                 if opt[:10] == "--videoram":
                     value = opt[10:]
-                    self.videoram_combo.entry.set_text(value)
+
+                    for size in self.ramsize_dict.keys():
+                        if int(value) == int(self.ramsize_dict[size]):
+                            self.videoram_combo.entry.set_text(size)                            
 
                 if opt[:9] == "--monitor":
                     opt = string.strip(opt[9:])
