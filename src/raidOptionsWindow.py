@@ -27,6 +27,7 @@ import gtk
 import signal
 import partWindow
 import raidWindow
+import kickstartGui
 
 ##
 ## I18N
@@ -44,6 +45,8 @@ class raidOptionsWindow:
         self.partWindow = partWindow
 
         self.raid_options_window = xml.get_widget("raid_options_window")
+        self.raid_options_window.set_icon(kickstartGui.iconPixbuf)
+
         self.raid_partition_radio = xml.get_widget("raid_partition_radio")
         self.raid_device_radio = xml.get_widget("raid_device_radio")
         self.raid_options_ok_button = xml.get_widget("raid_options_ok_button")

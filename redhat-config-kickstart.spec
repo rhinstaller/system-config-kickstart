@@ -55,6 +55,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Tue Aug 06 2002 Tammy Fox <tfox@redhat.com>
+- Add window icons
+
 * Mon Aug 05 2002 Brent Fox <bfox@redhat.com> 2.3.2-6
 - More software raid code
 

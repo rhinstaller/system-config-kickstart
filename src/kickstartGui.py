@@ -52,6 +52,16 @@ gettext.bindtextdomain ("redhat-config-kickstart", "/usr/share/locale")
 gettext.textdomain ("redhat-config-kickstart")
 _=gettext.gettext
 
+##
+## Icon for windows
+##
+
+iconPixbuf = None      
+try:
+	iconPixbuf = gtk.gdk.pixbuf_new_from_file("/usr/share/pixmaps/redhat/shadowman-round-48.png")
+except:
+	pass
+
 class kickstartGui:
 	
 	def destroy(self, args):
@@ -61,6 +71,7 @@ class kickstartGui:
 		self.xml = xml
 		self.toplevel = xml.get_widget("main_window")
 		self.toplevel.connect ("destroy", self.destroy)
+		self.toplevel.set_icon(iconPixbuf)
 
 		#bring in widgets from glade file
 		self.preview_options_dialog = xml.get_widget("preview_option_dialog")
@@ -146,6 +157,7 @@ class kickstartGui:
 		dlg.set_position (gtk.WIN_POS_CENTER)
 		dlg.set_border_width(2)
 		dlg.set_modal(gtk.TRUE)
+		dlg.set_icon(iconPixbuf)
 		rc = dlg.run()
 		if rc == gtk.RESPONSE_OK:
 			dlg.hide()
@@ -171,6 +183,7 @@ class kickstartGui:
 			dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_WARNING, gtk.BUTTONS_OK,
 						(_("Help is not available.")))
 			dlg.set_position(gtk.WIN_POS_CENTER)
+			dlg.set_icon(iconPixbuf)
 			dlg.run()
 			dlg.destroy()
 			return

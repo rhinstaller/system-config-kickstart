@@ -27,6 +27,7 @@ import gtk.glade
 import string
 import savedialog
 import signal
+import kickstartGui
 
 class saveFile:
 	
@@ -43,6 +44,7 @@ class saveFile:
 		self.confirm_options_cancel_button = xml.get_widget("confirm_options_cancel_button")
 
 		self.dialog.connect ("destroy", self.destroy)
+		self.dialog.set_icon(kickstartGui.iconPixbuf)
 		self.confirm_options_ok_button.connect("clicked", self.saveFile_cb)
 		self.confirm_options_cancel_button.connect("clicked", self.on_confirm_options_cancel_button)
 		
@@ -71,3 +73,4 @@ class saveFile:
 	def saveFile_cb(self, *args):
 		self.dialog.hide()
  		fileDialog = savedialog.saveDialog(self.buf, self.xml)
+		fileDialog.set_icon(kickstartGui.iconPixbuf)

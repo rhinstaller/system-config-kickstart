@@ -29,6 +29,7 @@ import string
 import partWindow
 import raidOptionsWindow
 import partEntry
+import kickstartGui
 
 ##
 ## I18N
@@ -300,6 +301,7 @@ class partition:
         dlg.set_position (gtk.WIN_POS_CENTER)
         dlg.set_border_width(2)
         dlg.set_modal(gtk.TRUE)
+        dlg.set_icon(kickstartGui.iconPixbuf)
         rc = dlg.run()
         if rc == gtk.RESPONSE_OK:
             dlg.hide()

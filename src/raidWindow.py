@@ -29,6 +29,7 @@ import signal
 import partWindow
 import raidWindow
 import partEntry
+import kickstartGui
 
 ##
 ## I18N
@@ -45,6 +46,7 @@ class raidWindow:
         self.part_view = part_view
         
         self.raid_window = xml.get_widget("raid_window")
+        self.raid_window.set_icon(kickstartGui.iconPixbuf)
         self.raid_mp_combo = xml.get_widget("raid_mp_combo")
         self.raid_fsType_menu = xml.get_widget("raid_fsType_menu")
         self.raid_device_menu = xml.get_widget("raid_device_menu")

@@ -32,6 +32,8 @@ import crypt
 from rhpl import keyboard_models
 import rhpl.keyboard as keyboard
 
+import kickstartGui
+
 ##
 ## I18N
 ##
@@ -270,6 +272,7 @@ class basic:
             dlg.set_title(_("Error"))
             dlg.set_default_size(100, 100)
             dlg.set_position (gtk.WIN_POS_CENTER)
+            dlg.set_icon(kickstartGui.iconPixbuf)
             dlg.set_border_width(2)
             dlg.set_modal(gtk.TRUE)
             rc = dlg.run()

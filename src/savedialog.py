@@ -26,6 +26,7 @@ import gtk
 import gtk.glade
 import savefile
 import signal
+import kickstartGui
 
 class saveDialog:
 	
@@ -46,6 +47,8 @@ class saveDialog:
 		
 		self.save_ok_button.connect("clicked", self.saveFile)
 		self.save_cancel_button.connect("clicked", self.hide)
+
+		self.dialog.set_icon(kickstartGui.iconPixbuf)
 
 		self.dialog.show_all()
 
