@@ -324,12 +324,17 @@ class basic:
                     self.emulate_3_buttons.set_active(gtk.TRUE)
                     mouseLine.remove("--emulthree")
 
-                mouseTag = mouseLine[0]
+                try:
+                    mouseTag = mouseLine[0]
+                except:
+                    mouseTag = None
 
                 (a, b, c, d, e, dictMouseTag) = self.mouseDict[mouse]
 
                 if dictMouseTag == mouseTag:
                     self.mouse_combo.list.select_item(self.mouse_list.index(mouse))
+                else:
+                    self.mouse_combo.list.select_item(0)
 
         #set timezone
         self.timezone_combo.list.select_item(self.timezone_list.index(self.kickstartData.getTimezone()))
