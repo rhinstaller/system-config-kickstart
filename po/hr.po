@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-config-kickstart 0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-29 17:11-0500\n"
+"POT-Creation-Date: 2005-03-23 14:24-0500\n"
 "PO-Revision-Date: 2003-12-15 22:30+CET\n"
 "Last-Translator: auto\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
@@ -14,116 +14,41 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: TransDict server\n"
 
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. XXX FIXME
-#. if opt == "--enableldaptls":
-#. self.
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. #
-#. # I18N
-#. #
-#: ../src/basic.py:71
+#: ../src/basic.py:72
 msgid "x86, AMD64, or Intel EM64T"
 msgstr ""
 
-#: ../src/basic.py:71
+#: ../src/basic.py:72
 msgid "Intel Itanium"
 msgstr ""
 
-#: ../src/basic.py:71
+#: ../src/basic.py:72
 #, fuzzy
 msgid "IBM iSeries"
 msgstr "SMB poslužitelji:"
 
-#: ../src/basic.py:72
+#: ../src/basic.py:73
 #, fuzzy
 msgid "IBM pSeries"
 msgstr "SMB poslužitelji:"
 
-#: ../src/basic.py:72
+#: ../src/basic.py:73
 msgid "IBM zSeries/s390"
 msgstr ""
 
-#. populate language combo
-#. set default to English
-#. for lang in lang_list:
-#. self.lang_support_list.append([lang])
-#. populate mouse combo
-#. populate keyboard combo, add keyboards here
-#. set default to English
-#. set keyboard to current keymap
-#. set default mouse to generic ps/2
-#. populate time zone combo
-#: ../src/basic.py:205
+#: ../src/basic.py:206
 msgid "Root passwords do not match."
 msgstr "Ne odgovaraju lozinke za root korisnika."
 
-#. zerombr and clearpart options
-#. We want to preserve all partitions, so don't write the clearpart line
-#. Prepart the clearpart line
-#. This is a raid device
-#. Check to see if the selection is actually a partition or one of the parent roots
-#: ../src/basic.py:206 ../src/basic.py:225 ../src/install.py:214
-#: ../src/partition.py:305 ../src/partWindow.py:513 ../src/raidWindow.py:247
+#: ../src/basic.py:207 ../src/basic.py:226 ../src/install.py:214
+#: ../src/partWindow.py:513 ../src/partition.py:317 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "Greška"
 
-#: ../src/basic.py:224
+#: ../src/basic.py:225
 msgid "Please select a root password."
 msgstr "Molim, označite lozinku root korisnika."
 
-#. set platform
-#. set language
-#. set keyboard
-#. set mouse
-#. set timezone
-#. set the supported lang list
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. #
-#. # I18N
-#. #
 #: ../src/bootloader.py:76
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
@@ -133,159 +58,6 @@ msgstr ""
 msgid "Grub passwords do not match.  Please try again."
 msgstr "Ne poklapaju se GRUB lozinke. Molim, pokušajte ponovo."
 
-#. !/usr/bin/python2
-#. #
-#. # I18N
-#. #
-#: ../src/fedoraPackageGroupList.py:12 ../src/RHELPackageGroupList.py:12
-#, fuzzy
-msgid "X Window System"
-msgstr "Postavi X Window sustav"
-
-#: ../src/fedoraPackageGroupList.py:13 ../src/RHELPackageGroupList.py:13
-msgid "GNOME Desktop Environment"
-msgstr ""
-
-#: ../src/fedoraPackageGroupList.py:14 ../src/RHELPackageGroupList.py:14
-msgid "KDE Desktop Environment"
-msgstr ""
-
-#: ../src/fedoraPackageGroupList.py:16 ../src/RHELPackageGroupList.py:16
-#, fuzzy
-msgid "Editors"
-msgstr "_Uredi"
-
-#: ../src/fedoraPackageGroupList.py:17 ../src/RHELPackageGroupList.py:17
-msgid "Engineering and Scientific"
-msgstr ""
-
-#: ../src/fedoraPackageGroupList.py:18 ../src/RHELPackageGroupList.py:18
-msgid "Graphical Internet"
-msgstr ""
-
-#: ../src/fedoraPackageGroupList.py:19 ../src/RHELPackageGroupList.py:19
-msgid "Text-based Internet"
-msgstr ""
-
-#: ../src/fedoraPackageGroupList.py:20 ../src/RHELPackageGroupList.py:20
-msgid "Office/Productivity"
-msgstr ""
-
-#: ../src/fedoraPackageGroupList.py:21 ../src/RHELPackageGroupList.py:21
-msgid "Sound and Video"
-msgstr ""
-
-#: ../src/fedoraPackageGroupList.py:22 ../src/RHELPackageGroupList.py:22
-msgid "Graphics"
-msgstr ""
-
-#: ../src/fedoraPackageGroupList.py:23 ../src/RHELPackageGroupList.py:23
-msgid "Games and Entertainment"
-msgstr ""
-
-#: ../src/fedoraPackageGroupList.py:24 ../src/RHELPackageGroupList.py:24
-msgid "Authoring and Publishing"
-msgstr ""
-
-#: ../src/fedoraPackageGroupList.py:26
-#, fuzzy
-msgid "Server Configuration Tools"
-msgstr "X postavke"
-
-#: ../src/fedoraPackageGroupList.py:27 ../src/RHELPackageGroupList.py:27
-#, fuzzy
-msgid "Web Server"
-msgstr "Ime poslužitelja:"
-
-#: ../src/fedoraPackageGroupList.py:28 ../src/RHELPackageGroupList.py:28
-#, fuzzy
-msgid "Mail Server"
-msgstr "Ime poslužitelja:"
-
-#: ../src/fedoraPackageGroupList.py:29 ../src/RHELPackageGroupList.py:29
-msgid "Windows File Server"
-msgstr ""
-
-#: ../src/fedoraPackageGroupList.py:30 ../src/RHELPackageGroupList.py:30
-#, fuzzy
-msgid "DNS Name Server"
-msgstr "Ime poslužitelja:"
-
-#: ../src/fedoraPackageGroupList.py:31 ../src/RHELPackageGroupList.py:31
-#, fuzzy
-msgid "FTP Server"
-msgstr "FTP poslužitelj:"
-
-#: ../src/fedoraPackageGroupList.py:32 ../src/RHELPackageGroupList.py:32
-msgid "SQL Database Server"
-msgstr ""
-
-#: ../src/fedoraPackageGroupList.py:33 ../src/RHELPackageGroupList.py:33
-#, fuzzy
-msgid "News Server"
-msgstr "Ime poslužitelja:"
-
-#: ../src/fedoraPackageGroupList.py:34
-#, fuzzy
-msgid "Network Servers"
-msgstr "Mrežni uređaj:"
-
-#: ../src/fedoraPackageGroupList.py:36 ../src/RHELPackageGroupList.py:36
-#, fuzzy
-msgid "Development Tools"
-msgstr "Razvoj"
-
-#: ../src/fedoraPackageGroupList.py:37 ../src/RHELPackageGroupList.py:37
-#, fuzzy
-msgid "Kernel Development"
-msgstr "Razvoj"
-
-#: ../src/fedoraPackageGroupList.py:38 ../src/RHELPackageGroupList.py:38
-#, fuzzy
-msgid "X Software Development"
-msgstr "Razvoj"
-
-#: ../src/fedoraPackageGroupList.py:39 ../src/RHELPackageGroupList.py:39
-msgid "GNOME Software Development"
-msgstr ""
-
-#: ../src/fedoraPackageGroupList.py:40 ../src/RHELPackageGroupList.py:40
-#, fuzzy
-msgid "KDE Software Development"
-msgstr "Razvoj"
-
-#: ../src/fedoraPackageGroupList.py:42 ../src/RHELPackageGroupList.py:42
-msgid "Administration Tools"
-msgstr ""
-
-#: ../src/fedoraPackageGroupList.py:43 ../src/RHELPackageGroupList.py:43
-#, fuzzy
-msgid "System Tools"
-msgstr "Sustav"
-
-#: ../src/fedoraPackageGroupList.py:44 ../src/RHELPackageGroupList.py:44
-#, fuzzy
-msgid "Printing Support"
-msgstr "Podrška jeziku :"
-
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. #
-#. # I18N
-#. #
 #. create table with custom checklists
 #: ../src/firewall.py:60
 msgid "Trusted devices:"
@@ -299,32 +71,6 @@ msgstr "Servisi kojima se vjeruje:"
 msgid "Other ports: (1029:tcp)"
 msgstr "Ostali portovi: (1029:tcp)"
 
-#. pull list of language from system-config-languages
-#. Chop encoding off so we can compare to self.installedLangs
-#. define mice, add mice here
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. Kickstart Configurator Installation Methods
-#. #
-#. # I18N
-#. #
-#. gray out package selection and partitions if upgrade
-#. self.partitioning_frame.set_sensitive(install)
-#. self.pkg_selection_frame.set_sensitive(install)
-#. self.bootloader_class.upgrade_bootloader_radio.set_sensitive(not install)
 #: ../src/install.py:134
 msgid "Please enter an NFS server."
 msgstr "Molim, upišite NFS poslužitelj."
@@ -357,7 +103,6 @@ msgstr "Molim upišite HTTP poslužitelj"
 msgid "Please enter an HTTP server directory."
 msgstr "Molim, upišite mapu HTTP poslužitelja."
 
-#. strip the "http://" out
 #: ../src/install.py:202
 msgid "Please enter a hard drive directory."
 msgstr "Molim, upišite mapu tvrdog diska."
@@ -366,48 +111,6 @@ msgstr "Molim, upišite mapu tvrdog diska."
 msgid "Please enter a hard drive partition."
 msgstr "Molim unesite particiju tvrdog diska."
 
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. # Authors: Brent Fox <bfox@redhat.com>
-#. #          Tammy Fox <tfox@redhat.com>
-#. Patch contributed by Bill Huang - applied on 4/23/2001 for Japanese support
-#. #
-#. # I18N
-#. #
-#. #
-#. # Icon for windows
-#. #
-#. #
-#. # Pull in the Glade file
-#. #
 #: ../src/kickstartGui.py:86
 msgid "Kickstart"
 msgstr "Kickstart"
@@ -416,20 +119,6 @@ msgstr "Kickstart"
 msgid "Create a kickstart file"
 msgstr "Stvori kickstart datoteku"
 
-#. bring in widgets from glade file
-#. populate category list
-#. bring in basic functions
-#. bring in bootloader functions
-#. bring in install functions
-#. bring in partitions functions
-#. bring in network functions
-#. bring in auth functions
-#. bring in firewall functions
-#. bring in X functions
-#. bring in package function
-#. self.packages_class = packages.headerList(xml)
-#. FIXME
-#. bring in scripts function
 #: ../src/kickstartGui.py:138
 msgid "Subsection"
 msgstr "Podsekcija"
@@ -450,7 +139,7 @@ msgstr "Opcije programa za pokretanje sustava"
 msgid "Partition Information"
 msgstr "Informacije o particijama"
 
-#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:165
+#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:140
 msgid "Network Configuration"
 msgstr "Mrežne postavke"
 
@@ -458,29 +147,27 @@ msgstr "Mrežne postavke"
 msgid "Authentication"
 msgstr "Provjera valjanosti"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:218
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:186
 msgid "Firewall Configuration"
 msgstr "Postavke vatrozida"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:248
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:211
 #, fuzzy
 msgid "Display Configuration"
 msgstr "X postavke"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:259
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:221
 msgid "Package Selection"
 msgstr "Izbor paketa"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:265
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:226
 msgid "Pre-Installation Script"
 msgstr "Skripta koja se izvršava prije instalacije"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:272
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:232
 msgid "Post-Installation Script"
 msgstr "Skripta koja se izvršava nakon instalacije"
 
-#. show gui
-#. about box
 #: ../src/kickstartGui.py:193
 msgid ""
 "Kickstart Configurator @VERSION@\n"
@@ -499,66 +186,15 @@ msgstr ""
 msgid "About Kickstart Configurator"
 msgstr "O programu za postavljanje Kickstart-a"
 
-#. display help manual
 #: ../src/kickstartGui.py:224
 msgid "Help is not available."
 msgstr "Pomoć nije dostupna."
 
-#. get all buffers to save to file
-#. only do these things in installs, not upgrades
 #: ../src/kickstartGui.py:273
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "Ne mogu pristupiti datoteci \"%s\"."
 
-#. show chosen options for preview
-#. show preview dialog window
-#. show file selection dialog
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. # 		     "device"		: None			,
-#. # 		     "deviceprobe"	: None			,
-#. # 		     "driverdisk"	: None			,
-#. "lang"		: self.kickstartData.setLang		,
-#. # 		     "lilo"		: self.kickstartData.setLilo		,
-#. # 		     "lilocheck"	: self.kickstartData.setLiloCheck	,
-#. #                      "volgroup"         : self.defineVolumeGroup,
-#. #                      "logvol"           : self.defineLogicalVolume,
-#. # 		     "xdisplay"		: None			,
-#. #                      "autostep"         : self.kickstartData.setAutoStep       ,
-#. #                      "firstboot"        : self.kickstartData.setFirstboot      ,
-#. Separate the file into main, package, pre and post lists
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. Kickstart Configurator Network Configuration
-#. #
-#. # I18N
-#. #
 #: ../src/network.py:87
 msgid "Device"
 msgstr "Uređaj"
@@ -567,8 +203,6 @@ msgstr "Uređaj"
 msgid "Network Type"
 msgstr "Vrsta mreže"
 
-#. Let's find the last eth device in the list and increment by one to
-#. fill in the option menu with the next device
 #: ../src/network.py:109 ../src/network.py:155 ../src/network.py:223
 #: ../src/network.py:274 ../src/network.py:415
 msgid "Static IP"
@@ -586,167 +220,23 @@ msgid ""
 msgstr ""
 "Mrežni uređaj s imenom %s već postoji. Molim odaberite drugo ime uređaja."
 
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. Kickstart Configurator Package Selection
-#. #
-#. # I18N
-#. #
-#. Loop over the package list and see what was selected
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002 Brent Fox <bfox@redhat.com>
-#. #                                Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. Kickstart Configurator Partitions Data Structure
-#. self.onDisk = ""
-#. self.onDiskVal = ""
-#. self.onPart = ""
-#. self.onPartVal = ""
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. Kickstart Configurator Partitions Configuration
-#. #
-#. # I18N
-#. #
-#: ../src/partition.py:72
-msgid ""
-"Device/\n"
-"Partition Number"
+#: ../src/packageGroupList.py:16
+msgid "Could not start because there is no /usr/share/comps/"
 msgstr ""
-"Uređaj/\n"
-"Broj particije"
 
-#. col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
-#: ../src/partition.py:75
-msgid ""
-"Mount Point/\n"
-"RAID"
+#: ../src/packageGroupList.py:16
+msgid "/comps.xml file."
 msgstr ""
-"Mount točka/\n"
-"RAID"
 
-#: ../src/partition.py:77
-msgid "Type"
-msgstr "Tip"
+#: ../src/packageGroupList.py:17
+msgid "Please make sure the comps package is installed."
+msgstr ""
 
-#: ../src/partition.py:79
-msgid "Format"
-msgstr "Oblikovanje"
-
-#: ../src/partition.py:81
-msgid "Size (MB)"
-msgstr "Veličina (MB)"
-
-#. initialize the child classes
-#. #         #XXX-FIXME-FOR TESTING ONLY
-#. #         hard_drive_parent_iter = self.part_store.append(None)
-#. #         self.part_store.set_value(hard_drive_parent_iter, 0, (_("Hard Drives")))
-#. #         hda_iter = self.part_store.append(hard_drive_parent_iter)
-#. #         self.part_store.set_value(hda_iter, 0, (_("hda")))
-#. #         part_object = partEntry.partEntry()
-#. #         part_object.fsType = "raid"
-#. #         part_object.device = "Auto"
-#. #         part_object.raidNumber = "raid.01"
-#. #         part_object.format = 1
-#. #         part_object.size = 1
-#. #         part_iter = self.part_store.append(hda_iter)
-#. #         self.part_store.set_value(part_iter, 0, part_object.raidNumber)
-#. #         self.part_store.set_value(part_iter, 2, part_object.fsType)
-#. #         self.part_store.set_value(part_iter, 3, part_object.format)
-#. #         self.part_store.set_value(part_iter, 4, part_object.size)
-#. #         self.part_store.set_value(part_iter, 5, part_object)
-#. #         hdb_iter = self.part_store.append(hard_drive_parent_iter)
-#. #         self.part_store.set_value(hdb_iter, 0, (_("hdb")))
-#. #         part_object = partEntry.partEntry()
-#. #         part_object.fsType = "raid"
-#. #         part_object.device = "Auto"
-#. #         part_object.format = 1
-#. #         part_object.raidNumber = "raid.02"
-#. #         part_object.size = 1
-#. #         part_iter = self.part_store.append(hdb_iter)
-#. #         self.part_store.set_value(part_iter, 0, part_object.raidNumber)
-#. #         self.part_store.set_value(part_iter, 2, part_object.fsType)
-#. #         self.part_store.set_value(part_iter, 3, part_object.format)
-#. #         self.part_store.set_value(part_iter, 4, part_object.size)
-#. #         self.part_store.set_value(part_iter, 5, part_object)
-#. #         hdc_iter = self.part_store.append(hard_drive_parent_iter)
-#. #         self.part_store.set_value(hdc_iter, 0, (_("hdc")))
-#. #         part_object = partEntry.partEntry()
-#. #         part_object.fsType = "raid"
-#. #         part_object.device = "Auto"
-#. #         part_object.format = 1
-#. #         part_object.raidNumber = "raid.03"
-#. #         part_object.size = 1
-#. #         part_iter = self.part_store.append(hdc_iter)
-#. #         self.part_store.set_value(part_iter, 0, part_object.raidNumber)
-#. #         self.part_store.set_value(part_iter, 2, part_object.fsType)
-#. #         self.part_store.set_value(part_iter, 3, part_object.format)
-#. #         self.part_store.set_value(part_iter, 4, part_object.size)
-#. #         self.part_store.set_value(part_iter, 5, part_object)
-#: ../src/partition.py:151 ../src/partition.py:181
-msgid "Please select a partition from the list."
-msgstr "Molim, označite particiju s popisa."
-
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. # Copyright (C) 2001, 2002, 2003 Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. #
-#. # I18N
-#. #
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:58
+#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:53
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:59
+#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:54
 msgid "ext3"
 msgstr "ext3"
 
@@ -755,11 +245,11 @@ msgstr "ext3"
 msgid "software RAID"
 msgstr "Programski RAID"
 
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:60
+#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:55
 msgid "swap"
 msgstr "swap"
 
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:61
+#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:56
 msgid "vfat"
 msgstr "vfat"
 
@@ -767,9 +257,6 @@ msgstr "vfat"
 msgid "PPC PReP Boot"
 msgstr ""
 
-#. XXX - have to do this after the show_all due to a bug in gtkSpinButton, I suspect
-#. If the current iter is the only child, delete the parent and the child
-#. If there are other children, just delete this child
 #: ../src/partWindow.py:260 ../src/partWindow.py:535 ../src/raidWindow.py:212
 msgid "Yes"
 msgstr "Da"
@@ -778,7 +265,6 @@ msgstr "Da"
 msgid "No"
 msgstr "Ne"
 
-#. If they didn't specify a device, create a group called "Auto"
 #: ../src/partWindow.py:285 ../src/partWindow.py:300 ../src/partWindow.py:319
 #: ../src/partWindow.py:333
 msgid "Auto"
@@ -788,19 +274,10 @@ msgstr "Automatski"
 msgid "Hard Drives"
 msgstr "Tvrdi diskovi"
 
-#. # size stuff
-#. Let's do some error checking to make sure things make sense
-#. If it's a raid partition, run it through the checkRaid sanity checker
-#. this already has a raid number, leave it alone
-#. Erase any exiting raid data if we've edited a RAID partition to be non-RAID
-#. It's not raid, so move on
-#. If it's a swap partition, set fsType to be swap
-#. It's not raid and it's not swap, so it must be a regular partition
 #: ../src/partWindow.py:420
 msgid "Specify a mount point for the partition."
 msgstr "Odredi točku montiranja za particiju."
 
-#. Check to see if the mount point has already been used
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:429
 #, python-format
@@ -810,7 +287,6 @@ msgstr ""
 "Već se koristi točka montiranja \"%s\". Molim, označite drugu točku "
 "montiranja."
 
-#. This will scan the part_store and see if there are any duplicate mount points
 #: ../src/partWindow.py:449
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
@@ -819,9 +295,6 @@ msgstr ""
 "Kako bi stvorili novu particiju RAID polja, moraze odrediti ili ime tvrdog "
 "disk uređaja ili postojeću particiju."
 
-#. If all the checks pass, then return
-#. Don't iterate if we're counting the object that's being edited
-#. the entry doesn't start with "hd" or "sd" so it's probably not valid
 #: ../src/partWindow.py:488
 msgid "Specify a device on which to create the partition."
 msgstr "Odredite uređaj na kojem će biti stvorena particija."
@@ -852,65 +325,45 @@ msgstr ""
 "imati ispravan naziv uređaja i broj particije, kao što je \"hda1\" ili \"sda3"
 "\"."
 
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. # raidOptionWindow.py - code for system-config-kickstart's raid dialog
-#. # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. # Copyright (C) 2001, 2002, 2003 Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. import raidWindow
-#. #
-#. # I18N
-#. #
-#. self.raidWindow = raidWindow.raidWindow(self.xml, self.part_store, self.part_view)
+#: ../src/partition.py:72
+msgid ""
+"Device/\n"
+"Partition Number"
+msgstr ""
+"Uređaj/\n"
+"Broj particije"
+
+#. col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
+#: ../src/partition.py:75
+msgid ""
+"Mount Point/\n"
+"RAID"
+msgstr ""
+"Mount točka/\n"
+"RAID"
+
+#: ../src/partition.py:77
+msgid "Type"
+msgstr "Tip"
+
+#: ../src/partition.py:79
+msgid "Format"
+msgstr "Oblikovanje"
+
+#: ../src/partition.py:81
+msgid "Size (MB)"
+msgstr "Veličina (MB)"
+
+#: ../src/partition.py:151 ../src/partition.py:191
+msgid "Please select a partition from the list."
+msgstr "Molim, označite particiju s popisa."
+
 #: ../src/raidOptionsWindow.py:72
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
 msgstr ""
 "Trenutno imate %d slobodnih programsku(ih) RAID particiju(a) za korištenje."
 
-#. # raidWindow.py - code for redhat-config-kickstart's raid dialog
-#. # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. # Copyright (C) 2001, 2002, 2003 Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. #
-#. # I18N
-#. #
-#. it's a swap partition, so desensitize the mountPoint combo
 #: ../src/raidWindow.py:172
 #, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
@@ -921,94 +374,10 @@ msgstr "Morate označiti najmanje 2 particije kako bi koristili RAID %s"
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "Morate označiti najmanje 3 particije kako biste koristili RAID %S"
 
-#. then this is a new raid device, not one we're just editing
 #: ../src/raidWindow.py:192 ../src/raidWindow.py:218
 msgid "Raid Devices"
 msgstr "RAID uređaji"
 
-#: ../src/RHELPackageGroupList.py:26
-msgid "Server Configuration Tools (AS and ES only)"
-msgstr ""
-
-#: ../src/RHELPackageGroupList.py:34
-msgid "Network Servers (AS and ES only)"
-msgstr ""
-
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. save file
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. display choosen options in textview
-#. # 		baseSize = 10
-#. # 		baseFont = 'sans'
-#. # 		self.textTag = self.confirm_buffer.create_tag('text')
-#. # 		self.textTag.set_property('font', '%s %d' % (baseFont, baseSize))
-#. # 		self.textTag.set_property('pixels-above-lines', 1)
-#. # 		self.textTag.set_property('pixels-below-lines', 1)
-#. # 		self.confirm_buffer.apply_tag(self.textTag, self.confirm_buffer.get_start_iter(), self.confirm_buffer.get_end_iter())
-#. using hide because destroy crashes application after second instance
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. Kickstart Configurator Scripts
-#. !/usr/bin/python2
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003  Brent Fox <bfox@redhat.com>
-#. #                                       Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. #
-#. # I18N
-#. #
 #: ../src/system-config-kickstart.py:60
 msgid ""
 "Usage: system-config-kickstart [--help] [--generate <filename>] "
@@ -1048,45 +417,10 @@ msgstr ""
 "Pokušajte pokrenuti 'system-config-kickstart --help' kako biste vidjeli "
 "popis mogućnosti."
 
-#. !/usr/bin/python2
-#. !/usr/bin/python2
-#. profileSystem(data)
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. #                                      Tammy Fox <tfox@redhat.com>
-#. # This program is free software; you can redistribute it and/or modify
-#. # it under the terms of the GNU General Public License as published by
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # (at your option) any later version.
-#. # This program is distributed in the hope that it will be useful,
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#. # GNU General Public License for more details.
-#. # You should have received a copy of the GNU General Public License
-#. # along with this program; if not, write to the Free Software
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. Kickstart Configurator X Configuration
-#. add color depths
-#. add resolutions
-#. add video card RAM sizes to option menu
-#. add video cards to list
-#: ../src/xconfig.py:104
+#: ../src/xconfig.py:106
 msgid "Could not read video card database"
 msgstr "Nisam mogao pročitati bazu video kartica"
 
-#. add monitors to list
-#: ../src/xconfig.py:122
-msgid "Could not read monitor database"
-msgstr "Ne mogu čitati bazu zaslona"
-
-#. disable xconfig notebook
-#. color depth - translate
-#. resolution
-#. default desktop
-#. startxonboot
-#. video card and monitor
-#. translate MB to KB
 #.
 #. * Translatable strings file generated by Glade.
 #. * Add this file to your project's POTFILES.in.
@@ -1101,856 +435,803 @@ msgid "Partition Options"
 msgstr "Opcije particije"
 
 #: system-config-kickstart.gladestrings:9
-#: system-config-kickstart.gladestrings:10
-#: system-config-kickstart.gladestrings:23
 #: system-config-kickstart.gladestrings:28
-#: system-config-kickstart.gladestrings:33
-#: system-config-kickstart.gladestrings:72
-#: system-config-kickstart.gladestrings:77
-#: system-config-kickstart.gladestrings:78
-#: system-config-kickstart.gladestrings:81
-#: system-config-kickstart.gladestrings:83
-#: system-config-kickstart.gladestrings:87
-#: system-config-kickstart.gladestrings:89
-#: system-config-kickstart.gladestrings:106
-#: system-config-kickstart.gladestrings:107
-#: system-config-kickstart.gladestrings:110
-#: system-config-kickstart.gladestrings:112
-#: system-config-kickstart.gladestrings:116
-#: system-config-kickstart.gladestrings:117
-#: system-config-kickstart.gladestrings:119
-#: system-config-kickstart.gladestrings:120
-#: system-config-kickstart.gladestrings:124
-#: system-config-kickstart.gladestrings:125
-#: system-config-kickstart.gladestrings:138
-#: system-config-kickstart.gladestrings:139
-#: system-config-kickstart.gladestrings:144
-#: system-config-kickstart.gladestrings:172
-#: system-config-kickstart.gladestrings:175
-#: system-config-kickstart.gladestrings:179
-#: system-config-kickstart.gladestrings:180
-#: system-config-kickstart.gladestrings:187
-#: system-config-kickstart.gladestrings:189
-#: system-config-kickstart.gladestrings:191
-#: system-config-kickstart.gladestrings:196
-#: system-config-kickstart.gladestrings:198
-#: system-config-kickstart.gladestrings:204
-#: system-config-kickstart.gladestrings:205
-#: system-config-kickstart.gladestrings:222
-#: system-config-kickstart.gladestrings:224
-#: system-config-kickstart.gladestrings:236
-#: system-config-kickstart.gladestrings:240
-#: system-config-kickstart.gladestrings:242
-#: system-config-kickstart.gladestrings:263
-#: system-config-kickstart.gladestrings:270
-#: system-config-kickstart.gladestrings:290
-#: system-config-kickstart.gladestrings:292
-#: system-config-kickstart.gladestrings:294
-#: system-config-kickstart.gladestrings:296
-#: system-config-kickstart.gladestrings:297
-#: system-config-kickstart.gladestrings:299
-#: system-config-kickstart.gladestrings:301
-#: system-config-kickstart.gladestrings:303
-#: system-config-kickstart.gladestrings:304
-#: system-config-kickstart.gladestrings:306
-#: system-config-kickstart.gladestrings:308
-#: system-config-kickstart.gladestrings:310
-#: system-config-kickstart.gladestrings:311
-#: system-config-kickstart.gladestrings:313
-#: system-config-kickstart.gladestrings:315
-#: system-config-kickstart.gladestrings:317
-msgid "*"
-msgstr "*"
-
-#: system-config-kickstart.gladestrings:11
-#: system-config-kickstart.gladestrings:32
 msgid "Mount Point:"
 msgstr "Točka montiranja:"
 
-#: system-config-kickstart.gladestrings:12
-#: system-config-kickstart.gladestrings:37
+#: system-config-kickstart.gladestrings:10
+#: system-config-kickstart.gladestrings:32
 msgid "File System Type:"
 msgstr "Tip datotečnog sustava:"
 
-#: system-config-kickstart.gladestrings:13
+#: system-config-kickstart.gladestrings:11
 msgid "Size (MB):"
 msgstr "Veličina (MB):"
 
-#: system-config-kickstart.gladestrings:14
+#: system-config-kickstart.gladestrings:12
 msgid "Fill all unused space on disk"
 msgstr "Popuni sav neiskorišteni prostor na disku"
 
-#: system-config-kickstart.gladestrings:15
+#: system-config-kickstart.gladestrings:13
 msgid "Grow to maximum of (MB):"
 msgstr "Rasti na najviše (MB):"
 
-#: system-config-kickstart.gladestrings:16
+#: system-config-kickstart.gladestrings:14
 msgid "Fixed size"
 msgstr "Fiksna veličina"
 
-#: system-config-kickstart.gladestrings:17
+#: system-config-kickstart.gladestrings:15
 msgid "Use recommended swap size"
 msgstr "Koristi preporučenu veličinu swap-a"
 
-#: system-config-kickstart.gladestrings:18
+#: system-config-kickstart.gladestrings:16
 msgid "Additional Size Options"
 msgstr "Opcije dodatnih veličina"
 
-#: system-config-kickstart.gladestrings:19
+#: system-config-kickstart.gladestrings:17
 msgid "Force to be a primary partition (asprimary)"
 msgstr "Inzistiraj da bude primarna particija"
 
-#: system-config-kickstart.gladestrings:20
+#: system-config-kickstart.gladestrings:18
 msgid "Make partition on specific drive (ondisk)"
 msgstr "Stvori particiju na određenom disku"
 
-#: system-config-kickstart.gladestrings:21
-#: system-config-kickstart.gladestrings:26
+#: system-config-kickstart.gladestrings:19
+#: system-config-kickstart.gladestrings:23
 msgid "         "
 msgstr "         "
 
-#: system-config-kickstart.gladestrings:22
+#: system-config-kickstart.gladestrings:20
 msgid "Drive :"
 msgstr "Disk  :"
 
-#: system-config-kickstart.gladestrings:24
+#: system-config-kickstart.gladestrings:21
 msgid "(for example: hda or sdc)"
 msgstr "(na primjer: hda ili sdc)"
 
-#: system-config-kickstart.gladestrings:25
+#: system-config-kickstart.gladestrings:22
 msgid "Use existing partition (onpart)"
 msgstr "Koristi postojeću particiju"
 
-#: system-config-kickstart.gladestrings:27
+#: system-config-kickstart.gladestrings:24
 msgid "Partition :"
 msgstr "Particija :"
 
-#: system-config-kickstart.gladestrings:29
+#: system-config-kickstart.gladestrings:25
 msgid "(for example: hda1 or sdc3)"
 msgstr "(na primjer: hda1 ili sdc3)"
 
-#: system-config-kickstart.gladestrings:30
+#: system-config-kickstart.gladestrings:26
 msgid "Format partition"
 msgstr "Oblikuj particiju"
 
-#: system-config-kickstart.gladestrings:31
+#: system-config-kickstart.gladestrings:27
 msgid "Make RAID Device"
 msgstr "Stvori RAID uređaj"
 
-#: system-config-kickstart.gladestrings:34
+#: system-config-kickstart.gladestrings:29
 msgid "Number of spares:"
 msgstr "Broj pomoćnih diskova:"
 
-#: system-config-kickstart.gladestrings:35
+#: system-config-kickstart.gladestrings:30
 msgid "Raid Members"
 msgstr "Članovi RAID polja"
 
-#: system-config-kickstart.gladestrings:36
+#: system-config-kickstart.gladestrings:31
 msgid "RAID Level:"
 msgstr "RADI razina:"
 
-#: system-config-kickstart.gladestrings:38
+#: system-config-kickstart.gladestrings:33
 msgid "RAID Device:"
 msgstr "RAID uređaj:"
 
-#: system-config-kickstart.gladestrings:39
+#: system-config-kickstart.gladestrings:34
 msgid "md0"
 msgstr "md0"
 
-#: system-config-kickstart.gladestrings:40
+#: system-config-kickstart.gladestrings:35
 msgid "md1"
 msgstr "md1"
 
-#: system-config-kickstart.gladestrings:41
+#: system-config-kickstart.gladestrings:36
 msgid "md2"
 msgstr "md2"
 
-#: system-config-kickstart.gladestrings:42
+#: system-config-kickstart.gladestrings:37
 msgid "md3"
 msgstr "md3"
 
-#: system-config-kickstart.gladestrings:43
+#: system-config-kickstart.gladestrings:38
 msgid "md4"
 msgstr "md4"
 
-#: system-config-kickstart.gladestrings:44
+#: system-config-kickstart.gladestrings:39
 msgid "md5"
 msgstr "md5"
 
-#: system-config-kickstart.gladestrings:45
+#: system-config-kickstart.gladestrings:40
 msgid "md6"
 msgstr "md6"
 
-#: system-config-kickstart.gladestrings:46
+#: system-config-kickstart.gladestrings:41
 msgid "md7"
 msgstr "md7"
 
-#: system-config-kickstart.gladestrings:47
+#: system-config-kickstart.gladestrings:42
 msgid "md8"
 msgstr "md8"
 
-#: system-config-kickstart.gladestrings:48
+#: system-config-kickstart.gladestrings:43
 msgid "md9"
 msgstr "md9"
 
-#: system-config-kickstart.gladestrings:49
+#: system-config-kickstart.gladestrings:44
 msgid "md10"
 msgstr "md10"
 
-#: system-config-kickstart.gladestrings:50
+#: system-config-kickstart.gladestrings:45
 msgid "md11"
 msgstr "md11"
 
-#: system-config-kickstart.gladestrings:51
+#: system-config-kickstart.gladestrings:46
 msgid "md12"
 msgstr "md12"
 
-#: system-config-kickstart.gladestrings:52
+#: system-config-kickstart.gladestrings:47
 msgid "md13"
 msgstr "md13"
 
-#: system-config-kickstart.gladestrings:53
+#: system-config-kickstart.gladestrings:48
 msgid "md14"
 msgstr "md14"
 
-#: system-config-kickstart.gladestrings:54
+#: system-config-kickstart.gladestrings:49
 msgid "md15"
 msgstr "md15"
 
-#: system-config-kickstart.gladestrings:55
+#: system-config-kickstart.gladestrings:50
 msgid "0"
 msgstr "0"
 
-#: system-config-kickstart.gladestrings:56
+#: system-config-kickstart.gladestrings:51
 msgid "1"
 msgstr "1"
 
-#: system-config-kickstart.gladestrings:57
+#: system-config-kickstart.gladestrings:52
 msgid "5"
 msgstr "5"
 
-#: system-config-kickstart.gladestrings:62
+#: system-config-kickstart.gladestrings:57
 msgid "Format RAID device"
 msgstr "Oblikuje RAID uređaj"
 
-#: system-config-kickstart.gladestrings:63
+#: system-config-kickstart.gladestrings:58
 msgid "Kickstart Configurator"
 msgstr "Program za postavljanje Kickstart-a"
 
-#: system-config-kickstart.gladestrings:64
+#: system-config-kickstart.gladestrings:59
 msgid "_File"
 msgstr "_Datoteka"
 
-#: system-config-kickstart.gladestrings:65
+#: system-config-kickstart.gladestrings:60
 msgid "_Open File"
 msgstr "_Otvori datoteku"
 
-#: system-config-kickstart.gladestrings:66
+#: system-config-kickstart.gladestrings:61
 msgid "_Preview"
 msgstr "Pregled"
 
-#: system-config-kickstart.gladestrings:67
+#: system-config-kickstart.gladestrings:62
 msgid "_Save File"
 msgstr "Spremi datoteku"
 
-#: system-config-kickstart.gladestrings:68
+#: system-config-kickstart.gladestrings:63
 msgid "_Quit"
 msgstr "_Završi"
 
-#: system-config-kickstart.gladestrings:69
+#: system-config-kickstart.gladestrings:64
 msgid "_Help"
 msgstr "_Pomoć"
 
-#: system-config-kickstart.gladestrings:70
+#: system-config-kickstart.gladestrings:65
 msgid "_Contents"
 msgstr "_Sadržaj"
 
-#: system-config-kickstart.gladestrings:71
+#: system-config-kickstart.gladestrings:66
 msgid "_About"
 msgstr "_O"
 
-#: system-config-kickstart.gladestrings:73
+#: system-config-kickstart.gladestrings:67
 msgid "Default Language:"
 msgstr "Uobičajeni jezik:"
 
-#: system-config-kickstart.gladestrings:74
+#: system-config-kickstart.gladestrings:68
 msgid "Encrypt root password"
 msgstr "Šifriraj lozinku root korisnika"
 
-#: system-config-kickstart.gladestrings:75
+#: system-config-kickstart.gladestrings:69
 msgid "Keyboard:"
 msgstr "Tipkovnica:"
 
-#: system-config-kickstart.gladestrings:76
+#: system-config-kickstart.gladestrings:70
 msgid "Mouse:"
 msgstr "Miš:"
 
-#: system-config-kickstart.gladestrings:79
+#: system-config-kickstart.gladestrings:71
 msgid "Emulate 3 Buttons"
 msgstr "Emuliraj 3 tipke"
 
-#: system-config-kickstart.gladestrings:80
+#: system-config-kickstart.gladestrings:72
 msgid "Time Zone:"
 msgstr "Vremenska zona:"
 
-#: system-config-kickstart.gladestrings:82
+#: system-config-kickstart.gladestrings:73
 msgid "Root Password:"
 msgstr "Root lozinka:"
 
-#: system-config-kickstart.gladestrings:84
+#: system-config-kickstart.gladestrings:74
 msgid "Language Support:"
 msgstr "Podrška jeziku :"
 
-#: system-config-kickstart.gladestrings:85
+#: system-config-kickstart.gladestrings:75
 msgid "Use UTC clock"
 msgstr "Koristi UTC sat"
 
-#: system-config-kickstart.gladestrings:86
-#: system-config-kickstart.gladestrings:137
+#: system-config-kickstart.gladestrings:76
+#: system-config-kickstart.gladestrings:115
 msgid "Confirm Password:"
 msgstr "Potvrdi lozinku:"
 
-#: system-config-kickstart.gladestrings:88
+#: system-config-kickstart.gladestrings:77
 msgid "Target Architecture:"
 msgstr ""
 
-#: system-config-kickstart.gladestrings:90
+#: system-config-kickstart.gladestrings:78
 msgid "Reboot system after installation"
 msgstr "Ponovo pokreni sustav nakon instalacije"
 
-#: system-config-kickstart.gladestrings:91
+#: system-config-kickstart.gladestrings:79
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "Izvrši instalaciju u tekstualnom načinu rada (uobičajeno je grafički)"
 
-#: system-config-kickstart.gladestrings:92
+#: system-config-kickstart.gladestrings:80
 msgid "Perform installation in interactive mode"
 msgstr "Izvrši instalaciju u interaktivnom načinu rada"
 
-#: system-config-kickstart.gladestrings:93
+#: system-config-kickstart.gladestrings:81
 msgid "Basic Configuration (required)"
 msgstr "Osnovne postavke (potrebno)"
 
-#: system-config-kickstart.gladestrings:94
+#: system-config-kickstart.gladestrings:82
 msgid "label28"
 msgstr "label28"
 
-#: system-config-kickstart.gladestrings:95
+#: system-config-kickstart.gladestrings:83
 msgid "Perform new installation"
 msgstr "Izvrši novu instalaciju"
 
-#: system-config-kickstart.gladestrings:96
+#: system-config-kickstart.gladestrings:84
 msgid "Upgrade an existing installation"
 msgstr "Nadogradi postojeću instalaciju"
 
-#: system-config-kickstart.gladestrings:97
+#: system-config-kickstart.gladestrings:85
 msgid "Choose the Installation Method:"
 msgstr "Odaberite metodu instalacije:"
 
-#: system-config-kickstart.gladestrings:98
-#: system-config-kickstart.gladestrings:103
+#: system-config-kickstart.gladestrings:86
+#: system-config-kickstart.gladestrings:91
 msgid "CD-ROM"
 msgstr "CD-ROM"
 
-#: system-config-kickstart.gladestrings:99
-#: system-config-kickstart.gladestrings:108
+#: system-config-kickstart.gladestrings:87
+#: system-config-kickstart.gladestrings:94
 msgid "NFS"
 msgstr "NFS"
 
+#: system-config-kickstart.gladestrings:88
 #: system-config-kickstart.gladestrings:100
-#: system-config-kickstart.gladestrings:118
 msgid "FTP"
 msgstr "FTP"
 
-#: system-config-kickstart.gladestrings:101
-#: system-config-kickstart.gladestrings:123
+#: system-config-kickstart.gladestrings:89
+#: system-config-kickstart.gladestrings:103
 msgid "HTTP"
 msgstr "HTTP"
 
-#: system-config-kickstart.gladestrings:102
-#: system-config-kickstart.gladestrings:128
+#: system-config-kickstart.gladestrings:90
+#: system-config-kickstart.gladestrings:106
 msgid "Hard Drive"
 msgstr "Tvrdi disk"
 
-#: system-config-kickstart.gladestrings:104
+#: system-config-kickstart.gladestrings:92
 msgid "NFS Server:"
 msgstr "NFS poslužitelj:"
 
-#: system-config-kickstart.gladestrings:105
+#: system-config-kickstart.gladestrings:93
 msgid "NFS Directory:"
 msgstr "Mapa NFS:"
 
-#: system-config-kickstart.gladestrings:109
+#: system-config-kickstart.gladestrings:95
 msgid "FTP Server:"
 msgstr "FTP poslužitelj:"
 
-#: system-config-kickstart.gladestrings:111
+#: system-config-kickstart.gladestrings:96
 msgid "FTP Directory:"
 msgstr "Mapa FTP:"
 
-#: system-config-kickstart.gladestrings:113
+#: system-config-kickstart.gladestrings:97
 msgid "Specify an FTP username and password"
 msgstr "Odredite ime FTP korisnika i lozinku"
 
-#: system-config-kickstart.gladestrings:114
+#: system-config-kickstart.gladestrings:98
 msgid "FTP Username"
 msgstr "FTP korisničko ime"
 
-#: system-config-kickstart.gladestrings:115
+#: system-config-kickstart.gladestrings:99
 msgid "FTP Password"
 msgstr "Lozinka FTP-a"
 
-#: system-config-kickstart.gladestrings:121
+#: system-config-kickstart.gladestrings:101
 msgid "HTTP Server:"
 msgstr "HTTP poslužitelj:"
 
-#: system-config-kickstart.gladestrings:122
+#: system-config-kickstart.gladestrings:102
 msgid "HTTP Directory:"
 msgstr "HTTP mapa:"
 
-#: system-config-kickstart.gladestrings:126
+#: system-config-kickstart.gladestrings:104
 msgid "Hard Drive Partition:"
 msgstr "Particija tvrdog diska:"
 
-#: system-config-kickstart.gladestrings:127
+#: system-config-kickstart.gladestrings:105
 msgid "Hard Drive Directory:"
 msgstr "Mapa tvrdog diska:"
 
-#: system-config-kickstart.gladestrings:129
+#: system-config-kickstart.gladestrings:107
 msgid "Installation Method (required)"
 msgstr "Metoda instaliranja (potrebno)"
 
-#: system-config-kickstart.gladestrings:130
+#: system-config-kickstart.gladestrings:108
 msgid "label128"
 msgstr "label128"
 
-#: system-config-kickstart.gladestrings:131
+#: system-config-kickstart.gladestrings:109
 msgid "Install new boot loader"
 msgstr "Instaliraj novi program za pokretanje sustava"
 
-#: system-config-kickstart.gladestrings:132
+#: system-config-kickstart.gladestrings:110
 msgid "Do not install a boot loader"
 msgstr "Nemoj instalirati program pokretanja sustava"
 
-#: system-config-kickstart.gladestrings:133
+#: system-config-kickstart.gladestrings:111
 msgid "Upgrade existing boot loader"
 msgstr "Nadogradi postojeći program za pokretanje sustava"
 
-#: system-config-kickstart.gladestrings:134
+#: system-config-kickstart.gladestrings:112
 msgid "GRUB Options:"
 msgstr "Opcije GRUB-a:"
 
-#: system-config-kickstart.gladestrings:135
+#: system-config-kickstart.gladestrings:113
 msgid "Use GRUB password"
 msgstr "Koristi GRUB lozinku"
 
-#: system-config-kickstart.gladestrings:136
+#: system-config-kickstart.gladestrings:114
 msgid "Password:"
 msgstr "Lozinka:"
 
-#: system-config-kickstart.gladestrings:140
+#: system-config-kickstart.gladestrings:116
 msgid "Encrypt GRUB password"
 msgstr "Šifriraj GRUB lozinku"
 
-#: system-config-kickstart.gladestrings:141
+#: system-config-kickstart.gladestrings:117
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr ""
 "Instaliraj program za pokretanje na glavni zapis pokretanja sustava (MBR)"
 
-#: system-config-kickstart.gladestrings:142
+#: system-config-kickstart.gladestrings:118
 msgid "Install boot loader on first sector of the boot partition"
 msgstr ""
 "Instaliraj program pokretanja sustava na prvi sektor pokretačke particije"
 
-#: system-config-kickstart.gladestrings:143
+#: system-config-kickstart.gladestrings:119
 msgid "Kernel parameters:"
 msgstr "Parametri jezgre Linux-a:"
 
-#: system-config-kickstart.gladestrings:145
+#: system-config-kickstart.gladestrings:120
 #, fuzzy
 msgid "label216"
 msgstr "label28"
 
-#: system-config-kickstart.gladestrings:146
+#: system-config-kickstart.gladestrings:121
 msgid "Boot Loader Options (required)"
 msgstr "Opcije programa za pokretanje sustava (potrebno)"
 
-#: system-config-kickstart.gladestrings:147
+#: system-config-kickstart.gladestrings:122
 msgid "label35"
 msgstr "label35"
 
-#: system-config-kickstart.gladestrings:148
+#: system-config-kickstart.gladestrings:123
 msgid "Clear Master Boot Record"
 msgstr "Obriši glavni zapis pokretanja sustava (MBR)"
 
-#: system-config-kickstart.gladestrings:149
+#: system-config-kickstart.gladestrings:124
 msgid "Do not clear Master Boot Record"
 msgstr "Ne briši glavni zapis pokretanja sustava (MBR)"
 
-#: system-config-kickstart.gladestrings:150
+#: system-config-kickstart.gladestrings:125
 msgid "Remove all existing partitions"
 msgstr "Ukloni sve postojeće particije"
 
-#: system-config-kickstart.gladestrings:151
+#: system-config-kickstart.gladestrings:126
 msgid "Remove existing Linux partitions"
 msgstr "Ukloni postojeće Linux particije"
 
-#: system-config-kickstart.gladestrings:152
+#: system-config-kickstart.gladestrings:127
 msgid "Preserve existing partitions"
 msgstr "Zadrži postojeće particije"
 
-#: system-config-kickstart.gladestrings:153
+#: system-config-kickstart.gladestrings:128
 msgid "Initialize the disk label"
 msgstr "Inicijalizira naziv diska"
 
-#: system-config-kickstart.gladestrings:154
+#: system-config-kickstart.gladestrings:129
 msgid "Do not initialize the disk label"
 msgstr "Nemoj inicijalizirati naziv diska"
 
-#: system-config-kickstart.gladestrings:155
+#: system-config-kickstart.gladestrings:130
 msgid "_Add"
 msgstr "_Dodaj"
 
-#: system-config-kickstart.gladestrings:156
+#: system-config-kickstart.gladestrings:131
 msgid "_Edit"
 msgstr "_Uredi"
 
-#: system-config-kickstart.gladestrings:157
+#: system-config-kickstart.gladestrings:132
 msgid "_Delete"
 msgstr "_Obriši"
 
-#: system-config-kickstart.gladestrings:158
+#: system-config-kickstart.gladestrings:133
 msgid "RAID"
 msgstr "RAID"
 
-#: system-config-kickstart.gladestrings:159
+#: system-config-kickstart.gladestrings:134
 msgid "Partition options are not applicable on upgrades."
 msgstr ""
 
-#: system-config-kickstart.gladestrings:160
+#: system-config-kickstart.gladestrings:135
 msgid "Partition Information (required)"
 msgstr "Informacije o particiji (potrebno)"
 
-#: system-config-kickstart.gladestrings:161
+#: system-config-kickstart.gladestrings:136
 msgid "label30"
 msgstr "label30"
 
-#: system-config-kickstart.gladestrings:162
+#: system-config-kickstart.gladestrings:137
 msgid "_Add Network Device"
 msgstr "_Dodaj mrežni uređaj"
 
-#: system-config-kickstart.gladestrings:163
+#: system-config-kickstart.gladestrings:138
 msgid "_Edit Network Device"
 msgstr "_Uredi mrežne uređaje"
 
-#: system-config-kickstart.gladestrings:164
+#: system-config-kickstart.gladestrings:139
 msgid "_Delete Network Device"
 msgstr "_Obriši mrežni uređaj"
 
-#: system-config-kickstart.gladestrings:166
+#: system-config-kickstart.gladestrings:141
 msgid "label31"
 msgstr "label31"
 
-#: system-config-kickstart.gladestrings:167
+#: system-config-kickstart.gladestrings:142
 msgid "Authentication:"
 msgstr "Provjera vjerodostojnosti:"
 
-#: system-config-kickstart.gladestrings:168
+#: system-config-kickstart.gladestrings:143
 msgid "Use Shadow Passwords"
 msgstr "Koristi Shadow lozinke"
 
-#: system-config-kickstart.gladestrings:169
+#: system-config-kickstart.gladestrings:144
 msgid "Use MD5"
 msgstr "Koristi MD5"
 
-#: system-config-kickstart.gladestrings:170
+#: system-config-kickstart.gladestrings:145
 msgid "Enable NIS"
 msgstr "omogući MIS"
 
-#: system-config-kickstart.gladestrings:171
+#: system-config-kickstart.gladestrings:146
 msgid "NIS Domain:"
 msgstr "Nis domena:"
 
-#: system-config-kickstart.gladestrings:173
+#: system-config-kickstart.gladestrings:147
 msgid "Use broadcast to find NIS server"
 msgstr "Koristi pretraživanje mreže za nalaženje NIS poslužitelja"
 
-#: system-config-kickstart.gladestrings:174
+#: system-config-kickstart.gladestrings:148
 msgid "NIS Server:"
 msgstr "NIS poslužitelj:"
 
-#: system-config-kickstart.gladestrings:176
+#: system-config-kickstart.gladestrings:149
 msgid "NIS Authentication"
 msgstr "NIS provjera vjerodostojnosti"
 
-#: system-config-kickstart.gladestrings:177
+#: system-config-kickstart.gladestrings:150
 msgid "NIS"
 msgstr "NIS"
 
-#: system-config-kickstart.gladestrings:178
+#: system-config-kickstart.gladestrings:151
 msgid "Enable LDAP"
 msgstr "Omogući LDAP"
 
-#: system-config-kickstart.gladestrings:181
+#: system-config-kickstart.gladestrings:152
 msgid "LDAP Server: "
 msgstr "LDAP poslužitelj:"
 
-#: system-config-kickstart.gladestrings:182
+#: system-config-kickstart.gladestrings:153
 msgid "LDAP Base Name: "
 msgstr "Ime LDAP baze:"
 
-#: system-config-kickstart.gladestrings:183
+#: system-config-kickstart.gladestrings:154
 msgid "LDAP Authentication"
 msgstr "LDAP provjera vjerodostojnosti"
 
-#: system-config-kickstart.gladestrings:184
+#: system-config-kickstart.gladestrings:155
 msgid "LDAP "
 msgstr "LDAP"
 
-#: system-config-kickstart.gladestrings:185
+#: system-config-kickstart.gladestrings:156
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Omogući Kreberos 5 provjeru vjerodostojnosti"
 
-#: system-config-kickstart.gladestrings:186
+#: system-config-kickstart.gladestrings:157
 msgid "Kerberos Realm:"
 msgstr "Kerberos područje"
 
-#: system-config-kickstart.gladestrings:188
+#: system-config-kickstart.gladestrings:158
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Kerberos kontroler domene (KCD):"
 
-#: system-config-kickstart.gladestrings:190
+#: system-config-kickstart.gladestrings:159
 msgid "Kerberos Master Server:"
 msgstr "Glavni Kerberos poslužitelj:"
 
-#: system-config-kickstart.gladestrings:192
+#: system-config-kickstart.gladestrings:160
 msgid "Kerberos 5 Authentication"
 msgstr "Kerberos 5 provjera vjerodostojnosti"
 
-#: system-config-kickstart.gladestrings:193
+#: system-config-kickstart.gladestrings:161
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: system-config-kickstart.gladestrings:194
+#: system-config-kickstart.gladestrings:162
 msgid "Enable Hesiod Support"
 msgstr "Omogući podršku za Hesoid"
 
-#: system-config-kickstart.gladestrings:195
+#: system-config-kickstart.gladestrings:163
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS:"
 
-#: system-config-kickstart.gladestrings:197
+#: system-config-kickstart.gladestrings:164
 msgid "Hesiod RHS:"
 msgstr "Hesiod RHS:"
 
-#: system-config-kickstart.gladestrings:199
+#: system-config-kickstart.gladestrings:165
 msgid "Hesiod Authentication"
 msgstr "Hesoid provjera vjerodostojnosti"
 
-#: system-config-kickstart.gladestrings:200
+#: system-config-kickstart.gladestrings:166
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: system-config-kickstart.gladestrings:201
+#: system-config-kickstart.gladestrings:167
 msgid "Enable SMB Authentication"
 msgstr "Omogući SMB provjeru vjerodostojnosti"
 
-#: system-config-kickstart.gladestrings:202
+#: system-config-kickstart.gladestrings:168
 msgid "SMB Servers:"
 msgstr "SMB poslužitelji:"
 
-#: system-config-kickstart.gladestrings:203
+#: system-config-kickstart.gladestrings:169
 msgid "SMB Workgroup:"
 msgstr "SMB radna grupa:"
 
-#: system-config-kickstart.gladestrings:206
+#: system-config-kickstart.gladestrings:170
 msgid "SMB Authentication"
 msgstr "SMB provjera autentičnosti"
 
-#: system-config-kickstart.gladestrings:207
+#: system-config-kickstart.gladestrings:171
 msgid "SMB"
 msgstr "SMB"
 
-#: system-config-kickstart.gladestrings:208
+#: system-config-kickstart.gladestrings:172
 msgid "Enable nscd"
 msgstr "Omogući nscd"
 
-#: system-config-kickstart.gladestrings:209
+#: system-config-kickstart.gladestrings:173
 msgid "Name Switch Cache Daemon (nscd) Authentication"
 msgstr "Name Switch Cache Daemon (nscd) provjera vjerodostojnosti"
 
-#: system-config-kickstart.gladestrings:210
+#: system-config-kickstart.gladestrings:174
 msgid "Name Switch Cache"
 msgstr "Name Switch Cache"
 
-#: system-config-kickstart.gladestrings:211
+#: system-config-kickstart.gladestrings:175
 msgid "Authentication options are not applicable on upgrades."
 msgstr ""
 
-#: system-config-kickstart.gladestrings:212
+#: system-config-kickstart.gladestrings:176
 msgid "Authentication Configuration"
 msgstr "Postavljanje provjere vjerodostojnosti"
 
-#: system-config-kickstart.gladestrings:213
+#: system-config-kickstart.gladestrings:177
 msgid "label32"
 msgstr "label32"
 
-#: system-config-kickstart.gladestrings:214
+#: system-config-kickstart.gladestrings:178
 msgid "Security level:"
 msgstr "Sigurnosna razina:"
 
-#: system-config-kickstart.gladestrings:215
+#: system-config-kickstart.gladestrings:179
 msgid "Enable firewall"
 msgstr "Omogući vatrozid"
 
-#: system-config-kickstart.gladestrings:216
+#: system-config-kickstart.gladestrings:180
 msgid "Disable firewall"
 msgstr "Onemogući vatrozid"
 
-#: system-config-kickstart.gladestrings:217
-msgid "Firewall configuration is not applicable on upgrades."
+#: system-config-kickstart.gladestrings:181
+msgid "SELinux:"
 msgstr ""
 
-#: system-config-kickstart.gladestrings:219
-msgid "label33"
-msgstr "label33"
+#: system-config-kickstart.gladestrings:182
+msgid "Active"
+msgstr ""
 
-#: system-config-kickstart.gladestrings:220
-msgid "Configure the X Window System"
-msgstr "Postavi X Window sustav"
+#: system-config-kickstart.gladestrings:183
+msgid "Warn"
+msgstr ""
 
-#: system-config-kickstart.gladestrings:221
-msgid "Color Depth"
-msgstr "Dubina boja"
-
-#: system-config-kickstart.gladestrings:223
-msgid "Resolution"
-msgstr "Rezolucija"
-
-#: system-config-kickstart.gladestrings:225
-msgid "Default Desktop:"
-msgstr "Uobičajena radna površina:"
-
-#: system-config-kickstart.gladestrings:226
-msgid "GNOME"
-msgstr "GNOME"
-
-#: system-config-kickstart.gladestrings:227
-msgid "KDE"
-msgstr "KDE"
-
-#: system-config-kickstart.gladestrings:228
-msgid "Start the X Window System on boot"
-msgstr "Pokreni X Window sustav kod pokretanja sustava"
-
-#: system-config-kickstart.gladestrings:229
-msgid "On first boot, Setup Agent is: "
-msgstr "Kod prvog pokretanja sustava, agent postavki je:"
-
-#: system-config-kickstart.gladestrings:230
+#: system-config-kickstart.gladestrings:184
+#: system-config-kickstart.gladestrings:196
 msgid "Disabled"
 msgstr "Onemogućeno"
 
-#: system-config-kickstart.gladestrings:231
+#: system-config-kickstart.gladestrings:185
+msgid "Firewall configuration is not applicable on upgrades."
+msgstr ""
+
+#: system-config-kickstart.gladestrings:187
+msgid "label33"
+msgstr "label33"
+
+#: system-config-kickstart.gladestrings:188
+msgid "Configure the X Window System"
+msgstr "Postavi X Window sustav"
+
+#: system-config-kickstart.gladestrings:189
+msgid "Color Depth"
+msgstr "Dubina boja"
+
+#: system-config-kickstart.gladestrings:190
+msgid "Resolution"
+msgstr "Rezolucija"
+
+#: system-config-kickstart.gladestrings:191
+msgid "Default Desktop:"
+msgstr "Uobičajena radna površina:"
+
+#: system-config-kickstart.gladestrings:192
+msgid "GNOME"
+msgstr "GNOME"
+
+#: system-config-kickstart.gladestrings:193
+msgid "KDE"
+msgstr "KDE"
+
+#: system-config-kickstart.gladestrings:194
+msgid "Start the X Window System on boot"
+msgstr "Pokreni X Window sustav kod pokretanja sustava"
+
+#: system-config-kickstart.gladestrings:195
+msgid "On first boot, Setup Agent is: "
+msgstr "Kod prvog pokretanja sustava, agent postavki je:"
+
+#: system-config-kickstart.gladestrings:197
 msgid "Enabled"
 msgstr "Omogućeno"
 
-#: system-config-kickstart.gladestrings:232
+#: system-config-kickstart.gladestrings:198
 msgid "Enabled in reconfiguration mode"
 msgstr "Omogući način rada promjene postavki"
 
-#: system-config-kickstart.gladestrings:233
+#: system-config-kickstart.gladestrings:199
 msgid "General"
 msgstr "Općenito"
 
-#: system-config-kickstart.gladestrings:234
+#: system-config-kickstart.gladestrings:200
 msgid "Probe for video card"
 msgstr "Ispitaj za video karticu"
 
-#: system-config-kickstart.gladestrings:235
+#: system-config-kickstart.gladestrings:201
 msgid "Video Card RAM: "
 msgstr "RAM video kartice:"
 
-#: system-config-kickstart.gladestrings:237
+#: system-config-kickstart.gladestrings:202
 msgid "Video Card"
 msgstr "Video kartica"
 
-#: system-config-kickstart.gladestrings:238
+#: system-config-kickstart.gladestrings:203
 msgid "Probe for monitor"
 msgstr "Ispitaj za zaslon"
 
-#: system-config-kickstart.gladestrings:239
+#: system-config-kickstart.gladestrings:204
 msgid "Use custom monitor sync rates"
 msgstr "Koristite prilagođene učestalosti sinkroniziranja zaslona"
 
-#: system-config-kickstart.gladestrings:241
+#: system-config-kickstart.gladestrings:205
 msgid "Hz"
 msgstr "Hz"
 
-#: system-config-kickstart.gladestrings:243
+#: system-config-kickstart.gladestrings:206
 msgid "kHz"
 msgstr "kHz"
 
-#: system-config-kickstart.gladestrings:244
+#: system-config-kickstart.gladestrings:207
 msgid "Vertical Sync:"
 msgstr "Okomita sink.:"
 
-#: system-config-kickstart.gladestrings:245
+#: system-config-kickstart.gladestrings:208
 msgid "Horizontal Sync:"
 msgstr "Horizontalna sink.:"
 
-#: system-config-kickstart.gladestrings:246
+#: system-config-kickstart.gladestrings:209
 msgid "Monitor"
 msgstr "Zaslon"
 
-#: system-config-kickstart.gladestrings:247
+#: system-config-kickstart.gladestrings:210
 msgid "Display configuration is not applicable on upgrades."
 msgstr ""
 
-#: system-config-kickstart.gladestrings:249
+#: system-config-kickstart.gladestrings:212
 msgid "label88"
 msgstr "label88"
 
-#: system-config-kickstart.gladestrings:250
+#: system-config-kickstart.gladestrings:213
 msgid "Select packages to install."
 msgstr "Označite pakete za instaliranje."
 
-#: system-config-kickstart.gladestrings:251
-msgid "_Automatically Resolve Dependencies"
-msgstr "_Automatsko prepoznavanje ovisnosti"
+#: system-config-kickstart.gladestrings:214
+msgid "_Install Everything"
+msgstr ""
 
-#: system-config-kickstart.gladestrings:252
-msgid "_Ignore Dependencies"
-msgstr "_Ignoriraj ovisnosti"
-
-#: system-config-kickstart.gladestrings:253
+#: system-config-kickstart.gladestrings:215
 msgid "Desktops"
 msgstr "Radne površine"
 
-#: system-config-kickstart.gladestrings:254
+#: system-config-kickstart.gladestrings:216
 msgid "Applications"
 msgstr "Aplikacije"
 
-#: system-config-kickstart.gladestrings:255
+#: system-config-kickstart.gladestrings:217
 msgid "Servers"
 msgstr "Poslužitelji"
 
-#: system-config-kickstart.gladestrings:256
+#: system-config-kickstart.gladestrings:218
 msgid "Development"
 msgstr "Razvoj"
 
-#: system-config-kickstart.gladestrings:257
+#: system-config-kickstart.gladestrings:219
 msgid "System"
 msgstr "Sustav"
 
-#: system-config-kickstart.gladestrings:258
+#: system-config-kickstart.gladestrings:220
 msgid "Package selection is not applicable on upgrades."
 msgstr ""
 
-#: system-config-kickstart.gladestrings:260
+#: system-config-kickstart.gladestrings:222
 msgid "label34"
 msgstr "label34"
 
-#: system-config-kickstart.gladestrings:261
+#: system-config-kickstart.gladestrings:223
 #, c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1959,21 +1240,21 @@ msgstr ""
 "Upozorenje: Greška u ovoj skripti mogla bi prouzročiti neuspjeh vaše "
 "kickstart instalacije. Nemojte uključiti naredbu %pre na početak."
 
-#: system-config-kickstart.gladestrings:262
-#: system-config-kickstart.gladestrings:269
+#: system-config-kickstart.gladestrings:224
+#: system-config-kickstart.gladestrings:230
 msgid "Use an interpreter:"
 msgstr "Koristite prevoditelja:"
 
-#: system-config-kickstart.gladestrings:264
+#: system-config-kickstart.gladestrings:225
 #, c-format
 msgid "Type your %pre script below:"
 msgstr "Upišite ispod vašu %pre skriptu:"
 
-#: system-config-kickstart.gladestrings:266
+#: system-config-kickstart.gladestrings:227
 msgid "label89"
 msgstr "label89"
 
-#: system-config-kickstart.gladestrings:267
+#: system-config-kickstart.gladestrings:228
 #, c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1982,29 +1263,29 @@ msgstr ""
 "Upozorenje: Greška u ovoj skripti mogla bi prouzročiti neuspjeh vaše "
 "kickstart instalacije. Nemojte uključiti naredbu %post na početak."
 
-#: system-config-kickstart.gladestrings:268
+#: system-config-kickstart.gladestrings:229
 msgid "Run outside of the chroot environment"
 msgstr "Izvrši izvan chroot okruženja"
 
-#: system-config-kickstart.gladestrings:271
+#: system-config-kickstart.gladestrings:231
 #, c-format
 msgid "Type your %post script below:"
 msgstr "Dolje upišite vašu %post skriptu:"
 
-#: system-config-kickstart.gladestrings:273
+#: system-config-kickstart.gladestrings:233
 msgid "label93"
 msgstr "label93"
 
-#: system-config-kickstart.gladestrings:274
+#: system-config-kickstart.gladestrings:234
 msgid "Preview Options"
 msgstr "Opcije pregleda"
 
-#: system-config-kickstart.gladestrings:275
+#: system-config-kickstart.gladestrings:235
 #, fuzzy
 msgid "_Save to File"
 msgstr "Spremi u datoteku"
 
-#: system-config-kickstart.gladestrings:276
+#: system-config-kickstart.gladestrings:236
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
@@ -2012,11 +1293,11 @@ msgstr ""
 "Izabrali ste sljedeću konfiguraciju. Za spremanje kickstart datoteke "
 "pritisnite na \"Spremi datoteku\"."
 
-#: system-config-kickstart.gladestrings:277
+#: system-config-kickstart.gladestrings:237
 msgid "RAID Options"
 msgstr "Opcije RAID-a"
 
-#: system-config-kickstart.gladestrings:278
+#: system-config-kickstart.gladestrings:238
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -2029,7 +1310,7 @@ msgstr ""
 "dokumentaciju programa kickstart za više informacija o korištenju RAID "
 "uređaja."
 
-#: system-config-kickstart.gladestrings:279
+#: system-config-kickstart.gladestrings:239
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -2038,60 +1319,132 @@ msgstr ""
 "particije vrste 'programski RAID'. Tada možete stvoriti RAID uređaj koji "
 "može biti oblikovan i montiran."
 
-#: system-config-kickstart.gladestrings:280
+#: system-config-kickstart.gladestrings:240
 msgid "Choose one of the following options:"
 msgstr "Izaberite jednu od sljedećih opcija:"
 
-#: system-config-kickstart.gladestrings:281
+#: system-config-kickstart.gladestrings:241
 msgid "Create a software RAID partition"
 msgstr "Stvori programsku RAID particiju"
 
-#: system-config-kickstart.gladestrings:282
+#: system-config-kickstart.gladestrings:242
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "Stvori RAID uređaj [uobičajeno /dev/md0]"
 
-#: system-config-kickstart.gladestrings:283
+#: system-config-kickstart.gladestrings:243
 msgid "Network Device Information"
 msgstr "Informacije o mrežnom uređaju"
 
-#: system-config-kickstart.gladestrings:284
+#: system-config-kickstart.gladestrings:244
 msgid "Network Device:"
 msgstr "Mrežni uređaj:"
 
-#: system-config-kickstart.gladestrings:285
+#: system-config-kickstart.gladestrings:245
 msgid "Network Type:"
 msgstr "Vrsta mreže:"
 
-#: system-config-kickstart.gladestrings:286
+#: system-config-kickstart.gladestrings:246
 msgid "IP Address:"
 msgstr "IP adresa:"
 
-#: system-config-kickstart.gladestrings:287
+#: system-config-kickstart.gladestrings:247
 msgid "Netmask: "
 msgstr "Mrežna maska:"
 
-#: system-config-kickstart.gladestrings:288
+#: system-config-kickstart.gladestrings:248
 msgid "Gateway:"
 msgstr "Pristupnik:"
 
-#: system-config-kickstart.gladestrings:289
+#: system-config-kickstart.gladestrings:249
 msgid "Name Server:"
 msgstr "Ime poslužitelja:"
 
-#: system-config-kickstart.gladestrings:291
-#: system-config-kickstart.gladestrings:293
-#: system-config-kickstart.gladestrings:295
-#: system-config-kickstart.gladestrings:298
-#: system-config-kickstart.gladestrings:300
-#: system-config-kickstart.gladestrings:302
-#: system-config-kickstart.gladestrings:305
-#: system-config-kickstart.gladestrings:307
-#: system-config-kickstart.gladestrings:309
-#: system-config-kickstart.gladestrings:312
-#: system-config-kickstart.gladestrings:314
-#: system-config-kickstart.gladestrings:316
+#: system-config-kickstart.gladestrings:250
+#: system-config-kickstart.gladestrings:251
+#: system-config-kickstart.gladestrings:252
+#: system-config-kickstart.gladestrings:253
+#: system-config-kickstart.gladestrings:254
+#: system-config-kickstart.gladestrings:255
+#: system-config-kickstart.gladestrings:256
+#: system-config-kickstart.gladestrings:257
+#: system-config-kickstart.gladestrings:258
+#: system-config-kickstart.gladestrings:259
+#: system-config-kickstart.gladestrings:260
+#: system-config-kickstart.gladestrings:261
 msgid "."
 msgstr "."
+
+#, fuzzy
+#~ msgid "X Window System"
+#~ msgstr "Postavi X Window sustav"
+
+#, fuzzy
+#~ msgid "Editors"
+#~ msgstr "_Uredi"
+
+#, fuzzy
+#~ msgid "Server Configuration Tools"
+#~ msgstr "X postavke"
+
+#, fuzzy
+#~ msgid "Web Server"
+#~ msgstr "Ime poslužitelja:"
+
+#, fuzzy
+#~ msgid "Mail Server"
+#~ msgstr "Ime poslužitelja:"
+
+#, fuzzy
+#~ msgid "DNS Name Server"
+#~ msgstr "Ime poslužitelja:"
+
+#, fuzzy
+#~ msgid "FTP Server"
+#~ msgstr "FTP poslužitelj:"
+
+#, fuzzy
+#~ msgid "News Server"
+#~ msgstr "Ime poslužitelja:"
+
+#, fuzzy
+#~ msgid "Network Servers"
+#~ msgstr "Mrežni uređaj:"
+
+#, fuzzy
+#~ msgid "Development Tools"
+#~ msgstr "Razvoj"
+
+#, fuzzy
+#~ msgid "Kernel Development"
+#~ msgstr "Razvoj"
+
+#, fuzzy
+#~ msgid "X Software Development"
+#~ msgstr "Razvoj"
+
+#, fuzzy
+#~ msgid "KDE Software Development"
+#~ msgstr "Razvoj"
+
+#, fuzzy
+#~ msgid "System Tools"
+#~ msgstr "Sustav"
+
+#, fuzzy
+#~ msgid "Printing Support"
+#~ msgstr "Podrška jeziku :"
+
+#~ msgid "Could not read monitor database"
+#~ msgstr "Ne mogu čitati bazu zaslona"
+
+#~ msgid "*"
+#~ msgstr "*"
+
+#~ msgid "_Automatically Resolve Dependencies"
+#~ msgstr "_Automatsko prepoznavanje ovisnosti"
+
+#~ msgid "_Ignore Dependencies"
+#~ msgstr "_Ignoriraj ovisnosti"
 
 #~ msgid "Use GRUB for the boot loader"
 #~ msgstr "Koristi GRUB kao program za pokretanje sustava"

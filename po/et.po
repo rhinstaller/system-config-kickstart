@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: System-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-29 17:11-0500\n"
+"POT-Creation-Date: 2005-03-23 14:24-0500\n"
 "PO-Revision-Date: 2005-02-05 16:55+0200\n"
 "Last-Translator: Allan Sims <allsi@eau.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -18,52 +18,39 @@ msgstr ""
 "X-Poedit-Country: ESTONIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # This program is distributed in the hope that it will be useful,
-#. if opt == "--enableldaptls":
-#: ../src/basic.py:71
+#: ../src/basic.py:72
 msgid "x86, AMD64, or Intel EM64T"
 msgstr "x86, AMD64 või Intel EM64T"
 
-#: ../src/basic.py:71
+#: ../src/basic.py:72
 msgid "Intel Itanium"
 msgstr "Intel Itanium"
 
-#: ../src/basic.py:71
+#: ../src/basic.py:72
 msgid "IBM iSeries"
 msgstr "IBM iSeries"
 
-#: ../src/basic.py:72
+#: ../src/basic.py:73
 msgid "IBM pSeries"
 msgstr "IBM pSeries"
 
-#: ../src/basic.py:72
+#: ../src/basic.py:73
 msgid "IBM zSeries/s390"
 msgstr "IBM zSeries/s390"
 
-#. populate language combo
-#. set default mouse to generic ps/2
-#: ../src/basic.py:205
+#: ../src/basic.py:206
 msgid "Root passwords do not match."
 msgstr "Juurkasutaja parool ei sobinud."
 
-#. zerombr and clearpart options
-#: ../src/basic.py:206
-#: ../src/basic.py:225
-#: ../src/install.py:214
-#: ../src/partition.py:305
-#: ../src/partWindow.py:513
-#: ../src/raidWindow.py:247
+#: ../src/basic.py:207 ../src/basic.py:226 ../src/install.py:214
+#: ../src/partWindow.py:513 ../src/partition.py:317 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "Viga"
 
-#: ../src/basic.py:224
+#: ../src/basic.py:225
 msgid "Please select a root password."
 msgstr "Vali juurkasutaja parool."
 
-#. set platform
-#. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #: ../src/bootloader.py:76
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
@@ -73,153 +60,7 @@ msgstr "Alglaaduri valikud ei ole rakendatavad %s platvormile"
 msgid "Grub passwords do not match.  Please try again."
 msgstr "Grub-i paroolid ei kattu. Proovi palun uuesti."
 
-#. !/usr/bin/python2
-#: ../src/fedoraPackageGroupList.py:12
-#: ../src/RHELPackageGroupList.py:12
-msgid "X Window System"
-msgstr "X Window süsteem"
-
-#: ../src/fedoraPackageGroupList.py:13
-#: ../src/RHELPackageGroupList.py:13
-msgid "GNOME Desktop Environment"
-msgstr "GNOME Töölaua keskkond"
-
-#: ../src/fedoraPackageGroupList.py:14
-#: ../src/RHELPackageGroupList.py:14
-msgid "KDE Desktop Environment"
-msgstr "KDE Töölaua keskkond"
-
-#: ../src/fedoraPackageGroupList.py:16
-#: ../src/RHELPackageGroupList.py:16
-msgid "Editors"
-msgstr "Redaktorid"
-
-#: ../src/fedoraPackageGroupList.py:17
-#: ../src/RHELPackageGroupList.py:17
-msgid "Engineering and Scientific"
-msgstr "Inseneriteadus ja teaduslik"
-
-#: ../src/fedoraPackageGroupList.py:18
-#: ../src/RHELPackageGroupList.py:18
-msgid "Graphical Internet"
-msgstr "Graafiline internet"
-
-#: ../src/fedoraPackageGroupList.py:19
-#: ../src/RHELPackageGroupList.py:19
-msgid "Text-based Internet"
-msgstr "Tekstipõhine internet"
-
-#: ../src/fedoraPackageGroupList.py:20
-#: ../src/RHELPackageGroupList.py:20
-msgid "Office/Productivity"
-msgstr "Kontor/tootlikus"
-
-#: ../src/fedoraPackageGroupList.py:21
-#: ../src/RHELPackageGroupList.py:21
-msgid "Sound and Video"
-msgstr "Heli ja video"
-
-#: ../src/fedoraPackageGroupList.py:22
-#: ../src/RHELPackageGroupList.py:22
-msgid "Graphics"
-msgstr "Graafika"
-
-#: ../src/fedoraPackageGroupList.py:23
-#: ../src/RHELPackageGroupList.py:23
-msgid "Games and Entertainment"
-msgstr "Mängud ja meelelahutus"
-
-#: ../src/fedoraPackageGroupList.py:24
-#: ../src/RHELPackageGroupList.py:24
-msgid "Authoring and Publishing"
-msgstr "Loometöö ja avaldamine"
-
-#: ../src/fedoraPackageGroupList.py:26
-msgid "Server Configuration Tools"
-msgstr "Serveri seadistamise vahendid"
-
-#: ../src/fedoraPackageGroupList.py:27
-#: ../src/RHELPackageGroupList.py:27
-msgid "Web Server"
-msgstr "Veebiserver"
-
-#: ../src/fedoraPackageGroupList.py:28
-#: ../src/RHELPackageGroupList.py:28
-msgid "Mail Server"
-msgstr "Postiserver"
-
-#: ../src/fedoraPackageGroupList.py:29
-#: ../src/RHELPackageGroupList.py:29
-msgid "Windows File Server"
-msgstr "Windowsi failiserver"
-
-#: ../src/fedoraPackageGroupList.py:30
-#: ../src/RHELPackageGroupList.py:30
-msgid "DNS Name Server"
-msgstr "DNS nimeserver"
-
-#: ../src/fedoraPackageGroupList.py:31
-#: ../src/RHELPackageGroupList.py:31
-msgid "FTP Server"
-msgstr "Ftp server"
-
-#: ../src/fedoraPackageGroupList.py:32
-#: ../src/RHELPackageGroupList.py:32
-msgid "SQL Database Server"
-msgstr "SQL andmebaasiserver"
-
-#: ../src/fedoraPackageGroupList.py:33
-#: ../src/RHELPackageGroupList.py:33
-msgid "News Server"
-msgstr "Uudisteserver"
-
-#: ../src/fedoraPackageGroupList.py:34
-msgid "Network Servers"
-msgstr "Võrguserverid"
-
-#: ../src/fedoraPackageGroupList.py:36
-#: ../src/RHELPackageGroupList.py:36
-msgid "Development Tools"
-msgstr "Arendusvahendid"
-
-#: ../src/fedoraPackageGroupList.py:37
-#: ../src/RHELPackageGroupList.py:37
-msgid "Kernel Development"
-msgstr "Tuuma arendus"
-
-#: ../src/fedoraPackageGroupList.py:38
-#: ../src/RHELPackageGroupList.py:38
-msgid "X Software Development"
-msgstr "X tarkvara arendus"
-
-#: ../src/fedoraPackageGroupList.py:39
-#: ../src/RHELPackageGroupList.py:39
-msgid "GNOME Software Development"
-msgstr "GNOME tarkvara arendus"
-
-#: ../src/fedoraPackageGroupList.py:40
-#: ../src/RHELPackageGroupList.py:40
-msgid "KDE Software Development"
-msgstr "KDE tarkvara arendus"
-
-#: ../src/fedoraPackageGroupList.py:42
-#: ../src/RHELPackageGroupList.py:42
-msgid "Administration Tools"
-msgstr "Administreerimise vahendid"
-
-#: ../src/fedoraPackageGroupList.py:43
-#: ../src/RHELPackageGroupList.py:43
-msgid "System Tools"
-msgstr "Süsteemi vahendid"
-
-#: ../src/fedoraPackageGroupList.py:44
-#: ../src/RHELPackageGroupList.py:44
-msgid "Printing Support"
-msgstr "Printimise toetus"
-
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # This program is distributed in the hope that it will be useful,
-#. # I18N
+#. create table with custom checklists
 #: ../src/firewall.py:60
 msgid "Trusted devices:"
 msgstr "Usaldatud seadmed:"
@@ -232,10 +73,6 @@ msgstr "Usaldatud teenused:"
 msgid "Other ports: (1029:tcp)"
 msgstr "Muud pordid: (1029:tcp)"
 
-#. pull list of language from system-config-languages
-#. # it under the terms of the GNU General Public License as published by
-#. # along with this program; if not, write to the Free Software
-#. self.pkg_selection_frame.set_sensitive(install)
 #: ../src/install.py:134
 msgid "Please enter an NFS server."
 msgstr "Sisesta palun NFS server."
@@ -268,7 +105,6 @@ msgstr "Sisesta palun HTTP server."
 msgid "Please enter an HTTP server directory."
 msgstr "Sisesta palun HTTP serveri kataloog."
 
-#. strip the "http://" out
 #: ../src/install.py:202
 msgid "Please enter a hard drive directory."
 msgstr "Sisesta palun kõvaketta kataloog."
@@ -277,11 +113,6 @@ msgstr "Sisesta palun kõvaketta kataloog."
 msgid "Please enter a hard drive partition."
 msgstr "Sisesta palun kõvaketta partitsioon."
 
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # This program is distributed in the hope that it will be useful,
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. Patch contributed by Bill Huang - applied on 4/23/2001 for Japanese support
 #: ../src/kickstartGui.py:86
 msgid "Kickstart"
 msgstr "Kiirstart"
@@ -290,8 +121,6 @@ msgstr "Kiirstart"
 msgid "Create a kickstart file"
 msgstr "Luuakse kiirstardi fail"
 
-#. bring in widgets from glade file
-#. bring in firewall functions
 #: ../src/kickstartGui.py:138
 msgid "Subsection"
 msgstr "Alamsektsioon"
@@ -312,8 +141,7 @@ msgstr "Algkäivituse valikud"
 msgid "Partition Information"
 msgstr "Partitsiooni info"
 
-#: ../src/kickstartGui.py:144
-#: system-config-kickstart.gladestrings:165
+#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:140
 msgid "Network Configuration"
 msgstr "Võrgu seadistus"
 
@@ -321,32 +149,26 @@ msgstr "Võrgu seadistus"
 msgid "Authentication"
 msgstr "Autentimine"
 
-#: ../src/kickstartGui.py:145
-#: system-config-kickstart.gladestrings:218
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:186
 msgid "Firewall Configuration"
 msgstr "Tulemüüri seadistus"
 
-#: ../src/kickstartGui.py:145
-#: system-config-kickstart.gladestrings:248
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:211
 msgid "Display Configuration"
 msgstr "Kuva seadistus"
 
-#: ../src/kickstartGui.py:146
-#: system-config-kickstart.gladestrings:259
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:221
 msgid "Package Selection"
 msgstr "Pakettide valik"
 
-#: ../src/kickstartGui.py:146
-#: system-config-kickstart.gladestrings:265
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:226
 msgid "Pre-Installation Script"
 msgstr "Installeerimiseelne skript"
 
-#: ../src/kickstartGui.py:147
-#: system-config-kickstart.gladestrings:272
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:232
 msgid "Post-Installation Script"
 msgstr "Installeerimisjärgne skript"
 
-#. show gui
 #: ../src/kickstartGui.py:193
 msgid ""
 "Kickstart Configurator @VERSION@\n"
@@ -365,23 +187,15 @@ msgstr ""
 msgid "About Kickstart Configurator"
 msgstr "Kiirstardi seadistajast"
 
-#. display help manual
 #: ../src/kickstartGui.py:224
 msgid "Help is not available."
 msgstr "Abi pole kättesaadav."
 
-#. get all buffers to save to file
 #: ../src/kickstartGui.py:273
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "Failile \"%s\" pole võimalik ligipääseda."
 
-#. show chosen options for preview
-#. # the Free Software Foundation; either version 2 of the License, or
-#. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. #                      "logvol"           : self.defineLogicalVolume,
-#. # it under the terms of the GNU General Public License as published by
-#. # along with this program; if not, write to the Free Software
 #: ../src/network.py:87
 msgid "Device"
 msgstr "Seade"
@@ -390,12 +204,8 @@ msgstr "Seade"
 msgid "Network Type"
 msgstr "Võrgutüüp"
 
-#. Let's find the last eth device in the list and increment by one to
-#: ../src/network.py:109
-#: ../src/network.py:155
-#: ../src/network.py:223
-#: ../src/network.py:274
-#: ../src/network.py:415
+#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:223
+#: ../src/network.py:274 ../src/network.py:415
 msgid "Static IP"
 msgstr "Staatiline IP"
 
@@ -405,12 +215,115 @@ msgstr "Palun täida võrgu info"
 
 #: ../src/network.py:318
 #, python-format
-msgid "A network device with the name %s already exists.  Please choose another device name"
+msgid ""
+"A network device with the name %s already exists.  Please choose another "
+"device name"
 msgstr "Võrguseade nimega %s on juba olemas. Palun vali mõni teine seadme nimi"
 
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # This program is distributed in the hope that it will be useful,
-#. #
+#: ../src/packageGroupList.py:16
+msgid "Could not start because there is no /usr/share/comps/"
+msgstr ""
+
+#: ../src/packageGroupList.py:16
+msgid "/comps.xml file."
+msgstr ""
+
+#: ../src/packageGroupList.py:17
+msgid "Please make sure the comps package is installed."
+msgstr ""
+
+#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:53
+msgid "ext2"
+msgstr "ext2"
+
+#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:54
+msgid "ext3"
+msgstr "ext3"
+
+#. _("physical volume (LVM)"):"lvm",
+#: ../src/partWindow.py:85 ../src/partWindow.py:148
+msgid "software RAID"
+msgstr "tarkvara RAID"
+
+#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:55
+msgid "swap"
+msgstr "saale"
+
+#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:56
+msgid "vfat"
+msgstr "vfat"
+
+#: ../src/partWindow.py:87
+msgid "PPC PReP Boot"
+msgstr "PPC PReP Boot"
+
+#: ../src/partWindow.py:260 ../src/partWindow.py:535 ../src/raidWindow.py:212
+msgid "Yes"
+msgstr "Jah"
+
+#: ../src/partWindow.py:262 ../src/partWindow.py:537 ../src/raidWindow.py:214
+msgid "No"
+msgstr "Ei"
+
+#: ../src/partWindow.py:285 ../src/partWindow.py:300 ../src/partWindow.py:319
+#: ../src/partWindow.py:333
+msgid "Auto"
+msgstr "Auto"
+
+#: ../src/partWindow.py:294
+msgid "Hard Drives"
+msgstr "Kõvakettad"
+
+#: ../src/partWindow.py:420
+msgid "Specify a mount point for the partition."
+msgstr "Määra partitsioonile ühenduspunkt."
+
+#. They are trying to use a mount point already in use.  Let's complain
+#: ../src/partWindow.py:429
+#, python-format
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr ""
+"Ühenduspunkt \"%s\" on juba kasutusel. Palun vali mõni teine ühenduspunkt."
+
+#: ../src/partWindow.py:449
+msgid ""
+"To create a new RAID partition, you must specify either a hard drive device "
+"name or an existing partition."
+msgstr ""
+"RAID partitsiooni loomiseks on vaja määrata kas kõvaketta seadme nimi võ "
+"olemasolev partitsioon."
+
+#: ../src/partWindow.py:488
+msgid "Specify a device on which to create the partition."
+msgstr "Määratakse seade, millisele luuakse partitsioon."
+
+#: ../src/partWindow.py:490
+msgid ""
+"The device you specified is not a valid device name. Please use a valid "
+"device name such as \"hda1\" or \"sda3\"."
+msgstr ""
+"Määratud seadmenimi ei ole sobiv. Palun kasuta sobivat seadmenime nagu \"hda1"
+"\" või \"sda3\"."
+
+#: ../src/partWindow.py:500
+msgid ""
+"The partition you specified does not end in a number.  Partitions must have "
+"a partition number such as \"hda1\" or \"sda3\"."
+msgstr ""
+"Määratud partitsioon ei lõppe numbriga. Partitsioonil peab olema number nagu "
+"\"hda1\" või \"sda3\"."
+
+#: ../src/partWindow.py:506
+msgid ""
+"The partition you specified does not begin with \"hd\" or \"sd\".  "
+"Partitions must have a valid device name and partition number such as \"hda1"
+"\" or \"sda3\"."
+msgstr ""
+"Valitud partitsioon ei alga tähtedega \"hd\" või \"sd\". Partitsioonidel "
+"peavad olema sobivad seadmenimed ja partitsiooni numbrid nagu \"hda1\" või "
+"\"sda3\"."
+
 #: ../src/partition.py:72
 msgid ""
 "Device/\n"
@@ -440,118 +353,15 @@ msgstr "Vorming"
 msgid "Size (MB)"
 msgstr "Suurus (MB)"
 
-#. initialize the child classes
-#. #         part_object.device = "Auto"
-#. #         self.part_store.set_value(part_iter, 4, part_object.size)
-#. #         hdc_iter = self.part_store.append(hard_drive_parent_iter)
-#: ../src/partition.py:151
-#: ../src/partition.py:181
+#: ../src/partition.py:151 ../src/partition.py:191
 msgid "Please select a partition from the list."
 msgstr "Palun vali loendist partitsioon."
 
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # This program is distributed in the hope that it will be useful,
-#. # I18N
-#: ../src/partWindow.py:83
-#: system-config-kickstart.gladestrings:58
-msgid "ext2"
-msgstr "ext2"
-
-#: ../src/partWindow.py:83
-#: system-config-kickstart.gladestrings:59
-msgid "ext3"
-msgstr "ext3"
-
-#. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:85
-#: ../src/partWindow.py:148
-msgid "software RAID"
-msgstr "tarkvara RAID"
-
-#: ../src/partWindow.py:86
-#: system-config-kickstart.gladestrings:60
-msgid "swap"
-msgstr "saale"
-
-#: ../src/partWindow.py:86
-#: system-config-kickstart.gladestrings:61
-msgid "vfat"
-msgstr "vfat"
-
-#: ../src/partWindow.py:87
-msgid "PPC PReP Boot"
-msgstr "PPC PReP Boot"
-
-#. XXX - have to do this after the show_all due to a bug in gtkSpinButton, I suspect
-#: ../src/partWindow.py:260
-#: ../src/partWindow.py:535
-#: ../src/raidWindow.py:212
-msgid "Yes"
-msgstr "Jah"
-
-#: ../src/partWindow.py:262
-#: ../src/partWindow.py:537
-#: ../src/raidWindow.py:214
-msgid "No"
-msgstr "Ei"
-
-#. If they didn't specify a device, create a group called "Auto"
-#: ../src/partWindow.py:285
-#: ../src/partWindow.py:300
-#: ../src/partWindow.py:319
-#: ../src/partWindow.py:333
-msgid "Auto"
-msgstr "Auto"
-
-#: ../src/partWindow.py:294
-msgid "Hard Drives"
-msgstr "Kõvakettad"
-
-#. # size stuff
-#: ../src/partWindow.py:420
-msgid "Specify a mount point for the partition."
-msgstr "Määra partitsioonile ühenduspunkt."
-
-#. Check to see if the mount point has already been used
-#: ../src/partWindow.py:429
-#, python-format
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr "Ühenduspunkt \"%s\" on juba kasutusel. Palun vali mõni teine ühenduspunkt."
-
-#. This will scan the part_store and see if there are any duplicate mount points
-#: ../src/partWindow.py:449
-msgid "To create a new RAID partition, you must specify either a hard drive device name or an existing partition."
-msgstr "RAID partitsiooni loomiseks on vaja määrata kas kõvaketta seadme nimi võ olemasolev partitsioon."
-
-#. If all the checks pass, then return
-#: ../src/partWindow.py:488
-msgid "Specify a device on which to create the partition."
-msgstr "Määratakse seade, millisele luuakse partitsioon."
-
-#: ../src/partWindow.py:490
-msgid "The device you specified is not a valid device name. Please use a valid device name such as \"hda1\" or \"sda3\"."
-msgstr "Määratud seadmenimi ei ole sobiv. Palun kasuta sobivat seadmenime nagu \"hda1\" või \"sda3\"."
-
-#: ../src/partWindow.py:500
-msgid "The partition you specified does not end in a number.  Partitions must have a partition number such as \"hda1\" or \"sda3\"."
-msgstr "Määratud partitsioon ei lõppe numbriga. Partitsioonil peab olema number nagu \"hda1\" või \"sda3\"."
-
-#: ../src/partWindow.py:506
-msgid "The partition you specified does not begin with \"hd\" or \"sd\".  Partitions must have a valid device name and partition number such as \"hda1\" or \"sda3\"."
-msgstr "Valitud partitsioon ei alga tähtedega \"hd\" või \"sd\". Partitsioonidel peavad olema sobivad seadmenimed ja partitsiooni numbrid nagu \"hda1\" või \"sda3\"."
-
-#. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
-#. # but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
-#. # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #: ../src/raidOptionsWindow.py:72
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
 msgstr "Hetkel on kasutamiseks vabu tarkvara RAID partitsioone %d ."
 
-#. # raidWindow.py - code for redhat-config-kickstart's raid dialog
-#. # This program is distributed in the hope that it will be useful,
-#. # I18N
 #: ../src/raidWindow.py:172
 #, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
@@ -562,42 +372,34 @@ msgstr "RAID %s kasutamiseks on vaja valida vähemalt 2 partitsiooni."
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "RAID %s kasutamiseks on vaja valida vähemalt 3 partitsiooni."
 
-#. then this is a new raid device, not one we're just editing
-#: ../src/raidWindow.py:192
-#: ../src/raidWindow.py:218
+#: ../src/raidWindow.py:192 ../src/raidWindow.py:218
 msgid "Raid Devices"
 msgstr "Raid seadmed"
 
-#: ../src/RHELPackageGroupList.py:26
-msgid "Server Configuration Tools (AS and ES only)"
-msgstr "Serveri seadistamise vahend (ainult AS ja ES)"
-
-#: ../src/RHELPackageGroupList.py:34
-msgid "Network Servers (AS and ES only)"
-msgstr "Võrgu serverid (ainult AS ja ES)"
-
-#. # Kickstart Configurator - A graphical kickstart file generator
-#. # This program is distributed in the hope that it will be useful,
-#. # 		baseSize = 10
-#. !/usr/bin/python2
-#. # (at your option) any later version.
-#. #
 #: ../src/system-config-kickstart.py:60
 msgid ""
-"Usage: system-config-kickstart [--help] [--generate <filename>] [<kickstart_filename>]\n"
+"Usage: system-config-kickstart [--help] [--generate <filename>] "
+"[<kickstart_filename>]\n"
 "        \n"
 "--help                  Print out this message\n"
-"--generate <filename>   Generate a kickstart file from the current machine and write\n"
-"                        it to <filename>.  This option runs on the console, so it is\n"
-"                        useful for servers that do not have X currently running.\n"
-"<kickstart_filename>    This option will cause the GUI to launch with the values from\n"
+"--generate <filename>   Generate a kickstart file from the current machine "
+"and write\n"
+"                        it to <filename>.  This option runs on the console, "
+"so it is\n"
+"                        useful for servers that do not have X currently "
+"running.\n"
+"<kickstart_filename>    This option will cause the GUI to launch with the "
+"values from\n"
 "                        the kickstart file already filled in."
 msgstr ""
-"Kasutus: system-config-kickstart [--help] [--generate <failinimi>] [<kiirstardi_failinimi>]\n"
+"Kasutus: system-config-kickstart [--help] [--generate <failinimi>] "
+"[<kiirstardi_failinimi>]\n"
 "        \n"
 "--help                  Prinditakse käesolev teade\n"
-"--generate <failinimi>   Luuakse kiirstardi fail sellest masinast ning kirjutatakse etteantud\n"
-"                       faili.  Antud valik käivitatakse konsoolil, nii on see sobilik serveritele,\n"
+"--generate <failinimi>   Luuakse kiirstardi fail sellest masinast ning "
+"kirjutatakse etteantud\n"
+"                       faili.  Antud valik käivitatakse konsoolil, nii on "
+"see sobilik serveritele,\n"
 "                        millistel puudub graafiline keskkond.\n"
 "<kiirstardi_failinimi>  See valik käivitab graafilise liidese väärtustega, \n"
 "                        mis on antud kiirstardi failis."
@@ -608,22 +410,18 @@ msgstr "Kuva pole võimalik avada, kuna puudub käiv X server."
 
 #: ../src/system-config-kickstart.py:78
 msgid "Try running 'system-config-kickstart --help' for a list of options."
-msgstr "Proovi käivitada 'system-config-kickstart --help' valikute loendi saamiseks."
+msgstr ""
+"Proovi käivitada 'system-config-kickstart --help' valikute loendi saamiseks."
 
-#. !/usr/bin/python2
-#. # it under the terms of the GNU General Public License as published by
-#. # along with this program; if not, write to the Free Software
-#: ../src/xconfig.py:104
+#: ../src/xconfig.py:106
 msgid "Could not read video card database"
 msgstr "Videokaardi andmebaasi polnud võimalik lugeda"
 
-#. add monitors to list
-#: ../src/xconfig.py:122
-msgid "Could not read monitor database"
-msgstr "Monitori andmebaasi polnud võimalik lugeda"
-
-#. disable xconfig notebook
+#.
 #. * Translatable strings file generated by Glade.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
 #: system-config-kickstart.gladestrings:7
 msgid "Save File"
 msgstr "Salvesta fail"
@@ -633,965 +431,1040 @@ msgid "Partition Options"
 msgstr "Partitsiooni valikud"
 
 #: system-config-kickstart.gladestrings:9
-#: system-config-kickstart.gladestrings:10
-#: system-config-kickstart.gladestrings:23
 #: system-config-kickstart.gladestrings:28
-#: system-config-kickstart.gladestrings:33
-#: system-config-kickstart.gladestrings:72
-#: system-config-kickstart.gladestrings:77
-#: system-config-kickstart.gladestrings:78
-#: system-config-kickstart.gladestrings:81
-#: system-config-kickstart.gladestrings:83
-#: system-config-kickstart.gladestrings:87
-#: system-config-kickstart.gladestrings:89
-#: system-config-kickstart.gladestrings:106
-#: system-config-kickstart.gladestrings:107
-#: system-config-kickstart.gladestrings:110
-#: system-config-kickstart.gladestrings:112
-#: system-config-kickstart.gladestrings:116
-#: system-config-kickstart.gladestrings:117
-#: system-config-kickstart.gladestrings:119
-#: system-config-kickstart.gladestrings:120
-#: system-config-kickstart.gladestrings:124
-#: system-config-kickstart.gladestrings:125
-#: system-config-kickstart.gladestrings:138
-#: system-config-kickstart.gladestrings:139
-#: system-config-kickstart.gladestrings:144
-#: system-config-kickstart.gladestrings:172
-#: system-config-kickstart.gladestrings:175
-#: system-config-kickstart.gladestrings:179
-#: system-config-kickstart.gladestrings:180
-#: system-config-kickstart.gladestrings:187
-#: system-config-kickstart.gladestrings:189
-#: system-config-kickstart.gladestrings:191
-#: system-config-kickstart.gladestrings:196
-#: system-config-kickstart.gladestrings:198
-#: system-config-kickstart.gladestrings:204
-#: system-config-kickstart.gladestrings:205
-#: system-config-kickstart.gladestrings:222
-#: system-config-kickstart.gladestrings:224
-#: system-config-kickstart.gladestrings:236
-#: system-config-kickstart.gladestrings:240
-#: system-config-kickstart.gladestrings:242
-#: system-config-kickstart.gladestrings:263
-#: system-config-kickstart.gladestrings:270
-#: system-config-kickstart.gladestrings:290
-#: system-config-kickstart.gladestrings:292
-#: system-config-kickstart.gladestrings:294
-#: system-config-kickstart.gladestrings:296
-#: system-config-kickstart.gladestrings:297
-#: system-config-kickstart.gladestrings:299
-#: system-config-kickstart.gladestrings:301
-#: system-config-kickstart.gladestrings:303
-#: system-config-kickstart.gladestrings:304
-#: system-config-kickstart.gladestrings:306
-#: system-config-kickstart.gladestrings:308
-#: system-config-kickstart.gladestrings:310
-#: system-config-kickstart.gladestrings:311
-#: system-config-kickstart.gladestrings:313
-#: system-config-kickstart.gladestrings:315
-#: system-config-kickstart.gladestrings:317
-msgid "*"
-msgstr "*"
-
-#: system-config-kickstart.gladestrings:11
-#: system-config-kickstart.gladestrings:32
 msgid "Mount Point:"
 msgstr "Ühenduspunkt:"
 
-#: system-config-kickstart.gladestrings:12
-#: system-config-kickstart.gladestrings:37
+#: system-config-kickstart.gladestrings:10
+#: system-config-kickstart.gladestrings:32
 msgid "File System Type:"
 msgstr "Failisüsteemi tüüp:"
 
-#: system-config-kickstart.gladestrings:13
+#: system-config-kickstart.gladestrings:11
 msgid "Size (MB):"
 msgstr "Suurus (MB):"
 
-#: system-config-kickstart.gladestrings:14
+#: system-config-kickstart.gladestrings:12
 msgid "Fill all unused space on disk"
 msgstr "Täidetakse kogu kasutamata ketas"
 
-#: system-config-kickstart.gladestrings:15
+#: system-config-kickstart.gladestrings:13
 msgid "Grow to maximum of (MB):"
 msgstr "Suureneb maksimaalselt kuni (MB):"
 
-#: system-config-kickstart.gladestrings:16
+#: system-config-kickstart.gladestrings:14
 msgid "Fixed size"
 msgstr "Kindla suurusega"
 
-#: system-config-kickstart.gladestrings:17
+#: system-config-kickstart.gladestrings:15
 msgid "Use recommended swap size"
 msgstr "Kasutatakse soovituslikku saale suurust"
 
-#: system-config-kickstart.gladestrings:18
+#: system-config-kickstart.gladestrings:16
 msgid "Additional Size Options"
 msgstr "Täiendavad suuruse valikud"
 
-#: system-config-kickstart.gladestrings:19
+#: system-config-kickstart.gladestrings:17
 msgid "Force to be a primary partition (asprimary)"
 msgstr "Sunnitakse olema esmane partitsioon (asprimary)"
 
-#: system-config-kickstart.gladestrings:20
+#: system-config-kickstart.gladestrings:18
 msgid "Make partition on specific drive (ondisk)"
 msgstr "Partitsioon tehakse kindlale kettale (ondisk)"
 
-#: system-config-kickstart.gladestrings:21
-#: system-config-kickstart.gladestrings:26
+#: system-config-kickstart.gladestrings:19
+#: system-config-kickstart.gladestrings:23
 msgid "         "
 msgstr "         "
 
-#: system-config-kickstart.gladestrings:22
+#: system-config-kickstart.gladestrings:20
 msgid "Drive :"
 msgstr "Ajam :"
 
-#: system-config-kickstart.gladestrings:24
+#: system-config-kickstart.gladestrings:21
 msgid "(for example: hda or sdc)"
 msgstr "(näiteks: hda või sdc)"
 
-#: system-config-kickstart.gladestrings:25
+#: system-config-kickstart.gladestrings:22
 msgid "Use existing partition (onpart)"
 msgstr "Kasutatakse olemasolevat partitsiooni (onpart)"
 
-#: system-config-kickstart.gladestrings:27
+#: system-config-kickstart.gladestrings:24
 msgid "Partition :"
 msgstr "Partitsioon :"
 
-#: system-config-kickstart.gladestrings:29
+#: system-config-kickstart.gladestrings:25
 msgid "(for example: hda1 or sdc3)"
 msgstr "(näiteks: hd1 või sdc3)"
 
-#: system-config-kickstart.gladestrings:30
+#: system-config-kickstart.gladestrings:26
 msgid "Format partition"
 msgstr "Partitsiooni vormindamine"
 
-#: system-config-kickstart.gladestrings:31
+#: system-config-kickstart.gladestrings:27
 msgid "Make RAID Device"
 msgstr "Tehakse RAID seade"
 
-#: system-config-kickstart.gladestrings:34
+#: system-config-kickstart.gladestrings:29
 msgid "Number of spares:"
 msgstr "Varuketaste arv:"
 
-#: system-config-kickstart.gladestrings:35
+#: system-config-kickstart.gladestrings:30
 msgid "Raid Members"
 msgstr "Raidi liikmed"
 
-#: system-config-kickstart.gladestrings:36
+#: system-config-kickstart.gladestrings:31
 msgid "RAID Level:"
 msgstr "RAID tase:"
 
-#: system-config-kickstart.gladestrings:38
+#: system-config-kickstart.gladestrings:33
 msgid "RAID Device:"
 msgstr "RAID seade:"
 
-#: system-config-kickstart.gladestrings:39
+#: system-config-kickstart.gladestrings:34
 msgid "md0"
 msgstr "md0"
 
-#: system-config-kickstart.gladestrings:40
+#: system-config-kickstart.gladestrings:35
 msgid "md1"
 msgstr "md1"
 
-#: system-config-kickstart.gladestrings:41
+#: system-config-kickstart.gladestrings:36
 msgid "md2"
 msgstr "md2"
 
-#: system-config-kickstart.gladestrings:42
+#: system-config-kickstart.gladestrings:37
 msgid "md3"
 msgstr "md3"
 
-#: system-config-kickstart.gladestrings:43
+#: system-config-kickstart.gladestrings:38
 msgid "md4"
 msgstr "md4"
 
-#: system-config-kickstart.gladestrings:44
+#: system-config-kickstart.gladestrings:39
 msgid "md5"
 msgstr "md5"
 
-#: system-config-kickstart.gladestrings:45
+#: system-config-kickstart.gladestrings:40
 msgid "md6"
 msgstr "md6"
 
-#: system-config-kickstart.gladestrings:46
+#: system-config-kickstart.gladestrings:41
 msgid "md7"
 msgstr "md7"
 
-#: system-config-kickstart.gladestrings:47
+#: system-config-kickstart.gladestrings:42
 msgid "md8"
 msgstr "md8"
 
-#: system-config-kickstart.gladestrings:48
+#: system-config-kickstart.gladestrings:43
 msgid "md9"
 msgstr "md9"
 
-#: system-config-kickstart.gladestrings:49
+#: system-config-kickstart.gladestrings:44
 msgid "md10"
 msgstr "md10"
 
-#: system-config-kickstart.gladestrings:50
+#: system-config-kickstart.gladestrings:45
 msgid "md11"
 msgstr "md11"
 
-#: system-config-kickstart.gladestrings:51
+#: system-config-kickstart.gladestrings:46
 msgid "md12"
 msgstr "md12"
 
-#: system-config-kickstart.gladestrings:52
+#: system-config-kickstart.gladestrings:47
 msgid "md13"
 msgstr "md13"
 
-#: system-config-kickstart.gladestrings:53
+#: system-config-kickstart.gladestrings:48
 msgid "md14"
 msgstr "md14"
 
-#: system-config-kickstart.gladestrings:54
+#: system-config-kickstart.gladestrings:49
 msgid "md15"
 msgstr "md15"
 
-#: system-config-kickstart.gladestrings:55
+#: system-config-kickstart.gladestrings:50
 msgid "0"
 msgstr "0"
 
-#: system-config-kickstart.gladestrings:56
+#: system-config-kickstart.gladestrings:51
 msgid "1"
 msgstr "1"
 
-#: system-config-kickstart.gladestrings:57
+#: system-config-kickstart.gladestrings:52
 msgid "5"
 msgstr "5"
 
-#: system-config-kickstart.gladestrings:62
+#: system-config-kickstart.gladestrings:57
 msgid "Format RAID device"
 msgstr "RAID seade vormindatakse"
 
-#: system-config-kickstart.gladestrings:63
+#: system-config-kickstart.gladestrings:58
 msgid "Kickstart Configurator"
 msgstr "Kiirstardi seadistaja"
 
-#: system-config-kickstart.gladestrings:64
+#: system-config-kickstart.gladestrings:59
 msgid "_File"
 msgstr "_Fail"
 
-#: system-config-kickstart.gladestrings:65
+#: system-config-kickstart.gladestrings:60
 msgid "_Open File"
 msgstr "_Ava fail"
 
-#: system-config-kickstart.gladestrings:66
+#: system-config-kickstart.gladestrings:61
 msgid "_Preview"
 msgstr "_Eelvaade"
 
-#: system-config-kickstart.gladestrings:67
+#: system-config-kickstart.gladestrings:62
 msgid "_Save File"
 msgstr "_Salvesta fail"
 
-#: system-config-kickstart.gladestrings:68
+#: system-config-kickstart.gladestrings:63
 msgid "_Quit"
 msgstr "_Välju"
 
-#: system-config-kickstart.gladestrings:69
+#: system-config-kickstart.gladestrings:64
 msgid "_Help"
 msgstr "_Abi"
 
-#: system-config-kickstart.gladestrings:70
+#: system-config-kickstart.gladestrings:65
 msgid "_Contents"
 msgstr "_Sisu"
 
-#: system-config-kickstart.gladestrings:71
+#: system-config-kickstart.gladestrings:66
 msgid "_About"
 msgstr "_Tiitelandmed"
 
-#: system-config-kickstart.gladestrings:73
+#: system-config-kickstart.gladestrings:67
 msgid "Default Language:"
 msgstr "Vaikekeel:"
 
-#: system-config-kickstart.gladestrings:74
+#: system-config-kickstart.gladestrings:68
 msgid "Encrypt root password"
 msgstr "Juurkasutaja parool krüpteeritakse"
 
-#: system-config-kickstart.gladestrings:75
+#: system-config-kickstart.gladestrings:69
 msgid "Keyboard:"
 msgstr "Klaviatuur:"
 
-#: system-config-kickstart.gladestrings:76
+#: system-config-kickstart.gladestrings:70
 msgid "Mouse:"
 msgstr "Hiir:"
 
-#: system-config-kickstart.gladestrings:79
+#: system-config-kickstart.gladestrings:71
 msgid "Emulate 3 Buttons"
 msgstr "Imiteeri 3 nuppu"
 
-#: system-config-kickstart.gladestrings:80
+#: system-config-kickstart.gladestrings:72
 msgid "Time Zone:"
 msgstr "Ajavöönd:"
 
-#: system-config-kickstart.gladestrings:82
+#: system-config-kickstart.gladestrings:73
 msgid "Root Password:"
 msgstr "Juurkasutaja parool:"
 
-#: system-config-kickstart.gladestrings:84
+#: system-config-kickstart.gladestrings:74
 msgid "Language Support:"
 msgstr "Keele toetus:"
 
-#: system-config-kickstart.gladestrings:85
+#: system-config-kickstart.gladestrings:75
 msgid "Use UTC clock"
 msgstr "Kasutatakse UTC kella"
 
-#: system-config-kickstart.gladestrings:86
-#: system-config-kickstart.gladestrings:137
+#: system-config-kickstart.gladestrings:76
+#: system-config-kickstart.gladestrings:115
 msgid "Confirm Password:"
 msgstr "Kinnita parool:"
 
-#: system-config-kickstart.gladestrings:88
+#: system-config-kickstart.gladestrings:77
 msgid "Target Architecture:"
 msgstr "Sihtmärgi arhitektuur:"
 
-#: system-config-kickstart.gladestrings:90
+#: system-config-kickstart.gladestrings:78
 msgid "Reboot system after installation"
 msgstr "Süsteem taaskäivitatakse peale installeerimist"
 
-#: system-config-kickstart.gladestrings:91
+#: system-config-kickstart.gladestrings:79
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "Installeeritakse tekstiolekus (vaikimisi on graafiline)"
 
-#: system-config-kickstart.gladestrings:92
+#: system-config-kickstart.gladestrings:80
 msgid "Perform installation in interactive mode"
 msgstr "Installeeritakse interaktiivses olekus"
 
-#: system-config-kickstart.gladestrings:93
+#: system-config-kickstart.gladestrings:81
 msgid "Basic Configuration (required)"
 msgstr "Põhiline seadistus (vajalik)"
 
-#: system-config-kickstart.gladestrings:94
+#: system-config-kickstart.gladestrings:82
 msgid "label28"
 msgstr "label28"
 
-#: system-config-kickstart.gladestrings:95
+#: system-config-kickstart.gladestrings:83
 msgid "Perform new installation"
 msgstr "Teostatakse uus installeerimine"
 
-#: system-config-kickstart.gladestrings:96
+#: system-config-kickstart.gladestrings:84
 msgid "Upgrade an existing installation"
 msgstr "Uuendatakse olemasolev installatsioon"
 
-#: system-config-kickstart.gladestrings:97
+#: system-config-kickstart.gladestrings:85
 msgid "Choose the Installation Method:"
 msgstr "Valida installeerimisviis:"
 
-#: system-config-kickstart.gladestrings:98
-#: system-config-kickstart.gladestrings:103
+#: system-config-kickstart.gladestrings:86
+#: system-config-kickstart.gladestrings:91
 msgid "CD-ROM"
 msgstr "CD-ROM"
 
-#: system-config-kickstart.gladestrings:99
-#: system-config-kickstart.gladestrings:108
+#: system-config-kickstart.gladestrings:87
+#: system-config-kickstart.gladestrings:94
 msgid "NFS"
 msgstr "NFS"
 
+#: system-config-kickstart.gladestrings:88
 #: system-config-kickstart.gladestrings:100
-#: system-config-kickstart.gladestrings:118
 msgid "FTP"
 msgstr "FTP"
 
-#: system-config-kickstart.gladestrings:101
-#: system-config-kickstart.gladestrings:123
+#: system-config-kickstart.gladestrings:89
+#: system-config-kickstart.gladestrings:103
 msgid "HTTP"
 msgstr "HTTP"
 
-#: system-config-kickstart.gladestrings:102
-#: system-config-kickstart.gladestrings:128
+#: system-config-kickstart.gladestrings:90
+#: system-config-kickstart.gladestrings:106
 msgid "Hard Drive"
 msgstr "Kõvaketas"
 
-#: system-config-kickstart.gladestrings:104
+#: system-config-kickstart.gladestrings:92
 msgid "NFS Server:"
 msgstr "NFS server:"
 
-#: system-config-kickstart.gladestrings:105
+#: system-config-kickstart.gladestrings:93
 msgid "NFS Directory:"
 msgstr "NFS kataloog:"
 
-#: system-config-kickstart.gladestrings:109
+#: system-config-kickstart.gladestrings:95
 msgid "FTP Server:"
 msgstr "FTP server:"
 
-#: system-config-kickstart.gladestrings:111
+#: system-config-kickstart.gladestrings:96
 msgid "FTP Directory:"
 msgstr "FTP kataloog:"
 
-#: system-config-kickstart.gladestrings:113
+#: system-config-kickstart.gladestrings:97
 msgid "Specify an FTP username and password"
 msgstr "Määratakse FTP kasutajanimi ja parool"
 
-#: system-config-kickstart.gladestrings:114
+#: system-config-kickstart.gladestrings:98
 msgid "FTP Username"
 msgstr "FTP kasutajanimi"
 
-#: system-config-kickstart.gladestrings:115
+#: system-config-kickstart.gladestrings:99
 msgid "FTP Password"
 msgstr "FTP parool"
 
-#: system-config-kickstart.gladestrings:121
+#: system-config-kickstart.gladestrings:101
 msgid "HTTP Server:"
 msgstr "HTTP Server:"
 
-#: system-config-kickstart.gladestrings:122
+#: system-config-kickstart.gladestrings:102
 msgid "HTTP Directory:"
 msgstr "HTTP kataloog:"
 
-#: system-config-kickstart.gladestrings:126
+#: system-config-kickstart.gladestrings:104
 msgid "Hard Drive Partition:"
 msgstr "Kõvaketta partitsioon:"
 
-#: system-config-kickstart.gladestrings:127
+#: system-config-kickstart.gladestrings:105
 msgid "Hard Drive Directory:"
 msgstr "Kõvaketta kataloog:"
 
-#: system-config-kickstart.gladestrings:129
+#: system-config-kickstart.gladestrings:107
 msgid "Installation Method (required)"
 msgstr "Installeerimisviis (vajalik)"
 
-#: system-config-kickstart.gladestrings:130
+#: system-config-kickstart.gladestrings:108
 msgid "label128"
 msgstr "label128"
 
-#: system-config-kickstart.gladestrings:131
+#: system-config-kickstart.gladestrings:109
 msgid "Install new boot loader"
 msgstr "Installeeritakse uus alglaadur"
 
-#: system-config-kickstart.gladestrings:132
+#: system-config-kickstart.gladestrings:110
 msgid "Do not install a boot loader"
 msgstr "Uut alglaadurit ei installeerita"
 
-#: system-config-kickstart.gladestrings:133
+#: system-config-kickstart.gladestrings:111
 msgid "Upgrade existing boot loader"
 msgstr "Uuendatakse olemasolev alglaadur"
 
-#: system-config-kickstart.gladestrings:134
+#: system-config-kickstart.gladestrings:112
 msgid "GRUB Options:"
 msgstr "GRUB-i valikud:"
 
-#: system-config-kickstart.gladestrings:135
+#: system-config-kickstart.gladestrings:113
 msgid "Use GRUB password"
 msgstr "Kasutatakse GRUB-i parooli"
 
-#: system-config-kickstart.gladestrings:136
+#: system-config-kickstart.gladestrings:114
 msgid "Password:"
 msgstr "Parool:"
 
-#: system-config-kickstart.gladestrings:140
+#: system-config-kickstart.gladestrings:116
 msgid "Encrypt GRUB password"
 msgstr "GRUB-i parool krüpteeritakse"
 
-#: system-config-kickstart.gladestrings:141
+#: system-config-kickstart.gladestrings:117
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "Alglaadur installeeritakse peabuutsektorile (MBR)"
 
-#: system-config-kickstart.gladestrings:142
+#: system-config-kickstart.gladestrings:118
 msgid "Install boot loader on first sector of the boot partition"
 msgstr "Alglaadur installeeritakse esimesele sektorile buutpartitsioonis"
 
-#: system-config-kickstart.gladestrings:143
+#: system-config-kickstart.gladestrings:119
 msgid "Kernel parameters:"
 msgstr "Kerneli parameetrid:"
 
-#: system-config-kickstart.gladestrings:145
+#: system-config-kickstart.gladestrings:120
 msgid "label216"
 msgstr "label216"
 
-#: system-config-kickstart.gladestrings:146
+#: system-config-kickstart.gladestrings:121
 msgid "Boot Loader Options (required)"
 msgstr "Alglaaduri valikud (vajalikud)"
 
-#: system-config-kickstart.gladestrings:147
+#: system-config-kickstart.gladestrings:122
 msgid "label35"
 msgstr "label35"
 
-#: system-config-kickstart.gladestrings:148
+#: system-config-kickstart.gladestrings:123
 msgid "Clear Master Boot Record"
 msgstr "Puhastatakse peabuutsektor (MBR)"
 
-#: system-config-kickstart.gladestrings:149
+#: system-config-kickstart.gladestrings:124
 msgid "Do not clear Master Boot Record"
 msgstr "Peabuutsektorit (MBR) ei puhastata"
 
-#: system-config-kickstart.gladestrings:150
+#: system-config-kickstart.gladestrings:125
 msgid "Remove all existing partitions"
 msgstr "Eemaldatakse kõik olemasolevad partitsioonid"
 
-#: system-config-kickstart.gladestrings:151
+#: system-config-kickstart.gladestrings:126
 msgid "Remove existing Linux partitions"
 msgstr "Eemaldatakse kõik Linuxi partitsioonid"
 
-#: system-config-kickstart.gladestrings:152
+#: system-config-kickstart.gladestrings:127
 msgid "Preserve existing partitions"
 msgstr "Säilitatakse olemasolevad partitsioonid"
 
-#: system-config-kickstart.gladestrings:153
+#: system-config-kickstart.gladestrings:128
 msgid "Initialize the disk label"
 msgstr "Lähtestatakse kettalipik"
 
-#: system-config-kickstart.gladestrings:154
+#: system-config-kickstart.gladestrings:129
 msgid "Do not initialize the disk label"
 msgstr "Kettalipikut ei lähtestata"
 
-#: system-config-kickstart.gladestrings:155
+#: system-config-kickstart.gladestrings:130
 msgid "_Add"
 msgstr "_Lisa"
 
-#: system-config-kickstart.gladestrings:156
+#: system-config-kickstart.gladestrings:131
 msgid "_Edit"
 msgstr "_Redigeeri"
 
-#: system-config-kickstart.gladestrings:157
+#: system-config-kickstart.gladestrings:132
 msgid "_Delete"
 msgstr "_Kustuta"
 
-#: system-config-kickstart.gladestrings:158
+#: system-config-kickstart.gladestrings:133
 msgid "RAID"
 msgstr "RAID"
 
-#: system-config-kickstart.gladestrings:159
+#: system-config-kickstart.gladestrings:134
 msgid "Partition options are not applicable on upgrades."
 msgstr "Uuendamisel pole võimalik partitsiooni valikuid rakendada."
 
-#: system-config-kickstart.gladestrings:160
+#: system-config-kickstart.gladestrings:135
 msgid "Partition Information (required)"
 msgstr "Partitsiooni info (vajalik)"
 
-#: system-config-kickstart.gladestrings:161
+#: system-config-kickstart.gladestrings:136
 msgid "label30"
 msgstr "label30"
 
-#: system-config-kickstart.gladestrings:162
+#: system-config-kickstart.gladestrings:137
 msgid "_Add Network Device"
 msgstr "_Lisa võrguseade"
 
-#: system-config-kickstart.gladestrings:163
+#: system-config-kickstart.gladestrings:138
 msgid "_Edit Network Device"
 msgstr "_Redigeeri võrguseadet"
 
-#: system-config-kickstart.gladestrings:164
+#: system-config-kickstart.gladestrings:139
 msgid "_Delete Network Device"
 msgstr "_Kustuta võrguseae"
 
-#: system-config-kickstart.gladestrings:166
+#: system-config-kickstart.gladestrings:141
 msgid "label31"
 msgstr "label31"
 
-#: system-config-kickstart.gladestrings:167
+#: system-config-kickstart.gladestrings:142
 msgid "Authentication:"
 msgstr "Autentimine:"
 
-#: system-config-kickstart.gladestrings:168
+#: system-config-kickstart.gladestrings:143
 msgid "Use Shadow Passwords"
 msgstr "Kasutatakse variparoole"
 
-#: system-config-kickstart.gladestrings:169
+#: system-config-kickstart.gladestrings:144
 msgid "Use MD5"
 msgstr "Kasutatakse MD5"
 
-#: system-config-kickstart.gladestrings:170
+#: system-config-kickstart.gladestrings:145
 msgid "Enable NIS"
 msgstr "Lubatakse NIS"
 
-#: system-config-kickstart.gladestrings:171
+#: system-config-kickstart.gladestrings:146
 msgid "NIS Domain:"
 msgstr "NIS domeen:"
 
-#: system-config-kickstart.gladestrings:173
+#: system-config-kickstart.gladestrings:147
 msgid "Use broadcast to find NIS server"
 msgstr "NIS serveri leidmiseks kasutatakse levisaadet"
 
-#: system-config-kickstart.gladestrings:174
+#: system-config-kickstart.gladestrings:148
 msgid "NIS Server:"
 msgstr "NIS server:"
 
-#: system-config-kickstart.gladestrings:176
+#: system-config-kickstart.gladestrings:149
 msgid "NIS Authentication"
 msgstr "NIS autentimine"
 
-#: system-config-kickstart.gladestrings:177
+#: system-config-kickstart.gladestrings:150
 msgid "NIS"
 msgstr "NIS"
 
-#: system-config-kickstart.gladestrings:178
+#: system-config-kickstart.gladestrings:151
 msgid "Enable LDAP"
 msgstr "Lubatakse LDAP"
 
-#: system-config-kickstart.gladestrings:181
+#: system-config-kickstart.gladestrings:152
 msgid "LDAP Server: "
 msgstr "LDAP server: "
 
-#: system-config-kickstart.gladestrings:182
+#: system-config-kickstart.gladestrings:153
 msgid "LDAP Base Name: "
 msgstr "LDAP baasnimi:"
 
-#: system-config-kickstart.gladestrings:183
+#: system-config-kickstart.gladestrings:154
 msgid "LDAP Authentication"
 msgstr "LDAP autentimine"
 
-#: system-config-kickstart.gladestrings:184
+#: system-config-kickstart.gladestrings:155
 msgid "LDAP "
 msgstr "LDAP "
 
-#: system-config-kickstart.gladestrings:185
+#: system-config-kickstart.gladestrings:156
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Lubatakse Kerberos 5 autentimist"
 
-#: system-config-kickstart.gladestrings:186
+#: system-config-kickstart.gladestrings:157
 msgid "Kerberos Realm:"
 msgstr "Kerberos piirkond:"
 
-#: system-config-kickstart.gladestrings:188
+#: system-config-kickstart.gladestrings:158
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Kerberose domeeni kontroller (KDC):"
 
-#: system-config-kickstart.gladestrings:190
+#: system-config-kickstart.gladestrings:159
 msgid "Kerberos Master Server:"
 msgstr "Kerberose ülemserver:"
 
-#: system-config-kickstart.gladestrings:192
+#: system-config-kickstart.gladestrings:160
 msgid "Kerberos 5 Authentication"
 msgstr "Kerberos 5 autentimine"
 
-#: system-config-kickstart.gladestrings:193
+#: system-config-kickstart.gladestrings:161
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: system-config-kickstart.gladestrings:194
+#: system-config-kickstart.gladestrings:162
 msgid "Enable Hesiod Support"
 msgstr "Lubatakse Hesiodi toetust"
 
-#: system-config-kickstart.gladestrings:195
+#: system-config-kickstart.gladestrings:163
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS:"
 
-#: system-config-kickstart.gladestrings:197
+#: system-config-kickstart.gladestrings:164
 msgid "Hesiod RHS:"
 msgstr "Hesiod RHS:"
 
-#: system-config-kickstart.gladestrings:199
+#: system-config-kickstart.gladestrings:165
 msgid "Hesiod Authentication"
 msgstr "Hesiodi autentimine"
 
-#: system-config-kickstart.gladestrings:200
+#: system-config-kickstart.gladestrings:166
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: system-config-kickstart.gladestrings:201
+#: system-config-kickstart.gladestrings:167
 msgid "Enable SMB Authentication"
 msgstr "Lubatakse SMB autentimist"
 
-#: system-config-kickstart.gladestrings:202
+#: system-config-kickstart.gladestrings:168
 msgid "SMB Servers:"
 msgstr "SMB serverid:"
 
-#: system-config-kickstart.gladestrings:203
+#: system-config-kickstart.gladestrings:169
 msgid "SMB Workgroup:"
 msgstr "SMB töögrupp:"
 
-#: system-config-kickstart.gladestrings:206
+#: system-config-kickstart.gladestrings:170
 msgid "SMB Authentication"
 msgstr "SMB autentimine"
 
-#: system-config-kickstart.gladestrings:207
+#: system-config-kickstart.gladestrings:171
 msgid "SMB"
 msgstr "SMB"
 
-#: system-config-kickstart.gladestrings:208
+#: system-config-kickstart.gladestrings:172
 msgid "Enable nscd"
 msgstr "Lubatakse nscd"
 
-#: system-config-kickstart.gladestrings:209
+#: system-config-kickstart.gladestrings:173
 msgid "Name Switch Cache Daemon (nscd) Authentication"
 msgstr "Nimemuutmise puhvri deemon (nscd) autentimine"
 
-#: system-config-kickstart.gladestrings:210
+#: system-config-kickstart.gladestrings:174
 msgid "Name Switch Cache"
 msgstr "Nimemuutmise puhver"
 
-#: system-config-kickstart.gladestrings:211
+#: system-config-kickstart.gladestrings:175
 msgid "Authentication options are not applicable on upgrades."
 msgstr "Uuendamisel pole võimalik autentimise valikuid rakendada."
 
-#: system-config-kickstart.gladestrings:212
+#: system-config-kickstart.gladestrings:176
 msgid "Authentication Configuration"
 msgstr "Autentimise seadistamine"
 
-#: system-config-kickstart.gladestrings:213
+#: system-config-kickstart.gladestrings:177
 msgid "label32"
 msgstr "label32"
 
-#: system-config-kickstart.gladestrings:214
+#: system-config-kickstart.gladestrings:178
 msgid "Security level:"
 msgstr "Turvalisuse tase:"
 
-#: system-config-kickstart.gladestrings:215
+#: system-config-kickstart.gladestrings:179
 msgid "Enable firewall"
 msgstr "Lubatakse tulemüüri"
 
-#: system-config-kickstart.gladestrings:216
+#: system-config-kickstart.gladestrings:180
 msgid "Disable firewall"
 msgstr "Keelatakse tulemüür"
 
-#: system-config-kickstart.gladestrings:217
-msgid "Firewall configuration is not applicable on upgrades."
-msgstr "Uuendamisel pole võimalik tulemüüri seaded rakendatad."
+#: system-config-kickstart.gladestrings:181
+msgid "SELinux:"
+msgstr ""
 
-#: system-config-kickstart.gladestrings:219
-msgid "label33"
-msgstr "label33"
+#: system-config-kickstart.gladestrings:182
+msgid "Active"
+msgstr ""
 
-#: system-config-kickstart.gladestrings:220
-msgid "Configure the X Window System"
-msgstr "Seadistatakse X aknasüsteem"
+#: system-config-kickstart.gladestrings:183
+msgid "Warn"
+msgstr ""
 
-#: system-config-kickstart.gladestrings:221
-msgid "Color Depth"
-msgstr "Värvi sügavus"
-
-#: system-config-kickstart.gladestrings:223
-msgid "Resolution"
-msgstr "Lahutusvõime"
-
-#: system-config-kickstart.gladestrings:225
-msgid "Default Desktop:"
-msgstr "Vaiketöölaud:"
-
-#: system-config-kickstart.gladestrings:226
-msgid "GNOME"
-msgstr "GNOME"
-
-#: system-config-kickstart.gladestrings:227
-msgid "KDE"
-msgstr "KDE"
-
-#: system-config-kickstart.gladestrings:228
-msgid "Start the X Window System on boot"
-msgstr "X aknasüsteem käivitatakse laadimisel"
-
-#: system-config-kickstart.gladestrings:229
-msgid "On first boot, Setup Agent is: "
-msgstr "Esmasel käivitusel on seadistajaks:"
-
-#: system-config-kickstart.gladestrings:230
+#: system-config-kickstart.gladestrings:184
+#: system-config-kickstart.gladestrings:196
 msgid "Disabled"
 msgstr "Keelatud"
 
-#: system-config-kickstart.gladestrings:231
+#: system-config-kickstart.gladestrings:185
+msgid "Firewall configuration is not applicable on upgrades."
+msgstr "Uuendamisel pole võimalik tulemüüri seaded rakendatad."
+
+#: system-config-kickstart.gladestrings:187
+msgid "label33"
+msgstr "label33"
+
+#: system-config-kickstart.gladestrings:188
+msgid "Configure the X Window System"
+msgstr "Seadistatakse X aknasüsteem"
+
+#: system-config-kickstart.gladestrings:189
+msgid "Color Depth"
+msgstr "Värvi sügavus"
+
+#: system-config-kickstart.gladestrings:190
+msgid "Resolution"
+msgstr "Lahutusvõime"
+
+#: system-config-kickstart.gladestrings:191
+msgid "Default Desktop:"
+msgstr "Vaiketöölaud:"
+
+#: system-config-kickstart.gladestrings:192
+msgid "GNOME"
+msgstr "GNOME"
+
+#: system-config-kickstart.gladestrings:193
+msgid "KDE"
+msgstr "KDE"
+
+#: system-config-kickstart.gladestrings:194
+msgid "Start the X Window System on boot"
+msgstr "X aknasüsteem käivitatakse laadimisel"
+
+#: system-config-kickstart.gladestrings:195
+msgid "On first boot, Setup Agent is: "
+msgstr "Esmasel käivitusel on seadistajaks:"
+
+#: system-config-kickstart.gladestrings:197
 msgid "Enabled"
 msgstr "Lubatud"
 
-#: system-config-kickstart.gladestrings:232
+#: system-config-kickstart.gladestrings:198
 msgid "Enabled in reconfiguration mode"
 msgstr "Lubatud taasseadistamise olekus"
 
-#: system-config-kickstart.gladestrings:233
+#: system-config-kickstart.gladestrings:199
 msgid "General"
 msgstr "Üldine"
 
-#: system-config-kickstart.gladestrings:234
+#: system-config-kickstart.gladestrings:200
 msgid "Probe for video card"
 msgstr "Proovi videokaarti"
 
-#: system-config-kickstart.gladestrings:235
+#: system-config-kickstart.gladestrings:201
 msgid "Video Card RAM: "
 msgstr "Videokaardi mälu:"
 
-#: system-config-kickstart.gladestrings:237
+#: system-config-kickstart.gladestrings:202
 msgid "Video Card"
 msgstr "Videokaart"
 
-#: system-config-kickstart.gladestrings:238
+#: system-config-kickstart.gladestrings:203
 msgid "Probe for monitor"
 msgstr "Proovi monitori"
 
-#: system-config-kickstart.gladestrings:239
+#: system-config-kickstart.gladestrings:204
 msgid "Use custom monitor sync rates"
 msgstr "Kasutatakse seadistatud monitori sagedusi"
 
-#: system-config-kickstart.gladestrings:241
+#: system-config-kickstart.gladestrings:205
 msgid "Hz"
 msgstr "Hz"
 
-#: system-config-kickstart.gladestrings:243
+#: system-config-kickstart.gladestrings:206
 msgid "kHz"
 msgstr "kHz"
 
-#: system-config-kickstart.gladestrings:244
+#: system-config-kickstart.gladestrings:207
 msgid "Vertical Sync:"
 msgstr "Vertikaalne sagedus:"
 
-#: system-config-kickstart.gladestrings:245
+#: system-config-kickstart.gladestrings:208
 msgid "Horizontal Sync:"
 msgstr "Horisontaalne sagedus:"
 
-#: system-config-kickstart.gladestrings:246
+#: system-config-kickstart.gladestrings:209
 msgid "Monitor"
 msgstr "Monitor"
 
-#: system-config-kickstart.gladestrings:247
+#: system-config-kickstart.gladestrings:210
 msgid "Display configuration is not applicable on upgrades."
 msgstr "Uuendamisel pole võimalik kuva seadistusi rakendada"
 
-#: system-config-kickstart.gladestrings:249
+#: system-config-kickstart.gladestrings:212
 msgid "label88"
 msgstr "label88"
 
-#: system-config-kickstart.gladestrings:250
+#: system-config-kickstart.gladestrings:213
 msgid "Select packages to install."
 msgstr "Vali installeerimiseks paketid."
 
-#: system-config-kickstart.gladestrings:251
-msgid "_Automatically Resolve Dependencies"
-msgstr "L_ahenda sõltuvused automaatselt"
+#: system-config-kickstart.gladestrings:214
+msgid "_Install Everything"
+msgstr ""
 
-#: system-config-kickstart.gladestrings:252
-msgid "_Ignore Dependencies"
-msgstr "_Ignoreeri sõltuvusi"
-
-#: system-config-kickstart.gladestrings:253
+#: system-config-kickstart.gladestrings:215
 msgid "Desktops"
 msgstr "Töölauad"
 
-#: system-config-kickstart.gladestrings:254
+#: system-config-kickstart.gladestrings:216
 msgid "Applications"
 msgstr "Rakendused"
 
-#: system-config-kickstart.gladestrings:255
+#: system-config-kickstart.gladestrings:217
 msgid "Servers"
 msgstr "Serverid"
 
-#: system-config-kickstart.gladestrings:256
+#: system-config-kickstart.gladestrings:218
 msgid "Development"
 msgstr "Arendus"
 
-#: system-config-kickstart.gladestrings:257
+#: system-config-kickstart.gladestrings:219
 msgid "System"
 msgstr "Süsteem"
 
-#: system-config-kickstart.gladestrings:258
+#: system-config-kickstart.gladestrings:220
 msgid "Package selection is not applicable on upgrades."
 msgstr "Uuendamisel pole võimalik pakettide valikut rakendada."
 
-#: system-config-kickstart.gladestrings:260
+#: system-config-kickstart.gladestrings:222
 msgid "label34"
 msgstr "label34"
 
-#: system-config-kickstart.gladestrings:261
+#: system-config-kickstart.gladestrings:223
 #, c-format
-msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %pre command at the beginning."
-msgstr "Hoiatus: vigane skript võib põhjustada kiirstardi installeerimise ebaõnnestumise. %pre käsku mitte lisada kõige algusesse."
+msgid ""
+"Warning: An error in this script might cause your kickstart installation to "
+"fail. Do not include the %pre command at the beginning."
+msgstr ""
+"Hoiatus: vigane skript võib põhjustada kiirstardi installeerimise "
+"ebaõnnestumise. %pre käsku mitte lisada kõige algusesse."
 
-#: system-config-kickstart.gladestrings:262
-#: system-config-kickstart.gladestrings:269
+#: system-config-kickstart.gladestrings:224
+#: system-config-kickstart.gladestrings:230
 msgid "Use an interpreter:"
 msgstr "Kasutatakse tõlgendajat:"
 
-#: system-config-kickstart.gladestrings:264
+#: system-config-kickstart.gladestrings:225
 #, c-format
 msgid "Type your %pre script below:"
 msgstr "Trüki oma %pre skript allpool:"
 
-#: system-config-kickstart.gladestrings:266
+#: system-config-kickstart.gladestrings:227
 msgid "label89"
 msgstr "label89"
 
-#: system-config-kickstart.gladestrings:267
+#: system-config-kickstart.gladestrings:228
 #, c-format
-msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %post command at the beginning."
-msgstr "Hoiatus: vigane skript võib põhjustada kiirstardi installeerimise ebaõnnestumise. %post käsku mitte lisada kõige algusesse."
+msgid ""
+"Warning: An error in this script might cause your kickstart installation to "
+"fail. Do not include the %post command at the beginning."
+msgstr ""
+"Hoiatus: vigane skript võib põhjustada kiirstardi installeerimise "
+"ebaõnnestumise. %post käsku mitte lisada kõige algusesse."
 
-#: system-config-kickstart.gladestrings:268
+#: system-config-kickstart.gladestrings:229
 msgid "Run outside of the chroot environment"
 msgstr "Käivitada väljaspool chroot keskkonda"
 
-#: system-config-kickstart.gladestrings:271
+#: system-config-kickstart.gladestrings:231
 #, c-format
 msgid "Type your %post script below:"
 msgstr "Trüki oma %post skript allpool:"
 
-#: system-config-kickstart.gladestrings:273
+#: system-config-kickstart.gladestrings:233
 msgid "label93"
 msgstr "label93"
 
-#: system-config-kickstart.gladestrings:274
+#: system-config-kickstart.gladestrings:234
 msgid "Preview Options"
 msgstr "Eelvaate valikud"
 
-#: system-config-kickstart.gladestrings:275
+#: system-config-kickstart.gladestrings:235
 msgid "_Save to File"
 msgstr "_Salvesta faili"
 
-#: system-config-kickstart.gladestrings:276
-msgid "You have choosen the following configuration. Click Save File to save the kickstart file. "
-msgstr "Valitud on järgnev seadistus. Faili salvestamiseks vajutada Salvesta fail."
+#: system-config-kickstart.gladestrings:236
+msgid ""
+"You have choosen the following configuration. Click Save File to save the "
+"kickstart file. "
+msgstr ""
+"Valitud on järgnev seadistus. Faili salvestamiseks vajutada Salvesta fail."
 
-#: system-config-kickstart.gladestrings:277
+#: system-config-kickstart.gladestrings:237
 msgid "RAID Options"
 msgstr "RAID valikud"
 
-#: system-config-kickstart.gladestrings:278
-msgid "Software RAID allows you to combine several disks into a larger RAID device.  A RAID device can be configured to provide additional speed and reliability compared to using an individual drive.  For more information on using RAID devices please consult the kickstart documentation."
-msgstr "Tarkvara RAID võimaldab kombineerida mitmeid kettaid ühte suurde RAID seadmesse. RAID seadet on võimalik seadistada tagamaks suuremat kiirust ja töökindlust võrreldes üksiku seadmega. RAID seadmete kohta saab lugeda lähemalt kiirstardi dokumentatsioonist."
+#: system-config-kickstart.gladestrings:238
+msgid ""
+"Software RAID allows you to combine several disks into a larger RAID "
+"device.  A RAID device can be configured to provide additional speed and "
+"reliability compared to using an individual drive.  For more information on "
+"using RAID devices please consult the kickstart documentation."
+msgstr ""
+"Tarkvara RAID võimaldab kombineerida mitmeid kettaid ühte suurde RAID "
+"seadmesse. RAID seadet on võimalik seadistada tagamaks suuremat kiirust ja "
+"töökindlust võrreldes üksiku seadmega. RAID seadmete kohta saab lugeda "
+"lähemalt kiirstardi dokumentatsioonist."
 
-#: system-config-kickstart.gladestrings:279
-msgid "To use RAID you must first create at least two partitions of type 'software RAID'.  Then you can create a RAID device which can be formatted and mounted."
-msgstr "RAID kasutamiseks on vajalik luua vähemalt kaks 'tarkvara RAID' partitsiooni. Seljuhul on võimalik luua RAID seadmeid, milliseid saab vormindada ja ühendada."
+#: system-config-kickstart.gladestrings:239
+msgid ""
+"To use RAID you must first create at least two partitions of type 'software "
+"RAID'.  Then you can create a RAID device which can be formatted and mounted."
+msgstr ""
+"RAID kasutamiseks on vajalik luua vähemalt kaks 'tarkvara RAID' "
+"partitsiooni. Seljuhul on võimalik luua RAID seadmeid, milliseid saab "
+"vormindada ja ühendada."
 
-#: system-config-kickstart.gladestrings:280
+#: system-config-kickstart.gladestrings:240
 msgid "Choose one of the following options:"
 msgstr "Vali üks järgmistest valikutest:"
 
-#: system-config-kickstart.gladestrings:281
+#: system-config-kickstart.gladestrings:241
 msgid "Create a software RAID partition"
 msgstr "Luuakse tarkvara RAID partitsioon"
 
-#: system-config-kickstart.gladestrings:282
+#: system-config-kickstart.gladestrings:242
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "Luuakse RAID seade [vaikimisi = /dev/md0]"
 
-#: system-config-kickstart.gladestrings:283
+#: system-config-kickstart.gladestrings:243
 msgid "Network Device Information"
 msgstr "Võrguseadme info"
 
-#: system-config-kickstart.gladestrings:284
+#: system-config-kickstart.gladestrings:244
 msgid "Network Device:"
 msgstr "Võrguseade:"
 
-#: system-config-kickstart.gladestrings:285
+#: system-config-kickstart.gladestrings:245
 msgid "Network Type:"
 msgstr "Võrgutüüp:"
 
-#: system-config-kickstart.gladestrings:286
+#: system-config-kickstart.gladestrings:246
 msgid "IP Address:"
 msgstr "IP aadress:"
 
-#: system-config-kickstart.gladestrings:287
+#: system-config-kickstart.gladestrings:247
 msgid "Netmask: "
 msgstr "Võrgumask:"
 
-#: system-config-kickstart.gladestrings:288
+#: system-config-kickstart.gladestrings:248
 msgid "Gateway:"
 msgstr "Lüüs:"
 
-#: system-config-kickstart.gladestrings:289
+#: system-config-kickstart.gladestrings:249
 msgid "Name Server:"
 msgstr "Nimeserver:"
 
-#: system-config-kickstart.gladestrings:291
-#: system-config-kickstart.gladestrings:293
-#: system-config-kickstart.gladestrings:295
-#: system-config-kickstart.gladestrings:298
-#: system-config-kickstart.gladestrings:300
-#: system-config-kickstart.gladestrings:302
-#: system-config-kickstart.gladestrings:305
-#: system-config-kickstart.gladestrings:307
-#: system-config-kickstart.gladestrings:309
-#: system-config-kickstart.gladestrings:312
-#: system-config-kickstart.gladestrings:314
-#: system-config-kickstart.gladestrings:316
+#: system-config-kickstart.gladestrings:250
+#: system-config-kickstart.gladestrings:251
+#: system-config-kickstart.gladestrings:252
+#: system-config-kickstart.gladestrings:253
+#: system-config-kickstart.gladestrings:254
+#: system-config-kickstart.gladestrings:255
+#: system-config-kickstart.gladestrings:256
+#: system-config-kickstart.gladestrings:257
+#: system-config-kickstart.gladestrings:258
+#: system-config-kickstart.gladestrings:259
+#: system-config-kickstart.gladestrings:260
+#: system-config-kickstart.gladestrings:261
 msgid "."
 msgstr "."
 
+#~ msgid "X Window System"
+#~ msgstr "X Window süsteem"
+
+#~ msgid "GNOME Desktop Environment"
+#~ msgstr "GNOME Töölaua keskkond"
+
+#~ msgid "KDE Desktop Environment"
+#~ msgstr "KDE Töölaua keskkond"
+
+#~ msgid "Editors"
+#~ msgstr "Redaktorid"
+
+#~ msgid "Engineering and Scientific"
+#~ msgstr "Inseneriteadus ja teaduslik"
+
+#~ msgid "Graphical Internet"
+#~ msgstr "Graafiline internet"
+
+#~ msgid "Text-based Internet"
+#~ msgstr "Tekstipõhine internet"
+
+#~ msgid "Office/Productivity"
+#~ msgstr "Kontor/tootlikus"
+
+#~ msgid "Sound and Video"
+#~ msgstr "Heli ja video"
+
+#~ msgid "Graphics"
+#~ msgstr "Graafika"
+
+#~ msgid "Games and Entertainment"
+#~ msgstr "Mängud ja meelelahutus"
+
+#~ msgid "Authoring and Publishing"
+#~ msgstr "Loometöö ja avaldamine"
+
+#~ msgid "Server Configuration Tools"
+#~ msgstr "Serveri seadistamise vahendid"
+
+#~ msgid "Web Server"
+#~ msgstr "Veebiserver"
+
+#~ msgid "Mail Server"
+#~ msgstr "Postiserver"
+
+#~ msgid "Windows File Server"
+#~ msgstr "Windowsi failiserver"
+
+#~ msgid "DNS Name Server"
+#~ msgstr "DNS nimeserver"
+
+#~ msgid "FTP Server"
+#~ msgstr "Ftp server"
+
+#~ msgid "SQL Database Server"
+#~ msgstr "SQL andmebaasiserver"
+
+#~ msgid "News Server"
+#~ msgstr "Uudisteserver"
+
+#~ msgid "Network Servers"
+#~ msgstr "Võrguserverid"
+
+#~ msgid "Development Tools"
+#~ msgstr "Arendusvahendid"
+
+#~ msgid "Kernel Development"
+#~ msgstr "Tuuma arendus"
+
+#~ msgid "X Software Development"
+#~ msgstr "X tarkvara arendus"
+
+#~ msgid "GNOME Software Development"
+#~ msgstr "GNOME tarkvara arendus"
+
+#~ msgid "KDE Software Development"
+#~ msgstr "KDE tarkvara arendus"
+
+#~ msgid "Administration Tools"
+#~ msgstr "Administreerimise vahendid"
+
+#~ msgid "System Tools"
+#~ msgstr "Süsteemi vahendid"
+
+#~ msgid "Printing Support"
+#~ msgstr "Printimise toetus"
+
+#~ msgid "Server Configuration Tools (AS and ES only)"
+#~ msgstr "Serveri seadistamise vahend (ainult AS ja ES)"
+
+#~ msgid "Network Servers (AS and ES only)"
+#~ msgstr "Võrgu serverid (ainult AS ja ES)"
+
+#~ msgid "Could not read monitor database"
+#~ msgstr "Monitori andmebaasi polnud võimalik lugeda"
+
+#~ msgid "*"
+#~ msgstr "*"
+
+#~ msgid "_Automatically Resolve Dependencies"
+#~ msgstr "L_ahenda sõltuvused automaatselt"
+
+#~ msgid "_Ignore Dependencies"
+#~ msgstr "_Ignoreeri sõltuvusi"
