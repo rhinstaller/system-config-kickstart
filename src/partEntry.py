@@ -39,7 +39,10 @@ class partEntry:
 #        self.onPart = ""
 #        self.onPartVal = ""
         self.doFormat = ""
-        self.raidType = ""
+        self.raidLevel = ""
         self.raidSpares = ""
         self.raidNumber = ""
-        self.isRaidDevice = ""
+        self.raidPartitions = []
+        self.raidPartitionObjects = []
+        self.raidDevice = ""
+        self.isRaidDevice = None
