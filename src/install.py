@@ -45,6 +45,8 @@ class install:
         self.nfsserver_label = xml.get_widget("nfsserver_label")
         self.ftpdir_label = xml.get_widget("ftpdir_label")
         self.ftpserver_label = xml.get_widget("ftpserver_label")
+        self.ftpuser_label = xml.get_widget("ftpuser_label")
+        self.ftppasswd_label = xml.get_widget("ftppasswd_label")        
         self.hdpart_label = xml.get_widget("hdpart_label")
         self.hddir_label = xml.get_widget("hddir_label")
         self.httpserver_label = xml.get_widget("httpserver_label")
@@ -54,10 +56,14 @@ class install:
         self.nfsserver_entry = xml.get_widget("nfsserver_entry")
         self.ftpdir_entry = xml.get_widget("ftpdir_entry")
         self.ftpserver_entry = xml.get_widget("ftpserver_entry")
+        self.ftpuser_entry = xml.get_widget("ftpuser_entry")
+        self.ftppasswd_entry = xml.get_widget("ftppasswd_entry")        
         self.hdpart_entry = xml.get_widget("hdpart_entry")
         self.hddir_entry = xml.get_widget("hddir_entry")
         self.httpserver_entry = xml.get_widget("httpserver_entry")
         self.httpdir_entry = xml.get_widget("httpdir_entry")
+
+        self.ftpuserpass_checkbutton = xml.get_widget("ftpuserpass_checkbutton")
 
         self.install_notebook = xml.get_widget("install_notebook")
         
@@ -68,6 +74,14 @@ class install:
         self.http_radiobutton.connect("toggled", self.setState)
         self.hd_radiobutton.connect("toggled", self.setState)
 
+        self.ftpuserpass_checkbutton.connect("toggled", self.toggleFtp)
+
+    def toggleFtp (self, args):
+        userpass = self.ftpuserpass_checkbutton.get_active()
+        self.ftpuser_entry.set_sensitive(userpass)
+        self.ftppasswd_entry.set_sensitive(userpass)
+    
+
     def toggleInstall (self, args):
         #gray out package selection and partitions if upgrade
         install = self.install_radiobutton.get_active()
@@ -76,19 +90,19 @@ class install:
 
     def setState (self, args):
         if self.cdrom_radiobutton.get_active():
-            self.install_notebook.set_page(0)
+            self.install_notebook.set_current_page(0)
             return
         elif self.nfs_radiobutton.get_active():
-            self.install_notebook.set_page(1)
+            self.install_notebook.set_current_page(1)
             return
         elif self.ftp_radiobutton.get_active():
-            self.install_notebook.set_page(2)
+            self.install_notebook.set_current_page(2)
             return
         elif self.http_radiobutton.get_active():
-            self.install_notebook.set_page(3)
+            self.install_notebook.set_current_page(3)
             return
         elif self.hd_radiobutton.get_active():
-            self.install_notebook.set_page(4)
+            self.install_notebook.set_current_page(4)
                                      
     def getData(self):
         data = []
@@ -113,7 +127,12 @@ class install:
         elif self.ftp_radiobutton.get_active():
             data.append("#Use FTP installation media")
             buf = "url"
-            buf = buf + " --url ftp://" + self.ftpserver_entry.get_text()
+            buf = buf + " --url ftp://"
+            if self.ftpuserpass_checkbutton.get_active():
+                buf = buf + self.ftpuser_entry.get_text() + ":" + self.ftppasswd_entry.get_text() + "@"
+
+            
+            buf = buf + self.ftpserver_entry.get_text()
             buf = buf + "/" + self.ftpdir_entry.get_text()		
             data.append(buf)
         elif self.http_radiobutton.get_active():
