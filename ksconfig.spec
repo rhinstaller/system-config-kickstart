@@ -42,12 +42,16 @@ rm -rf $RPM_BUILD_ROOT
 #%files -f %{name}.lang
 %files
 %defattr(-,root,root)
+%doc COPYING
 /usr/sbin/ksconfig
 /usr/share/ksconfig/*
 %{_mandir}/man8/ksconfig*
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
+* Wed Mar  7 2001 Bill Nottingham <notting@redhat.com>
+- put the GPL in %doc
+
 * Thu Mar 01 2001 Tammy Fox <tfox@redhat.com>
 - fixed end of line between auth and firewall lines
 
