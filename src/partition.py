@@ -24,6 +24,7 @@
 from gtk import *
 import GtkExtra
 import libglade
+import partWindow
 
 class partition:
     def __init__(self, xml):
@@ -36,6 +37,7 @@ class partition:
         self.add_part_button = xml.get_widget("add_part_button")
         self.edit_part_button = xml.get_widget("edit_part_button")
         self.del_part_button = xml.get_widget("del_part_button")
+#        self.partitionDialog = xml.get_widget("partition_dialog")
 
         xml.signal_autoconnect (
             { "select_clist" : self.select_clist,
@@ -68,134 +70,20 @@ class partition:
         self.edit_part_button.set_state(STATE_INSENSITIVE)
         self.edit_part_button.set_state(STATE_INSENSITIVE)
 
-    def delPartition(self, args):
+    def delPartition(self, *args):
+        print "del partition"
         self.num_parts.decrement()
         self.partClist.remove(selected[0])
         self.edit_part_button.set_state(STATE_INSENSITIVE)
         self.edit_part_button.set_state(STATE_INSENSITIVE)
 
-    def addPartition(args):
-        addWindow = GtkWindow()
-        addWindow.connect("delete_event", deleteEvent)
-        addWindow.set_title('Add Partition Entry')
-        addWindow.set_border_width(6)
-        addWindow.set_default_size(100, 50)
+    def addPartition(self, *args):
+        print "add Partition"
+#        self.partitionDialog.show_all()
+        self.partWindow = partWindow.partWindow()
 
-        addTable = GtkTable(5, 2, FALSE)
-        addWindow.add(addTable)
-
-        addLabel1 = GtkLabel("Mount Point:")
-        addTable.attach(addLabel1, 0, 1, 0, 1)
-
-        mpCombo = GtkCombo()
-        addTable.attach(mpCombo, 1, 2, 0, 1)
-        list_items = [ "/", "/boot", "/home", "/usr", "/opt", "/var" ]			
-        mpCombo.set_popdown_strings(list_items)
-        mpCombo.entry.set_editable(TRUE)
-
-        addLabel2 = GtkLabel("Filesystem Type:")
-        addTable.attach(addLabel2, 0, 1, 1, 2)
-
-        fsCombo = GtkCombo()
-        addTable.attach(fsCombo, 1, 2, 1, 2)
-        list_items = [ "ext2", "Linux Swap", "FAT 16" ]			
-        fsCombo.set_popdown_strings(list_items)
-        fsCombo.entry.set_text("")
-        fsCombo.entry.set_editable(TRUE)
-
-        addLabel3 = GtkLabel("Size (M):")
-        addTable.attach(addLabel3, 0, 1, 2, 3)
-
-        sizeEntry = GtkEntry()
-        addTable.attach(sizeEntry, 1, 2, 2, 3)
-
-        addLabel4 = GtkLabel("Growable:")
-        addTable.attach(addLabel4, 0, 1, 3, 4)
-
-        growCombo = GtkCombo()
-        addTable.attach(growCombo, 1, 2, 3, 4)
-        list_items = [ "No", "Yes" ]			
-        growCombo.set_popdown_strings(list_items)
-        growCombo.list.select_item(0)
-        growCombo.entry.set_editable(FALSE)
-
-        def addEntry(args, addWindow=addWindow, mpCombo=mpCombo, fsCombo=fsCombo, sizeEntry=sizeEntry, growCombo=growCombo, num_parts=num_parts):
-            a = mpCombo.entry.get_text()
-            b = fsCombo.entry.get_text()
-            c = sizeEntry.get_text()
-            d = growCombo.entry.get_text()
-            
-            entry = [ a, b, c, d]
-            partClist.append(entry)
-            addWindow.destroy()
-            num_partst.increment()
-
-        ok = GtkButton("OK")
-        addTable.attach(ok, 0, 1, 4, 5)
-        ok.connect("clicked", addEntry)
-
-        cancelAdd = GtkButton("Cancel")
-        addTable.attach(cancelAdd, 1, 2, 4, 5)
-        cancelAdd.connect("clicked", addWindow.hide)
-
-        addWindow.show_all()
-
-
-    def editPartition(self, args):
-
-        editWindow = GtkWindow()
-        editWindow.connect("delete_event", deleteEvent)
-        editWindow.set_title('Edit Partition Entry')
-        editWindow.set_border_width(6)
-        editWindow.set_default_size(100, 50)
-
-        editTable = GtkTable(5, 2, FALSE)
-        editWindow.add(editTable)
-
-        editLabel1 = GtkLabel("Mount Point:")
-        editTable.attach(editLabel1, 0, 1, 0, 1)
-
-        mpCombo = GtkCombo()
-        editTable.attach(mpCombo, 1, 2, 0, 1)
-        list_items = [ "/", "/boot", "/home", "/usr", "/opt", "/var" ]			
-        mpCombo.set_popdown_strings(list_items)
-        mpCombo.entry.set_text("")
-        mpCombo.entry.set_editable(TRUE)
-
-        editLabel2 = GtkLabel("Filesystem Type:")
-        editTable.attach(editLabel2, 0, 1, 1, 2)
-
-        fsCombo = GtkCombo()
-        editTable.attach(fsCombo, 1, 2, 1, 2)
-        list_items = [ "ext2", "Linux Swap", "FAT 16" ]			
-        fsCombo.set_popdown_strings(list_items)
-        fsCombo.entry.set_text("")
-        fsCombo.entry.set_editable(FALSE)
-
-        editLabel3 = GtkLabel("Size (M):")
-        editTable.attach(editLabel3, 0, 1, 2, 3)
-
-        sizeEntry = GtkEntry()
-        editTable.attach(sizeEntry, 1, 2, 2, 3)
-            
-        editLabel4 = GtkLabel("Growable:")
-        editTable.attach(editLabel4, 0, 1, 3, 4)
-
-        growCombo = GtkCombo()
-        editTable.attach(growCombo, 1, 2, 3, 4)
-        list_items = [ "No", "Yes" ]			
-        growCombo.set_popdown_strings(list_items)
-        growCombo.entry.set_editable(FALSE)
-
-        for i in range(4):
-            if i == 0:
-                mpCombo.entry.set_text(partClist.get_text(s[0], i))
-            elif i == 1:
-                fsCombo.entry.set_text(partClist.get_text(s[0], i))
-            elif i == 2:
-                sizeEntry.set_text(partClist.get_text(s[0], i))
-            elif i == 3:
-                growCombo.entry.set_text(partClist.get_text(s[0], i))
+    def editPartition(self, *args):
+        print "edit Partition"
 
 
         def editEntry(args, editWindow=editWindow, mpCombo=mpCombo, fsCombo=fsCombo, sizeEntry=sizeEntry, growCombo=growCombo, selected=s):
