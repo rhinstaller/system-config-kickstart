@@ -8,7 +8,7 @@ ExclusiveOS: Linux
 Group: System Environment/Base
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildArch: noarch
-Source0: %{name}-%{version}.tar.gz
+Source0: %{name}-%{version}.tar.bz2
 Obsoletes: ksconfig
 BuildRequires: desktop-file-utils
 Requires: pygtk2 >= 1.99.11
