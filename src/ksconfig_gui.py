@@ -98,7 +98,7 @@ class ksconfig_gui:
 		#bring in package function
 #		self.packages_class = packages.headerList(xml)
                 #FIXME
-#		self.packages_class = packages.Packages(xml)	
+		self.packages_class = packages.Packages(xml)	
 		#bring in scripts function
 		self.scripts_class = scripts.scripts(xml)	
 
@@ -202,8 +202,8 @@ class ksconfig_gui:
  		list = list + self.firewall_class.getData()
 		list = list + self.X_class.getData()
 
-#		if self.install_radiobutton.get_active():
-#			list = list + self.packages_class.getData()
+		if self.install_radiobutton.get_active():
+			list = list + self.packages_class.getData()
 
 		list = list + self.scripts_class.getData()
 
