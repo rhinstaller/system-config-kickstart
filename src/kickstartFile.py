@@ -2,10 +2,14 @@
 
 import string
 import getopt
+import kickstartData
 
 class KickstartFile:
     def __init__(self):
         print "starting"
+
+        self.kickstartData = kickstartData.KickstartData()
+
 	self.handlers = { 
 ## 		     "auth"		: self.doAuthconfig	,
 ## 		     "authconfig"	: self.doAuthconfig	,
@@ -48,6 +52,8 @@ class KickstartFile:
 
 
         self.readKickstartFile()
+        print "Lang is", self.kickstartData.getLang()
+
 
     def readKickstartFile(self):
         self.lines = open("ks.cfg", "r").readlines()
@@ -69,8 +75,7 @@ class KickstartFile:
                     
     def doLang(self, args):
         print "foo", args
-                    
-
+        self.kickstartData.setLang(args[0])
 
 
 KickstartFile()
