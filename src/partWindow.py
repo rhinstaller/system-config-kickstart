@@ -270,9 +270,10 @@ class partWindow:
                                           MESSAGE_BOX_ERROR, STOCK_BUTTON_OK, None)
                     dlg.run_and_close()
                     return
-                return
+#                return
 
         if fsType == "Linux Swap":
+            fsType = "swap"
             mountPoint = ""
 
         if onDisk and onPart:
