@@ -108,7 +108,6 @@ class ksconfig_gui:
 			  "on_about_activate" : self.on_about_activate,
 			  "on_activate_confirm_options" : self.on_activate_confirm_options,
 			  "on_help_button_clicked" : self.on_help_button_clicked,
-			  
 			  } )
 
 		#populate category list
