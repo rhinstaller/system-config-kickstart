@@ -48,7 +48,10 @@ class basic:
         self.interactive_checkbutton = xml.get_widget("interactive_checkbutton")                
 
         #define languages, add languages here
-        self.langDict = {"Czech" : "cs_CZ",
+        self.langDict = {"Chinese(Mainland)" :  "zh_CN.GB2312",
+			 "Chinese(Taiwan)" : "zh_TW.Big5",
+			 "Czech" : "cs_CZ",
+                         "Danish" : "da_DK",
                          "English" : "en_US",
                          "French" : "fr_FR",
                          "German" : "de_DE",
@@ -56,16 +59,18 @@ class basic:
                          "Icelandic" : "is_IS",
                          "Italian" : "it_IT",
                          "Japanese" : "ja_JP.eucJP",
+                         "Korean" : "ko_KR.eucKR",
                          "Norwegian" : "no_NO",
+                         "Portuguese" : "pt_PT",
                          "Romanian" : "ro_RO",
-                         "Russian" : "ru_RU.K0I8-R",
+                         "Russian" : "ru_RU.k0I8r",
                          "Serbian" : "sr_YU",
                          "Slovak" : "sk_SK",
                          "Slovenian" : "sl_SI",
                          "Spanish" : "es_ES",
                          "Swedish" : "sv_SE",
                          "Turkish" : "tr_TR",
-                         "Ukrainian" : "tr_TR",
+                         "Ukrainian" : "uk_UA",
                     }
 
         #define mice, add mice here
@@ -111,13 +116,13 @@ class basic:
         lang_list.sort()
         lang_combo.set_popdown_strings(lang_list)
         #set default to English
-        lang_combo.list.select_item(1)
+        lang_combo.list.select_item(4)
         lang_combo.entry.set_editable(FALSE)
 
         #populate language support combo
         lang_support_combo.set_popdown_strings(lang_list)
         #set default to English
-        lang_support_combo.list.select_item(1)
+        lang_support_combo.list.select_item(4)
         lang_support_combo.entry.set_editable(FALSE)				
         
         #populate mouse combo
