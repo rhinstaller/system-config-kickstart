@@ -1,9 +1,9 @@
 #!/usr/bin/python
 
 ## partWindow - event handling code for ksconfig's partitioning dialog
-## Copyright (C) 2001 Red Hat, Inc.
-## Copyright (C) 2001 Brent Fox <bfox@redhat.com>
-## Copyright (C) 2001 Tammy Fox <tfox@redhat.com>
+## Copyright (C) 2001, 2002 Red Hat, Inc.
+## Copyright (C) 2001, 2002 Brent Fox <bfox@redhat.com>
+## Copyright (C) 2001, 2002 Tammy Fox <tfox@redhat.com>
 
 ## This program is free software; you can redistribute it and/or modify
 ## it under the terms of the GNU General Public License as published by

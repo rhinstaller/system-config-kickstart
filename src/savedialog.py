@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
 ## Kickstart Configurator - A graphical kickstart file generator
-## Copyright (C) 2000, 2001 Red Hat, Inc.
-## Copyright (C) 2000, 2001 Brent Fox <bfox@redhat.com>
-##                          Tammy Fox <tfox@redhat.com>
+## Copyright (C) 2000, 2001, 2002 Red Hat, Inc.
+## Copyright (C) 2000, 2001, 2002 Brent Fox <bfox@redhat.com>
+##                                Tammy Fox <tfox@redhat.com>
 
 ## This program is free software; you can redistribute it and/or modify
 ## it under the terms of the GNU General Public License as published by
@@ -61,6 +61,5 @@ class saveDialog:
 		for line in self.dataList:
 			ksFile.write(line + "\n")
  
-
 		ksFile.close()
 		self.dialog.hide()

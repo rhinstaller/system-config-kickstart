@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
 ## Kickstart Configurator - A graphical kickstart file generator
-## Copyright (C) 2000, 2001 Red Hat, Inc.
-## Copyright (C) 2000, 2001 Brent Fox <bfox@redhat.com>
-##                          Tammy Fox <tfox@redhat.com>
+## Copyright (C) 2000, 2001, 2002 Red Hat, Inc.
+## Copyright (C) 2000, 2001, 2002 Brent Fox <bfox@redhat.com>
+##                                Tammy Fox <tfox@redhat.com>
 
 ## This program is free software; you can redistribute it and/or modify
 ## it under the terms of the GNU General Public License as published by
@@ -61,8 +61,6 @@ class saveFile:
 
 		for line in self.buf:
 			self.confirm_options_textbox.insert_defaults(line + "\n") 
-##		#insert current configuration
-##		self.confirm_options_textbox.insert_defaults(self.buf) 
 
 		self.confirm_options_textbox.thaw()           
 		self.dialog.show_all()
@@ -72,8 +70,5 @@ class saveFile:
 		self.dialog.hide()
 
 	def saveFile_cb(self, *args):
-
 		self.dialog.hide()
- 		fileDialog = savedialog.saveDialog(self.buf, self.xml)		
-
-
+ 		fileDialog = savedialog.saveDialog(self.buf, self.xml)

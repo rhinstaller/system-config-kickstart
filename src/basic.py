@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
 ## Kickstart Configurator - A graphical kickstart file generator
-## Copyright (C) 2000, 2001 Red Hat, Inc.
-## Copyright (C) 2000, 2001 Brent Fox <bfox@redhat.com>
-##                          Tammy Fox <tfox@redhat.com>
+## Copyright (C) 2000, 2001, 2002 Red Hat, Inc.
+## Copyright (C) 2000, 2001, 2002 Brent Fox <bfox@redhat.com>
+##                                Tammy Fox <tfox@redhat.com>
 
 ## This program is free software; you can redistribute it and/or modify
 ## it under the terms of the GNU General Public License as published by
@@ -244,7 +244,6 @@ class basic:
         xml.signal_autoconnect (
                 { "on_lang_support_list_select_row" : self.on_lang_support_list_select_row,
                   "on_lang_support_list_unselect_row" : self.on_lang_support_list_unselect_row,
-#                  "on_messagebox_button_clicked" : self.on_messagebox_button_clicked,
                   } )
 
     def on_lang_support_list_select_row(self, *args):
@@ -252,10 +251,6 @@ class basic:
 
     def on_lang_support_list_unselect_row(self, *args):
         self.langSupportList.remove(self.langDict[self.lang_support_list.get_text(args[1], args[2])])
-
-#    def on_messagebox_button_clicked(self, *args):
-#        print "button clicked"
-#        self.messagebox.hide()
 
     def getData(self):
         data = []
