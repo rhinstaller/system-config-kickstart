@@ -24,6 +24,7 @@
 import gtk
 import gtk.glade
 import getopt
+import string
 
 class scripts:
 
@@ -47,37 +48,46 @@ class scripts:
         self.pre_interpreter_entry.set_sensitive(self.pre_interpreter_checkbutton.get_active())        
 
     def getData(self):
-        data = []
-        data.append("")
-        data.append(self.preData())
-        data.append(self.postData())
-        return data
+        self.preData()
+        self.postData()
     
     def preData(self):
-        pre_command = "%pre "
         if self.pre_interpreter_checkbutton.get_active():
-            pre_command = pre_command + "--interpreter " + self.pre_interpreter_entry.get_text()
-        pre_buffer = self.pre_textview.get_buffer()
-        data = pre_buffer.get_text(pre_buffer.get_start_iter(),pre_buffer.get_end_iter(),gtk.FALSE)
-        if data != "":
-            buf = "\n" + pre_command + "\n" + data
+            pre_command = "--interpreter=" + self.pre_interpreter_entry.get_text()
+            self.kickstartData.setPreLine(pre_command)
         else:
-            buf = ""
-        return buf
+            self.kickstartData.setPreLine(None)
+
+        pre_buffer = self.pre_textview.get_buffer()
+        data = pre_buffer.get_text(pre_buffer.get_start_iter(),pre_buffer.get_end_iter(),gtk.TRUE)
+        data = string.strip(data)
+
+        if data != "":
+            self.kickstartData.setPreList([data])
+
 
     def postData(self):
-        post_command = "%post "
+        post_command = ""
         if self.chroot_checkbutton.get_active():
-            post_command = post_command + "--nochroot  "
+            post_command = "--nochroot "
+
         if self.interpreter_checkbutton.get_active():
-            post_command = post_command + "--interpreter " + self.interpreter_entry.get_text()
-        post_buffer = self.post_textview.get_buffer()
-        data = post_buffer.get_text(post_buffer.get_start_iter(),post_buffer.get_end_iter(),gtk.FALSE)
-        if data != "":
-            buf = "\n" + post_command + "\n" + data
+            post_command = post_command + "--interpreter=" + self.interpreter_entry.get_text()
+
+        if post_command == "":
+            self.kickstartData.setPostLine(None)
         else:
-            buf = ""
-        return buf
+            self.kickstartData.setPostLine(post_command)
+
+        post_buffer = self.post_textview.get_buffer()
+        data = post_buffer.get_text(post_buffer.get_start_iter(),post_buffer.get_end_iter(),gtk.TRUE)
+
+        data = string.strip(data)
+
+        if data == "":
+            self.kickstartData.setPostList([])
+        else:
+            self.kickstartData.setPostList([data])
 
     def fillData(self):
         if self.kickstartData.getPreLine():
