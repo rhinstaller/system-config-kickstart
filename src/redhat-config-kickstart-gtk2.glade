@@ -1587,8 +1587,6 @@
 		  <property name="show_border">False</property>
 		  <property name="tab_pos">GTK_POS_TOP</property>
 		  <property name="scrollable">False</property>
-		  <property name="tab_hborder">2</property>
-		  <property name="tab_vborder">2</property>
 		  <property name="enable_popup">False</property>
 
 		  <child>
@@ -2467,8 +2465,6 @@
 			      <property name="show_border">False</property>
 			      <property name="tab_pos">GTK_POS_TOP</property>
 			      <property name="scrollable">False</property>
-			      <property name="tab_hborder">2</property>
-			      <property name="tab_vborder">2</property>
 			      <property name="enable_popup">False</property>
 
 			      <child>
@@ -3351,6 +3347,17 @@
 				  <property name="fill">False</property>
 				</packing>
 			      </child>
+
+			      <child>
+				<widget class="GtkHSeparator" id="hseparator27">
+				  <property name="visible">True</property>
+				</widget>
+				<packing>
+				  <property name="padding">0</property>
+				  <property name="expand">True</property>
+				  <property name="fill">True</property>
+				</packing>
+			      </child>
 			    </widget>
 			    <packing>
 			      <property name="padding">0</property>
@@ -3366,8 +3373,6 @@
 			      <property name="show_border">False</property>
 			      <property name="tab_pos">GTK_POS_TOP</property>
 			      <property name="scrollable">False</property>
-			      <property name="tab_hborder">2</property>
-			      <property name="tab_vborder">2</property>
 			      <property name="enable_popup">False</property>
 
 			      <child>
@@ -3399,63 +3404,10 @@
 				  </child>
 
 				  <child>
-				    <widget class="GtkHBox" id="hbox37">
-				      <property name="visible">True</property>
-				      <property name="homogeneous">False</property>
-				      <property name="spacing">9</property>
-
-				      <child>
-					<widget class="GtkLabel" id="grub_password_label">
-					  <property name="visible">True</property>
-					  <property name="label" translatable="yes">Use GRUB password: </property>
-					  <property name="use_underline">False</property>
-					  <property name="use_markup">False</property>
-					  <property name="justify">GTK_JUSTIFY_CENTER</property>
-					  <property name="wrap">False</property>
-					  <property name="selectable">False</property>
-					  <property name="xalign">0</property>
-					  <property name="yalign">0.5</property>
-					  <property name="xpad">0</property>
-					  <property name="ypad">0</property>
-					</widget>
-					<packing>
-					  <property name="padding">0</property>
-					  <property name="expand">False</property>
-					  <property name="fill">False</property>
-					</packing>
-				      </child>
-
-				      <child>
-					<widget class="GtkEntry" id="grub_password_entry">
-					  <property name="visible">True</property>
-					  <property name="can_focus">True</property>
-					  <property name="editable">True</property>
-					  <property name="visibility">False</property>
-					  <property name="max_length">0</property>
-					  <property name="text" translatable="yes"></property>
-					  <property name="has_frame">True</property>
-					  <property name="invisible_char" translatable="yes">*</property>
-					  <property name="activates_default">False</property>
-					</widget>
-					<packing>
-					  <property name="padding">0</property>
-					  <property name="expand">False</property>
-					  <property name="fill">False</property>
-					</packing>
-				      </child>
-				    </widget>
-				    <packing>
-				      <property name="padding">0</property>
-				      <property name="expand">False</property>
-				      <property name="fill">True</property>
-				    </packing>
-				  </child>
-
-				  <child>
-				    <widget class="GtkCheckButton" id="grub_password_encrypt_checkbutton">
+				    <widget class="GtkCheckButton" id="grub_password_checkbutton">
 				      <property name="visible">True</property>
 				      <property name="can_focus">True</property>
-				      <property name="label" translatable="yes">Encrypt GRUB password</property>
+				      <property name="label" translatable="yes">Use GRUB password</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
 				      <property name="active">False</property>
@@ -3466,6 +3418,156 @@
 				      <property name="padding">0</property>
 				      <property name="expand">False</property>
 				      <property name="fill">False</property>
+				    </packing>
+				  </child>
+
+				  <child>
+				    <widget class="GtkAlignment" id="alignment6">
+				      <property name="visible">True</property>
+				      <property name="xalign">1</property>
+				      <property name="yalign">0.5</property>
+				      <property name="xscale">0.95</property>
+				      <property name="yscale">1</property>
+
+				      <child>
+					<widget class="GtkVBox" id="grub_password_hbox">
+					  <property name="visible">True</property>
+					  <property name="sensitive">False</property>
+					  <property name="homogeneous">False</property>
+					  <property name="spacing">5</property>
+
+					  <child>
+					    <widget class="GtkTable" id="table14">
+					      <property name="visible">True</property>
+					      <property name="n_rows">2</property>
+					      <property name="n_columns">2</property>
+					      <property name="homogeneous">False</property>
+					      <property name="row_spacing">5</property>
+					      <property name="column_spacing">5</property>
+
+					      <child>
+						<widget class="GtkLabel" id="label211">
+						  <property name="visible">True</property>
+						  <property name="label" translatable="yes">Password:</property>
+						  <property name="use_underline">False</property>
+						  <property name="use_markup">False</property>
+						  <property name="justify">GTK_JUSTIFY_LEFT</property>
+						  <property name="wrap">False</property>
+						  <property name="selectable">False</property>
+						  <property name="xalign">0</property>
+						  <property name="yalign">0.5</property>
+						  <property name="xpad">0</property>
+						  <property name="ypad">0</property>
+						</widget>
+						<packing>
+						  <property name="left_attach">0</property>
+						  <property name="right_attach">1</property>
+						  <property name="top_attach">0</property>
+						  <property name="bottom_attach">1</property>
+						  <property name="x_options">fill</property>
+						  <property name="y_options"></property>
+						</packing>
+					      </child>
+
+					      <child>
+						<widget class="GtkLabel" id="label212">
+						  <property name="visible">True</property>
+						  <property name="label" translatable="yes">Confirm Password:</property>
+						  <property name="use_underline">False</property>
+						  <property name="use_markup">False</property>
+						  <property name="justify">GTK_JUSTIFY_LEFT</property>
+						  <property name="wrap">False</property>
+						  <property name="selectable">False</property>
+						  <property name="xalign">0</property>
+						  <property name="yalign">0.5</property>
+						  <property name="xpad">0</property>
+						  <property name="ypad">0</property>
+						</widget>
+						<packing>
+						  <property name="left_attach">0</property>
+						  <property name="right_attach">1</property>
+						  <property name="top_attach">1</property>
+						  <property name="bottom_attach">2</property>
+						  <property name="x_options">fill</property>
+						  <property name="y_options"></property>
+						</packing>
+					      </child>
+
+					      <child>
+						<widget class="GtkEntry" id="grub_password_entry">
+						  <property name="visible">True</property>
+						  <property name="can_focus">True</property>
+						  <property name="editable">True</property>
+						  <property name="visibility">False</property>
+						  <property name="max_length">0</property>
+						  <property name="text" translatable="yes"></property>
+						  <property name="has_frame">True</property>
+						  <property name="invisible_char" translatable="yes">*</property>
+						  <property name="activates_default">False</property>
+						</widget>
+						<packing>
+						  <property name="left_attach">1</property>
+						  <property name="right_attach">2</property>
+						  <property name="top_attach">0</property>
+						  <property name="bottom_attach">1</property>
+						  <property name="x_options"></property>
+						  <property name="y_options"></property>
+						</packing>
+					      </child>
+
+					      <child>
+						<widget class="GtkEntry" id="grub_password_confirm">
+						  <property name="visible">True</property>
+						  <property name="can_focus">True</property>
+						  <property name="editable">True</property>
+						  <property name="visibility">False</property>
+						  <property name="max_length">0</property>
+						  <property name="text" translatable="yes"></property>
+						  <property name="has_frame">True</property>
+						  <property name="invisible_char" translatable="yes">*</property>
+						  <property name="activates_default">False</property>
+						</widget>
+						<packing>
+						  <property name="left_attach">1</property>
+						  <property name="right_attach">2</property>
+						  <property name="top_attach">1</property>
+						  <property name="bottom_attach">2</property>
+						  <property name="x_options"></property>
+						  <property name="y_options"></property>
+						</packing>
+					      </child>
+					    </widget>
+					    <packing>
+					      <property name="padding">0</property>
+					      <property name="expand">True</property>
+					      <property name="fill">True</property>
+					    </packing>
+					  </child>
+
+					  <child>
+					    <widget class="GtkCheckButton" id="grub_password_encrypt_checkbutton">
+					      <property name="visible">True</property>
+					      <property name="can_focus">True</property>
+					      <property name="label" translatable="yes">Encrypt GRUB password</property>
+					      <property name="use_underline">True</property>
+					      <property name="relief">GTK_RELIEF_NORMAL</property>
+					      <property name="active">False</property>
+					      <property name="inconsistent">False</property>
+					      <property name="draw_indicator">True</property>
+					    </widget>
+					    <packing>
+					      <property name="padding">0</property>
+					      <property name="expand">False</property>
+					      <property name="fill">False</property>
+					    </packing>
+					  </child>
+					</widget>
+				      </child>
+				    </widget>
+				    <packing>
+				      <property name="padding">0</property>
+				      <property name="expand">True</property>
+				      <property name="fill">True</property>
 				    </packing>
 				  </child>
 				</widget>
@@ -4171,7 +4273,7 @@
 				    <widget class="GtkButton" id="add_device_button">
 				      <property name="visible">True</property>
 				      <property name="can_focus">True</property>
-				      <property name="label" translatable="yes">Add Network Device</property>
+				      <property name="label" translatable="yes">_Add Network Device</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
 				    </widget>
@@ -4187,7 +4289,7 @@
 				      <property name="visible">True</property>
 				      <property name="sensitive">False</property>
 				      <property name="can_focus">True</property>
-				      <property name="label" translatable="yes">Edit Network Device</property>
+				      <property name="label" translatable="yes">_Edit Network Device</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
 				    </widget>
@@ -4203,7 +4305,7 @@
 				      <property name="visible">True</property>
 				      <property name="sensitive">False</property>
 				      <property name="can_focus">True</property>
-				      <property name="label" translatable="yes">Delete Network Device</property>
+				      <property name="label" translatable="yes">_Delete Network Device</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
 				    </widget>
@@ -4367,8 +4469,6 @@
 			      <property name="show_border">True</property>
 			      <property name="tab_pos">GTK_POS_TOP</property>
 			      <property name="scrollable">False</property>
-			      <property name="tab_hborder">2</property>
-			      <property name="tab_vborder">2</property>
 			      <property name="enable_popup">False</property>
 
 			      <child>
@@ -5790,8 +5890,6 @@
 			      <property name="show_border">True</property>
 			      <property name="tab_pos">GTK_POS_TOP</property>
 			      <property name="scrollable">False</property>
-			      <property name="tab_hborder">2</property>
-			      <property name="tab_vborder">2</property>
 			      <property name="enable_popup">False</property>
 
 			      <child>
