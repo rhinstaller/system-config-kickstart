@@ -29,25 +29,23 @@ import savedialog
 
 import gtk
 import signal
-import libglade
 import gnome.ui
 
-xml = libglade.GladeXML ("./ksconfig.glade", "partition_dialog", domain="ksconfig")
 
 class partWindow:
-
     def destroy(self, args):
         self.dialog.destroy()
 
-    def __init__(self):
+    def __init__(self, xml):
+        self.xml = xml
         print "init"
-        self.partitionDialog = xml.get_widget("partition_dialog")
+        self.partitionDialog = self.xml.get_widget("partition_dialog")
         self.partitionDialog.connect ("destroy", self.destroy)
-        self.deviceCombo = xml.get_widget("deviceCombo")
-        self.mountPointCombo = xml.get_widget("mountPointCombo")
-        self.fsTypeCombo = xml.get_widget("fsTypeCombo")
+        self.deviceCombo = self.xml.get_widget("deviceCombo")
+        self.mountPointCombo = self.xml.get_widget("mountPointCombo")
+        self.fsTypeCombo = self.xml.get_widget("fsTypeCombo")
 
-        xml.signal_autoconnect (
+        self.xml.signal_autoconnect (
             { "on_cancel_part_clicked" : self.on_cancel_part_clicked,
               })
 

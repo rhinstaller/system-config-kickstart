@@ -167,4 +167,4 @@ class ksconfig_gui:
 		buf = buf + self.scripts_class.getData()
 		
 	        #show confirm dialog window
-		confirmDialog = savefile.saveFile (buf)
+		confirmDialog = savefile.saveFile (buf, xml)

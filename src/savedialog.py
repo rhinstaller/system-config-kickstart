@@ -32,23 +32,22 @@ import signal
 import libglade
 import gnome.ui
 
-xml = libglade.GladeXML ("./ksconfig.glade", "save_dialog", domain="ksconfig")
-
 class saveDialog:
 	
 	def destroy(self, args):
 		self.dialog.destroy()
 
-        def __init__ (self, buf):
+        def __init__ (self, buf, xml):
+		self.xml = xml
 		self.buf = buf
-		self.dialog = xml.get_widget("save_dialog")
+		self.dialog = self.xml.get_widget("save_dialog")
 		self.dialog.set_filename("ks.cfg")
 		self.dialog.cancel_button.connect("clicked",self.dialog.hide)
 		self.dialog.filePath= ""
 		self.dialog.connect ("destroy", self.destroy)
 		
                 #extract widgets, autoconnects
-		xml.signal_autoconnect (
+		self.xml.signal_autoconnect (
 			{ "saveFile" : self.saveFile,
 			  } )
 

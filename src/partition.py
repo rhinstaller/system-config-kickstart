@@ -28,18 +28,19 @@ import partWindow
 
 class partition:
     def __init__(self, xml):
-        self.clear_mbr_yes_radiobutton = xml.get_widget("clear_mbr_yes_radiobutton")
-        self.clear_mbr_no_radiobutton = xml.get_widget("clear_mbr_no_radiobutton")
-        self.remove_parts_none_radiobutton = xml.get_widget("remove_parts_none_radiobutton")
-        self.remove_parts_all_radiobutton = xml.get_widget("remove_parts_all_radiobutton")
-        self.remove_parts_Linux_radiobutton = xml.get_widget("remove_parts_Linux_radiobutton")
-        self.partClist = xml.get_widget("partClist")
-        self.add_part_button = xml.get_widget("add_part_button")
-        self.edit_part_button = xml.get_widget("edit_part_button")
-        self.del_part_button = xml.get_widget("del_part_button")
-#        self.partitionDialog = xml.get_widget("partition_dialog")
+        self.xml = xml
+        self.clear_mbr_yes_radiobutton = self.xml.get_widget("clear_mbr_yes_radiobutton")
+        self.clear_mbr_no_radiobutton = self.xml.get_widget("clear_mbr_no_radiobutton")
+        self.remove_parts_none_radiobutton = self.xml.get_widget("remove_parts_none_radiobutton")
+        self.remove_parts_all_radiobutton = self.xml.get_widget("remove_parts_all_radiobutton")
+        self.remove_parts_Linux_radiobutton = self.xml.get_widget("remove_parts_Linux_radiobutton")
+        self.partClist = self.xml.get_widget("partClist")
+        self.add_part_button = self.xml.get_widget("add_part_button")
+        self.edit_part_button = self.xml.get_widget("edit_part_button")
+        self.del_part_button = self.xml.get_widget("del_part_button")
+#        self.partitionDialog = self.xml.get_widget("partition_dialog")
 
-        xml.signal_autoconnect (
+        self.xml.signal_autoconnect (
             { "select_clist" : self.select_clist,
               "unselect_clist" : self.unselect_clist,
               "addPartition" : self.addPartition,
@@ -88,7 +89,7 @@ class partition:
     def addPartition(self, *args):
         print "add Partition"
 #        self.partitionDialog.show_all()
-        self.partWindow = partWindow.partWindow()
+        self.partWindow = partWindow.partWindow(self.xml)
 
     def editPartition(self, *args):
         print "edit Partition"

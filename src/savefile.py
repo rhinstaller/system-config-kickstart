@@ -33,22 +33,21 @@ import signal
 import libglade
 import gnome.ui
 
-xml = libglade.GladeXML ("./ksconfig.glade", "confirm_options_dialog", domain="ksconfig")
-
 class saveFile:
 	
 	def destroy(self, args):
 		self.dialog.destroy()
 
-        def __init__ (self, buf):
+        def __init__ (self, buf, xml):
+		self.xml = xml
 		self.buf = buf
-		self.dialog = xml.get_widget("confirm_options_dialog")
+		self.dialog = self.xml.get_widget("confirm_options_dialog")
 		self.dialog.connect ("destroy", self.destroy)
 		
-		self.confirm_options_textbox = xml.get_widget("confirm_options_textbox")
+		self.confirm_options_textbox = self.xml.get_widget("confirm_options_textbox")
 	    
                 #extract widgets, autoconnects
-		xml.signal_autoconnect (
+		self.xml.signal_autoconnect (
 			{ "on_confirm_options_cancel_button" : self.on_confirm_options_cancel_button,
 			  "saveFile_cb" : self.saveFile_cb,
 			  } )
