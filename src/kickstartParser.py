@@ -24,7 +24,7 @@ class KickstartParser:
  		     "keyboard"		: self.kickstartData.setKeyboard	,
 # 		     "lang"		: self.kickstartData.setLang		,
        		     "lang"		: self.kickstartData.setLang		,
-                     "langsupport"	: self.kickstartData.setLangsupport	,
+                     "langsupport"	: self.kickstartData.setLangSupport	,
 ## 		     "lilo"		: self.kickstartData.setLilo		,
 
 ## 		     "lilocheck"	: self.kickstartData.setLiloCheck	,
@@ -77,7 +77,3 @@ class KickstartParser:
                     if self.handlers[tokens[0]]:
 			self.handlers[tokens[0]](tokens[1:])                        
                     
-import kickstartData
-data = kickstartData.KickstartData()
-KickstartParser(data, "ks.cfg")
-data.getAll()
