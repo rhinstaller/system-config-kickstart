@@ -5,7 +5,12 @@ VERSION=$(shell awk '/Version:/ { print $$2 }' ksconfig.spec)
 CVSTAG=r$(subst .,-,$(VERSION))
 SUBDIRS=man
 
+PREFIX=/usr
+
 MANDIR=/usr/share/man
+DATADIR=${PREFIX}/share
+
+PKGDATADIR=${DATADIR}/ksconfig
 
 default:
 
@@ -18,6 +23,7 @@ subdirs:
 install:
 	mkdir -p $(INSTROOT)/usr/sbin
 	install ksconfig.py $(INSTROOT)/usr/sbin/ksconfig
+	install *.py $(INSTROOT)/$(PKGDATADIR)
 	for d in $(SUBDIRS); do \
 	(cd $$d; $(MAKE) INSTROOT=$(INSTROOT) MANDIR=$(MANDIR) install) \
 		|| case "$(MFLAGS)" in *k*) fail=yes;; *) exit 1;; esac; \
