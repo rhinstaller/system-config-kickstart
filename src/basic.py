@@ -300,6 +300,7 @@ class basic:
         langSupportList = self.kickstartData.getLangSupport()
 
         if langSupportList == []:
+            iter = self.lang_support_store.get_iter_root()
             while iter:
                 self.lang_support_store.set_value(iter, 0, gtk.TRUE)
                 iter = self.lang_support_store.iter_next(iter)
