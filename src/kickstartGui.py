@@ -259,7 +259,9 @@ class kickstartGui:
         return 0
 
     def on_activate_open(self, *args):
-        fs = gtk.FileSelection()
+        fs = gtk.FileChooserDialog(action=gtk.FILE_CHOOSER_ACTION_OPEN,
+                 buttons=(gtk.STOCK_CANCEL,gtk.RESPONSE_CANCEL,
+			  gtk.STOCK_OPEN,gtk.RESPONSE_OK))
         result = fs.run()
         file = fs.get_filename()
 

@@ -39,7 +39,7 @@ class saveDialog:
 		self.save_ok_button = self.xml.get_widget("save_ok_button")
 		self.save_cancel_button = self.xml.get_widget("save_cancel_button")
 
-		self.dialog.set_filename("ks.cfg")
+		self.dialog.set_current_name("ks.cfg")
 
 		self.dialog.filePath= ""
 		self.dialog.connect ("destroy", self.destroy)
