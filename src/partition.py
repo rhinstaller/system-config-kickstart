@@ -41,13 +41,14 @@ gettext.textdomain ("redhat-config-kickstart")
 _=gettext.gettext
 
 class partition:
-    def __init__(self, xml):
+    def __init__(self, xml, kickstartData):
         self.xml = xml
+        self.kickstartData = kickstartData
         self.clear_mbr_yes_radiobutton = self.xml.get_widget("clear_mbr_yes_radiobutton")
         self.clear_mbr_no_radiobutton = self.xml.get_widget("clear_mbr_no_radiobutton")
         self.remove_parts_none_radiobutton = self.xml.get_widget("remove_parts_none_radiobutton")
         self.remove_parts_all_radiobutton = self.xml.get_widget("remove_parts_all_radiobutton")
-        self.remove_parts_Linux_radiobutton = self.xml.get_widget("remove_parts_Linux_radiobutton")
+        self.remove_parts_linux_radiobutton = self.xml.get_widget("remove_parts_linux_radiobutton")
         self.initlabel_yes_radiobutton = self.xml.get_widget("initlabel_yes_radiobutton")
         self.initlabel_no_radiobutton = self.xml.get_widget("initlabel_no_radiobutton")        
         self.part_view = self.xml.get_widget("part_view")
@@ -57,6 +58,7 @@ class partition:
         self.raid_part_button = self.xml.get_widget("raid_part_button")
         self.checkbox = self.xml.get_widget("checkbox2")
 
+        self.remove_parts_none_radiobutton.connect("toggled", self.noneToggled)
         self.add_part_button.connect("clicked", self.addPartition)
         self.edit_part_button.connect("clicked", self.editPartition)
         self.del_part_button.connect("clicked", self.delPartition)
@@ -189,41 +191,34 @@ class partition:
         self.raidOptionsWindow.showOptionsWindow()
 
     def getData(self):
-        data = []
-        data.append("")
+        self.kickstartData.clearPartList()
 
         #zerombr and clearpart options
         if self.clear_mbr_yes_radiobutton.get_active():
-            data.append("#Clear the Master Boot Record")
-            data.append("zerombr yes")
-        elif self.clear_mbr_no_radiobutton.get_active():
-            pass
+            self.kickstartData.setZeroMbr("yes")
+        else:
+            self.kickstartData.setZeroMbr(None)
+            
         if self.remove_parts_none_radiobutton.get_active():
+            #We want to preserve all partitions, so don't write the clearpart line
+            self.kickstartData.setClearPart(None)
             pass
         else:
-            buf = "clearpart "
-            data.append("")
+            #Prepart the clearpart line
+            buf = ""
             if self.remove_parts_all_radiobutton.get_active():
-                data.append("#Clear all partitions from the disk")
-                buf = buf + "--all "
-            elif self.remove_parts_Linux_radiobutton.get_active():
-                data.append("#Clear only Linux partitions from the disk")
+                buf = "--all "
+            elif self.remove_parts_linux_radiobutton.get_active():
                 buf = buf + "--linux "
+
             if self.initlabel_yes_radiobutton.get_active():
                 buf = buf + "--initlabel "
-            elif self.initlabel_no_radiobutton.get_active():
-                pass
-            data.append(buf)
-
-        data.append("")
-        data.append("#Disk partitioning information")
+            self.kickstartData.setClearPart([buf])
 
         self.partDataBuf = []
         self.part_store.foreach(self.getPartData)
 
-        data = data + self.partDataBuf
-        
-        return data
+        return None
 
     def getPartData(self, store, data, iter):
         part_object = self.part_store.get_value(iter, 5)
@@ -231,7 +226,7 @@ class partition:
         if part_object:
 
             if part_object.isRaidDevice == None:
-                buf = "part %s" % (part_object.mountPoint)
+                buf = part_object.mountPoint
                 
                 if part_object.fsType == "swap":
                     buf = buf + "swap "
@@ -282,6 +277,7 @@ class partition:
                     partitions = string.join(part_object.raidPartitions, " ")
                     buf = buf + partitions + " "
 
+            self.kickstartData.definePartition([buf])
             self.partDataBuf.append(buf)
             
     def rowSelected(self, *args):
@@ -313,3 +309,31 @@ class partition:
         if rc == gtk.RESPONSE_OK:
             dlg.hide()
         return None
+
+    def noneToggled(self, button):
+        self.initlabel_yes_radiobutton.set_sensitive(not button.get_active())
+        self.initlabel_no_radiobutton.set_sensitive(not button.get_active())
+
+    def fillData(self):
+        if self.kickstartData.getZeroMbr():
+            if self.kickstartData.getZeroMbr() == "yes":
+                self.clear_mbr_yes_radiobutton.set_active(gtk.TRUE)
+        else:
+            self.clear_mbr_no_radiobutton.set_active(gtk.TRUE)            
+
+        if self.kickstartData.getClearPart():
+            print self.kickstartData.getClearPart()
+            partList = self.kickstartData.getClearPart()
+            
+            if "--all" in partList:
+                self.remove_parts_all_radiobutton.set_active(gtk.TRUE)
+            elif "--linux" in partList:
+                self.remove_parts_linux_radiobutton.set_active(gtk.TRUE)                
+
+            if "--initlabel" in partList:
+                self.initlabel_yes_radiobutton.set_active(gtk.TRUE)
+            else:
+                self.initlabel_no_radiobutton.set_active(gtk.TRUE)
+                
+        else:
+            self.remove_parts_none_radiobutton.set_active(gtk.TRUE)
