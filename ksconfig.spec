@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: ksconfig
-Version: 1.9.3
-Release: 2
+Version: 1.9.4
+Release: 0
 URL: http://www.redhat.com
 Copyright: GPL
 ExclusiveOS: Linux
@@ -54,6 +54,9 @@ fi
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
+* Tue Jul 18 2001 Tammy Fox <tfox@redhat.com>
+- added i18n stuff
+
 * Mon Jul 16 2001 Brent Fox <bfox@redhat.com>
 - finished partitioning page
 
