@@ -96,7 +96,7 @@ class ProfileSystem:
             passwd = "--iscrypted" + tokens[1]
             self.kickstartData.setRootPw([passwd])
         else:
-            print "no access to file"
+            print "no access to /etc/shadow"
 
     def getPackages(self):
         fd = os.popen("/bin/rpm -qa --queryformat \"%{NAME}\n\"")
@@ -105,5 +105,7 @@ class ProfileSystem:
         packages.sort()
 
         for package in packages:
-            package = string.strip(package)
-            print package
+            packages[packages.index(package)] = string.strip(package)
+
+        self.kickstartData.setPackage(["resolvedeps"])
+        self.kickstartData.setIndividualPackageList(packages)
