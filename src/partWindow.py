@@ -191,7 +191,10 @@ class partWindow:
 
         self.partitionDialog.show_all()
         #XXX - have to do this after the show_all due to a bug in gtkSpinButton, I suspect
-        self.sizeCombo.set_text(part_object.size)
+        if part_object.size == "recommended":
+            self.swap_checkbutton.set_active(gtk.TRUE)
+        else:
+            self.sizeCombo.set_text(str(part_object.size))
         
     def win_reset(self):
         self.mountPointCombo.entry.set_text("")
@@ -346,18 +349,19 @@ class partWindow:
         part_object.fsType = self.fsTypesDict[fsTypeKey]
 
         ## size stuff
-        if self.swap_checkbutton.get_active() == 1:
+        if self.swap_checkbutton.get_active() == gtk.TRUE:
             part_object.size = "recommended"
+            part_object.sizeStrategy = "fixed"
         else:
             part_object.size = self.sizeCombo.get_text()
 
-        if self.sizeFixedRadio.get_active() == gtk.TRUE:
-            part_object.sizeStrategy = "fixed"
-        elif self.setSizeRadio.get_active() == gtk.TRUE:
-            part_object.sizeStrategy = "grow"
-            part_object.setSizeVal = self.setSizeCombo.get_text()
-        elif self.sizeMaxRadio.get_active() == gtk.TRUE:
-            part_object.sizeStrategy = "max"
+            if self.sizeFixedRadio.get_active() == gtk.TRUE:
+                part_object.sizeStrategy = "fixed"
+            elif self.setSizeRadio.get_active() == gtk.TRUE:
+                part_object.sizeStrategy = "grow"
+                part_object.setSizeVal = self.setSizeCombo.get_text()
+            elif self.sizeMaxRadio.get_active() == gtk.TRUE:
+                part_object.sizeStrategy = "max"
 
         part_object.asPrimary = self.asPrimaryCheck.get_active()
 
@@ -544,15 +548,22 @@ class partWindow:
             self.setValues(part_object)
 
     def parseLine(self, part_object, line):
-        part_object.mountPoint = line[0]
-        opts, args = getopt.getopt(line[1:], "d:h", ["fstype=", "size=", "onpart", 
-                                                     "grow", "maxsize", "noformat", "onpart",
+        opts, args = getopt.getopt(line[1:], "d:h", ["recommended", "fstype=", "size=", "onpart",
+                                                     "grow", "maxsize", "noformat",
                                                      "usepart", "ondisk=", "ondrive", "asprimary"
-                                                     "bytes-per-inode", "start", "end", "badblocks"])
+                                                     "bytes-per-inode", "start", "end", "badblocks"
+                                                     ])
 
         for (opt, value) in opts:
-            if opt == "--fstype":
+            if line[0] == "swap":
+                part_object.fsType = "swap"
+                part_object.mountPoint = ""
+            elif opt == "--fstype":
                 part_object.fsType = value
+                part_object.mountPoint = line[0]                
+
+            if opt == "--recommended":
+                part_object.size = "recommended"
 
             if opt == "--size":
                 part_object.size = value
