@@ -71,7 +71,7 @@ msgstr "label30"
 msgid "label31"
 msgstr "label31"
 
-#: ../src/kickstartGui.py:121
+#: ../src/kickstartGui.py:124
 msgid "Authentication"
 msgstr "인증"
 
@@ -109,7 +109,7 @@ msgstr ""
 msgid "Install new boot loader"
 msgstr "새로운 부트로더 설치"
 
-#: ../src/kickstartGui.py:122 redhat-config-kickstart.gladestrings:248
+#: ../src/kickstartGui.py:125 redhat-config-kickstart.gladestrings:248
 msgid "Firewall Configuration"
 msgstr "방화벽 설정"
 
@@ -129,7 +129,7 @@ msgstr "GRUB 패스워드 암호화"
 msgid "Fill all unused space on disk"
 msgstr "사용안된 디스크 공간 모두 채움"
 
-#: ../src/kickstartGui.py:155
+#: ../src/kickstartGui.py:157
 msgid "About Kickstart Configurator"
 msgstr "킥스타트 설정 프로그램에 대하여"
 
@@ -201,9 +201,9 @@ msgstr ""
 msgid "Kernel parameters:"
 msgstr "커널 매개변수:"
 
-#: redhat-config-kickstart.gladestrings:53
-msgid "md14"
-msgstr "md14"
+#: redhat-config-kickstart.gladestrings:66
+msgid "_Save File"
+msgstr "파일 저장(_S)"
 
 #: redhat-config-kickstart.gladestrings:306
 msgid "Create a software RAID partition"
@@ -213,17 +213,13 @@ msgstr "소프트웨어 RAID 파티션 만들기"
 msgid "Drive :"
 msgstr "드라이브 :"
 
-#: redhat-config-kickstart.gladestrings:260
-msgid "Probe for video card"
-msgstr "비디오 카드 검색"
+#: redhat-config-kickstart.gladestrings:161
+msgid "None"
+msgstr "없음"
 
 #: redhat-config-kickstart.gladestrings:164
 msgid "Gateway:"
 msgstr "게이트웨이:"
-
-#: redhat-config-kickstart.gladestrings:19
-msgid "Force to be a primary partition (asprimary)"
-msgstr "첫번째(primary) 파티션으로 함"
 
 #: redhat-config-kickstart.gladestrings:198
 msgid "Use MD5"
@@ -261,9 +257,9 @@ msgstr "텍스트 모드로 설치 (기본값은 그래픽 모드임)"
 msgid "Hard Drive Partition:"
 msgstr "하드 드라이브 파티션:"
 
-#: redhat-config-kickstart.gladestrings:241
-msgid "label32"
-msgstr "label32"
+#: ../src/install.py:196
+msgid "Please enter a hard drive directory."
+msgstr ""
 
 #: redhat-config-kickstart.gladestrings:107
 msgid "Specify an FTP username and password"
@@ -277,9 +273,9 @@ msgstr "사용하지 않음"
 msgid "label174"
 msgstr "label174"
 
-#: ../src/partWindow.py:413
-msgid "Specify a mount point for the partition."
-msgstr "해당 파티션에 대한 마운트 지점을 지정해 주십시오."
+#: ../src/install.py:182
+msgid "Please enter an HTTP server directory."
+msgstr ""
 
 #: redhat-config-kickstart.gladestrings:134
 msgid "label173"
@@ -314,7 +310,7 @@ msgstr "HTTP"
 msgid "Raid Devices"
 msgstr "RAID 장치"
 
-#: ../src/kickstartGui.py:120
+#: ../src/kickstartGui.py:123
 msgid "Boot Loader Options"
 msgstr "부트로더 옵션"
 
@@ -342,9 +338,10 @@ msgstr "비디오 카드의 램 용량: "
 msgid "Root Password:"
 msgstr "Root 패스워드:"
 
-#: ../src/basic.py:271
-msgid "Please select a root password."
-msgstr "Root 패스워드를 선택해 주십시오."
+#: redhat-config-kickstart.gladestrings:155
+#, fuzzy
+msgid "RAID"
+msgstr "RAID 5"
 
 #: redhat-config-kickstart.gladestrings:307
 msgid "Create a RAID device [default = /dev/md0]"
@@ -370,7 +367,7 @@ msgstr "Hz"
 msgid "label93"
 msgstr "label93"
 
-#: ../src/kickstartGui.py:119
+#: ../src/kickstartGui.py:122
 msgid "Basic Configuration"
 msgstr "기본 설정"
 
@@ -378,9 +375,9 @@ msgstr "기본 설정"
 msgid "Color Depth"
 msgstr "색상 수"
 
-#: redhat-config-kickstart.gladestrings:17
-msgid "Use recommended swap size"
-msgstr "추천된 스왑 용량 사용하기"
+#: redhat-config-kickstart.gladestrings:154
+msgid "_Delete"
+msgstr "삭제(_D)"
 
 #: redhat-config-kickstart.gladestrings:109
 msgid "FTP Password"
@@ -389,6 +386,10 @@ msgstr "FTP 패스워드"
 #: redhat-config-kickstart.gladestrings:7
 msgid "Save File"
 msgstr "파일 저장"
+
+#: ../src/install.py:140
+msgid "Please enter an NFS server."
+msgstr ""
 
 #: redhat-config-kickstart.gladestrings:283
 msgid "Miscellaneous"
@@ -402,17 +403,21 @@ msgstr "SMB 작업그룹:"
 msgid "SMB"
 msgstr "SMB"
 
-#: ../src/kickstartGui.py:119
+#: ../src/kickstartGui.py:122
 msgid "Installation Method"
 msgstr "설치 방법"
 
-#: ../src/kickstartGui.py:123 redhat-config-kickstart.gladestrings:290
+#: ../src/kickstartGui.py:126 redhat-config-kickstart.gladestrings:290
 msgid "Pre-Installation Script"
 msgstr "설치-전(Pre) 스크립트"
 
-#: redhat-config-kickstart.gladestrings:66
-msgid "_Save File"
-msgstr "파일 저장(_S)"
+#: ../src/partWindow.py:413
+msgid "Specify a mount point for the partition."
+msgstr "해당 파티션에 대한 마운트 지점을 지정해 주십시오."
+
+#: redhat-config-kickstart.gladestrings:53
+msgid "md14"
+msgstr "md14"
 
 #: redhat-config-kickstart.gladestrings:54
 msgid "md15"
@@ -447,9 +452,9 @@ msgstr "시스템"
 msgid "FTP"
 msgstr "FTP"
 
-#: redhat-config-kickstart.gladestrings:161
-msgid "None"
-msgstr "없음"
+#: redhat-config-kickstart.gladestrings:19
+msgid "Force to be a primary partition (asprimary)"
+msgstr "첫번째(primary) 파티션으로 함"
 
 #: redhat-config-kickstart.gladestrings:153
 msgid "_Edit"
@@ -458,6 +463,10 @@ msgstr "편집(_E)"
 #: redhat-config-kickstart.gladestrings:163
 msgid "Netmask: "
 msgstr "넷매스크: "
+
+#: ../src/install.py:143
+msgid "Please enter an NFS directory."
+msgstr ""
 
 #: redhat-config-kickstart.gladestrings:47
 msgid "md8"
@@ -472,7 +481,7 @@ msgstr "md9"
 msgid "NFS"
 msgstr "NFS"
 
-#: ../src/kickstartGui.py:121 redhat-config-kickstart.gladestrings:194
+#: ../src/kickstartGui.py:124 redhat-config-kickstart.gladestrings:194
 msgid "Network Configuration"
 msgstr "네트웍 설정"
 
@@ -512,9 +521,9 @@ msgstr "md7"
 msgid "md4"
 msgstr "md4"
 
-#: ../src/firewall.py:147
-msgid "Other ports: (1029:tcp)"
-msgstr "그 외의 포트: (1029:tcp)"
+#: redhat-config-kickstart.gladestrings:44
+msgid "md5"
+msgstr "md5"
 
 #: redhat-config-kickstart.gladestrings:151
 msgid "Do not initialize the disk label"
@@ -536,7 +545,7 @@ msgstr "NFS 서버:"
 msgid "KDE"
 msgstr "KDE"
 
-#: ../src/kickstartGui.py:120
+#: ../src/kickstartGui.py:123
 msgid "Partition Information"
 msgstr "파티션 정보"
 
@@ -559,6 +568,10 @@ msgstr "물리적 볼륨 (LVM)"
 #: redhat-config-kickstart.gladestrings:158
 msgid "Network Type:"
 msgstr "네트웍 유형:"
+
+#: redhat-config-kickstart.gladestrings:241
+msgid "label32"
+msgstr "label32"
 
 #: redhat-config-kickstart.gladestrings:292
 msgid ""
@@ -608,6 +621,11 @@ msgstr ""
 msgid "label89"
 msgstr "label89"
 
+#: redhat-config-kickstart.gladestrings:276
+#, fuzzy
+msgid "_Automatically Resolve Dependencies"
+msgstr "패키지 간의 의존성 문제 자동으로 해결"
+
 #: ../src/partWindow.py:422
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
@@ -639,6 +657,10 @@ msgstr "키보드:"
 msgid "Use default firewall rules"
 msgstr "기본 방화벽 방침 사용"
 
+#: ../src/install.py:153
+msgid "Please enter an FTP directory."
+msgstr ""
+
 #: redhat-config-kickstart.gladestrings:68
 msgid "_Help"
 msgstr "도움말(_H)"
@@ -667,6 +689,10 @@ msgstr "md0"
 #: redhat-config-kickstart.gladestrings:274
 msgid "label88"
 msgstr "label88"
+
+#: ../src/install.py:199
+msgid "Please enter a hard drive partition."
+msgstr ""
 
 #: redhat-config-kickstart.gladestrings:40
 msgid "md1"
@@ -792,9 +818,9 @@ msgstr "허용할 서비스:"
 msgid "Mount Point:"
 msgstr "마운트할 지점:"
 
-#: redhat-config-kickstart.gladestrings:44
-msgid "md5"
-msgstr "md5"
+#: ../src/firewall.py:147
+msgid "Other ports: (1029:tcp)"
+msgstr "그 외의 포트: (1029:tcp)"
 
 #: redhat-config-kickstart.gladestrings:303
 msgid ""
@@ -812,9 +838,9 @@ msgstr ""
 msgid "Encrypt root password"
 msgstr "Root 패스워드 암호화"
 
-#: redhat-config-kickstart.gladestrings:150
-msgid "Initialize the disk label"
-msgstr "디스크 레이블 초기화"
+#: ../src/install.py:150
+msgid "Please enter an FTP server."
+msgstr ""
 
 #: redhat-config-kickstart.gladestrings:207
 msgid "Enable LDAP"
@@ -832,8 +858,8 @@ msgstr "NIS 서버를 찾기 위해 브로드캐스트 사용"
 msgid "Please select a partition from the list."
 msgstr "목록에서 파티션을 선택해 주십시오."
 
-#: ../src/basic.py:272 ../src/partition.py:294 ../src/partWindow.py:502
-#: ../src/raidWindow.py:190
+#: ../src/basic.py:275 ../src/install.py:210 ../src/partition.py:294
+#: ../src/partWindow.py:502 ../src/raidWindow.py:190
 msgid "Error"
 msgstr "오류"
 
@@ -841,7 +867,7 @@ msgstr "오류"
 msgid "Language:"
 msgstr "언어:"
 
-#: ../src/kickstartGui.py:154
+#: ../src/kickstartGui.py:156
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -862,6 +888,10 @@ msgstr "부트로더 옵션 (필수)"
 #: redhat-config-kickstart.gladestrings:25
 msgid "Use existing partition (onpart)"
 msgstr "기존의 파티션 사용"
+
+#: redhat-config-kickstart.gladestrings:237
+msgid "Enable nscd"
+msgstr "nscd 사용"
 
 #: redhat-config-kickstart.gladestrings:223
 msgid "Enable Hesiod Support"
@@ -903,9 +933,14 @@ msgstr "(예, hda1 또는 sdc3)"
 msgid "General"
 msgstr "일반(General)"
 
-#: redhat-config-kickstart.gladestrings:154
-msgid "_Delete"
-msgstr "삭제(_D)"
+#: redhat-config-kickstart.gladestrings:277
+#, fuzzy
+msgid "_Ignore Dependencies"
+msgstr "패키지 간의 의존성 무시"
+
+#: redhat-config-kickstart.gladestrings:17
+msgid "Use recommended swap size"
+msgstr "추천된 스왑 용량 사용하기"
 
 #: ../src/raidWindow.py:121
 msgid "You must select at least 2 partitions in order to use RAID %s"
@@ -939,11 +974,11 @@ msgstr ""
 msgid "Raid Members"
 msgstr "RAID 요소(Member)"
 
-#: ../src/kickstartGui.py:115
+#: ../src/kickstartGui.py:118
 msgid "Subsection"
 msgstr "하부 섹션"
 
-#: ../src/kickstartGui.py:122 redhat-config-kickstart.gladestrings:273
+#: ../src/kickstartGui.py:125 redhat-config-kickstart.gladestrings:273
 msgid "X Configuration"
 msgstr "X 설정"
 
@@ -963,13 +998,13 @@ msgstr "해상도"
 msgid "Do not install a boot loader"
 msgstr "부트로더를 설치하지 않음"
 
+#: ../src/install.py:179
+msgid "Please enter an HTTP server."
+msgstr ""
+
 #: redhat-config-kickstart.gladestrings:36
 msgid "RAID Level:"
 msgstr "RAID 레벨:"
-
-#: redhat-config-kickstart.gladestrings:277
-msgid "Ignore Dependencies"
-msgstr "패키지 간의 의존성 무시"
 
 #: redhat-config-kickstart.gladestrings:108
 msgid "FTP Username"
@@ -995,11 +1030,11 @@ msgstr "현재 %d 소프트웨어 RAID 파티션이 사용 가능합니다."
 msgid "Mouse:"
 msgstr "마우스:"
 
-#: ../src/kickstartGui.py:124 redhat-config-kickstart.gladestrings:297
+#: ../src/kickstartGui.py:127 redhat-config-kickstart.gladestrings:297
 msgid "Post-Installation Script"
 msgstr "설치-후(Post) 스크립트"
 
-#: ../src/kickstartGui.py:123 redhat-config-kickstart.gladestrings:284
+#: ../src/kickstartGui.py:126 redhat-config-kickstart.gladestrings:284
 msgid "Package Selection"
 msgstr "패키지 선택"
 
@@ -1011,13 +1046,17 @@ msgstr "설치될 패키지를 선택해 주십시오."
 msgid "Kerberos 5 Authentication"
 msgstr "Kerberos 5 인증"
 
+#: redhat-config-kickstart.gladestrings:150
+msgid "Initialize the disk label"
+msgstr "디스크 레이블 초기화"
+
 #: redhat-config-kickstart.gladestrings:281
 msgid "Development"
 msgstr "개발"
 
-#: redhat-config-kickstart.gladestrings:152
-msgid "_Add"
-msgstr "추가(_A)"
+#: redhat-config-kickstart.gladestrings:69
+msgid "_Contents"
+msgstr "도움말 내용(_C)"
 
 #: redhat-config-kickstart.gladestrings:8
 msgid "Partition Options"
@@ -1056,9 +1095,10 @@ msgstr "%post 스크립트를 입력해 주십시요:"
 msgid "1"
 msgstr "1"
 
-#: redhat-config-kickstart.gladestrings:237
-msgid "Enable nscd"
-msgstr "nscd 사용"
+#: ../src/install.py:164
+#, fuzzy
+msgid "Please enter an FTP password."
+msgstr "Root 패스워드를 선택해 주십시오."
 
 #: redhat-config-kickstart.gladestrings:258
 msgid "Start the X Window System on boot"
@@ -1080,11 +1120,15 @@ msgstr "다음 중 한가지 옵션을 선택해 주십시오:"
 msgid "Enable SMB Authentication"
 msgstr "SMB 인증 사용"
 
+#: redhat-config-kickstart.gladestrings:260
+msgid "Probe for video card"
+msgstr "비디오 카드 검색"
+
 #: redhat-config-kickstart.gladestrings:272
 msgid "Monitor"
 msgstr "모니터"
 
-#: ../src/kickstartGui.py:184
+#: ../src/kickstartGui.py:186
 msgid "Help is not available."
 msgstr "도움말 자료가 없습니다."
 
@@ -1096,18 +1140,17 @@ msgstr ""
 "지정하신 장치명이 올바르지 않습니다. \"hda1\"나 \"sda3\"와 같은 올바른 장치명"
 "을 사용해 주십시오."
 
-#: redhat-config-kickstart.gladestrings:155
-#, fuzzy
-msgid "RAID"
-msgstr "RAID 5"
+#: ../src/install.py:161
+msgid "Please enter an FTP user name."
+msgstr ""
+
+#: ../src/basic.py:274
+msgid "Please select a root password."
+msgstr "Root 패스워드를 선택해 주십시오."
 
 #: ../src/xconfig.py:91
 msgid "Could not read video card database"
 msgstr "비디오 카드 데이터베이스를 검색할 수 없습니다"
-
-#: redhat-config-kickstart.gladestrings:276
-msgid "Automatically Resolve Dependencies"
-msgstr "패키지 간의 의존성 문제 자동으로 해결"
 
 #: redhat-config-kickstart.gladestrings:65
 msgid "_Preview"
@@ -1182,9 +1225,9 @@ msgstr "새로운 설치 실행"
 msgid "Use GRUB password: "
 msgstr "GRUB 패스워드 사용: "
 
-#: redhat-config-kickstart.gladestrings:69
-msgid "_Contents"
-msgstr "도움말 내용(_C)"
+#: redhat-config-kickstart.gladestrings:152
+msgid "_Add"
+msgstr "추가(_A)"
 
 #: ../src/partWindow.py:298 ../src/partWindow.py:317 ../src/partWindow.py:331
 msgid "Auto"
