@@ -151,14 +151,14 @@ class basic:
 #            self.lang_support_list.append([lang])
 
         #populate mouse combo
-        mouse_list = ["Probe for Mouse"]
+        self.mouse_list = ["Probe for Mouse"]
         dict_list = self.mouseDict.keys()
         dict_list.sort()
 
         for item in dict_list:
-            mouse_list.append(item)
+            self.mouse_list.append(item)
 
-        self.mouse_combo.set_popdown_strings(mouse_list)
+        self.mouse_combo.set_popdown_strings(self.mouse_list)
         self.mouse_combo.list.select_item(0)
         self.mouse_combo.entry.set_editable(gtk.FALSE)		
 
@@ -188,7 +188,7 @@ class basic:
             lines = tz.readlines()
             tz.close()
 
-        list_items = []
+        self.timezone_list = []
 
         try:
             for line in lines:
@@ -196,18 +196,18 @@ class basic:
                     pass
                 else:
                     tokens = string.split(line)
-                    list_items.append(tokens[2])
+                    self.timezone_list.append(tokens[2])
 
-            list_items.sort()
+            self.timezone_list.sort()
         except:
-            list_items = []
+            self.timezone_list = []
 
         try:
-            select = list_items.index("America/New_York")
+            select = self.timezone_list.index("America/New_York")
         except:
             select = 0
 
-        self.timezone_combo.set_popdown_strings(list_items)
+        self.timezone_combo.set_popdown_strings(self.timezone_list)
         self.timezone_combo.list.select_item(select)
         self.timezone_combo.entry.set_editable(gtk.FALSE)		
 
@@ -288,8 +288,10 @@ class basic:
             self.kickstartData.setReboot(None)
 
         if self.text_install_checkbutton.get_active():
+            print "setting to text"
             self.kickstartData.setText("text")
         else:
+            print "setting text to None"
             self.kickstartData.setText(None)
 
         if self.interactive_checkbutton.get_active():
@@ -319,12 +321,46 @@ class basic:
             self.lang_support_store.set_value(iter, 1, lang)
 
     def fillData(self):
+        #set language
         for lang in self.langDict.keys():
             if self.langDict[lang] == self.kickstartData.getLang():
                 self.lang_combo.list.select_item(self.lang_list.index(lang))
-#                self.lang_combo.entry.set_text(lang)
 
-#        print self.keyboard_dict
-#        print self.keyboard_dict[self.kickstartData.getKeyboard()]
+        #set keyboard
         self.keyboard_combo.entry.set_text(self.keyboard_dict[self.kickstartData.getKeyboard()][0])
-                                 
+
+        #set mouse
+        for mouse in self.mouseDict.keys():
+            mouseLine = self.kickstartData.getMouse()
+
+            if "--emulthree" in mouseLine:
+                self.emulate_3_buttons.set_active(gtk.TRUE)
+                mouseLine.remove("--emulthree")
+
+            mouseTag = mouseLine[0]
+            
+            if self.mouseDict[mouse] == mouseTag:
+                self.mouse_combo.list.select_item(self.mouse_list.index(mouse))
+
+        #set timezone
+        self.timezone_combo.list.select_item(self.timezone_list.index(self.kickstartData.getTimezone()))
+
+        #set the supported lang list
+        langSupportList = self.kickstartData.getLangSupport()
+        langSupportList.append(self.kickstartData.getDefaultLang())
+
+        iter = self.lang_support_store.get_iter_root()
+
+        while iter:
+            if self.langDict[self.lang_support_store.get_value(iter, 1)] in langSupportList:
+                self.lang_support_store.set_value(iter, 0, gtk.TRUE)
+            iter = self.lang_support_store.iter_next(iter)
+
+        if self.kickstartData.getReboot():
+            self.reboot_checkbutton.set_active(gtk.TRUE)
+
+        if self.kickstartData.getText():
+            self.text_install_checkbutton.set_active(gtk.TRUE)
+
+        if self.kickstartData.getInteractive():
+            self.interactive_checkbutton.set_active(gtk.TRUE)
