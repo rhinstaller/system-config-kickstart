@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: ksconfig
-Version: 2.1.1
-Release: 3
+Version: 2.2
+Release: 1
 URL: http://www.redhat.com
 Copyright: GPL
 ExclusiveOS: Linux
@@ -45,7 +45,7 @@ fi
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
-* Thu Jun 27 2002 Brent Fox <bfox@redhat.com>
+* Thu Jun 27 2002 Brent Fox <bfox@redhat.com> 2.2-1
 - Install gtk2 glade file instead of the old one
 
 * Tue Jun 25 2002 Brent Fox <bfox@redhat.com>
