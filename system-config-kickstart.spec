@@ -58,6 +58,10 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Fri Mar 26 2004 Brent Fox <bfox@redhat.com> 
+- first stab at making system-config-kickstart arch aware (bug #91905)
+- removed LILO widgets
+
 * Thu Mar 11 2004 Brent Fox <bfox@redhat.com> 2.5.8-1
 - pull out package lists
 
