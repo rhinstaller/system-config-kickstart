@@ -60,7 +60,7 @@ fi
 - bump relnum and rebuild
 
 * Fri Jul 18 2003 Brent Fox <bfox@redhat.com> 2.3.11-1
-- add the 'recommeded' swap ks flag (bug #98156)
+- add the 'recommended' swap ks flag (bug #98156)
 
 * Thu Jul 10 2003 Brent Fox <bfox@redhat.com> 2.3.10-2
 - bump relnum and rebuild
