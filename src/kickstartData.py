@@ -31,6 +31,7 @@ class KickstartData:
         self.post = None
         self.upgrade = None
         self.xconfig = None
+        self.firstboot = None
         self.partList = []
         self.raidList = []
         self.packageGroupList = []
@@ -270,6 +271,15 @@ class KickstartData:
     def getXconfig(self):
         return self.xconfig
 
+    def setFirstboot(self, args):
+        if args == None:
+            self.firstboot = None
+        else:
+            self.firstboot = args[0]
+
+    def getFirstboot(self):
+        return self.firstboot
+
     def setPackage(self, args):
         self.package = args
 
@@ -421,6 +431,10 @@ class KickstartData:
         if self.getXconfig():
             file.append("#XWindows configuration information")
             file.append("xconfig " + string.join(self.getXconfig(), " "))
+
+        if self.getFirstboot():
+            file.append("#Run the Setup Agent on first boot")
+            file.append("firstboot " + self.getFirstboot())
 
         if self.getSkipX():
             file.append("#Do not configure XWindows")

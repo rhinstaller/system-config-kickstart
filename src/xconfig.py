@@ -45,7 +45,7 @@ class xconfig:
         self.gnome_radiobutton = xml.get_widget("gnome_radiobutton")
         self.kde_radiobutton = xml.get_widget("kde_radiobutton")
         self.startxonboot_checkbutton = xml.get_widget("startxonboot_checkbutton")
-        self.firstboot_checkbutton = xml.get_widget("firstboot_checkbutton")
+        self.firstboot_optionmenu = xml.get_widget("firstboot_optionmenu")
         self.card_vbox = xml.get_widget("card_vbox")
         self.monitor_vbox = xml.get_widget("monitor_vbox")
         self.card_probe_check = xml.get_widget("card_probe_check")
@@ -159,6 +159,13 @@ class xconfig:
 
     def getData(self):
         if self.config_x_button.get_active():
+            if self.firstboot_optionmenu.get_history() == 0:
+                self.kickstartData.setFirstboot(None)
+            elif self.firstboot_optionmenu.get_history() == 1:
+                self.kickstartData.setFirstboot(["--enabled"])
+            elif self.firstboot_optionmenu.get_history() == 2:
+                self.kickstartData.setFirstboot(["--reconfig"])
+
             self.kickstartData.setSkipX(None)
             buf = ""
             #color depth - translate
@@ -173,9 +180,6 @@ class xconfig:
             #startxonboot
             if self.startxonboot_checkbutton.get_active():
                 buf = buf + " --startxonboot"
-
-            if self.firstboot_checkbutton.get_active():
-                buf = buf + "--firstboot"
 
             if not self.card_probe_check.get_active():
                 #video card and monitor
@@ -205,6 +209,12 @@ class xconfig:
             self.config_x_button.set_active(gtk.FALSE)
         elif self.kickstartData.getXconfig():
             self.config_x_button.set_active(gtk.TRUE)
+
+            if self.kickstartData.getFirstboot() == "--enabled":
+                self.firstboot_optionmenu.set_history(1)
+            elif self.kickstartData.getFirstboot() == "--reconfig":
+                self.firstboot_optionmenu.set_history(2)
+                
             xLine = self.kickstartData.getXconfig()
             xLine = string.join (xLine, " ")
             xList = string.split(xLine, " --")
