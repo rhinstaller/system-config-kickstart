@@ -6,7 +6,7 @@
 TOP	 = ../..
 
 # What is this package?
-NLSPACKAGE	= redhat-config-kickstart
+NLSPACKAGE	= system-config-kickstart
 POTFILE		= $(NLSPACKAGE).pot
 INSTALL		= /usr/bin/install -c
 INSTALL_DATA	= $(INSTALL) -m 644
