@@ -309,7 +309,10 @@ class kickstartGui:
         self.packages_class.fillData()
         self.scripts_class.fillData()
 
+    def platformTypeChanged(self, platform):
+        self.bootloader_class.platformTypeChanged(platform)
+
     def installTypeChanged(self, boolean):
         self.partition_class.setSensitive(boolean)
         self.packages_class.setSensitive(boolean)
-        self.bootloader_class.setSensitive(boolean)
+        self.bootloader_class.enableUpgradeRadio(boolean)
