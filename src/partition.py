@@ -29,6 +29,7 @@ import partWindow
 class partition:
     def __init__(self, xml):
         self.xml = xml
+        self.num_rows = 0
         self.clear_mbr_yes_radiobutton = self.xml.get_widget("clear_mbr_yes_radiobutton")
         self.clear_mbr_no_radiobutton = self.xml.get_widget("clear_mbr_no_radiobutton")
         self.remove_parts_none_radiobutton = self.xml.get_widget("remove_parts_none_radiobutton")
@@ -39,22 +40,23 @@ class partition:
         self.edit_part_button = self.xml.get_widget("edit_part_button")
         self.del_part_button = self.xml.get_widget("del_part_button")
 #        self.partitionDialog = self.xml.get_widget("partition_dialog")
+        self.checkbox = self.xml.get_widget("checkbox2")
 
         self.xml.signal_autoconnect (
             { "select_clist" : self.select_clist,
-              "unselect_clist" : self.unselect_clist,
+#              "unselect_clist" : self.unselect_clist,
               "addPartition" : self.addPartition,
               "editPartition" : self.editPartition,
               "delPartition" : self.delPartition,
               })
 
         #populate partitions table with default values
-        bootPartition = ["/boot", "ext2", "35", "No"]
-        self.partClist.append(bootPartition)
-        swapPartition = ["", "Linux Swap", "128", "No"]
-        self.partClist.append(swapPartition)
-        rootPartition = ["/", "ext2", "1000", "Yes"]
-        self.partClist.append(rootPartition)
+#        bootPartition = ["/boot", "ext2", "35", "No"]
+#        self.partClist.append(bootPartition)
+#        swapPartition = ["", "Linux Swap", "128", "No"]
+#        self.partClist.append(swapPartition)
+#        rootPartition = ["/", "ext2", "1000", "Yes"]
+#        self.partClist.append(rootPartition)
 
         #keep track of the number of partitions
 	class counterClass:
@@ -70,29 +72,34 @@ class partition:
         self.num_parts = counterClass()
         self.num_parts.setCounter(3)
 
-    def select_clist(_clist, r, c, event):
-        selected[0] = r
+#    def select_clist(self, r, c, event):
+    def select_clist(self, *args ):
+        widget, r, c, event = args
+        self.selected_row = r
         self.edit_part_button.set_sensitive(TRUE)
         self.del_part_button.set_sensitive(TRUE)
 
-    def unselect_clist(self, args):
-        self.edit_part_button.set_state(STATE_INSENSITIVE)
-        self.edit_part_button.set_state(STATE_INSENSITIVE)
+#    def unselect_clist(self, *args):
+#        print "item unselected"
+#        self.edit_part_button.set_state(STATE_INSENSITIVE)
+#        self.edit_part_button.set_state(STATE_INSENSITIVE)
 
     def delPartition(self, *args):
-        print "del partition"
-        self.num_parts.decrement()
-        self.partClist.remove(selected[0])
+        self.num_rows = self.num_rows - 1
+#        self.num_parts.decrement()
+#        self.partClist.remove(selected[0])
+        self.partClist.remove(self.selected_row)
         self.edit_part_button.set_state(STATE_INSENSITIVE)
         self.edit_part_button.set_state(STATE_INSENSITIVE)
 
     def addPartition(self, *args):
-        print "add Partition"
-#        self.partitionDialog.show_all()
-        self.partWindow = partWindow.partWindow(self.xml)
+        self.num_rows = self.num_rows + 1
+        self.partWindow = partWindow.partWindow(self.xml, self.partClist)
+        self.edit_part_button.set_sensitive(TRUE)
+        self.del_part_button.set_sensitive(TRUE)
 
     def editPartition(self, *args):
-        print "edit Partition"
+        pass
 
 
         def editEntry(args, editWindow=editWindow, mpCombo=mpCombo, fsCombo=fsCombo, sizeEntry=sizeEntry, growCombo=growCombo, selected=s):
@@ -110,49 +117,105 @@ class partition:
             editButton.set_state(STATE_INSENSITIVE)
             delButton.set_state(STATE_INSENSITIVE)
         
+
     def getData(self):
         buf = ""
-        if self.clear_mbr_yes_radiobutton.get_active():
-            buf = buf + "\n" + "zerombr yes"
-        elif self.clear_mbr_no_radiobutton.get_active():
-            buf = buf + "\n" + "zerombr no"			
+        num_raid = 0
+        print self.num_rows
+        for row in range(self.num_rows):
+            rowData = self.partClist.get_row_data(row)
+            (mountPoint, fsType, size, fixedSize, setSize, setSizeVal, maxSize,
+                       asPrimary, asPrimaryNum, asPrimaryVal, onDisk, onDiskVal, onPart, onPartVal, doFormat) = rowData
 
-        if self.remove_parts_none_radiobutton.get_active():
-            buf = buf
-        elif self.remove_parts_all_radiobutton.get_active():
-            buf = buf + "\n" + "clearpart --all"
-        elif self.remove_parts_Linux_radiobutton.get_active():
-            buf = buf + "\n" + "clearpart --linux"
+            if fsType == "RAID partition":
+                num_raid = num_raid + 1
+                if num_raid < 10:
+                    buf = buf + "\n" + "part raid.%d%d" %(0, num_raid)
+                else:
+                    buf = buf + "\n" + "part raid.%d " %(num_raid)
+            else:
+                buf = buf + "\n" + "part %s " % (mountPoint)
 
-        rows = self.num_parts.currentVal()
 
-        for n in range(rows):
-            print n
-            line = "part"
-            for i in range(4):
-                if i == 0:
-                    mount = self.partClist.get_text(n, i)
-                    if mount == '':                    
-                        line = line
-                    else:
-                        line = line + " " + mount
-                elif i == 1:
-                    fsType = self.partClist.get_text(n, i)
-                    if fsType == 'Linux Swap':
-                        line = line + " swap"
-                    elif fsType == 'ext2':
-                        line = line + " "
-                    else:
-                        line = line + " " + fsType
-                elif i == 2:
-                    size = self.partClist.get_text(n, i)
-                    line = line + " --size " + size
-                elif i == 3:
-                    grow = self.partClist.get_text(n, i)
-                    if grow == 'Yes':
-                        line = line + " --grow"
-                    else:
-                        line = line
+            buf = buf + "--size %s " % (size)
 
-            buf = buf + "\n" + line
+            if setSize:
+                buf = buf + "--grow --maxsize %s " % (setSizeVal)
+
+            elif maxSize:
+                buf = buf + "--grow "
+
+            if asPrimary:
+                buf = buf + "--asprimary "
+
+            if asPrimaryNum:
+                buf = buf + "--onprimary %s " % (asPrimaryVal)
+
+            if onDisk:
+                buf = buf + "--ondisk %s " % (onDiskVal)
+
+            if onPart:
+                buf = buf + "--onpart %s " % (onPartVal)
+
+            if not doFormat:
+                buf = buf + "--noformat "
+
         return buf
+
+
+    
+
+
+
+
+
+
+
+
+
+##     def getData(self):
+##         buf = ""
+##         if self.clear_mbr_yes_radiobutton.get_active():
+##             buf = buf + "\n" + "zerombr yes"
+##         elif self.clear_mbr_no_radiobutton.get_active():
+##             buf = buf + "\n" + "zerombr no"			
+
+##         if self.remove_parts_none_radiobutton.get_active():
+##             buf = buf
+##         elif self.remove_parts_all_radiobutton.get_active():
+##             buf = buf + "\n" + "clearpart --all"
+##         elif self.remove_parts_Linux_radiobutton.get_active():
+##             buf = buf + "\n" + "clearpart --linux"
+
+##         rows = self.num_parts.currentVal()
+
+##         for n in range(rows):
+##             print n
+##             line = "part"
+##             for i in range(4):
+##                 if i == 0:
+##                     mount = self.partClist.get_text(n, i)
+##                     if mount == '':                    
+##                         line = line
+##                     else:
+##                         line = line + " " + mount
+##                 elif i == 1:
+##                     fsType = self.partClist.get_text(n, i)
+##                     if fsType == 'Linux Swap':
+##                         line = line + " swap"
+##                     elif fsType == 'ext2':
+##                         line = line + " "
+##                     else:
+##                         line = line + " " + fsType
+##                 elif i == 2:
+##                     size = self.partClist.get_text(n, i)
+##                     line = line + " --size " + size
+##                 elif i == 3:
+##                     grow = self.partClist.get_text(n, i)
+##                     if grow == 'Yes':
+##                         line = line + " --grow"
+##                     else:
+##                         line = line
+
+##             buf = buf + "\n" + line
+##         return buf

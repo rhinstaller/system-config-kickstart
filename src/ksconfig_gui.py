@@ -44,7 +44,8 @@ import xconfig
 import packages
 import scripts
 
-xml = libglade.GladeXML ("/usr/share/ksconfig/ksconfig.glade", domain="ksconfig")
+#xml = libglade.GladeXML ("/usr/share/ksconfig/ksconfig.glade", domain="ksconfig")
+xml = libglade.GladeXML ("./ksconfig.glade", domain="ksconfig")
 
 class ksconfig_gui:
 	
@@ -157,6 +158,8 @@ class ksconfig_gui:
 		#only write partition info if performing an install
 		if self.install_radiobutton.get_active():
 			buf = buf + self.partition_class.getData()
+			print "part class is"
+			print self.partition_class.getData()
 		buf = buf + self.network_class.getData()
 		buf = buf + self.auth_class.getData()
 		buf = buf + self.firewall_class.getData()
