@@ -38,11 +38,17 @@ EOF
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%preun
+if [ -d /usr/share/ksconfig ] ; then
+  rm -rf /usr/share/ksconfig/*.pyc
+fi
+
 #%files -f %{name}.lang
 %files
 %defattr(-,root,root)
 %doc COPYING
 /usr/sbin/ksconfig
+%dir /usr/share/ksconfig
 /usr/share/ksconfig/*
 %{_mandir}/man8/ksconfig*
 %config /etc/X11/applnk/System/ksconfig.desktop
