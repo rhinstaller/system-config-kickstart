@@ -42,7 +42,8 @@ import packages
 import scripts
 import helpBrowser
 import os
-
+import kickstartData
+import kickstartParser
 
 ##
 ## I18N
@@ -70,7 +71,9 @@ class kickstartGui:
 
     def __init__ (self, xml, file):
         self.xml = xml
-		
+
+        self.kickstartData = kickstartData.KickstartData()
+
 	self.toplevel = xml.get_widget("main_window")
 	self.toplevel.connect ("destroy", self.destroy)
 	self.toplevel.set_icon(iconPixbuf)
@@ -92,7 +95,7 @@ class kickstartGui:
 
 	#bring in basic functions
 	self.basic_class = basic.basic(xml, self.category_store,
-				       self.category_view, self.options_notebook)
+				       self.category_view, self.options_notebook, self.kickstartData)
 	#bring in bootloader functions
 	self.bootloader_class = bootloader.bootloader(xml)		
 	#bring in install functions
@@ -137,6 +140,12 @@ class kickstartGui:
 	self.help_menu.connect("activate", self.on_help_button_clicked)
 	self.about_menu.connect("activate", self.on_about_activate)
 	self.category_view.connect("cursor_changed", self.on_list_view_row_activated)
+
+        if file:
+            self.kickstartParser = kickstartParser.KickstartParser(self.kickstartData, file)
+            self.fillData()
+            
+
 
 	#show gui
 	self.toplevel.show_all()
@@ -228,6 +237,8 @@ class kickstartGui:
 
 	list = list + self.scripts_class.getData()
 
+        print "output is", self.kickstartData.getAll()
+
 	return list
 
     #show chosen options for preview
@@ -247,3 +258,6 @@ class kickstartGui:
 	else:
 	    return		
 
+    def fillData(self):
+        self.basic_class.fillData()
+    
