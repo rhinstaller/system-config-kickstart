@@ -101,6 +101,9 @@ class KickstartParser:
 
             if line == "":
                 continue
+            elif line[:10] == "#platform=":
+                key, value = string.split(line, "=")
+                self.kickstartData.setPlatform(value)
             elif line[0] == "#":
                 continue
             elif line != "":
