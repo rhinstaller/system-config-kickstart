@@ -27,7 +27,7 @@ ksconfig is a graphical tool for creating kickstart files.
 %install
 make INSTROOT=$RPM_BUILD_ROOT install
 
-#%find_lang %name
+%find_lang %name
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -37,8 +37,7 @@ if [ -d /usr/share/ksconfig ] ; then
   rm -rf /usr/share/ksconfig/*.pyc
 fi
 
-#%files -f %{name}.lang
-%files
+%files -f %{name}.lang
 %defattr(-,root,root)
 %doc COPYING
 %doc doc/*
@@ -46,8 +45,8 @@ fi
 %dir /usr/share/ksconfig
 /usr/share/ksconfig/*
 %{_mandir}/man8/ksconfig*
-%lang(ja) %{_mandir}/ja/man8/ksconfig*
-%lang(ja) %{_datadir}/locale/ja/LC_MESSAGES/ksconfig.mo
+#%lang(ja) %{_mandir}/ja/man8/ksconfig*
+#%lang(ja) %{_datadir}/locale/ja/LC_MESSAGES/ksconfig.mo
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
