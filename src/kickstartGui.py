@@ -84,12 +84,20 @@ class kickstartGui:
 		self.help_menu = xml.get_widget("help_menu")
 		self.about_menu = xml.get_widget("about_menu")
 
+		#populate category list
+		self.category_view = xml.get_widget("list_view")
+		self.category_store = gtk.ListStore(gobject.TYPE_STRING)
+		self.category_view.set_model(self.category_store)
+
 		#bring in basic functions
-		self.basic_class = basic.basic(xml)
+		self.basic_class = basic.basic(xml, self.category_store,
+					       self.category_view, self.options_notebook)
 		#bring in bootloader functions
 		self.bootloader_class = bootloader.bootloader(xml)		
 		#bring in install functions
-		self.install_class = install.install(xml, self.bootloader_class)
+		self.install_class = install.install(xml, self.category_store,
+						     self.category_view, self.options_notebook,
+						     self.bootloader_class)
 		#bring in partitions functions
 		self.partition_class = partition.partition(xml)
 		#bring in network functions
@@ -106,11 +114,6 @@ class kickstartGui:
 		self.packages_class = packages.Packages(xml)	
 		#bring in scripts function
 		self.scripts_class = scripts.scripts(xml)	
-
-		#populate category list
-		self.category_view = xml.get_widget("list_view")
-		self.category_store = gtk.ListStore(gobject.TYPE_STRING)
-		self.category_view.set_model(self.category_store)
 
 		col = gtk.TreeViewColumn(_("Subsection"), gtk.CellRendererText(), text=0)
 		col.set_sort_column_id(0)
@@ -136,7 +139,6 @@ class kickstartGui:
 
 		#show gui
 		self.toplevel.show_all()
-
 
 #		self.options_notebook.set_current_page(3)
 
@@ -202,7 +204,13 @@ class kickstartGui:
 			list = list + data
 		else:
 			return
-		list = list + self.install_class.getData()
+
+	        data = self.install_class.getData()
+		if data:
+			list = list + self.install_class.getData()
+		else:
+			return
+		
 		list = list + self.bootloader_class.getData()
 
  		#only write partition info if performing an install
