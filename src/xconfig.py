@@ -170,7 +170,10 @@ class xconfig:
 
             if not self.card_probe_check.get_active():
                 #video card and monitor
-                buf = buf + " --card \"" + self.video_card_clist.get_text(self.selected_vc_row,0) + "\""
+                temp, iter = self.card_view.get_selection().get_selected()
+                card = self.card_store.get_value(iter, 0)
+                buf = buf + " --card \"" + card + "\""
+
                 #translate MB to KB 
                 ramsize_dict = {"256 KB" : "256",
                                 "512 KB" : "512",
