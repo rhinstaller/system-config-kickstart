@@ -74,19 +74,18 @@ class raidWindow:
         self.raid_ok_button.connect("clicked", self.okClicked)
         self.raid_cancel_button.connect("clicked", self.destroy)
 
-        self.fillRaidList()
-        self.raid_window.show_all()
-
-    def fillRaidList(self):
+    def addPartition(self):
+        self.raid_partition_store.clear()
         iter = self.part_store.get_iter_first()
         while iter:
-            part_object = self.part_store.get_value(iter, 4)
+            part_object = self.part_store.get_value(iter, 5)
             if part_object.raidNumber:
                 new_iter = self.raid_partition_store.append()
                 self.raid_partition_store.set_value(new_iter, 0, gtk.FALSE)
                 self.raid_partition_store.set_value(new_iter, 1, part_object.fsType)
                 self.raid_partition_store.set_value(new_iter, 2, part_object.raidNumber)
             iter = self.part_store.iter_next(iter)
+        self.raid_window.show_all()
 
     def partitionToggled(self, data, row):
         iter = self.raid_partition_store.get_iter((int(row),))
