@@ -107,7 +107,7 @@ class kickstartGui:
 	#bring in network functions
 	self.network_class = network.network(xml)
 	#bring in auth functions
-	self.auth_class = auth.auth(xml)
+	self.auth_class = auth.auth(xml, self.kickstartData)
 	#bring in firewall functions
 	self.firewall_class = firewall.firewall(xml)
 	#bring in X functions
@@ -226,7 +226,7 @@ class kickstartGui:
             self.partition_class.getData()
 
 	list = list + self.network_class.getData()
-	list = list + self.auth_class.getData()
+	self.auth_class.getData()
 	list = list + self.firewall_class.getData()
 	list = list + self.X_class.getData()
 
@@ -261,3 +261,4 @@ class kickstartGui:
         self.install_class.fillData()
         self.bootloader_class.fillData()
         self.partition_class.fillData()
+        self.auth_class.fillData()
