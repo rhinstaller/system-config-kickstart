@@ -88,7 +88,7 @@ class ksconfig_gui:
 		self.X_class = xconfig.xconfig(xml)
 		#bring in package function
 #		self.packages_class = packages.headerList(xml)
-		self.packages_class = packages.Packages(xml)	
+#		self.packages_class = packages.Packages(xml)	
 		#bring in scripts function
 		self.scripts_class = scripts.scripts(xml)	
 
@@ -107,7 +107,7 @@ class ksconfig_gui:
 
 		#populate category list
 		self.category_view = xml.get_widget("list_view")
-
+		print self.category_view.parent
 		self.category_store = gtk.ListStore(gobject.TYPE_STRING)
 		self.category_view.set_model(self.category_store)
 
@@ -115,19 +115,29 @@ class ksconfig_gui:
 		col.set_sort_column_id(0)
 		self.category_view.append_column(col)
 
-##		self.category_clist = xml.get_widget("category_clist")
-## 		self.category_clist.append([_("Basic Configuration")])
-## 		self.category_clist.append([_("Boot Loader Options")])		
-## 		self.category_clist.append([_("Installation Method")])
-## 		self.category_clist.append([_("Partition Information")])
-## 		self.category_clist.append([_("Network Configuration")])
-## 		self.category_clist.append([_("Authentication")])
-## 		self.category_clist.append([_("Firewall Configuration")])
-## 		self.category_clist.append([_("X Configuration")])
-## 		self.category_clist.append([_("Package Selection")])
-## 		self.category_clist.append([_("Pre-Installation Script")])
-## 		self.category_clist.append([_("Post-Installation Script")])
-		
+		iter = self.category_store.append()
+		self.category_store.set_value(iter, 0, (_("Basic Configuration")))
+		iter = self.category_store.append()
+		self.category_store.set_value(iter, 0, (_("Boot Loader Options")))
+		iter = self.category_store.append()
+		self.category_store.set_value(iter, 0, (_("Installation Method")))
+		iter = self.category_store.append()
+		self.category_store.set_value(iter, 0, (_("Partition Information")))
+		iter = self.category_store.append()
+		self.category_store.set_value(iter, 0, (_("Network Configuration")))
+		iter = self.category_store.append()
+		self.category_store.set_value(iter, 0, (_("Authentication")))
+		iter = self.category_store.append()
+		self.category_store.set_value(iter, 0, (_("Firewall Configuration")))
+		iter = self.category_store.append()
+		self.category_store.set_value(iter, 0, (_("X Configuration")))
+		iter = self.category_store.append()
+		self.category_store.set_value(iter, 0, (_("Package Selection")))
+		iter = self.category_store.append()
+		self.category_store.set_value(iter, 0, (_("Pre-Installation Script")))
+		iter = self.category_store.append()
+		self.category_store.set_value(iter, 0, (_("Post-Installation Script")))
+
 		gtk.mainloop ()
 
 	def select_category(self, event, row, column, data):
