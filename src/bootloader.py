@@ -25,6 +25,8 @@ from gtk import *
 import GtkExtra
 import libglade
 import string
+import whrandom
+import crypt
 
 class bootloader:
 
@@ -43,6 +45,7 @@ class bootloader:
         self.grub_options_label = xml.get_widget("grub_options_label")
         self.grub_password_label = xml.get_widget("grub_password_label")
         self.grub_password_entry = xml.get_widget("grub_password_entry")
+        self.grub_password_encrypt = xml.get_widget("grub_password_encrypt")
 
         #bring in signals from glade file
         xml.signal_autoconnect (
@@ -113,7 +116,15 @@ class bootloader:
             gp = string.strip (self.grub_password_entry.get_text())
             length = len(gp)
             if length > 0:
-                buf = buf + "--password=" + gp + " "
+                if self.grub_password_encrypt.get_active():
+                    salt = "$1$"
+                    saltLen = 8
+                    for i in range(saltLen):
+                        salt = salt + whrandom.choice (string.letters + string.digits + './')
+                    self.passwd = crypt.crypt (gp, salt)
+                    buf = buf + "--md5pass=" + self.passwd
+                else:
+                    buf = buf + "--password=" + gp + " "
         else:
             buf = "\n" + "bootloader --location=none"
         data.append(buf)
