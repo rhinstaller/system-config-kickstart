@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
 Version: 2.3.2
-Release: 9
+Release: 10
 URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
@@ -55,6 +55,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Mon Aug 12 2002 Tammy Fox <tfox@redhat.com> 2.3.2-10
+- rebuilt with updated docs
+
 * Sat Aug 10 2002 Brent Fox <bfox@redhat.com> 2.3.2-9
 - Add error checking dialogs to install screen
 
