@@ -10,7 +10,7 @@ BuildRoot: %{_tmppath}/ksconfig-%{version}-root
 BuildArch: noarch
 Source: ksconfig-%{version}.tar.gz
 BuildArch: noarch
-Requires: pygtk
+Requires: pygnome pygtk pygtk-libglade pygnome-libglade
 Requires: redhat-logos
 
 %description
@@ -54,15 +54,20 @@ fi
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
+* Fri Jul 06 2001 Tammy Fox <tfox@redhat.com>
+- added xconfig page
+- added install and upgrade radiobuttons
+
+* Thu Jul 05 2001 Brent Fox <bfox@redhat.com>
+- added package page
+
 * Tue Jun 26 2001 Tammy Fox <tfox@redhat.com>
 - added emulate three buttons and probe for mouse options
 - added preview configuration window
-- started tab for X Configuration
 - modified basic.py to use dictionaries to store combo box selections
 
 * Sat Jun 23 2001 Brent Fox <bfox@redhat.com>
 - fixed auth callback for new interface
-- started working on new add/edit/delete partitions windows
 
 * Fri Jun 22 2001 Tammy Fox <tfox@redhat.com>
 - redesigned interface
