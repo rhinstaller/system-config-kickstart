@@ -39,5 +39,6 @@ if __name__ == "__main__":
 
 xml = gtk.glade.XML ("/usr/share/redhat-config-kickstart/redhat-config-kickstart-gtk2.glade", domain="redhat-config-kickstart")
 
-kickstartGui.kickstartGui(xml)
+#xml = gtk.glade.XML ("redhat-config-kickstart-gtk2.glade", domain="redhat-config-kickstart")
 
+kickstartGui.kickstartGui(xml)
