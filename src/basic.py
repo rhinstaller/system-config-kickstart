@@ -57,6 +57,7 @@ class basic:
         self.keyboard_combo = xml.get_widget("keyboard_combo")
         self.mouse_combo = xml.get_widget("mouse_combo")
         self.timezone_combo = xml.get_widget("timezone_combo")
+        self.utc_check_button = xml.get_widget("utc_check_button")
 
         self.root_passwd_entry = xml.get_widget("root_passwd_entry")
         self.emulate_3_buttons = xml.get_widget("emulate_3_buttons")
@@ -190,7 +191,11 @@ class basic:
                 break
 
         self.kickstartData.setMouse([self.mouseLookup(self.mouse_combo.entry.get_text())])
-        self.kickstartData.setTimezone([self.timezone_combo.entry.get_text()])
+
+        if self.utc_check_button.get_active() == gtk.TRUE:
+            self.kickstartData.setTimezone(["--utc %s" % self.timezone_combo.entry.get_text()])
+        else:
+            self.kickstartData.setTimezone([self.timezone_combo.entry.get_text()])
 
         if self.root_passwd_entry.get_text() == "" and doInstall:
             dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, _("Please select a root password."))
