@@ -284,11 +284,15 @@ class basic:
         data.append("#Root password")
 
         if self.root_passwd_entry.get_text() == "":
-            dlg = GnomeMessageBox(_("Please set a root password."),
-                                  MESSAGE_BOX_ERROR, STOCK_BUTTON_OK)
-            dlg.set_position(WIN_POS_CENTER)
-            dlg.show()
-            dlg.run_and_close()
+            dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, _("Please select a root password."))
+            dlg.set_title(_("Error"))
+            dlg.set_default_size(100, 100)
+            dlg.set_position (gtk.WIN_POS_CENTER)
+            dlg.set_border_width(2)
+            dlg.set_modal(gtk.TRUE)
+            rc = dlg.run()
+            if rc == gtk.RESPONSE_OK:
+                dlg.hide()
             self.root_passwd_entry.grab_focus()
             self.root_passwd_entry.show()
             return

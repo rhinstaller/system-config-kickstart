@@ -217,47 +217,86 @@ class partWindow:
         doFormat = self.formatCheck.get_active()
 
         if size < 1 or size == "" and onPart == gtk.FALSE:
-            dlg = GnomeMessageBox("You must specify a size for the partition",
-                                  MESSAGE_BOX_ERROR, STOCK_BUTTON_OK, None)
-            dlg.run_and_close()            
+            dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, _("You must specify a size for the partition."))
+            dlg.set_title(_("Error"))
+            dlg.set_default_size(100, 100)
+            dlg.set_position (gtk.WIN_POS_CENTER)
+            dlg.set_border_width(2)
+            dlg.set_modal(gtk.TRUE)
+            rc = dlg.run()
+            if rc == gtk.RESPONSE_OK:
+                selectDialog.hide()
             return
 
         if fsType == "RAID":
             mountPoint = ""            
             if not onDisk and not onPart:
-                dlg = GnomeMessageBox("To create a new RAID partition, "
-                                      "you must specify either a hard drive "
-                                      "or an existing partition.",
-                                      MESSAGE_BOX_ERROR, STOCK_BUTTON_OK, None)
-                dlg.run_and_close()
+                dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
+                                        _("To create a new RAID partition, "
+                                          "you must specify either a hard drive "
+                                          "or an existing partition."))
+                dlg.set_title(_("Error"))
+                dlg.set_default_size(100, 100)
+                dlg.set_position (gtk.WIN_POS_CENTER)
+                dlg.set_border_width(2)
+                dlg.set_modal(gtk.TRUE)
+                rc = dlg.run()
+                if rc == gtk.RESPONSE_OK:
+                    dlg.hide()
                 return
                 
             elif onDisk and onPart:
-                dlg = GnomeMessageBox("You cannot use onPart and onDisk at the same time",
-                                      MESSAGE_BOX_ERROR, STOCK_BUTTON_OK, None)
-                dlg.run_and_close()
+                dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
+                                        _("onPart and onDisk can not be used at the same time."))
+                dlg.set_title(_("Error"))
+                dlg.set_default_size(100, 100)
+                dlg.set_position (gtk.WIN_POS_CENTER)
+                dlg.set_border_width(2)
+                dlg.set_modal(gtk.TRUE)
+                rc = dlg.run()
+                if rc == gtk.RESPONSE_OK:
+                    dlg.hide()
                 return                
 
             elif onDisk and onDiskVal == "":
-                dlg = GnomeMessageBox("You must specify a device to create "
-                                      "the RAID partition on.",
-                                      MESSAGE_BOX_ERROR, STOCK_BUTTON_OK, None)
-                dlg.run_and_close()
+                dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
+                                        _("Specify a device on which to create the RAID partition."))
+                dlg.set_title(_("Error"))
+                dlg.set_default_size(100, 100)
+                dlg.set_position (gtk.WIN_POS_CENTER)
+                dlg.set_border_width(2)
+                dlg.set_modal(gtk.TRUE)
+                rc = dlg.run()
+                if rc == gtk.RESPONSE_OK:
+                    dlg.hide()
                 return
 
             elif onPart and onPartVal == "":
-                dlg = GnomeMessageBox("You must specify an existing partition to create "
-                                      "the RAID partition on.",
-                                      MESSAGE_BOX_ERROR, STOCK_BUTTON_OK, None)
-                dlg.run_and_close()
+                dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
+                                        _("Specify an existing partition on which to create the RAID partition."))
+                dlg.set_title(_("Error"))
+                dlg.set_default_size(100, 100)
+                dlg.set_position (gtk.WIN_POS_CENTER)
+                dlg.set_border_width(2)
+                dlg.set_modal(gtk.TRUE)
+                rc = dlg.run()
+                if rc == gtk.RESPONSE_OK:
+                    dlg.hide()
                 return
 
         elif fsType != "RAID":
             if fsType != "swap":
                 if mountPoint == "":
-                    dlg = GnomeMessageBox("You must specify a mount point for the partition.",
-                                          MESSAGE_BOX_ERROR, STOCK_BUTTON_OK, None)
-                    dlg.run_and_close()
+                    dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
+                                            _("Specify a mount point for the partition."))
+                    dlg.set_title(_("Error"))
+                    dlg.set_default_size(100, 100)
+                    dlg.set_position (gtk.WIN_POS_CENTER)
+                    dlg.set_border_width(2)
+                    dlg.set_modal(gtk.TRUE)
+                    rc = dlg.run()
+                    if rc == gtk.RESPONSE_OK:
+                        dlg.hide()
                     return
 
         if fsType == "swap":   
@@ -265,22 +304,42 @@ class partWindow:
             mountPoint = ""
 
         if onDisk and onPart:
-            dlg = GnomeMessageBox("You cannot use onPart and onDisk at the same time",
-                                  MESSAGE_BOX_ERROR, STOCK_BUTTON_OK, None)
-            dlg.run_and_close()
+            dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
+                                        _("onPart and onDisk can not be used at the same time."))
+            dlg.set_title(_("Error"))
+            dlg.set_default_size(100, 100)
+            dlg.set_position (gtk.WIN_POS_CENTER)
+            dlg.set_border_width(2)
+            dlg.set_modal(gtk.TRUE)
+            rc = dlg.run()
+            if rc == gtk.RESPONSE_OK:
+                dlg.hide()
             return                
 
         if onDisk and onDiskVal == "":
-            dlg = GnomeMessageBox("You must specify a device to create "
-                                  "the partition on.",
-                                  MESSAGE_BOX_ERROR, STOCK_BUTTON_OK, None)
-            dlg.run_and_close()
+            dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
+                                        _("Specify a device on which to create the partition."))
+            dlg.set_title(_("Error"))
+            dlg.set_default_size(100, 100)
+            dlg.set_position (gtk.WIN_POS_CENTER)
+            dlg.set_border_width(2)
+            dlg.set_modal(gtk.TRUE)
+            rc = dlg.run()
+            if rc == gtk.RESPONSE_OK:
+                dlg.hide()
             return
 
         elif onPart and onPartVal == "":
-            dlg = GnomeMessageBox("You must specify an existing partition to use.",
-                                  MESSAGE_BOX_ERROR, STOCK_BUTTON_OK, None)
-            dlg.run_and_close()
+            dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
+                                        _("Specify an existing partition to use."))
+            dlg.set_title(_("Error"))
+            dlg.set_default_size(100, 100)
+            dlg.set_position (gtk.WIN_POS_CENTER)
+            dlg.set_border_width(2)
+            dlg.set_modal(gtk.TRUE)
+            rc = dlg.run()
+            if rc == gtk.RESPONSE_OK:
+                dlg.hide()
             return
 
         rowData = [mountPoint, fsType, size, fixedSize, setSize,
