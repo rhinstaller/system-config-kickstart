@@ -30,6 +30,8 @@ class install:
     def __init__(self, xml):
         self.install_radiobutton = xml.get_widget("install_radiobutton")
         self.upgrade_radiobutton = xml.get_widget("upgrade_radiobutton")
+        self.partitioning_frame = xml.get_widget("partitioning_frame")
+        self.pkg_selection_frame = xml.get_widget("pkg_selection_frame")
 
         self.cdrom_radiobutton = xml.get_widget("cdrom_radiobutton")
         self.nfs_radiobutton = xml.get_widget("nfs_radiobutton")
@@ -59,7 +61,14 @@ class install:
 
         xml.signal_autoconnect (
             { "setState" : self.setState,
+              "toggleInstall" : self.toggleInstall,
               } )
+
+    def toggleInstall (self, args):
+        #gray out package selection and partitions if upgrade
+        install = self.install_radiobutton.get_active()
+        self.partitioning_frame.set_sensitive(install)
+        self.pkg_selection_frame.set_sensitive(install)            
 
     def setState (self, args):
         if self.cdrom_radiobutton.get_active():
@@ -82,8 +91,6 @@ class install:
             buf = "\n" + "install"
         elif self.upgrade_radiobutton.get_active():
             buf = "\n" + "upgrade"
-            #gray out package selection and partitions
-            
         if self.cdrom_radiobutton.get_active():
             buf = buf + "\n" + "cdrom"
         elif self.nfs_radiobutton.get_active():
