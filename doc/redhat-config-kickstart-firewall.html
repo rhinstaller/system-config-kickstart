@@ -73,6 +73,17 @@ CLASS="CHAPTER"
 NAME="REDHAT-CONFIG-KICKSTART-FIREWALL"
 ></A
 >Chapter 8. Firewall Configuration</H1
+><P
+>	The <B
+CLASS="GUILABEL"
+>Firewall Configuration</B
+> window is similar to the
+	screen in the installation program and the
+	<B
+CLASS="APPLICATION"
+>Security Level Configuration Tool</B
+>.
+      </P
 ><DIV
 CLASS="FIGURE"
 ><A
@@ -89,32 +100,75 @@ SRC="./figs/ksconfig-firewall.png"></P
 >Figure 8-1. Firewall Configuration</B
 ></P
 ></DIV
+
+<P
+>	If <B
+CLASS="GUILABEL"
+>Disable firewall</B
+> is selected, the system allows
+	complete access to any active services and ports. No connections to the
+	system are refused or denied.
+      </P
 ><P
->	The <B
+>	Selecting <B
 CLASS="GUILABEL"
->Firewall Configuration</B
-> window is identical to
-	the screen in the Red Hat Linux installation program and the
+>Enable firewall</B
+> configures the system to
+	reject incoming connections that are not in response to outbound
+	requests, such as DNS replies or DHCP requests. If access to services
+	running on this machine is needed, you can choose to allow specific
+	services through the firewall.</P
+><P
+>	Only devices configured in the <B
+CLASS="GUILABEL"
+>Network
+	Configuration</B
+> section are listed as available
 	<B
-CLASS="APPLICATION"
->Security Level Configuration Tool</B
->, with the same
-	functionality. Choose between <B
 CLASS="GUILABEL"
->High</B
->,
+>Trusted devices</B
+>. Connections from any devices
+	selected in the list are accepted by the system. For example, if
 	<B
 CLASS="GUILABEL"
->Medium</B
->, and <B
+>eth1</B
+> only receives connections from internal
+	system, you might want to allow connections from it.
+      </P
+><P
+>	If a service is selected in the <B
 CLASS="GUILABEL"
->Disabled</B
-> security
-      levels. Refer to the <I
-CLASS="CITETITLE"
->Red Hat Linux Customization Guide</I
-> for
-	detailed information about these security levels.
+>Trusted services</B
+>
+	list, connections for the service are accepted and processed by the
+	system.
+      </P
+><P
+>	In the <B
+CLASS="GUILABEL"
+>Other ports</B
+> text field, list any additional
+	ports that should be opened for remote access. Use the following format:
+	<TT
+CLASS="USERINPUT"
+><B
+>port:protocol</B
+></TT
+>. For example, to allow IMAP access
+	through the firewall, specify <TT
+CLASS="USERINPUT"
+><B
+>imap:tcp</B
+></TT
+>.  Specify
+	numeric ports can also be specified; to allow UDP packets on port 1234
+	through the firewall, enter <TT
+CLASS="USERINPUT"
+><B
+>1234:udp</B
+></TT
+>. To specify
+	multiple ports, separate them with commas.
       </P
 ></DIV
 ><DIV

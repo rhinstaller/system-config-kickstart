@@ -111,22 +111,22 @@ CLASS="FILENAME"
 	you are using a different boot loader, install LILO or GRUB on the first
 	sector of the <TT
 CLASS="FILENAME"
->/boot</TT
+>/boot/</TT
 > partition and configure the
-	other boot loader to boot Red Hat Linux.
+	other boot loader to boot the operating system.
       </P
 ><P
->	If you need to pass any special parameters to the kernel to be used when
-	the system boots, enter them in the <B
+>	To pass any special parameters to the kernel to be used when the system
+	boots, enter them in the <B
 CLASS="GUILABEL"
->Kernel
-	parameters</B
-> text field. For example, if you have an IDE CD-ROM
-	Writer, you can tell the kernel to use the SCSI emulation driver that
-	must be loaded before using <TT
+>Kernel parameters</B
+> text
+	field. For example, if you have an IDE CD-ROM Writer, you can tell the
+	kernel to use the SCSI emulation driver that must be loaded before using
+	<TT
 CLASS="COMMAND"
 >cdrecord</TT
-> by typing
+> by configuring
 	<TT
 CLASS="USERINPUT"
 ><B
@@ -142,38 +142,47 @@ CLASS="USERINPUT"
       </P
 ><P
 >	If you choose GRUB as the boot loader, you can password protect it by
-	configuring a GRUB password. Enter a password in the <B
+	configuring a GRUB password. Select <B
 CLASS="GUILABEL"
 >Use GRUB
 	password</B
-> text entry area. To save the password as
-	an encrypted password in the file, select <B
+>, and enter a password in the
+	<B
+CLASS="GUILABEL"
+>Password</B
+> field. Type the same password in the
+	<B
+CLASS="GUILABEL"
+>Confirm Password</B
+> text field. To save the password
+	as an encrypted password in the file, select <B
 CLASS="GUILABEL"
 >Encrypt GRUB
 	password</B
->. When the file is saved, the plaintext password
-	that you typed will be encrypted and written to the kickstart file. Do
-	not type an already encrypted password and select to encrypt it.
+>. If the encryption option is selected, when the file
+	is saved, the plain text password that you typed will be encrypted and
+	written to the kickstart file. Do not type an already encrypted password
+	and select to encrypt it.
       </P
 ><P
 >	If you choose LILO as the boot loader, choose whether you want to use
 	linear mode and whether you want to force the use of lba32 mode.
       </P
 ><P
->	If you selected to <B
+>	If <B
 CLASS="GUILABEL"
 >Upgrade an existing installation</B
->
-	on the <B
+> is selected on
+	the <B
 CLASS="GUILABEL"
 >Installation Method</B
-> page, you can select
+> page, select
 	<B
 CLASS="GUILABEL"
 >Upgrade existing boot loader</B
 > to upgrade the
 	existing boot loader configuration, while preserving the old entries.
-    </P
+      </P
 ></DIV
 ><DIV
 CLASS="NAVFOOTER"
