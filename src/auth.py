@@ -1,0 +1,297 @@
+#!/usr/bin/env python
+
+## Kickstart Configurator - A graphical kickstart file generator
+## Copyright (C) 2000, 2001 Red Hat, Inc.
+## Copyright (C) 2000, 2001 Brent Fox <bfox@redhat.com>
+##                          Tammy Fox <tfox@redhat.com>
+
+## This program is free software; you can redistribute it and/or modify
+## it under the terms of the GNU General Public License as published by
+## the Free Software Foundation; either version 2 of the License, or
+## (at your option) any later version.
+
+## This program is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+## GNU General Public License for more details.
+
+## You should have received a copy of the GNU General Public License
+## along with this program; if not, write to the Free Software
+## Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
+
+from gtk import *
+import GtkExtra
+import libglade
+
+class nisData:
+    def __init__(self, quit_cb=None):
+        global nisdomain
+        global nisserver
+        self.nisdomain = ''
+        self.nisserver = ''
+        self.broadcast = "OFF"
+        self.disabled = "TRUE"
+
+#        self.myNisClass = nisData()
+#        self.myLDAPClass = ldapData()
+#        self.myKerberosClass = kerberosData()
+#        self.myHesiodClass = hesiodData()
+
+    def set_domain(self, name):
+        self.nisdomain = name
+    def set_server(self, name):
+        self.nisserver = name
+    def set_disabled(self):
+        self.disabled = "TRUE"
+    def set_enabled(self):
+        self.disabled = "FALSE"
+    def set_broadcast(self, name):
+        self.broadcast = name
+    def return_domain(self):
+        return self.nisdomain
+    def return_server(self):
+        return self.nisserver
+    def return_status(self):
+        return self.disabled
+    def return_broadcast(self):
+        return self.broadcast
+    def return_data(self):
+        if (self.disabled == 'TRUE'):
+            return ""
+        else:
+            if (self.return_broadcast() == 'ON'):
+                return " --enablenis --nisdomain " + self.nisdomain
+            else:				
+                return " --enablenis --nisdomain " + self.nisdomain + " --nisserver " + self.nisserver
+			
+class ldapData:
+    def __init__(self, quit_cb=None):
+        global ldapAuth
+        global ldapServer
+        global ldapDN
+        self.ldapAuth = "YES"
+        self.ldapServer = ''
+        self.ldapDN = ''
+        self.disabled = "TRUE"
+    def set_auth(self, name):
+        self.ldapAuth = name
+    def set_server(self, name):
+        self.ldapServer = name
+    def set_DN(self, name):
+        self.ldapDN = name
+    def set_disabled(self):
+        self.disabled = "TRUE"
+    def set_enabled(self):
+        self.disabled = "FALSE"
+    def return_auth(self):
+        return self.ldapAuth
+    def return_server(self):
+        return self.ldapServer
+    def return_DN(self):
+        return self.ldapDN
+    def return_status(self):
+        return self.disabled
+    def return_data(self):
+        if (self.disabled == 'TRUE'):
+            return ""
+        else:
+            if (self.ldapAuth == 'YES'):
+                return " --enableldap --enableldapauth --ldapserver " + self.ldapServer + " --ldapbasedn " + self.ldapDN
+            else:
+                return " --enableldap --ldapserver " + self.ldapServer + " --ldapbasedn " + self.ldapDN
+
+class kerberosData:
+    def __init__(self, quit_cb=None):
+        global kerberosRealm
+        global kerberosKDC
+        global kerberosMaster
+        self.kerberosRealm = " "
+        self.kerberosKDC = " "
+        self.kerberosMaster = " "
+        self.disabled = "TRUE"		
+    def set_realm(self, name):
+        self.kerberosRealm = name
+    def set_KDC(self, name):
+        self.kerberosKDC = name
+    def set_master(self, name):
+        self.kerberosMaster = name
+    def set_disabled(self):
+        self.disabled = "TRUE"
+    def set_enabled(self):
+        self.disabled = "FALSE"
+    def return_realm(self):
+        return self.kerberosRealm
+    def return_KDC(self):
+        return self.kerberosKDC
+    def return_master(self):
+        return self.kerberosMaster
+    def return_status(self):
+        return self.disabled
+    def return_data(self):
+        if (self.disabled == 'TRUE'):
+            return ""
+        else:
+            return " --enablekrb5 --krb5realm " + self.kerberosRealm + " --krb5kdc " + self.kerberosKDC + " --krb5adminserver " + self.kerberosMaster
+            
+class hesiodData:
+    def __init__(self, quit_cb=None):
+        global hesiodLHS
+        global hesiodRHS
+        self.hesiodLHS = " "
+        self.hesiodRHS = " "
+        self.disabled = "TRUE"		
+    def set_LHS(self, name):
+        self.hesiodLHS = name
+    def set_RHS(self, name):
+        self.hesiodRHS = name
+    def set_disabled(self):
+        self.disabled = "TRUE"
+    def set_enabled(self):
+        self.disabled = "FALSE"
+    def return_LHS(self):
+        return self.hesiodLHS
+    def return_RHS(self):
+        return self.hesiodRHS
+    def return_status(self):
+        return self.disabled
+    def return_data(self):
+        if (self.disabled == 'TRUE'):
+            return ""
+        else:
+            return " --enablehesiod --hesiodlhs " + self.hesiodLHS + " --hesiodRHS " + self.hesiodRHS
+
+class sambaData:
+	def __init__(self, quit_cb=None):
+		global sambaServer
+		global sambaWorkgroup
+		self.sambaServer = " "
+		self.sambaWorkgroup = " "
+		self.disabled = "TRUE"		
+	def set_server(self, name):
+		self.sambaServer = name
+        def set_workgroup(self, name):
+		self.sambaWorkgroup = name
+        def set_disabled(self):
+		self.disabled = "TRUE"
+        def set_enabled(self):
+		self.disabled = "FALSE"
+	def return_server(self):
+		return self.sambaServer
+	def return_workgroup(self):
+		return self.sambaWorkgroup
+	def return_status(self):
+		return self.disabled
+	def return_data(self):
+		if (self.disabled == 'TRUE'):
+			return ""
+		else:
+			return " --enablesmbauth --smbservers " + self.sambaServers + " --smbworkgroup " + self.sambaWorkgroup
+
+      
+class auth:
+    
+    def __init__(self, xml):
+
+        self.myNisClass = nisData()
+        self.myLDAPClass = ldapData()
+        self.myKerberosClass = kerberosData()
+        self.myHesiodClass = hesiodData()
+        self.mySambaClass = sambaData()
+        
+        self.nisCheck = xml.get_widget("nisCheck")
+        self.nisDomainLabel = xml.get_widget("nisDomainLabel")
+        self.nisDomainEntry = xml.get_widget("nisDomainEntry")
+        self.nisServerLabel = xml.get_widget("nisServerLabel")
+        self.nisBroadcastCheck = xml.get_widget("nisBroadcastCheck")
+        self.nisServerEntry = xml.get_widget("nisServerEntry")
+        self.ldapCheck = xml.get_widget("ldapCheck")
+        self.ldapLabel1 = xml.get_widget("ldapLabel1")
+        self.ldapLabel2 = xml.get_widget("ldapLabel2")
+        self.ldapLabel3 = xml.get_widget("ldapLabel3")
+        self.ldapRadio1 = xml.get_widget("ldapRadio1")
+        self.ldapRadio2 = xml.get_widget("ldapRadio2")
+        self.ldapServerEntry = xml.get_widget("ldapServerEntry")
+        self.ldapDNEntry = xml.get_widget("ldapDNEntry")
+        self.kerberosCheck = xml.get_widget("kerberosCheck")
+        self.kerberosLabel1 = xml.get_widget("kerberosLabel1")
+        self.kerberosLabel2 = xml.get_widget("kerberosLabel2")
+        self.kerberosLabel3 = xml.get_widget("kerberosLabel3")
+        self.kerberosRealmEntry = xml.get_widget("kerberosRealmEntry")
+        self.kerberosKDCEntry = xml.get_widget("kerberosKDCEntry")
+        self.kerberosMasterEntry = xml.get_widget("kerberosMasterEntry")
+        self.hesiodCheck = xml.get_widget("hesiodCheck")
+        self.hesiodLabel1 = xml.get_widget("hesiodLabel1")
+        self.hesiodLabel2 = xml.get_widget("hesiodLabel2")
+        self.hesiodLabel3 = xml.get_widget("hesiodLabel3")
+        self.hesiodLHSEntry = xml.get_widget("hesiodLHSEntry")
+        self.hesiodRHSEntry = xml.get_widget("hesiodRHSEntry")
+        self.sambaCheck = xml.get_widget("sambaCheck")
+        self.sambaLabel1 = xml.get_widget("sambaLabel1")
+        self.sambaLabel2 = xml.get_widget("sambaLabel2")
+        self.sambaServerEntry = xml.get_widget("sambaServerEntry")
+        self.sambaWorkgroupEntry = xml.get_widget("sambaWorkgroupEntry")
+
+        xml.signal_autoconnect (
+            { "enableNIS" : self.enableNIS,
+              "BroadcastCheck_cb" : self.BroadcastCheck_cb,
+              "enableLDAP" : self.enableLDAP,
+              "enableHesiod" : self.enableHesiod,
+              "enableKerberos" : self.enableKerberos,
+              "enableSamba" : self.enableSamba,
+            } )
+
+    def enableNIS(self, args):
+        self.nisDomainLabel.set_sensitive(self.nisCheck.get_active())
+        self.nisDomainEntry.set_sensitive(self.nisCheck.get_active())
+        self.nisServerLabel.set_sensitive(self.nisCheck.get_active())
+        self.nisBroadcastCheck.set_sensitive(self.nisCheck.get_active())	
+        self.nisServerEntry.set_sensitive(self.nisCheck.get_active())
+        self.myNisClass.set_enabled()
+        
+    def BroadcastCheck_cb(self, args):
+        if (self.nisBroadcastCheck.get_active() == 1):
+            self.nisServerEntry.set_sensitive(FALSE)
+            self.nisServerEntry.set_text("")
+        elif (self.nisBroadcastCheck.get_active() == 0):
+            self.nisServerEntry.set_sensitive(TRUE)
+
+    def enableLDAP(self, args):
+            self.ldapLabel1.set_sensitive(self.ldapCheck.get_active())		
+            self.ldapRadio1.set_sensitive(self.ldapCheck.get_active())
+            self.ldapRadio2.set_sensitive(self.ldapCheck.get_active())
+            self.ldapLabel2.set_sensitive(self.ldapCheck.get_active())		
+            self.ldapLabel3.set_sensitive(self.ldapCheck.get_active())
+            self.ldapServerEntry.set_sensitive(self.ldapCheck.get_active())
+            self.ldapDNEntry.set_sensitive(self.ldapCheck.get_active())				
+            self.myLDAPClass.set_enabled()
+
+    def enableKerberos(self, args):
+            self.kerberosLabel1.set_sensitive(self.kerberosCheck.get_active())
+            self.kerberosLabel2.set_sensitive(self.kerberosCheck.get_active())
+            self.kerberosLabel3.set_sensitive(self.kerberosCheck.get_active())
+            self.kerberosRealmEntry.set_sensitive(self.kerberosCheck.get_active())
+            self.kerberosKDCEntry.set_sensitive(self.kerberosCheck.get_active())
+            self.kerberosMasterEntry.set_sensitive(self.kerberosCheck.get_active())
+            self.myKerberosClass.set_enabled()			
+
+    def enableHesiod(self, args):
+            self.hesiodLabel1.set_sensitive(self.hesiodCheck.get_active())		
+            self.hesiodLabel2.set_sensitive(self.hesiodCheck.get_active())		
+            self.hesiodLHSEntry.set_sensitive(self.hesiodCheck.get_active())
+            self.hesiodRHSEntry.set_sensitive(self.hesiodCheck.get_active())	
+            self.myHesiodClass.set_enabled()
+
+    def enableSamba(self, args):
+            self.sambaLabel1.set_sensitive(self.sambaCheck.get_active())		
+            self.sambaLabel2.set_sensitive(self.sambaCheck.get_active())		
+            self.sambaServerEntry.set_sensitive(self.sambaCheck.get_active())
+            self.sambaWorkgroupEntry.set_sensitive(self.sambaCheck.get_active())	
+            self.mySambaClass.set_enabled()		
+
+    def toggleLDAP(self, args):
+            if (self.ldapRadio1.get_active()):
+                    self.myLDAPClass.set_auth("YES")
+            else:
+                    self.myLDAPClass.set_auth("No")	
+
