@@ -23,10 +23,12 @@
 
 import gtk
 import gtk.glade
+import getopt
 
 class scripts:
 
-    def __init__(self, xml):
+    def __init__(self, xml, kickstartData):
+        self.kickstartData = kickstartData
         self.chroot_checkbutton = xml.get_widget("chroot_checkbutton")
         self.interpreter_checkbutton = xml.get_widget("interpreter_checkbutton")
         self.interpreter_entry = xml.get_widget("interpreter_entry")
@@ -43,6 +45,7 @@ class scripts:
 
     def pre_interpreter_cb(self, args):
         self.pre_interpreter_entry.set_sensitive(self.pre_interpreter_checkbutton.get_active())        
+
     def getData(self):
         data = []
         data.append("")
@@ -75,3 +78,44 @@ class scripts:
         else:
             buf = ""
         return buf
+
+    def fillData(self):
+        if self.kickstartData.getPreLine():
+            line = self.kickstartData.getPreLine()
+
+            opts, args = getopt.getopt(line, "i:", ["interpreter="])
+
+            for opt, value in opts:
+                if opt == "--interpreter":
+                    self.pre_interpreter_checkbutton.set_active(gtk.TRUE)
+                    self.pre_interpreter_entry.set_text(value)
+            
+            if self.kickstartData.getPreList():
+                list = self.kickstartData.getPreList()
+                iter = self.pre_textview.get_buffer().get_iter_at_offset(0)
+
+                for line in list:
+                    self.pre_textview.get_buffer().insert(iter, (line + "\n"))
+
+        if self.kickstartData.getPostLine():
+            line = self.kickstartData.getPostLine()
+
+            opts, args = getopt.getopt(line, "i:", ["interpreter=", "nochroot"])
+
+            for opt, value in opts:
+                if opt == "--interpreter":
+                    self.interpreter_checkbutton.set_active(gtk.TRUE)
+                    self.interpreter_entry.set_text(value)
+
+                if opt == "--nochroot":
+                    self.chroot_checkbutton.set_active(gtk.TRUE)
+            
+            if self.kickstartData.getPostList():
+                list = self.kickstartData.getPostList()
+                iter = self.post_textview.get_buffer().get_iter_at_offset(0)
+
+                for line in list:
+                    self.post_textview.get_buffer().insert(iter, (line + "\n"))
+
+
+
