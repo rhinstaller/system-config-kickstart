@@ -80,11 +80,11 @@ class firewall:
         self.trustedView = gtk.TreeView()
         self.trustedView.set_headers_visible(gtk.FALSE)
         self.trustedView.set_model(self.trustedStore)
-        self.checkbox = gtk.CellRendererToggle()
-        col = gtk.TreeViewColumn('', self.checkbox, active = 0)
+        checkbox = gtk.CellRendererToggle()
+        checkbox.connect("toggled", self.item_toggled, self.trustedStore)
+        col = gtk.TreeViewColumn('', checkbox, active = 0)
         col.set_fixed_width(20)
         col.set_clickable(gtk.TRUE)
-#        self.checkbox.connect("toggled", self.langToggled)
         self.trustedView.append_column(col)
 
         col = gtk.TreeViewColumn("", gtk.CellRendererText(), text=1)
@@ -103,9 +103,6 @@ class firewall:
         viewport.add(self.trustedView)
         self.customTable.attach (viewport, 1, 2, 2, 3, gtk.EXPAND|gtk.FILL, gtk.FILL, 5, 5)
 
-##         for device in self.netdevices:
-##             self.trusted.append_row((device, device), gtk.FALSE)
-
         self.label2 = gtk.Label (_("Allow incoming:"))
         self.label2.set_alignment (0.0, 0.0)
 
@@ -113,11 +110,11 @@ class firewall:
         self.incomingView = gtk.TreeView()
         self.incomingView.set_headers_visible(gtk.FALSE)        
         self.incomingView.set_model(self.incomingStore)
-        self.checkbox = gtk.CellRendererToggle()
-        col = gtk.TreeViewColumn('', self.checkbox, active = 0)
+        checkbox = gtk.CellRendererToggle()
+        checkbox.connect("toggled", self.item_toggled, self.incomingStore)
+        col = gtk.TreeViewColumn('', checkbox, active = 0)
         col.set_fixed_width(20)
         col.set_clickable(gtk.TRUE)
-#        self.checkbox.connect("toggled", self.langToggled)
         self.incomingView.append_column(col)
 #        self.incoming.connect ('button_press_event', self.incoming_select_row)
 #        self.incoming.connect ("key_press_event", self.incoming_key_press)
@@ -140,10 +137,6 @@ class firewall:
         self.customTable.attach (self.label2, 0, 1, 3, 4, gtk.FILL, gtk.FILL, 5, 5)
         self.customTable.attach (viewport, 1, 2, 3, 4, gtk.EXPAND|gtk.FILL, gtk.FILL, 5, 5)
 
-##        for item in self.list.keys():
-##            self.incoming.append_row ((item, item), gtk.FALSE)
-
-
         self.label3 = gtk.Label (_("Other ports: (1029:tcp)"))
         self.label3.set_alignment (0.0, 0.0)
         self.portsEntry = gtk.Entry ()
@@ -152,6 +145,11 @@ class firewall:
         
         #initialize custom options to not sensitive
         self.customTable.set_sensitive(gtk.FALSE)
+
+    def item_toggled(self, data, row, store):
+        iter = store.get_iter((int(row),))
+        val = store.get_value(iter, 0)
+        store.set_value(iter, 0 , not val)
 
     def disable_firewall (self, widget):
         active = not (self.securityNoneRadio.get_active())
@@ -166,28 +164,6 @@ class firewall:
     def enable_custom (self, widget):
         self.customTable.set_sensitive(self.firewallCustomizeRadio.get_active())
     
-##     def trusted_select_row(self, clist, event):
-##         try:
-##             row, col  = self.trusted.get_selection_info (event.x, event.y)
-##             self.toggle_row(self.trusted, row)
-##         except:
-##             pass
-
-##     def trusted_key_press (self, list, event):
-##         if event.keyval == ord(" ") and self.trusted.focus_row != -1:
-##             self.toggle_row (self.trusted, self.trusted.focus_row)
-            
-##     def incoming_select_row(self, clist, event):
-##         try:
-##             row, col  = self.incoming.get_selection_info (event.x, event.y)
-##             self.toggle_row(self.incoming, row)
-##         except:
-##             pass    
-        
-##     def incoming_key_press (self, list, event):
-##         if event.keyval == ord(" ") and self.incoming.focus_row != -1:
-##             self.toggle_row (self.incoming, self.incoming.focus_row)   
-
     def toggle_row (self, list, row):
         (val, row_data, header) = list.get_row_data(row)
         val = not val
@@ -208,24 +184,22 @@ class firewall:
 
         if self.customizeRadio.get_active():
 
-            numdev = len(self.netdevices)
- ##            for i in range(numdev):
-##                 (val, row_data, header) = self.trusted.get_row_data (i)
-                    
-##                 if val == 1:
-##                     buf = buf + "--trust " + self.netdevices[i] + " "
-##                 elif val == 0:
-##                     pass
+            iter = self.trustedStore.get_iter_first()
 
-            list_keys = self.list.keys()
-            numserv = len(self.list)
-##             for i in list_keys:
-##                 (val, row_data, header) = self.incoming.get_row_data (list_keys.index(i))
-##                 if val == 1:
-##                     buf = buf + "--" + self.list[i] + " "
-##                 elif val == 0:
-##                     pass
+            while iter:
+                if self.trustedStore.get_value(iter, 0) == gtk.TRUE:
+                    buf = buf + "--trust " + self.trustedStore.get_value(iter, 1) + " "
+                iter = self.trustedStore.iter_next(iter)
 
+
+            iter = self.incomingStore.get_iter_first()
+
+            while iter:
+                if self.incomingStore.get_value(iter, 0) == gtk.TRUE:
+                    service = self.list[self.incomingStore.get_value(iter, 1)]
+                    buf = buf + "--" + service + " "
+                iter = self.incomingStore.iter_next(iter)
+                
             portlist = self.portsEntry.get_text()
             ports = []
             
