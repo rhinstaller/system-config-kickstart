@@ -39,11 +39,8 @@ class Packages:
 
     def __init__(self, xml):
 
-        self.resolve_deps_checkbutton = xml.get_widget("resolve_deps_checkbutton")
-        self.ignore_deps_checkbutton = xml.get_widget("ignore_deps_checkbutton")
-
-        self.resolve_deps_checkbutton.connect("toggled", self.on_resolve_deps_toggled)
-        self.ignore_deps_checkbutton.connect("toggled", self.on_ignore_deps_toggled)        
+        self.resolve_deps_radio = xml.get_widget("resolve_deps_radio")
+        self.ignore_deps_radio = xml.get_widget("ignore_deps_radio")
 
         self.desktops_eventbox = xml.get_widget("desktops_eventbox")
         self.desktops_eventbox.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#00009c"))
@@ -186,14 +183,6 @@ class Packages:
         col = gtk.TreeViewColumn("", gtk.CellRendererText(), text=1)
         view.append_column(col)
 
-    def on_resolve_deps_toggled(self, *args):
-        active = self.resolve_deps_checkbutton.get_active()
-        self.ignore_deps_checkbutton.set_sensitive(not active)
-
-    def on_ignore_deps_toggled(self, *args):
-        active = self.ignore_deps_checkbutton.get_active()
-        self.resolve_deps_checkbutton.set_sensitive(not active)        
-
     def packageToggled(self, data, row, store):
         iter = store.get_iter((int(row),))
         val = store.get_value(iter, 0)
@@ -203,9 +192,9 @@ class Packages:
         data = []
         data.append("")
 
-        if self.resolve_deps_checkbutton.get_active() == 1:
+        if self.resolve_deps_radio.get_active() == 1:
             data.append("%packages --resolvedeps")
-        elif self.ignore_deps_checkbutton.get_active() == 1:
+        elif self.ignore_deps_radio.get_active() == 1:
             data.append("%packages --ignoredeps")
         else:
             data.append("%packages")            
