@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: ksconfig
 Version: 1.0
-Release: 1
+Release: 2
 Copyright: GPL
 ExclusiveOS: Linux
 Group: System Environment/Base
@@ -11,8 +11,7 @@ ExclusiveArch: noarch
 Requires: pygtk
 
 %description
-ksconfig is a graphical tool for creating kickstart files.  It will allow you to set most of the
-kickstart options.
+ksconfig is a graphical tool for creating kickstart files.  It will allow you to set most of the kickstart options.
 
 %prep
 %setup -q
@@ -35,3 +34,7 @@ rm -rf $RPM_BUILD_ROOT
 * Tue Jan 16 2001 Brent Fox <bfox@redhat.com>
 - initial packaging
 
+* Sat Jan 27 2001 Tammy Fox <tfox@redhat.com>
+- added file dialog box
+- cleaned up code
+- renamed okButton to saveButton
