@@ -206,9 +206,8 @@ class basic:
         return self.langDict [args]
 
     def mouseLookup(self, args):
-        buf = ""
         if args == "Probe for Mouse":
-            return buf
+            buf = "#Probe for Mouse"
         else:
             buf = "mouse "
             if self.emulate_3_buttons.get_active():

@@ -37,29 +37,28 @@ xml = libglade.GladeXML ("./ksconfig.glade", "save_dialog", domain="ksconfig")
 class saveDialog:
 	
 	def destroy(self, args):
-            self.dialog.destroy()
+		self.dialog.destroy()
 
         def __init__ (self, buf):
-            self.buf = buf
-            self.dialog = xml.get_widget("save_dialog")
-            self.dialog.set_filename("ks.cfg")
-            self.dialog.cancel_button.connect("clicked",self.dialog.hide)
-            self.dialog.filePath= ""
-            self.dialog.connect ("destroy", self.destroy)
+		self.buf = buf
+		self.dialog = xml.get_widget("save_dialog")
+		self.dialog.set_filename("ks.cfg")
+		self.dialog.cancel_button.connect("clicked",self.dialog.hide)
+		self.dialog.filePath= ""
+		self.dialog.connect ("destroy", self.destroy)
+		
+                #extract widgets, autoconnects
+		xml.signal_autoconnect (
+			{ "saveFile" : self.saveFile,
+			  } )
 
-            #extract widgets, autoconnects
-            xml.signal_autoconnect (
-                { "saveFile" : self.saveFile,
-                  } )
-
-            self.dialog.show_all()
+		self.dialog.show_all()
 
 
 	#save file
         def saveFile(self, *args):
-            self.dialog.filePath = self.dialog.get_filename()
-            
-            ksFile = open(self.dialog.filePath, "w")
-            ksFile.write(self.buf)
-            ksFile.close()
-            self.dialog.hide()
+		self.dialog.filePath = self.dialog.get_filename()
+		ksFile = open(self.dialog.filePath, "w")
+		ksFile.write(self.buf)
+		ksFile.close()
+		self.dialog.hide()
