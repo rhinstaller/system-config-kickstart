@@ -95,7 +95,7 @@ class ksconfig_gui:
 		#populate category list
 		self.category_clist = xml.get_widget("category_clist")
 		self.category_clist.append(["Basic Configuration"])
-		self.category_clist.append(["Installation Source"])
+		self.category_clist.append(["Installation Method"])
 		self.category_clist.append(["Partition Information"])
 		self.category_clist.append(["Network Configuration"])
 		self.category_clist.append(["Authentication"])
@@ -112,7 +112,7 @@ class ksconfig_gui:
 			#change notebook tab
 			self.options_notebook.set_page(0)
 			return
-		elif  self.category_clist.get_text(row,0)== "Installation Source":
+		elif  self.category_clist.get_text(row,0)== "Installation Method":
 			self.options_notebook.set_page(1)
 			return
 		elif  self.category_clist.get_text(row,0)== "Partition Information":
