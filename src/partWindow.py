@@ -116,10 +116,9 @@ class partWindow:
 
             if index == "raid":
                 self.mountPointCombo.set_sensitive(gtk.FALSE)
-                self.formatCheck.set_sensitive(gtk.FALSE)
+                self.formatCheck.set_sensitive(gtk.TRUE)
             elif index == "lvm":
                 self.mountPointCombo.set_sensitive(gtk.FALSE)
-                self.formatCheck.set_sensitive(gtk.TRUE)
             else:
                 self.mountPointCombo.set_sensitive(gtk.TRUE)
                 self.formatCheck.set_sensitive(gtk.TRUE)
@@ -459,6 +458,7 @@ class partWindow:
                 part_object.raidNumber = "raid.%s" % str(tmpNum)
             
         #If all the checks pass, then return
+        print fsType
         return fsType
 
     def countRaid(self, store, data, iter):
