@@ -52,14 +52,14 @@ class saveFile:
 		for line in self.buf:
 			self.confirm_buffer.insert(iter,line + "\n",-1)
 
-		baseSize = 12
-		baseFont = 'sans'
-		self.textTag = self.confirm_buffer.create_tag('text')
-		self.textTag.set_property('font', '%s %d' % (baseFont, baseSize))
-		self.textTag.set_property('pixels-above-lines', 1)
-		self.textTag.set_property('pixels-below-lines', 1)
+## 		baseSize = 10
+## 		baseFont = 'sans'
+## 		self.textTag = self.confirm_buffer.create_tag('text')
+## 		self.textTag.set_property('font', '%s %d' % (baseFont, baseSize))
+## 		self.textTag.set_property('pixels-above-lines', 1)
+## 		self.textTag.set_property('pixels-below-lines', 1)
 
-		self.confirm_buffer.apply_tag(self.textTag, self.confirm_buffer.get_start_iter(), self.confirm_buffer.get_end_iter())
+## 		self.confirm_buffer.apply_tag(self.textTag, self.confirm_buffer.get_start_iter(), self.confirm_buffer.get_end_iter())
 		self.textview.set_buffer(self.confirm_buffer)
 				
 		self.dialog.show_all()
