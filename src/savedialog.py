@@ -33,7 +33,7 @@ class saveDialog:
 		self.dataList = dataList
 		self.dialog = self.xml.get_widget("save_dialog")
 		self.dialog.connect("delete-event", self.hide)
-		self.dialog.set_modal(gtk.TRUE)
+		self.dialog.set_modal(True)
 		toplevel = self.xml.get_widget("main_window")
 		self.dialog.set_transient_for(toplevel)
 		self.save_ok_button = self.xml.get_widget("save_ok_button")
@@ -63,4 +63,4 @@ class saveDialog:
 
 	def hide(self, *args):
 		self.dialog.hide()
-		return gtk.TRUE
+		return True

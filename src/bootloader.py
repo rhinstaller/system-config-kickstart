@@ -95,7 +95,7 @@ class bootloader:
             if length > 0:
                 buf = buf + "--append " + params + " "
 
-            if self.grub_password_checkbutton.get_active() == gtk.TRUE:
+            if self.grub_password_checkbutton.get_active() == True:
                 gp = string.strip (self.grub_password_entry.get_text())
                 cp = string.strip (self.grub_password_confirm.get_text())
                 length = len(gp)
@@ -116,7 +116,7 @@ class bootloader:
                         dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_WARNING, gtk.BUTTONS_OK,
                                                 (_("Grub passwords do not match.  Please try again.")))
                         dlg.set_position(gtk.WIN_POS_CENTER)
-                        dlg.set_modal(gtk.TRUE)
+                        dlg.set_modal(True)
                         dlg.set_icon(kickstartGui.iconPixbuf)
                         dlg.run()
                         dlg.destroy()
@@ -143,11 +143,11 @@ class bootloader:
         for item in list:
             if item[:11] == "--location=":
                 if item[11:] == "none":
-                    self.no_bootloader_radio.set_active(gtk.TRUE)
+                    self.no_bootloader_radio.set_active(True)
                 elif item[11:] == "mbr":
-                    self.mbr_radiobutton.set_active(gtk.TRUE)
+                    self.mbr_radiobutton.set_active(True)
                 elif item[11:] == "partition":
-                    self.firstsector_radiobutton.set_active(gtk.TRUE)
+                    self.firstsector_radiobutton.set_active(True)
 
             if item[:10] == "--password":
                 self.grub_password_entry.set_text(item[10:])
@@ -157,8 +157,8 @@ class bootloader:
             self.parameters_entry.set_text(list[list.index(item)])
 
         if "--md5pass" in list:
-            self.grub_password_encrypt_checkbutton.set_active(gtk.TRUE)
+            self.grub_password_encrypt_checkbutton.set_active(True)
 
         if "--upgrade" in list:
-            self.upgrade_bootloader_radio.set_active(gtk.TRUE)
+            self.upgrade_bootloader_radio.set_active(True)
             

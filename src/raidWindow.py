@@ -73,7 +73,7 @@ class raidWindow:
         self.checkbox = gtk.CellRendererToggle()
         col = gtk.TreeViewColumn('', self.checkbox, active = 0)
         col.set_fixed_width(20)
-        col.set_clickable(gtk.TRUE)
+        col.set_clickable(True)
         self.checkbox.connect("toggled", self.partitionToggled)
         self.raid_partitions_view.append_column(col)
 
@@ -89,9 +89,9 @@ class raidWindow:
     def on_raid_fsType_menu_changed(self, *args):
         if self.raid_fsType_menu.get_children()[0].get_text() == "swap":
             #it's a swap partition, so desensitize the mountPoint combo
-            self.raid_mp_combo.set_sensitive(gtk.FALSE)
+            self.raid_mp_combo.set_sensitive(False)
         else:
-            self.raid_mp_combo.set_sensitive(gtk.TRUE)            
+            self.raid_mp_combo.set_sensitive(True)            
 
     def addPartition(self):
         self.raid_partition_store.clear()
@@ -129,9 +129,9 @@ class raidWindow:
             new_iter = self.raid_partition_store.append()
 
             if raidPartitions and part_object.raidNumber in raidPartitions:
-                self.raid_partition_store.set_value(new_iter, 0, gtk.TRUE)
+                self.raid_partition_store.set_value(new_iter, 0, True)
             else:
-                self.raid_partition_store.set_value(new_iter, 0, gtk.FALSE)
+                self.raid_partition_store.set_value(new_iter, 0, False)
                 
             self.raid_partition_store.set_value(new_iter, 1, part_object.raidNumber)
             self.raid_partition_store.set_value(new_iter, 2, iter)
@@ -205,7 +205,7 @@ class raidWindow:
             self.part_store.set_value(raid_device_iter, 2, raid_object.fsType)
             self.part_store.set_value(raid_device_iter, 5, raid_object)
 
-            if self.raid_format_check.get_active() == gtk.TRUE:
+            if self.raid_format_check.get_active() == True:
                 raid_object.doFormat = 1
 
             if raid_object.doFormat == 1:
@@ -219,7 +219,7 @@ class raidWindow:
             self.raid_parent_iter = iter
 
     def isRowToggled(self, store, data, iter, raid_object):
-        if self.raid_partition_store.get_value(iter, 0) == gtk.TRUE:
+        if self.raid_partition_store.get_value(iter, 0) == True:
             self.partition_list.append(self.raid_partition_store.get_value(iter, 1))
             partition_iter = self.raid_partition_store.get_value(iter,2)
             part_object = self.raid_partition_store.get_value(iter, 3)
@@ -228,7 +228,7 @@ class raidWindow:
             raid_object.raidPartitionObjects.append(part_object)
             self.part_store.set_value(partition_iter, 1, raid_object.raidDevice)
 
-        elif self.raid_partition_store.get_value(iter, 0) == gtk.FALSE:
+        elif self.raid_partition_store.get_value(iter, 0) == False:
             partition_iter = self.raid_partition_store.get_value(iter,2)
             part_object = self.raid_partition_store.get_value(iter, 3)            
             if self.original_partitions:
@@ -248,7 +248,7 @@ class raidWindow:
         dlg.set_default_size(100, 100)
         dlg.set_position (gtk.WIN_POS_CENTER)
         dlg.set_border_width(2)
-        dlg.set_modal(gtk.TRUE)
+        dlg.set_modal(True)
         dlg.set_transient_for(self.raid_window)
         rc = dlg.run()
         if rc == gtk.RESPONSE_OK:
@@ -257,7 +257,7 @@ class raidWindow:
 
     def destroy(self, *args):
         self.raid_window.hide()
-        return gtk.TRUE
+        return True
 
     def populateRaid(self, line):
         raid_object = partEntry.partEntry()

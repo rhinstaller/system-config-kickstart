@@ -61,7 +61,7 @@ class xconfig:
         self.monitor_view.set_model(self.monitor_store)
         self.monitor_col = gtk.TreeViewColumn("", gtk.CellRendererText(), text = 0)
         self.monitor_view.append_column(self.monitor_col)
-        self.upgrade_flag = gtk.FALSE
+        self.upgrade_flag = False
 
         self.config_x_button.connect("toggled", self.toggleXconfig)
         self.monitor_probe_check.connect("toggled", self.on_monitor_probe_check_toggled)
@@ -74,18 +74,18 @@ class xconfig:
         #add color depths
         color_depths = ["8", "16", "24", "32"]
         self.color_depth_combo.set_popdown_strings(color_depths)
-        self.color_depth_combo.entry.set_editable(gtk.FALSE)
+        self.color_depth_combo.entry.set_editable(False)
 
         #add resolutions
         resolutions = ["640x480", "800x600", "1024x768", "1152x864", "1280x1024", "1400x1050",
                        "1600x1200", "1920x1440", "2048x1536"]
         self.resolution_combo.set_popdown_strings(resolutions)
-        self.resolution_combo.entry.set_editable(gtk.FALSE)
+        self.resolution_combo.entry.set_editable(False)
         
         #add video card RAM sizes to option menu
         vram_list = ["256 KB", "512 KB", "1 MB", "2 MB", "4 MB", "8 MB", "16 MB", "32 MB", "64 MB"]
         self.videoram_combo.set_popdown_strings(vram_list)
-        self.videoram_combo.entry.set_editable(gtk.FALSE)
+        self.videoram_combo.entry.set_editable(False)
 
         self.ramsize_dict = {"256 KB" : "256",
                              "512 KB" : "512",
@@ -162,17 +162,17 @@ class xconfig:
         self.monitor_view.set_sensitive(not sync_instead)        
 
     def setSensitive(self, boolean):
-        if boolean == gtk.FALSE:
+        if boolean == False:
             self.xconfig_vbox.hide()
             self.xconfig_label_box.show()
-            self.upgrade_flag = gtk.TRUE
+            self.upgrade_flag = True
         else:
             self.xconfig_vbox.show()
             self.xconfig_label_box.hide()
-            self.upgrade_flag = gtk.FALSE
+            self.upgrade_flag = False
 
     def getData(self):
-        if self.upgrade_flag == gtk.TRUE:
+        if self.upgrade_flag == True:
             self.kickstartData.setXconfig(None)
             self.kickstartData.setFirstboot(None)
             return
@@ -225,9 +225,9 @@ class xconfig:
 
     def fillData(self):
         if self.kickstartData.getSkipX():
-            self.config_x_button.set_active(gtk.FALSE)
+            self.config_x_button.set_active(False)
         elif self.kickstartData.getXconfig():
-            self.config_x_button.set_active(gtk.TRUE)
+            self.config_x_button.set_active(True)
 
             if self.kickstartData.getFirstboot() == "--enable":
                 self.firstboot_optionmenu.set_history(1)
@@ -246,14 +246,14 @@ class xconfig:
                 opt = string.replace(opt, "=", " ")
             
                 if opt == "--startxonboot":
-                    self.startxonboot_checkbutton.set_active(gtk.TRUE)
+                    self.startxonboot_checkbutton.set_active(True)
 
                 if opt[:16] == "--defaultdesktop":
                     value = opt[16:]
                     if string.lower(value) == "gnome":
-                        self.gnome_radiobutton.set_active(gtk.TRUE)
+                        self.gnome_radiobutton.set_active(True)
                     if string.lower(value) == "kde":
-                        self.kde_radiobutton.set_active(gtk.TRUE)
+                        self.kde_radiobutton.set_active(True)
 
                 if opt[:7] == "--depth":
                     value = opt[7:]
@@ -265,7 +265,7 @@ class xconfig:
 
                 if opt[:6] == "--card":
                     value = string.strip(opt[6:])
-                    self.card_probe_check.set_active(gtk.FALSE)
+                    self.card_probe_check.set_active(False)
                     value = string.replace(value, '"', '')
 
                     iter = self.card_store.get_iter_first()
@@ -273,8 +273,8 @@ class xconfig:
                     while iter:
                         if self.card_store.get_value(iter, 0) == value:
                             path = self.card_store.get_path(iter)
-                            self.card_view.set_cursor(path, self.card_col, gtk.FALSE)
-                            self.card_view.scroll_to_cell(path, self.card_col, gtk.TRUE, 0.5, 0.5)
+                            self.card_view.set_cursor(path, self.card_col, False)
+                            self.card_view.scroll_to_cell(path, self.card_col, True, 0.5, 0.5)
                         iter = self.card_store.iter_next(iter)
 
                 if opt[:10] == "--videoram":
@@ -286,7 +286,7 @@ class xconfig:
 
                 if opt[:9] == "--monitor":
                     opt = string.strip(opt[9:])
-                    self.monitor_probe_check.set_active(gtk.FALSE)
+                    self.monitor_probe_check.set_active(False)
                     value = string.replace(value, '"', '')
 
                     iter = self.monitor_store.get_iter_first()
@@ -294,18 +294,18 @@ class xconfig:
                     while iter:
                         if self.monitor_store.get_value(iter, 0) == value:
                             path = self.monitor_store.get_path(iter)
-                            self.monitor_view.set_cursor(path, self.monitor_col, gtk.FALSE)
-                            self.monitor_view.scroll_to_cell(path, self.monitor_col, gtk.TRUE, 0.5, 0.5)
+                            self.monitor_view.set_cursor(path, self.monitor_col, False)
+                            self.monitor_view.scroll_to_cell(path, self.monitor_col, True, 0.5, 0.5)
                         iter = self.monitor_store.iter_next(iter)
 
                 if opt[:7] == "--hsync":
                     value = opt[7:]
-                    self.sync_button.set_active(gtk.TRUE)
+                    self.sync_button.set_active(True)
                     self.hsync_entry.set_text(string.strip(value))
-                    self.monitor_probe_check.set_active(gtk.FALSE)
+                    self.monitor_probe_check.set_active(False)
 
                 if opt[:7] == "--vsync":
                     value = opt[7:]
-                    self.sync_button.set_active(gtk.TRUE)
+                    self.sync_button.set_active(True)
                     self.vsync_entry.set_text(string.strip(value))
-                    self.monitor_probe_check.set_active(gtk.FALSE)
+                    self.monitor_probe_check.set_active(False)

@@ -143,7 +143,7 @@ class Packages:
         self.checkbox = gtk.CellRendererToggle()
         col = gtk.TreeViewColumn('', self.checkbox, active = 0)
         col.set_fixed_width(20)
-        col.set_clickable(gtk.TRUE)
+        col.set_clickable(True)
         self.checkbox.connect("toggled", self.packageToggled, store)
         view.append_column(col)
 
@@ -172,7 +172,7 @@ class Packages:
         
         #Loop over the package list and see what was selected
         while iter:
-            if store.get_value(iter, 0) == gtk.TRUE:
+            if store.get_value(iter, 0) == True:
                 packageList.append(store.get_value(iter, 2))
             iter = store.iter_next(iter)
 
@@ -182,11 +182,11 @@ class Packages:
         iter = store.get_iter_first()
         while iter:
             if package == store.get_value(iter, 2):
-                store.set_value(iter, 0, gtk.TRUE)
+                store.set_value(iter, 0, True)
             iter = store.iter_next(iter)
 
     def setSensitive(self, boolean):
-        if boolean == gtk.FALSE:
+        if boolean == False:
             self.package_vbox.hide()
             self.package_label_box.show()
         else:
@@ -196,7 +196,7 @@ class Packages:
     def fillData(self):
         if self.kickstartData.getEverything():
             self.package_vbox.set_sensitive(False)
-            self.package_everything_checkbutton.set_active(gtk.TRUE)
+            self.package_everything_checkbutton.set_active(True)
         else:
             packageList = self.kickstartData.getPackageGroupList()
 

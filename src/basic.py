@@ -79,7 +79,7 @@ class basic:
         self.checkbox = gtk.CellRendererToggle()
         col = gtk.TreeViewColumn('', self.checkbox, active = 0)
         col.set_fixed_width(20)
-        col.set_clickable(gtk.TRUE)
+        col.set_clickable(True)
         self.checkbox.connect("toggled", self.langToggled)
         self.lang_support_view.append_column(col)
 
@@ -176,7 +176,7 @@ class basic:
         iter = self.lang_support_store.get_iter_first()
 
         while iter:
-            if self.lang_support_store.get_value(iter, 0) == gtk.TRUE:
+            if self.lang_support_store.get_value(iter, 0) == True:
                 lang = self.lang_support_store.get_value(iter, 1) 
                 lang_list.append(self.langDict[lang])
 
@@ -196,7 +196,7 @@ class basic:
 
         self.kickstartData.setMouse([self.mouseLookup(self.mouse_combo.entry.get_text())])
 
-        if self.utc_check_button.get_active() == gtk.TRUE:
+        if self.utc_check_button.get_active() == True:
             self.kickstartData.setTimezone(["--utc %s" % self.timezone_combo.entry.get_text()])
         else:
             self.kickstartData.setTimezone([self.timezone_combo.entry.get_text()])
@@ -209,7 +209,7 @@ class basic:
             dlg.set_position (gtk.WIN_POS_CENTER)
             dlg.set_icon(kickstartGui.iconPixbuf)
             dlg.set_border_width(2)
-            dlg.set_modal(gtk.TRUE)
+            dlg.set_modal(True)
             toplevel = self.xml.get_widget("main_window")
             dlg.set_transient_for(toplevel)
             dlg.run()
@@ -228,7 +228,7 @@ class basic:
             dlg.set_position (gtk.WIN_POS_CENTER)
             dlg.set_icon(kickstartGui.iconPixbuf)
             dlg.set_border_width(2)
-            dlg.set_modal(gtk.TRUE)
+            dlg.set_modal(True)
             toplevel = self.xml.get_widget("main_window")
             dlg.set_transient_for(toplevel)
             dlg.run()
@@ -237,7 +237,7 @@ class basic:
             self.root_passwd_entry.grab_focus()
             return None
 
-        if self.encrypt_root_pw_checkbutton.get_active() == gtk.TRUE:
+        if self.encrypt_root_pw_checkbutton.get_active() == True:
             pure = self.root_passwd_entry.get_text()
 
             salt = "$1$"
@@ -294,7 +294,7 @@ class basic:
     def populateLangSupport(self):
         for lang in self.lang_list:
             iter = self.lang_support_store.append()
-            self.lang_support_store.set_value(iter, 0, gtk.FALSE)
+            self.lang_support_store.set_value(iter, 0, False)
             self.lang_support_store.set_value(iter, 1, lang)
 
     def platformChanged(self, entry):
@@ -325,7 +325,7 @@ class basic:
             for mouse in self.mouseDict.keys():
 
                 if "--emulthree" in mouseLine:
-                    self.emulate_3_buttons.set_active(gtk.TRUE)
+                    self.emulate_3_buttons.set_active(True)
                     mouseLine.remove("--emulthree")
 
                 try:
@@ -349,7 +349,7 @@ class basic:
         if langSupportList == []:
             iter = self.lang_support_store.get_iter_root()
             while iter:
-                self.lang_support_store.set_value(iter, 0, gtk.TRUE)
+                self.lang_support_store.set_value(iter, 0, True)
                 iter = self.lang_support_store.iter_next(iter)
         else:
             langSupportList.append(self.kickstartData.getDefaultLang())
@@ -358,27 +358,27 @@ class basic:
 
             while iter:
                 if self.langDict[self.lang_support_store.get_value(iter, 1)] in langSupportList:
-                    self.lang_support_store.set_value(iter, 0, gtk.TRUE)
+                    self.lang_support_store.set_value(iter, 0, True)
                 iter = self.lang_support_store.iter_next(iter)
 
 
         if self.kickstartData.getReboot():
-            self.reboot_checkbutton.set_active(gtk.TRUE)
+            self.reboot_checkbutton.set_active(True)
 
         if self.kickstartData.getText():
-            self.text_install_checkbutton.set_active(gtk.TRUE)
+            self.text_install_checkbutton.set_active(True)
 
         if self.kickstartData.getInteractive():
-            self.interactive_checkbutton.set_active(gtk.TRUE)
+            self.interactive_checkbutton.set_active(True)
 
         if self.kickstartData.getRootPw():
-            self.encrypt_root_pw_checkbutton.set_active(gtk.FALSE)
+            self.encrypt_root_pw_checkbutton.set_active(False)
             line = self.kickstartData.getRootPw()
             (opts, args) = getopt.getopt(line.split(), "", ["iscrypted"])
 
             for opt, value in opts:
                 if opt == "--iscrypted":
-                    self.encrypt_root_pw_checkbutton.set_active(gtk.TRUE)
+                    self.encrypt_root_pw_checkbutton.set_active(True)
 
             self.root_passwd_entry.set_text(args[0])
             self.root_passwd_confirm_entry.set_text(args[0])

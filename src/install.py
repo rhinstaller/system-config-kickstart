@@ -88,8 +88,8 @@ class install:
         self.hd_radiobutton.connect("toggled", self.setState)
 
         self.ftpuserpass_checkbutton.connect("toggled", self.toggleFtp)
-        self.ftpuser_entry.set_sensitive(gtk.FALSE)
-        self.ftppasswd_entry.set_sensitive(gtk.FALSE)
+        self.ftpuser_entry.set_sensitive(False)
+        self.ftppasswd_entry.set_sensitive(False)
 
     def toggleFtp (self, args):
         userpass = self.ftpuserpass_checkbutton.get_active()
@@ -216,7 +216,7 @@ class install:
             dlg.set_position (gtk.WIN_POS_CENTER)
             dlg.set_icon(kickstartGui.iconPixbuf)
             dlg.set_border_width(2)
-            dlg.set_modal(gtk.TRUE)
+            dlg.set_modal(True)
             toplevel = self.xml.get_widget("main_window")
             dlg.set_transient_for(toplevel)
             dlg.run()
@@ -239,16 +239,16 @@ class install:
 
     def fillData(self):
         if self.kickstartData.getInstall():
-            self.install_radiobutton.set_active(gtk.TRUE)            
+            self.install_radiobutton.set_active(True)            
 
         elif self.kickstartData.getUpgrade():
-            self.upgrade_radiobutton.set_active(gtk.TRUE)
+            self.upgrade_radiobutton.set_active(True)
 
         if self.kickstartData.getCdrom():
-            self.cdrom_radiobutton.set_active(gtk.TRUE)
+            self.cdrom_radiobutton.set_active(True)
 
         elif self.kickstartData.getHardDrive():
-            self.hd_radiobutton.set_active(gtk.TRUE)
+            self.hd_radiobutton.set_active(True)
             list = self.kickstartData.getHardDrive()
             for i in list:
                 tokens = string.split(i, "=")
@@ -258,7 +258,7 @@ class install:
                     self.hddir_entry.set_text(tokens[1])
 
         elif self.kickstartData.getNfs():
-            self.nfs_radiobutton.set_active(gtk.TRUE)
+            self.nfs_radiobutton.set_active(True)
             list = self.kickstartData.getNfs()
             for i in list:
                 tokens = string.split(i, "=")
@@ -274,10 +274,10 @@ class install:
             data = tokens[1]
 
             if protocol == "ftp":
-                self.ftp_radiobutton.set_active(gtk.TRUE)
+                self.ftp_radiobutton.set_active(True)
 
                 if "@" in data:
-                    self.ftpuserpass_checkbutton.set_active(gtk.TRUE)
+                    self.ftpuserpass_checkbutton.set_active(True)
 
                     loginData, data = string.split(data, "@")
 
@@ -295,7 +295,7 @@ class install:
             elif protocol == "http":
                 host, dir = self.splitUrl(data)
                 
-                self.http_radiobutton.set_active(gtk.TRUE)
+                self.http_radiobutton.set_active(True)
                 self.httpserver_entry.set_text(host)
                 self.httpdir_entry.set_text(dir)
 

@@ -299,18 +299,18 @@ class partition:
     def rowSelected(self, *args):
         store, iter = self.part_view.get_selection().get_selected()
         if iter == None:
-            self.edit_part_button.set_sensitive(gtk.FALSE)
-            self.del_part_button.set_sensitive(gtk.FALSE)
+            self.edit_part_button.set_sensitive(False)
+            self.del_part_button.set_sensitive(False)
         else:
             part_object = self.part_store.get_value(iter, 5)
             # Check to see if the selection is actually a partition or
             # one of the parent roots
             if part_object == None:
-                self.edit_part_button.set_sensitive(gtk.FALSE)
-                self.del_part_button.set_sensitive(gtk.FALSE)
+                self.edit_part_button.set_sensitive(False)
+                self.del_part_button.set_sensitive(False)
             else:                
-                self.edit_part_button.set_sensitive(gtk.TRUE)
-                self.del_part_button.set_sensitive(gtk.TRUE)
+                self.edit_part_button.set_sensitive(True)
+                self.del_part_button.set_sensitive(True)
 
     def deviceNotValid(self, label):
         dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, label)
@@ -318,7 +318,7 @@ class partition:
         dlg.set_default_size(100, 100)
         dlg.set_position (gtk.WIN_POS_CENTER)
         dlg.set_border_width(2)
-        dlg.set_modal(gtk.TRUE)
+        dlg.set_modal(True)
         toplevel = self.xml.get_widget("main_window")
         dlg.set_transient_for(toplevel)        
         dlg.set_icon(kickstartGui.iconPixbuf)
@@ -332,7 +332,7 @@ class partition:
         self.initlabel_no_radiobutton.set_sensitive(not button.get_active())
 
     def setSensitive(self, boolean):
-        if boolean == gtk.FALSE:
+        if boolean == False:
             self.partition_vbox.hide()
             self.partition_label_box.show_all()
         else:
@@ -342,25 +342,25 @@ class partition:
     def fillData(self):
         if self.kickstartData.getZeroMbr():
             if self.kickstartData.getZeroMbr() == "yes":
-                self.clear_mbr_yes_radiobutton.set_active(gtk.TRUE)
+                self.clear_mbr_yes_radiobutton.set_active(True)
         else:
-            self.clear_mbr_no_radiobutton.set_active(gtk.TRUE)            
+            self.clear_mbr_no_radiobutton.set_active(True)            
 
         if self.kickstartData.getClearPart():
             partList = self.kickstartData.getClearPart()
             
             if "--all" in partList:
-                self.remove_parts_all_radiobutton.set_active(gtk.TRUE)
+                self.remove_parts_all_radiobutton.set_active(True)
             elif "--linux" in partList:
-                self.remove_parts_linux_radiobutton.set_active(gtk.TRUE)                
+                self.remove_parts_linux_radiobutton.set_active(True)                
 
             if "--initlabel" in partList:
-                self.initlabel_yes_radiobutton.set_active(gtk.TRUE)
+                self.initlabel_yes_radiobutton.set_active(True)
             else:
-                self.initlabel_no_radiobutton.set_active(gtk.TRUE)
+                self.initlabel_no_radiobutton.set_active(True)
                 
         else:
-            self.remove_parts_none_radiobutton.set_active(gtk.TRUE)
+            self.remove_parts_none_radiobutton.set_active(True)
 
         if self.kickstartData.getPartitions() != []:
             for line in self.kickstartData.getPartitions():
