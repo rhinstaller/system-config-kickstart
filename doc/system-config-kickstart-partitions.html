@@ -5,17 +5,17 @@
 >Partition Information</TITLE
 ><META
 NAME="GENERATOR"
-CONTENT="Modular DocBook HTML Stylesheet Version 1.73
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
 "><LINK
 REL="HOME"
 TITLE="Kickstart Configurator"
 HREF="index.html"><LINK
 REL="PREVIOUS"
 TITLE="Installation Method"
-HREF="ksconfig-install.html"><LINK
+HREF="redhat-config-kickstart-install.html"><LINK
 REL="NEXT"
 TITLE="Network Configuration"
-HREF="ksconfig-network.html"></HEAD
+HREF="redhat-config-kickstart-network.html"></HEAD
 ><BODY
 CLASS="CHAPTER"
 BGCOLOR="#FFFFFF"
@@ -43,7 +43,7 @@ WIDTH="10%"
 ALIGN="left"
 VALIGN="bottom"
 ><A
-HREF="ksconfig-install.html"
+HREF="redhat-config-kickstart-install.html"
 ACCESSKEY="P"
 >Prev</A
 ></TD
@@ -57,7 +57,7 @@ WIDTH="10%"
 ALIGN="right"
 VALIGN="bottom"
 ><A
-HREF="ksconfig-network.html"
+HREF="redhat-config-kickstart-network.html"
 ACCESSKEY="N"
 >Next</A
 ></TD
@@ -70,19 +70,15 @@ WIDTH="100%"></DIV
 CLASS="CHAPTER"
 ><H1
 ><A
-NAME="KSCONFIG-PARTITIONS"
->Chapter 5. Partition Information</A
-></H1
+NAME="REDHAT-CONFIG-KICKSTART-PARTITIONS">Chapter 5. Partition Information</H1
 ><DIV
 CLASS="FIGURE"
 ><A
-NAME="KSCONFIG-PARTITIONS-FIG"
-></A
-><DIV
+NAME="REDHAT-CONFIG-KICKSTART-PARTITIONS-FIG"><DIV
 CLASS="MEDIAOBJECT"
 ><P
 ><IMG
-SRC="./figs/ksconfig/ksconfig-partitions.png"></P
+SRC="./figs/ksconfig-partitions.png"></P
 ></DIV
 ><P
 ><B
@@ -133,9 +129,7 @@ CLASS="SECT1"
 ><H1
 CLASS="SECT1"
 ><A
-NAME="KSCONFIG-CREATE-PART"
->Creating Partitions</A
-></H1
+NAME="REDHAT-CONFIG-KICKSTART-CREATE-PART">Creating Partitions</H1
 ><P
 >	  To create a partition, click the <B
 CLASS="GUIBUTTON"
@@ -146,10 +140,10 @@ CLASS="GUILABEL"
 >Partition Options</B
 > window shown in
 	  <A
-HREF="ksconfig-partitions.html#KSCONFIG-ADD-PART-FIG"
+HREF="redhat-config-kickstart-partitions.html#REDHAT-CONFIG-KICKSTART-ADD-PART-FIG"
 >Figure 5-2</A
 > will appear. Choose mount point,
-	  filesystem type, and partition size for the new partition. Optionally,
+	  file system type, and partition size for the new partition. Optionally,
 	  you can also choose from the following:
 	</P
 ><P
@@ -162,7 +156,10 @@ CLASS="GUILABEL"
 >Additional Size Options</B
 > &#8212; Choose to
 	      make the partition a fixed size, up to a chosen size, or fill the
-	      remaining space on the hard drive.
+	      remaining space on the hard drive. If you selected swap as the
+	      file system type, you can select to have the installation program
+	      create the swap partition with the recommended size instead of
+	      specifying a size.
 	    </P
 ></LI
 ><LI
@@ -211,19 +208,17 @@ CLASS="FILENAME"
 ></LI
 ><LI
 ><P
->Format the partition as the chosen filesystem type.</P
+>Format the partition as the chosen file system type.</P
 ></LI
 ></UL
 ><DIV
 CLASS="FIGURE"
 ><A
-NAME="KSCONFIG-ADD-PART-FIG"
-></A
-><DIV
+NAME="REDHAT-CONFIG-KICKSTART-ADD-PART-FIG"><DIV
 CLASS="MEDIAOBJECT"
 ><P
 ><IMG
-SRC="./figs/ksconfig/ksconfig-part-options.png"></P
+SRC="./figs/ksconfig-part-options.png"></P
 ></DIV
 ><P
 ><B
@@ -272,7 +267,7 @@ WIDTH="33%"
 ALIGN="left"
 VALIGN="top"
 ><A
-HREF="ksconfig-install.html"
+HREF="redhat-config-kickstart-install.html"
 ACCESSKEY="P"
 >Prev</A
 ></TD
@@ -290,7 +285,7 @@ WIDTH="33%"
 ALIGN="right"
 VALIGN="top"
 ><A
-HREF="ksconfig-network.html"
+HREF="redhat-config-kickstart-network.html"
 ACCESSKEY="N"
 >Next</A
 ></TD

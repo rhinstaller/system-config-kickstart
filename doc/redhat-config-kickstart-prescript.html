@@ -5,17 +5,17 @@
 >Pre-Installation Script</TITLE
 ><META
 NAME="GENERATOR"
-CONTENT="Modular DocBook HTML Stylesheet Version 1.73
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
 "><LINK
 REL="HOME"
 TITLE="Kickstart Configurator"
 HREF="index.html"><LINK
 REL="PREVIOUS"
 TITLE="Package Selection"
-HREF="ksconfig-pkgs.html"><LINK
+HREF="redhat-config-kickstart-pkgs.html"><LINK
 REL="NEXT"
 TITLE="Post-Installation Script"
-HREF="ksconfig-postinstall.html"></HEAD
+HREF="redhat-config-kickstart-postinstall.html"></HEAD
 ><BODY
 CLASS="CHAPTER"
 BGCOLOR="#FFFFFF"
@@ -43,7 +43,7 @@ WIDTH="10%"
 ALIGN="left"
 VALIGN="bottom"
 ><A
-HREF="ksconfig-pkgs.html"
+HREF="redhat-config-kickstart-pkgs.html"
 ACCESSKEY="P"
 >Prev</A
 ></TD
@@ -57,7 +57,7 @@ WIDTH="10%"
 ALIGN="right"
 VALIGN="bottom"
 ><A
-HREF="ksconfig-postinstall.html"
+HREF="redhat-config-kickstart-postinstall.html"
 ACCESSKEY="N"
 >Next</A
 ></TD
@@ -70,19 +70,15 @@ WIDTH="100%"></DIV
 CLASS="CHAPTER"
 ><H1
 ><A
-NAME="KSCONFIG-PRESCRIPT"
->Chapter 11. Pre-Installation Script</A
-></H1
+NAME="REDHAT-CONFIG-KICKSTART-PRESCRIPT">Chapter 11. Pre-Installation Script</H1
 ><DIV
 CLASS="FIGURE"
 ><A
-NAME="KSCONFIG-PRESCRIPT-FIG"
-></A
-><DIV
+NAME="REDHAT-CONFIG-KICKSTART-PRESCRIPT-FIG"><DIV
 CLASS="MEDIAOBJECT"
 ><P
 ><IMG
-SRC="./figs/ksconfig/ksconfig-prescript.png"></P
+SRC="./figs/ksconfig-prescript.png"></P
 ></DIV
 ><P
 ><B
@@ -95,6 +91,31 @@ SRC="./figs/ksconfig/ksconfig-prescript.png"></P
 	you have configured the network in the kickstart file, the network is
 	enabled before this section is processed. If you would like to include
 	a pre-installation script, type it in the text area. 
+      </P
+><P
+>	If you want to specify a scripting language to use to execute your
+	script, click the <B
+CLASS="GUIBUTTON"
+>Use an interpreter</B
+> button and
+	enter the interpreter in the text box beside the button. For example,
+	<TT
+CLASS="USERINPUT"
+><B
+>/usr/bin/python</B
+></TT
+> can be specified for a Python
+	script. This option corresponds to using <TT
+CLASS="COMMAND"
+>%pre --interpreter
+	  <TT
+CLASS="REPLACEABLE"
+><I
+>/usr/bin/python</I
+></TT
+></TT
+> in your kickstart
+	file.
       </P
 ><DIV
 CLASS="CAUTION"
@@ -154,7 +175,7 @@ WIDTH="33%"
 ALIGN="left"
 VALIGN="top"
 ><A
-HREF="ksconfig-pkgs.html"
+HREF="redhat-config-kickstart-pkgs.html"
 ACCESSKEY="P"
 >Prev</A
 ></TD
@@ -172,7 +193,7 @@ WIDTH="33%"
 ALIGN="right"
 VALIGN="top"
 ><A
-HREF="ksconfig-postinstall.html"
+HREF="redhat-config-kickstart-postinstall.html"
 ACCESSKEY="N"
 >Next</A
 ></TD

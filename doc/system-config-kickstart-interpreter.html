@@ -2,7 +2,7 @@
 <HTML
 ><HEAD
 ><TITLE
->Examples</TITLE
+>Use an Interpreter</TITLE
 ><META
 NAME="GENERATOR"
 CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
@@ -14,11 +14,11 @@ REL="UP"
 TITLE="Post-Installation Script"
 HREF="redhat-config-kickstart-postinstall.html"><LINK
 REL="PREVIOUS"
-TITLE="Use an Interpreter"
-HREF="redhat-config-kickstart-interpreter.html"><LINK
+TITLE="Post-Installation Script"
+HREF="redhat-config-kickstart-postinstall.html"><LINK
 REL="NEXT"
-TITLE="Saving the File"
-HREF="redhat-config-kickstart-savefile.html"></HEAD
+TITLE="Examples"
+HREF="redhat-config-kickstart-postinstall-examples.html"></HEAD
 ><BODY
 CLASS="SECT1"
 BGCOLOR="#FFFFFF"
@@ -46,7 +46,7 @@ WIDTH="10%"
 ALIGN="left"
 VALIGN="bottom"
 ><A
-HREF="redhat-config-kickstart-interpreter.html"
+HREF="redhat-config-kickstart-postinstall.html"
 ACCESSKEY="P"
 >Prev</A
 ></TD
@@ -60,7 +60,7 @@ WIDTH="10%"
 ALIGN="right"
 VALIGN="bottom"
 ><A
-HREF="redhat-config-kickstart-savefile.html"
+HREF="redhat-config-kickstart-postinstall-examples.html"
 ACCESSKEY="N"
 >Next</A
 ></TD
@@ -74,76 +74,32 @@ CLASS="SECT1"
 ><H1
 CLASS="SECT1"
 ><A
-NAME="REDHAT-CONFIG-KICKSTART-POSTINSTALL-EXAMPLES">Examples</H1
+NAME="REDHAT-CONFIG-KICKSTART-INTERPRETER">Use an Interpreter</H1
 ><P
->	  The post-installation script can be used to perform any useful
-	  functions such as the following examples.
-	</P
-><P
->	  Turn services on and off:
-	</P
-><TABLE
-BORDER="0"
-BGCOLOR="#E0E0E0"
-WIDTH="100%"
-><TR
-><TD
-><PRE
-CLASS="SCREEN"
-><TT
+>	  If you want to specify a scripting language to use to execute your
+	  script, click the <B
+CLASS="GUIBUTTON"
+>Use an interpreter</B
+> button and
+	  enter the interpreter in the text box beside the button. For example,
+	  <TT
+CLASS="USERINPUT"
+><B
+>/usr/bin/python</B
+></TT
+> can be specified for a Python
+	  script. This option corresponds to using <TT
 CLASS="COMMAND"
->/sbin/chkconfig --level 345 telnet off
-/sbin/chkconfig --level 345 finger off
-/sbin/chkconfig --level 345 lpd off
-/sbin/chkconfig --level 345 httpd on</TT
-></PRE
-></TD
-></TR
-></TABLE
-><P
->	  Run a script named <TT
-CLASS="FILENAME"
->runme</TT
-> from an NFS share:
+>%post --interpreter
+	    <TT
+CLASS="REPLACEABLE"
+><I
+>/usr/bin/python</I
+></TT
+></TT
+> in your kickstart
+	  file.
 	</P
-><TABLE
-BORDER="0"
-BGCOLOR="#E0E0E0"
-WIDTH="100%"
-><TR
-><TD
-><PRE
-CLASS="SCREEN"
-><TT
-CLASS="COMMAND"
->mkdir /mnt/temp
-mount 10.10.0.2:/usr/new-machines /mnt/temp
-open -s -w -- /mnt/temp/runme
-umount /mnt/temp</TT
-></PRE
-></TD
-></TR
-></TABLE
-><P
->	  Add a user to the system:
-	</P
-><TABLE
-BORDER="0"
-BGCOLOR="#E0E0E0"
-WIDTH="100%"
-><TR
-><TD
-><PRE
-CLASS="SCREEN"
-><TT
-CLASS="COMMAND"
->/usr/sbin/useradd bob
-/usr/bin/chfn -f "Bob Smith" bob
-/usr/sbin/usermod -p 'kjdf$04930FTH/ ' bob</TT
-></PRE
-></TD
-></TR
-></TABLE
 ></DIV
 ><DIV
 CLASS="NAVFOOTER"
@@ -161,7 +117,7 @@ WIDTH="33%"
 ALIGN="left"
 VALIGN="top"
 ><A
-HREF="redhat-config-kickstart-interpreter.html"
+HREF="redhat-config-kickstart-postinstall.html"
 ACCESSKEY="P"
 >Prev</A
 ></TD
@@ -179,7 +135,7 @@ WIDTH="33%"
 ALIGN="right"
 VALIGN="top"
 ><A
-HREF="redhat-config-kickstart-savefile.html"
+HREF="redhat-config-kickstart-postinstall-examples.html"
 ACCESSKEY="N"
 >Next</A
 ></TD
@@ -189,7 +145,7 @@ ACCESSKEY="N"
 WIDTH="33%"
 ALIGN="left"
 VALIGN="top"
->Use an Interpreter</TD
+>Post-Installation Script</TD
 ><TD
 WIDTH="34%"
 ALIGN="center"
@@ -203,7 +159,7 @@ ACCESSKEY="U"
 WIDTH="33%"
 ALIGN="right"
 VALIGN="top"
->Saving the File</TD
+>Examples</TD
 ></TR
 ></TABLE
 ></DIV
