@@ -241,7 +241,7 @@ class partWindow:
         doFormat = self.formatCheck.get_active()
 
         #Let's do some error checking to make sure things make sense
-        if size < 1 or size == "" and onPart == gtk.FALSE:
+        if size < 1 or size == "" and onPart == gtk.FALSE and not self.sizeMaxRadio.get_active():
             dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, _("You must specify a size for the partition."))
             dlg.set_title(_("Error"))
             dlg.set_default_size(100, 100)
