@@ -49,6 +49,9 @@ fi
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
+* Sun Jan 20 2002 Brent Fox <bfox@redhat.com>
+- fixed bug #58570
+
 * Sun Nov 11 2001 Tammy Fox <tfox@redhat.com>
 - added encrypt GRUB password
 
