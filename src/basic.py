@@ -95,7 +95,7 @@ class basic:
         self.lang_combo.set_popdown_strings(self.lang_list)
 
         #set default to English
-        self.lang_combo.list.select_item(47)
+        self.lang_combo.list.select_item(self.lang_list.index('English (USA)'))
 
         self.populateLangSupport()
 #        for lang in lang_list:
