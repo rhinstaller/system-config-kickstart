@@ -36,6 +36,8 @@ class partition:
         self.remove_parts_none_radiobutton = self.xml.get_widget("remove_parts_none_radiobutton")
         self.remove_parts_all_radiobutton = self.xml.get_widget("remove_parts_all_radiobutton")
         self.remove_parts_Linux_radiobutton = self.xml.get_widget("remove_parts_Linux_radiobutton")
+        self.initlabel_yes_radiobutton = self.xml.get_widget("initlabel_yes_radiobutton")
+        self.initlabel_no_radiobutton = self.xml.get_widget("initlabel_no_radiobutton")        
         self.partClist = self.xml.get_widget("partClist")
         self.add_part_button = self.xml.get_widget("add_part_button")
         self.edit_part_button = self.xml.get_widget("edit_part_button")
@@ -100,6 +102,10 @@ class partition:
             buf = buf + "\n" + "clearpart --all"
         elif self.remove_parts_Linux_radiobutton.get_active():
             buf = buf + "\n" + "clearpart --linux"
+        if self.initlabel_yes_radiobutton.get_active():
+            buf = buf + "\n" + "clearpart --initlabel"
+        elif self.initlabel_no_radiobutton.get_active():
+            pass
 
         #partitioning table options
         num_raid = 0

@@ -73,8 +73,8 @@ class partWindow:
         mountPoints = ["/", "/boot", "/home", "/var", "/tmp", "/usr", "/opt"]
         self.mountPointCombo.set_popdown_strings(mountPoints)
 
-#        self.fileTypes = ["ext2", "ext3", "RAID", "Linux Swap"]
-        self.fileTypes = ["ext2", "ext3", "Linux Swap"]
+#        self.fileTypes = ["ext2", "ext3", "RAID", "Linux Swap", "vfat"]
+        self.fileTypes = ["ext2", "ext3", "Linux Swap", "vfat"]
         self.fsTypeCombo.set_popdown_strings(self.fileTypes)
         self.fsTypeCombo.list.select_item(0)
 

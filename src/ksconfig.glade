@@ -1800,7 +1800,7 @@
 	      <widget>
 		<class>GtkTable</class>
 		<name>table5</name>
-		<rows>2</rows>
+		<rows>3</rows>
 		<columns>2</columns>
 		<homogeneous>False</homogeneous>
 		<row_spacing>4</row_spacing>
@@ -1978,6 +1978,83 @@
 		    <xfill>True</xfill>
 		    <yfill>False</yfill>
 		  </child>
+		</widget>
+
+		<widget>
+		  <class>GtkLabel</class>
+		  <name>label135</name>
+		  <label>Initialize the Disk Label:</label>
+		  <justify>GTK_JUSTIFY_CENTER</justify>
+		  <wrap>False</wrap>
+		  <xalign>0</xalign>
+		  <yalign>0.5</yalign>
+		  <xpad>0</xpad>
+		  <ypad>0</ypad>
+		  <child>
+		    <left_attach>0</left_attach>
+		    <right_attach>1</right_attach>
+		    <top_attach>2</top_attach>
+		    <bottom_attach>3</bottom_attach>
+		    <xpad>0</xpad>
+		    <ypad>0</ypad>
+		    <xexpand>False</xexpand>
+		    <yexpand>False</yexpand>
+		    <xshrink>False</xshrink>
+		    <yshrink>False</yshrink>
+		    <xfill>True</xfill>
+		    <yfill>False</yfill>
+		  </child>
+		</widget>
+
+		<widget>
+		  <class>GtkHBox</class>
+		  <name>hbox36</name>
+		  <homogeneous>False</homogeneous>
+		  <spacing>0</spacing>
+		  <child>
+		    <left_attach>1</left_attach>
+		    <right_attach>2</right_attach>
+		    <top_attach>2</top_attach>
+		    <bottom_attach>3</bottom_attach>
+		    <xpad>0</xpad>
+		    <ypad>0</ypad>
+		    <xexpand>False</xexpand>
+		    <yexpand>False</yexpand>
+		    <xshrink>False</xshrink>
+		    <yshrink>False</yshrink>
+		    <xfill>True</xfill>
+		    <yfill>True</yfill>
+		  </child>
+
+		  <widget>
+		    <class>GtkRadioButton</class>
+		    <name>initlabel_yes_radiobutton</name>
+		    <can_focus>True</can_focus>
+		    <label>Yes</label>
+		    <active>False</active>
+		    <draw_indicator>True</draw_indicator>
+		    <group>initlabel</group>
+		    <child>
+		      <padding>0</padding>
+		      <expand>False</expand>
+		      <fill>False</fill>
+		    </child>
+		  </widget>
+
+		  <widget>
+		    <class>GtkRadioButton</class>
+		    <name>initlabel_no_radiobutton</name>
+		    <can_focus>True</can_focus>
+		    <label>No</label>
+		    <active>True</active>
+		    <draw_indicator>True</draw_indicator>
+		    <group>initlabel</group>
+		    <child>
+		      <padding>0</padding>
+		      <expand>False</expand>
+		      <fill>False</fill>
+		    </child>
+		  </widget>
 		</widget>
 	      </widget>
 
