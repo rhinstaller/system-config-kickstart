@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-11 12:08-0500\n"
+"POT-Creation-Date: 2004-03-26 18:21-0500\n"
 "PO-Revision-Date: 2004-03-13 15:15+0100\n"
 "Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
 "Language-Team: Danish <<dansk@klid.dk>>\n"
@@ -53,8 +53,28 @@ msgstr ""
 #. #
 #. # I18N
 #. #
-#. self.lang_support_list.set_selection_mode(SELECTION_MULTIPLE)
-#. self.messagebox = xml.get_widget("messagebox")
+#: ../src/basic.py:71
+msgid "x86, AMD64, or Intel EM64T"
+msgstr ""
+
+#: ../src/basic.py:71
+msgid "Intel Itanium"
+msgstr ""
+
+#: ../src/basic.py:71
+#, fuzzy
+msgid "IBM iSeries"
+msgstr "SMB-server:"
+
+#: ../src/basic.py:72
+#, fuzzy
+msgid "IBM pSeries"
+msgstr "SMB-server:"
+
+#: ../src/basic.py:72
+msgid "IBM zSeries/s390"
+msgstr ""
+
 #. populate language combo
 #. set default to English
 #. for lang in lang_list:
@@ -65,7 +85,7 @@ msgstr ""
 #. set keyboard to current keymap
 #. set default mouse to generic ps/2
 #. populate time zone combo
-#: ../src/basic.py:199
+#: ../src/basic.py:205
 msgid "Root passwords do not match."
 msgstr "Adgangskoder for root er ikke ens."
 
@@ -74,12 +94,12 @@ msgstr "Adgangskoder for root er ikke ens."
 #. Prepart the clearpart line
 #. This is a raid device
 #. Check to see if the selection is actually a partition or one of the parent roots
-#: ../src/basic.py:200 ../src/basic.py:220 ../src/install.py:213
-#: ../src/partition.py:303 ../src/partWindow.py:513 ../src/raidWindow.py:247
+#: ../src/basic.py:206 ../src/basic.py:226 ../src/install.py:214
+#: ../src/partition.py:304 ../src/partWindow.py:513 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "Fejl"
 
-#: ../src/basic.py:219
+#: ../src/basic.py:225
 msgid "Please select a root password."
 msgstr "Vælg venligst en adgangskode for 'root'"
 
@@ -108,7 +128,7 @@ msgstr "Vælg venligst en adgangskode for 'root'"
 #. #
 #. lilo stuff
 #. end of lilo stuff
-#: ../src/bootloader.py:132
+#: ../src/bootloader.py:122
 msgid "Grub passwords do not match.  Please try again."
 msgstr "Adgangskoder for Grub er ikke ens. Prøv igen."
 
@@ -286,44 +306,47 @@ msgstr "Andre porte: (1029:tcp)"
 #. # I18N
 #. #
 #. gray out package selection and partitions if upgrade
-#: ../src/install.py:133
+#. self.partitioning_frame.set_sensitive(install)
+#. self.pkg_selection_frame.set_sensitive(install)
+#. self.bootloader_class.upgrade_bootloader_radio.set_sensitive(not install)
+#: ../src/install.py:134
 msgid "Please enter an NFS server."
 msgstr "Indtast venligst en NFS-server."
 
-#: ../src/install.py:136
+#: ../src/install.py:137
 msgid "Please enter an NFS directory."
 msgstr "Indtast venligst et katalog til NFS."
 
-#: ../src/install.py:146
+#: ../src/install.py:147
 msgid "Please enter an FTP server."
 msgstr "Indtast venligst en FTP-server."
 
-#: ../src/install.py:153
+#: ../src/install.py:154
 msgid "Please enter an FTP directory."
 msgstr "Indtast venligst et FTP-katalog."
 
-#: ../src/install.py:159
+#: ../src/install.py:160
 msgid "Please enter an FTP user name."
 msgstr "Indtast venligst et brugernavn til FTP."
 
-#: ../src/install.py:162
+#: ../src/install.py:163
 msgid "Please enter an FTP password."
 msgstr "Indtast venligst en adgangskode for 'FTP'"
 
-#: ../src/install.py:177
+#: ../src/install.py:178
 msgid "Please enter an HTTP server."
 msgstr "Indtast venligst en HTTP-server."
 
-#: ../src/install.py:180
+#: ../src/install.py:181
 msgid "Please enter an HTTP server directory."
 msgstr "Indtast venligst et katalog til HTTP-server."
 
 #. strip the "http://" out
-#: ../src/install.py:201
+#: ../src/install.py:202
 msgid "Please enter a hard drive directory."
 msgstr "Indtast venligst et katalog til disk."
 
-#: ../src/install.py:204
+#: ../src/install.py:205
 msgid "Please enter a hard drive partition."
 msgstr "Indtast venligst en diskpartition."
 
@@ -411,7 +434,7 @@ msgstr "Alternativer for opstartsindlæser"
 msgid "Partition Information"
 msgstr "Partitionsinformation"
 
-#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:168
+#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:163
 msgid "Network Configuration"
 msgstr "Netværkskonfiguration"
 
@@ -419,23 +442,23 @@ msgstr "Netværkskonfiguration"
 msgid "Authentication"
 msgstr "Autenticering"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:219
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:214
 msgid "Firewall Configuration"
 msgstr "Brandmurskonfiguration"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:248
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:243
 msgid "X Configuration"
 msgstr "X-konfiguration"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:258
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:253
 msgid "Package Selection"
 msgstr "Pakkevalg"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:264
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:259
 msgid "Pre-Installation Script"
 msgstr "Pre-installations skript"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:271
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:266
 msgid "Post-Installation Script"
 msgstr "Post-installations skript"
 
@@ -606,7 +629,7 @@ msgstr ""
 #. #
 #. # I18N
 #. #
-#: ../src/partition.py:70
+#: ../src/partition.py:71
 msgid ""
 "Device/\n"
 "Partition Number"
@@ -615,7 +638,7 @@ msgstr ""
 "Partitionsnummer"
 
 #. col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
-#: ../src/partition.py:73
+#: ../src/partition.py:74
 msgid ""
 "Mount Point/\n"
 "RAID"
@@ -623,15 +646,15 @@ msgstr ""
 "Monteringspunkt/\n"
 "RAID"
 
-#: ../src/partition.py:75
+#: ../src/partition.py:76
 msgid "Type"
 msgstr "Type"
 
-#: ../src/partition.py:77
+#: ../src/partition.py:78
 msgid "Format"
 msgstr "Format"
 
-#: ../src/partition.py:79
+#: ../src/partition.py:80
 msgid "Size (MB)"
 msgstr "Størrelse (MB)"
 
@@ -681,7 +704,7 @@ msgstr "Størrelse (MB)"
 #. #         self.part_store.set_value(part_iter, 3, part_object.format)
 #. #         self.part_store.set_value(part_iter, 4, part_object.size)
 #. #         self.part_store.set_value(part_iter, 5, part_object)
-#: ../src/partition.py:149 ../src/partition.py:179
+#: ../src/partition.py:150 ../src/partition.py:180
 msgid "Please select a partition from the list."
 msgstr "Vælg venligst en partition fra listen."
 
@@ -765,7 +788,8 @@ msgstr "Angiv et monteringspunkt for partitionen."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:429
 #, python-format
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "Monteringspunktet '%s' er allerede i brug. Vælg venligst et andet "
 "monteringspunkt."
@@ -825,7 +849,7 @@ msgstr ""
 #. # You should have received a copy of the GNU General Public License
 #. # along with this program; if not, write to the Free Software
 #. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. # raidOptionWindow.py - code for redhat-config-kickstart's raid dialog
+#. # raidOptionWindow.py - code for system-config-kickstart's raid dialog
 #. # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
 #. # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
 #. # Copyright (C) 2001, 2002, 2003 Tammy Fox <tfox@redhat.com>
@@ -1068,53 +1092,54 @@ msgstr "Alternativer for partition"
 #: system-config-kickstart.gladestrings:81
 #: system-config-kickstart.gladestrings:83
 #: system-config-kickstart.gladestrings:87
-#: system-config-kickstart.gladestrings:104
-#: system-config-kickstart.gladestrings:105
-#: system-config-kickstart.gladestrings:108
+#: system-config-kickstart.gladestrings:89
+#: system-config-kickstart.gladestrings:106
+#: system-config-kickstart.gladestrings:107
 #: system-config-kickstart.gladestrings:110
-#: system-config-kickstart.gladestrings:114
-#: system-config-kickstart.gladestrings:115
+#: system-config-kickstart.gladestrings:112
+#: system-config-kickstart.gladestrings:116
 #: system-config-kickstart.gladestrings:117
-#: system-config-kickstart.gladestrings:118
-#: system-config-kickstart.gladestrings:122
-#: system-config-kickstart.gladestrings:123
+#: system-config-kickstart.gladestrings:119
+#: system-config-kickstart.gladestrings:120
+#: system-config-kickstart.gladestrings:124
+#: system-config-kickstart.gladestrings:125
 #: system-config-kickstart.gladestrings:138
 #: system-config-kickstart.gladestrings:139
-#: system-config-kickstart.gladestrings:149
-#: system-config-kickstart.gladestrings:175
+#: system-config-kickstart.gladestrings:144
+#: system-config-kickstart.gladestrings:170
+#: system-config-kickstart.gladestrings:173
+#: system-config-kickstart.gladestrings:177
 #: system-config-kickstart.gladestrings:178
-#: system-config-kickstart.gladestrings:182
-#: system-config-kickstart.gladestrings:183
-#: system-config-kickstart.gladestrings:190
-#: system-config-kickstart.gladestrings:192
+#: system-config-kickstart.gladestrings:185
+#: system-config-kickstart.gladestrings:187
+#: system-config-kickstart.gladestrings:189
 #: system-config-kickstart.gladestrings:194
-#: system-config-kickstart.gladestrings:199
-#: system-config-kickstart.gladestrings:201
-#: system-config-kickstart.gladestrings:207
-#: system-config-kickstart.gladestrings:208
-#: system-config-kickstart.gladestrings:223
-#: system-config-kickstart.gladestrings:225
-#: system-config-kickstart.gladestrings:237
-#: system-config-kickstart.gladestrings:241
-#: system-config-kickstart.gladestrings:243
-#: system-config-kickstart.gladestrings:262
-#: system-config-kickstart.gladestrings:269
-#: system-config-kickstart.gladestrings:289
+#: system-config-kickstart.gladestrings:196
+#: system-config-kickstart.gladestrings:202
+#: system-config-kickstart.gladestrings:203
+#: system-config-kickstart.gladestrings:218
+#: system-config-kickstart.gladestrings:220
+#: system-config-kickstart.gladestrings:232
+#: system-config-kickstart.gladestrings:236
+#: system-config-kickstart.gladestrings:238
+#: system-config-kickstart.gladestrings:257
+#: system-config-kickstart.gladestrings:264
+#: system-config-kickstart.gladestrings:284
+#: system-config-kickstart.gladestrings:286
+#: system-config-kickstart.gladestrings:288
+#: system-config-kickstart.gladestrings:290
 #: system-config-kickstart.gladestrings:291
 #: system-config-kickstart.gladestrings:293
 #: system-config-kickstart.gladestrings:295
-#: system-config-kickstart.gladestrings:296
+#: system-config-kickstart.gladestrings:297
 #: system-config-kickstart.gladestrings:298
 #: system-config-kickstart.gladestrings:300
 #: system-config-kickstart.gladestrings:302
-#: system-config-kickstart.gladestrings:303
+#: system-config-kickstart.gladestrings:304
 #: system-config-kickstart.gladestrings:305
 #: system-config-kickstart.gladestrings:307
 #: system-config-kickstart.gladestrings:309
-#: system-config-kickstart.gladestrings:310
-#: system-config-kickstart.gladestrings:312
-#: system-config-kickstart.gladestrings:314
-#: system-config-kickstart.gladestrings:316
+#: system-config-kickstart.gladestrings:311
 msgid "*"
 msgstr "*"
 
@@ -1367,133 +1392,129 @@ msgid "Confirm Password:"
 msgstr "Bekræft adgangskode:"
 
 #: system-config-kickstart.gladestrings:88
+msgid "Target Architecture:"
+msgstr ""
+
+#: system-config-kickstart.gladestrings:90
 msgid "Reboot system after installation"
 msgstr "Start systemet igen efter installationen"
 
-#: system-config-kickstart.gladestrings:89
+#: system-config-kickstart.gladestrings:91
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "Udfør installationen i teksttilstand (grafisk er standard)"
 
-#: system-config-kickstart.gladestrings:90
+#: system-config-kickstart.gladestrings:92
 msgid "Perform installation in interactive mode"
 msgstr "Udfør installationen i interaktivt tilstand"
 
-#: system-config-kickstart.gladestrings:91
+#: system-config-kickstart.gladestrings:93
 msgid "Basic Configuration (required)"
 msgstr "Grundlæggende konfiguration (krævet)"
 
-#: system-config-kickstart.gladestrings:92
+#: system-config-kickstart.gladestrings:94
 msgid "label28"
 msgstr "etiket28"
 
-#: system-config-kickstart.gladestrings:93
+#: system-config-kickstart.gladestrings:95
 msgid "Perform new installation"
 msgstr "Udfør ny installation"
 
-#: system-config-kickstart.gladestrings:94
+#: system-config-kickstart.gladestrings:96
 msgid "Upgrade an existing installation"
 msgstr "Opgradér en eksisterende installation"
 
-#: system-config-kickstart.gladestrings:95
+#: system-config-kickstart.gladestrings:97
 msgid "Choose the Installation Method:"
 msgstr "Vælg installationsmetode:"
 
-#: system-config-kickstart.gladestrings:96
-#: system-config-kickstart.gladestrings:101
+#: system-config-kickstart.gladestrings:98
+#: system-config-kickstart.gladestrings:103
 msgid "CD-ROM"
 msgstr "CD-ROM"
 
-#: system-config-kickstart.gladestrings:97
-#: system-config-kickstart.gladestrings:106
+#: system-config-kickstart.gladestrings:99
+#: system-config-kickstart.gladestrings:108
 msgid "NFS"
 msgstr "NFS"
 
-#: system-config-kickstart.gladestrings:98
-#: system-config-kickstart.gladestrings:116
+#: system-config-kickstart.gladestrings:100
+#: system-config-kickstart.gladestrings:118
 msgid "FTP"
 msgstr "FTP"
 
-#: system-config-kickstart.gladestrings:99
-#: system-config-kickstart.gladestrings:121
+#: system-config-kickstart.gladestrings:101
+#: system-config-kickstart.gladestrings:123
 msgid "HTTP"
 msgstr "HTTP"
 
-#: system-config-kickstart.gladestrings:100
-#: system-config-kickstart.gladestrings:126
+#: system-config-kickstart.gladestrings:102
+#: system-config-kickstart.gladestrings:128
 msgid "Hard Drive"
 msgstr "Harddisk"
 
-#: system-config-kickstart.gladestrings:102
+#: system-config-kickstart.gladestrings:104
 msgid "NFS Server:"
 msgstr "NFS-server:"
 
-#: system-config-kickstart.gladestrings:103
+#: system-config-kickstart.gladestrings:105
 msgid "NFS Directory:"
 msgstr "NFS-katalog:"
 
-#: system-config-kickstart.gladestrings:107
+#: system-config-kickstart.gladestrings:109
 msgid "FTP Server:"
 msgstr "FTP-server:"
 
-#: system-config-kickstart.gladestrings:109
+#: system-config-kickstart.gladestrings:111
 msgid "FTP Directory:"
 msgstr "FTP-katalog:"
 
-#: system-config-kickstart.gladestrings:111
+#: system-config-kickstart.gladestrings:113
 msgid "Specify an FTP username and password"
 msgstr "Angiv et brugernavn og en adgangskode for FTP"
 
-#: system-config-kickstart.gladestrings:112
+#: system-config-kickstart.gladestrings:114
 msgid "FTP Username"
 msgstr "FTP-brugernavn:"
 
-#: system-config-kickstart.gladestrings:113
+#: system-config-kickstart.gladestrings:115
 msgid "FTP Password"
 msgstr "Adgangskode for FTP:"
 
-#: system-config-kickstart.gladestrings:119
+#: system-config-kickstart.gladestrings:121
 msgid "HTTP Server:"
 msgstr "HTTP-server:"
 
-#: system-config-kickstart.gladestrings:120
+#: system-config-kickstart.gladestrings:122
 msgid "HTTP Directory:"
 msgstr "HTTP-katalog:"
 
-#: system-config-kickstart.gladestrings:124
+#: system-config-kickstart.gladestrings:126
 msgid "Hard Drive Partition:"
 msgstr "Harddisk-partition:"
 
-#: system-config-kickstart.gladestrings:125
+#: system-config-kickstart.gladestrings:127
 msgid "Hard Drive Directory:"
 msgstr "Harddisk-katalog:"
 
-#: system-config-kickstart.gladestrings:127
+#: system-config-kickstart.gladestrings:129
 msgid "Installation Method (required)"
 msgstr "Installationsmetode (krævet)"
 
-#: system-config-kickstart.gladestrings:128
+#: system-config-kickstart.gladestrings:130
 msgid "label128"
 msgstr "etiket128"
 
-#: system-config-kickstart.gladestrings:129
+#: system-config-kickstart.gladestrings:131
 msgid "Install new boot loader"
 msgstr "Installér ny opstartsindlæser"
 
-#: system-config-kickstart.gladestrings:130
+#: system-config-kickstart.gladestrings:132
 msgid "Do not install a boot loader"
 msgstr "Installér ikke en opstartsindlæser"
 
-#: system-config-kickstart.gladestrings:131
+#: system-config-kickstart.gladestrings:133
 msgid "Upgrade existing boot loader"
 msgstr "Opgradér eksisterende opstartsindlæser"
-
-#: system-config-kickstart.gladestrings:132
-msgid "Use GRUB for the boot loader"
-msgstr "Brug GRUB som opstartsindlæser"
-
-#: system-config-kickstart.gladestrings:133
-msgid "Use LILO for the boot loader"
-msgstr "Brug LILO som opstartsindlæser"
 
 #: system-config-kickstart.gladestrings:134
 msgid "GRUB Options:"
@@ -1512,398 +1533,378 @@ msgid "Encrypt GRUB password"
 msgstr "Kryptér adgangskode på GRUB"
 
 #: system-config-kickstart.gladestrings:141
-msgid "label173"
-msgstr "etiket173"
-
-#: system-config-kickstart.gladestrings:142
-msgid "LILO Options:"
-msgstr "Alternativer for LILO:"
-
-#: system-config-kickstart.gladestrings:143
-msgid "Use linear mode"
-msgstr "Brug lineær modus"
-
-#: system-config-kickstart.gladestrings:144
-msgid "Force use of lba32 mode"
-msgstr "Tvungen brug af lba32-modus"
-
-#: system-config-kickstart.gladestrings:145
-msgid "label174"
-msgstr "etiket174"
-
-#: system-config-kickstart.gladestrings:146
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "Installér opstartsindlæser på Master Boot Record (MBR)"
 
-#: system-config-kickstart.gladestrings:147
+#: system-config-kickstart.gladestrings:142
 msgid "Install boot loader on first sector of the boot partition"
 msgstr "Installér opstartsindlæser på første sektor af opstartspartitionen"
 
-#: system-config-kickstart.gladestrings:148
+#: system-config-kickstart.gladestrings:143
 msgid "Kernel parameters:"
 msgstr "Kerneparametre:"
 
-#: system-config-kickstart.gladestrings:150
+#: system-config-kickstart.gladestrings:145
 msgid "Boot Loader Options (required)"
 msgstr "Alternativer for opstartsindlæser (krævet)"
 
-#: system-config-kickstart.gladestrings:151
+#: system-config-kickstart.gladestrings:146
 msgid "label35"
 msgstr "etiket35"
 
-#: system-config-kickstart.gladestrings:152
+#: system-config-kickstart.gladestrings:147
 msgid "Clear Master Boot Record"
 msgstr "Nulstil Master Boot Record"
 
-#: system-config-kickstart.gladestrings:153
+#: system-config-kickstart.gladestrings:148
 msgid "Do not clear Master Boot Record"
 msgstr "Nulstil ikke Master Boot Record"
 
-#: system-config-kickstart.gladestrings:154
+#: system-config-kickstart.gladestrings:149
 msgid "Remove all existing partitions"
 msgstr "Fjern alle eksisterende partitioner:"
 
-#: system-config-kickstart.gladestrings:155
+#: system-config-kickstart.gladestrings:150
 msgid "Remove existing Linux partitions"
 msgstr "Fjern eksisterende LINUX-partitioner"
 
-#: system-config-kickstart.gladestrings:156
+#: system-config-kickstart.gladestrings:151
 msgid "Preserve existing partitions"
 msgstr "Bevar eksisterende partitioner"
 
-#: system-config-kickstart.gladestrings:157
+#: system-config-kickstart.gladestrings:152
 msgid "Initialize the disk label"
 msgstr "Initier disketiketten"
 
-#: system-config-kickstart.gladestrings:158
+#: system-config-kickstart.gladestrings:153
 msgid "Do not initialize the disk label"
 msgstr "Initier ikke disketiketten"
 
-#: system-config-kickstart.gladestrings:159
+#: system-config-kickstart.gladestrings:154
 msgid "_Add"
 msgstr "_Tilføj"
 
-#: system-config-kickstart.gladestrings:160
+#: system-config-kickstart.gladestrings:155
 msgid "_Edit"
 msgstr "_Redigér"
 
-#: system-config-kickstart.gladestrings:161
+#: system-config-kickstart.gladestrings:156
 msgid "_Delete"
 msgstr "_Slet"
 
-#: system-config-kickstart.gladestrings:162
+#: system-config-kickstart.gladestrings:157
 msgid "RAID"
 msgstr "RAID"
 
-#: system-config-kickstart.gladestrings:163
+#: system-config-kickstart.gladestrings:158
 msgid "Partition Information (required)"
 msgstr "Partitionsinformation (krævet)"
 
-#: system-config-kickstart.gladestrings:164
+#: system-config-kickstart.gladestrings:159
 msgid "label30"
 msgstr "etiket30"
 
-#: system-config-kickstart.gladestrings:165
+#: system-config-kickstart.gladestrings:160
 msgid "_Add Network Device"
 msgstr "_Tilføj netværksenhed"
 
-#: system-config-kickstart.gladestrings:166
+#: system-config-kickstart.gladestrings:161
 msgid "_Edit Network Device"
 msgstr "_Redigér netværksenhed"
 
-#: system-config-kickstart.gladestrings:167
+#: system-config-kickstart.gladestrings:162
 msgid "_Delete Network Device"
 msgstr "_Slet netværksenhed"
 
-#: system-config-kickstart.gladestrings:169
+#: system-config-kickstart.gladestrings:164
 msgid "label31"
 msgstr "etiket31"
 
-#: system-config-kickstart.gladestrings:170
+#: system-config-kickstart.gladestrings:165
 msgid "Authentication:"
 msgstr "Autenticering:"
 
-#: system-config-kickstart.gladestrings:171
+#: system-config-kickstart.gladestrings:166
 msgid "Use Shadow Passwords"
 msgstr "Brug skyggeadgangskoder"
 
-#: system-config-kickstart.gladestrings:172
+#: system-config-kickstart.gladestrings:167
 msgid "Use MD5"
 msgstr "Brug MD5"
 
-#: system-config-kickstart.gladestrings:173
+#: system-config-kickstart.gladestrings:168
 msgid "Enable NIS"
 msgstr "Brug NIS"
 
-#: system-config-kickstart.gladestrings:174
+#: system-config-kickstart.gladestrings:169
 msgid "NIS Domain:"
 msgstr "NIS-domæne:"
 
-#: system-config-kickstart.gladestrings:176
+#: system-config-kickstart.gladestrings:171
 msgid "Use broadcast to find NIS server"
 msgstr "Brug rundkasting for at finde NIS-server"
 
-#: system-config-kickstart.gladestrings:177
+#: system-config-kickstart.gladestrings:172
 msgid "NIS Server:"
 msgstr "NIS-server:"
 
-#: system-config-kickstart.gladestrings:179
+#: system-config-kickstart.gladestrings:174
 msgid "NIS Authentication"
 msgstr "NIS-autenticering"
 
-#: system-config-kickstart.gladestrings:180
+#: system-config-kickstart.gladestrings:175
 msgid "NIS"
 msgstr "NIS"
 
-#: system-config-kickstart.gladestrings:181
+#: system-config-kickstart.gladestrings:176
 msgid "Enable LDAP"
 msgstr "Brug LDAP"
 
-#: system-config-kickstart.gladestrings:184
+#: system-config-kickstart.gladestrings:179
 msgid "LDAP Server: "
 msgstr "LDAP-server: "
 
-#: system-config-kickstart.gladestrings:185
+#: system-config-kickstart.gladestrings:180
 msgid "LDAP Base Name: "
 msgstr "LDAP-basisnavn: "
 
-#: system-config-kickstart.gladestrings:186
+#: system-config-kickstart.gladestrings:181
 msgid "LDAP Authentication"
 msgstr "LDAP-autenticering"
 
-#: system-config-kickstart.gladestrings:187
+#: system-config-kickstart.gladestrings:182
 msgid "LDAP "
 msgstr "LDAP"
 
-#: system-config-kickstart.gladestrings:188
+#: system-config-kickstart.gladestrings:183
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Brug Kerberos 5-autenticering"
 
-#: system-config-kickstart.gladestrings:189
+#: system-config-kickstart.gladestrings:184
 msgid "Kerberos Realm:"
 msgstr "Kerberos område:"
 
-#: system-config-kickstart.gladestrings:191
+#: system-config-kickstart.gladestrings:186
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Kerberos domænekontroller (KDC):"
 
-#: system-config-kickstart.gladestrings:193
+#: system-config-kickstart.gladestrings:188
 msgid "Kerberos Master Server:"
 msgstr "Kerberos hovedserver:"
 
-#: system-config-kickstart.gladestrings:195
+#: system-config-kickstart.gladestrings:190
 msgid "Kerberos 5 Authentication"
 msgstr "Kerberos 5-autenticering"
 
-#: system-config-kickstart.gladestrings:196
+#: system-config-kickstart.gladestrings:191
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: system-config-kickstart.gladestrings:197
+#: system-config-kickstart.gladestrings:192
 msgid "Enable Hesiod Support"
 msgstr "Aktivér understøttelse for Hesiod"
 
-#: system-config-kickstart.gladestrings:198
+#: system-config-kickstart.gladestrings:193
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS:"
 
-#: system-config-kickstart.gladestrings:200
+#: system-config-kickstart.gladestrings:195
 msgid "Hesiod RHS:"
 msgstr "Hesiod RHS:"
 
-#: system-config-kickstart.gladestrings:202
+#: system-config-kickstart.gladestrings:197
 msgid "Hesiod Authentication"
 msgstr "Hesiod-autenticering"
 
-#: system-config-kickstart.gladestrings:203
+#: system-config-kickstart.gladestrings:198
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: system-config-kickstart.gladestrings:204
+#: system-config-kickstart.gladestrings:199
 msgid "Enable SMB Authentication"
 msgstr "Brug SMB-autenticering"
 
-#: system-config-kickstart.gladestrings:205
+#: system-config-kickstart.gladestrings:200
 msgid "SMB Servers:"
 msgstr "SMB-server:"
 
-#: system-config-kickstart.gladestrings:206
+#: system-config-kickstart.gladestrings:201
 msgid "SMB Workgroup:"
 msgstr "SMB-arbejdsgruppe:"
 
-#: system-config-kickstart.gladestrings:209
+#: system-config-kickstart.gladestrings:204
 msgid "SMB Authentication"
 msgstr "SMB-autenticering"
 
-#: system-config-kickstart.gladestrings:210
+#: system-config-kickstart.gladestrings:205
 msgid "SMB"
 msgstr "SMB"
 
-#: system-config-kickstart.gladestrings:211
+#: system-config-kickstart.gladestrings:206
 msgid "Enable nscd"
 msgstr "Brug nscd"
 
-#: system-config-kickstart.gladestrings:212
+#: system-config-kickstart.gladestrings:207
 msgid "Name Switch Cache Daemon (nscd) Authentication"
 msgstr "Name Switch Cache Daemon (nscd)-autenticering"
 
-#: system-config-kickstart.gladestrings:213
+#: system-config-kickstart.gladestrings:208
 msgid "Name Switch Cache"
 msgstr "Name Switch Cache"
 
-#: system-config-kickstart.gladestrings:214
+#: system-config-kickstart.gladestrings:209
 msgid "Authentication Configuration"
 msgstr "Konfiguration af autenticering"
 
-#: system-config-kickstart.gladestrings:215
+#: system-config-kickstart.gladestrings:210
 msgid "label32"
 msgstr "etiket32"
 
-#: system-config-kickstart.gladestrings:216
+#: system-config-kickstart.gladestrings:211
 msgid "Security level:"
 msgstr "Sikkerhedsniveau:"
 
-#: system-config-kickstart.gladestrings:217
+#: system-config-kickstart.gladestrings:212
 msgid "Enable firewall"
 msgstr "Aktivér brandmur"
 
-#: system-config-kickstart.gladestrings:218
+#: system-config-kickstart.gladestrings:213
 msgid "Disable firewall"
 msgstr "Deaktivér brandmur"
 
-#: system-config-kickstart.gladestrings:220
+#: system-config-kickstart.gladestrings:215
 msgid "label33"
 msgstr "etiket33"
 
-#: system-config-kickstart.gladestrings:221
+#: system-config-kickstart.gladestrings:216
 msgid "Configure the X Window System"
 msgstr "Konfigurér X-vinduessystemet"
 
-#: system-config-kickstart.gladestrings:222
+#: system-config-kickstart.gladestrings:217
 msgid "Color Depth"
 msgstr "Farvedybde"
 
-#: system-config-kickstart.gladestrings:224
+#: system-config-kickstart.gladestrings:219
 msgid "Resolution"
 msgstr "Opløsning"
 
-#: system-config-kickstart.gladestrings:226
+#: system-config-kickstart.gladestrings:221
 msgid "Default Desktop:"
 msgstr "Standard skrivebord:"
 
-#: system-config-kickstart.gladestrings:227
+#: system-config-kickstart.gladestrings:222
 msgid "GNOME"
 msgstr "GNOME"
 
-#: system-config-kickstart.gladestrings:228
+#: system-config-kickstart.gladestrings:223
 msgid "KDE"
 msgstr "KDE"
 
-#: system-config-kickstart.gladestrings:229
+#: system-config-kickstart.gladestrings:224
 msgid "Start the X Window System on boot"
 msgstr "Start X-vinduessystemet ved opstart"
 
-#: system-config-kickstart.gladestrings:230
+#: system-config-kickstart.gladestrings:225
 msgid "On first boot, Setup Agent is: "
 msgstr "Ved første opstart er Opsætningshjælperen: "
 
-#: system-config-kickstart.gladestrings:231
+#: system-config-kickstart.gladestrings:226
 msgid "Disabled"
 msgstr "Deaktiveret"
 
-#: system-config-kickstart.gladestrings:232
+#: system-config-kickstart.gladestrings:227
 msgid "Enabled"
 msgstr "Aktiveret"
 
-#: system-config-kickstart.gladestrings:233
+#: system-config-kickstart.gladestrings:228
 msgid "Enabled in reconfiguration mode"
 msgstr "Aktiveret i omkonfigurationstilstand"
 
-#: system-config-kickstart.gladestrings:234
+#: system-config-kickstart.gladestrings:229
 msgid "General"
 msgstr "Generelt"
 
-#: system-config-kickstart.gladestrings:235
+#: system-config-kickstart.gladestrings:230
 msgid "Probe for video card"
 msgstr "Undersøg for grafikkort"
 
-#: system-config-kickstart.gladestrings:236
+#: system-config-kickstart.gladestrings:231
 msgid "Video Card RAM: "
 msgstr "RAM på skærmkort:"
 
-#: system-config-kickstart.gladestrings:238
+#: system-config-kickstart.gladestrings:233
 msgid "Video Card"
 msgstr "Skærmkort:"
 
-#: system-config-kickstart.gladestrings:239
+#: system-config-kickstart.gladestrings:234
 msgid "Probe for monitor"
 msgstr "Undersøg for skærm"
 
-#: system-config-kickstart.gladestrings:240
+#: system-config-kickstart.gladestrings:235
 msgid "Use custom monitor sync rates"
 msgstr "Brug tilpassede værdier for skærmsynkronisering"
 
-#: system-config-kickstart.gladestrings:242
+#: system-config-kickstart.gladestrings:237
 msgid "Hz"
 msgstr "Hz"
 
-#: system-config-kickstart.gladestrings:244
+#: system-config-kickstart.gladestrings:239
 msgid "kHz"
 msgstr "kHz"
 
-#: system-config-kickstart.gladestrings:245
+#: system-config-kickstart.gladestrings:240
 msgid "Vertical Sync:"
 msgstr "Lodret synk:"
 
-#: system-config-kickstart.gladestrings:246
+#: system-config-kickstart.gladestrings:241
 msgid "Horizontal Sync:"
 msgstr "Vandret synk:"
 
-#: system-config-kickstart.gladestrings:247
+#: system-config-kickstart.gladestrings:242
 msgid "Monitor"
 msgstr "Skærm"
 
-#: system-config-kickstart.gladestrings:249
+#: system-config-kickstart.gladestrings:244
 msgid "label88"
 msgstr "etiket88"
 
-#: system-config-kickstart.gladestrings:250
+#: system-config-kickstart.gladestrings:245
 msgid "Select packages to install."
 msgstr "Vlæg pakker der skal installeres."
 
-#: system-config-kickstart.gladestrings:251
+#: system-config-kickstart.gladestrings:246
 msgid "_Automatically Resolve Dependencies"
 msgstr "Løs afhængigheder _automatisk"
 
-#: system-config-kickstart.gladestrings:252
+#: system-config-kickstart.gladestrings:247
 msgid "_Ignore Dependencies"
 msgstr "_Ignorér afhængigheder"
 
-#: system-config-kickstart.gladestrings:253
+#: system-config-kickstart.gladestrings:248
 msgid "Desktops"
 msgstr "Skriveborde"
 
-#: system-config-kickstart.gladestrings:254
+#: system-config-kickstart.gladestrings:249
 msgid "Applications"
 msgstr "Programmer"
 
-#: system-config-kickstart.gladestrings:255
+#: system-config-kickstart.gladestrings:250
 msgid "Servers"
 msgstr "SMB-servere:"
 
-#: system-config-kickstart.gladestrings:256
+#: system-config-kickstart.gladestrings:251
 msgid "Development"
 msgstr "Udvikling"
 
-#: system-config-kickstart.gladestrings:257
+#: system-config-kickstart.gladestrings:252
 msgid "System"
 msgstr "System"
 
-#: system-config-kickstart.gladestrings:259
+#: system-config-kickstart.gladestrings:254
 msgid "label34"
 msgstr "etiket34"
 
-#: system-config-kickstart.gladestrings:260
+#: system-config-kickstart.gladestrings:255
 #, c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1912,21 +1913,21 @@ msgstr ""
 "Advarsel: En fejl i dette skript kan forårsage at kickstart-installationen "
 "fejler. Medtag ikke %pre-kommandoen i starten."
 
-#: system-config-kickstart.gladestrings:261
-#: system-config-kickstart.gladestrings:268
+#: system-config-kickstart.gladestrings:256
+#: system-config-kickstart.gladestrings:263
 msgid "Use an interpreter:"
 msgstr "Brug en fortolker:"
 
-#: system-config-kickstart.gladestrings:263
+#: system-config-kickstart.gladestrings:258
 #, c-format
 msgid "Type your %pre script below:"
 msgstr "Skriv ind dit %pre-skript nedenunder:"
 
-#: system-config-kickstart.gladestrings:265
+#: system-config-kickstart.gladestrings:260
 msgid "label89"
 msgstr "etiket89"
 
-#: system-config-kickstart.gladestrings:266
+#: system-config-kickstart.gladestrings:261
 #, c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1935,40 +1936,40 @@ msgstr ""
 "Advarsel: En fejl i dette skript kan forårsage at kickstart installationen "
 "fejler. Medtag ikke %post-kommandoen i begyndelsen."
 
-#: system-config-kickstart.gladestrings:267
+#: system-config-kickstart.gladestrings:262
 msgid "Run outside of the chroot environment"
 msgstr "Kør udenfor chroot-miljøet"
 
-#: system-config-kickstart.gladestrings:270
+#: system-config-kickstart.gladestrings:265
 #, c-format
 msgid "Type your %post script below:"
 msgstr "Skriv ind dit %post-skript nedenunder:"
 
-#: system-config-kickstart.gladestrings:272
+#: system-config-kickstart.gladestrings:267
 msgid "label93"
 msgstr "etiket93"
 
-#: system-config-kickstart.gladestrings:273
+#: system-config-kickstart.gladestrings:268
 msgid "Preview Options"
 msgstr "Alternativer for smugkig"
 
-#: system-config-kickstart.gladestrings:274
+#: system-config-kickstart.gladestrings:269
 msgid "_Save to File"
 msgstr "_Gem i fil"
 
-#: system-config-kickstart.gladestrings:275
+#: system-config-kickstart.gladestrings:270
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
 msgstr ""
-"Du har valgt den følgende konfiguration. Klik Gem fil for at gemme "
-"kickstart-filen."
+"Du har valgt den følgende konfiguration. Klik Gem fil for at gemme kickstart-"
+"filen."
 
-#: system-config-kickstart.gladestrings:276
+#: system-config-kickstart.gladestrings:271
 msgid "RAID Options"
 msgstr "Alternativer for RAID:"
 
-#: system-config-kickstart.gladestrings:277
+#: system-config-kickstart.gladestrings:272
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -1980,7 +1981,7 @@ msgstr ""
 "pålidelighed sammenlignet med brug af et individuelt drev. Se i kickstart-"
 "dokumentationen for yderligere information om brug af RAID-enheder."
 
-#: system-config-kickstart.gladestrings:278
+#: system-config-kickstart.gladestrings:273
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -1989,60 +1990,81 @@ msgstr ""
 "'programmeret RAID'. Så kan du oprette en RAID-enhed som kan formateres og "
 "monteres."
 
-#: system-config-kickstart.gladestrings:279
+#: system-config-kickstart.gladestrings:274
 msgid "Choose one of the following options:"
 msgstr "Vælg en af de følgende valgmuligheder:"
 
-#: system-config-kickstart.gladestrings:280
+#: system-config-kickstart.gladestrings:275
 msgid "Create a software RAID partition"
 msgstr "Opret en programmeret RAID-partition:"
 
-#: system-config-kickstart.gladestrings:281
+#: system-config-kickstart.gladestrings:276
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "opret en RAID-enhed [standard = /dev/md0]"
 
-#: system-config-kickstart.gladestrings:282
+#: system-config-kickstart.gladestrings:277
 msgid "Network Device Information"
 msgstr "Information om netværksenhed"
 
-#: system-config-kickstart.gladestrings:283
+#: system-config-kickstart.gladestrings:278
 msgid "Network Device:"
 msgstr "Netværksenhed:"
 
-#: system-config-kickstart.gladestrings:284
+#: system-config-kickstart.gladestrings:279
 msgid "Network Type:"
 msgstr "Netværkstype:"
 
-#: system-config-kickstart.gladestrings:285
+#: system-config-kickstart.gladestrings:280
 msgid "IP Address:"
 msgstr "IP-adresse:"
 
-#: system-config-kickstart.gladestrings:286
+#: system-config-kickstart.gladestrings:281
 msgid "Netmask: "
 msgstr "Netmaske: "
 
-#: system-config-kickstart.gladestrings:287
+#: system-config-kickstart.gladestrings:282
 msgid "Gateway:"
 msgstr "Gateway:"
 
-#: system-config-kickstart.gladestrings:288
+#: system-config-kickstart.gladestrings:283
 msgid "Name Server:"
 msgstr "Navneserver:"
 
-#: system-config-kickstart.gladestrings:290
+#: system-config-kickstart.gladestrings:285
+#: system-config-kickstart.gladestrings:287
+#: system-config-kickstart.gladestrings:289
 #: system-config-kickstart.gladestrings:292
 #: system-config-kickstart.gladestrings:294
-#: system-config-kickstart.gladestrings:297
+#: system-config-kickstart.gladestrings:296
 #: system-config-kickstart.gladestrings:299
 #: system-config-kickstart.gladestrings:301
-#: system-config-kickstart.gladestrings:304
+#: system-config-kickstart.gladestrings:303
 #: system-config-kickstart.gladestrings:306
 #: system-config-kickstart.gladestrings:308
-#: system-config-kickstart.gladestrings:311
-#: system-config-kickstart.gladestrings:313
-#: system-config-kickstart.gladestrings:315
+#: system-config-kickstart.gladestrings:310
 msgid "."
 msgstr "."
+
+#~ msgid "Use GRUB for the boot loader"
+#~ msgstr "Brug GRUB som opstartsindlæser"
+
+#~ msgid "Use LILO for the boot loader"
+#~ msgstr "Brug LILO som opstartsindlæser"
+
+#~ msgid "label173"
+#~ msgstr "etiket173"
+
+#~ msgid "LILO Options:"
+#~ msgstr "Alternativer for LILO:"
+
+#~ msgid "Use linear mode"
+#~ msgstr "Brug lineær modus"
+
+#~ msgid "Force use of lba32 mode"
+#~ msgstr "Tvungen brug af lba32-modus"
+
+#~ msgid "label174"
+#~ msgstr "etiket174"
 
 #~ msgid "Specify hsync and vsync instead of monitor"
 #~ msgstr "Specificer hsync og vsync i stedet for skærm"
@@ -2068,4 +2090,3 @@ msgstr "."
 #, fuzzy
 #~ msgid "DIsabled"
 #~ msgstr "Deaktiveret"
-
