@@ -271,14 +271,22 @@ class auth:
         self.shadow_passwd_checkbutton = xml.get_widget("shadow_passwd_checkbutton")
         self.md5_checkbutton = xml.get_widget("md5_checkbutton")
 
-        xml.signal_autoconnect (
-            { "enableNIS" : self.enableNIS,
-              "BroadcastCheck_cb" : self.BroadcastCheck_cb,
-              "enableLDAP" : self.enableLDAP,
-              "enableHesiod" : self.enableHesiod,
-              "enableKerberos" : self.enableKerberos,
-              "enableSamba" : self.enableSamba,
-            } )
+        self.nisCheck.connect("toggled", self.enableNIS)
+        self.nisBroadcastCheck.connect("toggled", self.enableBroadcast)
+        self.ldapCheck.connect("toggled", self.enableLDAP)
+        self.kerberosCheck.connect("toggled", self.enableKerberos)
+        self.hesiodCheck.connect("toggled", self.enableHesiod)
+        self.sambaCheck.connect("toggled", self.enableSamba)
+#        xml.signal_connect("enableSamba", self.enableSamba)
+
+##         xml.signal_autoconnect (
+##             { "enableNIS" : self.enableNIS,
+##               "BroadcastCheck_cb" : self.BroadcastCheck_cb,
+##               "enableLDAP" : self.enableLDAP,
+##               "enableHesiod" : self.enableHesiod,
+##               "enableKerberos" : self.enableKerberos,
+##  #             "enableSamba" : self.enableSamba,
+##             } )
 
     def enableNIS(self, args):
         self.nisDomainLabel.set_sensitive(self.nisCheck.get_active())
@@ -288,7 +296,7 @@ class auth:
         self.nisServerEntry.set_sensitive(self.nisCheck.get_active())
         self.myNisClass.set_enabled(self.nisCheck.get_active())
         
-    def BroadcastCheck_cb(self, checkbutton):
+    def enableBroadcast(self, checkbutton):
         val = not checkbutton.get_active()
         self.nisServerEntry.set_sensitive(val)
         self.nisServerLabel.set_sensitive(val)

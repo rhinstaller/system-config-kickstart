@@ -33,10 +33,10 @@ import crypt
 class bootloader:
 
     def __init__(self, xml):
-        self.install_bootloader_checkbutton = xml.get_widget("install_bootloader_checkbutton")
+        self.install_bootloader_check = xml.get_widget("install_bootloader_check")
         self.bootloader_table = xml.get_widget("bootloader_table")
-        self.choose_grub_radiobutton = xml.get_widget("choose_grub_radiobutton")
-        self.choose_lilo_radiobutton = xml.get_widget("choose_lilo_radiobutton")
+        self.grub_radio = xml.get_widget("grub_radio")
+        self.lilo_radio = xml.get_widget("lilo_radio")
         self.mbr_radiobutton = xml.get_widget("mbr_radiobutton")               
         self.firstsector_radiobutton = xml.get_widget("firstsector_radiobutton")
         self.parameters_label = xml.get_widget("parameters_label")
@@ -49,12 +49,10 @@ class bootloader:
         self.grub_password_entry = xml.get_widget("grub_password_entry")
         self.grub_password_encrypt = xml.get_widget("grub_password_encrypt")
 
-        #bring in signals from glade file
-        xml.signal_autoconnect (
-            { "toggled_bootloader" : self.toggled_bootloader,
-              "toggled_lilo" : self.toggled_lilo,
-              "toggled_grub" : self.toggled_grub,
-              })
+        self.install_bootloader_check.connect("toggled", self.toggled_bootloader)
+        self.grub_radio.connect("toggled", self.toggled_grub)
+        self.lilo_radio.connect("toggled", self.toggled_lilo)
+
 
     def toggled_bootloader (self, args):
         status = self.install_bootloader_checkbutton.get_active()

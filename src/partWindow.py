@@ -74,14 +74,14 @@ class partWindow:
             index = self.fileTypes.index(curr)
 
             if index == 2:
-                self.mountPointCombo.set_sensitive(FALSE)
-                self.formatCheck.set_sensitive(FALSE)
+                self.mountPointCombo.set_sensitive(gtk.FALSE)
+                self.formatCheck.set_sensitive(gtk.FALSE)
 #            elif index == 3:
-#                self.mountPointCombo.set_sensitive(FALSE)
-#                self.formatCheck.set_sensitive(TRUE)
+#                self.mountPointCombo.set_sensitive(gtk.FALSE)
+#                self.formatCheck.set_sensitive(gtk.TRUE)
             else:
-                self.mountPointCombo.set_sensitive(TRUE)
-                self.formatCheck.set_sensitive(TRUE)
+                self.mountPointCombo.set_sensitive(gtk.TRUE)
+                self.formatCheck.set_sensitive(gtk.TRUE)
 
     def on_sizeSetRadio_toggled(self, *args):
         self.maxSizeCombo.set_sensitive(self.sizeSetRadio.get_active())
@@ -124,26 +124,26 @@ class partWindow:
             index = self.fileTypes.index(curr)
         
             if index == 2:
-                self.mountPointCombo.set_sensitive(FALSE)
-                self.formatCheck.set_sensitive(FALSE)
+                self.mountPointCombo.set_sensitive(gtk.FALSE)
+                self.formatCheck.set_sensitive(gtk.FALSE)
 
 
         self.partitionDialog.show_all()
 
     def win_reset(self):
         self.mountPointCombo.entry.set_text("")
-        self.mountPointCombo.set_sensitive(TRUE)
+        self.mountPointCombo.set_sensitive(gtk.TRUE)
 #        self.fsTypeCombo.entry.set_text("") 
         self.fsTypeCombo.list.select_item(1)
         self.sizeCombo.set_text("") 
-        self.asPrimaryCheck.set_active(FALSE)
-        self.onDiskCheck.set_active(FALSE)
+        self.asPrimaryCheck.set_active(gtk.FALSE)
+        self.onDiskCheck.set_active(gtk.FALSE)
         self.onDiskEntry.set_text("")
-        self.onPartCheck.set_active(FALSE)
+        self.onPartCheck.set_active(gtk.FALSE)
         self.onPartEntry.set_text("")
-        self.sizeFixedRadio.set_active(TRUE)
+        self.sizeFixedRadio.set_active(gtk.TRUE)
         self.maxSizeCombo.set_text("1")
-        self.formatCheck.set_active(TRUE)
+        self.formatCheck.set_active(gtk.TRUE)
         
     def on_cancel_part_button_clicked(self, *args):
         self.ok_button.disconnect(self.ok_handler)

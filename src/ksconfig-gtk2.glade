@@ -53,6 +53,7 @@
 
       <child internal-child="action_area">
 	<widget class="GtkHButtonBox" id="dialog-action_area2">
+	  <property name="border_width">5</property>
 	  <property name="visible">True</property>
 	  <property name="layout_style">GTK_BUTTONBOX_END</property>
 	  <property name="spacing">10</property>
@@ -720,6 +721,7 @@
 
       <child internal-child="action_area">
 	<widget class="GtkHButtonBox" id="dialog-action_area3">
+	  <property name="border_width">5</property>
 	  <property name="visible">True</property>
 	  <property name="layout_style">GTK_BUTTONBOX_END</property>
 	  <property name="spacing">10</property>
@@ -1121,12 +1123,7 @@
 	      <property name="window_placement">GTK_CORNER_TOP_LEFT</property>
 
 	      <child internal-child="vscrollbar">
-		<widget class="GtkVScrollbar" id="convertwidget19">
-		  <property name="visible">True</property>
-		  <property name="update_policy">GTK_UPDATE_CONTINUOUS</property>
-		  <property name="inverted">False</property>
-		  <property name="adjustment">0 0 0 0 0 0</property>
-		</widget>
+		<placeholder/>
 	      </child>
 	    </widget>
 	    <packing>
@@ -1332,7 +1329,8 @@
 	      <child>
 		<widget class="GtkNotebook" id="options_notebook">
 		  <property name="visible">True</property>
-		  <property name="show_tabs">False</property>
+		  <property name="can_focus">True</property>
+		  <property name="show_tabs">True</property>
 		  <property name="show_border">False</property>
 		  <property name="tab_pos">GTK_POS_TOP</property>
 		  <property name="scrollable">False</property>
@@ -1829,15 +1827,16 @@
 			      </child>
 
 			      <child>
-				<widget class="GtkScrolledWindow" id="scrolledwindow9">
+				<widget class="GtkScrolledWindow" id="scrolledwindow18">
 				  <property name="visible">True</property>
-				  <property name="hscrollbar_policy">GTK_POLICY_NEVER</property>
+				  <property name="can_focus">True</property>
+				  <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
 				  <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
-				  <property name="shadow_type">GTK_SHADOW_IN</property>
+				  <property name="shadow_type">GTK_SHADOW_NONE</property>
 				  <property name="window_placement">GTK_CORNER_TOP_LEFT</property>
 
-				  <child internal-child="vscrollbar">
-				    <widget class="GtkTreeView" id="treeview1">
+				  <child>
+				    <widget class="GtkTreeView" id="treeview7">
 				      <property name="visible">True</property>
 				      <property name="can_focus">True</property>
 				      <property name="headers_visible">False</property>
@@ -1852,7 +1851,6 @@
 				  <property name="right_attach">2</property>
 				  <property name="top_attach">7</property>
 				  <property name="bottom_attach">8</property>
-				  <property name="x_options">fill</property>
 				</packing>
 			      </child>
 			    </widget>
@@ -1989,7 +1987,7 @@
 			  <property name="spacing">4</property>
 
 			  <child>
-			    <widget class="GtkCheckButton" id="install_bootloader_checkbutton">
+			    <widget class="GtkCheckButton" id="install_bootloader_check">
 			      <property name="visible">True</property>
 			      <property name="can_focus">True</property>
 			      <property name="label" translatable="yes">Install Boot Loader</property>
@@ -1998,7 +1996,6 @@
 			      <property name="active">True</property>
 			      <property name="inconsistent">False</property>
 			      <property name="draw_indicator">True</property>
-			      <signal name="toggled" handler="toggled_bootloader"/>
 			    </widget>
 			    <packing>
 			      <property name="padding">0</property>
@@ -2028,7 +2025,7 @@
 			      <property name="column_spacing">4</property>
 
 			      <child>
-				<widget class="GtkRadioButton" id="choose_lilo_radiobutton">
+				<widget class="GtkRadioButton" id="lilo_radio">
 				  <property name="visible">True</property>
 				  <property name="can_focus">True</property>
 				  <property name="label" translatable="yes">_LILO</property>
@@ -2037,7 +2034,6 @@
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
-				  <signal name="toggled" handler="toggled_lilo"/>
 				</widget>
 				<packing>
 				  <property name="left_attach">2</property>
@@ -2050,7 +2046,7 @@
 			      </child>
 
 			      <child>
-				<widget class="GtkRadioButton" id="choose_grub_radiobutton">
+				<widget class="GtkRadioButton" id="grub_radio">
 				  <property name="visible">True</property>
 				  <property name="can_focus">True</property>
 				  <property name="label" translatable="yes">_GRUB</property>
@@ -2059,8 +2055,7 @@
 				  <property name="active">True</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
-				  <property name="group">choose_lilo_radiobutton</property>
-				  <signal name="toggled" handler="toggled_grub"/>
+				  <property name="group">lilo_radio</property>
 				</widget>
 				<packing>
 				  <property name="left_attach">1</property>
@@ -2082,7 +2077,7 @@
 				  <property name="active">True</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
-				  <property name="group">choose_lilo_radiobutton</property>
+				  <property name="group">lilo_radio</property>
 				</widget>
 				<packing>
 				  <property name="left_attach">1</property>
@@ -2104,7 +2099,7 @@
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
-				  <property name="group">choose_lilo_radiobutton</property>
+				  <property name="group">lilo_radio</property>
 				</widget>
 				<packing>
 				  <property name="left_attach">2</property>
@@ -3561,18 +3556,19 @@
 			  </child>
 
 			  <child>
-			    <widget class="GtkScrolledWindow" id="partitions_scrolledwindow">
+			    <widget class="GtkScrolledWindow" id="scrolledwindow19">
 			      <property name="visible">True</property>
+			      <property name="can_focus">True</property>
 			      <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
 			      <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
 			      <property name="shadow_type">GTK_SHADOW_NONE</property>
 			      <property name="window_placement">GTK_CORNER_TOP_LEFT</property>
 
-			      <child internal-child="vscrollbar">
-				<widget class="GtkTreeView" id="treeview2">
+			      <child>
+				<widget class="GtkTreeView" id="treeview8">
 				  <property name="visible">True</property>
 				  <property name="can_focus">True</property>
-				  <property name="headers_visible">True</property>
+				  <property name="headers_visible">False</property>
 				  <property name="rules_hint">False</property>
 				  <property name="reorderable">False</property>
 				  <property name="enable_search">True</property>
@@ -4745,7 +4741,6 @@
 					  <property name="active">False</property>
 					  <property name="inconsistent">False</property>
 					  <property name="draw_indicator">True</property>
-					  <signal name="toggled" handler="enableNIS"/>
 					</widget>
 					<packing>
 					  <property name="padding">0</property>
@@ -4820,7 +4815,6 @@
 					  <property name="active">False</property>
 					  <property name="inconsistent">False</property>
 					  <property name="draw_indicator">True</property>
-					  <signal name="toggled" handler="BroadcastCheck_cb"/>
 					</widget>
 					<packing>
 					  <property name="padding">0</property>
@@ -4955,7 +4949,6 @@
 					  <property name="active">False</property>
 					  <property name="inconsistent">False</property>
 					  <property name="draw_indicator">True</property>
-					  <signal name="toggled" handler="enableLDAP"/>
 					</widget>
 					<packing>
 					  <property name="padding">0</property>
@@ -5145,7 +5138,6 @@
 					  <property name="active">False</property>
 					  <property name="inconsistent">False</property>
 					  <property name="draw_indicator">True</property>
-					  <signal name="toggled" handler="enableKerberos"/>
 					</widget>
 					<packing>
 					  <property name="padding">0</property>
@@ -5580,7 +5572,6 @@
 					  <property name="active">False</property>
 					  <property name="inconsistent">False</property>
 					  <property name="draw_indicator">True</property>
-					  <signal name="toggled" handler="enableSamba"/>
 					</widget>
 					<packing>
 					  <property name="padding">0</property>
@@ -6584,19 +6575,22 @@
 				      <property name="spacing">0</property>
 
 				      <child>
-					<widget class="GtkScrolledWindow" id="video_card_swindow">
+					<widget class="GtkScrolledWindow" id="scrolledwindow16">
 					  <property name="visible">True</property>
-					  <property name="hscrollbar_policy">GTK_POLICY_NEVER</property>
-					  <property name="vscrollbar_policy">GTK_POLICY_ALWAYS</property>
-					  <property name="shadow_type">GTK_SHADOW_IN</property>
+					  <property name="can_focus">True</property>
+					  <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+					  <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+					  <property name="shadow_type">GTK_SHADOW_NONE</property>
 					  <property name="window_placement">GTK_CORNER_TOP_LEFT</property>
 
-					  <child internal-child="vscrollbar">
-					    <widget class="GtkVScrollbar" id="convertwidget47">
+					  <child>
+					    <widget class="GtkTreeView" id="treeview5">
 					      <property name="visible">True</property>
-					      <property name="update_policy">GTK_UPDATE_CONTINUOUS</property>
-					      <property name="inverted">False</property>
-					      <property name="adjustment">0 0 0 0 0 0</property>
+					      <property name="can_focus">True</property>
+					      <property name="headers_visible">False</property>
+					      <property name="rules_hint">False</property>
+					      <property name="reorderable">False</property>
+					      <property name="enable_search">True</property>
 					    </widget>
 					  </child>
 					</widget>
@@ -6766,19 +6760,22 @@
 				      <property name="spacing">0</property>
 
 				      <child>
-					<widget class="GtkScrolledWindow" id="monitor_swindow">
+					<widget class="GtkScrolledWindow" id="scrolledwindow17">
 					  <property name="visible">True</property>
-					  <property name="hscrollbar_policy">GTK_POLICY_NEVER</property>
-					  <property name="vscrollbar_policy">GTK_POLICY_ALWAYS</property>
-					  <property name="shadow_type">GTK_SHADOW_IN</property>
+					  <property name="can_focus">True</property>
+					  <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+					  <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+					  <property name="shadow_type">GTK_SHADOW_NONE</property>
 					  <property name="window_placement">GTK_CORNER_TOP_LEFT</property>
 
-					  <child internal-child="vscrollbar">
-					    <widget class="GtkVScrollbar" id="convertwidget52">
+					  <child>
+					    <widget class="GtkTreeView" id="treeview6">
 					      <property name="visible">True</property>
-					      <property name="update_policy">GTK_UPDATE_CONTINUOUS</property>
-					      <property name="inverted">False</property>
-					      <property name="adjustment">0 0 0 0 0 0</property>
+					      <property name="can_focus">True</property>
+					      <property name="headers_visible">False</property>
+					      <property name="rules_hint">False</property>
+					      <property name="reorderable">False</property>
+					      <property name="enable_search">True</property>
 					    </widget>
 					  </child>
 					</widget>
@@ -7694,7 +7691,7 @@
 
   <child internal-child="vbox">
     <widget class="GtkVBox" id="dialog-vbox4">
-      <property name="border_width">4</property>
+      <property name="border_width">2</property>
       <property name="visible">True</property>
       <property name="homogeneous">False</property>
       <property name="spacing">6</property>
