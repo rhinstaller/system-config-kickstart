@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: ksconfig
 Version: 2.0
-Release: 5
+Release: 6
 URL: http://www.redhat.com
 Copyright: GPL
 ExclusiveOS: Linux
@@ -49,6 +49,10 @@ fi
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
+* Thu Apr 11 2002 Brent Fox <bfox@redhat.com>
+- Added msw's code snippet to disable threads
+- Fixed bug #63191
+
 * Tue Apr 02 2002 Tammy Fox <tfox@redhat.com>
 - updated docs
 
