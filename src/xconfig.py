@@ -30,7 +30,6 @@ class xconfig:
 
     def __init__(self, xml):
         self.config_x_button = xml.get_widget("config_x_button")
-        self.probe_x_button = xml.get_widget("probe_x_button")
         self.video_card_swindow = xml.get_widget("video_card_swindow")
         self.video_card_clist = xml.get_widget("video_card_clist")
         self.monitor_swindow = xml.get_widget("monitor_swindow")
@@ -50,20 +49,10 @@ class xconfig:
 
         xml.signal_autoconnect (
             { "toggleXconfig" : self.toggleXconfig,
-              "toggle_vc_monitor" : self.toggle_vc_monitor,
               "select_monitor" : self.select_monitor,
               "select_videocard" : self.select_videocard,
               "toggle_sync" : self.toggle_sync,
               })
-
-        #probe by default
-        self.probe_x_button.set_active(1)
-        self.video_card_swindow.set_sensitive(0)
-        self.monitor_swindow.set_sensitive(0)
-        self.video_card_clist.set_sensitive(0)
-        self.monitor_clist.set_sensitive(0)
-        self.sync_button.set_sensitive(0)
-        self.videoram_combo.set_sensitive(0)        
 
         #add video cards to list
         try:
@@ -146,15 +135,6 @@ class xconfig:
         #disable xconfig notebook
         self.xconfig_notebook.set_sensitive(config)
 
-    def toggle_vc_monitor (self, args):
-        showLists = not self.probe_x_button.get_active()
-        self.video_card_swindow.set_sensitive(showLists)
-        self.monitor_swindow.set_sensitive(showLists)
-        self.video_card_clist.set_sensitive(showLists)
-        self.monitor_clist.set_sensitive(showLists)
-        self.sync_button.set_sensitive(showLists)
-        self.videoram_combo.set_sensitive(showLists)
-
     def toggle_sync (self, args):
         sync_instead = self.sync_button.get_active()
         self.sync_table.set_sensitive(sync_instead)
@@ -183,18 +163,26 @@ class xconfig:
             if self.startxonboot_checkbutton.get_active():
                 buf = buf + "  --startxonboot"
             #video card and monitor
-            if self.probe_x_button.get_active():
-                buf = buf + "\n" + "#Probe for monitor and video card"
-                pass
+            buf = buf + " --card \"" + self.video_card_clist.get_text(self.selected_vc_row,0) + "\""
+            #translate MB to KB 
+            ramsize_dict = {"256 KB" : "256",
+                            "512 KB" : "512",
+                            "1 MB" : "1024",
+                            "2 MB" : "2048",
+                            "4 MB" : "4096",
+                            "8 MB" : "8192",
+                            "16 MB" : "16384",
+                            "32 MB" : "32768",
+                            "64 MB" : "65536",
+                            
+                            }
+            buf = buf + " --videoram " + ramsize_dict [self.videoram_combo.entry.get_text()]
+            if self.sync_button.get_active():
+                buf = buf + " --hsync " + self.hsync_entry.get_text()
+                buf = buf + " --vsync " + self.vsync_entry.get_text()
             else:
-                buf = buf + " --card \"" + self.video_card_clist.get_text(self.selected_vc_row,0) + "\""
-                if self.sync_button.get_active():
-                    buf = buf + " --hsync " + self.hsync_entry.get_text()
-                    buf = buf + " --vsync " + self.vsync_entry.get_text()
-                else:
-                    buf = buf + " --monitor \"" + self.monitor_clist.get_text(self.selected_monitor_row,0) + "\""
-
-
+                buf = buf + " --monitor \"" + self.monitor_clist.get_text(self.selected_monitor_row,0) + "\""
+                
         else:
             buf = "\n" + "#Do not configure the X Window System"
             buf = buf + "\n" + "skipx"            
