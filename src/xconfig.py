@@ -25,10 +25,12 @@ import gtk
 import gtk.glade
 import gobject
 import string
+import getopt
 
 class xconfig:
 
-    def __init__(self, xml):
+    def __init__(self, xml, kickstartData):
+        self.kickstartData = kickstartData
         self.config_x_button = xml.get_widget("config_x_button")
         self.card_view = xml.get_widget("card_view")
         self.monitor_view = xml.get_widget("monitor_view")
@@ -51,13 +53,13 @@ class xconfig:
         
         self.card_store = gtk.ListStore(gobject.TYPE_STRING)
         self.card_view.set_model(self.card_store)
-        col = gtk.TreeViewColumn("", gtk.CellRendererText(), text = 0)
-        self.card_view.append_column(col)
+        self.card_col = gtk.TreeViewColumn("", gtk.CellRendererText(), text = 0)
+        self.card_view.append_column(self.card_col)
         
         self.monitor_store = gtk.ListStore(gobject.TYPE_STRING)
         self.monitor_view.set_model(self.monitor_store)
-        col = gtk.TreeViewColumn("", gtk.CellRendererText(), text = 0)
-        self.monitor_view.append_column(col)
+        self.monitor_col = gtk.TreeViewColumn("", gtk.CellRendererText(), text = 0)
+        self.monitor_view.append_column(self.monitor_col)
 
         self.config_x_button.connect("toggled", self.toggleXconfig)
         self.monitor_probe_check.connect("toggled", self.on_monitor_probe_check_toggled)
@@ -145,17 +147,13 @@ class xconfig:
         self.monitor_view.set_sensitive(not sync_instead)        
 
     def getData(self):
-        data = []
-        data.append("")
-
         if self.config_x_button.get_active():
-            data.append("#XWindows configuration information")
-
-            buf = "xconfig "
+            self.kickstartData.setSkipX(None)
+            buf = ""
             #color depth - translate
-            buf = buf + " --depth " + self.color_depth_combo.entry.get_text()
+            buf = "--depth=" + self.color_depth_combo.entry.get_text()
             #resolution
-            buf = buf + " --resolution " + self.resolution_combo.entry.get_text()            
+            buf = buf + " --resolution=" + self.resolution_combo.entry.get_text()            
             #default desktop
             if self.gnome_radiobutton.get_active():
                 buf = buf + " --defaultdesktop=GNOME"
@@ -169,7 +167,7 @@ class xconfig:
                 #video card and monitor
                 temp, iter = self.card_view.get_selection().get_selected()
                 card = self.card_store.get_value(iter, 0)
-                buf = buf + " --card \"" + card + "\""
+                buf = buf + " --card=\"" + card + "\""
 
                 #translate MB to KB 
                 ramsize_dict = {"256 KB" : "256",
@@ -182,26 +180,88 @@ class xconfig:
                                 "32 MB" : "32768",
                                 "64 MB" : "65536",
                                 }
-                buf = buf + " --videoram " + ramsize_dict [self.videoram_combo.entry.get_text()]
-            else:
-                data.append("#Probe for video card")                
+                buf = buf + " --videoram=" + ramsize_dict [self.videoram_combo.entry.get_text()]
 
             if not self.monitor_probe_check.get_active():
                 if self.sync_button.get_active():
-                    buf = buf + " --hsync " + self.hsync_entry.get_text()
-                    buf = buf + " --vsync " + self.vsync_entry.get_text()
+                    buf = buf + " --hsync=" + self.hsync_entry.get_text()
+                    buf = buf + " --vsync=" + self.vsync_entry.get_text()
                 else:
                     temp, iter = self.monitor_view.get_selection().get_selected()
                     name = self.monitor_store.get_value(iter, 0)
-                    print name
-                    buf = buf + " --monitor \"" + name + "\""
-            else:
-                data.append("#Probe for monitor")
-            data.append(buf)
-                                
+                    buf = buf + " --monitor=\"" + name + "\""
+
+            self.kickstartData.setXconfig([buf])
         else:
-            data.append("#Do not configure the X Window System")
-            data.append("skipx")
+            self.kickstartData.setSkipX(["skipx"])
+            self.kickstartData.setXconfig(None)
 
-        return data
+    def fillData(self):
+        if self.kickstartData.getSkipX():
+            self.config_x_button.set_active(gtk.FALSE)
+        elif self.kickstartData.getXconfig():
+            self.config_x_button.set_active(gtk.TRUE)
+            xLine = self.kickstartData.getXconfig()
+            xLine = string.join (xLine, " ")
+            xList = string.split(xLine, " --")
 
+            for item in xList:
+                if item[:2] != "--":
+                    xList[xList.index(item)] = ("--" + item)
+
+            opts, args = getopt.getopt(xList, "d:h", ["noprobe", "card=",
+                                       "videoram=", "monitor=", "hsync=", "vsync=", "defaultdesktop=",
+                                       "startxonboot", "resolution=", "depth="])
+
+            for opt, value in opts:
+                if opt == "--startxonboot":
+                    self.startxonboot_checkbutton.set_active(gtk.TRUE)
+
+                if opt == "--defaultdesktop":
+                    if value == "GNOME":
+                        self.gnome_radiobutton.set_active(gtk.TRUE)
+                    if value == "KDE":
+                        self.kde_radiobutton.set_active(gtk.TRUE)
+
+                if opt == "--depth":
+                    self.color_depth_combo.entry.set_text(value)
+
+                if opt == "--resolution":
+                    self.resoulution_combo.entry.set_text(value)
+
+                if opt == "--card":
+                    self.card_probe_check.set_active(gtk.FALSE)
+                    value = string.replace(value, '"', '')
+
+                    iter = self.card_store.get_iter_first()
+
+                    while iter:
+                        if self.card_store.get_value(iter, 0) == value:
+                            path = self.card_store.get_path(iter)
+                            self.card_view.set_cursor(path, self.card_col, gtk.FALSE)
+                            self.card_view.scroll_to_cell(path, self.card_col, gtk.TRUE, 0.5, 0.5)
+                        iter = self.card_store.iter_next(iter)
+
+                if opt == "--videoram":
+                    self.videoram_combo.entry.set_text(value)
+
+                if opt == "--monitor":
+                    self.monitor_probe_check.set_active(gtk.FALSE)
+                    value = string.replace(value, '"', '')
+
+                    iter = self.monitor_store.get_iter_first()
+
+                    while iter:
+                        if self.monitor_store.get_value(iter, 0) == value:
+                            path = self.monitor_store.get_path(iter)
+                            self.monitor_view.set_cursor(path, self.monitor_col, gtk.FALSE)
+                            self.monitor_view.scroll_to_cell(path, self.monitor_col, gtk.TRUE, 0.5, 0.5)
+                        iter = self.monitor_store.iter_next(iter)
+
+                if opt == "--hsync":
+                    self.sync_button.set_active(gtk.TRUE)
+                    self.hsync_entry.set_text(value)
+
+                if opt == "--vsync":
+                    self.sync_button.set_active(gtk.TRUE)
+                    self.vsync_entry.set_text(value)
