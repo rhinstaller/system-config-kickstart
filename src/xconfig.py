@@ -87,7 +87,7 @@ class xconfig:
         try:
             monitorFile = open("/usr/share/hwdata/MonitorsDB", "r")
         except:
-            print "can not read MonitorDB file"
+            raise RuntimeError, (_("Could not read monitor database"))
 
         lines=monitorFile.readlines()
         monitorFile.close()
