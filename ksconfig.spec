@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: ksconfig
 Version: 1.1
-Release: 3
+Release: 5 
 URL: http://www.redhat.com
 Copyright: GPL
 ExclusiveOS: Linux
@@ -48,6 +48,9 @@ rm -rf $RPM_BUILD_ROOT
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
+* Thu Mar 01 2001 Tammy Fox <tfox@redhat.com>
+- fixed end of line between auth and firewall lines
+
 * Fri Feb 23 2001 Tammy Fox <tfox@redhat.com>
 - moved package icons into package instead of requiring anaconda for them
 
