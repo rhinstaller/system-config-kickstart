@@ -40,7 +40,6 @@ class basic:
 
     def __init__(self, xml):
         self.xml = xml
-        print dir(self.xml)
         self.lang_combo = xml.get_widget("lang_combo")
         self.keyboard_combo = xml.get_widget("keyboard_combo")
         self.mouse_combo = xml.get_widget("mouse_combo")
@@ -297,7 +296,7 @@ class basic:
             self.root_passwd_entry.show()
             return
             
-        if self.encrypt_root_pw_checkbutton.get_active():
+        if self.encrypt_root_pw_checkbutton.get_active() == gtk.TRUE:
             pure = self.root_passwd_entry.get_text()
 
             salt = "$1$"
@@ -307,7 +306,11 @@ class basic:
                 salt = salt + whrandom.choice (string.letters + string.digits + './')
 
             self.passwd = crypt.crypt (pure, salt)
-            data.append("rootpw --iscrypted " + self.passwd)
+
+            temp = unicode (self.passwd, 'iso-8859-1')
+            data.append("rootpw --iscrypted " + temp)
+
+#            data.append("rootpw --iscrypted " + self.passwd)
             
         else:
             self.passwd = self.root_passwd_entry.get_text()

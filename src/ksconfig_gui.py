@@ -88,6 +88,7 @@ class ksconfig_gui:
 		self.X_class = xconfig.xconfig(xml)
 		#bring in package function
 #		self.packages_class = packages.headerList(xml)
+                #FIXME
 #		self.packages_class = packages.Packages(xml)	
 		#bring in scripts function
 		self.scripts_class = scripts.scripts(xml)	
@@ -133,7 +134,6 @@ class ksconfig_gui:
 
 	#about box
 	def on_about_activate(self, args):
-		print "on about"
 		dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_INFO, gtk.BUTTONS_OK,
                                         _("Kickstart Configurator @VERSION@\n Copyright (c) 2000-2002 Red Hat, Inc.\n Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com> Tammy Fox <tfox@redhat.com>\n A graphical interface for creating a kickstart file"))
 		dlg.set_title(_("Error"))
@@ -183,8 +183,8 @@ class ksconfig_gui:
  		list = list + self.firewall_class.getData()
 		list = list + self.X_class.getData()
 
-		if self.install_radiobutton.get_active():
-			list = list + self.packages_class.getData()
+#		if self.install_radiobutton.get_active():
+#			list = list + self.packages_class.getData()
 
 		list = list + self.scripts_class.getData()
 

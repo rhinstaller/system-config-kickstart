@@ -30,8 +30,8 @@ class scripts:
         self.chroot_checkbutton = xml.get_widget("chroot_checkbutton")
         self.interpreter_checkbutton = xml.get_widget("interpreter_checkbutton")
         self.interpreter_entry = xml.get_widget("interpreter_entry")
-        self.pre_text = xml.get_widget("pre_text")
-        self.post_text = xml.get_widget("post_text")
+        self.pre_textview = xml.get_widget("pre_textview")
+        self.post_textview = xml.get_widget("post_textview")
         #bring in signals from glade file
         xml.signal_autoconnect (
             { "interpreter_cb" : self.interpreter_cb,
@@ -48,9 +48,9 @@ class scripts:
         return data
     
     def preData(self):
-        length = self.pre_text.get_length()
-        if length > 0:
-            data = self.pre_text.get_chars(0,length)
+        pre_buffer = self.pre_textview.get_buffer()
+        data = pre_buffer.get_text(pre_buffer.get_start_iter(),pre_buffer.get_end_iter(),gtk.FALSE)
+        if data != "":
             buf = "%pre" + "\n" + data
         else:
             buf = ""
@@ -62,9 +62,9 @@ class scripts:
             post_command = post_command + " --nochroot  "
         if self.interpreter_checkbutton.get_active():
             post_command = post_command + "--interpreter " + self.interpreter_entry.get_text()
-        length = self.post_text.get_length()
-        if length > 0:
-            data = self.post_text.get_chars(0,length)
+        post_buffer = self.post_textview.get_buffer()
+        data = post_buffer.get_text(post_buffer.get_start_iter(),post_buffer.get_end_iter(),gtk.FALSE)
+        if data != "":
             buf = "\n" + post_command + "\n" + data
         else:
             buf = ""
