@@ -56,6 +56,7 @@ fi
 %changelog
 * Tue Jul 18 2001 Tammy Fox <tfox@redhat.com>
 - added i18n stuff
+- added grub password and initialize the disk label
 
 * Mon Jul 16 2001 Brent Fox <bfox@redhat.com>
 - finished partitioning page
