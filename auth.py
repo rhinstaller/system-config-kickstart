@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-#!/usr/bin/env python
 
 ## Kickstart Configurator - A graphical kickstart file generator
 ## Copyright (C) 2000, 2001 Red Hat, Inc.
