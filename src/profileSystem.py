@@ -47,8 +47,6 @@ class ProfileSystem:
         self.kickstartData.setZeroMbr("yes")
         self.kickstartData.setClearPart(["--linux"])
 
-        self.kickstartData.printData()
-
     def getLang(self):
         default, langs = self.languageBackend.getInstalledLangs()
         self.kickstartData.setLang([default])
@@ -93,7 +91,7 @@ class ProfileSystem:
         if os.access('/etc/shadow', os.R_OK) == 1:
             line = open('/etc/shadow', 'r').readline()
             tokens = string.split(line, ":")
-            passwd = "--iscrypted" + tokens[1]
+            passwd = "--iscrypted " + tokens[1]
             self.kickstartData.setRootPw([passwd])
         else:
             print "no access to /etc/shadow"
