@@ -1,4 +1,4 @@
-## raidOptionWindow.py - code for redhat-config-kickstart's raid dialog
+## raidOptionWindow.py - code for system-config-kickstart's raid dialog
 ## Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
 ## Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
 ## Copyright (C) 2001, 2002, 2003 Tammy Fox <tfox@redhat.com>
