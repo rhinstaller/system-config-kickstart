@@ -103,4 +103,5 @@ class ProfileSystem:
         for package in packages:
             packages[packages.index(package)] = string.strip(package)
 
+        self.kickstartData.setPackage(["resolvedeps"])
         self.kickstartData.setIndividualPackageList(packages)
