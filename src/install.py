@@ -222,13 +222,10 @@ class install:
 
     def fillData(self):
         if self.kickstartData.getInstall():
-            line = self.kickstartData.getInstall()
+            self.install_radiobutton.set_active(gtk.TRUE)            
 
         elif self.kickstartData.getUpgrade():
             self.upgrade_radiobutton.set_active(gtk.TRUE)
-
-        print "in fillData"
-        print self.kickstartData.getUrl()
 
         if self.kickstartData.getCdrom():
             self.cdrom_radiobutton.set_active(gtk.TRUE)
@@ -285,5 +282,4 @@ class install:
                 self.httpserver_entry.set_text(host)
                 self.httpdir_entry.set_text(dir)
 
-        self.install_radiobutton.set_active(gtk.TRUE)
 
