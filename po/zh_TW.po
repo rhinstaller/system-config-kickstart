@@ -56,8 +56,8 @@ msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
 msgstr ""
-"您所指定的分割區不是以數字結尾。  分割區必須有一個分割區號碼，例如 "
-"\"hda1\" 或 \"sda3\"。"
+"您所指定的分割區不是以數字結尾。  分割區必須有一個分割區號碼，例如 \"hda1\" "
+"或 \"sda3\"。"
 
 #: redhat-config-kickstart.gladestrings:152
 msgid "_Yes"
@@ -106,8 +106,8 @@ msgid ""
 "Partitions must have a valid device name and partition number such as \"hda1"
 "\" or \"sda3\"."
 msgstr ""
-"您所指定的分割區不是以  \"hd\" 或 \"sd\" 開頭。  "
-"分割區必須有一個有效的裝置名稱與分割區號碼，例如 \"hda1\" 或 \"sda3\"。"
+"您所指定的分割區不是以  \"hd\" 或 \"sd\" 開頭。  分割區必須有一個有效的裝置名"
+"稱與分割區號碼，例如 \"hda1\" 或 \"sda3\"。"
 
 #: redhat-config-kickstart.gladestrings:277
 msgid "Monitor"
@@ -312,6 +312,7 @@ msgid "A_ll"
 msgstr "全部(_l)"
 
 #: redhat-config-kickstart.gladestrings:145
+#, fuzzy
 msgid "Clear Master Boot Record:"
 msgstr "清除主要開機磁區："
 
@@ -611,7 +612,8 @@ msgstr "FTP 目錄："
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
-msgstr "要建立一個新的 RAID 分割區，您必須指定一個硬碟裝置名稱或一個現有的分割區。"
+msgstr ""
+"要建立一個新的 RAID 分割區，您必須指定一個硬碟裝置名稱或一個現有的分割區。"
 
 #: redhat-config-kickstart.gladestrings:296
 msgid "label89"
@@ -648,6 +650,7 @@ msgid "Keyboard:"
 msgstr "鍵盤："
 
 #: redhat-config-kickstart.gladestrings:146
+#, fuzzy
 msgid "Remove Existing Partitions:"
 msgstr "移除既有的分割區："
 
@@ -1091,8 +1094,8 @@ msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
 msgstr ""
-"您所指定的裝置不是一個有效的裝置名稱。 請使用一個有效的裝置名稱，例如 "
-"\"hda1\" 或 \"sda3\"。"
+"您所指定的裝置不是一個有效的裝置名稱。 請使用一個有效的裝置名稱，例如 \"hda1"
+"\" 或 \"sda3\"。"
 
 #: ../src/basic.py:269
 msgid "Please select a root password."
@@ -1180,6 +1183,7 @@ msgid "_Contents"
 msgstr "內容(_C)"
 
 #: redhat-config-kickstart.gladestrings:147
+#, fuzzy
 msgid "Initialize the Disk Label:"
 msgstr "初始化磁碟標籤："
 
@@ -1210,6 +1214,22 @@ msgstr "否(_N)"
 #: redhat-config-kickstart.gladestrings:67
 msgid "_Quit"
 msgstr "離開(_Q)"
+
+#, fuzzy
+#~ msgid "Preserve existing partitions"
+#~ msgstr "移除既有的分割區："
+
+#, fuzzy
+#~ msgid "Remove existing Linux partitions"
+#~ msgstr "移除既有的分割區："
+
+#, fuzzy
+#~ msgid "Do not clear Master Boot Record"
+#~ msgstr "清除主要開機磁區："
+
+#, fuzzy
+#~ msgid "Do not initialize the disk label"
+#~ msgstr "初始化磁碟標籤："
 
 #~ msgid "RAID 5"
 #~ msgstr "RAID 5"
@@ -1309,4 +1329,3 @@ msgstr "離開(_Q)"
 
 #~ msgid "Select a Video Card"
 #~ msgstr "選取顯示卡"
-
