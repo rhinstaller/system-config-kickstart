@@ -50,6 +50,9 @@ rm -rf $RPM_BUILD_ROOT
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
+* Wed Feb 14 2001 Brent Fox <bfox@redhat.com>
+- fixed bug with the firewall screen
+
 * Thu Feb 8 2001 Brent Fox <bfox@redhat.com>
 - made code modular
 - improved package selection screen
