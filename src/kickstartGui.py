@@ -217,9 +217,14 @@ class kickstartGui:
         
 	self.bootloader_class.getData()
 
+#	#only write partition info if performing an install
+#	if self.install_radiobutton.get_active():
+#		list = list + self.partition_class.getData()
+
 	#only write partition info if performing an install
-	if self.install_radiobutton.get_active():
-		list = list + self.partition_class.getData()
+        if self.install_radiobutton.get_active():
+            self.partition_class.getData()
+
 	list = list + self.network_class.getData()
 	list = list + self.auth_class.getData()
 	list = list + self.firewall_class.getData()
