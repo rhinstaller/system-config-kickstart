@@ -23,6 +23,7 @@
 
 import gtk
 import gtk.glade
+import string
 import kickstartGui
 
 ##
@@ -35,12 +36,13 @@ _=gettext.gettext
 
 class install:
   
-    def __init__(self, xml, store, view, notebook, bootloader_class):
+    def __init__(self, xml, store, view, notebook, bootloader_class, kickstartData):
         self.xml = xml
         self.store = store
         self.view = view
         self.notebook = notebook
         self.bootloader_class = bootloader_class
+        self.kickstartData = kickstartData
         self.install_radiobutton = xml.get_widget("install_radiobutton")
         self.upgrade_radiobutton = xml.get_widget("upgrade_radiobutton")
         self.partitioning_frame = xml.get_widget("partitioning_frame")
@@ -119,31 +121,23 @@ class install:
             self.install_notebook.set_current_page(4)
                                      
     def getData(self):
-        data = []
-        data.append("")
         if self.install_radiobutton.get_active():
-            data.append("#Install Red Hat Linux instead of upgrade")
-            data.append("install")
+            self.kickstartData.setInstall("install")
         elif self.upgrade_radiobutton.get_active():
-            data.append("#Upgrade existing installation")
-            data.append("upgrade")
+            self.kickstartData.setUpgrade("upgrade")
 
-        data.append("")
         if self.cdrom_radiobutton.get_active():
-            data.append("#Use CDROM installation media")
-            data.append("cdrom")
+            self.kickstartData.setCdrom("cdrom")
         elif self.nfs_radiobutton.get_active():
-            data.append("#Use NFS installation media")
-            buf = "nfs"
             if self.nfsserver_entry.get_text() == "":
                 self.showDialog(_("Please enter an NFS server."), self.nfsserver_entry)
                 return
             if self.nfsdir_entry.get_text() == "":
                 self.showDialog(_("Please enter an NFS directory."), self.nfsdir_entry)
                 return
-            buf = buf + " --server " + self.nfsserver_entry.get_text()
-            buf = buf + " --dir " + self.nfsdir_entry.get_text()
-            data.append(buf)
+            buf = "--server=" + self.nfsserver_entry.get_text()
+            buf = buf + " --dir=" + self.nfsdir_entry.get_text()
+            self.kickstartData.setNfs(buf)
         elif self.ftp_radiobutton.get_active():
             if self.ftpserver_entry.get_text() == "":
                 self.showDialog(_("Please enter an FTP server."), self.ftpserver_entry)
@@ -152,9 +146,7 @@ class install:
                 self.showDialog(_("Please enter an FTP directory."), self.ftpserver_entry)
                 return
 
-            data.append("#Use FTP installation media")
-            buf = "url"
-            buf = buf + " --url ftp://"
+            buf = "ftp://"
             if self.ftpuserpass_checkbutton.get_active():
                 if self.ftpuser_entry.get_text() == "":
                     self.showDialog(_("Please enter an FTP user name."), self.ftpuser_entry)
@@ -172,7 +164,7 @@ class install:
             else:
                 buf = buf + "/" + directory
 
-            data.append(buf)
+            self.kickstartData.setUrl(["--url", buf])
         elif self.http_radiobutton.get_active():
             if self.httpserver_entry.get_text() == "":
                 self.showDialog(_("Please enter an HTTP server."), self.httpserver_entry)
@@ -180,16 +172,14 @@ class install:
             if self.httpdir_entry.get_text() == "":
                 self.showDialog(_("Please enter an HTTP server directory."), self.httpdir_entry)
                 return
-            data.append("#Use HTTP installation media")
-            buf = "url"
-            buf = buf + " --url http://" + self.httpserver_entry.get_text()
+            buf = "http://" + self.httpserver_entry.get_text()
             directory = self.httpdir_entry.get_text()		
             if directory[0] == '/':
                 buf = buf + directory
             else:
                 buf = buf + "/" + directory
 
-            data.append(buf)
+            self.kickstartData.setUrl(["--url", buf])
         elif self.hd_radiobutton.get_active():
             if self.hddir_entry.get_text() == "":
                 self.showDialog(_("Please enter a hard drive directory."), self.hddir_entry)
@@ -197,12 +187,10 @@ class install:
             if self.hdpart_entry.get_text() == "":
                 self.showDialog(_("Please enter a hard drive partition."), self.hdpart_entry)
                 return
-            data.append("#Use Hard drive installation media")
-            buf = "harddrive"
-            buf = buf + " --dir " + self.hddir_entry.get_text()
-            buf = buf + " --partition " + self.hdpart_entry.get_text()        
-            data.append(buf)
-        return data
+            buf = "--dir=" + self.hddir_entry.get_text()
+            buf = buf + " --partition=" + self.hdpart_entry.get_text()        
+            self.kickstartData.setHardDrive(buf)
+        return 0
 
     def showDialog(self, text, widget):
             dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
@@ -223,4 +211,79 @@ class install:
             self.notebook.set_current_page(1)
             widget.grab_focus()
             return
-        
+
+    def splitUrl(self, data):
+        tokens = string.split(data, "/")
+        host = tokens[0]
+        dir = tokens[1:]
+        dir = string.join(dir, '/')
+        dir = "/" + dir
+        return host, dir
+
+    def fillData(self):
+        if self.kickstartData.getInstall():
+            line = self.kickstartData.getInstall()
+
+        elif self.kickstartData.getUpgrade():
+            self.upgrade_radiobutton.set_active(gtk.TRUE)
+
+        print "in fillData"
+        print self.kickstartData.getUrl()
+
+        if self.kickstartData.getCdrom():
+            self.cdrom_radiobutton.set_active(gtk.TRUE)
+
+        elif self.kickstartData.getHardDrive():
+            self.hd_radiobutton.set_active(gtk.TRUE)
+            list = self.kickstartData.getHardDrive()
+            for i in list:
+                tokens = string.split(i, "=")
+                if tokens[0] == "--partition":
+                    self.hdpart_entry.set_text(tokens[1])
+                if tokens[0] == "--dir":
+                    self.hddir_entry.set_text(tokens[1])
+
+        elif self.kickstartData.getNfs():
+            self.nfs_radiobutton.set_active(gtk.TRUE)
+            list = self.kickstartData.getNfs()
+            for i in list:
+                tokens = string.split(i, "=")
+                if tokens[0] == "--server":
+                    self.nfsserver_entry.set_text(tokens[1])
+                if tokens[0] == "--dir":
+                    self.nfsdir_entry.set_text(tokens[1])
+
+        elif self.kickstartData.getUrl():
+            tokens = string.split(self.kickstartData.getUrl(), "://")
+
+            protocol = tokens[0]
+            data = tokens[1]
+
+            if protocol == "ftp":
+                self.ftp_radiobutton.set_active(gtk.TRUE)
+
+                if "@" in data:
+                    self.ftpuserpass_checkbutton.set_active(gtk.TRUE)
+
+                    loginData, data = string.split(data, "@")
+
+                    username, password = string.split(loginData, ":")
+                    self.ftpuser_entry.set_text(username)
+                    self.ftppasswd_entry.set_text(password)
+
+                    host, dir = self.splitUrl(data)
+                    self.ftpserver_entry.set_text(host)
+                    self.ftpdir_entry.set_text(dir)
+
+                else:
+                    host, dir = self.splitUrl(data)
+
+            elif protocol == "http":
+                host, dir = self.splitUrl(data)
+                
+                self.http_radiobutton.set_active(gtk.TRUE)
+                self.httpserver_entry.set_text(host)
+                self.httpdir_entry.set_text(dir)
+
+        self.install_radiobutton.set_active(gtk.TRUE)
+
