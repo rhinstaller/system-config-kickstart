@@ -328,7 +328,8 @@ class auth:
         if self.kickstartData.getAuth():
             opts, args = getopt.getopt(self.kickstartData.getAuth(), "d:h", ["enablemd5", "enablenis",
                                        "nisdomain=", "nisserver=", "useshadow", "enableshadow",
-                                       "enableldap", "ldapserver=", "ldapbasedn=", "enableldaptls",
+                                       "enableldap", "enableldapauth", "ldapserver=", "ldapbasedn=",
+                                       "enableldaptls",
                                        "enablekrb5", "krb5realm=", "krb5kdc=", "krb5adminserver=",
                                        "enablehesiod", "hesiodlhs=", "hesiodrhs=", "enablesmbauth",
                                        "smbservers=", "smbworkgroup=", "enablecache"])
@@ -363,7 +364,7 @@ class auth:
                     self.ldapCheck.set_active(gtk.TRUE)
 
                 if opt == "--ldapbasedn":
-                    self.ldapDNEntry.set_text("value")
+                    self.ldapDNEntry.set_text(value)
                     self.ldapCheck.set_active(gtk.TRUE)
     #XXX FIXME
     #            if opt == "--enableldaptls":
