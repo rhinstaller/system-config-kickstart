@@ -25,26 +25,28 @@ from gtk import *
 import GtkExtra
 import libglade
 import string
+import os
 
 class basic:
 
     def __init__(self, xml):
-        self.lang_combo = xml.get_widget("lang_combo")
-        self.lang_support_combo = xml.get_widget("lang_support_combo")
-        self.keyboard_combo = xml.get_widget("keyboard_combo")
-        self.mouse_combo = xml.get_widget("mouse_combo")
-        self.timezone_combo = xml.get_widget("timezone_combo")
-        self.root_passwd_entry = xml.get_widget("root_passwd_entry")
-        self.lilo_mbr_radiobutton = xml.get_widget("lilo_mbr_radiobutton")
-        self.lilo_none_radiobutton = xml.get_widget("lilo_none_radiobutton")
-        self.shadow_passwd_checkbutton = xml.get_widget("shadow_passwd_checkbutton")
-        self.md5_checkbutton = xml.get_widget("md5_checkbutton")
-        self.emulate_3_buttons = xml.get_widget("emulate_3_buttons")
-        lang_combo = xml.get_widget("lang_combo")
-        lang_support_combo = xml.get_widget("lang_support_combo")
-        mouse_combo = xml.get_widget("mouse_combo")
-        keyboard_combo = xml.get_widget("keyboard_combo")		
-        timezone_combo = xml.get_widget("timezone_combo")
+        self.xml = xml
+        self.lang_combo = self.xml.get_widget("lang_combo")
+        self.lang_support_combo = self.xml.get_widget("lang_support_combo")
+        self.keyboard_combo = self.xml.get_widget("keyboard_combo")
+        self.mouse_combo = self.xml.get_widget("mouse_combo")
+        self.timezone_combo = self.xml.get_widget("timezone_combo")
+        self.root_passwd_entry = self.xml.get_widget("root_passwd_entry")
+        self.lilo_mbr_radiobutton = self.xml.get_widget("lilo_mbr_radiobutton")
+        self.lilo_none_radiobutton = self.xml.get_widget("lilo_none_radiobutton")
+        self.shadow_passwd_checkbutton = self.xml.get_widget("shadow_passwd_checkbutton")
+        self.md5_checkbutton = self.xml.get_widget("md5_checkbutton")
+        self.emulate_3_buttons = self.xml.get_widget("emulate_3_buttons")
+        lang_combo = self.xml.get_widget("lang_combo")
+        lang_support_combo = self.xml.get_widget("lang_support_combo")
+        mouse_combo = self.xml.get_widget("mouse_combo")
+        keyboard_combo = self.xml.get_widget("keyboard_combo")		
+        timezone_combo = self.xml.get_widget("timezone_combo")
 
         #define languages, add languages here
         self.langDict = {"Czech" : "cs_CZ",
@@ -152,32 +154,29 @@ class basic:
         keyboard_combo.entry.set_editable(FALSE)		
 
         #populate time zone combo
-        tz = open ("/usr/share/zoneinfo/zone.tab", "r")
-        lines = tz.readlines()
-        tz.close()
+        if os.access("/usr/share/zoneinfo/zone.tab", os.R_OK):
+            tz = open ("/usr/share/zoneinfo/zone.tab", "r")
+            lines = tz.readlines()
+            tz.close()
+
         list_items = []
 
-        clockfile = open ("/etc/sysconfig/clock", "r")
-        clocklines = clockfile.readlines()
-        clockfile.close()
-        for line in clocklines:
-                if line[:4] == "ZONE":
-                        tmp = string.split(line, "=")
-                        zone = tmp[1]
-                        zone = zone[1:-2]
-
-        for line in lines:
+        try:
+            for line in lines:
                 if line[:1] == "#":
-                        pass
+                    pass
                 else:
-                        tokens = string.split(line)
-                        list_items.append(tokens[2])
+                    tokens = string.split(line)
+                    list_items.append(tokens[2])
 
-        list_items.sort()
+            list_items.sort()
+        except:
+            list_items = []
 
-        #--Search timezone list for default
-        if zone in list_items:
-                select = list_items.index(zone)
+        try:
+            select = list_items.index("America/New_York")
+        except:
+            select = 0
 
         timezone_combo.set_popdown_strings(list_items)
         timezone_combo.list.select_item(select)

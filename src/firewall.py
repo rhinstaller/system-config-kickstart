@@ -26,6 +26,7 @@ import GtkExtra
 import string
 import checklist
 import libglade
+import os
 
 class firewall:
     
@@ -54,16 +55,21 @@ class firewall:
         self.label1.set_alignment (0.2, 0.0)
         self.customTable.attach (self.label1, 0, 1, 2, 3, FILL, FILL, 5, 5)
         
-        f = open ("/proc/net/dev")
-        lines = f.readlines()
-        f.close ()
+        if os.access("/proc/net/dev", os.R_OK):
+            f = open ("/proc/net/dev")
+            lines = f.readlines()
+            f.close ()
+            
         # skip first two lines, they are header
-        lines = lines[2:]
         self.netdevices = []
-        for line in lines:
-            dev = string.strip (line[0:6])
-            if dev != "lo":
-                self.netdevices.append(dev)
+        try:
+            lines = lines[2:]
+            for line in lines:
+                dev = string.strip (line[0:6])
+                if dev != "lo":
+                    self.netdevices.append(dev)
+        except:
+            pass
 
         self.trusted = checklist.CheckList(1)
         self.trusted.connect ('button_press_event', self.trusted_select_row)
