@@ -26,6 +26,12 @@ import sys
 import signal
 import ksconfig_gui
 
+try:
+    from gtk import _disable_gdk_threading
+    _disable_gdk_threading()
+except ImportError:
+    pass
+
 if __name__ == "__main__":
     signal.signal (signal.SIGINT, signal.SIG_DFL)
 
