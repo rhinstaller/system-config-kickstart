@@ -128,7 +128,7 @@ class ksconfig_gui:
 
 	#about box
 	def on_about_activate(self, args):
-		aboutDialog = gnome.ui.GnomeAbout ("Kickstart Configurator", "1.95",
+		aboutDialog = gnome.ui.GnomeAbout ("Kickstart Configurator", "1.9",
 						   "Copyright (c) 2000, 2001 Red Hat, Inc.",
 						   ["Brent Fox <bfox@redhat.com>",
 						    "Tammy Fox <tfox@redhat.com>"],
