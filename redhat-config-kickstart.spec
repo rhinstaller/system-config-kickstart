@@ -3,6 +3,7 @@ Name: redhat-config-kickstart
 Version: 2.3
 Release: 1
 URL: http://www.redhat.com
+License: GPL
 ExclusiveOS: Linux
 Group: System Environment/Base
 BuildRoot: %{_tmppath}/redhat-config-kickstart-%{version}-root
