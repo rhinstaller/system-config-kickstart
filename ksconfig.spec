@@ -10,15 +10,28 @@ BuildRoot: %{_tmppath}/ksconfig-%{version}-root
 Source: ksconfig-%{version}.tar.gz
 BuildArch: noarch
 Requires: pygtk
+Requires: redhat-logos
 
 %description
-ksconfig is a graphical tool for creating kickstart files.  It will allow you to set most of the kickstart options.
+ksconfig is a graphical tool for creating kickstart files.  It will allow you to set most of the 
+kickstart options.
 
 %prep
 %setup -q
 
 %install
 make INSTROOT=$RPM_BUILD_ROOT install
+
+mkdir -p $RPM_BUILD_ROOT/etc/X11/applnk/System
+cat > $RPM_BUILD_ROOT/etc/X11/applnk/System/ksconfig.desktop << EOF
+[Desktop Entry]
+Name=Kickstart Configurator
+Comment=Kickstart file generator
+Icon=redhat/shadowman-round-48.png
+Exec=/usr/sbin/ksconfig
+Type=Application
+Terminal=false
+EOF
 
 #%find_lang %name
 
@@ -38,6 +51,7 @@ rm -rf $RPM_BUILD_ROOT
 - renamed okButton to saveButton in ksconfig.py
 - renamed Cancel button to Exit in interface
 - added /boot to default partition list
+- added menu icon
 
 * Tue Jan 16 2001 Brent Fox <bfox@redhat.com>
 - initial packaging
