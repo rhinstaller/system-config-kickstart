@@ -67,11 +67,6 @@ class Packages:
         self.system_label = xml.get_widget("system_label")
         self.system_label.set_markup("<span foreground='white'><big><b>%s</b></big></span>" % (self.system_label.get(),))
 
-        self.miscellaneous_eventbox = xml.get_widget("miscellaneous_eventbox")
-        self.miscellaneous_eventbox.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#4a59a6"))
-        self.miscellaneous_label = xml.get_widget("miscellaneous_label")
-        self.miscellaneous_label.set_markup("<span foreground='white'><big><b>%s</b></big></span>" % (self.miscellaneous_label.get(),))
-
         self.desktops_view = xml.get_widget("desktops_view")
         self.desktops_view.get_selection().set_mode(gtk.SELECTION_NONE)
         self.applications_view = xml.get_widget("applications_treeview")
@@ -82,8 +77,6 @@ class Packages:
         self.development_view.get_selection().set_mode(gtk.SELECTION_NONE)
         self.systems_view = xml.get_widget("systems_treeview")
         self.systems_view.get_selection().set_mode(gtk.SELECTION_NONE)
-        self.miscellaneous_view = xml.get_widget("miscellaneous_treeview")
-        self.miscellaneous_view.get_selection().set_mode(gtk.SELECTION_NONE)
 
         self.desktops_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
         self.desktops_view.set_model(self.desktops_store)
@@ -100,15 +93,11 @@ class Packages:
         self.system_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
         self.systems_view.set_model(self.system_store)
 
-        self.miscellaneous_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
-        self.miscellaneous_view.set_model(self.miscellaneous_store)
-
         self.create_columns(self.desktops_view, self.desktops_store)
         self.create_columns(self.applications_view, self.applications_store)
         self.create_columns(self.servers_view, self.servers_store)
         self.create_columns(self.development_view, self.development_store)
         self.create_columns(self.systems_view, self.system_store)
-        self.create_columns(self.miscellaneous_view, self.miscellaneous_store)
 
         desktopsList = ["X Window System",
                        "GNOME Desktop Environment",
@@ -197,7 +186,6 @@ class Packages:
         data = self.getPkgData(self.servers_store, data)
         data = self.getPkgData(self.development_store, data)
         data = self.getPkgData(self.system_store, data)
-        data = self.getPkgData(self.miscellaneous_store, data)        
 
         return data
 
