@@ -57,7 +57,15 @@ class xconfig:
               })
 
         #add video cards to list
-        cardsFile = open("Cards")
+        try:
+            cardsFile = open("Cards", "r")
+        except:
+            try:
+                cardsFile = open("/usr/share/ksconfig/Cards", "r")
+            except:
+                print "can not read Cards file"
+
+            
         lines = cardsFile.readlines ()
         cardsFile.close ()
         card = {}
@@ -79,7 +87,14 @@ class xconfig:
 
 
         #add monitors to list
-        monitorFile = open("MonitorsDB", "r")
+        try:
+            monitorFile = open("MonitorsDB", "r")
+        except:
+            try:
+                monitorFile = open("/usr/share/ksconfig/MonitorsDB", "r")
+            except:
+                print "can not read MonitorDB file"
+
         lines=monitorFile.readlines()
         monitorFile.close()
         

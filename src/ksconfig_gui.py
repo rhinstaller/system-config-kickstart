@@ -44,7 +44,7 @@ import xconfig
 import packages
 import scripts
 
-xml = libglade.GladeXML ("./ksconfig.glade", domain="ksconfig")
+xml = libglade.GladeXML ("/usr/share/ksconfig/ksconfig.glade", domain="ksconfig")
 
 class ksconfig_gui:
 	
