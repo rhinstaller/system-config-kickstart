@@ -113,9 +113,6 @@ class raidWindow:
         
         self.raid_partition_store.foreach(self.isRowToggled, mount_point)
 
-        print "raid level is", raid_level
-        print len(self.partition_list)
-
         if raid_level == "0" or raid_level == "1":
             if len(self.partition_list) < 2:
                 device_is_valid = self.deviceNotValid(_("You must select at least 2 partitions in order to use "
@@ -167,11 +164,9 @@ class raidWindow:
 
     def isRowToggled(self, store, data, iter, mount_point):
         if self.raid_partition_store.get_value(iter, 0) == gtk.TRUE:
-            print "row is true"
             self.partition_list.append(self.raid_partition_store.get_value(iter, 1))
             partition_iter = self.raid_partition_store.get_value(iter,2)
             part_object = self.raid_partition_store.get_value(iter, 3)
-            print part_object
 
 #            raid_number = part_object.raidNumber
             self.raid_object.raidPartitions.append(part_object.raidNumber)
@@ -181,10 +176,8 @@ class raidWindow:
     def countRaidDevices(self, store, data, iter):
         part_object = self.part_store.get_value(iter, 5)
         if part_object:
-            print part_object.device
 
             if part_object.device[:2] == 'md':
-                print "raid object found"
                 self.num_raid_devices = self.num_raid_devices + 1
         
     def deviceNotValid(self, label):
