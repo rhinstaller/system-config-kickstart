@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
 Version: 2.3.17
-Release: 1
+Release: 2
 URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
@@ -56,6 +56,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Fri Aug 22 2003 Brent Fox <bfox@bfox.devel.redhat.com> 2.3.17-2
+- bump relnum and rebuild
+
 * Fri Aug 22 2003 Brent Fox <bfox@bfox.devel.redhat.com> 2.3.17-1
 - handle maxsize, grow, and onpart correctly from existing files
 
