@@ -184,8 +184,7 @@ class kickstartGui:
 	dlg.set_transient_for(self.toplevel)
 	dlg.set_icon(iconPixbuf)
 	rc = dlg.run()
-	if rc == gtk.RESPONSE_OK:
-	    dlg.hide()
+        dlg.destroy()
 
     #display help manual
     def on_help_button_clicked (self, args):
