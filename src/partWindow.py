@@ -37,20 +37,14 @@ gettext.textdomain ("redhat-config-kickstart")
 _=gettext.gettext
 
 class partWindow:
-    def __init__(self, xml, part_store, part_view, type = None):
+    def __init__(self, xml, part_store, part_view):
         print "in partWindow init", xml
-#        self.partClist = partClist
         self.part_store = part_store
         self.part_view = part_view
-        if type:
-            self.type = type
-        else:
-            self.type = None
 
         self.partitionDialog = xml.get_widget("partition_dialog")
         self.mountPointCombo = xml.get_widget("mountPointCombo")
         self.fsTypeCombo = xml.get_widget("fsTypeCombo")
-        print self.fsTypeCombo
         self.sizeCombo = xml.get_widget("sizeCombo")
         self.asPrimaryCheck = xml.get_widget("asPrimaryCheck")
         self.onDiskCheck = xml.get_widget("onDiskCheck")
@@ -125,11 +119,11 @@ class partWindow:
         self.onDiskBox.set_sensitive(self.onDiskCheck.get_active())
         self.onPartCheck.set_sensitive(not self.onDiskCheck.get_active())
 
-    def add_partition(self):
+    def add_partition(self, type=None):
         self.ok_handler = self.partOkButton.connect("clicked", self.on_ok_button_clicked)
         self.win_reset()
-        if self.type:
-            self.fsTypeCombo.entry.set_text(self.type)
+        if type == "TYPE_RAID":
+            self.fsTypeCombo.entry.set_text(_("software RAID"))
         self.partitionDialog.show_all()
 
     def edit_partition(self, iter):
@@ -185,7 +179,7 @@ class partWindow:
     def on_part_cancel_button_clicked(self, *args):
         self.partOkButton.disconnect(self.ok_handler)
         self.win_reset()
-        self.partitionDialog.destroy()
+        self.partitionDialog.hide()
 
     def on_edit_ok_button_clicked(self, *args):
         part_object = self.part_store.get_value(self.current_iter, 4)
@@ -198,7 +192,7 @@ class partWindow:
             
         self.partOkButton.disconnect(self.ok_handler)
         self.win_reset()
-        self.partitionDialog.destroy()
+        self.partitionDialog.hide()
 
     def on_ok_button_clicked(self, *args):
         part_object = partEntry.partEntry()
@@ -216,7 +210,7 @@ class partWindow:
 
         self.partOkButton.disconnect(self.ok_handler)
         self.win_reset()
-        self.partitionDialog.destroy()
+        self.partitionDialog.hide()
 
     def on_swap_recommended_toggled(self, *args):
         active = self.swap_checkbutton.get_active()
