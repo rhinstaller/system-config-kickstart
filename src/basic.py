@@ -34,8 +34,6 @@ class basic:
     def __init__(self, xml):
         self.xml = xml
         self.lang_combo = xml.get_widget("lang_combo")
-#        self.lang_support_combo = xml.get_widget("lang_support_combo")
-#        self.lang_support_combo.list.set_selection_mode(SELECTION_MULTIPLE)
         self.keyboard_combo = xml.get_widget("keyboard_combo")
         self.mouse_combo = xml.get_widget("mouse_combo")
         self.timezone_combo = xml.get_widget("timezone_combo")
@@ -251,10 +249,15 @@ class basic:
         data = []
         data.append("")
         data.append("#System language")
-        data.append("lang " + self.languageLookup(self.lang_combo.entry.get_text()))
+        lang = self.languageLookup(self.lang_combo.entry.get_text())
+        data.append("lang " + lang)
         data.append("")
         data.append("#Language modules to install")
 
+        print self.langSupportList
+        if lang not in self.langSupportList:
+            print "adding ", lang
+            self.langSupportList.append(lang)
 
         if self.langSupportList != []:
             buf = ""

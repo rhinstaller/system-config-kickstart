@@ -42,14 +42,22 @@ class scripts:
         self.interpreter_entry.set_sensitive(self.interpreter_checkbutton.get_active())
 
     def getData(self):
-        buf = self.preData() + self.postData()
-        return buf
+        data = []
+        data.append("")
+        data.append(self.preData())
+#        data.append("")
+        data.append(self.postData())
+
+#        buf = self.preData() + self.postData()
+#        data.append(buf)
+        return data
+    
 
     def preData(self):
         length = self.pre_text.get_length()
         if length > 0:
             data = self.pre_text.get_chars(0,length)
-            buf = "\n" + "%pre" + "\n" + data
+            buf = "%pre" + "\n" + data
         else:
             buf = ""
         return buf

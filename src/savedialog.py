@@ -37,9 +37,9 @@ class saveDialog:
 	def destroy(self, args):
 		self.dialog.destroy()
 
-        def __init__ (self, buf, xml):
+        def __init__ (self, dataList, xml):
 		self.xml = xml
-		self.buf = buf
+		self.dataList = dataList
 		self.dialog = self.xml.get_widget("save_dialog")
 		self.dialog.set_filename("ks.cfg")
 		self.dialog.cancel_button.connect("clicked",self.dialog.hide)
@@ -58,6 +58,9 @@ class saveDialog:
         def saveFile(self, *args):
 		self.dialog.filePath = self.dialog.get_filename()
 		ksFile = open(self.dialog.filePath, "w")
-		ksFile.write(self.buf)
+		for line in self.dataList:
+			ksFile.write(line + "\n")
+ 
+
 		ksFile.close()
 		self.dialog.hide()

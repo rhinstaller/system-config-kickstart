@@ -278,8 +278,13 @@
 		  <widget>
 		    <class>GtkEntry</class>
 		    <child_name>GtkCombo:entry</child_name>
-		    <name>combo_entry1</name>
+		    <name>lang_entry</name>
 		    <can_focus>True</can_focus>
+		    <signal>
+		      <name>changed</name>
+		      <handler>on_lang_entry_changed</handler>
+		      <last_modification_time>Sun, 04 Nov 2001 02:35:18 GMT</last_modification_time>
+		    </signal>
 		    <editable>True</editable>
 		    <text_visible>True</text_visible>
 		    <text_max_length>0</text_max_length>
@@ -4632,12 +4637,30 @@
 		  <spacing>4</spacing>
 
 		  <widget>
-		    <class>GtkScrolledWindow</class>
-		    <name>video_card_swindow</name>
-		    <hscrollbar_policy>GTK_POLICY_NEVER</hscrollbar_policy>
-		    <vscrollbar_policy>GTK_POLICY_ALWAYS</vscrollbar_policy>
-		    <hupdate_policy>GTK_UPDATE_CONTINUOUS</hupdate_policy>
-		    <vupdate_policy>GTK_UPDATE_CONTINUOUS</vupdate_policy>
+		    <class>GtkCheckButton</class>
+		    <name>card_probe_check</name>
+		    <can_focus>True</can_focus>
+		    <signal>
+		      <name>toggled</name>
+		      <handler>on_card_probe_check_toggled</handler>
+		      <last_modification_time>Sun, 04 Nov 2001 05:49:01 GMT</last_modification_time>
+		    </signal>
+		    <label>Probe for video card</label>
+		    <active>True</active>
+		    <draw_indicator>True</draw_indicator>
+		    <child>
+		      <padding>0</padding>
+		      <expand>False</expand>
+		      <fill>False</fill>
+		    </child>
+		  </widget>
+
+		  <widget>
+		    <class>GtkVBox</class>
+		    <name>card_vbox</name>
+		    <sensitive>False</sensitive>
+		    <homogeneous>False</homogeneous>
+		    <spacing>0</spacing>
 		    <child>
 		      <padding>0</padding>
 		      <expand>True</expand>
@@ -4645,87 +4668,101 @@
 		    </child>
 
 		    <widget>
-		      <class>GtkCList</class>
-		      <name>video_card_clist</name>
-		      <can_focus>True</can_focus>
-		      <signal>
-			<name>select_row</name>
-			<handler>select_videocard</handler>
-			<last_modification_time>Fri, 06 Jul 2001 06:30:22 GMT</last_modification_time>
-		      </signal>
-		      <columns>1</columns>
-		      <column_widths>80</column_widths>
-		      <selection_mode>GTK_SELECTION_BROWSE</selection_mode>
-		      <show_titles>True</show_titles>
-		      <shadow_type>GTK_SHADOW_IN</shadow_type>
+		      <class>GtkScrolledWindow</class>
+		      <name>video_card_swindow</name>
+		      <hscrollbar_policy>GTK_POLICY_NEVER</hscrollbar_policy>
+		      <vscrollbar_policy>GTK_POLICY_ALWAYS</vscrollbar_policy>
+		      <hupdate_policy>GTK_UPDATE_CONTINUOUS</hupdate_policy>
+		      <vupdate_policy>GTK_UPDATE_CONTINUOUS</vupdate_policy>
+		      <child>
+			<padding>0</padding>
+			<expand>True</expand>
+			<fill>True</fill>
+		      </child>
+
+		      <widget>
+			<class>GtkCList</class>
+			<name>video_card_clist</name>
+			<can_focus>True</can_focus>
+			<signal>
+			  <name>select_row</name>
+			  <handler>select_videocard</handler>
+			  <last_modification_time>Fri, 06 Jul 2001 06:30:22 GMT</last_modification_time>
+			</signal>
+			<columns>1</columns>
+			<column_widths>80</column_widths>
+			<selection_mode>GTK_SELECTION_BROWSE</selection_mode>
+			<show_titles>True</show_titles>
+			<shadow_type>GTK_SHADOW_IN</shadow_type>
+
+			<widget>
+			  <class>GtkLabel</class>
+			  <child_name>CList:title</child_name>
+			  <name>vc_label</name>
+			  <label>Select a Video Card</label>
+			  <justify>GTK_JUSTIFY_CENTER</justify>
+			  <wrap>False</wrap>
+			  <xalign>0.5</xalign>
+			  <yalign>0.5</yalign>
+			  <xpad>0</xpad>
+			  <ypad>0</ypad>
+			</widget>
+		      </widget>
+		    </widget>
+
+		    <widget>
+		      <class>GtkHBox</class>
+		      <name>hbox31</name>
+		      <homogeneous>False</homogeneous>
+		      <spacing>9</spacing>
+		      <child>
+			<padding>0</padding>
+			<expand>False</expand>
+			<fill>False</fill>
+		      </child>
 
 		      <widget>
 			<class>GtkLabel</class>
-			<child_name>CList:title</child_name>
-			<name>vc_label</name>
-			<label>Select a Video Card</label>
+			<name>label127</name>
+			<label>Video Card RAM: </label>
 			<justify>GTK_JUSTIFY_CENTER</justify>
 			<wrap>False</wrap>
 			<xalign>0.5</xalign>
 			<yalign>0.5</yalign>
 			<xpad>0</xpad>
 			<ypad>0</ypad>
+			<child>
+			  <padding>0</padding>
+			  <expand>False</expand>
+			  <fill>False</fill>
+			</child>
 		      </widget>
-		    </widget>
-		  </widget>
-
-		  <widget>
-		    <class>GtkHBox</class>
-		    <name>hbox31</name>
-		    <homogeneous>False</homogeneous>
-		    <spacing>9</spacing>
-		    <child>
-		      <padding>0</padding>
-		      <expand>False</expand>
-		      <fill>False</fill>
-		    </child>
-
-		    <widget>
-		      <class>GtkLabel</class>
-		      <name>label127</name>
-		      <label>Video Card RAM: </label>
-		      <justify>GTK_JUSTIFY_CENTER</justify>
-		      <wrap>False</wrap>
-		      <xalign>0.5</xalign>
-		      <yalign>0.5</yalign>
-		      <xpad>0</xpad>
-		      <ypad>0</ypad>
-		      <child>
-			<padding>0</padding>
-			<expand>False</expand>
-			<fill>False</fill>
-		      </child>
-		    </widget>
-
-		    <widget>
-		      <class>GtkCombo</class>
-		      <name>videoram_combo</name>
-		      <value_in_list>False</value_in_list>
-		      <ok_if_empty>True</ok_if_empty>
-		      <case_sensitive>False</case_sensitive>
-		      <use_arrows>True</use_arrows>
-		      <use_arrows_always>False</use_arrows_always>
-		      <items></items>
-		      <child>
-			<padding>0</padding>
-			<expand>False</expand>
-			<fill>False</fill>
-		      </child>
 
 		      <widget>
-			<class>GtkEntry</class>
-			<child_name>GtkCombo:entry</child_name>
-			<name>combo-entry10</name>
-			<can_focus>True</can_focus>
-			<editable>True</editable>
-			<text_visible>True</text_visible>
-			<text_max_length>0</text_max_length>
-			<text></text>
+			<class>GtkCombo</class>
+			<name>videoram_combo</name>
+			<value_in_list>False</value_in_list>
+			<ok_if_empty>True</ok_if_empty>
+			<case_sensitive>False</case_sensitive>
+			<use_arrows>True</use_arrows>
+			<use_arrows_always>False</use_arrows_always>
+			<items></items>
+			<child>
+			  <padding>0</padding>
+			  <expand>False</expand>
+			  <fill>False</fill>
+			</child>
+
+			<widget>
+			  <class>GtkEntry</class>
+			  <child_name>GtkCombo:entry</child_name>
+			  <name>combo-entry10</name>
+			  <can_focus>True</can_focus>
+			  <editable>True</editable>
+			  <text_visible>True</text_visible>
+			  <text_max_length>0</text_max_length>
+			  <text></text>
+			</widget>
 		      </widget>
 		    </widget>
 		  </widget>
@@ -4752,69 +4789,16 @@
 		  <spacing>4</spacing>
 
 		  <widget>
-		    <class>GtkScrolledWindow</class>
-		    <name>monitor_swindow</name>
-		    <hscrollbar_policy>GTK_POLICY_NEVER</hscrollbar_policy>
-		    <vscrollbar_policy>GTK_POLICY_ALWAYS</vscrollbar_policy>
-		    <hupdate_policy>GTK_UPDATE_CONTINUOUS</hupdate_policy>
-		    <vupdate_policy>GTK_UPDATE_CONTINUOUS</vupdate_policy>
-		    <child>
-		      <padding>0</padding>
-		      <expand>True</expand>
-		      <fill>True</fill>
-		    </child>
-
-		    <widget>
-		      <class>GtkCList</class>
-		      <name>monitor_clist</name>
-		      <can_focus>True</can_focus>
-		      <signal>
-			<name>select_row</name>
-			<handler>select_monitor</handler>
-			<last_modification_time>Fri, 06 Jul 2001 06:30:06 GMT</last_modification_time>
-		      </signal>
-		      <columns>1</columns>
-		      <column_widths>80</column_widths>
-		      <selection_mode>GTK_SELECTION_BROWSE</selection_mode>
-		      <show_titles>True</show_titles>
-		      <shadow_type>GTK_SHADOW_IN</shadow_type>
-
-		      <widget>
-			<class>GtkLabel</class>
-			<child_name>CList:title</child_name>
-			<name>monitor_label</name>
-			<label>Select a Monitor</label>
-			<justify>GTK_JUSTIFY_CENTER</justify>
-			<wrap>False</wrap>
-			<xalign>0.5</xalign>
-			<yalign>0.5</yalign>
-			<xpad>0</xpad>
-			<ypad>0</ypad>
-		      </widget>
-		    </widget>
-		  </widget>
-
-		  <widget>
-		    <class>GtkHSeparator</class>
-		    <name>hseparator6</name>
-		    <child>
-		      <padding>0</padding>
-		      <expand>False</expand>
-		      <fill>False</fill>
-		    </child>
-		  </widget>
-
-		  <widget>
 		    <class>GtkCheckButton</class>
-		    <name>sync_button</name>
+		    <name>monitor_probe_check</name>
 		    <can_focus>True</can_focus>
 		    <signal>
 		      <name>toggled</name>
-		      <handler>toggle_sync</handler>
-		      <last_modification_time>Fri, 06 Jul 2001 15:10:24 GMT</last_modification_time>
+		      <handler>on_monitor_probe_check_toggled</handler>
+		      <last_modification_time>Sun, 04 Nov 2001 05:49:21 GMT</last_modification_time>
 		    </signal>
-		    <label>Specify hsync and vsync instead of monitor</label>
-		    <active>False</active>
+		    <label>Probe for monitor</label>
+		    <active>True</active>
 		    <draw_indicator>True</draw_indicator>
 		    <child>
 		      <padding>0</padding>
@@ -4824,170 +4808,255 @@
 		  </widget>
 
 		  <widget>
-		    <class>GtkTable</class>
-		    <name>sync_table</name>
+		    <class>GtkVBox</class>
+		    <name>monitor_vbox</name>
 		    <sensitive>False</sensitive>
-		    <rows>2</rows>
-		    <columns>3</columns>
 		    <homogeneous>False</homogeneous>
-		    <row_spacing>5</row_spacing>
-		    <column_spacing>5</column_spacing>
+		    <spacing>0</spacing>
 		    <child>
 		      <padding>0</padding>
-		      <expand>False</expand>
-		      <fill>False</fill>
+		      <expand>True</expand>
+		      <fill>True</fill>
 		    </child>
 
 		    <widget>
-		      <class>GtkEntry</class>
-		      <name>hsync_entry</name>
+		      <class>GtkScrolledWindow</class>
+		      <name>monitor_swindow</name>
+		      <hscrollbar_policy>GTK_POLICY_NEVER</hscrollbar_policy>
+		      <vscrollbar_policy>GTK_POLICY_ALWAYS</vscrollbar_policy>
+		      <hupdate_policy>GTK_UPDATE_CONTINUOUS</hupdate_policy>
+		      <vupdate_policy>GTK_UPDATE_CONTINUOUS</vupdate_policy>
+		      <child>
+			<padding>0</padding>
+			<expand>True</expand>
+			<fill>True</fill>
+		      </child>
+
+		      <widget>
+			<class>GtkCList</class>
+			<name>monitor_clist</name>
+			<can_focus>True</can_focus>
+			<signal>
+			  <name>select_row</name>
+			  <handler>select_monitor</handler>
+			  <last_modification_time>Fri, 06 Jul 2001 06:30:06 GMT</last_modification_time>
+			</signal>
+			<columns>1</columns>
+			<column_widths>80</column_widths>
+			<selection_mode>GTK_SELECTION_BROWSE</selection_mode>
+			<show_titles>True</show_titles>
+			<shadow_type>GTK_SHADOW_IN</shadow_type>
+
+			<widget>
+			  <class>GtkLabel</class>
+			  <child_name>CList:title</child_name>
+			  <name>monitor_label</name>
+			  <label>Select a Monitor</label>
+			  <justify>GTK_JUSTIFY_CENTER</justify>
+			  <wrap>False</wrap>
+			  <xalign>0.5</xalign>
+			  <yalign>0.5</yalign>
+			  <xpad>0</xpad>
+			  <ypad>0</ypad>
+			</widget>
+		      </widget>
+		    </widget>
+
+		    <widget>
+		      <class>GtkHSeparator</class>
+		      <name>hseparator6</name>
+		      <child>
+			<padding>0</padding>
+			<expand>False</expand>
+			<fill>False</fill>
+		      </child>
+		    </widget>
+
+		    <widget>
+		      <class>GtkCheckButton</class>
+		      <name>sync_button</name>
 		      <can_focus>True</can_focus>
-		      <editable>True</editable>
-		      <text_visible>True</text_visible>
-		      <text_max_length>0</text_max_length>
-		      <text></text>
+		      <signal>
+			<name>toggled</name>
+			<handler>toggle_sync</handler>
+			<last_modification_time>Fri, 06 Jul 2001 15:10:24 GMT</last_modification_time>
+		      </signal>
+		      <label>Specify hsync and vsync instead of monitor</label>
+		      <active>False</active>
+		      <draw_indicator>True</draw_indicator>
 		      <child>
-			<left_attach>1</left_attach>
-			<right_attach>2</right_attach>
-			<top_attach>0</top_attach>
-			<bottom_attach>1</bottom_attach>
-			<xpad>0</xpad>
-			<ypad>0</ypad>
-			<xexpand>True</xexpand>
-			<yexpand>False</yexpand>
-			<xshrink>False</xshrink>
-			<yshrink>False</yshrink>
-			<xfill>True</xfill>
-			<yfill>False</yfill>
+			<padding>0</padding>
+			<expand>False</expand>
+			<fill>False</fill>
 		      </child>
 		    </widget>
 
 		    <widget>
-		      <class>GtkLabel</class>
-		      <name>label112</name>
-		      <label>Hz</label>
-		      <justify>GTK_JUSTIFY_CENTER</justify>
-		      <wrap>False</wrap>
-		      <xalign>0.5</xalign>
-		      <yalign>0.5</yalign>
-		      <xpad>0</xpad>
-		      <ypad>0</ypad>
+		      <class>GtkTable</class>
+		      <name>sync_table</name>
+		      <sensitive>False</sensitive>
+		      <rows>2</rows>
+		      <columns>3</columns>
+		      <homogeneous>False</homogeneous>
+		      <row_spacing>5</row_spacing>
+		      <column_spacing>5</column_spacing>
 		      <child>
-			<left_attach>2</left_attach>
-			<right_attach>3</right_attach>
-			<top_attach>0</top_attach>
-			<bottom_attach>1</bottom_attach>
-			<xpad>0</xpad>
-			<ypad>0</ypad>
-			<xexpand>False</xexpand>
-			<yexpand>False</yexpand>
-			<xshrink>False</xshrink>
-			<yshrink>False</yshrink>
-			<xfill>False</xfill>
-			<yfill>False</yfill>
+			<padding>0</padding>
+			<expand>True</expand>
+			<fill>True</fill>
 		      </child>
-		    </widget>
 
-		    <widget>
-		      <class>GtkEntry</class>
-		      <name>vsync_entry</name>
-		      <can_focus>True</can_focus>
-		      <editable>True</editable>
-		      <text_visible>True</text_visible>
-		      <text_max_length>0</text_max_length>
-		      <text></text>
-		      <child>
-			<left_attach>1</left_attach>
-			<right_attach>2</right_attach>
-			<top_attach>1</top_attach>
-			<bottom_attach>2</bottom_attach>
-			<xpad>0</xpad>
-			<ypad>0</ypad>
-			<xexpand>True</xexpand>
-			<yexpand>False</yexpand>
-			<xshrink>False</xshrink>
-			<yshrink>False</yshrink>
-			<xfill>True</xfill>
-			<yfill>False</yfill>
-		      </child>
-		    </widget>
+		      <widget>
+			<class>GtkEntry</class>
+			<name>hsync_entry</name>
+			<can_focus>True</can_focus>
+			<editable>True</editable>
+			<text_visible>True</text_visible>
+			<text_max_length>0</text_max_length>
+			<text></text>
+			<child>
+			  <left_attach>1</left_attach>
+			  <right_attach>2</right_attach>
+			  <top_attach>0</top_attach>
+			  <bottom_attach>1</bottom_attach>
+			  <xpad>0</xpad>
+			  <ypad>0</ypad>
+			  <xexpand>True</xexpand>
+			  <yexpand>False</yexpand>
+			  <xshrink>False</xshrink>
+			  <yshrink>False</yshrink>
+			  <xfill>True</xfill>
+			  <yfill>False</yfill>
+			</child>
+		      </widget>
 
-		    <widget>
-		      <class>GtkLabel</class>
-		      <name>label114</name>
-		      <label>kHz</label>
-		      <justify>GTK_JUSTIFY_CENTER</justify>
-		      <wrap>False</wrap>
-		      <xalign>0.5</xalign>
-		      <yalign>0.5</yalign>
-		      <xpad>0</xpad>
-		      <ypad>0</ypad>
-		      <child>
-			<left_attach>2</left_attach>
-			<right_attach>3</right_attach>
-			<top_attach>1</top_attach>
-			<bottom_attach>2</bottom_attach>
+		      <widget>
+			<class>GtkLabel</class>
+			<name>label112</name>
+			<label>Hz</label>
+			<justify>GTK_JUSTIFY_CENTER</justify>
+			<wrap>False</wrap>
+			<xalign>0.5</xalign>
+			<yalign>0.5</yalign>
 			<xpad>0</xpad>
 			<ypad>0</ypad>
-			<xexpand>False</xexpand>
-			<yexpand>False</yexpand>
-			<xshrink>False</xshrink>
-			<yshrink>False</yshrink>
-			<xfill>False</xfill>
-			<yfill>False</yfill>
-		      </child>
-		    </widget>
+			<child>
+			  <left_attach>2</left_attach>
+			  <right_attach>3</right_attach>
+			  <top_attach>0</top_attach>
+			  <bottom_attach>1</bottom_attach>
+			  <xpad>0</xpad>
+			  <ypad>0</ypad>
+			  <xexpand>False</xexpand>
+			  <yexpand>False</yexpand>
+			  <xshrink>False</xshrink>
+			  <yshrink>False</yshrink>
+			  <xfill>False</xfill>
+			  <yfill>False</yfill>
+			</child>
+		      </widget>
 
-		    <widget>
-		      <class>GtkLabel</class>
-		      <name>label113</name>
-		      <label>Vertical Sync:</label>
-		      <justify>GTK_JUSTIFY_CENTER</justify>
-		      <wrap>False</wrap>
-		      <xalign>0.5</xalign>
-		      <yalign>0.5</yalign>
-		      <xpad>0</xpad>
-		      <ypad>0</ypad>
-		      <child>
-			<left_attach>0</left_attach>
-			<right_attach>1</right_attach>
-			<top_attach>1</top_attach>
-			<bottom_attach>2</bottom_attach>
-			<xpad>0</xpad>
-			<ypad>0</ypad>
-			<xexpand>False</xexpand>
-			<yexpand>False</yexpand>
-			<xshrink>False</xshrink>
-			<yshrink>False</yshrink>
-			<xfill>True</xfill>
-			<yfill>False</yfill>
-		      </child>
-		    </widget>
+		      <widget>
+			<class>GtkEntry</class>
+			<name>vsync_entry</name>
+			<can_focus>True</can_focus>
+			<editable>True</editable>
+			<text_visible>True</text_visible>
+			<text_max_length>0</text_max_length>
+			<text></text>
+			<child>
+			  <left_attach>1</left_attach>
+			  <right_attach>2</right_attach>
+			  <top_attach>1</top_attach>
+			  <bottom_attach>2</bottom_attach>
+			  <xpad>0</xpad>
+			  <ypad>0</ypad>
+			  <xexpand>True</xexpand>
+			  <yexpand>False</yexpand>
+			  <xshrink>False</xshrink>
+			  <yshrink>False</yshrink>
+			  <xfill>True</xfill>
+			  <yfill>False</yfill>
+			</child>
+		      </widget>
 
-		    <widget>
-		      <class>GtkLabel</class>
-		      <name>label111</name>
-		      <label>Horizontal Sync:</label>
-		      <justify>GTK_JUSTIFY_CENTER</justify>
-		      <wrap>False</wrap>
-		      <xalign>0.5</xalign>
-		      <yalign>0.5</yalign>
-		      <xpad>0</xpad>
-		      <ypad>0</ypad>
-		      <child>
-			<left_attach>0</left_attach>
-			<right_attach>1</right_attach>
-			<top_attach>0</top_attach>
-			<bottom_attach>1</bottom_attach>
+		      <widget>
+			<class>GtkLabel</class>
+			<name>label114</name>
+			<label>kHz</label>
+			<justify>GTK_JUSTIFY_CENTER</justify>
+			<wrap>False</wrap>
+			<xalign>0.5</xalign>
+			<yalign>0.5</yalign>
 			<xpad>0</xpad>
 			<ypad>0</ypad>
-			<xexpand>True</xexpand>
-			<yexpand>False</yexpand>
-			<xshrink>False</xshrink>
-			<yshrink>False</yshrink>
-			<xfill>False</xfill>
-			<yfill>False</yfill>
-		      </child>
+			<child>
+			  <left_attach>2</left_attach>
+			  <right_attach>3</right_attach>
+			  <top_attach>1</top_attach>
+			  <bottom_attach>2</bottom_attach>
+			  <xpad>0</xpad>
+			  <ypad>0</ypad>
+			  <xexpand>False</xexpand>
+			  <yexpand>False</yexpand>
+			  <xshrink>False</xshrink>
+			  <yshrink>False</yshrink>
+			  <xfill>False</xfill>
+			  <yfill>False</yfill>
+			</child>
+		      </widget>
+
+		      <widget>
+			<class>GtkLabel</class>
+			<name>label113</name>
+			<label>Vertical Sync:</label>
+			<justify>GTK_JUSTIFY_CENTER</justify>
+			<wrap>False</wrap>
+			<xalign>0.5</xalign>
+			<yalign>0.5</yalign>
+			<xpad>0</xpad>
+			<ypad>0</ypad>
+			<child>
+			  <left_attach>0</left_attach>
+			  <right_attach>1</right_attach>
+			  <top_attach>1</top_attach>
+			  <bottom_attach>2</bottom_attach>
+			  <xpad>0</xpad>
+			  <ypad>0</ypad>
+			  <xexpand>False</xexpand>
+			  <yexpand>False</yexpand>
+			  <xshrink>False</xshrink>
+			  <yshrink>False</yshrink>
+			  <xfill>True</xfill>
+			  <yfill>False</yfill>
+			</child>
+		      </widget>
+
+		      <widget>
+			<class>GtkLabel</class>
+			<name>label111</name>
+			<label>Horizontal Sync:</label>
+			<justify>GTK_JUSTIFY_CENTER</justify>
+			<wrap>False</wrap>
+			<xalign>0.5</xalign>
+			<yalign>0.5</yalign>
+			<xpad>0</xpad>
+			<ypad>0</ypad>
+			<child>
+			  <left_attach>0</left_attach>
+			  <right_attach>1</right_attach>
+			  <top_attach>0</top_attach>
+			  <bottom_attach>1</bottom_attach>
+			  <xpad>0</xpad>
+			  <ypad>0</ypad>
+			  <xexpand>True</xexpand>
+			  <yexpand>False</yexpand>
+			  <xshrink>False</xshrink>
+			  <yshrink>False</yshrink>
+			  <xfill>False</xfill>
+			  <yfill>False</yfill>
+			</child>
+		      </widget>
 		    </widget>
 		  </widget>
 		</widget>
@@ -6044,88 +6113,6 @@
 	  <expand>False</expand>
 	  <fill>False</fill>
 	</child>
-      </widget>
-
-      <widget>
-	<class>GtkHBox</class>
-	<name>asPrimaryNumBox</name>
-	<sensitive>False</sensitive>
-	<homogeneous>False</homogeneous>
-	<spacing>0</spacing>
-	<child>
-	  <padding>0</padding>
-	  <expand>False</expand>
-	  <fill>False</fill>
-	</child>
-
-	<widget>
-	  <class>GtkLabel</class>
-	  <name>label126</name>
-	  <label>         </label>
-	  <justify>GTK_JUSTIFY_CENTER</justify>
-	  <wrap>False</wrap>
-	  <xalign>0.5</xalign>
-	  <yalign>0.5</yalign>
-	  <xpad>0</xpad>
-	  <ypad>0</ypad>
-	  <child>
-	    <padding>0</padding>
-	    <expand>False</expand>
-	    <fill>False</fill>
-	  </child>
-	</widget>
-
-	<widget>
-	  <class>GtkCheckButton</class>
-	  <name>asPrimaryNumCheck</name>
-	  <can_focus>True</can_focus>
-	  <signal>
-	    <name>toggled</name>
-	    <handler>on_asPrimaryNumCheck_toggled</handler>
-	    <last_modification_time>Sun, 08 Jul 2001 03:27:58 GMT</last_modification_time>
-	  </signal>
-	  <label>Force as primary number (1-4):</label>
-	  <active>False</active>
-	  <draw_indicator>True</draw_indicator>
-	  <child>
-	    <padding>0</padding>
-	    <expand>False</expand>
-	    <fill>False</fill>
-	  </child>
-	</widget>
-
-	<widget>
-	  <class>GtkCombo</class>
-	  <name>asPrimaryNumCombo</name>
-	  <width>40</width>
-	  <sensitive>False</sensitive>
-	  <value_in_list>False</value_in_list>
-	  <ok_if_empty>True</ok_if_empty>
-	  <case_sensitive>False</case_sensitive>
-	  <use_arrows>True</use_arrows>
-	  <use_arrows_always>False</use_arrows_always>
-	  <items>1
-2
-3
-4
-</items>
-	  <child>
-	    <padding>0</padding>
-	    <expand>False</expand>
-	    <fill>False</fill>
-	  </child>
-
-	  <widget>
-	    <class>GtkEntry</class>
-	    <child_name>GtkCombo:entry</child_name>
-	    <name>combo-entry9</name>
-	    <can_focus>True</can_focus>
-	    <editable>True</editable>
-	    <text_visible>True</text_visible>
-	    <text_max_length>0</text_max_length>
-	    <text>1</text>
-	  </widget>
-	</widget>
       </widget>
 
       <widget>

@@ -26,7 +26,6 @@ import GtkExtra
 import string
 import checklist
 import libglade
-#import rpm
 import string
 
 
@@ -55,14 +54,14 @@ class Packages:
 
 
     def getData(self):
-        buf = ""
-        buf = buf + "\n" + "%packages"
+        data = []
+        data.append("")
+        data.append("%packages")
 
         boxes = self.list.children()
         for box in boxes:
             if box.get_active():
                 package = box.children()[0]
                 label = package.get()
-                buf = buf + "\n" + "@" + label
-
-        return buf
+                data.append("@" + label) 
+        return data

@@ -90,7 +90,7 @@ class ksconfig_gui:
 		#bring in firewall functions
 		self.firewall_class = firewall.firewall(xml)
 		#bring in X functions
-#		self.X_class = xconfig.xconfig(xml)
+		self.X_class = xconfig.xconfig(xml)
 		#bring in package function
 #		self.packages_class = packages.headerList(xml)
 		self.packages_class = packages.Packages(xml)	
@@ -171,6 +171,13 @@ class ksconfig_gui:
  		list = list + self.network_class.getData()
  		list = list + self.auth_class.getData()
  		list = list + self.firewall_class.getData()
+		list = list + self.X_class.getData()
+
+		if self.install_radiobutton.get_active():
+			list = list + self.packages_class.getData()
+
+		list = list + self.scripts_class.getData()
+
 ## 		buf = buf + self.X_class.getData()	
 ## 		#only write pkg info if performing an install	
 ## 		if self.install_radiobutton.get_active():	
