@@ -24,6 +24,7 @@ subdirs:
 install:
 	mkdir -p $(INSTROOT)/usr/sbin
 	mkdir -p $(INSTROOT)$(PKGDATADIR)
+	mkdir -p $(INSTROOT)$(PKGDATADIR)/pixmaps
 	mkdir -p $(INSTROOT)/usr/share/applications
 	install ${PKGNAME} $(INSTROOT)/usr/sbin/${PKGNAME}
 	install src/*.py $(INSTROOT)$(PKGDATADIR)
