@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: ksconfig 1.92\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-12-01 11:27-0500\n"
-"PO-Revision-Date: 2003-08-29 18:25+0200\n"
+"PO-Revision-Date: 2003-12-18 00:22+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnu.org>\n"
 "Language-Team: Norwegian <no@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -133,9 +133,8 @@ msgid "Trusted devices:"
 msgstr "Enheter vi stoler på:"
 
 #: ../src/firewall.py:82
-#, fuzzy
 msgid "Trusted services:"
-msgstr "Enheter vi stoler på:"
+msgstr "Tjenester vi stoler på:"
 
 #: ../src/firewall.py:114
 msgid "Other ports: (1029:tcp)"
@@ -831,7 +830,6 @@ msgstr "RAID-enheter"
 #. # I18N
 #. #
 #: ../src/system-config-kickstart.py:60
-#, fuzzy
 msgid ""
 "Usage: system-config-kickstart [--help] [--generate <filename>] "
 "[<kickstart_filename>]\n"
@@ -847,14 +845,12 @@ msgid ""
 "values from\n"
 "                        the kickstart file already filled in."
 msgstr ""
-"Bruk: redhat-config-kickstart [--help] [--generate <filnavn>]\n"
+"Bruk: system-config-kickstart [--help] [--generate <filnavn>]\n"
 "[<kickstart_filnavn>]\n"
 "\n"
 "--help                  Skriv ut denne meldingen\n"
-"--generate <filnavn>    Generer en kickstart-fil fra denne maskinen og skriv "
-"den\n"
-"                        til <filnavn>. Dette alternativet kan brukes fra "
-"konsollet\n"
+"--generate <filnavn>    Generer en kickstart-fil fra denne maskinen og skriv den\n"
+"                        til <filnavn>. Dette alternativet kan brukes fra konsollet\n"
 "                        så det er nyttig for tjenere hvor X ikke kjører\n"
 "<kickstart_filnavn>     Dette lar deg starte GUI'et med data fra filen"
 
@@ -863,11 +859,8 @@ msgid "Could not open display because no X server is running."
 msgstr "Kunne ikke åpne skjerm fordi ingen X-tjener kjører."
 
 #: ../src/system-config-kickstart.py:78
-#, fuzzy
 msgid "Try running 'system-config-kickstart --help' for a list of options."
-msgstr ""
-"Prøv å kjøre «redhat-config-kickstart --help» for å få en liste med "
-"alternativer."
+msgstr "Prøv å kjøre «system-config-kickstart --help» for å få en liste med alternativer."
 
 #. !/usr/bin/python2
 #. !/usr/bin/python2
@@ -1709,7 +1702,7 @@ msgstr "Søk etter skjerm"
 
 #: system-config-kickstart.gladestrings:240
 msgid "Use custom monitor sync rates"
-msgstr ""
+msgstr "Bruk egendefinerte synkroniseringsrater for skjerm"
 
 #: system-config-kickstart.gladestrings:242
 msgid "Hz"
@@ -1911,15 +1904,3 @@ msgstr "Navnetjener:"
 #: system-config-kickstart.gladestrings:315
 msgid "."
 msgstr "."
-
-#~ msgid "Specify hsync and vsync instead of monitor"
-#~ msgstr "Spesifiser hsync og vsync i stedet for skjerm"
-
-#~ msgid "Allow incoming:"
-#~ msgstr "Tillat innkommende:"
-
-#~ msgid "Use default firewall rules"
-#~ msgstr "Bruk standard brannveggregler"
-
-#~ msgid "Select the default firewall level:"
-#~ msgstr "Velg forvalgt brannveggnivå:"
