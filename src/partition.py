@@ -179,10 +179,10 @@ class partition:
         print part_object.isRaidDevice
 
         if part_object.isRaidDevice:
-            print "it's a raid device"
-            self.raidWindow.editDevice(part_object)
+            self.raidWindow.editDevice(iter, part_object)
         else:
             self.partWindow.edit_partition(iter)
+
         self.part_view.get_selection().unselect_all()
 
     def raidPartition(self, *args):
