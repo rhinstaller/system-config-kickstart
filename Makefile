@@ -34,7 +34,7 @@ install:
 	install src/${PKGNAME}-gtk2.glade $(INSTROOT)$(PKGDATADIR)
 	mkdir -p $(INSTROOT)$(DESKTOPDIR)
 	install -m 644 ${PKGNAME}.desktop $(INSTROOT)$(DESKTOPDIR)
-	ln -sf $(INSTROOT)/usr/sbin/${PKGNAME} $(INSTROOT)/usr/sbin/ksconfig
+	ln -sf $(INSTROOT)/usr/sbin/${PKGNAME} /usr/sbin/ksconfig
 	for d in $(SUBDIRS); do \
 	(cd $$d; $(MAKE) INSTROOT=$(INSTROOT) MANDIR=$(MANDIR) install) \
 		|| case "$(MFLAGS)" in *k*) fail=yes;; *) exit 1;; esac; \
