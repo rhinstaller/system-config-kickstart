@@ -98,16 +98,21 @@ class partWindow:
             self.mountPointCombo.set_sensitive(gtk.FALSE)
             self.formatCheck.set_sensitive(gtk.FALSE)
             self.swap_checkbutton.set_sensitive(gtk.TRUE)
-        elif index == "raid":
-            self.mountPointCombo.set_sensitive(gtk.FALSE)
-            self.formatCheck.set_sensitive(gtk.FALSE)
-        elif index == "lvm":
-            self.mountPointCombo.set_sensitive(gtk.FALSE)
-            self.formatCheck.set_sensitive(gtk.TRUE)
+            if self.swap_checkbutton.get_active() == gtk.TRUE:
+                self.sizeOptionsTable.set_sensitive(gtk.FALSE)
         else:
-            self.mountPointCombo.set_sensitive(gtk.TRUE)
-            self.formatCheck.set_sensitive(gtk.TRUE)
             self.swap_checkbutton.set_sensitive(gtk.FALSE)
+            self.sizeOptionsTable.set_sensitive(gtk.TRUE)
+
+            if index == "raid":
+                self.mountPointCombo.set_sensitive(gtk.FALSE)
+                self.formatCheck.set_sensitive(gtk.FALSE)
+            elif index == "lvm":
+                self.mountPointCombo.set_sensitive(gtk.FALSE)
+                self.formatCheck.set_sensitive(gtk.TRUE)
+            else:
+                self.mountPointCombo.set_sensitive(gtk.TRUE)
+                self.formatCheck.set_sensitive(gtk.TRUE)
 
     def on_sizeSetRadio_toggled(self, *args):
         self.sizeSetCombo.set_sensitive(self.sizeSetRadio.get_active())
@@ -280,6 +285,7 @@ class partWindow:
 
     def on_swap_recommended_toggled(self, *args):
         active = self.swap_checkbutton.get_active()
+        self.sizeCombo.set_sensitive(not active)
         self.sizeOptionsTable.set_sensitive(not active)
 
     def getData(self, part_object):
