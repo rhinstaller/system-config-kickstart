@@ -50,11 +50,15 @@ fi
 /usr/sbin/ksconfig
 %dir /usr/share/%{name}
 /usr/share/%{name}/*
+/usr/share/%{name}/pixmaps/%{name}.png
 %{_mandir}/man8/%{name}*
 %lang(ja) %{_mandir}/ja/man8/%{name}*
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Wed Aug 14 2002 Tammy Fox <tfox@redhat.com> 2.3.2-15
+- new icon from garrett
+
 * Wed Aug 14 2002 Brent Fox <bfox@redhat.com> 2.3.2-14
 - Rebuild with the latest docs and translations
 

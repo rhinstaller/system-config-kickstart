@@ -58,7 +58,7 @@ _=gettext.gettext
 
 iconPixbuf = None      
 try:
-	iconPixbuf = gtk.gdk.pixbuf_new_from_file("/usr/share/pixmaps/redhat/shadowman-round-48.png")
+	iconPixbuf = gtk.gdk.pixbuf_new_from_file("/usr/share/redhat-config-kickstart/pixmaps/redhat-config-kickstart.png")
 except:
 	pass
 
