@@ -26,13 +26,16 @@ class KickstartData:
         self.auth = None
         self.firewall = None
         self.skipx = None
-        self.packages = None
+        self.package = None
         self.pre = None
         self.post = None
         self.upgrade = None
         self.xconfig = None
         self.partList = []
         self.raidList = []
+        self.packageList = []
+        self.preList = []
+        self.postList = []
 
     def setLang(self, args):
         self.lang = args[0]
@@ -261,6 +264,18 @@ class KickstartData:
     def getXconfig(self):
         return self.xconfig
 
+    def setPackage(self, args):
+        self.package = args
+
+    def getPackage(self):
+        return self.package
+
+    def setPackageList(self, args):
+        self.packageList = args
+
+    def getPackageList(self):
+        return self.packageList
+
     def getAll(self):
         print "in getAll\n\n"
         file = []
@@ -365,6 +380,14 @@ class KickstartData:
         if self.getSkipX():
             file.append("#Do not configure XWindows")
             file.append("skipx")
+
+        if self.getPackage():
+            file.append("#Package install information")
+            file.append("%packages --" + string.join(self.getPackage(), " "))
+
+            if self.getPackageList() != []:
+                for package in self.getPackageList():
+                    file.append("@ %s" % package)
 
         for line in file:
             print line
