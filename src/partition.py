@@ -71,27 +71,10 @@ class partition:
         col = gtk.TreeViewColumn(_("Device"), gtk.CellRendererText(), text=3)
         self.part_view.append_column(col)
 
-        #temp until edit partitions finished
+        #initialize the child classes
         self.partWindow = partWindow.partWindow(self.xml, self.part_store, self.part_view)
 #        self.raidWindow = raidWindow.raidWindow(self.xml, self.part_view)
 
-
-
-#        self.xml.signal_autoconnect (
-#            { "select_clist" : self.select_clist,
-#              "unselect_clist" : self.unselect_clist,
-#              "addPartition" : self.addPartition,
-#              "editPartition" : self.editPartition,
-#              "delPartition" : self.delPartition,
-#              "raidPartition" : self.raidPartition, 
-#              })
-
-#    def select_clist(self, r, c, event):
-#    def select_clist(self, *args ):
-#        widget, r, c, event = args
-#        self.selected_row = r
-#        self.edit_part_button.set_sensitive(gtk.TRUE)
-#        self.del_part_button.set_sensitive(gtk.TRUE)
 
     def delPartition(self, *args):
         data, iter = self.part_view.get_selection().get_selected()
@@ -146,12 +129,12 @@ class partition:
 
         #partitioning table options
 #        num_raid = 0
-        for row in range(self.num_rows):
-            rowData = self.partClist.get_row_data(row)
-            (mountPoint, fsType, size, fixedSize, setSize,
-             setSizeVal, maxSize, asPrimary, 
-             onDisk, onDiskVal, onPart, onPartVal,
-             doFormat, raidType, raidSpares, isRaidDevice) = rowData
+
+        next = 1
+        iter = self.part_store.get_iter_root()
+
+        while next:
+            part_object = self.part_store.get_value(iter, 4)
 
 ##             if fsType == "RAID":
 ##                 num_raid = num_raid + 1
@@ -163,38 +146,39 @@ class partition:
 ##                 buf = buf + "\n" + "part %s " % (mountPoint)
 ##                 buf = buf + "--fstype " + fsType + " " 
 
-            buf = "part %s " % (mountPoint)
+            buf = "part %s " % (part_object.mountPoint)
 
-            if fsType == "swap":
+            if part_object.fsType == "swap":
                 buf = buf + "swap "
             else:
-                buf = buf + "--fstype " + fsType + " " 
-
-            if size == "recommended":
+                buf = buf + "--fstype " + part_object.fsType + " " 
+                
+            if part_object.size == "recommended":
                 buf = buf + "--recommended"
             else:
-                buf = buf + "--size %s " % (size)
+                buf = buf + "--size %s " % (part_object.size)
 
-            if setSize:
-                buf = buf + "--grow --maxsize %s " % (setSizeVal)
-            elif maxSize:
+            if part_object.sizeStrategy == "grow":
+                buf = buf + "--grow --maxsize %s " % (part_object.setSizeVal)
+            elif part_object.sizeStrategy == "max":
                 buf = buf + "--grow "
 
-            if asPrimary:
+            if part_object.asPrimary:
                 buf = buf + "--asprimary "
 
 #            if asPrimaryNum:
 #                buf = buf + "--onprimary %s " % (asPrimaryVal)
 
-            if onDisk:
-                buf = buf + "--ondisk %s " % (onDiskVal)
+            if part_object.onDisk:
+                buf = buf + "--ondisk %s " % (part_object.onDiskVal)
 
-            if onPart:
-                buf = buf + "--onpart %s " % (onPartVal)
+            if part_object.onPart:
+                buf = buf + "--onpart %s " % (part_object.onPartVal)
 
-            if not doFormat:
+            if not part_object.doFormat:
                 buf = buf + "--noformat "
 
             data.append(buf)
+            next = self.part_store.iter_next(iter)
 
         return data
