@@ -35,26 +35,30 @@ class saveDialog:
         def __init__ (self, dataList, xml):
 		self.xml = xml
 		self.dataList = dataList
-		self.dialog = self.xml.get_widget("save_dialog")
+		self.dialog = self.xml.get_widget("save_dialog")		
+		self.save_ok_button = self.xml.get_widget("save_ok_button")
+		self.save_cancel_button = self.xml.get_widget("save_cancel_button")
+
 		self.dialog.set_filename("ks.cfg")
-		self.dialog.cancel_button.connect("clicked",self.dialog.hide)
+
 		self.dialog.filePath= ""
 		self.dialog.connect ("destroy", self.destroy)
 		
-                #extract widgets, autoconnects
-		self.xml.signal_autoconnect (
-			{ "saveFile" : self.saveFile,
-			  } )
+		self.save_ok_button.connect("clicked", self.saveFile)
+		self.save_cancel_button.connect("clicked", self.hide)
 
 		self.dialog.show_all()
 
 
 	#save file
-        def saveFile(self, *args):
+        def saveFile(self, *args):		
 		self.dialog.filePath = self.dialog.get_filename()
 		ksFile = open(self.dialog.filePath, "w")
 		for line in self.dataList:
 			ksFile.write(line + "\n")
  
 		ksFile.close()
+		self.dialog.hide()
+
+	def hide(self, *args):
 		self.dialog.hide()

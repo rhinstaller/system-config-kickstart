@@ -61,10 +61,12 @@ class install:
 
         self.install_notebook = xml.get_widget("install_notebook")
         
-        xml.signal_autoconnect (
-            { "setState" : self.setState,
-              "toggleInstall" : self.toggleInstall,
-              } )
+        self.install_radiobutton.connect("toggled", self.toggleInstall)
+        self.cdrom_radiobutton.connect("toggled", self.setState)
+        self.nfs_radiobutton.connect("toggled", self.setState)
+        self.ftp_radiobutton.connect("toggled", self.setState)
+        self.http_radiobutton.connect("toggled", self.setState)
+        self.hd_radiobutton.connect("toggled", self.setState)
 
     def toggleInstall (self, args):
         #gray out package selection and partitions if upgrade

@@ -38,14 +38,13 @@ class saveFile:
 		self.buf = buf
 		self.dialog = self.xml.get_widget("confirm_options_dialog")
 		self.textview = self.xml.get_widget("confirm_options_textview")
-		self.dialog.connect ("destroy", self.destroy)
-		
-                #extract widgets, autoconnects
-		self.xml.signal_autoconnect (
-			{ "on_confirm_options_cancel_button" : self.on_confirm_options_cancel_button,
-			  "saveFile_cb" : self.saveFile_cb,
-			  } )
+		self.confirm_options_ok_button = xml.get_widget("confirm_options_ok_button")
+		self.confirm_options_cancel_button = xml.get_widget("confirm_options_cancel_button")
 
+		self.dialog.connect ("destroy", self.destroy)
+		self.confirm_options_ok_button.connect("clicked", self.saveFile_cb)
+		self.confirm_options_cancel_button.connect("clicked", self.on_confirm_options_cancel_button)
+		
 		#display choosen options in textview
 		self.confirm_buffer = gtk.TextBuffer(None)
 		iter = self.confirm_buffer.get_iter_at_offset (0)

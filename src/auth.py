@@ -277,16 +277,6 @@ class auth:
         self.kerberosCheck.connect("toggled", self.enableKerberos)
         self.hesiodCheck.connect("toggled", self.enableHesiod)
         self.sambaCheck.connect("toggled", self.enableSamba)
-#        xml.signal_connect("enableSamba", self.enableSamba)
-
-##         xml.signal_autoconnect (
-##             { "enableNIS" : self.enableNIS,
-##               "BroadcastCheck_cb" : self.BroadcastCheck_cb,
-##               "enableLDAP" : self.enableLDAP,
-##               "enableHesiod" : self.enableHesiod,
-##               "enableKerberos" : self.enableKerberos,
-##  #             "enableSamba" : self.enableSamba,
-##             } )
 
     def enableNIS(self, args):
         self.nisDomainLabel.set_sensitive(self.nisCheck.get_active())

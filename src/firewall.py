@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python2.2
 
 ## Kickstart Configurator - A graphical kickstart file generator
 ## Copyright (C) 2000, 2001, 2002 Red Hat, Inc.
@@ -51,10 +51,8 @@ class firewall:
         self.customFrame = xml.get_widget("customFrame")
         self.customizeRadio = xml.get_widget("firewallCustomizeRadio")
 
-        xml.signal_autoconnect (
-            { "disable_firewall" : self.disable_firewall,
-              "enable_custom" : self.enable_custom,
-              })
+        self.securityNoneRadio.connect("toggled", self.disable_firewall)
+        self.customizeRadio.connect("toggled", self.enable_custom)
 
         #create table with custom checklists
         self.label1 = gtk.Label (_("Trusted devices:"))

@@ -14,7 +14,7 @@
   <property name="show_fileops">True</property>
 
   <child internal-child="cancel_button">
-    <widget class="GtkButton" id="cancel_button1">
+    <widget class="GtkButton" id="save_cancel_button">
       <property name="visible">True</property>
       <property name="can_default">True</property>
       <property name="can_focus">True</property>
@@ -23,12 +23,11 @@
   </child>
 
   <child internal-child="ok_button">
-    <widget class="GtkButton" id="ok_button1">
+    <widget class="GtkButton" id="save_ok_button">
       <property name="visible">True</property>
       <property name="can_default">True</property>
       <property name="can_focus">True</property>
       <property name="relief">GTK_RELIEF_NORMAL</property>
-      <signal name="clicked" handler="saveFile"/>
     </widget>
   </child>
 </widget>
@@ -42,7 +41,6 @@
   <property name="resizable">True</property>
   <property name="destroy_with_parent">False</property>
   <property name="has_separator">True</property>
-  <signal name="close" handler="on_cancel_part_button_clicked"/>
 
   <child internal-child="vbox">
     <widget class="GtkVBox" id="dialog-vbox2">
@@ -59,7 +57,7 @@
 	  <property name="spacing">10</property>
 
 	  <child>
-	    <widget class="GtkButton" id="cancel_part_button">
+	    <widget class="GtkButton" id="part_cancel_button">
 	      <property name="visible">True</property>
 	      <property name="can_default">True</property>
 	      <property name="can_focus">True</property>
@@ -67,12 +65,11 @@
 	      <property name="use_stock">True</property>
 	      <property name="relief">GTK_RELIEF_NORMAL</property>
 	      <property name="response_id">0</property>
-	      <signal name="clicked" handler="on_cancel_part_button_clicked"/>
 	    </widget>
 	  </child>
 
 	  <child>
-	    <widget class="GtkButton" id="ok_part_button">
+	    <widget class="GtkButton" id="part_ok_button">
 	      <property name="visible">True</property>
 	      <property name="can_default">True</property>
 	      <property name="can_focus">True</property>
@@ -80,7 +77,6 @@
 	      <property name="use_stock">True</property>
 	      <property name="relief">GTK_RELIEF_NORMAL</property>
 	      <property name="response_id">0</property>
-	      <signal name="clicked" handler="on_ok_button_clicked"/>
 	    </widget>
 	  </child>
 	</widget>
@@ -176,7 +172,6 @@
 		  <property name="case_sensitive">False</property>
 		  <property name="enable_arrow_keys">True</property>
 		  <property name="enable_arrows_always">False</property>
-		  <signal name="set_focus_child" handler="on_fsTypeCombo_set_focus_child"/>
 
 		  <child internal-child="entry">
 		    <widget class="GtkEntry" id="fsTypeEntry">
@@ -402,7 +397,6 @@
 		      <property name="inconsistent">False</property>
 		      <property name="draw_indicator">True</property>
 		      <property name="group">sizeMaxRadio</property>
-		      <signal name="toggled" handler="on_sizeSetRadio_toggled"/>
 		    </widget>
 		    <packing>
 		      <property name="left_attach">0</property>
@@ -475,7 +469,6 @@
 	      <property name="active">False</property>
 	      <property name="inconsistent">False</property>
 	      <property name="draw_indicator">True</property>
-	      <signal name="toggled" handler="on_asPrimaryCheck_toggled"/>
 	    </widget>
 	    <packing>
 	      <property name="padding">5</property>
@@ -495,7 +488,6 @@
 	      <property name="active">False</property>
 	      <property name="inconsistent">False</property>
 	      <property name="draw_indicator">True</property>
-	      <signal name="toggled" handler="on_onDiskCheck_toggled"/>
 	    </widget>
 	    <packing>
 	      <property name="padding">0</property>
@@ -589,7 +581,6 @@
 	      <property name="active">False</property>
 	      <property name="inconsistent">False</property>
 	      <property name="draw_indicator">True</property>
-	      <signal name="toggled" handler="on_onPartCheck_toggled"/>
 	    </widget>
 	    <packing>
 	      <property name="padding">0</property>
@@ -710,7 +701,6 @@
   <property name="resizable">True</property>
   <property name="destroy_with_parent">False</property>
   <property name="has_separator">True</property>
-  <signal name="close" handler="on_raid_cancel_button_clicked"/>
 
   <child internal-child="vbox">
     <widget class="GtkVBox" id="dialog-vbox3">
@@ -735,7 +725,6 @@
 	      <property name="use_stock">True</property>
 	      <property name="relief">GTK_RELIEF_NORMAL</property>
 	      <property name="response_id">0</property>
-	      <signal name="clicked" handler="on_raid_cancel_button_clicked"/>
 	    </widget>
 	  </child>
 
@@ -748,7 +737,6 @@
 	      <property name="use_stock">True</property>
 	      <property name="relief">GTK_RELIEF_NORMAL</property>
 	      <property name="response_id">0</property>
-	      <signal name="clicked" handler="on_raid_ok_button_clicked"/>
 	    </widget>
 	  </child>
 	</widget>
@@ -1176,15 +1164,14 @@
 		<widget class="GtkMenu" id="file2_menu">
 
 		  <child>
-		    <widget class="GtkImageMenuItem" id="save_file">
+		    <widget class="GtkImageMenuItem" id="save_menu">
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">_Save File</property>
 		      <property name="use_underline">True</property>
-		      <signal name="activate" handler="on_activate_confirm_options" last_modification_time="Wed, 05 Jun 2002 02:42:47 GMT"/>
 		      <accelerator key="S" modifiers="GDK_CONTROL_MASK" signal="activate"/>
 
 		      <child internal-child="image">
-			<widget class="GtkImage" id="image37">
+			<widget class="GtkImage" id="image45">
 			  <property name="visible">True</property>
 			  <property name="stock">gtk-save-as</property>
 			  <property name="icon_size">1</property>
@@ -1198,15 +1185,14 @@
 		  </child>
 
 		  <child>
-		    <widget class="GtkImageMenuItem" id="quit">
+		    <widget class="GtkImageMenuItem" id="quit_menu">
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">_Quit</property>
 		      <property name="use_underline">True</property>
-		      <signal name="activate" handler="on_exit_activate" last_modification_time="Wed, 05 Jun 2002 02:16:52 GMT"/>
 		      <accelerator key="Q" modifiers="GDK_CONTROL_MASK" signal="activate"/>
 
 		      <child internal-child="image">
-			<widget class="GtkImage" id="image38">
+			<widget class="GtkImage" id="image46">
 			  <property name="visible">True</property>
 			  <property name="stock">gtk-quit</property>
 			  <property name="icon_size">1</property>
@@ -1233,15 +1219,14 @@
 		<widget class="GtkMenu" id="help2_menu">
 
 		  <child>
-		    <widget class="GtkImageMenuItem" id="help3">
+		    <widget class="GtkImageMenuItem" id="help_menu">
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">_Help</property>
 		      <property name="use_underline">True</property>
-		      <signal name="activate" handler="on_help_button_clicked" last_modification_time="Wed, 05 Jun 2002 03:05:20 GMT"/>
 		      <accelerator key="H" modifiers="GDK_CONTROL_MASK" signal="activate"/>
 
 		      <child internal-child="image">
-			<widget class="GtkImage" id="image39">
+			<widget class="GtkImage" id="image47">
 			  <property name="visible">True</property>
 			  <property name="stock">gtk-help</property>
 			  <property name="icon_size">1</property>
@@ -1255,14 +1240,13 @@
 		  </child>
 
 		  <child>
-		    <widget class="GtkImageMenuItem" id="about">
+		    <widget class="GtkImageMenuItem" id="about_menu">
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">_About</property>
 		      <property name="use_underline">True</property>
-		      <signal name="activate" handler="on_about_activate" last_modification_time="Wed, 05 Jun 2002 02:13:16 GMT"/>
 
 		      <child internal-child="image">
-			<widget class="GtkImage" id="image40">
+			<widget class="GtkImage" id="image48">
 			  <property name="visible">True</property>
 			  <property name="stock">gnome-stock-about</property>
 			  <property name="icon_size">1</property>
@@ -1315,7 +1299,6 @@
 		      <property name="rules_hint">False</property>
 		      <property name="reorderable">False</property>
 		      <property name="enable_search">True</property>
-		      <signal name="cursor_changed" handler="on_list_view_row_activated" last_modification_time="Tue, 04 Jun 2002 20:44:37 GMT"/>
 		    </widget>
 		  </child>
 		</widget>
@@ -1329,8 +1312,7 @@
 	      <child>
 		<widget class="GtkNotebook" id="options_notebook">
 		  <property name="visible">True</property>
-		  <property name="can_focus">True</property>
-		  <property name="show_tabs">True</property>
+		  <property name="show_tabs">False</property>
 		  <property name="show_border">False</property>
 		  <property name="tab_pos">GTK_POS_TOP</property>
 		  <property name="scrollable">False</property>
@@ -1381,7 +1363,6 @@
 				      <property name="has_frame">True</property>
 				      <property name="invisible_char" translatable="yes">*</property>
 				      <property name="activates_default">False</property>
-				      <signal name="changed" handler="on_lang_entry_changed"/>
 				    </widget>
 				  </child>
 
@@ -2482,7 +2463,6 @@
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
-				  <signal name="toggled" handler="toggleInstall"/>
 				</widget>
 				<packing>
 				  <property name="padding">0</property>
@@ -2565,7 +2545,6 @@
 				  <property name="active">True</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
-				  <signal name="toggled" handler="setState"/>
 				</widget>
 				<packing>
 				  <property name="padding">0</property>
@@ -2585,7 +2564,6 @@
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
 				  <property name="group">cdrom_radiobutton</property>
-				  <signal name="toggled" handler="setState"/>
 				</widget>
 				<packing>
 				  <property name="padding">0</property>
@@ -2605,7 +2583,6 @@
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
 				  <property name="group">cdrom_radiobutton</property>
-				  <signal name="toggled" handler="disableHTTP"/>
 				</widget>
 				<packing>
 				  <property name="padding">0</property>
@@ -2625,7 +2602,6 @@
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
 				  <property name="group">cdrom_radiobutton</property>
-				  <signal name="toggled" handler="setState"/>
 				</widget>
 				<packing>
 				  <property name="padding">0</property>
@@ -2645,7 +2621,6 @@
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
 				  <property name="group">cdrom_radiobutton</property>
-				  <signal name="toggled" handler="setState"/>
 				</widget>
 				<packing>
 				  <property name="padding">0</property>
@@ -3595,7 +3570,6 @@
 				  <property name="label" translatable="yes">_Add</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
-				  <signal name="clicked" handler="addPartition"/>
 				</widget>
 				<packing>
 				  <property name="padding">0</property>
@@ -3612,7 +3586,6 @@
 				  <property name="label" translatable="yes">_Edit</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
-				  <signal name="clicked" handler="editPartition"/>
 				</widget>
 				<packing>
 				  <property name="padding">0</property>
@@ -3629,7 +3602,6 @@
 				  <property name="label" translatable="yes">_Delete</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
-				  <signal name="clicked" handler="delPartition"/>
 				</widget>
 				<packing>
 				  <property name="padding">0</property>
@@ -3762,7 +3734,6 @@
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
 				  <property name="group">dhcp_radiobutton</property>
-				  <signal name="toggled" handler="toggleIP"/>
 				</widget>
 				<packing>
 				  <property name="padding">0</property>
@@ -5382,7 +5353,6 @@
 					  <property name="active">False</property>
 					  <property name="inconsistent">False</property>
 					  <property name="draw_indicator">True</property>
-					  <signal name="toggled" handler="enableHesiod"/>
 					</widget>
 					<packing>
 					  <property name="padding">0</property>
@@ -5943,7 +5913,6 @@
 				      <property name="inconsistent">False</property>
 				      <property name="draw_indicator">True</property>
 				      <property name="group">securityHighRadio</property>
-				      <signal name="toggled" handler="disable_firewall"/>
 				    </widget>
 				    <packing>
 				      <property name="padding">0</property>
@@ -6022,7 +5991,6 @@
 				      <property name="inconsistent">False</property>
 				      <property name="draw_indicator">True</property>
 				      <property name="group">firewallDefaultRadio</property>
-				      <signal name="toggled" handler="enable_custom"/>
 				    </widget>
 				    <packing>
 				      <property name="padding">0</property>
@@ -6174,7 +6142,6 @@
 			      <property name="active">False</property>
 			      <property name="inconsistent">False</property>
 			      <property name="draw_indicator">True</property>
-			      <signal name="toggled" handler="toggleXconfig"/>
 			    </widget>
 			    <packing>
 			      <property name="padding">0</property>
@@ -6558,7 +6525,6 @@
 				      <property name="active">True</property>
 				      <property name="inconsistent">False</property>
 				      <property name="draw_indicator">True</property>
-				      <signal name="toggled" handler="on_card_probe_check_toggled"/>
 				    </widget>
 				    <packing>
 				      <property name="padding">0</property>
@@ -6743,7 +6709,6 @@
 				      <property name="active">True</property>
 				      <property name="inconsistent">False</property>
 				      <property name="draw_indicator">True</property>
-				      <signal name="toggled" handler="on_monitor_probe_check_toggled"/>
 				    </widget>
 				    <packing>
 				      <property name="padding">0</property>
@@ -6807,7 +6772,6 @@
 					  <property name="active">False</property>
 					  <property name="inconsistent">False</property>
 					  <property name="draw_indicator">True</property>
-					  <signal name="toggled" handler="toggle_sync"/>
 					</widget>
 					<packing>
 					  <property name="padding">0</property>
@@ -7402,7 +7366,6 @@
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
-				  <signal name="toggled" handler="interpreter_cb"/>
 				</widget>
 				<packing>
 				  <property name="padding">0</property>
@@ -7577,7 +7540,6 @@
 		  <property name="can_default">True</property>
 		  <property name="can_focus">True</property>
 		  <property name="relief">GTK_RELIEF_NORMAL</property>
-		  <signal name="clicked" handler="on_activate_confirm_options"/>
 
 		  <child>
 		    <widget class="GtkAlignment" id="alignment2">
@@ -7645,7 +7607,6 @@
 		  <property name="label">gtk-cancel</property>
 		  <property name="use_stock">True</property>
 		  <property name="relief">GTK_RELIEF_NORMAL</property>
-		  <signal name="clicked" handler="on_cancel_button_clicked"/>
 		</widget>
 	      </child>
 
@@ -7657,7 +7618,6 @@
 		  <property name="label">gtk-help</property>
 		  <property name="use_stock">True</property>
 		  <property name="relief">GTK_RELIEF_NORMAL</property>
-		  <signal name="clicked" handler="on_help_button_clicked"/>
 		</widget>
 	      </child>
 	    </widget>
@@ -7680,7 +7640,7 @@
 
 <widget class="GtkDialog" id="confirm_options_dialog">
   <property name="title" translatable="yes">b</property>
-  <property name="type">GTK_WINDOW_POPUP</property>
+  <property name="type">GTK_WINDOW_TOPLEVEL</property>
   <property name="window_position">GTK_WIN_POS_CENTER</property>
   <property name="modal">True</property>
   <property name="default_width">350</property>
@@ -7712,7 +7672,6 @@
 	      <property name="use_stock">True</property>
 	      <property name="relief">GTK_RELIEF_NORMAL</property>
 	      <property name="response_id">-6</property>
-	      <signal name="clicked" handler="on_confirm_options_cancel_button" last_modification_time="Wed, 05 Jun 2002 03:44:43 GMT"/>
 	    </widget>
 	  </child>
 
@@ -7723,7 +7682,6 @@
 	      <property name="can_focus">True</property>
 	      <property name="relief">GTK_RELIEF_NORMAL</property>
 	      <property name="response_id">-5</property>
-	      <signal name="clicked" handler="saveFile_cb" last_modification_time="Wed, 05 Jun 2002 04:14:21 GMT"/>
 
 	      <child>
 		<widget class="GtkAlignment" id="alignment3">

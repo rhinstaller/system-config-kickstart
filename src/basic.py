@@ -238,10 +238,10 @@ class basic:
         timezone_combo.entry.set_editable(gtk.FALSE)		
 
         #bring in signals from glade file
-        xml.signal_autoconnect (
-                { "on_lang_support_list_select_row" : self.on_lang_support_list_select_row,
-                  "on_lang_support_list_unselect_row" : self.on_lang_support_list_unselect_row,
-                  } )
+#        xml.signal_autoconnect (
+#                { "on_lang_support_list_select_row" : self.on_lang_support_list_select_row,
+#                  "on_lang_support_list_unselect_row" : self.on_lang_support_list_unselect_row,
+#                  } )
 
     def on_lang_support_list_select_row(self, *args):
         self.langSupportList.append(self.langDict[self.lang_support_list.get_text(args[1], args[2])])

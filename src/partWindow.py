@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2.2
 
 ## partWindow - event handling code for ksconfig's partitioning dialog
 ## Copyright (C) 2001, 2002 Red Hat, Inc.
@@ -30,36 +30,32 @@ import signal
 
 class partWindow:
     def __init__(self, xml, partClist):
-        self.xml = xml
         self.partClist = partClist
-        self.partitionDialog = self.xml.get_widget("partition_dialog")
-        self.mountPointCombo = self.xml.get_widget("mountPointCombo")
-        self.fsTypeCombo = self.xml.get_widget("fsTypeCombo")
-        self.sizeCombo = self.xml.get_widget("sizeCombo")
-        self.asPrimaryCheck = self.xml.get_widget("asPrimaryCheck")
-        self.onDiskCheck = self.xml.get_widget("onDiskCheck")
-        self.onDiskEntry = self.xml.get_widget("onDiskEntry")
-        self.onDiskBox = self.xml.get_widget("onDiskBox")
-        self.onPartCheck = self.xml.get_widget("onPartCheck")
-        self.onPartEntry = self.xml.get_widget("onPartEntry")
-        self.onPartBox = self.xml.get_widget("onPartBox")
-        self.sizeFixedRadio = self.xml.get_widget("sizeFixedRadio")
-        self.sizeSetRadio = self.xml.get_widget("sizeSetRadio")
-        self.sizeMaxRadio = self.xml.get_widget("sizeMaxRadio")
-        self.maxSizeCombo = self.xml.get_widget("maxSizeCombo")
-        self.formatCheck = self.xml.get_widget("formatCheck")
-
-        self.ok_button = self.xml.get_widget("ok_part_button")
+        self.partitionDialog = xml.get_widget("partition_dialog")
+        self.mountPointCombo = xml.get_widget("mountPointCombo")
+        self.fsTypeCombo = xml.get_widget("fsTypeCombo")
+        self.sizeCombo = xml.get_widget("sizeCombo")
+        self.asPrimaryCheck = xml.get_widget("asPrimaryCheck")
+        self.onDiskCheck = xml.get_widget("onDiskCheck")
+        self.onDiskEntry = xml.get_widget("onDiskEntry")
+        self.onDiskBox = xml.get_widget("onDiskBox")
+        self.onPartCheck = xml.get_widget("onPartCheck")
+        self.onPartEntry = xml.get_widget("onPartEntry")
+        self.onPartBox = xml.get_widget("onPartBox")
+        self.sizeFixedRadio = xml.get_widget("sizeFixedRadio")
+        self.sizeSetRadio = xml.get_widget("sizeSetRadio")
+        self.sizeMaxRadio = xml.get_widget("sizeMaxRadio")
+        self.maxSizeCombo = xml.get_widget("maxSizeCombo")
+        self.formatCheck = xml.get_widget("formatCheck")
+        self.partCancelButton = xml.get_widget("part_cancel_button")
+        self.partOkButton = xml.get_widget("part_ok_button")
 
         self.fsTypeCombo.list.connect("selection-changed", self.on_fsTypeCombo_set_focus_child)
+        self.partCancelButton.connect("clicked", self.on_part_cancel_button_clicked)
+        self.sizeSetRadio.connect("toggled", self.on_sizeSetRadio_toggled)
+        self.onPartCheck.connect("toggled", self.on_onPartCheck_toggled)
+        self.onDiskCheck.connect("toggled", self.on_onDiskCheck_toggled)
         
-        self.xml.signal_autoconnect (
-            { "on_cancel_part_button_clicked" : self.on_cancel_part_button_clicked,
-              "on_sizeSetRadio_toggled" : self.on_sizeSetRadio_toggled,
-              "on_onPartCheck_toggled" : self.on_onPartCheck_toggled,
-              "on_onDiskCheck_toggled" : self.on_onDiskCheck_toggled,
-              })
-
         mountPoints = ["/", "/boot", "/home", "/var", "/tmp", "/usr", "/opt"]
         self.mountPointCombo.set_popdown_strings(mountPoints)
 
@@ -145,7 +141,7 @@ class partWindow:
         self.maxSizeCombo.set_text("1")
         self.formatCheck.set_active(gtk.TRUE)
         
-    def on_cancel_part_button_clicked(self, *args):
+    def on_part_cancel_button_clicked(self, *args):
         self.ok_button.disconnect(self.ok_handler)
         self.partitionDialog.hide()
         self.win_reset()

@@ -32,10 +32,8 @@ class scripts:
         self.interpreter_entry = xml.get_widget("interpreter_entry")
         self.pre_textview = xml.get_widget("pre_textview")
         self.post_textview = xml.get_widget("post_textview")
-        #bring in signals from glade file
-        xml.signal_autoconnect (
-            { "interpreter_cb" : self.interpreter_cb,
-              } )
+
+        self.interpreter_checkbutton.connect("toggled", self.interpreter_cb)
 
     def interpreter_cb(self, args):
         self.interpreter_entry.set_sensitive(self.interpreter_checkbutton.get_active())

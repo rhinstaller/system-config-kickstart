@@ -53,12 +53,16 @@ class partition:
         self.partWindow = partWindow.partWindow(self.xml, self.partClist)
 #        self.raidWindow = raidWindow.raidWindow(self.xml, self.partClist)
 
+        self.add_part_button.connect("clicked", self.addPartition)
+        self.edit_part_button.connect("clicked", self.editPartition)
+        self.del_part_button.connect("clicked", self.delPartition)
+
         self.xml.signal_autoconnect (
             { "select_clist" : self.select_clist,
 #              "unselect_clist" : self.unselect_clist,
-              "addPartition" : self.addPartition,
-              "editPartition" : self.editPartition,
-              "delPartition" : self.delPartition,
+#              "addPartition" : self.addPartition,
+#              "editPartition" : self.editPartition,
+#              "delPartition" : self.delPartition,
 #              "raidPartition" : self.raidPartition, 
               })
 

@@ -50,10 +50,8 @@ class network:
         self.nameserver_entry3 = xml.get_widget("nameserver_entry3")
         self.nameserver_entry4 = xml.get_widget("nameserver_entry4")
 
-        xml.signal_autoconnect (
-            { "toggleIP" : self.toggleIP,
-          } )
-
+        self.ip_radiobutton.connect("toggled", self.toggleIP)
+        
     def getData(self):
         data = []
         data.append("")

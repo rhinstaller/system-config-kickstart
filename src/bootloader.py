@@ -66,25 +66,25 @@ class bootloader:
         self.grub_password_label.set_sensitive(status)
         self.grub_password_entry.set_sensitive(status)        
         if status:
-            status = self.choose_lilo_radiobutton.get_active()
+            status = self.lilo_radio.get_active()
             if status:
                 self.grub_options_label.set_sensitive(not status)        
                 self.grub_password_label.set_sensitive(not status)
                 self.grub_password_entry.set_sensitive(not status)
-            status = self.choose_grub_radiobutton.get_active()
+            status = self.grub_radio.get_active()
             if status:
                 self.lilo_options_label.set_sensitive(not status)
                 self.linear_checkbutton.set_sensitive(not status)
                 self.lba32_checkbutton.set_sensitive(not status)
 
     def toggled_lilo (self, args):
-        status = self.choose_lilo_radiobutton.get_active()
+        status = self.lilo_radio.get_active()
         self.lilo_options_label.set_sensitive(status)
         self.linear_checkbutton.set_sensitive(status)
         self.lba32_checkbutton.set_sensitive(status)
 
     def toggled_grub (self, args):
-        status = self.choose_grub_radiobutton.get_active()
+        status = self.grub_radio.get_active()
         self.grub_options_label.set_sensitive(status)        
         self.grub_password_label.set_sensitive(status)
         self.grub_password_entry.set_sensitive(status)        
@@ -93,10 +93,10 @@ class bootloader:
         data = []
         data.append("")
         data.append("#System bootloader configuration")
-        if self.install_bootloader_checkbutton.get_active():
+        if self.install_bootloader_check.get_active():
             buf = "bootloader "
             #lilo stuff
-            if self.choose_lilo_radiobutton.get_active():
+            if self.lilo_radio.get_active():
                 buf = buf + "--useLilo "
                 if self.linear_checkbutton.get_active():
                     buf = buf + "--linear "

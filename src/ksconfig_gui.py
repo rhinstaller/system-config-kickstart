@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python2.2
 
 ## Kickstart Configurator - A graphical kickstart file generator
 ## Copyright (C) 2000, 2001, 2002 Red Hat, Inc.
@@ -67,9 +67,16 @@ class ksconfig_gui:
 		#bring in widgets from glade file
 		self.ksconfig_about = xml.get_widget("ksconfig_about")
 		self.confirm_options_dialog = xml.get_widget("confirm_option_dialog")
+		self.confirm_options_button = xml.get_widget("confirm_options_button")
 		self.options_notebook = xml.get_widget("options_notebook")
 		self.install_radiobutton = xml.get_widget("install_radiobutton")
 		self.category_clist = xml.get_widget("category_clist")
+		self.save_menu = xml.get_widget("save_menu")
+		self.quit_menu = xml.get_widget("quit_menu")
+		self.help_menu = xml.get_widget("help_menu")
+		self.about_menu = xml.get_widget("about_menu")
+		self.cancel_button = xml.get_widget("cancel_button")
+
 		#bring in basic functions
 		self.basic_class = basic.basic(xml)
 		#bring in bootloader functions
@@ -96,14 +103,6 @@ class ksconfig_gui:
 		#show gui
 		self.toplevel.show_all()
 
-		#bring in signals from glade file
-		xml.signal_connect("on_cancel_button_clicked", gtk.mainquit)
-		xml.signal_connect("on_exit_activate", gtk.mainquit)
-		xml.signal_connect("on_list_view_row_activated", self.on_list_view_row_activated)
-		xml.signal_connect("on_about_activate", self.on_about_activate)
-		xml.signal_connect("on_activate_confirm_options", self.on_activate_confirm_options)
-		xml.signal_connect("on_help_button_clicked", self.on_help_button_clicked)
-
 		#populate category list
 		self.category_view = xml.get_widget("list_view")
 		self.category_store = gtk.ListStore(gobject.TYPE_STRING)
@@ -124,6 +123,24 @@ class ksconfig_gui:
 			iter = self.category_store.append()
 			self.category_store.set_value(iter, 0, item)
 
+		self.save_menu.connect("activate", self.on_activate_confirm_options)
+		self.quit_menu.connect("activate", gtk.mainquit)
+		self.help_menu.connect("activate", self.on_help_button_clicked)
+		self.about_menu.connect("activate", self.on_about_activate)
+
+		self.confirm_options_button.connect("clicked", self.on_activate_confirm_options)
+		self.cancel_button.connect("clicked", gtk.mainquit)
+		self.category_view.connect("cursor_changed", self.on_list_view_row_activated)
+
+		#bring in signals from glade file
+#		xml.signal_connect("on_cancel_button_clicked", gtk.mainquit)
+#		xml.signal_connect("on_exit_activate", gtk.mainquit)
+##		xml.signal_connect("on_list_view_row_activated", self.on_list_view_row_activated)
+#		xml.signal_connect("on_about_activate", self.on_about_activate)
+#		xml.signal_connect("on_activate_confirm_options", self.on_activate_confirm_options)
+#		xml.signal_connect("on_help_button_clicked", self.on_help_button_clicked)
+
+
 		gtk.mainloop ()
 
 	def on_list_view_row_activated(self, tree_view):
@@ -135,8 +152,8 @@ class ksconfig_gui:
 	#about box
 	def on_about_activate(self, args):
 		dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_INFO, gtk.BUTTONS_OK,
-                                        _("Kickstart Configurator @VERSION@\n Copyright (c) 2000-2002 Red Hat, Inc.\n Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com> Tammy Fox <tfox@redhat.com>\n A graphical interface for creating a kickstart file"))
-		dlg.set_title(_("Error"))
+                                        _("Kickstart Configurator @VERSION@\n Copyright (c) 2000-2002 Red Hat, Inc.\n Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n A graphical interface for creating a kickstart file"))
+		dlg.set_title(_("About Kickstart Configurator"))
 		dlg.set_default_size(100, 100)
 		dlg.set_position (gtk.WIN_POS_CENTER)
 		dlg.set_border_width(2)

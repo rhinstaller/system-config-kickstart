@@ -50,14 +50,10 @@ class xconfig:
         self.card_probe_check = xml.get_widget("card_probe_check")
         self.monitor_probe_check = xml.get_widget("monitor_probe_check")
 
-        xml.signal_autoconnect (
-            { "toggleXconfig" : self.toggleXconfig,
-              "select_monitor" : self.select_monitor,
-              "select_videocard" : self.select_videocard,
-              "toggle_sync" : self.toggle_sync,
-              "on_card_probe_check_toggled" : self.on_card_probe_check_toggled,
-              "on_monitor_probe_check_toggled" : self.on_monitor_probe_check_toggled,
-              })
+        self.config_x_button.connect("toggled", self.toggleXconfig)
+        self.monitor_probe_check.connect("toggled", self.on_monitor_probe_check_toggled)
+        self.card_probe_check.connect("toggled", self.on_card_probe_check_toggled)
+        self.sync_button.connect("toggled", self.toggle_sync)
 
         #add video cards to list
         try:
@@ -151,12 +147,6 @@ class xconfig:
         self.sync_table.set_sensitive(sync_instead)
         self.monitor_swindow.set_sensitive(not sync_instead)
         self.monitor_clist.set_sensitive(not sync_instead)        
-
-    def select_monitor(self, event, row, column, data):
-        self.selected_monitor_row = row
-        
-    def select_videocard(self, event, row, column, data):
-        self.selected_vc_row = row
 
     def getData(self):
         data = []
