@@ -32,16 +32,12 @@ SRCFILES	= $(PYSRC) ksconfig.gladestrings
 all::  update-po $(MOFILES)
 
 $(POTFILE): $(SRCFILES)
-	@$(PYGETTEXT) --keyword=_ --keyword=N_ $(PYSRC)
+	$(PYGETTEXT) --keyword=_ --keyword=N_ $(SRCFILES)
 	@if cmp -s $(NLSPACKAGE).po $(POTFILE); then \
 	    rm -f $(NLSPACKAGE).po; \
 	else \
 	    mv -f $(NLSPACKAGE).po $(POTFILE); \
 	fi; \
-	$(XGETTEXT) --keyword=N_ ksconfig.gladestrings; \
-	msghack --append $(NLSPACKAGE).po $(POTFILE) -o $(POTFILE)-; \
-	mv -f $(POTFILE)- $(POTFILE); \
-	rm -f $(NLSPACKAGE).po
 
 update-po: Makefile $(POTFILE) refresh-po
 

@@ -1,78 +1,811 @@
-# ksconfig ja.po
-# Copyright (C) 2001 Red Hat, Inc.
+# Japanese translation of ksconfig
+# Copyright (C) 2001 Free Software Foundation, Inc.
 # Yukihiro Nakai <ynakai@redhat.com>, 2001.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ksconfig CVS\n"
-"PO-Revision-Date: Fri Jul 20 12:16:04 2001\n"
-"Last-Translator: Yukihiro Nakai <ynakai@redhat.com>\n"
+"Project-Id-Version: ksconfig 1.9.3\n"
+"POT-Creation-Date: 2001-07-18 20:48-0400\n"
+"PO-Revision-Date: 2001-07-18 20:13-0400\n"
+"Last-Translator: Yukihiro Nakai <ynakai@redhat.comM>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=euc-jp\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: pygettext.py 1.1\n"
 
-#: ../src/firewall.py:90
-msgid "Allow incoming:"
+#: ksconfig.gladestrings:125
+msgid "Hesiod LHS:"
+msgstr "Hesiod LHS:"
+
+#: ksconfig.gladestrings:69
+msgid "Initialize the Disk Label:"
+msgstr "ディスクラベルの初期化:"
+
+#: ksconfig.gladestrings:76
+msgid "_Add"
+msgstr "追加(_A)"
+
+#: ksconfig.gladestrings:28
+msgid "_First sector of boot partition"
+msgstr "先頭セクタ(_F)"
+
+#: ksconfig.gladestrings:130
+msgid "SMB Servers:"
+msgstr "SMBサーバ:"
+
+#: ksconfig.gladestrings:208
+msgid "Format partition"
+msgstr "パーティションのフォーマット"
+
+#: ksconfig.gladestrings:55
+msgid "HTTP Directory:"
+msgstr "HTTPディレクトリ:"
+
+#: ksconfig.gladestrings:205
+msgid "Use existing partition (onpart)"
+msgstr "存在するパーティションを使う(一部)"
+
+#: ksconfig.gladestrings:161
+msgid "kHz"
+msgstr "kHz"
+
+#: ksconfig.gladestrings:163
+msgid "Horizontal Sync:"
+msgstr "水平周波数:"
+
+#: ksconfig.gladestrings:22
+msgid "label28"
+msgstr "label28"
+
+#: ksconfig.gladestrings:46 ksconfig.gladestrings:59
+msgid "Hard Drive"
+msgstr "ハードドライブ"
+
+#: ksconfig.gladestrings:74
+msgid "Size (MB)"
+msgstr "サイズ(MB)"
+
+#: ksconfig.gladestrings:173
+msgid ""
+"Warning: An error in this script might cause your kickstart installation to "
+"fail. Do not include the %post command at the beginning."
 msgstr ""
+"注意: このスクリプトでエラーが発生するとキックスタートインストールは失敗しま"
+"す。%post コマンドを最初に書かないでください。"
+
+#: ksconfig.gladestrings:49
+msgid "NFS Directory:"
+msgstr "NFSディレクトリ:"
+
+#: ksconfig.gladestrings:135
+msgid "Name Switch Cache"
+msgstr "NSCD"
+
+#: ksconfig.gladestrings:41
+msgid "Choose the Installation Method:"
+msgstr "インストール方法の選択"
+
+#: ksconfig.gladestrings:105
+msgid "Use MD5"
+msgstr "MD5を使う"
+
+#: ksconfig.gladestrings:181
+msgid ""
+"You have choosen the following configuration. Click Save File to save the "
+"kickstart file. Click Cancel to return to the program."
+msgstr ""
+"あなたは次の設定を選択しました。ファイルの保存をクリックしてキックスタート"
+"ファイルを保存してください。キャンセルをクリックするとプログラムを終了しま"
+"す。"
+
+#: ksconfig.gladestrings:129
+msgid "Enable SMB Authentication"
+msgstr "SMB認証有効"
+
+#: ../src/ksconfig_gui.py:118
+msgid "Partition Information"
+msgstr "パーティション情報"
+
+#: ksconfig.gladestrings:162
+msgid "Verfical Sync:"
+msgstr "垂直同期:"
+
+#: ksconfig.gladestrings:153
+msgid "Start the X Window System on boot"
+msgstr "ブート時にXウィンドウシステムを起動する"
+
+#: ksconfig.gladestrings:8
+msgid "_Save File..."
+msgstr "ファイルの保存(_S)..."
+
+#: ksconfig.gladestrings:201
+msgid "1"
+msgstr "1"
+
+#: ksconfig.gladestrings:176
+msgid "Type your %post script below:"
+msgstr "%post スクリプトを下に入力してください:"
+
+#: ksconfig.gladestrings:37
+msgid "label128"
+msgstr "label128"
+
+#: ksconfig.gladestrings:30
+msgid "Install Boot Loader on: "
+msgstr "ブートローダのインストール先: "
+
+#: ksconfig.gladestrings:142 ksconfig.gladestrings:144
+msgid "Customize"
+msgstr "カスタマイズ"
+
+#: ksconfig.gladestrings:52
+msgid "FTP Directory:"
+msgstr "FTPディレクトリ:"
+
+#: ksconfig.gladestrings:202
+msgid "Make partition on specific drive (ondisk)"
+msgstr "指定したドライブにパーティションを作る(ディスク上)"
+
+#: ../src/ksconfig_gui.py:138
+msgid "A graphical interface for creating a kickstart file."
+msgstr "キックスタートファイルを作成するグラフィカルなインターフェース"
+
+#: ksconfig.gladestrings:102
+msgid "Authentication Configuration"
+msgstr "認証設定"
 
 #: ../src/ksconfig_gui.py:123
 msgid "Package Selection"
-msgstr "パッケージ選択"
+msgstr "パッケージの選択"
 
-#: ../src/ksconfig_gui.py:125
-msgid "Post-Installation Script"
-msgstr ""
+#: ksconfig.gladestrings:72
+msgid "Mount Point"
+msgstr "マウントポイント"
 
-#: ../src/ksconfig_gui.py:119
-msgid "Network Configuration"
-msgstr ""
+#: ksconfig.gladestrings:83
+msgid "Static IP"
+msgstr "固定IP"
+
+#: ksconfig.gladestrings:15
+msgid "Mouse:"
+msgstr "マウス:"
+
+#: ksconfig.gladestrings:133
+msgid "Name Switch Cache Daemon (nscd) Authentication"
+msgstr "ネームスイッチキャッシュドメイン(nscd)認証"
+
+#: ksconfig.gladestrings:19
+msgid "Reboot system after installation"
+msgstr "インストール後にシステムを再起動"
+
+#: ksconfig.gladestrings:38
+msgid "Installation Method (required)"
+msgstr "インストール方法(必須)"
+
+#: ksconfig.gladestrings:186 ksconfig.gladestrings:211
+msgid "Mount Point:"
+msgstr "マウントポイント:"
+
+#: ksconfig.gladestrings:147
+msgid "Configure the X Window System"
+msgstr "Xウィンドウシステムの設定"
+
+#: ksconfig.gladestrings:26
+msgid "_GRUB"
+msgstr "_GRUB"
+
+#: ../src/ksconfig_gui.py:122 ksconfig.gladestrings:146
+msgid "X Configuration"
+msgstr "Xの設定"
+
+#: ksconfig.gladestrings:27
+msgid "_MBR"
+msgstr "_MBR"
+
+#: ksconfig.gladestrings:179
+msgid "Kickstart Configuration"
+msgstr "キックスタート設定"
+
+#: ksconfig.gladestrings:214
+msgid "Raid Members"
+msgstr "RAIDメンバ"
+
+#: ksconfig.gladestrings:82
+msgid "DHCP"
+msgstr "DHCP"
+
+#: ksconfig.gladestrings:184
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: ksconfig.gladestrings:77
+msgid "_Edit"
+msgstr "編集(_E)"
 
 #: ../src/ksconfig_gui.py:114
 msgid "category_clist"
 msgstr ""
 
-#: ../src/ksconfig_gui.py:120
-msgid "Authentication"
+#: ksconfig.gladestrings:78
+msgid "_Delete"
+msgstr "削除(_D)"
+
+#: ksconfig.gladestrings:128
+msgid "SMB Authentication"
+msgstr "SMB認証"
+
+#: ksconfig.gladestrings:154
+msgid "General"
+msgstr "一般"
+
+#: ksconfig.gladestrings:21
+msgid "Perform installation in interactive mode"
+msgstr "インタラクティブモードでインストールを実行"
+
+#: ksconfig.gladestrings:51
+msgid "FTP Server:"
+msgstr "FTPサーバ:"
+
+#: ksconfig.gladestrings:139
+msgid "High"
+msgstr "高"
+
+#: ksconfig.gladestrings:103
+msgid "Authentication:"
+msgstr "認証:"
+
+#: ksconfig.gladestrings:145
+msgid "label33"
+msgstr "label33"
+
+#: ksconfig.gladestrings:174
+msgid "Run outside of the chroot environment"
+msgstr "chroot環境の外で実行"
+
+#: ksconfig.gladestrings:194 ksconfig.gladestrings:203
+#: ksconfig.gladestrings:206
+msgid "         "
+msgstr "         "
+
+#: ksconfig.gladestrings:149
+msgid "Resolution"
+msgstr "解像度"
+
+#: ksconfig.gladestrings:12
+msgid "Language:"
+msgstr "言語:"
+
+#: ksconfig.gladestrings:39
+msgid "Install"
+msgstr "インストール"
+
+#: ksconfig.gladestrings:109
+msgid "Use broadcast to find NIS server"
+msgstr "NISサーバの検索にブロードキャストを使う"
+
+#: ksconfig.gladestrings:166
+msgid "Package Group Selection"
+msgstr "パッケージグループの選択"
+
+#: ksconfig.gladestrings:171
+msgid "label89"
+msgstr "label89"
+
+#: ksconfig.gladestrings:134
+msgid "Enable nscd"
+msgstr "nscd有効"
+
+#: ksconfig.gladestrings:113
+msgid "Enable LDAP"
+msgstr "LDAP有効"
+
+#: ksconfig.gladestrings:207
+msgid "Partition:"
+msgstr "パーティション:"
+
+#: ksconfig.gladestrings:75
+msgid "Device"
+msgstr "デバイス"
+
+#: ksconfig.gladestrings:196
+msgid ""
+"1\n"
+"2\n"
+"3\n"
+"4\n"
 msgstr ""
+"1\n"
+"2\n"
+"3\n"
+"4\n"
+
+#: ksconfig.gladestrings:188
+msgid "Size (MB):"
+msgstr "サイズ(MB):"
+
+#: ksconfig.gladestrings:85 ksconfig.gladestrings:86 ksconfig.gladestrings:87
+#: ksconfig.gladestrings:88 ksconfig.gladestrings:89 ksconfig.gladestrings:90
+#: ksconfig.gladestrings:91 ksconfig.gladestrings:92 ksconfig.gladestrings:93
+#: ksconfig.gladestrings:94 ksconfig.gladestrings:95 ksconfig.gladestrings:96
+msgid "."
+msgstr "."
+
+#: ../src/ksconfig_gui.py:115
+msgid "Basic Configuration"
+msgstr "基本設定"
+
+#: ksconfig.gladestrings:152
+msgid "KDE"
+msgstr "KDE"
+
+#: ksconfig.gladestrings:193
+msgid "Force to be a primary partition (asprimary)"
+msgstr ""
+
+#: ksconfig.gladestrings:112
+msgid "LDAP Authentication"
+msgstr "LDAP 認証"
+
+#: ksconfig.gladestrings:170
+msgid "Type your %pre script below:"
+msgstr "%pre スクリプトを下に入力してください:"
+
+#: ksconfig.gladestrings:132
+msgid "SMB"
+msgstr "SMB"
+
+#: ksconfig.gladestrings:61
+msgid "Partition Information (required)"
+msgstr "パーティション情報(必須)"
+
+#: ksconfig.gladestrings:106
+msgid "NIS Authentication"
+msgstr "NIS認証"
+
+#: ksconfig.gladestrings:178
+msgid "Save File..."
+msgstr "ファイルの保存..."
+
+#: ksconfig.gladestrings:143
+msgid "Use default firewall rules"
+msgstr "デフォルトのファイアウォールルールを使う"
+
+#: ksconfig.gladestrings:68
+msgid "Remove Partitions:"
+msgstr "削除するパーティション:"
+
+#: ksconfig.gladestrings:14
+msgid "Keyboard:"
+msgstr "キーボード:"
+
+#: ksconfig.gladestrings:123
+msgid "Hesiod Authentication"
+msgstr "Hesiod認証"
+
+#: ksconfig.gladestrings:42 ksconfig.gladestrings:47
+msgid "CD-ROM"
+msgstr "CD-ROM"
+
+#: ksconfig.gladestrings:100
+msgid "Name Server:"
+msgstr "ネームサーバ:"
+
+#: ksconfig.gladestrings:71
+msgid "No"
+msgstr "いいえ"
+
+#: ../src/ksconfig_gui.py:119 ksconfig.gladestrings:80
+msgid "Network Configuration"
+msgstr "ネットワーク設定"
+
+#: ksconfig.gladestrings:40
+msgid "Upgrade"
+msgstr "アップグレード"
+
+#: ksconfig.gladestrings:97
+msgid "IP Address:"
+msgstr "IPアドレス"
+
+#: ksconfig.gladestrings:34
+msgid "Force use of lba32 mode"
+msgstr "LBA32モードを強制する"
+
+#: ksconfig.gladestrings:215
+msgid "Number of spares:"
+msgstr "スペアの数:"
+
+#: ksconfig.gladestrings:70
+msgid "Yes"
+msgstr "はい"
+
+#: ksconfig.gladestrings:107
+msgid "Enable NIS"
+msgstr "NIS有効"
+
+#: ksconfig.gladestrings:126
+msgid "Hesiod RHS:"
+msgstr "Hesiod RHS:"
+
+#: ksconfig.gladestrings:25
+msgid "_LILO"
+msgstr "_LILO"
+
+#: ksconfig.gladestrings:118
+msgid "Enable Kerberos 5 Authentication"
+msgstr "ケルベロス5認証有効"
+
+#: ksconfig.gladestrings:104
+msgid "Use Shadow Passwords"
+msgstr "シャドウパスワードを使う"
+
+#: ksconfig.gladestrings:48
+msgid "NFS Server:"
+msgstr "NFSサーバ:"
+
+#: ksconfig.gladestrings:122
+msgid "Kerberos 5"
+msgstr "ケルベロス5"
+
+#: ksconfig.gladestrings:58
+msgid "Hard Drive Directory:"
+msgstr "ハードドライブディレクトリ:"
+
+#: ../src/firewall.py:105
+msgid "Other ports:"
+msgstr "他のポート:"
+
+#: ksconfig.gladestrings:117
+msgid "Kerberos 5 Authentication"
+msgstr "ケルベロス5認証"
+
+#: ../src/firewall.py:90
+msgid "Allow incoming:"
+msgstr ""
+
+#: ksconfig.gladestrings:29
+msgid "Choose Boot Loader: "
+msgstr "ブートローダの選択:"
+
+#: ksconfig.gladestrings:158
+msgid "Select a Monitor"
+msgstr "モニタの選択"
+
+#: ksconfig.gladestrings:185
+msgid "Partition Options"
+msgstr "パーティションオプション"
+
+#: ksconfig.gladestrings:43 ksconfig.gladestrings:50
+msgid "NFS"
+msgstr "NFS"
+
+#: ksconfig.gladestrings:36
+msgid "Use GRUB Password: "
+msgstr "GRUBパスワードを使う: "
+
+#: ksconfig.gladestrings:169
+msgid ""
+"Warning: An error in this script might cause your kickstart installation to "
+"fail. Do not include the %pre command at the beginning."
+msgstr ""
+"注意: このスクリプトでエラーが発生するとキックスタートインストールは失敗しま"
+"す。%pre コマンドを最初に書かないでください。"
+
+#: ksconfig.gladestrings:187 ksconfig.gladestrings:212
+msgid "Filesystem Type:"
+msgstr "ファイルシステムタイプ:"
+
+#: ksconfig.gladestrings:98
+msgid "Netmask: "
+msgstr "ネットマスク:"
+
+#: ksconfig.gladestrings:84
+msgid "None"
+msgstr "なし"
+
+#: ksconfig.gladestrings:44 ksconfig.gladestrings:53
+msgid "FTP"
+msgstr "FTP"
+
+#: ksconfig.gladestrings:138
+msgid "Security Level"
+msgstr "セキュリティレベル"
+
+#: ksconfig.gladestrings:115
+msgid "LDAP Base Name: "
+msgstr "LDAPベース名: "
+
+#: ksconfig.gladestrings:35
+msgid "GRUB Options:"
+msgstr "GRUBオプション:"
+
+#: ../src/ksconfig_gui.py:124 ksconfig.gladestrings:168
+msgid "Pre-Installation Script"
+msgstr "インストール前の スクリプト"
 
 #: ../src/ksconfig_gui.py:117
 msgid "Installation Method"
+msgstr "インストール方法"
+
+#: ksconfig.gladestrings:131
+msgid "SMB Workgroup:"
+msgstr "SMBワークグループ:"
+
+#: ../src/ksconfig_gui.py:125 ksconfig.gladestrings:172
+msgid "Post-Installation Script"
+msgstr "インストール後のスクリプト"
+
+#: ksconfig.gladestrings:67
+msgid "L_inux"
+msgstr "リナックス(_I)"
+
+#: ksconfig.gladestrings:180 ksconfig.gladestrings:182
+msgid "Save File"
+msgstr "ファイルの保存"
+
+#: ksconfig.gladestrings:210
+msgid "Format Partition"
+msgstr "パーティションのフォーマット"
+
+#: ksconfig.gladestrings:148
+msgid "Color Depth"
+msgstr "カラーの深さ"
+
+#: ksconfig.gladestrings:140
+msgid "Medium"
+msgstr "中"
+
+#: ksconfig.gladestrings:177
+msgid "label93"
+msgstr "label93"
+
+#: ksconfig.gladestrings:160
+msgid "Hz"
+msgstr "Hz"
+
+#: ksconfig.gladestrings:108
+msgid "NIS Domain:"
+msgstr "NISドメイン:"
+
+#: ksconfig.gladestrings:73
+msgid "Type"
+msgstr "タイプ"
+
+#: ksconfig.gladestrings:65
+msgid "N_one"
+msgstr "なし(_O)"
+
+#: ksconfig.gladestrings:60
+msgid "label35"
+msgstr "label35"
+
+#: ksconfig.gladestrings:17
+msgid "Root Password:"
+msgstr "rootパスワード:"
+
+#: ksconfig.gladestrings:156
+msgid "Video Card RAM: "
+msgstr "ビデオカードRAM: "
+
+#: ksconfig.gladestrings:54
+msgid "HTTP Server:"
+msgstr "HTTPサーバ:"
+
+#: ../src/ksconfig_gui.py:116 ksconfig.gladestrings:23
+msgid "Boot Loader Options"
+msgstr "ブートローダオプション"
+
+#: ksconfig.gladestrings:45 ksconfig.gladestrings:56
+msgid "HTTP"
+msgstr "HTTP"
+
+#: ksconfig.gladestrings:62
+msgid "Clear Master Boot Record:"
+msgstr "マスターブートレコードの消去:"
+
+#: ../src/ksconfig_gui.py:120
+msgid "Authentication"
+msgstr "認証"
+
+#: ksconfig.gladestrings:66
+msgid "A_ll"
+msgstr "すべて(_L)"
+
+#: ksconfig.gladestrings:190
+msgid "Fill to maximum allowable size"
+msgstr "可能な最大サイズを使用"
+
+#: ksconfig.gladestrings:119
+msgid "Kerberos Realm:"
+msgstr "ケルベロス領域"
+
+#: ksconfig.gladestrings:111
+msgid "NIS"
+msgstr "NIS"
+
+#: ksconfig.gladestrings:32
+msgid "LILO Options:"
+msgstr "LILOオプション:"
+
+#: ksconfig.gladestrings:81
+msgid "Network Type:"
+msgstr "ネットワークタイプ:"
+
+#: ksconfig.gladestrings:141
+msgid "Disabled"
+msgstr "なし"
+
+#: ksconfig.gladestrings:165
+msgid "label88"
+msgstr "label88"
+
+#: ksconfig.gladestrings:57
+msgid "Hard Drive Partition:"
+msgstr "ハードドライブパーティション:"
+
+#: ksconfig.gladestrings:20
+msgid "Perform installation in text mode (graphical is default)"
+msgstr "テキストモードでインストールを実行(デフォルトはグラフィカル)"
+
+#: ksconfig.gladestrings:159
+msgid "Specify hsync and vsync instead of monitor"
+msgstr "水平周波数と垂直周波数を直接指定する"
+
+#: ksconfig.gladestrings:183
+msgid "OK"
+msgstr "OK"
+
+#: ksconfig.gladestrings:127
+msgid "Hesiod"
+msgstr "Hesiod"
+
+#: ksconfig.gladestrings:11
+msgid "Basic Configuration (required)"
+msgstr "基本設定(必須)"
+
+#: ksconfig.gladestrings:99
+msgid "Gateway:"
+msgstr "ゲートウェイ:"
+
+#: ksconfig.gladestrings:195
+msgid "Force as primary number (1-4):"
+msgstr ""
+
+#: ksconfig.gladestrings:16
+msgid "Time Zone:"
+msgstr "タイムゾーン:"
+
+#: ksconfig.gladestrings:31
+msgid "Kernel parameters:"
+msgstr "カーネルパラメータ:"
+
+#: ksconfig.gladestrings:114
+msgid "LDAP Server: "
+msgstr "LDAPサーバ: "
+
+#: ksconfig.gladestrings:10
+msgid "label1"
+msgstr "label1"
+
+#: ksconfig.gladestrings:151
+msgid "GNOME"
+msgstr "GNOME"
+
+#: ksconfig.gladestrings:204
+msgid "Drive:"
+msgstr "ドライブ:"
+
+#: ksconfig.gladestrings:24
+msgid "Install Boot Loader"
+msgstr "ブートローダのインストール"
+
+#: ksconfig.gladestrings:33
+msgid "Use linear mode"
+msgstr "リニアモードを使う"
+
+#: ksconfig.gladestrings:110
+msgid "NIS Server:"
+msgstr "NISサーバ:"
+
+#: ksconfig.gladestrings:7
+msgid "Kickstart Configurator"
+msgstr "キックスタート設定ツール"
+
+#: ksconfig.gladestrings:9
+msgid "_Manual"
+msgstr "マニュアル(_M)"
+
+#: ksconfig.gladestrings:116
+msgid "LDAP "
+msgstr "LDAP "
+
+#: ksconfig.gladestrings:191
+msgid "Fill all space up to (MB):"
+msgstr "埋めるサイズの上限(MB):"
+
+#: ksconfig.gladestrings:213
+msgid "RAID Level:"
+msgstr "RAIDレベル:"
+
+#: ksconfig.gladestrings:192
+msgid "Fixed size"
 msgstr ""
 
 #: ../src/firewall.py:62
 msgid "Trusted devices:"
-msgstr ""
+msgstr "信頼されるデバイス:"
 
-#: ../src/ksconfig_gui.py:124
-msgid "Pre-Installation Script"
-msgstr ""
+#: ksconfig.gladestrings:124
+msgid "Enable Hesiod Support"
+msgstr "Hesiodサポート有効"
 
-#: ../src/ksconfig_gui.py:118
-msgid "Partition Information"
-msgstr ""
+#: ksconfig.gladestrings:120
+msgid "Kerberos Domain Controller (KDC):"
+msgstr "ケルベロスドメインコントローラ(KDC):"
 
-#: ../src/ksconfig_gui.py:116
-msgid "Boot Loader Options"
-msgstr ""
+#: ksconfig.gladestrings:175
+msgid "Use an interpreter:"
+msgstr "インタプリタを使う:"
 
-#: ../src/ksconfig_gui.py:138
-msgid "A graphical interface for creating a kickstart file."
-msgstr ""
-
-#: ../src/firewall.py:105
-msgid "Other ports:"
-msgstr ""
-
-#: ../src/ksconfig_gui.py:115
-msgid "Basic Configuration"
-msgstr ""
-
-#: ../src/ksconfig_gui.py:122
-msgid "X Configuration"
-msgstr ""
-
-#: ../src/ksconfig_gui.py:121
+#: ../src/ksconfig_gui.py:121 ksconfig.gladestrings:137
 msgid "Firewall Configuration"
-msgstr ""
+msgstr "ファイアウォール設定"
+
+#: ksconfig.gladestrings:189
+msgid "Additional Size Options"
+msgstr "追加サイズオプション"
+
+#: ksconfig.gladestrings:121
+msgid "Kerberos Master Server:"
+msgstr "ケルベロスマスターサーバ:"
+
+#: ksconfig.gladestrings:167
+msgid "label34"
+msgstr "label34"
+
+#: ksconfig.gladestrings:157
+msgid "Video Card"
+msgstr "ビデオカード"
+
+#: ksconfig.gladestrings:136
+msgid "label32"
+msgstr "label32"
+
+#: ksconfig.gladestrings:101
+msgid "label31"
+msgstr "label31"
+
+#: ksconfig.gladestrings:79
+msgid "label30"
+msgstr "label30"
+
+#: ksconfig.gladestrings:64
+msgid "_No"
+msgstr "いいえ(_N)"
+
+#: ksconfig.gladestrings:63
+msgid "_Yes"
+msgstr "はい(_Y)"
+
+#: ksconfig.gladestrings:155
+msgid "Select a Video Card"
+msgstr "ビデオカードの選択"
+
+#: ksconfig.gladestrings:209
+msgid "Make RAID Device"
+msgstr "RAIDデバイスの作成"
+
+#: ksconfig.gladestrings:150
+msgid "Default Desktop:"
+msgstr "デフォルトデスクトップ:"
+
+#: ksconfig.gladestrings:13
+msgid "Language Support:"
+msgstr "サポート言語:"
+
+#: ksconfig.gladestrings:164
+msgid "Monitor"
+msgstr "モニタ"
+
+#: ksconfig.gladestrings:18
+msgid "Emulate 3 Buttons"
+msgstr "3ボタンのエミュレーション"
