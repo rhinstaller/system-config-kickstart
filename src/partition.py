@@ -63,7 +63,7 @@ class partition:
         self.lvm_part_button.connect("clicked", self.lvmPartition)
 
         self.part_store = gtk.ListStore(gobject.TYPE_STRING, gobject.TYPE_STRING, gobject.TYPE_STRING,
-                                        gobject.TYPE_STRING, gobject.TYPE_PYOBJECT)
+                                        gobject.TYPE_STRING, gobject.TYPE_STRING, gobject.TYPE_PYOBJECT)
 
 
         self.part_view.set_model(self.part_store)
@@ -75,9 +75,12 @@ class partition:
         self.part_view.append_column(col)
         col = gtk.TreeViewColumn(_("Device"), gtk.CellRendererText(), text=3)
         self.part_view.append_column(col)
+        col = gtk.TreeViewColumn(_("Existing Partition"), gtk.CellRendererText(), text=4)
+        self.part_view.append_column(col)
 
         #initialize the child classes
         self.partWindow = partWindow.partWindow(self.xml, self.part_store, self.part_view)
+        self.raidOptionsWindow = raidOptionsWindow.raidOptionsWindow(self.xml, self.part_store, self.part_view, self.partWindow)
 #        self.raidWindow = raidWindow.raidWindow(self.xml, self.part_view)
 
 
@@ -131,8 +134,7 @@ class partition:
         self.partWindow.edit_partition(iter)
 
     def raidPartition(self, *args):
-        self.raidOptionsWindow = raidOptionsWindow.raidOptionsWindow(self.xml, self.part_store, self.part_view, self.partWindow)
-#        self.raidWindow.add_raid(self.num_rows)
+        self.raidOptionsWindow.showOptionsWindow()
 
     def lvmPartition(self, *args):
         pass

@@ -127,7 +127,7 @@ class partWindow:
 
     def edit_partition(self, iter):
         self.current_iter = iter
-        part_object = self.part_store.get_value(self.current_iter, 4)
+        part_object = self.part_store.get_value(self.current_iter, 5)
         self.ok_handler = self.partOkButton.connect("clicked", self.on_edit_ok_button_clicked)
         self.win_reset()
 
@@ -181,13 +181,14 @@ class partWindow:
         self.partitionDialog.hide()
 
     def on_edit_ok_button_clicked(self, *args):
-        part_object = self.part_store.get_value(self.current_iter, 4)
+        part_object = self.part_store.get_value(self.current_iter, 5)
         self.getData(part_object)
 
         self.part_store.set_value(self.current_iter, 0, part_object.mountPoint)
         self.part_store.set_value(self.current_iter, 1, part_object.fsType)
         self.part_store.set_value(self.current_iter, 2, part_object.size)
         self.part_store.set_value(self.current_iter, 3, part_object.onDiskVal)
+        self.part_store.set_value(self.current_iter, 4, part_object.onPartVal)        
             
         self.partOkButton.disconnect(self.ok_handler)
         self.win_reset()
@@ -205,7 +206,8 @@ class partWindow:
         self.part_store.set_value(iter, 1, part_object.fsType)
         self.part_store.set_value(iter, 2, part_object.size)
         self.part_store.set_value(iter, 3, part_object.onDiskVal)
-        self.part_store.set_value(iter, 4, part_object)
+        self.part_store.set_value(iter, 4, part_object.onPartVal)
+        self.part_store.set_value(iter, 5, part_object)
 
         self.partOkButton.disconnect(self.ok_handler)
         self.win_reset()
@@ -341,7 +343,7 @@ class partWindow:
         lastRaidNumber = ""
         iter = self.part_store.get_iter_first()        
         while iter:
-            pyObject = self.part_store.get_value(iter, 4)
+            pyObject = self.part_store.get_value(iter, 5)
             if pyObject.fsType == "raid":
                 lastRaidNumber = pyObject.raidNumber
             iter = self.part_store.iter_next(iter)        
