@@ -58,17 +58,9 @@ class partition:
         self.edit_part_button.connect("clicked", self.editPartition)
         self.del_part_button.connect("clicked", self.delPartition)
 
-#         (mountPoint, fsType, size, fixedSize, setSize,
-#             setSizeVal, maxSize, asPrimary, 
-#             onDisk, onDiskVal, onPart, onPartVal,
-#             doFormat, raidType, raidSpares, isRaidDevice)
-
         self.part_store = gtk.ListStore(gobject.TYPE_STRING, gobject.TYPE_STRING, gobject.TYPE_STRING,
-                                        gobject.TYPE_STRING, gobject.TYPE_STRING, gobject.TYPE_STRING,
-                                        gobject.TYPE_STRING, gobject.TYPE_STRING, gobject.TYPE_STRING,
-                                        gobject.TYPE_STRING, gobject.TYPE_STRING, gobject.TYPE_STRING,
-                                        gobject.TYPE_STRING, gobject.TYPE_STRING, gobject.TYPE_STRING,
-                                        gobject.TYPE_STRING)
+                                        gobject.TYPE_STRING, gobject.TYPE_PYOBJECT)
+
 
         self.part_view.set_model(self.part_store)
         col = gtk.TreeViewColumn(_("Mount Point"), gtk.CellRendererText(), text=0)
@@ -77,7 +69,7 @@ class partition:
         self.part_view.append_column(col)
         col = gtk.TreeViewColumn(_("Size"), gtk.CellRendererText(), text=2)
         self.part_view.append_column(col)
-        col = gtk.TreeViewColumn(_("Device"), gtk.CellRendererText(), text=9)
+        col = gtk.TreeViewColumn(_("Device"), gtk.CellRendererText(), text=3)
         self.part_view.append_column(col)
 
         #temp until edit partitions finished
@@ -114,12 +106,12 @@ class partition:
         self.edit_part_button.set_sensitive(gtk.TRUE)
         self.del_part_button.set_sensitive(gtk.TRUE)
 #        self.raid_part_button.set_sensitive(gtk.TRUE)
-#        self.partClist.unselect_all()
         self.part_view.get_selection().unselect_all()
 
     def editPartition(self, *args):
-        rowData = self.partClist.get_row_data(self.selected_row)
-        self.partWindow.edit_partition(rowData, self.selected_row)
+        data, iter = self.part_view.get_selection().get_selected()
+        part_object = self.part_store.get_value(iter, 4)
+        self.partWindow.edit_partition(part_object)
 
 #    def raidPartition(self, *args):
 #        self.raidWindow.add_raid(self.num_rows)

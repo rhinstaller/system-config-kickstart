@@ -26,6 +26,7 @@ import gtk
 import gtk.glade
 import string
 import signal
+import partEntry
 
 ##
 ## I18N
@@ -53,8 +54,8 @@ class partWindow:
         self.onPartBox = xml.get_widget("onPartBox")
         self.sizeFixedRadio = xml.get_widget("sizeFixedRadio")
         self.sizeSetRadio = xml.get_widget("sizeSetRadio")
+        self.sizeSetCombo = xml.get_widget("sizeSetCombo")
         self.sizeMaxRadio = xml.get_widget("sizeMaxRadio")
-        self.maxSizeCombo = xml.get_widget("maxSizeCombo")
         self.formatCheck = xml.get_widget("formatCheck")
         self.partCancelButton = xml.get_widget("part_cancel_button")
         self.partOkButton = xml.get_widget("part_ok_button")
@@ -64,6 +65,7 @@ class partWindow:
         self.fsTypeCombo.list.connect("selection-changed", self.on_fsTypeCombo_set_focus_child)
         self.partCancelButton.connect("clicked", self.on_part_cancel_button_clicked)
         self.sizeSetRadio.connect("toggled", self.on_sizeSetRadio_toggled)
+        self.sizeMaxRadio.connect("toggled", self.on_sizeMaxRadio_toggled)
         self.onPartCheck.connect("toggled", self.on_onPartCheck_toggled)
         self.onDiskCheck.connect("toggled", self.on_onDiskCheck_toggled)
         self.swap_checkbutton.connect("toggled", self.on_swap_recommended_toggled)
@@ -94,7 +96,10 @@ class partWindow:
                 self.swap_checkbutton.set_sensitive(gtk.FALSE)
 
     def on_sizeSetRadio_toggled(self, *args):
-        self.maxSizeCombo.set_sensitive(self.sizeSetRadio.get_active())
+        self.sizeSetCombo.set_sensitive(self.sizeSetRadio.get_active())
+
+    def on_sizeMaxRadio_toggled(self, *args):
+        self.sizeCombo.set_sensitive(not self.sizeMaxRadio.get_active())
 
     def on_onPartCheck_toggled(self, *args):
         self.onPartBox.set_sensitive(self.onPartCheck.get_active())
@@ -109,25 +114,28 @@ class partWindow:
         self.win_reset()
         self.partitionDialog.show_all()
 
-    def edit_partition(self, rowData, selected_row):
-        self.selected_row = selected_row
+    def edit_partition(self, part_object):
         self.ok_handler = self.partOkButton.connect("clicked", self.on_edit_ok_button_clicked)
         self.win_reset()
 
-        (mountPoint, fsType, size, fixedSize, setSize, setSizeVal, maxSize,
-         asPrimary, onDisk, onDiskVal, onPart,
-         onPartVal, doFormat, None, None, None) = rowData
-        self.mountPointCombo.entry.set_text(mountPoint)
-        self.fsTypeCombo.entry.set_text(fsType) 
-        self.sizeCombo.set_text(size) 
-        self.asPrimaryCheck.set_active(asPrimary)
-        self.onDiskCheck.set_active(onDisk)
-        self.onDiskEntry.set_text(str(onDiskVal))
-        self.onPartCheck.set_active(onPart)
-        self.onPartEntry.set_text(str(onPartVal))
-        self.sizeFixedRadio.set_active(fixedSize)
-        self.maxSizeCombo.set_text(str(maxSize))
-        self.formatCheck.set_active(doFormat)        
+        self.mountPointCombo.entry.set_text(part_object.mountPoint)
+        self.fsTypeCombo.entry.set_text(part_object.fsType) 
+        self.sizeCombo.set_text(part_object.size) 
+        self.asPrimaryCheck.set_active(part_object.asPrimary)
+        self.onDiskCheck.set_active(part_object.onDisk)
+        self.onDiskEntry.set_text(str(part_object.onDiskVal))
+        self.onPartCheck.set_active(part_object.onPart)
+        self.onPartEntry.set_text(str(part_object.onPartVal))
+        
+        if part_object.sizeStrategy == "fixed":
+            self.sizeFixedRadio.set_active(gtk.TRUE)
+        elif part_object.sizeStrategy == "grow":
+            self.sizeSetRadio.set_active(gtk.TRUE)
+            self.sizeSetCombo.set_text(part_object.sizeSetVal)
+        elif part_object.sizeStrategy == "max":
+            self.sizeMaxRadio.set_active(gtk.TRUE)
+        
+        self.formatCheck.set_active(part_object.doFormat)        
 
         curr = self.fsTypeCombo.entry.get_text()
         if curr in self.fileTypes:
@@ -152,7 +160,7 @@ class partWindow:
         self.onPartCheck.set_active(gtk.FALSE)
         self.onPartEntry.set_text("")
         self.sizeFixedRadio.set_active(gtk.TRUE)
-        self.maxSizeCombo.set_text("1")
+        self.sizeSetCombo.set_text("1")
         self.formatCheck.set_active(gtk.TRUE)
         
     def on_part_cancel_button_clicked(self, *args):
@@ -161,25 +169,6 @@ class partWindow:
         self.win_reset()
 
     def on_edit_ok_button_clicked(self, *args):
-        rowData = self.getData()
-
-        if rowData:
-            (mountPoint, fsType, size, fixedSize, setSize,
-             setSizeVal, maxSize, asPrimary, 
-             onDisk, onDiskVal, onPart, onPartVal,
-             doFormat, raidType, raidSpares, isRaidDevice) = rowData
-
-            self.partClist.set_text(self.selected_row, 0, mountPoint)
-            self.partClist.set_text(self.selected_row, 1, fsType)
-            self.partClist.set_text(self.selected_row, 2, size)
-            self.partClist.set_text(self.selected_row, 3, onDiskVal)
-            self.partClist.set_row_data(self.selected_row, rowData)
-            
-            self.partOkButton.disconnect(self.ok_handler)
-            self.partitionDialog.hide()
-            self.win_reset()
-
-    def on_ok_button_clicked(self, *args):
         rowData = self.getData()
 
         if rowData:
@@ -205,9 +194,25 @@ class partWindow:
             self.part_store.set_value(iter, 13, raidType)
             self.part_store.set_value(iter, 14, raidSpares)
             self.part_store.set_value(iter, 15, isRaidDevice)
+
             
-#            row = self.partClist.append([mountPoint, fsType, size, onDiskVal])
-#            self.partClist.set_row_data(row, rowData)
+            self.partOkButton.disconnect(self.ok_handler)
+            self.partitionDialog.hide()
+            self.win_reset()
+
+    def on_ok_button_clicked(self, *args):
+        rowData = self.getData()
+        
+        if rowData:
+            part_object = partEntry.partEntry()
+            part_object.setData(rowData)
+
+            iter = self.part_store.append()
+            self.part_store.set_value(iter, 0, part_object.mountPoint)
+            self.part_store.set_value(iter, 1, part_object.fsType)
+            self.part_store.set_value(iter, 2, part_object.size)
+            self.part_store.set_value(iter, 3, part_object.onDiskVal)
+            self.part_store.set_value(iter, 4, part_object)
 
             self.partOkButton.disconnect(self.ok_handler)
             self.partitionDialog.hide()
@@ -227,18 +232,25 @@ class partWindow:
 
 ##      size stuff
 
-        size = self.sizeCombo.get_text()
-
         if self.swap_checkbutton.get_active() == 1:
             size = "recommended"
+        else:
+            size = self.sizeCombo.get_text()
 
-        fixedSize = self.sizeFixedRadio.get_active()
-        setSize = self.sizeSetRadio.get_active()
-        if setSize == 1:
-            setSizeVal = self.maxSizeCombo.get_text()
-        maxSize = self.sizeMaxRadio.get_active()
+        if self.sizeFixedRadio.get_active() == gtk.TRUE:
+            sizeStrategy = "fixed"
+        elif self.sizeSetRadio.get_active() == gtk.TRUE:
+            sizeStrategy = "grow"
+            setSizeVal = self.sizeSetCombo.get_text()
+        elif self.sizeMaxRadio.get_active() == gtk.TRUE:
+            sizeStrategy = "max"
 
-##
+
+#        fixedSize = self.sizeFixedRadio.get_active()
+#        setSize = self.sizeSetRadio.get_active()
+#        if setSize == 1:
+#        if sizeStrategy = "grow":
+#        maxSize = self.sizeMaxRadio.get_active()
 
         asPrimary = self.asPrimaryCheck.get_active()
 
@@ -378,9 +390,7 @@ class partWindow:
                 dlg.hide()
             return
 
-        rowData = [mountPoint, fsType, size, fixedSize, setSize,
-                   setSizeVal, maxSize, asPrimary, 
-                   onDisk, onDiskVal, onPart, onPartVal,
-                   doFormat, "", "", ""]
+        rowData = [mountPoint, fsType, sizeStrategy, size, setSizeVal, asPrimary, 
+                   onDisk, onDiskVal, onPart, onPartVal, doFormat, "", "", ""]
 
         return rowData
