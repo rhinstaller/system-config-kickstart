@@ -39,7 +39,8 @@ class bootloader:
     def __init__(self, xml, notebook, kickstartData):
         self.kickstartData = kickstartData
         self.notebook = notebook
-        self.bootloader_frame = xml.get_widget("bootloader_frame")
+        self.bootloader_vbox = xml.get_widget("bootloader_vbox")
+        self.bootloader_label = xml.get_widget("bootloader_label")
         self.install_bootloader_radio = xml.get_widget("install_bootloader_radio")
         self.upgrade_bootloader_radio = xml.get_widget("upgrade_bootloader_radio")
         self.no_bootloader_radio = xml.get_widget("no_bootloader_radio")
@@ -70,10 +71,14 @@ class bootloader:
         self.grub_password_hbox.set_sensitive(self.grub_password_checkbutton.get_active())
 
     def platformTypeChanged(self, platform):
-        if platform == "Intel Itanium":
-            self.bootloader_frame.set_sensitive(gtk.FALSE)
+        if platform != "x86, AMD64, or Intel EM64T":
+            self.bootloader_vbox.hide()
+            self.bootloader_label.set_text(_("Bootloader options are not applicable to "
+                                             "the %s platform" % platform))
+            self.bootloader_label.show()
         else:
-            self.bootloader_frame.set_sensitive(gtk.TRUE)
+            self.bootloader_vbox.show()
+            self.bootloader_label.hide()
 
     def enableUpgradeRadio(self, boolean):
         self.upgrade_bootloader_radio.set_sensitive(not boolean)

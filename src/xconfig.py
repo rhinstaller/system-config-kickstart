@@ -29,6 +29,8 @@ class xconfig:
 
     def __init__(self, xml, kickstartData):
         self.kickstartData = kickstartData
+        self.xconfig_vbox = xml.get_widget("xconfig_vbox")
+        self.xconfig_label_box = xml.get_widget("xconfig_label_box")
         self.config_x_button = xml.get_widget("config_x_button")
         self.card_view = xml.get_widget("card_view")
         self.monitor_view = xml.get_widget("monitor_view")
@@ -154,6 +156,14 @@ class xconfig:
         sync_instead = self.sync_button.get_active()
         self.sync_table.set_sensitive(sync_instead)
         self.monitor_view.set_sensitive(not sync_instead)        
+
+    def setSensitive(self, boolean):
+        if boolean == gtk.FALSE:
+            self.xconfig_vbox.hide()
+            self.xconfig_label_box.show()
+        else:
+            self.xconfig_vbox.show()
+            self.xconfig_label_box.hide()
 
     def getData(self):
         if self.config_x_button.get_active():

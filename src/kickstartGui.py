@@ -142,7 +142,7 @@ class kickstartGui:
 	self.category_list = [ (_("Basic Configuration")), (_("Installation Method")),
 			       (_("Boot Loader Options")), (_("Partition Information")),
 			       (_("Network Configuration")), (_("Authentication")),
-			       (_("Firewall Configuration")), (_("X Configuration")),
+			       (_("Firewall Configuration")), (_("Display Configuration")),
 			       (_("Package Selection")), (_("Pre-Installation Script")),
 			       (_("Post-Installation Script")) ]
 		
@@ -164,7 +164,7 @@ class kickstartGui:
             self.fillData()
             
 	#show gui
-	self.toplevel.show_all()
+	self.toplevel.show()
 
 	gtk.mainloop ()
 
@@ -315,4 +315,7 @@ class kickstartGui:
     def installTypeChanged(self, boolean):
         self.partition_class.setSensitive(boolean)
         self.packages_class.setSensitive(boolean)
+        self.auth_class.setSensitive(boolean)
+        self.firewall_class.setSensitive(boolean)
+        self.X_class.setSensitive(boolean)
         self.bootloader_class.enableUpgradeRadio(boolean)

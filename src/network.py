@@ -40,6 +40,7 @@ class network:
 
     def __init__(self, xml, kickstartData):
         self.kickstartData = kickstartData
+        self.network_frame = xml.get_widget("network_frame")
         self.network_device_tree = xml.get_widget("network_device_tree")
         self.add_device_button = xml.get_widget("add_device_button")
         self.edit_device_button = xml.get_widget("edit_device_button")
@@ -115,6 +116,7 @@ class network:
 
         self.network_type_option_menu.connect("changed", self.typeChanged)
         self.network_cancel_button.connect("clicked", self.resetDialog)
+        self.network_frame.show_all()
         
     def showAddNetworkDialog(self, *args):
         self.handler = self.network_ok_button.connect("clicked", self.addDevice)

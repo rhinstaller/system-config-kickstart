@@ -232,6 +232,8 @@ class auth:
         self.myHesiodClass = hesiodData()
         self.mySambaClass = sambaData()
         
+        self.auth_vbox = xml.get_widget("auth_vbox")
+        self.auth_label_box = xml.get_widget("auth_label_box")
         self.nisCheck = xml.get_widget("nisCheck")
         self.nisDomainLabel = xml.get_widget("nisDomainLabel")
         self.nisDomainEntry = xml.get_widget("nisDomainEntry")
@@ -321,6 +323,13 @@ class auth:
         else:
             self.myLDAPClass.set_auth("No")	
 
+    def setSensitive(self, boolean):
+        if boolean == gtk.FALSE:
+            self.auth_vbox.hide()
+            self.auth_label_box.show()
+        else:
+            self.auth_vbox.show()
+            self.auth_label_box.hide()
 
     def fillData(self):
         if self.kickstartData.getAuth():

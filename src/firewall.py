@@ -40,6 +40,9 @@ class firewall:
     
     def __init__(self, xml, kickstartData):
         self.kickstartData = kickstartData
+        self.firewall_frame = xml.get_widget("firewall_frame")
+        self.firewall_vbox = xml.get_widget("firewall_vbox")
+        self.firewall_label_box = xml.get_widget("firewall_label_box")
         self.securityOptionMenu = xml.get_widget("securityOptionMenu")
         self.firewallDefaultRadio = xml.get_widget("firewallDefaultRadio")
         self.firewallCustomizeRadio = xml.get_widget("firewallCustomizeRadio")        
@@ -117,6 +120,8 @@ class firewall:
         self.customTable.attach (self.label3, 0, 1, 4, 5, gtk.FILL, gtk.FILL, 5, 5)
         self.customTable.attach (self.portsEntry, 1, 2, 4, 5, gtk.EXPAND|gtk.FILL, gtk.FILL, 5, 5)
 
+        self.firewall_frame.show_all()
+
     def item_toggled(self, data, row, store):
         iter = store.get_iter((int(row),))
         val = store.get_value(iter, 0)
@@ -135,6 +140,14 @@ class firewall:
         val = not val
         list.set_row_data(row, (val, row_data, header))
         list._update_row (row)
+
+    def setSensitive(self, boolean):
+        if boolean == gtk.FALSE:
+            self.firewall_vbox.hide()
+            self.firewall_label_box.show()
+        else:
+            self.firewall_vbox.show()
+            self.firewall_label_box.hide()
 
     def getData(self):
         buf = ""
