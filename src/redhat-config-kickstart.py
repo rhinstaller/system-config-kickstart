@@ -27,6 +27,7 @@ import signal
 import gtk
 import gtk.glade
 import gettext
+import getopt
 import kickstartGui
 
 try:
@@ -44,4 +45,7 @@ gtk.glade.bindtextdomain(domain)
 
 xml = gtk.glade.XML ("/usr/share/redhat-config-kickstart/redhat-config-kickstart-gtk2.glade", domain=domain)
 
-kickstartGui.kickstartGui(xml)
+file = None
+opts, file = getopt.getopt(sys.argv[1:], "d:h")
+
+kickstartGui.kickstartGui(xml, file)

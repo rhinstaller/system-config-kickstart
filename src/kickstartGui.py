@@ -58,190 +58,192 @@ _=gettext.gettext
 
 iconPixbuf = None      
 try:
-	iconPixbuf = gtk.gdk.pixbuf_new_from_file("/usr/share/redhat-config-kickstart/pixmaps/redhat-config-kickstart.png")
+    iconPixbuf = gtk.gdk.pixbuf_new_from_file("/usr/share/redhat-config-kickstart/pixmaps/redhat-config-kickstart.png")
+     
 except:
-	pass
+    pass
 
 class kickstartGui:
 	
-	def destroy(self, args):
-		gtk.mainquit()
+    def destroy(self, args):
+        gtk.mainquit()
 
-	def __init__ (self, xml):
-		self.xml = xml
-		self.toplevel = xml.get_widget("main_window")
-		self.toplevel.connect ("destroy", self.destroy)
-		self.toplevel.set_icon(iconPixbuf)
-
-		#bring in widgets from glade file
-		self.options_notebook = xml.get_widget("options_notebook")
-		self.install_radiobutton = xml.get_widget("install_radiobutton")
-		self.category_clist = xml.get_widget("category_clist")
-		self.preview_menu = xml.get_widget("preview_menu")
-		self.save_menu = xml.get_widget("save_menu")
-		self.quit_menu = xml.get_widget("quit_menu")
-		self.help_menu = xml.get_widget("help_menu")
-		self.about_menu = xml.get_widget("about_menu")
-
-		#populate category list
-		self.category_view = xml.get_widget("list_view")
-		self.category_store = gtk.ListStore(gobject.TYPE_STRING)
-		self.category_view.set_model(self.category_store)
-
-		#bring in basic functions
-		self.basic_class = basic.basic(xml, self.category_store,
-					       self.category_view, self.options_notebook)
-		#bring in bootloader functions
-		self.bootloader_class = bootloader.bootloader(xml)		
-		#bring in install functions
-		self.install_class = install.install(xml, self.category_store,
-						     self.category_view, self.options_notebook,
-						     self.bootloader_class)
-		#bring in partitions functions
-		self.partition_class = partition.partition(xml)
-		#bring in network functions
-		self.network_class = network.network(xml)
-		#bring in auth functions
-		self.auth_class = auth.auth(xml)
-		#bring in firewall functions
-		self.firewall_class = firewall.firewall(xml)
-		#bring in X functions
-		self.X_class = xconfig.xconfig(xml)
-		#bring in package function
-#		self.packages_class = packages.headerList(xml)
-                #FIXME
-		self.packages_class = packages.Packages(xml)	
-		#bring in scripts function
-		self.scripts_class = scripts.scripts(xml)	
-
-		col = gtk.TreeViewColumn(_("Subsection"), gtk.CellRendererText(), text=0)
-		col.set_sort_column_id(0)
-		self.category_view.append_column(col)
-
-		self.category_list = [ (_("Basic Configuration")), (_("Installation Method")),
-				   (_("Boot Loader Options")), (_("Partition Information")),
-				   (_("Network Configuration")), (_("Authentication")),
-				   (_("Firewall Configuration")), (_("X Configuration")),
-				   (_("Package Selection")), (_("Pre-Installation Script")),
-				   (_("Post-Installation Script")) ]
+    def __init__ (self, xml, file):
+        self.xml = xml
 		
-		for item in self.category_list:
-			iter = self.category_store.append()
-			self.category_store.set_value(iter, 0, item)
+	self.toplevel = xml.get_widget("main_window")
+	self.toplevel.connect ("destroy", self.destroy)
+	self.toplevel.set_icon(iconPixbuf)
 
-		self.preview_menu.connect("activate", self.on_activate_preview_options)
-		self.save_menu.connect("activate", self.on_activate_save_options)
-		self.quit_menu.connect("activate", gtk.mainquit)
-		self.help_menu.connect("activate", self.on_help_button_clicked)
-		self.about_menu.connect("activate", self.on_about_activate)
-		self.category_view.connect("cursor_changed", self.on_list_view_row_activated)
+	#bring in widgets from glade file
+	self.options_notebook = xml.get_widget("options_notebook")
+	self.install_radiobutton = xml.get_widget("install_radiobutton")
+	self.category_clist = xml.get_widget("category_clist")
+	self.preview_menu = xml.get_widget("preview_menu")
+	self.save_menu = xml.get_widget("save_menu")
+	self.quit_menu = xml.get_widget("quit_menu")
+	self.help_menu = xml.get_widget("help_menu")
+	self.about_menu = xml.get_widget("about_menu")
 
-		#show gui
-		self.toplevel.show_all()
+	#populate category list
+	self.category_view = xml.get_widget("list_view")
+	self.category_store = gtk.ListStore(gobject.TYPE_STRING)
+	self.category_view.set_model(self.category_store)
 
-#		self.options_notebook.set_current_page(3)
-
-		gtk.mainloop ()
-
-	def on_list_view_row_activated(self, tree_view):
-		data, iter = tree_view.get_selection().get_selected()
-		category = self.category_store.get_value(iter, 0)
-		row = self.category_list.index(category)
-		self.options_notebook.set_current_page(row)
-
-	#about box
-	def on_about_activate(self, args):
-		dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_INFO, gtk.BUTTONS_OK,
-                                        _("Kickstart Configurator @VERSION@\n Copyright (c) 2000-2002 Red Hat, Inc.\n Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n A graphical interface for creating a kickstart file"))
-		dlg.set_title(_("About Kickstart Configurator"))
-		dlg.set_default_size(100, 100)
-		dlg.set_position (gtk.WIN_POS_CENTER)
-		dlg.set_border_width(2)
-		dlg.set_modal(gtk.TRUE)
-		dlg.set_transient_for(self.toplevel)
-		dlg.set_icon(iconPixbuf)
-		rc = dlg.run()
-		if rc == gtk.RESPONSE_OK:
-			dlg.hide()
-
-	#display help manual
-	def on_help_button_clicked (self, args):
-		help_pages = ["file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-basic.html",
-			      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-bootloader.html",
-			      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-install.html",
-			      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-partitions.html",
-			      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-network.html",
-			      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-auth.html",
-			      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-firewall.html",
-			      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-xconfig.html",
-			      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-pkgs.html",
-			      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-prescript.html",
-			      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-postinstall.html",
-			      ]
-		page = (help_pages [self.options_notebook.get_current_page ()])
-		path = helpBrowser.find_browser()
-
-		if path == None:
-			dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_WARNING, gtk.BUTTONS_OK,
-						(_("Help is not available.")))
-			dlg.set_position(gtk.WIN_POS_CENTER)
-			dlg.set_icon(iconPixbuf)
-			dlg.run()
-			dlg.destroy()
-			return
+	#bring in basic functions
+	self.basic_class = basic.basic(xml, self.category_store,
+				       self.category_view, self.options_notebook)
+	#bring in bootloader functions
+	self.bootloader_class = bootloader.bootloader(xml)		
+	#bring in install functions
+	self.install_class = install.install(xml, self.category_store,
+					     self.category_view, self.options_notebook,
+					     self.bootloader_class)
+	#bring in partitions functions
+	self.partition_class = partition.partition(xml)
+	#bring in network functions
+	self.network_class = network.network(xml)
+	#bring in auth functions
+	self.auth_class = auth.auth(xml)
+	#bring in firewall functions
+	self.firewall_class = firewall.firewall(xml)
+	#bring in X functions
+	self.X_class = xconfig.xconfig(xml)
+	#bring in package function
+        #self.packages_class = packages.headerList(xml)
+	#FIXME
+	self.packages_class = packages.Packages(xml)	
+	#bring in scripts function
+	self.scripts_class = scripts.scripts(xml)	
+	
+	col = gtk.TreeViewColumn(_("Subsection"), gtk.CellRendererText(), text=0)
+	col.set_sort_column_id(0)
+	self.category_view.append_column(col)
+	
+	self.category_list = [ (_("Basic Configuration")), (_("Installation Method")),
+			       (_("Boot Loader Options")), (_("Partition Information")),
+			       (_("Network Configuration")), (_("Authentication")),
+			       (_("Firewall Configuration")), (_("X Configuration")),
+			       (_("Package Selection")), (_("Pre-Installation Script")),
+			       (_("Post-Installation Script")) ]
 		
-		pid = os.fork()
-		if not pid:
-			os.execv(path, [path, page])
+	for item in self.category_list:
+		iter = self.category_store.append()
+		self.category_store.set_value(iter, 0, item)
 
-	#get all buffers to save to file
-	def getAllData(self, *args):
-		list = []
+	self.preview_menu.connect("activate", self.on_activate_preview_options)
+	self.save_menu.connect("activate", self.on_activate_save_options)
+	self.quit_menu.connect("activate", gtk.mainquit)
+	self.help_menu.connect("activate", self.on_help_button_clicked)
+	self.about_menu.connect("activate", self.on_about_activate)
+	self.category_view.connect("cursor_changed", self.on_list_view_row_activated)
 
-		data = self.basic_class.getData()
-		if data:
-			list.append("#Generated by Kickstart Configurator")
-			list = list + data
-		else:
-			return
+	#show gui
+	self.toplevel.show_all()
 
-	        data = self.install_class.getData()
-		if data:
-			list = list + self.install_class.getData()
-		else:
-			return
+	#		self.options_notebook.set_current_page(3)
+
+	gtk.mainloop ()
+
+    def on_list_view_row_activated(self, tree_view):
+        data, iter = tree_view.get_selection().get_selected()
+	category = self.category_store.get_value(iter, 0)
+	row = self.category_list.index(category)
+	self.options_notebook.set_current_page(row)
+
+    #about box
+    def on_about_activate(self, args):
+        dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_INFO, gtk.BUTTONS_OK,
+				 _("Kickstart Configurator @VERSION@\n Copyright (c) 2000-2002 Red Hat, Inc.\n Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n A graphical interface for creating a kickstart file"))
+	dlg.set_title(_("About Kickstart Configurator"))
+	dlg.set_default_size(100, 100)
+	dlg.set_position (gtk.WIN_POS_CENTER)
+	dlg.set_border_width(2)
+	dlg.set_modal(gtk.TRUE)
+	dlg.set_transient_for(self.toplevel)
+	dlg.set_icon(iconPixbuf)
+	rc = dlg.run()
+	if rc == gtk.RESPONSE_OK:
+	    dlg.hide()
+
+    #display help manual
+    def on_help_button_clicked (self, args):
+        help_pages = ["file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-basic.html",
+		      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-bootloader.html",
+		      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-install.html",
+		      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-partitions.html",
+		      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-network.html",
+		      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-auth.html",
+		      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-firewall.html",
+		      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-xconfig.html",
+		      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-pkgs.html",
+		      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-prescript.html",
+		      "file:///usr/share/doc/redhat-config-kickstart-" + "@VERSION@" + "/redhat-config-kickstart-postinstall.html",
+		      ]
+	page = (help_pages [self.options_notebook.get_current_page ()])
+	path = helpBrowser.find_browser()
+
+	if path == None:
+	    dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_WARNING, gtk.BUTTONS_OK,
+				    (_("Help is not available.")))
+	    dlg.set_position(gtk.WIN_POS_CENTER)
+	    dlg.set_icon(iconPixbuf)
+	    dlg.run()
+	    dlg.destroy()
+	    return
 		
-		list = list + self.bootloader_class.getData()
+	pid = os.fork()
+	if not pid:
+	    os.execv(path, [path, page])
 
- 		#only write partition info if performing an install
- 		if self.install_radiobutton.get_active():
- 			list = list + self.partition_class.getData()
- 		list = list + self.network_class.getData()
- 		list = list + self.auth_class.getData()
- 		list = list + self.firewall_class.getData()
-		list = list + self.X_class.getData()
+    #get all buffers to save to file
+    def getAllData(self, *args):
+        list = []
 
-		if self.install_radiobutton.get_active():
-			list = list + self.packages_class.getData()
+	data = self.basic_class.getData()
+	if data:
+		list.append("#Generated by Kickstart Configurator")
+		list = list + data
+	else:
+		return
 
-		list = list + self.scripts_class.getData()
+	data = self.install_class.getData()
+	if data:
+		list = list + self.install_class.getData()
+	else:
+		return
 
-		return list
+	list = list + self.bootloader_class.getData()
 
-	#show chosen options for preview
-	def on_activate_preview_options (self, *args):
-		list = self.getAllData()
-		if list:
- 	                #show preview dialog window
-			previewDialog = savefile.saveFile (list, self.xml)
-		else:
-			return
+	#only write partition info if performing an install
+	if self.install_radiobutton.get_active():
+		list = list + self.partition_class.getData()
+	list = list + self.network_class.getData()
+	list = list + self.auth_class.getData()
+	list = list + self.firewall_class.getData()
+	list = list + self.X_class.getData()
 
-	def on_activate_save_options (self, *args):
-		list = self.getAllData()
-		if list:
-   	                #show file selection dialog
-			fileDialog = savedialog.saveDialog(list, self.xml)
-		else:
-			return		
+	if self.install_radiobutton.get_active():
+		list = list + self.packages_class.getData()
+
+	list = list + self.scripts_class.getData()
+
+	return list
+
+    #show chosen options for preview
+    def on_activate_preview_options (self, *args):
+        list = self.getAllData()
+	if list:
+	    #show preview dialog window
+	    previewDialog = savefile.saveFile (list, self.xml)
+	else:
+	    return
+
+    def on_activate_save_options (self, *args):
+        list = self.getAllData()
+	if list:
+	    #show file selection dialog
+	    fileDialog = savedialog.saveDialog(list, self.xml)
+	else:
+	    return		
 
