@@ -58,6 +58,12 @@ class raidWindow:
         self.raid_cancel_button = xml.get_widget("raid_cancel_button")        
 
         mountPoints = ["/", "/boot", "/home", "/var", "/tmp", "/usr", "/opt"]
+        self.fsTypesList = [ "ext2", "ext3", "raid", "swap", "vfat" ]
+        self.raidDeviceList = ['md0', 'md1', 'md2', 'md3', 'md4', 'md5',
+                               'md6', 'md7', 'md8', 'md9', 'md10', 'md11',
+                               'md12', 'md13', 'md14', 'md15']
+        self.raidLevelList = [ "0", "1", "5" ]
+        
         self.raid_mp_combo.set_popdown_strings(mountPoints)
 
         self.raid_partition_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING,
@@ -85,15 +91,44 @@ class raidWindow:
 
     def editDevice(self, part_object):
         print "edit device"
-        print part_object.mountPoint
 
-    def countRaidPartitions(self, store, data, iter):
+        self.raid_partition_store.clear()
+        self.raid_mp_combo.entry.set_text(part_object.mountPoint)
+
+        fsType = part_object.fsType
+        index = self.fsTypesList.index(fsType)
+        menu_item = self.raid_fsType_menu.get_menu().get_children()[index]
+        self.raid_fsType_menu.get_menu().activate_item(menu_item, gtk.TRUE)
+
+        device = part_object.raidDevice
+        index = self.raidDeviceList.index(device)
+        menu_item = self.raid_device_menu.get_menu().get_children()[index]
+        self.raid_device_menu.get_menu().activate_item(menu_item, gtk.TRUE)
+
+        level = part_object.raidLevel
+        index = self.raidLevelList.index(level)
+        menu_item = self.raid_level_menu.get_menu().get_children()[index]
+        self.raid_level_menu.get_menu().activate_item(menu_item, gtk.TRUE)
+        
+        print part_object.raidPartitions
+        self.part_store.foreach(self.countRaidPartitions, part_object.raidPartitions)
+        
+
+        self.raid_window.show_all()
+
+    def countRaidPartitions(self, store, data, iter, raidPartitions = None):
         print "in countRaidPartitions"
         part_object = self.part_store.get_value(iter, 5)
         if part_object and part_object.raidNumber:
             print "appending"
             new_iter = self.raid_partition_store.append()
-            self.raid_partition_store.set_value(new_iter, 0, gtk.FALSE)
+
+            if raidPartitions and part_object.raidNumber in raidPartitions:
+                self.raid_partition_store.set_value(new_iter, 0, gtk.TRUE)
+            else:
+                self.raid_partition_store.set_value(new_iter, 0, gtk.FALSE)
+
+                
             self.raid_partition_store.set_value(new_iter, 1, part_object.raidNumber)
             self.raid_partition_store.set_value(new_iter, 2, iter)
             self.raid_partition_store.set_value(new_iter, 3, part_object)
