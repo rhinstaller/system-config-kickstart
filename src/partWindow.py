@@ -57,7 +57,7 @@ class partWindow:
         mountPoints = ["/", "/boot", "/home", "/var", "/tmp", "/usr", "/opt"]
         self.mountPointCombo.set_popdown_strings(mountPoints)
 
-        fileTypes = ["ext2", "Linux Swap"]
+        fileTypes = ["ext2", "ext3", "Linux Swap"]
         self.fsTypeCombo.set_popdown_strings(fileTypes)
 
         #if swap, disable mount points
