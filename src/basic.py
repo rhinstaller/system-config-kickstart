@@ -28,6 +28,16 @@ import string
 import os
 import whrandom
 import crypt
+from gnome.ui import *
+import gnome.ui
+
+##
+## I18N
+##
+import gettext
+gettext.bindtextdomain ("ksconfig", "/usr/share/locale")
+gettext.textdomain ("ksconfig")
+_=gettext.gettext
 
 class basic:
 
@@ -50,6 +60,7 @@ class basic:
         self.encrypt_root_pw_checkbutton = xml.get_widget("encrypt_root_pw_checkbutton")
         self.lang_support_list = xml.get_widget("lang_support_list")
         self.lang_support_list.set_selection_mode(SELECTION_MULTIPLE)
+#        self.messagebox = xml.get_widget("messagebox")
 
         #define languages, add languages here
         self.langDict = {"Chinese(Mainland)" :  "zh_CN.GB2312",
@@ -233,6 +244,7 @@ class basic:
         xml.signal_autoconnect (
                 { "on_lang_support_list_select_row" : self.on_lang_support_list_select_row,
                   "on_lang_support_list_unselect_row" : self.on_lang_support_list_unselect_row,
+#                  "on_messagebox_button_clicked" : self.on_messagebox_button_clicked,
                   } )
 
     def on_lang_support_list_select_row(self, *args):
@@ -240,6 +252,10 @@ class basic:
 
     def on_lang_support_list_unselect_row(self, *args):
         self.langSupportList.remove(self.langDict[self.lang_support_list.get_text(args[1], args[2])])
+
+#    def on_messagebox_button_clicked(self, *args):
+#        print "button clicked"
+#        self.messagebox.hide()
 
     def getData(self):
         data = []
@@ -273,6 +289,17 @@ class basic:
 
         data.append("")
         data.append("#Root password")
+
+        if self.root_passwd_entry.get_text() == "":
+            dlg = GnomeMessageBox(_("Please set a root password."),
+                                  MESSAGE_BOX_ERROR, STOCK_BUTTON_OK)
+            dlg.set_position(WIN_POS_CENTER)
+            dlg.show()
+            dlg.run_and_close()
+            self.root_passwd_entry.grab_focus()
+            self.root_passwd_entry.show()
+            return
+            
         if self.encrypt_root_pw_checkbutton.get_active():
             pure = self.root_passwd_entry.get_text()
 
