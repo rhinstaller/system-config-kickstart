@@ -19,288 +19,245 @@
 ## along with this program; if not, write to the Free Software
 ## Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-#Kickstart Configurator Authentication Options
-#Created February, 2000 Brent Fox
-#Last Modified: February 6, 2001 Brent Fox
+#Kickstart Configurator Partitions Configuration
 
 from gtk import *
 import GtkExtra
+import libglade
 
-class partitionWindow(GtkWindow):
-    def okClicked(self, args):        
-#        print self.getData()
-        self.destroy()
+class partition:
 
-    def cancelClicked(self, args):
-#        self.myNisClass.set_disabled()
-#        self.myKerberosClass.set_disabled()
-        self.destroy()
+    def __init__(self, xml):
+        self.clear_mbr_yes_radiobutton = xml.get_widget("clear_mbr_yes_radiobutton")
+        self.clear_mbr_no_radiobutton = xml.get_widget("clear_mbr_no_radiobutton")
+        self.remove_parts_none_radiobutton = xml.get_widget("remove_parts_none_radiobutton")
+        self.remove_parts_all_radiobutton = xml.get_widget("remove_parts_all_radiobutton")
+        self.remove_parts_Linux_radiobutton = xml.get_widget("remove_parts_Linux_radiobutton")
+        self.partClist = xml.get_widget("partClist")
+        self.add_part_button = xml.get_widget("add_part_button")
+        self.edit_part_button = xml.get_widget("edit_part_button")
+        self.del_part_button = xml.get_widget("del_part_button")
 
+        xml.signal_autoconnect (
+            { "select_clist" : self.select_clist,
+              "unselect_clist" : self.unselect_clist,
+              "addPartition" : self.addPartition,
+              "editPartition" : self.editPartition,
+              "delPartition" : self.delPartition,
+              })
+
+	class counterClass:
+
+		def setCounter(self, start):
+			self.rowCount = start
+		def increment(self):
+			self.rowCount = self.rowCount + 1
+		def decrement(self):
+			self.rowCount = self.rowCount - 1
+		def currentVal(self):
+			return self.rowCount
+                    
+        self.num_parts = counterClass()
+        self.num_parts.setCounter(3)
+
+    def select_clist(_clist, r, c, event):
+            selected[0] = r
+            self.edit_part_button.set_sensitive(TRUE)
+            self.del_part_button.set_sensitive(TRUE)
+
+    def unselect_clist(self, args):
+            self.edit_part_button.set_state(STATE_INSENSITIVE)
+            self.edit_part_button.set_state(STATE_INSENSITIVE)
+
+    def delPartition(self, args):
+            self.num_parts.decrement()
+            self.partClist.remove(selected[0])
+            self.edit_part_button.set_state(STATE_INSENSITIVE)
+            self.edit_part_button.set_state(STATE_INSENSITIVE)
+
+    def addPartition(args):
+
+            addWindow = GtkWindow()
+            addWindow.connect("delete_event", deleteEvent)
+            addWindow.set_title('Add Partition Entry')
+            addWindow.set_border_width(6)
+            addWindow.set_default_size(100, 50)
+
+            addTable = GtkTable(5, 2, FALSE)
+            addWindow.add(addTable)
+
+            addLabel1 = GtkLabel("Mount Point:")
+            addTable.attach(addLabel1, 0, 1, 0, 1)
+
+            mpCombo = GtkCombo()
+            addTable.attach(mpCombo, 1, 2, 0, 1)
+            list_items = [ "/", "/boot", "/home", "/usr", "/opt", "/var" ]			
+            mpCombo.set_popdown_strings(list_items)
+            mpCombo.entry.set_editable(TRUE)
+
+            addLabel2 = GtkLabel("Filesystem Type:")
+            addTable.attach(addLabel2, 0, 1, 1, 2)
+
+            fsCombo = GtkCombo()
+            addTable.attach(fsCombo, 1, 2, 1, 2)
+            list_items = [ "ext2", "Linux Swap", "FAT 16" ]			
+            fsCombo.set_popdown_strings(list_items)
+            fsCombo.entry.set_text("")
+            fsCombo.entry.set_editable(TRUE)
+
+            addLabel3 = GtkLabel("Size (M):")
+            addTable.attach(addLabel3, 0, 1, 2, 3)
+
+            sizeEntry = GtkEntry()
+            addTable.attach(sizeEntry, 1, 2, 2, 3)
+
+            addLabel4 = GtkLabel("Growable:")
+            addTable.attach(addLabel4, 0, 1, 3, 4)
+
+            growCombo = GtkCombo()
+            addTable.attach(growCombo, 1, 2, 3, 4)
+            list_items = [ "No", "Yes" ]			
+            growCombo.set_popdown_strings(list_items)
+            growCombo.list.select_item(0)
+            growCombo.entry.set_editable(FALSE)
+
+            def addEntry(args, addWindow=addWindow, mpCombo=mpCombo, fsCombo=fsCombo, sizeEntry=sizeEntry, growCombo=growCombo, num_parts=num_parts):
+                    a = mpCombo.entry.get_text()
+                    b = fsCombo.entry.get_text()
+                    c = sizeEntry.get_text()
+                    d = growCombo.entry.get_text()
+
+                    entry = [ a, b, c, d]
+                    partClist.append(entry)
+                    addWindow.destroy()
+                    num_partst.increment()
+
+            ok = GtkButton("OK")
+            addTable.attach(ok, 0, 1, 4, 5)
+            ok.connect("clicked", addEntry)
+
+            cancelAdd = GtkButton("Cancel")
+            addTable.attach(cancelAdd, 1, 2, 4, 5)
+            cancelAdd.connect("clicked", addWindow.hide)
+
+            addWindow.show_all()
+
+
+    def editPartition(self, args):
+
+            editWindow = GtkWindow()
+            editWindow.connect("delete_event", deleteEvent)
+            editWindow.set_title('Edit Partition Entry')
+            editWindow.set_border_width(6)
+            editWindow.set_default_size(100, 50)
+
+            editTable = GtkTable(5, 2, FALSE)
+            editWindow.add(editTable)
+
+            editLabel1 = GtkLabel("Mount Point:")
+            editTable.attach(editLabel1, 0, 1, 0, 1)
+
+            mpCombo = GtkCombo()
+            editTable.attach(mpCombo, 1, 2, 0, 1)
+            list_items = [ "/", "/boot", "/home", "/usr", "/opt", "/var" ]			
+            mpCombo.set_popdown_strings(list_items)
+            mpCombo.entry.set_text("")
+            mpCombo.entry.set_editable(TRUE)
+
+            editLabel2 = GtkLabel("Filesystem Type:")
+            editTable.attach(editLabel2, 0, 1, 1, 2)
+
+            fsCombo = GtkCombo()
+            editTable.attach(fsCombo, 1, 2, 1, 2)
+            list_items = [ "ext2", "Linux Swap", "FAT 16" ]			
+            fsCombo.set_popdown_strings(list_items)
+            fsCombo.entry.set_text("")
+            fsCombo.entry.set_editable(FALSE)
+
+            editLabel3 = GtkLabel("Size (M):")
+            editTable.attach(editLabel3, 0, 1, 2, 3)
+
+            sizeEntry = GtkEntry()
+            editTable.attach(sizeEntry, 1, 2, 2, 3)
+
+            editLabel4 = GtkLabel("Growable:")
+            editTable.attach(editLabel4, 0, 1, 3, 4)
+
+            growCombo = GtkCombo()
+            editTable.attach(growCombo, 1, 2, 3, 4)
+            list_items = [ "No", "Yes" ]			
+            growCombo.set_popdown_strings(list_items)
+            growCombo.entry.set_editable(FALSE)
+
+            for i in range(4):
+                    if i == 0:
+                            mpCombo.entry.set_text(partClist.get_text(s[0], i))
+                    elif i == 1:
+                            fsCombo.entry.set_text(partClist.get_text(s[0], i))
+                    elif i == 2:
+                            sizeEntry.set_text(partClist.get_text(s[0], i))
+                    elif i == 3:
+                            growCombo.entry.set_text(partClist.get_text(s[0], i))
+
+
+            def editEntry(args, editWindow=editWindow, mpCombo=mpCombo, fsCombo=fsCombo, sizeEntry=sizeEntry, growCombo=growCombo, selected=s):
+                    a = mpCombo.entry.get_text()
+                    b = fsCombo.entry.get_text()
+                    c = sizeEntry.get_text()
+                    d = growCombo.entry.get_text()
+
+                    partClist.remove(selected[0])
+
+                    entry = [ a, b, c, d]
+                    partClist.insert(selected[0], entry)
+                    editWindow.destroy()
+
+                    editButton.set_state(STATE_INSENSITIVE)
+                    delButton.set_state(STATE_INSENSITIVE)
+        
     def getData(self):
         buf = ""
-	return buf
+        if mbrRadio1.get_active():
+                buf = buf + "\n" + "zerombr yes"
+        elif mbrRadio2.get_active():
+                buf = buf + "\n" + "zerombr no"			
 
+        if clearRadio1.get_active():
+                buf = buf
+        elif clearRadio2.get_active():
+                buf = buf + "\n" + "clearpart --all"
+        elif clearRadio3.get_active():
+                buf = buf + "\n" + "clearpart --linux"
 
-    def __init__(self, quit_cb=None):
-        GtkWindow.__init__(self, WINDOW_TOPLEVEL)
-        self.set_modal(TRUE)
-        self.set_border_width(6)
-        self.set_default_size(550, 100)		
-        self.set_title("Disk Partitioning")
+        rows = self.num_parts.currentVal()
 
-        self.vbox = GtkVBox()
-        self.add(self.vbox)
+        for n in range(rows):
+                line = "part"
+                for i in range(4):
 
-        frame3 = GtkFrame("Disk Partitioning")
-        self.vbox.pack_start(frame3)
+                        if i == 0:
+                                mount = self.partClist.get_text(n, i)
+                                if mount == '':
+                                        line = line
+                                else:
+                                        line = line + " " + mount
+                        elif i == 1:
+                                fsType = self.partClist.get_text(n, i)
+                                if fsType == 'Linux Swap':
+                                        line = line + " swap"
+                                elif fsType == 'ext2':
+                                        line = line + " "
+                                else:
+                                        line = line + " " + fsType
+                        elif i == 2:
+                                size = self.partClist.get_text(n, i)
+                                line = line + " --size " + size
+                        elif i == 3:
+                                grow = self.partClist.get_text(n, i)
+                                if grow == 'Yes':
+                                        line = line + " --grow"
+                                else:
+                                        line = line
 
-        partVbox = GtkVBox()
-        frame3.add(partVbox)
-
-        mbrHbox = GtkHBox()
-        partVbox.pack_start(mbrHbox)
-
-        mbrLabel = GtkLabel("Clear Master Boot Record:")
-        mbrHbox.pack_start(mbrLabel)
-
-        mbrRadio1 = GtkRadioButton(None, "Yes")
-        mbrHbox.pack_start(mbrRadio1)
-
-        mbrRadio2 = GtkRadioButton(mbrRadio1, "No")
-        mbrHbox.pack_start(mbrRadio2)
-
-        clearHbox = GtkHBox()
-        partVbox.pack_start(clearHbox)
-
-        clearLabel = GtkLabel("Remove Existing Partitions:")
-        clearHbox.pack_start(clearLabel)
-
-        clearRadio1 = GtkRadioButton(None, "None")
-        clearHbox.pack_start(clearRadio1)
-
-        clearRadio2 = GtkRadioButton(clearRadio1, "All")
-        clearHbox.pack_start(clearRadio2)
-
-        clearRadio3 = GtkRadioButton(clearRadio1, "Linux")
-        clearHbox.pack_start(clearRadio3)
-
-
-        #---Partition table clist---#
-        titles = ["Mount Point", "Type", "Size (M)", "Growable"]
-
-        partClist = GtkCList(4, titles)
-        partVbox.pack_start(partClist)
-
-        partClist.set_column_width(0, 150)
-        partClist.set_column_width(1, 150)
-        partClist.set_column_width(2, 50)
-        partClist.set_column_width(3, 20)
-
-        s = [0]
-
-##         def delPartition(_button, partClist=partClist, selected=s, myCount=myCount):
-##             myCount.decrement()
-##             partClist.remove(selected[0])
-##             editButton.set_state(STATE_INSENSITIVE)
-##             delButton.set_state(STATE_INSENSITIVE)
-        
-        def select_clist(_clist, r, c, event, selected=s):
-            selected[0] = r
-            editButton.set_sensitive(TRUE)
-            delButton.set_sensitive(TRUE)
-
-        def unselect_clist(_clist, r, c, event, selected=s):
-            editButton.set_state(STATE_INSENSITIVE)
-            delButton.set_state(STATE_INSENSITIVE)
-
-##         def addPartition(args):
-	
-##             addWindow = GtkWindow()
-##             addWindow.connect("delete_event", deleteEvent)
-##             addWindow.set_title('Add Partition Entry')
-##             addWindow.set_border_width(6)
-##             addWindow.set_default_size(100, 50)
-
-##             addTable = GtkTable(5, 2, FALSE)
-##             addWindow.add(addTable)
-
-##             addLabel1 = GtkLabel("Mount Point:")
-##             addTable.attach(addLabel1, 0, 1, 0, 1)
-	
-##             mpCombo = GtkCombo()
-##             addTable.attach(mpCombo, 1, 2, 0, 1)
-##             list_items = [ "/", "/boot", "/home", "/usr", "/opt", "/var" ]			
-##             mpCombo.set_popdown_strings(list_items)
-##             mpCombo.entry.set_editable(TRUE)
-
-##             addLabel2 = GtkLabel("Filesystem Type:")
-##             addTable.attach(addLabel2, 0, 1, 1, 2)
-            
-##             fsCombo = GtkCombo()
-##             addTable.attach(fsCombo, 1, 2, 1, 2)
-##             list_items = [ "ext2", "Linux Swap", "FAT 16" ]			
-##             fsCombo.set_popdown_strings(list_items)
-##             fsCombo.entry.set_text("")
-##             fsCombo.entry.set_editable(TRUE)
-	
-##             addLabel3 = GtkLabel("Size (M):")
-##             addTable.attach(addLabel3, 0, 1, 2, 3)
-            
-##             sizeEntry = GtkEntry()
-##             addTable.attach(sizeEntry, 1, 2, 2, 3)
-            
-##             addLabel4 = GtkLabel("Growable:")
-##             addTable.attach(addLabel4, 0, 1, 3, 4)
-
-##             growCombo = GtkCombo()
-##             addTable.attach(growCombo, 1, 2, 3, 4)
-##             list_items = [ "No", "Yes" ]			
-##             growCombo.set_popdown_strings(list_items)
-##             growCombo.list.select_item(0)
-##             growCombo.entry.set_editable(FALSE)
-	
-##         def addEntry(args, addWindow=addWindow, mpCombo=mpCombo, fsCombo=fsCombo, sizeEntry=sizeEntry, growCombo=growCombo, myCount=myCount):
-##             a = mpCombo.entry.get_text()
-##             b = fsCombo.entry.get_text()
-##             c = sizeEntry.get_text()
-##             d = growCombo.entry.get_text()
-
-##             entry = [ a, b, c, d]
-##             partClist.append(entry)
-##             addWindow.destroy()
-##             myCount.increment()
-
-##             ok = GtkButton("OK")
-##             addTable.attach(ok, 0, 1, 4, 5)
-##             ok.connect("clicked", addEntry)
-
-##             cancelAdd = GtkButton("Cancel")
-##             addTable.attach(cancelAdd, 1, 2, 4, 5)
-##             cancelAdd.connect("clicked", addWindow.hide)
-
-##             addWindow.show_all()
-
-
-##         def editPartition(args, partClist=partClist, selection=s):
-	
-##             editWindow = GtkWindow()
-##             editWindow.connect("delete_event", deleteEvent)
-##             editWindow.set_title('Edit Partition Entry')
-##             editWindow.set_border_width(6)
-##             editWindow.set_default_size(100, 50)
-
-##             editTable = GtkTable(5, 2, FALSE)
-##             editWindow.add(editTable)
-
-##             editLabel1 = GtkLabel("Mount Point:")
-##             editTable.attach(editLabel1, 0, 1, 0, 1)
-	
-##             mpCombo = GtkCombo()
-##             editTable.attach(mpCombo, 1, 2, 0, 1)
-##             list_items = [ "/", "/boot", "/home", "/usr", "/opt", "/var" ]			
-##             mpCombo.set_popdown_strings(list_items)
-##             mpCombo.entry.set_text("")
-##             mpCombo.entry.set_editable(TRUE)
-
-##             editLabel2 = GtkLabel("Filesystem Type:")
-##             editTable.attach(editLabel2, 0, 1, 1, 2)
-
-##             fsCombo = GtkCombo()
-##             editTable.attach(fsCombo, 1, 2, 1, 2)
-##             list_items = [ "ext2", "Linux Swap", "FAT 16" ]			
-##             fsCombo.set_popdown_strings(list_items)
-##             fsCombo.entry.set_text("")
-##             fsCombo.entry.set_editable(FALSE)
-	
-##             editLabel3 = GtkLabel("Size (M):")
-##             editTable.attach(editLabel3, 0, 1, 2, 3)
-
-##             sizeEntry = GtkEntry()
-##             editTable.attach(sizeEntry, 1, 2, 2, 3)
-
-##             editLabel4 = GtkLabel("Growable:")
-##             editTable.attach(editLabel4, 0, 1, 3, 4)
-
-##             growCombo = GtkCombo()
-##             editTable.attach(growCombo, 1, 2, 3, 4)
-##             list_items = [ "No", "Yes" ]			
-##             growCombo.set_popdown_strings(list_items)
-##             growCombo.entry.set_editable(FALSE)
-
-##             for i in range(4):
-## 		if i == 0:
-##                     mpCombo.entry.set_text(partClist.get_text(s[0], i))
-## 		elif i == 1:
-##                     fsCombo.entry.set_text(partClist.get_text(s[0], i))
-## 		elif i == 2:
-##                     sizeEntry.set_text(partClist.get_text(s[0], i))
-## 		elif i == 3:
-##                     growCombo.entry.set_text(partClist.get_text(s[0], i))
-			
-
-##             def editEntry(args, editWindow=editWindow, mpCombo=mpCombo, fsCombo=fsCombo, sizeEntry=sizeEntry, growCombo=growCombo, selected=s):
-## 		a = mpCombo.entry.get_text()
-## 		b = fsCombo.entry.get_text()
-## 		c = sizeEntry.get_text()
-## 		d = growCombo.entry.get_text()
-
-## 		partClist.remove(selected[0])
-
-## 		entry = [ a, b, c, d]
-## #		partClist.append(entry)
-## 		partClist.insert(selected[0], entry)
-## 		editWindow.destroy()
-		
-## 		editButton.set_state(STATE_INSENSITIVE)
-## 		delButton.set_state(STATE_INSENSITIVE)
-
-
-
-##             okEdit = GtkButton("OK")
-##             editTable.attach(okEdit, 0, 1, 4, 5)
-##             okEdit.connect("clicked", editEntry)
-
-##             cancelEdit = GtkButton("Cancel")
-##             editTable.attach(cancelEdit, 1, 2, 4, 5)
-##             editWindow.show_all()
-
-##             def exitEdit(cancelEdit=cancelEdit, editWindow=editWindow):
-## 		editWindow.hide()
-
-##             cancelEdit.connect("clicked", exitEdit)
-
-##         def deleteEvent(win, event=None):
-##             win.destroy()
-##             return TRUE
-
-        bootPartition = ["/boot", "ext2", "35", "No"]
-        partClist.append(bootPartition)
-
-        swapPartition = ["", "Linux Swap", "128", "No"]
-        partClist.append(swapPartition)
-
-        rootPartition = ["/", "ext2", "1000", "Yes"]
-        partClist.append(rootPartition)
-
-        partHbox = GtkHBox()
-        partVbox.pack_start(partHbox)
-
-        addButton = GtkButton("Add")
-#        addButton.connect("clicked", addPartition)
-        partHbox.pack_start(addButton)
-
-        editButton = GtkButton("Edit")
-#        editButton.connect("clicked", editPartition)
-        partHbox.pack_start(editButton)
-        editButton.set_state(STATE_INSENSITIVE)
-
-        delButton = GtkButton("Delete")
-#        delButton.connect("clicked", delPartition)
-        partHbox.pack_start(delButton)
-        delButton.set_state(STATE_INSENSITIVE)
-
-        partClist.connect("select_row", select_clist)
-        partClist.connect("unselect_row", unselect_clist)
-
-
-        self.show_all()
+			buf = buf + "\n" + line
+        return buf

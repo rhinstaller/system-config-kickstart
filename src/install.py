@@ -72,3 +72,20 @@ class install:
             self.hdpart_entry.set_state(STATE_INSENSITIVE)
             self.hddir_entry.set_state(STATE_INSENSITIVE)
 
+    def getData(self):
+        buf = ""
+        if self.cdrom_radiobutton.get_active():
+            buf = buf + "\n" + "cdrom"
+        elif self.nfs_radiobutton.get_active():
+            buf = buf + "\n" + "nfs"
+            buf = buf + " --server " + self.nfsserver_entry.get_text()
+            buf = buf + " --dir " + self.nfsdir_entry.get_text()
+        elif self.ftp_radiobutton.get_active():
+            buf = buf + "\n" + "url"
+            buf = buf + " --url ftp://" + self.ftpserver_entry.get_text()
+            buf = buf + self.ftpdir_entry.get_text()		
+        elif self.hd_radiobutton.get_active():
+            buf = buf + "\n" + "harddrive"
+            buf = buf + " --dir " + self.hddir_entry.get_text()
+            buf = buf + " --partition " + self.hdpart_entry.get_text()        
+        return buf
