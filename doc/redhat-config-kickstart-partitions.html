@@ -11,11 +11,11 @@ REL="HOME"
 TITLE="Kickstart Configurator"
 HREF="index.html"><LINK
 REL="PREVIOUS"
-TITLE="Installation Method"
-HREF="redhat-config-kickstart-install.html"><LINK
+TITLE="Boot Loader Options"
+HREF="redhat-config-kickstart-bootloader.html"><LINK
 REL="NEXT"
 TITLE="Network Configuration"
-HREF="redhat-config-kickstart-network.html"></HEAD
+HREF="redhat-config-kickstart-network.html"></HEAD><link rel="stylesheet" type="text/css" href="rhdocs-man.css"
 ><BODY
 CLASS="CHAPTER"
 BGCOLOR="#FFFFFF"
@@ -43,7 +43,7 @@ WIDTH="10%"
 ALIGN="left"
 VALIGN="bottom"
 ><A
-HREF="redhat-config-kickstart-install.html"
+HREF="redhat-config-kickstart-bootloader.html"
 ACCESSKEY="P"
 >Prev</A
 ></TD
@@ -70,11 +70,15 @@ WIDTH="100%"></DIV
 CLASS="CHAPTER"
 ><H1
 ><A
-NAME="REDHAT-CONFIG-KICKSTART-PARTITIONS">Chapter 5. Partition Information</H1
+NAME="REDHAT-CONFIG-KICKSTART-PARTITIONS"
+></A
+>Chapter 5. Partition Information</H1
 ><DIV
 CLASS="FIGURE"
 ><A
-NAME="REDHAT-CONFIG-KICKSTART-PARTITIONS-FIG"><DIV
+NAME="REDHAT-CONFIG-KICKSTART-PARTITIONS-FIG"
+></A
+><DIV
 CLASS="MEDIAOBJECT"
 ><P
 ><IMG
@@ -86,50 +90,33 @@ SRC="./figs/ksconfig-partitions.png"></P
 ></P
 ></DIV
 ><P
->	To clear the Master Boot Record, select <B
-CLASS="GUIBUTTON"
->Yes</B
->
-	beside the option on the top of the window. You can choose to keep the
-	existing partitions, remove all the existing partitions, or remove all
-	the existing Linux partitions by selecting
-	<B
-CLASS="GUIBUTTON"
->None</B
->, <B
-CLASS="GUIBUTTON"
->All</B
->, or
-	<B
-CLASS="GUIBUTTON"
->Linux</B
->, respectively, next to <B
-CLASS="GUILABEL"
->Remove
-	  Partitions</B
->.
+>	Select whether or not to clear the Master Boot Record (MBR). You can
+	also choose to remove all the existing partitions, remove all the
+	existing Linux partitions, or preserve existing partitions.
       </P
 ><P
->	You can initialize the disk label to the
-	default for the architecture of the system (<TT
+>	You can initialize the disk label to the default for the architecture of
+	the system (<TT
 CLASS="COMMAND"
 >msdos</TT
-> for
-	x86 and <TT
+> for x86 and <TT
 CLASS="COMMAND"
 >gpt</TT
-> for Itanium). Choose
-	<B
-CLASS="GUIBUTTON"
->Yes</B
-> if you are installing on a brand new hard drive.
+>
+	for Itanium). Select <B
+CLASS="GUILABEL"
+>Initialize the disk label</B
+> if
+	you are installing on a brand new hard drive.
       </P
 ><DIV
 CLASS="SECT1"
 ><H1
 CLASS="SECT1"
 ><A
-NAME="REDHAT-CONFIG-KICKSTART-CREATE-PART">Creating Partitions</H1
+NAME="REDHAT-CONFIG-KICKSTART-CREATE-PART"
+></A
+>Creating Partitions</H1
 ><P
 >	  To create a partition, click the <B
 CLASS="GUIBUTTON"
@@ -142,19 +129,19 @@ CLASS="GUILABEL"
 	  <A
 HREF="redhat-config-kickstart-partitions.html#REDHAT-CONFIG-KICKSTART-ADD-PART-FIG"
 >Figure 5-2</A
-> will appear. Choose mount point,
-	  file system type, and partition size for the new partition. Optionally,
-	  you can also choose from the following:
+> will
+	  appear. Choose mount point, file system type, and partition size for
+	  the new partition. Optionally, you can also choose from the following:
 	</P
 ><P
 ></P
 ><UL
 ><LI
 ><P
-><B
+>In the <B
 CLASS="GUILABEL"
 >Additional Size Options</B
-> &#8212; Choose to
+> section, choose to
 	      make the partition a fixed size, up to a chosen size, or fill the
 	      remaining space on the hard drive. If you selected swap as the
 	      file system type, you can select to have the installation program
@@ -214,7 +201,9 @@ CLASS="FILENAME"
 ><DIV
 CLASS="FIGURE"
 ><A
-NAME="REDHAT-CONFIG-KICKSTART-ADD-PART-FIG"><DIV
+NAME="REDHAT-CONFIG-KICKSTART-ADD-PART-FIG"
+></A
+><DIV
 CLASS="MEDIAOBJECT"
 ><P
 ><IMG
@@ -249,6 +238,126 @@ CLASS="GUIBUTTON"
 >Delete</B
 > button.
 	</P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="REDHAT-CONFIG-KICKSTART-RAID"
+></A
+>Creating Software RAID Partitions</H2
+><P
+>	    RAID 0, 1, and 5 can be configured.
+	  </P
+><P
+>	    To create a software RAID partition, use the following steps:
+	  </P
+><P
+></P
+><OL
+TYPE="1"
+><LI
+><P
+>Click the <B
+CLASS="GUIBUTTON"
+>RAID</B
+> button.</P
+></LI
+><LI
+><P
+>Select <B
+CLASS="GUILABEL"
+>Create a software RAID
+		partition</B
+>.
+	      </P
+></LI
+><LI
+><P
+>Configure the partitions as previously described, except
+		select <B
+CLASS="GUILABEL"
+>Software RAID</B
+> as the file system
+		type. Also, you must specify a hard drive on which to make the
+		partition or an existing partition to use.</P
+></LI
+></OL
+><DIV
+CLASS="FIGURE"
+><A
+NAME="FIG-KICKSTART-RAID"
+></A
+><DIV
+CLASS="MEDIAOBJECT"
+><P
+><IMG
+SRC="./figs/ksconfig-raid-new.png"></P
+></DIV
+><P
+><B
+>Figure 5-3. Creating a Software RAID Partition</B
+></P
+></DIV
+><P
+>	    Repeat these steps to create as many partitions as needed for your
+	    RAID setup. All of your partitions do not have to be RAID
+	    partitions. 
+	  </P
+><P
+>	    After creating all the partitions needed to form a RAID device,
+	    follow these steps:
+	  </P
+><P
+></P
+><OL
+TYPE="1"
+><LI
+><P
+>Click the <B
+CLASS="GUIBUTTON"
+>RAID</B
+> button.</P
+></LI
+><LI
+><P
+>Select <B
+CLASS="GUILABEL"
+>Create a RAID device</B
+>.</P
+></LI
+><LI
+><P
+>Select a mount point, file system type, RAIDE device name, 
+	      RAID level, RAID members, and number of spares for the software
+	      RAID device.</P
+><DIV
+CLASS="FIGURE"
+><A
+NAME="FIG-REDHAT-CONFIG-KICKSTART-MD0"
+></A
+><DIV
+CLASS="MEDIAOBJECT"
+><P
+><IMG
+SRC="./figs/ksconfig-raid-device.png"></P
+></DIV
+><P
+><B
+>Figure 5-4. Creating a Software RAID Device</B
+></P
+></DIV
+></LI
+><LI
+><P
+>Click <B
+CLASS="GUIBUTTON"
+>OK</B
+> to add the device to the
+	      list.</P
+></LI
+></OL
+></DIV
 ></DIV
 ></DIV
 ><DIV
@@ -267,7 +376,7 @@ WIDTH="33%"
 ALIGN="left"
 VALIGN="top"
 ><A
-HREF="redhat-config-kickstart-install.html"
+HREF="redhat-config-kickstart-bootloader.html"
 ACCESSKEY="P"
 >Prev</A
 ></TD
@@ -295,7 +404,7 @@ ACCESSKEY="N"
 WIDTH="33%"
 ALIGN="left"
 VALIGN="top"
->Installation Method</TD
+>Boot Loader Options</TD
 ><TD
 WIDTH="34%"
 ALIGN="center"

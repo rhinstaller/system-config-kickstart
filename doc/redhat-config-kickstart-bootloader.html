@@ -11,11 +11,11 @@ REL="HOME"
 TITLE="Kickstart Configurator"
 HREF="index.html"><LINK
 REL="PREVIOUS"
-TITLE="Basic Configuration"
-HREF="redhat-config-kickstart-basic.html"><LINK
-REL="NEXT"
 TITLE="Installation Method"
-HREF="redhat-config-kickstart-install.html"></HEAD
+HREF="redhat-config-kickstart-install.html"><LINK
+REL="NEXT"
+TITLE="Partition Information"
+HREF="redhat-config-kickstart-partitions.html"></HEAD><link rel="stylesheet" type="text/css" href="rhdocs-man.css"
 ><BODY
 CLASS="CHAPTER"
 BGCOLOR="#FFFFFF"
@@ -43,7 +43,7 @@ WIDTH="10%"
 ALIGN="left"
 VALIGN="bottom"
 ><A
-HREF="redhat-config-kickstart-basic.html"
+HREF="redhat-config-kickstart-install.html"
 ACCESSKEY="P"
 >Prev</A
 ></TD
@@ -57,7 +57,7 @@ WIDTH="10%"
 ALIGN="right"
 VALIGN="bottom"
 ><A
-HREF="redhat-config-kickstart-install.html"
+HREF="redhat-config-kickstart-partitions.html"
 ACCESSKEY="N"
 >Next</A
 ></TD
@@ -70,11 +70,15 @@ WIDTH="100%"></DIV
 CLASS="CHAPTER"
 ><H1
 ><A
-NAME="REDHAT-CONFIG-KICKSTART-BOOTLOADER">Chapter 3. Boot Loader Options</H1
+NAME="REDHAT-CONFIG-KICKSTART-BOOTLOADER"
+></A
+>Chapter 4. Boot Loader Options</H1
 ><DIV
 CLASS="FIGURE"
 ><A
-NAME="REDHAT-CONFIG-KICKSTART-BOOTLOADER-FIG"><DIV
+NAME="REDHAT-CONFIG-KICKSTART-BOOTLOADER-FIG"
+></A
+><DIV
 CLASS="MEDIAOBJECT"
 ><P
 ><IMG
@@ -82,19 +86,18 @@ SRC="./figs/ksconfig-bootloader.png"></P
 ></DIV
 ><P
 ><B
->Figure 3-1. Boot Loader Options</B
+>Figure 4-1. Boot Loader Options</B
 ></P
 ></DIV
 ><P
->	You have the option of installing GRUB or LILO
-	as the boot loader. If you do not want to install a boot loader, uncheck
-	<B
+>	You have the option of installing GRUB or LILO as the boot loader. If
+	you do not want to install a boot loader, select <B
 CLASS="GUILABEL"
->Install Boot Loader</B
->. If you choose
-	not to install a boot loader, make sure you create a boot disk or have
-	another way to boot (such as a third-party boot loader) your Red Hat Linux
-	system.
+>Do not
+	install a boot loader</B
+>. If you choose not to install a boot
+	loader, make sure you create a boot disk or have another way to boot
+	(such as a third-party boot loader) your system.
       </P
 ><P
 >	If you choose to install a boot loader, you must also choose which
@@ -119,10 +122,10 @@ CLASS="GUILABEL"
 >Kernel
 	parameters</B
 > text field. For example, if you have an IDE CD-ROM
-	burner, you can tell the kernel to use the SCSI emulation driver that
-	must be loaded before using <B
-CLASS="APPLICATION"
->cdrecord</B
+	Writer, you can tell the kernel to use the SCSI emulation driver that
+	must be loaded before using <TT
+CLASS="COMMAND"
+>cdrecord</TT
 > by typing
 	<TT
 CLASS="USERINPUT"
@@ -146,20 +149,31 @@ CLASS="USERINPUT"
 	configuring a GRUB password. Enter a password in the <B
 CLASS="GUILABEL"
 >Use GRUB
-	Password</B
-> text entry area. If you want to save the password
-	as an encrypted password in the file, select <B
+	password</B
+> text entry area. If you want to save the password as
+	an encrypted password in the file, select <B
 CLASS="GUIBUTTON"
 >Encrypt GRUB
-	  password</B
+	password</B
 >. When the file is saved, the plaintext password
 	that you typed will be encrypted and written to the kickstart file. Do
 	not type an already encrypted password and select to encrypt it.
       </P
 ><P
->	For upgrades only, you can select to upgrade the existing boot loader
-	configuration.
-      </P
+>	If you selected to <B
+CLASS="GUILABEL"
+>Upgrade an existing installation</B
+>
+	on the <B
+CLASS="GUILABEL"
+>Installation Method</B
+> page, you can select
+	<B
+CLASS="GUILABEL"
+>Upgrade existing boot loader</B
+> to upgrade the
+	existing boot loader configuration, while preserving the old entries.
+    </P
 ></DIV
 ><DIV
 CLASS="NAVFOOTER"
@@ -177,7 +191,7 @@ WIDTH="33%"
 ALIGN="left"
 VALIGN="top"
 ><A
-HREF="redhat-config-kickstart-basic.html"
+HREF="redhat-config-kickstart-install.html"
 ACCESSKEY="P"
 >Prev</A
 ></TD
@@ -195,7 +209,7 @@ WIDTH="33%"
 ALIGN="right"
 VALIGN="top"
 ><A
-HREF="redhat-config-kickstart-install.html"
+HREF="redhat-config-kickstart-partitions.html"
 ACCESSKEY="N"
 >Next</A
 ></TD
@@ -205,7 +219,7 @@ ACCESSKEY="N"
 WIDTH="33%"
 ALIGN="left"
 VALIGN="top"
->Basic Configuration</TD
+>Installation Method</TD
 ><TD
 WIDTH="34%"
 ALIGN="center"
@@ -215,7 +229,7 @@ VALIGN="top"
 WIDTH="33%"
 ALIGN="right"
 VALIGN="top"
->Installation Method</TD
+>Partition Information</TD
 ></TR
 ></TABLE
 ></DIV

@@ -15,7 +15,7 @@ TITLE="Firewall Configuration"
 HREF="redhat-config-kickstart-firewall.html"><LINK
 REL="NEXT"
 TITLE="Video Card"
-HREF="redhat-config-kickstart-xconfig-videocard.html"></HEAD
+HREF="redhat-config-kickstart-xconfig-videocard.html"></HEAD><link rel="stylesheet" type="text/css" href="rhdocs-man.css"
 ><BODY
 CLASS="CHAPTER"
 BGCOLOR="#FFFFFF"
@@ -70,7 +70,9 @@ WIDTH="100%"></DIV
 CLASS="CHAPTER"
 ><H1
 ><A
-NAME="REDHAT-CONFIG-KICKSTART-XCONFIG">Chapter 9. X Configuration</H1
+NAME="REDHAT-CONFIG-KICKSTART-XCONFIG"
+></A
+>Chapter 9. X Configuration</H1
 ><P
 >	If you are installing the X Window System, you can configure it during
 	the kickstart installation by checking the <B
@@ -96,11 +98,21 @@ CLASS="SECT1"
 ><H1
 CLASS="SECT1"
 ><A
-NAME="REDHAT-CONFIG-KICKSTART-XCONFIG-GENERAL">General</H1
+NAME="REDHAT-CONFIG-KICKSTART-XCONFIG-GENERAL"
+></A
+>General</H1
+><P
+>	  The first step in configuring X is to choose the default color depth
+	  and resolution. Select them from their respective pulldown menus. Be
+	  sure to specify a color depth and resolution that is compatible with
+	  the video card and monitor for the system.
+	</P
 ><DIV
 CLASS="FIGURE"
 ><A
-NAME="XCONFIG-GENERAL-FIG"><DIV
+NAME="XCONFIG-GENERAL-FIG"
+></A
+><DIV
 CLASS="MEDIAOBJECT"
 ><P
 ><IMG
@@ -111,12 +123,6 @@ SRC="./figs/ksconfig-xconfig-general.png"></P
 >Figure 9-1. X Configuration - General</B
 ></P
 ></DIV
-><P
->	  The first step in configuring X is to choose the default color depth
-	  and resolution. Select them from their respective pulldown menus. Be
-	  sure to specify a color depth and resolution that is compatible with
-	  the video card and monitor for the system.
-	</P
 ><P
 >	  If you are installing both the GNOME and KDE desktops, you need to
 	  choose which desktop you want to be the default. If you are just
