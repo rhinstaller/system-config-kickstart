@@ -37,11 +37,7 @@ except ImportError:
 if __name__ == "__main__":
     signal.signal (signal.SIGINT, signal.SIG_DFL)
 
-try:
-    xml = gtk.glade.XML ("./ksconfig-gtk2.glade", domain="ksconfig")
-except:
-    xml = gtk.glade.XML ("/usr/share/ksconfig/ksconfig-gtk2.glade", domain="ksconfig")
-    
+xml = gtk.glade.XML ("/usr/share/ksconfig/ksconfig-gtk2.glade", domain="ksconfig")
 
 ksconfig_gui.ksconfig_gui(xml)
 
