@@ -204,6 +204,7 @@ class partWindow:
         self.onPartEntry.set_text("")
         self.sizeFixedRadio.set_active(gtk.TRUE)
         self.setSizeCombo.set_text("1")
+        self.swap_checkbutton.set_active(gtk.FALSE)
         self.formatCheck.set_active(gtk.TRUE)
         
     def on_part_cancel_button_clicked(self, *args):
