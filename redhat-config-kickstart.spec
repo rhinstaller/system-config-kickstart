@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
-Version: 2.4.1
+Version: 2.4.2
 Release: 1
 URL: http://www.redhat.com
 License: GPL
@@ -56,6 +56,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Tue Oct 14 2003 Brent Fox <bfox@redhat.com> 2.4.2-1
+- call language_backend correctly (bug #103625)
+
 * Tue Sep 23 2003 Brent Fox <bfox@redhat.com> 2.4.1-1
 - rebuild with latest docs
 
