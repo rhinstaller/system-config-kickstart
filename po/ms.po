@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: redhat-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-29 17:11-0500\n"
-"PO-Revision-Date: 2004-03-22 10:15+0800\n"
+"PO-Revision-Date: 2004-07-27 10:54+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -54,25 +54,23 @@ msgstr ""
 #. #
 #: ../src/basic.py:71
 msgid "x86, AMD64, or Intel EM64T"
-msgstr ""
+msgstr "x86, AMD64, atau Intel EM64T"
 
 #: ../src/basic.py:71
 msgid "Intel Itanium"
-msgstr ""
+msgstr "Intel Itanium"
 
 #: ../src/basic.py:71
-#, fuzzy
 msgid "IBM iSeries"
-msgstr "SMB Pelayan:"
+msgstr "IBM iSeries"
 
 #: ../src/basic.py:72
-#, fuzzy
 msgid "IBM pSeries"
 msgstr "SMB Pelayan:"
 
 #: ../src/basic.py:72
 msgid "IBM zSeries/s390"
-msgstr ""
+msgstr "IBM zSeries/s390"
 
 #. populate language combo
 #. set default to English
@@ -85,9 +83,8 @@ msgstr ""
 #. set default mouse to generic ps/2
 #. populate time zone combo
 #: ../src/basic.py:205
-#, fuzzy
 msgid "Root passwords do not match."
-msgstr "Root."
+msgstr "Katalaluan root tidak sepadan."
 
 #. zerombr and clearpart options
 #. We want to preserve all partitions, so don't write the clearpart line
@@ -101,7 +98,7 @@ msgstr "Ralat"
 
 #: ../src/basic.py:224
 msgid "Please select a root password."
-msgstr ""
+msgstr "Sila pilih katalaluan root."
 
 #. set platform
 #. set language
@@ -130,11 +127,11 @@ msgstr ""
 #: ../src/bootloader.py:76
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
-msgstr ""
+msgstr "Pilihan pemuatboot tidak digunapakai pada platform %s"
 
 #: ../src/bootloader.py:117
 msgid "Grub passwords do not match.  Please try again."
-msgstr ""
+msgstr "Katalaluan Grub tidak sepadan.  Sila cuba lagi."
 
 #. !/usr/bin/python2
 #. #
@@ -277,16 +274,15 @@ msgstr "Sokongan Cetakan"
 #. create table with custom checklists
 #: ../src/firewall.py:60
 msgid "Trusted devices:"
-msgstr ""
+msgstr "Peranti dipercayai:"
 
 #: ../src/firewall.py:85
 msgid "Trusted services:"
-msgstr ""
+msgstr "Servis dipercayai:"
 
 #: ../src/firewall.py:117
-#, fuzzy
 msgid "Other ports: (1029:tcp)"
-msgstr "Lain-lain port"
+msgstr "Port lain: (1029:tcp)"
 
 #. pull list of language from system-config-languages
 #. Chop encoding off so we can compare to self.installedLangs
@@ -315,14 +311,12 @@ msgstr "Lain-lain port"
 #. self.pkg_selection_frame.set_sensitive(install)
 #. self.bootloader_class.upgrade_bootloader_radio.set_sensitive(not install)
 #: ../src/install.py:134
-#, fuzzy
 msgid "Please enter an NFS server."
-msgstr "NFS."
+msgstr "Sila masukkan pelayan NFS."
 
 #: ../src/install.py:137
-#, fuzzy
 msgid "Please enter an NFS directory."
-msgstr "NFS direktori."
+msgstr "Sila masukkan direktori NFS."
 
 #: ../src/install.py:147
 #, fuzzy
@@ -466,7 +460,7 @@ msgstr "Tentutetap Firewall"
 #: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:248
 #, fuzzy
 msgid "Display Configuration"
-msgstr "Asas"
+msgstr "Paparan"
 
 #: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:259
 #, fuzzy
@@ -809,8 +803,7 @@ msgstr "for."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:429
 #, fuzzy, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "s dalam."
 
 #. This will scan the part_store and see if there are any duplicate mount points
@@ -1041,7 +1034,7 @@ msgstr "tidak."
 #: ../src/system-config-kickstart.py:78
 #, fuzzy
 msgid "Try running 'system-config-kickstart --help' for a list of options."
-msgstr "for."
+msgstr "for _Aksi."
 
 #. !/usr/bin/python2
 #. !/usr/bin/python2
@@ -1212,9 +1205,8 @@ msgid "         "
 msgstr ""
 
 #: system-config-kickstart.gladestrings:22
-#, fuzzy
 msgid "Drive :"
-msgstr "Pemacu:"
+msgstr "Pemacu :"
 
 #: system-config-kickstart.gladestrings:24
 #, fuzzy
@@ -1227,9 +1219,8 @@ msgid "Use existing partition (onpart)"
 msgstr "Guna"
 
 #: system-config-kickstart.gladestrings:27
-#, fuzzy
 msgid "Partition :"
-msgstr "Partisyen:"
+msgstr "Partisyen :"
 
 #: system-config-kickstart.gladestrings:29
 #, fuzzy
@@ -1383,21 +1374,18 @@ msgid "_About"
 msgstr "_Perihal"
 
 #: system-config-kickstart.gladestrings:73
-#, fuzzy
 msgid "Default Language:"
-msgstr "Default Bahasa:"
+msgstr "Bahasa Default:"
 
 #: system-config-kickstart.gladestrings:74
 msgid "Encrypt root password"
 msgstr ""
 
 #: system-config-kickstart.gladestrings:75
-#, fuzzy
 msgid "Keyboard:"
 msgstr "Papan Kekunci:"
 
 #: system-config-kickstart.gladestrings:76
-#, fuzzy
 msgid "Mouse:"
 msgstr "Tetikus:"
 
@@ -1415,9 +1403,8 @@ msgid "Root Password:"
 msgstr "Katalaluan Root:"
 
 #: system-config-kickstart.gladestrings:84
-#, fuzzy
 msgid "Language Support:"
-msgstr "Bahasa Sokongan:"
+msgstr "Sokongan Bahasa:"
 
 #: system-config-kickstart.gladestrings:85
 #, fuzzy
@@ -1496,24 +1483,20 @@ msgid "Hard Drive"
 msgstr ""
 
 #: system-config-kickstart.gladestrings:104
-#, fuzzy
 msgid "NFS Server:"
-msgstr "NFS Pelayan:"
+msgstr "Pelayan NFS:"
 
 #: system-config-kickstart.gladestrings:105
-#, fuzzy
 msgid "NFS Directory:"
-msgstr "NFS Direktori:"
+msgstr "Direktori NFS:"
 
 #: system-config-kickstart.gladestrings:109
-#, fuzzy
 msgid "FTP Server:"
-msgstr "FTP Pelayan:"
+msgstr "Pelayan FTP:"
 
 #: system-config-kickstart.gladestrings:111
-#, fuzzy
 msgid "FTP Directory:"
-msgstr "FTP Direktori:"
+msgstr "Direktori FTP:"
 
 #: system-config-kickstart.gladestrings:113
 #, fuzzy
@@ -1531,14 +1514,12 @@ msgid "FTP Password"
 msgstr "FTP"
 
 #: system-config-kickstart.gladestrings:121
-#, fuzzy
 msgid "HTTP Server:"
-msgstr "HTTP Pelayan:"
+msgstr "Pelayan HTTP:"
 
 #: system-config-kickstart.gladestrings:122
-#, fuzzy
 msgid "HTTP Directory:"
-msgstr "HTTP Direktori:"
+msgstr "Direktori HTTP:"
 
 #: system-config-kickstart.gladestrings:126
 #, fuzzy
@@ -1606,9 +1587,8 @@ msgid "Kernel parameters:"
 msgstr "Kernel:"
 
 #: system-config-kickstart.gladestrings:145
-#, fuzzy
 msgid "label216"
-msgstr "label31"
+msgstr "label216"
 
 #: system-config-kickstart.gladestrings:146
 #, fuzzy
@@ -1668,8 +1648,9 @@ msgid "RAID"
 msgstr "RAID"
 
 #: system-config-kickstart.gladestrings:159
+#, fuzzy
 msgid "Partition options are not applicable on upgrades."
-msgstr ""
+msgstr "Partisyen _Aksi on."
 
 #: system-config-kickstart.gladestrings:160
 #, fuzzy
@@ -1700,7 +1681,6 @@ msgid "label31"
 msgstr "label31"
 
 #: system-config-kickstart.gladestrings:167
-#, fuzzy
 msgid "Authentication:"
 msgstr "Pengesahan:"
 
@@ -1744,9 +1724,8 @@ msgid "Enable LDAP"
 msgstr "Hidupkan LDAP"
 
 #: system-config-kickstart.gladestrings:181
-#, fuzzy
 msgid "LDAP Server: "
-msgstr "LDAP Pelayan "
+msgstr "Pelayan LDAP: "
 
 #: system-config-kickstart.gladestrings:182
 #, fuzzy
@@ -1821,14 +1800,12 @@ msgid "Enable SMB Authentication"
 msgstr "Hidupkan SMB"
 
 #: system-config-kickstart.gladestrings:202
-#, fuzzy
 msgid "SMB Servers:"
-msgstr "SMB Pelayan:"
+msgstr "Pelayan SMB:"
 
 #: system-config-kickstart.gladestrings:203
-#, fuzzy
 msgid "SMB Workgroup:"
-msgstr "SMB Kumpulankerja:"
+msgstr "Kumpulankerja SMB:"
 
 #: system-config-kickstart.gladestrings:206
 msgid "SMB Authentication"
@@ -1854,8 +1831,9 @@ msgid "Name Switch Cache"
 msgstr "Nama Tukar"
 
 #: system-config-kickstart.gladestrings:211
+#, fuzzy
 msgid "Authentication options are not applicable on upgrades."
-msgstr ""
+msgstr "Pengesahan _Aksi on."
 
 #: system-config-kickstart.gladestrings:212
 msgid "Authentication Configuration"
@@ -1874,13 +1852,13 @@ msgid "Enable firewall"
 msgstr "Hidupkan firewall"
 
 #: system-config-kickstart.gladestrings:216
-#, fuzzy
 msgid "Disable firewall"
-msgstr "Dimatikan"
+msgstr "Matikan firewall"
 
 #: system-config-kickstart.gladestrings:217
+#, fuzzy
 msgid "Firewall configuration is not applicable on upgrades."
-msgstr ""
+msgstr "Firewall on."
 
 #: system-config-kickstart.gladestrings:219
 msgid "label33"
@@ -1983,8 +1961,9 @@ msgid "Monitor"
 msgstr "Monitor"
 
 #: system-config-kickstart.gladestrings:247
+#, fuzzy
 msgid "Display configuration is not applicable on upgrades."
-msgstr ""
+msgstr "Paparan on."
 
 #: system-config-kickstart.gladestrings:249
 msgid "label88"
@@ -2002,7 +1981,7 @@ msgstr ""
 #: system-config-kickstart.gladestrings:252
 #, fuzzy
 msgid "_Ignore Dependencies"
-msgstr "Abai"
+msgstr "Abaikan"
 
 #: system-config-kickstart.gladestrings:253
 msgid "Desktops"
@@ -2025,8 +2004,9 @@ msgid "System"
 msgstr "Sistem"
 
 #: system-config-kickstart.gladestrings:258
+#, fuzzy
 msgid "Package selection is not applicable on upgrades."
-msgstr ""
+msgstr "Pakej on."
 
 #: system-config-kickstart.gladestrings:260
 msgid "label34"
@@ -2113,8 +2093,9 @@ msgid ""
 msgstr "Kepada RAD RAD Kemudian RAD dan terpasang."
 
 #: system-config-kickstart.gladestrings:280
+#, fuzzy
 msgid "Choose one of the following options:"
-msgstr ""
+msgstr "_Aksi:"
 
 #: system-config-kickstart.gladestrings:281
 #, fuzzy
@@ -2132,33 +2113,28 @@ msgid "Network Device Information"
 msgstr "Rangkaian Peranti"
 
 #: system-config-kickstart.gladestrings:284
-#, fuzzy
 msgid "Network Device:"
-msgstr "Rangkaian Peranti:"
+msgstr "Peranti Rangkaian:"
 
 #: system-config-kickstart.gladestrings:285
-#, fuzzy
 msgid "Network Type:"
-msgstr "Rangkaian Jenis:"
+msgstr "Jenis Rangkaian:"
 
 #: system-config-kickstart.gladestrings:286
-#, fuzzy
 msgid "IP Address:"
-msgstr "IP Alamat:"
+msgstr "Alamat IP:"
 
 #: system-config-kickstart.gladestrings:287
-#, fuzzy
 msgid "Netmask: "
-msgstr "Netmask "
+msgstr "Netmask: "
 
 #: system-config-kickstart.gladestrings:288
 msgid "Gateway:"
 msgstr "Gateway:"
 
 #: system-config-kickstart.gladestrings:289
-#, fuzzy
 msgid "Name Server:"
-msgstr "Nama Pelayan:"
+msgstr "Pelayan Nama:"
 
 #: system-config-kickstart.gladestrings:291
 #: system-config-kickstart.gladestrings:293
@@ -2175,22 +2151,3 @@ msgstr "Nama Pelayan:"
 msgid "."
 msgstr "."
 
-#, fuzzy
-#~ msgid "Use GRUB for the boot loader"
-#~ msgstr "Guna for"
-
-#, fuzzy
-#~ msgid "Use LILO for the boot loader"
-#~ msgstr "Guna LILO for"
-
-#, fuzzy
-#~ msgid "LILO Options:"
-#~ msgstr "LILO Pilihan:"
-
-#, fuzzy
-#~ msgid "Use linear mode"
-#~ msgstr "Guna"
-
-#, fuzzy
-#~ msgid "Force use of lba32 mode"
-#~ msgstr "Daya"
