@@ -169,12 +169,14 @@ class partition:
 ##                 buf = buf + "\n" + "part %s " % (mountPoint)
 ##                 buf = buf + "--fstype " + fsType + " " 
 
-            buf = "part %s " % (part_object.mountPoint)
+            buf = "part %s" % (part_object.mountPoint)
 
             if part_object.fsType == "swap":
                 buf = buf + "swap "
+            elif part_object.fsType == "raid":
+                buf = buf + "raid.%s " % part_object.raidNumber
             else:
-                buf = buf + "--fstype " + part_object.fsType + " " 
+                buf = buf + " --fstype " + part_object.fsType + " " 
                 
             if part_object.size == "recommended":
                 buf = buf + "--recommended"
