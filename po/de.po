@@ -6,12 +6,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksconfig\n"
 "POT-Creation-Date: 2001-07-19 11:24-0400\n"
-"PO-Revision-Date: 2002-07-26 15:32+0000\n"
+"PO-Revision-Date: 2002-08-05 11:45+0000\n"
 "Last-Translator:  <claudia@redhat.it>\n"
 "Language-Team:  <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 0.9.6\n"
 
 #: redhat-config-kickstart.gladestrings:166
@@ -53,6 +53,8 @@ msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
 msgstr ""
+"Die angegebene Partition endet nicht mit einer Zahl. Die Partitionen "
+"müsseneine Partitionsnummer wie \"hda1\" oder \"sda3\" besitzen."
 
 #: redhat-config-kickstart.gladestrings:152
 msgid "_Yes"
@@ -98,9 +100,12 @@ msgstr "Zusätzliche Größenoptionen"
 #: ../src/partWindow.py:427
 msgid ""
 "The partition you specified does not begin with \"hd\" or \"sd\".  "
-"Partitions must have a valid device name and partition number such as \"hda1"
-"\" or \"sda3\"."
+"Partitions must have a valid device name and partition number such as "
+"\"hda1\" or \"sda3\"."
 msgstr ""
+"Die angegebene Partition beginnt nicht mit \"hd\" oder \"sd\".  Die "
+"Partitionen müssen einen gültigen Gerätenamen und Partitionsnummer wie "
+"beispielsweise \"hda1\" oder \"sda3\" besitzen."
 
 #: redhat-config-kickstart.gladestrings:277
 msgid "Monitor"
@@ -140,7 +145,7 @@ msgstr "Feste Größe"
 
 #: redhat-config-kickstart.gladestrings:55
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: ../src/partWindow.py:83 redhat-config-kickstart.gladestrings:61
 msgid "swap"
@@ -172,7 +177,7 @@ msgstr "GNOME"
 
 #: redhat-config-kickstart.gladestrings:24
 msgid "(for example: hda or sdc)"
-msgstr ""
+msgstr "(zum Beispiel: hda oder sdc)"
 
 #: redhat-config-kickstart.gladestrings:304
 msgid "Preview Options"
@@ -183,14 +188,12 @@ msgid "LDAP Server: "
 msgstr "LDAP-Server:"
 
 #: redhat-config-kickstart.gladestrings:306
-#, fuzzy
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
 msgstr ""
 "Sie haben die folgende Konfiguration gewählt. Klicken Sie auf Datei "
-"speichern, um die Kickstart-Datei zu speichern. Klicken Sie auf Abbrechen, "
-"um in das Programm zurückzukehren."
+"speichern, um die Kickstart-Datei zu speichern."
 
 #: redhat-config-kickstart.gladestrings:141
 msgid "Kernel parameters:"
@@ -230,7 +233,7 @@ msgstr "Hesiod"
 
 #: redhat-config-kickstart.gladestrings:283
 msgid "Desktops"
-msgstr ""
+msgstr "Desktops"
 
 #: redhat-config-kickstart.gladestrings:221
 msgid "Kerberos Domain Controller (KDC):"
@@ -273,18 +276,16 @@ msgid "Disabled"
 msgstr "Deaktiviert"
 
 #: redhat-config-kickstart.gladestrings:138
-#, fuzzy
 msgid "label174"
-msgstr "label1"
+msgstr "label174"
 
 #: ../src/partWindow.py:356
 msgid "Specify a mount point for the partition."
 msgstr "Geben Sie einen Mountpoint für die Partition an."
 
 #: redhat-config-kickstart.gladestrings:134
-#, fuzzy
 msgid "label173"
-msgstr "label1"
+msgstr "label173"
 
 #: redhat-config-kickstart.gladestrings:307
 msgid "RAID Options"
@@ -311,7 +312,6 @@ msgid "A_ll"
 msgstr "A_lle"
 
 #: redhat-config-kickstart.gladestrings:145
-#, fuzzy
 msgid "Clear Master Boot Record:"
 msgstr "Master Boot Record löschen:"
 
@@ -321,9 +321,8 @@ msgid "HTTP"
 msgstr "HTTP"
 
 #: ../src/raidWindow.py:136 ../src/raidWindow.py:161
-#, fuzzy
 msgid "Raid Devices"
-msgstr "RAID-Gerät:"
+msgstr "RAID-Geräte"
 
 #: ../src/kickstartGui.py:109
 msgid "Boot Loader Options"
@@ -334,13 +333,12 @@ msgid "Automatically Resolve Dependencies"
 msgstr "Abhängigkeiten automatisch lösen"
 
 #: redhat-config-kickstart.gladestrings:127
-#, fuzzy
 msgid "Upgrade existing boot loader"
-msgstr "Existierende Bootloader-Konfiguration aktualisieren"
+msgstr "Existierenden Bootloader aktualisieren"
 
 #: redhat-config-kickstart.gladestrings:129
 msgid "Use LILO for the boot loader"
-msgstr ""
+msgstr "LILO für Bootloader verwenden"
 
 #: redhat-config-kickstart.gladestrings:115
 msgid "HTTP Server:"
@@ -404,7 +402,7 @@ msgstr "L_inux"
 
 #: redhat-config-kickstart.gladestrings:288
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Verschiedenes"
 
 #: redhat-config-kickstart.gladestrings:236
 msgid "SMB Workgroup:"
@@ -452,7 +450,7 @@ msgstr "md13"
 
 #: redhat-config-kickstart.gladestrings:287
 msgid "System"
-msgstr ""
+msgstr "System"
 
 #: redhat-config-kickstart.gladestrings:94
 #: redhat-config-kickstart.gladestrings:112
@@ -464,11 +462,12 @@ msgid "None"
 msgstr "Kein"
 
 #: ../src/partition.py:71
-#, fuzzy
 msgid ""
 "Mount Point/\n"
 "RAID/Volume"
-msgstr "Mount Point"
+msgstr ""
+"Mount-Point/\n"
+"RAID/Volumen"
 
 #: redhat-config-kickstart.gladestrings:156
 msgid "_Edit"
@@ -500,8 +499,9 @@ msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %pre command at the beginning."
 msgstr ""
-"Warnung: ein Fehler in diesem Skript könnte dazu führen, dass Ihre Kickstart-"
-"Installation fehlschlägt. Lassen Sie den Befehl %pre zu Beginn weg."
+"Warnung: ein Fehler in diesem Skript könnte dazu führen, dass Ihre "
+"Kickstart-Installation fehlschlägt. Lassen Sie den Befehl %pre zu Beginn "
+"weg."
 
 #: redhat-config-kickstart.gladestrings:41
 msgid "md2"
@@ -565,7 +565,7 @@ msgstr "Authentifizierung von Kerberos 5 aktivieren"
 
 #: redhat-config-kickstart.gladestrings:128
 msgid "Use GRUB for the boot loader"
-msgstr ""
+msgstr "GRUB für Bootloader verwenden"
 
 #: ../src/partWindow.py:82 redhat-config-kickstart.gladestrings:60
 msgid "physical volume (LVM)"
@@ -580,8 +580,9 @@ msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %post command at the beginning."
 msgstr ""
-"Warnung: ein Fehler in diesem Skript könnte dazu führen, dass Ihre Kickstart-"
-"Installation fehlschlägt. Lassen Sie den Befehl %post zu Beginn weg."
+"Warnung: ein Fehler in diesem Skript könnte dazu führen, dass Ihre "
+"Kickstart-Installation fehlschlägt. Lassen Sie den Befehl %post zu Beginn "
+"weg."
 
 #: redhat-config-kickstart.gladestrings:230
 msgid "Hesiod RHS:"
@@ -593,7 +594,7 @@ msgstr "LDAP-Basisname:"
 
 #: ../src/raidWindow.py:125
 msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr ""
+msgstr "Sie müssen mindestens 3 Partitionen wählen, um RAID %s zu verwenden"
 
 #: ../src/partWindow.py:203 ../src/partWindow.py:270 ../src/raidWindow.py:152
 #: redhat-config-kickstart.gladestrings:154
@@ -609,13 +610,12 @@ msgid "FTP Directory:"
 msgstr "FTP-Verzeichnis:"
 
 #: ../src/partWindow.py:376
-#, fuzzy
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
 msgstr ""
-"Geben Sie eine Festplatte oder eine existierende Partition an, um eine neue "
-"RAID-Partition anzulegen."
+"Geben Sie einen Festplatten-Gerätenamen oder eine existierende Partition "
+"an, um eine neue RAID-Partition anzulegen."
 
 #: redhat-config-kickstart.gladestrings:296
 msgid "label89"
@@ -626,9 +626,8 @@ msgid "Upgrade"
 msgstr "Aktualisieren"
 
 #: redhat-config-kickstart.gladestrings:125
-#, fuzzy
 msgid "Install new boot loader"
-msgstr "Bootloader installieren"
+msgstr "Neuen Bootloader installieren"
 
 #: ../src/partWindow.py:205 ../src/partWindow.py:272 ../src/raidWindow.py:154
 #: redhat-config-kickstart.gladestrings:151
@@ -653,7 +652,6 @@ msgid "Keyboard:"
 msgstr "Tastatur:"
 
 #: redhat-config-kickstart.gladestrings:146
-#, fuzzy
 msgid "Remove Existing Partitions:"
 msgstr "Existierende Partitionen entfernen:"
 
@@ -690,18 +688,16 @@ msgid "High"
 msgstr "Hoch"
 
 #: ../src/partWindow.py:225
-#, fuzzy
 msgid "Hard Drives"
-msgstr "Laufwerk"
+msgstr "Festplatten"
 
 #: redhat-config-kickstart.gladestrings:216
 msgid "LDAP Authentication"
 msgstr "LDAP-Authentifizierung"
 
 #: redhat-config-kickstart.gladestrings:284
-#, fuzzy
 msgid "Applications"
-msgstr "Authentifizierung"
+msgstr "Anwendungen"
 
 #: redhat-config-kickstart.gladestrings:21
 #: redhat-config-kickstart.gladestrings:26
@@ -772,9 +768,8 @@ msgid "RAID Device:"
 msgstr "RAID-Gerät:"
 
 #: redhat-config-kickstart.gladestrings:139
-#, fuzzy
 msgid "Install boot loader on Master Boot Record (MBR)"
-msgstr "Bootloader installieren auf: "
+msgstr "Bootloader auf Master Boot Record (MBR) installieren"
 
 #: redhat-config-kickstart.gladestrings:171
 #: redhat-config-kickstart.gladestrings:173
@@ -814,16 +809,16 @@ msgstr "md5"
 
 #: redhat-config-kickstart.gladestrings:308
 msgid ""
-"Software RAID allows you to combine several disks into a larger RAID "
-"device.  A RAID device can be configured to provide additional speed and "
-"reliability compared to using an individual drive.  For more information on "
-"using RAID devices please consult the kickstart documentation."
+"Software RAID allows you to combine several disks into a larger RAID device. "
+" A RAID device can be configured to provide additional speed and reliability "
+"compared to using an individual drive.  For more information on using RAID "
+"devices please consult the kickstart documentation."
 msgstr ""
-"Mit Software RAID können Sie verschiedene Disketten auf einem größeren RAID-"
-"Gerät kombinieren. Ein RAID-Gerät kann konfiguriert werden, um zusätzliche "
-"Geschwindigkeit und Zuverlässigkeit im Vergleich zu einem einzigen Laufwerk "
-"zu bieten. Weitere Informationen über den Gebrauch der RAID-Geräte finden "
-"Sie in der kickstart-Dokumentation."
+"Mit Software RAID können Sie verschiedene Disketten auf einem größeren "
+"RAID-Gerät kombinieren. Ein RAID-Gerät kann konfiguriert werden, um "
+"zusätzliche Geschwindigkeit und Zuverlässigkeit im Vergleich zu einem "
+"einzigen Laufwerk zu bieten. Weitere Informationen über den Gebrauch der "
+"RAID-Geräte finden Sie in der kickstart-Dokumentation."
 
 #: redhat-config-kickstart.gladestrings:73
 msgid "Encrypt root password"
@@ -869,9 +864,8 @@ msgstr ""
 " Eine graphische Schnittstelle für die Anlage der Kickstart-Datei"
 
 #: redhat-config-kickstart.gladestrings:143
-#, fuzzy
 msgid "Boot Loader Options (required)"
-msgstr "Bootloader-Optionen"
+msgstr "Bootloader-Optionen (obligatorisch)"
 
 #: redhat-config-kickstart.gladestrings:25
 msgid "Use existing partition (onpart)"
@@ -886,9 +880,8 @@ msgid "Authentication:"
 msgstr "Authentifizierung:"
 
 #: ../src/partition.py:77
-#, fuzzy
 msgid "Size (MB)"
-msgstr "Größe (MB):"
+msgstr "Größe (MB)"
 
 #: redhat-config-kickstart.gladestrings:105
 msgid "FTP Server:"
@@ -912,7 +905,7 @@ msgstr "_Datei"
 
 #: redhat-config-kickstart.gladestrings:29
 msgid "(for example: hda1 or sdc3)"
-msgstr ""
+msgstr "(zum Beispiel: hda1 oder sdc3)"
 
 #: redhat-config-kickstart.gladestrings:264
 msgid "General"
@@ -924,7 +917,7 @@ msgstr "_Löschen"
 
 #: ../src/raidWindow.py:119
 msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr ""
+msgstr "Sie müssen mindestens 2 Partitionen wählen, um RAID %s zu verwenden"
 
 #: redhat-config-kickstart.gladestrings:268
 msgid "Video Card"
@@ -947,6 +940,8 @@ msgid ""
 "Device/\n"
 "Partition Number"
 msgstr ""
+"Gerät/\n"
+"Partitionsnummer"
 
 #: redhat-config-kickstart.gladestrings:35
 msgid "Raid Members"
@@ -973,9 +968,8 @@ msgid "Resolution"
 msgstr "Auflösung"
 
 #: redhat-config-kickstart.gladestrings:126
-#, fuzzy
 msgid "Do not install a boot loader"
-msgstr "Bootloader installieren"
+msgstr "Keinen Bootloader installieren"
 
 #: redhat-config-kickstart.gladestrings:36
 msgid "RAID Level:"
@@ -1031,7 +1025,7 @@ msgstr "Kerberos 5 Authentifizierung"
 
 #: redhat-config-kickstart.gladestrings:286
 msgid "Development"
-msgstr ""
+msgstr "Entwicklung"
 
 #: ../src/partition.py:131 ../src/partition.py:152
 msgid "Please select a partition from the list."
@@ -1047,7 +1041,7 @@ msgstr "Partition auf spezifischem Laufwerk erstellen (ondisk)"
 
 #: ../src/partition.py:75
 msgid "Format"
-msgstr ""
+msgstr "Format"
 
 #: redhat-config-kickstart.gladestrings:251
 #: redhat-config-kickstart.gladestrings:252
@@ -1076,7 +1070,7 @@ msgstr "Beim Booten das X-Window System starten"
 
 #: redhat-config-kickstart.gladestrings:57
 msgid "5"
-msgstr ""
+msgstr "5"
 
 #: redhat-config-kickstart.gladestrings:244
 msgid "Authentication Configuration"
@@ -1091,9 +1085,8 @@ msgid "Enable SMB Authentication"
 msgstr "SMB-Authentifizierung"
 
 #: redhat-config-kickstart.gladestrings:285
-#, fuzzy
 msgid "Servers"
-msgstr "SMB-Server:"
+msgstr "Server"
 
 #: ../src/kickstartGui.py:172
 msgid "Help is not available."
@@ -1104,6 +1097,8 @@ msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
 msgstr ""
+"Das angegebene Gerät besitzt keinen gültigen Gerätenamen. Verwenden Sie "
+"einenGerätenamen wie zum Beispiel \"hda1\" oder \"sda3\"."
 
 #: ../src/basic.py:269
 msgid "Please select a root password."
@@ -1134,9 +1129,8 @@ msgid "Medium"
 msgstr "Mittel"
 
 #: redhat-config-kickstart.gladestrings:140
-#, fuzzy
 msgid "Install boot loader on first sector of the boot partition"
-msgstr "_Erster Sektor der Bootpartition"
+msgstr "Bootloader im ersten Sektor der Bootpartition installieren"
 
 #: redhat-config-kickstart.gladestrings:96
 #: redhat-config-kickstart.gladestrings:122
@@ -1189,18 +1183,16 @@ msgid "Use GRUB password: "
 msgstr "GRUB-Passwort verwenden:"
 
 #: redhat-config-kickstart.gladestrings:69
-#, fuzzy
 msgid "_Contents"
-msgstr "_Hilfe Inhalt"
+msgstr "_Inhalt"
 
 #: redhat-config-kickstart.gladestrings:147
-#, fuzzy
 msgid "Initialize the Disk Label:"
 msgstr "Festplattenkennung initialisieren:"
 
 #: ../src/partWindow.py:231 ../src/partWindow.py:250 ../src/partWindow.py:264
 msgid "Auto"
-msgstr ""
+msgstr "Automatisch"
 
 #: redhat-config-kickstart.gladestrings:228
 msgid "Hesiod LHS:"
@@ -1215,9 +1207,8 @@ msgid "Force use of lba32 mode"
 msgstr "Verwenden des lba32 Modus forcieren"
 
 #: redhat-config-kickstart.gladestrings:305
-#, fuzzy
 msgid "Save to File"
-msgstr "Datei speichern"
+msgstr "In Datei speichern"
 
 #: redhat-config-kickstart.gladestrings:148
 msgid "_No"
@@ -1226,22 +1217,6 @@ msgstr "_Nein"
 #: redhat-config-kickstart.gladestrings:67
 msgid "_Quit"
 msgstr "_Beenden"
-
-#, fuzzy
-#~ msgid "Preserve existing partitions"
-#~ msgstr "Existierende Partitionen entfernen:"
-
-#, fuzzy
-#~ msgid "Remove existing Linux partitions"
-#~ msgstr "Existierende Partitionen entfernen:"
-
-#, fuzzy
-#~ msgid "Do not clear Master Boot Record"
-#~ msgstr "Master Boot Record löschen:"
-
-#, fuzzy
-#~ msgid "Do not initialize the disk label"
-#~ msgstr "Festplattenkennung initialisieren:"
 
 #~ msgid "RAID 5"
 #~ msgstr "RAID 5"
