@@ -88,12 +88,9 @@ class xconfig:
 
         #add monitors to list
         try:
-            monitorFile = open("MonitorsDB", "r")
+            monitorFile = open("/usr/share/hwdata/MonitorsDB", "r")
         except:
-            try:
-                monitorFile = open("/usr/share/ksconfig/MonitorsDB", "r")
-            except:
-                print "can not read MonitorDB file"
+            print "can not read MonitorDB file"
 
         lines=monitorFile.readlines()
         monitorFile.close()
