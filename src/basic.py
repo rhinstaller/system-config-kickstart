@@ -283,19 +283,19 @@ class basic:
             self.kickstartData.setRootPw([self.passwd])            
 
         if self.reboot_checkbutton.get_active():
-            self.kickstartData.setReboot(["reboot"])
+            self.kickstartData.setReboot("reboot")
         else:
-            self.kickstartData.setReboot([None])
+            self.kickstartData.setReboot(None)
 
         if self.text_install_checkbutton.get_active():
-            self.kickstartData.setText(["text"])
+            self.kickstartData.setText("text")
         else:
-            self.kickstartData.setText([None])
+            self.kickstartData.setText(None)
 
         if self.interactive_checkbutton.get_active():
-            self.kickstartData.setInteractive(["interactive"])
+            self.kickstartData.setInteractive("interactive")
         else:
-            self.kickstartData.setInteractive([None])
+            self.kickstartData.setInteractive(None)
 
         return 0
 

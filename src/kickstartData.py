@@ -66,7 +66,7 @@ class KickstartData:
         return self.mouse
 
     def setText(self, args):
-        self.text = args[0]
+        self.text = args
 
     def getText(self):
         return self.text
@@ -84,7 +84,7 @@ class KickstartData:
         return self.rootpw
 
     def setReboot(self, args):
-        self.reboot = args[0]
+        self.reboot = args
 
     def getReboot(self):
         return self.reboot 
@@ -96,7 +96,7 @@ class KickstartData:
         return self.install
 
     def setInteractive(self, args):
-        self.interactive = args[0]
+        self.interactive = args
 
     def getInteractive(self):
         return self.interactive
