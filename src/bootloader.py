@@ -29,7 +29,8 @@ import crypt
 
 class bootloader:
 
-    def __init__(self, xml):
+    def __init__(self, xml, kickstartData):
+        self.kickstartData = kickstartData
         self.install_bootloader_radio = xml.get_widget("install_bootloader_radio")
         self.upgrade_bootloader_radio = xml.get_widget("upgrade_bootloader_radio")
         self.no_bootloader_radio = xml.get_widget("no_bootloader_radio")
@@ -81,14 +82,11 @@ class bootloader:
         self.grub_password_encrypt_checkbutton.set_sensitive(status)
 
     def getData (self):
-        data = []
-        data.append("")
-        data.append("#System bootloader configuration")
         if self.install_bootloader_radio.get_active():
-            buf = "bootloader "
+            buf = ""
             #lilo stuff
             if self.lilo_radiobutton.get_active():
-                buf = buf + "--useLilo "
+                buf = "--useLilo "
                 if self.linear_checkbutton.get_active():
                     buf = buf + "--linear "
                 else:
@@ -120,9 +118,43 @@ class bootloader:
                     else:
                         buf = buf + "--password=" + gp + " "
         elif self.upgrade_bootloader_radio.get_active():
-            buf = "bootloader --upgrade"
+            buf = "--upgrade"
         else:
-            buf = "bootloader --location=none"
-        data.append(buf)
-        return data
-        
+            buf = "--location=none"
+
+        self.kickstartData.setBootloader(buf)
+        return 0
+
+    def fillData(self):
+        list = self.kickstartData.getBootloader()
+
+        for item in list:
+            if item[:11] == "--location=":
+                if item[11:] == "none":
+                    self.no_bootloader_radio.set_active(gtk.TRUE)
+                elif item[11:] == "mbr":
+                    self.mbr_radiobutton.set_active(gtk.TRUE)
+                elif item[11:] == "partition":
+                    self.firstsector_radiobutton.set_active(gtk.TRUE)
+
+            if item[:10] == "--password":
+                self.grub_password_entry.set_text(item[10:])
+
+        if "--md5pass" in list:
+            self.grub_password_encrypt_checkbutton.set_active(gtk.TRUE)
+
+        if "--upgrade" in list:
+            self.upgrade_bootloader_radio.set_active(gtk.TRUE)
+            
+        if "--useLilo" in list:
+            self.lilo_radiobutton.set_active(gtk.TRUE)
+
+            if "--linear" in list:
+                self.linear_checkbutton.set_active(gtk.TRUE)
+
+            if "--nolinear" in list:
+                self.linear_checkbutton.set_active(gtk.FALSE)
+
+            if "--lba32" in list:
+                self.lba32_checkbutton.set_active(gtk.TRUE)
+
