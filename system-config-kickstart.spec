@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
 Version: 2.5.10
-Release: 1
+Release: 2
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
 ExclusiveOS: Linux
@@ -56,8 +56,12 @@ fi
 %{_mandir}/man8/%{name}*
 %lang(ja) %{_mandir}/ja/man8/%{name}*
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
+%attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Thu Apr  8 2004 Brent Fox <bfox@redhat.com> 2.5.10-2
+- fix icon path (bug #120176)
+
 * Tue Apr  6 2004 Brent Fox <bfox@redhat.com> 2.5.10-1
 - fix typo in package.py (bug #119257)
 
