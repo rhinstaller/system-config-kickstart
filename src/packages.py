@@ -156,9 +156,9 @@ class Packages:
         packageList = []
 
         if self.resolve_deps_radio.get_active() == 1:
-             self.kickstartData.setPackage(["resolvedeps"])
+             self.kickstartData.setPackage(["--resolvedeps"])
         elif self.ignore_deps_radio.get_active() == 1:
-             self.kickstartData.setPackage(["ignoredeps"])
+             self.kickstartData.setPackage(["--ignoredeps"])
 
         packageList = self.getPkgData(self.desktops_store, packageList)
 

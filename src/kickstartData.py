@@ -477,7 +477,7 @@ class KickstartData:
 
         if self.getPackage():
             file.append("#Package install information")
-            file.append("%packages --" + string.join(self.getPackage(), " "))
+            file.append("%packages " + string.join(self.getPackage(), " "))
 
             if self.getPackageGroupList() != []:
                 for package in self.getPackageGroupList():
