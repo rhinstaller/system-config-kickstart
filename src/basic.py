@@ -138,13 +138,13 @@ class basic:
                            }
 
         #populate language combo
-        lang_list = self.langDict.keys()
-        lang_list.sort()
-        lang_combo.set_popdown_strings(lang_list)
+        self.lang_list = self.langDict.keys()
+        self.lang_list.sort()
+        self.lang_combo.set_popdown_strings(self.lang_list)
 
         #set default to English
-        lang_combo.list.select_item(4)
-        lang_combo.entry.set_editable(gtk.FALSE)
+        self.lang_combo.list.select_item(4)
+        self.lang_combo.entry.set_editable(gtk.FALSE)
 
         self.populateLangSupport()
 #        for lang in lang_list:
@@ -158,9 +158,9 @@ class basic:
         for item in dict_list:
             mouse_list.append(item)
 
-        mouse_combo.set_popdown_strings(mouse_list)
-        mouse_combo.list.select_item(0)
-        mouse_combo.entry.set_editable(gtk.FALSE)		
+        self.mouse_combo.set_popdown_strings(mouse_list)
+        self.mouse_combo.list.select_item(0)
+        self.mouse_combo.entry.set_editable(gtk.FALSE)		
 
         #populate keyboard combo, add keyboards here
         self.keyboard_dict = keyboard_models.KeyboardModels().get_models()
@@ -170,17 +170,17 @@ class basic:
 
         for item in keys:
             keyboard_list.append(self.keyboard_dict[item][0])
-        keyboard_combo.set_popdown_strings(keyboard_list)
+        self.keyboard_combo.set_popdown_strings(keyboard_list)
 
         #set default to English
         kbd = keyboard.Keyboard()
         kbd.read()
         currentKeymap = kbd.get()
 	#set keyboard to current keymap
-        keyboard_combo.entry.set_text(self.keyboard_dict[currentKeymap][0])
+        self.keyboard_combo.entry.set_text(self.keyboard_dict[currentKeymap][0])
 
         #set default mouse to generic ps/2
-        mouse_combo.list.select_item(8)
+        self.mouse_combo.list.select_item(8)
 
         #populate time zone combo
         if os.access("/usr/share/zoneinfo/zone.tab", os.R_OK):
@@ -207,9 +207,9 @@ class basic:
         except:
             select = 0
 
-        timezone_combo.set_popdown_strings(list_items)
-        timezone_combo.list.select_item(select)
-        timezone_combo.entry.set_editable(gtk.FALSE)		
+        self.timezone_combo.set_popdown_strings(list_items)
+        self.timezone_combo.list.select_item(select)
+        self.timezone_combo.entry.set_editable(gtk.FALSE)		
 
     def langToggled(self, data, row):
         iter = self.lang_support_store.get_iter((int(row),))
@@ -218,11 +218,13 @@ class basic:
 
     def getData(self):
         data = []
-        data.append("")
-        data.append("#System language")
+#        data.append("")
+#        data.append("#System language")
         lang = self.languageLookup(self.lang_combo.entry.get_text())
-        data.append("lang " + lang)
-        data.append("")
+#        print "lang is", lang
+        self.kickstartData.setLang([self.languageLookup(self.lang_combo.entry.get_text())])
+#        data.append("lang " + lang)
+#        data.append("")
         data.append("#Language modules to install")
 
         lang_list = []
@@ -236,6 +238,9 @@ class basic:
             iter = self.lang_support_store.iter_next(iter)
 
         defaultLang = self.languageLookup(self.lang_combo.entry.get_text())
+
+        self.kickstartData.setLangsupport(list, defaultLang)
+        
 
         if len(lang_list) == 0:
             data.append("langsupport " + defaultLang)
@@ -338,10 +343,7 @@ class basic:
         return buf
 
     def populateLangSupport(self):
-        lang_list = self.langDict.keys()
-        lang_list.sort()        
-        
-        for lang in lang_list:
+        for lang in self.lang_list:
             iter = self.lang_support_store.append()
             self.lang_support_store.set_value(iter, 0, gtk.FALSE)
             self.lang_support_store.set_value(iter, 1, lang)
@@ -349,9 +351,12 @@ class basic:
     def fillData(self):
         for lang in self.langDict.keys():
             if self.langDict[lang] == self.kickstartData.getLang():
-                self.lang_combo.entry.set_text(lang)
+                print lang, self.langDict
+                print "lang is",  self.lang_list.index(lang)
+                self.lang_combo.list.select_item(self.lang_list.index(lang))
+#                self.lang_combo.entry.set_text(lang)
 
-        print self.keyboard_dict
-        print self.keyboard_dict[self.kickstartData.getKeyboard()]
+#        print self.keyboard_dict
+#        print self.keyboard_dict[self.kickstartData.getKeyboard()]
         self.keyboard_combo.entry.set_text(self.keyboard_dict[self.kickstartData.getKeyboard()][0])
                                  
