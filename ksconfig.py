@@ -1,13 +1,27 @@
 #!/usr/bin/env python
 
-#Kickstart Configurator
-#Copyright Red Hat, Inc. 2001
-#Written by Brent Fox (bfox@redhat.com) and Tammy Fox (tfox@redhat.com)
+## Kickstart Configurator - A graphical kickstart file generator
+## Copyright (C) 2000, 2001 Red Hat, Inc.
+## Copyright (C) 2000, 2001 Brent Fox <bfox@redhat.com>
+##                          Tammy Fox <tfox@redhat.com>
+
+## This program is free software; you can redistribute it and/or modify
+## it under the terms of the GNU General Public License as published by
+## the Free Software Foundation; either version 2 of the License, or
+## (at your option) any later version.
+
+## This program is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+## GNU General Public License for more details.
+
+## You should have received a copy of the GNU General Public License
+## along with this program; if not, write to the Free Software
+## Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
 #Created August 10, 2000 Brent Fox
 #Last Modified: February 16, 2001 Tammy Fox
 #Patch contributed by Bill Huang - applied on 4/23/2001 for Japanese support
-#License: This software package is licensed under the GNU General Public 
-#License (GPL).  A copy of the GNU GPL should be distributed with this package. # Refer to the file 'COPYING' or www.gnu.org for more licensing information.
 
 from gtk import *
 import GtkExtra
