@@ -262,16 +262,16 @@ class partition:
 
             else:
                 #This is a raid device
-                buf = "raid %s" % (part_object.mountPoint)
+                buf = "raid %s " % (part_object.mountPoint)
 
                 if part_object.raidLevel:
-                    buf = buf + " --level=%s" % part_object.raidLevel + " "
+                    buf = buf + "--level=%s" % part_object.raidLevel + " "
 
                 if part_object.raidDevice:
-                    buf = buf + " --device=%s" % part_object.raidDevice + " "
+                    buf = buf + "--device=%s" % part_object.raidDevice + " "
 
                 if part_object.fsType:
-                    buf = buf + " --fstype " + part_object.fsType + " " 
+                    buf = buf + "--fstype " + part_object.fsType + " " 
 
                 if not part_object.doFormat:
                     buf = buf + "--noformat "
