@@ -49,7 +49,7 @@ import scripts
 
 ##
 ## I18N
-##
+## bfox - not sure it this is correct
 import gettext
 gettext.bindtextdomain ("ksconfig", "/usr/share/locale")
 gettext.textdomain ("ksconfig")
@@ -123,44 +123,11 @@ class ksconfig_gui:
 		self.category_clist.append([_("Package Selection")])
 		self.category_clist.append([_("Pre-Installation Script")])
 		self.category_clist.append([_("Post-Installation Script")])		
-		
 		gtk.mainloop ()
 
 	def select_category(self, event, row, column, data):
-		if self.category_clist.get_text(row,0)== "Basic Configuration":
-			#change notebook tab
-			self.options_notebook.set_page(0)
-			return
-		elif  self.category_clist.get_text(row,0)== "Boot Loader Options":
-			self.options_notebook.set_page(1)
-			return
-		elif  self.category_clist.get_text(row,0)== "Installation Method":
-			self.options_notebook.set_page(2)
-			return
-		elif  self.category_clist.get_text(row,0)== "Partition Information":
-			self.options_notebook.set_page(3)
-			return
-		elif  self.category_clist.get_text(row,0)== "Network Configuration":
-			self.options_notebook.set_page(4)
-			return
-		elif  self.category_clist.get_text(row,0)== "Authentication":
-			self.options_notebook.set_page(5)
-			return
-		elif  self.category_clist.get_text(row,0)== "Firewall Configuration":
-			self.options_notebook.set_page(6)
-			return
-		elif  self.category_clist.get_text(row,0)== "X Configuration":
-			self.options_notebook.set_page(7)
-			return
-		elif  self.category_clist.get_text(row,0)== "Package Selection":
-			self.options_notebook.set_page(8)
-			return
-		elif  self.category_clist.get_text(row,0)== "Pre-Installation Script":
-			self.options_notebook.set_page(9)
-			return				
-		elif  self.category_clist.get_text(row,0)== "Post-Installation Script":
-			self.options_notebook.set_page(10)
-			return				
+		self.options_notebook.set_page(row)
+		return
 
 	#about box
 	def on_about_activate(self, args):
