@@ -114,7 +114,9 @@ class partWindow:
         self.win_reset()
         self.partitionDialog.show_all()
 
-    def edit_partition(self, part_object):
+    def edit_partition(self, iter, part_object):
+        self.current_iter = iter
+        self.current_object = part_object
         self.ok_handler = self.partOkButton.connect("clicked", self.on_edit_ok_button_clicked)
         self.win_reset()
 
@@ -151,7 +153,6 @@ class partWindow:
     def win_reset(self):
         self.mountPointCombo.entry.set_text("")
         self.mountPointCombo.set_sensitive(gtk.TRUE)
-#        self.fsTypeCombo.entry.set_text("") 
         self.fsTypeCombo.list.select_item(1)
         self.sizeCombo.set_text("") 
         self.asPrimaryCheck.set_active(gtk.FALSE)
@@ -172,29 +173,11 @@ class partWindow:
         rowData = self.getData()
 
         if rowData:
-            (mountPoint, fsType, size, fixedSize, setSize,
-             setSizeVal, maxSize, asPrimary, 
-             onDisk, onDiskVal, onPart, onPartVal,
-             doFormat, raidType, raidSpares, isRaidDevice) = rowData
-
-            iter = self.part_store.append()
-            self.part_store.set_value(iter, 0, mountPoint)
-            self.part_store.set_value(iter, 1, fsType)
-            self.part_store.set_value(iter, 2, size)
-            self.part_store.set_value(iter, 3, fixedSize)
-            self.part_store.set_value(iter, 4, setSize)
-            self.part_store.set_value(iter, 5, setSizeVal)
-            self.part_store.set_value(iter, 6, maxSize)
-            self.part_store.set_value(iter, 7, asPrimary)
-            self.part_store.set_value(iter, 8, onDisk)
-            self.part_store.set_value(iter, 9, onDiskVal)
-            self.part_store.set_value(iter, 10, onPart)
-            self.part_store.set_value(iter, 11, onPartVal)
-            self.part_store.set_value(iter, 12, doFormat)
-            self.part_store.set_value(iter, 13, raidType)
-            self.part_store.set_value(iter, 14, raidSpares)
-            self.part_store.set_value(iter, 15, isRaidDevice)
-
+            self.current_object.setData(rowData)
+            self.part_store.set_value(self.current_iter, 0, self.current_object.mountPoint)
+            self.part_store.set_value(self.current_iter, 1, self.current_object.fsType)
+            self.part_store.set_value(self.current_iter, 2, self.current_object.size)
+            self.part_store.set_value(self.current_iter, 3, self.current_object.onDiskVal)
             
             self.partOkButton.disconnect(self.ok_handler)
             self.partitionDialog.hide()
@@ -245,13 +228,6 @@ class partWindow:
         elif self.sizeMaxRadio.get_active() == gtk.TRUE:
             sizeStrategy = "max"
 
-
-#        fixedSize = self.sizeFixedRadio.get_active()
-#        setSize = self.sizeSetRadio.get_active()
-#        if setSize == 1:
-#        if sizeStrategy = "grow":
-#        maxSize = self.sizeMaxRadio.get_active()
-
         asPrimary = self.asPrimaryCheck.get_active()
 
         onDisk = self.onDiskCheck.get_active()
@@ -264,6 +240,7 @@ class partWindow:
 
         doFormat = self.formatCheck.get_active()
 
+        #Let's do some error checking to make sure things make sense
         if size < 1 or size == "" and onPart == gtk.FALSE:
             dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, _("You must specify a size for the partition."))
             dlg.set_title(_("Error"))

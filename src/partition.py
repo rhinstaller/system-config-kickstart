@@ -38,7 +38,6 @@ _=gettext.gettext
 class partition:
     def __init__(self, xml):
         self.xml = xml
-        self.num_rows = 0
         self.clear_mbr_yes_radiobutton = self.xml.get_widget("clear_mbr_yes_radiobutton")
         self.clear_mbr_no_radiobutton = self.xml.get_widget("clear_mbr_no_radiobutton")
         self.remove_parts_none_radiobutton = self.xml.get_widget("remove_parts_none_radiobutton")
@@ -88,20 +87,19 @@ class partition:
 #              })
 
 #    def select_clist(self, r, c, event):
-    def select_clist(self, *args ):
-        widget, r, c, event = args
-        self.selected_row = r
-        self.edit_part_button.set_sensitive(gtk.TRUE)
-        self.del_part_button.set_sensitive(gtk.TRUE)
+#    def select_clist(self, *args ):
+#        widget, r, c, event = args
+#        self.selected_row = r
+#        self.edit_part_button.set_sensitive(gtk.TRUE)
+#        self.del_part_button.set_sensitive(gtk.TRUE)
 
     def delPartition(self, *args):
-        self.num_rows = self.num_rows - 1
-        self.partClist.remove(self.selected_row)
+        data, iter = self.part_view.get_selection().get_selected()
+        self.part_store.remove(iter)
         self.edit_part_button.set_state(STATE_INSENSITIVE)
         self.del_part_button.set_state(STATE_INSENSITIVE)
 
     def addPartition(self, *args):
-        self.num_rows = self.num_rows + 1
         self.partWindow.add_partition()
         self.edit_part_button.set_sensitive(gtk.TRUE)
         self.del_part_button.set_sensitive(gtk.TRUE)
@@ -111,7 +109,7 @@ class partition:
     def editPartition(self, *args):
         data, iter = self.part_view.get_selection().get_selected()
         part_object = self.part_store.get_value(iter, 4)
-        self.partWindow.edit_partition(part_object)
+        self.partWindow.edit_partition(iter, part_object)
 
 #    def raidPartition(self, *args):
 #        self.raidWindow.add_raid(self.num_rows)
