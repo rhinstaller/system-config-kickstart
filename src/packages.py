@@ -80,19 +80,19 @@ class Packages:
         self.systems_view = xml.get_widget("systems_treeview")
         self.systems_view.get_selection().set_mode(gtk.SELECTION_NONE)
 
-        self.desktops_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
+        self.desktops_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING, gobject.TYPE_STRING)
         self.desktops_view.set_model(self.desktops_store)
 
-        self.applications_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
+        self.applications_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING, gobject.TYPE_STRING)
         self.applications_view.set_model(self.applications_store)
 
-        self.servers_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
+        self.servers_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING, gobject.TYPE_STRING)
         self.servers_view.set_model(self.servers_store)
 
-        self.development_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
+        self.development_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING, gobject.TYPE_STRING)
         self.development_view.set_model(self.development_store)
 
-        self.system_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
+        self.system_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING, gobject.TYPE_STRING)
         self.systems_view.set_model(self.system_store)
 
         self.create_columns(self.desktops_view, self.desktops_store)
@@ -118,23 +118,28 @@ class Packages:
 
         for pkg in desktopsList:
             iter = self.desktops_store.append()
-            self.desktops_store.set_value(iter, 1, pkg)
+            self.desktops_store.set_value(iter, 1, pkg[0])
+            self.desktops_store.set_value(iter, 2, pkg[1])
 
         for pkg in applicationsList:
             iter = self.applications_store.append()
-            self.applications_store.set_value(iter, 1, pkg)
+            self.applications_store.set_value(iter, 1, pkg[0])
+            self.applications_store.set_value(iter, 2, pkg[1])
 
         for pkg in serversList:
             iter = self.servers_store.append()
-            self.servers_store.set_value(iter, 1, pkg)
+            self.servers_store.set_value(iter, 1, pkg[0])
+            self.servers_store.set_value(iter, 2, pkg[1])
 
         for pkg in developmentList:
             iter = self.development_store.append()
-            self.development_store.set_value(iter, 1, pkg)
+            self.development_store.set_value(iter, 1, pkg[0])
+            self.development_store.set_value(iter, 2, pkg[1])            
 
         for pkg in systemList:
             iter = self.system_store.append()
-            self.system_store.set_value(iter, 1, pkg)
+            self.system_store.set_value(iter, 1, pkg[0])
+            self.system_store.set_value(iter, 2, pkg[1])            
 
     def create_columns(self, view, store):
         self.checkbox = gtk.CellRendererToggle()
@@ -175,7 +180,7 @@ class Packages:
         #Loop over the package list and see what was selected
         while iter:
             if store.get_value(iter, 0) == gtk.TRUE:
-                packageList.append(store.get_value(iter, 1))
+                packageList.append(store.get_value(iter, 2))
             iter = store.iter_next(iter)
 
         return packageList
@@ -183,7 +188,7 @@ class Packages:
     def lookupPackageInList(self, package, store):
         iter = store.get_iter_first()
         while iter:
-            if package == store.get_value(iter, 1):
+            if package == store.get_value(iter, 2):
                 store.set_value(iter, 0, gtk.TRUE)
             iter = store.iter_next(iter)
 
