@@ -299,6 +299,10 @@ class basic:
             self.parent_class.platformTypeChanged(entry.get_text())
 
     def fillData(self):
+        #set platform
+        if self.kickstartData.getPlatform() in self.platform_list:
+            self.platform_combo.entry.set_text(self.kickstartData.getPlatform())
+
         #set language
         for lang in self.langDict.keys():
             if self.langDict[lang] == self.kickstartData.getLang():
