@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: ksconfig
 Version: 2.1
-Release: 1
+Release: 2
 URL: http://www.redhat.com
 Copyright: GPL
 ExclusiveOS: Linux
@@ -9,10 +9,8 @@ Group: System Environment/Base
 BuildRoot: %{_tmppath}/ksconfig-%{version}-root
 BuildArch: noarch
 Source: ksconfig-%{version}.tar.gz
-BuildRequires: python-devel
-BuildRequires: gnome-libs-devel
-Requires: pygtk 
-Requires: pygtk-libglade 
+Requires: pygtk2 
+Requires: pygtk2-libglade 
 Requires: python2
 Requires: hwdata
 
@@ -47,6 +45,12 @@ fi
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
+* Mon Jun 17 2002 Brent Fox <bfox@redhat.com>
+- completed the port to gtk2
+- Fixed bug 65835
+- Fixed bug 66815
+- Fixed bug 64453 (with help from menthos@menthos.com)
+
 * Fri Jun 14 2002 Tammy Fox <tfox@redhat.com>
 - Added optional ftp username and password
 - Added preview menu item
