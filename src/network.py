@@ -45,6 +45,7 @@ class network:
         self.edit_device_button = xml.get_widget("edit_device_button")
         self.delete_device_button = xml.get_widget("delete_device_button")
         self.network_device_dialog = xml.get_widget("network_device_dialog")
+        self.network_device_dialog.connect("delete-event", self.resetDialog)
 
         self.network_device_option_menu = xml.get_widget("network_device_option_menu")
         self.network_type_option_menu = xml.get_widget("network_type_option_menu")        
@@ -330,6 +331,7 @@ class network:
 
         self.network_ok_button.disconnect(self.handler)
         self.network_device_dialog.hide()
+        return gtk.TRUE
 
     def getData(self):
         self.kickstartData.clearNetwork()

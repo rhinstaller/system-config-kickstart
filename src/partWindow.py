@@ -50,6 +50,7 @@ class partWindow:
         self.device_iter_dict = {}
 
         self.partitionDialog = xml.get_widget("partition_dialog")
+        self.partitionDialog.connect("delete-event", self.on_part_cancel_button_clicked)
         toplevel = xml.get_widget("main_window")
         self.partitionDialog.set_transient_for(toplevel)
         self.partitionDialog.set_icon(kickstartGui.iconPixbuf)
@@ -215,6 +216,7 @@ class partWindow:
         self.partOkButton.disconnect(self.ok_handler)
         self.win_reset()
         self.partitionDialog.hide()
+        return gtk.TRUE
 
     def on_edit_ok_button_clicked(self, *args):
         part_object = self.part_store.get_value(self.current_iter, 5)

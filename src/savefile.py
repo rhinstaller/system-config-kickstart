@@ -39,6 +39,7 @@ class saveFile:
 		self.buf = buf
 
 		self.dialog = self.xml.get_widget("preview_options_dialog")
+		self.dialog.connect("delete-event", self.on_confirm_options_cancel_button)
 		toplevel = self.xml.get_widget("main_window")
 		self.dialog.set_transient_for(toplevel)
 		self.textview = self.xml.get_widget("confirm_options_textview")
@@ -71,6 +72,7 @@ class saveFile:
         def on_confirm_options_cancel_button(self, *args):
 		#using hide because destroy crashes application after second instance
 		self.dialog.hide()
+		return gtk.TRUE
 
 	def saveFile_cb(self, *args):
 		self.dialog.hide()

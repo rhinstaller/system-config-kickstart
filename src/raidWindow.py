@@ -48,6 +48,7 @@ class raidWindow:
         self.original_partitions = None
         
         self.raid_window = xml.get_widget("raid_window")
+        self.raid_window.connect("delete-event", self.destroy)
         toplevel = self.xml.get_widget("main_window")
         self.raid_window.set_transient_for(toplevel)
         self.raid_window.set_icon(kickstartGui.iconPixbuf)
@@ -252,4 +253,4 @@ class raidWindow:
 
     def destroy(self, *args):
         self.raid_window.hide()
-    
+        return gtk.TRUE
