@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.5.19
+Version: 2.5.20
 Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -60,6 +60,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Wed Jan 12 2005 Chris Lumens <clumens@redhat.com> 2.5.20-1 
+- Default to English (USA) instead of English (Singapore).
+
 * Mon Dec 20 2004 Chris Lumens <clumens@redhat.com> - 2.5.19-1
 - Fixed a segfault in pygtk on the partitioning screen.
 - Fixed RAID editing screen so the config values don't change if you
