@@ -58,8 +58,6 @@ _=gettext.gettext
 xml = libglade.GladeXML ("/usr/share/ksconfig/ksconfig.glade", domain="ksconfig")
 #xml = libglade.GladeXML ("./ksconfig.glade", domain="ksconfig")
 
-VERSION = "2.0"
-
 class ksconfig_gui:
 	
 	def destroy(self, args):
@@ -131,7 +129,7 @@ class ksconfig_gui:
 
 	#about box
 	def on_about_activate(self, args):
-		aboutDialog = gnome.ui.GnomeAbout (_("Kickstart Configurator"), VERSION,
+		aboutDialog = gnome.ui.GnomeAbout (_("Kickstart Configurator"), @VERSION@,
 						   "Copyright (c) 2000, 2001 Red Hat, Inc.",
 						   ["Brent Fox <bfox@redhat.com>",
 						    "Tammy Fox <tfox@redhat.com>"],
@@ -141,17 +139,17 @@ class ksconfig_gui:
 	#display help manual
 	def on_help_button_clicked (self, args):
 	
-		help_pages = ["file:///usr/share/doc/ksconfig-" + VERSION + "/ksconfig-basic.html",
-			      "file:///usr/share/doc/ksconfig-" + VERSION + "/ksconfig-bootloader.html",
-			      "file:///usr/share/doc/ksconfig-" + VERSION + "/ksconfig-install.html",
-			      "file:///usr/share/doc/ksconfig-" + VERSION + "/ksconfig-partitions.html",
-			      "file:///usr/share/doc/ksconfig-" + VERSION + "/ksconfig-network.html",
-			      "file:///usr/share/doc/ksconfig-" + VERSION + "/ksconfig-auth.html",
-			      "file:///usr/share/doc/ksconfig-" + VERSION + "/ksconfig-firewall.html",
-			      "file:///usr/share/doc/ksconfig-" + VERSION + "/ksconfig-xconfig.html",
-			      "file:///usr/share/doc/ksconfig-" + VERSION + "/ksconfig-pkgs.html",
-			      "file:///usr/share/doc/ksconfig-" + VERSION + "/ksconfig-prescript.html",
-			      "file:///usr/share/doc/ksconfig-" + VERSION + "/ksconfig-postinstall.html",
+		help_pages = ["file:///usr/share/doc/ksconfig-" + @VERSION@ + "/ksconfig-basic.html",
+			      "file:///usr/share/doc/ksconfig-" + @VERSION@ + "/ksconfig-bootloader.html",
+			      "file:///usr/share/doc/ksconfig-" + @VERSION@ + "/ksconfig-install.html",
+			      "file:///usr/share/doc/ksconfig-" + @VERSION@ + "/ksconfig-partitions.html",
+			      "file:///usr/share/doc/ksconfig-" + @VERSION@ + "/ksconfig-network.html",
+			      "file:///usr/share/doc/ksconfig-" + @VERSION@ + "/ksconfig-auth.html",
+			      "file:///usr/share/doc/ksconfig-" + @VERSION@ + "/ksconfig-firewall.html",
+			      "file:///usr/share/doc/ksconfig-" + @VERSION@ + "/ksconfig-xconfig.html",
+			      "file:///usr/share/doc/ksconfig-" + @VERSION@ + "/ksconfig-pkgs.html",
+			      "file:///usr/share/doc/ksconfig-" + @VERSION@ + "/ksconfig-prescript.html",
+			      "file:///usr/share/doc/ksconfig-" + @VERSION@ + "/ksconfig-postinstall.html",
 			      ]
 		gnome.help.goto (help_pages [self.options_notebook.get_current_page ()])
 
