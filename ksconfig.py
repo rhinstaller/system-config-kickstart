@@ -144,7 +144,10 @@ def saveFile_cb(args):
 	elif liloRadio2.get_active():
 		buf = buf + "\n" + "lilo --location none"
 
-	buf = buf + "\n" + packageWin.getData()
+	try:
+		buf = buf + "\n" + packageWin.getData()
+	except:
+		pass
 
 	fd = fileDialog(buf)
 
