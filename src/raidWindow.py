@@ -106,15 +106,15 @@ class raidWindow:
         self.raid_mp_combo.entry.set_text(part_object.mountPoint)
 
         fsType = part_object.fsType
-        index = self.fsTypesList.index(fsType) - 1
+        index = self.fsTypesList.index(fsType)
         self.raid_fsType_menu.set_history(index)
 
         device = part_object.raidDevice
-        index = self.raidDeviceList.index(device) - 1
+        index = self.raidDeviceList.index(device)
         self.raid_device_menu.set_history(index)
         
         level = part_object.raidLevel
-        index = self.raidLevelList.index(level) - 1
+        index = self.raidLevelList.index(level)
         self.raid_level_menu.set_history(index)
         
         self.original_partitions = part_object.raidPartitions
