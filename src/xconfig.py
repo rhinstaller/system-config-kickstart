@@ -225,11 +225,11 @@ class xconfig:
 
                 if opt[:7] == "--depth":
                     value = opt[7:]
-                    self.color_depth_combo.entry.set_text(value)
+                    self.color_depth_combo.entry.set_text(string.strip(value))
 
                 if opt[:12] == "--resolution":
                     value = opt[12:]
-                    self.resolution_combo.entry.set_text(value)
+                    self.resolution_combo.entry.set_text(string.strip(value))
 
                 if opt[:6] == "--card":
                     value = string.strip(opt[6:])
