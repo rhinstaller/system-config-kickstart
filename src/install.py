@@ -31,8 +31,8 @@ class install:
         self.cdrom_radiobutton = xml.get_widget("cdrom_radiobutton")
         self.nfs_radiobutton = xml.get_widget("nfs_radiobutton")
         self.ftp_radiobutton = xml.get_widget("ftp_radiobutton")
-        self.hd_radiobutton = xml.get_widget("hd_radiobutton")		
         self.http_radiobutton = xml.get_widget("http_radiobutton")
+        self.hd_radiobutton = xml.get_widget("hd_radiobutton")		
 
         self.nfsdir_label = xml.get_widget("nfsdir_label")
         self.nfsserver_label = xml.get_widget("nfsserver_label")
@@ -52,28 +52,27 @@ class install:
         self.httpserver_entry = xml.get_widget("httpserver_entry")
         self.httpdir_entry = xml.get_widget("httpdir_entry")
 
+        self.install_notebook = xml.get_widget("install_notebook")
+
         xml.signal_autoconnect (
             { "setState" : self.setState,
               } )
 
     def setState (self, args):
-        self.nfsserver_label.set_sensitive(self.nfs_radiobutton.get_active())
-        self.nfsdir_label.set_sensitive(self.nfs_radiobutton.get_active())
-        self.ftpserver_label.set_sensitive(self.ftp_radiobutton.get_active())
-        self.ftpdir_label.set_sensitive(self.ftp_radiobutton.get_active())
-        self.hdpart_label.set_sensitive(self.hd_radiobutton.get_active())
-        self.hddir_label.set_sensitive(self.hd_radiobutton.get_active())
-        self.httpserver_label.set_sensitive(self.http_radiobutton.get_active())
-        self.httpdir_label.set_sensitive(self.http_radiobutton.get_active())
-
-        self.nfsserver_entry.set_sensitive(self.nfs_radiobutton.get_active())
-        self.nfsdir_entry.set_sensitive(self.nfs_radiobutton.get_active())
-        self.ftpserver_entry.set_sensitive(self.ftp_radiobutton.get_active())
-        self.ftpdir_entry.set_sensitive(self.ftp_radiobutton.get_active())
-        self.hdpart_entry.set_sensitive(self.hd_radiobutton.get_active())
-        self.hddir_entry.set_sensitive(self.hd_radiobutton.get_active())
-        self.httpserver_entry.set_sensitive(self.http_radiobutton.get_active())
-        self.httpdir_entry.set_sensitive(self.http_radiobutton.get_active())
+        if self.cdrom_radiobutton.get_active():
+            self.install_notebook.set_page(0)
+            return
+        elif self.nfs_radiobutton.get_active():
+            self.install_notebook.set_page(1)
+            return
+        elif self.ftp_radiobutton.get_active():
+            self.install_notebook.set_page(2)
+            return
+        elif self.http_radiobutton.get_active():
+            self.install_notebook.set_page(3)
+            return
+        elif self.hd_radiobutton.get_active():
+            self.install_notebook.set_page(4)
                                      
     def getData(self):
         #specify to perform a fresh install
