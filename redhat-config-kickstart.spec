@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
 Version: 2.3.2
-Release: 16
+Release: 17
 URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
@@ -56,6 +56,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Thu Aug 23 2002 Brent Fox <bfox@redhat.com> 2.3.2-17
+- bump release num
+
 * Sat Aug 17 2002 Brent Fox <bfox@redhat.com> 2.3.2-16
 - Don't write out --emulthree if No Mouse is selected
 - Fix gtk.glade.bindtextdomain so that the glade screens pull in translations
