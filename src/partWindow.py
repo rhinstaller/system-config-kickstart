@@ -73,27 +73,36 @@ class partWindow:
         mountPoints = ["/", "/boot", "/home", "/var", "/tmp", "/usr", "/opt"]
         self.mountPointCombo.set_popdown_strings(mountPoints)
 
-#        self.fileTypes = ["ext2", "ext3", "RAID", "Linux Swap", "vfat"]
-        self.fileTypes = ["ext2", "ext3", "swap", "vfat"]
-        self.fsTypeCombo.set_popdown_strings(self.fileTypes)
+        self.fsTypesDict = { _("ext2"):"ext2", _("ext3"):"ext3",
+                               _("physical volume (LVM)"):"lvm", _("software RAID"):"raid",
+                               _("swap"):"swap", "vfat":"vfat"}
+        
+        self.fsTypes = self.fsTypesDict.keys()
+        self.fsTypeCombo.set_popdown_strings(self.fsTypes)
         self.fsTypeCombo.list.select_item(0)
 
     def on_fsTypeCombo_set_focus_child(self, *args):
-        curr = self.fsTypeCombo.entry.get_text()
-        if curr in self.fileTypes:
-            index = self.fileTypes.index(curr)
+        key = self.fsTypeCombo.entry.get_text()
 
-            if index == 2:
-                self.mountPointCombo.set_sensitive(gtk.FALSE)
-                self.formatCheck.set_sensitive(gtk.FALSE)
-                self.swap_checkbutton.set_sensitive(gtk.TRUE)
-#            elif index == 3:
-#                self.mountPointCombo.set_sensitive(gtk.FALSE)
-#                self.formatCheck.set_sensitive(gtk.TRUE)
-            else:
-                self.mountPointCombo.set_sensitive(gtk.TRUE)
-                self.formatCheck.set_sensitive(gtk.TRUE)
-                self.swap_checkbutton.set_sensitive(gtk.FALSE)
+        if key == None or key == "":
+            return
+        
+        index = self.fsTypesDict[key]
+
+        if index == "swap":
+            self.mountPointCombo.set_sensitive(gtk.FALSE)
+            self.formatCheck.set_sensitive(gtk.FALSE)
+            self.swap_checkbutton.set_sensitive(gtk.TRUE)
+        elif index == "raid":
+            self.mountPointCombo.set_sensitive(gtk.FALSE)
+            self.formatCheck.set_sensitive(gtk.FALSE)
+        elif index == "lvm":
+            self.mountPointCombo.set_sensitive(gtk.FALSE)
+            self.formatCheck.set_sensitive(gtk.TRUE)
+        else:
+            self.mountPointCombo.set_sensitive(gtk.TRUE)
+            self.formatCheck.set_sensitive(gtk.TRUE)
+            self.swap_checkbutton.set_sensitive(gtk.FALSE)
 
     def on_sizeSetRadio_toggled(self, *args):
         self.sizeSetCombo.set_sensitive(self.sizeSetRadio.get_active())
@@ -114,9 +123,9 @@ class partWindow:
         self.win_reset()
         self.partitionDialog.show_all()
 
-    def edit_partition(self, iter, part_object):
+    def edit_partition(self, iter):
         self.current_iter = iter
-        self.current_object = part_object
+        part_object = self.part_store.get_value(self.current_iter, 4)
         self.ok_handler = self.partOkButton.connect("clicked", self.on_edit_ok_button_clicked)
         self.win_reset()
 
@@ -139,14 +148,14 @@ class partWindow:
         
         self.formatCheck.set_active(part_object.doFormat)        
 
-        curr = self.fsTypeCombo.entry.get_text()
-        if curr in self.fileTypes:
-            index = self.fileTypes.index(curr)
+        fsTypeKey = self.fsTypeCombo.entry.get_text()
+        curr = self.fsTypesDict[fsTypeKey]
+        if curr in self.fsTypes:
+            index = self.fsTypes.index(curr)
         
             if index == 2:
                 self.mountPointCombo.set_sensitive(gtk.FALSE)
                 self.formatCheck.set_sensitive(gtk.FALSE)
-
 
         self.partitionDialog.show_all()
 
@@ -170,148 +179,84 @@ class partWindow:
         self.win_reset()
 
     def on_edit_ok_button_clicked(self, *args):
-        rowData = self.getData()
+        part_object = self.part_store.get_value(self.current_iter, 4)
+        self.getData(part_object)
 
-        if rowData:
-            self.current_object.setData(rowData)
-            self.part_store.set_value(self.current_iter, 0, self.current_object.mountPoint)
-            self.part_store.set_value(self.current_iter, 1, self.current_object.fsType)
-            self.part_store.set_value(self.current_iter, 2, self.current_object.size)
-            self.part_store.set_value(self.current_iter, 3, self.current_object.onDiskVal)
+        self.part_store.set_value(self.current_iter, 0, part_object.mountPoint)
+        self.part_store.set_value(self.current_iter, 1, part_object.fsType)
+        self.part_store.set_value(self.current_iter, 2, part_object.size)
+        self.part_store.set_value(self.current_iter, 3, part_object.onDiskVal)
             
-            self.partOkButton.disconnect(self.ok_handler)
-            self.partitionDialog.hide()
-            self.win_reset()
+        self.partOkButton.disconnect(self.ok_handler)
+        self.partitionDialog.hide()
+        self.win_reset()
 
     def on_ok_button_clicked(self, *args):
-        rowData = self.getData()
+        part_object = partEntry.partEntry()
+        self.getData(part_object)
         
-        if rowData:
-            part_object = partEntry.partEntry()
-            part_object.setData(rowData)
+        iter = self.part_store.append()
+        self.part_store.set_value(iter, 0, part_object.mountPoint)
+        self.part_store.set_value(iter, 1, part_object.fsType)
+        self.part_store.set_value(iter, 2, part_object.size)
+        self.part_store.set_value(iter, 3, part_object.onDiskVal)
+        self.part_store.set_value(iter, 4, part_object)
 
-            iter = self.part_store.append()
-            self.part_store.set_value(iter, 0, part_object.mountPoint)
-            self.part_store.set_value(iter, 1, part_object.fsType)
-            self.part_store.set_value(iter, 2, part_object.size)
-            self.part_store.set_value(iter, 3, part_object.onDiskVal)
-            self.part_store.set_value(iter, 4, part_object)
-
-            self.partOkButton.disconnect(self.ok_handler)
-            self.partitionDialog.hide()
-            self.win_reset()
+        self.partOkButton.disconnect(self.ok_handler)
+        self.partitionDialog.hide()
+        self.win_reset()
 
     def on_swap_recommended_toggled(self, *args):
         active = self.swap_checkbutton.get_active()
         self.sizeOptionsTable.set_sensitive(not active)
 
-    def getData(self):
+    def getData(self, part_object):
         onDiskVal = ""
         onPartVal = ""
         setSizeVal = ""
+        raidPartition = None
 
-        mountPoint = self.mountPointCombo.entry.get_text()
-        fsType = self.fsTypeCombo.entry.get_text()
+        part_object.mountPoint = self.mountPointCombo.entry.get_text()
+        fsTypeKey = self.fsTypeCombo.entry.get_text()
+        part_object.fsType = self.fsTypesDict[fsTypeKey]
 
-##      size stuff
-
+        ## size stuff
         if self.swap_checkbutton.get_active() == 1:
-            size = "recommended"
+            part_object.size = "recommended"
         else:
-            size = self.sizeCombo.get_text()
+            part_object.size = self.sizeCombo.get_text()
 
         if self.sizeFixedRadio.get_active() == gtk.TRUE:
-            sizeStrategy = "fixed"
+            part_object.sizeStrategy = "fixed"
         elif self.sizeSetRadio.get_active() == gtk.TRUE:
-            sizeStrategy = "grow"
-            setSizeVal = self.sizeSetCombo.get_text()
+            part_object.sizeStrategy = "grow"
+            part_object.setSizeVal = self.sizeSetCombo.get_text()
         elif self.sizeMaxRadio.get_active() == gtk.TRUE:
-            sizeStrategy = "max"
+            part_object.sizeStrategy = "max"
 
-        asPrimary = self.asPrimaryCheck.get_active()
+        part_object.asPrimary = self.asPrimaryCheck.get_active()
 
-        onDisk = self.onDiskCheck.get_active()
-        if onDisk == 1:
-            onDiskVal = self.onDiskEntry.get_text()
+        part_object.onDisk = self.onDiskCheck.get_active()
+        if part_object.onDisk == 1:
+            part_object.onDiskVal = self.onDiskEntry.get_text()
 
-        onPart = self.onPartCheck.get_active()
-        if onPart == 1:
-            onPartVal = self.onPartEntry.get_text()
+        part_object.onPart = self.onPartCheck.get_active()
+        if part_object.onPart == 1:
+            part_object.onPartVal = self.onPartEntry.get_text()
 
-        doFormat = self.formatCheck.get_active()
+        part_object.doFormat = self.formatCheck.get_active()
 
         #Let's do some error checking to make sure things make sense
-        if size < 1 or size == "" and onPart == gtk.FALSE and not self.sizeMaxRadio.get_active():
-            dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, _("You must specify a size for the partition."))
-            dlg.set_title(_("Error"))
-            dlg.set_default_size(100, 100)
-            dlg.set_position (gtk.WIN_POS_CENTER)
-            dlg.set_border_width(2)
-            dlg.set_modal(gtk.TRUE)
-            rc = dlg.run()
-            if rc == gtk.RESPONSE_OK:
-                dlg.hide()
-            return
-
-        if fsType == "RAID":
-            mountPoint = ""            
-            if not onDisk and not onPart:
-                dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
-                                        _("To create a new RAID partition, "
-                                          "you must specify either a hard drive "
-                                          "or an existing partition."))
-                dlg.set_title(_("Error"))
-                dlg.set_default_size(100, 100)
-                dlg.set_position (gtk.WIN_POS_CENTER)
-                dlg.set_border_width(2)
-                dlg.set_modal(gtk.TRUE)
-                rc = dlg.run()
-                if rc == gtk.RESPONSE_OK:
-                    dlg.hide()
+        if part_object.fsType == "raid":
+            result = self.checkRaid(fsType, onDisk, onDiskVal, onPart, onPartVal)
+            if not result:
                 return
-                
-            elif onDisk and onPart:
-                dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
-                                        _("onPart and onDisk can not be used at the same time."))
-                dlg.set_title(_("Error"))
-                dlg.set_default_size(100, 100)
-                dlg.set_position (gtk.WIN_POS_CENTER)
-                dlg.set_border_width(2)
-                dlg.set_modal(gtk.TRUE)
-                rc = dlg.run()
-                if rc == gtk.RESPONSE_OK:
-                    dlg.hide()
-                return                
+            else:
+                part_object.fsType = result
 
-            elif onDisk and onDiskVal == "":
-                dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
-                                        _("Specify a device on which to create the RAID partition."))
-                dlg.set_title(_("Error"))
-                dlg.set_default_size(100, 100)
-                dlg.set_position (gtk.WIN_POS_CENTER)
-                dlg.set_border_width(2)
-                dlg.set_modal(gtk.TRUE)
-                rc = dlg.run()
-                if rc == gtk.RESPONSE_OK:
-                    dlg.hide()
-                return
-
-            elif onPart and onPartVal == "":
-                dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
-                                        _("Specify an existing partition on which to create the RAID partition."))
-                dlg.set_title(_("Error"))
-                dlg.set_default_size(100, 100)
-                dlg.set_position (gtk.WIN_POS_CENTER)
-                dlg.set_border_width(2)
-                dlg.set_modal(gtk.TRUE)
-                rc = dlg.run()
-                if rc == gtk.RESPONSE_OK:
-                    dlg.hide()
-                return
-
-        elif fsType != "RAID":
-            if fsType != "swap":
-                if mountPoint == "":
+        elif part_object.fsType != "RAID":
+            if part_object.fsType != "swap":
+                if part_object.mountPoint == "":
                     dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
                                             _("Specify a mount point for the partition."))
                     dlg.set_title(_("Error"))
@@ -324,13 +269,25 @@ class partWindow:
                         dlg.hide()
                     return
 
-        if fsType == "swap":   
-            fsType = "swap"
-            mountPoint = ""
+        if part_object.fsType == "swap":   
+            part_object.fsType = "swap"
+            part_object.mountPoint = ""
 
-        if onDisk and onPart:
+        #If onDisk is true, let's check for validity for onDiskVal.  Same for onPart
+        result = self.checkPartitionValidity(part_object.onDisk, part_object.onDiskVal,
+                                             part_object.onPart, part_object.onPartVal)
+
+        if not result:
+            return
+
+
+    def checkRaid(self, fsType, onDisk, onDiskVal, onPart, onPartVal):
+        mountPoint = ""            
+        if not onDisk and not onPart:
             dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
-                                        _("onPart and onDisk can not be used at the same time."))
+                                    _("To create a new RAID partition, "
+                                      "you must specify either a hard drive "
+                                      "or an existing partition."))
             dlg.set_title(_("Error"))
             dlg.set_default_size(100, 100)
             dlg.set_position (gtk.WIN_POS_CENTER)
@@ -339,8 +296,52 @@ class partWindow:
             rc = dlg.run()
             if rc == gtk.RESPONSE_OK:
                 dlg.hide()
-            return                
+            return None
 
+        elif onDisk and onDiskVal == "":
+            dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
+                                    _("Specify a device on which to create the RAID partition."))
+            dlg.set_title(_("Error"))
+            dlg.set_default_size(100, 100)
+            dlg.set_position (gtk.WIN_POS_CENTER)
+            dlg.set_border_width(2)
+            dlg.set_modal(gtk.TRUE)
+            rc = dlg.run()
+            if rc == gtk.RESPONSE_OK:
+                dlg.hide()
+            return None
+
+        elif onPart and onPartVal == "":
+            dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
+                                    _("Specify an existing partition on which to create the RAID partition."))
+            dlg.set_title(_("Error"))
+            dlg.set_default_size(100, 100)
+            dlg.set_position (gtk.WIN_POS_CENTER)
+            dlg.set_border_width(2)
+            dlg.set_modal(gtk.TRUE)
+            rc = dlg.run()
+            if rc == gtk.RESPONSE_OK:
+                dlg.hide()
+            return None
+
+        raidList = []
+        iter = self.part_store.get_iter_first()        
+        while iter:
+            print iter
+            pyObject = self.part_store.get_value(iter, 4)
+            print "fsType is ", pyObject.fsType
+            if pyObject.fsType == "raid":
+                raidNumber = pyObject.raidNumber
+                raidList.append(raidNumber)
+            iter = self.part_store.iter_next(iter)        
+
+        if raidList == []:
+            fsType = "raid"
+
+        #If all the checks pass, then return
+        return fsType
+    
+    def checkPartitionValidity(self, onDisk, onDiskVal, onPart, onPartVal):
         if onDisk and onDiskVal == "":
             dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
                                         _("Specify a device on which to create the partition."))
@@ -352,7 +353,7 @@ class partWindow:
             rc = dlg.run()
             if rc == gtk.RESPONSE_OK:
                 dlg.hide()
-            return
+            return None
 
         elif onPart and onPartVal == "":
             dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
@@ -365,9 +366,8 @@ class partWindow:
             rc = dlg.run()
             if rc == gtk.RESPONSE_OK:
                 dlg.hide()
-            return
-
-        rowData = [mountPoint, fsType, sizeStrategy, size, setSizeVal, asPrimary, 
-                   onDisk, onDiskVal, onPart, onPartVal, doFormat, "", "", ""]
-
-        return rowData
+            return None
+        
+        # Everything's good, so return
+        return
+    
