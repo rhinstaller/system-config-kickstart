@@ -1,7 +1,7 @@
 #License: GPL
 #Copyright Red Hat Inc.  Jan 2001
 
-PKGNAME=ksconfig
+PKGNAME=redhat-config-kickstart
 VERSION=$(shell awk '/Version:/ { print $$2 }' ${PKGNAME}.spec)
 CVSTAG=r$(subst .,-,$(VERSION))
 SUBDIRS=man po
@@ -34,6 +34,7 @@ install:
 	install src/${PKGNAME}-gtk2.glade $(INSTROOT)$(PKGDATADIR)
 	mkdir -p $(INSTROOT)$(DESKTOPDIR)
 	install -m 644 ${PKGNAME}.desktop $(INSTROOT)$(DESKTOPDIR)
+	ln -sf $(INSTROOT)/usr/bin/${PKGNAME} $(INSTROOT)/usr/bin/ksconfig
 	for d in $(SUBDIRS); do \
 	(cd $$d; $(MAKE) INSTROOT=$(INSTROOT) MANDIR=$(MANDIR) install) \
 		|| case "$(MFLAGS)" in *k*) fail=yes;; *) exit 1;; esac; \
