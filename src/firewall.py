@@ -191,17 +191,7 @@ class firewall:
             portlist = self.portsEntry.get_text()
             ports = []
 
-##             if portlist:
-##                 ports = string.split(portlist,',')
-##                 for port in ports:
-##                     port = string.strip(port)
-##                     try:
-##                         if not string.index(port,':'):
-##                             port = '%s:tcp' % port
-##                     except:
-##                         pass
-##                     ports.append(port)
-
+            buf = buf + '--port ' + portlist
 
         data.append(buf)
         return data
