@@ -46,7 +46,7 @@ class nisData:
     def return_server(self):
         return self.nisserver
     def return_status(self):
-        return self.disabled
+        return self.enabled
     def return_broadcast(self):
         return self.broadcast
     def return_data(self):
@@ -73,10 +73,7 @@ class ldapData:
         self.ldapServer = name
     def set_DN(self, name):
         self.ldapDN = name
-#    def set_disabled(self):
-#        self.disabled = "TRUE"
     def set_enabled(self, val):
-        print val
         self.enabled = val
     def return_auth(self):
         return self.ldapAuth
@@ -85,15 +82,12 @@ class ldapData:
     def return_DN(self):
         return self.ldapDN
     def return_status(self):
-        return self.disabled
+        return self.enabled
     def return_data(self):
         if self.enabled == 0:
             return ""
         else:
-            if (self.ldapAuth == 'YES'):
-                return " --enableldap --enableldapauth --ldapserver " + self.ldapServer + " --ldapbasedn " + self.ldapDN
-            else:
-                return " --enableldap --ldapserver " + self.ldapServer + " --ldapbasedn " + self.ldapDN
+            return " --enableldap --enableldapauth --ldapserver " + self.ldapServer + " --ldapbasedn " + self.ldapDN
 
 class kerberosData:
     def __init__(self, quit_cb=None):
@@ -103,17 +97,15 @@ class kerberosData:
         self.kerberosRealm = " "
         self.kerberosKDC = " "
         self.kerberosMaster = " "
-        self.disabled = "TRUE"		
+        self.enabled = 0
     def set_realm(self, name):
         self.kerberosRealm = name
     def set_KDC(self, name):
         self.kerberosKDC = name
     def set_master(self, name):
         self.kerberosMaster = name
-    def set_disabled(self):
-        self.disabled = "TRUE"
-    def set_enabled(self):
-        self.disabled = "FALSE"
+    def set_enabled(self, val):
+        self.enabled = val
     def return_realm(self):
         return self.kerberosRealm
     def return_KDC(self):
@@ -121,9 +113,9 @@ class kerberosData:
     def return_master(self):
         return self.kerberosMaster
     def return_status(self):
-        return self.disabled
+        return self.enabled
     def return_data(self):
-        if (self.disabled == 'TRUE'):
+        if self.enabled == 0:
             return ""
         else:
             return " --enablekrb5 --krb5realm " + self.kerberosRealm + " --krb5kdc " + self.kerberosKDC + " --krb5adminserver " + self.kerberosMaster
@@ -134,23 +126,21 @@ class hesiodData:
         global hesiodRHS
         self.hesiodLHS = " "
         self.hesiodRHS = " "
-        self.disabled = "TRUE"		
+        self.enabled = 0
     def set_LHS(self, name):
         self.hesiodLHS = name
     def set_RHS(self, name):
         self.hesiodRHS = name
-    def set_disabled(self):
-        self.disabled = "TRUE"
-    def set_enabled(self):
-        self.disabled = "FALSE"
+    def set_enabled(self, val):
+        self.enabled = val
     def return_LHS(self):
         return self.hesiodLHS
     def return_RHS(self):
         return self.hesiodRHS
     def return_status(self):
-        return self.disabled
+        return self.enabled
     def return_data(self):
-        if (self.disabled == 'TRUE'):
+        if self.enabled == 0:
             return ""
         else:
             return " --enablehesiod --hesiodlhs " + self.hesiodLHS + " --hesiodRHS " + self.hesiodRHS
@@ -203,27 +193,25 @@ class auth:
         else:
             self.myLDAPClass.set_enabled(self.ldapCheck.get_active())
 
+        if (self.kerberosCheck.get_active()):
+            self.myKerberosClass.set_realm(self.kerberosRealmEntry.get_text())
+            self.myKerberosClass.set_KDC(self.kerberosKDCEntry.get_text())
+            self.myKerberosClass.set_master(self.kerberosMasterEntry.get_text())
+        else:
+            self.myKerberosClass.set_enabled(self.kerberosCheck.get_active())
 
-##         if (self.kerberosCheck.get_active()):
-##             self.myKerberosClass.set_realm(self.kerberosRealmEntry.get_text())
-##             self.myKerberosClass.set_KDC(self.kerberosKDCEntry.get_text())
-##             self.myKerberosClass.set_master(self.kerberosMasterEntry.get_text())
-##         else:
-##             self.myKerberosClass.set_disabled()
-
-
-##         if (self.hesiodCheck.get_active()):
-##             self.myHesiodClass.set_LHS(self.hesiodLHSEntry.get_text())
-##             self.myHesiodClass.set_RHS(self.hesiodRHSEntry.get_text())
-##         else:
-##             self.myHesiodClass.set_disabled()
+        if (self.hesiodCheck.get_active()):
+            self.myHesiodClass.set_LHS(self.hesiodLHSEntry.get_text())
+            self.myHesiodClass.set_RHS(self.hesiodRHSEntry.get_text())
+        else:
+            self.myHesiodClass.set_enabled(self.hesiodCheck.get_active())
 
 
-        buf = ""
+        buf = " "
         buf = buf + self.myNisClass.return_data()
         buf = buf + self.myLDAPClass.return_data()
-#        buf = buf + self.myKerberosClass.return_data()
-#        buf = buf + self.myHesiodClass.return_data()
+        buf = buf + self.myKerberosClass.return_data()
+        buf = buf + self.myHesiodClass.return_data()
         return buf
     
     def __init__(self, xml):
@@ -243,9 +231,6 @@ class auth:
         self.ldapCheck = xml.get_widget("ldapCheck")
         self.ldapLabel1 = xml.get_widget("ldapLabel1")
         self.ldapLabel2 = xml.get_widget("ldapLabel2")
-        self.ldapLabel3 = xml.get_widget("ldapLabel3")
-        self.ldapRadio1 = xml.get_widget("ldapRadio1")
-        self.ldapRadio2 = xml.get_widget("ldapRadio2")
         self.ldapServerEntry = xml.get_widget("ldapServerEntry")
         self.ldapDNEntry = xml.get_widget("ldapDNEntry")
         self.kerberosCheck = xml.get_widget("kerberosCheck")
@@ -284,49 +269,44 @@ class auth:
         self.nisServerEntry.set_sensitive(self.nisCheck.get_active())
         self.myNisClass.set_enabled(self.nisCheck.get_active())
         
-    def BroadcastCheck_cb(self, args):
-        if (self.nisBroadcastCheck.get_active() == 1):
-            self.nisServerEntry.set_sensitive(FALSE)
-            self.nisServerEntry.set_text("")
-        elif (self.nisBroadcastCheck.get_active() == 0):
-            self.nisServerEntry.set_sensitive(TRUE)
-
+    def BroadcastCheck_cb(self, checkbutton):
+        val = not checkbutton.get_active()
+        self.nisServerEntry.set_sensitive(val)
+        self.nisServerLabel.set_sensitive(val)
+            
     def enableLDAP(self, args):
-            self.ldapLabel1.set_sensitive(self.ldapCheck.get_active())		
-            self.ldapRadio1.set_sensitive(self.ldapCheck.get_active())
-            self.ldapRadio2.set_sensitive(self.ldapCheck.get_active())
-            self.ldapLabel2.set_sensitive(self.ldapCheck.get_active())		
-            self.ldapLabel3.set_sensitive(self.ldapCheck.get_active())
-            self.ldapServerEntry.set_sensitive(self.ldapCheck.get_active())
-            self.ldapDNEntry.set_sensitive(self.ldapCheck.get_active())				
-            self.myLDAPClass.set_enabled(self.ldapCheck.get_active())
+        self.ldapLabel1.set_sensitive(self.ldapCheck.get_active())		
+        self.ldapLabel2.set_sensitive(self.ldapCheck.get_active())		
+        self.ldapServerEntry.set_sensitive(self.ldapCheck.get_active())
+        self.ldapDNEntry.set_sensitive(self.ldapCheck.get_active())				
+        self.myLDAPClass.set_enabled(self.ldapCheck.get_active())
 
     def enableKerberos(self, args):
-            self.kerberosLabel1.set_sensitive(self.kerberosCheck.get_active())
-            self.kerberosLabel2.set_sensitive(self.kerberosCheck.get_active())
-            self.kerberosLabel3.set_sensitive(self.kerberosCheck.get_active())
-            self.kerberosRealmEntry.set_sensitive(self.kerberosCheck.get_active())
-            self.kerberosKDCEntry.set_sensitive(self.kerberosCheck.get_active())
-            self.kerberosMasterEntry.set_sensitive(self.kerberosCheck.get_active())
-            self.myKerberosClass.set_enabled()			
+        self.kerberosLabel1.set_sensitive(self.kerberosCheck.get_active())
+        self.kerberosLabel2.set_sensitive(self.kerberosCheck.get_active())
+        self.kerberosLabel3.set_sensitive(self.kerberosCheck.get_active())
+        self.kerberosRealmEntry.set_sensitive(self.kerberosCheck.get_active())
+        self.kerberosKDCEntry.set_sensitive(self.kerberosCheck.get_active())
+        self.kerberosMasterEntry.set_sensitive(self.kerberosCheck.get_active())
+        self.myKerberosClass.set_enabled(self.kerberosCheck.get_active())			
 
     def enableHesiod(self, args):
-            self.hesiodLabel1.set_sensitive(self.hesiodCheck.get_active())		
-            self.hesiodLabel2.set_sensitive(self.hesiodCheck.get_active())		
-            self.hesiodLHSEntry.set_sensitive(self.hesiodCheck.get_active())
-            self.hesiodRHSEntry.set_sensitive(self.hesiodCheck.get_active())	
-            self.myHesiodClass.set_enabled()
+        self.hesiodLabel1.set_sensitive(self.hesiodCheck.get_active())		
+        self.hesiodLabel2.set_sensitive(self.hesiodCheck.get_active())		
+        self.hesiodLHSEntry.set_sensitive(self.hesiodCheck.get_active())
+        self.hesiodRHSEntry.set_sensitive(self.hesiodCheck.get_active())	
+        self.myHesiodClass.set_enabled(self.hesiodCheck.get_active())
 
     def enableSamba(self, args):
-            self.sambaLabel1.set_sensitive(self.sambaCheck.get_active())		
-            self.sambaLabel2.set_sensitive(self.sambaCheck.get_active())		
-            self.sambaServerEntry.set_sensitive(self.sambaCheck.get_active())
-            self.sambaWorkgroupEntry.set_sensitive(self.sambaCheck.get_active())	
-            self.mySambaClass.set_enabled()		
+        self.sambaLabel1.set_sensitive(self.sambaCheck.get_active())		
+        self.sambaLabel2.set_sensitive(self.sambaCheck.get_active())		
+        self.sambaServerEntry.set_sensitive(self.sambaCheck.get_active())
+        self.sambaWorkgroupEntry.set_sensitive(self.sambaCheck.get_active())	
+        self.mySambaClass.set_enabled()		
 
     def toggleLDAP(self, args):
-            if (self.ldapRadio1.get_active()):
-                    self.myLDAPClass.set_auth("YES")
-            else:
-                    self.myLDAPClass.set_auth("No")	
+        if (self.ldapRadio1.get_active()):
+            self.myLDAPClass.set_auth("YES")
+        else:
+            self.myLDAPClass.set_auth("No")	
 
