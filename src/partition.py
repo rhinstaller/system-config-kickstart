@@ -25,7 +25,7 @@ from gtk import *
 import GtkExtra
 import libglade
 import partWindow
-import raidWindow
+#import raidWindow
 
 class partition:
     def __init__(self, xml):
@@ -49,7 +49,7 @@ class partition:
         #temp until edit partitions finished
 #        self.edit_partition_dialog = self.xml.get_widget("edit_partition_dialog")
         self.partWindow = partWindow.partWindow(self.xml, self.partClist)
-        self.raidWindow = raidWindow.raidWindow(self.xml, self.partClist)
+#        self.raidWindow = raidWindow.raidWindow(self.xml, self.partClist)
 
         self.xml.signal_autoconnect (
             { "select_clist" : self.select_clist,
@@ -57,7 +57,7 @@ class partition:
               "addPartition" : self.addPartition,
               "editPartition" : self.editPartition,
               "delPartition" : self.delPartition,
-              "raidPartition" : self.raidPartition, 
+#              "raidPartition" : self.raidPartition, 
               })
 
 #    def select_clist(self, r, c, event):
@@ -85,8 +85,8 @@ class partition:
         rowData = self.partClist.get_row_data(self.selected_row)
         self.partWindow.edit_partition(rowData, self.selected_row)
 
-    def raidPartition(self, *args):
-        self.raidWindow.add_raid(self.num_rows)
+#    def raidPartition(self, *args):
+#        self.raidWindow.add_raid(self.num_rows)
 
     def getData(self):
         buf = ""
@@ -108,7 +108,7 @@ class partition:
             pass
 
         #partitioning table options
-        num_raid = 0
+#        num_raid = 0
         for row in range(self.num_rows):
             rowData = self.partClist.get_row_data(row)
             (mountPoint, fsType, size, fixedSize, setSize,
@@ -116,16 +116,16 @@ class partition:
              asPrimaryVal, onDisk, onDiskVal, onPart, onPartVal,
              doFormat, raidType, raidSpares, isRaidDevice) = rowData
 
-            if fsType == "RAID":
-                print "here"
-                num_raid = num_raid + 1
-                if num_raid < 10:
-                    buf = buf + "\n" + "part raid.%d%d " %(0, num_raid)
-                else:
-                    buf = buf + "\n" + "part raid.%d " %(num_raid)
-            else:
-                buf = buf + "\n" + "part %s " % (mountPoint)
-                buf = buf + "--fstype " + fsType + " " 
+##             if fsType == "RAID":
+##                 print "here"
+##                 num_raid = num_raid + 1
+##                 if num_raid < 10:
+##                     buf = buf + "\n" + "part raid.%d%d " %(0, num_raid)
+##                 else:
+##                     buf = buf + "\n" + "part raid.%d " %(num_raid)
+##             else:
+##                 buf = buf + "\n" + "part %s " % (mountPoint)
+##                 buf = buf + "--fstype " + fsType + " " 
 
             buf = buf + "--size %s " % (size)
 
@@ -150,4 +150,3 @@ class partition:
                 buf = buf + "--noformat "
 
         return buf
-
