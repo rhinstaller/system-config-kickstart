@@ -24,17 +24,10 @@
 
 #Patch contributed by Bill Huang - applied on 4/23/2001 for Japanese support
 
-#from gtk import *
-#from gnome.ui import *
-#import GtkExtra
-
 import gtk
 import gtk.glade
+import gobject
 import signal
-#import libglade
-#import gnome.ui
-#import gnome.help
-
 import basic
 import bootloader
 import install
@@ -69,8 +62,6 @@ class ksconfig_gui:
 
 	def __init__ (self):
 		self.toplevel = xml.get_widget("main_window")
-		print self.toplevel
-#		self.toplevel.set_title("Foobar")
 		self.toplevel.connect ("destroy", self.destroy)
 
 		#bring in widgets from glade file
@@ -115,7 +106,16 @@ class ksconfig_gui:
 			  } )
 
 		#populate category list
-		self.category_clist = xml.get_widget("category_clist")
+		self.category_view = xml.get_widget("list_view")
+
+		self.category_store = gtk.ListStore(gobject.TYPE_STRING)
+		self.category_view.set_model(self.category_store)
+
+		col = gtk.TreeViewColumn(_("Subsection"), gtk.CellRendererText(), text=0)
+		col.set_sort_column_id(0)
+		self.category_view.append_column(col)
+
+##		self.category_clist = xml.get_widget("category_clist")
 ## 		self.category_clist.append([_("Basic Configuration")])
 ## 		self.category_clist.append([_("Boot Loader Options")])		
 ## 		self.category_clist.append([_("Installation Method")])
