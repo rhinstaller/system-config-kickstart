@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
 Version: 2.5.21
-Release: 1
+Release: 2
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
 ExclusiveOS: Linux
@@ -60,6 +60,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Wed Mar 23 2005 Chris Lumens <clumens@redhat.com> 2.5.21-2
+- Rebuilt translation files.
+
 * Wed Mar 23 2005 Chris Lumens <clumens@redhat.com> 2.5.21-1
 - Add SELinux support to the firewall page (#148966).
 - Fix gtk deprecation warnings.
