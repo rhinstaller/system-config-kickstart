@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
-Version: 2.3.6
-Release: 4
+Version: 2.3.7
+Release: 1
 URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
@@ -56,6 +56,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Wed May 21 2003 Brent Fox <bfox@redhat.com> 2.3.7-1
+- fall back to us keymap if the current keymap is not found (bug #88844)
+
 * Mon Feb 24 2003 Brent Fox <bfox@redhat.com> 2.3.6-4
 - apply patch from katzj to fix bug #84745
 
