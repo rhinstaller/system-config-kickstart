@@ -111,19 +111,16 @@ class raidWindow:
         self.raid_mp_combo.entry.set_text(part_object.mountPoint)
 
         fsType = part_object.fsType
-        index = self.fsTypesList.index(fsType)
-        menu_item = self.raid_fsType_menu.get_menu().get_children()[index]
-        self.raid_fsType_menu.get_menu().activate_item(menu_item, gtk.TRUE)
+        index = self.fsTypesList.index(fsType) - 1
+        self.raid_fsType_menu.set_history(index)
 
         device = part_object.raidDevice
-        index = self.raidDeviceList.index(device)
-        menu_item = self.raid_device_menu.get_menu().get_children()[index]
-        self.raid_device_menu.get_menu().activate_item(menu_item, gtk.TRUE)
-
+        index = self.raidDeviceList.index(device) - 1
+        self.raid_device_menu.set_history(index)
+        
         level = part_object.raidLevel
-        index = self.raidLevelList.index(level)
-        menu_item = self.raid_level_menu.get_menu().get_children()[index]
-        self.raid_level_menu.get_menu().activate_item(menu_item, gtk.TRUE)
+        index = self.raidLevelList.index(level) - 1
+        self.raid_level_menu.set_history(index)
         
         self.original_partitions = part_object.raidPartitions
         self.part_store.foreach(self.countRaidPartitions, part_object.raidPartitions)
@@ -286,7 +283,7 @@ class raidWindow:
         for (opt, value) in opts:
             if line[0] == "swap":
                 raid_object.fsType = "swap"
-                raid_object.mountPoint = ""
+                raid_object.mountPoint = "swap"
             elif opt == "--fstype":
                 raid_object.fsType = value
                 raid_object.mountPoint = line[0]
