@@ -57,12 +57,9 @@ class xconfig:
 
         #add video cards to list
         try:
-            cardsFile = open("Cards", "r")
+            cardsFile = open("/usr/share/hwdata/Cards", "r")
         except:
-            try:
-                cardsFile = open("/usr/share/ksconfig/Cards", "r")
-            except:
-                print "can not read Cards file"
+            raise RuntimeError, (_("Could not read video card database"))
 
             
         lines = cardsFile.readlines ()
