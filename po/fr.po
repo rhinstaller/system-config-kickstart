@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "POT-Creation-Date: 2001-07-19 11:24-0400\n"
-"PO-Revision-Date: 2002-06-26 10:59+0200\n"
+"PO-Revision-Date: 2002-07-17 16:39+0200\n"
 "Last-Translator: \n"
 "Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgstr "Partition :"
 
 #: redhat-config-kickstart.gladestrings:46
 msgid "_About"
-msgstr ""
+msgstr "_A propos"
 
 #: redhat-config-kickstart.gladestrings:222
 msgid "High"
@@ -94,6 +94,8 @@ msgid ""
 "To create a new RAID partition, you must specify either a hard drive or an "
 "existing partition."
 msgstr ""
+"Pour créer une nouvelle partition RAID, vous devez spécifier un disque dur "
+"ou une partition existante."
 
 #: ../src/kickstartGui.py:111 redhat-config-kickstart.gladestrings:229
 msgid "Firewall Configuration"
@@ -165,7 +167,7 @@ msgstr "Disque :"
 
 #: redhat-config-kickstart.gladestrings:241
 msgid "Probe for video card"
-msgstr ""
+msgstr "Essai de carte vidéo"
 
 #: redhat-config-kickstart.gladestrings:144
 msgid "Gateway:"
@@ -198,7 +200,7 @@ msgstr "label32"
 
 #: redhat-config-kickstart.gladestrings:107
 msgid "Specify an FTP username and password"
-msgstr ""
+msgstr "Spécifier un nom d'utilisateur et un mot de passe FTP"
 
 #: redhat-config-kickstart.gladestrings:224
 msgid "Disabled"
@@ -206,7 +208,7 @@ msgstr "Désactivé"
 
 #: ../src/partWindow.py:316
 msgid "Specify a mount point for the partition."
-msgstr ""
+msgstr "Spécifier un point de montage pour la partition."
 
 #: redhat-config-kickstart.gladestrings:138
 msgid "Network Type:"
@@ -244,6 +246,7 @@ msgstr "HTTP"
 #: ../src/partWindow.py:301
 msgid "Specify an existing partition on which to create the RAID partition."
 msgstr ""
+"Spécifier une partition existante sur laquelle créer la partition RAID."
 
 #: ../src/kickstartGui.py:108 redhat-config-kickstart.gladestrings:83
 msgid "Boot Loader Options"
@@ -271,7 +274,7 @@ msgstr "A_ucun"
 
 #: ../src/xconfig.py:108
 msgid "Could not read monitor database"
-msgstr ""
+msgstr "Impossible de lire la base de données du moniteur"
 
 #: redhat-config-kickstart.gladestrings:180
 msgid "NIS Domain:"
@@ -337,11 +340,11 @@ msgstr "Options GRUB :"
 
 #: ../src/partWindow.py:346
 msgid "Specify a device on which to create the partition."
-msgstr ""
+msgstr "Spécifier un périphérique sur lequel créer la partition."
 
 #: ../src/xconfig.py:90
 msgid "Could not read video card database"
-msgstr ""
+msgstr "Impossible de lire la base de données de la carte vidéo"
 
 #: redhat-config-kickstart.gladestrings:225
 msgid "Security Level"
@@ -366,7 +369,7 @@ msgstr "Masque de réseau :"
 
 #: ../src/partWindow.py:245
 msgid "You must specify a size for the partition."
-msgstr ""
+msgstr "Vous devez spécifier la taille de la partition."
 
 #: redhat-config-kickstart.gladestrings:89
 #: redhat-config-kickstart.gladestrings:98
@@ -438,9 +441,8 @@ msgid "Hesiod RHS:"
 msgstr "Hesiod RHS :"
 
 #: redhat-config-kickstart.gladestrings:14
-#, fuzzy
 msgid "Fill all unused space on disk"
-msgstr "Remplir tout l'espace jusqu'à (Mo) :"
+msgstr "Remplir tout l'espace disponible du disque"
 
 #: redhat-config-kickstart.gladestrings:179
 msgid "Enable NIS"
@@ -510,7 +512,7 @@ msgstr "Utiliser les règles de pare-feu par défaut"
 #: redhat-config-kickstart.gladestrings:44
 #: redhat-config-kickstart.gladestrings:45
 msgid "_Help"
-msgstr ""
+msgstr "_Aide"
 
 #: redhat-config-kickstart.gladestrings:185
 msgid "NIS Authentication"
@@ -648,7 +650,7 @@ msgstr "Chiffrer le mot de passe root"
 
 #: ../src/partWindow.py:275 ../src/partWindow.py:333
 msgid "onPart and onDisk can not be used at the same time."
-msgstr ""
+msgstr "onPart et onDisk ne peuvent être utilisés en même temps."
 
 #: redhat-config-kickstart.gladestrings:187
 msgid "Enable LDAP"
@@ -671,7 +673,7 @@ msgstr "Installer"
 #: ../src/partWindow.py:317 ../src/partWindow.py:334 ../src/partWindow.py:347
 #: ../src/partWindow.py:360
 msgid "Error"
-msgstr ""
+msgstr "Erreur"
 
 #: redhat-config-kickstart.gladestrings:48
 msgid "Language:"
@@ -685,6 +687,11 @@ msgid ""
 " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
 " A graphical interface for creating a kickstart file"
 msgstr ""
+"Kickstart Configurator @VERSION@\n"
+" Copyright (c) 2000-2002 Red Hat, Inc.\n"
+" Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
+" Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
+"Interface graphique pour la création d'un fichier kickstart"
 
 #: redhat-config-kickstart.gladestrings:24
 msgid "Use existing partition (onpart)"
@@ -712,7 +719,7 @@ msgstr "LDAP "
 
 #: redhat-config-kickstart.gladestrings:40
 msgid "_File"
-msgstr ""
+msgstr "_Fichier"
 
 #: redhat-config-kickstart.gladestrings:240
 msgid "General"
@@ -720,7 +727,7 @@ msgstr "Général"
 
 #: redhat-config-kickstart.gladestrings:17
 msgid "Use recommended swap size"
-msgstr ""
+msgstr "Utiliser la taille swap recommandée"
 
 #: redhat-config-kickstart.gladestrings:63
 msgid "Basic Configuration (required)"
@@ -744,7 +751,7 @@ msgstr "Membres Raid"
 
 #: ../src/kickstartGui.py:104
 msgid "Subsection"
-msgstr ""
+msgstr "Sous-section"
 
 #: redhat-config-kickstart.gladestrings:66
 msgid "_MBR"
@@ -782,7 +789,7 @@ msgstr "Souris :"
 
 #: redhat-config-kickstart.gladestrings:258
 msgid "Ignore Dependencies"
-msgstr ""
+msgstr "Ignorer les dépendances"
 
 #: redhat-config-kickstart.gladestrings:105
 msgid "FTP Username"
@@ -940,7 +947,7 @@ msgstr ""
 #: redhat-config-kickstart.gladestrings:82
 #, fuzzy
 msgid "Upgrade existing boot loader configuration"
-msgstr "Installer le chargeur de démarrage"
+msgstr "Mettre à jour le chargeur de démarrage"
 
 #: redhat-config-kickstart.gladestrings:232
 msgid "Color Depth"
@@ -984,7 +991,7 @@ msgstr "Initialiser l'étiquette du disque :"
 
 #: redhat-config-kickstart.gladestrings:15
 msgid "Grow to maximum of (MB):"
-msgstr ""
+msgstr "Aller jusqu'à un maximum de (Mo) :"
 
 #: redhat-config-kickstart.gladestrings:204
 msgid "Hesiod LHS:"
@@ -999,9 +1006,8 @@ msgid "Force use of lba32 mode"
 msgstr "Forcer l'utilisation du mode lba32 "
 
 #: redhat-config-kickstart.gladestrings:43
-#, fuzzy
 msgid "_Quit"
-msgstr "_Modifier"
+msgstr "_Quitter"
 
 #~ msgid "Fill to maximum allowable size"
 #~ msgstr "Remplir jusqu'à la taille maximum disponible"
