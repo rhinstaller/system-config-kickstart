@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
 Version: 2.3.2
-Release: 11
+Release: 12
 URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
@@ -55,6 +55,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Tue Aug 13 2002 Tammy Fox <tfox@redhat.com> 2.3.2-12
+- clarify language and language support options in docs
+
 * Tue Aug 13 2002 Brent Fox <bfox@redhat.com> 2.3.2-11
 - Fix bug 69667 with bootloader option overlap
 
