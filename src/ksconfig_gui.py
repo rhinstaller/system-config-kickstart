@@ -101,6 +101,7 @@ class ksconfig_gui:
 		self.category_clist.append(["Networking Options"])
 		self.category_clist.append(["Authentication"])
 		self.category_clist.append(["Firewall Configuration"])
+		self.category_clist.append(["X Configuration"])
 		self.category_clist.append(["Package Selection"])
 
 		#populate partitions table with default values
@@ -152,13 +153,44 @@ class ksconfig_gui:
 		keyboard_combo.entry.set_editable(FALSE)		
 
 		#populate mouse combo
-		list_items = [ "Generic - 2 Button Mouse (serial)",
- 				"Generic - 2 Button Mouse (PS/2)",
- 				"Logitech - MouseMan/FirstMouse (serial)",
-			        "Logitech - MouseMan/FirstMouse (PS/2)" ]
+		list_items = [ "No Mouse",
+			       "ALPS GlidePoint (PS/2)",
+			       "ASCII MieMouse (serial)",
+			       "ASCII MieMouse (PS/2)",
+			       "ATI Bus Mouse",
+			       "Generic Mouse (serial)",
+			       "Generic 3 Button Mouse (serial)",
+			       "Generic Mouse (PS/2)",
+			       "Generic 3 Button Mouse (PS/2)",
+			       "Generic Mouse (USB)",
+			       "Generic 3 Button Mouse (USB)",
+			       "Genius NetMouse (serial)",
+			       "Genius NetMouse (PS/2)",
+			       "Genius NetMouse Pro (PS/2)",
+			       "Genius NetScroll (PS/2)",
+			       "Kensington Thinking Mouse (serial)",
+			       "Kensington Thinking Mouse (PS/2)",
+			       "Logitech Mouse (serial, old C7 type)",
+			       "Logitech CC Series (serial)",
+			       "Logitech Bus Mouse",
+			       "Logitech MouseMan/FirstMouse (serial)",
+			       "Logitech MouseMan/FirstMouse (PS/2)",
+			       "Logitech MouseMan+/FirstMouse+ (serial)",
+			       "Logitech MouseMan+/FirstMouse+ (PS/2)",
+			       "Logitech MouseMan Wheel (USB)",
+			       "Microsoft compatible (serial)",
+			       "Microsoft Rev 2.1A or higher (serial)",
+			       "Microsoft IntelliMouse (serial)",
+			       "Microsoft IntelliMouse (PS/2)",
+			       "Microsoft IntelliMouse (USB)",
+			       "Microsoft Bus Mouse",
+			       "Mouse Systems (serial)",
+			       "MM Series (serial)",
+			       "MM HitTablet (serial)"
+			       ]
 
 		mouse_combo.set_popdown_strings(list_items)
-		mouse_combo.list.select_item(1)
+		mouse_combo.list.select_item(0)
 		mouse_combo.entry.set_editable(FALSE)		
 
 		#populate time zone combo
@@ -215,8 +247,11 @@ class ksconfig_gui:
 		elif  self.category_clist.get_text(row,0)== "Firewall Configuration":
 			self.options_notebook.set_page(5)
 			return
-		elif  self.category_clist.get_text(row,0)== "Package Selection":
+		elif  self.category_clist.get_text(row,0)== "X Configuration":
 			self.options_notebook.set_page(6)
+			return
+		elif  self.category_clist.get_text(row,0)== "Package Selection":
+			self.options_notebook.set_page(7)
 			return		
 
 	#about box
