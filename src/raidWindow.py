@@ -88,6 +88,15 @@ class raidWindow:
 
         self.raid_ok_button.connect("clicked", self.okClicked)
         self.raid_cancel_button.connect("clicked", self.destroy)
+        self.raid_fsType_menu.connect("changed", self.on_raid_fsType_menu_changed)
+
+    def on_raid_fsType_menu_changed(self, *args):
+        print self.raid_fsType_menu.get_children()[0].get_text()
+        if self.raid_fsType_menu.get_children()[0].get_text() == "swap":
+            #it's a swap partition, so desensitize the mountPoint combo
+            self.raid_mp_combo.set_sensitive(gtk.FALSE)
+        else:
+            self.raid_mp_combo.set_sensitive(gtk.TRUE)            
 
     def addPartition(self):
         self.raid_partition_store.clear()
@@ -146,8 +155,13 @@ class raidWindow:
 
     def okClicked(self, *args):
         self.partition_list = []
-        mount_point = self.raid_mp_combo.entry.get_text()
+
         fsType = self.raid_fsType_menu.get_children()[0].get_text()
+        if fsType == "swap":
+            mount_point = "swap"
+        else:
+            mount_point = self.raid_mp_combo.entry.get_text()
+            
         raid_device = self.raid_device_menu.get_children()[0].get_text()
         raid_level = self.raid_level_menu.get_children()[0].get_text()
 
