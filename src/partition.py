@@ -178,7 +178,7 @@ class partition:
             self.deviceNotValid(_("Please select a partition from the list."))
 
         part_object = self.part_store.get_value(iter, 5)
-        print part_object.isRaidDevice
+#        print part_object.isRaidDevice
 
         if part_object.isRaidDevice:
             self.raidWindow.editDevice(iter, part_object)
@@ -322,7 +322,7 @@ class partition:
             self.clear_mbr_no_radiobutton.set_active(gtk.TRUE)            
 
         if self.kickstartData.getClearPart():
-            print self.kickstartData.getClearPart()
+#            print self.kickstartData.getClearPart()
             partList = self.kickstartData.getClearPart()
             
             if "--all" in partList:
@@ -339,6 +339,6 @@ class partition:
             self.remove_parts_none_radiobutton.set_active(gtk.TRUE)
 
         if self.kickstartData.getPartitions() != []:
-            print self.kickstartData.getPartitions()
+#            print self.kickstartData.getPartitions()
             for line in self.kickstartData.getPartitions():
                 self.partWindow.populateList(line)

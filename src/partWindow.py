@@ -377,10 +377,10 @@ class partWindow:
         if part_object.fsType == "raid":
             part_object.mountPoint = ""
             # If it's a raid partition, run it through the checkRaid sanity checker
-            print part_object.raidNumber
+#            print part_object.raidNumber
             if part_object.raidNumber == "":
                 if not self.checkRaid(part_object):
-                    print "returning None"
+#                    print "returning None"
                     return None
             else:
                 print "this already has a raid number, leave it alone"
@@ -415,7 +415,6 @@ class partWindow:
 
                 part_object.mountPoint = mountPoint
 
-        print "returning 0"
         return 0
 
     def checkMountPoint(self, store, data, iter, mountPoint):
