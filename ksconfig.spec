@@ -52,6 +52,7 @@ fi
 - Added preview menu item
 - Added bootloader --upgrade
 - Added swap --recommended
+- Added %packages -- resolvedeps and %packages --ignoredeps
 
 * Wed May 22 2002 Brent Fox <bfox@redhat.com> 2.0-9
 - Fixed bug #65323 to handle partition minimum size better
