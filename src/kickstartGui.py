@@ -105,7 +105,7 @@ class kickstartGui:
 	#bring in partitions functions
 	self.partition_class = partition.partition(xml, self.kickstartData)
 	#bring in network functions
-	self.network_class = network.network(xml)
+	self.network_class = network.network(xml, self.kickstartData)
 	#bring in auth functions
 	self.auth_class = auth.auth(xml, self.kickstartData)
 	#bring in firewall functions
@@ -225,7 +225,7 @@ class kickstartGui:
         if self.install_radiobutton.get_active():
             self.partition_class.getData()
 
-	list = list + self.network_class.getData()
+	self.network_class.getData()
 	self.auth_class.getData()
 	self.firewall_class.getData()
 	self.X_class.getData()
@@ -262,6 +262,7 @@ class kickstartGui:
         self.bootloader_class.fillData()
         self.partition_class.fillData()
         self.auth_class.fillData()
+        self.network_class.fillData()
         self.firewall_class.fillData()
         self.X_class.fillData()
         self.packages_class.fillData()
