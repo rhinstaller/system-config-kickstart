@@ -40,7 +40,7 @@ import kickstartGui
 
 class bootloader:
 
-    def __init__(self, xml, kickstartData, notebook):
+    def __init__(self, xml, notebook, kickstartData):
         self.kickstartData = kickstartData
         self.notebook = notebook
         self.install_bootloader_radio = xml.get_widget("install_bootloader_radio")
