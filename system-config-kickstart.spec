@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.5.13
+Version: 2.5.14
 Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -60,6 +60,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Tue Sep 21 2004 Paul Nasrat <pnasrat@redhat.com> - 2.5.14-1
+- ks.cfg parsing errors
+
 * Tue Sep 07 2004 Paul Nasrat <pnasrat@redhat.com> - 2.5.13-1
 - i18n .desktop 
 
