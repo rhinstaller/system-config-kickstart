@@ -228,13 +228,14 @@ class partition:
         if part_object:
 
             if part_object.isRaidDevice == None:
-                buf = part_object.mountPoint
                 
                 if part_object.fsType == "swap":
+                    buf = part_object.mountPoint
                     buf = buf + "swap "
                 elif part_object.fsType == "raid":
-                    buf = buf + " " + part_object.raidNumber + " "
+                    buf = part_object.raidNumber + " "
                 else:
+                    buf = part_object.mountPoint
                     buf = buf + " --fstype " + part_object.fsType + " " 
 
                 if part_object.size == "recommended":
