@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.5.21
-Release: 4
+Version: 2.5.22
+Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
 ExclusiveOS: Linux
@@ -73,7 +73,10 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
-* Mon Mar 28 2005 Christopher Aillon <caillon@redhat.com>
+* Mon Apr 04 2005 Chris Lumens <clumens@redhat.com> 2.5.22-1
+- Use the new GTK file selection dialogs for loading and saving (#152995).
+
+* Mon Mar 28 2005 Christopher Aillon <caillon@redhat.com> 2.5.21-4
 - rebuilt
 
 * Fri Mar 25 2005 Christopher Aillon <caillon@redhat.com> 2.5.21-3
