@@ -69,7 +69,7 @@ msgstr "label30"
 msgid "label31"
 msgstr "label31"
 
-#: ../src/kickstartGui.py:123
+#: ../src/kickstartGui.py:128
 msgid "Authentication"
 msgstr "Autenticação"
 
@@ -108,7 +108,7 @@ msgstr ""
 msgid "Install new boot loader"
 msgstr "Instalar um novo gestor de arranque"
 
-#: ../src/kickstartGui.py:124 redhat-config-kickstart.gladestrings:248
+#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:248
 msgid "Firewall Configuration"
 msgstr "Configuração da 'Firewall'"
 
@@ -128,7 +128,7 @@ msgstr "Cifrar senha do GRUB"
 msgid "Fill all unused space on disk"
 msgstr "Preencher todo o espaço livre no disco"
 
-#: ../src/kickstartGui.py:156
+#: ../src/kickstartGui.py:167
 msgid "About Kickstart Configurator"
 msgstr "Acerca do Configurador de Kickstarts"
 
@@ -256,7 +256,7 @@ msgstr "Realizar instalação em modo texto (modo gráfico por omissão)"
 msgid "Hard Drive Partition:"
 msgstr "Partição do Disco Rígido:"
 
-#: ../src/install.py:195
+#: ../src/install.py:185
 msgid "Please enter a hard drive directory."
 msgstr "Insira a directoria no disco rígido."
 
@@ -272,7 +272,7 @@ msgstr "Inactivo"
 msgid "label174"
 msgstr "label174"
 
-#: ../src/install.py:181
+#: ../src/install.py:173
 msgid "Please enter an HTTP server directory."
 msgstr "Insira a directoria no servidor HTTP."
 
@@ -309,7 +309,7 @@ msgstr "HTTP"
 msgid "Raid Devices"
 msgstr "Dispositivos RAID"
 
-#: ../src/kickstartGui.py:122
+#: ../src/kickstartGui.py:127
 msgid "Boot Loader Options"
 msgstr "Opções do Gestor de Arranque"
 
@@ -345,7 +345,7 @@ msgstr "RAID"
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "Criar um dispositivo RAID [por omissão = /dev/md0]"
 
-#: ../src/partition.py:74
+#: ../src/partition.py:76
 msgid "Type"
 msgstr "Tipo"
 
@@ -365,7 +365,7 @@ msgstr "Hz"
 msgid "label93"
 msgstr "label93"
 
-#: ../src/kickstartGui.py:121
+#: ../src/kickstartGui.py:126
 msgid "Basic Configuration"
 msgstr "Configuração Básica"
 
@@ -385,7 +385,7 @@ msgstr "Senha de FTP"
 msgid "Save File"
 msgstr "Gravar Ficheiro"
 
-#: ../src/install.py:139
+#: ../src/install.py:133
 msgid "Please enter an NFS server."
 msgstr "Insira um servidor NFS."
 
@@ -397,11 +397,11 @@ msgstr "Grupo de Trabalho SMB:"
 msgid "SMB"
 msgstr "SMB"
 
-#: ../src/kickstartGui.py:121
+#: ../src/kickstartGui.py:126
 msgid "Installation Method"
 msgstr "Método de Instalação"
 
-#: ../src/kickstartGui.py:125 redhat-config-kickstart.gladestrings:289
+#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:289
 msgid "Pre-Installation Script"
 msgstr "'Script' de Pré-Instalação"
 
@@ -458,7 +458,7 @@ msgstr "_Editar"
 msgid "Netmask: "
 msgstr "Máscara: "
 
-#: ../src/install.py:142
+#: ../src/install.py:136
 msgid "Please enter an NFS directory."
 msgstr "Insira um directoria NFS."
 
@@ -475,7 +475,7 @@ msgstr "md9"
 msgid "NFS"
 msgstr "NFS"
 
-#: ../src/kickstartGui.py:123 redhat-config-kickstart.gladestrings:194
+#: ../src/kickstartGui.py:128 redhat-config-kickstart.gladestrings:194
 msgid "Network Configuration"
 msgstr "Configuração da Rede"
 
@@ -539,7 +539,7 @@ msgstr "Servidor NFS:"
 msgid "KDE"
 msgstr "KDE"
 
-#: ../src/kickstartGui.py:122
+#: ../src/kickstartGui.py:127
 msgid "Partition Information"
 msgstr "Informações de Particionamento"
 
@@ -587,7 +587,8 @@ msgstr "Limpar o Master Boot Record"
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "Tem que seleccionar pelo menos 3 partições para utilizar RAID %s"
 
-#: ../src/partWindow.py:252 ../src/partWindow.py:280 ../src/raidWindow.py:203
+#: ../src/partWindow.py:252 ../src/partWindow.py:280 ../src/partWindow.py:544
+#: ../src/raidWindow.py:203
 msgid "Yes"
 msgstr "Sim"
 
@@ -622,7 +623,8 @@ msgstr ""
 "O ponto de montagem \"%s\" já está a ser utilizado.  Por favor escolha outro "
 "ponto de montagem."
 
-#: ../src/partWindow.py:254 ../src/partWindow.py:282 ../src/raidWindow.py:205
+#: ../src/partWindow.py:254 ../src/partWindow.py:282 ../src/partWindow.py:546
+#: ../src/raidWindow.py:205
 msgid "No"
 msgstr "Não"
 
@@ -647,7 +649,7 @@ msgstr "Teclado:"
 msgid "Use default firewall rules"
 msgstr "Utilizar regras de 'firewall' por omissão"
 
-#: ../src/install.py:152
+#: ../src/install.py:146
 msgid "Please enter an FTP directory."
 msgstr "Insira uma directoria FTP."
 
@@ -679,7 +681,7 @@ msgstr "md0"
 msgid "label88"
 msgstr "label88"
 
-#: ../src/install.py:198
+#: ../src/install.py:188
 msgid "Please enter a hard drive partition."
 msgstr "Insira uma partição do disco rígido."
 
@@ -828,7 +830,7 @@ msgstr ""
 msgid "Encrypt root password"
 msgstr "Cifrar senha de root"
 
-#: ../src/install.py:149
+#: ../src/install.py:143
 msgid "Please enter an FTP server."
 msgstr "Insira um servidor de FTP."
 
@@ -848,11 +850,11 @@ msgstr "Utilizar 'broadcast' para encontrar servidor NIS"
 msgid "Partition Options"
 msgstr "Opções de Particionamento"
 
-#: ../src/partition.py:148 ../src/partition.py:176
+#: ../src/partition.py:150 ../src/partition.py:178
 msgid "Please select a partition from the list."
 msgstr "Seleccione uma partição da lista."
 
-#: ../src/basic.py:275 ../src/install.py:209 ../src/partition.py:304
+#: ../src/basic.py:251 ../src/install.py:197 ../src/partition.py:300
 #: ../src/partWindow.py:514 ../src/raidWindow.py:241
 msgid "Error"
 msgstr "Erro"
@@ -861,7 +863,7 @@ msgstr "Erro"
 msgid "Language:"
 msgstr "Língua:"
 
-#: ../src/kickstartGui.py:155
+#: ../src/kickstartGui.py:166
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -895,7 +897,7 @@ msgstr "Activar Suporte Hesiod"
 msgid "Authentication:"
 msgstr "Autenticação:"
 
-#: ../src/partition.py:78
+#: ../src/partition.py:80
 msgid "Size (MB)"
 msgstr "Tamanho (MB)"
 
@@ -955,7 +957,7 @@ msgstr "vfat"
 msgid "DHCP"
 msgstr "DHCP"
 
-#: ../src/partition.py:69
+#: ../src/partition.py:71
 msgid ""
 "Device/\n"
 "Partition Number"
@@ -967,11 +969,11 @@ msgstr ""
 msgid "Raid Members"
 msgstr "Membros do Raid"
 
-#: ../src/kickstartGui.py:117
+#: ../src/kickstartGui.py:122
 msgid "Subsection"
 msgstr "Subsecção"
 
-#: ../src/kickstartGui.py:124 redhat-config-kickstart.gladestrings:273
+#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:273
 msgid "X Configuration"
 msgstr "Configuração do X"
 
@@ -991,7 +993,7 @@ msgstr "Resolução"
 msgid "Do not install a boot loader"
 msgstr "Não instalar um gestor de arranque"
 
-#: ../src/install.py:178
+#: ../src/install.py:170
 msgid "Please enter an HTTP server."
 msgstr "Insira um servidor de HTTP."
 
@@ -1023,11 +1025,11 @@ msgstr "Tem actualmente %s partições de RAID por software disponíveis."
 msgid "Mouse:"
 msgstr "Rato:"
 
-#: ../src/kickstartGui.py:126 redhat-config-kickstart.gladestrings:296
+#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:296
 msgid "Post-Installation Script"
 msgstr "'Script' de Pós-Instalação"
 
-#: ../src/kickstartGui.py:125 redhat-config-kickstart.gladestrings:283
+#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:283
 msgid "Package Selection"
 msgstr "Selecção de Pacotes"
 
@@ -1059,7 +1061,7 @@ msgstr "Emular 3 Botões"
 msgid "Make partition on specific drive (ondisk)"
 msgstr "Criar partição no disco especificado (ondisk)"
 
-#: ../src/partition.py:72
+#: ../src/partition.py:74
 msgid ""
 "Mount Point/\n"
 "RAID"
@@ -1067,7 +1069,7 @@ msgstr ""
 "Montar em/\n"
 "RAID"
 
-#: ../src/partition.py:76
+#: ../src/partition.py:78
 msgid "Format"
 msgstr "Formatar"
 
@@ -1087,7 +1089,7 @@ msgstr "Insira o 'script' %post aqui:"
 msgid "1"
 msgstr "1"
 
-#: ../src/install.py:163
+#: ../src/install.py:155
 msgid "Please enter an FTP password."
 msgstr "Insira a senha do FTP."
 
@@ -1119,7 +1121,7 @@ msgstr "Autodetectar a placa gráfica"
 msgid "Monitor"
 msgstr "Monitor"
 
-#: ../src/kickstartGui.py:186
+#: ../src/kickstartGui.py:197
 msgid "Help is not available."
 msgstr "A ajuda não está disponível."
 
@@ -1131,11 +1133,11 @@ msgstr ""
 "O dispositivo que escolheu não é válido. Por favor utilize um nome de "
 "dispositivo válido como por exemplo \"hda1\" ou \"sda3."
 
-#: ../src/install.py:160
+#: ../src/install.py:152
 msgid "Please enter an FTP user name."
 msgstr "Insira um nome de utilizador FTP."
 
-#: ../src/basic.py:274
+#: ../src/basic.py:250
 msgid "Please select a root password."
 msgstr "Seleccione a senha de 'root'."
 

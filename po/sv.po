@@ -71,7 +71,7 @@ msgstr "label30"
 msgid "label31"
 msgstr "label31"
 
-#: ../src/kickstartGui.py:123
+#: ../src/kickstartGui.py:128
 msgid "Authentication"
 msgstr "Autentisering"
 
@@ -110,7 +110,7 @@ msgstr ""
 msgid "Install new boot loader"
 msgstr "Installera nytt startprogram"
 
-#: ../src/kickstartGui.py:124 redhat-config-kickstart.gladestrings:248
+#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:248
 msgid "Firewall Configuration"
 msgstr "Brandväggskonfiguration"
 
@@ -130,7 +130,7 @@ msgstr "Kryptera GRUB-lösenord"
 msgid "Fill all unused space on disk"
 msgstr "Fyll allt oanvänt utrymme på disken"
 
-#: ../src/kickstartGui.py:156
+#: ../src/kickstartGui.py:167
 msgid "About Kickstart Configurator"
 msgstr "Om Kickstart-konfigurationsprogrammet"
 
@@ -259,7 +259,7 @@ msgstr "Utför installationen i textläge (grafiskt är standard)"
 msgid "Hard Drive Partition:"
 msgstr "Hårddiskpartition:"
 
-#: ../src/install.py:195
+#: ../src/install.py:185
 msgid "Please enter a hard drive directory."
 msgstr "Ange en hårddiskkatalog."
 
@@ -275,7 +275,7 @@ msgstr "Avstängd"
 msgid "label174"
 msgstr "label174"
 
-#: ../src/install.py:181
+#: ../src/install.py:173
 msgid "Please enter an HTTP server directory."
 msgstr "Ange en HTTP-serverkatalog."
 
@@ -312,7 +312,7 @@ msgstr "HTTP"
 msgid "Raid Devices"
 msgstr "Raid-enheter"
 
-#: ../src/kickstartGui.py:122
+#: ../src/kickstartGui.py:127
 msgid "Boot Loader Options"
 msgstr "Startprogramalternativ"
 
@@ -348,7 +348,7 @@ msgstr "RAID"
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "Skapa en RAID-enhet [standard = /dev/md0]"
 
-#: ../src/partition.py:74
+#: ../src/partition.py:76
 msgid "Type"
 msgstr "Typ"
 
@@ -368,7 +368,7 @@ msgstr "Hz"
 msgid "label93"
 msgstr "label93"
 
-#: ../src/kickstartGui.py:121
+#: ../src/kickstartGui.py:126
 msgid "Basic Configuration"
 msgstr "Grundläggande konfiguration"
 
@@ -388,7 +388,7 @@ msgstr "FTP-lösenord"
 msgid "Save File"
 msgstr "Spara fil"
 
-#: ../src/install.py:139
+#: ../src/install.py:133
 msgid "Please enter an NFS server."
 msgstr "Ange en NFS-server."
 
@@ -400,11 +400,11 @@ msgstr "SMB-arbetsgrupp:"
 msgid "SMB"
 msgstr "SMB"
 
-#: ../src/kickstartGui.py:121
+#: ../src/kickstartGui.py:126
 msgid "Installation Method"
 msgstr "Installationsmetod"
 
-#: ../src/kickstartGui.py:125 redhat-config-kickstart.gladestrings:289
+#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:289
 msgid "Pre-Installation Script"
 msgstr "Förinstallationsskript"
 
@@ -461,7 +461,7 @@ msgstr "_Redigera"
 msgid "Netmask: "
 msgstr "Nätmask: "
 
-#: ../src/install.py:142
+#: ../src/install.py:136
 msgid "Please enter an NFS directory."
 msgstr "Ange en NFS-katalog."
 
@@ -478,7 +478,7 @@ msgstr "md9"
 msgid "NFS"
 msgstr "NFS"
 
-#: ../src/kickstartGui.py:123 redhat-config-kickstart.gladestrings:194
+#: ../src/kickstartGui.py:128 redhat-config-kickstart.gladestrings:194
 msgid "Network Configuration"
 msgstr "Nätverkskonfiguration"
 
@@ -542,7 +542,7 @@ msgstr "NFS-server:"
 msgid "KDE"
 msgstr "KDE"
 
-#: ../src/kickstartGui.py:122
+#: ../src/kickstartGui.py:127
 msgid "Partition Information"
 msgstr "Partitionsinformation"
 
@@ -590,7 +590,8 @@ msgstr "Töm huvudstartposten (MBR)"
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "Du måste välja minst 3 partitioner för att kunna använda RAID %s"
 
-#: ../src/partWindow.py:252 ../src/partWindow.py:280 ../src/raidWindow.py:203
+#: ../src/partWindow.py:252 ../src/partWindow.py:280 ../src/partWindow.py:544
+#: ../src/raidWindow.py:203
 msgid "Yes"
 msgstr "Ja"
 
@@ -623,7 +624,8 @@ msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "Monteringspunkten \"%s\" används redan. Välj en annan monteringspunkt."
 
-#: ../src/partWindow.py:254 ../src/partWindow.py:282 ../src/raidWindow.py:205
+#: ../src/partWindow.py:254 ../src/partWindow.py:282 ../src/partWindow.py:546
+#: ../src/raidWindow.py:205
 msgid "No"
 msgstr "Nej"
 
@@ -648,7 +650,7 @@ msgstr "Tangentbord:"
 msgid "Use default firewall rules"
 msgstr "Använd standardbrandväggsregler"
 
-#: ../src/install.py:152
+#: ../src/install.py:146
 msgid "Please enter an FTP directory."
 msgstr "Ange en FTP-katalog."
 
@@ -680,7 +682,7 @@ msgstr "md0"
 msgid "label88"
 msgstr "label88"
 
-#: ../src/install.py:198
+#: ../src/install.py:188
 msgid "Please enter a hard drive partition."
 msgstr "Ange en hårddiskpartition."
 
@@ -829,7 +831,7 @@ msgstr ""
 msgid "Encrypt root password"
 msgstr "Kryptera rootlösenord"
 
-#: ../src/install.py:149
+#: ../src/install.py:143
 msgid "Please enter an FTP server."
 msgstr "Ange en FTP-server."
 
@@ -849,11 +851,11 @@ msgstr "Använd broadcast för att hitta NIS-server"
 msgid "Partition Options"
 msgstr "Partitionsalternativ"
 
-#: ../src/partition.py:148 ../src/partition.py:176
+#: ../src/partition.py:150 ../src/partition.py:178
 msgid "Please select a partition from the list."
 msgstr "Välj en partition från listan."
 
-#: ../src/basic.py:275 ../src/install.py:209 ../src/partition.py:304
+#: ../src/basic.py:251 ../src/install.py:197 ../src/partition.py:300
 #: ../src/partWindow.py:514 ../src/raidWindow.py:241
 msgid "Error"
 msgstr "Fel"
@@ -862,7 +864,7 @@ msgstr "Fel"
 msgid "Language:"
 msgstr "Språk:"
 
-#: ../src/kickstartGui.py:155
+#: ../src/kickstartGui.py:166
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -896,7 +898,7 @@ msgstr "Använd stöd för Hesiod"
 msgid "Authentication:"
 msgstr "Autentisering:"
 
-#: ../src/partition.py:78
+#: ../src/partition.py:80
 msgid "Size (MB)"
 msgstr "Storlek (MB)"
 
@@ -956,7 +958,7 @@ msgstr "vfat"
 msgid "DHCP"
 msgstr "DHCP"
 
-#: ../src/partition.py:69
+#: ../src/partition.py:71
 msgid ""
 "Device/\n"
 "Partition Number"
@@ -968,11 +970,11 @@ msgstr ""
 msgid "Raid Members"
 msgstr "RAID-medlemmar"
 
-#: ../src/kickstartGui.py:117
+#: ../src/kickstartGui.py:122
 msgid "Subsection"
 msgstr "Undersektion"
 
-#: ../src/kickstartGui.py:124 redhat-config-kickstart.gladestrings:273
+#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:273
 msgid "X Configuration"
 msgstr "X-konfiguration"
 
@@ -992,7 +994,7 @@ msgstr "Upplösning"
 msgid "Do not install a boot loader"
 msgstr "Installera inte något startprogram"
 
-#: ../src/install.py:178
+#: ../src/install.py:170
 msgid "Please enter an HTTP server."
 msgstr "Ange en HTTP-server."
 
@@ -1025,11 +1027,11 @@ msgstr ""
 msgid "Mouse:"
 msgstr "Mus:"
 
-#: ../src/kickstartGui.py:126 redhat-config-kickstart.gladestrings:296
+#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:296
 msgid "Post-Installation Script"
 msgstr "Postinstallationsskript"
 
-#: ../src/kickstartGui.py:125 redhat-config-kickstart.gladestrings:283
+#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:283
 msgid "Package Selection"
 msgstr "Val av paket"
 
@@ -1061,7 +1063,7 @@ msgstr "Emulera 3 knappar"
 msgid "Make partition on specific drive (ondisk)"
 msgstr "Skapa partition på specifik enhet (ondisk)"
 
-#: ../src/partition.py:72
+#: ../src/partition.py:74
 msgid ""
 "Mount Point/\n"
 "RAID"
@@ -1069,7 +1071,7 @@ msgstr ""
 "Monteringspunkt/\n"
 "RAID"
 
-#: ../src/partition.py:76
+#: ../src/partition.py:78
 msgid "Format"
 msgstr "Format"
 
@@ -1089,7 +1091,7 @@ msgstr "Skriv in ditt %post-skript nedan:"
 msgid "1"
 msgstr "1"
 
-#: ../src/install.py:163
+#: ../src/install.py:155
 msgid "Please enter an FTP password."
 msgstr "Ange ett FTP-lösenord."
 
@@ -1121,7 +1123,7 @@ msgstr "Undersök grafikkort"
 msgid "Monitor"
 msgstr "Bildskärm"
 
-#: ../src/kickstartGui.py:186
+#: ../src/kickstartGui.py:197
 msgid "Help is not available."
 msgstr "Hjälp är inte tillgänglig."
 
@@ -1133,11 +1135,11 @@ msgstr ""
 "Enheten som du angav är inte ett giltigt enetsnamn. Ange ett giltigt "
 "enhetsnamn som exempelvis \"hda1\" eller \"sda3\"."
 
-#: ../src/install.py:160
+#: ../src/install.py:152
 msgid "Please enter an FTP user name."
 msgstr "Ange ett FTP-användarnamn."
 
-#: ../src/basic.py:274
+#: ../src/basic.py:250
 msgid "Please select a root password."
 msgstr "Välj ett rootlösenord."
 

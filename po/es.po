@@ -83,7 +83,7 @@ msgid "label31"
 msgstr "etiqueta31"
 
 # ../src/ksconfig_gui.py:121
-#: ../src/kickstartGui.py:123
+#: ../src/kickstartGui.py:128
 msgid "Authentication"
 msgstr "Autenticación"
 
@@ -129,7 +129,7 @@ msgid "Install new boot loader"
 msgstr "Instalar el nuevo gestor de arranque"
 
 # ../src/ksconfig_gui.py:122 ksconfig.gladestrings:138
-#: ../src/kickstartGui.py:124 redhat-config-kickstart.gladestrings:248
+#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:248
 msgid "Firewall Configuration"
 msgstr "Configuración del cortafuegos"
 
@@ -152,7 +152,7 @@ msgid "Fill all unused space on disk"
 msgstr "Rellenar todo el espacio del disco"
 
 # ../src/ksconfig_gui.py:135 ksconfig.gladestrings:7
-#: ../src/kickstartGui.py:156
+#: ../src/kickstartGui.py:167
 msgid "About Kickstart Configurator"
 msgstr "Acerca del configurador de Kickstart"
 
@@ -303,7 +303,7 @@ msgstr "Realizar la instalación en modo texto (por defecto se hace gráfica)"
 msgid "Hard Drive Partition:"
 msgstr "Partición de un disco duro:"
 
-#: ../src/install.py:195
+#: ../src/install.py:185
 msgid "Please enter a hard drive directory."
 msgstr "Introduzca un directorio de disco duro."
 
@@ -321,7 +321,7 @@ msgstr "Desactivado"
 msgid "label174"
 msgstr "etiqueta31"
 
-#: ../src/install.py:181
+#: ../src/install.py:173
 msgid "Please enter an HTTP server directory."
 msgstr "Introduzca un directorio de servidor HTTP."
 
@@ -367,7 +367,7 @@ msgid "Raid Devices"
 msgstr "Dispositivos Raid"
 
 # ../src/ksconfig_gui.py:117 ksconfig.gladestrings:24
-#: ../src/kickstartGui.py:122
+#: ../src/kickstartGui.py:127
 msgid "Boot Loader Options"
 msgstr "Opciones del gestor de arranque"
 
@@ -407,7 +407,7 @@ msgstr "RAID"
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "Crear un dispositivo RAID [default = /dev/md0]"
 
-#: ../src/partition.py:74
+#: ../src/partition.py:76
 msgid "Type"
 msgstr "Escribir"
 
@@ -431,7 +431,7 @@ msgid "label93"
 msgstr "etiqueta93"
 
 # ../src/ksconfig_gui.py:116
-#: ../src/kickstartGui.py:121
+#: ../src/kickstartGui.py:126
 msgid "Basic Configuration"
 msgstr "Configuración básica"
 
@@ -455,7 +455,7 @@ msgstr "Contraseña FTP"
 msgid "Save File"
 msgstr "Guardar fichero"
 
-#: ../src/install.py:139
+#: ../src/install.py:133
 msgid "Please enter an NFS server."
 msgstr "Introduzca un servidor NFS."
 
@@ -470,12 +470,12 @@ msgid "SMB"
 msgstr "SMB"
 
 # ../src/ksconfig_gui.py:118
-#: ../src/kickstartGui.py:121
+#: ../src/kickstartGui.py:126
 msgid "Installation Method"
 msgstr "Método de instalación"
 
 # ../src/ksconfig_gui.py:125 ksconfig.gladestrings:169
-#: ../src/kickstartGui.py:125 redhat-config-kickstart.gladestrings:289
+#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:289
 msgid "Pre-Installation Script"
 msgstr "Script de pre-instalación"
 
@@ -537,7 +537,7 @@ msgstr "_Editar"
 msgid "Netmask: "
 msgstr "Máscara de red: "
 
-#: ../src/install.py:142
+#: ../src/install.py:136
 msgid "Please enter an NFS directory."
 msgstr "Introduzca un directorio NFS."
 
@@ -556,7 +556,7 @@ msgid "NFS"
 msgstr "NFS"
 
 # ../src/ksconfig_gui.py:120 ksconfig.gladestrings:81
-#: ../src/kickstartGui.py:123 redhat-config-kickstart.gladestrings:194
+#: ../src/kickstartGui.py:128 redhat-config-kickstart.gladestrings:194
 msgid "Network Configuration"
 msgstr "Configuración de red"
 
@@ -629,7 +629,7 @@ msgid "KDE"
 msgstr "KDE"
 
 # ../src/ksconfig_gui.py:119
-#: ../src/kickstartGui.py:122
+#: ../src/kickstartGui.py:127
 msgid "Partition Information"
 msgstr "Información de las particiones"
 
@@ -686,7 +686,8 @@ msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "Debe seleccionar al menos 3 particiones para usar RAID %s"
 
 # ksconfig.gladestrings:71
-#: ../src/partWindow.py:252 ../src/partWindow.py:280 ../src/raidWindow.py:203
+#: ../src/partWindow.py:252 ../src/partWindow.py:280 ../src/partWindow.py:544
+#: ../src/raidWindow.py:203
 msgid "Yes"
 msgstr "Sí"
 
@@ -725,7 +726,8 @@ msgstr ""
 "montaje."
 
 # ksconfig.gladestrings:72
-#: ../src/partWindow.py:254 ../src/partWindow.py:282 ../src/raidWindow.py:205
+#: ../src/partWindow.py:254 ../src/partWindow.py:282 ../src/partWindow.py:546
+#: ../src/raidWindow.py:205
 msgid "No"
 msgstr "No"
 
@@ -755,7 +757,7 @@ msgstr "Teclado:"
 msgid "Use default firewall rules"
 msgstr "Utilizar reglas por defecto del cortafuegos"
 
-#: ../src/install.py:152
+#: ../src/install.py:146
 msgid "Please enter an FTP directory."
 msgstr "Introduzca un directorio FTP."
 
@@ -792,7 +794,7 @@ msgstr "md0"
 msgid "label88"
 msgstr "etiqueta88"
 
-#: ../src/install.py:198
+#: ../src/install.py:188
 msgid "Please enter a hard drive partition."
 msgstr "Introduzca una partición de disco duro."
 
@@ -959,7 +961,7 @@ msgstr ""
 msgid "Encrypt root password"
 msgstr "Contraseña de root encriptada"
 
-#: ../src/install.py:149
+#: ../src/install.py:143
 msgid "Please enter an FTP server."
 msgstr "Introduzca un servidor FTP."
 
@@ -983,11 +985,11 @@ msgid "Partition Options"
 msgstr "Opciones de la partición"
 
 # ksconfig.gladestrings:19
-#: ../src/partition.py:148 ../src/partition.py:176
+#: ../src/partition.py:150 ../src/partition.py:178
 msgid "Please select a partition from the list."
 msgstr "Seleccione una partición desde la lista. "
 
-#: ../src/basic.py:275 ../src/install.py:209 ../src/partition.py:304
+#: ../src/basic.py:251 ../src/install.py:197 ../src/partition.py:300
 #: ../src/partWindow.py:514 ../src/raidWindow.py:241
 msgid "Error"
 msgstr "Error"
@@ -997,7 +999,7 @@ msgstr "Error"
 msgid "Language:"
 msgstr "Idioma:"
 
-#: ../src/kickstartGui.py:155
+#: ../src/kickstartGui.py:166
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -1037,7 +1039,7 @@ msgid "Authentication:"
 msgstr "Autenticación:"
 
 # ksconfig.gladestrings:189
-#: ../src/partition.py:78
+#: ../src/partition.py:80
 msgid "Size (MB)"
 msgstr "Tamaño (MB)"
 
@@ -1105,7 +1107,7 @@ msgstr "vfat"
 msgid "DHCP"
 msgstr "DHCP"
 
-#: ../src/partition.py:69
+#: ../src/partition.py:71
 msgid ""
 "Device/\n"
 "Partition Number"
@@ -1118,12 +1120,12 @@ msgstr ""
 msgid "Raid Members"
 msgstr "Mienbros Raid"
 
-#: ../src/kickstartGui.py:117
+#: ../src/kickstartGui.py:122
 msgid "Subsection"
 msgstr "Subsección"
 
 # ../src/ksconfig_gui.py:123 ksconfig.gladestrings:147
-#: ../src/kickstartGui.py:124 redhat-config-kickstart.gladestrings:273
+#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:273
 msgid "X Configuration"
 msgstr "Configuración de las X"
 
@@ -1147,7 +1149,7 @@ msgstr "Resolución"
 msgid "Do not install a boot loader"
 msgstr "No instalar un gestor de arranque"
 
-#: ../src/install.py:178
+#: ../src/install.py:170
 msgid "Please enter an HTTP server."
 msgstr "Introduzca un servidor HTTP."
 
@@ -1188,12 +1190,12 @@ msgid "Mouse:"
 msgstr "Ratón:"
 
 # ../src/ksconfig_gui.py:126 ksconfig.gladestrings:173
-#: ../src/kickstartGui.py:126 redhat-config-kickstart.gladestrings:296
+#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:296
 msgid "Post-Installation Script"
 msgstr "Script de post-instalación"
 
 # ../src/ksconfig_gui.py:124
-#: ../src/kickstartGui.py:125 redhat-config-kickstart.gladestrings:283
+#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:283
 msgid "Package Selection"
 msgstr "Selección de paquetes"
 
@@ -1230,7 +1232,7 @@ msgid "Make partition on specific drive (ondisk)"
 msgstr "HAcer una partición en un disco específico (ondisk)"
 
 # ksconfig.gladestrings:73
-#: ../src/partition.py:72
+#: ../src/partition.py:74
 msgid ""
 "Mount Point/\n"
 "RAID"
@@ -1238,7 +1240,7 @@ msgstr ""
 "Punto de montaje/\n"
 "RAID"
 
-#: ../src/partition.py:76
+#: ../src/partition.py:78
 msgid "Format"
 msgstr "Formatear"
 
@@ -1262,7 +1264,7 @@ msgid "1"
 msgstr "1"
 
 # ksconfig.gladestrings:19
-#: ../src/install.py:163
+#: ../src/install.py:155
 msgid "Please enter an FTP password."
 msgstr "Seleccione una contraseña FTP."
 
@@ -1298,7 +1300,7 @@ msgstr "Probar la tarjeta de vídeo"
 msgid "Monitor"
 msgstr "Monitor"
 
-#: ../src/kickstartGui.py:186
+#: ../src/kickstartGui.py:197
 msgid "Help is not available."
 msgstr "La ayuda no está disponible."
 
@@ -1310,12 +1312,12 @@ msgstr ""
 "El dispositivo que ha modificado no es un nombre de dispositivo válido. "
 "Utilice un nombre de dispositivo válido como por ejemplo \"hda1\" o \"sda3\"."
 
-#: ../src/install.py:160
+#: ../src/install.py:152
 msgid "Please enter an FTP user name."
 msgstr "Introduzca un nombre de usuario FTP."
 
 # ksconfig.gladestrings:19
-#: ../src/basic.py:274
+#: ../src/basic.py:250
 msgid "Please select a root password."
 msgstr "Seleccione una contraseña de root"
 

@@ -69,7 +69,7 @@ msgstr "label30"
 msgid "label31"
 msgstr "label31"
 
-#: ../src/kickstartGui.py:123
+#: ../src/kickstartGui.py:128
 msgid "Authentication"
 msgstr "验证"
 
@@ -107,7 +107,7 @@ msgstr ""
 msgid "Install new boot loader"
 msgstr "安装新引导装载程序"
 
-#: ../src/kickstartGui.py:124 redhat-config-kickstart.gladestrings:248
+#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:248
 msgid "Firewall Configuration"
 msgstr "防火墙配置"
 
@@ -127,7 +127,7 @@ msgstr "给 GRUB 口令加密"
 msgid "Fill all unused space on disk"
 msgstr "使用磁盘上全部未用空间"
 
-#: ../src/kickstartGui.py:156
+#: ../src/kickstartGui.py:167
 msgid "About Kickstart Configurator"
 msgstr "关于反冲启动配置程序"
 
@@ -253,7 +253,7 @@ msgstr "在文本模式中执行安装（默认为图形化模式）"
 msgid "Hard Drive Partition:"
 msgstr "硬盘驱动器分区："
 
-#: ../src/install.py:195
+#: ../src/install.py:185
 msgid "Please enter a hard drive directory."
 msgstr "请输入硬盘驱动器目录。"
 
@@ -269,7 +269,7 @@ msgstr "已禁用"
 msgid "label174"
 msgstr "label174"
 
-#: ../src/install.py:181
+#: ../src/install.py:173
 msgid "Please enter an HTTP server directory."
 msgstr "请输入 HTTP 服务器目录。"
 
@@ -306,7 +306,7 @@ msgstr "HTTP"
 msgid "Raid Devices"
 msgstr "RAID 设备"
 
-#: ../src/kickstartGui.py:122
+#: ../src/kickstartGui.py:127
 msgid "Boot Loader Options"
 msgstr "引导装载程序选项"
 
@@ -342,7 +342,7 @@ msgstr "RAID "
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "创建 RAID 设备 [default = /dev/md0]"
 
-#: ../src/partition.py:74
+#: ../src/partition.py:76
 msgid "Type"
 msgstr "类型"
 
@@ -362,7 +362,7 @@ msgstr "赫兹"
 msgid "label93"
 msgstr "label93"
 
-#: ../src/kickstartGui.py:121
+#: ../src/kickstartGui.py:126
 msgid "Basic Configuration"
 msgstr "基本配置"
 
@@ -382,7 +382,7 @@ msgstr "FTP 口令"
 msgid "Save File"
 msgstr "储存文件"
 
-#: ../src/install.py:139
+#: ../src/install.py:133
 msgid "Please enter an NFS server."
 msgstr "请输入 NFS 服务器。"
 
@@ -394,11 +394,11 @@ msgstr "SMB 工作组："
 msgid "SMB"
 msgstr "SMB"
 
-#: ../src/kickstartGui.py:121
+#: ../src/kickstartGui.py:126
 msgid "Installation Method"
 msgstr "安装方法"
 
-#: ../src/kickstartGui.py:125 redhat-config-kickstart.gladestrings:289
+#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:289
 msgid "Pre-Installation Script"
 msgstr "预安装脚本"
 
@@ -455,7 +455,7 @@ msgstr "编辑(_E)"
 msgid "Netmask: "
 msgstr "子网掩码："
 
-#: ../src/install.py:142
+#: ../src/install.py:136
 msgid "Please enter an NFS directory."
 msgstr "请输入 NFS 目录。"
 
@@ -472,7 +472,7 @@ msgstr "md9"
 msgid "NFS"
 msgstr "NFS"
 
-#: ../src/kickstartGui.py:123 redhat-config-kickstart.gladestrings:194
+#: ../src/kickstartGui.py:128 redhat-config-kickstart.gladestrings:194
 msgid "Network Configuration"
 msgstr "网络配置"
 
@@ -535,7 +535,7 @@ msgstr "NFS 服务器："
 msgid "KDE"
 msgstr "KDE"
 
-#: ../src/kickstartGui.py:122
+#: ../src/kickstartGui.py:127
 msgid "Partition Information"
 msgstr "分区信息"
 
@@ -583,7 +583,8 @@ msgstr "清除主引导记录"
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "您必须至少选择 3 个分区来使用 RAID %s"
 
-#: ../src/partWindow.py:252 ../src/partWindow.py:280 ../src/raidWindow.py:203
+#: ../src/partWindow.py:252 ../src/partWindow.py:280 ../src/partWindow.py:544
+#: ../src/raidWindow.py:203
 msgid "Yes"
 msgstr "是"
 
@@ -614,7 +615,8 @@ msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "挂载点“%s”已被使用。请另选一个挂载点。"
 
-#: ../src/partWindow.py:254 ../src/partWindow.py:282 ../src/raidWindow.py:205
+#: ../src/partWindow.py:254 ../src/partWindow.py:282 ../src/partWindow.py:546
+#: ../src/raidWindow.py:205
 msgid "No"
 msgstr "否"
 
@@ -639,7 +641,7 @@ msgstr "键盘："
 msgid "Use default firewall rules"
 msgstr "使用默认的防火墙规则"
 
-#: ../src/install.py:152
+#: ../src/install.py:146
 msgid "Please enter an FTP directory."
 msgstr "请输入 FTP 目录。"
 
@@ -671,7 +673,7 @@ msgstr "md0"
 msgid "label88"
 msgstr "label88"
 
-#: ../src/install.py:198
+#: ../src/install.py:188
 msgid "Please enter a hard drive partition."
 msgstr "请输入硬盘分区。"
 
@@ -818,7 +820,7 @@ msgstr ""
 msgid "Encrypt root password"
 msgstr "给根口令加密"
 
-#: ../src/install.py:149
+#: ../src/install.py:143
 msgid "Please enter an FTP server."
 msgstr "请输入 FTP 服务器。"
 
@@ -838,11 +840,11 @@ msgstr "用广播寻找 NIS 服务器"
 msgid "Partition Options"
 msgstr "分区选项"
 
-#: ../src/partition.py:148 ../src/partition.py:176
+#: ../src/partition.py:150 ../src/partition.py:178
 msgid "Please select a partition from the list."
 msgstr "请从列表中选择分区。"
 
-#: ../src/basic.py:275 ../src/install.py:209 ../src/partition.py:304
+#: ../src/basic.py:251 ../src/install.py:197 ../src/partition.py:300
 #: ../src/partWindow.py:514 ../src/raidWindow.py:241
 msgid "Error"
 msgstr "错误"
@@ -851,7 +853,7 @@ msgstr "错误"
 msgid "Language:"
 msgstr "语言："
 
-#: ../src/kickstartGui.py:155
+#: ../src/kickstartGui.py:166
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -885,7 +887,7 @@ msgstr "启用 Hesiod 支持"
 msgid "Authentication:"
 msgstr "验证："
 
-#: ../src/partition.py:78
+#: ../src/partition.py:80
 msgid "Size (MB)"
 msgstr "大小 (MB)"
 
@@ -945,7 +947,7 @@ msgstr "vfat"
 msgid "DHCP"
 msgstr "DHCP"
 
-#: ../src/partition.py:69
+#: ../src/partition.py:71
 msgid ""
 "Device/\n"
 "Partition Number"
@@ -957,11 +959,11 @@ msgstr ""
 msgid "Raid Members"
 msgstr "RAID 成员"
 
-#: ../src/kickstartGui.py:117
+#: ../src/kickstartGui.py:122
 msgid "Subsection"
 msgstr "子选择"
 
-#: ../src/kickstartGui.py:124 redhat-config-kickstart.gladestrings:273
+#: ../src/kickstartGui.py:129 redhat-config-kickstart.gladestrings:273
 msgid "X Configuration"
 msgstr "X 配置"
 
@@ -981,7 +983,7 @@ msgstr "分辨率"
 msgid "Do not install a boot loader"
 msgstr "不安装引导装载程序"
 
-#: ../src/install.py:178
+#: ../src/install.py:170
 msgid "Please enter an HTTP server."
 msgstr "请输入 HTTP 服务器。"
 
@@ -1013,11 +1015,11 @@ msgstr "目前，您还有 %d 个空闲的软件 RAID 分区可以使用。"
 msgid "Mouse:"
 msgstr "鼠标："
 
-#: ../src/kickstartGui.py:126 redhat-config-kickstart.gladestrings:296
+#: ../src/kickstartGui.py:131 redhat-config-kickstart.gladestrings:296
 msgid "Post-Installation Script"
 msgstr "安装后脚本"
 
-#: ../src/kickstartGui.py:125 redhat-config-kickstart.gladestrings:283
+#: ../src/kickstartGui.py:130 redhat-config-kickstart.gladestrings:283
 msgid "Package Selection"
 msgstr "选择软件包"
 
@@ -1049,7 +1051,7 @@ msgstr "模拟三键"
 msgid "Make partition on specific drive (ondisk)"
 msgstr "在指定的驱动器上分区 (ondisk)"
 
-#: ../src/partition.py:72
+#: ../src/partition.py:74
 msgid ""
 "Mount Point/\n"
 "RAID"
@@ -1057,7 +1059,7 @@ msgstr ""
 "挂载点/\n"
 "RAID"
 
-#: ../src/partition.py:76
+#: ../src/partition.py:78
 msgid "Format"
 msgstr "格式"
 
@@ -1077,7 +1079,7 @@ msgstr "在下面键入您的 %post 脚本："
 msgid "1"
 msgstr "1"
 
-#: ../src/install.py:163
+#: ../src/install.py:155
 msgid "Please enter an FTP password."
 msgstr "请输入 FTP 口令。"
 
@@ -1109,7 +1111,7 @@ msgstr "探测视频卡"
 msgid "Monitor"
 msgstr "显示器"
 
-#: ../src/kickstartGui.py:186
+#: ../src/kickstartGui.py:197
 msgid "Help is not available."
 msgstr "没有帮助。"
 
@@ -1120,11 +1122,11 @@ msgid ""
 msgstr ""
 "您指定的设备不是有效的设备名。请使用一个有效的设备名，如“hda1”或“sda3”。"
 
-#: ../src/install.py:160
+#: ../src/install.py:152
 msgid "Please enter an FTP user name."
 msgstr "请输入 FTP 用户名。"
 
-#: ../src/basic.py:274
+#: ../src/basic.py:250
 msgid "Please select a root password."
 msgstr "请选择根口令。"
 
