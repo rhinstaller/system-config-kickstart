@@ -53,11 +53,11 @@ class KickstartParser:
 
 
         self.readKickstartFile(file)
-        print "Lang is", self.kickstartData.getLang()
-        print "Langsupport is", self.kickstartData.getLangsupport()
-        print "Keyboard is", self.kickstartData.getKeyboard()
-        print self.kickstartData.getMouse()
-        print self.kickstartData.getTimezone()        
+#        print "Lang is", self.kickstartData.getLang()
+#        print "Langsupport is", self.kickstartData.getLangSupport()
+#        print "Keyboard is", self.kickstartData.getKeyboard()
+#        print self.kickstartData.getMouse()
+#        print self.kickstartData.getTimezone()        
 
     def readKickstartFile(self, file):
         self.lines = open(file, "r").readlines()
