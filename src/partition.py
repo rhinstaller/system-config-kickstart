@@ -25,6 +25,7 @@ import gtk
 import gtk.glade
 import gobject
 import partWindow
+import raidOptionsWindow
 #import raidWindow
 
 ##
@@ -49,6 +50,8 @@ class partition:
         self.add_part_button = self.xml.get_widget("add_part_button")
         self.edit_part_button = self.xml.get_widget("edit_part_button")
         self.del_part_button = self.xml.get_widget("del_part_button")
+        self.raid_part_button = self.xml.get_widget("raid_part_button")
+        self.lvm_part_button = self.xml.get_widget("lvm_part_button")
 #        self.raid_part_button = self.xml.get_widget("raid_part_button")
 #        self.partitionDialog = self.xml.get_widget("partition_dialog")
         self.checkbox = self.xml.get_widget("checkbox2")
@@ -56,6 +59,8 @@ class partition:
         self.add_part_button.connect("clicked", self.addPartition)
         self.edit_part_button.connect("clicked", self.editPartition)
         self.del_part_button.connect("clicked", self.delPartition)
+        self.raid_part_button.connect("clicked", self.raidPartition)
+        self.lvm_part_button.connect("clicked", self.lvmPartition)
 
         self.part_store = gtk.ListStore(gobject.TYPE_STRING, gobject.TYPE_STRING, gobject.TYPE_STRING,
                                         gobject.TYPE_STRING, gobject.TYPE_PYOBJECT)
@@ -72,7 +77,7 @@ class partition:
         self.part_view.append_column(col)
 
         #initialize the child classes
-        self.partWindow = partWindow.partWindow(self.xml, self.part_store, self.part_view)
+#        self.partWindow = partWindow.partWindow(self.xml, self.part_store, self.part_view)
 #        self.raidWindow = raidWindow.raidWindow(self.xml, self.part_view)
 
 
@@ -95,13 +100,20 @@ class partition:
         self.del_part_button.set_sensitive(gtk.FALSE)
 
     def addPartition(self, *args):
-        self.partWindow.add_partition()
+        part = partWindow.partWindow(self.xml, self.part_store, self.part_view)
+        part.add_partition()
         self.edit_part_button.set_sensitive(gtk.TRUE)
         self.del_part_button.set_sensitive(gtk.TRUE)
-#        self.raid_part_button.set_sensitive(gtk.TRUE)
         self.part_view.get_selection().unselect_all()
 
+##         self.partWindow = partWindow.partWindow(self.xml, self.part_store, self.part_view)
+##         self.partWindow.add_partition()
+##         self.edit_part_button.set_sensitive(gtk.TRUE)
+##         self.del_part_button.set_sensitive(gtk.TRUE)
+##         self.part_view.get_selection().unselect_all()
+
     def editPartition(self, *args):
+        self.partWindow = partWindow.partWindow(self.xml, self.part_store, self.part_view)
         try:
             data, iter = self.part_view.get_selection().get_selected()
         except:
@@ -118,8 +130,12 @@ class partition:
             
         self.partWindow.edit_partition(iter)
 
-#    def raidPartition(self, *args):
+    def raidPartition(self, *args):
+        self.raidOptionsWindow = raidOptionsWindow.raidOptionsWindow(self.xml, self.part_store, self.part_view)
 #        self.raidWindow.add_raid(self.num_rows)
+
+    def lvmPartition(self, *args):
+        pass
 
     def getData(self):
         data = []

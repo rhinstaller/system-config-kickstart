@@ -37,13 +37,20 @@ gettext.textdomain ("redhat-config-kickstart")
 _=gettext.gettext
 
 class partWindow:
-    def __init__(self, xml, part_store, part_view):
+    def __init__(self, xml, part_store, part_view, type = None):
+        print "in partWindow init", xml
 #        self.partClist = partClist
         self.part_store = part_store
         self.part_view = part_view
+        if type:
+            self.type = type
+        else:
+            self.type = None
+
         self.partitionDialog = xml.get_widget("partition_dialog")
         self.mountPointCombo = xml.get_widget("mountPointCombo")
         self.fsTypeCombo = xml.get_widget("fsTypeCombo")
+        print self.fsTypeCombo
         self.sizeCombo = xml.get_widget("sizeCombo")
         self.asPrimaryCheck = xml.get_widget("asPrimaryCheck")
         self.onDiskCheck = xml.get_widget("onDiskCheck")
@@ -121,6 +128,8 @@ class partWindow:
     def add_partition(self):
         self.ok_handler = self.partOkButton.connect("clicked", self.on_ok_button_clicked)
         self.win_reset()
+        if self.type:
+            self.fsTypeCombo.entry.set_text(self.type)
         self.partitionDialog.show_all()
 
     def edit_partition(self, iter):
@@ -175,8 +184,8 @@ class partWindow:
         
     def on_part_cancel_button_clicked(self, *args):
         self.partOkButton.disconnect(self.ok_handler)
-        self.partitionDialog.hide()
         self.win_reset()
+        self.partitionDialog.destroy()
 
     def on_edit_ok_button_clicked(self, *args):
         part_object = self.part_store.get_value(self.current_iter, 4)
@@ -188,8 +197,8 @@ class partWindow:
         self.part_store.set_value(self.current_iter, 3, part_object.onDiskVal)
             
         self.partOkButton.disconnect(self.ok_handler)
-        self.partitionDialog.hide()
         self.win_reset()
+        self.partitionDialog.destroy()
 
     def on_ok_button_clicked(self, *args):
         part_object = partEntry.partEntry()
@@ -206,8 +215,8 @@ class partWindow:
         self.part_store.set_value(iter, 4, part_object)
 
         self.partOkButton.disconnect(self.ok_handler)
-        self.partitionDialog.hide()
         self.win_reset()
+        self.partitionDialog.destroy()
 
     def on_swap_recommended_toggled(self, *args):
         active = self.swap_checkbutton.get_active()
