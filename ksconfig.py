@@ -76,12 +76,13 @@ def saveFile_cb(args):
 			buf = buf + " --enablemd5"
 
 	try:
-		buf = buf + authWin.getData()
+		buf = buf + authWin.getData() + "\n"
+		print buf
 	except:
 		pass
 
 	try:
-		buf = buf + firewallWin.getData()
+		buf = buf + "\n" + firewallWin.getData()
 	except:
 		pass
 
