@@ -28,6 +28,7 @@ import gtk
 import gtk.glade
 import gobject
 import signal
+#import ksconfig
 import basic
 import bootloader
 import install
@@ -51,7 +52,7 @@ _=gettext.gettext
 
 #gtk.glade.bindtextdomain(domain)
 #xml = gtk.glade.XML ("/usr/share/ksconfig/ksconfig-gtk2.glade", domain="ksconfig")
-xml = gtk.glade.XML ("./ksconfig-gtk2.glade", domain="ksconfig")
+#xml = gtk.glade.XML ("./ksconfig-gtk2.glade", domain="ksconfig")
 #xml = libglade.GladeXML ("/usr/share/ksconfig/ksconfig.glade", domain="ksconfig")
 #xml = libglade.GladeXML ("./ksconfig.glade", domain="ksconfig")
 
@@ -60,7 +61,7 @@ class ksconfig_gui:
 	def destroy(self, args):
 		gtk.mainquit()
 
-	def __init__ (self):
+	def __init__ (self, xml):
 		self.toplevel = xml.get_widget("main_window")
 		self.toplevel.connect ("destroy", self.destroy)
 

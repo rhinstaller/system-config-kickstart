@@ -24,7 +24,16 @@
 
 import sys
 import signal
+import gtk
+import gtk.glade
 import ksconfig_gui
+
+doDebug = None
+
+for arg in sys.argv:
+    if arg == '--debug':
+        print "starting with debugging options"
+        doDebug  = 1
 
 try:
     from gtk import _disable_gdk_threading
@@ -35,5 +44,14 @@ except ImportError:
 if __name__ == "__main__":
     signal.signal (signal.SIGINT, signal.SIG_DFL)
 
-ksconfig_gui.ksconfig_gui()
+
+if doDebug:
+    xml = gtk.glade.XML ("./ksconfig-gtk2.glade", domain="ksconfig")
+else:
+    xml = gtk.glade.XML ("/usr/share/ksconfig/ksconfig-gtk2.glade", domain="ksconfig")
+    
+#xml = libglade.GladeXML ("/usr/share/ksconfig/ksconfig.glade", domain="ksconfig")
+#xml = libglade.GladeXML ("./ksconfig.glade", domain="ksconfig")
+
+ksconfig_gui.ksconfig_gui(xml)
 
