@@ -74,7 +74,7 @@ class partWindow:
         self.mountPointCombo.set_popdown_strings(mountPoints)
 
 #        self.fileTypes = ["ext2", "ext3", "RAID", "Linux Swap", "vfat"]
-        self.fileTypes = ["ext2", "ext3", "Linux Swap", "vfat"]
+        self.fileTypes = ["ext2", "ext3", "swap", "vfat"]
         self.fsTypeCombo.set_popdown_strings(self.fileTypes)
         self.fsTypeCombo.list.select_item(0)
 
@@ -135,6 +135,18 @@ class partWindow:
         self.sizeFixedRadio.set_active(fixedSize)
         self.maxSizeCombo.set_text(str(maxSize))
         self.formatCheck.set_active(doFormat)        
+
+        curr = self.fsTypeCombo.entry.get_text()
+        print "here", curr, self.fileTypes
+        if curr in self.fileTypes:
+            index = self.fileTypes.index(curr)
+            print index
+        
+            if index == 2:
+                self.mountPointCombo.set_sensitive(FALSE)
+                self.formatCheck.set_sensitive(FALSE)
+
+
         self.partitionDialog.show_all()
 
     def win_reset(self):
@@ -264,15 +276,14 @@ class partWindow:
                 return
 
         elif fsType != "RAID":
-            if fsType != "Linux Swap":
+            if fsType != "swap":
                 if mountPoint == "":
                     dlg = GnomeMessageBox("You must specify a mount point for the partition.",
                                           MESSAGE_BOX_ERROR, STOCK_BUTTON_OK, None)
                     dlg.run_and_close()
                     return
-#                return
 
-        if fsType == "Linux Swap":
+        if fsType == "swap":   
             fsType = "swap"
             mountPoint = ""
 
