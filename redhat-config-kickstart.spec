@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
-Version: 2.3.18
-Release: 2
+Version: 2.3.19
+Release: 1
 URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
@@ -56,6 +56,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Wed Sep 17 2003 Brent Fox <bfox@redhat.com> 2.3.19-1
+- firstboot flag is "enable" not "enabled" (bug #104552)
+
 * Mon Sep 15 2003 Brent Fox <bfox@redhat.com> 2.3.18-2
 - bump relnum and rebuild
 
