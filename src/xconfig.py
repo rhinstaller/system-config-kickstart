@@ -46,12 +46,18 @@ class xconfig:
         self.gnome_radiobutton = xml.get_widget("gnome_radiobutton")
         self.kde_radiobutton = xml.get_widget("kde_radiobutton")
         self.startxonboot_checkbutton = xml.get_widget("startxonboot_checkbutton")
+        self.card_vbox = xml.get_widget("card_vbox")
+        self.monitor_vbox = xml.get_widget("monitor_vbox")
+        self.card_probe_check = xml.get_widget("card_probe_check")
+        self.monitor_probe_check = xml.get_widget("monitor_probe_check")
 
         xml.signal_autoconnect (
             { "toggleXconfig" : self.toggleXconfig,
               "select_monitor" : self.select_monitor,
               "select_videocard" : self.select_videocard,
               "toggle_sync" : self.toggle_sync,
+              "on_card_probe_check_toggled" : self.on_card_probe_check_toggled,
+              "on_monitor_probe_check_toggled" : self.on_monitor_probe_check_toggled,
               })
 
         #add video cards to list
@@ -130,6 +136,12 @@ class xconfig:
         self.videoram_combo.set_popdown_strings(vram_list)
         self.videoram_combo.entry.set_editable(FALSE)
 
+    def on_card_probe_check_toggled(self, *args):
+        self.card_vbox.set_sensitive(not self.card_probe_check.get_active())
+
+    def on_monitor_probe_check_toggled(self, *args):
+        self.monitor_vbox.set_sensitive(not self.monitor_probe_check.get_active())
+
     def toggleXconfig (self, args):
         config = self.config_x_button.get_active()
         #disable xconfig notebook
@@ -148,8 +160,13 @@ class xconfig:
         self.selected_vc_row = row
 
     def getData(self):
+        data = []
+        data.append("")
+
         if self.config_x_button.get_active():
-            buf = "\n" + "xconfig "
+            data.append("#XWindows configuration information")
+
+            buf = "xconfig "
             #color depth - translate
             buf = buf + " --depth " + self.color_depth_combo.entry.get_text()
             #resolution
@@ -161,31 +178,40 @@ class xconfig:
                 buf = buf + " --defaultdesktop=KDE"
             #startxonboot
             if self.startxonboot_checkbutton.get_active():
-                buf = buf + "  --startxonboot"
-            #video card and monitor
-            buf = buf + " --card \"" + self.video_card_clist.get_text(self.selected_vc_row,0) + "\""
-            #translate MB to KB 
-            ramsize_dict = {"256 KB" : "256",
-                            "512 KB" : "512",
-                            "1 MB" : "1024",
-                            "2 MB" : "2048",
-                            "4 MB" : "4096",
-                            "8 MB" : "8192",
-                            "16 MB" : "16384",
-                            "32 MB" : "32768",
-                            "64 MB" : "65536",
-                            
-                            }
-            buf = buf + " --videoram " + ramsize_dict [self.videoram_combo.entry.get_text()]
-            if self.sync_button.get_active():
-                buf = buf + " --hsync " + self.hsync_entry.get_text()
-                buf = buf + " --vsync " + self.vsync_entry.get_text()
-            else:
-                buf = buf + " --monitor \"" + self.monitor_clist.get_text(self.selected_monitor_row,0) + "\""
-                
-        else:
-            buf = "\n" + "#Do not configure the X Window System"
-            buf = buf + "\n" + "skipx"            
-        return buf
+                buf = buf + " --startxonboot"
 
+            if not self.card_probe_check.get_active():
+                #video card and monitor
+                buf = buf + " --card \"" + self.video_card_clist.get_text(self.selected_vc_row,0) + "\""
+                #translate MB to KB 
+                ramsize_dict = {"256 KB" : "256",
+                                "512 KB" : "512",
+                                "1 MB" : "1024",
+                                "2 MB" : "2048",
+                                "4 MB" : "4096",
+                                "8 MB" : "8192",
+                                "16 MB" : "16384",
+                                "32 MB" : "32768",
+                                "64 MB" : "65536",
+
+                                }
+                buf = buf + " --videoram " + ramsize_dict [self.videoram_combo.entry.get_text()]
+            else:
+                data.append("#Probe for video card")                
+
+            if not self.monitor_probe_check.get_active():
+                if self.sync_button.get_active():
+                    buf = buf + " --hsync " + self.hsync_entry.get_text()
+                    buf = buf + " --vsync " + self.vsync_entry.get_text()
+                else:
+                    buf = buf + " --monitor \"" + self.monitor_clist.get_text(self.selected_monitor_row,0) + "\""
+            else:
+                data.append("#Probe for monitor")
+            data.append(buf)
+                                
+        else:
+            data.append("#Do not configure the X Window System")
+            data.append("skipx")
+
+        return data
 
