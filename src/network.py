@@ -378,8 +378,6 @@ class network:
                                                      "hostname="])
             
             for opt, value in opts:
-                self.network_device_store.set_value(iter, 0, "eth0")
-
                 if opt == "--device":
                     self.network_device_store.set_value(iter, 0, value)
 
