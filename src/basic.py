@@ -29,6 +29,9 @@ import os
 import whrandom
 import crypt
 
+from rhpl import keyboard_models
+import rhpl.keyboard as keyboard
+
 ##
 ## I18N
 ##
@@ -80,21 +83,16 @@ class basic:
                          "English" : "en_US",
                          "French" : "fr_FR",
                          "German" : "de_DE",
-                         "Hungarian" : "hu_HU",
                          "Icelandic" : "is_IS",
                          "Italian" : "it_IT",
                          "Japanese" : "ja_JP.eucJP",
                          "Korean" : "ko_KR.eucKR",
                          "Norwegian" : "no_NO",
                          "Portuguese" : "pt_PT",
-                         "Romanian" : "ro_RO",
                          "Russian" : "ru_RU.k0I8r",
-                         "Serbian" : "sr_YU",
-                         "Slovak" : "sk_SK",
                          "Slovenian" : "sl_SI",
                          "Spanish" : "es_ES",
                          "Swedish" : "sv_SE",
-                         "Turkish" : "tr_TR",
                          "Ukrainian" : "uk_UA",
                     }
 
@@ -159,63 +157,22 @@ class basic:
         mouse_combo.entry.set_editable(gtk.FALSE)		
 
         #populate keyboard combo, add keyboards here
-        self.keyboard_dict = { 'U.S. English': 'us',
-                          'Swiss German': 'de_CH',
-                          'Swiss French': 'fr_CH',
-                          'PC-98xx Series': 'nec/jp',
-                          'Polish': 'pl',
-                          'Canadian': 'ca',
-                          'Spanish': 'es',
-                          'Slovak': 'sk',
-                          'Macedonian': 'mk',
-                          'United Kingdom':'uk',
-                          'Belarusian': 'by',
-                          'Japanese': 'jp',
-                          'German': 'de',
-                          'Czech': 'cz',
-                          'Portuguese':
-                          'pt',
-                          'Turkish': 'tr',
-                          'Croatian': 'hr',
-                          'U.S. English w/ deadkeys': 'us_intl',
-                          'Serbian': 'sr',
-                          'Latvian': 'lv',
-                          'Ukrainian': 'ua',
-                          'Greek': 'el',
-                          'Norwegian': 'no',
-                          'Lithuanian qwerty programmers': 'lt_p',
-                          'Finnish': 'fi',
-                          'Czech (qwerty)': 'cz_qwerty',
-                          'Dvorak': 'dvorak',
-                          'Thai': 'th',
-                          'Russian': 'ru',
-                          'Armenian': 'am',
-                          'Azerbaidjani': 'az',
-                          'Lithuanian qwerty "numeric"': 'lt',
-                          'Slovak (qwerty)': 'sk_qwerty',
-                          'French': 'fr',
-                          'Lithuanian azerty standard': 'lt_std',
-                          'Hungarian': 'hu',
-                          'Bulgarian': 'bg',
-                          'Danish': 'dk',
-                          'Belgian': 'be',
-                          'U.S. English w/ISO9995-3': 'en_US',
-                          'Brazilian': 'br',
-                          'Slovenian': 'si',
-                          'Italian': 'it',
-                          'Romanian': 'ro',
-                          'Vietnamese': 'vn',
-                          'Estonian': 'ee',
-                          'Icelandic': 'is',
-                          'Israeli': 'il',
-                          'Swedish': 'se'}
-       
-        keyboard_list = self.keyboard_dict.keys()
-        keyboard_list.sort()
+        self.keyboard_dict = keyboard_models.KeyboardModels().get_models()
+        keys = self.keyboard_dict.keys()
+        keys.sort()
+        keyboard_list = []
+        for item in keys:
+            keyboard_list.append(self.keyboard_dict[item][0])
         keyboard_combo.set_popdown_strings(keyboard_list)
         #set default to English
-        keyboard_combo.list.select_item(43)
-        keyboard_combo.entry.set_editable(gtk.FALSE)		
+        kbd = keyboard.Keyboard()
+        kbd.read()
+        currentKeymap = kbd.get()
+        print currentKeymap
+        keyboard_combo.entry.set_text(self.keyboard_dict[currentKeymap][0])
+        
+#        keyboard_combo.list.select_item(43)
+#        keyboard_combo.entry.set_editable(gtk.FALSE)		
 
         #set default mouse to generic ps/2
         mouse_combo.list.select_item(8)
