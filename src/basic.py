@@ -38,6 +38,7 @@ class basic:
         self.lilo_none_radiobutton = xml.get_widget("lilo_none_radiobutton")
         self.shadow_passwd_checkbutton = xml.get_widget("shadow_passwd_checkbutton")
         self.md5_checkbutton = xml.get_widget("md5_checkbutton")
+        self.emulate_3_buttons = xml.get_widget("emulate_3_buttons")
 
     def getData(self):
         buf = ""
@@ -45,7 +46,7 @@ class basic:
         buf = buf + "\n" + self.languageLookup(self.lang_combo.entry.get_text())
         buf = buf + "\n" + self.languagesupportLookup(self.lang_support_combo.entry.get_text())
         buf = buf + "\n" + "keyboard " + self.keyboard_combo.entry.get_text()
-        buf = buf + "\n" + self.mouseLookup(self.mouse_combo.entry.get_text())
+        buf = buf + "\n" + "mouse " + self.mouseLookup(self.mouse_combo.entry.get_text())
         buf = buf + "\n" + "timezone --utc " + self.timezone_combo.entry.get_text()
         buf = buf + "\n" + "rootpw " + self.root_passwd_entry.get_text()
         if self.lilo_mbr_radiobutton.get_active():
@@ -139,8 +140,15 @@ class basic:
                     return "keyboard us"
 
     def mouseLookup(self, args):
-            if args:	
-                    return "mouse generic3ps/2"
+             buf = ""
+#            if args:	
+#                    return "mouse generic3ps/2"
+             #translate mouse to driver from mouseconfig
+                          
+             #check emulate 3 buttons checkbutton
+             if self.emulate_3_buttons.get_active():
+                 buf = buf + "--emulthree"
+             return buf
 
     def timezoneLookup(self, args):
             if args == 'US Eastern':
