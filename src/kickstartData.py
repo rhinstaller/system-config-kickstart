@@ -340,6 +340,10 @@ class KickstartData:
             file.append("#System authorization infomation")
             file.append("auth " + string.join(self.getAuth(), " "))
 
+        if self.getFirewall():
+            file.append("#Firewall configuration")
+            file.append("firewall " + string.join(self.getFirewall(), " "))
+
         for line in file:
             print line
 
