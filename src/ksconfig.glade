@@ -817,18 +817,8 @@
 		  <can_focus>True</can_focus>
 		  <signal>
 		    <name>toggled</name>
-		    <handler>disableNFS</handler>
-		    <last_modification_time>Wed, 20 Jun 2001 15:34:40 GMT</last_modification_time>
-		  </signal>
-		  <signal>
-		    <name>toggled</name>
-		    <handler>disableFTP</handler>
-		    <last_modification_time>Wed, 20 Jun 2001 15:34:56 GMT</last_modification_time>
-		  </signal>
-		  <signal>
-		    <name>toggled</name>
-		    <handler>disableHD</handler>
-		    <last_modification_time>Wed, 20 Jun 2001 15:35:26 GMT</last_modification_time>
+		    <handler>setState</handler>
+		    <last_modification_time>Sat, 30 Jun 2001 23:00:59 GMT</last_modification_time>
 		  </signal>
 		  <label>CD-ROM</label>
 		  <active>True</active>
@@ -847,18 +837,8 @@
 		  <can_focus>True</can_focus>
 		  <signal>
 		    <name>toggled</name>
-		    <handler>enableNFS</handler>
-		    <last_modification_time>Wed, 20 Jun 2001 15:35:50 GMT</last_modification_time>
-		  </signal>
-		  <signal>
-		    <name>toggled</name>
-		    <handler>disableFTP</handler>
-		    <last_modification_time>Wed, 20 Jun 2001 15:36:01 GMT</last_modification_time>
-		  </signal>
-		  <signal>
-		    <name>toggled</name>
-		    <handler>disableHD</handler>
-		    <last_modification_time>Wed, 20 Jun 2001 15:36:12 GMT</last_modification_time>
+		    <handler>setState</handler>
+		    <last_modification_time>Sat, 30 Jun 2001 23:00:46 GMT</last_modification_time>
 		  </signal>
 		  <label>NFS</label>
 		  <active>False</active>
@@ -877,20 +857,30 @@
 		  <can_focus>True</can_focus>
 		  <signal>
 		    <name>toggled</name>
-		    <handler>enableFTP</handler>
-		    <last_modification_time>Wed, 20 Jun 2001 15:36:25 GMT</last_modification_time>
-		  </signal>
-		  <signal>
-		    <name>toggled</name>
-		    <handler>disableNFS</handler>
-		    <last_modification_time>Wed, 20 Jun 2001 15:36:35 GMT</last_modification_time>
-		  </signal>
-		  <signal>
-		    <name>toggled</name>
-		    <handler>disabledHD</handler>
-		    <last_modification_time>Wed, 20 Jun 2001 15:36:42 GMT</last_modification_time>
+		    <handler>disableHTTP</handler>
+		    <last_modification_time>Sat, 30 Jun 2001 22:33:47 GMT</last_modification_time>
 		  </signal>
 		  <label>FTP</label>
+		  <active>False</active>
+		  <draw_indicator>True</draw_indicator>
+		  <group>install_method_group</group>
+		  <child>
+		    <padding>0</padding>
+		    <expand>False</expand>
+		    <fill>False</fill>
+		  </child>
+		</widget>
+
+		<widget>
+		  <class>GtkRadioButton</class>
+		  <name>http_radiobutton</name>
+		  <can_focus>True</can_focus>
+		  <signal>
+		    <name>toggled</name>
+		    <handler>setState</handler>
+		    <last_modification_time>Sat, 30 Jun 2001 23:00:06 GMT</last_modification_time>
+		  </signal>
+		  <label>HTTP</label>
 		  <active>False</active>
 		  <draw_indicator>True</draw_indicator>
 		  <group>install_method_group</group>
@@ -907,18 +897,8 @@
 		  <can_focus>True</can_focus>
 		  <signal>
 		    <name>toggled</name>
-		    <handler>enableHD</handler>
-		    <last_modification_time>Wed, 20 Jun 2001 15:36:55 GMT</last_modification_time>
-		  </signal>
-		  <signal>
-		    <name>toggled</name>
-		    <handler>disableNFS</handler>
-		    <last_modification_time>Wed, 20 Jun 2001 15:37:04 GMT</last_modification_time>
-		  </signal>
-		  <signal>
-		    <name>toggled</name>
-		    <handler>disableFTP</handler>
-		    <last_modification_time>Wed, 20 Jun 2001 15:37:15 GMT</last_modification_time>
+		    <handler>setState</handler>
+		    <last_modification_time>Sat, 30 Jun 2001 23:00:22 GMT</last_modification_time>
 		  </signal>
 		  <label>Hard Drive</label>
 		  <active>False</active>
@@ -946,7 +926,7 @@
 		<class>GtkTable</class>
 		<name>install_method_table</name>
 		<border_width>6</border_width>
-		<rows>6</rows>
+		<rows>8</rows>
 		<columns>2</columns>
 		<homogeneous>False</homogeneous>
 		<row_spacing>5</row_spacing>
@@ -958,8 +938,60 @@
 		</child>
 
 		<widget>
+		  <class>GtkLabel</class>
+		  <name>ftpdir_label</name>
+		  <label>FTP Directory:</label>
+		  <justify>GTK_JUSTIFY_CENTER</justify>
+		  <wrap>False</wrap>
+		  <xalign>0</xalign>
+		  <yalign>0.5</yalign>
+		  <xpad>0</xpad>
+		  <ypad>0</ypad>
+		  <child>
+		    <left_attach>0</left_attach>
+		    <right_attach>1</right_attach>
+		    <top_attach>3</top_attach>
+		    <bottom_attach>4</bottom_attach>
+		    <xpad>0</xpad>
+		    <ypad>0</ypad>
+		    <xexpand>False</xexpand>
+		    <yexpand>False</yexpand>
+		    <xshrink>False</xshrink>
+		    <yshrink>False</yshrink>
+		    <xfill>True</xfill>
+		    <yfill>False</yfill>
+		  </child>
+		</widget>
+
+		<widget>
+		  <class>GtkLabel</class>
+		  <name>ftpserver_label</name>
+		  <label>FTP Server:</label>
+		  <justify>GTK_JUSTIFY_CENTER</justify>
+		  <wrap>False</wrap>
+		  <xalign>0</xalign>
+		  <yalign>0.5</yalign>
+		  <xpad>0</xpad>
+		  <ypad>0</ypad>
+		  <child>
+		    <left_attach>0</left_attach>
+		    <right_attach>1</right_attach>
+		    <top_attach>2</top_attach>
+		    <bottom_attach>3</bottom_attach>
+		    <xpad>0</xpad>
+		    <ypad>0</ypad>
+		    <xexpand>False</xexpand>
+		    <yexpand>False</yexpand>
+		    <xshrink>False</xshrink>
+		    <yshrink>False</yshrink>
+		    <xfill>True</xfill>
+		    <yfill>False</yfill>
+		  </child>
+		</widget>
+
+		<widget>
 		  <class>GtkEntry</class>
-		  <name>nfsdir_entry</name>
+		  <name>nfsserver_entry</name>
 		  <sensitive>False</sensitive>
 		  <can_focus>True</can_focus>
 		  <editable>True</editable>
@@ -984,7 +1016,7 @@
 
 		<widget>
 		  <class>GtkEntry</class>
-		  <name>nfsserver_entry</name>
+		  <name>nfsdir_entry</name>
 		  <sensitive>False</sensitive>
 		  <can_focus>True</can_focus>
 		  <editable>True</editable>
@@ -1008,8 +1040,60 @@
 		</widget>
 
 		<widget>
+		  <class>GtkLabel</class>
+		  <name>nfsserver_label</name>
+		  <label>NFS Server:</label>
+		  <justify>GTK_JUSTIFY_CENTER</justify>
+		  <wrap>False</wrap>
+		  <xalign>0</xalign>
+		  <yalign>0.5</yalign>
+		  <xpad>0</xpad>
+		  <ypad>0</ypad>
+		  <child>
+		    <left_attach>0</left_attach>
+		    <right_attach>1</right_attach>
+		    <top_attach>0</top_attach>
+		    <bottom_attach>1</bottom_attach>
+		    <xpad>0</xpad>
+		    <ypad>0</ypad>
+		    <xexpand>False</xexpand>
+		    <yexpand>False</yexpand>
+		    <xshrink>False</xshrink>
+		    <yshrink>False</yshrink>
+		    <xfill>True</xfill>
+		    <yfill>False</yfill>
+		  </child>
+		</widget>
+
+		<widget>
+		  <class>GtkLabel</class>
+		  <name>nfsdir_label</name>
+		  <label>NFS Directory:</label>
+		  <justify>GTK_JUSTIFY_CENTER</justify>
+		  <wrap>False</wrap>
+		  <xalign>7.45058e-09</xalign>
+		  <yalign>0.5</yalign>
+		  <xpad>0</xpad>
+		  <ypad>0</ypad>
+		  <child>
+		    <left_attach>0</left_attach>
+		    <right_attach>1</right_attach>
+		    <top_attach>1</top_attach>
+		    <bottom_attach>2</bottom_attach>
+		    <xpad>0</xpad>
+		    <ypad>0</ypad>
+		    <xexpand>False</xexpand>
+		    <yexpand>False</yexpand>
+		    <xshrink>False</xshrink>
+		    <yshrink>False</yshrink>
+		    <xfill>True</xfill>
+		    <yfill>False</yfill>
+		  </child>
+		</widget>
+
+		<widget>
 		  <class>GtkEntry</class>
-		  <name>ftpdir_entry</name>
+		  <name>ftpserver_entry</name>
 		  <sensitive>False</sensitive>
 		  <can_focus>True</can_focus>
 		  <editable>True</editable>
@@ -1034,7 +1118,7 @@
 
 		<widget>
 		  <class>GtkEntry</class>
-		  <name>ftpserver_entry</name>
+		  <name>ftpdir_entry</name>
 		  <sensitive>False</sensitive>
 		  <can_focus>True</can_focus>
 		  <editable>True</editable>
@@ -1069,6 +1153,108 @@
 		  <child>
 		    <left_attach>1</left_attach>
 		    <right_attach>2</right_attach>
+		    <top_attach>6</top_attach>
+		    <bottom_attach>7</bottom_attach>
+		    <xpad>0</xpad>
+		    <ypad>0</ypad>
+		    <xexpand>True</xexpand>
+		    <yexpand>False</yexpand>
+		    <xshrink>False</xshrink>
+		    <yshrink>False</yshrink>
+		    <xfill>True</xfill>
+		    <yfill>False</yfill>
+		  </child>
+		</widget>
+
+		<widget>
+		  <class>GtkEntry</class>
+		  <name>hddir_entry</name>
+		  <sensitive>False</sensitive>
+		  <can_focus>True</can_focus>
+		  <editable>True</editable>
+		  <text_visible>True</text_visible>
+		  <text_max_length>0</text_max_length>
+		  <text></text>
+		  <child>
+		    <left_attach>1</left_attach>
+		    <right_attach>2</right_attach>
+		    <top_attach>7</top_attach>
+		    <bottom_attach>8</bottom_attach>
+		    <xpad>0</xpad>
+		    <ypad>0</ypad>
+		    <xexpand>True</xexpand>
+		    <yexpand>False</yexpand>
+		    <xshrink>False</xshrink>
+		    <yshrink>False</yshrink>
+		    <xfill>True</xfill>
+		    <yfill>False</yfill>
+		  </child>
+		</widget>
+
+		<widget>
+		  <class>GtkLabel</class>
+		  <name>hdpart_label</name>
+		  <label>Hard Drive Partition:</label>
+		  <justify>GTK_JUSTIFY_CENTER</justify>
+		  <wrap>False</wrap>
+		  <xalign>0</xalign>
+		  <yalign>0.5</yalign>
+		  <xpad>0</xpad>
+		  <ypad>0</ypad>
+		  <child>
+		    <left_attach>0</left_attach>
+		    <right_attach>1</right_attach>
+		    <top_attach>6</top_attach>
+		    <bottom_attach>7</bottom_attach>
+		    <xpad>0</xpad>
+		    <ypad>0</ypad>
+		    <xexpand>False</xexpand>
+		    <yexpand>False</yexpand>
+		    <xshrink>False</xshrink>
+		    <yshrink>False</yshrink>
+		    <xfill>True</xfill>
+		    <yfill>False</yfill>
+		  </child>
+		</widget>
+
+		<widget>
+		  <class>GtkLabel</class>
+		  <name>hddir_label</name>
+		  <label>Hard Drive Directory:</label>
+		  <justify>GTK_JUSTIFY_CENTER</justify>
+		  <wrap>False</wrap>
+		  <xalign>0</xalign>
+		  <yalign>0.5</yalign>
+		  <xpad>0</xpad>
+		  <ypad>0</ypad>
+		  <child>
+		    <left_attach>0</left_attach>
+		    <right_attach>1</right_attach>
+		    <top_attach>7</top_attach>
+		    <bottom_attach>8</bottom_attach>
+		    <xpad>0</xpad>
+		    <ypad>0</ypad>
+		    <xexpand>False</xexpand>
+		    <yexpand>False</yexpand>
+		    <xshrink>False</xshrink>
+		    <yshrink>False</yshrink>
+		    <xfill>True</xfill>
+		    <yfill>False</yfill>
+		  </child>
+		</widget>
+
+		<widget>
+		  <class>GtkEntry</class>
+		  <name>httpserver_entry</name>
+		  <sensitive>False</sensitive>
+		  <can_focus>True</can_focus>
+		  <editable>True</editable>
+		  <text_visible>True</text_visible>
+		  <text_max_length>0</text_max_length>
+		  <text></text>
+		  <child>
+		    <left_attach>1</left_attach>
+		    <right_attach>2</right_attach>
 		    <top_attach>4</top_attach>
 		    <bottom_attach>5</bottom_attach>
 		    <xpad>0</xpad>
@@ -1084,7 +1270,7 @@
 
 		<widget>
 		  <class>GtkEntry</class>
-		  <name>hddir_entry</name>
+		  <name>httpdir_entry</name>
 		  <sensitive>False</sensitive>
 		  <can_focus>True</can_focus>
 		  <editable>True</editable>
@@ -1109,89 +1295,11 @@
 
 		<widget>
 		  <class>GtkLabel</class>
-		  <name>label37</name>
-		  <label>NFS Directory:</label>
+		  <name>httpserver_label</name>
+		  <label>HTTP Server:</label>
 		  <justify>GTK_JUSTIFY_CENTER</justify>
 		  <wrap>False</wrap>
 		  <xalign>7.45058e-09</xalign>
-		  <yalign>0.5</yalign>
-		  <xpad>0</xpad>
-		  <ypad>0</ypad>
-		  <child>
-		    <left_attach>0</left_attach>
-		    <right_attach>1</right_attach>
-		    <top_attach>0</top_attach>
-		    <bottom_attach>1</bottom_attach>
-		    <xpad>0</xpad>
-		    <ypad>0</ypad>
-		    <xexpand>False</xexpand>
-		    <yexpand>False</yexpand>
-		    <xshrink>False</xshrink>
-		    <yshrink>False</yshrink>
-		    <xfill>True</xfill>
-		    <yfill>False</yfill>
-		  </child>
-		</widget>
-
-		<widget>
-		  <class>GtkLabel</class>
-		  <name>label38</name>
-		  <label>NFS Server:</label>
-		  <justify>GTK_JUSTIFY_CENTER</justify>
-		  <wrap>False</wrap>
-		  <xalign>0</xalign>
-		  <yalign>0.5</yalign>
-		  <xpad>0</xpad>
-		  <ypad>0</ypad>
-		  <child>
-		    <left_attach>0</left_attach>
-		    <right_attach>1</right_attach>
-		    <top_attach>1</top_attach>
-		    <bottom_attach>2</bottom_attach>
-		    <xpad>0</xpad>
-		    <ypad>0</ypad>
-		    <xexpand>False</xexpand>
-		    <yexpand>False</yexpand>
-		    <xshrink>False</xshrink>
-		    <yshrink>False</yshrink>
-		    <xfill>True</xfill>
-		    <yfill>False</yfill>
-		  </child>
-		</widget>
-
-		<widget>
-		  <class>GtkLabel</class>
-		  <name>label42</name>
-		  <label>Hard Drive Directory:</label>
-		  <justify>GTK_JUSTIFY_CENTER</justify>
-		  <wrap>False</wrap>
-		  <xalign>0</xalign>
-		  <yalign>0.5</yalign>
-		  <xpad>0</xpad>
-		  <ypad>0</ypad>
-		  <child>
-		    <left_attach>0</left_attach>
-		    <right_attach>1</right_attach>
-		    <top_attach>5</top_attach>
-		    <bottom_attach>6</bottom_attach>
-		    <xpad>0</xpad>
-		    <ypad>0</ypad>
-		    <xexpand>False</xexpand>
-		    <yexpand>False</yexpand>
-		    <xshrink>False</xshrink>
-		    <yshrink>False</yshrink>
-		    <xfill>True</xfill>
-		    <yfill>False</yfill>
-		  </child>
-		</widget>
-
-		<widget>
-		  <class>GtkLabel</class>
-		  <name>label41</name>
-		  <label>Hard Drive Partition</label>
-		  <justify>GTK_JUSTIFY_CENTER</justify>
-		  <wrap>False</wrap>
-		  <xalign>0</xalign>
 		  <yalign>0.5</yalign>
 		  <xpad>0</xpad>
 		  <ypad>0</ypad>
@@ -1213,45 +1321,19 @@
 
 		<widget>
 		  <class>GtkLabel</class>
-		  <name>label40</name>
-		  <label>FTP Server:</label>
+		  <name>httpdir_label</name>
+		  <label>HTTP Directory:</label>
 		  <justify>GTK_JUSTIFY_CENTER</justify>
 		  <wrap>False</wrap>
-		  <xalign>0</xalign>
+		  <xalign>7.45058e-09</xalign>
 		  <yalign>0.5</yalign>
 		  <xpad>0</xpad>
 		  <ypad>0</ypad>
 		  <child>
 		    <left_attach>0</left_attach>
 		    <right_attach>1</right_attach>
-		    <top_attach>3</top_attach>
-		    <bottom_attach>4</bottom_attach>
-		    <xpad>0</xpad>
-		    <ypad>0</ypad>
-		    <xexpand>False</xexpand>
-		    <yexpand>False</yexpand>
-		    <xshrink>False</xshrink>
-		    <yshrink>False</yshrink>
-		    <xfill>True</xfill>
-		    <yfill>False</yfill>
-		  </child>
-		</widget>
-
-		<widget>
-		  <class>GtkLabel</class>
-		  <name>label39</name>
-		  <label>FTP Directory:</label>
-		  <justify>GTK_JUSTIFY_CENTER</justify>
-		  <wrap>False</wrap>
-		  <xalign>0</xalign>
-		  <yalign>0.5</yalign>
-		  <xpad>0</xpad>
-		  <ypad>0</ypad>
-		  <child>
-		    <left_attach>0</left_attach>
-		    <right_attach>1</right_attach>
-		    <top_attach>2</top_attach>
-		    <bottom_attach>3</bottom_attach>
+		    <top_attach>5</top_attach>
+		    <bottom_attach>6</bottom_attach>
 		    <xpad>0</xpad>
 		    <ypad>0</ypad>
 		    <xexpand>False</xexpand>
@@ -1585,7 +1667,6 @@
 		    <last_modification_time>Fri, 22 Jun 2001 03:11:42 GMT</last_modification_time>
 		  </signal>
 		  <label>_Add</label>
-		  <relief>GTK_RELIEF_NORMAL</relief>
 		  <child>
 		    <padding>0</padding>
 		    <expand>False</expand>
@@ -1603,7 +1684,6 @@
 		    <last_modification_time>Fri, 22 Jun 2001 03:11:54 GMT</last_modification_time>
 		  </signal>
 		  <label>_Edit</label>
-		  <relief>GTK_RELIEF_NORMAL</relief>
 		  <child>
 		    <padding>0</padding>
 		    <expand>False</expand>
@@ -1621,7 +1701,6 @@
 		    <last_modification_time>Fri, 22 Jun 2001 03:12:07 GMT</last_modification_time>
 		  </signal>
 		  <label>_Delete</label>
-		  <relief>GTK_RELIEF_NORMAL</relief>
 		  <child>
 		    <padding>0</padding>
 		    <expand>False</expand>
@@ -3799,7 +3878,6 @@
 	    <last_modification_time>Tue, 19 Jun 2001 22:55:25 GMT</last_modification_time>
 	  </signal>
 	  <label>Save File...</label>
-	  <relief>GTK_RELIEF_NORMAL</relief>
 	</widget>
 
 	<widget>
@@ -3813,7 +3891,6 @@
 	    <last_modification_time>Tue, 19 Jun 2001 22:54:45 GMT</last_modification_time>
 	  </signal>
 	  <stock_button>GNOME_STOCK_BUTTON_CANCEL</stock_button>
-	  <relief>GTK_RELIEF_NORMAL</relief>
 	</widget>
 
 	<widget>
@@ -3827,7 +3904,6 @@
 	    <last_modification_time>Tue, 19 Jun 2001 22:54:19 GMT</last_modification_time>
 	  </signal>
 	  <stock_button>GNOME_STOCK_BUTTON_HELP</stock_button>
-	  <relief>GTK_RELIEF_NORMAL</relief>
 	</widget>
       </widget>
     </widget>
@@ -3985,7 +4061,6 @@
       <last_modification_time>Wed, 20 Jun 2001 16:09:57 GMT</last_modification_time>
     </signal>
     <label>OK</label>
-    <relief>GTK_RELIEF_NORMAL</relief>
   </widget>
 
   <widget>
@@ -3995,7 +4070,6 @@
     <can_default>True</can_default>
     <can_focus>True</can_focus>
     <label>Cancel</label>
-    <relief>GTK_RELIEF_NORMAL</relief>
   </widget>
 </widget>
 

@@ -32,46 +32,49 @@ class install:
         self.nfs_radiobutton = xml.get_widget("nfs_radiobutton")
         self.ftp_radiobutton = xml.get_widget("ftp_radiobutton")
         self.hd_radiobutton = xml.get_widget("hd_radiobutton")		
+        self.http_radiobutton = xml.get_widget("http_radiobutton")
+
+        self.nfsdir_label = xml.get_widget("nfsdir_label")
+        self.nfsserver_label = xml.get_widget("nfsserver_label")
+        self.ftpdir_label = xml.get_widget("ftpdir_label")
+        self.ftpserver_label = xml.get_widget("ftpserver_label")
+        self.hdpart_label = xml.get_widget("hdpart_label")
+        self.hddir_label = xml.get_widget("hddir_label")
+        self.httpserver_label = xml.get_widget("httpserver_label")
+        self.httpdir_label = xml.get_widget("httpdir_label")
+
         self.nfsdir_entry = xml.get_widget("nfsdir_entry")
         self.nfsserver_entry = xml.get_widget("nfsserver_entry")
         self.ftpdir_entry = xml.get_widget("ftpdir_entry")
         self.ftpserver_entry = xml.get_widget("ftpserver_entry")
         self.hdpart_entry = xml.get_widget("hdpart_entry")
         self.hddir_entry = xml.get_widget("hddir_entry")
+        self.httpserver_entry = xml.get_widget("httpserver_entry")
+        self.httpdir_entry = xml.get_widget("httpdir_entry")
 
         xml.signal_autoconnect (
-            { "enableFTP" : self.enableFTP,
-              "enableNFS" : self.enableNFS,
-              "enableHD" : self.enableHD,
-              "disableFTP" : self.disableFTP,
-              "disableNFS" : self.disableNFS,
-              "disableHD" : self.disableHD,
+            { "setState" : self.setState,
               } )
 
-    def enableNFS(self, args):
-            self.nfsserver_entry.set_sensitive(self.nfs_radiobutton.get_active())
-            self.nfsdir_entry.set_sensitive(self.nfs_radiobutton.get_active())
+    def setState (self, args):
+        self.nfsserver_label.set_sensitive(self.nfs_radiobutton.get_active())
+        self.nfsdir_label.set_sensitive(self.nfs_radiobutton.get_active())
+        self.ftpserver_label.set_sensitive(self.ftp_radiobutton.get_active())
+        self.ftpdir_label.set_sensitive(self.ftp_radiobutton.get_active())
+        self.hdpart_label.set_sensitive(self.hd_radiobutton.get_active())
+        self.hddir_label.set_sensitive(self.hd_radiobutton.get_active())
+        self.httpserver_label.set_sensitive(self.http_radiobutton.get_active())
+        self.httpdir_label.set_sensitive(self.http_radiobutton.get_active())
 
-    def disableNFS(self, args):
-            self.nfsserver_entry.set_state(STATE_INSENSITIVE)
-            self.nfsdir_entry.set_state(STATE_INSENSITIVE)
-
-    def enableFTP(self, args):
-            self.ftpserver_entry.set_sensitive(self.ftp_radiobutton.get_active())
-            self.ftpdir_entry.set_sensitive(self.ftp_radiobutton.get_active())
-
-    def disableFTP(self, args):
-            self.ftpserver_entry.set_state(STATE_INSENSITIVE)
-            self.ftpdir_entry.set_state(STATE_INSENSITIVE)
-
-    def enableHD(self, args):
-            self.hdpart_entry.set_sensitive(self.hd_radiobutton.get_active())
-            self.hddir_entry.set_sensitive(self.hd_radiobutton.get_active())
-
-    def disableHD(self, args):
-            self.hdpart_entry.set_state(STATE_INSENSITIVE)
-            self.hddir_entry.set_state(STATE_INSENSITIVE)
-
+        self.nfsserver_entry.set_sensitive(self.nfs_radiobutton.get_active())
+        self.nfsdir_entry.set_sensitive(self.nfs_radiobutton.get_active())
+        self.ftpserver_entry.set_sensitive(self.ftp_radiobutton.get_active())
+        self.ftpdir_entry.set_sensitive(self.ftp_radiobutton.get_active())
+        self.hdpart_entry.set_sensitive(self.hd_radiobutton.get_active())
+        self.hddir_entry.set_sensitive(self.hd_radiobutton.get_active())
+        self.httpserver_entry.set_sensitive(self.http_radiobutton.get_active())
+        self.httpdir_entry.set_sensitive(self.http_radiobutton.get_active())
+                                     
     def getData(self):
         #specify to perform a fresh install
         buf = "\n" + "install"
