@@ -10,11 +10,11 @@ BuildRoot: %{_tmppath}/ksconfig-%{version}-root
 BuildArch: noarch
 Source: ksconfig-%{version}.tar.gz
 BuildRequires: python-devel
-BuildRequires:gnome-libs-devel
+BuildRequires: gnome-libs-devel
 Requires: pygtk 
 Requires: pygtk-libglade 
-Requires: python >= 1.5.2
-Requires: usermode
+Requires: python2
+Requires: hwdata
 
 %description
 ksconfig is a graphical tool for creating kickstart files.  
