@@ -30,8 +30,8 @@ import os
 ## I18N
 ##
 import gettext
-gettext.bindtextdomain ("ksconfig", "/usr/share/locale")
-gettext.textdomain ("ksconfig")
+gettext.bindtextdomain ("redhat-config-kickstart", "/usr/share/locale")
+gettext.textdomain ("redhat-config-kickstart")
 _=gettext.gettext
 
 class firewall:

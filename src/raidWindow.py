@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-## raidWindow - event handling code for ksconfig's raid dialog
+## raidWindow - event handling code for redhat-config-kickstart's raid dialog
 ## Copyright (C) 2001, 2002 Red Hat, Inc.
 ## Copyright (C) 2001, 2002 Brent Fox <bfox@redhat.com>
 ## Copyright (C) 2001, 2002 Tammy Fox <tfox@redhat.com>

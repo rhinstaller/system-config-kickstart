@@ -1,6 +1,6 @@
 #!/usr/bin/python2.2
 
-## partWindow - event handling code for ksconfig's partitioning dialog
+## partWindow - event handling code for redhat-config-kickstart's partitioning dialog
 ## Copyright (C) 2001, 2002 Red Hat, Inc.
 ## Copyright (C) 2001, 2002 Brent Fox <bfox@redhat.com>
 ## Copyright (C) 2001, 2002 Tammy Fox <tfox@redhat.com>
@@ -32,8 +32,8 @@ import partEntry
 ## I18N
 ##
 import gettext
-gettext.bindtextdomain ("ksconfig", "/usr/share/locale")
-gettext.textdomain ("ksconfig")
+gettext.bindtextdomain ("redhat-config-kickstart", "/usr/share/locale")
+gettext.textdomain ("redhat-config-kickstart")
 _=gettext.gettext
 
 class partWindow:
