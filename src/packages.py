@@ -80,6 +80,7 @@ class Packages:
                        "X Software Development",
                        "GNOME Software Development",
                        "KDE Software Development",
+		       "Everything"
                        ]
 
         for pkg in packageList:
