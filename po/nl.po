@@ -1,17 +1,17 @@
 # Translation of redhat-config-kickstart to Dutch.
 # Copyright (C) 2002 Taco Witte
 # Taco Witte <T.C.Witte@phys.uu.nl>, 2002.
+# Tino Meinen <a.t.meinen@chello.nl>, 2003.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: redhat-config-kickstart\n"
-"PO-Revision-Date: Mon Aug 26 19:27:00 2002\n"
-"Last-Translator: Taco Witte <T.C.Witte@phys.uu.nl>\n"
+"PO-Revision-Date: 2003-02-03 21:43+0100\n"
+"Last-Translator: Tino Meinen <a.t.meinen@chello.nl>\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: pygettext.py 1.1\n"
 
 #: redhat-config-kickstart.gladestrings:279
 msgid "IP Address:"
@@ -84,7 +84,7 @@ msgstr "label35"
 
 #: redhat-config-kickstart.gladestrings:162
 msgid "Delete Network Device"
-msgstr ""
+msgstr "Netwerk-apparaat verwijderen"
 
 #: redhat-config-kickstart.gladestrings:255
 #: redhat-config-kickstart.gladestrings:262
@@ -118,9 +118,8 @@ msgid "Firewall Configuration"
 msgstr "Firewall configuratie"
 
 #: redhat-config-kickstart.gladestrings:73
-#, fuzzy
 msgid "Default Language:"
-msgstr "Taal:"
+msgstr "Standaard-taal:"
 
 #: ../src/partWindow.py:88 redhat-config-kickstart.gladestrings:59
 msgid "ext3"
@@ -200,7 +199,7 @@ msgstr "LDAP-server: "
 
 #: ../src/kickstartGui.py:89
 msgid "Create a kickstart file"
-msgstr ""
+msgstr "Een kickstart-bestand aanmaken"
 
 #: redhat-config-kickstart.gladestrings:269
 msgid ""
@@ -255,9 +254,8 @@ msgid "Specify hsync and vsync instead of monitor"
 msgstr "In plaats van beeldscherm, hsync en vsync aangeven"
 
 #: redhat-config-kickstart.gladestrings:277
-#, fuzzy
 msgid "Network Device:"
-msgstr "Soort netwerk:"
+msgstr "Netwerk-apparaat:"
 
 #: ../src/partWindow.py:90 ../src/partWindow.py:149
 msgid "software RAID"
@@ -361,9 +359,8 @@ msgid "Root Password:"
 msgstr "Root wachtwoord:"
 
 #: redhat-config-kickstart.gladestrings:276
-#, fuzzy
 msgid "Network Device Information"
-msgstr "Netwerk configuratie"
+msgstr "Netwerk-apparaat informatie"
 
 #: redhat-config-kickstart.gladestrings:157
 msgid "RAID"
@@ -441,7 +438,7 @@ msgstr "Voer alstublieft een HTTP-servermap in."
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
-msgstr ""
+msgstr "Een netwerk-apparaat met de naam %s bestaat reeds.  Kies alstublieft een andere naam"
 
 #: redhat-config-kickstart.gladestrings:54
 msgid "md15"
@@ -559,7 +556,7 @@ msgstr "Harde schrijf map:"
 
 #: ../src/kickstartGui.py:88
 msgid "Kickstart"
-msgstr ""
+msgstr "Kickstart"
 
 #: redhat-config-kickstart.gladestrings:191
 msgid "Kerberos 5"
@@ -607,7 +604,7 @@ msgstr "LDAP basisnaam: "
 
 #: redhat-config-kickstart.gladestrings:85
 msgid "Use UTC clock"
-msgstr ""
+msgstr "UTC-klok gebruiken"
 
 #: ../src/raidWindow.py:171
 msgid "You must select at least 3 partitions in order to use RAID %s"
@@ -661,7 +658,7 @@ msgstr "CD-ROM"
 
 #: ../src/redhat-config-kickstart.py:81
 msgid "Try running 'redhat-config-kickstart --help' for a list of options."
-msgstr ""
+msgstr "Probeer 'redhat-config-kickstart --help' voor een lijst met opties."
 
 #: redhat-config-kickstart.gladestrings:197
 msgid "Hesiod Authentication"
@@ -689,7 +686,7 @@ msgstr "Selecteer het standaard firewall niveau:"
 
 #: ../src/redhat-config-kickstart.py:80
 msgid "Could not open display because no X server is running."
-msgstr ""
+msgstr "Kon display niet openen omdat er geen X-server loopt."
 
 #: redhat-config-kickstart.gladestrings:174
 msgid "NIS Authentication"
@@ -824,7 +821,7 @@ msgstr "Bootloader op Master Boot Record (MBR) installeren"
 
 #: ../src/kickstartGui.py:258
 msgid "The file \"%s\" cannot be accessed."
-msgstr ""
+msgstr "Kon geen toegang krijgen tot het bestand \"%s\""
 
 #: redhat-config-kickstart.gladestrings:13
 msgid "Size (MB):"
@@ -844,13 +841,12 @@ msgid "Mount Point:"
 msgstr "Koppelpunt:"
 
 #: ../src/network.py:86
-#, fuzzy
 msgid "Device"
-msgstr "Raid apparaten"
+msgstr "Apparaat"
 
 #: redhat-config-kickstart.gladestrings:160
 msgid "Add Network Device"
-msgstr ""
+msgstr "Netwerk-apparaat toevoegen"
 
 #: ../src/firewall.py:142
 msgid "Other ports: (1029:tcp)"
@@ -901,6 +897,15 @@ msgid ""
 "values from\n"
 "                        the kickstart file already filled in."
 msgstr ""
+"Gebruik: redhat-config-kickstart [--help] [--generate <bestandsnaam>] [<kickstart_bestandsnaam>]\n"
+"\n"
+"--help                     Dit bericht tonen\n"
+"--generate <bestandsnaam>  Een kickstart-bestand genereren van de huidige opstelling\n"
+"                           en dit schrijven naar <bestandsnaam>. Deze optie wordt op\n"
+"                           de console gebruikt en is daarom handig voor servers die\n"
+"                           geen grafische omgeving hebben lopen.\n"
+"<kickstart_bestandsnaam>   Met deze optie zal de grafische omgeving opstarten met de\n"
+"                           waarden uit het kickstart-bestand reeds ingevuld."
 
 #: redhat-config-kickstart.gladestrings:171
 msgid "Use broadcast to find NIS server"
@@ -999,9 +1004,8 @@ msgid "Video Card"
 msgstr "Videokaart"
 
 #: redhat-config-kickstart.gladestrings:65
-#, fuzzy
 msgid "_Open File"
-msgstr "_Bestand opslaan"
+msgstr "Bestand _openen"
 
 #: redhat-config-kickstart.gladestrings:89
 msgid "Basic Configuration (required)"
@@ -1078,7 +1082,7 @@ msgstr "Systeem herstarten na installatie"
 
 #: ../src/network.py:196
 msgid "Please fill in the network information"
-msgstr ""
+msgstr "Informatie over het netwerk invoeren"
 
 #: ../src/raidOptionsWindow.py:77
 msgid "You currently have %d software RAID partition(s) free to use."
@@ -1094,9 +1098,8 @@ msgid "Post-Installation Script"
 msgstr "Na-installatie script"
 
 #: ../src/network.py:89
-#, fuzzy
 msgid "Network Type"
-msgstr "Soort netwerk:"
+msgstr "Soort netwerk"
 
 #: ../src/kickstartGui.py:147 redhat-config-kickstart.gladestrings:252
 msgid "Package Selection"
@@ -1216,7 +1219,7 @@ msgstr "Kon videokaart database niet lezen"
 
 #: redhat-config-kickstart.gladestrings:161
 msgid "Edit Network Device"
-msgstr ""
+msgstr "Netwerk-apparaat bewerken"
 
 #: redhat-config-kickstart.gladestrings:66
 msgid "_Preview"
@@ -1330,15 +1333,3 @@ msgstr "Opslaan naar bestand"
 #: redhat-config-kickstart.gladestrings:68
 msgid "_Quit"
 msgstr "_Afsluiten"
-
-#~ msgid "None"
-#~ msgstr "Geen"
-
-#~ msgid "DHCP"
-#~ msgstr "DHCP"
-
-#~ msgid "Miscellaneous"
-#~ msgstr "Divers"
-
-#~ msgid "physical volume (LVM)"
-#~ msgstr "fysiek volume (LVM)"
