@@ -54,7 +54,7 @@ class saveFile:
 		self.confirm_buffer = gtk.TextBuffer(None)
 		iter = self.confirm_buffer.get_iter_at_offset (0)
 		for line in self.buf:
-			self.confirm_buffer.insert(iter,line + "\n",-1)
+			self.confirm_buffer.insert(iter,line + "\n")
 
 ## 		baseSize = 10
 ## 		baseFont = 'sans'
