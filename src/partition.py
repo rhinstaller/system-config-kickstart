@@ -25,6 +25,7 @@ from gtk import *
 import GtkExtra
 import libglade
 import partWindow
+import raidWindow
 
 class partition:
     def __init__(self, xml):
@@ -39,8 +40,14 @@ class partition:
         self.add_part_button = self.xml.get_widget("add_part_button")
         self.edit_part_button = self.xml.get_widget("edit_part_button")
         self.del_part_button = self.xml.get_widget("del_part_button")
+#        self.raid_part_button = self.xml.get_widget("raid_part_button")
 #        self.partitionDialog = self.xml.get_widget("partition_dialog")
         self.checkbox = self.xml.get_widget("checkbox2")
+
+        #temp until edit partitions finished
+#        self.edit_partition_dialog = self.xml.get_widget("edit_partition_dialog")
+        self.partWindow = partWindow.partWindow(self.xml, self.partClist)
+        self.raidWindow = raidWindow.raidWindow(self.xml, self.partClist)
 
         self.xml.signal_autoconnect (
             { "select_clist" : self.select_clist,
@@ -48,29 +55,8 @@ class partition:
               "addPartition" : self.addPartition,
               "editPartition" : self.editPartition,
               "delPartition" : self.delPartition,
+              "raidPartition" : self.raidPartition, 
               })
-
-        #populate partitions table with default values
-#        bootPartition = ["/boot", "ext2", "35", "No"]
-#        self.partClist.append(bootPartition)
-#        swapPartition = ["", "Linux Swap", "128", "No"]
-#        self.partClist.append(swapPartition)
-#        rootPartition = ["/", "ext2", "1000", "Yes"]
-#        self.partClist.append(rootPartition)
-
-        #keep track of the number of partitions
-	class counterClass:
-            def setCounter(self, start):
-                self.rowCount = start
-            def increment(self):
-                self.rowCount = self.rowCount + 1
-            def decrement(self):
-                self.rowCount = self.rowCount - 1
-            def currentVal(self):
-                return self.rowCount
-                    
-        self.num_parts = counterClass()
-        self.num_parts.setCounter(3)
 
 #    def select_clist(self, r, c, event):
     def select_clist(self, *args ):
@@ -79,69 +65,66 @@ class partition:
         self.edit_part_button.set_sensitive(TRUE)
         self.del_part_button.set_sensitive(TRUE)
 
-#    def unselect_clist(self, *args):
-#        print "item unselected"
-#        self.edit_part_button.set_state(STATE_INSENSITIVE)
-#        self.edit_part_button.set_state(STATE_INSENSITIVE)
-
     def delPartition(self, *args):
         self.num_rows = self.num_rows - 1
-#        self.num_parts.decrement()
-#        self.partClist.remove(selected[0])
         self.partClist.remove(self.selected_row)
         self.edit_part_button.set_state(STATE_INSENSITIVE)
-        self.edit_part_button.set_state(STATE_INSENSITIVE)
+        self.del_part_button.set_state(STATE_INSENSITIVE)
 
     def addPartition(self, *args):
         self.num_rows = self.num_rows + 1
-        self.partWindow = partWindow.partWindow(self.xml, self.partClist)
+        self.partWindow.add_partition()
         self.edit_part_button.set_sensitive(TRUE)
         self.del_part_button.set_sensitive(TRUE)
+#        self.raid_part_button.set_sensitive(TRUE)
+        self.partClist.unselect_all()
 
     def editPartition(self, *args):
-        pass
+        rowData = self.partClist.get_row_data(self.selected_row)
+        self.partWindow.edit_partition(rowData, self.selected_row)
 
-
-        def editEntry(args, editWindow=editWindow, mpCombo=mpCombo, fsCombo=fsCombo, sizeEntry=sizeEntry, growCombo=growCombo, selected=s):
-            a = mpCombo.entry.get_text()
-            b = fsCombo.entry.get_text()
-            c = sizeEntry.get_text()
-            d = growCombo.entry.get_text()
-
-            partClist.remove(selected[0])
-
-            entry = [ a, b, c, d]
-            partClist.insert(selected[0], entry)
-            editWindow.destroy()
-
-            editButton.set_state(STATE_INSENSITIVE)
-            delButton.set_state(STATE_INSENSITIVE)
-        
+    def raidPartition(self, *args):
+        self.raidWindow.add_raid(self.num_rows)
 
     def getData(self):
         buf = ""
+
+        #zerombr and clearpart options
+        if self.clear_mbr_yes_radiobutton.get_active():
+            buf = buf + "\n" + "zerombr yes"
+        elif self.clear_mbr_no_radiobutton.get_active():
+            pass
+        if self.remove_parts_none_radiobutton.get_active():
+            pass
+        elif self.remove_parts_all_radiobutton.get_active():
+            buf = buf + "\n" + "clearpart --all"
+        elif self.remove_parts_Linux_radiobutton.get_active():
+            buf = buf + "\n" + "clearpart --linux"
+
+        #partitioning table options
         num_raid = 0
-        print self.num_rows
         for row in range(self.num_rows):
             rowData = self.partClist.get_row_data(row)
-            (mountPoint, fsType, size, fixedSize, setSize, setSizeVal, maxSize,
-                       asPrimary, asPrimaryNum, asPrimaryVal, onDisk, onDiskVal, onPart, onPartVal, doFormat) = rowData
+            (mountPoint, fsType, size, fixedSize, setSize,
+             setSizeVal, maxSize, asPrimary, asPrimaryNum,
+             asPrimaryVal, onDisk, onDiskVal, onPart, onPartVal,
+             doFormat, raidType, raidSpares, isRaidDevice) = rowData
 
-            if fsType == "RAID partition":
+            if fsType == "RAID":
+                print "here"
                 num_raid = num_raid + 1
                 if num_raid < 10:
-                    buf = buf + "\n" + "part raid.%d%d" %(0, num_raid)
+                    buf = buf + "\n" + "part raid.%d%d " %(0, num_raid)
                 else:
                     buf = buf + "\n" + "part raid.%d " %(num_raid)
             else:
                 buf = buf + "\n" + "part %s " % (mountPoint)
-
+                buf = buf + "--fstype " + fsType + " " 
 
             buf = buf + "--size %s " % (size)
 
             if setSize:
                 buf = buf + "--grow --maxsize %s " % (setSizeVal)
-
             elif maxSize:
                 buf = buf + "--grow "
 
@@ -162,60 +145,3 @@ class partition:
 
         return buf
 
-
-    
-
-
-
-
-
-
-
-
-
-##     def getData(self):
-##         buf = ""
-##         if self.clear_mbr_yes_radiobutton.get_active():
-##             buf = buf + "\n" + "zerombr yes"
-##         elif self.clear_mbr_no_radiobutton.get_active():
-##             buf = buf + "\n" + "zerombr no"			
-
-##         if self.remove_parts_none_radiobutton.get_active():
-##             buf = buf
-##         elif self.remove_parts_all_radiobutton.get_active():
-##             buf = buf + "\n" + "clearpart --all"
-##         elif self.remove_parts_Linux_radiobutton.get_active():
-##             buf = buf + "\n" + "clearpart --linux"
-
-##         rows = self.num_parts.currentVal()
-
-##         for n in range(rows):
-##             print n
-##             line = "part"
-##             for i in range(4):
-##                 if i == 0:
-##                     mount = self.partClist.get_text(n, i)
-##                     if mount == '':                    
-##                         line = line
-##                     else:
-##                         line = line + " " + mount
-##                 elif i == 1:
-##                     fsType = self.partClist.get_text(n, i)
-##                     if fsType == 'Linux Swap':
-##                         line = line + " swap"
-##                     elif fsType == 'ext2':
-##                         line = line + " "
-##                     else:
-##                         line = line + " " + fsType
-##                 elif i == 2:
-##                     size = self.partClist.get_text(n, i)
-##                     line = line + " --size " + size
-##                 elif i == 3:
-##                     grow = self.partClist.get_text(n, i)
-##                     if grow == 'Yes':
-##                         line = line + " --grow"
-##                     else:
-##                         line = line
-
-##             buf = buf + "\n" + line
-##         return buf
