@@ -60,7 +60,7 @@ fi
 - changed the order so that install appears before bootloader
 
 * Fri Jul 26 2002 Tammy Fox <tfox@redhat.com>
-- Change Help menu item to Help Contents
+- Change Help menu item to Contents
 
 * Thu Jul 25 2002 Brent Fox <bfox@redhat.com> 2.3.2-4
 - Fixed bug 68147
