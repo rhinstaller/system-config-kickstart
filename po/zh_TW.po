@@ -1,16 +1,19 @@
 # Translation of zh_TW.po to Chinese (traditional)
+# Translation of zh_TW.po to Chinese (traditional)
+# Translation of zh_TW.po to Chinese (traditional)
+# Translation of zh_TW.po to Chinese (traditional)
 # Copyright (C) 2002 Red Hat Inc.
 # Ben Wu <hpwu@redhat.com>, 2002.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: redhat-config-kickstart\n"
-"PO-Revision-Date: 2002-07-26 16:58+1000\n"
+"PO-Revision-Date: 2002-08-05 10:44+1000\n"
 "Last-Translator: Ben Wu <hpwu@redhat.com>\n"
 "Language-Team: Chinese (traditional) <i18n-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Generated-By: pygettext.py 1.1\n"
 "X-Generator: KBabel 1.0beta1\n"
 
@@ -53,6 +56,8 @@ msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
 msgstr ""
+"您所指定的分割區不是以數字結尾。  分割區必須有一個分割區號碼，例如 "
+"\"hda1\" 或 \"sda3\"。"
 
 #: redhat-config-kickstart.gladestrings:152
 msgid "_Yes"
@@ -101,6 +106,8 @@ msgid ""
 "Partitions must have a valid device name and partition number such as \"hda1"
 "\" or \"sda3\"."
 msgstr ""
+"您所指定的分割區不是以  \"hd\" 或 \"sd\" 開頭。  "
+"分割區必須有一個有效的裝置名稱與分割區號碼，例如 \"hda1\" 或 \"sda3\"。"
 
 #: redhat-config-kickstart.gladestrings:277
 msgid "Monitor"
@@ -140,7 +147,7 @@ msgstr "固定大小"
 
 #: redhat-config-kickstart.gladestrings:55
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: ../src/partWindow.py:83 redhat-config-kickstart.gladestrings:61
 msgid "swap"
@@ -172,7 +179,7 @@ msgstr "GNOME"
 
 #: redhat-config-kickstart.gladestrings:24
 msgid "(for example: hda or sdc)"
-msgstr ""
+msgstr "（例如： hda 或 sdc）"
 
 #: redhat-config-kickstart.gladestrings:304
 msgid "Preview Options"
@@ -183,13 +190,10 @@ msgid "LDAP Server: "
 msgstr "LDAP 伺服器："
 
 #: redhat-config-kickstart.gladestrings:306
-#, fuzzy
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
-msgstr ""
-"您已選取下列組態設定。按下 儲存檔案 來儲存 kickstart 檔。按下 取消 以回到該程"
-"式。"
+msgstr "您已選取下列的組態設定。請按下 『儲存檔案』 來儲存 kickstart 檔案。"
 
 #: redhat-config-kickstart.gladestrings:141
 msgid "Kernel parameters:"
@@ -229,7 +233,7 @@ msgstr "Hesiod"
 
 #: redhat-config-kickstart.gladestrings:283
 msgid "Desktops"
-msgstr ""
+msgstr "桌面"
 
 #: redhat-config-kickstart.gladestrings:221
 msgid "Kerberos Domain Controller (KDC):"
@@ -272,18 +276,16 @@ msgid "Disabled"
 msgstr "已停用"
 
 #: redhat-config-kickstart.gladestrings:138
-#, fuzzy
 msgid "label174"
-msgstr "label1"
+msgstr "label174"
 
 #: ../src/partWindow.py:356
 msgid "Specify a mount point for the partition."
 msgstr "請指定這個分割區的掛載點。"
 
 #: redhat-config-kickstart.gladestrings:134
-#, fuzzy
 msgid "label173"
-msgstr "label1"
+msgstr "label173"
 
 #: redhat-config-kickstart.gladestrings:307
 msgid "RAID Options"
@@ -319,9 +321,8 @@ msgid "HTTP"
 msgstr "HTTP"
 
 #: ../src/raidWindow.py:136 ../src/raidWindow.py:161
-#, fuzzy
 msgid "Raid Devices"
-msgstr "RAID 裝置："
+msgstr "RAID 裝置"
 
 #: ../src/kickstartGui.py:109
 msgid "Boot Loader Options"
@@ -332,13 +333,12 @@ msgid "Automatically Resolve Dependencies"
 msgstr "自動解決相依性問題"
 
 #: redhat-config-kickstart.gladestrings:127
-#, fuzzy
 msgid "Upgrade existing boot loader"
-msgstr "升級目前的開機管理程式設定"
+msgstr "升級目前的開機管理程式"
 
 #: redhat-config-kickstart.gladestrings:129
 msgid "Use LILO for the boot loader"
-msgstr ""
+msgstr "使用 LILO 當作開機管理程式"
 
 #: redhat-config-kickstart.gladestrings:115
 msgid "HTTP Server:"
@@ -402,7 +402,7 @@ msgstr "Linux(_i)"
 
 #: redhat-config-kickstart.gladestrings:288
 msgid "Miscellaneous"
-msgstr ""
+msgstr "其他"
 
 #: redhat-config-kickstart.gladestrings:236
 msgid "SMB Workgroup:"
@@ -450,7 +450,7 @@ msgstr "md13"
 
 #: redhat-config-kickstart.gladestrings:287
 msgid "System"
-msgstr ""
+msgstr "系統"
 
 #: redhat-config-kickstart.gladestrings:94
 #: redhat-config-kickstart.gladestrings:112
@@ -462,11 +462,12 @@ msgid "None"
 msgstr "沒有"
 
 #: ../src/partition.py:71
-#, fuzzy
 msgid ""
 "Mount Point/\n"
 "RAID/Volume"
-msgstr "掛載點"
+msgstr ""
+"掛載點/\n"
+"RAID/磁區"
 
 #: redhat-config-kickstart.gladestrings:156
 msgid "_Edit"
@@ -563,7 +564,7 @@ msgstr "啟用 Kerberos 5 認證"
 
 #: redhat-config-kickstart.gladestrings:128
 msgid "Use GRUB for the boot loader"
-msgstr ""
+msgstr "使用 GRUB 當作開機管理程式"
 
 #: ../src/partWindow.py:82 redhat-config-kickstart.gladestrings:60
 msgid "physical volume (LVM)"
@@ -591,7 +592,7 @@ msgstr "LDAP Base 名稱："
 
 #: ../src/raidWindow.py:125
 msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr ""
+msgstr "為了要使用 RAID %s，您必須至少選擇 3 個分割區"
 
 #: ../src/partWindow.py:203 ../src/partWindow.py:270 ../src/raidWindow.py:152
 #: redhat-config-kickstart.gladestrings:154
@@ -600,18 +601,17 @@ msgstr "確定"
 
 #: redhat-config-kickstart.gladestrings:34
 msgid "Number of spares:"
-msgstr "備用品(spares)的數量："
+msgstr "spares 的數量："
 
 #: redhat-config-kickstart.gladestrings:106
 msgid "FTP Directory:"
 msgstr "FTP 目錄："
 
 #: ../src/partWindow.py:376
-#, fuzzy
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
-msgstr "要建立一個新的 RAID 分割區，您必須指定一個硬碟或一個現有的分割區。"
+msgstr "要建立一個新的 RAID 分割區，您必須指定一個硬碟裝置名稱或一個現有的分割區。"
 
 #: redhat-config-kickstart.gladestrings:296
 msgid "label89"
@@ -622,9 +622,8 @@ msgid "Upgrade"
 msgstr "升級"
 
 #: redhat-config-kickstart.gladestrings:125
-#, fuzzy
 msgid "Install new boot loader"
-msgstr "安裝開機管理程式"
+msgstr "安裝新的開機管理程式"
 
 #: ../src/partWindow.py:205 ../src/partWindow.py:272 ../src/raidWindow.py:154
 #: redhat-config-kickstart.gladestrings:151
@@ -685,7 +684,6 @@ msgid "High"
 msgstr "高"
 
 #: ../src/partWindow.py:225
-#, fuzzy
 msgid "Hard Drives"
 msgstr "硬碟"
 
@@ -694,9 +692,8 @@ msgid "LDAP Authentication"
 msgstr "LDAP 認證"
 
 #: redhat-config-kickstart.gladestrings:284
-#, fuzzy
 msgid "Applications"
-msgstr "認證"
+msgstr "應用程式"
 
 #: redhat-config-kickstart.gladestrings:21
 #: redhat-config-kickstart.gladestrings:26
@@ -767,9 +764,8 @@ msgid "RAID Device:"
 msgstr "RAID 裝置："
 
 #: redhat-config-kickstart.gladestrings:139
-#, fuzzy
 msgid "Install boot loader on Master Boot Record (MBR)"
-msgstr "安裝開機管理程式在： "
+msgstr "安裝開機管理程式在 MBR"
 
 #: redhat-config-kickstart.gladestrings:171
 #: redhat-config-kickstart.gladestrings:173
@@ -862,9 +858,8 @@ msgstr ""
 " 一個用來建立 kickstart 檔案的圖形介面"
 
 #: redhat-config-kickstart.gladestrings:143
-#, fuzzy
 msgid "Boot Loader Options (required)"
-msgstr "開機管理程式選項"
+msgstr "開機管理程式選項（必要的）"
 
 #: redhat-config-kickstart.gladestrings:25
 msgid "Use existing partition (onpart)"
@@ -879,9 +874,8 @@ msgid "Authentication:"
 msgstr "認證："
 
 #: ../src/partition.py:77
-#, fuzzy
 msgid "Size (MB)"
-msgstr "大小 (MB):"
+msgstr "大小 (MB)"
 
 #: redhat-config-kickstart.gladestrings:105
 msgid "FTP Server:"
@@ -905,7 +899,7 @@ msgstr "檔案(_F)"
 
 #: redhat-config-kickstart.gladestrings:29
 msgid "(for example: hda1 or sdc3)"
-msgstr ""
+msgstr "（例如： hda1 或 sdc3）"
 
 #: redhat-config-kickstart.gladestrings:264
 msgid "General"
@@ -917,7 +911,7 @@ msgstr "刪除(_D)"
 
 #: ../src/raidWindow.py:119
 msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr ""
+msgstr "為了要使用 RAID %s，您必須至少選擇 2 個分割區"
 
 #: redhat-config-kickstart.gladestrings:268
 msgid "Video Card"
@@ -940,6 +934,8 @@ msgid ""
 "Device/\n"
 "Partition Number"
 msgstr ""
+"裝置/\n"
+"分割區號碼"
 
 #: redhat-config-kickstart.gladestrings:35
 msgid "Raid Members"
@@ -966,9 +962,8 @@ msgid "Resolution"
 msgstr "解析度"
 
 #: redhat-config-kickstart.gladestrings:126
-#, fuzzy
 msgid "Do not install a boot loader"
-msgstr "安裝開機管理程式"
+msgstr "不安裝開機管理程式"
 
 #: redhat-config-kickstart.gladestrings:36
 msgid "RAID Level:"
@@ -1024,7 +1019,7 @@ msgstr "Kerberos 5 認證"
 
 #: redhat-config-kickstart.gladestrings:286
 msgid "Development"
-msgstr ""
+msgstr "程式開發"
 
 #: ../src/partition.py:131 ../src/partition.py:152
 msgid "Please select a partition from the list."
@@ -1040,7 +1035,7 @@ msgstr "在特定磁碟機上建立分割區 (ondisk)"
 
 #: ../src/partition.py:75
 msgid "Format"
-msgstr ""
+msgstr "格式化"
 
 #: redhat-config-kickstart.gladestrings:251
 #: redhat-config-kickstart.gladestrings:252
@@ -1069,7 +1064,7 @@ msgstr "開機時啟動 X 視窗系統"
 
 #: redhat-config-kickstart.gladestrings:57
 msgid "5"
-msgstr ""
+msgstr "5"
 
 #: redhat-config-kickstart.gladestrings:244
 msgid "Authentication Configuration"
@@ -1084,9 +1079,8 @@ msgid "Enable SMB Authentication"
 msgstr "啟用 SMB 認證"
 
 #: redhat-config-kickstart.gladestrings:285
-#, fuzzy
 msgid "Servers"
-msgstr "SMB 伺服器："
+msgstr "伺服器"
 
 #: ../src/kickstartGui.py:172
 msgid "Help is not available."
@@ -1097,6 +1091,8 @@ msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
 msgstr ""
+"您所指定的裝置不是一個有效的裝置名稱。 請使用一個有效的裝置名稱，例如 "
+"\"hda1\" 或 \"sda3\"。"
 
 #: ../src/basic.py:269
 msgid "Please select a root password."
@@ -1127,9 +1123,8 @@ msgid "Medium"
 msgstr "中"
 
 #: redhat-config-kickstart.gladestrings:140
-#, fuzzy
 msgid "Install boot loader on first sector of the boot partition"
-msgstr "開機磁區的第一扇區(_F)"
+msgstr "安裝開機管理程式在開機磁區的第一扇區"
 
 #: redhat-config-kickstart.gladestrings:96
 #: redhat-config-kickstart.gladestrings:122
@@ -1181,9 +1176,8 @@ msgid "Use GRUB password: "
 msgstr "使用 GRUB 密碼： "
 
 #: redhat-config-kickstart.gladestrings:69
-#, fuzzy
 msgid "_Contents"
-msgstr "說明內容(_H)"
+msgstr "內容(_C)"
 
 #: redhat-config-kickstart.gladestrings:147
 msgid "Initialize the Disk Label:"
@@ -1191,7 +1185,7 @@ msgstr "初始化磁碟標籤："
 
 #: ../src/partWindow.py:231 ../src/partWindow.py:250 ../src/partWindow.py:264
 msgid "Auto"
-msgstr ""
+msgstr "自動"
 
 #: redhat-config-kickstart.gladestrings:228
 msgid "Hesiod LHS:"
@@ -1206,9 +1200,8 @@ msgid "Force use of lba32 mode"
 msgstr "強制使用 lba32 模式"
 
 #: redhat-config-kickstart.gladestrings:305
-#, fuzzy
 msgid "Save to File"
-msgstr "儲存檔案"
+msgstr "儲存到檔案"
 
 #: redhat-config-kickstart.gladestrings:148
 msgid "_No"
@@ -1316,3 +1309,4 @@ msgstr "離開(_Q)"
 
 #~ msgid "Select a Video Card"
 #~ msgstr "選取顯示卡"
+
