@@ -151,15 +151,13 @@ class sambaData:
 		global sambaWorkgroup
 		self.sambaServer = " "
 		self.sambaWorkgroup = " "
-		self.disabled = "TRUE"		
+		self.enabled = 0
 	def set_server(self, name):
 		self.sambaServer = name
         def set_workgroup(self, name):
 		self.sambaWorkgroup = name
-        def set_disabled(self):
-		self.disabled = "TRUE"
-        def set_enabled(self):
-		self.disabled = "FALSE"
+        def set_enabled(self, val):
+		self.enabled = val
 	def return_server(self):
 		return self.sambaServer
 	def return_workgroup(self):
@@ -167,10 +165,10 @@ class sambaData:
 	def return_status(self):
 		return self.disabled
 	def return_data(self):
-		if (self.disabled == 'TRUE'):
+		if self.enabled == 0:
 			return ""
 		else:
-			return " --enablesmbauth --smbservers " + self.sambaServers + " --smbworkgroup " + self.sambaWorkgroup
+			return " --enablesmbauth --smbservers " + self.sambaServer + " --smbworkgroup " + self.sambaWorkgroup
 
       
 class auth:
@@ -206,12 +204,18 @@ class auth:
         else:
             self.myHesiodClass.set_enabled(self.hesiodCheck.get_active())
 
+        if (self.sambaCheck.get_active()):
+            self.mySambaClass.set_server(self.sambaServerEntry.get_text())
+            self.mySambaClass.set_workgroup(self.sambaWorkgroupEntry.get_text())
+        else:
+            self.mySambaClass.set_enabled(self.sambaCheck.get_active())
 
         buf = " "
         buf = buf + self.myNisClass.return_data()
         buf = buf + self.myLDAPClass.return_data()
         buf = buf + self.myKerberosClass.return_data()
         buf = buf + self.myHesiodClass.return_data()
+        buf = buf + self.mySambaClass.return_data()
         return buf
     
     def __init__(self, xml):
@@ -302,8 +306,8 @@ class auth:
         self.sambaLabel2.set_sensitive(self.sambaCheck.get_active())		
         self.sambaServerEntry.set_sensitive(self.sambaCheck.get_active())
         self.sambaWorkgroupEntry.set_sensitive(self.sambaCheck.get_active())	
-        self.mySambaClass.set_enabled()		
-
+        self.mySambaClass.set_enabled(self.sambaCheck.get_active())
+        
     def toggleLDAP(self, args):
         if (self.ldapRadio1.get_active()):
             self.myLDAPClass.set_auth("YES")
