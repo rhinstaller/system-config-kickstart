@@ -26,7 +26,7 @@ install:
 	mkdir -p $(INSTROOT)$(PKGDATADIR)/pixmaps
 	install pixmaps/* $(INSTROOT)$(PKGDATADIR)/pixmaps
 	install ksconfig $(INSTROOT)/usr/sbin/ksconfig
-	install *.py $(INSTROOT)$(PKGDATADIR)
+	install src/*.py $(INSTROOT)$(PKGDATADIR)
 	for d in $(SUBDIRS); do \
 	(cd $$d; $(MAKE) INSTROOT=$(INSTROOT) MANDIR=$(MANDIR) install) \
 		|| case "$(MFLAGS)" in *k*) fail=yes;; *) exit 1;; esac; \
