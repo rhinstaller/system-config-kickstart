@@ -89,18 +89,10 @@ def saveFile_cb(args):
 	except:
 		pass
 
-
-#	try:
-        print firewallWin.getData()
-#		buf = buf + firewallWin.getData()
-#	except:
-#		print "problem"
-#		pass
-
-	#	buf = buf + auth.myNisClass.return_data()
-	#	buf = buf + auth.myLDAPClass.return_data()
-	#	buf = buf + auth.myKerberosClass.return_data()
-	#	buf = buf + auth.myHesiodClass.return_data()
+	try:
+		buf = buf + firewallWin.getData()
+	except:
+		pass
 
 	if mbrRadio1.get_active():
 		buf = buf + "\n" + "zerombr yes"
