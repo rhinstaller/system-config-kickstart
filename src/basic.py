@@ -289,8 +289,10 @@ class basic:
                 mouseLine.remove("--emulthree")
 
             mouseTag = mouseLine[0]
+
+            a, b, c, d, dictMouseTag = self.mouseDict[mouse]
             
-            if self.mouseDict[mouse] == mouseTag:
+            if dictMouseTag == mouseTag:
                 self.mouse_combo.list.select_item(self.mouse_list.index(mouse))
 
         #set timezone
