@@ -1,24 +1,30 @@
-#define languages, add languages here
-langDict = {"Chinese(Mainland)" :  "zh_CN.GB2312",
-                 "Chinese(Taiwan)" : "zh_TW.Big5",
-                 "Czech" : "cs_CZ",
-                 "Danish" : "da_DK",
-		 "Dutch"  : "nl_NL",
-                 "English" : "en_US",
-                 "French" : "fr_FR",
-                 "German" : "de_DE",
-                 "Icelandic" : "is_IS",
-                 "Italian" : "it_IT",
-                 "Japanese" : "ja_JP.eucJP",
-                 "Korean" : "ko_KR.eucKR",
-                 "Norwegian" : "no_NO",
-                 "Portuguese" : "pt_PT",
-                 "Russian" : "ru_RU.k0I8r",
-                 "Slovenian" : "sl_SI",
-                 "Spanish" : "es_ES",
-                 "Swedish" : "sv_SE",
-                 "Ukrainian" : "uk_UA",
-            }
+import string
+
+#pull list of language from system-config-languages
+langDict = {}
+
+lines = open("/usr/share/system-config-language/locale-list", "r").readlines()
+
+for line in lines:
+    tokens = string.split(line)
+
+    if '.' in tokens[0]:
+        #Chop encoding off so we can compare to self.installedLangs
+        langBase = string.split(tokens[0], '.')
+        langBase = langBase[0]
+    elif '@' in tokens[0]:
+        langBase = string.split(tokens[0], '@')
+        langBase = langBase[0]
+    else:
+        langBase = tokens[0]
+
+    name = ""
+    for token in tokens[3:]:
+        name = name + " " + token
+
+    name = string.strip(name)
+    langDict[name] = langBase
+
 
 #define mice, add mice here
 mouseDict = { "No Mouse" : "none",

@@ -88,8 +88,7 @@ class basic:
         self.lang_combo.set_popdown_strings(self.lang_list)
 
         #set default to English
-        self.lang_combo.list.select_item(5)
-        self.lang_combo.entry.set_editable(gtk.FALSE)
+        self.lang_combo.list.select_item(47)
 
         self.populateLangSupport()
 #        for lang in lang_list:
@@ -105,7 +104,6 @@ class basic:
 
         self.mouse_combo.set_popdown_strings(self.mouse_list)
         self.mouse_combo.list.select_item(0)
-        self.mouse_combo.entry.set_editable(gtk.FALSE)		
 
         #populate keyboard combo, add keyboards here
         self.keyboard_dict = keyboard_models.KeyboardModels().get_models()
@@ -157,7 +155,6 @@ class basic:
 
         self.timezone_combo.set_popdown_strings(self.timezone_list)
         self.timezone_combo.list.select_item(select)
-        self.timezone_combo.entry.set_editable(gtk.FALSE)		
 
     def langToggled(self, data, row):
         iter = self.lang_support_store.get_iter((int(row),))
