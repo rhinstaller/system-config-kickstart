@@ -218,15 +218,14 @@ class basic:
         data.append("#Language modules to install")
 
         lang_list = []
-        iter = self.lang_support_store.get_iter_root()
-        next = 1
+        iter = self.lang_support_store.get_iter_first()
 
-        while next:
+        while iter:
             if self.lang_support_store.get_value(iter, 0) == gtk.TRUE:
                 lang = self.lang_support_store.get_value(iter, 1) 
                 lang_list.append(self.langDict[lang])
 
-            next = self.lang_support_store.iter_next(iter)
+            iter = self.lang_support_store.iter_next(iter)
 
         defaultLang = self.languageLookup(self.lang_combo.entry.get_text())
 

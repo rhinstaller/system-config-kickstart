@@ -155,7 +155,7 @@ class partition:
         #partitioning table options
 #        num_raid = 0
 
-        iter = self.part_store.get_iter_root()
+        iter = self.part_store.get_iter_first()
 
         while iter:
             part_object = self.part_store.get_value(iter, 4)

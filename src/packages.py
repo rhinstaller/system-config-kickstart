@@ -91,13 +91,12 @@ class Packages:
         else:
             data.append("%packages")            
 
-        iter = self.package_store.get_iter_root()
-        next = 1
+        iter = self.package_store.get_iter_first()
 
         #Loop over the package list and see what was selected
-        while next:
+        while iter:
             if self.package_store.get_value(iter, 0) == gtk.TRUE:
                 data.append("@" + self.package_store.get_value(iter, 1))
-            next = self.package_store.iter_next(iter)
+            iter = self.package_store.iter_next(iter)
 
         return data
