@@ -356,19 +356,28 @@ class partWindow:
                                   "a hard drive device name or an existing partition."))
             return None
 
-        lastRaidNumber = ""
-        iter = self.part_store.get_iter_first()        
-        while iter:
-            pyObject = self.part_store.get_value(iter, 5)
-            if pyObject and pyObject.fsType == "raid":
-                lastRaidNumber = pyObject.raidNumber
-            iter = self.part_store.iter_next(iter)        
+        self.lastRaidNumber = ""
 
-        if lastRaidNumber == "":
+
+        self.part_store.foreach(self.countRaid)
+
+#        iter = self.part_store.get_iter_first()        
+
+
+                
+
+##         while iter:
+##             print iter
+##             pyObject = self.part_store.get_value(iter, 5)
+##             if pyObject and pyObject.fsType == "raid":
+##                 lastRaidNumber = pyObject.raidNumber
+##             iter = self.part_store.iter_next(iter)        
+
+        if self.lastRaidNumber == "":
             fsType = "raid"
             part_object.raidNumber = "01"
         else:
-            tmpNum = int(lastRaidNumber) + 1
+            tmpNum = int(self.lastRaidNumber) + 1
             if tmpNum < 10:
                 part_object.raidNumber = "0%s" % str(tmpNum)
             else:
@@ -376,6 +385,15 @@ class partWindow:
             
         #If all the checks pass, then return
         return fsType
+
+    def countRaid(self, store, data, iter):
+        print "in countRaid"
+        part_object = self.part_store.get_value(iter, 5)
+        if part_object and part_object.fsType == "raid":
+            if self.lastRaidNumber < part_object.raidNumber:
+                print "setting raid number to", part_object.raidNumber
+                self.lastRaidNumber = part_object.raidNumber
+
     
     def isDeviceValid(self, device):
         if device[:2] == "hd" or device[:2] == "sd":

@@ -155,24 +155,17 @@ class partition:
         data.append("")
         data.append("#Disk partitioning information")
 
-        #partitioning table options
-#        num_raid = 0
+        self.partDataBuf = []
+        self.part_store.foreach(self.getPartData)
 
-        iter = self.part_store.get_iter_first()
+        data = data + self.partDataBuf
+        
+        return data
 
-        while iter:
-            part_object = self.part_store.get_value(iter, 4)
+    def getPartData(self, store, data, iter):
+        part_object = self.part_store.get_value(iter, 5)
 
-##             if fsType == "RAID":
-##                 num_raid = num_raid + 1
-##                 if num_raid < 10:
-##                     buf = buf + "\n" + "part raid.%d%d " %(0, num_raid)
-##                 else:
-##                     buf = buf + "\n" + "part raid.%d " %(num_raid)
-##             else:
-##                 buf = buf + "\n" + "part %s " % (mountPoint)
-##                 buf = buf + "--fstype " + fsType + " " 
-
+        if part_object:
             buf = "part %s" % (part_object.mountPoint)
 
             if part_object.fsType == "swap":
@@ -181,7 +174,7 @@ class partition:
                 buf = buf + "raid.%s " % part_object.raidNumber
             else:
                 buf = buf + " --fstype " + part_object.fsType + " " 
-                
+
             if part_object.size == "recommended":
                 buf = buf + "--recommended"
             else:
@@ -195,19 +188,14 @@ class partition:
             if part_object.asPrimary:
                 buf = buf + "--asprimary "
 
-#            if asPrimaryNum:
-#                buf = buf + "--onprimary %s " % (asPrimaryVal)
+            if part_object.partition:
+                buf = buf + "--onpart %s " % (part_object.partition)
 
-            if part_object.onDisk:
-                buf = buf + "--ondisk %s " % (part_object.onDiskVal)
-
-            if part_object.onPart:
-                buf = buf + "--onpart %s " % (part_object.onPartVal)
+            elif part_object.device:
+                buf = buf + "--ondisk %s " % (part_object.device)
 
             if not part_object.doFormat:
                 buf = buf + "--noformat "
 
-            data.append(buf)
-            iter = self.part_store.iter_next(iter)
-
-        return data
+            self.partDataBuf.append(buf)
+            
