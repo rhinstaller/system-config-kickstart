@@ -23,6 +23,7 @@
 
 import gtk
 import gtk.glade
+import gobject
 import string
 import os
 
@@ -45,7 +46,7 @@ class firewall:
         self.firewallCustomizeRadio = xml.get_widget("firewallCustomizeRadio")        
         self.trusted_devices_label = xml.get_widget("trusted_devices_label")
         self.allow_incoming_label = xml.get_widget("allow_incoming_label")
-        self.firewall_ports_label = xml.get_widget("firewall_ports_label")
+        self.fnnirewall_ports_label = xml.get_widget("firewall_ports_label")
         self.firewall_ports_entry = xml.get_widget("firewall_ports_entry")
         self.customTable = xml.get_widget("customTable")
         self.customFrame = xml.get_widget("customFrame")
@@ -75,24 +76,69 @@ class firewall:
         except:
             pass
 
+        self.trustedStore = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
+        self.trustedView = gtk.TreeView()
+        self.trustedView.set_headers_visible(gtk.FALSE)
+        self.trustedView.set_model(self.trustedStore)
+        self.checkbox = gtk.CellRendererToggle()
+        col = gtk.TreeViewColumn('', self.checkbox, active = 0)
+        col.set_fixed_width(20)
+        col.set_clickable(gtk.TRUE)
+#        self.checkbox.connect("toggled", self.langToggled)
+        self.trustedView.append_column(col)
+
+        col = gtk.TreeViewColumn("", gtk.CellRendererText(), text=1)
+        self.trustedView.append_column(col)
+
+        for device in self.netdevices:
+            iter = self.trustedStore.append()
+            self.trustedStore.set_value(iter, 0, gtk.FALSE)
+            self.trustedStore.set_value(iter, 1, device)
+
 ##         self.trusted = checklist.CheckList(1)
 ##         self.trusted.connect ('button_press_event', self.trusted_select_row)
 ##         self.trusted.connect ("key_press_event", self.trusted_key_press)
-##         self.customTable.attach (self.trusted, 1, 2, 2, 3, gtk.EXPAND|gtk.FILL, gtk.FILL, 5, 5)
+        viewport = gtk.Viewport()
+        viewport.set_shadow_type(gtk.SHADOW_ETCHED_IN)
+        viewport.add(self.trustedView)
+        self.customTable.attach (viewport, 1, 2, 2, 3, gtk.EXPAND|gtk.FILL, gtk.FILL, 5, 5)
 
 ##         for device in self.netdevices:
 ##             self.trusted.append_row((device, device), gtk.FALSE)
 
         self.label2 = gtk.Label (_("Allow incoming:"))
         self.label2.set_alignment (0.0, 0.0)
-#        self.incoming = checklist.CheckList(1)
+
+        self.incomingStore = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
+        self.incomingView = gtk.TreeView()
+        self.incomingView.set_headers_visible(gtk.FALSE)        
+        self.incomingView.set_model(self.incomingStore)
+        self.checkbox = gtk.CellRendererToggle()
+        col = gtk.TreeViewColumn('', self.checkbox, active = 0)
+        col.set_fixed_width(20)
+        col.set_clickable(gtk.TRUE)
+#        self.checkbox.connect("toggled", self.langToggled)
+        self.incomingView.append_column(col)
 #        self.incoming.connect ('button_press_event', self.incoming_select_row)
 #        self.incoming.connect ("key_press_event", self.incoming_key_press)
-        self.customTable.attach (self.label2, 0, 1, 3, 4, gtk.FILL, gtk.FILL, 5, 5)
-#        self.customTable.attach (self.incoming, 1, 2, 3, 4, gtk.EXPAND|gtk.FILL, gtk.FILL, 5, 5)
+
+        col = gtk.TreeViewColumn("", gtk.CellRendererText(), text=1)
+        self.incomingView.append_column(col)
 
         self.list = {"DHCP":"dhcp", "SSH":"ssh", "Telnet":"telnet", "WWW (HTTP)":"http",
                      "Mail (SMTP)":"smtp", "FTP":"ftp"}
+
+        for item in self.list.keys():
+            iter = self.incomingStore.append()
+            self.incomingStore.set_value(iter, 0, gtk.FALSE)
+            self.incomingStore.set_value(iter, 1, item)
+
+        viewport = gtk.Viewport()
+        viewport.set_shadow_type(gtk.SHADOW_ETCHED_IN)
+        viewport.add(self.incomingView)
+
+        self.customTable.attach (self.label2, 0, 1, 3, 4, gtk.FILL, gtk.FILL, 5, 5)
+        self.customTable.attach (viewport, 1, 2, 3, 4, gtk.EXPAND|gtk.FILL, gtk.FILL, 5, 5)
 
 ##        for item in self.list.keys():
 ##            self.incoming.append_row ((item, item), gtk.FALSE)
@@ -105,24 +151,20 @@ class firewall:
         self.customTable.attach (self.portsEntry, 1, 2, 4, 5, gtk.EXPAND|gtk.FILL, gtk.FILL, 5, 5)
         
         #initialize custom options to not sensitive
-        self.label1.set_sensitive(gtk.FALSE)
-        self.label2.set_sensitive(gtk.FALSE)
-        self.label3.set_sensitive(gtk.FALSE)        
-#        self.trusted.set_sensitive(gtk.FALSE)
-#        self.incoming.set_sensitive(gtk.FALSE)
-        self.portsEntry.set_sensitive(gtk.FALSE)
-        
+        self.customTable.set_sensitive(gtk.FALSE)
+
     def disable_firewall (self, widget):
         active = not (self.securityNoneRadio.get_active())
-        self.customFrame.set_sensitive (active)
+        self.firewallDefaultRadio.set_sensitive (active)
+        self.customizeRadio.set_sensitive (active)        
+
+        if self.securityNoneRadio.get_active() == gtk.TRUE:
+            self.customTable.set_sensitive (gtk.FALSE)
+        else:
+            self.customTable.set_sensitive(self.firewallCustomizeRadio.get_active())
 
     def enable_custom (self, widget):
-        self.label1.set_sensitive(self.firewallCustomizeRadio.get_active())
-        self.label2.set_sensitive(self.firewallCustomizeRadio.get_active())
-        self.label3.set_sensitive(self.firewallCustomizeRadio.get_active())        
-#        self.trusted.set_sensitive(self.firewallCustomizeRadio.get_active())
-#        self.incoming.set_sensitive(self.firewallCustomizeRadio.get_active())
-        self.portsEntry.set_sensitive(self.firewallCustomizeRadio.get_active())
+        self.customTable.set_sensitive(self.firewallCustomizeRadio.get_active())
     
 ##     def trusted_select_row(self, clist, event):
 ##         try:
