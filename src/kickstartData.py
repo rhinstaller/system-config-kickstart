@@ -413,7 +413,11 @@ class KickstartData:
         if self.getPartitions() != []:
             file.append("#Disk partitioning information")
             for line in self.getPartitions():
-                file.append("part " + string.join(line, " "))
+                tokens = string.split(string.strip(line[0]))
+                if tokens[0] == "raid":
+                    file.append(string.join(line, " "))
+                else:
+                    file.append("part " + string.join(line, " "))
 
         if self.getAuth():
             file.append("#System authorization infomation")
