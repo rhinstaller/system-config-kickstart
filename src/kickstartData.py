@@ -42,6 +42,7 @@ class KickstartData:
         self.networkList = []
         self.auth = None
         self.firewall = None
+        self.selinux = None
         self.skipx = None
         self.package = None
         self.everything = False
@@ -243,6 +244,12 @@ class KickstartData:
 
     def getFirewall(self):
         return self.firewall
+
+    def setSELinux(self, args):
+        self.selinux = args
+
+    def getSELinux(self):
+        return self.selinux
 
     def setSkipX(self, args):
         if args == None:
@@ -463,6 +470,10 @@ class KickstartData:
         if self.getFirewall():
             file.append("#Firewall configuration")
             file.append("firewall " + string.join(self.getFirewall(), " "))
+
+        if self.getSELinux():
+            file.append("#SELinux configuration")
+            file.append("selinux " + self.getSELinux())
 
         if self.getXconfig():
             file.append("#XWindows configuration information")
