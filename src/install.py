@@ -130,19 +130,27 @@ class install:
         if self.cdrom_radiobutton.get_active():
             self.kickstartData.setCdrom("cdrom")
         elif self.nfs_radiobutton.get_active():
-            if self.nfsserver_entry.get_text() == "":
+            server = self.nfsserver_entry.get_text()
+            if server == "":
                 self.showDialog(_("Please enter an NFS server."), self.nfsserver_entry)
                 return
-            if self.nfsdir_entry.get_text() == "":
+            if server == "":
                 self.showDialog(_("Please enter an NFS directory."), self.nfsdir_entry)
                 return
-            buf = "--server=" + self.nfsserver_entry.get_text()
+            if server [-1] == "/":
+                server = server[:-1]
+            buf = "--server=" + server
             buf = buf + " --dir=" + self.nfsdir_entry.get_text()
             self.kickstartData.setNfs(buf)
         elif self.ftp_radiobutton.get_active():
-            if self.ftpserver_entry.get_text() == "":
+            ftpserver = string.strip(self.ftpserver_entry.get_text())
+            if ftpserver == "":
                 self.showDialog(_("Please enter an FTP server."), self.ftpserver_entry)
                 return
+            if ftpserver[:6] == "ftp://":
+                ftpserver = ftpserver[6:]
+            if ftpserver[-1] == "/":
+                ftpserver = ftpserver[:-1]
             if self.ftpdir_entry.get_text() == "":
                 self.showDialog(_("Please enter an FTP directory."), self.ftpserver_entry)
                 return
@@ -158,7 +166,7 @@ class install:
 
                 buf = buf + self.ftpuser_entry.get_text() + ":" + self.ftppasswd_entry.get_text() + "@"
             
-            buf = buf + self.ftpserver_entry.get_text()
+            buf = buf + ftpserver
             directory = self.ftpdir_entry.get_text()		
             if directory[0] == '/':
                 buf = buf + directory
@@ -173,7 +181,16 @@ class install:
             if self.httpdir_entry.get_text() == "":
                 self.showDialog(_("Please enter an HTTP server directory."), self.httpdir_entry)
                 return
-            buf = "http://" + self.httpserver_entry.get_text()
+
+            loc = string.strip(self.httpserver_entry.get_text())
+
+            if loc[:7] == "http://":
+                #strip the "http://" out
+                loc = loc[7:]
+            if loc [-1] == "/":
+                loc = loc[:-1]
+
+            buf = "http://" + loc
             directory = self.httpdir_entry.get_text()		
             if directory[0] == '/':
                 buf = buf + directory
