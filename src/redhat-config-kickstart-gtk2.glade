@@ -1380,7 +1380,7 @@
 		      <accelerator key="S" modifiers="GDK_CONTROL_MASK" signal="activate"/>
 
 		      <child internal-child="image">
-			<widget class="GtkImage" id="image57">
+			<widget class="GtkImage" id="image63">
 			  <property name="visible">True</property>
 			  <property name="stock">gtk-save-as</property>
 			  <property name="icon_size">1</property>
@@ -1401,7 +1401,7 @@
 		      <accelerator key="Q" modifiers="GDK_CONTROL_MASK" signal="activate"/>
 
 		      <child internal-child="image">
-			<widget class="GtkImage" id="image58">
+			<widget class="GtkImage" id="image64">
 			  <property name="visible">True</property>
 			  <property name="stock">gtk-quit</property>
 			  <property name="icon_size">1</property>
@@ -1430,12 +1430,12 @@
 		  <child>
 		    <widget class="GtkImageMenuItem" id="help_menu">
 		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">_Help</property>
+		      <property name="label" translatable="yes">_Help Contents</property>
 		      <property name="use_underline">True</property>
 		      <accelerator key="H" modifiers="GDK_CONTROL_MASK" signal="activate"/>
 
 		      <child internal-child="image">
-			<widget class="GtkImage" id="image59">
+			<widget class="GtkImage" id="image65">
 			  <property name="visible">True</property>
 			  <property name="stock">gtk-help</property>
 			  <property name="icon_size">1</property>
@@ -1455,7 +1455,7 @@
 		      <property name="use_underline">True</property>
 
 		      <child internal-child="image">
-			<widget class="GtkImage" id="image60">
+			<widget class="GtkImage" id="image66">
 			  <property name="visible">True</property>
 			  <property name="stock">gnome-stock-about</property>
 			  <property name="icon_size">1</property>
@@ -3815,6 +3815,7 @@
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
+				  <property name="group">clear_mbr_no_radiobutton</property>
 				</widget>
 				<packing>
 				  <property name="left_attach">3</property>
@@ -3836,7 +3837,7 @@
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
-				  <property name="group">remove_parts_Linux_radiobutton</property>
+				  <property name="group">clear_mbr_no_radiobutton</property>
 				</widget>
 				<packing>
 				  <property name="left_attach">2</property>
@@ -3858,6 +3859,7 @@
 				  <property name="active">True</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
+				  <property name="group">clear_mbr_no_radiobutton</property>
 				</widget>
 				<packing>
 				  <property name="left_attach">2</property>
@@ -3901,7 +3903,7 @@
 				  <property name="active">True</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
-				  <property name="group">remove_parts_Linux_radiobutton</property>
+				  <property name="group">clear_mbr_no_radiobutton</property>
 				</widget>
 				<packing>
 				  <property name="left_attach">1</property>
@@ -3923,7 +3925,7 @@
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
-				  <property name="group">initlabel_no_radiobutton</property>
+				  <property name="group">clear_mbr_no_radiobutton</property>
 				</widget>
 				<packing>
 				  <property name="left_attach">1</property>

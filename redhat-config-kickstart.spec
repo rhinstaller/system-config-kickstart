@@ -6,9 +6,9 @@ URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
 Group: System Environment/Base
-BuildRoot: %{_tmppath}/redhat-config-kickstart-%{version}-root
+BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildArch: noarch
-Source0: redhat-config-kickstart-%{version}.tar.gz
+Source0: %{name}-%{version}.tar.gz
 Obsoletes: ksconfig
 BuildRequires: desktop-file-utils
 Requires: pygtk2 >= 1.99.11
@@ -18,7 +18,7 @@ Requires: hwdata
 Requires: rhpl
 
 %description
-redhat-config-kickstart is a graphical tool for creating kickstart files.  
+Kickstart Configurator is a graphical tool for creating kickstart files.  
 
 %prep
 %setup -q
@@ -30,7 +30,7 @@ desktop-file-install --vendor redhat --delete-original      \
   --add-category Application \
   --add-category System \
   --add-category X-Red-Hat-Base          \
-  $RPM_BUILD_ROOT%{_datadir}/applications/redhat-config-kickstart.desktop
+  $RPM_BUILD_ROOT%{_datadir}/applications/%{name}.desktop
 
 %find_lang %name
 
@@ -38,23 +38,26 @@ desktop-file-install --vendor redhat --delete-original      \
 rm -rf $RPM_BUILD_ROOT
 
 %preun
-if [ -d /usr/share/redhat-config-kickstart ] ; then
-  rm -rf /usr/share/redhat-config-kickstart/*.pyc
+if [ -d /usr/share/%{name} ] ; then
+  rm -rf /usr/share/%{name}/*.pyc
 fi
 
 %files -f %{name}.lang
 %defattr(-,root,root)
 %doc COPYING
 %doc doc/*
-/usr/sbin/redhat-config-kickstart
+/usr/sbin/%{name}
 /usr/sbin/ksconfig
-%dir /usr/share/redhat-config-kickstart
-/usr/share/redhat-config-kickstart/*
-%{_mandir}/man8/redhat-config-kickstart*
-%lang(ja) %{_mandir}/ja/man8/redhat-config-kickstart*
-%attr(0644,root,root) %{_datadir}/applications/redhat-config-kickstart.desktop
+%dir /usr/share/%{name}
+/usr/share/%{name}/*
+%{_mandir}/man8/%{name}*
+%lang(ja) %{_mandir}/ja/man8/%{name}*
+%attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Fri Jul 26 2002 Tammy Fox <tfox@redhat.com>
+- Change Help menu item to Help Contents
+
 * Thu Jul 25 2002 Brent Fox <bfox@redhat.com> 2.3.2-4
 - Fixed bug 68147
 - Write out the console keyboard keymap, not the X keymap
