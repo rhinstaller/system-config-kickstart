@@ -46,32 +46,32 @@ class Packages:
         self.ignore_deps_checkbutton.connect("toggled", self.on_ignore_deps_toggled)        
 
         self.desktops_eventbox = xml.get_widget("desktops_eventbox")
-        self.desktops_eventbox.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#737db5"))
+        self.desktops_eventbox.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#00009c"))
         self.desktops_label = xml.get_widget("desktops_label")
         self.desktops_label.set_markup("<span foreground='white'><big><b>%s</b></big></span>" % (self.desktops_label.get(),))
 
         self.applications_eventbox = xml.get_widget("applications_eventbox")
-        self.applications_eventbox.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#737db5"))
+        self.applications_eventbox.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#00009c"))
         self.applications_label = xml.get_widget("applications_label")
         self.applications_label.set_markup("<span foreground='white'><big><b>%s</b></big></span>" % (self.applications_label.get(),))
 
         self.servers_eventbox = xml.get_widget("servers_eventbox")
-        self.servers_eventbox.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#737db5"))
+        self.servers_eventbox.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#00009c"))
         self.servers_label = xml.get_widget("servers_label")
         self.servers_label.set_markup("<span foreground='white'><big><b>%s</b></big></span>" % (self.servers_label.get(),))
 
         self.development_eventbox = xml.get_widget("development_eventbox")
-        self.development_eventbox.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#737db5"))
+        self.development_eventbox.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#00009c"))
         self.development_label = xml.get_widget("development_label")
         self.development_label.set_markup("<span foreground='white'><big><b>%s</b></big></span>" % (self.development_label.get(),))
 
         self.system_eventbox = xml.get_widget("system_eventbox")
-        self.system_eventbox.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#737db5"))
+        self.system_eventbox.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#00009c"))
         self.system_label = xml.get_widget("system_label")
         self.system_label.set_markup("<span foreground='white'><big><b>%s</b></big></span>" % (self.system_label.get(),))
 
         self.miscellaneous_eventbox = xml.get_widget("miscellaneous_eventbox")
-        self.miscellaneous_eventbox.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#737db5"))
+        self.miscellaneous_eventbox.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#00009c"))
         self.miscellaneous_label = xml.get_widget("miscellaneous_label")
         self.miscellaneous_label.set_markup("<span foreground='white'><big><b>%s</b></big></span>" % (self.miscellaneous_label.get(),))
 
