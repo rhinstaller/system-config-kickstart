@@ -120,7 +120,7 @@ class Packages:
                        "Windows File Server",
                        "DNS Name Server", 
                        "FTP Server",
-                       "SQL Database Server",
+#                       "SQL Database Server",
                        "News Server",
                        "Network Servers"
                        ]
