@@ -39,4 +39,5 @@ class partEntry:
         self.doFormat = ""
         self.raidType = ""
         self.raidSpares = ""
+        self.raidNumber = ""
         self.isRaidDevice = ""
