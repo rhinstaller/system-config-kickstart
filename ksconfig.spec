@@ -32,12 +32,13 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/*
 
 %changelog
-* Tue Jan 16 2001 Brent Fox <bfox@redhat.com>
-- initial packaging
-
 * Sat Jan 27 2001 Tammy Fox <tfox@redhat.com>
 - added file dialog box
 - cleaned up code
 - renamed okButton to saveButton in ksconfig.py
 - renamed Cancel button to Exit in interface
 - added /boot to default partition list
+
+* Tue Jan 16 2001 Brent Fox <bfox@redhat.com>
+- initial packaging
+
