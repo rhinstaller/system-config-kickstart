@@ -240,7 +240,7 @@
 	      <widget>
 		<class>GtkTable</class>
 		<name>basic_config_table</name>
-		<rows>7</rows>
+		<rows>8</rows>
 		<columns>2</columns>
 		<homogeneous>False</homogeneous>
 		<row_spacing>8</row_spacing>
@@ -500,30 +500,6 @@
 		</widget>
 
 		<widget>
-		  <class>GtkEntry</class>
-		  <name>root_passwd_entry</name>
-		  <can_focus>True</can_focus>
-		  <editable>True</editable>
-		  <text_visible>False</text_visible>
-		  <text_max_length>0</text_max_length>
-		  <text></text>
-		  <child>
-		    <left_attach>1</left_attach>
-		    <right_attach>2</right_attach>
-		    <top_attach>6</top_attach>
-		    <bottom_attach>7</bottom_attach>
-		    <xpad>0</xpad>
-		    <ypad>0</ypad>
-		    <xexpand>True</xexpand>
-		    <yexpand>False</yexpand>
-		    <xshrink>False</xshrink>
-		    <yshrink>False</yshrink>
-		    <xfill>True</xfill>
-		    <yfill>False</yfill>
-		  </child>
-		</widget>
-
-		<widget>
 		  <class>GtkCombo</class>
 		  <name>timezone_combo</name>
 		  <value_in_list>False</value_in_list>
@@ -626,6 +602,65 @@
 		    <xpad>0</xpad>
 		    <ypad>0</ypad>
 		    <xexpand>True</xexpand>
+		    <yexpand>False</yexpand>
+		    <xshrink>False</xshrink>
+		    <yshrink>False</yshrink>
+		    <xfill>True</xfill>
+		    <yfill>False</yfill>
+		  </child>
+		</widget>
+
+		<widget>
+		  <class>GtkHBox</class>
+		  <name>hbox38</name>
+		  <homogeneous>False</homogeneous>
+		  <spacing>0</spacing>
+		  <child>
+		    <left_attach>1</left_attach>
+		    <right_attach>2</right_attach>
+		    <top_attach>6</top_attach>
+		    <bottom_attach>7</bottom_attach>
+		    <xpad>0</xpad>
+		    <ypad>0</ypad>
+		    <xexpand>False</xexpand>
+		    <yexpand>False</yexpand>
+		    <xshrink>False</xshrink>
+		    <yshrink>False</yshrink>
+		    <xfill>True</xfill>
+		    <yfill>True</yfill>
+		  </child>
+
+		  <widget>
+		    <class>GtkEntry</class>
+		    <name>root_passwd_entry</name>
+		    <can_focus>True</can_focus>
+		    <editable>True</editable>
+		    <text_visible>False</text_visible>
+		    <text_max_length>0</text_max_length>
+		    <text></text>
+		    <child>
+		      <padding>0</padding>
+		      <expand>True</expand>
+		      <fill>True</fill>
+		    </child>
+		  </widget>
+		</widget>
+
+		<widget>
+		  <class>GtkCheckButton</class>
+		  <name>encrypt_root_pw_checkbutton</name>
+		  <can_focus>True</can_focus>
+		  <label>Encrypt root password</label>
+		  <active>False</active>
+		  <draw_indicator>True</draw_indicator>
+		  <child>
+		    <left_attach>1</left_attach>
+		    <right_attach>2</right_attach>
+		    <top_attach>7</top_attach>
+		    <bottom_attach>8</bottom_attach>
+		    <xpad>0</xpad>
+		    <ypad>0</ypad>
+		    <xexpand>False</xexpand>
 		    <yexpand>False</yexpand>
 		    <xshrink>False</xshrink>
 		    <yshrink>False</yshrink>
@@ -2282,6 +2317,7 @@
 		    <last_modification_time>Fri, 22 Jun 2001 03:11:42 GMT</last_modification_time>
 		  </signal>
 		  <label>_Add</label>
+		  <relief>GTK_RELIEF_NORMAL</relief>
 		  <child>
 		    <padding>0</padding>
 		    <expand>False</expand>
@@ -2300,6 +2336,7 @@
 		    <last_modification_time>Fri, 22 Jun 2001 03:11:54 GMT</last_modification_time>
 		  </signal>
 		  <label>_Edit</label>
+		  <relief>GTK_RELIEF_NORMAL</relief>
 		  <child>
 		    <padding>0</padding>
 		    <expand>False</expand>
@@ -2318,6 +2355,7 @@
 		    <last_modification_time>Fri, 22 Jun 2001 03:12:07 GMT</last_modification_time>
 		  </signal>
 		  <label>_Delete</label>
+		  <relief>GTK_RELIEF_NORMAL</relief>
 		  <child>
 		    <padding>0</padding>
 		    <expand>False</expand>
@@ -5345,6 +5383,7 @@
 	    <last_modification_time>Tue, 19 Jun 2001 22:55:25 GMT</last_modification_time>
 	  </signal>
 	  <label>Save File...</label>
+	  <relief>GTK_RELIEF_NORMAL</relief>
 	</widget>
 
 	<widget>
@@ -5358,6 +5397,7 @@
 	    <last_modification_time>Tue, 19 Jun 2001 22:54:45 GMT</last_modification_time>
 	  </signal>
 	  <stock_button>GNOME_STOCK_BUTTON_CANCEL</stock_button>
+	  <relief>GTK_RELIEF_NORMAL</relief>
 	</widget>
 
 	<widget>
@@ -5371,6 +5411,7 @@
 	    <last_modification_time>Tue, 19 Jun 2001 22:54:19 GMT</last_modification_time>
 	  </signal>
 	  <stock_button>GNOME_STOCK_BUTTON_HELP</stock_button>
+	  <relief>GTK_RELIEF_NORMAL</relief>
 	</widget>
       </widget>
     </widget>
@@ -5529,6 +5570,7 @@
       <last_modification_time>Wed, 20 Jun 2001 16:09:57 GMT</last_modification_time>
     </signal>
     <label>OK</label>
+    <relief>GTK_RELIEF_NORMAL</relief>
   </widget>
 
   <widget>
@@ -5538,6 +5580,7 @@
     <can_default>True</can_default>
     <can_focus>True</can_focus>
     <label>Cancel</label>
+    <relief>GTK_RELIEF_NORMAL</relief>
   </widget>
 </widget>
 
