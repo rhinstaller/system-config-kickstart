@@ -38,4 +38,6 @@ rm -rf $RPM_BUILD_ROOT
 * Sat Jan 27 2001 Tammy Fox <tfox@redhat.com>
 - added file dialog box
 - cleaned up code
-- renamed okButton to saveButton
+- renamed okButton to saveButton in ksconfig.py
+- renamed Cancel button to Exit in interface
+- added /boot to default partition list
