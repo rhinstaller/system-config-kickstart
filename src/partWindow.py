@@ -450,7 +450,7 @@ class partWindow:
         if self.lastRaidNumber == "":
             fsType = "raid"
             part_object.raidNumber = "raid.01"
-        elif part_object.raidNumber == None:
+        elif part_object.raidNumber != None:
             tmpNum = 0
             tmpNum = int(self.lastRaidNumber) + 1
             if tmpNum < 10:
