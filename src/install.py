@@ -73,7 +73,8 @@ class install:
             self.hddir_entry.set_state(STATE_INSENSITIVE)
 
     def getData(self):
-        buf = ""
+        #specify to perform a fresh install
+        buf = "\n" + "install"
         if self.cdrom_radiobutton.get_active():
             buf = buf + "\n" + "cdrom"
         elif self.nfs_radiobutton.get_active():
