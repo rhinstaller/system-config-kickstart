@@ -123,7 +123,12 @@ class KickstartParser:
                 if pkg[0] == "@":
                     pkg = string.replace(pkg, "@", "")
                     pkg = string.strip(pkg)
-                    groupList.append(pkg)
+
+                    if pkg[:10] == "everything":
+                        self.kickstartData.setEverything(True)
+                        break
+                    else:
+                        groupList.append(pkg)
                 else:
                     individualList.append(pkg)
             
