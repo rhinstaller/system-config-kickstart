@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: ksconfig
-Version: 2.0
-Release: 9
+Version: 2.1
+Release: 1
 URL: http://www.redhat.com
 Copyright: GPL
 ExclusiveOS: Linux
@@ -47,6 +47,10 @@ fi
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
+* Fri Jun 14 2002 Tammy Fox <tfox@redhat.com>
+- Add optional ftp username and password
+- Add preview menu item
+
 * Wed May 22 2002 Brent Fox <bfox@redhat.com> 2.0-9
 - Fixed bug #65323 to handle partition minimum size better
 
