@@ -1,16 +1,16 @@
 # Icelandic ksconfig.po
 # Copyright (C) 2001 Red Hat
-# Richard Allen <ra@hp.is>, 2001.
+# Richard Allen <ra@ra.is>, 2001.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ksconfig 1.1\n"
 "PO-Revision-Date: Mon Aug 13 16:08:22 2001\n"
-"Last-Translator: Richard Allen <ra@hp.is>\n"
+"Last-Translator: Richard Allen <ra@ra.is>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Generated-By: pygettext.py 1.1\n"
 
 #: redhat-config-kickstart.gladestrings:279
@@ -84,7 +84,7 @@ msgstr "label35"
 
 #: redhat-config-kickstart.gladestrings:162
 msgid "Delete Network Device"
-msgstr ""
+msgstr "Eyða netkorti"
 
 #: redhat-config-kickstart.gladestrings:255
 #: redhat-config-kickstart.gladestrings:262
@@ -245,9 +245,8 @@ msgid "Specify hsync and vsync instead of monitor"
 msgstr "Gefðu upp samhæfingagildi í stað skjás"
 
 #: redhat-config-kickstart.gladestrings:277
-#, fuzzy
 msgid "Network Device:"
-msgstr "Tegund nets:"
+msgstr "Netkort:"
 
 #: ../src/partWindow.py:88 ../src/partWindow.py:147
 msgid "software RAID"
@@ -351,9 +350,8 @@ msgid "Root Password:"
 msgstr "Rótarlykilorð:"
 
 #: redhat-config-kickstart.gladestrings:276
-#, fuzzy
 msgid "Network Device Information"
-msgstr "Stillingar nets"
+msgstr "Upplýsingar um netkort"
 
 #: redhat-config-kickstart.gladestrings:157
 msgid "RAID"
@@ -432,6 +430,7 @@ msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
 msgstr ""
+"Netkort með heitinu %s er þegar til. Vinsamlegast veldu annað heiti"
 
 #: redhat-config-kickstart.gladestrings:54
 msgid "md15"
@@ -597,7 +596,7 @@ msgstr "LDAP grunnnafn: "
 
 #: redhat-config-kickstart.gladestrings:85
 msgid "Use UTC clock"
-msgstr ""
+msgstr "Nota UTC klukku"
 
 #: ../src/raidWindow.py:169
 msgid "You must select at least 3 partitions in order to use RAID %s"
@@ -650,7 +649,7 @@ msgstr "Geisladrif"
 
 #: ../src/redhat-config-kickstart.py:83
 msgid "Try running 'redhat-config-kickstart --help' for a list of options."
-msgstr ""
+msgstr "Þú getur keyrt 'redhat-config-kickstart --help' til að sjá þá rofa sem þekktir eru."
 
 #: redhat-config-kickstart.gladestrings:197
 msgid "Hesiod Authentication"
@@ -678,7 +677,7 @@ msgstr "Nota sjálfgefnar eldveggjareglur:"
 
 #: ../src/redhat-config-kickstart.py:82
 msgid "Could not open display because no X server is running."
-msgstr ""
+msgstr "Gat ekki opnað myndræn skil því enginn X þjónn er keyrandi."
 
 #: redhat-config-kickstart.gladestrings:174
 msgid "NIS Authentication"
@@ -813,7 +812,7 @@ msgstr "Setja ræsistjórann á aðalræsifærsluna (MBR)"
 
 #: ../src/kickstartGui.py:257
 msgid "The file \"%s\" cannot be accessed."
-msgstr ""
+msgstr "Ekki var hægt að opna skrána \"%s\"."
 
 #: redhat-config-kickstart.gladestrings:13
 msgid "Size (MB):"
@@ -833,13 +832,12 @@ msgid "Mount Point:"
 msgstr "Tengipunktur:"
 
 #: ../src/network.py:87
-#, fuzzy
 msgid "Device"
-msgstr "RAID tæki"
+msgstr "Tæki"
 
 #: redhat-config-kickstart.gladestrings:160
 msgid "Add Network Device"
-msgstr ""
+msgstr "Bæta við netkorti"
 
 #: ../src/firewall.py:141
 msgid "Other ports: (1029:tcp)"
@@ -889,6 +887,19 @@ msgid ""
 "values from\n"
 "                        the kickstart file already filled in."
 msgstr ""
+"Notkun: redhat-config-kickstart [--help] [--generate <skráarheiti>] "
+"[<hraðuppsetningarskrá>]\n"
+"        \n"
+"--help                   Prenta þessi skilaboð\n"
+"--generate <skráarheiti> Búa til hraðuppsetningarskrá af þessari vél og "
+"kalla hana\n"
+"                         <hraðuppsetningarskrá>.  Þessi rofi lætur "
+"forritið keyra\n"
+"                         í textaham svo það er gagnlegt fyrir þjóna án X "
+"gluggakerfisins.\n"
+"<hraðuppsetningarskrá>   Þessi rofi veldur því að forritið ræsir með gildin "
+"úr\n"
+"                         skránni þegar valin."
 
 #: redhat-config-kickstart.gladestrings:171
 msgid "Use broadcast to find NIS server"
@@ -987,9 +998,8 @@ msgid "Video Card"
 msgstr "Skjákort"
 
 #: redhat-config-kickstart.gladestrings:65
-#, fuzzy
 msgid "_Open File"
-msgstr "_Vista skrá"
+msgstr "_Opna skrá"
 
 #: redhat-config-kickstart.gladestrings:89
 msgid "Basic Configuration (required)"
@@ -1065,7 +1075,7 @@ msgstr "Endurræsa vélina eftir uppsetningu"
 
 #: ../src/network.py:197
 msgid "Please fill in the network information"
-msgstr ""
+msgstr "Vinsamlegast gefðu upp netstillingar"
 
 #: ../src/raidOptionsWindow.py:75
 msgid "You currently have %d software RAID partition(s) free to use."
@@ -1081,9 +1091,8 @@ msgid "Static IP"
 msgstr "Fast IP vistfang"
 
 #: ../src/network.py:90
-#, fuzzy
 msgid "Network Type"
-msgstr "Tegund nets:"
+msgstr "Tegund nets"
 
 #: ../src/kickstartGui.py:146 redhat-config-kickstart.gladestrings:252
 msgid "Package Selection"
@@ -1203,7 +1212,7 @@ msgstr "Gat ekki lesið skjákortagrunninn"
 
 #: redhat-config-kickstart.gladestrings:161
 msgid "Edit Network Device"
-msgstr ""
+msgstr "Breyta netkorti"
 
 #: redhat-config-kickstart.gladestrings:66
 msgid "_Preview"
@@ -1318,15 +1327,3 @@ msgstr "Vista í skrá"
 #: redhat-config-kickstart.gladestrings:68
 msgid "_Quit"
 msgstr "_Hætta"
-
-#~ msgid "None"
-#~ msgstr "Ekkert"
-
-#~ msgid "DHCP"
-#~ msgstr "DHCP"
-
-#~ msgid "Miscellaneous"
-#~ msgstr "Ýmislegt"
-
-#~ msgid "physical volume (LVM)"
-#~ msgstr "LVM raundiskur"
