@@ -138,9 +138,9 @@ class install:
                 return
             if server [-1] == "/":
                 server = server[:-1]
-            buf = "--server=" + server
-            buf = buf + " --dir=" + self.nfsdir_entry.get_text()
-            self.kickstartData.setNfs(buf)
+            nfs_server = "--server=%s" % server 
+            nfs_dir = " --dir=%s" % self.nfsdir_entry.get_text()
+            self.kickstartData.setNfs([nfs_server, nfs_dir])
         elif self.ftp_radiobutton.get_active():
             ftpserver = string.strip(self.ftpserver_entry.get_text())
             if ftpserver == "":

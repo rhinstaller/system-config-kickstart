@@ -418,7 +418,7 @@ class KickstartData:
 
         elif self.getNfs():
             file.append("#Use NFS installation Media")
-            file.append("nfs " + string.join(self.getNfs(), " "))
+            file.append("nfs " +  string.join(self.getNfs()," "))
 
         elif self.getHardDrive():
             file.append("#Use hard drive installation media")
