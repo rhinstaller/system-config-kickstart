@@ -53,8 +53,7 @@ gettext.bindtextdomain ("ksconfig", "/usr/share/locale")
 gettext.textdomain ("ksconfig")
 _=gettext.gettext
 
-#xml = libglade.GladeXML ("/usr/share/ksconfig/ksconfig.glade", domain="ksconfig")
-xml = libglade.GladeXML ("ksconfig.glade", domain="ksconfig")
+xml = libglade.GladeXML ("/usr/share/ksconfig/ksconfig.glade", domain="ksconfig")
 
 class ksconfig_gui:
 	
