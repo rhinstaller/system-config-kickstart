@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
 Version: 2.3.2
-Release: 7
+Release: 8
 URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
@@ -55,6 +55,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Wed Aug 07 2002 Brent Fox <bfox@redhat.com> 2.3.2-8
+- fix desensitize bug in install screen
+
 * Tue Aug 06 2002 Brent Fox <bfox@redhat.com> 2.3.2-7
 - fix bug 70757
 
