@@ -134,13 +134,12 @@ msgid "Trusted devices:"
 msgstr "Treyst tæki:"
 
 #: ../src/firewall.py:82
-#, fuzzy
 msgid "Trusted services:"
-msgstr "Treyst tæki:"
+msgstr "Traustar þjónustur:"
 
 #: ../src/firewall.py:114
 msgid "Other ports: (1029:tcp)"
-msgstr "Önnur port: (1029:tcp)"
+msgstr "Aðrar gáttir: (1029:tcp)"
 
 #. pull list of language from system-config-languages
 #. Chop encoding off so we can compare to self.installedLangs
@@ -833,7 +832,6 @@ msgstr "RAID tæki"
 #. # I18N
 #. #
 #: ../src/system-config-kickstart.py:60
-#, fuzzy
 msgid ""
 "Usage: system-config-kickstart [--help] [--generate <filename>] "
 "[<kickstart_filename>]\n"
@@ -849,7 +847,7 @@ msgid ""
 "values from\n"
 "                        the kickstart file already filled in."
 msgstr ""
-"Notkun: redhat-config-kickstart [--help] [--generate <skráarheiti>] "
+"Notkun: system-config-kickstart [--help] [--generate <skráarheiti>] "
 "[<hraðuppsetningarskrá>]\n"
 "        \n"
 "--help                   Prenta þessi skilaboð\n"
@@ -868,10 +866,9 @@ msgid "Could not open display because no X server is running."
 msgstr "Gat ekki opnað myndræn skil því enginn X þjónn er keyrandi."
 
 #: ../src/system-config-kickstart.py:78
-#, fuzzy
 msgid "Try running 'system-config-kickstart --help' for a list of options."
 msgstr ""
-"Þú getur keyrt 'redhat-config-kickstart --help' til að sjá þá rofa sem "
+"Þú getur keyrt 'system-config-kickstart --help' til að sjá þá rofa sem "
 "þekktir eru."
 
 #. !/usr/bin/python2
@@ -1714,7 +1711,7 @@ msgstr "Leita að skjá"
 
 #: system-config-kickstart.gladestrings:240
 msgid "Use custom monitor sync rates"
-msgstr ""
+msgstr "Nota sérsniðin tíðnisvið"
 
 #: system-config-kickstart.gladestrings:242
 msgid "Hz"
@@ -1916,9 +1913,3 @@ msgstr "Nafnaþjónn:"
 #: system-config-kickstart.gladestrings:315
 msgid "."
 msgstr "."
-
-#~ msgid "Specify hsync and vsync instead of monitor"
-#~ msgstr "Gefðu upp samhæfingagildi í stað skjás"
-
-#~ msgid "Allow incoming:"
-#~ msgstr "Leyfa tengingar inn:"
