@@ -3,7 +3,7 @@
 
 VERSION=$(shell awk '/Version:/ { print $$2 }' ksconfig.spec)
 CVSTAG=r$(subst .,-,$(VERSION))
-SUBDIRS=man
+SUBDIRS=man po
 
 PREFIX=/usr
 
