@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.5.4
+Version: 2.5.5
 Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -58,6 +58,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Thu Mar  4 2004 Brent Fox <bfox@redhat.com> 2.5.5-1
+- fix capitalization problem (bug #117490)
+
 * Thu Jan  8 2004 Brent Fox <bfox@redhat.com> 2.5.4-1
 - only add --default to langsupport if more than one lang is selected (bug #111600)
 
