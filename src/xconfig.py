@@ -269,9 +269,11 @@ class xconfig:
                 if opt[:7] == "--hsync":
                     value = opt[7:]
                     self.sync_button.set_active(gtk.TRUE)
-                    self.hsync_entry.set_text(value)
+                    self.hsync_entry.set_text(string.strip(value))
+                    self.monitor_probe_check.set_active(gtk.FALSE)
 
                 if opt[:7] == "--vsync":
                     value = opt[7:]
                     self.sync_button.set_active(gtk.TRUE)
-                    self.vsync_entry.set_text(value)
+                    self.vsync_entry.set_text(string.strip(value))
+                    self.monitor_probe_check.set_active(gtk.FALSE)
