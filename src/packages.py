@@ -25,7 +25,7 @@ import gtk
 import gtk.glade
 import gobject
 import string
-
+import getopt
 
 ##
 ## I18N
@@ -37,8 +37,8 @@ _=gettext.gettext
 
 class Packages:
 
-    def __init__(self, xml):
-
+    def __init__(self, xml, kickstartData):
+        self.kickstartData = kickstartData
         self.resolve_deps_radio = xml.get_widget("resolve_deps_radio")
         self.ignore_deps_radio = xml.get_widget("ignore_deps_radio")
 
@@ -171,32 +171,59 @@ class Packages:
         store.set_value(iter, 0 , not val)
 
     def getData(self):
-        data = []
-        data.append("")
+        packageList = []
 
         if self.resolve_deps_radio.get_active() == 1:
-            data.append("%packages --resolvedeps")
+             self.kickstartData.setPackage(["resolvedeps"])
         elif self.ignore_deps_radio.get_active() == 1:
-            data.append("%packages --ignoredeps")
-        else:
-            data.append("%packages")            
+             self.kickstartData.setPackage(["ignoredeps"])
 
-        data = self.getPkgData(self.desktops_store, data)
-        data = self.getPkgData(self.applications_store, data)
-        data = self.getPkgData(self.servers_store, data)
-        data = self.getPkgData(self.development_store, data)
-        data = self.getPkgData(self.system_store, data)
+        packageList = self.getPkgData(self.desktops_store, packageList)
 
-        return data
+        packageList = self.getPkgData(self.applications_store, packageList)
+        packageList = self.getPkgData(self.servers_store, packageList)
+        packageList = self.getPkgData(self.development_store, packageList)
+        packageList = self.getPkgData(self.system_store, packageList)
 
-    def getPkgData(self, store, data):
-        
+        self.kickstartData.setPackageList(packageList)
+
+    def getPkgData(self, store, packageList):
         iter = store.get_iter_first()
-
+        
         #Loop over the package list and see what was selected
         while iter:
             if store.get_value(iter, 0) == gtk.TRUE:
-                data.append("@" + store.get_value(iter, 1))
+                packageList.append(store.get_value(iter, 1))
             iter = store.iter_next(iter)
 
-        return data
+        return packageList
+
+    def lookupPackageInList(self, package, store):
+        iter = store.get_iter_first()
+        while iter:
+            if package == store.get_value(iter, 1):
+                store.set_value(iter, 0, gtk.TRUE)
+            iter = store.iter_next(iter)
+
+
+    def fillData(self):
+        if self.kickstartData.getPackage():
+            opts, args = getopt.getopt(self.kickstartData.getPackage(), "d:h", ["resolvedeps", "ignoredeps"])
+
+            for opt, value in opts:
+                if opt == "--resolvedeps":
+                    self.resolve_deps_radio.set_active(gtk.TRUE)
+                elif opt == "--ignoredeps":
+                    self.ignore_deps_radio.set_active(gtk.TRUE)
+
+        packageList = self.kickstartData.getPackageList()
+
+        for package in packageList:
+            package = string.replace(package, "@", "")
+            package = string.strip(package)
+            self.lookupPackageInList(package, self.desktops_store)
+            self.lookupPackageInList(package, self.applications_store)
+            self.lookupPackageInList(package, self.servers_store)
+            self.lookupPackageInList(package, self.development_store)
+            self.lookupPackageInList(package, self.system_store)
+            
