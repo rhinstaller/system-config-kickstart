@@ -3,7 +3,7 @@
 #Kickstart Configurator
 #Copyright Red Hat, Inc. 2001
 #Written by Brent Fox (bfox@redhat.com) and Tammy Fox (tfox@redhat.com)
-#Created August 10, 2000
+#Created August 10, 2000 Brent Fox
 #Last Modified: January 27, 2001 Tammy Fox
 
 from gtk import *
@@ -39,12 +39,10 @@ class nisData:
 		if (self.disabled == 'TRUE'):
 			return ""
 		else:
-			print self.return_broadcast()
 			if (self.return_broadcast() == 'ON'):
 				return " --enablenis --nisdomain " + self.nisdomain
 			else:				
 				return " --enablenis --nisdomain " + self.nisdomain + " --nisserver " + self.nisserver
-			
 			
 class ldapData:
 	def __init__(self, quit_cb=None):
@@ -159,7 +157,6 @@ class counterClass:
 class authWindow(GtkWindow):
 	def __init__(self, quit_cb=None):
 		GtkWindow.__init__(self, WINDOW_TOPLEVEL)
-		print "Advanced Authorization"
 		self.set_border_width(6)
 		self.set_default_size(400, 10)		
 		self.set_title("Advanced Authentication")
@@ -424,7 +421,7 @@ class authWindow(GtkWindow):
 
 		self.hesiodCheck.connect("toggled", self.enableHesiod)
 
-		#----------Ok and Cancel Buttons--------#
+		#----------Ok and Cancel Buttons for Authenication window--------#
 		self.hbox = GtkHBox()
 		self.hbox.show()
 		self.vbox.pack_start(self.hbox)
@@ -826,30 +823,14 @@ vbox1 = GtkVBox()
 vbox1.show()
 window.add(vbox1)
 
+#number of partitions#
 myCount = counterClass()
-myCount.setCounter(2)
-
+myCount.setCounter(3)
 
 myNisClass = nisData()
 myLDAPClass = ldapData()
 myKerberosClass = kerberosData()
 myHesiodClass = hesiodData()
-
-
-#print myCount.currentVal()
-
-
-#----------------Icon and title----------#
-#hbox1 = GtkHBox()
-#hbox1.show()
-#vbox1.pack_start(hbox1)
-
-#pix, msk = create_pixmap_from_xpm(window, None, "kstitle.xpm")
-#pixmap = GtkPixmap(pix, msk)
-#pixmap.show()
-#hbox1.add(pixmap)
-
-
 
 #---------------Install Type-----------#
 
@@ -864,29 +845,8 @@ frame1.add(installVbox)
 
 
 table1 = GtkTable(7, 2, FALSE)
-#table1.set_row_spacings(25)
-#table1.set_col_spacings(20)
-#table1.set_border_width(0)
-#vbox1.pack_start(table1)
 table1.show()
 installVbox.pack_start(table1)
-#frame1.add(table1)
-
-
-#platformLabel = GtkLabel("Platform:")
-#table1.attach(platformLabel, 0, 1, 1, 2)
-#platformLabel.show()
-
-
-#platformCombo = GtkCombo()
-#table1.attach(platformCombo, 1, 2, 1, 2)
-#platformCombo.show()
-
-#list_items = GtkList()
-#list_items = [ "x86", "IA-64", "Alpha", "Sparc" ]			
-
-#platformCombo.set_popdown_strings(list_items)
-#platformCombo.entry.set_editable(FALSE)
 
 #---------------Language----------------#
 languageLabel = GtkLabel("Language:")
@@ -1458,40 +1418,18 @@ partClist = GtkCList(4, titles)
 partClist.show()
 partVbox.pack_start(partClist)
 
-#partClist.set_column_title(1, "Mount Point")
-#partClist.set_column_title(2, "Type")
-#partClist.set_column_title(3, "Size (M)")
-#partClist.set_column_title(4, "Size")
-
 partClist.set_column_width(0, 150)
 partClist.set_column_width(1, 150)
 partClist.set_column_width(2, 50)
 partClist.set_column_width(3, 20)
-#partClist.set_column_width(4, 20)
-
-#addWindow = GtkWindow()
-#mpCombo = GtkCombo()
-#fsCombo = GtkCombo()
-#sizeEntry = GtkEntry()
-#growCombo = GtkCombo()
-
 
 s = [0]
-
-#rowCount = 2
-#myCount = counterClass()
-#myCount.setCounter(2)
-#print myCount.currentVal()
-
-		
 
 def delPartition(_button, partClist=partClist, selected=s, myCount=myCount):
 	myCount.decrement()
 	partClist.remove(selected[0])
 	editButton.set_state(STATE_INSENSITIVE)
 	delButton.set_state(STATE_INSENSITIVE)
-
-
 
 def select_clist(_clist, r, c, event, selected=s):
 	selected[0] = r
@@ -1576,10 +1514,10 @@ def addPartition(args):
 	addTable.attach(ok, 0, 1, 4, 5)
 	ok.connect("clicked", addEntry)
 
-	cancel = GtkButton("Cancel")
-	cancel.show()
-	addTable.attach(cancel, 1, 2, 4, 5)
-	cancel.connect("clicked", addWindow.hide)
+	cancelAdd = GtkButton("Cancel")
+	cancelAdd.show()
+	addTable.attach(cancelAdd, 1, 2, 4, 5)
+	cancelAdd.connect("clicked", addWindow.hide)
 
 	addWindow.show()
 
@@ -1671,21 +1609,19 @@ def editPartition(args, partClist=partClist, selection=s):
 
 
 
-	ok = GtkButton("OK")
-	ok.show()
-	editTable.attach(ok, 0, 1, 4, 5)
-	ok.connect("clicked", editEntry)
+	okEdit = GtkButton("OK")
+	okEdit.show()
+	editTable.attach(okEdit, 0, 1, 4, 5)
+	okEdit.connect("clicked", editEntry)
 
-	cancel = GtkButton("Cancel")
-	cancel.show()
-	editTable.attach(cancel, 1, 2, 4, 5)
+	cancelEdit = GtkButton("Cancel")
+	cancelEdit.show()
+	editTable.attach(cancelEdit, 1, 2, 4, 5)
 
-	def cancelEdit(cancel=cancel, editWindow=editWindow):
+	def exitEdit(cancelEdit=cancelEdit, editWindow=editWindow):
 		editWindow.hide()
-		delButton.set_state(STATE_INSENSITIVE)
-		editButton.set_state(STATE_INSENSITIVE)
 
-	cancel.connect("clicked", cancelEdit)
+	cancelEdit.connect("clicked", exitEdit)
 
 	editWindow.show()
 
@@ -1693,17 +1629,14 @@ def deleteEvent(win, event=None):
 	win.destroy()
 	return TRUE
 
-#numRows = counterClass()
+bootPartition = ["/boot", "ext2", "35", "No"]
+partClist.append(bootPartition)
 
-first = ["/", "ext2", "1000", "Yes"]
-partClist.append(first)
+swapPartition = ["", "Linux Swap", "128", "No"]
+partClist.append(swapPartition)
 
-second = ["", "Linux Swap", "128", "No"]
-partClist.append(second)
-
-#third = ["/boot", "ext2", "10", "No"]
-#partClist.append(third)
-
+rootPartition = ["/", "ext2", "1000", "Yes"]
+partClist.append(rootPartition)
 
 partHbox = GtkHBox()
 partHbox.show()
@@ -1772,10 +1705,10 @@ saveButton.show()
 saveButton.connect("clicked", saveClicked)
 hbox.pack_start(saveButton)
 
-cancelButton = GtkButton("Cancel")
-cancelButton.show()
-cancelButton.connect("clicked", destroy)
-hbox.pack_start(cancelButton)
+exitButton = GtkButton("Exit")
+exitButton.show()
+exitButton.connect("clicked", destroy)
+hbox.pack_start(exitButton)
 
 window.show()
 mainloop()
