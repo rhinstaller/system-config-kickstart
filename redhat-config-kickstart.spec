@@ -10,6 +10,7 @@ BuildRoot: %{_tmppath}/redhat-config-kickstart-%{version}-root
 BuildArch: noarch
 Source0: redhat-config-kickstart-%{version}.tar.gz
 Obsoletes: ksconfig
+BuildRequires: desktop-file-utils
 Requires: pygtk2 >= 1.99.11
 Requires: pygtk2-libglade 
 Requires: python2
@@ -24,6 +25,12 @@ redhat-config-kickstart is a graphical tool for creating kickstart files.
 
 %install
 make INSTROOT=$RPM_BUILD_ROOT install
+desktop-file-install --vendor redhat --delete-original      \
+  --dir $RPM_BUILD_ROOT%{_datadir}/applications             \
+  --add-category Application \
+  --add-category System \
+  --add-category X-Red-Hat-Base          \
+  $RPM_BUILD_ROOT%{_datadir}/applications/redhat-config-kickstart.desktop
 
 %find_lang %name
 
@@ -45,7 +52,7 @@ fi
 /usr/share/redhat-config-kickstart/*
 %{_mandir}/man8/redhat-config-kickstart*
 %lang(ja) %{_mandir}/ja/man8/redhat-config-kickstart*
-%config /etc/X11/applnk/System/redhat-config-kickstart.desktop
+%attr(0644,root,root) %{_datadir}/applications/redhat-config-kickstart.desktop
 
 %changelog
 * Fri Jul 19 2002 Brent Fox <bfox@redhat.com> 2.3.2-3

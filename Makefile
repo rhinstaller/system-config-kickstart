@@ -12,7 +12,6 @@ MANDIR=/usr/share/man
 DATADIR=${PREFIX}/share
 
 PKGDATADIR=${DATADIR}/${PKGNAME}
-DESKTOPDIR=/etc/X11/applnk/System
 
 default:
 
@@ -25,15 +24,14 @@ subdirs:
 install:
 	mkdir -p $(INSTROOT)/usr/sbin
 	mkdir -p $(INSTROOT)$(PKGDATADIR)
-	mkdir -p $(INSTROOT)$(DESKTOPDIR)
+	mkdir -p $(INSTROOT)/usr/share/applications
 	install ${PKGNAME} $(INSTROOT)/usr/sbin/${PKGNAME}
 	install src/*.py $(INSTROOT)$(PKGDATADIR)
 	for py in src/*.py ; do \
 		sed -e s,@VERSION@,$(VERSION),g $${py} > $(INSTROOT)$(PKGDATADIR)/`basename $${py}` ; \
 	done
 	install src/${PKGNAME}-gtk2.glade $(INSTROOT)$(PKGDATADIR)
-	mkdir -p $(INSTROOT)$(DESKTOPDIR)
-	install -m 644 ${PKGNAME}.desktop $(INSTROOT)$(DESKTOPDIR)
+	install ${PKGNAME}.desktop $(INSTROOT)/usr/share/applications/${PKGNAME}.desktop
 	ln -sf /usr/sbin/${PKGNAME} $(INSTROOT)/usr/sbin/ksconfig
 	for d in $(SUBDIRS); do \
 	(cd $$d; $(MAKE) INSTROOT=$(INSTROOT) MANDIR=$(MANDIR) install) \
