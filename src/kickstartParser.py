@@ -115,7 +115,6 @@ class KickstartParser:
 
         if packageList != []:
             tokens = string.split(packageList[0])
-            self.kickstartData.setPackage(tokens[1:])
 
             groupList = []
             individualList = []
