@@ -397,7 +397,7 @@ class partWindow:
                 if not self.checkRaid(part_object):
                     return None
             else:
-#                print "this already has a raid number, leave it alone"
+                #this already has a raid number, leave it alone
                 pass
 
         else:
