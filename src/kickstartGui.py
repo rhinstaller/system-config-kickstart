@@ -82,6 +82,7 @@ class kickstartGui:
 	self.options_notebook = xml.get_widget("options_notebook")
 	self.install_radiobutton = xml.get_widget("install_radiobutton")
 	self.category_clist = xml.get_widget("category_clist")
+        self.open_menu = xml.get_widget("open_menu")
 	self.preview_menu = xml.get_widget("preview_menu")
 	self.save_menu = xml.get_widget("save_menu")
 	self.quit_menu = xml.get_widget("quit_menu")
@@ -134,6 +135,7 @@ class kickstartGui:
 		iter = self.category_store.append()
 		self.category_store.set_value(iter, 0, item)
 
+        self.open_menu.connect("activate", self.on_activate_open)
 	self.preview_menu.connect("activate", self.on_activate_preview_options)
 	self.save_menu.connect("activate", self.on_activate_save_options)
 	self.quit_menu.connect("activate", gtk.mainquit)
@@ -145,12 +147,8 @@ class kickstartGui:
             self.kickstartParser = kickstartParser.KickstartParser(self.kickstartData, file)
             self.fillData()
             
-
-
 	#show gui
 	self.toplevel.show_all()
-
-	#		self.options_notebook.set_current_page(3)
 
 	gtk.mainloop ()
 
@@ -215,10 +213,6 @@ class kickstartGui:
         
 	self.bootloader_class.getData()
 
-#	#only write partition info if performing an install
-#	if self.install_radiobutton.get_active():
-#		list = list + self.partition_class.getData()
-
 	#only write partition info if performing an install
         if self.install_radiobutton.get_active():
             self.partition_class.getData()
@@ -233,11 +227,29 @@ class kickstartGui:
 
 	self.scripts_class.getData()
 
+    def on_activate_open(self, *args):
+        fs = gtk.FileSelection()
+        result = fs.run()
+        file = fs.get_filename()
+
+        if result == gtk.RESPONSE_OK:
+            if os.access(file, os.R_OK) == 1:
+                self.kickstartParser = kickstartParser.KickstartParser(self.kickstartData, file)
+                self.fillData()
+            else:
+                dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_WARNING, gtk.BUTTONS_OK,
+                                        (_("The file \"%s\" cannot be accessed.")) % file)
+                dlg.set_position(gtk.WIN_POS_CENTER)
+                dlg.set_icon(iconPixbuf)
+                dlg.run()
+                dlg.destroy()
+
+        fs.destroy()
+
     #show chosen options for preview
     def on_activate_preview_options (self, *args):
         self.getAllData()
         list = self.kickstartData.getAll()
-
 
 	if list:
 	    #show preview dialog window
