@@ -61,4 +61,5 @@ local:
 
 clean:
 	@rm -f *~
-	@rm -f *.pyc
+	@rm -f src/*~
+	@rm -f src/*.pyc
