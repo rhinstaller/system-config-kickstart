@@ -1,14 +1,15 @@
-# translation of ru.po to Russian
+# translation of redhat-config-kickstart to Russian
 # Copyright (C) YEAR ORGANIZATION.
-# Victor Ashik <vashik@mail.ru>, 2004.
+# Leon Kanter <leon@blackcatlinux.com>, 2003.
+# Victor Ashik <vashik@inventa.ru>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ru\n"
+"Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-29 17:11-0500\n"
-"PO-Revision-Date: 2004-07-13 11:30+0400\n"
-"Last-Translator: Andrew Martynov <andrewm@inventa.ru>\n"
+"PO-Revision-Date: 2004-07-14 13:01+0400\n"
+"Last-Translator: Victor Ashik <vashik@inventa.ru>\n"
 "Language-Team: Russian <fedora-trans-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -457,11 +458,11 @@ msgstr "Выбор пакетов"
 
 #: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:265
 msgid "Pre-Installation Script"
-msgstr "Скрипт, выполняемый до установки"
+msgstr "Сценарий до установки"
 
 #: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:272
 msgid "Post-Installation Script"
-msgstr "Скрипт, выполняемый после установки"
+msgstr "Сценарий после установки"
 
 #. show gui
 #. about box
@@ -480,9 +481,8 @@ msgstr ""
 "Графический интерфейс для создания файла kickstart"
 
 #: ../src/kickstartGui.py:194
-#, fuzzy
 msgid "About Kickstart Configurator"
-msgstr "Про програму настройки Kickstart"
+msgstr "О программе настройки Kickstart"
 
 #. display help manual
 #: ../src/kickstartGui.py:224
@@ -812,11 +812,10 @@ msgid ""
 msgstr "Указанное вами имя не является допустимым именем устройства. Используйте допустимое имя, такое как \"hda1\" или \"sda3\"."
 
 #: ../src/partWindow.py:500
-#, fuzzy
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
-msgstr "Указанный вами раздел не оканчивается числом.  Разделы должны иметь номер раздела, такой как  \"hda1\" или \"sda3\"."
+msgstr "Указанный вами раздел не оканчивается числом.  Разделы должны иметь номер раздела, такой как \"hda1\" или \"sda3\"."
 
 #: ../src/partWindow.py:506
 msgid ""
@@ -982,7 +981,6 @@ msgstr "Сетевые серверы (только AS и ES)"
 #. # I18N
 #. #
 #: ../src/system-config-kickstart.py:60
-#, fuzzy
 msgid ""
 "Usage: system-config-kickstart [--help] [--generate <filename>] "
 "[<kickstart_filename>]\n"
@@ -1006,18 +1004,17 @@ msgstr ""
 "и записать\n"
 "                        в <filename>.  Эта опция работает в консоли, "
 "поэтому она\n"
-"                        полезна для серверов, не имеющих запущенного сервера X.\n"
+"                        полезна для серверов, не имеющих запущенного X-сервера.\n"
 "<kickstart_filename>    Эта опция вызовет запуск графического интерфейса с параметрами из\n"
-"                        существующего файла kickstart."
+"                        уже составленного файла kickstart."
 
 #: ../src/system-config-kickstart.py:77
-#, fuzzy
 msgid "Could not open display because no X server is running."
-msgstr "Невозможно открыть дисплей потому что не запущен сервер X."
+msgstr "Невозможно открыть дисплей потому что не запущен X-сервер."
 
 #: ../src/system-config-kickstart.py:78
 msgid "Try running 'system-config-kickstart --help' for a list of options."
-msgstr "Попробуйте запустить  'system-config-kickstart --help' для списка опций."
+msgstr "Попробуйте запустить 'system-config-kickstart --help' для списка опций."
 
 #. !/usr/bin/python2
 #. !/usr/bin/python2
@@ -1379,7 +1376,7 @@ msgstr "Системные часы используют UTC"
 #: system-config-kickstart.gladestrings:86
 #: system-config-kickstart.gladestrings:137
 msgid "Confirm Password:"
-msgstr "Подтверждение пароля:"
+msgstr "Повторите пароль:"
 
 #: system-config-kickstart.gladestrings:88
 msgid "Target Architecture:"
@@ -1391,7 +1388,7 @@ msgstr "Перезагрузить систему после установки"
 
 #: system-config-kickstart.gladestrings:91
 msgid "Perform installation in text mode (graphical is default)"
-msgstr "Выполнить установку в текстовом режиме (по умолчанию графический)"
+msgstr "Текстовый режим установки (графический по умолчанию)"
 
 #: system-config-kickstart.gladestrings:92
 msgid "Perform installation in interactive mode"
@@ -1524,11 +1521,11 @@ msgstr "Зашифровать пароль GRUB"
 
 #: system-config-kickstart.gladestrings:141
 msgid "Install boot loader on Master Boot Record (MBR)"
-msgstr "Устанавливать загрузчик в MBR"
+msgstr "Загрузчик в MBR"
 
 #: system-config-kickstart.gladestrings:142
 msgid "Install boot loader on first sector of the boot partition"
-msgstr "Установить загрузчик в первый сектор загрузочного раздела"
+msgstr "Загрузчик в первом секторе загрузочного раздела"
 
 #: system-config-kickstart.gladestrings:143
 msgid "Kernel parameters:"
@@ -1591,7 +1588,6 @@ msgid "RAID"
 msgstr "RAID"
 
 #: system-config-kickstart.gladestrings:159
-#, fuzzy
 msgid "Partition options are not applicable on upgrades."
 msgstr "Параметры разделов не применимы при обновлении системы."
 
@@ -1625,11 +1621,11 @@ msgstr "Аутентификация:"
 
 #: system-config-kickstart.gladestrings:168
 msgid "Use Shadow Passwords"
-msgstr "Использовать скрытые пароли"
+msgstr "Пароли в shadow"
 
 #: system-config-kickstart.gladestrings:169
 msgid "Use MD5"
-msgstr "Использовать MD5"
+msgstr "Шифр MD5"
 
 #: system-config-kickstart.gladestrings:170
 msgid "Enable NIS"
@@ -1641,7 +1637,7 @@ msgstr "Домен NIS:"
 
 #: system-config-kickstart.gladestrings:173
 msgid "Use broadcast to find NIS server"
-msgstr "Использовать ШВ запрос для поиска сервера NIS"
+msgstr "Широковещательный поиск сервера NIS"
 
 #: system-config-kickstart.gladestrings:174
 msgid "NIS Server:"
@@ -1813,7 +1809,9 @@ msgstr "Запускать систему X Window после загрузки"
 
 #: system-config-kickstart.gladestrings:229
 msgid "On first boot, Setup Agent is: "
-msgstr "При первой загрузке, Setup Agent:"
+msgstr ""
+"При первой загрузке\n"
+"помощник по настройке: "
 
 #: system-config-kickstart.gladestrings:230
 msgid "Disabled"
@@ -1824,7 +1822,6 @@ msgid "Enabled"
 msgstr "Включен"
 
 #: system-config-kickstart.gladestrings:232
-#, fuzzy
 msgid "Enabled in reconfiguration mode"
 msgstr "Включен в режиме перенастройки"
 
@@ -1926,7 +1923,7 @@ msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %pre command at the beginning."
 msgstr ""
-"Внимание: ошибка в скрипте может привести к сбою вашей установки. Не "
+"Внимание: ошибка в скрипте может привести к сбою установки. Не "
 "включайте команду %pre в начале."
 
 #: system-config-kickstart.gladestrings:262
@@ -1949,7 +1946,7 @@ msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %post command at the beginning."
 msgstr ""
-"Внимание: ошибка в этом скрипте может привести к сбою вашей установки. Не "
+"Внимание: ошибка в этом скрипте может привести к сбою установки. Не "
 "включайте команду %post в начале."
 
 #: system-config-kickstart.gladestrings:268
@@ -2053,4 +2050,129 @@ msgstr "Сервер имен:"
 #: system-config-kickstart.gladestrings:316
 msgid "."
 msgstr "."
+
+#~ msgid "LILO Options:"
+#~ msgstr "Параметры LILO:"
+
+#~ msgid "Use linear mode"
+#~ msgstr "Использовать линейный режим"
+
+#~ msgid "Force use of lba32 mode"
+#~ msgstr "Принудительно использовать lba32"
+
+#~ msgid "Specify hsync and vsync instead of monitor"
+#~ msgstr "Указать частоты развертки вместо модели монитора"
+
+#~ msgid "Allow incoming:"
+#~ msgstr "Разрешить входящие:"
+
+#~ msgid "Use default firewall rules"
+#~ msgstr "Использовать стандартные правила брандмауэра"
+
+#~ msgid "High"
+#~ msgstr "Высокий"
+
+#~ msgid "Customize"
+#~ msgstr "Улучшить"
+
+#~ msgid "Medium"
+#~ msgstr "Средний"
+
+#, fuzzy
+#~ msgid "DIsabled"
+#~ msgstr "Выключено"
+
+#~ msgid "None"
+#~ msgstr "Нет"
+
+#~ msgid "DHCP"
+#~ msgstr "DHCP"
+
+#, fuzzy
+#~ msgid "Make LVM Partition"
+#~ msgstr "Форматировать раздел"
+
+#~ msgid "_Yes"
+#~ msgstr "_Да"
+
+#~ msgid "A_ll"
+#~ msgstr "Все"
+
+#~ msgid "N_one"
+#~ msgstr "Нет"
+
+#~ msgid "L_inux"
+#~ msgstr "L_inux"
+
+#~ msgid "Upgrade"
+#~ msgstr "Обновить"
+
+#~ msgid "Install"
+#~ msgstr "Установить"
+
+#~ msgid "_No"
+#~ msgstr "_Нет"
+
+#~ msgid "_LILO"
+#~ msgstr "_LILO"
+
+#~ msgid "File System Type"
+#~ msgstr "Тип файловой системы"
+
+#~ msgid "_MBR"
+#~ msgstr "_MBR"
+
+#~ msgid "_GRUB"
+#~ msgstr "_GRUB"
+
+#~ msgid "Choose boot loader: "
+#~ msgstr "Выберите загрузчик: "
+
+#~ msgid "Format Partition"
+#~ msgstr "Форматировать раздел"
+
+#~ msgid "Fill to maximum allowable size"
+#~ msgstr "Заполнить до максимально доступного размера"
+
+#~ msgid "_Save File..."
+#~ msgstr "_Сохранить файл..."
+
+#~ msgid "A graphical interface for creating a kickstart file."
+#~ msgstr "Графический интерфейс для создания файла kickstart"
+
+#~ msgid "3"
+#~ msgstr "3"
+
+#~ msgid "Kickstart Configuration"
+#~ msgstr "Настройка Kickstart"
+
+#~ msgid "Cancel"
+#~ msgstr "Отмена"
+
+#~ msgid "Package Group Selection"
+#~ msgstr "Выбор групп пакетов"
+
+#~ msgid "2"
+#~ msgstr "2"
+
+#~ msgid "Save File..."
+#~ msgstr "Сохранить файл..."
+
+#~ msgid "Select a Monitor"
+#~ msgstr "Выберите монитор"
+
+#~ msgid "OK"
+#~ msgstr "OK"
+
+#~ msgid "Force as primary number (1-4):"
+#~ msgstr "Принудительно сделать первичным с номером (1-4):"
+
+#~ msgid "_Manual"
+#~ msgstr "_Вручную"
+
+#~ msgid "4"
+#~ msgstr "4"
+
+#~ msgid "Select a Video Card"
+#~ msgstr "Выберите видеокарту"
 
