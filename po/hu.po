@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: redhat-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-12-01 11:27-0500\n"
-"PO-Revision-Date: Thu Jan 30 00:27:05 2003\n"
+"PO-Revision-Date: 2003-12-03 00:00+0100\n"
 "Last-Translator: Tamas Szanto <tszanto@mol.hu>\n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
@@ -134,9 +134,8 @@ msgid "Trusted devices:"
 msgstr "Megbízható eszközök:"
 
 #: ../src/firewall.py:82
-#, fuzzy
 msgid "Trusted services:"
-msgstr "Megbízható eszközök:"
+msgstr "Megbízható szolgáltatások:"
 
 #: ../src/firewall.py:114
 msgid "Other ports: (1029:tcp)"
@@ -838,11 +837,9 @@ msgid "Could not open display because no X server is running."
 msgstr "Nem sikerült megnyitni a képernyőt, nem fut az X-kiszolgáló."
 
 #: ../src/system-config-kickstart.py:78
-#, fuzzy
 msgid "Try running 'system-config-kickstart --help' for a list of options."
 msgstr ""
-"Az opciók kilistázásához adja ki a 'redhat-config-kickstart --help' "
-"parancsot."
+"Az opciók kilistázásához a 'system-config-kickstart --help' parancs használható."
 
 #. !/usr/bin/python2
 #. !/usr/bin/python2
@@ -1206,9 +1203,8 @@ msgstr "UTC-s óra használata"
 
 #: system-config-kickstart.gladestrings:86
 #: system-config-kickstart.gladestrings:137
-#, fuzzy
 msgid "Confirm Password:"
-msgstr "Rendszergazdai jelszó:"
+msgstr "Még egyszer:"
 
 #: system-config-kickstart.gladestrings:88
 msgid "Reboot system after installation"
@@ -1344,14 +1340,12 @@ msgid "GRUB Options:"
 msgstr "GRUB-beállítások:"
 
 #: system-config-kickstart.gladestrings:135
-#, fuzzy
 msgid "Use GRUB password"
-msgstr "A GRUB jelszavának titkosítása"
+msgstr "GRUB jelszó használata"
 
 #: system-config-kickstart.gladestrings:136
-#, fuzzy
 msgid "Password:"
-msgstr "Rendszergazdai jelszó:"
+msgstr "Jelszó:"
 
 #: system-config-kickstart.gladestrings:140
 msgid "Encrypt GRUB password"
@@ -1450,19 +1444,16 @@ msgid "label30"
 msgstr "Címke30"
 
 #: system-config-kickstart.gladestrings:165
-#, fuzzy
 msgid "_Add Network Device"
-msgstr "Hálózati eszköz hozzáadása"
+msgstr "Hálózati eszköz _hozzáadása"
 
 #: system-config-kickstart.gladestrings:166
-#, fuzzy
 msgid "_Edit Network Device"
-msgstr "Hálózati eszköz hozzáadása"
+msgstr "Hálózati eszköz mó_dosítása"
 
 #: system-config-kickstart.gladestrings:167
-#, fuzzy
 msgid "_Delete Network Device"
-msgstr "Hálózati eszköz törlése"
+msgstr "Hálózati eszköz _törlése"
 
 #: system-config-kickstart.gladestrings:169
 msgid "label31"
@@ -1470,7 +1461,7 @@ msgstr "Címke31"
 
 #: system-config-kickstart.gladestrings:170
 msgid "Authentication:"
-msgstr ""
+msgstr "Felhasználóazonosítás:"
 
 #: system-config-kickstart.gladestrings:171
 msgid "Use Shadow Passwords"
@@ -1482,11 +1473,11 @@ msgstr "MD5 használata"
 
 #: system-config-kickstart.gladestrings:173
 msgid "Enable NIS"
-msgstr ""
+msgstr "A NIS használata"
 
 #: system-config-kickstart.gladestrings:174
 msgid "NIS Domain:"
-msgstr "NIS tartomány"
+msgstr "NIS tartomány:"
 
 #: system-config-kickstart.gladestrings:176
 msgid "Use broadcast to find NIS server"
@@ -1590,7 +1581,7 @@ msgstr "SMB"
 
 #: system-config-kickstart.gladestrings:211
 msgid "Enable nscd"
-msgstr ""
+msgstr "Az nscd bekapcsolása"
 
 #: system-config-kickstart.gladestrings:212
 msgid "Name Switch Cache Daemon (nscd) Authentication"
@@ -1598,7 +1589,7 @@ msgstr ""
 
 #: system-config-kickstart.gladestrings:213
 msgid "Name Switch Cache"
-msgstr ""
+msgstr "Névváltási gyorstár"
 
 #: system-config-kickstart.gladestrings:214
 msgid "Authentication Configuration"
@@ -1610,15 +1601,15 @@ msgstr "címke32"
 
 #: system-config-kickstart.gladestrings:216
 msgid "Security level:"
-msgstr ""
+msgstr "Biztonsági szint:"
 
 #: system-config-kickstart.gladestrings:217
 msgid "Enable firewall"
-msgstr ""
+msgstr "A tűzfal bekapcsolása"
 
 #: system-config-kickstart.gladestrings:218
 msgid "Disable firewall"
-msgstr ""
+msgstr "A tűzfal kikapcsolása"
 
 #: system-config-kickstart.gladestrings:220
 msgid "label33"
@@ -1626,7 +1617,7 @@ msgstr "Címke33"
 
 #: system-config-kickstart.gladestrings:221
 msgid "Configure the X Window System"
-msgstr ""
+msgstr "Az X Window beállítása"
 
 #: system-config-kickstart.gladestrings:222
 msgid "Color Depth"
@@ -1634,7 +1625,7 @@ msgstr "Színmélység"
 
 #: system-config-kickstart.gladestrings:224
 msgid "Resolution"
-msgstr ""
+msgstr "Felbontás"
 
 #: system-config-kickstart.gladestrings:226
 msgid "Default Desktop:"
@@ -1650,20 +1641,19 @@ msgstr "KDE"
 
 #: system-config-kickstart.gladestrings:229
 msgid "Start the X Window System on boot"
-msgstr ""
+msgstr "A X Window automatikusan induljon el"
 
 #: system-config-kickstart.gladestrings:230
 msgid "On first boot, Setup Agent is: "
-msgstr ""
+msgstr "Első rendszerindításkor a Setup Agent legyen: "
 
 #: system-config-kickstart.gladestrings:231
 msgid "Disabled"
-msgstr "Letiltva"
+msgstr "Kikapcsolva"
 
 #: system-config-kickstart.gladestrings:232
-#, fuzzy
 msgid "Enabled"
-msgstr "Letiltva"
+msgstr "Bekapcsolva"
 
 #: system-config-kickstart.gladestrings:233
 msgid "Enabled in reconfiguration mode"
@@ -1671,7 +1661,7 @@ msgstr ""
 
 #: system-config-kickstart.gladestrings:234
 msgid "General"
-msgstr ""
+msgstr "Általános"
 
 #: system-config-kickstart.gladestrings:235
 msgid "Probe for video card"
@@ -1683,7 +1673,7 @@ msgstr "Videokártya RAM: "
 
 #: system-config-kickstart.gladestrings:238
 msgid "Video Card"
-msgstr ""
+msgstr "Videokártya"
 
 #: system-config-kickstart.gladestrings:239
 msgid "Probe for monitor"
@@ -1699,7 +1689,7 @@ msgstr "Hz"
 
 #: system-config-kickstart.gladestrings:244
 msgid "kHz"
-msgstr ""
+msgstr "kHz"
 
 #: system-config-kickstart.gladestrings:245
 msgid "Vertical Sync:"
@@ -1707,11 +1697,11 @@ msgstr "Függőleges frekvencia:"
 
 #: system-config-kickstart.gladestrings:246
 msgid "Horizontal Sync:"
-msgstr ""
+msgstr "Vízszintes szinkr.:"
 
 #: system-config-kickstart.gladestrings:247
 msgid "Monitor"
-msgstr ""
+msgstr "Monitor"
 
 #: system-config-kickstart.gladestrings:249
 msgid "label88"
@@ -1719,7 +1709,7 @@ msgstr "címke88"
 
 #: system-config-kickstart.gladestrings:250
 msgid "Select packages to install."
-msgstr ""
+msgstr "Válassza ki a telepítendő csomagokat."
 
 #: system-config-kickstart.gladestrings:251
 msgid "_Automatically Resolve Dependencies"
@@ -1743,7 +1733,7 @@ msgstr "Kiszolgálók"
 
 #: system-config-kickstart.gladestrings:256
 msgid "Development"
-msgstr ""
+msgstr "Fejlesztés"
 
 #: system-config-kickstart.gladestrings:257
 msgid "System"
@@ -1770,7 +1760,7 @@ msgstr "Programértelmező használata:"
 #: system-config-kickstart.gladestrings:263
 #, c-format
 msgid "Type your %pre script below:"
-msgstr ""
+msgstr "Írja be alább a saját %pre szkriptjét:"
 
 #: system-config-kickstart.gladestrings:265
 msgid "label89"
@@ -1790,7 +1780,7 @@ msgstr "Futtatás a chroot környezeten kívül"
 #: system-config-kickstart.gladestrings:270
 #, c-format
 msgid "Type your %post script below:"
-msgstr ""
+msgstr "Írja be a saját %post szkriptjét:"
 
 #: system-config-kickstart.gladestrings:272
 msgid "label93"
@@ -1802,7 +1792,7 @@ msgstr "Előnézeti beállítások"
 
 #: system-config-kickstart.gladestrings:274
 msgid "Save to File"
-msgstr ""
+msgstr "Mentés fájlba"
 
 #: system-config-kickstart.gladestrings:275
 msgid ""
@@ -1836,7 +1826,7 @@ msgstr ""
 
 #: system-config-kickstart.gladestrings:279
 msgid "Choose one of the following options:"
-msgstr ""
+msgstr "Válasszon egyet a következő lehetőségek közül:"
 
 #: system-config-kickstart.gladestrings:280
 msgid "Create a software RAID partition"
@@ -1856,7 +1846,7 @@ msgstr "Hálózati eszköz:"
 
 #: system-config-kickstart.gladestrings:284
 msgid "Network Type:"
-msgstr ""
+msgstr "Hálózattípus:"
 
 #: system-config-kickstart.gladestrings:285
 msgid "IP Address:"
@@ -1889,21 +1879,3 @@ msgstr "Névkiszolgáló:"
 msgid "."
 msgstr "."
 
-#~ msgid "Specify hsync and vsync instead of monitor"
-#~ msgstr "A függ. és vízsz. frekvenciák megadása a monitor típusa helyett"
-
-#~ msgid "Allow incoming:"
-#~ msgstr "Engedélyezett bejövő:"
-
-#~ msgid "Use default firewall rules"
-#~ msgstr "Az alapértelmezett tűzfalszabályok használata"
-
-#~ msgid "Select the default firewall level:"
-#~ msgstr "Válassza ki az alapértelmezett tűzfalbeállítást:"
-
-#~ msgid "High"
-#~ msgstr "Magas"
-
-#, fuzzy
-#~ msgid "DIsabled"
-#~ msgstr "Letiltva"
