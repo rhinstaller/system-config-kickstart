@@ -9,37 +9,37 @@ domain = 'system-config-kickstart'
 translate.textdomain (domain)
 
 
-desktopsList = [N_("X Window System"),
-               N_("GNOME Desktop Environment"),
-               N_("KDE (K Desktop Environment)")
+desktopsList = [[N_("X Window System"), "base-x"],
+                [N_("GNOME Desktop Environment"), "gnome-desktop"],
+                [N_("KDE (K Desktop Environment)"), "kde-desktop"]
                 ]
-applicationsList = [N_("Editors"),
-                    N_("Engineering and Scientific"),
-                    N_("Graphical Internet"),
-                    N_("Text-based Internet"),
-                    N_("Office/Productivity"),
-                    N_("Sound and Video"),
-                    N_("Graphics"),
-                    N_("Games and Entertainment"),
-                    N_("Authoring and Publishing")
+applicationsList = [[N_("Editors"), "editors"],
+                    [N_("Engineering and Scientific"), "engineering-and-scientific"],
+                    [N_("Graphical Internet"), "graphical-internet"],
+                    [N_("Text-based Internet"), "text-internet"],
+                    [N_("Office/Productivity"), "office"],
+                    [N_("Sound and Video"), "sound-and-video"],
+                    [N_("Graphics"), "graphics"],
+                    [N_("Games and Entertainment"), "games"],
+                    [N_("Authoring and Publishing"), "authoring-and-publishing"]
                     ]
-serversList = [N_("Server Configuration Tools"),
-               N_("Web Server"),
-               N_("Mail Server"),
-               N_("Windows File Server"),
-               N_("DNS Name Server"), 
-               N_("FTP Server"),
-               N_("SQL Database Server"),
-               N_("News Server"),
-               N_("Network Servers")
+serversList = [[N_("Server Configuration Tools"), "server-cfg"],
+               [N_("Web Server"), "web-server"],
+               [N_("Mail Server"), "mail-server"],
+               [N_("Windows File Server"), "smb-server"],
+               [N_("DNS Name Server"), "dns-server"],
+               [N_("FTP Server"), "ftp-server"],
+               [N_("SQL Database Server"), "sql-server"],
+               [N_("News Server"), "news-server"],
+               [N_("Network Servers"), "network-server"]
                ]
-developmentList = [N_("Development Tools"),
-                   N_("Kernel Development"),
-                   N_("X Software Development"),
-                   N_("GNOME Software Development"),
-                   N_("KDE Software Development")
+developmentList = [[N_("Development Tools"), "development-tools"],
+                   [N_("Kernel Development"), "kernel-development"],
+                   [N_("X Software Development"), "x-software-development"],
+                   [N_("GNOME Software Development"), "gnome-software-development"],
+                   [N_("KDE Software Development"), "kde-software-development"]
                    ]
-systemList = [N_("Administration Tools"),
-              N_("System Tools"),
-              N_("Printing Support")
+systemList = [[N_("Administration Tools"), "admin-tools"],
+              [N_("System Tools"), "system-tools"],
+              [N_("Printing Support"), "printing"]
               ]
