@@ -118,6 +118,23 @@ class network:
         
     def showAddNetworkDialog(self, *args):
         self.handler = self.network_ok_button.connect("clicked", self.addDevice)
+
+        #Let's find the last eth device in the list and increment by one to
+        #fill in the option menu with the next device
+        device = None
+        iter = self.network_device_store.get_iter_first()
+        while iter:
+            device = self.network_device_store.get_value(iter, 0)
+            iter = self.network_device_store.iter_next(iter)
+
+        if device == None:
+            num = 0
+        else:
+            num = int(device[3:])
+            if num < 15:
+                num = num + 1
+
+        self.network_device_option_menu.set_history(num)
         self.network_device_dialog.show_all()
 
     def showEditNetworkDialog(self, *args):
