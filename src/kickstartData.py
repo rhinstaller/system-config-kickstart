@@ -16,6 +16,9 @@ class KickstartData:
         self.interactive = None
         self.text = None
         self.cdrom = None
+        self.harddrive = None
+        self.nfs = None
+        self.url = None
         self.bootloader = None
         self.zerombr = None
         self.clearpart = None
@@ -26,6 +29,7 @@ class KickstartData:
         self.packages = None
         self.pre = None
         self.post = None
+        self.upgrade = None
 
     def setLang(self, args):
         self.lang = args[0]
@@ -96,7 +100,11 @@ class KickstartData:
         return self.reboot 
     
     def setInstall(self, args):
-        self.install = args
+        if args == None:
+            self.install = None
+        else:
+            self.install = "install"
+            self.setUpgrade(None)
 
     def getInstall(self):
         return self.install
@@ -111,10 +119,52 @@ class KickstartData:
         return self.interactive
 
     def setCdrom(self, args):
-        self.cdrom = "cdrom"
+        if args == None:
+            self.cdrom = None
+        else:
+            self.cdrom = "cdrom"
+            self.setNfs(None)
+            self.setUrl(None)
+            self.setHardDrive(None)
 
     def getCdrom(self):
         return self.cdrom
+
+    def setHardDrive(self, args):
+        if args == None:
+            self.harddrive = None
+        else:
+            self.harddrive = args
+            self.setNfs(None)
+            self.setUrl(None)
+            self.setCdrom(None)
+
+    def getHardDrive(self):
+        return self.harddrive
+
+    def setNfs(self, args):
+        if args == None:
+            self.nfs = None
+        else:
+            self.nfs = args
+            self.setHardDrive(None)
+            self.setUrl(None)
+            self.setCdrom(None)
+
+    def getNfs(self):
+        return self.nfs
+
+    def setUrl(self, args):
+        if args == None:
+            self.url = None
+        else:
+            self.url = args[1]
+            self.setNfs(None)
+            self.setHardDrive(None)
+            self.setCdrom(None)
+
+    def getUrl(self):
+        return self.url
 
     def setBootloader(self, args):
         self.bootloader = args
@@ -157,6 +207,16 @@ class KickstartData:
 
     def getSkipX(self):
         return self.skipx
+
+    def setUpgrade(self, args):
+        if args == None:
+            self.upgrade = None
+        else:
+            self.upgrade = "upgrade"
+            self.setInstall(None)
+
+    def getUpgrade(self):
+        return self.upgrade
 
     def getAll(self):
         print "in getAll\n\n"
@@ -204,7 +264,30 @@ class KickstartData:
             file.append("#Use interactive kickstart installation method")
             file.append(self.getInteractive())
 
+        if self.getInstall():
+            file.append("#Install Red Hat Linux instead of upgrade")
+            file.append(self.getInstall())
 
+        elif self.getUpgrade():
+            file.append("#Upgrade existing installation")
+            file.append(self.getUpgrade())
+
+        if self.getCdrom():
+            file.append("#Use CDROM installation media")
+            file.append(self.getCdrom())
+
+        elif self.getNfs():
+            file.append("#Use NFS installation Media")
+            file.append("nfs " + self.getNfs())
+
+        elif self.getHardDrive():
+            file.append("#Use hard drive installation media")
+            file.append("harddrive " + self.getHardDrive())
+
+        elif self.getUrl():
+            file.append("#Use Web installation")
+            file.append("url --url " + self.getUrl())
+            pass
 
         for line in file:
             print line
