@@ -1,14 +1,14 @@
-# Swedish messages for redhat-config-kickstart.
-# Copyright (C) 2001, 2002, 2003 Christian Rose <menthos@menthos.com>.
+# Swedish messages for system-config-kickstart.
+# Copyright (C) 2001, 2002, 2003, 2004 Christian Rose <menthos@menthos.com>.
 #
 # $Id$
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: redhat-config-kickstart\n"
+"Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-05 15:11-0500\n"
-"PO-Revision-Date: 2003-10-19 15:53+0200\n"
+"PO-Revision-Date: 2004-03-08 00:03+0100\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -134,9 +134,8 @@ msgid "Trusted devices:"
 msgstr "Pålitliga enheter:"
 
 #: ../src/firewall.py:82
-#, fuzzy
 msgid "Trusted services:"
-msgstr "Pålitliga enheter:"
+msgstr "Pålitliga tjänster:"
 
 #: ../src/firewall.py:114
 msgid "Other ports: (1029:tcp)"
@@ -603,7 +602,7 @@ msgstr "vfat"
 
 #: ../src/partWindow.py:87
 msgid "PPC PReP Boot"
-msgstr ""
+msgstr "PPC PReP-start"
 
 #. XXX - have to do this after the show_all due to a bug in gtkSpinButton, I suspect
 #. If the current iter is the only child, delete the parent and the child
@@ -839,7 +838,6 @@ msgstr "Raid-enheter"
 #. # I18N
 #. #
 #: ../src/system-config-kickstart.py:60
-#, fuzzy
 msgid ""
 "Usage: system-config-kickstart [--help] [--generate <filename>] "
 "[<kickstart_filename>]\n"
@@ -855,7 +853,7 @@ msgid ""
 "values from\n"
 "                        the kickstart file already filled in."
 msgstr ""
-"Användning: redhat-config-kickstart [--help] [--generate <filnamn>] "
+"Användning: system-config-kickstart [--help] [--generate <filnamn>] "
 "[<kickstartfilnamn>]\n"
 "        \n"
 "--help                  Skriv ut detta meddelande\n"
@@ -872,10 +870,9 @@ msgid "Could not open display because no X server is running."
 msgstr "Kunde inte öppna display eftersom ingen X-server körs."
 
 #: ../src/system-config-kickstart.py:78
-#, fuzzy
 msgid "Try running 'system-config-kickstart --help' for a list of options."
 msgstr ""
-"Prova att köra \"redhat-config-kickstart --help\" för en lista med flaggor."
+"Prova att köra \"system-config-kickstart --help\" för en lista med flaggor."
 
 #. !/usr/bin/python2
 #. !/usr/bin/python2
@@ -1713,7 +1710,7 @@ msgstr "Sök efter bildskärm"
 
 #: system-config-kickstart.gladestrings:240
 msgid "Use custom monitor sync rates"
-msgstr ""
+msgstr "Använd anpassade synkroniseringsfrekvenser för bildskärm"
 
 #: system-config-kickstart.gladestrings:242
 msgid "Hz"
@@ -1825,8 +1822,16 @@ msgid "Preview Options"
 msgstr "Förhandsgranska alternativ"
 
 #: system-config-kickstart.gladestrings:274
-#, fuzzy
 msgid "_Save to File"
+msgstr "_Spara till fil"
+
+msgid "Save to File"
+msgstr "Spara till fil"
+
+msgid "_Save to file"
+msgstr "_Spara till fil"
+
+msgid "Save to file"
 msgstr "Spara till fil"
 
 #: system-config-kickstart.gladestrings:275
