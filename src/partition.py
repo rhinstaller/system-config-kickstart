@@ -43,6 +43,7 @@ class partition:
     def __init__(self, xml, kickstartData):
         self.xml = xml
         self.kickstartData = kickstartData
+        self.partition_frame = self.xml.get_widget("partition_frame")
         self.clear_mbr_yes_radiobutton = self.xml.get_widget("clear_mbr_yes_radiobutton")
         self.clear_mbr_no_radiobutton = self.xml.get_widget("clear_mbr_no_radiobutton")
         self.remove_parts_none_radiobutton = self.xml.get_widget("remove_parts_none_radiobutton")
@@ -316,6 +317,9 @@ class partition:
     def noneToggled(self, button):
         self.initlabel_yes_radiobutton.set_sensitive(not button.get_active())
         self.initlabel_no_radiobutton.set_sensitive(not button.get_active())
+
+    def setSensitive(self, boolean):
+        self.partition_frame.set_sensitive(boolean)
 
     def fillData(self):
         if self.kickstartData.getZeroMbr():
