@@ -43,9 +43,9 @@ archive:
 	@rm -rf /tmp/${PKGNAME}-$(VERSION) /tmp/${PKGNAME}
 	@cd /tmp; cvs export -r$(CVSTAG) ${PKGNAME}
 	@mv /tmp/${PKGNAME} /tmp/${PKGNAME}-$(VERSION)
-	@dir=$$PWD; cd /tmp; tar cvzf $$dir/${PKGNAME}-$(VERSION).tar.gz ${PKGNAME}-$(VERSION)
+	@dir=$$PWD; cd /tmp; tar --bzip2 -cSpf $$dir/${PKGNAME}-$(VERSION).tar.bz2 ${PKGNAME}-$(VERSION)
 	@rm -rf /tmp/${PKGNAME}-$(VERSION)
-	@echo "The archive is in ${PKGNAME}-$(VERSION).tar.gz"
+	@echo "The archive is in ${PKGNAME}-$(VERSION).tar.bz2"
 
 snapsrc: create-snapshot
 	@rpmbuild -ta --nodeps $(PKGNAME)-$(VERSION).tar.bz2
@@ -67,13 +67,13 @@ create-snapshot:
 
 
 local:
-	@rm -rf ${PKGNAME}-$(VERSION).tar.gz
+	@rm -rf ${PKGNAME}-$(VERSION).tar.bz2
 	@rm -rf /tmp/${PKGNAME}-$(VERSION) /tmp/${PKGNAME}
 	@cd /tmp; cp -a ~/redhat/${PKGNAME} ${PKGNAME}
 	@mv /tmp/${PKGNAME} /tmp/${PKGNAME}-$(VERSION)
-	@dir=$$PWD; cd /tmp; tar cvzf $$dir/${PKGNAME}-$(VERSION).tar.gz ${PKGNAME}-$(VERSION)
+	@dir=$$PWD; cd /tmp; tar --bzip2 -cSpf $$dir/${PKGNAME}-$(VERSION).tar.b2z ${PKGNAME}-$(VERSION)
 	@rm -rf /tmp/${PKGNAME}-$(VERSION)	
-	@echo "The archive is in ${PKGNAME}-$(VERSION).tar.gz"
+	@echo "The archive is in ${PKGNAME}-$(VERSION).tar.bz2"
 
 clean:
 	@rm -f *~
