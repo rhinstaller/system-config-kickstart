@@ -6,13 +6,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: redhat-config-kickstart\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2003-02-10 17:08+0200\n"
+"PO-Revision-Date: 2003-06-24 15:19-0200\n"
 "Last-Translator: Nikos Charonitakis <charosn@her.forthnet.gr>\n"
 "Language-Team: Greek <nls@hellug.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.6\n"
 
 #: redhat-config-kickstart.gladestrings:284
 msgid "IP Address:"
@@ -48,9 +47,7 @@ msgid "Make RAID Device"
 msgstr "Δημιουργία Συσκευής RAID"
 
 #: ../src/partWindow.py:492
-msgid ""
-"The partition you specified does not end in a number.  Partitions must have "
-"a partition number such as \"hda1\" or \"sda3\"."
+msgid "The partition you specified does not end in a number.  Partitions must have a partition number such as \"hda1\" or \"sda3\"."
 msgstr ""
 
 #: redhat-config-kickstart.gladestrings:62
@@ -95,17 +92,15 @@ msgid "Video Card RAM: "
 msgstr "RAM Κάρτας Βίντεο:"
 
 #: ../src/partWindow.py:498
-msgid ""
-"The partition you specified does not begin with \"hd\" or \"sd\".  "
-"Partitions must have a valid device name and partition number such as \"hda1"
-"\" or \"sda3\"."
+msgid "The partition you specified does not begin with \"hd\" or \"sd\".  Partitions must have a valid device name and partition number such as \"hda1\" or \"sda3\"."
 msgstr ""
 
 #: redhat-config-kickstart.gladestrings:129
 msgid "Install new boot loader"
 msgstr ""
 
-#: ../src/kickstartGui.py:147 redhat-config-kickstart.gladestrings:222
+#: ../src/kickstartGui.py:147
+#: redhat-config-kickstart.gladestrings:222
 msgid "Firewall Configuration"
 msgstr ""
 
@@ -113,11 +108,13 @@ msgstr ""
 msgid "Default Language:"
 msgstr "Εξ ορισμού Γλώσσα:"
 
-#: ../src/partWindow.py:88 redhat-config-kickstart.gladestrings:59
+#: ../src/partWindow.py:88
+#: redhat-config-kickstart.gladestrings:59
 msgid "ext3"
 msgstr "ext3"
 
-#: ../src/partWindow.py:88 redhat-config-kickstart.gladestrings:58
+#: ../src/partWindow.py:88
+#: redhat-config-kickstart.gladestrings:58
 msgid "ext2"
 msgstr "ext2"
 
@@ -145,7 +142,8 @@ msgstr ""
 msgid "0"
 msgstr "0"
 
-#: ../src/partWindow.py:91 redhat-config-kickstart.gladestrings:60
+#: ../src/partWindow.py:91
+#: redhat-config-kickstart.gladestrings:60
 msgid "swap"
 msgstr ""
 
@@ -194,24 +192,21 @@ msgid "Create a kickstart file"
 msgstr ""
 
 #: redhat-config-kickstart.gladestrings:274
-msgid ""
-"You have choosen the following configuration. Click Save File to save the "
-"kickstart file. "
+msgid "You have choosen the following configuration. Click Save File to save the kickstart file. "
 msgstr ""
 
 #: redhat-config-kickstart.gladestrings:148
 msgid "Kernel parameters:"
-msgstr "Παράμετροι πηρύνα:"
+msgstr "Παράμετροι πυρήνα:"
 
 #: redhat-config-kickstart.gladestrings:67
 msgid "_Save File"
-msgstr "_Αποθήκευση Αρχείου"
+msgstr "Απο_θήκευση Αρχείου"
 
 #: redhat-config-kickstart.gladestrings:86
 #: redhat-config-kickstart.gladestrings:137
-#, fuzzy
 msgid "Confirm Password:"
-msgstr "Κωδικός Πρόσβασης Διαχειριστή Συστήματος:"
+msgstr "Επιβεβαίωση Συνθηματικού:"
 
 #: redhat-config-kickstart.gladestrings:22
 msgid "Drive :"
@@ -222,13 +217,12 @@ msgid "Probe for video card"
 msgstr ""
 
 #: redhat-config-kickstart.gladestrings:167
-#, fuzzy
 msgid "_Delete Network Device"
-msgstr "Συσκευή Δικτύου:"
+msgstr "_Διαγραφή Συσκευής Δικτύου"
 
 #: redhat-config-kickstart.gladestrings:286
 msgid "Gateway:"
-msgstr "_Πύλη:"
+msgstr "Πύλη:"
 
 #: redhat-config-kickstart.gladestrings:239
 msgid "Specify hsync and vsync instead of monitor"
@@ -258,7 +252,8 @@ msgstr ""
 msgid "Network Device:"
 msgstr "Συσκευή Δικτύου:"
 
-#: ../src/partWindow.py:90 ../src/partWindow.py:149
+#: ../src/partWindow.py:90
+#: ../src/partWindow.py:149
 msgid "software RAID"
 msgstr "RAID με λογισμικό"
 
@@ -323,7 +318,8 @@ msgstr ""
 msgid "HTTP"
 msgstr "HTTP"
 
-#: ../src/raidWindow.py:185 ../src/raidWindow.py:213
+#: ../src/raidWindow.py:185
+#: ../src/raidWindow.py:213
 msgid "Raid Devices"
 msgstr "Συσκευές RAID"
 
@@ -347,7 +343,8 @@ msgstr ""
 msgid "HTTP Server:"
 msgstr "Εξυπηρετητής HTTP:"
 
-#: ../src/kickstartGui.py:146 redhat-config-kickstart.gladestrings:168
+#: ../src/kickstartGui.py:146
+#: redhat-config-kickstart.gladestrings:168
 msgid "Network Configuration"
 msgstr "Ρύθμιση Δικτύου"
 
@@ -356,13 +353,12 @@ msgid "Netmask: "
 msgstr "Μάσκα δικτύου:"
 
 #: redhat-config-kickstart.gladestrings:165
-#, fuzzy
 msgid "_Add Network Device"
-msgstr "Προσθήκη Συσκευής Δικτύου"
+msgstr "_Προσθήκη Συσκευής Δικτύου"
 
 #: redhat-config-kickstart.gladestrings:82
 msgid "Root Password:"
-msgstr "Κωδικός Πρόσβασης Διαχειριστή Συστήματος:"
+msgstr "Συνθηματικό Διαχειριστή Συστήματος:"
 
 #: redhat-config-kickstart.gladestrings:281
 msgid "Network Device Information"
@@ -432,7 +428,8 @@ msgstr "SMB"
 msgid "Installation Method"
 msgstr "Μέθοδος Εγκατάστασης"
 
-#: ../src/kickstartGui.py:148 redhat-config-kickstart.gladestrings:263
+#: ../src/kickstartGui.py:148
+#: redhat-config-kickstart.gladestrings:263
 msgid "Pre-Installation Script"
 msgstr ""
 
@@ -441,9 +438,7 @@ msgid "Specify a mount point for the partition."
 msgstr ""
 
 #: ../src/network.py:318
-msgid ""
-"A network device with the name %s already exists.  Please choose another "
-"device name"
+msgid "A network device with the name %s already exists.  Please choose another device name"
 msgstr ""
 
 #: redhat-config-kickstart.gladestrings:54
@@ -513,9 +508,7 @@ msgid "Partition Options"
 msgstr ""
 
 #: redhat-config-kickstart.gladestrings:259
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %pre command at the beginning."
+msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %pre command at the beginning."
 msgstr ""
 
 #: redhat-config-kickstart.gladestrings:41
@@ -614,7 +607,9 @@ msgstr "Χρήση ρολογιού UTC"
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr ""
 
-#: ../src/partWindow.py:256 ../src/partWindow.py:527 ../src/raidWindow.py:205
+#: ../src/partWindow.py:256
+#: ../src/partWindow.py:527
+#: ../src/raidWindow.py:205
 msgid "Yes"
 msgstr "Ναι"
 
@@ -628,9 +623,7 @@ msgid "Hard Drive"
 msgstr "Σκληρός δίσκος"
 
 #: ../src/partWindow.py:441
-msgid ""
-"To create a new RAID partition, you must specify either a hard drive device "
-"name or an existing partition."
+msgid "To create a new RAID partition, you must specify either a hard drive device name or an existing partition."
 msgstr ""
 
 #: redhat-config-kickstart.gladestrings:264
@@ -638,11 +631,12 @@ msgid "label89"
 msgstr "label89"
 
 #: ../src/partWindow.py:421
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 
-#: ../src/partWindow.py:258 ../src/partWindow.py:529 ../src/raidWindow.py:207
+#: ../src/partWindow.py:258
+#: ../src/partWindow.py:529
+#: ../src/raidWindow.py:207
 msgid "No"
 msgstr "Όχι"
 
@@ -850,11 +844,7 @@ msgid "Other ports: (1029:tcp)"
 msgstr "Άλλες θύρες: (1029:tcp)"
 
 #: redhat-config-kickstart.gladestrings:276
-msgid ""
-"Software RAID allows you to combine several disks into a larger RAID "
-"device.  A RAID device can be configured to provide additional speed and "
-"reliability compared to using an individual drive.  For more information on "
-"using RAID devices please consult the kickstart documentation."
+msgid "Software RAID allows you to combine several disks into a larger RAID device.  A RAID device can be configured to provide additional speed and reliability compared to using an individual drive.  For more information on using RAID devices please consult the kickstart documentation."
 msgstr ""
 
 #: redhat-config-kickstart.gladestrings:74
@@ -862,9 +852,8 @@ msgid "Encrypt root password"
 msgstr "Κρυπτογράφηση συνθηματικού διαχειριστή (root)"
 
 #: redhat-config-kickstart.gladestrings:135
-#, fuzzy
 msgid "Use GRUB password"
-msgstr "Χρήση συνθηματικού GRUB:"
+msgstr "Χρήση συνθηματικού GRUB"
 
 #: ../src/install.py:144
 msgid "Please enter an FTP server."
@@ -880,18 +869,13 @@ msgstr ""
 
 #: ../src/redhat-config-kickstart.py:63
 msgid ""
-"Usage: redhat-config-kickstart [--help] [--generate <filename>] "
-"[<kickstart_filename>]\n"
+"Usage: redhat-config-kickstart [--help] [--generate <filename>] [<kickstart_filename>]\n"
 "        \n"
 "--help                  Print out this message\n"
-"--generate <filename>   Generate a kickstart file from the current machine "
-"and write\n"
-"                        it to <filename>.  This option runs on the console, "
-"so it is\n"
-"                        useful for servers that do not have X currently "
-"running.\n"
-"<kickstart_filename>    This option will cause the GUI to launch with the "
-"values from\n"
+"--generate <filename>   Generate a kickstart file from the current machine and write\n"
+"                        it to <filename>.  This option runs on the console, so it is\n"
+"                        useful for servers that do not have X currently running.\n"
+"<kickstart_filename>    This option will cause the GUI to launch with the values from\n"
 "                        the kickstart file already filled in."
 msgstr ""
 
@@ -899,8 +883,12 @@ msgstr ""
 msgid "Use broadcast to find NIS server"
 msgstr ""
 
-#: ../src/basic.py:203 ../src/basic.py:223 ../src/install.py:198
-#: ../src/partition.py:302 ../src/partWindow.py:505 ../src/raidWindow.py:243
+#: ../src/basic.py:203
+#: ../src/basic.py:223
+#: ../src/install.py:198
+#: ../src/partition.py:302
+#: ../src/partWindow.py:505
+#: ../src/raidWindow.py:243
 msgid "Error"
 msgstr "Σφάλμα"
 
@@ -995,7 +983,7 @@ msgstr "_Άνοιγμα Αρχείου"
 
 #: redhat-config-kickstart.gladestrings:91
 msgid "Basic Configuration (required)"
-msgstr ""
+msgstr "Βασική Ρύθμιση (απαιτείται)"
 
 #: ../src/install.py:137
 msgid "Please enter an NFS directory."
@@ -1019,7 +1007,8 @@ msgstr "Μέλη Raid"
 msgid "Subsection"
 msgstr ""
 
-#: ../src/kickstartGui.py:147 redhat-config-kickstart.gladestrings:247
+#: ../src/kickstartGui.py:147
+#: redhat-config-kickstart.gladestrings:247
 msgid "X Configuration"
 msgstr "Ρύθμιση X"
 
@@ -1051,8 +1040,11 @@ msgstr "Επίπεδο RAID:"
 msgid "FTP Username"
 msgstr "Όνομα χρήστη FTP"
 
-#: ../src/network.py:110 ../src/network.py:155 ../src/network.py:223
-#: ../src/network.py:274 ../src/network.py:414
+#: ../src/network.py:110
+#: ../src/network.py:155
+#: ../src/network.py:223
+#: ../src/network.py:274
+#: ../src/network.py:414
 msgid "Static IP"
 msgstr "Στατικό IP"
 
@@ -1076,7 +1068,8 @@ msgstr ""
 msgid "Mouse:"
 msgstr "Ποντίκι:"
 
-#: ../src/kickstartGui.py:149 redhat-config-kickstart.gladestrings:270
+#: ../src/kickstartGui.py:149
+#: redhat-config-kickstart.gladestrings:270
 msgid "Post-Installation Script"
 msgstr ""
 
@@ -1084,7 +1077,8 @@ msgstr ""
 msgid "Network Type"
 msgstr "Τύπος Δικτύου"
 
-#: ../src/kickstartGui.py:148 redhat-config-kickstart.gladestrings:257
+#: ../src/kickstartGui.py:148
+#: redhat-config-kickstart.gladestrings:257
 msgid "Package Selection"
 msgstr "Επιλογή Πακέτων"
 
@@ -1104,7 +1098,8 @@ msgstr ""
 msgid "Development"
 msgstr ""
 
-#: ../src/partition.py:151 ../src/partition.py:181
+#: ../src/partition.py:151
+#: ../src/partition.py:181
 msgid "Please select a partition from the list."
 msgstr ""
 
@@ -1180,9 +1175,7 @@ msgid "Help is not available."
 msgstr "Η Βοήθεια δεν είναι διαθέσιμη."
 
 #: ../src/partWindow.py:482
-msgid ""
-"The device you specified is not a valid device name. Please use a valid "
-"device name such as \"hda1\" or \"sda3\"."
+msgid "The device you specified is not a valid device name. Please use a valid device name such as \"hda1\" or \"sda3\"."
 msgstr ""
 
 #: ../src/install.py:153
@@ -1238,9 +1231,7 @@ msgid "label28"
 msgstr "label28"
 
 #: redhat-config-kickstart.gladestrings:277
-msgid ""
-"To use RAID you must first create at least two partitions of type 'software "
-"RAID'.  Then you can create a RAID device which can be formatted and mounted."
+msgid "To use RAID you must first create at least two partitions of type 'software RAID'.  Then you can create a RAID device which can be formatted and mounted."
 msgstr ""
 
 #: redhat-config-kickstart.gladestrings:245
@@ -1264,14 +1255,12 @@ msgid "SMB Servers:"
 msgstr "Εξυπηρετητές SMB:"
 
 #: redhat-config-kickstart.gladestrings:166
-#, fuzzy
 msgid "_Edit Network Device"
-msgstr "Προσθήκη Συσκευής Δικτύου"
+msgstr "_Επεξεργασία Συσκευής Δικτύου"
 
 #: redhat-config-kickstart.gladestrings:136
-#, fuzzy
 msgid "Password:"
-msgstr "Κωδικός Πρόσβασης Διαχειριστή Συστήματος:"
+msgstr "Συνθηματικό:"
 
 #: redhat-config-kickstart.gladestrings:93
 msgid "Perform new installation"
@@ -1282,16 +1271,16 @@ msgid "Create a software RAID partition"
 msgstr ""
 
 #: redhat-config-kickstart.gladestrings:265
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %post command at the beginning."
+msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %post command at the beginning."
 msgstr ""
 
 #: redhat-config-kickstart.gladestrings:70
 msgid "_Contents"
 msgstr "_Περιεχόμενα"
 
-#: ../src/partWindow.py:281 ../src/partWindow.py:296 ../src/partWindow.py:315
+#: ../src/partWindow.py:281
+#: ../src/partWindow.py:296
+#: ../src/partWindow.py:315
 #: ../src/partWindow.py:329
 msgid "Auto"
 msgstr "Αυτόματο"
@@ -1315,3 +1304,4 @@ msgstr "Αποθήκευση σε αρχείο"
 #: redhat-config-kickstart.gladestrings:68
 msgid "_Quit"
 msgstr "_Έξοδος"
+
