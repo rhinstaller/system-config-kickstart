@@ -26,6 +26,7 @@ import sys
 import signal
 import gtk
 import gtk.glade
+import gettext
 import kickstartGui
 
 try:
@@ -37,6 +38,10 @@ except ImportError:
 if __name__ == "__main__":
     signal.signal (signal.SIGINT, signal.SIG_DFL)
 
-xml = gtk.glade.XML ("/usr/share/redhat-config-kickstart/redhat-config-kickstart-gtk2.glade", domain="redhat-config-kickstart")
+domain = 'redhat-config-kickstart'
+gettext.bindtextdomain(domain, '/usr/share/locale')
+gtk.glade.bindtextdomain(domain)
+
+xml = gtk.glade.XML ("/usr/share/redhat-config-kickstart/redhat-config-kickstart-gtk2.glade", domain=domain)
 
 kickstartGui.kickstartGui(xml)
