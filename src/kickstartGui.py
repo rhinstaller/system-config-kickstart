@@ -117,7 +117,7 @@ class kickstartGui:
 	#FIXME
 	self.packages_class = packages.Packages(xml, self.kickstartData)
 	#bring in scripts function
-	self.scripts_class = scripts.scripts(xml)	
+	self.scripts_class = scripts.scripts(xml, self.kickstartData)
 	
 	col = gtk.TreeViewColumn(_("Subsection"), gtk.CellRendererText(), text=0)
 	col.set_sort_column_id(0)
@@ -233,7 +233,7 @@ class kickstartGui:
 	if self.install_radiobutton.get_active():
             self.packages_class.getData()
 
-	list = list + self.scripts_class.getData()
+	self.scripts_class.getData()
 
         self.kickstartData.getAll()
 
@@ -265,3 +265,4 @@ class kickstartGui:
         self.firewall_class.fillData()
         self.X_class.fillData()
         self.packages_class.fillData()
+        self.scripts_class.fillData()
