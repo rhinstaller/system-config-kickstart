@@ -174,19 +174,18 @@ class ksconfig_gui:
 	#display help manual
 	def on_help_button_clicked (self, args):
 	
-		help_pages = ["file:///usr/share/doc/ksconfig-" + VERSION + "ksconfig-basic.html",
-			      "file:///usr/share/doc/ksconfig-" + VERSION + "ksconfig-bootloader.html",
-			      "file:///usr/share/doc/ksconfig-" + VERSION + "ksconfig-install.html",
-			      "file:///usr/share/doc/ksconfig-" + VERSION + "ksconfig-partitions.html",
-			      "file:///usr/share/doc/ksconfig-" + VERSION + "ksconfig-network.html",
-			      "file:///usr/share/doc/ksconfig-" + VERSION + "ksconfig-auth.html",
-			      "file:///usr/share/doc/ksconfig-" + VERSION + "ksconfig-firewall.html",
-			      "file:///usr/share/doc/ksconfig-" + VERSION + "ksconfig-xconfig.html",
-			      "file:///usr/share/doc/ksconfig-" + VERSION + "ksconfig-pkgs.html",
-			      "file:///usr/share/doc/ksconfig-" + VERSION + "ksconfig-prescript.html",
-			      "file:///usr/share/doc/ksconfig-" + VERSION + "ksconfig-postscript.html",
+		help_pages = ["file:///usr/share/doc/ksconfig-" + VERSION + "/ksconfig-basic.html",
+			      "file:///usr/share/doc/ksconfig-" + VERSION + "/ksconfig-bootloader.html",
+			      "file:///usr/share/doc/ksconfig-" + VERSION + "/ksconfig-install.html",
+			      "file:///usr/share/doc/ksconfig-" + VERSION + "/ksconfig-partitions.html",
+			      "file:///usr/share/doc/ksconfig-" + VERSION + "/ksconfig-network.html",
+			      "file:///usr/share/doc/ksconfig-" + VERSION + "/ksconfig-auth.html",
+			      "file:///usr/share/doc/ksconfig-" + VERSION + "/ksconfig-firewall.html",
+			      "file:///usr/share/doc/ksconfig-" + VERSION + "/ksconfig-xconfig.html",
+			      "file:///usr/share/doc/ksconfig-" + VERSION + "/ksconfig-pkgs.html",
+			      "file:///usr/share/doc/ksconfig-" + VERSION + "/ksconfig-prescript.html",
+			      "file:///usr/share/doc/ksconfig-" + VERSION + "/ksconfig-postinstall.html",
 			      ]
-		print self.options_notebook.get_current_page ()
 		gnome.help.goto (help_pages [self.options_notebook.get_current_page ()])
 
 	#show choosen options for confirmation
