@@ -159,7 +159,7 @@ class basic:
                           'Spanish': 'es',
                           'Slovak': 'sk',
                           'Macedonian': 'mk',
-                          'United Kingdom':'gb',
+                          'United Kingdom':'uk',
                           'Belarusian': 'by',
                           'Japanese': 'jp',
                           'German': 'de',
