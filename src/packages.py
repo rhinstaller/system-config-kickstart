@@ -75,12 +75,19 @@ class Packages:
         self.miscellaneous_label = xml.get_widget("miscellaneous_label")
         self.miscellaneous_label.set_markup("<span foreground='white'><big><b>%s</b></big></span>" % (self.miscellaneous_label.get(),))
 
+        style = gtk.Style()
         self.desktops_view = xml.get_widget("desktops_view")
+        self.desktops_view.get_selection().set_mode(gtk.SELECTION_NONE)
         self.applications_view = xml.get_widget("applications_treeview")
+        self.applications_view.get_selection().set_mode(gtk.SELECTION_NONE)
         self.servers_view = xml.get_widget("servers_treeview")
+        self.servers_view.get_selection().set_mode(gtk.SELECTION_NONE)
         self.development_view = xml.get_widget("development_treeview")
+        self.development_view.get_selection().set_mode(gtk.SELECTION_NONE)
         self.systems_view = xml.get_widget("systems_treeview")
+        self.systems_view.get_selection().set_mode(gtk.SELECTION_NONE)
         self.miscellaneous_view = xml.get_widget("miscellaneous_treeview")
+        self.miscellaneous_view.get_selection().set_mode(gtk.SELECTION_NONE)
 
         self.desktops_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
         self.desktops_view.set_model(self.desktops_store)
@@ -112,7 +119,7 @@ class Packages:
                        "KDE Desktop Environment"
                         ]
         applicationsList = ["Editors",
-                            "Engineering and Scientific"
+                            "Engineering and Scientific",
                             "Graphical Internet",
                             "Text-based Internet",
                             "Office/Productivity",
