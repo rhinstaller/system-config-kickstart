@@ -30,7 +30,7 @@ install:
 	install src/ksconfig.glade $(INSTROOT)$(PKGDATADIR)
 	install src/Cards $(INSTROOT)$(PKGDATADIR)
 	install src/MonitorsDB $(INSTROOT)$(PKGDATADIR)
-	install src/ksconfig.desktop $(INSTROOT)$(DESKTOPDIR)
+	install ksconfig.desktop $(INSTROOT)$(DESKTOPDIR)
 	for d in $(SUBDIRS); do \
 	(cd $$d; $(MAKE) INSTROOT=$(INSTROOT) MANDIR=$(MANDIR) install) \
 		|| case "$(MFLAGS)" in *k*) fail=yes;; *) exit 1;; esac; \

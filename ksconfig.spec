@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: ksconfig
-Version: 1.9.4
+Version: 1.9.5
 Release: 1
 URL: http://www.redhat.com
 Copyright: GPL
