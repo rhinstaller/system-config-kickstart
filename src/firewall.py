@@ -60,7 +60,7 @@ class firewall:
 
         #create table with custom checklists
         self.label1 = GtkLabel (_("Trusted devices:"))
-        self.label1.set_alignment (0.2, 0.0)
+        self.label1.set_alignment (0.0, 0.0)
         self.customTable.attach (self.label1, 0, 1, 2, 3, FILL, FILL, 5, 5)
         
         if os.access("/proc/net/dev", os.R_OK):
@@ -88,7 +88,7 @@ class firewall:
             self.trusted.append_row((device, device), FALSE)
 
         self.label2 = GtkLabel (_("Allow incoming:"))
-        self.label2.set_alignment (0.2, 0.0)
+        self.label2.set_alignment (0.0, 0.0)
         self.incoming = checklist.CheckList(1)
         self.incoming.connect ('button_press_event', self.incoming_select_row)
         self.incoming.connect ("key_press_event", self.incoming_key_press)
@@ -102,8 +102,8 @@ class firewall:
             self.incoming.append_row ((item, item), FALSE)
 
 
-        self.label3 = GtkLabel (_("Other ports:"))
-        self.label3.set_alignment (0.2, 0.0)
+        self.label3 = GtkLabel (_("Other ports: (1029:tcp)"))
+        self.label3.set_alignment (0.0, 0.0)
         self.portsEntry = GtkEntry ()
         self.customTable.attach (self.label3, 0, 1, 4, 5, FILL, FILL, 5, 5)
         self.customTable.attach (self.portsEntry, 1, 2, 4, 5, EXPAND|FILL, FILL, 5, 5)
@@ -190,8 +190,9 @@ class firewall:
 
             portlist = self.portsEntry.get_text()
             ports = []
-
-            buf = buf + '--port ' + portlist
-
+            
+            if portlist != "":
+                buf = buf + '--port ' + portlist
+            
         data.append(buf)
         return data
