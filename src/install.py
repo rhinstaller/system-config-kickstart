@@ -36,6 +36,7 @@ _=gettext.gettext
 class install:
   
     def __init__(self, xml, store, view, notebook, bootloader_class):
+        self.xml = xml
         self.store = store
         self.view = view
         self.notebook = notebook
@@ -211,6 +212,8 @@ class install:
             dlg.set_icon(kickstartGui.iconPixbuf)
             dlg.set_border_width(2)
             dlg.set_modal(gtk.TRUE)
+            toplevel = self.xml.get_widget("main_window")
+            dlg.set_transient_for(toplevel)
             dlg.run()
             dlg.hide()
 

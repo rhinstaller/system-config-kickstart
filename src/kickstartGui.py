@@ -74,7 +74,6 @@ class kickstartGui:
 		self.toplevel.set_icon(iconPixbuf)
 
 		#bring in widgets from glade file
-		self.preview_options_dialog = xml.get_widget("preview_option_dialog")
 		self.options_notebook = xml.get_widget("options_notebook")
 		self.install_radiobutton = xml.get_widget("install_radiobutton")
 		self.category_clist = xml.get_widget("category_clist")
@@ -159,6 +158,7 @@ class kickstartGui:
 		dlg.set_position (gtk.WIN_POS_CENTER)
 		dlg.set_border_width(2)
 		dlg.set_modal(gtk.TRUE)
+		dlg.set_transient_for(self.toplevel)
 		dlg.set_icon(iconPixbuf)
 		rc = dlg.run()
 		if rc == gtk.RESPONSE_OK:

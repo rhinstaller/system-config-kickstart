@@ -39,6 +39,8 @@ class saveFile:
 		self.buf = buf
 
 		self.dialog = self.xml.get_widget("preview_options_dialog")
+		toplevel = self.xml.get_widget("main_window")
+		self.dialog.set_transient_for(toplevel)
 		self.textview = self.xml.get_widget("confirm_options_textview")
 		self.confirm_options_ok_button = xml.get_widget("confirm_options_ok_button")
 		self.confirm_options_cancel_button = xml.get_widget("confirm_options_cancel_button")

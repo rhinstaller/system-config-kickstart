@@ -278,6 +278,8 @@ class basic:
             dlg.set_icon(kickstartGui.iconPixbuf)
             dlg.set_border_width(2)
             dlg.set_modal(gtk.TRUE)
+            toplevel = self.xml.get_widget("main_window")
+            dlg.set_transient_for(toplevel)
             dlg.run()
             dlg.hide()
             iter = self.store.get_iter_first()

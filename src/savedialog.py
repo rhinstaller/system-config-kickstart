@@ -36,7 +36,10 @@ class saveDialog:
         def __init__ (self, dataList, xml):
 		self.xml = xml
 		self.dataList = dataList
-		self.dialog = self.xml.get_widget("save_dialog")		
+		self.dialog = self.xml.get_widget("save_dialog")
+		self.dialog.set_modal(gtk.TRUE)
+		toplevel = self.xml.get_widget("main_window")
+		self.dialog.set_transient_for(toplevel)
 		self.save_ok_button = self.xml.get_widget("save_ok_button")
 		self.save_cancel_button = self.xml.get_widget("save_cancel_button")
 

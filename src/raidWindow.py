@@ -47,6 +47,8 @@ class raidWindow:
         self.original_partitions = None
         
         self.raid_window = xml.get_widget("raid_window")
+        toplevel = self.xml.get_widget("main_window")
+        self.raid_window.set_transient_for(toplevel)
         self.raid_window.set_icon(kickstartGui.iconPixbuf)
         self.raid_mp_combo = xml.get_widget("raid_mp_combo")
         self.raid_fsType_menu = xml.get_widget("raid_fsType_menu")
@@ -241,6 +243,7 @@ class raidWindow:
         dlg.set_position (gtk.WIN_POS_CENTER)
         dlg.set_border_width(2)
         dlg.set_modal(gtk.TRUE)
+        dlg.set_transient_for(self.raid_window)
         rc = dlg.run()
         if rc == gtk.RESPONSE_OK:
             dlg.hide()

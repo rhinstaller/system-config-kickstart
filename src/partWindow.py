@@ -48,6 +48,8 @@ class partWindow:
         self.device_iter_dict = {}
 
         self.partitionDialog = xml.get_widget("partition_dialog")
+        toplevel = xml.get_widget("main_window")
+        self.partitionDialog.set_transient_for(toplevel)
         self.partitionDialog.set_icon(kickstartGui.iconPixbuf)
         self.mountPointCombo = xml.get_widget("mountPointCombo")
         self.fsTypeCombo = xml.get_widget("fsTypeCombo")
@@ -514,6 +516,7 @@ class partWindow:
         dlg.set_position (gtk.WIN_POS_CENTER)
         dlg.set_border_width(2)
         dlg.set_modal(gtk.TRUE)
+        dlg.set_transient_for(self.partitionDialog)
         dlg.set_icon(kickstartGui.iconPixbuf)
         rc = dlg.run()
         if rc == gtk.RESPONSE_OK:
