@@ -54,14 +54,12 @@ class partition:
         self.edit_part_button = self.xml.get_widget("edit_part_button")
         self.del_part_button = self.xml.get_widget("del_part_button")
         self.raid_part_button = self.xml.get_widget("raid_part_button")
-        self.lvm_part_button = self.xml.get_widget("lvm_part_button")
         self.checkbox = self.xml.get_widget("checkbox2")
 
         self.add_part_button.connect("clicked", self.addPartition)
         self.edit_part_button.connect("clicked", self.editPartition)
         self.del_part_button.connect("clicked", self.delPartition)
         self.raid_part_button.connect("clicked", self.raidPartition)
-        self.lvm_part_button.connect("clicked", self.lvmPartition)
 
         self.part_store = gtk.TreeStore(gobject.TYPE_STRING, gobject.TYPE_STRING, gobject.TYPE_STRING,
                                         gobject.TYPE_STRING, gobject.TYPE_STRING, gobject.TYPE_PYOBJECT)
@@ -181,9 +179,6 @@ class partition:
 
     def raidPartition(self, *args):
         self.raidOptionsWindow.showOptionsWindow()
-
-    def lvmPartition(self, *args):
-        pass
 
     def getData(self):
         data = []
