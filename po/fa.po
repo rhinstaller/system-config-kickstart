@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-12-01 11:27-0500\n"
+"POT-Creation-Date: 2004-03-05 15:11-0500\n"
 "PO-Revision-Date: 2004-01-08 19:32+0330\n"
 "Last-Translator: Abbas Izad <abbasizad@hotmail.com>\n"
 "Language-Team: Persian <fa@li.org>\n"
@@ -65,7 +65,7 @@ msgstr ""
 #. set keyboard to current keymap
 #. set default mouse to generic ps/2
 #. populate time zone combo
-#: ../src/basic.py:202
+#: ../src/basic.py:199
 msgid "Root passwords do not match."
 msgstr "گذرواژه‌های مدیر مطابقت نمی‌کنند."
 
@@ -74,12 +74,12 @@ msgstr "گذرواژه‌های مدیر مطابقت نمی‌کنند."
 #. Prepart the clearpart line
 #. This is a raid device
 #. Check to see if the selection is actually a partition or one of the parent roots
-#: ../src/basic.py:203 ../src/basic.py:223 ../src/install.py:213
-#: ../src/partition.py:301 ../src/partWindow.py:506 ../src/raidWindow.py:247
+#: ../src/basic.py:200 ../src/basic.py:220 ../src/install.py:213
+#: ../src/partition.py:303 ../src/partWindow.py:513 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "خطا"
 
-#: ../src/basic.py:222
+#: ../src/basic.py:219
 msgid "Please select a root password."
 msgstr "لطفا گذرواژه‌ی مدیر را انتخاب کنید."
 
@@ -143,7 +143,8 @@ msgstr "سرویس‌های مورد اعتماد:"
 msgid "Other ports: (1029:tcp)"
 msgstr "درگاه‌های دیگر: (1029:tcp)"
 
-#. define languages, add languages here
+#. pull list of language from system-config-languages
+#. Chop encoding off so we can compare to self.installedLangs
 #. define mice, add mice here
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
@@ -422,7 +423,9 @@ msgstr "لطفا اطلاعات شبکه را پر کنید"
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
-msgstr "یک دستگاه شبکه با نام %s از قبل وجود دارد.  لطفا نام دستگاه دیگری را انتخاب کنید"
+msgstr ""
+"یک دستگاه شبکه با نام %s از قبل وجود دارد.  لطفا نام دستگاه دیگری را انتخاب "
+"کنید"
 
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
@@ -589,7 +592,7 @@ msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:85 ../src/partWindow.py:144
+#: ../src/partWindow.py:85 ../src/partWindow.py:148
 msgid "software RAID"
 msgstr "نرم‌افزار RAID"
 
@@ -597,24 +600,32 @@ msgstr "نرم‌افزار RAID"
 msgid "swap"
 msgstr "حافظه‌ی مبادله"
 
+#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:61
+msgid "vfat"
+msgstr "vfat"
+
+#: ../src/partWindow.py:87
+msgid "PPC PReP Boot"
+msgstr ""
+
 #. XXX - have to do this after the show_all due to a bug in gtkSpinButton, I suspect
 #. If the current iter is the only child, delete the parent and the child
 #. If there are other children, just delete this child
-#: ../src/partWindow.py:256 ../src/partWindow.py:528 ../src/raidWindow.py:212
+#: ../src/partWindow.py:260 ../src/partWindow.py:535 ../src/raidWindow.py:212
 msgid "Yes"
 msgstr "بله"
 
-#: ../src/partWindow.py:258 ../src/partWindow.py:530 ../src/raidWindow.py:214
+#: ../src/partWindow.py:262 ../src/partWindow.py:537 ../src/raidWindow.py:214
 msgid "No"
 msgstr "نه"
 
 #. If they didn't specify a device, create a group called "Auto"
-#: ../src/partWindow.py:281 ../src/partWindow.py:296 ../src/partWindow.py:315
-#: ../src/partWindow.py:329
+#: ../src/partWindow.py:285 ../src/partWindow.py:300 ../src/partWindow.py:319
+#: ../src/partWindow.py:333
 msgid "Auto"
 msgstr "خودکار"
 
-#: ../src/partWindow.py:290
+#: ../src/partWindow.py:294
 msgid "Hard Drives"
 msgstr "گرداننده‌های دیسک"
 
@@ -626,44 +637,45 @@ msgstr "گرداننده‌های دیسک"
 #. It's not raid, so move on
 #. If it's a swap partition, set fsType to be swap
 #. It's not raid and it's not swap, so it must be a regular partition
-#: ../src/partWindow.py:413
+#: ../src/partWindow.py:420
 msgid "Specify a mount point for the partition."
 msgstr "نقطه سوارسازی را برای قسمت‌بندی مشخص کنید."
 
 #. Check to see if the mount point has already been used
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:422
+#: ../src/partWindow.py:429
 #, python-format
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "نقطه سوارسازی \"%s\" از قبل مورد استفاده است.  لطفا نقطه‌ی سوارسازی دیگری را "
 "انتخاب کنید."
 
 #. This will scan the part_store and see if there are any duplicate mount points
-#: ../src/partWindow.py:442
+#: ../src/partWindow.py:449
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
 msgstr ""
-"برای ایجاد کردن یک قسمت‌بندی RAID، باید یا نام دستگاه دیسکی یا قسمت‌بندی موجودی "
-"را مشخص کنید."
+"برای ایجاد کردن یک قسمت‌بندی RAID، باید یا نام دستگاه دیسکی یا قسمت‌بندی "
+"موجودی را مشخص کنید."
 
 #. If all the checks pass, then return
 #. Don't iterate if we're counting the object that's being edited
 #. the entry doesn't start with "hd" or "sd" so it's probably not valid
-#: ../src/partWindow.py:481
+#: ../src/partWindow.py:488
 msgid "Specify a device on which to create the partition."
 msgstr "دستگاهی را برای ایجاد کردن قسمت‌بندی بر رویش مشخص کنید."
 
-#: ../src/partWindow.py:483
+#: ../src/partWindow.py:490
 msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
 msgstr ""
-"دستگاهی را که مشخص کرده‌اید نام دستگاه معتبری نیست. لطفا از یک نام دستگاه معتبر "
-"مانند \"hda1\" یا \"sda3\" استفاده کنید."
+"دستگاهی را که مشخص کرده‌اید نام دستگاه معتبری نیست. لطفا از یک نام دستگاه "
+"معتبر مانند \"hda1\" یا \"sda3\" استفاده کنید."
 
-#: ../src/partWindow.py:493
+#: ../src/partWindow.py:500
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -671,15 +683,15 @@ msgstr ""
 "قسمت‌بندیی که مشخص کرده‌اید با یک شماره تمام نمی‌شود.  قسمت‌بندی‌ها باید یک "
 "شماره‌ی قسمت‌بندی مانند \"hda1\" یا \"sda3\" داشته باشند."
 
-#: ../src/partWindow.py:499
+#: ../src/partWindow.py:506
 msgid ""
 "The partition you specified does not begin with \"hd\" or \"sd\".  "
 "Partitions must have a valid device name and partition number such as \"hda1"
 "\" or \"sda3\"."
 msgstr ""
-"قسمت‌بندیی که مشخص کرده‌اید با \"hd\" یا \"sd\" شروع نمی‌شود.  "
-"قسمت‌بندی‌ها باید یک نام دستگاه معتبر و شماره‌ی قسمت‌بندیی مانند \"hda1\" یا \"sda3\" "
-"داشته باشند."
+"قسمت‌بندیی که مشخص کرده‌اید با \"hd\" یا \"sd\" شروع نمی‌شود.  قسمت‌بندی‌ها باید "
+"یک نام دستگاه معتبر و شماره‌ی قسمت‌بندیی مانند \"hda1\" یا \"sda3\" داشته "
+"باشند."
 
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
 #. # Copyright (C) 2000, 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
@@ -742,12 +754,14 @@ msgstr "شما در حال حاضر %d قسمت‌بندی آزاد نرم‌ا�
 #: ../src/raidWindow.py:172
 #, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr "شما باید حداقل ۲ قسمت‌بندی را برای توانستن به استفاده از RAID %s انتخاب کنید"
+msgstr ""
+"شما باید حداقل ۲ قسمت‌بندی را برای توانستن به استفاده از RAID %s انتخاب کنید"
 
 #: ../src/raidWindow.py:178
 #, python-format
 msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr "شما باید حداقل ۳ قسمت‌بندی را برای توانستن به استفاده از RAID %s انتخاب کنید"
+msgstr ""
+"شما باید حداقل ۳ قسمت‌بندی را برای توانستن به استفاده از RAID %s انتخاب کنید"
 
 #. then this is a new raid device, not one we're just editing
 #: ../src/raidWindow.py:192 ../src/raidWindow.py:218
@@ -850,14 +864,14 @@ msgstr ""
 "[<kickstart_filename>]\n"
 "        \n"
 "--help                  این پیغام را نشان می‌دهد\n"
-"--generate <filename>   یک پرونده‌ی راه‌اندازی شروعی را از ماشین کنونی ایجاد کرده "
-"و آن \n"
-"                        به پرونده‌ی <filename> می‌نویسد.  این گزینه بر کنسول اجرا شده, "
-"بنابرین آن\n"
+"--generate <filename>   یک پرونده‌ی راه‌اندازی شروعی را از ماشین کنونی ایجاد "
+"کرده و آن \n"
+"                        به پرونده‌ی <filename> می‌نویسد.  این گزینه بر کنسول "
+"اجرا شده, بنابرین آن\n"
 "                        برای کارگزارهایی که پنجره اکس را اجرا نمی‌کنند مفید "
 "است.\n"
-"<kickstart_filename>    این گزینه باعث می‌شود که ظاهر گرافیکی با مقدارهایی که "
-" از قبل\n"
+"<kickstart_filename>    این گزینه باعث می‌شود که ظاهر گرافیکی با مقدارهایی "
+"که  از قبل\n"
 "                        در پرونده‌ی راه‌اندازی شروعی پر شده‌اند راه‌اندازی شود."
 
 #: ../src/system-config-kickstart.py:77
@@ -866,7 +880,9 @@ msgstr "بدلیل در حال اجرا نبودن کارگزار X نمایشگ
 
 #: ../src/system-config-kickstart.py:78
 msgid "Try running 'system-config-kickstart --help' for a list of options."
-msgstr "اجرای 'system-config-kickstart --help' را برای دیدن لیستی از گزینه‌ها امتحان کنید."
+msgstr ""
+"اجرای 'system-config-kickstart --help' را برای دیدن لیستی از گزینه‌ها امتحان "
+"کنید."
 
 #. !/usr/bin/python2
 #. !/usr/bin/python2
@@ -1147,10 +1163,6 @@ msgstr "1"
 #: system-config-kickstart.gladestrings:57
 msgid "5"
 msgstr "5"
-
-#: system-config-kickstart.gladestrings:61
-msgid "vfat"
-msgstr "vfat"
 
 #: system-config-kickstart.gladestrings:62
 msgid "Format RAID device"
@@ -1776,8 +1788,8 @@ msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %pre command at the beginning."
 msgstr ""
-"هشدار: خطایی در این دست‌نویس ممکن است نصب راه‌اندازی شروعی شما را مردود "
-"کند. پیش‌فرمان %p را در شروع ضمیمه نکنید."
+"هشدار: خطایی در این دست‌نویس ممکن است نصب راه‌اندازی شروعی شما را مردود کند. "
+"پیش‌فرمان %p را در شروع ضمیمه نکنید."
 
 #: system-config-kickstart.gladestrings:261
 #: system-config-kickstart.gladestrings:268
@@ -1799,8 +1811,8 @@ msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %post command at the beginning."
 msgstr ""
-"هشدار: خطایی در این دست‌نویس ممکن است نصب راه‌اندازی شروعی شما را مردود "
-"کند. پس‌فرمان %p را در شروع ضمیمه نکنید."
+"هشدار: خطایی در این دست‌نویس ممکن است نصب راه‌اندازی شروعی شما را مردود کند. "
+"پس‌فرمان %p را در شروع ضمیمه نکنید."
 
 #: system-config-kickstart.gladestrings:267
 msgid "Run outside of the chroot environment"
@@ -1820,7 +1832,8 @@ msgid "Preview Options"
 msgstr "گزینه‌های پیش‌نما"
 
 #: system-config-kickstart.gladestrings:274
-msgid "Save to File"
+#, fuzzy
+msgid "_Save to File"
 msgstr "ذخیره کردن به پرونده"
 
 #: system-config-kickstart.gladestrings:275
@@ -1828,8 +1841,8 @@ msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
 msgstr ""
-"شما پیکربندی بدنبال آمده را انتخاب کرده‌اید. ذخیره کردن پرونده را برای ذخیره‌ی پرونده‌ی "
-"راه‌اندازی شروعی کلیک کنید."
+"شما پیکربندی بدنبال آمده را انتخاب کرده‌اید. ذخیره کردن پرونده را برای ذخیره‌ی "
+"پرونده‌ی راه‌اندازی شروعی کلیک کنید."
 
 #: system-config-kickstart.gladestrings:276
 msgid "RAID Options"
@@ -1843,9 +1856,10 @@ msgid ""
 "using RAID devices please consult the kickstart documentation."
 msgstr ""
 "نرم‌افزار RAID به شما اجازه می‌دهد تا چندین دیسک را به یک دستگاه بزرگتر RAID "
-"تبدیل کنید.  یک دستگاه RAID می‌تواند برای عرضه دادن سرعت بیشتر و قابلیت اعتماد "
-"بالاتر در مقایسه با استفاده از یک گرداننده‌ی تکی پیکربندی شود.  برای اطلاعات بیشتر "
-"در استفاده از دستگاه‌های RAID لطفا به نوشتارهای راه‌انداز شروعی مراجعه کنید."
+"تبدیل کنید.  یک دستگاه RAID می‌تواند برای عرضه دادن سرعت بیشتر و قابلیت "
+"اعتماد بالاتر در مقایسه با استفاده از یک گرداننده‌ی تکی پیکربندی شود.  برای "
+"اطلاعات بیشتر در استفاده از دستگاه‌های RAID لطفا به نوشتارهای راه‌انداز شروعی "
+"مراجعه کنید."
 
 #: system-config-kickstart.gladestrings:278
 msgid ""
@@ -1853,7 +1867,8 @@ msgid ""
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
 msgstr ""
 "برای استفاده از RAID باید اول حداقل دو قسمت‌بندی از نوع 'نرم‌افزار RAID' ایجاد "
-"کنید. سپس می‌توانید یک دستگاه RAID که بتواند قالب‌بندی و سوار شود را ایجاد کنید."
+"کنید. سپس می‌توانید یک دستگاه RAID که بتواند قالب‌بندی و سوار شود را ایجاد "
+"کنید."
 
 #: system-config-kickstart.gladestrings:279
 msgid "Choose one of the following options:"
@@ -1909,4 +1924,3 @@ msgstr "کارگزار نام:"
 #: system-config-kickstart.gladestrings:315
 msgid "."
 msgstr "."
-

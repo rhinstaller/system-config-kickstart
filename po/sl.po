@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: redhat-config-kickstart 2.3.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-01-06 16:57-0500\n"
+"POT-Creation-Date: 2004-03-05 15:11-0500\n"
 "PO-Revision-Date: 2003-09-27 22:57+0200\n"
 "Last-Translator: Roman Maurer <roman@lugos.si>\n"
 "Language-Team: Slovenian <translation-team-sl@lists.sourceforge.net>\n"
@@ -74,7 +74,7 @@ msgstr ""
 #. This is a raid device
 #. Check to see if the selection is actually a partition or one of the parent roots
 #: ../src/basic.py:200 ../src/basic.py:220 ../src/install.py:213
-#: ../src/partition.py:301 ../src/partWindow.py:506 ../src/raidWindow.py:247
+#: ../src/partition.py:303 ../src/partWindow.py:513 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "Napaka"
 
@@ -591,7 +591,7 @@ msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:85 ../src/partWindow.py:144
+#: ../src/partWindow.py:85 ../src/partWindow.py:148
 msgid "software RAID"
 msgstr "programski RAID"
 
@@ -599,24 +599,32 @@ msgstr "programski RAID"
 msgid "swap"
 msgstr "izmenjalni prostor"
 
+#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:61
+msgid "vfat"
+msgstr "vfat"
+
+#: ../src/partWindow.py:87
+msgid "PPC PReP Boot"
+msgstr ""
+
 #. XXX - have to do this after the show_all due to a bug in gtkSpinButton, I suspect
 #. If the current iter is the only child, delete the parent and the child
 #. If there are other children, just delete this child
-#: ../src/partWindow.py:256 ../src/partWindow.py:528 ../src/raidWindow.py:212
+#: ../src/partWindow.py:260 ../src/partWindow.py:535 ../src/raidWindow.py:212
 msgid "Yes"
 msgstr "Da"
 
-#: ../src/partWindow.py:258 ../src/partWindow.py:530 ../src/raidWindow.py:214
+#: ../src/partWindow.py:262 ../src/partWindow.py:537 ../src/raidWindow.py:214
 msgid "No"
 msgstr "Ne"
 
 #. If they didn't specify a device, create a group called "Auto"
-#: ../src/partWindow.py:281 ../src/partWindow.py:296 ../src/partWindow.py:315
-#: ../src/partWindow.py:329
+#: ../src/partWindow.py:285 ../src/partWindow.py:300 ../src/partWindow.py:319
+#: ../src/partWindow.py:333
 msgid "Auto"
 msgstr "Samodejno"
 
-#: ../src/partWindow.py:290
+#: ../src/partWindow.py:294
 msgid "Hard Drives"
 msgstr "Trdi pogoni"
 
@@ -628,13 +636,13 @@ msgstr "Trdi pogoni"
 #. It's not raid, so move on
 #. If it's a swap partition, set fsType to be swap
 #. It's not raid and it's not swap, so it must be a regular partition
-#: ../src/partWindow.py:413
+#: ../src/partWindow.py:420
 msgid "Specify a mount point for the partition."
 msgstr "Določite točko priklopa za razdelek."
 
 #. Check to see if the mount point has already been used
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:422
+#: ../src/partWindow.py:429
 #, python-format
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
@@ -643,7 +651,7 @@ msgstr ""
 "priklopa."
 
 #. This will scan the part_store and see if there are any duplicate mount points
-#: ../src/partWindow.py:442
+#: ../src/partWindow.py:449
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -654,11 +662,11 @@ msgstr ""
 #. If all the checks pass, then return
 #. Don't iterate if we're counting the object that's being edited
 #. the entry doesn't start with "hd" or "sd" so it's probably not valid
-#: ../src/partWindow.py:481
+#: ../src/partWindow.py:488
 msgid "Specify a device on which to create the partition."
 msgstr "Določite napravo na kateri bi radi naredili razdelek."
 
-#: ../src/partWindow.py:483
+#: ../src/partWindow.py:490
 msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
@@ -666,7 +674,7 @@ msgstr ""
 "Naprava, ki ste jo določili, ni veljavno ime naprave.  Prosim, uporabite "
 "veljavno ime naprave, kot sta \"hda1\" ali \"sda3\"."
 
-#: ../src/partWindow.py:493
+#: ../src/partWindow.py:500
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -674,7 +682,7 @@ msgstr ""
 "Razdelek, ki ste ga določili, se ne konča s številko.  Razdelki morajo imeti "
 "številko razdelka kot je \"hda1\" ali \"sda3\"."
 
-#: ../src/partWindow.py:499
+#: ../src/partWindow.py:506
 msgid ""
 "The partition you specified does not begin with \"hd\" or \"sd\".  "
 "Partitions must have a valid device name and partition number such as \"hda1"
@@ -1152,10 +1160,6 @@ msgstr "1"
 #: system-config-kickstart.gladestrings:57
 msgid "5"
 msgstr "5"
-
-#: system-config-kickstart.gladestrings:61
-msgid "vfat"
-msgstr "vfat"
 
 #: system-config-kickstart.gladestrings:62
 msgid "Format RAID device"
@@ -1832,7 +1836,8 @@ msgid "Preview Options"
 msgstr "Predogled izbir"
 
 #: system-config-kickstart.gladestrings:274
-msgid "Save to File"
+#, fuzzy
+msgid "_Save to File"
 msgstr "Shrani v datoteko"
 
 #: system-config-kickstart.gladestrings:275

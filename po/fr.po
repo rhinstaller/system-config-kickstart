@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-01-06 16:57-0500\n"
+"POT-Creation-Date: 2004-03-05 15:11-0500\n"
 "PO-Revision-Date: 2004-02-20 15:29+0100\n"
 "Last-Translator: Jean-Paul Aubry <jpaubry@redhat.com>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -75,7 +75,7 @@ msgstr "Les mots de passe root ne correspondent pas. "
 #. This is a raid device
 #. Check to see if the selection is actually a partition or one of the parent roots
 #: ../src/basic.py:200 ../src/basic.py:220 ../src/install.py:213
-#: ../src/partition.py:301 ../src/partWindow.py:506 ../src/raidWindow.py:247
+#: ../src/partition.py:303 ../src/partWindow.py:513 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "Erreur"
 
@@ -110,7 +110,8 @@ msgstr "Veuillez sélectionner un mot de passe root."
 #. end of lilo stuff
 #: ../src/bootloader.py:132
 msgid "Grub passwords do not match.  Please try again."
-msgstr "Les mots de passe Grub ne correspondent pas. Veuillez essayer de nouveau."
+msgstr ""
+"Les mots de passe Grub ne correspondent pas. Veuillez essayer de nouveau."
 
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
@@ -592,7 +593,7 @@ msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:85 ../src/partWindow.py:144
+#: ../src/partWindow.py:85 ../src/partWindow.py:148
 msgid "software RAID"
 msgstr "RAID logiciel"
 
@@ -600,24 +601,32 @@ msgstr "RAID logiciel"
 msgid "swap"
 msgstr "swap"
 
+#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:61
+msgid "vfat"
+msgstr "vfat"
+
+#: ../src/partWindow.py:87
+msgid "PPC PReP Boot"
+msgstr ""
+
 #. XXX - have to do this after the show_all due to a bug in gtkSpinButton, I suspect
 #. If the current iter is the only child, delete the parent and the child
 #. If there are other children, just delete this child
-#: ../src/partWindow.py:256 ../src/partWindow.py:528 ../src/raidWindow.py:212
+#: ../src/partWindow.py:260 ../src/partWindow.py:535 ../src/raidWindow.py:212
 msgid "Yes"
 msgstr "Oui"
 
-#: ../src/partWindow.py:258 ../src/partWindow.py:530 ../src/raidWindow.py:214
+#: ../src/partWindow.py:262 ../src/partWindow.py:537 ../src/raidWindow.py:214
 msgid "No"
 msgstr "Non"
 
 #. If they didn't specify a device, create a group called "Auto"
-#: ../src/partWindow.py:281 ../src/partWindow.py:296 ../src/partWindow.py:315
-#: ../src/partWindow.py:329
+#: ../src/partWindow.py:285 ../src/partWindow.py:300 ../src/partWindow.py:319
+#: ../src/partWindow.py:333
 msgid "Auto"
 msgstr "Auto"
 
-#: ../src/partWindow.py:290
+#: ../src/partWindow.py:294
 msgid "Hard Drives"
 msgstr "Disques durs"
 
@@ -629,21 +638,22 @@ msgstr "Disques durs"
 #. It's not raid, so move on
 #. If it's a swap partition, set fsType to be swap
 #. It's not raid and it's not swap, so it must be a regular partition
-#: ../src/partWindow.py:413
+#: ../src/partWindow.py:420
 msgid "Specify a mount point for the partition."
 msgstr "Spécifier un point de montage pour la partition."
 
 #. Check to see if the mount point has already been used
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:422
+#: ../src/partWindow.py:429
 #, python-format
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "Le point de montage \"%s\" est déjà utilisé. Veuillez sélectionner un autre "
 "point de montage."
 
 #. This will scan the part_store and see if there are any duplicate mount points
-#: ../src/partWindow.py:442
+#: ../src/partWindow.py:449
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -654,11 +664,11 @@ msgstr ""
 #. If all the checks pass, then return
 #. Don't iterate if we're counting the object that's being edited
 #. the entry doesn't start with "hd" or "sd" so it's probably not valid
-#: ../src/partWindow.py:481
+#: ../src/partWindow.py:488
 msgid "Specify a device on which to create the partition."
 msgstr "Spécifier un périphérique sur lequel créer la partition."
 
-#: ../src/partWindow.py:483
+#: ../src/partWindow.py:490
 msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
@@ -666,7 +676,7 @@ msgstr ""
 "Le périphérique que vous avez spécifié n'a pas de nom de périphérique "
 "valable. Utilisez un nom de périphérque valable, comme \"hda1\" ou \"sda3\"."
 
-#: ../src/partWindow.py:493
+#: ../src/partWindow.py:500
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -675,7 +685,7 @@ msgstr ""
 "partitions doivent comporter un numéro de partition comme \"hda1\" ou \"sda3"
 "\"."
 
-#: ../src/partWindow.py:499
+#: ../src/partWindow.py:506
 msgid ""
 "The partition you specified does not begin with \"hd\" or \"sd\".  "
 "Partitions must have a valid device name and partition number such as \"hda1"
@@ -751,7 +761,8 @@ msgstr "Vous devez sélectionner au moins 2 partitions afin d'utiliser RAID %s"
 #: ../src/raidWindow.py:178
 #, python-format
 msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr "Vous devez sélectionner au moins 3 partitions pour pouvoir utiliser RAID %s"
+msgstr ""
+"Vous devez sélectionner au moins 3 partitions pour pouvoir utiliser RAID %s"
 
 #. then this is a new raid device, not one we're just editing
 #: ../src/raidWindow.py:192 ../src/raidWindow.py:218
@@ -1155,10 +1166,6 @@ msgstr "1"
 #: system-config-kickstart.gladestrings:57
 msgid "5"
 msgstr "5"
-
-#: system-config-kickstart.gladestrings:61
-msgid "vfat"
-msgstr "vfat"
 
 #: system-config-kickstart.gladestrings:62
 msgid "Format RAID device"
@@ -1832,7 +1839,8 @@ msgid "Preview Options"
 msgstr "Options d'aperçu"
 
 #: system-config-kickstart.gladestrings:274
-msgid "Save to File"
+#, fuzzy
+msgid "_Save to File"
 msgstr "Enregistrer dans le fichier"
 
 #: system-config-kickstart.gladestrings:275
@@ -2038,4 +2046,3 @@ msgstr "."
 
 #~ msgid "onPart and onDisk can not be used at the same time."
 #~ msgstr "onPart et onDisk ne peuvent être utilisés en même temps."
-
