@@ -350,7 +350,7 @@
 		      <property name="column_spacing">4</property>
 
 		      <child>
-			<widget class="GtkSpinButton" id="maxSizeCombo">
+			<widget class="GtkSpinButton" id="sizeSetCombo">
 			  <property name="visible">True</property>
 			  <property name="sensitive">False</property>
 			  <property name="can_focus">True</property>
@@ -375,7 +375,7 @@
 			<widget class="GtkRadioButton" id="sizeMaxRadio">
 			  <property name="visible">True</property>
 			  <property name="can_focus">True</property>
-			  <property name="label" translatable="yes">Fill to maximum allowable size</property>
+			  <property name="label" translatable="yes">Fill all unused space on disk</property>
 			  <property name="use_underline">True</property>
 			  <property name="relief">GTK_RELIEF_NORMAL</property>
 			  <property name="active">False</property>
@@ -396,7 +396,7 @@
 			<widget class="GtkRadioButton" id="sizeSetRadio">
 			  <property name="visible">True</property>
 			  <property name="can_focus">True</property>
-			  <property name="label" translatable="yes">Fill all space up to (MB):</property>
+			  <property name="label" translatable="yes">Grow to maximum of (MB):</property>
 			  <property name="use_underline">True</property>
 			  <property name="relief">GTK_RELIEF_NORMAL</property>
 			  <property name="active">False</property>
@@ -1995,7 +1995,7 @@
 		  </child>
 
 		  <child>
-		    <widget class="GtkFrame" id="frame11">
+		    <widget class="GtkFrame" id="boot_loader_frame">
 		      <property name="visible">True</property>
 		      <property name="label_xalign">0</property>
 		      <property name="label_yalign">0.5</property>
@@ -2147,6 +2147,7 @@
 				  <property name="active">True</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
+				  <property name="group">mbr_radiobutton</property>
 				</widget>
 				<packing>
 				  <property name="left_attach">1</property>
@@ -2168,7 +2169,7 @@
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
-				  <property name="group">grub_radiobutton</property>
+				  <property name="group">mbr_radiobutton</property>
 				</widget>
 				<packing>
 				  <property name="left_attach">2</property>
@@ -2465,7 +2466,7 @@
 			      <property name="visible">True</property>
 			      <property name="sensitive">False</property>
 			      <property name="can_focus">True</property>
-			      <property name="label" translatable="yes">Upgrade bootloader</property>
+			      <property name="label" translatable="yes">Upgrade boot loader</property>
 			      <property name="use_underline">True</property>
 			      <property name="relief">GTK_RELIEF_NORMAL</property>
 			      <property name="active">False</property>
