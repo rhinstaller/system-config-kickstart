@@ -199,7 +199,35 @@ class partWindow:
 
     def on_edit_ok_button_clicked(self, *args):
         part_object = self.part_store.get_value(self.current_iter, 5)
-        self.getData(part_object)
+        result = self.getData(part_object)
+
+        if not result:
+            return
+
+        parent_iter = self.part_store.iter_parent(self.current_iter)
+
+        if part_object.device == None:
+            self.part_store.set_value(self.current_iter, 0, "")
+        else:
+            if self.part_store.get_value(parent_iter, 0) != part_object.device:
+
+                if self.part_store.iter_n_children(parent_iter) == 1:
+                    #If the current iter is the only child, delete the parent and the child
+                    self.part_store.remove(self.current_iter)
+                    self.part_store.remove(parent_iter)
+                else:
+                    #If there are other children, just delete this child
+                    self.part_store.remove(self.current_iter)
+
+                self.current_iter = self.addPartitionToTree(part_object, self.current_iter)
+
+            else:
+                if part_object.raidNumber:
+                    self.part_store.set_value(self.current_iter, 0, part_object.raidNumber)
+                elif part_object.partition:
+                    self.part_store.set_value(self.current_iter, 0, part_object.partition)
+                else:
+                    self.part_store.set_value(self.current_iter, 0, part_object.device)
 
         self.part_store.set_value(self.current_iter, 1, part_object.mountPoint)
         self.part_store.set_value(self.current_iter, 2, part_object.fsType)
@@ -209,6 +237,8 @@ class partWindow:
             self.part_store.set_value(self.current_iter, 3, (_("No")))
         self.part_store.set_value(self.current_iter, 4, part_object.size)
         self.part_store.set_value(self.current_iter, 5, part_object)
+
+        self.part_view.expand_all()
 
         self.partOkButton.disconnect(self.ok_handler)
         self.win_reset()
@@ -224,6 +254,25 @@ class partWindow:
         iter = self.part_store.get_iter_first()
         parent = None
 
+        iter = self.addPartitionToTree(part_object, iter)
+
+        self.part_store.set_value(iter, 1, part_object.mountPoint)
+        self.part_store.set_value(iter, 2, part_object.fsType)
+
+        if part_object.doFormat == 1:
+            self.part_store.set_value(iter, 3, (_("Yes")))
+        else:
+            self.part_store.set_value(iter, 3, (_("No")))
+            
+        self.part_store.set_value(iter, 4, part_object.size)
+        self.part_store.set_value(iter, 5, part_object)
+
+        self.part_view.expand_all()
+        self.partOkButton.disconnect(self.ok_handler)
+        self.win_reset()
+        self.partitionDialog.hide()
+
+    def addPartitionToTree(self, part_object, iter):
         if iter == None:
             self.hard_drive_parent_iter = self.part_store.append(None)
             self.part_store.set_value(self.hard_drive_parent_iter, 0, (_("Hard Drives")))
@@ -267,21 +316,7 @@ class partWindow:
                     else:
                         self.part_store.set_value(iter, 0, (_("Auto")))
                 
-        self.part_store.set_value(iter, 1, part_object.mountPoint)
-        self.part_store.set_value(iter, 2, part_object.fsType)
-
-        if part_object.doFormat == 1:
-            self.part_store.set_value(iter, 3, (_("Yes")))
-        else:
-            self.part_store.set_value(iter, 3, (_("No")))
-            
-        self.part_store.set_value(iter, 4, part_object.size)
-        self.part_store.set_value(iter, 5, part_object)
-
-        self.part_view.expand_all()
-        self.partOkButton.disconnect(self.ok_handler)
-        self.win_reset()
-        self.partitionDialog.hide()
+        return iter
 
     def on_swap_recommended_toggled(self, *args):
         active = self.swap_checkbutton.get_active()
@@ -347,6 +382,9 @@ class partWindow:
                 part_object.fsType = result
 
         else:
+            #Erase any exiting raid data if we've edited a RAID partition to be non-RAID
+            part_object.raidNumber = None
+            
             #It's not raid, so move on
             if part_object.fsType == "swap":   
                 #If it's a swap partition, set fsType to be swap
@@ -398,7 +436,8 @@ class partWindow:
         if self.lastRaidNumber == "":
             fsType = "raid"
             part_object.raidNumber = "raid.01"
-        else:
+        elif part_object.raidNumber == None:
+            tmpNum = 0
             tmpNum = int(self.lastRaidNumber) + 1
             if tmpNum < 10:
                 part_object.raidNumber = "raid.0%s" % str(tmpNum)
