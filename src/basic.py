@@ -44,22 +44,20 @@ _=gettext.gettext
 
 class basic:
 
-    def __init__(self, xml, store, view, notebook):
+    def __init__(self, xml, store, view, notebook, kickstartData):
         self.store = store
         self.view = view
         self.notebook = notebook
+        self.kickstartData = kickstartData
         self.xml = xml
         self.lang_combo = xml.get_widget("lang_combo")
         self.keyboard_combo = xml.get_widget("keyboard_combo")
         self.mouse_combo = xml.get_widget("mouse_combo")
         self.timezone_combo = xml.get_widget("timezone_combo")
+
         self.root_passwd_entry = xml.get_widget("root_passwd_entry")
         self.emulate_3_buttons = xml.get_widget("emulate_3_buttons")
-        lang_combo = xml.get_widget("lang_combo")
         self.lang_support_view = xml.get_widget("lang_support_view")
-        mouse_combo = xml.get_widget("mouse_combo")
-        keyboard_combo = xml.get_widget("keyboard_combo")		
-        timezone_combo = xml.get_widget("timezone_combo")
         self.reboot_checkbutton = xml.get_widget("reboot_checkbutton")
         self.text_install_checkbutton = xml.get_widget("text_install_checkbutton")
         self.interactive_checkbutton = xml.get_widget("interactive_checkbutton")                
@@ -143,6 +141,7 @@ class basic:
         lang_list = self.langDict.keys()
         lang_list.sort()
         lang_combo.set_popdown_strings(lang_list)
+
         #set default to English
         lang_combo.list.select_item(4)
         lang_combo.entry.set_editable(gtk.FALSE)
@@ -155,8 +154,10 @@ class basic:
         mouse_list = ["Probe for Mouse"]
         dict_list = self.mouseDict.keys()
         dict_list.sort()
+
         for item in dict_list:
             mouse_list.append(item)
+
         mouse_combo.set_popdown_strings(mouse_list)
         mouse_combo.list.select_item(0)
         mouse_combo.entry.set_editable(gtk.FALSE)		
@@ -166,9 +167,11 @@ class basic:
         keys = self.keyboard_dict.keys()
         keys.sort()
         keyboard_list = []
+
         for item in keys:
             keyboard_list.append(self.keyboard_dict[item][0])
         keyboard_combo.set_popdown_strings(keyboard_list)
+
         #set default to English
         kbd = keyboard.Keyboard()
         kbd.read()
@@ -342,3 +345,13 @@ class basic:
             iter = self.lang_support_store.append()
             self.lang_support_store.set_value(iter, 0, gtk.FALSE)
             self.lang_support_store.set_value(iter, 1, lang)
+
+    def fillData(self):
+#        for lang in self.langDict.keys():
+#            if self.langDict[lang] == self.kickstartData.getLang():
+#                self.lang_combo.entry.set_text(lang)
+
+        print self.keyboard_dict
+        print self.keyboard_dict[self.kickstartData.getKeyboard()]
+#        self.keyboard_combo.entry.set_text(self.keyboard_dict[self.kickstartData.getKeyboard()][0])
+                                 
