@@ -43,7 +43,7 @@ class KickstartParser:
  		     "timezone"		: self.kickstartData.setTimezone	,
  		     "url"		: self.kickstartData.setUrl		,
  		     "upgrade"		: self.kickstartData.setUpgrade	        ,
-## 		     "xconfig"		: self.kickstartData.setXconfig	,
+ 		     "xconfig"		: self.kickstartData.setXconfig	        ,
 ## 		     "xdisplay"		: None			,
  		     "zerombr"		: self.kickstartData.setZeroMbr	,
                      "interactive"      : self.kickstartData.setInteractive     ,
@@ -53,11 +53,6 @@ class KickstartParser:
 
 
         self.readKickstartFile(file)
-#        print "Lang is", self.kickstartData.getLang()
-#        print "Langsupport is", self.kickstartData.getLangSupport()
-#        print "Keyboard is", self.kickstartData.getKeyboard()
-#        print self.kickstartData.getMouse()
-#        print self.kickstartData.getTimezone()        
 
     def readKickstartFile(self, file):
         self.lines = open(file, "r").readlines()
@@ -75,5 +70,5 @@ class KickstartParser:
                 print tokens
                 if tokens[0] in self.handlers.keys():
                     if self.handlers[tokens[0]]:
-			self.handlers[tokens[0]](tokens[1:])                        
+			self.handlers[tokens[0]](tokens[1:])
                     
