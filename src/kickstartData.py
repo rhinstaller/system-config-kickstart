@@ -336,6 +336,9 @@ class KickstartData:
             for line in self.getPartitions():
                 file.append("part " + string.join(line, " "))
 
+        if self.getAuth():
+            file.append("#System authorization infomation")
+            file.append("auth " + string.join(self.getAuth(), " "))
 
         for line in file:
             print line
