@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
-Version: 2.3.1
+Version: 2.3.2
 Release: 1
 URL: http://www.redhat.com
 License: GPL
@@ -14,6 +14,7 @@ Requires: pygtk2
 Requires: pygtk2-libglade 
 Requires: python2
 Requires: hwdata
+Requires: rhpl
 
 %description
 redhat-config-kickstart is a graphical tool for creating kickstart files.  
@@ -47,6 +48,10 @@ fi
 %config /etc/X11/applnk/System/redhat-config-kickstart.desktop
 
 %changelog
+* Thu Jul 18 2002 Tammy Fox <tfox@redhat.com> 2.3.2-1
+- Updated list of langs
+- Reimplemented keyboard list to use list from rhpl
+
 * Thu Jul 18 2002 Tammy Fox <tfox@redhat.com> 2.3.1-1
 - Fixed bug 69169
 
