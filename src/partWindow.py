@@ -154,7 +154,7 @@ class partWindow:
         self.mountPointCombo.entry.set_text("")
         self.mountPointCombo.set_sensitive(gtk.TRUE)
         self.fsTypeCombo.list.select_item(1)
-        self.sizeCombo.set_text("") 
+        self.sizeCombo.set_text("1") 
         self.asPrimaryCheck.set_active(gtk.FALSE)
         self.onDiskCheck.set_active(gtk.FALSE)
         self.onDiskEntry.set_text("")
