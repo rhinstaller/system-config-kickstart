@@ -17,6 +17,11 @@
   <name>main_window</name>
   <width>605</width>
   <height>400</height>
+  <signal>
+    <name>delete_event</name>
+    <handler>on_main_window_delete_event</handler>
+    <last_modification_time>Fri, 06 Jul 2001 22:46:01 GMT</last_modification_time>
+  </signal>
   <title>Kickstart Configurator</title>
   <type>GTK_WINDOW_TOPLEVEL</type>
   <position>GTK_WIN_POS_CENTER</position>
@@ -2934,7 +2939,7 @@
 
 		    <widget>
 		      <class>GtkEntry</class>
-		      <name>entry1</name>
+		      <name>ldapServerEntry</name>
 		      <sensitive>False</sensitive>
 		      <can_focus>True</can_focus>
 		      <editable>True</editable>
@@ -2959,7 +2964,7 @@
 
 		    <widget>
 		      <class>GtkEntry</class>
-		      <name>entry2</name>
+		      <name>ldapDNEntry</name>
 		      <sensitive>False</sensitive>
 		      <can_focus>True</can_focus>
 		      <editable>True</editable>
@@ -2984,7 +2989,7 @@
 
 		    <widget>
 		      <class>GtkLabel</class>
-		      <name>label80</name>
+		      <name>ldapLabel1</name>
 		      <sensitive>False</sensitive>
 		      <label>LDAP Server: </label>
 		      <justify>GTK_JUSTIFY_CENTER</justify>
@@ -3011,7 +3016,7 @@
 
 		    <widget>
 		      <class>GtkLabel</class>
-		      <name>label81</name>
+		      <name>ldapLabel2</name>
 		      <sensitive>False</sensitive>
 		      <label>LDAP Base Name: </label>
 		      <justify>GTK_JUSTIFY_CENTER</justify>
@@ -3902,7 +3907,7 @@
 		  <class>GtkLabel</class>
 		  <child_name>Notebook:tab</child_name>
 		  <name>label109</name>
-		  <label>Video Card / Monitor</label>
+		  <label>Video Card /Monitor</label>
 		  <justify>GTK_JUSTIFY_CENTER</justify>
 		  <wrap>False</wrap>
 		  <xalign>0.5</xalign>
