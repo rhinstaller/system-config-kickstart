@@ -42,8 +42,6 @@ class bootloader:
         self.install_bootloader_radio = xml.get_widget("install_bootloader_radio")
         self.upgrade_bootloader_radio = xml.get_widget("upgrade_bootloader_radio")
         self.no_bootloader_radio = xml.get_widget("no_bootloader_radio")
-        self.grub_radiobutton = xml.get_widget("grub_radiobutton")
-        self.lilo_radiobutton = xml.get_widget("lilo_radiobutton")
         self.mbr_radiobutton = xml.get_widget("mbr_radiobutton")               
         self.firstsector_radiobutton = xml.get_widget("firstsector_radiobutton")
         self.parameters_label = xml.get_widget("parameters_label")
@@ -56,36 +54,22 @@ class bootloader:
         self.grub_password_entry = xml.get_widget("grub_password_entry")
         self.grub_password_confirm = xml.get_widget("grub_password_confirm")
         self.grub_password_encrypt_checkbutton = xml.get_widget("grub_password_encrypt_checkbutton")
-        self.option_notebook = xml.get_widget("option_notebook")
 
         self.install_bootloader_radio.connect("toggled", self.toggled_bootloader)
         self.grub_password_checkbutton.connect("toggled", self.toggled_grub_password)
-        self.grub_radiobutton.connect("toggled", self.toggled_grub)
-        self.lilo_radiobutton.connect("toggled", self.toggled_lilo)
 
     def toggled_bootloader (self, args):
         status = self.install_bootloader_radio.get_active()
         self.parameters_label.set_sensitive(status)
         self.parameters_entry.set_sensitive(status)
-        self.grub_radiobutton.set_sensitive(status)
-        self.lilo_radiobutton.set_sensitive(status)
         self.mbr_radiobutton.set_sensitive(status)
         self.firstsector_radiobutton.set_sensitive(status)
-        self.option_notebook.set_sensitive(status)
-
-    def toggled_lilo (self, args):
-        status = self.lilo_radiobutton.get_active()        
-        if status:
-            self.option_notebook.set_current_page(1)
-
-    def toggled_grub (self, args):
-        status = self.grub_radiobutton.get_active()
-        if status:
-            self.option_notebook.set_current_page(0)
-        self.grub_password_encrypt_checkbutton.set_sensitive(status)
 
     def toggled_grub_password(self, args):
         self.grub_password_hbox.set_sensitive(self.grub_password_checkbutton.get_active())
+
+    def setSensitive(self, boolean):
+        self.upgrade_bootloader_radio.set_sensitive(not boolean)
 
     def getData (self):
         if self.install_bootloader_radio.get_active():
@@ -109,37 +93,36 @@ class bootloader:
             if length > 0:
                 buf = buf + "--append " + params + " "
 
-            if self.grub_radiobutton.get_active() == gtk.TRUE:
-                if self.grub_password_checkbutton.get_active() == gtk.TRUE:
-                    gp = string.strip (self.grub_password_entry.get_text())
-                    cp = string.strip (self.grub_password_confirm.get_text())
-                    length = len(gp)
-                    if length > 0:
-                        if gp == cp:
-                            if self.grub_password_encrypt_checkbutton.get_active():
-                                salt = "$1$"
-                                saltLen = 8
-                                for i in range(saltLen):
-                                    salt = salt + whrandom.choice (string.letters + string.digits + './')
-                                self.passwd = crypt.crypt (gp, salt)
-                                temp = unicode (self.passwd, 'iso-8859-1')
-                                buf = buf + "--md5pass=" + temp
-                            else:
-                                buf = buf + "--password=" + gp + " "
-
+            if self.grub_password_checkbutton.get_active() == gtk.TRUE:
+                gp = string.strip (self.grub_password_entry.get_text())
+                cp = string.strip (self.grub_password_confirm.get_text())
+                length = len(gp)
+                if length > 0:
+                    if gp == cp:
+                        if self.grub_password_encrypt_checkbutton.get_active():
+                            salt = "$1$"
+                            saltLen = 8
+                            for i in range(saltLen):
+                                salt = salt + whrandom.choice (string.letters + string.digits + './')
+                            self.passwd = crypt.crypt (gp, salt)
+                            temp = unicode (self.passwd, 'iso-8859-1')
+                            buf = buf + "--md5pass=" + temp
                         else:
-                            dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_WARNING, gtk.BUTTONS_OK,
-                                                    (_("Grub passwords do not match.  Please try again.")))
-                            dlg.set_position(gtk.WIN_POS_CENTER)
-                            dlg.set_modal(gtk.TRUE)
-                            dlg.set_icon(kickstartGui.iconPixbuf)
-                            dlg.run()
-                            dlg.destroy()
-                            self.grub_password_entry.set_text("")
-                            self.grub_password_confirm.set_text("")
-                            self.notebook.set_current_page(2)
-                            self.grub_password_entry.grab_focus()
-                            return None
+                            buf = buf + "--password=" + gp + " "
+
+                    else:
+                        dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_WARNING, gtk.BUTTONS_OK,
+                                                (_("Grub passwords do not match.  Please try again.")))
+                        dlg.set_position(gtk.WIN_POS_CENTER)
+                        dlg.set_modal(gtk.TRUE)
+                        dlg.set_icon(kickstartGui.iconPixbuf)
+                        dlg.run()
+                        dlg.destroy()
+                        self.grub_password_entry.set_text("")
+                        self.grub_password_confirm.set_text("")
+                        self.notebook.set_current_page(2)
+                        self.grub_password_entry.grab_focus()
+                        return None
                         
         elif self.upgrade_bootloader_radio.get_active():
             buf = "--upgrade"
