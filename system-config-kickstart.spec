@@ -14,7 +14,7 @@ Obsoletes: redhat-config-kickstart
 BuildRequires: desktop-file-utils
 Requires: pygtk2 >= 1.99.11
 Requires: pygtk2-libglade 
-Requires: python2
+Requires: python >= 2.3.3
 Requires: hwdata
 Requires: rhpl
 Requires: system-config-language
