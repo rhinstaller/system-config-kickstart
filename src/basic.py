@@ -44,7 +44,10 @@ _=gettext.gettext
 
 class basic:
 
-    def __init__(self, xml):
+    def __init__(self, xml, store, view, notebook):
+        self.store = store
+        self.view = view
+        self.notebook = notebook
         self.xml = xml
         self.lang_combo = xml.get_widget("lang_combo")
         self.keyboard_combo = xml.get_widget("keyboard_combo")
@@ -275,9 +278,11 @@ class basic:
             dlg.set_icon(kickstartGui.iconPixbuf)
             dlg.set_border_width(2)
             dlg.set_modal(gtk.TRUE)
-            rc = dlg.run()
-            if rc == gtk.RESPONSE_OK:
-                dlg.hide()
+            dlg.run()
+            dlg.hide()
+            iter = self.store.get_iter_first()
+            self.view.get_selection().select_iter(iter)
+            self.notebook.set_current_page(0)
             self.root_passwd_entry.grab_focus()
             return
             
