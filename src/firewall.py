@@ -44,9 +44,7 @@ class firewall:
     
     def __init__(self, xml, kickstartData):
         self.kickstartData = kickstartData
-        self.securityHighRadio = xml.get_widget("securityHighRadio")
-        self.securityMediumRadio = xml.get_widget("securityMediumRadio")
-        self.securityNoneRadio = xml.get_widget("securityNoneRadio")
+        self.securityOptionMenu = xml.get_widget("securityOptionMenu")
         self.firewallDefaultRadio = xml.get_widget("firewallDefaultRadio")
         self.firewallCustomizeRadio = xml.get_widget("firewallCustomizeRadio")        
         self.trusted_devices_label = xml.get_widget("trusted_devices_label")
@@ -57,37 +55,17 @@ class firewall:
         self.customFrame = xml.get_widget("customFrame")
         self.customizeRadio = xml.get_widget("firewallCustomizeRadio")
 
-        self.securityNoneRadio.connect("toggled", self.disable_firewall)
-        self.customizeRadio.connect("toggled", self.enable_custom)
+        self.securityOptionMenu.connect("changed", self.disable_firewall)
 
         #create table with custom checklists
         self.label1 = gtk.Label (_("Trusted devices:"))
         self.label1.set_alignment (0.0, 0.0)
         self.customTable.attach (self.label1, 0, 1, 2, 3, gtk.FILL, gtk.FILL, 5, 5)
         
-        if os.access("/proc/net/dev", os.R_OK):
-            f = open ("/proc/net/dev")
-            lines = f.readlines()
-            f.close ()
-            
-        # skip first two lines, they are header
-        self.netdevices = []
-        try:
-            lines = lines[2:]
-            for line in lines:
-                dev = string.strip (line[0:6])
-                if dev != "lo":
-                    self.netdevices.append(dev)
-        except:
-            pass
-
-#        self.trustedStore = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
         self.trustedView = gtk.TreeView()
         self.trustedView.set_headers_visible(gtk.FALSE)
-#        self.trustedView.set_model(self.trustedStore)
         self.trustedView.set_model(trustedStore)
         checkbox = gtk.CellRendererToggle()
-#        checkbox.connect("toggled", self.item_toggled, self.trustedStore)
         checkbox.connect("toggled", self.item_toggled, trustedStore)
         col = gtk.TreeViewColumn('', checkbox, active = 0)
         col.set_fixed_width(20)
@@ -142,9 +120,6 @@ class firewall:
         self.portsEntry = gtk.Entry ()
         self.customTable.attach (self.label3, 0, 1, 4, 5, gtk.FILL, gtk.FILL, 5, 5)
         self.customTable.attach (self.portsEntry, 1, 2, 4, 5, gtk.EXPAND|gtk.FILL, gtk.FILL, 5, 5)
-        
-        #initialize custom options to not sensitive
-        self.customTable.set_sensitive(gtk.FALSE)
 
     def item_toggled(self, data, row, store):
         iter = store.get_iter((int(row),))
@@ -152,18 +127,13 @@ class firewall:
         store.set_value(iter, 0 , not val)
 
     def disable_firewall (self, widget):
-        active = not (self.securityNoneRadio.get_active())
-        self.firewallDefaultRadio.set_sensitive (active)
-        self.customizeRadio.set_sensitive (active)        
-
-        if self.securityNoneRadio.get_active() == gtk.TRUE:
-            self.customTable.set_sensitive (gtk.FALSE)
+        state = self.securityOptionMenu.get_history()
+        
+        if state == 0:
+            self.customTable.set_sensitive (gtk.TRUE)
         else:
-            self.customTable.set_sensitive(self.firewallCustomizeRadio.get_active())
+            self.customTable.set_sensitive (gtk.FALSE)
 
-    def enable_custom (self, widget):
-        self.customTable.set_sensitive(self.firewallCustomizeRadio.get_active())
-    
     def toggle_row (self, list, row):
         (val, row_data, header) = list.get_row_data(row)
         val = not val
@@ -172,36 +142,33 @@ class firewall:
 
     def getData(self):
         buf = ""
-        if self.securityHighRadio.get_active():
-            buf = "--high "
-        elif self.securityMediumRadio.get_active():
-            buf = "--medium "
-        elif self.securityNoneRadio.get_active():
-            buf = "--disabled "        
 
-        if self.customizeRadio.get_active():
+        if self.securityOptionMenu.get_history() == 0:
+            buf = "--enabled "
+        elif self.securityOptionMenu.get_history() == 1:
+            buf = "--disabled "
 
-            iter = trustedStore.get_iter_first()
+        iter = trustedStore.get_iter_first()
 
-            while iter:
-                if trustedStore.get_value(iter, 0) == gtk.TRUE:
-                    buf = buf + "--trust=" + trustedStore.get_value(iter, 1) + " "
-                iter = trustedStore.iter_next(iter)
+        while iter:
+            if trustedStore.get_value(iter, 0) == gtk.TRUE:
+                buf = buf + "--trust=" + trustedStore.get_value(iter, 1) + " "
+            iter = trustedStore.iter_next(iter)
 
 
-            iter = self.incomingStore.get_iter_first()
+        iter = self.incomingStore.get_iter_first()
 
-            while iter:
-                if self.incomingStore.get_value(iter, 0) == gtk.TRUE:
-                    service = self.list[self.incomingStore.get_value(iter, 1)]
-                    buf = buf + "--" + service + " "
-                iter = self.incomingStore.iter_next(iter)
-                
-            portlist = self.portsEntry.get_text()
-            ports = []
-            
-            if portlist != "":
-                buf = buf + '--port=' + portlist
+        while iter:
+            if self.incomingStore.get_value(iter, 0) == gtk.TRUE:
+                service = self.list[self.incomingStore.get_value(iter, 1)]
+                buf = buf + "--" + service + " "
+            iter = self.incomingStore.iter_next(iter)
+
+        portlist = self.portsEntry.get_text()
+        ports = []
+
+        if portlist != "":
+            buf = buf + '--port=' + portlist
             
         self.kickstartData.setFirewall([buf])
         
@@ -213,13 +180,16 @@ class firewall:
 
             for opt, value in opts:
                 if opt == "--high":
-                    self.securityHighRadio.set_active(gtk.TRUE)
+                    self.securityOptionMenu.set_history(0)
 
                 if opt == "--medium":
-                    self.securityMediumRadio.set_active(gtk.TRUE)
+                    self.securityOptionMenu.set_history(0)
+
+                if opt == "--enabled":
+                    self.securityOptionMenu.set_history(0)
 
                 if opt == "--disabled":
-                    self.securityNoneRadio.set_active(gtk.TRUE)
+                    self.securityOptionMenu.set_history(1)
 
                 if opt=="--dhcp" or opt=="--ssh" or opt=="--telnet" or opt=="--smtp" or opt=="--http" or opt=="--ftp":
                     self.firewallCustomizeRadio.set_active(gtk.TRUE)
@@ -233,16 +203,10 @@ class firewall:
 
                 if opt == "--trust":
                     self.firewallCustomizeRadio.set_active(gtk.TRUE)
-
-##                     iter = trustedStore.append()
-##                     trustedStore.set_value(iter, 0, gtk.TRUE)
-##                     trustedStore.set_value(iter, 1, value)
-
                     iter = trustedStore.get_iter_first()
 
                     while iter:
                         device = trustedStore.get_value(iter, 1) 
-                        print device, value
                         if device == value:
                             trustedStore.set_value(iter, 0, gtk.TRUE)
                         iter = trustedStore.iter_next(iter)
