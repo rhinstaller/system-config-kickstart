@@ -17,6 +17,7 @@ class KickstartParser:
 ## 		     "deviceprobe"	: None			,
 ## 		     "driverdisk"	: None			,
  		     "firewall"		: self.kickstartData.setFirewall	,
+                     "firstboot"        : self.kickstartData.setFirstboot       ,
  		     "harddrive"	: self.kickstartData.setHardDrive	,
  		     "install"		: self.kickstartData.setInstall        	,
  		     "keyboard"		: self.kickstartData.setKeyboard	,
