@@ -57,7 +57,7 @@ _=gettext.gettext
 
 xml = libglade.GladeXML ("/usr/share/ksconfig/ksconfig.glade", domain="ksconfig")
 
-VERSION = "1.9.5"
+VERSION = "1.9.7"
 
 class ksconfig_gui:
 	
