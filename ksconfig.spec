@@ -49,7 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
-* Thurs Feb 08 2001 Brent Fox <bfox@redhat.com>
+* Thu Feb 8 2001 Brent Fox <bfox@redhat.com>
 - made code modular
 - improved package selection screen
 - implemented firewall screen
