@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: ksconfig
 Version: 2.0
-Release: 3
+Release: 4
 URL: http://www.redhat.com
 Copyright: GPL
 ExclusiveOS: Linux
@@ -49,6 +49,9 @@ fi
 %config /etc/X11/applnk/System/ksconfig.desktop
 
 %changelog
+* Tue Apr 02 2002 Tammy Fox <tfox@redhat.com>
+- updated docs
+
 * Sun Jan 20 2002 Brent Fox <bfox@redhat.com>
 - fixed bug #58570
 
