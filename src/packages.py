@@ -41,6 +41,8 @@ class Packages:
         self.kickstartData = kickstartData
         self.package_vbox = xml.get_widget("package_vbox")
         self.package_label_box = xml.get_widget("package_label_box")
+        self.resolve_deps_radio = xml.get_widget("resolve_deps_radio")
+        self.ignore_deps_radio = xml.get_widget("ignore_deps_radio")
 
         self.desktops_eventbox = xml.get_widget("desktops_eventbox")
         self.desktops_eventbox.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#4a59a6"))
@@ -77,10 +79,6 @@ class Packages:
         self.development_view.get_selection().set_mode(gtk.SELECTION_NONE)
         self.systems_view = xml.get_widget("systems_treeview")
         self.systems_view.get_selection().set_mode(gtk.SELECTION_NONE)
-
-        self.package_vbox = xml.get_widget("package_vbox")
-        self.package_everything_checkbutton = xml.get_widget("package_everything_checkbutton")
-        self.package_everything_checkbutton.connect("toggled", self.toggled_everything_checkbutton)
 
         self.desktops_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING, gobject.TYPE_STRING)
         self.desktops_view.set_model(self.desktops_store)
@@ -135,10 +133,6 @@ class Packages:
             self.system_store.set_value(iter, 1, pkg[0])
             self.system_store.set_value(iter, 2, pkg[1])            
 
-    def toggled_everything_checkbutton (self, args):
-        self.package_vbox.set_sensitive(not self.package_everything_checkbutton.get_active())
-        self.kickstartData.setEverything(self.package_everything_checkbutton.get_active())
-
     def create_columns(self, view, store):
         self.checkbox = gtk.CellRendererToggle()
         col = gtk.TreeViewColumn('', self.checkbox, active = 0)
@@ -157,6 +151,11 @@ class Packages:
 
     def getData(self):
         packageList = []
+
+        if self.resolve_deps_radio.get_active() == 1:
+             self.kickstartData.setPackage(["--resolvedeps"])
+        elif self.ignore_deps_radio.get_active() == 1:
+             self.kickstartData.setPackage(["--ignoredeps"])
 
         packageList = self.getPkgData(self.desktops_store, packageList)
 
@@ -194,17 +193,23 @@ class Packages:
             self.package_label_box.hide()
 
     def fillData(self):
-        if self.kickstartData.getEverything():
-            self.package_vbox.set_sensitive(False)
-            self.package_everything_checkbutton.set_active(gtk.TRUE)
-        else:
-            packageList = self.kickstartData.getPackageGroupList()
+        if self.kickstartData.getPackage():
+            opts, args = getopt.getopt(self.kickstartData.getPackage(), "d:h", ["resolvedeps", "ignoredeps"])
 
-            for package in packageList:
-                package = string.replace(package, "@", "")
-                package = string.strip(package)
-                self.lookupPackageInList(package, self.desktops_store)
-                self.lookupPackageInList(package, self.applications_store)
-                self.lookupPackageInList(package, self.servers_store)
-                self.lookupPackageInList(package, self.development_store)
-                self.lookupPackageInList(package, self.system_store)
+            for opt, value in opts:
+                if opt == "--resolvedeps":
+                    self.resolve_deps_radio.set_active(gtk.TRUE)
+                elif opt == "--ignoredeps":
+                    self.ignore_deps_radio.set_active(gtk.TRUE)
+
+        packageList = self.kickstartData.getPackageGroupList()
+
+        for package in packageList:
+            package = string.replace(package, "@", "")
+            package = string.strip(package)
+            self.lookupPackageInList(package, self.desktops_store)
+            self.lookupPackageInList(package, self.applications_store)
+            self.lookupPackageInList(package, self.servers_store)
+            self.lookupPackageInList(package, self.development_store)
+            self.lookupPackageInList(package, self.system_store)
+            

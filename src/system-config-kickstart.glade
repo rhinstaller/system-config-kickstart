@@ -7097,10 +7097,10 @@
 			      </child>
 
 			      <child>
-				<widget class="GtkCheckButton" id="package_everything_checkbutton">
+				<widget class="GtkRadioButton" id="resolve_deps_radio">
 				  <property name="visible">True</property>
 				  <property name="can_focus">True</property>
-				  <property name="label" translatable="yes">_Install Everything</property>
+				  <property name="label" translatable="yes">_Automatically Resolve Dependencies</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
 				  <property name="focus_on_click">True</property>
@@ -7110,6 +7110,37 @@
 				</widget>
 				<packing>
 				  <property name="padding">0</property>
+				  <property name="expand">False</property>
+				  <property name="fill">False</property>
+				</packing>
+			      </child>
+
+			      <child>
+				<widget class="GtkRadioButton" id="ignore_deps_radio">
+				  <property name="visible">True</property>
+				  <property name="can_focus">True</property>
+				  <property name="label" translatable="yes">_Ignore Dependencies</property>
+				  <property name="use_underline">True</property>
+				  <property name="relief">GTK_RELIEF_NORMAL</property>
+				  <property name="focus_on_click">True</property>
+				  <property name="active">False</property>
+				  <property name="inconsistent">False</property>
+				  <property name="draw_indicator">True</property>
+				  <property name="group">resolve_deps_radio</property>
+				</widget>
+				<packing>
+				  <property name="padding">0</property>
+				  <property name="expand">False</property>
+				  <property name="fill">False</property>
+				</packing>
+			      </child>
+
+			      <child>
+				<widget class="GtkHSeparator" id="hseparator16">
+				  <property name="visible">True</property>
+				</widget>
+				<packing>
+				  <property name="padding">8</property>
 				  <property name="expand">False</property>
 				  <property name="fill">False</property>
 				</packing>
@@ -7130,7 +7161,7 @@
 				      <property name="shadow_type">GTK_SHADOW_IN</property>
 
 				      <child>
-					<widget class="GtkVBox" id="package_vbox">
+					<widget class="GtkVBox" id="vbox36">
 					  <property name="visible">True</property>
 					  <property name="homogeneous">False</property>
 					  <property name="spacing">0</property>
