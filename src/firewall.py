@@ -45,14 +45,12 @@ class firewall:
         self.firewall_label_box = xml.get_widget("firewall_label_box")
         self.securityOptionMenu = xml.get_widget("securityOptionMenu")
         self.firewallDefaultRadio = xml.get_widget("firewallDefaultRadio")
-        self.firewallCustomizeRadio = xml.get_widget("firewallCustomizeRadio")        
         self.trusted_devices_label = xml.get_widget("trusted_devices_label")
         self.allow_incoming_label = xml.get_widget("allow_incoming_label")
         self.fnnirewall_ports_label = xml.get_widget("firewall_ports_label")
         self.firewall_ports_entry = xml.get_widget("firewall_ports_entry")
         self.customTable = xml.get_widget("customTable")
         self.customFrame = xml.get_widget("customFrame")
-        self.customizeRadio = xml.get_widget("firewallCustomizeRadio")
         self.upgrade_flag = gtk.FALSE
 
         self.securityOptionMenu.connect("changed", self.disable_firewall)
@@ -208,7 +206,6 @@ class firewall:
                     self.securityOptionMenu.set_history(1)
 
                 if opt=="--dhcp" or opt=="--ssh" or opt=="--telnet" or opt=="--smtp" or opt=="--http" or opt=="--ftp":
-                    self.firewallCustomizeRadio.set_active(gtk.TRUE)
                     iter = self.incomingStore.get_iter_first()
 
                     while iter:
@@ -218,7 +215,6 @@ class firewall:
                         iter = self.incomingStore.iter_next(iter)
 
                 if opt == "--trust":
-                    self.firewallCustomizeRadio.set_active(gtk.TRUE)
                     iter = trustedStore.get_iter_first()
 
                     while iter:
@@ -228,6 +224,5 @@ class firewall:
                         iter = trustedStore.iter_next(iter)
 
                 if opt == "--port":
-                    self.firewallCustomizeRadio.set_active(gtk.TRUE)                    
                     current = self.portsEntry.get_text()
                     self.portsEntry.set_text(value)
