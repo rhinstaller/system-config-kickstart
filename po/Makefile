@@ -17,8 +17,6 @@ INSTALL_NLS_DIR = $(RPM_BUILD_ROOT)/usr/share/locale
 
 # PO catalog handling
 MSGMERGE	= msgmerge -v
-PYGETTEXT	= ./pygettext.py --default-domain=$(NLSPACKAGE) \
-		  --verbose --output-file=$(NLSPACKAGE).po 
 XGETTEXT	= xgettext --default-domain=$(NLSPACKAGE) \
 		  --add-comments		  
 MSGFMT		= msgfmt --statistics --verbose
@@ -27,12 +25,14 @@ MSGFMT		= msgfmt --statistics --verbose
 POFILES		= $(wildcard *.po)
 MOFILES		= $(patsubst %.po,%.mo,$(POFILES))
 PYSRC		= $(wildcard ../src/*.py)
-SRCFILES	= $(PYSRC) $(NLSPACKAGE).gladestrings
+SRCFILES 	= $(PYSRC)
+
+#default:: clean
 
 all::  update-po $(MOFILES)
 
 $(POTFILE): $(SRCFILES)
-	$(PYGETTEXT) --keyword=_ --keyword=N_ $(SRCFILES)
+	$(XGETTEXT) --keyword=_ --keyword=N_ $(SRCFILES)
 	@if cmp -s $(NLSPACKAGE).po $(POTFILE); then \
 	    rm -f $(NLSPACKAGE).po; \
 	else \
@@ -67,4 +67,5 @@ install: $(MOFILES)
 	$(MSGFMT) -o $@ $<
 
 .PHONY: missing depend
+
 
