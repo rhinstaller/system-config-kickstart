@@ -176,13 +176,19 @@ class KickstartData:
         return self.bootloader
 
     def setZeroMbr(self, args):
-        self.zerombr = args
+        if args == None:
+            self.zerombr = None
+        else:
+            self.zerombr = "yes"
 
     def getZeroMbr(self):
         return self.zerombr
 
     def setClearPart(self, args):
-        self.clearpart = args
+        if args == None:
+            self.clearpart = None
+        else:
+            self.clearpart = args
 
     def getClearPart(self):
         return self.clearpart
@@ -229,11 +235,17 @@ class KickstartData:
     def getPartitions(self):
         return self.partList
 
+    def clearPartList(self):
+        self.partList = []
+
     def defineRaid(self, args):
         self.raidList.append(args)
 
     def getRaid(self):
         return self.raidList
+
+    def clearRaidList(self):
+        self.raidList = []
 
     def getAll(self):
         print "in getAll\n\n"
@@ -308,7 +320,16 @@ class KickstartData:
 
         if self.getBootloader():
             file.append("#System bootloader configuration")
-            file.append("bootloader " + self.getBootloader()[0])
+            file.append("bootloader " + string.join(self.getBootloader(), " "))
+
+        if self.getZeroMbr():
+            file.append("#Clear the Master Boot Record")
+            file.append("zerombr " + self.getZeroMbr())
+
+        if self.getClearPart():
+            file.append("#Partition clearing information")
+            file.append("clearpart " + string.join(self.getClearPart(), " "))
+
 
         if self.getPartitions() != []:
             file.append("#Disk partitioning information")
