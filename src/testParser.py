@@ -5,4 +5,4 @@ import kickstartParser
 
 data = kickstartData.KickstartData()
 kickstartParser.KickstartParser(data, "ks.cfg")
-data.getAll()
+data.printData()
