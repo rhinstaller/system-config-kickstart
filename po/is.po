@@ -116,6 +116,11 @@ msgstr "Setja upp nýjann ræsistjóra"
 msgid "Firewall Configuration"
 msgstr "Stillingar eldveggs"
 
+#: redhat-config-kickstart.gladestrings:73
+#, fuzzy
+msgid "Default Language:"
+msgstr "Tungumál:"
+
 #: ../src/partWindow.py:86 redhat-config-kickstart.gladestrings:59
 msgid "ext3"
 msgstr "ext3"
@@ -429,8 +434,7 @@ msgstr "Vinsamlegast sláðu inn heiti HTTP möppunnar."
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
-msgstr ""
-"Netkort með heitinu %s er þegar til. Vinsamlegast veldu annað heiti"
+msgstr "Netkort með heitinu %s er þegar til. Vinsamlegast veldu annað heiti"
 
 #: redhat-config-kickstart.gladestrings:54
 msgid "md15"
@@ -562,10 +566,6 @@ msgstr "KDE"
 msgid "Partition Information"
 msgstr "Disksneiðaupplýsingar"
 
-#: redhat-config-kickstart.gladestrings:239
-msgid "Vertical Sync:"
-msgstr "Lóðrétt samhæfing:"
-
 #: redhat-config-kickstart.gladestrings:183
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Nota Kerberos 5 auðkenningu"
@@ -649,7 +649,9 @@ msgstr "Geisladrif"
 
 #: ../src/redhat-config-kickstart.py:83
 msgid "Try running 'redhat-config-kickstart --help' for a list of options."
-msgstr "Þú getur keyrt 'redhat-config-kickstart --help' til að sjá þá rofa sem þekktir eru."
+msgstr ""
+"Þú getur keyrt 'redhat-config-kickstart --help' til að sjá þá rofa sem "
+"þekktir eru."
 
 #: redhat-config-kickstart.gladestrings:197
 msgid "Hesiod Authentication"
@@ -893,8 +895,8 @@ msgstr ""
 "--help                   Prenta þessi skilaboð\n"
 "--generate <skráarheiti> Búa til hraðuppsetningarskrá af þessari vél og "
 "kalla hana\n"
-"                         <hraðuppsetningarskrá>.  Þessi rofi lætur "
-"forritið keyra\n"
+"                         <hraðuppsetningarskrá>.  Þessi rofi lætur forritið "
+"keyra\n"
 "                         í textaham svo það er gagnlegt fyrir þjóna án X "
 "gluggakerfisins.\n"
 "<hraðuppsetningarskrá>   Þessi rofi veldur því að forritið ræsir með gildin "
@@ -910,9 +912,9 @@ msgstr "Kalla eftir NIS þjóni"
 msgid "Error"
 msgstr "Villa"
 
-#: redhat-config-kickstart.gladestrings:73
-msgid "Language:"
-msgstr "Tungumál:"
+#: redhat-config-kickstart.gladestrings:239
+msgid "Vertical Sync:"
+msgstr "Lóðrétt samhæfing:"
 
 #: ../src/kickstartGui.py:179
 msgid ""
