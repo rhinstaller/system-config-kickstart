@@ -27,6 +27,9 @@ install:
 	mkdir -p $(INSTROOT)$(DESKTOPDIR)
 	install ksconfig $(INSTROOT)/usr/sbin/ksconfig
 	install src/*.py $(INSTROOT)$(PKGDATADIR)
+	for py in src/*.py ; do \
+		sed -e s,@VERSION@,$(VERSION),g $${py} > $(INSTROOT)$(PKGDATADIR)/`basename $${py}` ; \
+	done
 	install src/ksconfig.glade $(INSTROOT)$(PKGDATADIR)
 	install src/Cards $(INSTROOT)$(PKGDATADIR)
 	install src/MonitorsDB $(INSTROOT)$(PKGDATADIR)
