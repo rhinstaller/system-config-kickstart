@@ -35,12 +35,12 @@ gtk.glade.bindtextdomain(domain)
 
 class install:
   
-    def __init__(self, xml, store, view, notebook, bootloader_class, kickstartData):
+    def __init__(self, parent_class, xml, store, view, notebook, kickstartData):
         self.xml = xml
+        self.parent_class = parent_class
         self.store = store
         self.view = view
         self.notebook = notebook
-        self.bootloader_class = bootloader_class
         self.kickstartData = kickstartData
         self.install_radiobutton = xml.get_widget("install_radiobutton")
         self.upgrade_radiobutton = xml.get_widget("upgrade_radiobutton")
@@ -99,9 +99,10 @@ class install:
     def toggleInstall (self, args):
         #gray out package selection and partitions if upgrade
         install = self.install_radiobutton.get_active()
-        self.partitioning_frame.set_sensitive(install)
-        self.pkg_selection_frame.set_sensitive(install)            
-        self.bootloader_class.upgrade_bootloader_radio.set_sensitive(not install)
+        self.parent_class.installTypeChanged(install)
+#        self.partitioning_frame.set_sensitive(install)
+#        self.pkg_selection_frame.set_sensitive(install)            
+#        self.bootloader_class.upgrade_bootloader_radio.set_sensitive(not install)
 
     def setState (self, args):
         if self.cdrom_radiobutton.get_active():
