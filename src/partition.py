@@ -77,6 +77,8 @@ class partition:
         col = gtk.TreeViewColumn(_("Size (MB)"), gtk.CellRendererText(), text=4)
         self.part_view.append_column(col)
 
+        self.part_view.get_selection().connect("changed", self.rowSelected)
+
         #initialize the child classes
         self.partWindow = partWindow.partWindow(self.xml, self.part_store, self.part_view)
         self.raidOptionsWindow = raidOptionsWindow.raidOptionsWindow(self.xml, self.part_store, self.part_view, self.partWindow)
@@ -137,13 +139,10 @@ class partition:
                 selectDialog.hide()
             return
         self.part_store.remove(iter)
-        self.edit_part_button.set_sensitive(gtk.FALSE)
-        self.del_part_button.set_sensitive(gtk.FALSE)
+        self.part_view.get_selection().unselect_all()
 
     def addPartition(self, *args):
         self.partWindow.add_partition()
-        self.edit_part_button.set_sensitive(gtk.TRUE)
-        self.del_part_button.set_sensitive(gtk.TRUE)
         self.part_view.get_selection().unselect_all()
 
     def editPartition(self, *args):
@@ -162,6 +161,7 @@ class partition:
             return
             
         self.partWindow.edit_partition(iter)
+        self.part_view.get_selection().unselect_all()
 
     def raidPartition(self, *args):
         self.raidOptionsWindow.showOptionsWindow()
@@ -263,3 +263,11 @@ class partition:
 
             self.partDataBuf.append(buf)
             
+    def rowSelected(self, *args):
+        store, selection = self.part_view.get_selection().get_selected()
+        if selection == None:
+            self.edit_part_button.set_sensitive(gtk.FALSE)
+            self.del_part_button.set_sensitive(gtk.FALSE)
+        else:
+            self.edit_part_button.set_sensitive(gtk.TRUE)
+            self.del_part_button.set_sensitive(gtk.TRUE)

@@ -111,33 +111,51 @@ class raidWindow:
         
         self.raid_partition_store.foreach(self.isRowToggled, mount_point)
 
-        self.raid_parent_iter = None
-        self.part_store.foreach(self.checkForRaidParent)
+        print "raid level is", raid_level
+        print len(self.partition_list)
 
-        if self.raid_parent_iter == None:
-            self.raid_parent_iter = self.part_store.append(None)
-            self.part_store.set_value(self.raid_parent_iter, 0, (_("Raid Devices")))
+        if raid_level == "0" or raid_level == "1":
+            if len(self.partition_list) < 2:
+                device_is_valid = self.deviceNotValid(_("You must select at least 2 partitions in order to use "
+                                      "RAID %s" % raid_level))
+            else:
+                device_is_valid = 1
+        elif raid_level == "5":
+            if len(self.partition_list) < 3:
+                device_is_valid = self.deviceNotValid(_("You must select at least 3 partitions in order to use "
+                                      "RAID %s" % raid_level))
+            else:
+                device_is_valid = 1
+
+        if device_is_valid:
+            self.raid_parent_iter = None
+            self.part_store.foreach(self.checkForRaidParent)
+
+            if self.raid_parent_iter == None:
+                self.raid_parent_iter = self.part_store.append(None)
+                self.part_store.set_value(self.raid_parent_iter, 0, (_("Raid Devices")))
 
 
-        raid_device_iter = self.part_store.append(self.raid_parent_iter)
-        self.part_store.set_value(raid_device_iter, 0, mount_point)
+            raid_device_iter = self.part_store.append(self.raid_parent_iter)
+            self.part_store.set_value(raid_device_iter, 0, mount_point)
 
-        
-        self.num_raid_devices = None
-        self.part_store.foreach(self.countRaidDevices)
 
-        self.part_store.set_value(raid_device_iter, 0, self.raid_object.raidDevice)
-        self.part_store.set_value(raid_device_iter, 1, self.raid_object.mountPoint)
-        self.part_store.set_value(raid_device_iter, 2, self.raid_object.fsType)
-        self.part_store.set_value(raid_device_iter, 5, self.raid_object)
+            self.num_raid_devices = None
+            self.part_store.foreach(self.countRaidDevices)
 
-        if self.raid_object.doFormat == 1:
-            self.part_store.set_value(raid_device_iter, 3, (_("Yes")))
-        else:
-            self.part_store.set_value(raid_device_iter, 3, (_("No")))
+            self.part_store.set_value(raid_device_iter, 0, self.raid_object.raidDevice)
+            self.part_store.set_value(raid_device_iter, 1, self.raid_object.mountPoint)
+            self.part_store.set_value(raid_device_iter, 2, self.raid_object.fsType)
+            self.part_store.set_value(raid_device_iter, 5, self.raid_object)
 
-        self.part_view.expand_all()
-        self.raid_window.hide()
+            if self.raid_object.doFormat == 1:
+                self.part_store.set_value(raid_device_iter, 3, (_("Yes")))
+            else:
+                self.part_store.set_value(raid_device_iter, 3, (_("No")))
+
+            self.part_view.expand_all()
+
+            self.raid_window.hide()
 
     def checkForRaidParent(self, store, data, iter):
         if self.part_store.get_value(iter, 0) == (_("Raid Devices")):
@@ -165,6 +183,18 @@ class raidWindow:
                 print "raid object found"
                 self.num_raid_devices = self.num_raid_devices + 1
         
+    def deviceNotValid(self, label):
+        dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, label)
+        dlg.set_title(_("Error"))
+        dlg.set_default_size(100, 100)
+        dlg.set_position (gtk.WIN_POS_CENTER)
+        dlg.set_border_width(2)
+        dlg.set_modal(gtk.TRUE)
+        rc = dlg.run()
+        if rc == gtk.RESPONSE_OK:
+            dlg.hide()
+        return None
+
     def destroy(self, *args):
         self.raid_window.hide()
     

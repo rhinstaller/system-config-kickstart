@@ -137,14 +137,21 @@ class partWindow:
         self.win_reset()
 
         self.mountPointCombo.entry.set_text(part_object.mountPoint)
-        self.fsTypeCombo.entry.set_text(part_object.fsType) 
+
+        for type in self.fsTypesDict.keys():
+            if part_object.fsType == self.fsTypesDict[type]:
+                fsType = type
+        self.fsTypeCombo.entry.set_text(fsType) 
         self.sizeCombo.set_text(part_object.size) 
         self.asPrimaryCheck.set_active(part_object.asPrimary)
-        self.onDiskCheck.set_active(part_object.onDisk)
-        self.onDiskEntry.set_text(str(part_object.onDiskVal))
-        self.onPartCheck.set_active(part_object.onPart)
-        self.onPartEntry.set_text(str(part_object.onPartVal))
-        
+
+        if part_object.partition:
+            self.onPartCheck.set_active(gtk.TRUE)
+            self.onPartEntry.set_text(part_object.partition)
+        elif part_object.device:
+            self.onDiskCheck.set_active(gtk.TRUE)
+            self.onDiskEntry.set_text(part_object.device)
+            
         if part_object.sizeStrategy == "fixed":
             self.sizeFixedRadio.set_active(gtk.TRUE)
         elif part_object.sizeStrategy == "grow":
@@ -189,12 +196,16 @@ class partWindow:
         part_object = self.part_store.get_value(self.current_iter, 5)
         self.getData(part_object)
 
-        self.part_store.set_value(self.current_iter, 0, part_object.mountPoint)
-        self.part_store.set_value(self.current_iter, 1, part_object.fsType)
-        self.part_store.set_value(self.current_iter, 2, part_object.size)
-        self.part_store.set_value(self.current_iter, 3, part_object.onDiskVal)
-        self.part_store.set_value(self.current_iter, 4, part_object.onPartVal)        
-            
+        self.part_store.set_value(self.current_iter, 0, part_object.device)
+        self.part_store.set_value(self.current_iter, 1, part_object.mountPoint)
+        self.part_store.set_value(self.current_iter, 2, part_object.fsType)
+        if part_object.doFormat == 1:
+            self.part_store.set_value(self.current_iter, 3, (_("Yes")))
+        else:
+            self.part_store.set_value(self.current_iter, 3, (_("No")))
+        self.part_store.set_value(self.current_iter, 4, part_object.size)
+        self.part_store.set_value(self.current_iter, 5, part_object)
+
         self.partOkButton.disconnect(self.ok_handler)
         self.win_reset()
         self.partitionDialog.hide()
@@ -233,7 +244,10 @@ class partWindow:
                     self.part_store.set_value(iter, 0, part_object.partition)
                 else:
                     iter = self.part_store.append(device_iter)
-                    self.part_store.set_value(iter, 0, (_("Auto")))
+                    if part_object.raidNumber:
+                        self.part_store.set_value(iter, 0, part_object.raidNumber)
+                    else:
+                        self.part_store.set_value(iter, 0, (_("Auto")))
             else:
                 #There's no device parent for this device.  Create one and add it to the device
                 device_iter = self.part_store.append(self.hard_drive_parent_iter)
@@ -244,7 +258,10 @@ class partWindow:
                     self.part_store.set_value(iter, 0, part_object.partition)
                 else:
                     iter = self.part_store.append(device_iter)
-                    self.part_store.set_value(iter, 0, (_("Auto")))
+                    if part_object.raidNumber:
+                        self.part_store.set_value(iter, 0, part_object.raidNumber)
+                    else:
+                        self.part_store.set_value(iter, 0, (_("Auto")))
                 
         self.part_store.set_value(iter, 1, part_object.mountPoint)
         self.part_store.set_value(iter, 2, part_object.fsType)
@@ -377,14 +394,11 @@ class partWindow:
         return fsType
 
     def countRaid(self, store, data, iter):
-        print "in countRaid"
         part_object = self.part_store.get_value(iter, 5)
         if part_object and part_object.fsType == "raid":
             tag, number = string.split(part_object.raidNumber, '.')
             if self.lastRaidNumber < number:
-#                print "setting raid number to", part_object.raidNumber
                 self.lastRaidNumber = number
-
     
     def isDeviceValid(self, device):
         if device[:2] == "hd" or device[:2] == "sd":
