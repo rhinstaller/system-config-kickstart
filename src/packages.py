@@ -144,9 +144,6 @@ class Packages:
                       "System Tools",
                       "Printing Support"
                       ]
-        miscellaneousList = ["Minimal",
-                             "Everything"                       
-                             ]
 
         for pkg in desktopsList:
             iter = self.desktops_store.append()
@@ -167,10 +164,6 @@ class Packages:
         for pkg in systemList:
             iter = self.system_store.append()
             self.system_store.set_value(iter, 1, pkg)
-
-        for pkg in miscellaneousList:
-            iter = self.miscellaneous_store.append()
-            self.miscellaneous_store.set_value(iter, 1, pkg)
 
     def create_columns(self, view, store):
         self.checkbox = gtk.CellRendererToggle()
