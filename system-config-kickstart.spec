@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.5.8
+Version: 2.5.9
 Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -58,6 +58,10 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Mon Mar 29 2004 Brent Fox <bfox@redhat.com> 2.5.9-1
+- fix rhpl mouse bug (#119258)
+- more code to handle multi-platform
+
 * Fri Mar 26 2004 Brent Fox <bfox@redhat.com> 
 - first stab at making system-config-kickstart arch aware (bug #91905)
 - removed LILO widgets
