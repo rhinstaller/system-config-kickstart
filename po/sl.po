@@ -1,20 +1,23 @@
+# translation of sl.po to slovenščina
 # SLOVENIAN TRANSLATION OF REDHAT-CONFIG-KICKSTART.
 # Copyright (C) 2003 Free Software Foundation.
-# Roman Maurer <roman@lugos.si>, 2003.
 # $Id$
 # $Source$
+# Roman Maurer <roman@lugos.si>, 2003.
+# Rok Papez <rok.papez@lugos.si>, 2004
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: redhat-config-kickstart 2.3.6\n"
+"Project-Id-Version: sl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-29 17:11-0500\n"
-"PO-Revision-Date: 2003-09-27 22:57+0200\n"
-"Last-Translator: Roman Maurer <roman@lugos.si>\n"
-"Language-Team: Slovenian <translation-team-sl@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2004-04-04 13:58+0200\n"
+"Last-Translator: Rok Papez <rok.papez@lugos.si>\n"
+"Language-Team: slovenščina <translation-team-sl@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0\n"
 
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
@@ -54,25 +57,23 @@ msgstr ""
 #. #
 #: ../src/basic.py:71
 msgid "x86, AMD64, or Intel EM64T"
-msgstr ""
+msgstr "x86, AMD64 ali Intel EM64T"
 
 #: ../src/basic.py:71
 msgid "Intel Itanium"
-msgstr ""
+msgstr "Intel Itanium"
 
 #: ../src/basic.py:71
-#, fuzzy
 msgid "IBM iSeries"
-msgstr "Strežniki SMB:"
+msgstr "IBM iSeries"
 
 #: ../src/basic.py:72
-#, fuzzy
 msgid "IBM pSeries"
-msgstr "Strežniki SMB:"
+msgstr "IBM pSeries"
 
 #: ../src/basic.py:72
 msgid "IBM zSeries/s390"
-msgstr ""
+msgstr "IBM zSeries/s390"
 
 #. populate language combo
 #. set default to English
@@ -86,7 +87,7 @@ msgstr ""
 #. populate time zone combo
 #: ../src/basic.py:205
 msgid "Root passwords do not match."
-msgstr ""
+msgstr "Gesli za root se ne ujemata."
 
 #. zerombr and clearpart options
 #. We want to preserve all partitions, so don't write the clearpart line
@@ -129,146 +130,131 @@ msgstr "Prosim, izberite geslo skrbnika sistema."
 #: ../src/bootloader.py:76
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
-msgstr ""
+msgstr "Nastavitve zagonskega nalagalnika niso primerne za arhitekturo %s"
 
 #: ../src/bootloader.py:117
 msgid "Grub passwords do not match.  Please try again."
-msgstr ""
+msgstr "Gesli Grub se ne ujemata. Ponovite vnos."
 
 #. !/usr/bin/python2
 #. #
 #. # I18N
 #. #
 #: ../src/fedoraPackageGroupList.py:12 ../src/RHELPackageGroupList.py:12
-#, fuzzy
 msgid "X Window System"
-msgstr "Prikroji okenski sistem X"
+msgstr "Okna X"
 
 #: ../src/fedoraPackageGroupList.py:13 ../src/RHELPackageGroupList.py:13
 msgid "GNOME Desktop Environment"
-msgstr ""
+msgstr "Namizje GNOME"
 
 #: ../src/fedoraPackageGroupList.py:14 ../src/RHELPackageGroupList.py:14
 msgid "KDE Desktop Environment"
-msgstr ""
+msgstr "Namizje KDE"
 
 #: ../src/fedoraPackageGroupList.py:16 ../src/RHELPackageGroupList.py:16
-#, fuzzy
 msgid "Editors"
-msgstr "_Uredi"
+msgstr "Urejevalniki"
 
 #: ../src/fedoraPackageGroupList.py:17 ../src/RHELPackageGroupList.py:17
 msgid "Engineering and Scientific"
-msgstr ""
+msgstr "Inženirstvo in znanost"
 
 #: ../src/fedoraPackageGroupList.py:18 ../src/RHELPackageGroupList.py:18
 msgid "Graphical Internet"
-msgstr ""
+msgstr "Grafični internet"
 
 #: ../src/fedoraPackageGroupList.py:19 ../src/RHELPackageGroupList.py:19
 msgid "Text-based Internet"
-msgstr ""
+msgstr "Znakovni internet"
 
 #: ../src/fedoraPackageGroupList.py:20 ../src/RHELPackageGroupList.py:20
 msgid "Office/Productivity"
-msgstr ""
+msgstr "Pisarna/Delo"
 
 #: ../src/fedoraPackageGroupList.py:21 ../src/RHELPackageGroupList.py:21
 msgid "Sound and Video"
-msgstr ""
+msgstr "Zvok in video"
 
 #: ../src/fedoraPackageGroupList.py:22 ../src/RHELPackageGroupList.py:22
 msgid "Graphics"
-msgstr ""
+msgstr "Grafika"
 
 #: ../src/fedoraPackageGroupList.py:23 ../src/RHELPackageGroupList.py:23
 msgid "Games and Entertainment"
-msgstr ""
+msgstr "Igre in zabava"
 
 #: ../src/fedoraPackageGroupList.py:24 ../src/RHELPackageGroupList.py:24
 msgid "Authoring and Publishing"
-msgstr ""
+msgstr "Urejanje in namizno založništvo"
 
 #: ../src/fedoraPackageGroupList.py:26
-#, fuzzy
 msgid "Server Configuration Tools"
-msgstr "Prikrojitev X"
+msgstr "Orodja za prikrojevanje strežnika"
 
 #: ../src/fedoraPackageGroupList.py:27 ../src/RHELPackageGroupList.py:27
-#, fuzzy
 msgid "Web Server"
-msgstr "Imenski strežnik:"
+msgstr "Spletni strežnik"
 
 #: ../src/fedoraPackageGroupList.py:28 ../src/RHELPackageGroupList.py:28
-#, fuzzy
 msgid "Mail Server"
-msgstr "Imenski strežnik:"
+msgstr "Poštni strežnik"
 
 #: ../src/fedoraPackageGroupList.py:29 ../src/RHELPackageGroupList.py:29
 msgid "Windows File Server"
-msgstr ""
+msgstr "Datotečni strežnik za Windows"
 
 #: ../src/fedoraPackageGroupList.py:30 ../src/RHELPackageGroupList.py:30
-#, fuzzy
 msgid "DNS Name Server"
-msgstr "Imenski strežnik:"
+msgstr "Imenski strežnik"
 
 #: ../src/fedoraPackageGroupList.py:31 ../src/RHELPackageGroupList.py:31
-#, fuzzy
 msgid "FTP Server"
-msgstr "Strežnik FTP:"
+msgstr "Strežnik FTP"
 
 #: ../src/fedoraPackageGroupList.py:32 ../src/RHELPackageGroupList.py:32
 msgid "SQL Database Server"
-msgstr ""
+msgstr "Strežnik zbrike podatkov SQL"
 
 #: ../src/fedoraPackageGroupList.py:33 ../src/RHELPackageGroupList.py:33
-#, fuzzy
 msgid "News Server"
-msgstr "Imenski strežnik:"
+msgstr "Strežnik news"
 
 #: ../src/fedoraPackageGroupList.py:34
-#, fuzzy
 msgid "Network Servers"
-msgstr "Omrežna naprava:"
+msgstr "Omrežni strežniki"
 
 #: ../src/fedoraPackageGroupList.py:36 ../src/RHELPackageGroupList.py:36
-#, fuzzy
 msgid "Development Tools"
-msgstr "Razvoj"
+msgstr "Razvojna orodja"
 
 #: ../src/fedoraPackageGroupList.py:37 ../src/RHELPackageGroupList.py:37
-#, fuzzy
 msgid "Kernel Development"
-msgstr "Razvoj"
+msgstr "Razvoj jedra"
 
 #: ../src/fedoraPackageGroupList.py:38 ../src/RHELPackageGroupList.py:38
-#, fuzzy
 msgid "X Software Development"
-msgstr "Razvoj"
+msgstr "Razvoj programja X"
 
 #: ../src/fedoraPackageGroupList.py:39 ../src/RHELPackageGroupList.py:39
 msgid "GNOME Software Development"
-msgstr ""
+msgstr "Razvoj programja GNOME"
 
 #: ../src/fedoraPackageGroupList.py:40 ../src/RHELPackageGroupList.py:40
-#, fuzzy
 msgid "KDE Software Development"
-msgstr "Razvoj"
+msgstr "Razvoj programja KDE"
 
 #: ../src/fedoraPackageGroupList.py:42 ../src/RHELPackageGroupList.py:42
 msgid "Administration Tools"
-msgstr ""
+msgstr "Administrativna orodja"
 
 #: ../src/fedoraPackageGroupList.py:43 ../src/RHELPackageGroupList.py:43
-#, fuzzy
 msgid "System Tools"
-msgstr "Sistem"
+msgstr "Sistemka orodja"
 
 #: ../src/fedoraPackageGroupList.py:44 ../src/RHELPackageGroupList.py:44
-#, fuzzy
 msgid "Printing Support"
-msgstr "Jezikovna podpora:"
+msgstr "Tiskanje"
 
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
@@ -294,9 +280,8 @@ msgid "Trusted devices:"
 msgstr "Zaupne naprave:"
 
 #: ../src/firewall.py:85
-#, fuzzy
 msgid "Trusted services:"
-msgstr "Zaupne naprave:"
+msgstr "Varne naprave:"
 
 #: ../src/firewall.py:117
 msgid "Other ports: (1029:tcp)"
@@ -466,9 +451,8 @@ msgid "Firewall Configuration"
 msgstr "Prikrojitev požarnega zidu"
 
 #: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:248
-#, fuzzy
 msgid "Display Configuration"
-msgstr "Prikrojitev X"
+msgstr "Prikrojitev prikaza"
 
 #: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:259
 msgid "Package Selection"
@@ -586,8 +570,7 @@ msgstr "Prosim, vnesite podatke o omrežju"
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
-msgstr ""
-"Mrežna naprava z imenom %s že obstaja.  Prosim, izberite drugo ime naprave"
+msgstr "Mrežna naprava z imenom %s že obstaja.  Prosim, izberite drugo ime naprave"
 
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
@@ -768,7 +751,7 @@ msgstr "vfat"
 
 #: ../src/partWindow.py:87
 msgid "PPC PReP Boot"
-msgstr ""
+msgstr "PPC zagon PReP"
 
 #. XXX - have to do this after the show_all due to a bug in gtkSpinButton, I suspect
 #. If the current iter is the only child, delete the parent and the child
@@ -807,8 +790,7 @@ msgstr "Določite točko priklopa za razdelek."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:429
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "Točka priklopa \"%s\" se že uporablja.  Prosim, izberite drugo točko "
 "priklopa."
@@ -930,11 +912,11 @@ msgstr "Naprave RAID"
 
 #: ../src/RHELPackageGroupList.py:26
 msgid "Server Configuration Tools (AS and ES only)"
-msgstr ""
+msgstr "Orodja za nastavljanje strežnika (samo pri AS in ES)"
 
 #: ../src/RHELPackageGroupList.py:34
 msgid "Network Servers (AS and ES only)"
-msgstr ""
+msgstr "Omrežni strežniki (samo pri AS in ES)"
 
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
@@ -1012,7 +994,6 @@ msgstr ""
 #. # I18N
 #. #
 #: ../src/system-config-kickstart.py:60
-#, fuzzy
 msgid ""
 "Usage: system-config-kickstart [--help] [--generate <filename>] "
 "[<kickstart_filename>]\n"
@@ -1028,28 +1009,22 @@ msgid ""
 "values from\n"
 "                        the kickstart file already filled in."
 msgstr ""
-"Raba: redhat-config-kickstart [--help] [--generate <datoteka>] [<dat."
-"_za_hitri_zagon>]\n"
+"Raba: system-config-kickstart [--help] [--generate <datoteka>] [<datoteka_kickstart>]\n"
 "        \n"
 "--help                  Izpiše to sporočilo.\n"
-"--generate <datoteka>   Izdela datoteko za hitri zagon trenutnega stroja in "
-"jo\n"
-"                        zapiše v <datoteko>.  Ta izbira teče v konzoli, zato "
-"je\n"
-"                        uporabna za strežnike, v katerih trenutno ne teče "
-"X.\n"
-"<dat._za_hitri_zagon>   Ta izbira povzroči, da se uporabniški vmesnik "
-"zažene\n"
-"                        z že vpisanimi vrednostmi iz datoteke za hitri zagon."
+"--generate <datoteka>   Izdela datoteko kickstart iz nastavitev tega računalnika in\n"
+"                        jo zapiše v <datoteko>. Ta izbira teče v konzoli, zato je\n"
+"                        uporabna za strežnike, v katerih trenutno ne teče X.\n"
+"<datoteka_kickstart>    Ta izbira povzroči, da se uporabniški vmesnik zažene\n"
+"                        z že vpisanimi vrednostmi iz datoteke kickstart."
 
 #: ../src/system-config-kickstart.py:77
 msgid "Could not open display because no X server is running."
 msgstr "Zaslona ni moč odpreti, ker ne teče noben strežnik X."
 
 #: ../src/system-config-kickstart.py:78
-#, fuzzy
 msgid "Try running 'system-config-kickstart --help' for a list of options."
-msgstr "Poskusite pognati 'redhat-config-kickstart --help' za seznam izbir."
+msgstr "Poskusite pognati 'system-config-kickstart --help' za seznam izbir."
 
 #. !/usr/bin/python2
 #. !/usr/bin/python2
@@ -1242,7 +1217,7 @@ msgstr "Izdelaj napravo RAID"
 
 #: system-config-kickstart.gladestrings:34
 msgid "Number of spares:"
-msgstr ""
+msgstr "Število nadomestnih:"
 
 #: system-config-kickstart.gladestrings:35
 msgid "Raid Members"
@@ -1410,13 +1385,12 @@ msgstr "Uporabi uro v GMČ"
 
 #: system-config-kickstart.gladestrings:86
 #: system-config-kickstart.gladestrings:137
-#, fuzzy
 msgid "Confirm Password:"
-msgstr "Geslo skrbnika:"
+msgstr "Potrdite geslo:"
 
 #: system-config-kickstart.gladestrings:88
 msgid "Target Architecture:"
-msgstr ""
+msgstr "Ciljna arhitektura:"
 
 #: system-config-kickstart.gladestrings:90
 msgid "Reboot system after installation"
@@ -1544,14 +1518,12 @@ msgid "GRUB Options:"
 msgstr "Izbire za GRUB:"
 
 #: system-config-kickstart.gladestrings:135
-#, fuzzy
 msgid "Use GRUB password"
-msgstr "Uporabi geslo za GRUB: "
+msgstr "Uporabi geslo za GRUB"
 
 #: system-config-kickstart.gladestrings:136
-#, fuzzy
 msgid "Password:"
-msgstr "Geslo skrbnika:"
+msgstr "Geslo:"
 
 #: system-config-kickstart.gladestrings:140
 msgid "Encrypt GRUB password"
@@ -1570,9 +1542,8 @@ msgid "Kernel parameters:"
 msgstr "Parametri jedra:"
 
 #: system-config-kickstart.gladestrings:145
-#, fuzzy
 msgid "label216"
-msgstr "oznaka28"
+msgstr "label216"
 
 #: system-config-kickstart.gladestrings:146
 msgid "Boot Loader Options (required)"
@@ -1628,7 +1599,7 @@ msgstr "RAID"
 
 #: system-config-kickstart.gladestrings:159
 msgid "Partition options are not applicable on upgrades."
-msgstr ""
+msgstr "Nastavitve razdelkov ne veljajo pri nadgradnjah."
 
 #: system-config-kickstart.gladestrings:160
 msgid "Partition Information (required)"
@@ -1639,19 +1610,16 @@ msgid "label30"
 msgstr "oznaka30"
 
 #: system-config-kickstart.gladestrings:162
-#, fuzzy
 msgid "_Add Network Device"
-msgstr "Dodaj mrežno napravo"
+msgstr "Dodaj omrežno napravo"
 
 #: system-config-kickstart.gladestrings:163
-#, fuzzy
 msgid "_Edit Network Device"
-msgstr "Uredi mrežno napravo"
+msgstr "Uredi omrežno napravo"
 
 #: system-config-kickstart.gladestrings:164
-#, fuzzy
 msgid "_Delete Network Device"
-msgstr "Zbriši mrežno napravo"
+msgstr "Zbriši omrežno napravo"
 
 #: system-config-kickstart.gladestrings:166
 msgid "label31"
@@ -1719,7 +1687,7 @@ msgstr "Omogoči avtentikacijo Kerberos 5"
 
 #: system-config-kickstart.gladestrings:186
 msgid "Kerberos Realm:"
-msgstr ""
+msgstr "Kraljestvo Kerberos:"
 
 #: system-config-kickstart.gladestrings:188
 msgid "Kerberos Domain Controller (KDC):"
@@ -1787,11 +1755,11 @@ msgstr "Avtentikacija za nscd (Name Switch Cache Daemon)"
 
 #: system-config-kickstart.gladestrings:210
 msgid "Name Switch Cache"
-msgstr ""
+msgstr "Predpomnilnika NSS"
 
 #: system-config-kickstart.gladestrings:211
 msgid "Authentication options are not applicable on upgrades."
-msgstr ""
+msgstr "Nastavitve overjanja niso uporabne ob nadgradnji."
 
 #: system-config-kickstart.gladestrings:212
 msgid "Authentication Configuration"
@@ -1803,19 +1771,19 @@ msgstr "oznaka32"
 
 #: system-config-kickstart.gladestrings:214
 msgid "Security level:"
-msgstr ""
+msgstr "Raven varnosti:"
 
 #: system-config-kickstart.gladestrings:215
 msgid "Enable firewall"
-msgstr ""
+msgstr "Omogoči požarni zid"
 
 #: system-config-kickstart.gladestrings:216
 msgid "Disable firewall"
-msgstr ""
+msgstr "Onemogoči požarni zid"
 
 #: system-config-kickstart.gladestrings:217
 msgid "Firewall configuration is not applicable on upgrades."
-msgstr ""
+msgstr "Nastavitve požarnega zidu niso uporabne ob nadgradnji."
 
 #: system-config-kickstart.gladestrings:219
 msgid "label33"
@@ -1851,20 +1819,19 @@ msgstr "Ob zagonu poženi okenski sistem X"
 
 #: system-config-kickstart.gladestrings:229
 msgid "On first boot, Setup Agent is: "
-msgstr ""
+msgstr "Ob prvem zagonu je agent za nameščeanje:"
 
 #: system-config-kickstart.gladestrings:230
 msgid "Disabled"
 msgstr "Onemogočeno"
 
 #: system-config-kickstart.gladestrings:231
-#, fuzzy
 msgid "Enabled"
-msgstr "Omogoči nscd"
+msgstr "Omogoči"
 
 #: system-config-kickstart.gladestrings:232
 msgid "Enabled in reconfiguration mode"
-msgstr ""
+msgstr "Omogoči v načinu ponovnega nastavljanja"
 
 #: system-config-kickstart.gladestrings:233
 msgid "General"
@@ -1888,7 +1855,7 @@ msgstr "Zaznaj monitor"
 
 #: system-config-kickstart.gladestrings:239
 msgid "Use custom monitor sync rates"
-msgstr ""
+msgstr "Uporabi prikrojene frekvence osveževanja zaslona"
 
 #: system-config-kickstart.gladestrings:241
 msgid "Hz"
@@ -1912,7 +1879,7 @@ msgstr "Monitor"
 
 #: system-config-kickstart.gladestrings:247
 msgid "Display configuration is not applicable on upgrades."
-msgstr ""
+msgstr "Nastavitve prikaza niso uporabne pri nadgradnji."
 
 #: system-config-kickstart.gladestrings:249
 msgid "label88"
@@ -1952,7 +1919,7 @@ msgstr "Sistem"
 
 #: system-config-kickstart.gladestrings:258
 msgid "Package selection is not applicable on upgrades."
-msgstr ""
+msgstr "Izbire paketov niso uporabne pri nadgradnji."
 
 #: system-config-kickstart.gladestrings:260
 msgid "label34"
@@ -2008,9 +1975,8 @@ msgid "Preview Options"
 msgstr "Predogled izbir"
 
 #: system-config-kickstart.gladestrings:275
-#, fuzzy
 msgid "_Save to File"
-msgstr "Shrani v datoteko"
+msgstr "_Shrani v datoteko"
 
 #: system-config-kickstart.gladestrings:276
 msgid ""
@@ -2141,3 +2107,4 @@ msgstr "."
 
 #~ msgid "Medium"
 #~ msgstr "Srednja"
+
