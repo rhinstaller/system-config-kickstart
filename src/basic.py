@@ -37,8 +37,6 @@ class basic:
         self.mouse_combo = xml.get_widget("mouse_combo")
         self.timezone_combo = xml.get_widget("timezone_combo")
         self.root_passwd_entry = xml.get_widget("root_passwd_entry")
-        self.lilo_mbr_radiobutton = xml.get_widget("lilo_mbr_radiobutton")
-        self.lilo_none_radiobutton = xml.get_widget("lilo_none_radiobutton")
         self.emulate_3_buttons = xml.get_widget("emulate_3_buttons")
         lang_combo = xml.get_widget("lang_combo")
         lang_support_combo = xml.get_widget("lang_support_combo")
@@ -46,6 +44,8 @@ class basic:
         keyboard_combo = xml.get_widget("keyboard_combo")		
         timezone_combo = xml.get_widget("timezone_combo")
         self.reboot_checkbutton = xml.get_widget("reboot_checkbutton")
+        self.text_install_checkbutton = xml.get_widget("text_install_checkbutton")
+        self.interactive_checkbutton = xml.get_widget("interactive_checkbutton")                
 
         #define languages, add languages here
         self.langDict = {"Czech" : "cs_CZ",
@@ -82,8 +82,8 @@ class basic:
                            "Generic 3 Button Mouse (USB)" : "generic3usb",
                            "Genius NetMouse (serial)" : "geniusnm",
                            "Genius NetMouse (PS/2)" : "geniusnmps/2",
-                           "Genius NetMouse Pro (PS/2)" : "geniusnmps/2",
-                           "Genius NetScroll (PS/2)" : "geniusnsps/2",
+                           "Genius NetMouse Pro (PS/2)" : "geniusprops/2",
+                           "Genius NetScroll (PS/2)" : "geniusscrollps/2",
                            "Kensington Thinking Mouse (serial)" : "thinking",
                            "Kensington Thinking Mouse (PS/2)" : "thinkingps/2",
                            "Logitech Mouse (serial, old C7 type)" : "logitech",
@@ -93,16 +93,17 @@ class basic:
                            "Logitech MouseMan/FirstMouse (PS/2)" : "logimmanps/2",
                            "Logitech MouseMan+/FirstMouse+ (serial)" : "logimman+",
                            "Logitech MouseMan+/FirstMouse+ (PS/2)" : "logimman+ps/2",
-                           "Logitech MouseMan Wheel (USB)" : "generic3usb",
+                           "Logitech MouseMan Wheel (USB)" : "logimmusb",
                            "Microsoft compatible (serial)" : "microsoft",
                            "Microsoft Rev 2.1A or higher (serial)" : "msnew",
                            "Microsoft IntelliMouse (serial)" : "msintelli",
                            "Microsoft IntelliMouse (PS/2)" : "msintellips/2",
-                           "Microsoft IntelliMouse (USB)" : "generic3usb",
+                           "Microsoft IntelliMouse (USB)" : "msintelliusb",
                            "Microsoft Bus Mouse" : "msbm",
                            "Mouse Systems (serial)" : "mousesystems",
                            "MM Series (serial)" : "mmseries",
                            "MM HitTablet (serial)" : "mmhittab",
+                           "Sun Mouse" : "sun",
                            }
 
         #populate language combo
@@ -189,12 +190,12 @@ class basic:
         buf = buf + "\n" + self.mouseLookup(self.mouse_combo.entry.get_text())
         buf = buf + "\n" + "timezone --utc " + self.timezone_combo.entry.get_text()
         buf = buf + "\n" + "rootpw " + self.root_passwd_entry.get_text()
-        if self.lilo_mbr_radiobutton.get_active():
-            buf = buf + "\n" + "lilo --location mbr"
-        elif self.lilo_none_radiobutton.get_active():
-            buf = buf + "\n" + "lilo --location none"
         if self.reboot_checkbutton.get_active():
             buf = buf + "\n" + "reboot"
+        if self.text_install_checkbutton.get_active():
+            buf = buf + "\n" + "text"
+        if self.interactive_checkbutton.get_active():
+            buf = buf + "\n" + "interactive"            
         return buf
 
     def languageLookup(self, args):
