@@ -44,6 +44,7 @@ class raidWindow:
         self.xml = xml
         self.part_store = part_store
         self.part_view = part_view
+        self.original_partitions = None
         
         self.raid_window = xml.get_widget("raid_window")
         self.raid_window.set_icon(kickstartGui.iconPixbuf)
@@ -86,12 +87,14 @@ class raidWindow:
 
     def addPartition(self):
         self.raid_partition_store.clear()
+        self.original_partitions = None
+        self.original_iter = None
         self.part_store.foreach(self.countRaidPartitions)
         self.raid_window.show_all()
 
-    def editDevice(self, part_object):
+    def editDevice(self, iter, part_object):
         print "edit device"
-
+        self.original_iter = iter
         self.raid_partition_store.clear()
         self.raid_mp_combo.entry.set_text(part_object.mountPoint)
 
@@ -110,9 +113,8 @@ class raidWindow:
         menu_item = self.raid_level_menu.get_menu().get_children()[index]
         self.raid_level_menu.get_menu().activate_item(menu_item, gtk.TRUE)
         
-        print part_object.raidPartitions
+        self.original_partitions = part_object.raidPartitions
         self.part_store.foreach(self.countRaidPartitions, part_object.raidPartitions)
-        
 
         self.raid_window.show_all()
 
@@ -168,20 +170,25 @@ class raidWindow:
                 device_is_valid = 1
 
         if device_is_valid:
-            self.raid_parent_iter = None
-            self.part_store.foreach(self.checkForRaidParent)
 
-            if self.raid_parent_iter == None:
-                self.raid_parent_iter = self.part_store.append(None)
-                self.part_store.set_value(self.raid_parent_iter, 0, (_("Raid Devices")))
+            if not self.original_partitions:
+                #then this is a new raid device, not one we're just editing
+                self.raid_parent_iter = None
+                self.part_store.foreach(self.checkForRaidParent)
 
-            raid_device_iter = self.part_store.append(self.raid_parent_iter)
-            self.part_store.set_value(raid_device_iter, 0, mount_point)
+                if self.raid_parent_iter == None:
+                    self.raid_parent_iter = self.part_store.append(None)
+                    self.part_store.set_value(self.raid_parent_iter, 0, (_("Raid Devices")))
 
+                raid_device_iter = self.part_store.append(self.raid_parent_iter)
+                self.part_store.set_value(raid_device_iter, 0, mount_point)
 
-            self.num_raid_devices = None
-            self.part_store.foreach(self.countRaidDevices)
+                self.num_raid_devices = None
+                self.part_store.foreach(self.countRaidDevices)
 
+            if self.original_iter:
+                raid_device_iter = self.original_iter
+                
             self.part_store.set_value(raid_device_iter, 0, self.raid_object.raidDevice)
             self.part_store.set_value(raid_device_iter, 1, self.raid_object.mountPoint)
             self.part_store.set_value(raid_device_iter, 2, self.raid_object.fsType)
@@ -196,7 +203,6 @@ class raidWindow:
                 self.part_store.set_value(raid_device_iter, 3, (_("No")))
 
             self.part_view.expand_all()
-
             self.raid_window.hide()
 
     def checkForRaidParent(self, store, data, iter):
@@ -217,8 +223,8 @@ class raidWindow:
     def countRaidDevices(self, store, data, iter):
         part_object = self.part_store.get_value(iter, 5)
         if part_object:
-
-            if part_object.device[:2] == 'md':
+            print "part_object.device is", part_object.device
+            if part_object.device and part_object.device[:2] == 'md':
                 self.num_raid_devices = self.num_raid_devices + 1
         
     def deviceNotValid(self, label):
