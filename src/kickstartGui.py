@@ -109,7 +109,7 @@ class kickstartGui:
 	#bring in auth functions
 	self.auth_class = auth.auth(xml, self.kickstartData)
 	#bring in firewall functions
-	self.firewall_class = firewall.firewall(xml)
+	self.firewall_class = firewall.firewall(xml, self.kickstartData)
 	#bring in X functions
 	self.X_class = xconfig.xconfig(xml)
 	#bring in package function
@@ -227,7 +227,7 @@ class kickstartGui:
 
 	list = list + self.network_class.getData()
 	self.auth_class.getData()
-	list = list + self.firewall_class.getData()
+	self.firewall_class.getData()
 	list = list + self.X_class.getData()
 
 	if self.install_radiobutton.get_active():
@@ -262,3 +262,4 @@ class kickstartGui:
         self.bootloader_class.fillData()
         self.partition_class.fillData()
         self.auth_class.fillData()
+        self.firewall_class.fillData()
