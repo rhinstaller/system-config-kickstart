@@ -66,11 +66,12 @@ class basic:
         self.encrypt_root_pw_checkbutton = xml.get_widget("encrypt_root_pw_checkbutton")
         self.lang_support_list = xml.get_widget("lang_support_list")
         self.platform_combo = xml.get_widget("platform_combo")
-        self.platform_combo.entry.connect("changed", self.platformChanged)
+
 
         self.platform_list =  [_("x86, AMD64, or Intel EM64T"), _("Intel Itanium"), _("IBM iSeries"),
                                _("IBM pSeries"), _("IBM zSeries/s390")]
         self.platform_combo.set_popdown_strings(self.platform_list)
+        self.platform_combo.entry.connect("changed", self.platformChanged)
 
         self.lang_support_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
         self.lang_support_view.set_model(self.lang_support_store)
@@ -296,7 +297,7 @@ class basic:
     def platformChanged(self, entry):
         platform = entry.get_text()
         if platform:
-            print "platformChanged", entry.get_text()
+            self.parent_class.platformTypeChanged(entry.get_text())
 
     def fillData(self):
         #set language
