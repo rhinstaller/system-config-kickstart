@@ -99,8 +99,6 @@ class install:
         install = self.install_radiobutton.get_active()
         self.partitioning_frame.set_sensitive(install)
         self.pkg_selection_frame.set_sensitive(install)            
-        self.install_option_vbox.set_sensitive(install)
-        self.install_notebook.set_sensitive(install)
         self.bootloader_class.upgrade_bootloader_radio.set_sensitive(not install)
 
     def setState (self, args):
