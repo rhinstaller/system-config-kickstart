@@ -53,12 +53,6 @@ gettext.bindtextdomain ("ksconfig", "/usr/share/locale")
 gettext.textdomain ("ksconfig")
 _=gettext.gettext
 
-#gtk.glade.bindtextdomain(domain)
-#xml = gtk.glade.XML ("/usr/share/ksconfig/ksconfig-gtk2.glade", domain="ksconfig")
-#xml = gtk.glade.XML ("./ksconfig-gtk2.glade", domain="ksconfig")
-#xml = libglade.GladeXML ("/usr/share/ksconfig/ksconfig.glade", domain="ksconfig")
-#xml = libglade.GladeXML ("./ksconfig.glade", domain="ksconfig")
-
 class ksconfig_gui:
 	
 	def destroy(self, args):
@@ -129,7 +123,6 @@ class ksconfig_gui:
 		self.quit_menu.connect("activate", gtk.mainquit)
 		self.help_menu.connect("activate", self.on_help_button_clicked)
 		self.about_menu.connect("activate", self.on_about_activate)
-
 		self.category_view.connect("cursor_changed", self.on_list_view_row_activated)
 
 		#show gui
@@ -158,8 +151,6 @@ class ksconfig_gui:
 
 	#display help manual
 	def on_help_button_clicked (self, args):
-		print "you clicked help"
-		
 		help_pages = ["file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-basic.html",
 			      "file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-bootloader.html",
 			      "file:///usr/share/doc/ksconfig-" + "@VERSION@" + "/ksconfig-install.html",
