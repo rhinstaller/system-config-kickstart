@@ -54,8 +54,32 @@ class KickstartParser:
 
     def readKickstartFile(self, file):
         self.lines = open(file, "r").readlines()
+        fd = open(file, "r")
+        line = fd.readline()
 
+        mainList = []
+        packageList = []
+        preList = []
+        postList = []
+
+        list = mainList
+
+        #Separate the file into main, package, pre and post lists
         for line in self.lines:
+            line = string.strip(line)
+
+            if line == "":
+                continue
+            elif line[:9] == "%packages":
+                list = packageList
+            elif line[:4] == "%pre":
+                list = preList
+            elif line[:5] == "%post":
+                list = postList
+
+            list.append(line)
+
+        for line in mainList:
             line = string.strip(line)
 
             if line == "":
@@ -64,8 +88,12 @@ class KickstartParser:
                 continue
             elif line != "":
                 tokens = string.split(line)
-                print tokens
                 if tokens[0] in self.handlers.keys():
                     if self.handlers[tokens[0]]:
 			self.handlers[tokens[0]](tokens[1:])
                     
+
+        if packageList != []:
+            tokens = string.split(packageList[0])
+            self.kickstartData.setPackage(tokens[1:])
+            self.kickstartData.setPackageList(packageList[1:])
