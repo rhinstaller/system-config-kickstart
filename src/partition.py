@@ -77,7 +77,7 @@ class partition:
         self.part_view.append_column(col)
 
         #initialize the child classes
-#        self.partWindow = partWindow.partWindow(self.xml, self.part_store, self.part_view)
+        self.partWindow = partWindow.partWindow(self.xml, self.part_store, self.part_view)
 #        self.raidWindow = raidWindow.raidWindow(self.xml, self.part_view)
 
 
@@ -100,8 +100,8 @@ class partition:
         self.del_part_button.set_sensitive(gtk.FALSE)
 
     def addPartition(self, *args):
-        part = partWindow.partWindow(self.xml, self.part_store, self.part_view)
-        part.add_partition()
+#        part = partWindow.partWindow(self.xml, self.part_store, self.part_view)
+        self.partWindow.add_partition()
         self.edit_part_button.set_sensitive(gtk.TRUE)
         self.del_part_button.set_sensitive(gtk.TRUE)
         self.part_view.get_selection().unselect_all()
@@ -113,7 +113,7 @@ class partition:
 ##         self.part_view.get_selection().unselect_all()
 
     def editPartition(self, *args):
-        self.partWindow = partWindow.partWindow(self.xml, self.part_store, self.part_view)
+#        self.partWindow = partWindow.partWindow(self.xml, self.part_store, self.part_view)
         try:
             data, iter = self.part_view.get_selection().get_selected()
         except:
@@ -131,7 +131,7 @@ class partition:
         self.partWindow.edit_partition(iter)
 
     def raidPartition(self, *args):
-        self.raidOptionsWindow = raidOptionsWindow.raidOptionsWindow(self.xml, self.part_store, self.part_view)
+        self.raidOptionsWindow = raidOptionsWindow.raidOptionsWindow(self.xml, self.part_store, self.part_view, self.partWindow)
 #        self.raidWindow.add_raid(self.num_rows)
 
     def lvmPartition(self, *args):
