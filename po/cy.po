@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-config-kickstart.cy\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-11 12:08-0500\n"
+"POT-Creation-Date: 2004-03-26 18:21-0500\n"
 "PO-Revision-Date: 2004-03-01 17:49+0000\n"
 "Last-Translator: Owain Green <owaing@oceanfree.net>\n"
 "Language-Team: Cymraeg <Cy@li.org>\n"
@@ -53,8 +53,28 @@ msgstr ""
 #. #
 #. # I18N
 #. #
-#. self.lang_support_list.set_selection_mode(SELECTION_MULTIPLE)
-#. self.messagebox = xml.get_widget("messagebox")
+#: ../src/basic.py:71
+msgid "x86, AMD64, or Intel EM64T"
+msgstr ""
+
+#: ../src/basic.py:71
+msgid "Intel Itanium"
+msgstr ""
+
+#: ../src/basic.py:71
+#, fuzzy
+msgid "IBM iSeries"
+msgstr "Gweinyddion SMB:"
+
+#: ../src/basic.py:72
+#, fuzzy
+msgid "IBM pSeries"
+msgstr "Gweinyddion SMB:"
+
+#: ../src/basic.py:72
+msgid "IBM zSeries/s390"
+msgstr ""
+
 #. populate language combo
 #. set default to English
 #. for lang in lang_list:
@@ -65,7 +85,7 @@ msgstr ""
 #. set keyboard to current keymap
 #. set default mouse to generic ps/2
 #. populate time zone combo
-#: ../src/basic.py:199
+#: ../src/basic.py:205
 msgid "Root passwords do not match."
 msgstr "Nid yw'r cyfrineiriau gwraidd yn cydweddu."
 
@@ -74,12 +94,12 @@ msgstr "Nid yw'r cyfrineiriau gwraidd yn cydweddu."
 #. Prepart the clearpart line
 #. This is a raid device
 #. Check to see if the selection is actually a partition or one of the parent roots
-#: ../src/basic.py:200 ../src/basic.py:220 ../src/install.py:213
-#: ../src/partition.py:303 ../src/partWindow.py:513 ../src/raidWindow.py:247
+#: ../src/basic.py:206 ../src/basic.py:226 ../src/install.py:214
+#: ../src/partition.py:304 ../src/partWindow.py:513 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "Gwall"
 
-#: ../src/basic.py:219
+#: ../src/basic.py:225
 msgid "Please select a root password."
 msgstr "Dewiswch gyfrinair gwraidd."
 
@@ -108,7 +128,7 @@ msgstr "Dewiswch gyfrinair gwraidd."
 #. #
 #. lilo stuff
 #. end of lilo stuff
-#: ../src/bootloader.py:132
+#: ../src/bootloader.py:122
 msgid "Grub passwords do not match.  Please try again."
 msgstr "Nid yw'r cyfrineiriau grub yn cydweddu.  Ceisiwch eto."
 
@@ -301,44 +321,47 @@ msgstr "Pyrth eraill: (1029:tcp)"
 #. # I18N
 #. #
 #. gray out package selection and partitions if upgrade
-#: ../src/install.py:133
+#. self.partitioning_frame.set_sensitive(install)
+#. self.pkg_selection_frame.set_sensitive(install)
+#. self.bootloader_class.upgrade_bootloader_radio.set_sensitive(not install)
+#: ../src/install.py:134
 msgid "Please enter an NFS server."
 msgstr "Rhowch weinydd NFS os gwelwch yn dda."
 
-#: ../src/install.py:136
+#: ../src/install.py:137
 msgid "Please enter an NFS directory."
 msgstr "Rhowch gyfeiriadur NFS os gwelwch yn dda."
 
-#: ../src/install.py:146
+#: ../src/install.py:147
 msgid "Please enter an FTP server."
 msgstr "Rhowch weinydd FTP os gwelwch yn dda."
 
-#: ../src/install.py:153
+#: ../src/install.py:154
 msgid "Please enter an FTP directory."
 msgstr "Rhowch gyfeiriadur FTP os gwelwch yn dda."
 
-#: ../src/install.py:159
+#: ../src/install.py:160
 msgid "Please enter an FTP user name."
 msgstr "Rhowch enw defnyddiwr FTP os gwelwch yn dda."
 
-#: ../src/install.py:162
+#: ../src/install.py:163
 msgid "Please enter an FTP password."
 msgstr "Rhowch gyfrinair FTP os gwelwch yn dda."
 
-#: ../src/install.py:177
+#: ../src/install.py:178
 msgid "Please enter an HTTP server."
 msgstr "Rhowch weinydd HTTP os gwelwch yn dda."
 
-#: ../src/install.py:180
+#: ../src/install.py:181
 msgid "Please enter an HTTP server directory."
 msgstr "Rhowch gyfeiriadur gweinydd HTTP os gwelwch yn dda."
 
 #. strip the "http://" out
-#: ../src/install.py:201
+#: ../src/install.py:202
 msgid "Please enter a hard drive directory."
 msgstr "Rhowch gyfeiriadur disg galed os gwelwch yn dda."
 
-#: ../src/install.py:204
+#: ../src/install.py:205
 msgid "Please enter a hard drive partition."
 msgstr "Rhowch raniad disg galed os gwelwch yn dda."
 
@@ -426,7 +449,7 @@ msgstr "Dewisiadau Cychwynnydd"
 msgid "Partition Information"
 msgstr "Gwybodaeth Rhaniadau"
 
-#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:168
+#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:163
 msgid "Network Configuration"
 msgstr "Cyfluniad Rhwydwaith"
 
@@ -434,23 +457,23 @@ msgstr "Cyfluniad Rhwydwaith"
 msgid "Authentication"
 msgstr "Dilysiant"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:219
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:214
 msgid "Firewall Configuration"
 msgstr "Cyfluniad Mur Cadarn"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:248
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:243
 msgid "X Configuration"
 msgstr "Cyfluniad X"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:258
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:253
 msgid "Package Selection"
 msgstr "Dewis Pecynnau"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:264
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:259
 msgid "Pre-Installation Script"
 msgstr "Sgript Cyn-Arsefydlu"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:271
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:266
 msgid "Post-Installation Script"
 msgstr "Sgript Wedi-Arsefydlu"
 
@@ -621,7 +644,7 @@ msgstr ""
 #. #
 #. # I18N
 #. #
-#: ../src/partition.py:70
+#: ../src/partition.py:71
 msgid ""
 "Device/\n"
 "Partition Number"
@@ -630,7 +653,7 @@ msgstr ""
 "Rhaniad"
 
 #. col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
-#: ../src/partition.py:73
+#: ../src/partition.py:74
 msgid ""
 "Mount Point/\n"
 "RAID"
@@ -638,15 +661,15 @@ msgstr ""
 "Man Gosod/\n"
 "RAID"
 
-#: ../src/partition.py:75
+#: ../src/partition.py:76
 msgid "Type"
 msgstr "Math"
 
-#: ../src/partition.py:77
+#: ../src/partition.py:78
 msgid "Format"
 msgstr "Fformat"
 
-#: ../src/partition.py:79
+#: ../src/partition.py:80
 msgid "Size (MB)"
 msgstr "Maint (MB)"
 
@@ -696,7 +719,7 @@ msgstr "Maint (MB)"
 #. #         self.part_store.set_value(part_iter, 3, part_object.format)
 #. #         self.part_store.set_value(part_iter, 4, part_object.size)
 #. #         self.part_store.set_value(part_iter, 5, part_object)
-#: ../src/partition.py:149 ../src/partition.py:179
+#: ../src/partition.py:150 ../src/partition.py:180
 msgid "Please select a partition from the list."
 msgstr "Dewiswch raniad o'r restr."
 
@@ -840,7 +863,7 @@ msgstr ""
 #. # You should have received a copy of the GNU General Public License
 #. # along with this program; if not, write to the Free Software
 #. # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-#. # raidOptionWindow.py - code for redhat-config-kickstart's raid dialog
+#. # raidOptionWindow.py - code for system-config-kickstart's raid dialog
 #. # Copyright (C) 2001, 2002, 2003 Red Hat, Inc.
 #. # Copyright (C) 2001, 2002, 2003 Brent Fox <bfox@redhat.com>
 #. # Copyright (C) 2001, 2002, 2003 Tammy Fox <tfox@redhat.com>
@@ -1084,53 +1107,54 @@ msgstr "Dewisiadau Rhaniadau"
 #: system-config-kickstart.gladestrings:81
 #: system-config-kickstart.gladestrings:83
 #: system-config-kickstart.gladestrings:87
-#: system-config-kickstart.gladestrings:104
-#: system-config-kickstart.gladestrings:105
-#: system-config-kickstart.gladestrings:108
+#: system-config-kickstart.gladestrings:89
+#: system-config-kickstart.gladestrings:106
+#: system-config-kickstart.gladestrings:107
 #: system-config-kickstart.gladestrings:110
-#: system-config-kickstart.gladestrings:114
-#: system-config-kickstart.gladestrings:115
+#: system-config-kickstart.gladestrings:112
+#: system-config-kickstart.gladestrings:116
 #: system-config-kickstart.gladestrings:117
-#: system-config-kickstart.gladestrings:118
-#: system-config-kickstart.gladestrings:122
-#: system-config-kickstart.gladestrings:123
+#: system-config-kickstart.gladestrings:119
+#: system-config-kickstart.gladestrings:120
+#: system-config-kickstart.gladestrings:124
+#: system-config-kickstart.gladestrings:125
 #: system-config-kickstart.gladestrings:138
 #: system-config-kickstart.gladestrings:139
-#: system-config-kickstart.gladestrings:149
-#: system-config-kickstart.gladestrings:175
+#: system-config-kickstart.gladestrings:144
+#: system-config-kickstart.gladestrings:170
+#: system-config-kickstart.gladestrings:173
+#: system-config-kickstart.gladestrings:177
 #: system-config-kickstart.gladestrings:178
-#: system-config-kickstart.gladestrings:182
-#: system-config-kickstart.gladestrings:183
-#: system-config-kickstart.gladestrings:190
-#: system-config-kickstart.gladestrings:192
+#: system-config-kickstart.gladestrings:185
+#: system-config-kickstart.gladestrings:187
+#: system-config-kickstart.gladestrings:189
 #: system-config-kickstart.gladestrings:194
-#: system-config-kickstart.gladestrings:199
-#: system-config-kickstart.gladestrings:201
-#: system-config-kickstart.gladestrings:207
-#: system-config-kickstart.gladestrings:208
-#: system-config-kickstart.gladestrings:223
-#: system-config-kickstart.gladestrings:225
-#: system-config-kickstart.gladestrings:237
-#: system-config-kickstart.gladestrings:241
-#: system-config-kickstart.gladestrings:243
-#: system-config-kickstart.gladestrings:262
-#: system-config-kickstart.gladestrings:269
-#: system-config-kickstart.gladestrings:289
+#: system-config-kickstart.gladestrings:196
+#: system-config-kickstart.gladestrings:202
+#: system-config-kickstart.gladestrings:203
+#: system-config-kickstart.gladestrings:218
+#: system-config-kickstart.gladestrings:220
+#: system-config-kickstart.gladestrings:232
+#: system-config-kickstart.gladestrings:236
+#: system-config-kickstart.gladestrings:238
+#: system-config-kickstart.gladestrings:257
+#: system-config-kickstart.gladestrings:264
+#: system-config-kickstart.gladestrings:284
+#: system-config-kickstart.gladestrings:286
+#: system-config-kickstart.gladestrings:288
+#: system-config-kickstart.gladestrings:290
 #: system-config-kickstart.gladestrings:291
 #: system-config-kickstart.gladestrings:293
 #: system-config-kickstart.gladestrings:295
-#: system-config-kickstart.gladestrings:296
+#: system-config-kickstart.gladestrings:297
 #: system-config-kickstart.gladestrings:298
 #: system-config-kickstart.gladestrings:300
 #: system-config-kickstart.gladestrings:302
-#: system-config-kickstart.gladestrings:303
+#: system-config-kickstart.gladestrings:304
 #: system-config-kickstart.gladestrings:305
 #: system-config-kickstart.gladestrings:307
 #: system-config-kickstart.gladestrings:309
-#: system-config-kickstart.gladestrings:310
-#: system-config-kickstart.gladestrings:312
-#: system-config-kickstart.gladestrings:314
-#: system-config-kickstart.gladestrings:316
+#: system-config-kickstart.gladestrings:311
 msgid "*"
 msgstr "*"
 
@@ -1383,133 +1407,129 @@ msgid "Confirm Password:"
 msgstr "Gwirio Cyfrinair:"
 
 #: system-config-kickstart.gladestrings:88
+msgid "Target Architecture:"
+msgstr ""
+
+#: system-config-kickstart.gladestrings:90
 msgid "Reboot system after installation"
 msgstr "Ailgychwyn system wedi'r arsefydlu"
 
-#: system-config-kickstart.gladestrings:89
+#: system-config-kickstart.gladestrings:91
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "Gweithredu'r arsefydliad ym modd testun (graffigol yw'r rhagosodyn)"
 
-#: system-config-kickstart.gladestrings:90
+#: system-config-kickstart.gladestrings:92
 msgid "Perform installation in interactive mode"
 msgstr "Gweithredu'r arsefydliad ym modd rhyngweithiol"
 
-#: system-config-kickstart.gladestrings:91
+#: system-config-kickstart.gladestrings:93
 msgid "Basic Configuration (required)"
 msgstr "Cyfluniad Sylfaenol (angenrheidiol)"
 
-#: system-config-kickstart.gladestrings:92
+#: system-config-kickstart.gladestrings:94
 msgid "label28"
 msgstr "label28"
 
-#: system-config-kickstart.gladestrings:93
+#: system-config-kickstart.gladestrings:95
 msgid "Perform new installation"
 msgstr "Gweithredu arsefydliad newydd"
 
-#: system-config-kickstart.gladestrings:94
+#: system-config-kickstart.gladestrings:96
 msgid "Upgrade an existing installation"
 msgstr "Uwchraddio arsefydliad cyfredol"
 
-#: system-config-kickstart.gladestrings:95
+#: system-config-kickstart.gladestrings:97
 msgid "Choose the Installation Method:"
 msgstr "Dewiswch y Dull Arsefydlu:"
 
-#: system-config-kickstart.gladestrings:96
-#: system-config-kickstart.gladestrings:101
+#: system-config-kickstart.gladestrings:98
+#: system-config-kickstart.gladestrings:103
 msgid "CD-ROM"
 msgstr "CDd-ROM"
 
-#: system-config-kickstart.gladestrings:97
-#: system-config-kickstart.gladestrings:106
+#: system-config-kickstart.gladestrings:99
+#: system-config-kickstart.gladestrings:108
 msgid "NFS"
 msgstr "NFS"
 
-#: system-config-kickstart.gladestrings:98
-#: system-config-kickstart.gladestrings:116
+#: system-config-kickstart.gladestrings:100
+#: system-config-kickstart.gladestrings:118
 msgid "FTP"
 msgstr "FTP"
 
-#: system-config-kickstart.gladestrings:99
-#: system-config-kickstart.gladestrings:121
+#: system-config-kickstart.gladestrings:101
+#: system-config-kickstart.gladestrings:123
 msgid "HTTP"
 msgstr "HTTP"
 
-#: system-config-kickstart.gladestrings:100
-#: system-config-kickstart.gladestrings:126
+#: system-config-kickstart.gladestrings:102
+#: system-config-kickstart.gladestrings:128
 msgid "Hard Drive"
 msgstr "Disg Galed"
 
-#: system-config-kickstart.gladestrings:102
+#: system-config-kickstart.gladestrings:104
 msgid "NFS Server:"
 msgstr "Gweinydd NFS:"
 
-#: system-config-kickstart.gladestrings:103
+#: system-config-kickstart.gladestrings:105
 msgid "NFS Directory:"
 msgstr "Cyfeiriadur NFS:"
 
-#: system-config-kickstart.gladestrings:107
+#: system-config-kickstart.gladestrings:109
 msgid "FTP Server:"
 msgstr "Gweinydd FTP:"
 
-#: system-config-kickstart.gladestrings:109
+#: system-config-kickstart.gladestrings:111
 msgid "FTP Directory:"
 msgstr "Cyfeiriadur FTP:"
 
-#: system-config-kickstart.gladestrings:111
+#: system-config-kickstart.gladestrings:113
 msgid "Specify an FTP username and password"
 msgstr "PEnodwch enw defnyddiwr a chyfrinair FTP"
 
-#: system-config-kickstart.gladestrings:112
+#: system-config-kickstart.gladestrings:114
 msgid "FTP Username"
 msgstr "Enw Defnyddiwr FTP"
 
-#: system-config-kickstart.gladestrings:113
+#: system-config-kickstart.gladestrings:115
 msgid "FTP Password"
 msgstr "Cyfrinair FTP"
 
-#: system-config-kickstart.gladestrings:119
+#: system-config-kickstart.gladestrings:121
 msgid "HTTP Server:"
 msgstr "Gweinydd HTTP:"
 
-#: system-config-kickstart.gladestrings:120
+#: system-config-kickstart.gladestrings:122
 msgid "HTTP Directory:"
 msgstr "Cyfeiriadur HTTP:"
 
-#: system-config-kickstart.gladestrings:124
+#: system-config-kickstart.gladestrings:126
 msgid "Hard Drive Partition:"
 msgstr "Rhaniad Disg Galed:"
 
-#: system-config-kickstart.gladestrings:125
+#: system-config-kickstart.gladestrings:127
 msgid "Hard Drive Directory:"
 msgstr "Cyfeiriadur Disg Galed:"
 
-#: system-config-kickstart.gladestrings:127
+#: system-config-kickstart.gladestrings:129
 msgid "Installation Method (required)"
 msgstr "Dull Arsefydlu (angenrheidiol)"
 
-#: system-config-kickstart.gladestrings:128
+#: system-config-kickstart.gladestrings:130
 msgid "label128"
 msgstr "label128"
 
-#: system-config-kickstart.gladestrings:129
+#: system-config-kickstart.gladestrings:131
 msgid "Install new boot loader"
 msgstr "Arsefydlu cychwynnydd newydd"
 
-#: system-config-kickstart.gladestrings:130
+#: system-config-kickstart.gladestrings:132
 msgid "Do not install a boot loader"
 msgstr "Peidio âg arsefydlu cychwynnydd"
 
-#: system-config-kickstart.gladestrings:131
+#: system-config-kickstart.gladestrings:133
 msgid "Upgrade existing boot loader"
 msgstr "Uwchraddio cychwynnydd cyfredol"
-
-#: system-config-kickstart.gladestrings:132
-msgid "Use GRUB for the boot loader"
-msgstr "Defnyddio GRUB yn gychwynnydd"
-
-#: system-config-kickstart.gladestrings:133
-msgid "Use LILO for the boot loader"
-msgstr "Defnyddio LILO yn gychwynnydd"
 
 #: system-config-kickstart.gladestrings:134
 msgid "GRUB Options:"
@@ -1528,398 +1548,378 @@ msgid "Encrypt GRUB password"
 msgstr "Amgryptio cyfrinair GRUB"
 
 #: system-config-kickstart.gladestrings:141
-msgid "label173"
-msgstr "label173"
-
-#: system-config-kickstart.gladestrings:142
-msgid "LILO Options:"
-msgstr "Dewisiadau LILO:"
-
-#: system-config-kickstart.gladestrings:143
-msgid "Use linear mode"
-msgstr "Defnyddio modd llinol"
-
-#: system-config-kickstart.gladestrings:144
-msgid "Force use of lba32 mode"
-msgstr "Gorfodi defnyddio modd lba32"
-
-#: system-config-kickstart.gladestrings:145
-msgid "label174"
-msgstr "label174"
-
-#: system-config-kickstart.gladestrings:146
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "Arsefydlu cychwynnydd ar y Prif Gofnod Cychwyn (MBR)"
 
-#: system-config-kickstart.gladestrings:147
+#: system-config-kickstart.gladestrings:142
 msgid "Install boot loader on first sector of the boot partition"
 msgstr "Arsefydlu'r cychwynnydd ar sector cyntaf y rhaniad cychwyn"
 
-#: system-config-kickstart.gladestrings:148
+#: system-config-kickstart.gladestrings:143
 msgid "Kernel parameters:"
 msgstr "Paramedrau cnewyllyn:"
 
-#: system-config-kickstart.gladestrings:150
+#: system-config-kickstart.gladestrings:145
 msgid "Boot Loader Options (required)"
 msgstr "Dewisiadau Cychwynnydd (angenrheidiol)"
 
-#: system-config-kickstart.gladestrings:151
+#: system-config-kickstart.gladestrings:146
 msgid "label35"
 msgstr "label35"
 
-#: system-config-kickstart.gladestrings:152
+#: system-config-kickstart.gladestrings:147
 msgid "Clear Master Boot Record"
 msgstr "Gwagio'r Prif Gofnod Cychwyn"
 
-#: system-config-kickstart.gladestrings:153
+#: system-config-kickstart.gladestrings:148
 msgid "Do not clear Master Boot Record"
 msgstr "Peidio â gwagio'r Prif Gofnod Cychwyn"
 
-#: system-config-kickstart.gladestrings:154
+#: system-config-kickstart.gladestrings:149
 msgid "Remove all existing partitions"
 msgstr "Gwaredu pob rhaniad cyfredol"
 
-#: system-config-kickstart.gladestrings:155
+#: system-config-kickstart.gladestrings:150
 msgid "Remove existing Linux partitions"
 msgstr "Gwaredu pob rhaniad Linux cyfredol"
 
-#: system-config-kickstart.gladestrings:156
+#: system-config-kickstart.gladestrings:151
 msgid "Preserve existing partitions"
 msgstr "Cadw rhaniadau cyfredol"
 
-#: system-config-kickstart.gladestrings:157
+#: system-config-kickstart.gladestrings:152
 msgid "Initialize the disk label"
 msgstr "Ymgychwyn y label disg"
 
-#: system-config-kickstart.gladestrings:158
+#: system-config-kickstart.gladestrings:153
 msgid "Do not initialize the disk label"
 msgstr "Peidio âg ymgychwyn y label disg"
 
-#: system-config-kickstart.gladestrings:159
+#: system-config-kickstart.gladestrings:154
 msgid "_Add"
 msgstr "_Ychwanegu"
 
-#: system-config-kickstart.gladestrings:160
+#: system-config-kickstart.gladestrings:155
 msgid "_Edit"
 msgstr "_Golygu"
 
-#: system-config-kickstart.gladestrings:161
+#: system-config-kickstart.gladestrings:156
 msgid "_Delete"
 msgstr "_Dileu"
 
-#: system-config-kickstart.gladestrings:162
+#: system-config-kickstart.gladestrings:157
 msgid "RAID"
 msgstr "RAID"
 
-#: system-config-kickstart.gladestrings:163
+#: system-config-kickstart.gladestrings:158
 msgid "Partition Information (required)"
 msgstr "Gwybodaeth Raniadau (angenrheidiol)"
 
-#: system-config-kickstart.gladestrings:164
+#: system-config-kickstart.gladestrings:159
 msgid "label30"
 msgstr "label30"
 
-#: system-config-kickstart.gladestrings:165
+#: system-config-kickstart.gladestrings:160
 msgid "_Add Network Device"
 msgstr "_Ychwanegu Dyfais Rwydwaith"
 
-#: system-config-kickstart.gladestrings:166
+#: system-config-kickstart.gladestrings:161
 msgid "_Edit Network Device"
 msgstr "_Golygu Dyfais Rwydwaith"
 
-#: system-config-kickstart.gladestrings:167
+#: system-config-kickstart.gladestrings:162
 msgid "_Delete Network Device"
 msgstr "_Dileu Dyfais Rwydwaith"
 
-#: system-config-kickstart.gladestrings:169
+#: system-config-kickstart.gladestrings:164
 msgid "label31"
 msgstr "label31"
 
-#: system-config-kickstart.gladestrings:170
+#: system-config-kickstart.gladestrings:165
 msgid "Authentication:"
 msgstr "Dilysiant:"
 
-#: system-config-kickstart.gladestrings:171
+#: system-config-kickstart.gladestrings:166
 msgid "Use Shadow Passwords"
 msgstr "Defnyddio Cyfrineiriau Cysgod"
 
-#: system-config-kickstart.gladestrings:172
+#: system-config-kickstart.gladestrings:167
 msgid "Use MD5"
 msgstr "Defnyddio MD5"
 
-#: system-config-kickstart.gladestrings:173
+#: system-config-kickstart.gladestrings:168
 msgid "Enable NIS"
 msgstr "Galluogi NIS"
 
-#: system-config-kickstart.gladestrings:174
+#: system-config-kickstart.gladestrings:169
 msgid "NIS Domain:"
 msgstr "Parth NIS:"
 
-#: system-config-kickstart.gladestrings:176
+#: system-config-kickstart.gladestrings:171
 msgid "Use broadcast to find NIS server"
 msgstr "Defnyddio darlledu i ganfod gweinydd NIS"
 
-#: system-config-kickstart.gladestrings:177
+#: system-config-kickstart.gladestrings:172
 msgid "NIS Server:"
 msgstr "Gweinydd NIS:"
 
-#: system-config-kickstart.gladestrings:179
+#: system-config-kickstart.gladestrings:174
 msgid "NIS Authentication"
 msgstr "Dilysiant NIS"
 
-#: system-config-kickstart.gladestrings:180
+#: system-config-kickstart.gladestrings:175
 msgid "NIS"
 msgstr "NIS"
 
-#: system-config-kickstart.gladestrings:181
+#: system-config-kickstart.gladestrings:176
 msgid "Enable LDAP"
 msgstr "Galluogi LDAP"
 
-#: system-config-kickstart.gladestrings:184
+#: system-config-kickstart.gladestrings:179
 msgid "LDAP Server: "
 msgstr "Gweinydd LDAP: "
 
-#: system-config-kickstart.gladestrings:185
+#: system-config-kickstart.gladestrings:180
 msgid "LDAP Base Name: "
 msgstr "Enw Sail LDAP: "
 
-#: system-config-kickstart.gladestrings:186
+#: system-config-kickstart.gladestrings:181
 msgid "LDAP Authentication"
 msgstr "Dilysiant LDAP"
 
-#: system-config-kickstart.gladestrings:187
+#: system-config-kickstart.gladestrings:182
 msgid "LDAP "
 msgstr "LDAP "
 
-#: system-config-kickstart.gladestrings:188
+#: system-config-kickstart.gladestrings:183
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Galluogi Dilysiant Kerberos 5"
 
-#: system-config-kickstart.gladestrings:189
+#: system-config-kickstart.gladestrings:184
 msgid "Kerberos Realm:"
 msgstr "Bro Kerberos:"
 
-#: system-config-kickstart.gladestrings:191
+#: system-config-kickstart.gladestrings:186
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Rheolydd Pyrth Kerberos (KDC):"
 
-#: system-config-kickstart.gladestrings:193
+#: system-config-kickstart.gladestrings:188
 msgid "Kerberos Master Server:"
 msgstr "Prif-Weinydd Kerberos:"
 
-#: system-config-kickstart.gladestrings:195
+#: system-config-kickstart.gladestrings:190
 msgid "Kerberos 5 Authentication"
 msgstr "Dilysiant Kerberos 5"
 
-#: system-config-kickstart.gladestrings:196
+#: system-config-kickstart.gladestrings:191
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: system-config-kickstart.gladestrings:197
+#: system-config-kickstart.gladestrings:192
 msgid "Enable Hesiod Support"
 msgstr "Galluogi Cynhaliaeth Hesiod"
 
-#: system-config-kickstart.gladestrings:198
+#: system-config-kickstart.gladestrings:193
 msgid "Hesiod LHS:"
 msgstr "LHS Hesiod:"
 
-#: system-config-kickstart.gladestrings:200
+#: system-config-kickstart.gladestrings:195
 msgid "Hesiod RHS:"
 msgstr "RHS Hesiod:"
 
-#: system-config-kickstart.gladestrings:202
+#: system-config-kickstart.gladestrings:197
 msgid "Hesiod Authentication"
 msgstr "Dilysiant Hesiod"
 
-#: system-config-kickstart.gladestrings:203
+#: system-config-kickstart.gladestrings:198
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: system-config-kickstart.gladestrings:204
+#: system-config-kickstart.gladestrings:199
 msgid "Enable SMB Authentication"
 msgstr "Galluogi Dilysiant SMB"
 
-#: system-config-kickstart.gladestrings:205
+#: system-config-kickstart.gladestrings:200
 msgid "SMB Servers:"
 msgstr "Gweinyddion SMB:"
 
-#: system-config-kickstart.gladestrings:206
+#: system-config-kickstart.gladestrings:201
 msgid "SMB Workgroup:"
 msgstr "Grŵp gwaith SMB:"
 
-#: system-config-kickstart.gladestrings:209
+#: system-config-kickstart.gladestrings:204
 msgid "SMB Authentication"
 msgstr "Dilysiant SMB"
 
-#: system-config-kickstart.gladestrings:210
+#: system-config-kickstart.gladestrings:205
 msgid "SMB"
 msgstr "SMB"
 
-#: system-config-kickstart.gladestrings:211
+#: system-config-kickstart.gladestrings:206
 msgid "Enable nscd"
 msgstr "Galluogi nscd"
 
-#: system-config-kickstart.gladestrings:212
+#: system-config-kickstart.gladestrings:207
 msgid "Name Switch Cache Daemon (nscd) Authentication"
 msgstr "Dilysiant Ellyll Gelcio Newid Enw (nscd)"
 
-#: system-config-kickstart.gladestrings:213
+#: system-config-kickstart.gladestrings:208
 msgid "Name Switch Cache"
 msgstr "Celc Newid Enw"
 
-#: system-config-kickstart.gladestrings:214
+#: system-config-kickstart.gladestrings:209
 msgid "Authentication Configuration"
 msgstr "Cyfluniad Dilysiant"
 
-#: system-config-kickstart.gladestrings:215
+#: system-config-kickstart.gladestrings:210
 msgid "label32"
 msgstr "label32"
 
-#: system-config-kickstart.gladestrings:216
+#: system-config-kickstart.gladestrings:211
 msgid "Security level:"
 msgstr "Lefel diogelwch:"
 
-#: system-config-kickstart.gladestrings:217
+#: system-config-kickstart.gladestrings:212
 msgid "Enable firewall"
 msgstr "Galluogi mur cadarn"
 
-#: system-config-kickstart.gladestrings:218
+#: system-config-kickstart.gladestrings:213
 msgid "Disable firewall"
 msgstr "Analluogi mur cadarn"
 
-#: system-config-kickstart.gladestrings:220
+#: system-config-kickstart.gladestrings:215
 msgid "label33"
 msgstr "label33"
 
-#: system-config-kickstart.gladestrings:221
+#: system-config-kickstart.gladestrings:216
 msgid "Configure the X Window System"
 msgstr "Cyflunio'r System Ffenestri X"
 
-#: system-config-kickstart.gladestrings:222
+#: system-config-kickstart.gladestrings:217
 msgid "Color Depth"
 msgstr "Dyfnder Lliw"
 
-#: system-config-kickstart.gladestrings:224
+#: system-config-kickstart.gladestrings:219
 msgid "Resolution"
 msgstr "Cydraniad"
 
-#: system-config-kickstart.gladestrings:226
+#: system-config-kickstart.gladestrings:221
 msgid "Default Desktop:"
 msgstr "Penbwrdd rhagosodedig:"
 
-#: system-config-kickstart.gladestrings:227
+#: system-config-kickstart.gladestrings:222
 msgid "GNOME"
 msgstr "GNOME"
 
-#: system-config-kickstart.gladestrings:228
+#: system-config-kickstart.gladestrings:223
 msgid "KDE"
 msgstr "KDE"
 
-#: system-config-kickstart.gladestrings:229
+#: system-config-kickstart.gladestrings:224
 msgid "Start the X Window System on boot"
 msgstr "Dechrau'r System Ffenestri X ar gychwyn"
 
-#: system-config-kickstart.gladestrings:230
+#: system-config-kickstart.gladestrings:225
 msgid "On first boot, Setup Agent is: "
 msgstr "Ar gychwyn cyntaf, mae'r Asiant Gosod yn:"
 
-#: system-config-kickstart.gladestrings:231
+#: system-config-kickstart.gladestrings:226
 msgid "Disabled"
 msgstr "Analluog"
 
-#: system-config-kickstart.gladestrings:232
+#: system-config-kickstart.gladestrings:227
 msgid "Enabled"
 msgstr "Alluog"
 
-#: system-config-kickstart.gladestrings:233
+#: system-config-kickstart.gladestrings:228
 msgid "Enabled in reconfiguration mode"
 msgstr "Alluog ym modd ailgyflunio"
 
-#: system-config-kickstart.gladestrings:234
+#: system-config-kickstart.gladestrings:229
 msgid "General"
 msgstr "Cyffredinol"
 
-#: system-config-kickstart.gladestrings:235
+#: system-config-kickstart.gladestrings:230
 msgid "Probe for video card"
 msgstr "Archwilio am gerdyn fideo"
 
-#: system-config-kickstart.gladestrings:236
+#: system-config-kickstart.gladestrings:231
 msgid "Video Card RAM: "
 msgstr "RAM Cerdyn Fideo: "
 
-#: system-config-kickstart.gladestrings:238
+#: system-config-kickstart.gladestrings:233
 msgid "Video Card"
 msgstr "Cerdyn Fideo"
 
-#: system-config-kickstart.gladestrings:239
+#: system-config-kickstart.gladestrings:234
 msgid "Probe for monitor"
 msgstr "Archwilio am fonitor"
 
-#: system-config-kickstart.gladestrings:240
+#: system-config-kickstart.gladestrings:235
 msgid "Use custom monitor sync rates"
 msgstr "Defnyddio cyfraddau cysoni monitor addasiedig"
 
-#: system-config-kickstart.gladestrings:242
+#: system-config-kickstart.gladestrings:237
 msgid "Hz"
 msgstr "Hz"
 
-#: system-config-kickstart.gladestrings:244
+#: system-config-kickstart.gladestrings:239
 msgid "kHz"
 msgstr "kHz"
 
-#: system-config-kickstart.gladestrings:245
+#: system-config-kickstart.gladestrings:240
 msgid "Vertical Sync:"
 msgstr "Cysoni Fertigol:"
 
-#: system-config-kickstart.gladestrings:246
+#: system-config-kickstart.gladestrings:241
 msgid "Horizontal Sync:"
 msgstr "Cysoni Llorweddol:"
 
-#: system-config-kickstart.gladestrings:247
+#: system-config-kickstart.gladestrings:242
 msgid "Monitor"
 msgstr "Monitor"
 
-#: system-config-kickstart.gladestrings:249
+#: system-config-kickstart.gladestrings:244
 msgid "label88"
 msgstr "label88"
 
-#: system-config-kickstart.gladestrings:250
+#: system-config-kickstart.gladestrings:245
 msgid "Select packages to install."
 msgstr "Dewiswch becynnau i'w harsefydlu."
 
-#: system-config-kickstart.gladestrings:251
+#: system-config-kickstart.gladestrings:246
 msgid "_Automatically Resolve Dependencies"
 msgstr "Datrys Dibyniaethau'n _Awtomatig"
 
-#: system-config-kickstart.gladestrings:252
+#: system-config-kickstart.gladestrings:247
 msgid "_Ignore Dependencies"
 msgstr "_Anwybyddu Dibyniaethau"
 
-#: system-config-kickstart.gladestrings:253
+#: system-config-kickstart.gladestrings:248
 msgid "Desktops"
 msgstr "Penbyrddau"
 
-#: system-config-kickstart.gladestrings:254
+#: system-config-kickstart.gladestrings:249
 msgid "Applications"
 msgstr "Cymhwysiadau"
 
-#: system-config-kickstart.gladestrings:255
+#: system-config-kickstart.gladestrings:250
 msgid "Servers"
 msgstr "Gweinyddion"
 
-#: system-config-kickstart.gladestrings:256
+#: system-config-kickstart.gladestrings:251
 msgid "Development"
 msgstr "Datblygiad"
 
-#: system-config-kickstart.gladestrings:257
+#: system-config-kickstart.gladestrings:252
 msgid "System"
 msgstr "System"
 
-#: system-config-kickstart.gladestrings:259
+#: system-config-kickstart.gladestrings:254
 msgid "label34"
 msgstr "label34"
 
-#: system-config-kickstart.gladestrings:260
+#: system-config-kickstart.gladestrings:255
 #, c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1928,21 +1928,21 @@ msgstr ""
 "Rhybudd: Gallai gwall yn y sgript yma achosi i'ch arsefydliad kickstart "
 "fethu. Peidiwch â chynnwys y gorchymyn %pre ar y dechrau."
 
-#: system-config-kickstart.gladestrings:261
-#: system-config-kickstart.gladestrings:268
+#: system-config-kickstart.gladestrings:256
+#: system-config-kickstart.gladestrings:263
 msgid "Use an interpreter:"
 msgstr "Defnyddio dehonglydd:"
 
-#: system-config-kickstart.gladestrings:263
+#: system-config-kickstart.gladestrings:258
 #, c-format
 msgid "Type your %pre script below:"
 msgstr "Teipiwch eich sgript %pre isod:"
 
-#: system-config-kickstart.gladestrings:265
+#: system-config-kickstart.gladestrings:260
 msgid "label89"
 msgstr "label89"
 
-#: system-config-kickstart.gladestrings:266
+#: system-config-kickstart.gladestrings:261
 #, c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1951,29 +1951,29 @@ msgstr ""
 "Rhybudd: Gallai gwall yn y sgript yma achosi i'ch arsefydliad kickstart "
 "fethu. Peidiwch â chynnwys y gorchymyn %post ar y dechrau."
 
-#: system-config-kickstart.gladestrings:267
+#: system-config-kickstart.gladestrings:262
 msgid "Run outside of the chroot environment"
 msgstr "Rhedeg tu allan i'r amgylched chroot"
 
-#: system-config-kickstart.gladestrings:270
+#: system-config-kickstart.gladestrings:265
 #, c-format
 msgid "Type your %post script below:"
 msgstr "Teipiwch eich sgript %post isod:"
 
-#: system-config-kickstart.gladestrings:272
+#: system-config-kickstart.gladestrings:267
 msgid "label93"
 msgstr "label93"
 
-#: system-config-kickstart.gladestrings:273
+#: system-config-kickstart.gladestrings:268
 msgid "Preview Options"
 msgstr "Dewisiadau Rhagolwg"
 
-#: system-config-kickstart.gladestrings:274
+#: system-config-kickstart.gladestrings:269
 #, fuzzy
 msgid "_Save to File"
 msgstr "Cadw i Ffeil"
 
-#: system-config-kickstart.gladestrings:275
+#: system-config-kickstart.gladestrings:270
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
@@ -1981,11 +1981,11 @@ msgstr ""
 "Rydych wedi dewis y cyfluniad canlynol. Cliciwch Cadw Ffeil i gadw'r ffeil "
 "kickstart."
 
-#: system-config-kickstart.gladestrings:276
+#: system-config-kickstart.gladestrings:271
 msgid "RAID Options"
 msgstr "Dewisiadau RAID"
 
-#: system-config-kickstart.gladestrings:277
+#: system-config-kickstart.gladestrings:272
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -1997,7 +1997,7 @@ msgstr ""
 "ychwanegol o gymharu â defnyddio gyriant unigol.  Am ragor o wybodaeth ar "
 "ddefnyddio dyfeisiau RAID gweler y ddogfennaeth kickstart."
 
-#: system-config-kickstart.gladestrings:278
+#: system-config-kickstart.gladestrings:273
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -2006,57 +2006,78 @@ msgstr ""
 "meddalweddol' yn gyntaf.  Wedyn gallwch greu dyfais RAID y gellir ei "
 "fformadu a'i gosod."
 
-#: system-config-kickstart.gladestrings:279
+#: system-config-kickstart.gladestrings:274
 msgid "Choose one of the following options:"
 msgstr "Dewiswch un o'r dewisiadau canlynol:"
 
-#: system-config-kickstart.gladestrings:280
+#: system-config-kickstart.gladestrings:275
 msgid "Create a software RAID partition"
 msgstr "Creu rhaniad RAID meddalweddol"
 
-#: system-config-kickstart.gladestrings:281
+#: system-config-kickstart.gladestrings:276
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "Creu dyfais RAID [rhagosodyn= /dev/md0]"
 
-#: system-config-kickstart.gladestrings:282
+#: system-config-kickstart.gladestrings:277
 msgid "Network Device Information"
 msgstr "Gwybodaeth Dyfais Rwydwaith"
 
-#: system-config-kickstart.gladestrings:283
+#: system-config-kickstart.gladestrings:278
 msgid "Network Device:"
 msgstr "Dyfais Rwydwaith:"
 
-#: system-config-kickstart.gladestrings:284
+#: system-config-kickstart.gladestrings:279
 msgid "Network Type:"
 msgstr "Math Rhwydwaith:"
 
-#: system-config-kickstart.gladestrings:285
+#: system-config-kickstart.gladestrings:280
 msgid "IP Address:"
 msgstr "Cyfeiriad IP:"
 
-#: system-config-kickstart.gladestrings:286
+#: system-config-kickstart.gladestrings:281
 msgid "Netmask: "
 msgstr "Masg Rhwyd:"
 
-#: system-config-kickstart.gladestrings:287
+#: system-config-kickstart.gladestrings:282
 msgid "Gateway:"
 msgstr "Porthydd:"
 
-#: system-config-kickstart.gladestrings:288
+#: system-config-kickstart.gladestrings:283
 msgid "Name Server:"
 msgstr "Gweinydd Enwau:"
 
-#: system-config-kickstart.gladestrings:290
+#: system-config-kickstart.gladestrings:285
+#: system-config-kickstart.gladestrings:287
+#: system-config-kickstart.gladestrings:289
 #: system-config-kickstart.gladestrings:292
 #: system-config-kickstart.gladestrings:294
-#: system-config-kickstart.gladestrings:297
+#: system-config-kickstart.gladestrings:296
 #: system-config-kickstart.gladestrings:299
 #: system-config-kickstart.gladestrings:301
-#: system-config-kickstart.gladestrings:304
+#: system-config-kickstart.gladestrings:303
 #: system-config-kickstart.gladestrings:306
 #: system-config-kickstart.gladestrings:308
-#: system-config-kickstart.gladestrings:311
-#: system-config-kickstart.gladestrings:313
-#: system-config-kickstart.gladestrings:315
+#: system-config-kickstart.gladestrings:310
 msgid "."
 msgstr "."
+
+#~ msgid "Use GRUB for the boot loader"
+#~ msgstr "Defnyddio GRUB yn gychwynnydd"
+
+#~ msgid "Use LILO for the boot loader"
+#~ msgstr "Defnyddio LILO yn gychwynnydd"
+
+#~ msgid "label173"
+#~ msgstr "label173"
+
+#~ msgid "LILO Options:"
+#~ msgstr "Dewisiadau LILO:"
+
+#~ msgid "Use linear mode"
+#~ msgstr "Defnyddio modd llinol"
+
+#~ msgid "Force use of lba32 mode"
+#~ msgstr "Gorfodi defnyddio modd lba32"
+
+#~ msgid "label174"
+#~ msgstr "label174"
