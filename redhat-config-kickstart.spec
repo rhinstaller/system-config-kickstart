@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
 Version: 2.3.3
-Release: 1
+Release: 2
 URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
@@ -56,6 +56,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Thu Aug 29 2002 Brent Fox <bfox@redhat.com> 2.3.3-2
+- Pull in latest translations
+
 * Tue Aug 27 2002 Brent Fox <bfox@redhat.com> 2.3.3-1
 - Make customizing the firewall settings work again
 
