@@ -23,16 +23,19 @@
 
 import gtk
 import gtk.glade
+import gobject
 import string
 
 class xconfig:
 
     def __init__(self, xml):
         self.config_x_button = xml.get_widget("config_x_button")
-        self.video_card_swindow = xml.get_widget("video_card_swindow")
-        self.video_card_clist = xml.get_widget("video_card_clist")
-        self.monitor_swindow = xml.get_widget("monitor_swindow")
-        self.monitor_clist = xml.get_widget("monitor_clist")
+#        self.video_card_swindow = xml.get_widget("video_card_swindow")
+#        self.video_card_clist = xml.get_widget("video_card_clist")
+        self.card_view = xml.get_widget("card_view")
+        self.monitor_view = xml.get_widget("monitor_view")
+#        self.monitor_swindow = xml.get_widget("monitor_swindow")
+#        self.monitor_clist = xml.get_widget("monitor_clist")
         self.sync_button = xml.get_widget("sync_button")
         self.sync_table = xml.get_widget("sync_table")        
         self.startx_on_boot_button = xml.get_widget("startx_on_boot_button")
@@ -49,66 +52,24 @@ class xconfig:
         self.monitor_vbox = xml.get_widget("monitor_vbox")
         self.card_probe_check = xml.get_widget("card_probe_check")
         self.monitor_probe_check = xml.get_widget("monitor_probe_check")
+        
+        self.card_store = gtk.ListStore(gobject.TYPE_STRING)
+        self.card_view.set_model(self.card_store)
+        col = gtk.TreeViewColumn("", gtk.CellRendererText(), text = 0)
+        self.card_view.append_column(col)
+        
+        self.monitor_store = gtk.ListStore(gobject.TYPE_STRING)
+        self.monitor_view.set_model(self.monitor_store)
+        col = gtk.TreeViewColumn("", gtk.CellRendererText(), text = 0)
+        self.monitor_view.append_column(col)
 
         self.config_x_button.connect("toggled", self.toggleXconfig)
         self.monitor_probe_check.connect("toggled", self.on_monitor_probe_check_toggled)
         self.card_probe_check.connect("toggled", self.on_card_probe_check_toggled)
         self.sync_button.connect("toggled", self.toggle_sync)
 
-        #add video cards to list
-        try:
-            cardsFile = open("/usr/share/hwdata/Cards", "r")
-        except:
-            raise RuntimeError, (_("Could not read video card database"))
-
-            
-        lines = cardsFile.readlines ()
-        cardsFile.close ()
-        card = {}
-        Video_cardslist = {}
-        name = None
-        for line in lines:
-            line = string.strip (line)
-            if not line and name:
-                Video_cardslist[name] = card
-                name = None
-                continue
-            #skip comments
-            if line and line[0] == '#':
-                continue
-            if len (line) > 4 and line[0:4] == 'NAME':
-                name = line[5:]
-                name_list = [name]
-#                self.video_card_clist.append(name_list)
-#                self.video_card_clist.sort()
-
-
-        #add monitors to list
-        try:
-            monitorFile = open("/usr/share/hwdata/MonitorsDB", "r")
-        except:
-            raise RuntimeError, (_("Could not read monitor database"))
-
-        lines=monitorFile.readlines()
-        monitorFile.close()
-        
-        monitors = []
-        for line in lines:
-            line = string.strip (line)
-            if not line:
-                continue
-            if line and line[0] == "#":
-                continue
-            values=string.split(line,";")
-            manufacturer = string.strip(values[0])
-            model = string.strip(values[1])
-            id = string.strip(values[2])
-            hsync = string.strip(values[3])
-            vsync = string.strip(values[4])
-            model_list = [model]
-#            self.monitor_clist.append(model_list)
-            #grab hsync and vsync from cards DB
-            #FIXME
+        self.fill_card_list()
+        self.fill_monitor_list()
 
         #add color depths
         color_depths = ["8", "16", "24", "32"]
@@ -125,6 +86,51 @@ class xconfig:
         self.videoram_combo.set_popdown_strings(vram_list)
         self.videoram_combo.entry.set_editable(gtk.FALSE)
 
+    def fill_card_list(self):
+        #add video cards to list
+        try:
+            cardsFile = open("/usr/share/hwdata/Cards", "r")
+        except:
+            raise RuntimeError, (_("Could not read video card database"))
+            
+        lines = cardsFile.readlines ()
+        cardsFile.close ()
+        lines.sort()
+        for line in lines:
+            line = string.strip (line)
+
+            if len (line) > 4 and line[0:4] == 'NAME':
+                name = line[5:]
+                iter = self.card_store.append()
+                self.card_store.set_value(iter, 0, name)
+
+    def fill_monitor_list(self):
+        #add monitors to list
+        try:
+            monitorFile = open("/usr/share/hwdata/MonitorsDB", "r")
+        except:
+            raise RuntimeError, (_("Could not read monitor database"))
+
+        lines=monitorFile.readlines()
+        lines.sort()
+        monitorFile.close()
+        mon_list = []
+        
+        for line in lines:
+            line = string.strip (line)
+
+            if line and line[0] != "#":
+                values=string.split(line,";")
+                manufacturer = string.strip(values[0])
+                model = string.strip(values[1])
+                id = string.strip(values[2])
+                hsync = string.strip(values[3])
+                vsync = string.strip(values[4])
+                if model not in mon_list:
+                    mon_list.append(model)
+                    iter = self.monitor_store.append()
+                    self.monitor_store.set_value(iter, 0, model)
+
     def on_card_probe_check_toggled(self, *args):
         self.card_vbox.set_sensitive(not self.card_probe_check.get_active())
 
@@ -139,8 +145,7 @@ class xconfig:
     def toggle_sync (self, args):
         sync_instead = self.sync_button.get_active()
         self.sync_table.set_sensitive(sync_instead)
-        self.monitor_swindow.set_sensitive(not sync_instead)
-        self.monitor_clist.set_sensitive(not sync_instead)        
+        self.monitor_view.set_sensitive(not sync_instead)        
 
     def getData(self):
         data = []
@@ -176,7 +181,6 @@ class xconfig:
                                 "16 MB" : "16384",
                                 "32 MB" : "32768",
                                 "64 MB" : "65536",
-
                                 }
                 buf = buf + " --videoram " + ramsize_dict [self.videoram_combo.entry.get_text()]
             else:
@@ -187,7 +191,10 @@ class xconfig:
                     buf = buf + " --hsync " + self.hsync_entry.get_text()
                     buf = buf + " --vsync " + self.vsync_entry.get_text()
                 else:
-                    buf = buf + " --monitor \"" + self.monitor_clist.get_text(self.selected_monitor_row,0) + "\""
+                    temp, iter = self.monitor_view.get_selection().get_selected()
+                    name = self.monitor_store.get_value(iter, 0)
+                    print name
+                    buf = buf + " --monitor \"" + name + "\""
             else:
                 data.append("#Probe for monitor")
             data.append(buf)
