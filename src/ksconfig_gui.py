@@ -131,14 +131,6 @@ class ksconfig_gui:
 		self.cancel_button.connect("clicked", gtk.mainquit)
 		self.category_view.connect("cursor_changed", self.on_list_view_row_activated)
 
-		#bring in signals from glade file
-#		xml.signal_connect("on_cancel_button_clicked", gtk.mainquit)
-#		xml.signal_connect("on_exit_activate", gtk.mainquit)
-##		xml.signal_connect("on_list_view_row_activated", self.on_list_view_row_activated)
-#		xml.signal_connect("on_about_activate", self.on_about_activate)
-#		xml.signal_connect("on_activate_confirm_options", self.on_activate_confirm_options)
-#		xml.signal_connect("on_help_button_clicked", self.on_help_button_clicked)
-
 		#show gui
 		self.toplevel.show_all()
 
