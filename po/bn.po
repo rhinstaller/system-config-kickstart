@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: System-Config-KickStart VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-29 17:11-0500\n"
-"PO-Revision-Date: 2004-01-23 22:49+0530\n"
+"PO-Revision-Date: 2004-04-24 02:00+0600\n"
 "Last-Translator: Runa Bhattacharjee <runa@bengalinux.org>\n"
 "Language-Team: Bangla <redhat-translation@bengalinux.org>\n"
 "MIME-Version: 1.0\n"
@@ -126,7 +126,7 @@ msgstr "দয়া রুটের জন্য একটি পাসওয়া�
 #: ../src/bootloader.py:76
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
-msgstr ""
+msgstr "'%s' প্লাটফর্মের জন্য বুটলোডার-এর অপশন প্রযোজ্য নয়"
 
 #: ../src/bootloader.py:117
 msgid "Grub passwords do not match.  Please try again."
@@ -154,15 +154,15 @@ msgstr "সম্পাদনকারী সমুহ"
 
 #: ../src/fedoraPackageGroupList.py:17 ../src/RHELPackageGroupList.py:17
 msgid "Engineering and Scientific"
-msgstr ""
+msgstr "প্রকৌশল ও বৈজ্ঞানিক"
 
 #: ../src/fedoraPackageGroupList.py:18 ../src/RHELPackageGroupList.py:18
 msgid "Graphical Internet"
-msgstr ""
+msgstr "গ্রাফিকাল ইন্টারনেট"
 
 #: ../src/fedoraPackageGroupList.py:19 ../src/RHELPackageGroupList.py:19
 msgid "Text-based Internet"
-msgstr ""
+msgstr "টেক্সট-ভিত্তিক ইন্টারনেট"
 
 #: ../src/fedoraPackageGroupList.py:20 ../src/RHELPackageGroupList.py:20
 msgid "Office/Productivity"
@@ -178,11 +178,11 @@ msgstr "গ্রাফিক্স"
 
 #: ../src/fedoraPackageGroupList.py:23 ../src/RHELPackageGroupList.py:23
 msgid "Games and Entertainment"
-msgstr ""
+msgstr "খেলা ও বিনোদন"
 
 #: ../src/fedoraPackageGroupList.py:24 ../src/RHELPackageGroupList.py:24
 msgid "Authoring and Publishing"
-msgstr ""
+msgstr "লেখালেখি ও প্রকাশনা"
 
 #: ../src/fedoraPackageGroupList.py:26
 msgid "Server Configuration Tools"
@@ -273,11 +273,11 @@ msgstr "প্রিন্টিং সমর্থন"
 #. create table with custom checklists
 #: ../src/firewall.py:60
 msgid "Trusted devices:"
-msgstr ""
+msgstr "বিশ্বস্ত ডিভাইস:"
 
 #: ../src/firewall.py:85
 msgid "Trusted services:"
-msgstr ""
+msgstr "বিশ্বস্ত সার্ভিস:"
 
 #: ../src/firewall.py:117
 msgid "Other ports: (1029:tcp)"
@@ -416,7 +416,7 @@ msgstr "একটি কিক্‌স্টার্ট ফাইল তৈর
 #. bring in scripts function
 #: ../src/kickstartGui.py:138
 msgid "Subsection"
-msgstr ""
+msgstr "উপ-অনুচ্ছেদ"
 
 #: ../src/kickstartGui.py:142
 msgid "Basic Configuration"
@@ -749,14 +749,14 @@ msgstr "vfat"
 
 #: ../src/partWindow.py:87
 msgid "PPC PReP Boot"
-msgstr ""
+msgstr "পিপিসি প্রেপ বুট"
 
 #. XXX - have to do this after the show_all due to a bug in gtkSpinButton, I suspect
 #. If the current iter is the only child, delete the parent and the child
 #. If there are other children, just delete this child
 #: ../src/partWindow.py:260 ../src/partWindow.py:535 ../src/raidWindow.py:212
 msgid "Yes"
-msgstr "হ্যঁা"
+msgstr "হ্যাঁ"
 
 #: ../src/partWindow.py:262 ../src/partWindow.py:537 ../src/raidWindow.py:214
 msgid "No"
@@ -910,11 +910,11 @@ msgstr "Raid ডিভাইস"
 
 #: ../src/RHELPackageGroupList.py:26
 msgid "Server Configuration Tools (AS and ES only)"
-msgstr ""
+msgstr "সার্ভার কনফিগারেশনের সরঞ্জাম (শুধুমাত্র AS ও ES)"
 
 #: ../src/RHELPackageGroupList.py:34
 msgid "Network Servers (AS and ES only)"
-msgstr ""
+msgstr "নেটওয়ার্ক সার্ভার (শুধুমাত্র AS ও ES)"
 
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
@@ -1023,7 +1023,7 @@ msgstr ""
 
 #: ../src/system-config-kickstart.py:77
 msgid "Could not open display because no X server is running."
-msgstr ""
+msgstr "কোন এক্স সার্ভার চলছে না বলে ডিসপ্লে চালু করা যায় নি।"
 
 #: ../src/system-config-kickstart.py:78
 msgid "Try running 'system-config-kickstart --help' for a list of options."
@@ -1220,11 +1220,11 @@ msgstr "RAID ডিভাইস তৈরি করো"
 
 #: system-config-kickstart.gladestrings:34
 msgid "Number of spares:"
-msgstr ""
+msgstr "অতিরিক্তের সংখ্যা:"
 
 #: system-config-kickstart.gladestrings:35
 msgid "Raid Members"
-msgstr ""
+msgstr "রেইড-এর সদস্য"
 
 #: system-config-kickstart.gladestrings:36
 msgid "RAID Level:"
@@ -1393,7 +1393,7 @@ msgstr "পাসওয়ার্ড নিশ্চিত করুন:"
 
 #: system-config-kickstart.gladestrings:88
 msgid "Target Architecture:"
-msgstr ""
+msgstr "উদ্দেশ্যকৃত নির্মাণশৈলী (Architecture):"
 
 #: system-config-kickstart.gladestrings:90
 msgid "Reboot system after installation"
@@ -1603,7 +1603,7 @@ msgstr "RAID"
 
 #: system-config-kickstart.gladestrings:159
 msgid "Partition options are not applicable on upgrades."
-msgstr ""
+msgstr "আপগ্রেডের ক্ষেত্রে পার্টিশন অপশন প্রযোজ্য নয়।"
 
 #: system-config-kickstart.gladestrings:160
 msgid "Partition Information (required)"
@@ -1689,9 +1689,10 @@ msgstr "LDAP"
 msgid "Enable Kerberos 5 Authentication"
 msgstr "কারবেরস ৫ অনুমোদন সক্রিয় করো"
 
+# FIXME
 #: system-config-kickstart.gladestrings:186
 msgid "Kerberos Realm:"
-msgstr ""
+msgstr "কার্বারোস অঞ্চল (Realm):"
 
 #: system-config-kickstart.gladestrings:188
 msgid "Kerberos Domain Controller (KDC):"
@@ -1715,11 +1716,11 @@ msgstr "হেসোয়েড সমর্থন সক্রিয় করো"
 
 #: system-config-kickstart.gladestrings:195
 msgid "Hesiod LHS:"
-msgstr ""
+msgstr "হেসোয়েড-এর বামপক্ষ:"
 
 #: system-config-kickstart.gladestrings:197
 msgid "Hesiod RHS:"
-msgstr ""
+msgstr "হেসোয়েড-এর ডানপক্ষ:"
 
 #: system-config-kickstart.gladestrings:199
 msgid "Hesiod Authentication"
@@ -1755,15 +1756,15 @@ msgstr "nscd সক্রিয় করো"
 
 #: system-config-kickstart.gladestrings:209
 msgid "Name Switch Cache Daemon (nscd) Authentication"
-msgstr ""
+msgstr "নাম পরিবর্তন ক্যাশ ডীমন-এর (nscd) পরিচয়প্রমাণ প্রক্রিয়া"
 
 #: system-config-kickstart.gladestrings:210
 msgid "Name Switch Cache"
-msgstr ""
+msgstr "নাম পরিবর্তন ক্যাশ"
 
 #: system-config-kickstart.gladestrings:211
 msgid "Authentication options are not applicable on upgrades."
-msgstr ""
+msgstr "আপগ্রেডের ক্ষেত্রে পরিচয়প্রমাণ প্রক্রিয়ার অপশনসমূহ প্রযোজ্য নয়।"
 
 #: system-config-kickstart.gladestrings:212
 msgid "Authentication Configuration"
@@ -1787,7 +1788,7 @@ msgstr "ফায়ারওয়াল নিষ্ক্রিয় করো"
 
 #: system-config-kickstart.gladestrings:217
 msgid "Firewall configuration is not applicable on upgrades."
-msgstr ""
+msgstr "আপগ্রেডের ক্ষেত্রে ফায়ারওয়াল কনফিগারেশন প্রযোজ্য নয়।"
 
 #: system-config-kickstart.gladestrings:219
 msgid "label33"
@@ -1917,7 +1918,7 @@ msgstr "সার্ভার"
 
 #: system-config-kickstart.gladestrings:256
 msgid "Development"
-msgstr ""
+msgstr "ডেভেলপমেন্ট"
 
 #: system-config-kickstart.gladestrings:257
 msgid "System"
@@ -1925,7 +1926,7 @@ msgstr "সিস্টেম"
 
 #: system-config-kickstart.gladestrings:258
 msgid "Package selection is not applicable on upgrades."
-msgstr ""
+msgstr "আপগ্রেডের ক্ষেত্রে প্যাকেজ নির্বাচন প্রযোজ্য নয়।"
 
 #: system-config-kickstart.gladestrings:260
 msgid "label34"
@@ -2071,24 +2072,3 @@ msgstr "Name সার্ভার:"
 #: system-config-kickstart.gladestrings:316
 msgid "."
 msgstr "।"
-
-#~ msgid "Use GRUB for the boot loader"
-#~ msgstr "বুট লোডারে GRUB ব্যবহার করো"
-
-#~ msgid "Use LILO for the boot loader"
-#~ msgstr "বুট লোডারে LILO ব্যবহার করো"
-
-#~ msgid "label173"
-#~ msgstr "label173"
-
-#~ msgid "LILO Options:"
-#~ msgstr "LILO র অপশন:"
-
-#~ msgid "Use linear mode"
-#~ msgstr "লিনিয়ার মোড ব্যবহার করো"
-
-#~ msgid "Force use of lba32 mode"
-#~ msgstr "lba32 মোড বাধ্যতামূলক ভাবে ব্যবহার করো"
-
-#~ msgid "label174"
-#~ msgstr "label174"
