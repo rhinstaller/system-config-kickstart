@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
 Version: 2.3
-Release: 1
+Release: 2
 URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
@@ -47,6 +47,9 @@ fi
 %config /etc/X11/applnk/System/redhat-config-kickstart.desktop
 
 %changelog
+* Mon Jul 15 2002 Brent Fox <bfox@redhat.com> 2.3-2
+- Renamed doc files to redhat-config-kickstart
+
 * Wed Jul 10 2002 Brent Fox <bfox@redhat.com> 2.3-1
 - Renamed ksconfig to redhat-config-kickstart
 
