@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksconfig\n"
 "POT-Creation-Date: 2001-07-19 11:24-0400\n"
-"PO-Revision-Date: 2002-07-26 13:06+0200\n"
+"PO-Revision-Date: 2002-08-02 15:07+0200\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -53,6 +53,8 @@ msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
 msgstr ""
+"Partitionen du angav slutar inte med ett tal. Partitioner måste ha ett "
+"partitionsnummer som exempelvis \"hda1\" eller \"sda3\"."
 
 #: redhat-config-kickstart.gladestrings:152
 msgid "_Yes"
@@ -105,6 +107,9 @@ msgid ""
 "Partitions must have a valid device name and partition number such as \"hda1"
 "\" or \"sda3\"."
 msgstr ""
+"Partitionen som du angav börjar inte med \"hd\" eller \"sd\". Partitioner "
+"måste ha ett giltigt enhetsnamn och partitionsnummer som exempelvis "
+"\"hda1\" eller \"sda3\"."
 
 #: redhat-config-kickstart.gladestrings:277
 msgid "Monitor"
@@ -144,7 +149,7 @@ msgstr "Fast storlek"
 
 #: redhat-config-kickstart.gladestrings:55
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: ../src/partWindow.py:83 redhat-config-kickstart.gladestrings:61
 msgid "swap"
@@ -176,7 +181,7 @@ msgstr "GNOME"
 
 #: redhat-config-kickstart.gladestrings:24
 msgid "(for example: hda or sdc)"
-msgstr ""
+msgstr "(till exempel: hda eller sdc)"
 
 #: redhat-config-kickstart.gladestrings:298
 msgid "Preview Options"
@@ -264,18 +269,16 @@ msgid "Disabled"
 msgstr "Avstängd"
 
 #: redhat-config-kickstart.gladestrings:138
-#, fuzzy
 msgid "label174"
-msgstr "label1"
+msgstr "label174"
 
 #: ../src/partWindow.py:356
 msgid "Specify a mount point for the partition."
 msgstr "Ange en monteringspunkt för partitionen."
 
 #: redhat-config-kickstart.gladestrings:134
-#, fuzzy
 msgid "label173"
-msgstr "label1"
+msgstr "label173"
 
 #: redhat-config-kickstart.gladestrings:301
 msgid "RAID Options"
@@ -311,9 +314,8 @@ msgid "HTTP"
 msgstr "HTTP"
 
 #: ../src/raidWindow.py:136 ../src/raidWindow.py:161
-#, fuzzy
 msgid "Raid Devices"
-msgstr "RAID-enhet:"
+msgstr "Raid-enheter"
 
 #: ../src/kickstartGui.py:109
 msgid "Boot Loader Options"
@@ -324,14 +326,12 @@ msgid "Automatically Resolve Dependencies"
 msgstr "Lös beroenden automatiskt"
 
 #: redhat-config-kickstart.gladestrings:127
-#, fuzzy
 msgid "Upgrade existing boot loader"
-msgstr "Uppgradera befintlig startprogramskonfiguration"
+msgstr "Uppgradera befintligt startprogram"
 
 #: redhat-config-kickstart.gladestrings:129
-#, fuzzy
 msgid "Use LILO for the boot loader"
-msgstr "Uppgradera startprogram"
+msgstr "Använd LILO som startprogram"
 
 #: redhat-config-kickstart.gladestrings:115
 msgid "HTTP Server:"
@@ -452,11 +452,12 @@ msgid "None"
 msgstr "Inget"
 
 #: ../src/partition.py:71
-#, fuzzy
 msgid ""
 "Mount Point/\n"
 "RAID/Volume"
-msgstr "Monteringspunkt"
+msgstr ""
+"Monteringspunkt\n"
+"RAID/Volym"
 
 #: redhat-config-kickstart.gladestrings:156
 msgid "_Edit"
@@ -552,9 +553,8 @@ msgid "Enable Kerberos 5 Authentication"
 msgstr "Använd Kerberos 5-autentisering"
 
 #: redhat-config-kickstart.gladestrings:128
-#, fuzzy
 msgid "Use GRUB for the boot loader"
-msgstr "Uppgradera startprogram"
+msgstr "Använd GRUB som startprogram"
 
 #: ../src/partWindow.py:82 redhat-config-kickstart.gladestrings:60
 msgid "physical volume (LVM)"
@@ -582,7 +582,7 @@ msgstr "LDAP-basnamn: "
 
 #: ../src/raidWindow.py:125
 msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr ""
+msgstr "Du måste välja minst 3 partitioner för att kunna använda RAID %s"
 
 #: ../src/partWindow.py:203 ../src/partWindow.py:270 ../src/raidWindow.py:152
 #: redhat-config-kickstart.gladestrings:154
@@ -598,13 +598,12 @@ msgid "FTP Directory:"
 msgstr "FTP-katalog:"
 
 #: ../src/partWindow.py:376
-#, fuzzy
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
 msgstr ""
-"För att skapa en ny RAID-partition måste du antingen ange en hårddisk eller "
-"en befintlig partition."
+"För att skapa en ny RAID-partition måste du antingen ange enhetsnamnet på "
+"en hårddisk eller en befintlig partition."
 
 #: redhat-config-kickstart.gladestrings:290
 msgid "label89"
@@ -615,9 +614,8 @@ msgid "Upgrade"
 msgstr "Uppgradering"
 
 #: redhat-config-kickstart.gladestrings:125
-#, fuzzy
 msgid "Install new boot loader"
-msgstr "Installera startprogram"
+msgstr "Installera nytt startprogram"
 
 #: ../src/partWindow.py:205 ../src/partWindow.py:272 ../src/raidWindow.py:154
 #: redhat-config-kickstart.gladestrings:151
@@ -674,9 +672,8 @@ msgid "Type your %pre script below:"
 msgstr "Skriv in ditt %pre-skript nedan:"
 
 #: ../src/partWindow.py:225
-#, fuzzy
 msgid "Hard Drives"
-msgstr "Hårddisk"
+msgstr "Hårddiskar"
 
 #: redhat-config-kickstart.gladestrings:216
 msgid "LDAP Authentication"
@@ -751,9 +748,8 @@ msgid "RAID Device:"
 msgstr "RAID-enhet:"
 
 #: redhat-config-kickstart.gladestrings:139
-#, fuzzy
 msgid "Install boot loader on Master Boot Record (MBR)"
-msgstr "Installera startprogram på: "
+msgstr "Installera startprogram på huvudstartposten (MBR)"
 
 #: redhat-config-kickstart.gladestrings:171
 #: redhat-config-kickstart.gladestrings:173
@@ -848,9 +844,8 @@ msgstr ""
 " Ett grafiskt gränssnitt för skapande av en kickstart-fil"
 
 #: redhat-config-kickstart.gladestrings:143
-#, fuzzy
 msgid "Boot Loader Options (required)"
-msgstr "Startprogramalternativ"
+msgstr "Startprogramsalternativ (krävs)"
 
 #: redhat-config-kickstart.gladestrings:25
 msgid "Use existing partition (onpart)"
@@ -865,9 +860,8 @@ msgid "Authentication:"
 msgstr "Autentisering:"
 
 #: ../src/partition.py:77
-#, fuzzy
 msgid "Size (MB)"
-msgstr "Storlek (MB):"
+msgstr "Storlek (MB)"
 
 #: redhat-config-kickstart.gladestrings:105
 msgid "FTP Server:"
@@ -891,7 +885,7 @@ msgstr "_Arkiv"
 
 #: redhat-config-kickstart.gladestrings:29
 msgid "(for example: hda1 or sdc3)"
-msgstr ""
+msgstr "(till exempel: hda1 eller sdc3)"
 
 #: redhat-config-kickstart.gladestrings:264
 msgid "General"
@@ -904,6 +898,7 @@ msgstr "_Ta bort"
 #: ../src/raidWindow.py:119
 msgid "You must select at least 2 partitions in order to use RAID %s"
 msgstr ""
+"Du måste välja åtminstone 2 partitioner för att kunna använda RAID %s"
 
 #: redhat-config-kickstart.gladestrings:268
 msgid "Video Card"
@@ -926,6 +921,8 @@ msgid ""
 "Device/\n"
 "Partition Number"
 msgstr ""
+"Enhet/\n"
+"Partitionsnummer"
 
 #: redhat-config-kickstart.gladestrings:35
 msgid "Raid Members"
@@ -952,9 +949,8 @@ msgid "Resolution"
 msgstr "Upplösning"
 
 #: redhat-config-kickstart.gladestrings:126
-#, fuzzy
 msgid "Do not install a boot loader"
-msgstr "Installera startprogram"
+msgstr "Installera inte något startprogram"
 
 #: redhat-config-kickstart.gladestrings:36
 msgid "RAID Level:"
@@ -1019,7 +1015,7 @@ msgstr "Skapa partition på specifik enhet (ondisk)"
 
 #: ../src/partition.py:75
 msgid "Format"
-msgstr ""
+msgstr "Format"
 
 #: redhat-config-kickstart.gladestrings:251
 #: redhat-config-kickstart.gladestrings:252
@@ -1048,7 +1044,7 @@ msgstr "Starta X Window System vid uppstart"
 
 #: redhat-config-kickstart.gladestrings:57
 msgid "5"
-msgstr ""
+msgstr "5"
 
 #: redhat-config-kickstart.gladestrings:244
 msgid "Authentication Configuration"
@@ -1103,11 +1099,19 @@ msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name  such as \"hda1\" or \"sda3\"."
 msgstr ""
+"Enheten som du angav är inte ett giltigt enetsnamn. Ange ett giltigt "
+"enhetsnamn som exempelvis \"hda1\" eller \"sda3\"."
+
+msgid ""
+"The device you specified is not a valid device name. Please use a valid "
+"device name such as \"hda1\" or \"sda3\"."
+msgstr ""
+"Enheten som du angav är inte ett giltigt enetsnamn. Ange ett giltigt "
+"enhetsnamn som exempelvis \"hda1\" eller \"sda3\"."
 
 #: redhat-config-kickstart.gladestrings:140
-#, fuzzy
 msgid "Install boot loader on first sector of the boot partition"
-msgstr "_Första sektorn av startpartitionen"
+msgstr "Installera startprogrammet på första sektorn av startpartitionen"
 
 #: redhat-config-kickstart.gladestrings:96
 #: redhat-config-kickstart.gladestrings:122
@@ -1173,7 +1177,7 @@ msgstr "Initiera disketiketten:"
 
 #: ../src/partWindow.py:231 ../src/partWindow.py:250 ../src/partWindow.py:264
 msgid "Auto"
-msgstr ""
+msgstr "Automatiskt"
 
 #: redhat-config-kickstart.gladestrings:228
 msgid "Hesiod LHS:"
