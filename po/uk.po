@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: redhat-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-01-06 16:57-0500\n"
-"PO-Revision-Date: Tue Aug 12 17:52:29 2003\n"
+"PO-Revision-Date: 2004-02-26 20:04+0200 2003\n"
 "Last-Translator: Maxim Dziumanenko <mvd@mylinux.com.ua>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -303,7 +303,7 @@ msgstr "Конфігурація брандмауера"
 
 #: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:248
 msgid "X Configuration"
-msgstr "Настройка X"
+msgstr "Конфігурація X"
 
 #: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:258
 msgid "Package Selection"
@@ -347,7 +347,7 @@ msgstr "Довідка недоступна."
 #: ../src/kickstartGui.py:273
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
-msgstr "Неможливо отримати доступ до файлу \"%s\"."
+msgstr "Не вдається отримати доступ до файлу \"%s\"."
 
 #. show chosen options for preview
 #. show preview dialog window
@@ -421,7 +421,7 @@ msgstr "Вкажіть параметри мережі"
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
-msgstr "Мережевий пристрій з назвою %s вже існує. Виберіть іншу назву пристрою"
+msgstr "Мережний пристрій з назвою %s вже існує. Виберіть іншу назву пристрою"
 
 #. # Kickstart Configurator - A graphical kickstart file generator
 #. # Copyright (C) 2000, 2001, 2002, 2003 Red Hat, Inc.
@@ -590,7 +590,7 @@ msgstr "ext3"
 #. _("physical volume (LVM)"):"lvm",
 #: ../src/partWindow.py:85 ../src/partWindow.py:144
 msgid "software RAID"
-msgstr ""
+msgstr "програмний RAID"
 
 #: ../src/partWindow.py:86 system-config-kickstart.gladestrings:60
 msgid "swap"
@@ -1453,7 +1453,7 @@ msgstr "_Додати"
 
 #: system-config-kickstart.gladestrings:160
 msgid "_Edit"
-msgstr "_Редагувати"
+msgstr "_Правка"
 
 #: system-config-kickstart.gladestrings:161
 msgid "_Delete"
@@ -1473,15 +1473,15 @@ msgstr "label30"
 
 #: system-config-kickstart.gladestrings:165
 msgid "_Add Network Device"
-msgstr "_Додати мережевий пристрій"
+msgstr "_Додати мережний пристрій"
 
 #: system-config-kickstart.gladestrings:166
 msgid "_Edit Network Device"
-msgstr "_Редагувати мережевий пристрій"
+msgstr "_Змінити мережний пристрій"
 
 #: system-config-kickstart.gladestrings:167
 msgid "_Delete Network Device"
-msgstr "_Видалити мережевий пристрій"
+msgstr "_Видалити мережний пристрій"
 
 #: system-config-kickstart.gladestrings:169
 msgid "label31"
@@ -1557,7 +1557,7 @@ msgstr "Контролер домену Kerberos (KDC):"
 
 #: system-config-kickstart.gladestrings:193
 msgid "Kerberos Master Server:"
-msgstr "Головний сервер Kerberos"
+msgstr "Головний сервер Kerberos:"
 
 #: system-config-kickstart.gladestrings:195
 msgid "Kerberos 5 Authentication"
@@ -1649,7 +1649,7 @@ msgstr "Налаштовувати X Window"
 
 #: system-config-kickstart.gladestrings:222
 msgid "Color Depth"
-msgstr "Глибина кольору"
+msgstr "Якість передачі кольору"
 
 #: system-config-kickstart.gladestrings:224
 msgid "Resolution"
@@ -1673,19 +1673,19 @@ msgstr "Запускати X Window при завантаженні"
 
 #: system-config-kickstart.gladestrings:230
 msgid "On first boot, Setup Agent is: "
-msgstr "При першому завантаженні, Setup Agent:"
+msgstr "При першому завантаженні, агент настройки:"
 
 #: system-config-kickstart.gladestrings:231
 msgid "Disabled"
-msgstr "Вимкнено"
+msgstr "Вимкнений"
 
 #: system-config-kickstart.gladestrings:232
 msgid "Enabled"
-msgstr "Ввімкнено"
+msgstr "Ввімкнений"
 
 #: system-config-kickstart.gladestrings:233
 msgid "Enabled in reconfiguration mode"
-msgstr "Ввімкнено у режимі реконфігурації"
+msgstr "Ввімкнений у режимі реконфігурації"
 
 #: system-config-kickstart.gladestrings:234
 msgid "General"
@@ -1709,7 +1709,7 @@ msgstr "Визначати монітор автоматично"
 
 #: system-config-kickstart.gladestrings:240
 msgid "Use custom monitor sync rates"
-msgstr ""
+msgstr "Власний діапазон розгорток монітора"
 
 #: system-config-kickstart.gladestrings:242
 msgid "Hz"
@@ -1721,11 +1721,11 @@ msgstr "кГц"
 
 #: system-config-kickstart.gladestrings:245
 msgid "Vertical Sync:"
-msgstr "Вертикальна синхронізація:"
+msgstr "Частота кадрів:"
 
 #: system-config-kickstart.gladestrings:246
 msgid "Horizontal Sync:"
-msgstr "Горизонтальна синхронізація:"
+msgstr "Частота рядків:"
 
 #: system-config-kickstart.gladestrings:247
 msgid "Monitor"
@@ -1871,11 +1871,11 @@ msgstr "Створити пристрій RAID [типово = /dev/md0]"
 
 #: system-config-kickstart.gladestrings:282
 msgid "Network Device Information"
-msgstr "Інформація про мережевий пристрій"
+msgstr "Інформація про мережний пристрій"
 
 #: system-config-kickstart.gladestrings:283
 msgid "Network Device:"
-msgstr "Мережевий пристрій:"
+msgstr "Мережний пристрій:"
 
 #: system-config-kickstart.gladestrings:284
 msgid "Network Type:"
@@ -1911,9 +1911,3 @@ msgstr "Сервер імен:"
 #: system-config-kickstart.gladestrings:315
 msgid "."
 msgstr "."
-
-#~ msgid "Specify hsync and vsync instead of monitor"
-#~ msgstr "Вказати діапазон вертикальної та горизонтальної розгортки"
-
-#~ msgid "Allow incoming:"
-#~ msgstr "Дозволити вхідні:"
