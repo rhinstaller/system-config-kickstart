@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
 Version: 2.5.11
-Release: 2
+Release: 3
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
 ExclusiveOS: Linux
@@ -59,6 +59,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Thu Jun 17 2004 Brent Fox <bfox@redhat.com> - 2.5.11-3
+- comps name changed for KDE (bug #124612)
+
 * Tue May 25 2004 Brent Fox <bfox@redhat.com> 2.5.11-2
 - handle missing mouse line (bug #124341)
 - use N_ instead of _ in packages.py (bug #124144)
