@@ -549,6 +549,10 @@ class partWindow:
             self.setValues(part_object)
 
     def parseLine(self, part_object, line):
+        if line[0][:4] == "raid":
+            part_object.raidNumber = line[0]
+            part_object.fsType = "raid"
+
         opts, args = getopt.getopt(line[1:], "d:h", ["recommended", "fstype=", "size=", "onpart=",
                                                      "grow", "maxsize=", "noformat",
                                                      "usepart", "ondisk=", "ondrive", "asprimary"
@@ -588,3 +592,4 @@ class partWindow:
                 part_object.doFormat = 1
 
         return 0
+
