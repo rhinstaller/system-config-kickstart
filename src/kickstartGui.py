@@ -111,10 +111,11 @@ class kickstartGui:
 	self.category_view.set_model(self.category_store)
 
 	#bring in basic functions
-	self.basic_class = basic.basic(xml, self.category_store,
-				       self.category_view, self.options_notebook, self.kickstartData)
+	self.basic_class = basic.basic(xml, self.options_notebook, self.kickstartData)
+        
 	#bring in bootloader functions
-	self.bootloader_class = bootloader.bootloader(xml, self.kickstartData, self.options_notebook)
+	self.bootloader_class = bootloader.bootloader(xml, self.options_notebook, self.kickstartData)
+                                                      
 	#bring in install functions
 	self.install_class = install.install(xml, self.category_store,
 					     self.category_view, self.options_notebook,
@@ -158,6 +159,7 @@ class kickstartGui:
 	self.help_menu.connect("activate", self.on_help_button_clicked)
 	self.about_menu.connect("activate", self.on_about_activate)
 	self.category_view.connect("cursor_changed", self.on_list_view_row_activated)
+	self.options_notebook.connect("switch-page", self.on_notebook_changed)
 
         if file:
             self.kickstartParser = kickstartParser.KickstartParser(self.kickstartData, file)
@@ -168,12 +170,25 @@ class kickstartGui:
 
 	gtk.mainloop ()
 
+    def on_notebook_changed(self, page, data, num):
+        count = 0
+        iter = self.category_store.get_iter_first()
+        if num == 0:
+            self.category_view.get_selection().select_iter(iter)            
+        else:
+            while iter:
+                if count == num:
+                    self.category_view.get_selection().select_iter(iter)
+                    self.category_view.show_all()
+                iter = self.category_store.iter_next(iter)
+                count = count + 1
+
     def on_list_view_row_activated(self, tree_view):
         data, iter = tree_view.get_selection().get_selected()
 	category = self.category_store.get_value(iter, 0)
 	row = self.category_list.index(category)
 	self.options_notebook.set_current_page(row)
-
+        
     #about box
     def on_about_activate(self, args):
         dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_INFO, gtk.BUTTONS_OK,
