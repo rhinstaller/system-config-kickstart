@@ -156,9 +156,9 @@ class xconfig:
             buf = buf + " --resolution " + self.resolution_combo.entry.get_text()            
             #default desktop
             if self.gnome_radiobutton.get_active():
-                buf = buf + " defaultdesktop=GNOME"
+                buf = buf + " --defaultdesktop=GNOME"
             elif self.kde_radiobutton.get_active():
-                buf = buf + " defaultdesktop=KDE"
+                buf = buf + " --defaultdesktop=KDE"
             #startxonboot
             if self.startxonboot_checkbutton.get_active():
                 buf = buf + "  --startxonboot"
