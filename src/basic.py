@@ -283,7 +283,7 @@ class basic:
             buf = ""
             if self.emulate_3_buttons.get_active() and self.mouseDict[args] != 'none':
                 buf = buf + "--emulthree "
-            a, b, c, d, protocol = self.mouseDict[args]
+            (a, b, c, d, e, protocol) = self.mouseDict[args]
             buf = buf + protocol
         return buf
 
@@ -317,7 +317,7 @@ class basic:
 
             mouseTag = mouseLine[0]
 
-            a, b, c, d, dictMouseTag = self.mouseDict[mouse]
+            (a, b, c, d, e, dictMouseTag) = self.mouseDict[mouse]
             
             if dictMouseTag == mouseTag:
                 self.mouse_combo.list.select_item(self.mouse_list.index(mouse))
