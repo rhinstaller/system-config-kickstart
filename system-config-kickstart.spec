@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
 Version: 2.5.12
-Release: 2
+Release: 3
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
 ExclusiveOS: Linux
@@ -59,6 +59,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Tue Aug 10 2004 Paul Nasrat <pnasrat@redhat.com> - 2.5.12-3
+- Fix for mouse autoprobe (#129504)
+
 * Mon Aug 02 2004 Paul Nasrat <pnasrat@redhat.com> 2.5.12-2 
 - fix Japanese man page encoding (bug #128767)
 
