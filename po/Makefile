@@ -8,17 +8,20 @@ TOP	 = ../..
 # What is this package?
 NLSPACKAGE	= ksconfig
 POTFILE		= $(NLSPACKAGE).pot
+INSTALL		= /usr/bin/install -c
+INSTALL_DATA	= $(INSTALL) -m 644
+INSTALL_DIR	= /usr/bin/install -d
 
 # destination directory
 INSTALL_NLS_DIR = $(RPM_BUILD_ROOT)/usr/share/locale
 
 # PO catalog handling
-MSGMERGE	= OLD_PO_FILE_INPUT=yes msgmerge -v
+MSGMERGE	= msgmerge -v
 PYGETTEXT	= ./pygettext.py --default-domain=$(NLSPACKAGE) \
 		  --verbose --output-file=$(NLSPACKAGE).po 
 XGETTEXT	= xgettext --default-domain=$(NLSPACKAGE) \
 		  --add-comments		  
-MSGFMT		= OLD_PO_FILE_INPUT=yes msgfmt --statistics --verbose
+MSGFMT		= msgfmt --statistics --verbose
 
 # What do we need to do
 POFILES		= $(wildcard *.po)
