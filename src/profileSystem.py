@@ -54,20 +54,23 @@ class ProfileSystem:
         self.kickstartData.setKeyboard([kbd.get()])
 
     def getMouse(self):
-        lines = open('/etc/sysconfig/mouse', 'r').readlines()
-        for line in lines:
-            line = string.strip(line)
-            if line[0] != "#":
-                if line[:8] == "FULLNAME":
-                    tag, model = string.split(line, "=")
+        if os.access('/etc/sysconfig/mouse', os.F_OK):
+            lines = open('/etc/sysconfig/mouse', 'r').readlines()
+            for line in lines:
+                line = string.strip(line)
+                if line[0] != "#":
+                    if line[:8] == "FULLNAME":
+                        tag, model = string.split(line, "=")
 
-        model = string.replace(model, '"', "")
-        model = string.replace(model, "'", "")        
+            model = string.replace(model, '"', "")
+            model = string.replace(model, "'", "")        
 
-        mouseDict = self.mouse.available()
-        a, b, c, d, protocol = mouseDict[model]
-        
-        self.kickstartData.setMouse([protocol])
+            mouseDict = self.mouse.available()
+            a, b, c, d, protocol = mouseDict[model]
+
+            self.kickstartData.setMouse([protocol])
+        else:
+            self.kickstartData.setMouse(["none"])
 
     def getTimezone(self):
         lines = open('/etc/sysconfig/clock', 'r').readlines()
