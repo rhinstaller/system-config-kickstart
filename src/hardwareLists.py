@@ -3,7 +3,7 @@ langDict = {"Chinese(Mainland)" :  "zh_CN.GB2312",
                  "Chinese(Taiwan)" : "zh_TW.Big5",
                  "Czech" : "cs_CZ",
                  "Danish" : "da_DK",
-		 "Dutch"  : "nl_NL"
+		 "Dutch"  : "nl_NL",
                  "English" : "en_US",
                  "French" : "fr_FR",
                  "German" : "de_DE",
