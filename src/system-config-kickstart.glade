@@ -12,6 +12,11 @@
   <property name="modal">True</property>
   <property name="resizable">True</property>
   <property name="destroy_with_parent">False</property>
+  <property name="decorated">True</property>
+  <property name="skip_taskbar_hint">False</property>
+  <property name="skip_pager_hint">False</property>
+  <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
+  <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
   <property name="show_fileops">True</property>
 
   <child internal-child="cancel_button">
@@ -20,6 +25,7 @@
       <property name="can_default">True</property>
       <property name="can_focus">True</property>
       <property name="relief">GTK_RELIEF_NORMAL</property>
+      <property name="focus_on_click">True</property>
     </widget>
   </child>
 
@@ -29,6 +35,7 @@
       <property name="can_default">True</property>
       <property name="can_focus">True</property>
       <property name="relief">GTK_RELIEF_NORMAL</property>
+      <property name="focus_on_click">True</property>
     </widget>
   </child>
 </widget>
@@ -41,6 +48,11 @@
   <property name="modal">True</property>
   <property name="resizable">True</property>
   <property name="destroy_with_parent">False</property>
+  <property name="decorated">True</property>
+  <property name="skip_taskbar_hint">False</property>
+  <property name="skip_pager_hint">False</property>
+  <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
+  <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
   <property name="has_separator">True</property>
 
   <child internal-child="vbox">
@@ -62,6 +74,7 @@
 	      <property name="label">gtk-cancel</property>
 	      <property name="use_stock">True</property>
 	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
 	      <property name="response_id">0</property>
 	    </widget>
 	  </child>
@@ -74,6 +87,7 @@
 	      <property name="label">gtk-ok</property>
 	      <property name="use_stock">True</property>
 	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
 	      <property name="response_id">0</property>
 	    </widget>
 	  </child>
@@ -375,6 +389,7 @@
 			  <property name="label" translatable="yes">Fill all unused space on disk</property>
 			  <property name="use_underline">True</property>
 			  <property name="relief">GTK_RELIEF_NORMAL</property>
+			  <property name="focus_on_click">True</property>
 			  <property name="active">False</property>
 			  <property name="inconsistent">False</property>
 			  <property name="draw_indicator">True</property>
@@ -396,6 +411,7 @@
 			  <property name="label" translatable="yes">Grow to maximum of (MB):</property>
 			  <property name="use_underline">True</property>
 			  <property name="relief">GTK_RELIEF_NORMAL</property>
+			  <property name="focus_on_click">True</property>
 			  <property name="active">False</property>
 			  <property name="inconsistent">False</property>
 			  <property name="draw_indicator">True</property>
@@ -418,6 +434,7 @@
 			  <property name="label" translatable="yes">Fixed size</property>
 			  <property name="use_underline">True</property>
 			  <property name="relief">GTK_RELIEF_NORMAL</property>
+			  <property name="focus_on_click">True</property>
 			  <property name="active">True</property>
 			  <property name="inconsistent">False</property>
 			  <property name="draw_indicator">True</property>
@@ -449,6 +466,7 @@
 		      <property name="label" translatable="yes">Use recommended swap size</property>
 		      <property name="use_underline">True</property>
 		      <property name="relief">GTK_RELIEF_NORMAL</property>
+		      <property name="focus_on_click">True</property>
 		      <property name="active">False</property>
 		      <property name="inconsistent">False</property>
 		      <property name="draw_indicator">True</property>
@@ -496,6 +514,7 @@
 	      <property name="label" translatable="yes">Force to be a primary partition (asprimary)</property>
 	      <property name="use_underline">True</property>
 	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
 	      <property name="active">False</property>
 	      <property name="inconsistent">False</property>
 	      <property name="draw_indicator">True</property>
@@ -515,6 +534,7 @@
 	      <property name="label" translatable="yes">Make partition on specific drive (ondisk)</property>
 	      <property name="use_underline">True</property>
 	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
 	      <property name="active">False</property>
 	      <property name="inconsistent">False</property>
 	      <property name="draw_indicator">True</property>
@@ -629,6 +649,7 @@
 	      <property name="label" translatable="yes">Use existing partition (onpart)</property>
 	      <property name="use_underline">True</property>
 	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
 	      <property name="active">False</property>
 	      <property name="inconsistent">False</property>
 	      <property name="draw_indicator">True</property>
@@ -743,6 +764,7 @@
 	      <property name="label" translatable="yes">Format partition</property>
 	      <property name="use_underline">True</property>
 	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
 	      <property name="active">True</property>
 	      <property name="inconsistent">False</property>
 	      <property name="draw_indicator">True</property>
@@ -772,6 +794,11 @@
   <property name="modal">True</property>
   <property name="resizable">True</property>
   <property name="destroy_with_parent">False</property>
+  <property name="decorated">True</property>
+  <property name="skip_taskbar_hint">False</property>
+  <property name="skip_pager_hint">False</property>
+  <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
+  <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
   <property name="has_separator">True</property>
 
   <child internal-child="vbox">
@@ -793,6 +820,7 @@
 	      <property name="label">gtk-cancel</property>
 	      <property name="use_stock">True</property>
 	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
 	      <property name="response_id">-6</property>
 	    </widget>
 	  </child>
@@ -805,6 +833,7 @@
 	      <property name="label">gtk-ok</property>
 	      <property name="use_stock">True</property>
 	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
 	      <property name="response_id">0</property>
 	    </widget>
 	  </child>
@@ -1373,6 +1402,7 @@
 	  <property name="label" translatable="yes">Format RAID device</property>
 	  <property name="use_underline">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
+	  <property name="focus_on_click">True</property>
 	  <property name="active">True</property>
 	  <property name="inconsistent">False</property>
 	  <property name="draw_indicator">True</property>
@@ -1388,14 +1418,19 @@
 </widget>
 
 <widget class="GtkWindow" id="main_window">
-  <property name="width_request">640</property>
-  <property name="height_request">560</property>
   <property name="title" translatable="yes">Kickstart Configurator</property>
   <property name="type">GTK_WINDOW_TOPLEVEL</property>
   <property name="window_position">GTK_WIN_POS_CENTER</property>
   <property name="modal">False</property>
+  <property name="default_width">640</property>
+  <property name="default_height">560</property>
   <property name="resizable">True</property>
   <property name="destroy_with_parent">False</property>
+  <property name="decorated">True</property>
+  <property name="skip_taskbar_hint">False</property>
+  <property name="skip_pager_hint">False</property>
+  <property name="type_hint">GDK_WINDOW_TYPE_HINT_NORMAL</property>
+  <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
 
   <child>
     <widget class="GtkVBox" id="vbox24">
@@ -1710,6 +1745,7 @@
 				      <property name="label" translatable="yes">Encrypt root password</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				      <property name="active">True</property>
 				      <property name="inconsistent">False</property>
 				      <property name="draw_indicator">True</property>
@@ -1908,6 +1944,7 @@
 				  <property name="label" translatable="yes">Emulate 3 Buttons</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
+				  <property name="focus_on_click">True</property>
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
@@ -2111,6 +2148,7 @@
 				  <property name="label" translatable="yes">Use UTC clock</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
+				  <property name="focus_on_click">True</property>
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
@@ -2285,6 +2323,7 @@
 			      <property name="label" translatable="yes">Reboot system after installation</property>
 			      <property name="use_underline">True</property>
 			      <property name="relief">GTK_RELIEF_NORMAL</property>
+			      <property name="focus_on_click">True</property>
 			      <property name="active">True</property>
 			      <property name="inconsistent">False</property>
 			      <property name="draw_indicator">True</property>
@@ -2303,6 +2342,7 @@
 			      <property name="label" translatable="yes">Perform installation in text mode (graphical is default)</property>
 			      <property name="use_underline">True</property>
 			      <property name="relief">GTK_RELIEF_NORMAL</property>
+			      <property name="focus_on_click">True</property>
 			      <property name="active">False</property>
 			      <property name="inconsistent">False</property>
 			      <property name="draw_indicator">True</property>
@@ -2321,6 +2361,7 @@
 			      <property name="label" translatable="yes">Perform installation in interactive mode</property>
 			      <property name="use_underline">True</property>
 			      <property name="relief">GTK_RELIEF_NORMAL</property>
+			      <property name="focus_on_click">True</property>
 			      <property name="active">False</property>
 			      <property name="inconsistent">False</property>
 			      <property name="draw_indicator">True</property>
@@ -2405,6 +2446,7 @@
 				  <property name="label" translatable="yes">Perform new installation</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
+				  <property name="focus_on_click">True</property>
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
@@ -2423,6 +2465,7 @@
 				  <property name="label" translatable="yes">Upgrade an existing installation</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
+				  <property name="focus_on_click">True</property>
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
@@ -2487,6 +2530,7 @@
 				  <property name="label" translatable="yes">CD-ROM</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
+				  <property name="focus_on_click">True</property>
 				  <property name="active">True</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
@@ -2505,6 +2549,7 @@
 				  <property name="label" translatable="yes">NFS</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
+				  <property name="focus_on_click">True</property>
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
@@ -2524,6 +2569,7 @@
 				  <property name="label" translatable="yes">FTP</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
+				  <property name="focus_on_click">True</property>
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
@@ -2543,6 +2589,7 @@
 				  <property name="label" translatable="yes">HTTP</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
+				  <property name="focus_on_click">True</property>
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
@@ -2562,6 +2609,7 @@
 				  <property name="label" translatable="yes">Hard Drive</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
+				  <property name="focus_on_click">True</property>
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
@@ -2887,6 +2935,7 @@
 				      <property name="label" translatable="yes">Specify an FTP username and password</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				      <property name="active">False</property>
 				      <property name="inconsistent">False</property>
 				      <property name="draw_indicator">True</property>
@@ -2905,6 +2954,10 @@
 				      <property name="yalign">0.5</property>
 				      <property name="xscale">0.9</property>
 				      <property name="yscale">1</property>
+				      <property name="top_padding">0</property>
+				      <property name="bottom_padding">0</property>
+				      <property name="left_padding">0</property>
+				      <property name="right_padding">0</property>
 
 				      <child>
 					<widget class="GtkTable" id="table13">
@@ -3378,6 +3431,7 @@
 				      <property name="label" translatable="yes">Install new boot loader</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				      <property name="active">False</property>
 				      <property name="inconsistent">False</property>
 				      <property name="draw_indicator">True</property>
@@ -3396,6 +3450,7 @@
 				      <property name="label" translatable="yes">Do not install a boot loader</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				      <property name="active">False</property>
 				      <property name="inconsistent">False</property>
 				      <property name="draw_indicator">True</property>
@@ -3416,6 +3471,7 @@
 				      <property name="label" translatable="yes">Upgrade existing boot loader</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				      <property name="active">False</property>
 				      <property name="inconsistent">False</property>
 				      <property name="draw_indicator">True</property>
@@ -3481,6 +3537,7 @@
 				      <property name="label" translatable="yes">Use GRUB password</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				      <property name="active">False</property>
 				      <property name="inconsistent">False</property>
 				      <property name="draw_indicator">True</property>
@@ -3499,6 +3556,10 @@
 				      <property name="yalign">0.5</property>
 				      <property name="xscale">0.95</property>
 				      <property name="yscale">1</property>
+				      <property name="top_padding">0</property>
+				      <property name="bottom_padding">0</property>
+				      <property name="left_padding">0</property>
+				      <property name="right_padding">0</property>
 
 				      <child>
 					<widget class="GtkVBox" id="grub_password_hbox">
@@ -3622,6 +3683,7 @@
 					      <property name="label" translatable="yes">Encrypt GRUB password</property>
 					      <property name="use_underline">True</property>
 					      <property name="relief">GTK_RELIEF_NORMAL</property>
+					      <property name="focus_on_click">True</property>
 					      <property name="active">False</property>
 					      <property name="inconsistent">False</property>
 					      <property name="draw_indicator">True</property>
@@ -3673,6 +3735,7 @@
 				      <property name="label" translatable="yes">Install boot loader on Master Boot Record (MBR)</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				      <property name="active">False</property>
 				      <property name="inconsistent">False</property>
 				      <property name="draw_indicator">True</property>
@@ -3691,6 +3754,7 @@
 				      <property name="label" translatable="yes">Install boot loader on first sector of the boot partition</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				      <property name="active">False</property>
 				      <property name="inconsistent">False</property>
 				      <property name="draw_indicator">True</property>
@@ -3893,6 +3957,7 @@
 				      <property name="label" translatable="yes">Clear Master Boot Record</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				      <property name="active">False</property>
 				      <property name="inconsistent">False</property>
 				      <property name="draw_indicator">True</property>
@@ -3911,6 +3976,7 @@
 				      <property name="label" translatable="yes">Do not clear Master Boot Record</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				      <property name="active">True</property>
 				      <property name="inconsistent">False</property>
 				      <property name="draw_indicator">True</property>
@@ -3954,6 +4020,7 @@
 				      <property name="label" translatable="yes">Remove all existing partitions</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				      <property name="active">False</property>
 				      <property name="inconsistent">False</property>
 				      <property name="draw_indicator">True</property>
@@ -3972,6 +4039,7 @@
 				      <property name="label" translatable="yes">Remove existing Linux partitions</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				      <property name="active">False</property>
 				      <property name="inconsistent">False</property>
 				      <property name="draw_indicator">True</property>
@@ -3991,6 +4059,7 @@
 				      <property name="label" translatable="yes">Preserve existing partitions</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				      <property name="active">True</property>
 				      <property name="inconsistent">False</property>
 				      <property name="draw_indicator">True</property>
@@ -4034,6 +4103,7 @@
 				      <property name="label" translatable="yes">Initialize the disk label</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				      <property name="active">False</property>
 				      <property name="inconsistent">False</property>
 				      <property name="draw_indicator">True</property>
@@ -4052,6 +4122,7 @@
 				      <property name="label" translatable="yes">Do not initialize the disk label</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				      <property name="active">True</property>
 				      <property name="inconsistent">False</property>
 				      <property name="draw_indicator">True</property>
@@ -4111,6 +4182,7 @@
 				      <property name="label" translatable="yes">_Add</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				    </widget>
 				    <packing>
 				      <property name="padding">0</property>
@@ -4127,6 +4199,7 @@
 				      <property name="label" translatable="yes">_Edit</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				    </widget>
 				    <packing>
 				      <property name="padding">0</property>
@@ -4143,6 +4216,7 @@
 				      <property name="label" translatable="yes">_Delete</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				    </widget>
 				    <packing>
 				      <property name="padding">0</property>
@@ -4158,6 +4232,7 @@
 				      <property name="label" translatable="yes">RAID</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				    </widget>
 				    <packing>
 				      <property name="padding">0</property>
@@ -4319,6 +4394,7 @@
 				      <property name="label" translatable="yes">_Add Network Device</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				    </widget>
 				    <packing>
 				      <property name="padding">0</property>
@@ -4335,6 +4411,7 @@
 				      <property name="label" translatable="yes">_Edit Network Device</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				    </widget>
 				    <packing>
 				      <property name="padding">0</property>
@@ -4351,6 +4428,7 @@
 				      <property name="label" translatable="yes">_Delete Network Device</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				    </widget>
 				    <packing>
 				      <property name="padding">0</property>
@@ -4473,6 +4551,7 @@
 				      <property name="label" translatable="yes">Use Shadow Passwords</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				      <property name="active">True</property>
 				      <property name="inconsistent">False</property>
 				      <property name="draw_indicator">True</property>
@@ -4491,6 +4570,7 @@
 				      <property name="label" translatable="yes">Use MD5</property>
 				      <property name="use_underline">True</property>
 				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="focus_on_click">True</property>
 				      <property name="active">True</property>
 				      <property name="inconsistent">False</property>
 				      <property name="draw_indicator">True</property>
@@ -4542,6 +4622,7 @@
 					      <property name="label" translatable="yes">Enable NIS</property>
 					      <property name="use_underline">True</property>
 					      <property name="relief">GTK_RELIEF_NORMAL</property>
+					      <property name="focus_on_click">True</property>
 					      <property name="active">False</property>
 					      <property name="inconsistent">False</property>
 					      <property name="draw_indicator">True</property>
@@ -4616,6 +4697,7 @@
 					      <property name="label" translatable="yes">Use broadcast to find NIS server</property>
 					      <property name="use_underline">True</property>
 					      <property name="relief">GTK_RELIEF_NORMAL</property>
+					      <property name="focus_on_click">True</property>
 					      <property name="active">False</property>
 					      <property name="inconsistent">False</property>
 					      <property name="draw_indicator">True</property>
@@ -4750,6 +4832,7 @@
 					      <property name="label" translatable="yes">Enable LDAP</property>
 					      <property name="use_underline">True</property>
 					      <property name="relief">GTK_RELIEF_NORMAL</property>
+					      <property name="focus_on_click">True</property>
 					      <property name="active">False</property>
 					      <property name="inconsistent">False</property>
 					      <property name="draw_indicator">True</property>
@@ -4939,6 +5022,7 @@
 					      <property name="label" translatable="yes">Enable Kerberos 5 Authentication</property>
 					      <property name="use_underline">True</property>
 					      <property name="relief">GTK_RELIEF_NORMAL</property>
+					      <property name="focus_on_click">True</property>
 					      <property name="active">False</property>
 					      <property name="inconsistent">False</property>
 					      <property name="draw_indicator">True</property>
@@ -5183,6 +5267,7 @@
 					      <property name="label" translatable="yes">Enable Hesiod Support</property>
 					      <property name="use_underline">True</property>
 					      <property name="relief">GTK_RELIEF_NORMAL</property>
+					      <property name="focus_on_click">True</property>
 					      <property name="active">False</property>
 					      <property name="inconsistent">False</property>
 					      <property name="draw_indicator">True</property>
@@ -5372,6 +5457,7 @@
 					      <property name="label" translatable="yes">Enable SMB Authentication</property>
 					      <property name="use_underline">True</property>
 					      <property name="relief">GTK_RELIEF_NORMAL</property>
+					      <property name="focus_on_click">True</property>
 					      <property name="active">False</property>
 					      <property name="inconsistent">False</property>
 					      <property name="draw_indicator">True</property>
@@ -5561,6 +5647,7 @@
 					      <property name="label" translatable="yes">Enable nscd</property>
 					      <property name="use_underline">True</property>
 					      <property name="relief">GTK_RELIEF_NORMAL</property>
+					      <property name="focus_on_click">True</property>
 					      <property name="active">False</property>
 					      <property name="inconsistent">False</property>
 					      <property name="draw_indicator">True</property>
@@ -5954,6 +6041,7 @@
 				  <property name="label" translatable="yes">Configure the X Window System</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
+				  <property name="focus_on_click">True</property>
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
@@ -6227,6 +6315,7 @@
 					      <property name="label" translatable="yes">GNOME</property>
 					      <property name="use_underline">True</property>
 					      <property name="relief">GTK_RELIEF_NORMAL</property>
+					      <property name="focus_on_click">True</property>
 					      <property name="active">False</property>
 					      <property name="inconsistent">False</property>
 					      <property name="draw_indicator">True</property>
@@ -6245,6 +6334,7 @@
 					      <property name="label" translatable="yes">KDE</property>
 					      <property name="use_underline">True</property>
 					      <property name="relief">GTK_RELIEF_NORMAL</property>
+					      <property name="focus_on_click">True</property>
 					      <property name="active">False</property>
 					      <property name="inconsistent">False</property>
 					      <property name="draw_indicator">True</property>
@@ -6282,6 +6372,7 @@
 					  <property name="label" translatable="yes">Start the X Window System on boot</property>
 					  <property name="use_underline">True</property>
 					  <property name="relief">GTK_RELIEF_NORMAL</property>
+					  <property name="focus_on_click">True</property>
 					  <property name="active">False</property>
 					  <property name="inconsistent">False</property>
 					  <property name="draw_indicator">True</property>
@@ -6411,6 +6502,7 @@
 					  <property name="label" translatable="yes">Probe for video card</property>
 					  <property name="use_underline">True</property>
 					  <property name="relief">GTK_RELIEF_NORMAL</property>
+					  <property name="focus_on_click">True</property>
 					  <property name="active">True</property>
 					  <property name="inconsistent">False</property>
 					  <property name="draw_indicator">True</property>
@@ -6596,6 +6688,7 @@
 					  <property name="label" translatable="yes">Probe for monitor</property>
 					  <property name="use_underline">True</property>
 					  <property name="relief">GTK_RELIEF_NORMAL</property>
+					  <property name="focus_on_click">True</property>
 					  <property name="active">True</property>
 					  <property name="inconsistent">False</property>
 					  <property name="draw_indicator">True</property>
@@ -6659,6 +6752,7 @@
 					      <property name="label" translatable="yes">Use custom monitor sync rates</property>
 					      <property name="use_underline">True</property>
 					      <property name="relief">GTK_RELIEF_NORMAL</property>
+					      <property name="focus_on_click">True</property>
 					      <property name="active">False</property>
 					      <property name="inconsistent">False</property>
 					      <property name="draw_indicator">True</property>
@@ -7009,6 +7103,7 @@
 				  <property name="label" translatable="yes">_Automatically Resolve Dependencies</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
+				  <property name="focus_on_click">True</property>
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
@@ -7027,6 +7122,7 @@
 				  <property name="label" translatable="yes">_Ignore Dependencies</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
+				  <property name="focus_on_click">True</property>
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
@@ -7073,6 +7169,8 @@
 					  <child>
 					    <widget class="GtkEventBox" id="desktops_eventbox">
 					      <property name="visible">True</property>
+					      <property name="visible_window">True</property>
+					      <property name="above_child">False</property>
 
 					      <child>
 						<widget class="GtkLabel" id="desktops_label">
@@ -7116,6 +7214,8 @@
 					  <child>
 					    <widget class="GtkEventBox" id="applications_eventbox">
 					      <property name="visible">True</property>
+					      <property name="visible_window">True</property>
+					      <property name="above_child">False</property>
 
 					      <child>
 						<widget class="GtkLabel" id="applications_label">
@@ -7159,6 +7259,8 @@
 					  <child>
 					    <widget class="GtkEventBox" id="servers_eventbox">
 					      <property name="visible">True</property>
+					      <property name="visible_window">True</property>
+					      <property name="above_child">False</property>
 
 					      <child>
 						<widget class="GtkLabel" id="servers_label">
@@ -7202,6 +7304,8 @@
 					  <child>
 					    <widget class="GtkEventBox" id="development_eventbox">
 					      <property name="visible">True</property>
+					      <property name="visible_window">True</property>
+					      <property name="above_child">False</property>
 
 					      <child>
 						<widget class="GtkLabel" id="development_label">
@@ -7245,6 +7349,8 @@
 					  <child>
 					    <widget class="GtkEventBox" id="system_eventbox">
 					      <property name="visible">True</property>
+					      <property name="visible_window">True</property>
+					      <property name="above_child">False</property>
 
 					      <child>
 						<widget class="GtkLabel" id="system_label">
@@ -7442,6 +7548,7 @@
 				  <property name="label" translatable="yes">Use an interpreter:</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
+				  <property name="focus_on_click">True</property>
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
@@ -7526,6 +7633,8 @@
 				  <property name="visible">True</property>
 				  <property name="can_focus">True</property>
 				  <property name="editable">True</property>
+				  <property name="overwrite">False</property>
+				  <property name="accepts_tab">True</property>
 				  <property name="justification">GTK_JUSTIFY_LEFT</property>
 				  <property name="wrap_mode">GTK_WRAP_NONE</property>
 				  <property name="cursor_visible">True</property>
@@ -7646,6 +7755,7 @@
 			      <property name="label" translatable="yes">Run outside of the chroot environment</property>
 			      <property name="use_underline">True</property>
 			      <property name="relief">GTK_RELIEF_NORMAL</property>
+			      <property name="focus_on_click">True</property>
 			      <property name="active">False</property>
 			      <property name="inconsistent">False</property>
 			      <property name="draw_indicator">True</property>
@@ -7670,6 +7780,7 @@
 				  <property name="label" translatable="yes">Use an interpreter:</property>
 				  <property name="use_underline">True</property>
 				  <property name="relief">GTK_RELIEF_NORMAL</property>
+				  <property name="focus_on_click">True</property>
 				  <property name="active">False</property>
 				  <property name="inconsistent">False</property>
 				  <property name="draw_indicator">True</property>
@@ -7754,6 +7865,8 @@
 				  <property name="visible">True</property>
 				  <property name="can_focus">True</property>
 				  <property name="editable">True</property>
+				  <property name="overwrite">False</property>
+				  <property name="accepts_tab">True</property>
 				  <property name="justification">GTK_JUSTIFY_LEFT</property>
 				  <property name="wrap_mode">GTK_WRAP_NONE</property>
 				  <property name="cursor_visible">True</property>
@@ -7853,6 +7966,11 @@
   <property name="default_height">450</property>
   <property name="resizable">True</property>
   <property name="destroy_with_parent">False</property>
+  <property name="decorated">True</property>
+  <property name="skip_taskbar_hint">False</property>
+  <property name="skip_pager_hint">False</property>
+  <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
+  <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
   <property name="has_separator">False</property>
 
   <child internal-child="vbox">
@@ -7874,6 +7992,7 @@
 	      <property name="label">gtk-cancel</property>
 	      <property name="use_stock">True</property>
 	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
 	      <property name="response_id">-6</property>
 	    </widget>
 	  </child>
@@ -7884,6 +8003,7 @@
 	      <property name="can_default">True</property>
 	      <property name="can_focus">True</property>
 	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
 	      <property name="response_id">-5</property>
 
 	      <child>
@@ -7893,6 +8013,10 @@
 		  <property name="yalign">0.5</property>
 		  <property name="xscale">0</property>
 		  <property name="yscale">0</property>
+		  <property name="top_padding">0</property>
+		  <property name="bottom_padding">0</property>
+		  <property name="left_padding">0</property>
+		  <property name="right_padding">0</property>
 
 		  <child>
 		    <widget class="GtkHBox" id="hbox41">
@@ -7994,6 +8118,8 @@
 		  <property name="visible">True</property>
 		  <property name="can_focus">True</property>
 		  <property name="editable">False</property>
+		  <property name="overwrite">False</property>
+		  <property name="accepts_tab">True</property>
 		  <property name="justification">GTK_JUSTIFY_LEFT</property>
 		  <property name="wrap_mode">GTK_WRAP_NONE</property>
 		  <property name="cursor_visible">False</property>
@@ -8032,6 +8158,11 @@
   <property name="modal">True</property>
   <property name="resizable">True</property>
   <property name="destroy_with_parent">False</property>
+  <property name="decorated">True</property>
+  <property name="skip_taskbar_hint">False</property>
+  <property name="skip_pager_hint">False</property>
+  <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
+  <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
   <property name="has_separator">True</property>
 
   <child internal-child="vbox">
@@ -8053,6 +8184,7 @@
 	      <property name="label">gtk-cancel</property>
 	      <property name="use_stock">True</property>
 	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
 	      <property name="response_id">0</property>
 	    </widget>
 	  </child>
@@ -8065,6 +8197,7 @@
 	      <property name="label">gtk-ok</property>
 	      <property name="use_stock">True</property>
 	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
 	      <property name="response_id">-5</property>
 	    </widget>
 	  </child>
@@ -8174,6 +8307,10 @@
 	      <property name="yalign">0.5</property>
 	      <property name="xscale">0.9</property>
 	      <property name="yscale">1</property>
+	      <property name="top_padding">0</property>
+	      <property name="bottom_padding">0</property>
+	      <property name="left_padding">0</property>
+	      <property name="right_padding">0</property>
 
 	      <child>
 		<widget class="GtkVBox" id="vbox30">
@@ -8188,6 +8325,7 @@
 		      <property name="label" translatable="yes">Create a software RAID partition</property>
 		      <property name="use_underline">True</property>
 		      <property name="relief">GTK_RELIEF_NORMAL</property>
+		      <property name="focus_on_click">True</property>
 		      <property name="active">False</property>
 		      <property name="inconsistent">False</property>
 		      <property name="draw_indicator">True</property>
@@ -8206,6 +8344,7 @@
 		      <property name="label" translatable="yes">Create a RAID device [default = /dev/md0]</property>
 		      <property name="use_underline">True</property>
 		      <property name="relief">GTK_RELIEF_NORMAL</property>
+		      <property name="focus_on_click">True</property>
 		      <property name="active">False</property>
 		      <property name="inconsistent">False</property>
 		      <property name="draw_indicator">True</property>
@@ -8244,6 +8383,11 @@
   <property name="modal">False</property>
   <property name="resizable">True</property>
   <property name="destroy_with_parent">False</property>
+  <property name="decorated">True</property>
+  <property name="skip_taskbar_hint">False</property>
+  <property name="skip_pager_hint">False</property>
+  <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
+  <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
   <property name="has_separator">True</property>
 
   <child internal-child="vbox">
@@ -8265,6 +8409,7 @@
 	      <property name="label">gtk-cancel</property>
 	      <property name="use_stock">True</property>
 	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
 	      <property name="response_id">-6</property>
 	    </widget>
 	  </child>
@@ -8277,6 +8422,7 @@
 	      <property name="label">gtk-ok</property>
 	      <property name="use_stock">True</property>
 	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
 	      <property name="response_id">-5</property>
 	    </widget>
 	  </child>
