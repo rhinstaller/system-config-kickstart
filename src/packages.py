@@ -41,8 +41,6 @@ class Packages:
         self.kickstartData = kickstartData
         self.package_vbox = xml.get_widget("package_vbox")
         self.package_label_box = xml.get_widget("package_label_box")
-        self.resolve_deps_radio = xml.get_widget("resolve_deps_radio")
-        self.ignore_deps_radio = xml.get_widget("ignore_deps_radio")
 
         self.desktops_eventbox = xml.get_widget("desktops_eventbox")
         self.desktops_eventbox.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#4a59a6"))
@@ -160,11 +158,6 @@ class Packages:
     def getData(self):
         packageList = []
 
-        if self.resolve_deps_radio.get_active() == 1:
-             self.kickstartData.setPackage(["--resolvedeps"])
-        elif self.ignore_deps_radio.get_active() == 1:
-             self.kickstartData.setPackage(["--ignoredeps"])
-
         packageList = self.getPkgData(self.desktops_store, packageList)
 
         packageList = self.getPkgData(self.applications_store, packageList)
@@ -201,15 +194,6 @@ class Packages:
             self.package_label_box.hide()
 
     def fillData(self):
-        if self.kickstartData.getPackage():
-            opts, args = getopt.getopt(self.kickstartData.getPackage(), "d:h", ["resolvedeps", "ignoredeps"])
-
-            for opt, value in opts:
-                if opt == "--resolvedeps":
-                    self.resolve_deps_radio.set_active(gtk.TRUE)
-                elif opt == "--ignoredeps":
-                    self.ignore_deps_radio.set_active(gtk.TRUE)
-
         packageList = self.kickstartData.getPackageGroupList()
 
         for package in packageList:

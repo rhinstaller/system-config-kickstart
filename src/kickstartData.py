@@ -298,12 +298,6 @@ class KickstartData:
     def getFirstboot(self):
         return self.firstboot
 
-    def setPackage(self, args):
-        self.package = args
-
-    def getPackage(self):
-        return self.package
-
     def setPackageGroupList(self, args):
         self.packageGroupList = args
 
@@ -475,9 +469,9 @@ class KickstartData:
             file.append("#Do not configure XWindows")
             file.append("skipx")
 
-        if self.getPackage():
+        if self.getPackageGroupList() != [] or self.getIndividualPackageList() != []:
             file.append("#Package install information")
-            file.append("%packages " + string.join(self.getPackage(), " "))
+            file.append("%packages")
 
             if self.getPackageGroupList() != []:
                 for package in self.getPackageGroupList():
