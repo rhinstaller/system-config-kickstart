@@ -56,6 +56,15 @@ class xconfig:
               "toggle_sync" : self.toggle_sync,
               })
 
+        #probe by default
+        self.probe_x_button.set_active(1)
+        self.video_card_swindow.set_sensitive(0)
+        self.monitor_swindow.set_sensitive(0)
+        self.video_card_clist.set_sensitive(0)
+        self.monitor_clist.set_sensitive(0)
+        self.sync_button.set_sensitive(0)
+        self.videoram_combo.set_sensitive(0)        
+
         #add video cards to list
         try:
             cardsFile = open("Cards", "r")
@@ -84,6 +93,7 @@ class xconfig:
                 name = line[5:]
                 name_list = [name]
                 self.video_card_clist.append(name_list)
+                self.video_card_clist.sort()
 
 
         #add monitors to list
@@ -160,18 +170,6 @@ class xconfig:
     def getData(self):
         if self.config_x_button.get_active():
             buf = "\n" + "xconfig "
-            #video card and monitor
-            if self.probe_x_button.get_active():
-                #Probe for monitor and video card
-                pass
-            else:
-                buf = buf + " --card \"" + self.video_card_clist.get_text(self.selected_vc_row,0) + "\""
-                if self.sync_button.get_active():
-                    buf = buf + " --hsync " + self.hsync_entry.get_text()
-                    buf = buf + " --vsync " + self.vsync_entry.get_text()
-                else:
-                    buf = buf + " --monitor \"" + self.monitor_clist.get_text(self.selected_monitor_row,0) + "\""
-
             #color depth - translate
             buf = buf + " --depth " + self.color_depth_combo.entry.get_text()
             #resolution
@@ -184,6 +182,19 @@ class xconfig:
             #startxonboot
             if self.startxonboot_checkbutton.get_active():
                 buf = buf + "  --startxonboot"
+            #video card and monitor
+            if self.probe_x_button.get_active():
+                buf = buf + "\n" + "#Probe for monitor and video card"
+                pass
+            else:
+                buf = buf + " --card \"" + self.video_card_clist.get_text(self.selected_vc_row,0) + "\""
+                if self.sync_button.get_active():
+                    buf = buf + " --hsync " + self.hsync_entry.get_text()
+                    buf = buf + " --vsync " + self.vsync_entry.get_text()
+                else:
+                    buf = buf + " --monitor \"" + self.monitor_clist.get_text(self.selected_monitor_row,0) + "\""
+
+
         else:
             buf = "\n" + "#Do not configure the X Window System"
             buf = buf + "\n" + "skipx"            
