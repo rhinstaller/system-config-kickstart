@@ -343,3 +343,7 @@ class partition:
         if self.kickstartData.getPartitions() != []:
             for line in self.kickstartData.getPartitions():
                 self.partWindow.populateList(line)
+
+        if self.kickstartData.getRaid() != []:
+            for line in self.kickstartData.getRaid():
+                self.raidWindow.populateRaid(line)
