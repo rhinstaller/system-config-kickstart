@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
 Version: 2.3.3
-Release: 4
+Release: 5
 URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
@@ -56,6 +56,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Tue Nov 05 2002 Brent Fox <bfox@redhat.com> 2.3.3-5
+- Remove Minimal and Everything options from packages.py since they aren't in comps.xml
+
 * Wed Oct 16 2002 Tammy Fox <tfox@redhat.com>
 - Set modal windows to transient as well so they can't get hidden
 
