@@ -55,12 +55,15 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Fri Aug 02 2002 Tammy Fox <tfox@redhat.com>
+- Reworked package group selection
+
 * Thu Aug 01 2002 Brent Fox <bfox@redhat.com> 2.3.2-5
-- reworked GUI for bootloader screen
-- changed the order so that install appears before bootloader
+- Reworked GUI for bootloader screen
+- Changed the order so that install appears before bootloader
 
 * Fri Jul 26 2002 Tammy Fox <tfox@redhat.com>
-- Change Help menu item to Contents
+- Changed Help menu item to Contents
 
 * Thu Jul 25 2002 Brent Fox <bfox@redhat.com> 2.3.2-4
 - Fixed bug 68147
