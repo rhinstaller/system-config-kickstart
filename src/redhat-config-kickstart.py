@@ -55,10 +55,6 @@ def useCliMode(value):
     
 file = None
 opts, file = getopt.getopt(sys.argv[1:], "g:h", ["generate=", "help"])
-
-
-if file:
-    file = file[0]
     
 for (opt, value) in opts:
     if opt == "--generate" or opt == "-g":
@@ -75,6 +71,9 @@ for (opt, value) in opts:
                         the kickstart file already filled in.""")
         sys.exit(1)
 
+
+if file:
+    file = file[0]
 
 import kickstartGui
 kickstartGui.kickstartGui(file)
