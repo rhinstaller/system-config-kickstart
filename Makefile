@@ -1,7 +1,7 @@
 #License: GPL
 #Copyright Red Hat Inc.  Jan 2001
 
-PKGNAME=redhat-config-kickstart
+PKGNAME=system-config-kickstart
 VERSION=$(shell awk '/Version:/ { print $$2 }' ${PKGNAME}.spec)
 CVSTAG=r$(subst .,-,$(VERSION))
 SUBDIRS=man po
