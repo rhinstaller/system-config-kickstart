@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
 Version: 2.3.8
-Release: 1
+Release: 2
 URL: http://www.redhat.com
 License: GPL
 ExclusiveOS: Linux
@@ -56,6 +56,10 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Tue May 27 2003 Tammy Fox <tfox@redhat.com> 2.3.8-2
+- removed length argument to GtkTextBuffer.insert() call
+  since it is deprecated
+
 * Fri May 23 2003 Brent Fox <bfox@redhat.com> 2.3.8-1
 - remove midline comment for mouse in basic.py (bug #91502)
 
