@@ -40,6 +40,11 @@ class partWindow:
     def __init__(self, xml, part_store, part_view):
         self.part_store = part_store
         self.part_view = part_view
+        self.hard_drive_parent_iter = None
+        self.raid_parent_iter = None
+        self.lvm_parent_iter = None
+        self.auto_parent_iter = None
+        self.device_iter_dict = {}
 
         self.partitionDialog = xml.get_widget("partition_dialog")
         self.mountPointCombo = xml.get_widget("mountPointCombo")
@@ -200,15 +205,59 @@ class partWindow:
 
         if not result:
             return
-        
-        iter = self.part_store.append()
-        self.part_store.set_value(iter, 0, part_object.mountPoint)
-        self.part_store.set_value(iter, 1, part_object.fsType)
-        self.part_store.set_value(iter, 2, part_object.size)
-        self.part_store.set_value(iter, 3, part_object.onDiskVal)
-        self.part_store.set_value(iter, 4, part_object.onPartVal)
+
+        iter = self.part_store.get_iter_first()
+        parent = None
+
+        if iter == None:
+            self.hard_drive_parent_iter = self.part_store.append(None)
+            self.part_store.set_value(self.hard_drive_parent_iter, 0, (_("Hard Drives")))
+
+        if part_object.device == None:
+            #If they didn't specify a device, create a group called "Auto"
+            if self.auto_parent_iter == None:
+                self.auto_parent_iter = self.part_store.append(self.hard_drive_parent_iter)
+                self.part_store.set_value(self.auto_parent_iter, 0, (_("Auto")))
+
+            #If the auto parent node already exits, just add the new auto partition to it
+            iter = self.part_store.append(self.auto_parent_iter)
+            self.part_store.set_value(iter, 0, "")
+            
+        else:
+            #Now, ther's a device specified for this partition, so let's see if it already has a parent node
+            if part_object.device in self.device_iter_dict.keys():
+                #There's already a device parent for this device.  Just add the info
+                device_iter = self.device_iter_dict[part_object.device]
+                if part_object.partition != None:
+                    iter = self.part_store.append(device_iter)
+                    self.part_store.set_value(iter, 0, part_object.partition)
+                else:
+                    iter = self.part_store.append(device_iter)
+                    self.part_store.set_value(iter, 0, (_("Auto")))
+            else:
+                #There's no device parent for this device.  Create one and add it to the device
+                device_iter = self.part_store.append(self.hard_drive_parent_iter)
+                self.part_store.set_value(device_iter, 0, part_object.device)
+                self.device_iter_dict[part_object.device] = device_iter
+                if part_object.partition != None:
+                    iter = self.part_store.append(device_iter)
+                    self.part_store.set_value(iter, 0, part_object.partition)
+                else:
+                    iter = self.part_store.append(device_iter)
+                    self.part_store.set_value(iter, 0, (_("Auto")))
+                
+        self.part_store.set_value(iter, 1, part_object.mountPoint)
+        self.part_store.set_value(iter, 2, part_object.fsType)
+
+        if part_object.doFormat == 1:
+            self.part_store.set_value(iter, 3, (_("Yes")))
+        else:
+            self.part_store.set_value(iter, 3, (_("No")))
+            
+        self.part_store.set_value(iter, 4, part_object.size)
         self.part_store.set_value(iter, 5, part_object)
 
+        self.part_view.expand_all()
         self.partOkButton.disconnect(self.ok_handler)
         self.win_reset()
         self.partitionDialog.hide()
@@ -243,13 +292,26 @@ class partWindow:
 
         part_object.asPrimary = self.asPrimaryCheck.get_active()
 
-        part_object.onDisk = self.onDiskCheck.get_active()
-        if part_object.onDisk == 1:
-            part_object.onDiskVal = self.onDiskEntry.get_text()
+        if self.onDiskCheck.get_active() == gtk.TRUE:
+            device = self.onDiskEntry.get_text()
 
-        part_object.onPart = self.onPartCheck.get_active()
-        if part_object.onPart == 1:
-            part_object.onPartVal = self.onPartEntry.get_text()
+            if self.isDeviceValid(device) == 1:
+                part_object.device = device
+            else:
+                return None
+
+        if self.onPartCheck.get_active() == gtk.TRUE:
+            part = self.onPartEntry.get_text()
+
+            if self.isPartitionValid(part) == 1:
+                device = part
+                for i in string.digits:
+                    device = string.replace(device, i, "")
+                
+                part_object.device = device
+                part_object.partition = part
+            else:
+                return None
 
         part_object.doFormat = self.formatCheck.get_active()
 
@@ -281,70 +343,24 @@ class partWindow:
             part_object.fsType = "swap"
             part_object.mountPoint = ""
 
-        #If onDisk is true, let's check for validity for onDiskVal.  Same for onPart
-        result = self.checkPartitionValidity(part_object.onDisk, part_object.onDiskVal,
-                                             part_object.onPart, part_object.onPartVal)
-
-        if not result:
-            return None
-        else:
-            return 1
-        
+        return 1
 
     def checkRaid(self, part_object):
         fsType = part_object.fsType
-        onDisk = part_object.onDisk
-        onDiskVal = part_object.onDiskVal
-        onPart = part_object.onPart
-        onPartVal = part_object.onPartVal
+        device = part_object.device
+        partition = part_object.partition
 
         mountPoint = ""            
-        if not onDisk and not onPart:
-            dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
-                                    _("To create a new RAID partition, "
-                                      "you must specify either a hard drive "
-                                      "or an existing partition."))
-            dlg.set_title(_("Error"))
-            dlg.set_default_size(100, 100)
-            dlg.set_position (gtk.WIN_POS_CENTER)
-            dlg.set_border_width(2)
-            dlg.set_modal(gtk.TRUE)
-            rc = dlg.run()
-            if rc == gtk.RESPONSE_OK:
-                dlg.hide()
-            return None
-
-        elif onDisk and onDiskVal == "":
-            dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
-                                    _("Specify a device on which to create the RAID partition."))
-            dlg.set_title(_("Error"))
-            dlg.set_default_size(100, 100)
-            dlg.set_position (gtk.WIN_POS_CENTER)
-            dlg.set_border_width(2)
-            dlg.set_modal(gtk.TRUE)
-            rc = dlg.run()
-            if rc == gtk.RESPONSE_OK:
-                dlg.hide()
-            return None
-
-        elif onPart and onPartVal == "":
-            dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
-                                    _("Specify an existing partition on which to create the RAID partition."))
-            dlg.set_title(_("Error"))
-            dlg.set_default_size(100, 100)
-            dlg.set_position (gtk.WIN_POS_CENTER)
-            dlg.set_border_width(2)
-            dlg.set_modal(gtk.TRUE)
-            rc = dlg.run()
-            if rc == gtk.RESPONSE_OK:
-                dlg.hide()
+        if not device:
+            self.deviceNotValid(_("To create a new RAID partition, you must specify either "
+                                  "a hard drive device name or an existing partition."))
             return None
 
         lastRaidNumber = ""
         iter = self.part_store.get_iter_first()        
         while iter:
             pyObject = self.part_store.get_value(iter, 5)
-            if pyObject.fsType == "raid":
+            if pyObject and pyObject.fsType == "raid":
                 lastRaidNumber = pyObject.raidNumber
             iter = self.part_store.iter_next(iter)        
 
@@ -361,33 +377,43 @@ class partWindow:
         #If all the checks pass, then return
         return fsType
     
-    def checkPartitionValidity(self, onDisk, onDiskVal, onPart, onPartVal):
-        if onDisk and onDiskVal == "":
-            dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
-                                        _("Specify a device on which to create the partition."))
-            dlg.set_title(_("Error"))
-            dlg.set_default_size(100, 100)
-            dlg.set_position (gtk.WIN_POS_CENTER)
-            dlg.set_border_width(2)
-            dlg.set_modal(gtk.TRUE)
-            rc = dlg.run()
-            if rc == gtk.RESPONSE_OK:
-                dlg.hide()
-            return None
+    def isDeviceValid(self, device):
+        if device[:2] == "hd" or device[:2] == "sd":
+            return 1
+        else:
+            #the entry doesn't start with "hd" or "sd" so it's probably not valid
+            if device == "":
+                self.deviceNotValid(_("Specify a device on which to create the partition."))
+            else:
+                self.deviceNotValid(_("The device you specified is not a valid device name. "
+                                         "Please use a valid device name  "
+                                         "such as \"hda1\" or \"sda3\"."))
+            return
 
-        elif onPart and onPartVal == "":
-            dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
-                                        _("Specify an existing partition to use."))
-            dlg.set_title(_("Error"))
-            dlg.set_default_size(100, 100)
-            dlg.set_position (gtk.WIN_POS_CENTER)
-            dlg.set_border_width(2)
-            dlg.set_modal(gtk.TRUE)
-            rc = dlg.run()
-            if rc == gtk.RESPONSE_OK:
-                dlg.hide()
-            return None
-        
-        # Everything's good, so return
-        return 1
-    
+    def isPartitionValid(self, partition):
+        if partition[:2] == "hd" or partition[:2] == "sd":
+            if partition[-1] in string.digits:
+                return 1
+            else:
+                self.deviceNotValid(_("The partition you specified does not end "
+                                         "in a number.  Partitions must have a partition number "
+                                         "such as \"hda1\" or \"sda3\"."))
+                return
+        else:
+                
+            self.deviceNotValid(_("The partition you specified does not begin with "
+                                     "\"hd\" or \"sd\".  Partitions must have a valid device name "
+                                     "and partition number such as \"hda1\" or \"sda3\"."))
+            return
+
+    def deviceNotValid(self, label):
+        dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, label)
+        dlg.set_title(_("Error"))
+        dlg.set_default_size(100, 100)
+        dlg.set_position (gtk.WIN_POS_CENTER)
+        dlg.set_border_width(2)
+        dlg.set_modal(gtk.TRUE)
+        rc = dlg.run()
+        if rc == gtk.RESPONSE_OK:
+            dlg.hide()
+        return None

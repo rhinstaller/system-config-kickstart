@@ -32,10 +32,12 @@ class partEntry:
         self.sizeStrategy = ""
         self.maxSize = ""
         self.asPrimary = ""
-        self.onDisk = ""
-        self.onDiskVal = ""
-        self.onPart = ""
-        self.onPartVal = ""
+        self.device = None
+        self.partition = None
+#        self.onDisk = ""
+#        self.onDiskVal = ""
+#        self.onPart = ""
+#        self.onPartVal = ""
         self.doFormat = ""
         self.raidType = ""
         self.raidSpares = ""

@@ -26,7 +26,6 @@ import gtk.glade
 import gobject
 import partWindow
 import raidOptionsWindow
-#import raidWindow
 
 ##
 ## I18N
@@ -52,8 +51,6 @@ class partition:
         self.del_part_button = self.xml.get_widget("del_part_button")
         self.raid_part_button = self.xml.get_widget("raid_part_button")
         self.lvm_part_button = self.xml.get_widget("lvm_part_button")
-#        self.raid_part_button = self.xml.get_widget("raid_part_button")
-#        self.partitionDialog = self.xml.get_widget("partition_dialog")
         self.checkbox = self.xml.get_widget("checkbox2")
 
         self.add_part_button.connect("clicked", self.addPartition)
@@ -62,27 +59,24 @@ class partition:
         self.raid_part_button.connect("clicked", self.raidPartition)
         self.lvm_part_button.connect("clicked", self.lvmPartition)
 
-        self.part_store = gtk.ListStore(gobject.TYPE_STRING, gobject.TYPE_STRING, gobject.TYPE_STRING,
+        self.part_store = gtk.TreeStore(gobject.TYPE_STRING, gobject.TYPE_STRING, gobject.TYPE_STRING,
                                         gobject.TYPE_STRING, gobject.TYPE_STRING, gobject.TYPE_PYOBJECT)
 
-
         self.part_view.set_model(self.part_store)
-        col = gtk.TreeViewColumn(_("Mount Point"), gtk.CellRendererText(), text=0)
+        col = gtk.TreeViewColumn(_("Device/\nPartition Number"), gtk.CellRendererText(), text=0)
         self.part_view.append_column(col)
-        col = gtk.TreeViewColumn(_("File System Type"), gtk.CellRendererText(), text=1)
+        col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
         self.part_view.append_column(col)
-        col = gtk.TreeViewColumn(_("Size"), gtk.CellRendererText(), text=2)
+        col = gtk.TreeViewColumn(_("Type"), gtk.CellRendererText(), text=2)
         self.part_view.append_column(col)
-        col = gtk.TreeViewColumn(_("Device"), gtk.CellRendererText(), text=3)
+        col = gtk.TreeViewColumn(_("Format"), gtk.CellRendererText(), text=3)
         self.part_view.append_column(col)
-        col = gtk.TreeViewColumn(_("Existing Partition"), gtk.CellRendererText(), text=4)
+        col = gtk.TreeViewColumn(_("Size (MB)"), gtk.CellRendererText(), text=4)
         self.part_view.append_column(col)
 
         #initialize the child classes
         self.partWindow = partWindow.partWindow(self.xml, self.part_store, self.part_view)
         self.raidOptionsWindow = raidOptionsWindow.raidOptionsWindow(self.xml, self.part_store, self.part_view, self.partWindow)
-#        self.raidWindow = raidWindow.raidWindow(self.xml, self.part_view)
-
 
     def delPartition(self, *args):
         try:
@@ -103,20 +97,12 @@ class partition:
         self.del_part_button.set_sensitive(gtk.FALSE)
 
     def addPartition(self, *args):
-#        part = partWindow.partWindow(self.xml, self.part_store, self.part_view)
         self.partWindow.add_partition()
         self.edit_part_button.set_sensitive(gtk.TRUE)
         self.del_part_button.set_sensitive(gtk.TRUE)
         self.part_view.get_selection().unselect_all()
 
-##         self.partWindow = partWindow.partWindow(self.xml, self.part_store, self.part_view)
-##         self.partWindow.add_partition()
-##         self.edit_part_button.set_sensitive(gtk.TRUE)
-##         self.del_part_button.set_sensitive(gtk.TRUE)
-##         self.part_view.get_selection().unselect_all()
-
     def editPartition(self, *args):
-#        self.partWindow = partWindow.partWindow(self.xml, self.part_store, self.part_view)
         try:
             data, iter = self.part_view.get_selection().get_selected()
         except:
