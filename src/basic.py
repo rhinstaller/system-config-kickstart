@@ -254,9 +254,7 @@ class basic:
         data.append("")
         data.append("#Language modules to install")
 
-        print self.langSupportList
         if lang not in self.langSupportList:
-            print "adding ", lang
             self.langSupportList.append(lang)
 
         if self.langSupportList != []:

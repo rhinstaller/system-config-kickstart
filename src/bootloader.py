@@ -63,16 +63,13 @@ class bootloader:
         self.grub_password_label.set_sensitive(status)
         self.grub_password_entry.set_sensitive(status)        
         if status:
-            print "install boot loader"
             status = self.choose_lilo_radiobutton.get_active()
             if status:
-                print "lilo active" 
                 self.grub_options_label.set_sensitive(not status)        
                 self.grub_password_label.set_sensitive(not status)
                 self.grub_password_entry.set_sensitive(not status)
             status = self.choose_grub_radiobutton.get_active()
             if status:
-                print "grub active"                 
                 self.lilo_options_label.set_sensitive(not status)
                 self.linear_checkbutton.set_sensitive(not status)
                 self.lba32_checkbutton.set_sensitive(not status)

@@ -202,7 +202,6 @@ class firewall:
 ##                         pass
 ##                     ports.append(port)
 
-##             print ports
 
         data.append(buf)
         return data

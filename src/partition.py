@@ -128,7 +128,6 @@ class partition:
              doFormat, raidType, raidSpares, isRaidDevice) = rowData
 
 ##             if fsType == "RAID":
-##                 print "here"
 ##                 num_raid = num_raid + 1
 ##                 if num_raid < 10:
 ##                     buf = buf + "\n" + "part raid.%d%d " %(0, num_raid)

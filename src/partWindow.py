@@ -123,10 +123,8 @@ class partWindow:
         self.formatCheck.set_active(doFormat)        
 
         curr = self.fsTypeCombo.entry.get_text()
-        print "here", curr, self.fileTypes
         if curr in self.fileTypes:
             index = self.fileTypes.index(curr)
-            print index
         
             if index == 2:
                 self.mountPointCombo.set_sensitive(FALSE)
