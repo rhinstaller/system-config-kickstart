@@ -31,9 +31,8 @@ import crypt
 
 from rhpl import keyboard_models
 import rhpl.keyboard as keyboard
-
+import rhpl.mouse as mouse
 from hardwareLists import langDict
-from hardwareLists import mouseDict
 
 import kickstartGui
 
@@ -53,6 +52,7 @@ class basic:
         self.notebook = notebook
         self.kickstartData = kickstartData
         self.xml = xml
+        self.mouse = mouse.Mouse(skipProbe = 1)
         self.lang_combo = xml.get_widget("lang_combo")
         self.keyboard_combo = xml.get_widget("keyboard_combo")
         self.mouse_combo = xml.get_widget("mouse_combo")
@@ -82,7 +82,7 @@ class basic:
         self.lang_support_view.append_column(col)
 
         self.langDict = langDict
-        self.mouseDict = mouseDict
+        self.mouseDict = self.mouse.available()
 
         #populate language combo
         self.lang_list = self.langDict.keys()
@@ -255,7 +255,8 @@ class basic:
             buf = ""
             if self.emulate_3_buttons.get_active() and self.mouseDict[args] != 'none':
                 buf = buf + "--emulthree "
-            buf = buf + self.mouseDict [args]
+            a, b, c, d, protocol = self.mouseDict[args]
+            buf = buf + protocol
         return buf
 
     def populateLangSupport(self):
