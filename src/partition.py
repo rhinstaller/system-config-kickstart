@@ -228,7 +228,7 @@ class partition:
                 if part_object.fsType == "swap":
                     buf = buf + "swap "
                 elif part_object.fsType == "raid":
-                    buf = buf + "raid.%s " % part_object.raidNumber
+                    buf = buf + " " + part_object.raidNumber
                 else:
                     buf = buf + " --fstype " + part_object.fsType + " " 
 
