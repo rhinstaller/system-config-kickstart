@@ -349,12 +349,31 @@ class partWindow:
 
             else:
                 #It's not raid and it's not swap, so it must be a regular partition
-                part_object.mountPoint = self.mountPointCombo.entry.get_text()
-                if part_object.mountPoint == "":
+                mountPoint = self.mountPointCombo.entry.get_text()
+                
+                if mountPoint == "":
                     self.deviceNotValid(_("Specify a mount point for the partition."))
                     return None
 
+                #Check to see if the mount point has already been used
+                self.mp_is_duplicate = None
+                self.part_store.foreach(self.checkMountPoint, mountPoint)
+
+                if self.mp_is_duplicate:
+                    #They are trying to use a mount point already in use.  Let's complain
+                    self.deviceNotValid(_("The mount point \"%s\" is already in use.  "
+                                          "Please select another mount point." % mountPoint))
+                    return None
+
+                part_object.mountPoint = mountPoint
+
         return 1
+
+    def checkMountPoint(self, store, data, iter, mountPoint):
+        #This will scan the part_store and see if there are any duplicate mount points
+        part_object = self.part_store.get_value(iter, 5)
+        if part_object and part_object.mountPoint == mountPoint:
+            self.mp_is_unique = 1
 
     def checkRaid(self, part_object):
         fsType = part_object.fsType
