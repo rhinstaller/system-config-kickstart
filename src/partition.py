@@ -152,20 +152,30 @@ class partition:
 
         parent = self.part_store.iter_parent(iter)
         if parent:
-            children = self.part_store.iter_n_children(parent)
-            if children == 1:
-                 #If the item is the only one in the list, remove it and the parent.
+            if self.part_store.iter_n_children(parent) == 1:
+                 # Grab the key if the device we're deleting in the
+                 # iter_dict so we can remove it later.
+                 dev_name = data.get_value(iter, 5).device
+
+                 # If the item is the only one in the list, remove it and
+                 # the parent.
                  grandparent = self.part_store.iter_parent(parent)
                  self.part_store.remove(iter)
                  self.part_store.remove(parent)            
 
+                 # Delete the iter from the dict so that if we go to add
+                 # more partitions later, we won't reference a bad iter
+                 # and explode.
+                 if self.partWindow.device_iter_dict.has_key(dev_name):
+                     del(self.partWindow.device_iter_dict[dev_name])
+
                  if grandparent:
-                     grandchildren = self.part_store.iter_n_children(grandparent)
-                     if grandchildren == 0:
+                     if self.part_store.iter_n_children(grandparent) == 0:
                          self.part_store.remove(grandparent)
 
             else:
-                #If there are other items in that branch, only remove the selected item
+                # If there are other items in that branch, only remove the
+                # selected item
                 self.part_store.remove(iter)
 
         self.part_view.get_selection().unselect_all()
@@ -202,11 +212,12 @@ class partition:
             self.kickstartData.setZeroMbr(None)
             
         if self.remove_parts_none_radiobutton.get_active():
-            #We want to preserve all partitions, so don't write the clearpart line
+            # We want to preserve all partitions, so don't write the
+            # clearpart line
             self.kickstartData.setClearPart(None)
             pass
         else:
-            #Prepart the clearpart line
+            # Prepart the clearpart line
             buf = ""
             if self.remove_parts_all_radiobutton.get_active():
                 buf = "--all "
@@ -292,7 +303,8 @@ class partition:
             self.del_part_button.set_sensitive(gtk.FALSE)
         else:
             part_object = self.part_store.get_value(iter, 5)
-            #Check to see if the selection is actually a partition or one of the parent roots
+            # Check to see if the selection is actually a partition or
+            # one of the parent roots
             if part_object == None:
                 self.edit_part_button.set_sensitive(gtk.FALSE)
                 self.del_part_button.set_sensitive(gtk.FALSE)
