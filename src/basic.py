@@ -253,7 +253,7 @@ class basic:
         keys.sort()
         for item in keys:
             if self.keyboard_dict[item][0] == self.keyboard_combo.entry.get_text():
-                data.append("keyboard " + self.keyboard_dict[item][1])
+                data.append("keyboard " + item)
                 break
         data.append("")
         data.append("#System mouse")
