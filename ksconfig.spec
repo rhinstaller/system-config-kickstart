@@ -48,8 +48,10 @@ fi
 
 %changelog
 * Fri Jun 14 2002 Tammy Fox <tfox@redhat.com>
-- Add optional ftp username and password
-- Add preview menu item
+- Added optional ftp username and password
+- Added preview menu item
+- Added bootloader --upgrade
+- Added swap --recommended
 
 * Wed May 22 2002 Brent Fox <bfox@redhat.com> 2.0-9
 - Fixed bug #65323 to handle partition minimum size better
