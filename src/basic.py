@@ -201,31 +201,19 @@ class basic:
 
         if self.encrypt_root_pw_checkbutton.get_active():
             pure = self.root_passwd_entry.get_text()
-##             salt = (whrandom.choice (string.letters +
-##                                      string.digits + './') + 
-##                     whrandom.choice (string.letters +
-##                                      string.digits + './'))
 
             salt = "$1$"
             saltLen = 8
-
-#            salt = ""
-#            saltLen = 2
-
 
             for i in range(saltLen):
                 salt = salt + whrandom.choice (string.letters +
                                                string.digits + './')
 
-#            salt = "kb"
             self.passwd = crypt.crypt (pure, salt)
             buf = buf + "\n" + "rootpw --iscrypted " + self.passwd
         else:
             self.passwd = self.root_passwd_entry.get_text()
             buf = buf + "\n" + "rootpw " + self.passwd
-
-        print pure, salt
-        print self.passwd
 
         if self.reboot_checkbutton.get_active():
             buf = buf + "\n" + "reboot"
