@@ -772,7 +772,7 @@
 	  <widget>
 	    <class>GtkFrame</class>
 	    <name>install_method_frame</name>
-	    <label>Installation Source</label>
+	    <label>Installation Method</label>
 	    <label_xalign>0</label_xalign>
 	    <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
 
@@ -833,6 +833,16 @@
 		    <fill>False</fill>
 		  </child>
 		</widget>
+	      </widget>
+
+	      <widget>
+		<class>GtkHSeparator</class>
+		<name>hseparator10</name>
+		<child>
+		  <padding>0</padding>
+		  <expand>False</expand>
+		  <fill>False</fill>
+		</child>
 	      </widget>
 
 	      <widget>
@@ -3785,8 +3795,8 @@
 		    <can_focus>True</can_focus>
 		    <signal>
 		      <name>toggled</name>
-		      <handler>disable_vc_monitor</handler>
-		      <last_modification_time>Fri, 06 Jul 2001 02:52:50 GMT</last_modification_time>
+		      <handler>toggle_vc_monitor</handler>
+		      <last_modification_time>Fri, 06 Jul 2001 05:47:38 GMT</last_modification_time>
 		    </signal>
 		    <label>Probe for the video card and monitor</label>
 		    <active>False</active>
@@ -3815,6 +3825,11 @@
 		      <class>GtkCList</class>
 		      <name>monitor_clist</name>
 		      <can_focus>True</can_focus>
+		      <signal>
+			<name>select_row</name>
+			<handler>select_monitor</handler>
+			<last_modification_time>Fri, 06 Jul 2001 06:30:06 GMT</last_modification_time>
+		      </signal>
 		      <columns>1</columns>
 		      <column_widths>80</column_widths>
 		      <selection_mode>GTK_SELECTION_BROWSE</selection_mode>
@@ -3853,6 +3868,11 @@
 		      <class>GtkCList</class>
 		      <name>video_card_clist</name>
 		      <can_focus>True</can_focus>
+		      <signal>
+			<name>select_row</name>
+			<handler>select_videocard</handler>
+			<last_modification_time>Fri, 06 Jul 2001 06:30:22 GMT</last_modification_time>
+		      </signal>
 		      <columns>1</columns>
 		      <column_widths>80</column_widths>
 		      <selection_mode>GTK_SELECTION_BROWSE</selection_mode>
@@ -4235,16 +4255,30 @@
 		    </widget>
 
 		    <widget>
-		      <class>GtkOptionMenu</class>
-		      <name>videoram_optionmenu</name>
-		      <can_focus>True</can_focus>
+		      <class>GtkCombo</class>
+		      <name>videoram_combo</name>
+		      <value_in_list>False</value_in_list>
+		      <ok_if_empty>True</ok_if_empty>
+		      <case_sensitive>False</case_sensitive>
+		      <use_arrows>True</use_arrows>
+		      <use_arrows_always>False</use_arrows_always>
 		      <items></items>
-		      <initial_choice>0</initial_choice>
 		      <child>
 			<padding>0</padding>
 			<expand>False</expand>
 			<fill>False</fill>
 		      </child>
+
+		      <widget>
+			<class>GtkEntry</class>
+			<child_name>GtkCombo:entry</child_name>
+			<name>combo-entry8</name>
+			<can_focus>True</can_focus>
+			<editable>True</editable>
+			<text_visible>True</text_visible>
+			<text_max_length>0</text_max_length>
+			<text></text>
+		      </widget>
 		    </widget>
 		  </widget>
 
@@ -4329,7 +4363,7 @@
 
 		  <widget>
 		    <class>GtkCheckButton</class>
-		    <name>checkbutton5</name>
+		    <name>startxonboot_checkbutton</name>
 		    <can_focus>True</can_focus>
 		    <label>Start the X Window System on boot</label>
 		    <active>False</active>
