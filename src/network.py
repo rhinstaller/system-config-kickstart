@@ -175,12 +175,35 @@ class network:
         if self.doesDeviceExist(devName) is None:
             return
 
-        iter = self.network_device_store.append()
-        self.network_device_store.set_value(iter, 0, devName)
-
         if self.network_type_option_menu.get_history() == 0:
+            iter = self.network_device_store.append()
+            self.network_device_store.set_value(iter, 0, devName)
             self.network_device_store.set_value(iter, 1, "DHCP")
+        elif self.network_type_option_menu.get_history() == 2:
+            iter = self.network_device_store.append()
+            self.network_device_store.set_value(iter, 0, devName)
+            self.network_device_store.set_value(iter, 1, "BOOTP")
         else:
+            if self.ip_entry1.get_text() == "" or self.ip_entry2.get_text() == "" or \
+            self.ip_entry3.get_text() == "" or self.ip_entry4.get_text() == "" or \
+            self.netmask_entry1.get_text() == "" or self.netmask_entry2.get_text() == "" or \
+            self.netmask_entry3.get_text() == "" or self.netmask_entry4.get_text() == "" or \
+            self.gw_entry1.get_text() == "" or self.gw_entry2.get_text() == "" or \
+            self.gw_entry3.get_text() == "" or self.gw_entry4.get_text() == "" or \
+            self.nameserver_entry1.get_text() == "" or self.nameserver_entry2.get_text() == "" or \
+            self.nameserver_entry3.get_text() == "" or self.nameserver_entry4.get_text() == "":
+                print "uh uh"
+
+                text = (_("Please fill in the network information"))
+                dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
+                dlg.set_position(gtk.WIN_POS_CENTER)
+                dlg.set_modal(gtk.TRUE)
+                rc = dlg.run()
+                dlg.destroy()
+                return None
+
+            iter = self.network_device_store.append()
+            self.network_device_store.set_value(iter, 0, devName)
             self.network_device_store.set_value(iter, 1, _("Static IP"))
         
             ipBuf = ("%s.%s.%s.%s" %
