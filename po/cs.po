@@ -31,9 +31,9 @@ msgstr "Oddíl:"
 msgid "_About"
 msgstr "_O programu"
 
-#: redhat-config-kickstart.gladestrings:251
-msgid "Monitor"
-msgstr "Monitor"
+#: redhat-config-kickstart.gladestrings:220
+msgid "High"
+msgstr "Vysoký"
 
 #: redhat-config-kickstart.gladestrings:59
 msgid "Language Support:"
@@ -653,7 +653,7 @@ msgstr "Pro nalezení NIS serveru pou¾ít broadcast"
 msgid "Install"
 msgstr "Instalovat"
 
-#: ../src/basic.py:312 ../src/partWindow.py:246 ../src/partWindow.py:263
+#: ../src/basic.py:270 ../src/partWindow.py:246 ../src/partWindow.py:263
 #: ../src/partWindow.py:276 ../src/partWindow.py:289 ../src/partWindow.py:302
 #: ../src/partWindow.py:317 ../src/partWindow.py:334 ../src/partWindow.py:347
 #: ../src/partWindow.py:360
@@ -733,11 +733,6 @@ msgstr "Volby pro upgrade:"
 #: redhat-config-kickstart.gladestrings:34
 msgid "Raid Members"
 msgstr "Èlenové RAID"
-
-#: redhat-config-kickstart.gladestrings:82
-#, fuzzy
-msgid "Upgrade boot loader"
-msgstr "Pový¹it zavadìè systému"
 
 #: redhat-config-kickstart.gladestrings:57
 msgid "Root Password:"
@@ -820,9 +815,10 @@ msgstr "Vyberte, které balíèky mají být nainstalovány"
 msgid "Authentication Configuration"
 msgstr "Nastavení autentizace"
 
-#: redhat-config-kickstart.gladestrings:220
-msgid "High"
-msgstr "Vysoký"
+#: ../src/partition.py:83 ../src/partition.py:108
+#, fuzzy
+msgid "Please select a partition from the list."
+msgstr "Zadejte prosím heslo pro u¾ivatele root."
 
 #: redhat-config-kickstart.gladestrings:20
 msgid "Make partition on specific drive (ondisk)"
@@ -857,6 +853,10 @@ msgstr "Spustit pøi startu X Window System"
 msgid "Enable SMB Authentication"
 msgstr "Povolit SMB autentizaci"
 
+#: redhat-config-kickstart.gladestrings:251
+msgid "Monitor"
+msgstr "Monitor"
+
 #: redhat-config-kickstart.gladestrings:274
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
@@ -869,7 +869,7 @@ msgstr ""
 msgid "Help is not available."
 msgstr "Nápovìda není k dispozici."
 
-#: ../src/basic.py:311
+#: ../src/basic.py:269
 msgid "Please select a root password."
 msgstr "Zadejte prosím heslo pro u¾ivatele root."
 
@@ -921,6 +921,15 @@ msgstr "label128"
 #: redhat-config-kickstart.gladestrings:68
 msgid "Choose boot loader: "
 msgstr "Vyberte zavadìè: "
+
+#: ../src/partition.py:84 ../src/partition.py:109
+msgid "Message"
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:82
+#, fuzzy
+msgid "Upgrade existing boot loader configuration"
+msgstr "Pový¹it zavadìè systému"
 
 #: redhat-config-kickstart.gladestrings:230
 msgid "Color Depth"

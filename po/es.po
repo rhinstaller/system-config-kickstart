@@ -33,10 +33,10 @@ msgstr "Partición:"
 msgid "_About"
 msgstr "_Acerca"
 
-# ksconfig.gladestrings:165
-#: redhat-config-kickstart.gladestrings:251
-msgid "Monitor"
-msgstr "Monitor"
+# ksconfig.gladestrings:140
+#: redhat-config-kickstart.gladestrings:220
+msgid "High"
+msgstr "Alto"
 
 # ksconfig.gladestrings:13
 #: redhat-config-kickstart.gladestrings:59
@@ -777,7 +777,7 @@ msgstr "Utilizar broadcast para encontrar un servidor NIS"
 msgid "Install"
 msgstr "Instalar"
 
-#: ../src/basic.py:312 ../src/partWindow.py:246 ../src/partWindow.py:263
+#: ../src/basic.py:270 ../src/partWindow.py:246 ../src/partWindow.py:263
 #: ../src/partWindow.py:276 ../src/partWindow.py:289 ../src/partWindow.py:302
 #: ../src/partWindow.py:317 ../src/partWindow.py:334 ../src/partWindow.py:347
 #: ../src/partWindow.py:360
@@ -869,10 +869,6 @@ msgstr "Actualizar tan sólo las opciones:"
 #: redhat-config-kickstart.gladestrings:34
 msgid "Raid Members"
 msgstr "Mienbros Raid"
-
-#: redhat-config-kickstart.gladestrings:82
-msgid "Upgrade boot loader"
-msgstr "Actualizar el gestor de arranque"
 
 # ksconfig.gladestrings:17
 #: redhat-config-kickstart.gladestrings:57
@@ -973,10 +969,11 @@ msgstr "Seleccionar paquetes a instalar."
 msgid "Authentication Configuration"
 msgstr "Configuración de la autenticación"
 
-# ksconfig.gladestrings:140
-#: redhat-config-kickstart.gladestrings:220
-msgid "High"
-msgstr "Alto"
+# ksconfig.gladestrings:19
+#: ../src/partition.py:83 ../src/partition.py:108
+#, fuzzy
+msgid "Please select a partition from the list."
+msgstr "Seleccione una contraseña de root"
 
 # ksconfig.gladestrings:202
 #: redhat-config-kickstart.gladestrings:20
@@ -1018,6 +1015,11 @@ msgstr "Iniciar el Sistema X Window al arranque"
 msgid "Enable SMB Authentication"
 msgstr "Activar autenticación SMB"
 
+# ksconfig.gladestrings:165
+#: redhat-config-kickstart.gladestrings:251
+msgid "Monitor"
+msgstr "Monitor"
+
 # ksconfig.gladestrings:182
 #: redhat-config-kickstart.gladestrings:274
 msgid ""
@@ -1032,7 +1034,7 @@ msgid "Help is not available."
 msgstr "La ayuda no está disponible."
 
 # ksconfig.gladestrings:19
-#: ../src/basic.py:311
+#: ../src/basic.py:269
 msgid "Please select a root password."
 msgstr "Seleccione una contraseña de root"
 
@@ -1094,6 +1096,15 @@ msgstr "etiqueta28"
 #: redhat-config-kickstart.gladestrings:68
 msgid "Choose boot loader: "
 msgstr "Escoja un gestor de arranque: "
+
+#: ../src/partition.py:84 ../src/partition.py:109
+msgid "Message"
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:82
+#, fuzzy
+msgid "Upgrade existing boot loader configuration"
+msgstr "Actualizar el gestor de arranque"
 
 # ksconfig.gladestrings:149
 #: redhat-config-kickstart.gladestrings:230

@@ -31,9 +31,9 @@ msgstr "Раздел:"
 msgid "_About"
 msgstr ""
 
-#: redhat-config-kickstart.gladestrings:251
-msgid "Monitor"
-msgstr "Монитор"
+#: redhat-config-kickstart.gladestrings:220
+msgid "High"
+msgstr "Высокий"
 
 #: redhat-config-kickstart.gladestrings:59
 msgid "Language Support:"
@@ -660,7 +660,7 @@ msgstr "Использовать ШВ запрос для поиска сервера NIS"
 msgid "Install"
 msgstr "Установить"
 
-#: ../src/basic.py:312 ../src/partWindow.py:246 ../src/partWindow.py:263
+#: ../src/basic.py:270 ../src/partWindow.py:246 ../src/partWindow.py:263
 #: ../src/partWindow.py:276 ../src/partWindow.py:289 ../src/partWindow.py:302
 #: ../src/partWindow.py:317 ../src/partWindow.py:334 ../src/partWindow.py:347
 #: ../src/partWindow.py:360
@@ -735,11 +735,6 @@ msgstr ""
 #: redhat-config-kickstart.gladestrings:34
 msgid "Raid Members"
 msgstr "Члены RAID"
-
-#: redhat-config-kickstart.gladestrings:82
-#, fuzzy
-msgid "Upgrade boot loader"
-msgstr "Устанавливать начальный загрузчик"
 
 #: redhat-config-kickstart.gladestrings:57
 msgid "Root Password:"
@@ -824,9 +819,10 @@ msgstr ""
 msgid "Authentication Configuration"
 msgstr "Настройка аутентификации"
 
-#: redhat-config-kickstart.gladestrings:220
-msgid "High"
-msgstr "Высокий"
+#: ../src/partition.py:83 ../src/partition.py:108
+#, fuzzy
+msgid "Please select a partition from the list."
+msgstr "Зашифровать пароль root"
 
 #: redhat-config-kickstart.gladestrings:20
 msgid "Make partition on specific drive (ondisk)"
@@ -861,6 +857,10 @@ msgstr "Запускать систему X Window после загрузки"
 msgid "Enable SMB Authentication"
 msgstr "Включить аутентификацию SMB"
 
+#: redhat-config-kickstart.gladestrings:251
+msgid "Monitor"
+msgstr "Монитор"
+
 #: redhat-config-kickstart.gladestrings:274
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
@@ -873,7 +873,7 @@ msgstr ""
 msgid "Help is not available."
 msgstr ""
 
-#: ../src/basic.py:311
+#: ../src/basic.py:269
 #, fuzzy
 msgid "Please select a root password."
 msgstr "Зашифровать пароль root"
@@ -929,6 +929,15 @@ msgstr "label28"
 #, fuzzy
 msgid "Choose boot loader: "
 msgstr "Выберите загрузчик: "
+
+#: ../src/partition.py:84 ../src/partition.py:109
+msgid "Message"
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:82
+#, fuzzy
+msgid "Upgrade existing boot loader configuration"
+msgstr "Устанавливать начальный загрузчик"
 
 #: redhat-config-kickstart.gladestrings:230
 msgid "Color Depth"

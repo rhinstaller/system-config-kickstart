@@ -30,9 +30,9 @@ msgstr "Partition:"
 msgid "_About"
 msgstr "_Om"
 
-#: redhat-config-kickstart.gladestrings:251
-msgid "Monitor"
-msgstr "Bildskärm"
+#: redhat-config-kickstart.gladestrings:220
+msgid "High"
+msgstr "Hög"
 
 #: redhat-config-kickstart.gladestrings:59
 msgid "Language Support:"
@@ -652,7 +652,7 @@ msgstr "Använd broadcast för att hitta NIS-server"
 msgid "Install"
 msgstr "Installation"
 
-#: ../src/basic.py:312 ../src/partWindow.py:246 ../src/partWindow.py:263
+#: ../src/basic.py:270 ../src/partWindow.py:246 ../src/partWindow.py:263
 #: ../src/partWindow.py:276 ../src/partWindow.py:289 ../src/partWindow.py:302
 #: ../src/partWindow.py:317 ../src/partWindow.py:334 ../src/partWindow.py:347
 #: ../src/partWindow.py:360
@@ -732,10 +732,6 @@ msgstr "Alternativ endast för uppgradering:"
 #: redhat-config-kickstart.gladestrings:34
 msgid "Raid Members"
 msgstr "RAID-medlemmar"
-
-#: redhat-config-kickstart.gladestrings:82
-msgid "Upgrade boot loader"
-msgstr "Uppgradera startprogram"
 
 #: redhat-config-kickstart.gladestrings:57
 msgid "Root Password:"
@@ -818,9 +814,10 @@ msgstr "Välj paket att installera."
 msgid "Authentication Configuration"
 msgstr "Autentiseringskonfiguration"
 
-#: redhat-config-kickstart.gladestrings:220
-msgid "High"
-msgstr "Hög"
+#: ../src/partition.py:83 ../src/partition.py:108
+#, fuzzy
+msgid "Please select a partition from the list."
+msgstr "Välj ett rootlösenord."
 
 #: redhat-config-kickstart.gladestrings:20
 msgid "Make partition on specific drive (ondisk)"
@@ -855,6 +852,10 @@ msgstr "Starta X Window System vid uppstart"
 msgid "Enable SMB Authentication"
 msgstr "Använd SMB-autentisering"
 
+#: redhat-config-kickstart.gladestrings:251
+msgid "Monitor"
+msgstr "Bildskärm"
+
 #: redhat-config-kickstart.gladestrings:274
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
@@ -867,7 +868,7 @@ msgstr ""
 msgid "Help is not available."
 msgstr "Hjälp är inte tillgänglig."
 
-#: ../src/basic.py:311
+#: ../src/basic.py:269
 msgid "Please select a root password."
 msgstr "Välj ett rootlösenord."
 
@@ -919,6 +920,15 @@ msgstr "label28"
 #: redhat-config-kickstart.gladestrings:68
 msgid "Choose boot loader: "
 msgstr "Välj startprogram: "
+
+#: ../src/partition.py:84 ../src/partition.py:109
+msgid "Message"
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:82
+#, fuzzy
+msgid "Upgrade existing boot loader configuration"
+msgstr "Uppgradera startprogram"
 
 #: redhat-config-kickstart.gladestrings:230
 msgid "Color Depth"

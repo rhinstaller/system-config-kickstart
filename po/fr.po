@@ -30,9 +30,9 @@ msgstr "Partition :"
 msgid "_About"
 msgstr ""
 
-#: redhat-config-kickstart.gladestrings:251
-msgid "Monitor"
-msgstr "Moniteur"
+#: redhat-config-kickstart.gladestrings:220
+msgid "High"
+msgstr "Haut"
 
 #: redhat-config-kickstart.gladestrings:59
 msgid "Language Support:"
@@ -651,7 +651,7 @@ msgstr "Utiliser la diffusion pour trouver le serveur NIS"
 msgid "Install"
 msgstr "Installer"
 
-#: ../src/basic.py:312 ../src/partWindow.py:246 ../src/partWindow.py:263
+#: ../src/basic.py:270 ../src/partWindow.py:246 ../src/partWindow.py:263
 #: ../src/partWindow.py:276 ../src/partWindow.py:289 ../src/partWindow.py:302
 #: ../src/partWindow.py:317 ../src/partWindow.py:334 ../src/partWindow.py:347
 #: ../src/partWindow.py:360
@@ -726,11 +726,6 @@ msgstr "Ne mettre à jour que les options : "
 #: redhat-config-kickstart.gladestrings:34
 msgid "Raid Members"
 msgstr "Membres Raid"
-
-#: redhat-config-kickstart.gladestrings:82
-#, fuzzy
-msgid "Upgrade boot loader"
-msgstr "Installer le chargeur de démarrage"
 
 #: redhat-config-kickstart.gladestrings:57
 msgid "Root Password:"
@@ -813,9 +808,10 @@ msgstr "Sélectionnez les paquetages à installer."
 msgid "Authentication Configuration"
 msgstr "Configuration de l'authentifiaction"
 
-#: redhat-config-kickstart.gladestrings:220
-msgid "High"
-msgstr "Haut"
+#: ../src/partition.py:83 ../src/partition.py:108
+#, fuzzy
+msgid "Please select a partition from the list."
+msgstr "Choisir le mot de passe root."
 
 #: redhat-config-kickstart.gladestrings:20
 msgid "Make partition on specific drive (ondisk)"
@@ -851,6 +847,10 @@ msgstr "Lancer le système X Window au démarrage"
 msgid "Enable SMB Authentication"
 msgstr "Activer l'authentification SMB"
 
+#: redhat-config-kickstart.gladestrings:251
+msgid "Monitor"
+msgstr "Moniteur"
+
 #: redhat-config-kickstart.gladestrings:274
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
@@ -864,7 +864,7 @@ msgstr ""
 msgid "Help is not available."
 msgstr "L'aide n'est pas disponible."
 
-#: ../src/basic.py:311
+#: ../src/basic.py:269
 msgid "Please select a root password."
 msgstr "Choisir le mot de passe root."
 
@@ -916,6 +916,15 @@ msgstr "label28"
 #: redhat-config-kickstart.gladestrings:68
 msgid "Choose boot loader: "
 msgstr "Choisir le chargeur de démarrage :"
+
+#: ../src/partition.py:84 ../src/partition.py:109
+msgid "Message"
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:82
+#, fuzzy
+msgid "Upgrade existing boot loader configuration"
+msgstr "Installer le chargeur de démarrage"
 
 #: redhat-config-kickstart.gladestrings:230
 msgid "Color Depth"

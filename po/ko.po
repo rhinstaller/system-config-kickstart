@@ -29,9 +29,9 @@ msgstr "파티션 :"
 msgid "_About"
 msgstr "이 프로그램은(_A)"
 
-#: redhat-config-kickstart.gladestrings:251
-msgid "Monitor"
-msgstr "모니터"
+#: redhat-config-kickstart.gladestrings:220
+msgid "High"
+msgstr "최상위 수준"
 
 #: redhat-config-kickstart.gladestrings:59
 msgid "Language Support:"
@@ -650,7 +650,7 @@ msgstr "NIS 서버를 찾기 위해 브로드캐스트 사용"
 msgid "Install"
 msgstr "설치"
 
-#: ../src/basic.py:312 ../src/partWindow.py:246 ../src/partWindow.py:263
+#: ../src/basic.py:270 ../src/partWindow.py:246 ../src/partWindow.py:263
 #: ../src/partWindow.py:276 ../src/partWindow.py:289 ../src/partWindow.py:302
 #: ../src/partWindow.py:317 ../src/partWindow.py:334 ../src/partWindow.py:347
 #: ../src/partWindow.py:360
@@ -730,10 +730,6 @@ msgstr "업그레이드 전용 옵션:"
 #: redhat-config-kickstart.gladestrings:34
 msgid "Raid Members"
 msgstr "RAID 요소(Member)"
-
-#: redhat-config-kickstart.gladestrings:82
-msgid "Upgrade boot loader"
-msgstr "부트 로더 업그레이드"
 
 #: redhat-config-kickstart.gladestrings:57
 msgid "Root Password:"
@@ -816,9 +812,10 @@ msgstr "설치될 패키지를 선택해 주십시오."
 msgid "Authentication Configuration"
 msgstr "인증 설정"
 
-#: redhat-config-kickstart.gladestrings:220
-msgid "High"
-msgstr "최상위 수준"
+#: ../src/partition.py:83 ../src/partition.py:108
+#, fuzzy
+msgid "Please select a partition from the list."
+msgstr "Root 패스워드를 선택해 주십시오."
 
 #: redhat-config-kickstart.gladestrings:20
 msgid "Make partition on specific drive (ondisk)"
@@ -853,6 +850,10 @@ msgstr "부팅시 X 윈도우 시스템 시작"
 msgid "Enable SMB Authentication"
 msgstr "SMB 인증 사용"
 
+#: redhat-config-kickstart.gladestrings:251
+msgid "Monitor"
+msgstr "모니터"
+
 #: redhat-config-kickstart.gladestrings:274
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
@@ -866,7 +867,7 @@ msgstr ""
 msgid "Help is not available."
 msgstr "도움말 자료가 없습니다."
 
-#: ../src/basic.py:311
+#: ../src/basic.py:269
 msgid "Please select a root password."
 msgstr "Root 패스워드를 선택해 주십시오."
 
@@ -918,6 +919,15 @@ msgstr "label28"
 #: redhat-config-kickstart.gladestrings:68
 msgid "Choose boot loader: "
 msgstr "부트로더 선택:"
+
+#: ../src/partition.py:84 ../src/partition.py:109
+msgid "Message"
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:82
+#, fuzzy
+msgid "Upgrade existing boot loader configuration"
+msgstr "부트 로더 업그레이드"
 
 #: redhat-config-kickstart.gladestrings:230
 msgid "Color Depth"

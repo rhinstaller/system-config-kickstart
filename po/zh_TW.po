@@ -30,9 +30,9 @@ msgstr "分割區 ："
 msgid "_About"
 msgstr "關於(_A)"
 
-#: redhat-config-kickstart.gladestrings:251
-msgid "Monitor"
-msgstr "螢幕"
+#: redhat-config-kickstart.gladestrings:220
+msgid "High"
+msgstr "高"
 
 #: redhat-config-kickstart.gladestrings:59
 msgid "Language Support:"
@@ -649,7 +649,7 @@ msgstr "使用廣播方式搜尋 NIS 伺服器"
 msgid "Install"
 msgstr "安裝"
 
-#: ../src/basic.py:312 ../src/partWindow.py:246 ../src/partWindow.py:263
+#: ../src/basic.py:270 ../src/partWindow.py:246 ../src/partWindow.py:263
 #: ../src/partWindow.py:276 ../src/partWindow.py:289 ../src/partWindow.py:302
 #: ../src/partWindow.py:317 ../src/partWindow.py:334 ../src/partWindow.py:347
 #: ../src/partWindow.py:360
@@ -729,10 +729,6 @@ msgstr "只是升級的選項："
 #: redhat-config-kickstart.gladestrings:34
 msgid "Raid Members"
 msgstr "Raid 的成員"
-
-#: redhat-config-kickstart.gladestrings:82
-msgid "Upgrade boot loader"
-msgstr "升級開機管理程式"
 
 #: redhat-config-kickstart.gladestrings:57
 msgid "Root Password:"
@@ -815,9 +811,10 @@ msgstr "選取要安裝的套件。"
 msgid "Authentication Configuration"
 msgstr "認證組態設定"
 
-#: redhat-config-kickstart.gladestrings:220
-msgid "High"
-msgstr "高"
+#: ../src/partition.py:83 ../src/partition.py:108
+#, fuzzy
+msgid "Please select a partition from the list."
+msgstr "請選擇一個 root 密碼。"
 
 #: redhat-config-kickstart.gladestrings:20
 msgid "Make partition on specific drive (ondisk)"
@@ -852,6 +849,10 @@ msgstr "開機時啟動 X 視窗系統"
 msgid "Enable SMB Authentication"
 msgstr "啟用 SMB 認證"
 
+#: redhat-config-kickstart.gladestrings:251
+msgid "Monitor"
+msgstr "螢幕"
+
 #: redhat-config-kickstart.gladestrings:274
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
@@ -864,7 +865,7 @@ msgstr ""
 msgid "Help is not available."
 msgstr "無法取得輔助說明。"
 
-#: ../src/basic.py:311
+#: ../src/basic.py:269
 msgid "Please select a root password."
 msgstr "請選擇一個 root 密碼。"
 
@@ -916,6 +917,15 @@ msgstr "label28"
 #: redhat-config-kickstart.gladestrings:68
 msgid "Choose boot loader: "
 msgstr "選取開機管理程式： "
+
+#: ../src/partition.py:84 ../src/partition.py:109
+msgid "Message"
+msgstr ""
+
+#: redhat-config-kickstart.gladestrings:82
+#, fuzzy
+msgid "Upgrade existing boot loader configuration"
+msgstr "升級開機管理程式"
 
 #: redhat-config-kickstart.gladestrings:230
 msgid "Color Depth"
