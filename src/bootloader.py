@@ -39,6 +39,7 @@ class bootloader:
     def __init__(self, xml, notebook, kickstartData):
         self.kickstartData = kickstartData
         self.notebook = notebook
+        self.bootloader_frame = xml.get_widget("bootloader_frame")
         self.install_bootloader_radio = xml.get_widget("install_bootloader_radio")
         self.upgrade_bootloader_radio = xml.get_widget("upgrade_bootloader_radio")
         self.no_bootloader_radio = xml.get_widget("no_bootloader_radio")
@@ -68,7 +69,13 @@ class bootloader:
     def toggled_grub_password(self, args):
         self.grub_password_hbox.set_sensitive(self.grub_password_checkbutton.get_active())
 
-    def setSensitive(self, boolean):
+    def platformTypeChanged(self, platform):
+        if platform == "Intel Itanium":
+            self.bootloader_frame.set_sensitive(gtk.FALSE)
+        else:
+            self.bootloader_frame.set_sensitive(gtk.TRUE)
+
+    def enableUpgradeRadio(self, boolean):
         self.upgrade_bootloader_radio.set_sensitive(not boolean)
 
     def getData (self):
