@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: redhat-config-kickstart\n"
 "POT-Creation-Date: 2001-07-19 11:24-0400\n"
-"PO-Revision-Date: 2003-01-17 11:41+0100\n"
+"PO-Revision-Date: 2003-08-15 15:54+0200\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -25,6 +25,9 @@ msgstr "Filsystemstyp:"
 
 #: redhat-config-kickstart.gladestrings:27
 msgid "Partition :"
+msgstr "Partition:"
+
+msgid "Partition:"
 msgstr "Partition:"
 
 #: redhat-config-kickstart.gladestrings:71
@@ -94,7 +97,10 @@ msgstr "Ytterligare storleksalternativ"
 
 #: redhat-config-kickstart.gladestrings:217
 msgid "Enable firewall"
-msgstr ""
+msgstr "Aktivera brandvägg"
+
+msgid "Firewall"
+msgstr "Brandvägg"
 
 #: ../src/partWindow.py:503
 msgid ""
@@ -194,6 +200,9 @@ msgstr "Förhandsgranska alternativ"
 msgid "LDAP Server: "
 msgstr "LDAP-server: "
 
+msgid "LDAP Server:"
+msgstr "LDAP-server:"
+
 #: ../src/kickstartGui.py:89
 msgid "Create a kickstart file"
 msgstr "Skapa en kickstartfil"
@@ -216,12 +225,14 @@ msgstr "_Spara fil"
 
 #: redhat-config-kickstart.gladestrings:86
 #: redhat-config-kickstart.gladestrings:137
-#, fuzzy
 msgid "Confirm Password:"
-msgstr "Rootlösenord:"
+msgstr "Bekräfta lösenord:"
 
 #: redhat-config-kickstart.gladestrings:22
 msgid "Drive :"
+msgstr "Enhet:"
+
+msgid "Drive:"
 msgstr "Enhet:"
 
 #: redhat-config-kickstart.gladestrings:236
@@ -233,8 +244,10 @@ msgid "Probe for video card"
 msgstr "Undersök grafikkort"
 
 #: redhat-config-kickstart.gladestrings:167
-#, fuzzy
 msgid "_Delete Network Device"
+msgstr "_Ta bort nätverksenhet"
+
+msgid "Delete Network Device"
 msgstr "Ta bort nätverksenhet"
 
 #: redhat-config-kickstart.gladestrings:287
@@ -264,7 +277,7 @@ msgstr "Kerberos-domänstyrenhet (KDC):"
 
 #: ../src/basic.py:205
 msgid "Root passwords do not match."
-msgstr ""
+msgstr "Rootlösenorden stämmer inte överens."
 
 #: redhat-config-kickstart.gladestrings:283
 msgid "Network Device:"
@@ -296,7 +309,7 @@ msgstr "Ange ett FTP-användarnamn och -lösenord"
 
 #: redhat-config-kickstart.gladestrings:231
 msgid "Disabled"
-msgstr "Avstängd"
+msgstr "Inaktiverad"
 
 #: redhat-config-kickstart.gladestrings:145
 msgid "label174"
@@ -367,9 +380,14 @@ msgstr "Nätverkskonfiguration"
 msgid "Netmask: "
 msgstr "Nätmask: "
 
+msgid "Netmask:"
+msgstr "Nätmask:"
+
 #: redhat-config-kickstart.gladestrings:165
-#, fuzzy
 msgid "_Add Network Device"
+msgstr "_Lägg till nätverksenhet"
+
+msgid "Add Network Device"
 msgstr "Lägg till nätverksenhet"
 
 #: redhat-config-kickstart.gladestrings:82
@@ -526,7 +544,7 @@ msgstr "Partitionsalternativ"
 
 #: redhat-config-kickstart.gladestrings:233
 msgid "Enabled in reconfiguration mode"
-msgstr ""
+msgstr "Aktiverad i omkonfigurationsläge"
 
 #: redhat-config-kickstart.gladestrings:41
 msgid "md2"
@@ -737,7 +755,10 @@ msgstr "Ta bort befintliga Linux-partitioner"
 
 #: redhat-config-kickstart.gladestrings:230
 msgid "On first boot, Setup Agent is: "
-msgstr ""
+msgstr "Vid första starten är konfigurationsagenten: "
+
+msgid "On first boot, Setup Agent is:"
+msgstr "Vid första starten är konfigurationsagenten:"
 
 #: redhat-config-kickstart.gladestrings:249
 msgid "label88"
@@ -884,9 +905,8 @@ msgid "Encrypt root password"
 msgstr "Kryptera rootlösenord"
 
 #: redhat-config-kickstart.gladestrings:135
-#, fuzzy
 msgid "Use GRUB password"
-msgstr "Använd GRUB-lösenord: "
+msgstr "Använd GRUB-lösenord"
 
 #: ../src/install.py:148
 msgid "Please enter an FTP server."
@@ -901,9 +921,8 @@ msgid "Upgrade an existing installation"
 msgstr "Uppgradera en befintlig installation"
 
 #: redhat-config-kickstart.gladestrings:232
-#, fuzzy
 msgid "Enabled"
-msgstr "Använd nscd"
+msgstr "Aktiverad"
 
 #: ../src/redhat-config-kickstart.py:63
 msgid ""
@@ -944,7 +963,7 @@ msgstr "Fel"
 
 #: redhat-config-kickstart.gladestrings:218
 msgid "Disable firewall"
-msgstr ""
+msgstr "Inaktivera brandvägg"
 
 #: ../src/kickstartGui.py:195
 msgid ""
@@ -974,7 +993,7 @@ msgstr "Använd nscd"
 
 #: ../src/bootloader.py:136
 msgid "Grub passwords do not match.  Please try again."
-msgstr ""
+msgstr "Grub-lösenorden stämmer inte överens. Försök igen."
 
 #: redhat-config-kickstart.gladestrings:170
 msgid "Authentication:"
@@ -995,6 +1014,9 @@ msgstr "Utför installationen i interaktivt läge"
 #: redhat-config-kickstart.gladestrings:187
 msgid "LDAP "
 msgstr "LDAP "
+
+msgid "LDAP"
+msgstr "LDAP"
 
 #: redhat-config-kickstart.gladestrings:30
 msgid "Format partition"
@@ -1316,14 +1338,18 @@ msgid "SMB Servers:"
 msgstr "SMB-servrar:"
 
 #: redhat-config-kickstart.gladestrings:166
-#, fuzzy
 msgid "_Edit Network Device"
+msgstr "_Redigera nätverksenhet"
+
+msgid "Edit Network Device"
 msgstr "Redigera nätverksenhet"
 
 #: redhat-config-kickstart.gladestrings:136
-#, fuzzy
 msgid "Password:"
-msgstr "Rootlösenord:"
+msgstr "Lösenord:"
+
+msgid "Password"
+msgstr "Lösenord"
 
 #: redhat-config-kickstart.gladestrings:93
 msgid "Perform new installation"
@@ -1338,8 +1364,10 @@ msgid "_Contents"
 msgstr "_Innehåll"
 
 #: redhat-config-kickstart.gladestrings:216
-#, fuzzy
 msgid "Security level:"
+msgstr "Säkerhetsnivå:"
+
+msgid "Security level"
 msgstr "Säkerhetsnivå"
 
 #: ../src/partWindow.py:285 ../src/partWindow.py:300 ../src/partWindow.py:319
@@ -1382,9 +1410,8 @@ msgstr "_Avsluta"
 #~ msgid "Medium"
 #~ msgstr "Mellan"
 
-#, fuzzy
 #~ msgid "DIsabled"
-#~ msgstr "Avstängd"
+#~ msgstr "Inaktiverad"
 
 #~ msgid "None"
 #~ msgstr "Inget"
