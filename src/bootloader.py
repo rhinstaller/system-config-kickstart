@@ -50,6 +50,7 @@ class bootloader:
         self.grub_password_encrypt_checkbutton = xml.get_widget("grub_password_encrypt_checkbutton")
         self.bootloader_upgrade_label = xml.get_widget("bootloader_upgrade_label")
         self.bootloader_upgrade_checkbutton = xml.get_widget("bootloader_upgrade_checkbutton")        
+        self.option_notebook = xml.get_widget("option_notebook")
 
         self.install_bootloader_checkbutton.connect("toggled", self.toggled_bootloader)
         self.grub_radiobutton.connect("toggled", self.toggled_grub)
@@ -69,29 +70,17 @@ class bootloader:
         self.grub_password_encrypt_checkbutton.set_sensitive(status)
         self.bootloader_upgrade_label.set_sensitive(not status)
         self.bootloader_upgrade_checkbutton.set_sensitive(not status)
-        if status:
-            status = self.lilo_radiobutton.get_active()
-            if status:
-                self.grub_options_label.set_sensitive(not status)        
-                self.grub_password_label.set_sensitive(not status)
-                self.grub_password_entry.set_sensitive(not status)
-            status = self.grub_radiobutton.get_active()
-            if status:
-                self.lilo_options_label.set_sensitive(not status)
-                self.linear_checkbutton.set_sensitive(not status)
-                self.lba32_checkbutton.set_sensitive(not status)
+        self.option_notebook.set_sensitive(status)
 
     def toggled_lilo (self, args):
-        status = self.lilo_radiobutton.get_active()
-        self.lilo_options_label.set_sensitive(status)
-        self.linear_checkbutton.set_sensitive(status)
-        self.lba32_checkbutton.set_sensitive(status)
+        status = self.lilo_radiobutton.get_active()        
+        if status:
+            self.option_notebook.set_current_page(1)
 
     def toggled_grub (self, args):
         status = self.grub_radiobutton.get_active()
-        self.grub_options_label.set_sensitive(status)        
-        self.grub_password_label.set_sensitive(status)
-        self.grub_password_entry.set_sensitive(status)        
+        if status:
+            self.option_notebook.set_current_page(0)
         self.grub_password_encrypt_checkbutton.set_sensitive(status)
 
     def getData (self):
