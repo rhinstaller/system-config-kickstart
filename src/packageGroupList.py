@@ -10,10 +10,12 @@ import os
 import string
 import sys
 
+compsPath = "/usr/share/comps/" + rhpl.getArch() + "/comps.xml"
+
 try:
-    comps_file = rhpl.comps.Comps("/usr/share/comps/" + rhpl.getArch() + "/comps.xml")
+    comps_file = rhpl.comps.Comps(compsPath)
 except:
-    print (_("Could not start because there is no /usr/share/comps/" + rhpl.getArch() + "/comps.xml file."))
+    print (_("Could not start because there is no %s file." % compsPath))
     print(_("Please make sure the comps package is installed."))
     sys.exit(0)
 
