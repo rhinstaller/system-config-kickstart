@@ -4,14 +4,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ksconfig\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-23 14:24-0500\n"
-"PO-Revision-Date: 2005-03-29 10:54+0100\n"
+"POT-Creation-Date: 2005-04-11 10:21-0400\n"
+"PO-Revision-Date: 2005-04-12 10:26+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <morais@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: \n"
 "PO-Creation-Date: Mon Aug 13 16:08:22 2001\n"
 
 #: ../src/basic.py:72
@@ -137,7 +137,7 @@ msgstr "Opções do Gestor de Arranque"
 msgid "Partition Information"
 msgstr "Informações de Particionamento"
 
-#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:140
+#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:139
 msgid "Network Configuration"
 msgstr "Configuração da Rede"
 
@@ -145,23 +145,23 @@ msgstr "Configuração da Rede"
 msgid "Authentication"
 msgstr "Autenticação"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:186
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:185
 msgid "Firewall Configuration"
 msgstr "Configuração da 'Firewall'"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:211
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:210
 msgid "Display Configuration"
 msgstr "Configuração do Ecrã"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:221
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:220
 msgid "Package Selection"
 msgstr "Selecção de Pacotes"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:226
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:225
 msgid "Pre-Installation Script"
 msgstr "'Script' de Pré-Instalação"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:232
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:231
 msgid "Post-Installation Script"
 msgstr "'Script' de Pós-Instalação"
 
@@ -187,7 +187,7 @@ msgstr "Acerca do Configurador de Kickstarts"
 msgid "Help is not available."
 msgstr "A ajuda não está disponível."
 
-#: ../src/kickstartGui.py:273
+#: ../src/kickstartGui.py:275
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "Não foi possível aceder ao ficheiro \"%s\"."
@@ -218,23 +218,20 @@ msgstr ""
 "O dispositivo de rede com o nome %s já existe.  Por favor escolha outro nome "
 "para o dispositivo"
 
-#: ../src/packageGroupList.py:16
-msgid "Could not start because there is no /usr/share/comps/"
-msgstr "Não foi possível iniciar porque não existe /usr/share/comps/"
+#: ../src/packageGroupList.py:18
+#, python-format
+msgid "Could not start because there is no %s file."
+msgstr "Não foi possível iniciar porque não existe o ficheiro %s."
 
-#: ../src/packageGroupList.py:16
-msgid "/comps.xml file."
-msgstr "ficheiro /comps.xml."
-
-#: ../src/packageGroupList.py:17
+#: ../src/packageGroupList.py:19
 msgid "Please make sure the comps package is installed."
 msgstr "Verifique que o pacote comps está instalado."
 
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:53
+#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:52
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:54
+#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:53
 msgid "ext3"
 msgstr "ext3"
 
@@ -243,11 +240,11 @@ msgstr "ext3"
 msgid "software RAID"
 msgstr "RAID por software"
 
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:55
+#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:54
 msgid "swap"
 msgstr "swap"
 
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:56
+#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:55
 msgid "vfat"
 msgstr "vfat"
 
@@ -423,809 +420,805 @@ msgstr "Não foi possível ler a base de dados de placas gráficas"
 #. * DO NOT compile it as part of your application.
 #.
 #: system-config-kickstart.gladestrings:7
-msgid "Save File"
-msgstr "Gravar o Ficheiro"
-
-#: system-config-kickstart.gladestrings:8
 msgid "Partition Options"
 msgstr "Opções de Particionamento"
 
-#: system-config-kickstart.gladestrings:9
-#: system-config-kickstart.gladestrings:28
+#: system-config-kickstart.gladestrings:8
+#: system-config-kickstart.gladestrings:27
 msgid "Mount Point:"
 msgstr "Montar em:"
 
-#: system-config-kickstart.gladestrings:10
-#: system-config-kickstart.gladestrings:32
+#: system-config-kickstart.gladestrings:9
+#: system-config-kickstart.gladestrings:31
 msgid "File System Type:"
 msgstr "Tipo de sistema de ficheiros:"
 
-#: system-config-kickstart.gladestrings:11
+#: system-config-kickstart.gladestrings:10
 msgid "Size (MB):"
 msgstr "Tamanho (MB):"
 
-#: system-config-kickstart.gladestrings:12
+#: system-config-kickstart.gladestrings:11
 msgid "Fill all unused space on disk"
 msgstr "Preencher todo o espaço livre no disco"
 
-#: system-config-kickstart.gladestrings:13
+#: system-config-kickstart.gladestrings:12
 msgid "Grow to maximum of (MB):"
 msgstr "Aumentar até ao máximo de (MB):"
 
-#: system-config-kickstart.gladestrings:14
+#: system-config-kickstart.gladestrings:13
 msgid "Fixed size"
 msgstr "Tamanho fixo"
 
-#: system-config-kickstart.gladestrings:15
+#: system-config-kickstart.gladestrings:14
 msgid "Use recommended swap size"
 msgstr "Utilizar tamanho de paginação recomendado"
 
-#: system-config-kickstart.gladestrings:16
+#: system-config-kickstart.gladestrings:15
 msgid "Additional Size Options"
 msgstr "Opções Adicionais de Tamanho"
 
-#: system-config-kickstart.gladestrings:17
+#: system-config-kickstart.gladestrings:16
 msgid "Force to be a primary partition (asprimary)"
 msgstr "Forçar a ser uma partição primária (asprimary)"
 
-#: system-config-kickstart.gladestrings:18
+#: system-config-kickstart.gladestrings:17
 msgid "Make partition on specific drive (ondisk)"
 msgstr "Criar partição no disco indicado (ondisk)"
 
-#: system-config-kickstart.gladestrings:19
-#: system-config-kickstart.gladestrings:23
+#: system-config-kickstart.gladestrings:18
+#: system-config-kickstart.gladestrings:22
 msgid "         "
 msgstr "         "
 
-#: system-config-kickstart.gladestrings:20
+#: system-config-kickstart.gladestrings:19
 msgid "Drive :"
 msgstr "Unidade:"
 
-#: system-config-kickstart.gladestrings:21
+#: system-config-kickstart.gladestrings:20
 msgid "(for example: hda or sdc)"
 msgstr "(por exemplo: hda ou sdc)"
 
-#: system-config-kickstart.gladestrings:22
+#: system-config-kickstart.gladestrings:21
 msgid "Use existing partition (onpart)"
 msgstr "Utilizar partição existente (onpart)"
 
-#: system-config-kickstart.gladestrings:24
+#: system-config-kickstart.gladestrings:23
 msgid "Partition :"
 msgstr "Partição:"
 
-#: system-config-kickstart.gladestrings:25
+#: system-config-kickstart.gladestrings:24
 msgid "(for example: hda1 or sdc3)"
 msgstr "(por exemplo: hda1 ou sdc3)"
 
-#: system-config-kickstart.gladestrings:26
+#: system-config-kickstart.gladestrings:25
 msgid "Format partition"
 msgstr "Formatar partição"
 
-#: system-config-kickstart.gladestrings:27
+#: system-config-kickstart.gladestrings:26
 msgid "Make RAID Device"
 msgstr "Criar um Dispositivo RAID"
 
-#: system-config-kickstart.gladestrings:29
+#: system-config-kickstart.gladestrings:28
 msgid "Number of spares:"
 msgstr "Número de reservas:"
 
-#: system-config-kickstart.gladestrings:30
+#: system-config-kickstart.gladestrings:29
 msgid "Raid Members"
 msgstr "Membros do Raid"
 
-#: system-config-kickstart.gladestrings:31
+#: system-config-kickstart.gladestrings:30
 msgid "RAID Level:"
 msgstr "Nível de RAID:"
 
-#: system-config-kickstart.gladestrings:33
+#: system-config-kickstart.gladestrings:32
 msgid "RAID Device:"
 msgstr "Dispositivo RAID:"
 
-#: system-config-kickstart.gladestrings:34
+#: system-config-kickstart.gladestrings:33
 msgid "md0"
 msgstr "md0"
 
-#: system-config-kickstart.gladestrings:35
+#: system-config-kickstart.gladestrings:34
 msgid "md1"
 msgstr "md1"
 
-#: system-config-kickstart.gladestrings:36
+#: system-config-kickstart.gladestrings:35
 msgid "md2"
 msgstr "md2"
 
-#: system-config-kickstart.gladestrings:37
+#: system-config-kickstart.gladestrings:36
 msgid "md3"
 msgstr "md3"
 
-#: system-config-kickstart.gladestrings:38
+#: system-config-kickstart.gladestrings:37
 msgid "md4"
 msgstr "md4"
 
-#: system-config-kickstart.gladestrings:39
+#: system-config-kickstart.gladestrings:38
 msgid "md5"
 msgstr "md5"
 
-#: system-config-kickstart.gladestrings:40
+#: system-config-kickstart.gladestrings:39
 msgid "md6"
 msgstr "md6"
 
-#: system-config-kickstart.gladestrings:41
+#: system-config-kickstart.gladestrings:40
 msgid "md7"
 msgstr "md7"
 
-#: system-config-kickstart.gladestrings:42
+#: system-config-kickstart.gladestrings:41
 msgid "md8"
 msgstr "md8"
 
-#: system-config-kickstart.gladestrings:43
+#: system-config-kickstart.gladestrings:42
 msgid "md9"
 msgstr "md9"
 
-#: system-config-kickstart.gladestrings:44
+#: system-config-kickstart.gladestrings:43
 msgid "md10"
 msgstr "md10"
 
-#: system-config-kickstart.gladestrings:45
+#: system-config-kickstart.gladestrings:44
 msgid "md11"
 msgstr "md11"
 
-#: system-config-kickstart.gladestrings:46
+#: system-config-kickstart.gladestrings:45
 msgid "md12"
 msgstr "md12"
 
-#: system-config-kickstart.gladestrings:47
+#: system-config-kickstart.gladestrings:46
 msgid "md13"
 msgstr "md13"
 
-#: system-config-kickstart.gladestrings:48
+#: system-config-kickstart.gladestrings:47
 msgid "md14"
 msgstr "md14"
 
-#: system-config-kickstart.gladestrings:49
+#: system-config-kickstart.gladestrings:48
 msgid "md15"
 msgstr "md15"
 
-#: system-config-kickstart.gladestrings:50
+#: system-config-kickstart.gladestrings:49
 msgid "0"
 msgstr "0"
 
-#: system-config-kickstart.gladestrings:51
+#: system-config-kickstart.gladestrings:50
 msgid "1"
 msgstr "1"
 
-#: system-config-kickstart.gladestrings:52
+#: system-config-kickstart.gladestrings:51
 msgid "5"
 msgstr "5"
 
-#: system-config-kickstart.gladestrings:57
+#: system-config-kickstart.gladestrings:56
 msgid "Format RAID device"
 msgstr "Formatar Dispositivo RAID"
 
-#: system-config-kickstart.gladestrings:58
+#: system-config-kickstart.gladestrings:57
 msgid "Kickstart Configurator"
 msgstr "Configurador de kickstarts"
 
-#: system-config-kickstart.gladestrings:59
+#: system-config-kickstart.gladestrings:58
 msgid "_File"
 msgstr "_Ficheiro"
 
-#: system-config-kickstart.gladestrings:60
+#: system-config-kickstart.gladestrings:59
 msgid "_Open File"
 msgstr "Abrir um Ficheir_o"
 
-#: system-config-kickstart.gladestrings:61
+#: system-config-kickstart.gladestrings:60
 msgid "_Preview"
 msgstr "_Previsão"
 
-#: system-config-kickstart.gladestrings:62
+#: system-config-kickstart.gladestrings:61
 msgid "_Save File"
 msgstr "_Gravar o Ficheiro"
 
-#: system-config-kickstart.gladestrings:63
+#: system-config-kickstart.gladestrings:62
 msgid "_Quit"
 msgstr "_Sair"
 
-#: system-config-kickstart.gladestrings:64
+#: system-config-kickstart.gladestrings:63
 msgid "_Help"
 msgstr "_Ajuda"
 
-#: system-config-kickstart.gladestrings:65
+#: system-config-kickstart.gladestrings:64
 msgid "_Contents"
 msgstr "_Conteúdo"
 
-#: system-config-kickstart.gladestrings:66
+#: system-config-kickstart.gladestrings:65
 msgid "_About"
 msgstr "_Acerca"
 
-#: system-config-kickstart.gladestrings:67
+#: system-config-kickstart.gladestrings:66
 msgid "Default Language:"
 msgstr "Língua por omissão:"
 
-#: system-config-kickstart.gladestrings:68
+#: system-config-kickstart.gladestrings:67
 msgid "Encrypt root password"
 msgstr "Cifrar senha de root"
 
-#: system-config-kickstart.gladestrings:69
+#: system-config-kickstart.gladestrings:68
 msgid "Keyboard:"
 msgstr "Teclado:"
 
-#: system-config-kickstart.gladestrings:70
+#: system-config-kickstart.gladestrings:69
 msgid "Mouse:"
 msgstr "Rato:"
 
-#: system-config-kickstart.gladestrings:71
+#: system-config-kickstart.gladestrings:70
 msgid "Emulate 3 Buttons"
 msgstr "Emular 3 Botões"
 
-#: system-config-kickstart.gladestrings:72
+#: system-config-kickstart.gladestrings:71
 msgid "Time Zone:"
 msgstr "Fuso horário:"
 
-#: system-config-kickstart.gladestrings:73
+#: system-config-kickstart.gladestrings:72
 msgid "Root Password:"
 msgstr "Senha de 'root':"
 
-#: system-config-kickstart.gladestrings:74
+#: system-config-kickstart.gladestrings:73
 msgid "Language Support:"
 msgstr "Suporte a línguas:"
 
-#: system-config-kickstart.gladestrings:75
+#: system-config-kickstart.gladestrings:74
 msgid "Use UTC clock"
 msgstr "Utilizar o relógio em UTC"
 
-#: system-config-kickstart.gladestrings:76
-#: system-config-kickstart.gladestrings:115
+#: system-config-kickstart.gladestrings:75
+#: system-config-kickstart.gladestrings:114
 msgid "Confirm Password:"
 msgstr "Confirme a senha:"
 
-#: system-config-kickstart.gladestrings:77
+#: system-config-kickstart.gladestrings:76
 msgid "Target Architecture:"
 msgstr "Arquitectura alvo:"
 
-#: system-config-kickstart.gladestrings:78
+#: system-config-kickstart.gladestrings:77
 msgid "Reboot system after installation"
 msgstr "Reiniciar sistema após instalação"
 
-#: system-config-kickstart.gladestrings:79
+#: system-config-kickstart.gladestrings:78
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "Realizar instalação em modo texto (modo gráfico por omissão)"
 
-#: system-config-kickstart.gladestrings:80
+#: system-config-kickstart.gladestrings:79
 msgid "Perform installation in interactive mode"
 msgstr "Realizar instalação em modo interactivo"
 
-#: system-config-kickstart.gladestrings:81
+#: system-config-kickstart.gladestrings:80
 msgid "Basic Configuration (required)"
 msgstr "Configuração Básica (necessário)"
 
-#: system-config-kickstart.gladestrings:82
+#: system-config-kickstart.gladestrings:81
 msgid "label28"
 msgstr "label28"
 
-#: system-config-kickstart.gladestrings:83
+#: system-config-kickstart.gladestrings:82
 msgid "Perform new installation"
 msgstr "Efectuar uma nova instalação"
 
-#: system-config-kickstart.gladestrings:84
+#: system-config-kickstart.gladestrings:83
 msgid "Upgrade an existing installation"
 msgstr "Actualizar uma instalação existente"
 
-#: system-config-kickstart.gladestrings:85
+#: system-config-kickstart.gladestrings:84
 msgid "Choose the Installation Method:"
 msgstr "Escolha o método de instalação:"
 
-#: system-config-kickstart.gladestrings:86
-#: system-config-kickstart.gladestrings:91
+#: system-config-kickstart.gladestrings:85
+#: system-config-kickstart.gladestrings:90
 msgid "CD-ROM"
 msgstr "CD-ROM"
 
-#: system-config-kickstart.gladestrings:87
-#: system-config-kickstart.gladestrings:94
+#: system-config-kickstart.gladestrings:86
+#: system-config-kickstart.gladestrings:93
 msgid "NFS"
 msgstr "NFS"
 
-#: system-config-kickstart.gladestrings:88
-#: system-config-kickstart.gladestrings:100
+#: system-config-kickstart.gladestrings:87
+#: system-config-kickstart.gladestrings:99
 msgid "FTP"
 msgstr "FTP"
 
-#: system-config-kickstart.gladestrings:89
-#: system-config-kickstart.gladestrings:103
+#: system-config-kickstart.gladestrings:88
+#: system-config-kickstart.gladestrings:102
 msgid "HTTP"
 msgstr "HTTP"
 
-#: system-config-kickstart.gladestrings:90
-#: system-config-kickstart.gladestrings:106
+#: system-config-kickstart.gladestrings:89
+#: system-config-kickstart.gladestrings:105
 msgid "Hard Drive"
 msgstr "Disco Rígido"
 
-#: system-config-kickstart.gladestrings:92
+#: system-config-kickstart.gladestrings:91
 msgid "NFS Server:"
 msgstr "Servidor NFS:"
 
-#: system-config-kickstart.gladestrings:93
+#: system-config-kickstart.gladestrings:92
 msgid "NFS Directory:"
 msgstr "Directoria NFS:"
 
-#: system-config-kickstart.gladestrings:95
+#: system-config-kickstart.gladestrings:94
 msgid "FTP Server:"
 msgstr "Servidor FTP:"
 
-#: system-config-kickstart.gladestrings:96
+#: system-config-kickstart.gladestrings:95
 msgid "FTP Directory:"
 msgstr "Directoria FTP:"
 
-#: system-config-kickstart.gladestrings:97
+#: system-config-kickstart.gladestrings:96
 msgid "Specify an FTP username and password"
 msgstr "Insira o nome de utilizador e senha de FTP"
 
-#: system-config-kickstart.gladestrings:98
+#: system-config-kickstart.gladestrings:97
 msgid "FTP Username"
 msgstr "Utilizador de FTP"
 
-#: system-config-kickstart.gladestrings:99
+#: system-config-kickstart.gladestrings:98
 msgid "FTP Password"
 msgstr "Senha de FTP"
 
-#: system-config-kickstart.gladestrings:101
+#: system-config-kickstart.gladestrings:100
 msgid "HTTP Server:"
 msgstr "Servidor HTTP:"
 
-#: system-config-kickstart.gladestrings:102
+#: system-config-kickstart.gladestrings:101
 msgid "HTTP Directory:"
 msgstr "Directoria HTTP:"
 
-#: system-config-kickstart.gladestrings:104
+#: system-config-kickstart.gladestrings:103
 msgid "Hard Drive Partition:"
 msgstr "Partição do disco rígido:"
 
-#: system-config-kickstart.gladestrings:105
+#: system-config-kickstart.gladestrings:104
 msgid "Hard Drive Directory:"
 msgstr "Directoria no disco rígido:"
 
-#: system-config-kickstart.gladestrings:107
+#: system-config-kickstart.gladestrings:106
 msgid "Installation Method (required)"
 msgstr "Método de Instalação (necessário)"
 
-#: system-config-kickstart.gladestrings:108
+#: system-config-kickstart.gladestrings:107
 msgid "label128"
 msgstr "label128"
 
-#: system-config-kickstart.gladestrings:109
+#: system-config-kickstart.gladestrings:108
 msgid "Install new boot loader"
 msgstr "Instalar um novo gestor de arranque"
 
-#: system-config-kickstart.gladestrings:110
+#: system-config-kickstart.gladestrings:109
 msgid "Do not install a boot loader"
 msgstr "Não instalar um gestor de arranque"
 
-#: system-config-kickstart.gladestrings:111
+#: system-config-kickstart.gladestrings:110
 msgid "Upgrade existing boot loader"
 msgstr "Actualizar o gestor de arranque existente"
 
-#: system-config-kickstart.gladestrings:112
+#: system-config-kickstart.gladestrings:111
 msgid "GRUB Options:"
 msgstr "Opções do GRUB:"
 
-#: system-config-kickstart.gladestrings:113
+#: system-config-kickstart.gladestrings:112
 msgid "Use GRUB password"
 msgstr "Utilizar uma senha no GRUB"
 
-#: system-config-kickstart.gladestrings:114
+#: system-config-kickstart.gladestrings:113
 msgid "Password:"
 msgstr "Senha:"
 
-#: system-config-kickstart.gladestrings:116
+#: system-config-kickstart.gladestrings:115
 msgid "Encrypt GRUB password"
 msgstr "Cifrar senha do GRUB"
 
-#: system-config-kickstart.gladestrings:117
+#: system-config-kickstart.gladestrings:116
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "Instalar gestor de arranque no Master Boot Record (MBR)"
 
-#: system-config-kickstart.gladestrings:118
+#: system-config-kickstart.gladestrings:117
 msgid "Install boot loader on first sector of the boot partition"
 msgstr ""
 "Instalar o gestor de arranque no primeiro sector da partição de arranque"
 
-#: system-config-kickstart.gladestrings:119
+#: system-config-kickstart.gladestrings:118
 msgid "Kernel parameters:"
 msgstr "Parâmetros do kernel:"
 
-#: system-config-kickstart.gladestrings:120
+#: system-config-kickstart.gladestrings:119
 msgid "label216"
 msgstr "label216"
 
-#: system-config-kickstart.gladestrings:121
+#: system-config-kickstart.gladestrings:120
 msgid "Boot Loader Options (required)"
 msgstr "Opções do Gestor de Arranque (necessário)"
 
-#: system-config-kickstart.gladestrings:122
+#: system-config-kickstart.gladestrings:121
 msgid "label35"
 msgstr "label35"
 
-#: system-config-kickstart.gladestrings:123
+#: system-config-kickstart.gladestrings:122
 msgid "Clear Master Boot Record"
 msgstr "Limpar o Master Boot Record"
 
-#: system-config-kickstart.gladestrings:124
+#: system-config-kickstart.gladestrings:123
 msgid "Do not clear Master Boot Record"
 msgstr "Não limpar o Master Boot Record:"
 
-#: system-config-kickstart.gladestrings:125
+#: system-config-kickstart.gladestrings:124
 msgid "Remove all existing partitions"
 msgstr "Apagar todas as partições actuais"
 
-#: system-config-kickstart.gladestrings:126
+#: system-config-kickstart.gladestrings:125
 msgid "Remove existing Linux partitions"
 msgstr "Apagar as partições actuais de Linux"
 
-#: system-config-kickstart.gladestrings:127
+#: system-config-kickstart.gladestrings:126
 msgid "Preserve existing partitions"
 msgstr "Manter as partições actuais"
 
-#: system-config-kickstart.gladestrings:128
+#: system-config-kickstart.gladestrings:127
 msgid "Initialize the disk label"
 msgstr "Inicializar a etiqueta do disco"
 
-#: system-config-kickstart.gladestrings:129
+#: system-config-kickstart.gladestrings:128
 msgid "Do not initialize the disk label"
 msgstr "Não inicializar a etiqueta do disco:"
 
-#: system-config-kickstart.gladestrings:130
+#: system-config-kickstart.gladestrings:129
 msgid "_Add"
 msgstr "_Adicionar"
 
-#: system-config-kickstart.gladestrings:131
+#: system-config-kickstart.gladestrings:130
 msgid "_Edit"
 msgstr "_Editar"
 
-#: system-config-kickstart.gladestrings:132
+#: system-config-kickstart.gladestrings:131
 msgid "_Delete"
 msgstr "Apa_gar"
 
-#: system-config-kickstart.gladestrings:133
+#: system-config-kickstart.gladestrings:132
 msgid "RAID"
 msgstr "RAID"
 
-#: system-config-kickstart.gladestrings:134
+#: system-config-kickstart.gladestrings:133
 msgid "Partition options are not applicable on upgrades."
 msgstr "A opções de particionamento não se aplicam às actualizações."
 
-#: system-config-kickstart.gladestrings:135
+#: system-config-kickstart.gladestrings:134
 msgid "Partition Information (required)"
 msgstr "Informações de Particionamento (necessário)"
 
-#: system-config-kickstart.gladestrings:136
+#: system-config-kickstart.gladestrings:135
 msgid "label30"
 msgstr "label30"
 
-#: system-config-kickstart.gladestrings:137
+#: system-config-kickstart.gladestrings:136
 msgid "_Add Network Device"
 msgstr "_Adicionar um Dispositivo de Rede"
 
-#: system-config-kickstart.gladestrings:138
+#: system-config-kickstart.gladestrings:137
 msgid "_Edit Network Device"
 msgstr "_Editar o Dispositivo de Rede"
 
-#: system-config-kickstart.gladestrings:139
+#: system-config-kickstart.gladestrings:138
 msgid "_Delete Network Device"
 msgstr "Apagar o _Dispositivo de Rede"
 
-#: system-config-kickstart.gladestrings:141
+#: system-config-kickstart.gladestrings:140
 msgid "label31"
 msgstr "label31"
 
-#: system-config-kickstart.gladestrings:142
+#: system-config-kickstart.gladestrings:141
 msgid "Authentication:"
 msgstr "Autenticação:"
 
-#: system-config-kickstart.gladestrings:143
+#: system-config-kickstart.gladestrings:142
 msgid "Use Shadow Passwords"
 msgstr "Utilizar Senhas \"Shadow\""
 
-#: system-config-kickstart.gladestrings:144
+#: system-config-kickstart.gladestrings:143
 msgid "Use MD5"
 msgstr "Utilizar o MD5"
 
-#: system-config-kickstart.gladestrings:145
+#: system-config-kickstart.gladestrings:144
 msgid "Enable NIS"
 msgstr "Activar o NIS"
 
-#: system-config-kickstart.gladestrings:146
+#: system-config-kickstart.gladestrings:145
 msgid "NIS Domain:"
 msgstr "Domínio NIS:"
 
-#: system-config-kickstart.gladestrings:147
+#: system-config-kickstart.gladestrings:146
 msgid "Use broadcast to find NIS server"
 msgstr "Utilizar a difusão para encontrar o servidor NIS"
 
-#: system-config-kickstart.gladestrings:148
+#: system-config-kickstart.gladestrings:147
 msgid "NIS Server:"
 msgstr "Servidor NIS:"
 
-#: system-config-kickstart.gladestrings:149
+#: system-config-kickstart.gladestrings:148
 msgid "NIS Authentication"
 msgstr "Autenticação NIS"
 
-#: system-config-kickstart.gladestrings:150
+#: system-config-kickstart.gladestrings:149
 msgid "NIS"
 msgstr "NIS"
 
-#: system-config-kickstart.gladestrings:151
+#: system-config-kickstart.gladestrings:150
 msgid "Enable LDAP"
 msgstr "Activar o LDAP"
 
-#: system-config-kickstart.gladestrings:152
+#: system-config-kickstart.gladestrings:151
 msgid "LDAP Server: "
 msgstr "Servidor LDAP: "
 
-#: system-config-kickstart.gladestrings:153
+#: system-config-kickstart.gladestrings:152
 msgid "LDAP Base Name: "
 msgstr "Nome base LDAP: "
 
-#: system-config-kickstart.gladestrings:154
+#: system-config-kickstart.gladestrings:153
 msgid "LDAP Authentication"
 msgstr "Autenticação LDAP"
 
-#: system-config-kickstart.gladestrings:155
+#: system-config-kickstart.gladestrings:154
 msgid "LDAP "
 msgstr "LDAP "
 
-#: system-config-kickstart.gladestrings:156
+#: system-config-kickstart.gladestrings:155
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Activar Autenticação Kerberos 5"
 
-#: system-config-kickstart.gladestrings:157
+#: system-config-kickstart.gladestrings:156
 msgid "Kerberos Realm:"
 msgstr "Reino Kerberos:"
 
-#: system-config-kickstart.gladestrings:158
+#: system-config-kickstart.gladestrings:157
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Controlador de domínio Kerberos (KDC):"
 
-#: system-config-kickstart.gladestrings:159
+#: system-config-kickstart.gladestrings:158
 msgid "Kerberos Master Server:"
 msgstr "Servidor mestre Kerberos:"
 
-#: system-config-kickstart.gladestrings:160
+#: system-config-kickstart.gladestrings:159
 msgid "Kerberos 5 Authentication"
 msgstr "Autenticação Kerberos 5"
 
-#: system-config-kickstart.gladestrings:161
+#: system-config-kickstart.gladestrings:160
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: system-config-kickstart.gladestrings:162
+#: system-config-kickstart.gladestrings:161
 msgid "Enable Hesiod Support"
 msgstr "Activar Suporte Hesiod"
 
-#: system-config-kickstart.gladestrings:163
+#: system-config-kickstart.gladestrings:162
 msgid "Hesiod LHS:"
 msgstr "LHS Hesiod:"
 
-#: system-config-kickstart.gladestrings:164
+#: system-config-kickstart.gladestrings:163
 msgid "Hesiod RHS:"
 msgstr "RHS Hesiod:"
 
-#: system-config-kickstart.gladestrings:165
+#: system-config-kickstart.gladestrings:164
 msgid "Hesiod Authentication"
 msgstr "Autenticação Hesiod"
 
-#: system-config-kickstart.gladestrings:166
+#: system-config-kickstart.gladestrings:165
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: system-config-kickstart.gladestrings:167
+#: system-config-kickstart.gladestrings:166
 msgid "Enable SMB Authentication"
 msgstr "Activar a Autenticação SMB"
 
-#: system-config-kickstart.gladestrings:168
+#: system-config-kickstart.gladestrings:167
 msgid "SMB Servers:"
 msgstr "Servidores SMB:"
 
-#: system-config-kickstart.gladestrings:169
+#: system-config-kickstart.gladestrings:168
 msgid "SMB Workgroup:"
 msgstr "Grupo de trabalho SMB:"
 
-#: system-config-kickstart.gladestrings:170
+#: system-config-kickstart.gladestrings:169
 msgid "SMB Authentication"
 msgstr "Autenticação SMB"
 
-#: system-config-kickstart.gladestrings:171
+#: system-config-kickstart.gladestrings:170
 msgid "SMB"
 msgstr "SMB"
 
-#: system-config-kickstart.gladestrings:172
+#: system-config-kickstart.gladestrings:171
 msgid "Enable nscd"
 msgstr "Activar nscd"
 
-#: system-config-kickstart.gladestrings:173
+#: system-config-kickstart.gladestrings:172
 msgid "Name Switch Cache Daemon (nscd) Authentication"
 msgstr "Autenticação Name Switch Cache Daemon (nscd)"
 
-#: system-config-kickstart.gladestrings:174
+#: system-config-kickstart.gladestrings:173
 msgid "Name Switch Cache"
 msgstr "Name Switch Cache"
 
-#: system-config-kickstart.gladestrings:175
+#: system-config-kickstart.gladestrings:174
 msgid "Authentication options are not applicable on upgrades."
 msgstr "A opções de autenticação não se aplicam às actualizações."
 
-#: system-config-kickstart.gladestrings:176
+#: system-config-kickstart.gladestrings:175
 msgid "Authentication Configuration"
 msgstr "Configuração da Autenticação"
 
-#: system-config-kickstart.gladestrings:177
+#: system-config-kickstart.gladestrings:176
 msgid "label32"
 msgstr "label32"
 
-#: system-config-kickstart.gladestrings:178
+#: system-config-kickstart.gladestrings:177
 msgid "Security level:"
 msgstr "Nível de segurança:"
 
-#: system-config-kickstart.gladestrings:179
+#: system-config-kickstart.gladestrings:178
 msgid "Enable firewall"
 msgstr "Activar a 'firewall'"
 
-#: system-config-kickstart.gladestrings:180
+#: system-config-kickstart.gladestrings:179
 msgid "Disable firewall"
 msgstr "Desactivar a 'firewall'"
 
-#: system-config-kickstart.gladestrings:181
+#: system-config-kickstart.gladestrings:180
 msgid "SELinux:"
 msgstr "SELinux:"
 
-#: system-config-kickstart.gladestrings:182
+#: system-config-kickstart.gladestrings:181
 msgid "Active"
 msgstr "Activo"
 
-#: system-config-kickstart.gladestrings:183
+#: system-config-kickstart.gladestrings:182
 msgid "Warn"
 msgstr "Avisar"
 
-#: system-config-kickstart.gladestrings:184
-#: system-config-kickstart.gladestrings:196
+#: system-config-kickstart.gladestrings:183
+#: system-config-kickstart.gladestrings:195
 msgid "Disabled"
 msgstr "Inactivo"
 
-#: system-config-kickstart.gladestrings:185
+#: system-config-kickstart.gladestrings:184
 msgid "Firewall configuration is not applicable on upgrades."
 msgstr "A configuração da 'firewall'  não se aplica às actualizações."
 
-#: system-config-kickstart.gladestrings:187
+#: system-config-kickstart.gladestrings:186
 msgid "label33"
 msgstr "label33"
 
-#: system-config-kickstart.gladestrings:188
+#: system-config-kickstart.gladestrings:187
 msgid "Configure the X Window System"
 msgstr "Configurar o X Window System"
 
-#: system-config-kickstart.gladestrings:189
+#: system-config-kickstart.gladestrings:188
 msgid "Color Depth"
 msgstr "Número de Cores"
 
-#: system-config-kickstart.gladestrings:190
+#: system-config-kickstart.gladestrings:189
 msgid "Resolution"
 msgstr "Resolução"
 
-#: system-config-kickstart.gladestrings:191
+#: system-config-kickstart.gladestrings:190
 msgid "Default Desktop:"
 msgstr "Ambiente de trabalho por omissão:"
 
-#: system-config-kickstart.gladestrings:192
+#: system-config-kickstart.gladestrings:191
 msgid "GNOME"
 msgstr "GNOME"
 
-#: system-config-kickstart.gladestrings:193
+#: system-config-kickstart.gladestrings:192
 msgid "KDE"
 msgstr "KDE"
 
-#: system-config-kickstart.gladestrings:194
+#: system-config-kickstart.gladestrings:193
 msgid "Start the X Window System on boot"
 msgstr "Iniciar o X ao arrancar"
 
-#: system-config-kickstart.gladestrings:195
+#: system-config-kickstart.gladestrings:194
 msgid "On first boot, Setup Agent is: "
 msgstr "No primeiro arranque, o Agente de Configuração está: "
 
-#: system-config-kickstart.gladestrings:197
+#: system-config-kickstart.gladestrings:196
 msgid "Enabled"
 msgstr "Activo"
 
-#: system-config-kickstart.gladestrings:198
+#: system-config-kickstart.gladestrings:197
 msgid "Enabled in reconfiguration mode"
 msgstr "Activo no modo de reconfiguração"
 
-#: system-config-kickstart.gladestrings:199
+#: system-config-kickstart.gladestrings:198
 msgid "General"
 msgstr "Geral"
 
-#: system-config-kickstart.gladestrings:200
+#: system-config-kickstart.gladestrings:199
 msgid "Probe for video card"
 msgstr "Autodetectar a placa gráfica"
 
-#: system-config-kickstart.gladestrings:201
+#: system-config-kickstart.gladestrings:200
 msgid "Video Card RAM: "
 msgstr "Memória da placa gráfica: "
 
-#: system-config-kickstart.gladestrings:202
+#: system-config-kickstart.gladestrings:201
 msgid "Video Card"
 msgstr "Placa Gráfica"
 
-#: system-config-kickstart.gladestrings:203
+#: system-config-kickstart.gladestrings:202
 msgid "Probe for monitor"
 msgstr "Autodetectar monitor"
 
-#: system-config-kickstart.gladestrings:204
+#: system-config-kickstart.gladestrings:203
 msgid "Use custom monitor sync rates"
 msgstr "Utilizar taxas de sincronismo personalizadas"
 
-#: system-config-kickstart.gladestrings:205
+#: system-config-kickstart.gladestrings:204
 msgid "Hz"
 msgstr "Hz"
 
-#: system-config-kickstart.gladestrings:206
+#: system-config-kickstart.gladestrings:205
 msgid "kHz"
 msgstr "kHz"
 
-#: system-config-kickstart.gladestrings:207
+#: system-config-kickstart.gladestrings:206
 msgid "Vertical Sync:"
 msgstr "Sincronismo vertical:"
 
-#: system-config-kickstart.gladestrings:208
+#: system-config-kickstart.gladestrings:207
 msgid "Horizontal Sync:"
 msgstr "Sincronismo horizontal:"
 
-#: system-config-kickstart.gladestrings:209
+#: system-config-kickstart.gladestrings:208
 msgid "Monitor"
 msgstr "Monitor"
 
-#: system-config-kickstart.gladestrings:210
+#: system-config-kickstart.gladestrings:209
 msgid "Display configuration is not applicable on upgrades."
 msgstr "A configuração do ecrã não se aplica às actualizações."
 
-#: system-config-kickstart.gladestrings:212
+#: system-config-kickstart.gladestrings:211
 msgid "label88"
 msgstr "label88"
 
-#: system-config-kickstart.gladestrings:213
+#: system-config-kickstart.gladestrings:212
 msgid "Select packages to install."
 msgstr "Escolha o pacotes a instalar."
 
-#: system-config-kickstart.gladestrings:214
+#: system-config-kickstart.gladestrings:213
 msgid "_Install Everything"
 msgstr "_Instalar Tudo"
 
-#: system-config-kickstart.gladestrings:215
+#: system-config-kickstart.gladestrings:214
 msgid "Desktops"
 msgstr "Ambientes de Trabalho"
 
-#: system-config-kickstart.gladestrings:216
+#: system-config-kickstart.gladestrings:215
 msgid "Applications"
 msgstr "Aplicações"
 
-#: system-config-kickstart.gladestrings:217
+#: system-config-kickstart.gladestrings:216
 msgid "Servers"
 msgstr "Servidores"
 
-#: system-config-kickstart.gladestrings:218
+#: system-config-kickstart.gladestrings:217
 msgid "Development"
 msgstr "Desenvolvimento"
 
-#: system-config-kickstart.gladestrings:219
+#: system-config-kickstart.gladestrings:218
 msgid "System"
 msgstr "Sistema"
 
-#: system-config-kickstart.gladestrings:220
+#: system-config-kickstart.gladestrings:219
 msgid "Package selection is not applicable on upgrades."
 msgstr "A escolha de pacotes não se aplica às actualizações."
 
-#: system-config-kickstart.gladestrings:222
+#: system-config-kickstart.gladestrings:221
 msgid "label34"
 msgstr "label34"
 
-#: system-config-kickstart.gladestrings:223
+#: system-config-kickstart.gladestrings:222
 #, c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1234,21 +1227,21 @@ msgstr ""
 "Aviso: Um erro neste 'script' pode causar a falha da sua instalação por "
 "kickstart. Não inclua o comando %pre no início."
 
-#: system-config-kickstart.gladestrings:224
-#: system-config-kickstart.gladestrings:230
+#: system-config-kickstart.gladestrings:223
+#: system-config-kickstart.gladestrings:229
 msgid "Use an interpreter:"
 msgstr "Utilizar um interpretador:"
 
-#: system-config-kickstart.gladestrings:225
+#: system-config-kickstart.gladestrings:224
 #, c-format
 msgid "Type your %pre script below:"
 msgstr "Insira o 'script' %pre aqui:"
 
-#: system-config-kickstart.gladestrings:227
+#: system-config-kickstart.gladestrings:226
 msgid "label89"
 msgstr "label89"
 
-#: system-config-kickstart.gladestrings:228
+#: system-config-kickstart.gladestrings:227
 #, c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1257,28 +1250,28 @@ msgstr ""
 "Aviso: Um erro neste 'script' pode causar a falha da sua instalação por "
 "kickstart. Não inclua o comando %post no início."
 
-#: system-config-kickstart.gladestrings:229
+#: system-config-kickstart.gladestrings:228
 msgid "Run outside of the chroot environment"
 msgstr "Executar fora do ambiente chroot"
 
-#: system-config-kickstart.gladestrings:231
+#: system-config-kickstart.gladestrings:230
 #, c-format
 msgid "Type your %post script below:"
 msgstr "Insira o 'script' %post aqui:"
 
-#: system-config-kickstart.gladestrings:233
+#: system-config-kickstart.gladestrings:232
 msgid "label93"
 msgstr "label93"
 
-#: system-config-kickstart.gladestrings:234
+#: system-config-kickstart.gladestrings:233
 msgid "Preview Options"
 msgstr "Previsão das Opções"
 
-#: system-config-kickstart.gladestrings:235
+#: system-config-kickstart.gladestrings:234
 msgid "_Save to File"
 msgstr "_Gravar para Ficheiro"
 
-#: system-config-kickstart.gladestrings:236
+#: system-config-kickstart.gladestrings:235
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
@@ -1286,11 +1279,11 @@ msgstr ""
 "Escolheu a seguinte configuração. Carregue em Gravar num Ficheiro para "
 "gravar o ficheiro kickstart. Carregue em Cancelar para voltar ao programa."
 
-#: system-config-kickstart.gladestrings:237
+#: system-config-kickstart.gladestrings:236
 msgid "RAID Options"
 msgstr "Opções RAID"
 
-#: system-config-kickstart.gladestrings:238
+#: system-config-kickstart.gladestrings:237
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -1303,7 +1296,7 @@ msgstr ""
 "mais informações acerca da utilização de dispositivos RAID, consulta a "
 "documentação de kickstart."
 
-#: system-config-kickstart.gladestrings:239
+#: system-config-kickstart.gladestrings:238
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -1312,46 +1305,47 @@ msgstr ""
 "'RAID por software'.  Pode então criar um dispositivo RAID que pode ser "
 "formatado e montado."
 
-#: system-config-kickstart.gladestrings:240
+#: system-config-kickstart.gladestrings:239
 msgid "Choose one of the following options:"
 msgstr "Escolha uma das seguintes opções:"
 
-#: system-config-kickstart.gladestrings:241
+#: system-config-kickstart.gladestrings:240
 msgid "Create a software RAID partition"
 msgstr "Criar uma partição de RAID software"
 
-#: system-config-kickstart.gladestrings:242
+#: system-config-kickstart.gladestrings:241
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "Criar um dispositivo RAID [por omissão = /dev/md0]"
 
-#: system-config-kickstart.gladestrings:243
+#: system-config-kickstart.gladestrings:242
 msgid "Network Device Information"
 msgstr "Dados do Dispositivo de Rede"
 
-#: system-config-kickstart.gladestrings:244
+#: system-config-kickstart.gladestrings:243
 msgid "Network Device:"
 msgstr "Dispositivo de rede:"
 
-#: system-config-kickstart.gladestrings:245
+#: system-config-kickstart.gladestrings:244
 msgid "Network Type:"
 msgstr "Tipo de rede:"
 
-#: system-config-kickstart.gladestrings:246
+#: system-config-kickstart.gladestrings:245
 msgid "IP Address:"
 msgstr "Endereço IP:"
 
-#: system-config-kickstart.gladestrings:247
+#: system-config-kickstart.gladestrings:246
 msgid "Netmask: "
 msgstr "Máscara: "
 
-#: system-config-kickstart.gladestrings:248
+#: system-config-kickstart.gladestrings:247
 msgid "Gateway:"
 msgstr "'Gateway':"
 
-#: system-config-kickstart.gladestrings:249
+#: system-config-kickstart.gladestrings:248
 msgid "Name Server:"
 msgstr "Servidor de nomes:"
 
+#: system-config-kickstart.gladestrings:249
 #: system-config-kickstart.gladestrings:250
 #: system-config-kickstart.gladestrings:251
 #: system-config-kickstart.gladestrings:252
@@ -1363,9 +1357,14 @@ msgstr "Servidor de nomes:"
 #: system-config-kickstart.gladestrings:258
 #: system-config-kickstart.gladestrings:259
 #: system-config-kickstart.gladestrings:260
-#: system-config-kickstart.gladestrings:261
 msgid "."
 msgstr "."
+
+#~ msgid "/comps.xml file."
+#~ msgstr "ficheiro /comps.xml."
+
+#~ msgid "Save File"
+#~ msgstr "Gravar o Ficheiro"
 
 #~ msgid "X Window System"
 #~ msgstr "Sistema de Janelas X"
