@@ -234,6 +234,8 @@ class partition:
                     buf = buf + "swap "
                 elif part_object.fsType == "raid":
                     buf = part_object.raidNumber + " "
+                elif part_object.fsType == "PPC PReP Boot":
+                    buf = "None --fstype \"PPC PReP Boot\" "
                 else:
                     buf = part_object.mountPoint
                     buf = buf + " --fstype " + part_object.fsType + " " 

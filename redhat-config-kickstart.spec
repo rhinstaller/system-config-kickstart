@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: redhat-config-kickstart
-Version: 2.3.22
+Version: 2.3.22.1
 Release: 3
 URL: http://www.redhat.com
 License: GPL
@@ -57,6 +57,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Wed Apr 20 2005 Chris Lumens <clumens@redhat.com> 2.3.22.1-3
+- Support PPC PReP boot partitions (#152641).
+
 * Mon May 10 2004 Brent Fox <bfox@redhat.com> 2.3.22-3
 - gracefully handle missing /etc/sysconfig/mouse file
 

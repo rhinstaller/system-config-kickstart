@@ -26,7 +26,7 @@ import gtk
 import gtk.glade
 import string
 import signal
-import getopt
+import py24_getopt as getopt
 import partEntry
 import kickstartGui
 
@@ -88,7 +88,8 @@ class partWindow:
         self.fsTypesDict = { _("ext2"):"ext2", _("ext3"):"ext3",
 #                               _("physical volume (LVM)"):"lvm",
                                _("software RAID"):"raid",
-                               _("swap"):"swap", "vfat":"vfat"}
+                               _("swap"):"swap", "vfat":"vfat",
+                               _("PPC PReP Boot"): "PPC PReP Boot"}
         
         self.fsTypes = self.fsTypesDict.keys()
         self.fsTypes.sort()
@@ -124,6 +125,9 @@ class partWindow:
                 self.formatCheck.set_sensitive(gtk.TRUE)
             elif index == "lvm":
                 self.mountPointCombo.set_sensitive(gtk.FALSE)
+            elif index == "PPC PReP Boot":
+                self.mountPointCombo.set_sensitive(gtk.FALSE)
+                self.sizeCombo.set_text("8")
             else:
                 self.mountPointCombo.set_sensitive(gtk.TRUE)
                 self.formatCheck.set_sensitive(gtk.TRUE)
@@ -410,6 +414,9 @@ class partWindow:
                 part_object.fsType = "swap"
                 part_object.mountPoint = ""
 
+            elif part_object.fsType == "PPC PReP Boot":
+                part_object.mountPoint = ""
+
             else:
                 #It's not raid and it's not swap, so it must be a regular partition
                 mountPoint = self.mountPointCombo.entry.get_text()
@@ -553,7 +560,7 @@ class partWindow:
             part_object.raidNumber = line[0]
             part_object.fsType = "raid"
 
-        opts, args = getopt.getopt(line[1:], "d:h", ["recommended", "fstype=", "size=", "onpart=",
+        opts, args = getopt.gnu_getopt(line[1:], "d:h", ["recommended", "fstype=", "size=", "onpart=",
                                                      "grow", "maxsize=", "noformat",
                                                      "usepart", "ondisk=", "ondrive", "asprimary"
                                                      "bytes-per-inode", "start", "end", "badblocks"
@@ -564,8 +571,13 @@ class partWindow:
                 part_object.fsType = "swap"
                 part_object.mountPoint = ""
             elif opt == "--fstype":
-                part_object.fsType = value
-                part_object.mountPoint = line[0]                
+                if value == "\"PPC":
+                    value = "PPC PReP Boot"
+                    part_object.fsType = value
+                    part_object.mountPoint = ""
+                else:
+                    part_object.fsType = string.replace(value, '"', '')
+                    part_object.mountPoint = line[0]                
 
             if opt == "--recommended":
                 part_object.size = "recommended"
