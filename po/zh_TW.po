@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: zh_TW\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-04-11 10:21-0400\n"
-"PO-Revision-Date: 2005-03-25 16:53+1000\n"
+"PO-Revision-Date: 2005-04-20 10:06+1000\n"
 "Last-Translator: Chester Cheng <ccheng@redhat.com>\n"
 "Language-Team: Chinese Traditional <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -223,13 +223,13 @@ msgid ""
 msgstr "命名為 %s 名稱的網路裝置已經存在，請選擇另一個裝置名稱"
 
 #: ../src/packageGroupList.py:18
-#, fuzzy, python-format
+#, python-format
 msgid "Could not start because there is no %s file."
-msgstr "因為沒有 /usr/share/comps/ 所以無法啟動"
+msgstr "因為沒有 %s 檔案，所以無法啟動。"
 
 #: ../src/packageGroupList.py:19
 msgid "Please make sure the comps package is installed."
-msgstr "請確定已安裝 comps 套件"
+msgstr "請確定已安裝 comps 套件。"
 
 #: ../src/partWindow.py:83 system-config-kickstart.gladestrings:52
 msgid "ext2"
@@ -280,16 +280,14 @@ msgstr "請指定這個分割區的掛載點。"
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:429
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "掛載點 \"%s\" 已經被使用。  請選擇另一個掛載點。"
 
 #: ../src/partWindow.py:449
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
-msgstr ""
-"要建立一個新的 RAID 分割區，您必須指定一個硬碟裝置名稱或一個現有的分割區。"
+msgstr "要建立一個新的 RAID 分割區，您必須指定一個硬碟裝置名稱或一個現有的分割區。"
 
 #: ../src/partWindow.py:488
 msgid "Specify a device on which to create the partition."
@@ -1350,8 +1348,3 @@ msgstr "名稱伺服器:"
 msgid "."
 msgstr "。"
 
-#~ msgid "/comps.xml file."
-#~ msgstr "/comps.xml 檔案"
-
-#~ msgid "Save File"
-#~ msgstr "儲存檔案"
