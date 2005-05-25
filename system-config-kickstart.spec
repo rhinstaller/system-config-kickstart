@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.5.22
+Version: 2.5.23
 Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -44,7 +44,7 @@ rm -rf $RPM_BUILD_ROOT
 %post
 touch --no-create %{_datadir}/icons/hicolor
 if [ -x /usr/bin/gtk-update-icon-cache ]; then
-  gtk-update-icon-cache %{_datadir}/icons/hicolor
+  gtk-update-icon-cache -q %{_datadir}/icons/hicolor
 fi
 
 %preun
@@ -55,7 +55,7 @@ fi
 %postun
 touch --no-create %{_datadir}/icons/hicolor
 if [ -x /usr/bin/gtk-update-icon-cache ]; then
-  gtk-update-icon-cache %{_datadir}/icons/hicolor
+  gtk-update-icon-cache -q %{_datadir}/icons/hicolor
 fi
 
 %files -f %{name}.lang
@@ -73,6 +73,12 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Wed Apr 27 2005 Jeremy Katz <katzj@redhat.com> - 2.5.22-2
+- silence %%post
+
+* Mon Apr 11 2005 Chris Lumens <clumens@redhat.com> 2.5.23-1
+- Fixed string translation problems (#154247).
+
 * Mon Apr 04 2005 Chris Lumens <clumens@redhat.com> 2.5.22-1
 - Use the new GTK file selection dialogs for loading and saving (#152995).
 
