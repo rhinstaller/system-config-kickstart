@@ -73,6 +73,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Tue May 31 2005 Chris Lumens <clumens@redhat.com> 2.5.23-1
+- Use random module instead of whrandom (#159115).
+
 * Wed Apr 27 2005 Jeremy Katz <katzj@redhat.com> - 2.5.22-2
 - silence %%post
 

@@ -23,7 +23,7 @@ import gtk.glade
 import gobject
 import string
 import os
-import whrandom
+import random
 import crypt
 import getopt
 
@@ -245,7 +245,7 @@ class basic:
 
             if not pure.startswith(salt):
                 for i in range(saltLen):
-                    salt = salt + whrandom.choice (string.letters + string.digits + './')
+                    salt = salt + random.choice (string.letters + string.digits + './')
 
                 self.passwd = crypt.crypt (pure, salt)
 

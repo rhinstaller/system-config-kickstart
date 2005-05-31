@@ -20,7 +20,7 @@
 import gtk
 import gtk.glade
 import string
-import whrandom
+import random
 import crypt
 
 ##
@@ -105,7 +105,7 @@ class bootloader:
                             salt = "$1$"
                             saltLen = 8
                             for i in range(saltLen):
-                                salt = salt + whrandom.choice (string.letters + string.digits + './')
+                                salt = salt + random.choice (string.letters + string.digits + './')
                             self.passwd = crypt.crypt (gp, salt)
                             temp = unicode (self.passwd, 'iso-8859-1')
                             buf = buf + "--md5pass=" + temp
