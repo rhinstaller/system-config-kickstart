@@ -1,20 +1,21 @@
 # translation of ko.po to Korean
 # Copyright (C) 2002 Red Hat, Inc
-# Michelle Kim <mkim@redhat.com>, 2002
-# Michelle J Kim <mkim@redhat.com>, 2003,2004
+# Michelle Kim <mkim@redhat.com>, 2002.
+# Michelle J Kim <mkim@redhat.com>, 2003,2004.
+# Michelle Ji Yeen Kim <mkim@redhat.com>, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ko\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-03-23 14:24-0500\n"
-"PO-Revision-Date: 2004-03-30 12:04+1000\n"
-"Last-Translator: Michelle J Kim <mkim@redhat.com>\n"
-"Language-Team:  <ko@li.org>\n"
+"PO-Revision-Date: 2005-06-16 15:08+1000\n"
+"Last-Translator: Michelle Ji Yeen Kim <mkim@redhat.com>\n"
+"Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0\n"
+"X-Generator: KBabel 1.9.1\n"
 
 #: ../src/basic.py:72
 msgid "x86, AMD64, or Intel EM64T"
@@ -222,15 +223,15 @@ msgstr ""
 
 #: ../src/packageGroupList.py:16
 msgid "Could not start because there is no /usr/share/comps/"
-msgstr ""
+msgstr "/usr/share/comps/가 없어서 시작하지 못했습니다"
 
 #: ../src/packageGroupList.py:16
 msgid "/comps.xml file."
-msgstr ""
+msgstr "/comps.xml 파일"
 
 #: ../src/packageGroupList.py:17
 msgid "Please make sure the comps package is installed."
-msgstr ""
+msgstr "comps 패키지가 설치되었는지 확인해주십시오."
 
 #: ../src/partWindow.py:83 system-config-kickstart.gladestrings:53
 msgid "ext2"
@@ -281,10 +282,8 @@ msgstr "해당 파티션에 대한 마운트 지점을 지정해 주십시오."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:429
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr ""
-"\"%s\" 마운트 지점은 이미 사용중입니다.  다른 마운트 지점을 선택해 주십시오."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr "\"%s\" 마운트 지점은 이미 사용중입니다.  다른 마운트 지점을 선택해 주십시오."
 
 #: ../src/partWindow.py:449
 msgid ""
@@ -1072,17 +1071,16 @@ msgid "Disable firewall"
 msgstr "방화벽을 사용하지 않음"
 
 #: system-config-kickstart.gladestrings:181
-#, fuzzy
 msgid "SELinux:"
-msgstr "리눅스(_I)"
+msgstr "SELinux:"
 
 #: system-config-kickstart.gladestrings:182
 msgid "Active"
-msgstr ""
+msgstr "활성"
 
 #: system-config-kickstart.gladestrings:183
 msgid "Warn"
-msgstr ""
+msgstr "경고"
 
 #: system-config-kickstart.gladestrings:184
 #: system-config-kickstart.gladestrings:196
@@ -1195,7 +1193,7 @@ msgstr "설치될 패키지를 선택해 주십시오."
 
 #: system-config-kickstart.gladestrings:214
 msgid "_Install Everything"
-msgstr ""
+msgstr "전부 설치(_I)"
 
 #: system-config-kickstart.gladestrings:215
 msgid "Desktops"
@@ -1365,282 +1363,3 @@ msgstr "네임서버:"
 msgid "."
 msgstr "."
 
-#~ msgid "X Window System"
-#~ msgstr "X 윈도우 시스템"
-
-#~ msgid "GNOME Desktop Environment"
-#~ msgstr "GNOME 데스크탑 환경"
-
-#, fuzzy
-#~ msgid "KDE (K Desktop Environment)"
-#~ msgstr "KDE 데스크탑 환경"
-
-#~ msgid "Editors"
-#~ msgstr "편집기"
-
-#~ msgid "Engineering and Scientific"
-#~ msgstr "공학과 과학"
-
-#~ msgid "Graphical Internet"
-#~ msgstr "그래픽 인터넷"
-
-#~ msgid "Text-based Internet"
-#~ msgstr "텍스트 기반 인터넷"
-
-#~ msgid "Office/Productivity"
-#~ msgstr "사무/생산성"
-
-#~ msgid "Sound and Video"
-#~ msgstr "사운드와 비디오"
-
-#~ msgid "Graphics"
-#~ msgstr "그래픽"
-
-#~ msgid "Games and Entertainment"
-#~ msgstr "게임과 놀이"
-
-#~ msgid "Authoring and Publishing"
-#~ msgstr "제작과 출판"
-
-#~ msgid "Server Configuration Tools (AS and ES only)"
-#~ msgstr "서버 설정 도구 (AS 및 ES에만 적용됨)"
-
-#~ msgid "Web Server"
-#~ msgstr "웹 서버"
-
-#~ msgid "Mail Server"
-#~ msgstr "메일 서버"
-
-#~ msgid "Windows File Server"
-#~ msgstr "윈도우 파일 서버"
-
-#~ msgid "DNS Name Server"
-#~ msgstr "DNS 이름 서버"
-
-#~ msgid "FTP Server"
-#~ msgstr "FTP 서버"
-
-#~ msgid "SQL Database Server"
-#~ msgstr "SQL 데이터베이스 서버"
-
-#~ msgid "News Server"
-#~ msgstr "뉴스 서버"
-
-#~ msgid "Network Servers (AS and ES only)"
-#~ msgstr "네트워크 서버 (AS 및 ES에만 적용됨)"
-
-#~ msgid "Development Tools"
-#~ msgstr "개발용 도구"
-
-#~ msgid "Kernel Development"
-#~ msgstr "커널 개발"
-
-#~ msgid "X Software Development"
-#~ msgstr "X 소프트웨어 개발"
-
-#~ msgid "GNOME Software Development"
-#~ msgstr "GNOME 소프트웨어 개발"
-
-#~ msgid "KDE Software Development"
-#~ msgstr "KDE 소프트웨어 개발"
-
-#~ msgid "Administration Tools"
-#~ msgstr "관리 도구"
-
-#~ msgid "System Tools"
-#~ msgstr "시스템 도구"
-
-#~ msgid "Printing Support"
-#~ msgstr "인쇄 지원"
-
-#~ msgid "*"
-#~ msgstr "*"
-
-#~ msgid "Server Configuration Tools"
-#~ msgstr "서버 설정 도구"
-
-#~ msgid "Network Servers"
-#~ msgstr "네트워크 서버"
-
-#~ msgid "Could not read monitor database"
-#~ msgstr "모니터 데이터베이스를 검색할 수 없습니다"
-
-#~ msgid "_Automatically Resolve Dependencies"
-#~ msgstr "패키지 간의 의존성 문제 자동으로 해결(_A)"
-
-#~ msgid "_Ignore Dependencies"
-#~ msgstr "패키지 간의 의존성 무시(_I)"
-
-#~ msgid "Use GRUB for the boot loader"
-#~ msgstr "GRUB을 부트로더로 사용"
-
-#~ msgid "Use LILO for the boot loader"
-#~ msgstr "LILO를 부트로더로 사용"
-
-#~ msgid "label173"
-#~ msgstr "label173"
-
-#~ msgid "LILO Options:"
-#~ msgstr "LILO 옵션:"
-
-#~ msgid "Use linear mode"
-#~ msgstr "Linear 모드 사용"
-
-#~ msgid "Force use of lba32 mode"
-#~ msgstr "LBA32 모드로 사용"
-
-#~ msgid "label174"
-#~ msgstr "label174"
-
-#~ msgid "Specify hsync and vsync instead of monitor"
-#~ msgstr "모니터의 수평동기 및 수직동기 값 지정"
-
-#~ msgid "Allow incoming:"
-#~ msgstr "허용할 서비스:"
-
-#~ msgid "Use default firewall rules"
-#~ msgstr "기본 방화벽 방침 사용"
-
-#~ msgid "Select the default firewall level:"
-#~ msgstr "기본 방화벽 수준을 선택해 주십시오:"
-
-#~ msgid "High"
-#~ msgstr "최상위 수준"
-
-#~ msgid "Customize"
-#~ msgstr "사용자 설정"
-
-#~ msgid "Medium"
-#~ msgstr "중간 수준"
-
-#~ msgid "DIsabled"
-#~ msgstr "사용하지 않음"
-
-#~ msgid "None"
-#~ msgstr "없음"
-
-#~ msgid "DHCP"
-#~ msgstr "DHCP"
-
-#~ msgid "Miscellaneous"
-#~ msgstr "기타"
-
-#~ msgid "physical volume (LVM)"
-#~ msgstr "물리적 볼륨 (LVM)"
-
-#~ msgid "Make LVM Partition"
-#~ msgstr "LVM 파티션 만들기"
-
-#~ msgid "_Yes"
-#~ msgstr "예(_Y)"
-
-#~ msgid "A_ll"
-#~ msgstr "모두(_L)"
-
-#~ msgid "N_one"
-#~ msgstr "없음(_O)"
-
-#~ msgid "Upgrade"
-#~ msgstr "업그레이드"
-
-#~ msgid "Install"
-#~ msgstr "설치"
-
-#~ msgid "Message"
-#~ msgstr "메시지"
-
-#~ msgid "_No"
-#~ msgstr "아니오(_N)"
-
-#~ msgid "RAID 0"
-#~ msgstr "RAID 0"
-
-#~ msgid "RAID 1"
-#~ msgstr "RAID 1"
-
-#~ msgid "Specify an existing partition on which to create the RAID partition."
-#~ msgstr "RAID 파티션이 생성될 기존의 파티션을 지정해 주십시오."
-
-#~ msgid "_LILO"
-#~ msgstr "LILO(_L)"
-
-#~ msgid "Size"
-#~ msgstr "용량"
-
-#~ msgid "Existing Partition"
-#~ msgstr "기존 파티션"
-
-#~ msgid "File System Type"
-#~ msgstr "파일시스템 유형"
-
-#~ msgid "Upgrade Only Options:"
-#~ msgstr "업그레이드 전용 옵션:"
-
-#~ msgid "_MBR"
-#~ msgstr "MBR(_M)"
-
-#~ msgid "_GRUB"
-#~ msgstr "GRUB(_G)"
-
-#~ msgid "Specify a device on which to create the RAID partition."
-#~ msgstr "RAID 파티션이 생성될 장치를 지정해 주십시오."
-
-#~ msgid "Specify an existing partition to use."
-#~ msgstr "사용할 기존의 파티션을 지정해 주십시오."
-
-#~ msgid "Choose boot loader: "
-#~ msgstr "부트로더 선택:"
-
-#~ msgid "Format Partition"
-#~ msgstr "파티션 포맷"
-
-#~ msgid "You must specify a size for the partition."
-#~ msgstr "해당 파티션의 용량을 지정해 주십시오."
-
-#~ msgid "onPart and onDisk can not be used at the same time."
-#~ msgstr "onPart와 onDisk는 동시에 사용될 수 없습니다."
-
-#~ msgid "Fill to maximum allowable size"
-#~ msgstr "최대 가능한 용량으로 채움"
-
-#~ msgid "_Save File..."
-#~ msgstr "파일 저장(_S)..."
-
-#~ msgid "A graphical interface for creating a kickstart file."
-#~ msgstr "킥스타트 파일을 생성하기 위한 그래픽 환경(interface)입니다."
-
-#~ msgid "3"
-#~ msgstr "3"
-
-#~ msgid "Kickstart Configuration"
-#~ msgstr "킥스타트 설정"
-
-#~ msgid "Cancel"
-#~ msgstr "취소"
-
-#~ msgid "Package Group Selection"
-#~ msgstr "패키지 그룹 선택"
-
-#~ msgid "2"
-#~ msgstr "2"
-
-#~ msgid "Save File..."
-#~ msgstr "파일 저장..."
-
-#~ msgid "Select a Monitor"
-#~ msgstr "모니터 선택"
-
-#~ msgid "OK"
-#~ msgstr "확인"
-
-#~ msgid "Force as primary number (1-4):"
-#~ msgstr "첫번째(primary)로 지정할 수 (1-4):"
-
-#~ msgid "_Manual"
-#~ msgstr "수동(_M)"
-
-#~ msgid "4"
-#~ msgstr "4"
-
-#~ msgid "Select a Video Card"
-#~ msgstr "비디오 카드 선택"
