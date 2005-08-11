@@ -1,0 +1,1328 @@
+# Serbian translations for system-config-kickstart
+# Copyright (C) 2005 Red Hat, Inc.
+# This file is distributed under the same license as the system-config-kickstart package.
+# Игор Несторовић <igor@prevod.org>, 2005
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: system-config-kickstart\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-04-11 10:21-0400\n"
+"PO-Revision-Date: 2005-08-09 01:11+0200\n"
+"Last-Translator: Игор Несторовић <igor@prevod.org>\n"
+"Language-Team: Serbian (sr) <fedora@prevod.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/basic.py:72
+msgid "x86, AMD64, or Intel EM64T"
+msgstr "x86, AMD64, или Intel EM64T"
+
+#: ../src/basic.py:72
+msgid "Intel Itanium"
+msgstr "Intel Itanium"
+
+#: ../src/basic.py:72
+msgid "IBM iSeries"
+msgstr "IBM iСерије"
+
+#: ../src/basic.py:73
+msgid "IBM pSeries"
+msgstr "IBM pСерије"
+
+#: ../src/basic.py:73
+msgid "IBM zSeries/s390"
+msgstr "IBM zСерије/s390"
+
+#: ../src/basic.py:206
+msgid "Root passwords do not match."
+msgstr "Root лозинке се не слажу."
+
+#: ../src/basic.py:207
+#: ../src/basic.py:226
+#: ../src/install.py:214
+#: ../src/partWindow.py:513
+#: ../src/partition.py:317
+#: ../src/raidWindow.py:247
+msgid "Error"
+msgstr "Грешка"
+
+#: ../src/basic.py:225
+msgid "Please select a root password."
+msgstr "Изаберите root лозинку."
+
+#: ../src/bootloader.py:76
+#, python-format
+msgid "Bootloader options are not applicable to the %s platform"
+msgstr "Опције за покретач система нису применљиве на платформу %s"
+
+#: ../src/bootloader.py:117
+msgid "Grub passwords do not match.  Please try again."
+msgstr "Лозинке за Grub се не слажу.  Покушајте поново."
+
+#. create table with custom checklists
+#: ../src/firewall.py:60
+msgid "Trusted devices:"
+msgstr "Уређаји од поверења:"
+
+#: ../src/firewall.py:85
+msgid "Trusted services:"
+msgstr "Сервиси од поверења:"
+
+#: ../src/firewall.py:117
+msgid "Other ports: (1029:tcp)"
+msgstr "Други портови (1029:tcp)"
+
+#: ../src/install.py:134
+msgid "Please enter an NFS server."
+msgstr "Унесите NFS сервер."
+
+#: ../src/install.py:137
+msgid "Please enter an NFS directory."
+msgstr "Унесите NFS директоријум."
+
+#: ../src/install.py:147
+msgid "Please enter an FTP server."
+msgstr "Унесите FTP сервер."
+
+#: ../src/install.py:154
+msgid "Please enter an FTP directory."
+msgstr "Унесите FTP директоријум."
+
+#: ../src/install.py:160
+msgid "Please enter an FTP user name."
+msgstr "Унесите FTP корисничко име."
+
+#: ../src/install.py:163
+msgid "Please enter an FTP password."
+msgstr "Унесите FTP лозинку."
+
+#: ../src/install.py:178
+msgid "Please enter an HTTP server."
+msgstr "Унесите HTTP сервер."
+
+#: ../src/install.py:181
+msgid "Please enter an HTTP server directory."
+msgstr "Унесите директоријум HTTP сервера."
+
+#: ../src/install.py:202
+msgid "Please enter a hard drive directory."
+msgstr "Унесите директоријум тврдог диска."
+
+#: ../src/install.py:205
+msgid "Please enter a hard drive partition."
+msgstr "Унесите партицију тврдог диска."
+
+#: ../src/kickstartGui.py:86
+msgid "Kickstart"
+msgstr "Kickstart"
+
+#: ../src/kickstartGui.py:87
+msgid "Create a kickstart file"
+msgstr "Направите kickstart датотеку"
+
+#: ../src/kickstartGui.py:138
+msgid "Subsection"
+msgstr "Пододељак"
+
+#: ../src/kickstartGui.py:142
+msgid "Basic Configuration"
+msgstr "Основно подешавање"
+
+#: ../src/kickstartGui.py:142
+msgid "Installation Method"
+msgstr "Метод инсталације"
+
+#: ../src/kickstartGui.py:143
+msgid "Boot Loader Options"
+msgstr "Опције подизача система"
+
+#: ../src/kickstartGui.py:143
+msgid "Partition Information"
+msgstr "Подаци о партицији"
+
+#: ../src/kickstartGui.py:144
+#: system-config-kickstart.gladestrings:139
+msgid "Network Configuration"
+msgstr "Подешавање мреже"
+
+#: ../src/kickstartGui.py:144
+msgid "Authentication"
+msgstr "Аутентификација"
+
+#: ../src/kickstartGui.py:145
+#: system-config-kickstart.gladestrings:185
+msgid "Firewall Configuration"
+msgstr "Подешавање заштитног зида"
+
+#: ../src/kickstartGui.py:145
+#: system-config-kickstart.gladestrings:210
+msgid "Display Configuration"
+msgstr "Подешавање приказа"
+
+#: ../src/kickstartGui.py:146
+#: system-config-kickstart.gladestrings:220
+msgid "Package Selection"
+msgstr "Одабир пакета"
+
+#: ../src/kickstartGui.py:146
+#: system-config-kickstart.gladestrings:225
+msgid "Pre-Installation Script"
+msgstr "Скрипта пред инсталацију"
+
+#: ../src/kickstartGui.py:147
+#: system-config-kickstart.gladestrings:231
+msgid "Post-Installation Script"
+msgstr "Скрипта након инсталације"
+
+#: ../src/kickstartGui.py:193
+msgid ""
+"Kickstart Configurator @VERSION@\n"
+" Copyright (c) 2000-2002 Red Hat, Inc.\n"
+" Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
+" Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
+" A graphical interface for creating a kickstart file"
+msgstr ""
+"Kickstart подешивач @VERSION@\n"
+" Ауторско право (c) 2000-2002 Red Hat, Inc.\n"
+" Ауторско право (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
+" Ауторско право (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
+" Графичко сучеље за прављење kickstart датотеке"
+
+#: ../src/kickstartGui.py:194
+msgid "About Kickstart Configurator"
+msgstr "О Kickstart подешивачу"
+
+#: ../src/kickstartGui.py:224
+msgid "Help is not available."
+msgstr "Помоћ није доступна."
+
+#: ../src/kickstartGui.py:275
+#, python-format
+msgid "The file \"%s\" cannot be accessed."
+msgstr "Датотеци „%s“ није могуће приступити."
+
+#: ../src/network.py:87
+msgid "Device"
+msgstr "Уређај"
+
+#: ../src/network.py:90
+msgid "Network Type"
+msgstr "Тип мреже"
+
+#: ../src/network.py:109
+#: ../src/network.py:155
+#: ../src/network.py:223
+#: ../src/network.py:274
+#: ../src/network.py:415
+msgid "Static IP"
+msgstr "Статични IP"
+
+#: ../src/network.py:213
+msgid "Please fill in the network information"
+msgstr "Попуните податке о мрежи"
+
+#: ../src/network.py:318
+#, python-format
+msgid "A network device with the name %s already exists.  Please choose another device name"
+msgstr "Мрежни уређај имена %s већ постоји.  Изаберите друго име за уређај"
+
+#: ../src/packageGroupList.py:18
+#, python-format
+msgid "Could not start because there is no %s file."
+msgstr "Није могуће покретање пошто нема датотеке %s."
+
+#: ../src/packageGroupList.py:19
+msgid "Please make sure the comps package is installed."
+msgstr "Проверите да ли је инсталиран comps пакет."
+
+#: ../src/partWindow.py:83
+#: system-config-kickstart.gladestrings:52
+msgid "ext2"
+msgstr "ext2"
+
+#: ../src/partWindow.py:83
+#: system-config-kickstart.gladestrings:53
+msgid "ext3"
+msgstr "ext3"
+
+#. _("physical volume (LVM)"):"lvm",
+#: ../src/partWindow.py:85
+#: ../src/partWindow.py:148
+msgid "software RAID"
+msgstr "софтверски RAID"
+
+#: ../src/partWindow.py:86
+#: system-config-kickstart.gladestrings:54
+msgid "swap"
+msgstr "swap"
+
+#: ../src/partWindow.py:86
+#: system-config-kickstart.gladestrings:55
+msgid "vfat"
+msgstr "vfat"
+
+#: ../src/partWindow.py:87
+msgid "PPC PReP Boot"
+msgstr "PPC PReP покретање"
+
+#: ../src/partWindow.py:260
+#: ../src/partWindow.py:535
+#: ../src/raidWindow.py:212
+msgid "Yes"
+msgstr "Да"
+
+#: ../src/partWindow.py:262
+#: ../src/partWindow.py:537
+#: ../src/raidWindow.py:214
+msgid "No"
+msgstr "Не"
+
+#: ../src/partWindow.py:285
+#: ../src/partWindow.py:300
+#: ../src/partWindow.py:319
+#: ../src/partWindow.py:333
+msgid "Auto"
+msgstr "Ауто"
+
+#: ../src/partWindow.py:294
+msgid "Hard Drives"
+msgstr "Тврди дискови"
+
+#: ../src/partWindow.py:420
+msgid "Specify a mount point for the partition."
+msgstr "Наведите тачку монтирања за партицију."
+
+#. They are trying to use a mount point already in use.  Let's complain
+#: ../src/partWindow.py:429
+#, python-format
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr "Тачка монтирања „%s“ већ је у употреби.  Изаберите другу тачку монтирања."
+
+#: ../src/partWindow.py:449
+msgid "To create a new RAID partition, you must specify either a hard drive device name or an existing partition."
+msgstr "Ради прављења нове RAID партиције, морате навести било назив тврдог диска, било постојећу партицију."
+
+#: ../src/partWindow.py:488
+msgid "Specify a device on which to create the partition."
+msgstr "Наведите уређај на коме правите партицију."
+
+#: ../src/partWindow.py:490
+msgid "The device you specified is not a valid device name. Please use a valid device name such as \"hda1\" or \"sda3\"."
+msgstr "Уређај који сте навели није исправан назив уређаја. Користите исправан назив као што је „hda1“ или „sda3“."
+
+#: ../src/partWindow.py:500
+msgid "The partition you specified does not end in a number.  Partitions must have a partition number such as \"hda1\" or \"sda3\"."
+msgstr "Партиција коју сте навели се не завршава бројем.  Партиције морају имати свој број као што је „hda1“ или „sda3“"
+
+#: ../src/partWindow.py:506
+msgid "The partition you specified does not begin with \"hd\" or \"sd\".  Partitions must have a valid device name and partition number such as \"hda1\" or \"sda3\"."
+msgstr "Партиција коју сте навели не почиње са „hd“ или „sd“.  Партиције морају имати исправан назив и број партиције, као што су „hda1“ или „sda3“."
+
+#: ../src/partition.py:72
+msgid ""
+"Device/\n"
+"Partition Number"
+msgstr ""
+"Уређај/\n"
+"Број партиције"
+
+#. col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
+#: ../src/partition.py:75
+msgid ""
+"Mount Point/\n"
+"RAID"
+msgstr ""
+"Тачка монтирања/\n"
+"RAID"
+
+#: ../src/partition.py:77
+msgid "Type"
+msgstr "Тип"
+
+#: ../src/partition.py:79
+msgid "Format"
+msgstr "Формат"
+
+#: ../src/partition.py:81
+msgid "Size (MB)"
+msgstr "Величина (MБ)"
+
+#: ../src/partition.py:151
+#: ../src/partition.py:191
+msgid "Please select a partition from the list."
+msgstr "Изаберите партицију са листе."
+
+#: ../src/raidOptionsWindow.py:72
+#, python-format
+#. Овде је потребан облик за множину.
+msgid "You currently have %d software RAID partition(s) free to use."
+msgstr "Тренутно имате %d софтверских RAID партиција које су слободне за коришћење."
+
+#: ../src/raidWindow.py:172
+#, python-format
+msgid "You must select at least 2 partitions in order to use RAID %s"
+msgstr "Морате изабрати најмање 2 партиције како би користили RAID %s"
+
+#: ../src/raidWindow.py:178
+#, python-format
+msgid "You must select at least 3 partitions in order to use RAID %s"
+msgstr "Морате изабрати најмање 3 партиције како би користили RAID %s"
+
+#: ../src/raidWindow.py:192
+#: ../src/raidWindow.py:218
+msgid "Raid Devices"
+msgstr "Raid уређаји"
+
+#: ../src/system-config-kickstart.py:60
+msgid ""
+"Usage: system-config-kickstart [--help] [--generate <filename>] [<kickstart_filename>]\n"
+"        \n"
+"--help                  Print out this message\n"
+"--generate <filename>   Generate a kickstart file from the current machine and write\n"
+"                        it to <filename>.  This option runs on the console, so it is\n"
+"                        useful for servers that do not have X currently running.\n"
+"<kickstart_filename>    This option will cause the GUI to launch with the values from\n"
+"                        the kickstart file already filled in."
+msgstr ""
+"Употреба: system-config-kickstart [--help] [--generate <датотека>] [<kickstart_датотека>]\n"
+"        \n"
+"--help                  Исписује ову поруку\n"
+"--generate <датотека>   Ствара kickstart датотеку са тренутне машине и уписује\n"
+"                        је као <датотека>.  Ова опција се покреће из конзоле, па је\n"
+"                        корисна на серверима који тренутно немају покренут X.\n"
+"<kickstart_датотека>    Ова опција ће условити покретање графичког програма са унапред\n"
+"                        попуњеним вредностима из kickstart датотеке."
+
+#: ../src/system-config-kickstart.py:77
+msgid "Could not open display because no X server is running."
+msgstr "Није могуће отварање приказа пошто X сервер није покренут."
+
+#: ../src/system-config-kickstart.py:78
+msgid "Try running 'system-config-kickstart --help' for a list of options."
+msgstr "Покушајте покретањем ’system-config-kickstart --help‘ за листу опција."
+
+#: ../src/xconfig.py:106
+msgid "Could not read video card database"
+msgstr "Није могуће прочитати базу видео карти"
+
+#.
+#. * Translatable strings file generated by Glade.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
+#: system-config-kickstart.gladestrings:7
+msgid "Partition Options"
+msgstr "Опције партиције"
+
+#: system-config-kickstart.gladestrings:8
+#: system-config-kickstart.gladestrings:27
+msgid "Mount Point:"
+msgstr "Тачка монтирања:"
+
+#: system-config-kickstart.gladestrings:9
+#: system-config-kickstart.gladestrings:31
+msgid "File System Type:"
+msgstr "Тип система датотека:"
+
+#: system-config-kickstart.gladestrings:10
+msgid "Size (MB):"
+msgstr "Величина (MБ):"
+
+#: system-config-kickstart.gladestrings:11
+msgid "Fill all unused space on disk"
+msgstr "Попуни сав неискоришћен простор на диску"
+
+#: system-config-kickstart.gladestrings:12
+msgid "Grow to maximum of (MB):"
+msgstr "Повећај највише до (MБ):"
+
+#: system-config-kickstart.gladestrings:13
+msgid "Fixed size"
+msgstr "Утврђена величина"
+
+#: system-config-kickstart.gladestrings:14
+msgid "Use recommended swap size"
+msgstr "Користи препоручену величину за swap"
+
+#: system-config-kickstart.gladestrings:15
+msgid "Additional Size Options"
+msgstr "Додатне опције величине"
+
+#: system-config-kickstart.gladestrings:16
+msgid "Force to be a primary partition (asprimary)"
+msgstr "Присили да буде основна партиција (asprimary)"
+
+#: system-config-kickstart.gladestrings:17
+msgid "Make partition on specific drive (ondisk)"
+msgstr "Направи партицију на наведеном диску (ondisk)"
+
+#: system-config-kickstart.gladestrings:18
+#: system-config-kickstart.gladestrings:22
+msgid "         "
+msgstr "         "
+
+#: system-config-kickstart.gladestrings:19
+msgid "Drive :"
+msgstr "Диск :"
+
+#: system-config-kickstart.gladestrings:20
+msgid "(for example: hda or sdc)"
+msgstr "(на пример: hda или sdc)"
+
+#: system-config-kickstart.gladestrings:21
+msgid "Use existing partition (onpart)"
+msgstr "Користи постојећу партицију (onpart)"
+
+#: system-config-kickstart.gladestrings:23
+msgid "Partition :"
+msgstr "Партиција :"
+
+#: system-config-kickstart.gladestrings:24
+msgid "(for example: hda1 or sdc3)"
+msgstr "(на пример: hda1 или sdc3)"
+
+#: system-config-kickstart.gladestrings:25
+msgid "Format partition"
+msgstr "Форматирај партицију"
+
+#: system-config-kickstart.gladestrings:26
+msgid "Make RAID Device"
+msgstr "Направи RAID уређај"
+
+#: system-config-kickstart.gladestrings:28
+msgid "Number of spares:"
+msgstr "Број резерви:"
+
+#: system-config-kickstart.gladestrings:29
+msgid "Raid Members"
+msgstr "Raid чланови"
+
+#: system-config-kickstart.gladestrings:30
+msgid "RAID Level:"
+msgstr "RAID ниво:"
+
+#: system-config-kickstart.gladestrings:32
+msgid "RAID Device:"
+msgstr "RAID уређај:"
+
+#: system-config-kickstart.gladestrings:33
+msgid "md0"
+msgstr "md0"
+
+#: system-config-kickstart.gladestrings:34
+msgid "md1"
+msgstr "md1"
+
+#: system-config-kickstart.gladestrings:35
+msgid "md2"
+msgstr "md2"
+
+#: system-config-kickstart.gladestrings:36
+msgid "md3"
+msgstr "md3"
+
+#: system-config-kickstart.gladestrings:37
+msgid "md4"
+msgstr "md4"
+
+#: system-config-kickstart.gladestrings:38
+msgid "md5"
+msgstr "md5"
+
+#: system-config-kickstart.gladestrings:39
+msgid "md6"
+msgstr "md6"
+
+#: system-config-kickstart.gladestrings:40
+msgid "md7"
+msgstr "md7"
+
+#: system-config-kickstart.gladestrings:41
+msgid "md8"
+msgstr "md8"
+
+#: system-config-kickstart.gladestrings:42
+msgid "md9"
+msgstr "md9"
+
+#: system-config-kickstart.gladestrings:43
+msgid "md10"
+msgstr "md10"
+
+#: system-config-kickstart.gladestrings:44
+msgid "md11"
+msgstr "md11"
+
+#: system-config-kickstart.gladestrings:45
+msgid "md12"
+msgstr "md12"
+
+#: system-config-kickstart.gladestrings:46
+msgid "md13"
+msgstr "md13"
+
+#: system-config-kickstart.gladestrings:47
+msgid "md14"
+msgstr "md14"
+
+#: system-config-kickstart.gladestrings:48
+msgid "md15"
+msgstr "md15"
+
+#: system-config-kickstart.gladestrings:49
+msgid "0"
+msgstr "0"
+
+#: system-config-kickstart.gladestrings:50
+msgid "1"
+msgstr "1"
+
+#: system-config-kickstart.gladestrings:51
+msgid "5"
+msgstr "5"
+
+#: system-config-kickstart.gladestrings:56
+msgid "Format RAID device"
+msgstr "Форматирај RAID уређај"
+
+#: system-config-kickstart.gladestrings:57
+msgid "Kickstart Configurator"
+msgstr "Kickstart подешивач"
+
+#: system-config-kickstart.gladestrings:58
+msgid "_File"
+msgstr "_Датотека"
+
+#: system-config-kickstart.gladestrings:59
+msgid "_Open File"
+msgstr "_Отвори датотеку"
+
+#: system-config-kickstart.gladestrings:60
+msgid "_Preview"
+msgstr "_Преглед"
+
+#: system-config-kickstart.gladestrings:61
+msgid "_Save File"
+msgstr "_Сачувај датотеку"
+
+#: system-config-kickstart.gladestrings:62
+msgid "_Quit"
+msgstr "_Изађи"
+
+#: system-config-kickstart.gladestrings:63
+msgid "_Help"
+msgstr "_Помоћ"
+
+#: system-config-kickstart.gladestrings:64
+msgid "_Contents"
+msgstr "_Садржај"
+
+#: system-config-kickstart.gladestrings:65
+msgid "_About"
+msgstr "_О програму"
+
+#: system-config-kickstart.gladestrings:66
+msgid "Default Language:"
+msgstr "Подразумевани језик:"
+
+#: system-config-kickstart.gladestrings:67
+msgid "Encrypt root password"
+msgstr "Шифрирај root лозинку"
+
+#: system-config-kickstart.gladestrings:68
+msgid "Keyboard:"
+msgstr "Тастатура:"
+
+#: system-config-kickstart.gladestrings:69
+msgid "Mouse:"
+msgstr "Миш:"
+
+#: system-config-kickstart.gladestrings:70
+msgid "Emulate 3 Buttons"
+msgstr "Опонашај 3 дугмета"
+
+#: system-config-kickstart.gladestrings:71
+msgid "Time Zone:"
+msgstr "Временска зона:"
+
+#: system-config-kickstart.gladestrings:72
+msgid "Root Password:"
+msgstr "Root лозинка:"
+
+#: system-config-kickstart.gladestrings:73
+msgid "Language Support:"
+msgstr "Језичка подршка:"
+
+#: system-config-kickstart.gladestrings:74
+msgid "Use UTC clock"
+msgstr "Користи UTC сат"
+
+#: system-config-kickstart.gladestrings:75
+#: system-config-kickstart.gladestrings:114
+msgid "Confirm Password:"
+msgstr "Потврдите лозинку:"
+
+#: system-config-kickstart.gladestrings:76
+msgid "Target Architecture:"
+msgstr "Циљна архитектура:"
+
+#: system-config-kickstart.gladestrings:77
+msgid "Reboot system after installation"
+msgstr "Поново покрени систем након инсталације"
+
+#: system-config-kickstart.gladestrings:78
+msgid "Perform installation in text mode (graphical is default)"
+msgstr "Обави инсталацију у текстуалном режиму (графички је подразумеван)"
+
+#: system-config-kickstart.gladestrings:79
+msgid "Perform installation in interactive mode"
+msgstr "Обави инсталацију у интерактивном режиму"
+
+#: system-config-kickstart.gladestrings:80
+msgid "Basic Configuration (required)"
+msgstr "Основно подешавање (потребно)"
+
+#: system-config-kickstart.gladestrings:81
+msgid "label28"
+msgstr "label28"
+
+#: system-config-kickstart.gladestrings:82
+msgid "Perform new installation"
+msgstr "Обави нову инсталацију"
+
+#: system-config-kickstart.gladestrings:83
+msgid "Upgrade an existing installation"
+msgstr "Нагогради постојећу инсталацију"
+
+#: system-config-kickstart.gladestrings:84
+msgid "Choose the Installation Method:"
+msgstr "Изаберите метод инсталације:"
+
+#: system-config-kickstart.gladestrings:85
+#: system-config-kickstart.gladestrings:90
+msgid "CD-ROM"
+msgstr "CD-ROM"
+
+#: system-config-kickstart.gladestrings:86
+#: system-config-kickstart.gladestrings:93
+msgid "NFS"
+msgstr "NFS"
+
+#: system-config-kickstart.gladestrings:87
+#: system-config-kickstart.gladestrings:99
+msgid "FTP"
+msgstr "FTP"
+
+#: system-config-kickstart.gladestrings:88
+#: system-config-kickstart.gladestrings:102
+msgid "HTTP"
+msgstr "HTTP"
+
+#: system-config-kickstart.gladestrings:89
+#: system-config-kickstart.gladestrings:105
+msgid "Hard Drive"
+msgstr "Тврди диск"
+
+#: system-config-kickstart.gladestrings:91
+msgid "NFS Server:"
+msgstr "NFS сервер:"
+
+#: system-config-kickstart.gladestrings:92
+msgid "NFS Directory:"
+msgstr "NFS директоријум:"
+
+#: system-config-kickstart.gladestrings:94
+msgid "FTP Server:"
+msgstr "FTP сервер:"
+
+#: system-config-kickstart.gladestrings:95
+msgid "FTP Directory:"
+msgstr "FTP директоријум:"
+
+#: system-config-kickstart.gladestrings:96
+msgid "Specify an FTP username and password"
+msgstr "Наведите FTP корисничко име и лозинку:"
+
+#: system-config-kickstart.gladestrings:97
+msgid "FTP Username"
+msgstr "FTP корисничко име"
+
+#: system-config-kickstart.gladestrings:98
+msgid "FTP Password"
+msgstr "FTP лозинка"
+
+#: system-config-kickstart.gladestrings:100
+msgid "HTTP Server:"
+msgstr "HTTP сервер:"
+
+#: system-config-kickstart.gladestrings:101
+msgid "HTTP Directory:"
+msgstr "HTTP директоријум:"
+
+#: system-config-kickstart.gladestrings:103
+msgid "Hard Drive Partition:"
+msgstr "Партиција тврдог диска:"
+
+#: system-config-kickstart.gladestrings:104
+msgid "Hard Drive Directory:"
+msgstr "Директоријум тврдог диска:"
+
+#: system-config-kickstart.gladestrings:106
+msgid "Installation Method (required)"
+msgstr "Метоф инсталације (потребно)"
+
+#: system-config-kickstart.gladestrings:107
+msgid "label128"
+msgstr "label128"
+
+#: system-config-kickstart.gladestrings:108
+msgid "Install new boot loader"
+msgstr "Инсталирај нови покретач система"
+
+#: system-config-kickstart.gladestrings:109
+msgid "Do not install a boot loader"
+msgstr "Не инсталирај покретач система"
+
+#: system-config-kickstart.gladestrings:110
+msgid "Upgrade existing boot loader"
+msgstr "Надогради постојећи покретач система"
+
+#: system-config-kickstart.gladestrings:111
+msgid "GRUB Options:"
+msgstr "GRUB опције:"
+
+#: system-config-kickstart.gladestrings:112
+msgid "Use GRUB password"
+msgstr "Користи GRUB лозинку"
+
+#: system-config-kickstart.gladestrings:113
+msgid "Password:"
+msgstr "Лозинка:"
+
+#: system-config-kickstart.gladestrings:115
+msgid "Encrypt GRUB password"
+msgstr "Шифрирај GRUB лозинку"
+
+#: system-config-kickstart.gladestrings:116
+msgid "Install boot loader on Master Boot Record (MBR)"
+msgstr "Инсталирај покретач система у Главни покретачки запис (MBR)"
+
+#: system-config-kickstart.gladestrings:117
+msgid "Install boot loader on first sector of the boot partition"
+msgstr "Инсталирај покретач система на први сектор покретачке партиције"
+
+#: system-config-kickstart.gladestrings:118
+msgid "Kernel parameters:"
+msgstr "Параметри језгра:"
+
+#: system-config-kickstart.gladestrings:119
+msgid "label216"
+msgstr "label216"
+
+#: system-config-kickstart.gladestrings:120
+msgid "Boot Loader Options (required)"
+msgstr "Опције покретача система (потребно)"
+
+#: system-config-kickstart.gladestrings:121
+msgid "label35"
+msgstr "label35"
+
+#: system-config-kickstart.gladestrings:122
+msgid "Clear Master Boot Record"
+msgstr "Очисти главни покретачки запис (MBR)"
+
+#: system-config-kickstart.gladestrings:123
+msgid "Do not clear Master Boot Record"
+msgstr "Не чисти главни покретачки запис (MBR)"
+
+#: system-config-kickstart.gladestrings:124
+msgid "Remove all existing partitions"
+msgstr "Уклони све постојеће партиције"
+
+#: system-config-kickstart.gladestrings:125
+msgid "Remove existing Linux partitions"
+msgstr "Уклони постојеће Linux партиције"
+
+#: system-config-kickstart.gladestrings:126
+msgid "Preserve existing partitions"
+msgstr "Очувај постојеће партиције"
+
+#: system-config-kickstart.gladestrings:127
+msgid "Initialize the disk label"
+msgstr "Покрени ознаку диска"
+
+#: system-config-kickstart.gladestrings:128
+msgid "Do not initialize the disk label"
+msgstr "Не покрећи ознаку диска"
+
+#: system-config-kickstart.gladestrings:129
+msgid "_Add"
+msgstr "_Додавање"
+
+#: system-config-kickstart.gladestrings:130
+msgid "_Edit"
+msgstr "_Уређивање"
+
+#: system-config-kickstart.gladestrings:131
+msgid "_Delete"
+msgstr "_Брисање"
+
+#: system-config-kickstart.gladestrings:132
+msgid "RAID"
+msgstr "RAID"
+
+#: system-config-kickstart.gladestrings:133
+msgid "Partition options are not applicable on upgrades."
+msgstr "Опције партиције нису применљиве на надоградње."
+
+#: system-config-kickstart.gladestrings:134
+msgid "Partition Information (required)"
+msgstr "Подаци о партицији (потребно)"
+
+#: system-config-kickstart.gladestrings:135
+msgid "label30"
+msgstr "label30"
+
+#: system-config-kickstart.gladestrings:136
+msgid "_Add Network Device"
+msgstr "_Додај мрежни уређај"
+
+#: system-config-kickstart.gladestrings:137
+msgid "_Edit Network Device"
+msgstr "_Уреди мрежни уређај"
+
+#: system-config-kickstart.gladestrings:138
+msgid "_Delete Network Device"
+msgstr "_Обриши мрежни уређај"
+
+#: system-config-kickstart.gladestrings:140
+msgid "label31"
+msgstr "label31"
+
+#: system-config-kickstart.gladestrings:141
+msgid "Authentication:"
+msgstr "Аутентификација:"
+
+#: system-config-kickstart.gladestrings:142
+msgid "Use Shadow Passwords"
+msgstr "Користи Shadow лозинке"
+
+#: system-config-kickstart.gladestrings:143
+msgid "Use MD5"
+msgstr "Користи MD5"
+
+#: system-config-kickstart.gladestrings:144
+msgid "Enable NIS"
+msgstr "Укључи NIS"
+
+#: system-config-kickstart.gladestrings:145
+msgid "NIS Domain:"
+msgstr "NIS домен:"
+
+#: system-config-kickstart.gladestrings:146
+msgid "Use broadcast to find NIS server"
+msgstr "Користи емитовање за налажење NIS сервера"
+
+#: system-config-kickstart.gladestrings:147
+msgid "NIS Server:"
+msgstr "NIS сервер:"
+
+#: system-config-kickstart.gladestrings:148
+msgid "NIS Authentication"
+msgstr "NIS аутентификација"
+
+#: system-config-kickstart.gladestrings:149
+msgid "NIS"
+msgstr "NIS"
+
+#: system-config-kickstart.gladestrings:150
+msgid "Enable LDAP"
+msgstr "Укључи LDAP"
+
+#: system-config-kickstart.gladestrings:151
+msgid "LDAP Server: "
+msgstr "LDAP сервер: "
+
+#: system-config-kickstart.gladestrings:152
+msgid "LDAP Base Name: "
+msgstr "LDAP основно име: "
+
+#: system-config-kickstart.gladestrings:153
+msgid "LDAP Authentication"
+msgstr "LDAP аутентификација"
+
+#: system-config-kickstart.gladestrings:154
+msgid "LDAP "
+msgstr "LDAP "
+
+#: system-config-kickstart.gladestrings:155
+msgid "Enable Kerberos 5 Authentication"
+msgstr "Укључи Kerberos 5 аутентификацију"
+
+#: system-config-kickstart.gladestrings:156
+msgid "Kerberos Realm:"
+msgstr "Kerberos област:"
+
+#: system-config-kickstart.gladestrings:157
+msgid "Kerberos Domain Controller (KDC):"
+msgstr "Kerberos контролер домена (KDC):"
+
+#: system-config-kickstart.gladestrings:158
+msgid "Kerberos Master Server:"
+msgstr "Kerberos главни сервер:"
+
+#: system-config-kickstart.gladestrings:159
+msgid "Kerberos 5 Authentication"
+msgstr "Kerberos 5 аутентификација"
+
+#: system-config-kickstart.gladestrings:160
+msgid "Kerberos 5"
+msgstr "Kerberos 5"
+
+#: system-config-kickstart.gladestrings:161
+msgid "Enable Hesiod Support"
+msgstr "Укључи Hesiod подршку"
+
+#: system-config-kickstart.gladestrings:162
+msgid "Hesiod LHS:"
+msgstr "Hesiod LHS:"
+
+#: system-config-kickstart.gladestrings:163
+msgid "Hesiod RHS:"
+msgstr "Hesiod RHS:"
+
+#: system-config-kickstart.gladestrings:164
+msgid "Hesiod Authentication"
+msgstr "Hesiod аутентификација"
+
+#: system-config-kickstart.gladestrings:165
+msgid "Hesiod"
+msgstr "Hesiod"
+
+#: system-config-kickstart.gladestrings:166
+msgid "Enable SMB Authentication"
+msgstr "Укључи SMB аутентификацију"
+
+#: system-config-kickstart.gladestrings:167
+msgid "SMB Servers:"
+msgstr "SMB сервери:"
+
+#: system-config-kickstart.gladestrings:168
+msgid "SMB Workgroup:"
+msgstr "SMB радна група:"
+
+#: system-config-kickstart.gladestrings:169
+msgid "SMB Authentication"
+msgstr "SMB аутентификација"
+
+#: system-config-kickstart.gladestrings:170
+msgid "SMB"
+msgstr "SMB"
+
+#: system-config-kickstart.gladestrings:171
+msgid "Enable nscd"
+msgstr "Укључи nscd"
+
+#: system-config-kickstart.gladestrings:172
+msgid "Name Switch Cache Daemon (nscd) Authentication"
+msgstr "Name Switch Cache Daemon (nscd) аутентификација"
+
+#: system-config-kickstart.gladestrings:173
+msgid "Name Switch Cache"
+msgstr "Name Switch Cache"
+
+#: system-config-kickstart.gladestrings:174
+msgid "Authentication options are not applicable on upgrades."
+msgstr "Опције аутентификације нису применљиве на надоградње."
+
+#: system-config-kickstart.gladestrings:175
+msgid "Authentication Configuration"
+msgstr "Подешавање аутентификације"
+
+#: system-config-kickstart.gladestrings:176
+msgid "label32"
+msgstr "label32"
+
+#: system-config-kickstart.gladestrings:177
+msgid "Security level:"
+msgstr "Ниво сигурности:"
+
+#: system-config-kickstart.gladestrings:178
+msgid "Enable firewall"
+msgstr "Укључи заштитни зид"
+
+#: system-config-kickstart.gladestrings:179
+msgid "Disable firewall"
+msgstr "Искључи заштитни зид"
+
+#: system-config-kickstart.gladestrings:180
+msgid "SELinux:"
+msgstr "SELinux:"
+
+#: system-config-kickstart.gladestrings:181
+msgid "Active"
+msgstr "Активно"
+
+#: system-config-kickstart.gladestrings:182
+msgid "Warn"
+msgstr "Упоз."
+
+#: system-config-kickstart.gladestrings:183
+#: system-config-kickstart.gladestrings:195
+msgid "Disabled"
+msgstr "Искључено"
+
+#: system-config-kickstart.gladestrings:184
+msgid "Firewall configuration is not applicable on upgrades."
+msgstr "Подешавање заштитног зида није применљиво на надоградње."
+
+#: system-config-kickstart.gladestrings:186
+msgid "label33"
+msgstr "label33"
+
+#: system-config-kickstart.gladestrings:187
+msgid "Configure the X Window System"
+msgstr "Подеси X окружење"
+
+#: system-config-kickstart.gladestrings:188
+msgid "Color Depth"
+msgstr "Дубина боја"
+
+#: system-config-kickstart.gladestrings:189
+msgid "Resolution"
+msgstr "Резолуција"
+
+#: system-config-kickstart.gladestrings:190
+msgid "Default Desktop:"
+msgstr "Подразумевано окружење:"
+
+#: system-config-kickstart.gladestrings:191
+msgid "GNOME"
+msgstr "GNOME"
+
+#: system-config-kickstart.gladestrings:192
+msgid "KDE"
+msgstr "KDE"
+
+#: system-config-kickstart.gladestrings:193
+msgid "Start the X Window System on boot"
+msgstr "Покрени Х систем при покретању система"
+
+#: system-config-kickstart.gladestrings:194
+msgid "On first boot, Setup Agent is: "
+msgstr "При првом покретању, Агент подешавања је: "
+
+#: system-config-kickstart.gladestrings:196
+msgid "Enabled"
+msgstr "Укључено"
+
+#: system-config-kickstart.gladestrings:197
+msgid "Enabled in reconfiguration mode"
+msgstr "Укључено у режиму поновног подешавања"
+
+#: system-config-kickstart.gladestrings:198
+msgid "General"
+msgstr "Опште"
+
+#: system-config-kickstart.gladestrings:199
+msgid "Probe for video card"
+msgstr "Потражи видео карту"
+
+#: system-config-kickstart.gladestrings:200
+msgid "Video Card RAM: "
+msgstr "RAM видео карте:"
+
+#: system-config-kickstart.gladestrings:201
+msgid "Video Card"
+msgstr "Видео карта"
+
+#: system-config-kickstart.gladestrings:202
+msgid "Probe for monitor"
+msgstr "Потражи монитор"
+
+#: system-config-kickstart.gladestrings:203
+msgid "Use custom monitor sync rates"
+msgstr "Користи прилагођене вредности за синхронизовање монитора"
+
+#: system-config-kickstart.gladestrings:204
+msgid "Hz"
+msgstr "Hz"
+
+#: system-config-kickstart.gladestrings:205
+msgid "kHz"
+msgstr "kHz"
+
+#: system-config-kickstart.gladestrings:206
+msgid "Vertical Sync:"
+msgstr "Усправно синхронизовање:"
+
+#: system-config-kickstart.gladestrings:207
+msgid "Horizontal Sync:"
+msgstr "Положено синхронизовање:"
+
+#: system-config-kickstart.gladestrings:208
+msgid "Monitor"
+msgstr "Монитор"
+
+#: system-config-kickstart.gladestrings:209
+msgid "Display configuration is not applicable on upgrades."
+msgstr "Подешавање приказа није применљиво на надоградње."
+
+#: system-config-kickstart.gladestrings:211
+msgid "label88"
+msgstr "label88"
+
+#: system-config-kickstart.gladestrings:212
+msgid "Select packages to install."
+msgstr "Изаберите пакете за инсталирање."
+
+#: system-config-kickstart.gladestrings:213
+msgid "_Install Everything"
+msgstr "_Инсталирај све"
+
+#: system-config-kickstart.gladestrings:214
+msgid "Desktops"
+msgstr "Радна окружења"
+
+#: system-config-kickstart.gladestrings:215
+msgid "Applications"
+msgstr "Програми"
+
+#: system-config-kickstart.gladestrings:216
+msgid "Servers"
+msgstr "Сервери"
+
+#: system-config-kickstart.gladestrings:217
+msgid "Development"
+msgstr "Развој"
+
+#: system-config-kickstart.gladestrings:218
+msgid "System"
+msgstr "Систем"
+
+#: system-config-kickstart.gladestrings:219
+msgid "Package selection is not applicable on upgrades."
+msgstr "Одабир пакета није применљив на надоградње."
+
+#: system-config-kickstart.gladestrings:221
+msgid "label34"
+msgstr "label34"
+
+#: system-config-kickstart.gladestrings:222
+#, c-format
+msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %pre command at the beginning."
+msgstr "Упозорење: грешка у овој скрипти може довести до неуспеле kickstart инсталације. Не укључујте %pre команду на почетку."
+
+#: system-config-kickstart.gladestrings:223
+#: system-config-kickstart.gladestrings:229
+msgid "Use an interpreter:"
+msgstr "Користи интерпретер:"
+
+#: system-config-kickstart.gladestrings:224
+#, c-format
+msgid "Type your %pre script below:"
+msgstr "Укуцајте %pre скрипту:"
+
+#: system-config-kickstart.gladestrings:226
+msgid "label89"
+msgstr "label89"
+
+#: system-config-kickstart.gladestrings:227
+#, c-format
+msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %post command at the beginning."
+msgstr "Упозорење: грешка у овој скрипти може довести до неуспеле kickstart инсталације. Не укључујте %post команду на почетку."
+
+#: system-config-kickstart.gladestrings:228
+msgid "Run outside of the chroot environment"
+msgstr "Покрени изван chroot окружења"
+
+#: system-config-kickstart.gladestrings:230
+#, c-format
+msgid "Type your %post script below:"
+msgstr "Укуцајте %post скрипту:"
+
+#: system-config-kickstart.gladestrings:232
+msgid "label93"
+msgstr "label93"
+
+#: system-config-kickstart.gladestrings:233
+msgid "Preview Options"
+msgstr "Опције прегледа"
+
+#: system-config-kickstart.gladestrings:234
+msgid "_Save to File"
+msgstr "_Сачувај у датотеку"
+
+#: system-config-kickstart.gladestrings:235
+msgid "You have choosen the following configuration. Click Save File to save the kickstart file. "
+msgstr "Изабрали сте следеће подешавање. Клините Сачувај датотеку да би сачували kickstart датотеку. "
+
+#: system-config-kickstart.gladestrings:236
+msgid "RAID Options"
+msgstr "RAID опције"
+
+#: system-config-kickstart.gladestrings:237
+msgid "Software RAID allows you to combine several disks into a larger RAID device.  A RAID device can be configured to provide additional speed and reliability compared to using an individual drive.  For more information on using RAID devices please consult the kickstart documentation."
+msgstr "Софтверски RAID Вам омогућава комбиновање више дискова у већи RAID уређај.  RAID уређај може се подесити тако да пружи додатну брзину и поузданост у поређењу са појединачним диском.  За више информација о коришћењуRAID уређаја погледајте kickstart документацију. "
+
+#: system-config-kickstart.gladestrings:238
+msgid "To use RAID you must first create at least two partitions of type 'software RAID'.  Then you can create a RAID device which can be formatted and mounted."
+msgstr "Да би користили RAID прво морате направити најмање две партиције типа ’софтверски RAID‘.  Потом можете направити RAID уређај који може бити форматиран и монтиран."
+
+#: system-config-kickstart.gladestrings:239
+msgid "Choose one of the following options:"
+msgstr "Изаберите једну од следећих опција:"
+
+#: system-config-kickstart.gladestrings:240
+msgid "Create a software RAID partition"
+msgstr "Направите софтверску RAID партицију"
+
+#: system-config-kickstart.gladestrings:241
+msgid "Create a RAID device [default = /dev/md0]"
+msgstr "Направите RAID уређај [подразумевано = /dev/md0]"
+
+#: system-config-kickstart.gladestrings:242
+msgid "Network Device Information"
+msgstr "Подаци о мрежном уређају"
+
+#: system-config-kickstart.gladestrings:243
+msgid "Network Device:"
+msgstr "Мрежни уређај:"
+
+#: system-config-kickstart.gladestrings:244
+msgid "Network Type:"
+msgstr "Тип мреже:"
+
+#: system-config-kickstart.gladestrings:245
+msgid "IP Address:"
+msgstr "IP адреса:"
+
+#: system-config-kickstart.gladestrings:246
+msgid "Netmask: "
+msgstr "Мрежна маска: "
+
+#: system-config-kickstart.gladestrings:247
+msgid "Gateway:"
+msgstr "Мрежни излаз:"
+
+#: system-config-kickstart.gladestrings:248
+msgid "Name Server:"
+msgstr "Name Server:"
+
+#: system-config-kickstart.gladestrings:249
+#: system-config-kickstart.gladestrings:250
+#: system-config-kickstart.gladestrings:251
+#: system-config-kickstart.gladestrings:252
+#: system-config-kickstart.gladestrings:253
+#: system-config-kickstart.gladestrings:254
+#: system-config-kickstart.gladestrings:255
+#: system-config-kickstart.gladestrings:256
+#: system-config-kickstart.gladestrings:257
+#: system-config-kickstart.gladestrings:258
+#: system-config-kickstart.gladestrings:259
+#: system-config-kickstart.gladestrings:260
+msgid "."
+msgstr "."
+
