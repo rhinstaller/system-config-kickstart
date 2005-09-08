@@ -29,7 +29,6 @@ import getopt
 
 from rhpl import keyboard_models
 import rhpl.keyboard as keyboard
-import rhpl.mouse as mouse
 from hardwareLists import langDict
 
 import kickstartGui
@@ -50,16 +49,13 @@ class basic:
         self.notebook = notebook
         self.kickstartData = kickstartData
         self.xml = xml
-        self.mouse = mouse.Mouse(skipProbe = 1)
         self.lang_combo = xml.get_widget("lang_combo")
         self.keyboard_combo = xml.get_widget("keyboard_combo")
-        self.mouse_combo = xml.get_widget("mouse_combo")
         self.timezone_combo = xml.get_widget("timezone_combo")
         self.utc_check_button = xml.get_widget("utc_check_button")
 
         self.root_passwd_entry = xml.get_widget("root_passwd_entry")
         self.root_passwd_confirm_entry = xml.get_widget("root_passwd_confirm_entry")        
-        self.emulate_3_buttons = xml.get_widget("emulate_3_buttons")
         self.lang_support_view = xml.get_widget("lang_support_view")
         self.reboot_checkbutton = xml.get_widget("reboot_checkbutton")
         self.text_install_checkbutton = xml.get_widget("text_install_checkbutton")
@@ -87,7 +83,6 @@ class basic:
         self.lang_support_view.append_column(col)
 
         self.langDict = langDict
-        self.mouseDict = self.mouse.available()
 
         #populate language combo
         self.lang_list = self.langDict.keys()
@@ -100,17 +95,6 @@ class basic:
         self.populateLangSupport()
 #        for lang in lang_list:
 #            self.lang_support_list.append([lang])
-
-        #populate mouse combo
-        self.mouse_list = ["Probe for Mouse"]
-        dict_list = self.mouseDict.keys()
-        dict_list.sort()
-
-        for item in dict_list:
-            self.mouse_list.append(item)
-
-        self.mouse_combo.set_popdown_strings(self.mouse_list)
-        self.mouse_combo.list.select_item(0)
 
         #populate keyboard combo, add keyboards here
         self.keyboard_dict = keyboard_models.KeyboardModels().get_models()
@@ -131,9 +115,6 @@ class basic:
             self.keyboard_combo.entry.set_text(self.keyboard_dict[currentKeymap][0])
         except:
             self.keyboard_combo.entry.set_text(self.keyboard_dict["us"][0])
-
-        #set default mouse to generic ps/2
-        self.mouse_combo.list.select_item(8)
 
         #populate time zone combo
         if os.access("/usr/share/zoneinfo/zone.tab", os.R_OK):
@@ -193,8 +174,6 @@ class basic:
             if self.keyboard_dict[item][0] == self.keyboard_combo.entry.get_text():
                 self.kickstartData.setKeyboard([item])
                 break
-
-        self.kickstartData.setMouse([self.mouseLookup(self.mouse_combo.entry.get_text())])
 
         if self.utc_check_button.get_active() == True:
             self.kickstartData.setTimezone(["--utc %s" % self.timezone_combo.entry.get_text()])
@@ -280,17 +259,6 @@ class basic:
     def languageLookup(self, args):
         return self.langDict [args]
 
-    def mouseLookup(self, args):
-        if args == "Probe for Mouse":
-            buf = ""
-        else:
-            buf = ""
-            if self.emulate_3_buttons.get_active() and self.mouseDict[args] != 'none':
-                buf = buf + "--emulthree "
-            (a, b, c, d, e, protocol) = self.mouseDict[args]
-            buf = buf + protocol
-        return buf
-
     def populateLangSupport(self):
         for lang in self.lang_list:
             iter = self.lang_support_store.append()
@@ -314,31 +282,6 @@ class basic:
 
         #set keyboard
         self.keyboard_combo.entry.set_text(self.keyboard_dict[self.kickstartData.getKeyboard()][0])
-
-        mouseLine = self.kickstartData.getMouse()
-
-        if mouseLine == None:
-            self.mouse_combo.list.select_item(self.mouse_list.index("No - mouse"))
-
-        else:
-            #set mouse
-            for mouse in self.mouseDict.keys():
-
-                if "--emulthree" in mouseLine:
-                    self.emulate_3_buttons.set_active(True)
-                    mouseLine.remove("--emulthree")
-
-                try:
-                    mouseTag = mouseLine[0]
-                except:
-                    mouseTag = None
-
-                (a, b, c, d, e, dictMouseTag) = self.mouseDict[mouse]
-
-                if dictMouseTag == mouseTag:
-                    self.mouse_combo.list.select_item(self.mouse_list.index(mouse))
-                else:
-                    self.mouse_combo.list.select_item(0)
 
         #set timezone
         self.timezone_combo.list.select_item(self.timezone_list.index(self.kickstartData.getTimezone()))

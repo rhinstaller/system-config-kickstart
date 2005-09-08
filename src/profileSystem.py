@@ -22,17 +22,14 @@ import os
 sys.path.append("/usr/share/system-config-language")
 import language_backend
 import rhpl.keyboard as keyboard
-import rhpl.mouse as mouse
 
 class ProfileSystem:
     def __init__(self, kickstartData):
         self.kickstartData = kickstartData
         self.languageBackend = language_backend.LanguageBackend()
-        self.mouse = mouse.Mouse(skipProbe = 1)
         
         self.getLang()
         self.getKeyboard()
-        self.getMouse()
         self.getTimezone()
         self.getRootPassword()
         self.getPackages()
@@ -52,25 +49,6 @@ class ProfileSystem:
         kbd = keyboard.Keyboard()
         kbd.read()
         self.kickstartData.setKeyboard([kbd.get()])
-
-    def getMouse(self):
-        if os.access('/etc/sysconfig/mouse', os.F_OK):
-            lines = open('/etc/sysconfig/mouse', 'r').readlines()
-            for line in lines:
-                line = string.strip(line)
-                if line[0] != "#":
-                    if line[:8] == "FULLNAME":
-                        tag, model = string.split(line, "=")
-
-            model = string.replace(model, '"', "")
-            model = string.replace(model, "'", "")        
-
-            mouseDict = self.mouse.available()
-            a, b, c, d, e, protocol = mouseDict[model]
-
-            self.kickstartData.setMouse([protocol])
-        else:
-            self.kickstartData.setMouse(["none"])
 
     def getTimezone(self):
         lines = open('/etc/sysconfig/clock', 'r').readlines()
