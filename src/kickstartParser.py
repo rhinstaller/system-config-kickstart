@@ -18,6 +18,18 @@
 
 import string
 import getopt
+import gtk
+import sys
+import kickstartGui
+
+##
+## I18N
+##
+from rhpl.translate import _, N_
+import rhpl.translate as translate
+domain = 'system-config-kickstart'
+translate.textdomain (domain)
+gtk.glade.bindtextdomain(domain)
 
 class KickstartParser:
     def __init__(self, kickstartData, file):
@@ -29,28 +41,18 @@ class KickstartParser:
                      "bootloader"       : self.kickstartData.setBootloader,
  		     "cdrom"		: self.kickstartData.setCdrom,
  		     "clearpart"	: self.kickstartData.setClearPart,
-## 		     "device"		: None,
-## 		     "deviceprobe"	: None,
-## 		     "driverdisk"	: None,
  		     "firewall"		: self.kickstartData.setFirewall,
                      "firstboot"        : self.kickstartData.setFirstboot,
  		     "harddrive"	: self.kickstartData.setHardDrive,
  		     "install"		: self.kickstartData.setInstall,
  		     "keyboard"		: self.kickstartData.setKeyboard,
-# 		     "lang"		: self.kickstartData.setLang,
        		     "lang"		: self.kickstartData.setLang,
                      "langsupport"	: self.kickstartData.setLangSupport,
-## 		     "lilo"		: self.kickstartData.setLilo,
-
-## 		     "lilocheck"	: self.kickstartData.setLiloCheck,
- 		     "mouse"		: self.kickstartData.setMouse,
  		     "network"		: self.kickstartData.setNetwork,
  		     "nfs"		: self.kickstartData.setNfs,
  		     "part"		: self.kickstartData.definePartition,
  		     "partition"	: self.kickstartData.definePartition,
  		     "raid"		: self.kickstartData.defineRaid,
-##                      "volgroup"         : self.defineVolumeGroup,
-##                      "logvol"           : self.defineLogicalVolume,
  		     "reboot"		: self.kickstartData.setReboot,
  		     "rootpw"		: self.kickstartData.setRootPw,
  		     "selinux"		: self.kickstartData.setSELinux,
@@ -60,15 +62,27 @@ class KickstartParser:
  		     "url"		: self.kickstartData.setUrl,
  		     "upgrade"		: self.kickstartData.setUpgrade,
  		     "xconfig"		: self.kickstartData.setXconfig,
-## 		     "xdisplay"		: None,
  		     "zerombr"		: self.kickstartData.setZeroMbr,
                      "interactive"      : self.kickstartData.setInteractive,
-##                      "autostep"         : self.kickstartData.setAutoStep,
-##                      "firstboot"        : self.kickstartData.setFirstboot,
 		   }
 
-
         self.readKickstartFile(file)
+
+    def parserError(self, line):
+        dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK,
+                                (_("There was a problem reading the "
+                                   "following line from the kickstart file. "
+                                   "This could be due to an error on the line "
+                                   "or using a keyword that no longer "
+                                   "exists.\n\n%s") % line))
+	dlg.set_title(_("Kickstart Error"))
+	dlg.set_position(gtk.WIN_POS_CENTER)
+	dlg.set_icon(kickstartGui.iconPixbuf)
+	dlg.set_border_width(2)
+	dlg.set_modal(True)
+	dlg.run()
+	dlg.hide()
+	sys.exit(1)
 
     def readKickstartFile(self, file):
         self.lines = open(file, "r").readlines()
@@ -112,7 +126,8 @@ class KickstartParser:
                 if tokens[0] in self.handlers.keys():
                     if self.handlers[tokens[0]]:
 			self.handlers[tokens[0]](tokens[1:])
-                    
+                else:
+                    self.parserError(line)
 
         if packageList != []:
             tokens = string.split(packageList[0])
@@ -134,13 +149,13 @@ class KickstartParser:
                     individualList.append(pkg)
             
             self.kickstartData.setPackageGroupList(groupList)
-            self.kickstartData.setIndividualPackageList(individualList)            
+            self.kickstartData.setIndividualPackageList(individualList)
 
         if preList != []:
             tokens = string.split(preList[0])
             self.kickstartData.setPreLine(tokens[1:])
             self.kickstartData.setPreList(preList[1:])
-        
+
         if postList != []:
             tokens = string.split(postList[0])
             self.kickstartData.setPostLine(tokens[1:])

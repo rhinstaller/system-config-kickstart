@@ -25,7 +25,6 @@ class KickstartData:
         self.langsupport = None
         self.defaultLang = None
         self.keyboard = None
-        self.mouse = None
         self.timezone = None
         self.rootpw = None
         self.reboot = None
@@ -96,12 +95,6 @@ class KickstartData:
 
     def getKeyboard(self):
         return self.keyboard
-
-    def setMouse(self, args):
-        self.mouse = args
-
-    def getMouse(self):
-        return self.mouse
 
     def setText(self, args):
         if args == None:
@@ -387,19 +380,11 @@ class KickstartData:
 
         file.append("#System keyboard")
         file.append("keyboard " + self.getKeyboard())
-        file.append("#System mouse")
-
-        mouse = self.getMouse()
-        try:
-            file.append("mouse " + string.join(mouse), " ")
-        except:
-            file.append("mouse")
         file.append("#Sytem timezone")
         file.append("timezone " + self.getTimezone())
         file.append("#Root password")
         file.append("rootpw " + self.getRootPw())
 
-        
         if self.getReboot():
             file.append("#Reboot after installation")
             file.append(self.getReboot())
