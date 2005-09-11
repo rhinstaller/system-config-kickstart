@@ -1,7 +1,4 @@
 # translation of pl.po to Polish
-# translation of system-config-kickstart.po to Polish
-# This file is distributed under the same license as the PACKAGE package.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 # Tom Berner <tom@man.lodz.pl>, 2004.
 # Tom Berner <tom@lodz.pl>, 2005.
 #
@@ -10,7 +7,7 @@ msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-03-23 14:24-0500\n"
-"PO-Revision-Date: 2005-02-24 15:01+0100\n"
+"PO-Revision-Date: 2005-09-10 23:47+0200\n"
 "Last-Translator: Tom Berner <tom@lodz.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -49,19 +46,18 @@ msgstr "Błąd"
 
 #: ../src/basic.py:225
 msgid "Please select a root password."
-msgstr "Proszę podać hasło roota."
+msgstr "Podaj hasło roota."
 
 #: ../src/bootloader.py:76
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
 msgstr ""
-"Opcje programu statowego są nie do zastosowania w przypadku platformy %s"
+"Opcje programu statowego nie są stosowane w przypadku platformy %s"
 
 #: ../src/bootloader.py:117
 msgid "Grub passwords do not match.  Please try again."
-msgstr "Hasła GRUB-a nie zgadzają się.  Proszę spróbować ponownie."
+msgstr "Hasła GRUB-a nie zgadzają się. Spróbuj ponownie."
 
-#. create table with custom checklists
 #: ../src/firewall.py:60
 msgid "Trusted devices:"
 msgstr "Zaufane urządzenia:"
@@ -76,43 +72,43 @@ msgstr "Inne porty: (1029:tcp)"
 
 #: ../src/install.py:134
 msgid "Please enter an NFS server."
-msgstr "Proszę podać serwer NFS."
+msgstr "Podaj serwer NFS."
 
 #: ../src/install.py:137
 msgid "Please enter an NFS directory."
-msgstr "Proszę podać folder NFS."
+msgstr "Podaj folder NFS."
 
 #: ../src/install.py:147
 msgid "Please enter an FTP server."
-msgstr "Proszę podać serwer FTP."
+msgstr "Podaj serwer FTP."
 
 #: ../src/install.py:154
 msgid "Please enter an FTP directory."
-msgstr "Proszę podać folder FTP."
+msgstr "Podaj folder FTP."
 
 #: ../src/install.py:160
 msgid "Please enter an FTP user name."
-msgstr "Proszę podać nazwę użytkownika FTP."
+msgstr "Podaj nazwę użytkownika FTP."
 
 #: ../src/install.py:163
 msgid "Please enter an FTP password."
-msgstr "Proszę podać hasło serwera FTP."
+msgstr "Podaj hasło serwera FTP."
 
 #: ../src/install.py:178
 msgid "Please enter an HTTP server."
-msgstr "Proszę podać serwer HTTP."
+msgstr "Podaj serwer HTTP."
 
 #: ../src/install.py:181
 msgid "Please enter an HTTP server directory."
-msgstr "Proszę podać folder serwera HTTP."
+msgstr "Podaj folder serwera HTTP."
 
 #: ../src/install.py:202
 msgid "Please enter a hard drive directory."
-msgstr "Proszę podać folder na twardym dysku."
+msgstr "Podaj folder na twardym dysku."
 
 #: ../src/install.py:205
 msgid "Please enter a hard drive partition."
-msgstr "Proszę podać partycję na dysku."
+msgstr "Podaj partycję na dysku."
 
 #: ../src/kickstartGui.py:86
 msgid "Kickstart"
@@ -152,7 +148,7 @@ msgstr "Uwierzytelnianie"
 
 #: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:186
 msgid "Firewall Configuration"
-msgstr "Konfiguracja zapory ogniowej"
+msgstr "Konfiguracja zapory sieciowej"
 
 #: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:211
 msgid "Display Configuration"
@@ -190,7 +186,7 @@ msgstr "Informacje o Konfiguratorze kickstart"
 
 #: ../src/kickstartGui.py:224
 msgid "Help is not available."
-msgstr "Pomoc nie jest dostępna."
+msgstr "Pomoc jest niedostępna."
 
 #: ../src/kickstartGui.py:273
 #, python-format
@@ -212,7 +208,7 @@ msgstr "Stałe IP"
 
 #: ../src/network.py:213
 msgid "Please fill in the network information"
-msgstr "Proszę podać informacje o sieci"
+msgstr "Podaj informacje o sieci"
 
 #: ../src/network.py:318
 #, python-format
@@ -220,20 +216,19 @@ msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
 msgstr ""
-"Urządzenie sieciowe o nazwie %s już istnieje.  Proszę wybrać inną nazwę "
-"urządzenia"
+"Urządzenie sieciowe o nazwie %s już istnieje. Wybierz inną nazwę urządzenia"
 
 #: ../src/packageGroupList.py:16
 msgid "Could not start because there is no /usr/share/comps/"
-msgstr "Nie można wystartować, ponieważ brak /usr/share/comps/"
+msgstr "Nie można uruchomić, ponieważ brak pliku /usr/share/comps/"
 
 #: ../src/packageGroupList.py:16
 msgid "/comps.xml file."
-msgstr "plik /comps.xml"
+msgstr "/comps.xml."
 
 #: ../src/packageGroupList.py:17
 msgid "Please make sure the comps package is installed."
-msgstr "Proszę się upewnić, że pakiet comps został zainstalowany."
+msgstr "Upewnij się, że pakiet comps został zainstalowany."
 
 #: ../src/partWindow.py:83 system-config-kickstart.gladestrings:53
 msgid "ext2"
@@ -243,7 +238,6 @@ msgstr "ext2"
 msgid "ext3"
 msgstr "ext3"
 
-#. _("physical volume (LVM)"):"lvm",
 #: ../src/partWindow.py:85 ../src/partWindow.py:148
 msgid "software RAID"
 msgstr "programowy RAID"
@@ -281,40 +275,39 @@ msgstr "Dyski twarde"
 msgid "Specify a mount point for the partition."
 msgstr "Podaj punkt montowania dla partycji."
 
-#. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:429
 #, python-format
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr "Punkt montowania %s już jest w użyciu.  Proszę wybrać inny."
+msgstr "Punkt montowania %s już jest w użyciu. Wybierz inny."
 
 #: ../src/partWindow.py:449
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
 msgstr ""
-"Aby utworzyć nową partycję RAID musisz podać nazwę urządzenia twardego dysku "
+"Aby utworzyć nową partycję RAID, musisz podać nazwę urządzenia twardego dysku "
 "lub istniejącej partycji."
 
 #: ../src/partWindow.py:488
 msgid "Specify a device on which to create the partition."
-msgstr "Wskaż urządzenie na którym chcesz utworzyć partycję."
+msgstr "Wskaż urządzenie, na którym chcesz utworzyć partycję."
 
 #: ../src/partWindow.py:490
 msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
 msgstr ""
-"Podana nazwa urządzenia nie jest poprawną nazwą. Proszę podać poprawną nazwę "
-"urządzenia, przykładowo \"hda1\" lub \"sda3\"."
+"Podana nazwa urządzenia nie jest prawidłową nazwą. Podaj poprawną nazwę "
+"urządzenia, na przykład \"hda1\" lub \"sda3\"."
 
 #: ../src/partWindow.py:500
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
 msgstr ""
-"Wskazane partycje nie kończą się liczbą.  Partycje muszą mieć swój numer, "
-"przykładowo \"hda1\" lub \"sda3\"."
+"Wskazane partycje nie kończą się liczbą. Partycje muszą mieć swój numer, "
+"na przykład \"hda1\" lub \"sda3\"."
 
 #: ../src/partWindow.py:506
 msgid ""
@@ -322,8 +315,8 @@ msgid ""
 "Partitions must have a valid device name and partition number such as \"hda1"
 "\" or \"sda3\"."
 msgstr ""
-"Podane partycje nie rozpoczynają się od  \"hd\" lub \"sd\". Partycje muszą "
-"mieć poprawną nazwę urządzenia i numer partycji, przykładowo \"hda1\" lub "
+"Podane partycje nie rozpoczynają się od \"hd\" lub \"sd\". Partycje muszą "
+"mieć prawidłową nazwę urządzenia i numer partycji, przykładowo \"hda1\" lub "
 "\"sda3\"."
 
 #: ../src/partition.py:72
@@ -334,7 +327,6 @@ msgstr ""
 "Urządzenie/\n"
 "Numer partycji"
 
-#. col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
 #: ../src/partition.py:75
 msgid ""
 "Mount Point/\n"
@@ -349,7 +341,7 @@ msgstr "Typ"
 
 #: ../src/partition.py:79
 msgid "Format"
-msgstr "Formatuj"
+msgstr "Sformatuj"
 
 #: ../src/partition.py:81
 msgid "Size (MB)"
@@ -394,26 +386,27 @@ msgid ""
 "values from\n"
 "                        the kickstart file already filled in."
 msgstr ""
-"Użycie: system-config-kickstart [--help] [--generate <plik>] "
-"[<kickstart_nazwapliku>]\n"
+"Użycie: system-config-kickstart [--help] [--generate <nazwapliku>] "
+"[<nazwapliku_kickstart>]\n"
 "        \n"
 "--help                  Wyświetla ten komunikat\n"
-"--generate <plik>       Tworzy plik konfiguracyjny kickstart dla aktualnej "
-"maszyny \n"
-"                        i zapisuje go do <plik>. Ta opcja działa na konsoli, "
-"jest więc \n"
+"--generate <plik>       Tworzy plik konfiguracyjny kickstart dla aktualnego "
+"komputera\n"
+"                        i zapisuje go do <nazwapliku>. Ta opcja działa na "
+"konsoli, jest więc \n"
 "                        użyteczna dla serwerów bez uruchomionego serwera X.\n"
 "<kickstart_nazwapliku>  Ta opcja spowoduje uruchomienie GUI z wartościami\n"
-"                        z istniejącego już pliku konfiguracyjnego kickstart."
+"                        z już istniejącego pliku konfiguracyjnego kickstart."
 
 #: ../src/system-config-kickstart.py:77
 msgid "Could not open display because no X server is running."
-msgstr "Nie można otworzyć ekranu, ponieważ nie działa serwer X."
+msgstr "Nie można otworzyć ekranu, ponieważ serwer X nie jest uruchomiony."
 
 #: ../src/system-config-kickstart.py:78
 msgid "Try running 'system-config-kickstart --help' for a list of options."
 msgstr ""
-"Spróbuj uruchomić 'system-config-kickstart --help', aby otrzymać listę opcji."
+"Spróbuj uruchomić \"system-config-kickstart --help\", aby otrzymać listę "
+"opcji."
 
 #: ../src/xconfig.py:106
 msgid "Could not read video card database"
@@ -460,11 +453,11 @@ msgstr "Stały rozmiar"
 
 #: system-config-kickstart.gladestrings:15
 msgid "Use recommended swap size"
-msgstr "Użyj zalecanej wielkości swapu"
+msgstr "Użyj zalecanej wielkości obszaru wymiany"
 
 #: system-config-kickstart.gladestrings:16
 msgid "Additional Size Options"
-msgstr "Dodatkowe opcje ustalania wielkości"
+msgstr "Dodatkowe opcje rozmiaru"
 
 #: system-config-kickstart.gladestrings:17
 msgid "Force to be a primary partition (asprimary)"
@@ -485,7 +478,7 @@ msgstr "Napęd :"
 
 #: system-config-kickstart.gladestrings:21
 msgid "(for example: hda or sdc)"
-msgstr "(przykładowo: hda lub sdc)"
+msgstr "(na przykład: hda lub sdc)"
 
 #: system-config-kickstart.gladestrings:22
 msgid "Use existing partition (onpart)"
@@ -497,11 +490,11 @@ msgstr "Partycja :"
 
 #: system-config-kickstart.gladestrings:25
 msgid "(for example: hda1 or sdc3)"
-msgstr "(przykładowo: hda1 lub sdc3)"
+msgstr "(na przykład: hda1 lub sdc3)"
 
 #: system-config-kickstart.gladestrings:26
 msgid "Format partition"
-msgstr "Formatuj partycję"
+msgstr "Sformatuj partycję"
 
 #: system-config-kickstart.gladestrings:27
 msgid "Make RAID Device"
@@ -513,7 +506,7 @@ msgstr "Liczba dysków zapasowych:"
 
 #: system-config-kickstart.gladestrings:30
 msgid "Raid Members"
-msgstr "Składniki RAID"
+msgstr "Elementy RAID"
 
 #: system-config-kickstart.gladestrings:31
 msgid "RAID Level:"
@@ -601,7 +594,7 @@ msgstr "5"
 
 #: system-config-kickstart.gladestrings:57
 msgid "Format RAID device"
-msgstr "Formatuj urządzenie RAID"
+msgstr "Sformatuj urządzenie RAID"
 
 #: system-config-kickstart.gladestrings:58
 msgid "Kickstart Configurator"
@@ -637,7 +630,7 @@ msgstr "Zawar_tość"
 
 #: system-config-kickstart.gladestrings:66
 msgid "_About"
-msgstr "Informacje _o"
+msgstr "_Informacje o"
 
 #: system-config-kickstart.gladestrings:67
 msgid "Default Language:"
@@ -657,7 +650,7 @@ msgstr "Mysz:"
 
 #: system-config-kickstart.gladestrings:71
 msgid "Emulate 3 Buttons"
-msgstr "Emuluj 3 klawisze"
+msgstr "Emuluj trzy klawisze"
 
 #: system-config-kickstart.gladestrings:72
 msgid "Time Zone:"
@@ -669,7 +662,7 @@ msgstr "Hasło roota:"
 
 #: system-config-kickstart.gladestrings:74
 msgid "Language Support:"
-msgstr "Wsparcie dla języka:"
+msgstr "Obsługa języka:"
 
 #: system-config-kickstart.gladestrings:75
 msgid "Use UTC clock"
@@ -682,11 +675,11 @@ msgstr "Potwierdź hasło:"
 
 #: system-config-kickstart.gladestrings:77
 msgid "Target Architecture:"
-msgstr "Docelowa architektura:"
+msgstr "Architektura docelowa:"
 
 #: system-config-kickstart.gladestrings:78
 msgid "Reboot system after installation"
-msgstr "Restartuj system po instalacji"
+msgstr "Uruchamiaj ponownie system po instalacji"
 
 #: system-config-kickstart.gladestrings:79
 msgid "Perform installation in text mode (graphical is default)"
@@ -795,7 +788,7 @@ msgstr "label128"
 
 #: system-config-kickstart.gladestrings:109
 msgid "Install new boot loader"
-msgstr "Instaluj nowy program startowy"
+msgstr "Zainstaluj nowy program startowy"
 
 #: system-config-kickstart.gladestrings:110
 msgid "Do not install a boot loader"
@@ -823,11 +816,11 @@ msgstr "Szyfruj hasło GRUB-a"
 
 #: system-config-kickstart.gladestrings:117
 msgid "Install boot loader on Master Boot Record (MBR)"
-msgstr "Instaluj program startowy w Master Boot Record (MBR)"
+msgstr "Zainstaluj program startowy w Master Boot Record (MBR)"
 
 #: system-config-kickstart.gladestrings:118
 msgid "Install boot loader on first sector of the boot partition"
-msgstr "Instaluj program startowy na pierwszym sektorze partycji startowej"
+msgstr "Zainstaluj program startowy na pierwszym sektorze partycji startowej"
 
 #: system-config-kickstart.gladestrings:119
 msgid "Kernel parameters:"
@@ -851,7 +844,7 @@ msgstr "Wyczyść Master Boot Record"
 
 #: system-config-kickstart.gladestrings:124
 msgid "Do not clear Master Boot Record"
-msgstr "Nie czyść Master Boot Record"
+msgstr "Nie czyść Master Boot Recordu"
 
 #: system-config-kickstart.gladestrings:125
 msgid "Remove all existing partitions"
@@ -859,7 +852,7 @@ msgstr "Usuń wszystkie istniejące partycje"
 
 #: system-config-kickstart.gladestrings:126
 msgid "Remove existing Linux partitions"
-msgstr "Usuń wszystkie istniejące partycje Linuksa"
+msgstr "Usuń istniejące partycje linuksowe"
 
 #: system-config-kickstart.gladestrings:127
 msgid "Preserve existing partitions"
@@ -867,11 +860,11 @@ msgstr "Zachowaj istniejące partycje"
 
 #: system-config-kickstart.gladestrings:128
 msgid "Initialize the disk label"
-msgstr "Inicjalizuj etykietę dysku"
+msgstr "Inicjuj etykietę dysku"
 
 #: system-config-kickstart.gladestrings:129
 msgid "Do not initialize the disk label"
-msgstr "Nie inicjalizuj etykiety dysku"
+msgstr "Nie inicjuj etykiety dysku"
 
 #: system-config-kickstart.gladestrings:130
 msgid "_Add"
@@ -939,7 +932,7 @@ msgstr "Domena NIS:"
 
 #: system-config-kickstart.gladestrings:147
 msgid "Use broadcast to find NIS server"
-msgstr "Użyj brodcastu do znalezienia serwera NIS"
+msgstr "Użyj rozgłaszania do wyszukiwania serwera NIS"
 
 #: system-config-kickstart.gladestrings:148
 msgid "NIS Server:"
@@ -999,7 +992,7 @@ msgstr "Kerberos 5"
 
 #: system-config-kickstart.gladestrings:162
 msgid "Enable Hesiod Support"
-msgstr "Włącz wsparcie Hesoida"
+msgstr "Włącz obsługę Hesioda"
 
 #: system-config-kickstart.gladestrings:163
 msgid "Hesiod LHS:"
@@ -1011,7 +1004,7 @@ msgstr "Hesiod RHS:"
 
 #: system-config-kickstart.gladestrings:165
 msgid "Hesiod Authentication"
-msgstr "Uwierzytelnianie Hesoid"
+msgstr "Uwierzytelnianie Hesioda"
 
 #: system-config-kickstart.gladestrings:166
 msgid "Hesiod"
@@ -1067,11 +1060,11 @@ msgstr "Poziom bezpieczeństwa:"
 
 #: system-config-kickstart.gladestrings:179
 msgid "Enable firewall"
-msgstr "Włącz zaporę ogniową"
+msgstr "Włącz zaporę"
 
 #: system-config-kickstart.gladestrings:180
 msgid "Disable firewall"
-msgstr "Wyłącz zaporę ogniową"
+msgstr "Wyłącz zaporę"
 
 #: system-config-kickstart.gladestrings:181
 msgid "SELinux:"
@@ -1083,7 +1076,7 @@ msgstr "Aktywny"
 
 #: system-config-kickstart.gladestrings:183
 msgid "Warn"
-msgstr "Ostrz"
+msgstr "Ostrzegaj"
 
 #: system-config-kickstart.gladestrings:184
 #: system-config-kickstart.gladestrings:196
@@ -1092,7 +1085,7 @@ msgstr "Wyłączony"
 
 #: system-config-kickstart.gladestrings:185
 msgid "Firewall configuration is not applicable on upgrades."
-msgstr "Konfiguracji zapory ogniowej nie stosuje się przy aktualizacji."
+msgstr "Konfiguracji zapory sieciowej nie stosuje się przy aktualizacji."
 
 #: system-config-kickstart.gladestrings:187
 msgid "label33"
@@ -1144,11 +1137,11 @@ msgstr "Ogólne"
 
 #: system-config-kickstart.gladestrings:200
 msgid "Probe for video card"
-msgstr "Wykrywaj kartę graficzną"
+msgstr "Wykryj kartę graficzną"
 
 #: system-config-kickstart.gladestrings:201
 msgid "Video Card RAM: "
-msgstr "RAM karty graficznej: "
+msgstr "Pamięć karty graficznej: "
 
 #: system-config-kickstart.gladestrings:202
 msgid "Video Card"
@@ -1156,7 +1149,7 @@ msgstr "Karta graficzna"
 
 #: system-config-kickstart.gladestrings:203
 msgid "Probe for monitor"
-msgstr "Wykrywaj monitor"
+msgstr "Wykryj monitor"
 
 #: system-config-kickstart.gladestrings:204
 msgid "Use custom monitor sync rates"
@@ -1233,7 +1226,7 @@ msgid ""
 "fail. Do not include the %pre command at the beginning."
 msgstr ""
 "Ostrzeżenie: błąd w tym skrypcie może spowodować, że twoja instalacja z "
-"pliku kickstart nie powiedzie się. Nie załączaj komendy %pre na początku."
+"pliku kickstart nie powiedzie się. Nie załączaj polecenia %pre na początku."
 
 #: system-config-kickstart.gladestrings:224
 #: system-config-kickstart.gladestrings:230
@@ -1256,7 +1249,7 @@ msgid ""
 "fail. Do not include the %post command at the beginning."
 msgstr ""
 "Ostrzeżenie: błąd w tym skrypcie może spowodować, że twoja instalacja z "
-"pliku kickstart nie powiedzie się. Nie załączaj komendy %post na początku."
+"pliku kickstart nie powiedzie się. Nie załączaj polecenia %post na początku."
 
 #: system-config-kickstart.gladestrings:229
 msgid "Run outside of the chroot environment"
@@ -1284,7 +1277,7 @@ msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
 msgstr ""
-"Wybrałeś następującą konfigurację. Kliknij Zapisz do pliku, aby zapisać ją "
+"Wybrałeś następującą konfigurację. Naciśnij Zapisz do pliku, aby zapisać ją "
 "do pliku konfiguracyjnego kickstart. "
 
 #: system-config-kickstart.gladestrings:237
@@ -1309,7 +1302,7 @@ msgid ""
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
 msgstr ""
 "Aby używać RAID, musisz najpierw utworzyć co najmniej dwie partycje typu "
-"'programowy RAID'. Następnie możesz utworzyć urządzenie RAID, które można "
+"\"programowy RAID\". Następnie można utworzyć urządzenie RAID, które można "
 "sformatować i zamontować."
 
 #: system-config-kickstart.gladestrings:240
@@ -1318,7 +1311,7 @@ msgstr "Wybierz jedną z poniższych opcji:"
 
 #: system-config-kickstart.gladestrings:241
 msgid "Create a software RAID partition"
-msgstr "Utworzyć partycję programowego RAID"
+msgstr "Utwórz partycję programowego RAID"
 
 #: system-config-kickstart.gladestrings:242
 msgid "Create a RAID device [default = /dev/md0]"
@@ -1366,96 +1359,3 @@ msgstr "Serwer nazw:"
 #: system-config-kickstart.gladestrings:261
 msgid "."
 msgstr "."
-
-#~ msgid "X Window System"
-#~ msgstr "X Window System"
-
-#~ msgid "GNOME Desktop Environment"
-#~ msgstr "Środowisko graficzne GNOME"
-
-#~ msgid "KDE (K Desktop Environment)"
-#~ msgstr "Środowisko graficzne KDE"
-
-#~ msgid "Editors"
-#~ msgstr "Edytory"
-
-#~ msgid "Engineering and Scientific"
-#~ msgstr "Inżynieria i nauka"
-
-#~ msgid "Graphical Internet"
-#~ msgstr "Graficzny Internet"
-
-#~ msgid "Text-based Internet"
-#~ msgstr "Tekstowy Internet"
-
-#~ msgid "Office/Productivity"
-#~ msgstr "Biuro/praca biurowa"
-
-#~ msgid "Sound and Video"
-#~ msgstr "Multimedia"
-
-#~ msgid "Graphics"
-#~ msgstr "Grafika"
-
-#~ msgid "Games and Entertainment"
-#~ msgstr "Gry i rozrywka"
-
-#~ msgid "Authoring and Publishing"
-#~ msgstr "Pisanie i publikowanie"
-
-#~ msgid "Server Configuration Tools (AS and ES only)"
-#~ msgstr "Narzędzia konfiguracyjne serwera (tylko AS i ES)"
-
-#~ msgid "Web Server"
-#~ msgstr "Serwer WWW"
-
-#~ msgid "Mail Server"
-#~ msgstr "Serwer pocztowy"
-
-#~ msgid "Windows File Server"
-#~ msgstr "Serwer plików Windows"
-
-#~ msgid "DNS Name Server"
-#~ msgstr "Serwer nazw DNS"
-
-#~ msgid "FTP Server"
-#~ msgstr "Serwer FTP"
-
-#~ msgid "SQL Database Server"
-#~ msgstr "Serwer bazy danych SQL"
-
-#~ msgid "News Server"
-#~ msgstr "Serwer grup dyskusyjnych"
-
-#~ msgid "Network Servers (AS and ES only)"
-#~ msgstr "Serwery sieciowe (tylko AS i ES)"
-
-#~ msgid "Development Tools"
-#~ msgstr "Narzędzia programistyczne"
-
-#~ msgid "Kernel Development"
-#~ msgstr "Oprogramowywanie jądra"
-
-#~ msgid "X Software Development"
-#~ msgstr "Tworzenie aplikacji X Window"
-
-#~ msgid "GNOME Software Development"
-#~ msgstr "Narzędzia programistyczne GNOME"
-
-#~ msgid "KDE Software Development"
-#~ msgstr "Oprogramowanie programistyczne KDE"
-
-#~ msgid "Administration Tools"
-#~ msgstr "Narzędzia administracyjne"
-
-#~ msgid "System Tools"
-#~ msgstr "Narzędzia systemowe"
-
-#~ msgid "Printing Support"
-#~ msgstr "Wsparcie dla drukowania"
-
-#~ msgid "*"
-#~ msgstr "*"
-
-#~ msgid "_Ignore Dependencies"
-#~ msgstr "_Ignoruj zależności"
