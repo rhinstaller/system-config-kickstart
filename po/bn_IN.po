@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bn_IN\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-23 14:24-0500\n"
+"POT-Creation-Date: 2005-09-13 13:29-0400\n"
 "PO-Revision-Date: 2005-03-30 21:12+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bangla <redhat-translation@bengalinux.org>\n"
@@ -55,36 +55,36 @@ msgstr ""
 #  #
 #  # I18N
 #  #
-#: ../src/basic.py:72
+#: ../src/basic.py:67
 msgid "x86, AMD64, or Intel EM64T"
 msgstr "x86, AMD64 অথবা Intel EM64T"
 
-#: ../src/basic.py:72
+#: ../src/basic.py:67
 msgid "Intel Itanium"
 msgstr "Intel Itanium"
 
-#: ../src/basic.py:72
+#: ../src/basic.py:67
 msgid "IBM iSeries"
 msgstr "IBM iSeries"
 
-#: ../src/basic.py:73
+#: ../src/basic.py:68
 msgid "IBM pSeries"
 msgstr "IBM pSeries"
 
-#: ../src/basic.py:73
+#: ../src/basic.py:68
 msgid "IBM zSeries/s390"
 msgstr "IBM zSeries/s390"
 
-#: ../src/basic.py:206
+#: ../src/basic.py:156
 msgid "Root passwords do not match."
 msgstr "root-র পাসওয়ার্ডে গরমিল।"
 
-#: ../src/basic.py:207 ../src/basic.py:226 ../src/install.py:214
+#: ../src/basic.py:157 ../src/basic.py:176 ../src/install.py:214
 #: ../src/partWindow.py:513 ../src/partition.py:317 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "সমস্যা"
 
-#: ../src/basic.py:225
+#: ../src/basic.py:175
 msgid "Please select a root password."
 msgstr "অনুগ্রহ করে root-র জন্য একটি পাসওয়ার্ড নির্বাচন করুন।"
 
@@ -178,7 +178,7 @@ msgstr "বুট লোডার সংক্রান্ত অপশন"
 msgid "Partition Information"
 msgstr "পার্টিশন সংক্রান্ত তথ্য"
 
-#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:140
+#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:136
 msgid "Network Configuration"
 msgstr "নেটওয়ার্ক কনফিগারেশন"
 
@@ -186,23 +186,23 @@ msgstr "নেটওয়ার্ক কনফিগারেশন"
 msgid "Authentication"
 msgstr "অনুমোদন ব্যবস্থা"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:186
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:182
 msgid "Firewall Configuration"
 msgstr "ফায়ারওয়াল কনফিগারেশন"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:211
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:207
 msgid "Display Configuration"
 msgstr "প্রদর্শন কনফিগারেশন"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:221
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:217
 msgid "Package Selection"
 msgstr "প্যাকেজ নির্বাচন"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:226
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:222
 msgid "Pre-Installation Script"
 msgstr "প্রাক-ইনস্টলেশন স্ক্রিপ্ট"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:232
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:228
 msgid "Post-Installation Script"
 msgstr "ইনস্টলেশনের পরবর্তী স্ক্রিপ্ট"
 
@@ -228,10 +228,25 @@ msgstr "Kickstart Configurator পরিচিতি"
 msgid "Help is not available."
 msgstr "সহায়িকা উপস্থিত নেই।"
 
-#: ../src/kickstartGui.py:273
+#: ../src/kickstartGui.py:275
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "\"%s\" ফাইলটি ব্যবহার করা সম্ভব নয়।"
+
+#: ../src/kickstartParser.py:72
+#, python-format
+msgid ""
+"There was a problem reading the following line from the kickstart file. This "
+"could be due to an error on the line or using a keyword that no longer "
+"exists.\n"
+"\n"
+"%s"
+msgstr ""
+
+#: ../src/kickstartParser.py:77
+#, fuzzy
+msgid "Kickstart Error"
+msgstr "Kickstart"
 
 #: ../src/network.py:87
 msgid "Device"
@@ -256,26 +271,23 @@ msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
 msgstr ""
-"%s নামের একটি নেটওয়ার্ক ডিভাইস বর্তমানে উপস্থিত আছে।  অনুগ্রহ করে ডিভাইসের জন্য একটি পৃথক "
-"নাম নির্বাচন করুন"
+"%s নামের একটি নেটওয়ার্ক ডিভাইস বর্তমানে উপস্থিত আছে।  অনুগ্রহ করে ডিভাইসের জন্য "
+"একটি পৃথক নাম নির্বাচন করুন"
 
-#: ../src/packageGroupList.py:16
-msgid "Could not start because there is no /usr/share/comps/"
+#: ../src/packageGroupList.py:18
+#, fuzzy, python-format
+msgid "Could not start because there is no %s file."
 msgstr "/usr/share/comps/ উপস্থিত না থাকার কারণে আরম্ভ করা যায়নি"
 
-#: ../src/packageGroupList.py:16
-msgid "/comps.xml file."
-msgstr "/comps.xml ফাইল।"
-
-#: ../src/packageGroupList.py:17
+#: ../src/packageGroupList.py:19
 msgid "Please make sure the comps package is installed."
 msgstr "comps প্যাকেজটি ইনস্টল করা আছে কিনা তা অনুগ্রহ করে পরীক্ষা করুন।"
 
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:53
+#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:52
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:54
+#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:53
 msgid "ext3"
 msgstr "ext3"
 
@@ -284,11 +296,11 @@ msgstr "ext3"
 msgid "software RAID"
 msgstr "সফ্টওয়্যার RAID"
 
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:55
+#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:54
 msgid "swap"
 msgstr "swap"
 
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:56
+#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:55
 msgid "vfat"
 msgstr "vfat"
 
@@ -323,7 +335,8 @@ msgstr "পার্টিশনের জন্য একটি মাউন্
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:429
 #, python-format
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "\"%s\" মাউন্ট পয়েন্ট বর্তমানে ব্যবহৃত হচ্ছে। অনুগ্রহ করে একটি পৃথক মাউন্ট পয়েন্ট "
 "নির্বাচন করুন।"
@@ -333,8 +346,8 @@ msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
 msgstr ""
-"নতুন RAID পার্টিশন তৈরি করার জন্য, একটি হার্ড ড্রাইভ ডিভাইসের নাম "
-"অথবা একটি উপস্থিত পার্টিশন নির্দিষ্ট করতে হবে।"
+"নতুন RAID পার্টিশন তৈরি করার জন্য, একটি হার্ড ড্রাইভ ডিভাইসের নাম অথবা একটি "
+"উপস্থিত পার্টিশন নির্দিষ্ট করতে হবে।"
 
 #: ../src/partWindow.py:488
 msgid "Specify a device on which to create the partition."
@@ -353,8 +366,8 @@ msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
 msgstr ""
-"আপনার দ্বারা উল্লিখিত পার্টিশনের নামের শেষে কোনো সংখ্যা উপস্থিত নেই। পার্টিশনের নামের মধ্যে একটি "
-"সংখ্যা থাকা আবশ্যক যেমন \"hda1\" অথবা \"sda3\""
+"আপনার দ্বারা উল্লিখিত পার্টিশনের নামের শেষে কোনো সংখ্যা উপস্থিত নেই। পার্টিশনের "
+"নামের মধ্যে একটি সংখ্যা থাকা আবশ্যক যেমন \"hda1\" অথবা \"sda3\""
 
 #: ../src/partWindow.py:506
 msgid ""
@@ -362,8 +375,9 @@ msgid ""
 "Partitions must have a valid device name and partition number such as \"hda1"
 "\" or \"sda3\"."
 msgstr ""
-"আপনার নির্ধাচিত পার্টিশনের প্রারম্ভে \"hd\" অথবা \"sd\" উপস্থিত নেই। পার্টিশনে একটি বৈধ "
-"ডিভাইসের নাম এবং পার্টিশন সংখ্যা থাকা প্রয়োজন, উদাহরণ \"hda1\" অথবা \"sda3\"।"
+"আপনার নির্ধাচিত পার্টিশনের প্রারম্ভে \"hd\" অথবা \"sd\" উপস্থিত নেই। পার্টিশনে "
+"একটি বৈধ ডিভাইসের নাম এবং পার্টিশন সংখ্যা থাকা প্রয়োজন, উদাহরণ \"hda1\" অথবা "
+"\"sda3\"।"
 
 #: ../src/partition.py:72
 msgid ""
@@ -455,8 +469,9 @@ msgstr "চলমান কোনো X সার্ভার উপস্থি�
 msgid "Try running 'system-config-kickstart --help' for a list of options."
 msgstr "অপশন তালিকা পড়ার জন্য 'system-config-kickstart --help ব্যবহার করুন।"
 
-#: ../src/xconfig.py:106
-msgid "Could not read video card database"
+#: ../src/xconfig.py:115
+#, fuzzy
+msgid "Could not read video driver database"
 msgstr "ভিডিও কার্ডের ডাটাবেস পড়া সম্ভব হয়নি"
 
 #.
@@ -465,812 +480,797 @@ msgstr "ভিডিও কার্ডের ডাটাবেস পড়া �
 #. * DO NOT compile it as part of your application.
 #.
 #: system-config-kickstart.gladestrings:7
-msgid "Save File"
-msgstr "ফাইল সংরক্ষণ করুন"
-
-#: system-config-kickstart.gladestrings:8
 msgid "Partition Options"
 msgstr "পার্টিশন সংক্রান্ত অপশন"
 
-#: system-config-kickstart.gladestrings:9
-#: system-config-kickstart.gladestrings:28
+#: system-config-kickstart.gladestrings:8
+#: system-config-kickstart.gladestrings:27
 msgid "Mount Point:"
 msgstr "মাউন্ট পয়েন্ট:"
 
-#: system-config-kickstart.gladestrings:10
-#: system-config-kickstart.gladestrings:32
+#: system-config-kickstart.gladestrings:9
+#: system-config-kickstart.gladestrings:31
 msgid "File System Type:"
 msgstr "ফাইল সিস্টেমের ধরন:"
 
-#: system-config-kickstart.gladestrings:11
+#: system-config-kickstart.gladestrings:10
 msgid "Size (MB):"
 msgstr "মাপ (মেগাবাইট):"
 
-#: system-config-kickstart.gladestrings:12
+#: system-config-kickstart.gladestrings:11
 msgid "Fill all unused space on disk"
 msgstr "ডিস্কের অব্যবহৃত স্থান পূরণ করা হবে"
 
-#: system-config-kickstart.gladestrings:13
+#: system-config-kickstart.gladestrings:12
 msgid "Grow to maximum of (MB):"
 msgstr "সর্বাধিক মাপ পর্যন্ত বিস্তার করা হবে (মেগাবাইট):"
 
-#: system-config-kickstart.gladestrings:14
+#: system-config-kickstart.gladestrings:13
 msgid "Fixed size"
 msgstr "সীমিত পরিমাপ"
 
-#: system-config-kickstart.gladestrings:15
+#: system-config-kickstart.gladestrings:14
 msgid "Use recommended swap size"
 msgstr "swap-র ক্ষেত্রে উল্লিখিত মাপ ব্যবহার করুন"
 
-#: system-config-kickstart.gladestrings:16
+#: system-config-kickstart.gladestrings:15
 msgid "Additional Size Options"
 msgstr "মাপ সম্বন্ধীয় অতিরিক্ত অপশন"
 
-#: system-config-kickstart.gladestrings:17
+#: system-config-kickstart.gladestrings:16
 msgid "Force to be a primary partition (asprimary)"
 msgstr "বলপূর্বক প্রধান পার্টিশন হিসাবে চিহ্নিত করুন (asprimary)"
 
-#: system-config-kickstart.gladestrings:18
+#: system-config-kickstart.gladestrings:17
 msgid "Make partition on specific drive (ondisk)"
 msgstr "নির্ধারিত ড্রাইভে পার্টিশন তৈরি করুন (ondisk)"
 
-#: system-config-kickstart.gladestrings:19
-#: system-config-kickstart.gladestrings:23
+#: system-config-kickstart.gladestrings:18
+#: system-config-kickstart.gladestrings:22
 msgid "         "
 msgstr "         "
 
-#: system-config-kickstart.gladestrings:20
+#: system-config-kickstart.gladestrings:19
 msgid "Drive :"
 msgstr "ড্রাইভ :"
 
-#: system-config-kickstart.gladestrings:21
+#: system-config-kickstart.gladestrings:20
 msgid "(for example: hda or sdc)"
 msgstr "(উদাহরণ: hda অথবা sdc)"
 
-#: system-config-kickstart.gladestrings:22
+#: system-config-kickstart.gladestrings:21
 msgid "Use existing partition (onpart)"
 msgstr "উপস্থিত পার্টিশন ব্যবহার করুন (onpart)"
 
-#: system-config-kickstart.gladestrings:24
+#: system-config-kickstart.gladestrings:23
 msgid "Partition :"
 msgstr "পার্টিশন :"
 
-#: system-config-kickstart.gladestrings:25
+#: system-config-kickstart.gladestrings:24
 msgid "(for example: hda1 or sdc3)"
 msgstr "(উদাহরণ: hda1 অথবা sdc3)"
 
-#: system-config-kickstart.gladestrings:26
+#: system-config-kickstart.gladestrings:25
 msgid "Format partition"
 msgstr "পার্টিশন ফরম্যাট করুন"
 
-#: system-config-kickstart.gladestrings:27
+#: system-config-kickstart.gladestrings:26
 msgid "Make RAID Device"
 msgstr "RAID ডিভাইস নির্মাণ করুন"
 
-#: system-config-kickstart.gladestrings:29
+#: system-config-kickstart.gladestrings:28
 msgid "Number of spares:"
 msgstr "বাড়তি ড্রাইভের সংখ্যা:"
 
-#: system-config-kickstart.gladestrings:30
+#: system-config-kickstart.gladestrings:29
 msgid "Raid Members"
 msgstr "RAID-র সদস্য"
 
-#: system-config-kickstart.gladestrings:31
+#: system-config-kickstart.gladestrings:30
 msgid "RAID Level:"
 msgstr "RAID-র লেভেল:"
 
-#: system-config-kickstart.gladestrings:33
+#: system-config-kickstart.gladestrings:32
 msgid "RAID Device:"
 msgstr "RAID ডিভাইস:"
 
-#: system-config-kickstart.gladestrings:34
+#: system-config-kickstart.gladestrings:33
 msgid "md0"
 msgstr "md0"
 
-#: system-config-kickstart.gladestrings:35
+#: system-config-kickstart.gladestrings:34
 msgid "md1"
 msgstr "md1"
 
-#: system-config-kickstart.gladestrings:36
+#: system-config-kickstart.gladestrings:35
 msgid "md2"
 msgstr "md2"
 
-#: system-config-kickstart.gladestrings:37
+#: system-config-kickstart.gladestrings:36
 msgid "md3"
 msgstr "md3"
 
-#: system-config-kickstart.gladestrings:38
+#: system-config-kickstart.gladestrings:37
 msgid "md4"
 msgstr "md4"
 
-#: system-config-kickstart.gladestrings:39
+#: system-config-kickstart.gladestrings:38
 msgid "md5"
 msgstr "md5"
 
-#: system-config-kickstart.gladestrings:40
+#: system-config-kickstart.gladestrings:39
 msgid "md6"
 msgstr "md6"
 
-#: system-config-kickstart.gladestrings:41
+#: system-config-kickstart.gladestrings:40
 msgid "md7"
 msgstr "md7"
 
-#: system-config-kickstart.gladestrings:42
+#: system-config-kickstart.gladestrings:41
 msgid "md8"
 msgstr "md8"
 
-#: system-config-kickstart.gladestrings:43
+#: system-config-kickstart.gladestrings:42
 msgid "md9"
 msgstr "md9"
 
-#: system-config-kickstart.gladestrings:44
+#: system-config-kickstart.gladestrings:43
 msgid "md10"
 msgstr "md10"
 
-#: system-config-kickstart.gladestrings:45
+#: system-config-kickstart.gladestrings:44
 msgid "md11"
 msgstr "md11"
 
-#: system-config-kickstart.gladestrings:46
+#: system-config-kickstart.gladestrings:45
 msgid "md12"
 msgstr "md12"
 
-#: system-config-kickstart.gladestrings:47
+#: system-config-kickstart.gladestrings:46
 msgid "md13"
 msgstr "md13"
 
-#: system-config-kickstart.gladestrings:48
+#: system-config-kickstart.gladestrings:47
 msgid "md14"
 msgstr "md14"
 
-#: system-config-kickstart.gladestrings:49
+#: system-config-kickstart.gladestrings:48
 msgid "md15"
 msgstr "md15"
 
-#: system-config-kickstart.gladestrings:50
+#: system-config-kickstart.gladestrings:49
 msgid "0"
 msgstr "0"
 
-#: system-config-kickstart.gladestrings:51
+#: system-config-kickstart.gladestrings:50
 msgid "1"
 msgstr "1"
 
-#: system-config-kickstart.gladestrings:52
+#: system-config-kickstart.gladestrings:51
 msgid "5"
 msgstr "5"
 
-#: system-config-kickstart.gladestrings:57
+#: system-config-kickstart.gladestrings:56
 msgid "Format RAID device"
 msgstr "RAID ডিভাইস ফরম্যাট করুন"
 
-#: system-config-kickstart.gladestrings:58
+#: system-config-kickstart.gladestrings:57
 msgid "Kickstart Configurator"
 msgstr "Kickstart Configurator"
 
-#: system-config-kickstart.gladestrings:59
+#: system-config-kickstart.gladestrings:58
 msgid "_File"
 msgstr "ফাইল (_F)"
 
-#: system-config-kickstart.gladestrings:60
+#: system-config-kickstart.gladestrings:59
 msgid "_Open File"
 msgstr "ফাইল খুলুন (_O)"
 
-#: system-config-kickstart.gladestrings:61
+#: system-config-kickstart.gladestrings:60
 msgid "_Preview"
 msgstr "পূর্ব প্রদর্শন (_P)"
 
-#: system-config-kickstart.gladestrings:62
+#: system-config-kickstart.gladestrings:61
 msgid "_Save File"
 msgstr "ফাইল সংরক্ষণ করুন (_S)"
 
-#: system-config-kickstart.gladestrings:63
+#: system-config-kickstart.gladestrings:62
 msgid "_Quit"
 msgstr "প্রস্থান (_Q)"
 
-#: system-config-kickstart.gladestrings:64
+#: system-config-kickstart.gladestrings:63
 msgid "_Help"
 msgstr "সহায়িকা (_H)"
 
-#: system-config-kickstart.gladestrings:65
+#: system-config-kickstart.gladestrings:64
 msgid "_Contents"
 msgstr "সূচি (_C)"
 
-#: system-config-kickstart.gladestrings:66
+#: system-config-kickstart.gladestrings:65
 msgid "_About"
 msgstr "পরিচিতি (_A)"
 
-#: system-config-kickstart.gladestrings:67
+#: system-config-kickstart.gladestrings:66
 msgid "Default Language:"
 msgstr "ডিফল্ট ভাষা:"
 
-#: system-config-kickstart.gladestrings:68
-msgid "Encrypt root password"
-msgstr "root পাসওয়ার্ড এনক্রিপ্ট করা হবে"
-
-#: system-config-kickstart.gladestrings:69
+#: system-config-kickstart.gladestrings:67
 msgid "Keyboard:"
 msgstr "কীবোর্ড:"
 
-#: system-config-kickstart.gladestrings:70
-msgid "Mouse:"
-msgstr "মাউস:"
-
-#: system-config-kickstart.gladestrings:71
-msgid "Emulate 3 Buttons"
-msgstr "৩ বাটনের অনুকরণ করা হবে"
-
-#: system-config-kickstart.gladestrings:72
+#: system-config-kickstart.gladestrings:68
 msgid "Time Zone:"
 msgstr "সময়ের অঞ্চল:"
 
-#: system-config-kickstart.gladestrings:73
-msgid "Root Password:"
-msgstr "root পাসওয়ার্ড:"
-
-#: system-config-kickstart.gladestrings:74
-msgid "Language Support:"
-msgstr "ভাষা সমর্থন:"
-
-#: system-config-kickstart.gladestrings:75
+#: system-config-kickstart.gladestrings:69
 msgid "Use UTC clock"
 msgstr "UTC ঘড়ি ব্যবহার করা হবে"
 
-#: system-config-kickstart.gladestrings:76
-#: system-config-kickstart.gladestrings:115
+#: system-config-kickstart.gladestrings:70
+msgid "Root Password:"
+msgstr "root পাসওয়ার্ড:"
+
+#: system-config-kickstart.gladestrings:71
+#: system-config-kickstart.gladestrings:111
 msgid "Confirm Password:"
 msgstr "পাসওয়ার্ড নিশ্চিত করুন:"
 
-#: system-config-kickstart.gladestrings:77
+#: system-config-kickstart.gladestrings:72
+msgid "Encrypt root password"
+msgstr "root পাসওয়ার্ড এনক্রিপ্ট করা হবে"
+
+#: system-config-kickstart.gladestrings:73
 msgid "Target Architecture:"
 msgstr "উদ্দিষ্ট আর্কিটেকচার:"
 
-#: system-config-kickstart.gladestrings:78
+#: system-config-kickstart.gladestrings:74
 msgid "Reboot system after installation"
 msgstr "ইনস্টলেশনের পরে সিস্টেম পুনরায় বুট করুন"
 
-#: system-config-kickstart.gladestrings:79
+#: system-config-kickstart.gladestrings:75
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "টেক্সট মোডে ইনস্টলেশন করুন (ডিফল্ট পদ্ধতি হল গ্রাফিকাল)"
 
-#: system-config-kickstart.gladestrings:80
+#: system-config-kickstart.gladestrings:76
 msgid "Perform installation in interactive mode"
 msgstr "ইন্টারেকটিভ মোডে ইনস্টলেশন করুন"
 
 # not sure
-#: system-config-kickstart.gladestrings:81
+#: system-config-kickstart.gladestrings:77
 msgid "Basic Configuration (required)"
 msgstr "মৌলিক কনফিগারেশন (আবশ্যক)"
 
-#: system-config-kickstart.gladestrings:82
+#: system-config-kickstart.gladestrings:78
 msgid "label28"
 msgstr "label28"
 
-#: system-config-kickstart.gladestrings:83
+#: system-config-kickstart.gladestrings:79
 msgid "Perform new installation"
 msgstr "নতুন ইনস্টলেশন করুন"
 
-#: system-config-kickstart.gladestrings:84
+#: system-config-kickstart.gladestrings:80
 msgid "Upgrade an existing installation"
 msgstr "একটি বর্তমান ইনস্টলেশন আগ্রেড করুন"
 
-#: system-config-kickstart.gladestrings:85
+#: system-config-kickstart.gladestrings:81
 msgid "Choose the Installation Method:"
 msgstr "ইনস্টলেশন প্রক্রিয়া নির্বাচন করুন:"
 
-#: system-config-kickstart.gladestrings:86
-#: system-config-kickstart.gladestrings:91
+#: system-config-kickstart.gladestrings:82
+#: system-config-kickstart.gladestrings:87
 msgid "CD-ROM"
 msgstr "CD-ROM"
 
-#: system-config-kickstart.gladestrings:87
-#: system-config-kickstart.gladestrings:94
+#: system-config-kickstart.gladestrings:83
+#: system-config-kickstart.gladestrings:90
 msgid "NFS"
 msgstr "NFS"
 
-#: system-config-kickstart.gladestrings:88
-#: system-config-kickstart.gladestrings:100
+#: system-config-kickstart.gladestrings:84
+#: system-config-kickstart.gladestrings:96
 msgid "FTP"
 msgstr "FTP"
 
-#: system-config-kickstart.gladestrings:89
-#: system-config-kickstart.gladestrings:103
+#: system-config-kickstart.gladestrings:85
+#: system-config-kickstart.gladestrings:99
 msgid "HTTP"
 msgstr "HTTP"
 
-#: system-config-kickstart.gladestrings:90
-#: system-config-kickstart.gladestrings:106
+#: system-config-kickstart.gladestrings:86
+#: system-config-kickstart.gladestrings:102
 msgid "Hard Drive"
 msgstr "হার্ড ড্রাইভ"
 
-#: system-config-kickstart.gladestrings:92
+#: system-config-kickstart.gladestrings:88
 msgid "NFS Server:"
 msgstr "NFS সার্ভার:"
 
-#: system-config-kickstart.gladestrings:93
+#: system-config-kickstart.gladestrings:89
 msgid "NFS Directory:"
 msgstr "NFS ডিরেক্টরি:"
 
-#: system-config-kickstart.gladestrings:95
+#: system-config-kickstart.gladestrings:91
 msgid "FTP Server:"
 msgstr "FTP সার্ভার:"
 
-#: system-config-kickstart.gladestrings:96
+#: system-config-kickstart.gladestrings:92
 msgid "FTP Directory:"
 msgstr "FTP ডিরেক্টরি:"
 
-#: system-config-kickstart.gladestrings:97
+#: system-config-kickstart.gladestrings:93
 msgid "Specify an FTP username and password"
 msgstr "FTP ব্যবহারকরীর নাম এবং পাসওয়ার্ড নির্ধারণ করুন"
 
-#: system-config-kickstart.gladestrings:98
+#: system-config-kickstart.gladestrings:94
 msgid "FTP Username"
 msgstr "FTP ব্যবহারকারীর নাম"
 
-#: system-config-kickstart.gladestrings:99
+#: system-config-kickstart.gladestrings:95
 msgid "FTP Password"
 msgstr "FTP পাসওয়ার্ড"
 
-#: system-config-kickstart.gladestrings:101
+#: system-config-kickstart.gladestrings:97
 msgid "HTTP Server:"
 msgstr "HTTP সার্ভার:"
 
-#: system-config-kickstart.gladestrings:102
+#: system-config-kickstart.gladestrings:98
 msgid "HTTP Directory:"
 msgstr "HTTP ডিরেক্টরি:"
 
-#: system-config-kickstart.gladestrings:104
+#: system-config-kickstart.gladestrings:100
 msgid "Hard Drive Partition:"
 msgstr "হার্ড ড্রাইভ পার্টিশন:"
 
-#: system-config-kickstart.gladestrings:105
+#: system-config-kickstart.gladestrings:101
 msgid "Hard Drive Directory:"
 msgstr "হার্ড ড্রাইভের ডিরেক্টরি:"
 
-#: system-config-kickstart.gladestrings:107
+#: system-config-kickstart.gladestrings:103
 msgid "Installation Method (required)"
 msgstr "ইনস্টলেশন পদ্ধতি (আবশ্যক)"
 
-#: system-config-kickstart.gladestrings:108
+#: system-config-kickstart.gladestrings:104
 msgid "label128"
 msgstr "label128"
 
-#: system-config-kickstart.gladestrings:109
+#: system-config-kickstart.gladestrings:105
 msgid "Install new boot loader"
 msgstr "নতুন বুট লোডার ইনস্টল করুন"
 
-#: system-config-kickstart.gladestrings:110
+#: system-config-kickstart.gladestrings:106
 msgid "Do not install a boot loader"
 msgstr "বুট লোডার ইনস্টল করা হবে না"
 
-#: system-config-kickstart.gladestrings:111
+#: system-config-kickstart.gladestrings:107
 msgid "Upgrade existing boot loader"
 msgstr "উপস্থিত বুট লোডার আপগ্রেড করুন"
 
-#: system-config-kickstart.gladestrings:112
+#: system-config-kickstart.gladestrings:108
 msgid "GRUB Options:"
 msgstr "GRUB সংক্রান্ত অপশন:"
 
-#: system-config-kickstart.gladestrings:113
+#: system-config-kickstart.gladestrings:109
 msgid "Use GRUB password"
 msgstr "GRUB-এ পাসওয়ার্ড ব্যবহার করুন"
 
-#: system-config-kickstart.gladestrings:114
+#: system-config-kickstart.gladestrings:110
 msgid "Password:"
 msgstr "পাসওয়ার্ড:"
 
-#: system-config-kickstart.gladestrings:116
+#: system-config-kickstart.gladestrings:112
 msgid "Encrypt GRUB password"
 msgstr "GRUB-র পাসওয়ার্ড এনক্রিপ্ট করুন"
 
-#: system-config-kickstart.gladestrings:117
+#: system-config-kickstart.gladestrings:113
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "মাস্টার বুট রেকর্ড (MBR)-এ বুট লোডার ইনস্টল করুন"
 
-#: system-config-kickstart.gladestrings:118
+#: system-config-kickstart.gladestrings:114
 msgid "Install boot loader on first sector of the boot partition"
 msgstr "boot পার্টিশনের প্রথম সেক্টরে বুট লোডার ইনস্টল করুন"
 
-#: system-config-kickstart.gladestrings:119
+#: system-config-kickstart.gladestrings:115
 msgid "Kernel parameters:"
 msgstr "কার্নেল সংক্রান্ত পরামিতি:"
 
-#: system-config-kickstart.gladestrings:120
+#: system-config-kickstart.gladestrings:116
 msgid "label216"
 msgstr "label216"
 
-#: system-config-kickstart.gladestrings:121
+#: system-config-kickstart.gladestrings:117
 msgid "Boot Loader Options (required)"
 msgstr "বুট লোডার সংক্রান্ড অপশন (আবশ্যক)"
 
-#: system-config-kickstart.gladestrings:122
+#: system-config-kickstart.gladestrings:118
 msgid "label35"
 msgstr "label35"
 
-#: system-config-kickstart.gladestrings:123
+#: system-config-kickstart.gladestrings:119
 msgid "Clear Master Boot Record"
 msgstr "মাস্টার বুট রেকর্ডের তথ্য মুছে ফেলুন"
 
-#: system-config-kickstart.gladestrings:124
+#: system-config-kickstart.gladestrings:120
 msgid "Do not clear Master Boot Record"
 msgstr "মাস্টার বুট রেকর্ডের তথ্য মুছে ফেলা হবে না"
 
-#: system-config-kickstart.gladestrings:125
+#: system-config-kickstart.gladestrings:121
 msgid "Remove all existing partitions"
 msgstr "উপস্থিত সব পার্টিশন মুছে ফেলুন"
 
-#: system-config-kickstart.gladestrings:126
+#: system-config-kickstart.gladestrings:122
 msgid "Remove existing Linux partitions"
 msgstr "উপস্থিত Linux পার্টিশনগুলি মুছে ফেলুন"
 
-#: system-config-kickstart.gladestrings:127
+#: system-config-kickstart.gladestrings:123
 msgid "Preserve existing partitions"
 msgstr "বর্তমান পার্টিশনগুলি অক্ষত রাখুন"
 
-#: system-config-kickstart.gladestrings:128
+#: system-config-kickstart.gladestrings:124
 msgid "Initialize the disk label"
 msgstr "ডিস্ক লেবেল আরম্ভ করুন"
 
-#: system-config-kickstart.gladestrings:129
+#: system-config-kickstart.gladestrings:125
 msgid "Do not initialize the disk label"
 msgstr "ডিস্ক লেবেল আরম্ভ করা হবে না"
 
-#: system-config-kickstart.gladestrings:130
+#: system-config-kickstart.gladestrings:126
 msgid "_Add"
 msgstr "যোগ করুন (_A)"
 
-#: system-config-kickstart.gladestrings:131
+#: system-config-kickstart.gladestrings:127
 msgid "_Edit"
 msgstr "সম্পাদন করুন (_E)"
 
-#: system-config-kickstart.gladestrings:132
+#: system-config-kickstart.gladestrings:128
 msgid "_Delete"
 msgstr "মুছে ফেলুন (_D)"
 
-#: system-config-kickstart.gladestrings:133
+#: system-config-kickstart.gladestrings:129
 msgid "RAID"
 msgstr "RAID"
 
-#: system-config-kickstart.gladestrings:134
+#: system-config-kickstart.gladestrings:130
 msgid "Partition options are not applicable on upgrades."
 msgstr "আপগ্রেডের ক্ষেত্রে পার্টিশন অপশনগুলি প্রযোজ্য নয়।"
 
-#: system-config-kickstart.gladestrings:135
+#: system-config-kickstart.gladestrings:131
 msgid "Partition Information (required)"
 msgstr "পার্টিশন সম্বন্ধীয় তথ্য (আবশ্যক)"
 
-#: system-config-kickstart.gladestrings:136
+#: system-config-kickstart.gladestrings:132
 msgid "label30"
 msgstr "label30"
 
-#: system-config-kickstart.gladestrings:137
+#: system-config-kickstart.gladestrings:133
 msgid "_Add Network Device"
 msgstr "নেটওয়ার্ক ডিভাইস যোগ করুন (_A)"
 
-#: system-config-kickstart.gladestrings:138
+#: system-config-kickstart.gladestrings:134
 msgid "_Edit Network Device"
 msgstr "নেটওয়ার্ক ডিভাইস সম্পাদন করুন (_E)"
 
-#: system-config-kickstart.gladestrings:139
+#: system-config-kickstart.gladestrings:135
 msgid "_Delete Network Device"
 msgstr "নেটওয়ার্ক ডিভাইস মুছে ফেলুন (_D)"
 
-#: system-config-kickstart.gladestrings:141
+#: system-config-kickstart.gladestrings:137
 msgid "label31"
 msgstr "label31"
 
-#: system-config-kickstart.gladestrings:142
+#: system-config-kickstart.gladestrings:138
 msgid "Authentication:"
 msgstr "অনুমোদন ব্যবস্থা:"
 
-#: system-config-kickstart.gladestrings:143
+#: system-config-kickstart.gladestrings:139
 msgid "Use Shadow Passwords"
 msgstr "শেডো পাসওয়ার্ড ব্যবহার করা হবে"
 
-#: system-config-kickstart.gladestrings:144
+#: system-config-kickstart.gladestrings:140
 msgid "Use MD5"
 msgstr "MD5 ব্যবহার করা হবে"
 
-#: system-config-kickstart.gladestrings:145
+#: system-config-kickstart.gladestrings:141
 msgid "Enable NIS"
 msgstr "NIS সক্রিয় করুন"
 
-#: system-config-kickstart.gladestrings:146
+#: system-config-kickstart.gladestrings:142
 msgid "NIS Domain:"
 msgstr "NIS ডোমেইন:"
 
-#: system-config-kickstart.gladestrings:147
+#: system-config-kickstart.gladestrings:143
 msgid "Use broadcast to find NIS server"
 msgstr "NIS সার্ভার অনুসন্ধান করতে ব্রডকাস্ট ব্যবহার করুন"
 
-#: system-config-kickstart.gladestrings:148
+#: system-config-kickstart.gladestrings:144
 msgid "NIS Server:"
 msgstr "NIS সার্ভার:"
 
-#: system-config-kickstart.gladestrings:149
+#: system-config-kickstart.gladestrings:145
 msgid "NIS Authentication"
 msgstr "NIS অনুমোদন ব্যবস্থা"
 
-#: system-config-kickstart.gladestrings:150
+#: system-config-kickstart.gladestrings:146
 msgid "NIS"
 msgstr "NIS"
 
-#: system-config-kickstart.gladestrings:151
+#: system-config-kickstart.gladestrings:147
 msgid "Enable LDAP"
 msgstr "LDAP সক্রিয় করুন"
 
-#: system-config-kickstart.gladestrings:152
+#: system-config-kickstart.gladestrings:148
 msgid "LDAP Server: "
 msgstr "LDAP সার্ভার: "
 
-#: system-config-kickstart.gladestrings:153
+#: system-config-kickstart.gladestrings:149
 msgid "LDAP Base Name: "
 msgstr "LDAP Base Name: "
 
-#: system-config-kickstart.gladestrings:154
+#: system-config-kickstart.gladestrings:150
 msgid "LDAP Authentication"
 msgstr "LDAP অনুমোদন ব্যবস্থা"
 
-#: system-config-kickstart.gladestrings:155
+#: system-config-kickstart.gladestrings:151
 msgid "LDAP "
 msgstr "LDAP "
 
-#: system-config-kickstart.gladestrings:156
+#: system-config-kickstart.gladestrings:152
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Kerberos 5 অনুমোদন ব্যবস্থা ব্যবহার করুন"
 
 # FIXME
-#: system-config-kickstart.gladestrings:157
+#: system-config-kickstart.gladestrings:153
 msgid "Kerberos Realm:"
 msgstr "Kerberos Realm:"
 
-#: system-config-kickstart.gladestrings:158
+#: system-config-kickstart.gladestrings:154
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Kerberos ডোমেইন কন্ট্রলার (KDC):"
 
-#: system-config-kickstart.gladestrings:159
+#: system-config-kickstart.gladestrings:155
 msgid "Kerberos Master Server:"
 msgstr "Kerberos মাস্টার সার্ভার:"
 
-#: system-config-kickstart.gladestrings:160
+#: system-config-kickstart.gladestrings:156
 msgid "Kerberos 5 Authentication"
 msgstr "Kerberos 5 অনুমোদনব্যবস্থা"
 
-#: system-config-kickstart.gladestrings:161
+#: system-config-kickstart.gladestrings:157
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: system-config-kickstart.gladestrings:162
+#: system-config-kickstart.gladestrings:158
 msgid "Enable Hesiod Support"
 msgstr "Hesiod সমর্থন সক্রিয় করুন"
 
-#: system-config-kickstart.gladestrings:163
+#: system-config-kickstart.gladestrings:159
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS:"
 
-#: system-config-kickstart.gladestrings:164
+#: system-config-kickstart.gladestrings:160
 msgid "Hesiod RHS:"
 msgstr "Hesiod RHS:"
 
-#: system-config-kickstart.gladestrings:165
+#: system-config-kickstart.gladestrings:161
 msgid "Hesiod Authentication"
 msgstr "Hesiod অনুমোদন ব্যবস্থা"
 
-#: system-config-kickstart.gladestrings:166
+#: system-config-kickstart.gladestrings:162
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: system-config-kickstart.gladestrings:167
+#: system-config-kickstart.gladestrings:163
 msgid "Enable SMB Authentication"
 msgstr "SMB অনুমোদন সক্রিয় করুন"
 
-#: system-config-kickstart.gladestrings:168
+#: system-config-kickstart.gladestrings:164
 msgid "SMB Servers:"
 msgstr "SMB সার্ভার:"
 
-#: system-config-kickstart.gladestrings:169
+#: system-config-kickstart.gladestrings:165
 msgid "SMB Workgroup:"
 msgstr "SMB ওয়ার্কগ্রুপ:"
 
-#: system-config-kickstart.gladestrings:170
+#: system-config-kickstart.gladestrings:166
 msgid "SMB Authentication"
 msgstr "SMB অনুমোদন ব্যবস্থা"
 
-#: system-config-kickstart.gladestrings:171
+#: system-config-kickstart.gladestrings:167
 msgid "SMB"
 msgstr "SMB"
 
-#: system-config-kickstart.gladestrings:172
+#: system-config-kickstart.gladestrings:168
 msgid "Enable nscd"
 msgstr "nscd সক্রিয় করুন"
 
-#: system-config-kickstart.gladestrings:173
+#: system-config-kickstart.gladestrings:169
 msgid "Name Switch Cache Daemon (nscd) Authentication"
 msgstr "Name Switch Cache Daemon (nscd) অনুমোদন ব্যবস্থা"
 
-#: system-config-kickstart.gladestrings:174
+#: system-config-kickstart.gladestrings:170
 msgid "Name Switch Cache"
 msgstr "Name Switch Cache"
 
-#: system-config-kickstart.gladestrings:175
+#: system-config-kickstart.gladestrings:171
 msgid "Authentication options are not applicable on upgrades."
 msgstr "আপগ্রেডের ক্ষেত্রে অনুমোদন ব্যবস্থা সংক্রান্ত অপশনগুলি প্রযোজ্য নয়।"
 
-#: system-config-kickstart.gladestrings:176
+#: system-config-kickstart.gladestrings:172
 msgid "Authentication Configuration"
 msgstr "অনুমোদন ব্যবস্থার কনফিগারেশন"
 
-#: system-config-kickstart.gladestrings:177
+#: system-config-kickstart.gladestrings:173
 msgid "label32"
 msgstr "label32"
 
-#: system-config-kickstart.gladestrings:178
+#: system-config-kickstart.gladestrings:174
 msgid "Security level:"
 msgstr "নিরাপত্তার মাত্রা:"
 
-#: system-config-kickstart.gladestrings:179
+#: system-config-kickstart.gladestrings:175
 msgid "Enable firewall"
 msgstr "ফায়ারওয়াল সক্রিয় করুন"
 
-#: system-config-kickstart.gladestrings:180
+#: system-config-kickstart.gladestrings:176
 msgid "Disable firewall"
 msgstr "ফায়ারওয়াল নিষ্ক্রিয় করুন"
 
-#: system-config-kickstart.gladestrings:181
+#: system-config-kickstart.gladestrings:177
 msgid "SELinux:"
 msgstr "SELinux:"
 
-#: system-config-kickstart.gladestrings:182
+#: system-config-kickstart.gladestrings:178
 msgid "Active"
 msgstr "সক্রিয়"
 
-#: system-config-kickstart.gladestrings:183
+#: system-config-kickstart.gladestrings:179
 msgid "Warn"
 msgstr "সতর্কবাণী"
 
-#: system-config-kickstart.gladestrings:184
-#: system-config-kickstart.gladestrings:196
+#: system-config-kickstart.gladestrings:180
+#: system-config-kickstart.gladestrings:192
 msgid "Disabled"
 msgstr "নিষ্ক্রিয়"
 
-#: system-config-kickstart.gladestrings:185
+#: system-config-kickstart.gladestrings:181
 msgid "Firewall configuration is not applicable on upgrades."
 msgstr "আপগ্রেডের ক্ষেত্রে ফায়ারওয়াল কনফিগারেশন প্রযোজ্য নয়।"
 
-#: system-config-kickstart.gladestrings:187
+#: system-config-kickstart.gladestrings:183
 msgid "label33"
 msgstr "label33"
 
-#: system-config-kickstart.gladestrings:188
+#: system-config-kickstart.gladestrings:184
 msgid "Configure the X Window System"
 msgstr "X উইন্ডো সিস্টেম কনফিগার করুন"
 
-#: system-config-kickstart.gladestrings:189
+#: system-config-kickstart.gladestrings:185
 msgid "Color Depth"
 msgstr "রং-র গভীরতা"
 
-#: system-config-kickstart.gladestrings:190
+#: system-config-kickstart.gladestrings:186
 msgid "Resolution"
 msgstr "রিসোলিউশন"
 
-#: system-config-kickstart.gladestrings:191
+#: system-config-kickstart.gladestrings:187
 msgid "Default Desktop:"
 msgstr "ডিফল্ট ডেস্কটপ:"
 
-#: system-config-kickstart.gladestrings:192
+#: system-config-kickstart.gladestrings:188
 msgid "GNOME"
 msgstr "GNOME"
 
-#: system-config-kickstart.gladestrings:193
+#: system-config-kickstart.gladestrings:189
 msgid "KDE"
 msgstr "KDE"
 
-#: system-config-kickstart.gladestrings:194
+#: system-config-kickstart.gladestrings:190
 msgid "Start the X Window System on boot"
 msgstr "বুট করার সময় X উইন্ডো সিস্টেম আরম্ভ করা হবে"
 
-#: system-config-kickstart.gladestrings:195
+#: system-config-kickstart.gladestrings:191
 msgid "On first boot, Setup Agent is: "
 msgstr "প্রথমবার বুট করার সময়, Setup Agent: "
 
-#: system-config-kickstart.gladestrings:197
+#: system-config-kickstart.gladestrings:193
 msgid "Enabled"
 msgstr "সক্রিয় অবস্থায় থাকবে"
 
-#: system-config-kickstart.gladestrings:198
+#: system-config-kickstart.gladestrings:194
 msgid "Enabled in reconfiguration mode"
 msgstr "রিকনফিগারেশন মোডে স্বক্রিয় করা থাকবে"
 
-#: system-config-kickstart.gladestrings:199
+#: system-config-kickstart.gladestrings:195
 msgid "General"
 msgstr "সাধারণ"
 
-#: system-config-kickstart.gladestrings:200
-msgid "Probe for video card"
+#: system-config-kickstart.gladestrings:196
+#, fuzzy
+msgid "Probe for video card driver"
 msgstr "ভিডিও কার্ড অনুসন্ধান করুন"
 
-#: system-config-kickstart.gladestrings:201
+#: system-config-kickstart.gladestrings:197
 msgid "Video Card RAM: "
 msgstr "ভিডিও কার্ডের RAM: "
 
-#: system-config-kickstart.gladestrings:202
+#: system-config-kickstart.gladestrings:198
 msgid "Video Card"
 msgstr "ভিডিও কার্ড"
 
-#: system-config-kickstart.gladestrings:203
+#: system-config-kickstart.gladestrings:199
 msgid "Probe for monitor"
 msgstr "মনিটার অনুসন্ধান করুন"
 
-#: system-config-kickstart.gladestrings:204
+#: system-config-kickstart.gladestrings:200
 msgid "Use custom monitor sync rates"
 msgstr "স্বনির্বাচিত মনিটার সিঙ্ক মান ব্যবহার করা হবে"
 
-#: system-config-kickstart.gladestrings:205
+#: system-config-kickstart.gladestrings:201
 msgid "Hz"
 msgstr "হার্টজ"
 
-#: system-config-kickstart.gladestrings:206
+#: system-config-kickstart.gladestrings:202
 msgid "kHz"
 msgstr "কিলোহার্টজ"
 
-#: system-config-kickstart.gladestrings:207
+#: system-config-kickstart.gladestrings:203
 msgid "Vertical Sync:"
 msgstr "উল্লম্ব সিঙ্ক:"
 
 # msgstr "উল্লম্ব সমান্তরাল:"
-#: system-config-kickstart.gladestrings:208
+#: system-config-kickstart.gladestrings:204
 msgid "Horizontal Sync:"
 msgstr "অনুভূমিক সিঙ্ক:"
 
 # msgstr "অনুভূমিক সমান্তরাল:"
-#: system-config-kickstart.gladestrings:209
+#: system-config-kickstart.gladestrings:205
 msgid "Monitor"
 msgstr "মনিটার"
 
-#: system-config-kickstart.gladestrings:210
+#: system-config-kickstart.gladestrings:206
 msgid "Display configuration is not applicable on upgrades."
 msgstr "আপগ্রেডের ক্ষেত্রে ডিসপ্লে কনফিগারেশন প্রযোজ্য নয়।"
 
-#: system-config-kickstart.gladestrings:212
+#: system-config-kickstart.gladestrings:208
 msgid "label88"
 msgstr "label88"
 
-#: system-config-kickstart.gladestrings:213
+#: system-config-kickstart.gladestrings:209
 msgid "Select packages to install."
 msgstr "ইনস্টল করার উদ্দেশ্যে প্যাকেজ নির্বাচন করুন।"
 
-#: system-config-kickstart.gladestrings:214
+#: system-config-kickstart.gladestrings:210
 msgid "_Install Everything"
 msgstr "সমস্ত প্যাকেজ ইনস্টল করুন (_I)"
 
-#: system-config-kickstart.gladestrings:215
+#: system-config-kickstart.gladestrings:211
 msgid "Desktops"
 msgstr "ডেস্কটপ"
 
-#: system-config-kickstart.gladestrings:216
+#: system-config-kickstart.gladestrings:212
 msgid "Applications"
 msgstr "অ্যাপ্লিকেশন"
 
-#: system-config-kickstart.gladestrings:217
+#: system-config-kickstart.gladestrings:213
 msgid "Servers"
 msgstr "সার্ভার"
 
-#: system-config-kickstart.gladestrings:218
+#: system-config-kickstart.gladestrings:214
 msgid "Development"
 msgstr "ডিভেলপমেন্ট"
 
-#: system-config-kickstart.gladestrings:219
+#: system-config-kickstart.gladestrings:215
 msgid "System"
 msgstr "সিস্টেম"
 
-#: system-config-kickstart.gladestrings:220
+#: system-config-kickstart.gladestrings:216
 msgid "Package selection is not applicable on upgrades."
 msgstr "আপগ্রেডের ক্ষেত্রে প্যাকেজ নির্বাচন প্রযোজ্য নয়।"
 
-#: system-config-kickstart.gladestrings:222
+#: system-config-kickstart.gladestrings:218
 msgid "label34"
 msgstr "label34"
 
-#: system-config-kickstart.gladestrings:223
+#: system-config-kickstart.gladestrings:219
 #, c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1279,21 +1279,21 @@ msgstr ""
 "সতর্কবাণী: এই স্ক্রিপ্টের মধ্যে একটি ত্রুটির দরুণ আপনার kickstart ইনস্টলেশন ব্যর্থ হতে "
 "পারে। %pre কমান্ডটি আরম্ভে অন্তর্ভুক্ত করবেন না।"
 
-#: system-config-kickstart.gladestrings:224
-#: system-config-kickstart.gladestrings:230
+#: system-config-kickstart.gladestrings:220
+#: system-config-kickstart.gladestrings:226
 msgid "Use an interpreter:"
 msgstr "একটি ইন্টারপ্রেটার ব্যবহার করুন:"
 
-#: system-config-kickstart.gladestrings:225
+#: system-config-kickstart.gladestrings:221
 #, c-format
 msgid "Type your %pre script below:"
 msgstr "আপনি যে %pre স্ক্রিপ্ট ব্যবহার করতে ইচ্ছুক তা নীচে টাইপ করুন:"
 
-#: system-config-kickstart.gladestrings:227
+#: system-config-kickstart.gladestrings:223
 msgid "label89"
 msgstr "label89"
 
-#: system-config-kickstart.gladestrings:228
+#: system-config-kickstart.gladestrings:224
 #, c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1302,29 +1302,29 @@ msgstr ""
 "সতর্কবাণী: এই স্ক্রিপ্টের মধ্যে একটি ত্রুটির দরুণ আপনার kickstart ইনস্টলেশন ব্যর্থ হতে "
 "পারে। %post কমান্ডটি আরম্ভে অন্তর্ভুক্ত করবেন না।"
 
-#: system-config-kickstart.gladestrings:229
+#: system-config-kickstart.gladestrings:225
 msgid "Run outside of the chroot environment"
 msgstr "chroot এনভায়রনমেন্টের বাইরে চালান"
 
-#: system-config-kickstart.gladestrings:231
+#: system-config-kickstart.gladestrings:227
 #, c-format
 msgid "Type your %post script below:"
 msgstr "আপনি যে %post স্ক্রিপ্ট ব্যবহার করতে ইচ্ছুক তা নীচে টাইপ করুন:"
 
 # not sure
-#: system-config-kickstart.gladestrings:233
+#: system-config-kickstart.gladestrings:229
 msgid "label93"
 msgstr "label93"
 
-#: system-config-kickstart.gladestrings:234
+#: system-config-kickstart.gladestrings:230
 msgid "Preview Options"
 msgstr "পূর্বপ্রদর্শন সংক্রান্ত অপশন"
 
-#: system-config-kickstart.gladestrings:235
+#: system-config-kickstart.gladestrings:231
 msgid "_Save to File"
 msgstr "ফাইলে সংরক্ষণ করুন (_S)"
 
-#: system-config-kickstart.gladestrings:236
+#: system-config-kickstart.gladestrings:232
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
@@ -1332,11 +1332,11 @@ msgstr ""
 "আপনি নিম্নোক্ত কনফিগারেশন নির্বাচন করেছেন। ফাইল সংরক্ষণ-এ ক্লিক করে kickstart "
 "ফাইলটি সংরক্ষণ করুন।"
 
-#: system-config-kickstart.gladestrings:237
+#: system-config-kickstart.gladestrings:233
 msgid "RAID Options"
 msgstr "RAID সংক্রান্ত অপশন"
 
-#: system-config-kickstart.gladestrings:238
+#: system-config-kickstart.gladestrings:234
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -1344,56 +1344,63 @@ msgid ""
 "using RAID devices please consult the kickstart documentation."
 msgstr ""
 "সফ্টওয়্যার RAID-র সাহায্যে আপনি একাধিক ডিস্ক একত্র করে একটি বড় RAID ডিভাইস তৈরি "
-"করতে পারবেন। একটি স্বতন্ত্র ড্রাইভের তুলনায় RAID ডিভাইস অধিক দ্রুত এবং "
-"নির্ভরযোগ্য পরিসেবার জন্য কনফিগার করা সম্ভব। RAID ডিভাইস সম্বন্ধে অধিক তথ্যের জন্য kickstart "
+"করতে পারবেন। একটি স্বতন্ত্র ড্রাইভের তুলনায় RAID ডিভাইস অধিক দ্রুত এবং নির্ভরযোগ্য "
+"পরিসেবার জন্য কনফিগার করা সম্ভব। RAID ডিভাইস সম্বন্ধে অধিক তথ্যের জন্য kickstart "
 "সহায়িকা পড়ুন।"
 
-#: system-config-kickstart.gladestrings:239
+#: system-config-kickstart.gladestrings:235
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
-msgstr "RAID ব্যবহার করার পূর্বে 'সফ্টওয়্যার RAID' ধরনের অন্তত দুটি পার্টিশন তৈরি করা আবশ্যক।  তারপর আপনি একটি RAID ডিভাইস নির্মাণ করে সেটি ফরম্যাট এবং মাউন্ট করতে পারবেন।"
+msgstr ""
+"RAID ব্যবহার করার পূর্বে 'সফ্টওয়্যার RAID' ধরনের অন্তত দুটি পার্টিশন তৈরি করা "
+"আবশ্যক।  তারপর আপনি একটি RAID ডিভাইস নির্মাণ করে সেটি ফরম্যাট এবং মাউন্ট করতে "
+"পারবেন।"
 
-#: system-config-kickstart.gladestrings:240
+#: system-config-kickstart.gladestrings:236
 msgid "Choose one of the following options:"
 msgstr "নিম্নোক্ত অপশনের মধ্যে একটি নির্বাচন করুন:"
 
-#: system-config-kickstart.gladestrings:241
+#: system-config-kickstart.gladestrings:237
 msgid "Create a software RAID partition"
 msgstr "একটি সফ্টওয়্যার RAID পার্টিশন তৈরি করুন"
 
-#: system-config-kickstart.gladestrings:242
+#: system-config-kickstart.gladestrings:238
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "একটি RAID ডিভাইস তৈরি করুন [default = /dev/md0]"
 
-#: system-config-kickstart.gladestrings:243
+#: system-config-kickstart.gladestrings:239
 msgid "Network Device Information"
 msgstr "নেটওয়ার্ক ডিভাইস সংক্রান্ত তথ্য"
 
-#: system-config-kickstart.gladestrings:244
+#: system-config-kickstart.gladestrings:240
 msgid "Network Device:"
 msgstr "নেটওয়ার্কের ডিভাইস:"
 
-#: system-config-kickstart.gladestrings:245
+#: system-config-kickstart.gladestrings:241
 msgid "Network Type:"
 msgstr "নেটওয়ার্কের ধরন:"
 
-#: system-config-kickstart.gladestrings:246
+#: system-config-kickstart.gladestrings:242
 msgid "IP Address:"
 msgstr "IP অ্যাড্রেস:"
 
-#: system-config-kickstart.gladestrings:247
+#: system-config-kickstart.gladestrings:243
 msgid "Netmask: "
 msgstr "নেটমাস্ক:"
 
-#: system-config-kickstart.gladestrings:248
+#: system-config-kickstart.gladestrings:244
 msgid "Gateway:"
 msgstr "গেটওয়ে:"
 
-#: system-config-kickstart.gladestrings:249
+#: system-config-kickstart.gladestrings:245
 msgid "Name Server:"
 msgstr "Name সার্ভার:"
 
+#: system-config-kickstart.gladestrings:246
+#: system-config-kickstart.gladestrings:247
+#: system-config-kickstart.gladestrings:248
+#: system-config-kickstart.gladestrings:249
 #: system-config-kickstart.gladestrings:250
 #: system-config-kickstart.gladestrings:251
 #: system-config-kickstart.gladestrings:252
@@ -1402,10 +1409,20 @@ msgstr "Name সার্ভার:"
 #: system-config-kickstart.gladestrings:255
 #: system-config-kickstart.gladestrings:256
 #: system-config-kickstart.gladestrings:257
-#: system-config-kickstart.gladestrings:258
-#: system-config-kickstart.gladestrings:259
-#: system-config-kickstart.gladestrings:260
-#: system-config-kickstart.gladestrings:261
 msgid "."
 msgstr "."
 
+#~ msgid "/comps.xml file."
+#~ msgstr "/comps.xml ফাইল।"
+
+#~ msgid "Save File"
+#~ msgstr "ফাইল সংরক্ষণ করুন"
+
+#~ msgid "Mouse:"
+#~ msgstr "মাউস:"
+
+#~ msgid "Emulate 3 Buttons"
+#~ msgstr "৩ বাটনের অনুকরণ করা হবে"
+
+#~ msgid "Language Support:"
+#~ msgstr "ভাষা সমর্থন:"

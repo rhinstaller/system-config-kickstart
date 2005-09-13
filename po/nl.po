@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-23 14:24-0500\n"
+"POT-Creation-Date: 2005-09-13 13:29-0400\n"
 "PO-Revision-Date: 2005-03-29 23:47+0200\n"
 "Last-Translator: Peter van Egdom <p.van.egdom@chello.nl>\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
@@ -17,36 +17,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
 
-#: ../src/basic.py:72
+#: ../src/basic.py:67
 msgid "x86, AMD64, or Intel EM64T"
 msgstr "x86, AMD64, of Intel EM64T"
 
-#: ../src/basic.py:72
+#: ../src/basic.py:67
 msgid "Intel Itanium"
 msgstr "Intel Itanium"
 
-#: ../src/basic.py:72
+#: ../src/basic.py:67
 msgid "IBM iSeries"
 msgstr "IBM iSeries"
 
-#: ../src/basic.py:73
+#: ../src/basic.py:68
 msgid "IBM pSeries"
 msgstr "IBM pSeries"
 
-#: ../src/basic.py:73
+#: ../src/basic.py:68
 msgid "IBM zSeries/s390"
 msgstr "IBM zSeries/s390"
 
-#: ../src/basic.py:206
+#: ../src/basic.py:156
 msgid "Root passwords do not match."
 msgstr "Root wachtwoorden komen niet overeen."
 
-#: ../src/basic.py:207 ../src/basic.py:226 ../src/install.py:214
+#: ../src/basic.py:157 ../src/basic.py:176 ../src/install.py:214
 #: ../src/partWindow.py:513 ../src/partition.py:317 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "Fout"
 
-#: ../src/basic.py:225
+#: ../src/basic.py:175
 msgid "Please select a root password."
 msgstr "Selecteer een root wachtwoord."
 
@@ -146,7 +146,7 @@ msgstr "Bootloader opties"
 msgid "Partition Information"
 msgstr "Partitie informatie"
 
-#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:140
+#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:136
 msgid "Network Configuration"
 msgstr "Netwerk configuratie"
 
@@ -154,26 +154,26 @@ msgstr "Netwerk configuratie"
 msgid "Authentication"
 msgstr "Aanmeldingscontrole"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:186
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:182
 msgid "Firewall Configuration"
 msgstr "Firewall configuratie"
 
 # Was: X configuratie
 # weergave configuratie
 # grafische configuratie
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:211
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:207
 msgid "Display Configuration"
 msgstr "Display configuratie"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:221
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:217
 msgid "Package Selection"
 msgstr "Pakket selectie"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:226
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:222
 msgid "Pre-Installation Script"
 msgstr "Voor-installatie script"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:232
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:228
 msgid "Post-Installation Script"
 msgstr "Na-installatie script"
 
@@ -199,10 +199,25 @@ msgstr "Over Kickstart Configurator"
 msgid "Help is not available."
 msgstr "Hulp is niet beschikbaar."
 
-#: ../src/kickstartGui.py:273
+#: ../src/kickstartGui.py:275
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "Kon geen toegang krijgen tot het bestand \"%s\"."
+
+#: ../src/kickstartParser.py:72
+#, python-format
+msgid ""
+"There was a problem reading the following line from the kickstart file. This "
+"could be due to an error on the line or using a keyword that no longer "
+"exists.\n"
+"\n"
+"%s"
+msgstr ""
+
+#: ../src/kickstartParser.py:77
+#, fuzzy
+msgid "Kickstart Error"
+msgstr "Kickstart"
 
 #: ../src/network.py:87
 msgid "Device"
@@ -229,23 +244,20 @@ msgid ""
 msgstr ""
 "Een netwerk-apparaat met de naam %s bestaat reeds.  Kies een andere naam"
 
-#: ../src/packageGroupList.py:16
-msgid "Could not start because there is no /usr/share/comps/"
+#: ../src/packageGroupList.py:18
+#, fuzzy, python-format
+msgid "Could not start because there is no %s file."
 msgstr "Kon niet starten omdat /usr/share/comps/ ontbreekt"
 
-#: ../src/packageGroupList.py:16
-msgid "/comps.xml file."
-msgstr "/comps.xml bestand."
-
-#: ../src/packageGroupList.py:17
+#: ../src/packageGroupList.py:19
 msgid "Please make sure the comps package is installed."
 msgstr "Zorg ervoor dat het comps pakket geïnstalleerd is."
 
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:53
+#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:52
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:54
+#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:53
 msgid "ext3"
 msgstr "ext3"
 
@@ -254,11 +266,11 @@ msgstr "ext3"
 msgid "software RAID"
 msgstr "software RAID"
 
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:55
+#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:54
 msgid "swap"
 msgstr "swap"
 
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:56
+#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:55
 msgid "vfat"
 msgstr "vfat"
 
@@ -427,8 +439,9 @@ msgstr "Kon display niet openen omdat er geen X-server loopt."
 msgid "Try running 'system-config-kickstart --help' for a list of options."
 msgstr "Probeer 'system-config-kickstart --help' voor een lijst met opties."
 
-#: ../src/xconfig.py:106
-msgid "Could not read video card database"
+#: ../src/xconfig.py:115
+#, fuzzy
+msgid "Could not read video driver database"
 msgstr "Kon videokaart database niet lezen"
 
 #.
@@ -437,808 +450,793 @@ msgstr "Kon videokaart database niet lezen"
 #. * DO NOT compile it as part of your application.
 #.
 #: system-config-kickstart.gladestrings:7
-msgid "Save File"
-msgstr "Bestand opslaan"
-
-#: system-config-kickstart.gladestrings:8
 msgid "Partition Options"
 msgstr "Partitie opties"
 
-#: system-config-kickstart.gladestrings:9
-#: system-config-kickstart.gladestrings:28
+#: system-config-kickstart.gladestrings:8
+#: system-config-kickstart.gladestrings:27
 msgid "Mount Point:"
 msgstr "Koppelpunt:"
 
-#: system-config-kickstart.gladestrings:10
-#: system-config-kickstart.gladestrings:32
+#: system-config-kickstart.gladestrings:9
+#: system-config-kickstart.gladestrings:31
 msgid "File System Type:"
 msgstr "Bestandssysteem soort:"
 
-#: system-config-kickstart.gladestrings:11
+#: system-config-kickstart.gladestrings:10
 msgid "Size (MB):"
 msgstr "Grootte (MB):"
 
-#: system-config-kickstart.gladestrings:12
+#: system-config-kickstart.gladestrings:11
 msgid "Fill all unused space on disk"
 msgstr "Alle ongebruikte ruimte op schijf vullen"
 
-#: system-config-kickstart.gladestrings:13
+#: system-config-kickstart.gladestrings:12
 msgid "Grow to maximum of (MB):"
 msgstr "Groeien tot een maximum van (MB):"
 
-#: system-config-kickstart.gladestrings:14
+#: system-config-kickstart.gladestrings:13
 msgid "Fixed size"
 msgstr "Vaste grootte"
 
-#: system-config-kickstart.gladestrings:15
+#: system-config-kickstart.gladestrings:14
 msgid "Use recommended swap size"
 msgstr "Aangeraden swap grootte gebruiken"
 
-#: system-config-kickstart.gladestrings:16
+#: system-config-kickstart.gladestrings:15
 msgid "Additional Size Options"
 msgstr "Extra grootte opties"
 
-#: system-config-kickstart.gladestrings:17
+#: system-config-kickstart.gladestrings:16
 msgid "Force to be a primary partition (asprimary)"
 msgstr "Als primaire partitie forceren (asprimary)"
 
-#: system-config-kickstart.gladestrings:18
+#: system-config-kickstart.gladestrings:17
 msgid "Make partition on specific drive (ondisk)"
 msgstr "Partitie maken op specifieke schijf (ondisk)"
 
-#: system-config-kickstart.gladestrings:19
-#: system-config-kickstart.gladestrings:23
+#: system-config-kickstart.gladestrings:18
+#: system-config-kickstart.gladestrings:22
 msgid "         "
 msgstr "         "
 
-#: system-config-kickstart.gladestrings:20
+#: system-config-kickstart.gladestrings:19
 msgid "Drive :"
 msgstr "Schijf :"
 
-#: system-config-kickstart.gladestrings:21
+#: system-config-kickstart.gladestrings:20
 msgid "(for example: hda or sdc)"
 msgstr "(bijvoorbeeld: hda of sdc)"
 
-#: system-config-kickstart.gladestrings:22
+#: system-config-kickstart.gladestrings:21
 msgid "Use existing partition (onpart)"
 msgstr "Bestaande partitie gebruiken (onpart)"
 
-#: system-config-kickstart.gladestrings:24
+#: system-config-kickstart.gladestrings:23
 msgid "Partition :"
 msgstr "Partitie :"
 
-#: system-config-kickstart.gladestrings:25
+#: system-config-kickstart.gladestrings:24
 msgid "(for example: hda1 or sdc3)"
 msgstr "(bijvoorbeeld: hda1 of sdc3)"
 
-#: system-config-kickstart.gladestrings:26
+#: system-config-kickstart.gladestrings:25
 msgid "Format partition"
 msgstr "Partitie formatteren"
 
-#: system-config-kickstart.gladestrings:27
+#: system-config-kickstart.gladestrings:26
 msgid "Make RAID Device"
 msgstr "RAID apparaat maken"
 
-#: system-config-kickstart.gladestrings:29
+#: system-config-kickstart.gladestrings:28
 msgid "Number of spares:"
 msgstr "Aantal reserve:"
 
-#: system-config-kickstart.gladestrings:30
+#: system-config-kickstart.gladestrings:29
 msgid "Raid Members"
 msgstr "Raid-onderdelen"
 
-#: system-config-kickstart.gladestrings:31
+#: system-config-kickstart.gladestrings:30
 msgid "RAID Level:"
 msgstr "RAID niveau:"
 
-#: system-config-kickstart.gladestrings:33
+#: system-config-kickstart.gladestrings:32
 msgid "RAID Device:"
 msgstr "RAID-apparaat:"
 
-#: system-config-kickstart.gladestrings:34
+#: system-config-kickstart.gladestrings:33
 msgid "md0"
 msgstr "md0"
 
-#: system-config-kickstart.gladestrings:35
+#: system-config-kickstart.gladestrings:34
 msgid "md1"
 msgstr "md1"
 
-#: system-config-kickstart.gladestrings:36
+#: system-config-kickstart.gladestrings:35
 msgid "md2"
 msgstr "md2"
 
-#: system-config-kickstart.gladestrings:37
+#: system-config-kickstart.gladestrings:36
 msgid "md3"
 msgstr "md3"
 
-#: system-config-kickstart.gladestrings:38
+#: system-config-kickstart.gladestrings:37
 msgid "md4"
 msgstr "md4"
 
-#: system-config-kickstart.gladestrings:39
+#: system-config-kickstart.gladestrings:38
 msgid "md5"
 msgstr "md5"
 
-#: system-config-kickstart.gladestrings:40
+#: system-config-kickstart.gladestrings:39
 msgid "md6"
 msgstr "md6"
 
-#: system-config-kickstart.gladestrings:41
+#: system-config-kickstart.gladestrings:40
 msgid "md7"
 msgstr "md7"
 
-#: system-config-kickstart.gladestrings:42
+#: system-config-kickstart.gladestrings:41
 msgid "md8"
 msgstr "md8"
 
-#: system-config-kickstart.gladestrings:43
+#: system-config-kickstart.gladestrings:42
 msgid "md9"
 msgstr "md9"
 
-#: system-config-kickstart.gladestrings:44
+#: system-config-kickstart.gladestrings:43
 msgid "md10"
 msgstr "md10"
 
-#: system-config-kickstart.gladestrings:45
+#: system-config-kickstart.gladestrings:44
 msgid "md11"
 msgstr "md11"
 
-#: system-config-kickstart.gladestrings:46
+#: system-config-kickstart.gladestrings:45
 msgid "md12"
 msgstr "md12"
 
-#: system-config-kickstart.gladestrings:47
+#: system-config-kickstart.gladestrings:46
 msgid "md13"
 msgstr "md13"
 
-#: system-config-kickstart.gladestrings:48
+#: system-config-kickstart.gladestrings:47
 msgid "md14"
 msgstr "md14"
 
-#: system-config-kickstart.gladestrings:49
+#: system-config-kickstart.gladestrings:48
 msgid "md15"
 msgstr "md15"
 
-#: system-config-kickstart.gladestrings:50
+#: system-config-kickstart.gladestrings:49
 msgid "0"
 msgstr "0"
 
-#: system-config-kickstart.gladestrings:51
+#: system-config-kickstart.gladestrings:50
 msgid "1"
 msgstr "1"
 
-#: system-config-kickstart.gladestrings:52
+#: system-config-kickstart.gladestrings:51
 msgid "5"
 msgstr "5"
 
-#: system-config-kickstart.gladestrings:57
+#: system-config-kickstart.gladestrings:56
 msgid "Format RAID device"
 msgstr "RAID-apparaat formatteren"
 
-#: system-config-kickstart.gladestrings:58
+#: system-config-kickstart.gladestrings:57
 msgid "Kickstart Configurator"
 msgstr "Kickstart Configurator"
 
-#: system-config-kickstart.gladestrings:59
+#: system-config-kickstart.gladestrings:58
 msgid "_File"
 msgstr "_Bestand"
 
-#: system-config-kickstart.gladestrings:60
+#: system-config-kickstart.gladestrings:59
 msgid "_Open File"
 msgstr "Bestand _openen"
 
-#: system-config-kickstart.gladestrings:61
+#: system-config-kickstart.gladestrings:60
 msgid "_Preview"
 msgstr "_Voorbeeld"
 
-#: system-config-kickstart.gladestrings:62
+#: system-config-kickstart.gladestrings:61
 msgid "_Save File"
 msgstr "_Bestand opslaan"
 
-#: system-config-kickstart.gladestrings:63
+#: system-config-kickstart.gladestrings:62
 msgid "_Quit"
 msgstr "_Afsluiten"
 
-#: system-config-kickstart.gladestrings:64
+#: system-config-kickstart.gladestrings:63
 msgid "_Help"
 msgstr "_Help"
 
-#: system-config-kickstart.gladestrings:65
+#: system-config-kickstart.gladestrings:64
 msgid "_Contents"
 msgstr "_Inhoud"
 
-#: system-config-kickstart.gladestrings:66
+#: system-config-kickstart.gladestrings:65
 msgid "_About"
 msgstr "_Info"
 
-#: system-config-kickstart.gladestrings:67
+#: system-config-kickstart.gladestrings:66
 msgid "Default Language:"
 msgstr "Standaardtaal:"
 
-#: system-config-kickstart.gladestrings:68
-msgid "Encrypt root password"
-msgstr "Root wachtwoord coderen"
-
-#: system-config-kickstart.gladestrings:69
+#: system-config-kickstart.gladestrings:67
 msgid "Keyboard:"
 msgstr "Toetsenbord:"
 
-#: system-config-kickstart.gladestrings:70
-msgid "Mouse:"
-msgstr "Muis:"
-
-#: system-config-kickstart.gladestrings:71
-msgid "Emulate 3 Buttons"
-msgstr "3 knoppen emuleren"
-
-#: system-config-kickstart.gladestrings:72
+#: system-config-kickstart.gladestrings:68
 msgid "Time Zone:"
 msgstr "Tijdzone:"
 
-#: system-config-kickstart.gladestrings:73
-msgid "Root Password:"
-msgstr "Root wachtwoord:"
-
-#: system-config-kickstart.gladestrings:74
-msgid "Language Support:"
-msgstr "Taalondersteuning:"
-
-#: system-config-kickstart.gladestrings:75
+#: system-config-kickstart.gladestrings:69
 msgid "Use UTC clock"
 msgstr "UTC-klok gebruiken"
 
-#: system-config-kickstart.gladestrings:76
-#: system-config-kickstart.gladestrings:115
+#: system-config-kickstart.gladestrings:70
+msgid "Root Password:"
+msgstr "Root wachtwoord:"
+
+#: system-config-kickstart.gladestrings:71
+#: system-config-kickstart.gladestrings:111
 msgid "Confirm Password:"
 msgstr "Bevestig wachtwoord:"
 
-#: system-config-kickstart.gladestrings:77
+#: system-config-kickstart.gladestrings:72
+msgid "Encrypt root password"
+msgstr "Root wachtwoord coderen"
+
+#: system-config-kickstart.gladestrings:73
 msgid "Target Architecture:"
 msgstr "Doel-architectuur:"
 
-#: system-config-kickstart.gladestrings:78
+#: system-config-kickstart.gladestrings:74
 msgid "Reboot system after installation"
 msgstr "Systeem herstarten na installatie"
 
-#: system-config-kickstart.gladestrings:79
+#: system-config-kickstart.gladestrings:75
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "Installatie uitvoeren in tekstmodus (grafisch is standaard)"
 
-#: system-config-kickstart.gladestrings:80
+#: system-config-kickstart.gladestrings:76
 msgid "Perform installation in interactive mode"
 msgstr "Installatie uitvoeren in interactieve modus"
 
-#: system-config-kickstart.gladestrings:81
+#: system-config-kickstart.gladestrings:77
 msgid "Basic Configuration (required)"
 msgstr "Basisconfiguratie (nodig)"
 
-#: system-config-kickstart.gladestrings:82
+#: system-config-kickstart.gladestrings:78
 msgid "label28"
 msgstr "label28"
 
-#: system-config-kickstart.gladestrings:83
+#: system-config-kickstart.gladestrings:79
 msgid "Perform new installation"
 msgstr "Nieuwe installatie uitvoeren"
 
-#: system-config-kickstart.gladestrings:84
+#: system-config-kickstart.gladestrings:80
 msgid "Upgrade an existing installation"
 msgstr "Een bestaande installatie bijwerken"
 
-#: system-config-kickstart.gladestrings:85
+#: system-config-kickstart.gladestrings:81
 msgid "Choose the Installation Method:"
 msgstr "Kies de installatiemethode:"
 
-#: system-config-kickstart.gladestrings:86
-#: system-config-kickstart.gladestrings:91
+#: system-config-kickstart.gladestrings:82
+#: system-config-kickstart.gladestrings:87
 msgid "CD-ROM"
 msgstr "CD-ROM"
 
-#: system-config-kickstart.gladestrings:87
-#: system-config-kickstart.gladestrings:94
+#: system-config-kickstart.gladestrings:83
+#: system-config-kickstart.gladestrings:90
 msgid "NFS"
 msgstr "NFS"
 
-#: system-config-kickstart.gladestrings:88
-#: system-config-kickstart.gladestrings:100
+#: system-config-kickstart.gladestrings:84
+#: system-config-kickstart.gladestrings:96
 msgid "FTP"
 msgstr "FTP"
 
-#: system-config-kickstart.gladestrings:89
-#: system-config-kickstart.gladestrings:103
+#: system-config-kickstart.gladestrings:85
+#: system-config-kickstart.gladestrings:99
 msgid "HTTP"
 msgstr "HTTP"
 
-#: system-config-kickstart.gladestrings:90
-#: system-config-kickstart.gladestrings:106
+#: system-config-kickstart.gladestrings:86
+#: system-config-kickstart.gladestrings:102
 msgid "Hard Drive"
 msgstr "Harde schijf"
 
-#: system-config-kickstart.gladestrings:92
+#: system-config-kickstart.gladestrings:88
 msgid "NFS Server:"
 msgstr "NFS-server:"
 
-#: system-config-kickstart.gladestrings:93
+#: system-config-kickstart.gladestrings:89
 msgid "NFS Directory:"
 msgstr "NFS map:"
 
-#: system-config-kickstart.gladestrings:95
+#: system-config-kickstart.gladestrings:91
 msgid "FTP Server:"
 msgstr "FTP-server:"
 
-#: system-config-kickstart.gladestrings:96
+#: system-config-kickstart.gladestrings:92
 msgid "FTP Directory:"
 msgstr "FTP map:"
 
-#: system-config-kickstart.gladestrings:97
+#: system-config-kickstart.gladestrings:93
 msgid "Specify an FTP username and password"
 msgstr "FTP gebruikersnaam en wachtwoord aangeven"
 
-#: system-config-kickstart.gladestrings:98
+#: system-config-kickstart.gladestrings:94
 msgid "FTP Username"
 msgstr "FTP gebruikersnaam"
 
-#: system-config-kickstart.gladestrings:99
+#: system-config-kickstart.gladestrings:95
 msgid "FTP Password"
 msgstr "FTP wachtwoord"
 
-#: system-config-kickstart.gladestrings:101
+#: system-config-kickstart.gladestrings:97
 msgid "HTTP Server:"
 msgstr "HTTP-server:"
 
-#: system-config-kickstart.gladestrings:102
+#: system-config-kickstart.gladestrings:98
 msgid "HTTP Directory:"
 msgstr "HTTP map:"
 
-#: system-config-kickstart.gladestrings:104
+#: system-config-kickstart.gladestrings:100
 msgid "Hard Drive Partition:"
 msgstr "Harde schijf partitie:"
 
-#: system-config-kickstart.gladestrings:105
+#: system-config-kickstart.gladestrings:101
 msgid "Hard Drive Directory:"
 msgstr "Harde schrijf map:"
 
-#: system-config-kickstart.gladestrings:107
+#: system-config-kickstart.gladestrings:103
 msgid "Installation Method (required)"
 msgstr "Installatiemethode (nodig)"
 
-#: system-config-kickstart.gladestrings:108
+#: system-config-kickstart.gladestrings:104
 msgid "label128"
 msgstr "label128"
 
-#: system-config-kickstart.gladestrings:109
+#: system-config-kickstart.gladestrings:105
 msgid "Install new boot loader"
 msgstr "Nieuwe bootloader installeren"
 
-#: system-config-kickstart.gladestrings:110
+#: system-config-kickstart.gladestrings:106
 msgid "Do not install a boot loader"
 msgstr "Geen bootloader installeren"
 
-#: system-config-kickstart.gladestrings:111
+#: system-config-kickstart.gladestrings:107
 msgid "Upgrade existing boot loader"
 msgstr "Bestaande bootloader bijwerken"
 
-#: system-config-kickstart.gladestrings:112
+#: system-config-kickstart.gladestrings:108
 msgid "GRUB Options:"
 msgstr "GRUB opties:"
 
-#: system-config-kickstart.gladestrings:113
+#: system-config-kickstart.gladestrings:109
 msgid "Use GRUB password"
 msgstr "GRUB wachtwoord gebruiken"
 
-#: system-config-kickstart.gladestrings:114
+#: system-config-kickstart.gladestrings:110
 msgid "Password:"
 msgstr "Wachtwoord:"
 
-#: system-config-kickstart.gladestrings:116
+#: system-config-kickstart.gladestrings:112
 msgid "Encrypt GRUB password"
 msgstr "GRUB wachtwoord coderen"
 
-#: system-config-kickstart.gladestrings:117
+#: system-config-kickstart.gladestrings:113
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "Bootloader op Master Boot Record (MBR) installeren"
 
-#: system-config-kickstart.gladestrings:118
+#: system-config-kickstart.gladestrings:114
 msgid "Install boot loader on first sector of the boot partition"
 msgstr "Bootloader op eerste sector van opstartpartitie installeren"
 
-#: system-config-kickstart.gladestrings:119
+#: system-config-kickstart.gladestrings:115
 msgid "Kernel parameters:"
 msgstr "Kernel parameters:"
 
-#: system-config-kickstart.gladestrings:120
+#: system-config-kickstart.gladestrings:116
 msgid "label216"
 msgstr "label216"
 
-#: system-config-kickstart.gladestrings:121
+#: system-config-kickstart.gladestrings:117
 msgid "Boot Loader Options (required)"
 msgstr "Bootloader opties (nodig)"
 
-#: system-config-kickstart.gladestrings:122
+#: system-config-kickstart.gladestrings:118
 msgid "label35"
 msgstr "label35"
 
-#: system-config-kickstart.gladestrings:123
+#: system-config-kickstart.gladestrings:119
 msgid "Clear Master Boot Record"
 msgstr "Master Boot Record wissen"
 
-#: system-config-kickstart.gladestrings:124
+#: system-config-kickstart.gladestrings:120
 msgid "Do not clear Master Boot Record"
 msgstr "Master Boot Record niet wissen"
 
-#: system-config-kickstart.gladestrings:125
+#: system-config-kickstart.gladestrings:121
 msgid "Remove all existing partitions"
 msgstr "Alle bestaande partities verwijderen"
 
-#: system-config-kickstart.gladestrings:126
+#: system-config-kickstart.gladestrings:122
 msgid "Remove existing Linux partitions"
 msgstr "Bestaande Linux partities verwijderen"
 
-#: system-config-kickstart.gladestrings:127
+#: system-config-kickstart.gladestrings:123
 msgid "Preserve existing partitions"
 msgstr "Bestaande partities behouden"
 
-#: system-config-kickstart.gladestrings:128
+#: system-config-kickstart.gladestrings:124
 msgid "Initialize the disk label"
 msgstr "Het disklabel initialiseren"
 
-#: system-config-kickstart.gladestrings:129
+#: system-config-kickstart.gladestrings:125
 msgid "Do not initialize the disk label"
 msgstr "Schijflabel niet initialiseren"
 
-#: system-config-kickstart.gladestrings:130
+#: system-config-kickstart.gladestrings:126
 msgid "_Add"
 msgstr "_Toevoegen"
 
-#: system-config-kickstart.gladestrings:131
+#: system-config-kickstart.gladestrings:127
 msgid "_Edit"
 msgstr "_Bewerken"
 
-#: system-config-kickstart.gladestrings:132
+#: system-config-kickstart.gladestrings:128
 msgid "_Delete"
 msgstr "_Verwijderen"
 
-#: system-config-kickstart.gladestrings:133
+#: system-config-kickstart.gladestrings:129
 msgid "RAID"
 msgstr "RAID"
 
-#: system-config-kickstart.gladestrings:134
+#: system-config-kickstart.gladestrings:130
 msgid "Partition options are not applicable on upgrades."
 msgstr "Partitie-opties zijn niet van toepassing bij upgrades."
 
-#: system-config-kickstart.gladestrings:135
+#: system-config-kickstart.gladestrings:131
 msgid "Partition Information (required)"
 msgstr "Partitie informatie (nodig)"
 
-#: system-config-kickstart.gladestrings:136
+#: system-config-kickstart.gladestrings:132
 msgid "label30"
 msgstr "label30"
 
-#: system-config-kickstart.gladestrings:137
+#: system-config-kickstart.gladestrings:133
 msgid "_Add Network Device"
 msgstr "Netwerk-apparaat _toevoegen"
 
-#: system-config-kickstart.gladestrings:138
+#: system-config-kickstart.gladestrings:134
 msgid "_Edit Network Device"
 msgstr "Netwerk-apparaat _bewerken"
 
-#: system-config-kickstart.gladestrings:139
+#: system-config-kickstart.gladestrings:135
 msgid "_Delete Network Device"
 msgstr "Netwerk-apparaat _verwijderen"
 
-#: system-config-kickstart.gladestrings:141
+#: system-config-kickstart.gladestrings:137
 msgid "label31"
 msgstr "label31"
 
-#: system-config-kickstart.gladestrings:142
+#: system-config-kickstart.gladestrings:138
 msgid "Authentication:"
 msgstr "Aanmeldingscontrole:"
 
-#: system-config-kickstart.gladestrings:143
+#: system-config-kickstart.gladestrings:139
 msgid "Use Shadow Passwords"
 msgstr "Schaduwwachtwoorden gebruiken"
 
-#: system-config-kickstart.gladestrings:144
+#: system-config-kickstart.gladestrings:140
 msgid "Use MD5"
 msgstr "MD5 gebruiken"
 
-#: system-config-kickstart.gladestrings:145
+#: system-config-kickstart.gladestrings:141
 msgid "Enable NIS"
 msgstr "NIS aanzetten"
 
-#: system-config-kickstart.gladestrings:146
+#: system-config-kickstart.gladestrings:142
 msgid "NIS Domain:"
 msgstr "NIS-domein:"
 
-#: system-config-kickstart.gladestrings:147
+#: system-config-kickstart.gladestrings:143
 msgid "Use broadcast to find NIS server"
 msgstr "Broadcast gebruiken om NIS-server te vinden"
 
-#: system-config-kickstart.gladestrings:148
+#: system-config-kickstart.gladestrings:144
 msgid "NIS Server:"
 msgstr "NIS-server:"
 
-#: system-config-kickstart.gladestrings:149
+#: system-config-kickstart.gladestrings:145
 msgid "NIS Authentication"
 msgstr "NIS-aanmelding"
 
-#: system-config-kickstart.gladestrings:150
+#: system-config-kickstart.gladestrings:146
 msgid "NIS"
 msgstr "NIS"
 
-#: system-config-kickstart.gladestrings:151
+#: system-config-kickstart.gladestrings:147
 msgid "Enable LDAP"
 msgstr "LDAP aanzetten"
 
-#: system-config-kickstart.gladestrings:152
+#: system-config-kickstart.gladestrings:148
 msgid "LDAP Server: "
 msgstr "LDAP-server: "
 
-#: system-config-kickstart.gladestrings:153
+#: system-config-kickstart.gladestrings:149
 msgid "LDAP Base Name: "
 msgstr "LDAP basisnaam: "
 
-#: system-config-kickstart.gladestrings:154
+#: system-config-kickstart.gladestrings:150
 msgid "LDAP Authentication"
 msgstr "LDAP-aanmelding"
 
-#: system-config-kickstart.gladestrings:155
+#: system-config-kickstart.gladestrings:151
 msgid "LDAP "
 msgstr "LDAP "
 
-#: system-config-kickstart.gladestrings:156
+#: system-config-kickstart.gladestrings:152
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Kerberos 5 aanmelding aanzetten"
 
-#: system-config-kickstart.gladestrings:157
+#: system-config-kickstart.gladestrings:153
 msgid "Kerberos Realm:"
 msgstr "Kerberos Realm:"
 
-#: system-config-kickstart.gladestrings:158
+#: system-config-kickstart.gladestrings:154
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Kerberos Domein Controller (KDC):"
 
-#: system-config-kickstart.gladestrings:159
+#: system-config-kickstart.gladestrings:155
 msgid "Kerberos Master Server:"
 msgstr "Kerberos-hoofdserver:"
 
-#: system-config-kickstart.gladestrings:160
+#: system-config-kickstart.gladestrings:156
 msgid "Kerberos 5 Authentication"
 msgstr "Kerberos 5 aanmelding"
 
-#: system-config-kickstart.gladestrings:161
+#: system-config-kickstart.gladestrings:157
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: system-config-kickstart.gladestrings:162
+#: system-config-kickstart.gladestrings:158
 msgid "Enable Hesiod Support"
 msgstr "Hesiod ondersteuning aanzetten"
 
-#: system-config-kickstart.gladestrings:163
+#: system-config-kickstart.gladestrings:159
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS:"
 
-#: system-config-kickstart.gladestrings:164
+#: system-config-kickstart.gladestrings:160
 msgid "Hesiod RHS:"
 msgstr "Hesiod RHS:"
 
-#: system-config-kickstart.gladestrings:165
+#: system-config-kickstart.gladestrings:161
 msgid "Hesiod Authentication"
 msgstr "Hesiod-aanmelding"
 
-#: system-config-kickstart.gladestrings:166
+#: system-config-kickstart.gladestrings:162
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: system-config-kickstart.gladestrings:167
+#: system-config-kickstart.gladestrings:163
 msgid "Enable SMB Authentication"
 msgstr "SMB-aanmelding aanzetten"
 
-#: system-config-kickstart.gladestrings:168
+#: system-config-kickstart.gladestrings:164
 msgid "SMB Servers:"
 msgstr "SMB-servers:"
 
-#: system-config-kickstart.gladestrings:169
+#: system-config-kickstart.gladestrings:165
 msgid "SMB Workgroup:"
 msgstr "SMB werkgroep:"
 
-#: system-config-kickstart.gladestrings:170
+#: system-config-kickstart.gladestrings:166
 msgid "SMB Authentication"
 msgstr "SMB-aanmelding"
 
-#: system-config-kickstart.gladestrings:171
+#: system-config-kickstart.gladestrings:167
 msgid "SMB"
 msgstr "SMB"
 
-#: system-config-kickstart.gladestrings:172
+#: system-config-kickstart.gladestrings:168
 msgid "Enable nscd"
 msgstr "nscd aanzetten"
 
-#: system-config-kickstart.gladestrings:173
+#: system-config-kickstart.gladestrings:169
 msgid "Name Switch Cache Daemon (nscd) Authentication"
 msgstr "Name Switch Cache Daemon (nscd)-aanmelding"
 
-#: system-config-kickstart.gladestrings:174
+#: system-config-kickstart.gladestrings:170
 msgid "Name Switch Cache"
 msgstr "Name Switch Cache"
 
-#: system-config-kickstart.gladestrings:175
+#: system-config-kickstart.gladestrings:171
 msgid "Authentication options are not applicable on upgrades."
 msgstr "Aanmeldingscontrole-opties zijn niet van toepassing bij upgrades."
 
-#: system-config-kickstart.gladestrings:176
+#: system-config-kickstart.gladestrings:172
 msgid "Authentication Configuration"
 msgstr "Aanmeldingscontrole configureren"
 
-#: system-config-kickstart.gladestrings:177
+#: system-config-kickstart.gladestrings:173
 msgid "label32"
 msgstr "label32"
 
-#: system-config-kickstart.gladestrings:178
+#: system-config-kickstart.gladestrings:174
 msgid "Security level:"
 msgstr "Beveiligingsniveau:"
 
-#: system-config-kickstart.gladestrings:179
+#: system-config-kickstart.gladestrings:175
 msgid "Enable firewall"
 msgstr "Zet firewall aan"
 
-#: system-config-kickstart.gladestrings:180
+#: system-config-kickstart.gladestrings:176
 msgid "Disable firewall"
 msgstr "Zet firewall uit"
 
-#: system-config-kickstart.gladestrings:181
+#: system-config-kickstart.gladestrings:177
 msgid "SELinux:"
 msgstr "SELinux:"
 
-#: system-config-kickstart.gladestrings:182
+#: system-config-kickstart.gladestrings:178
 msgid "Active"
 msgstr "Actief"
 
-#: system-config-kickstart.gladestrings:183
+#: system-config-kickstart.gladestrings:179
 msgid "Warn"
 msgstr "Waarschuwen"
 
-#: system-config-kickstart.gladestrings:184
-#: system-config-kickstart.gladestrings:196
+#: system-config-kickstart.gladestrings:180
+#: system-config-kickstart.gladestrings:192
 msgid "Disabled"
 msgstr "Uitgezet"
 
-#: system-config-kickstart.gladestrings:185
+#: system-config-kickstart.gladestrings:181
 msgid "Firewall configuration is not applicable on upgrades."
 msgstr "Firewall configuratie is niet van toepassing bij upgrades."
 
-#: system-config-kickstart.gladestrings:187
+#: system-config-kickstart.gladestrings:183
 msgid "label33"
 msgstr "label33"
 
-#: system-config-kickstart.gladestrings:188
+#: system-config-kickstart.gladestrings:184
 msgid "Configure the X Window System"
 msgstr "Het X Window System configureren"
 
-#: system-config-kickstart.gladestrings:189
+#: system-config-kickstart.gladestrings:185
 msgid "Color Depth"
 msgstr "Kleurdiepte"
 
-#: system-config-kickstart.gladestrings:190
+#: system-config-kickstart.gladestrings:186
 msgid "Resolution"
 msgstr "Resolutie"
 
-#: system-config-kickstart.gladestrings:191
+#: system-config-kickstart.gladestrings:187
 msgid "Default Desktop:"
 msgstr "Standaard desktop:"
 
-#: system-config-kickstart.gladestrings:192
+#: system-config-kickstart.gladestrings:188
 msgid "GNOME"
 msgstr "GNOME"
 
-#: system-config-kickstart.gladestrings:193
+#: system-config-kickstart.gladestrings:189
 msgid "KDE"
 msgstr "KDE"
 
-#: system-config-kickstart.gladestrings:194
+#: system-config-kickstart.gladestrings:190
 msgid "Start the X Window System on boot"
 msgstr "Het X Window System starten bij opstarten systeem"
 
-#: system-config-kickstart.gladestrings:195
+#: system-config-kickstart.gladestrings:191
 msgid "On first boot, Setup Agent is: "
 msgstr "Gedurende de eerste start is de Setup Agent: "
 
-#: system-config-kickstart.gladestrings:197
+#: system-config-kickstart.gladestrings:193
 msgid "Enabled"
 msgstr "Aan"
 
-#: system-config-kickstart.gladestrings:198
+#: system-config-kickstart.gladestrings:194
 msgid "Enabled in reconfiguration mode"
 msgstr "Aangezet in herconfiguratie modus"
 
-#: system-config-kickstart.gladestrings:199
+#: system-config-kickstart.gladestrings:195
 msgid "General"
 msgstr "Algemeen"
 
-#: system-config-kickstart.gladestrings:200
-msgid "Probe for video card"
+#: system-config-kickstart.gladestrings:196
+#, fuzzy
+msgid "Probe for video card driver"
 msgstr "Videokaart onderzoeken"
 
-#: system-config-kickstart.gladestrings:201
+#: system-config-kickstart.gladestrings:197
 msgid "Video Card RAM: "
 msgstr "Videokaart RAM: "
 
-#: system-config-kickstart.gladestrings:202
+#: system-config-kickstart.gladestrings:198
 msgid "Video Card"
 msgstr "Videokaart"
 
-#: system-config-kickstart.gladestrings:203
+#: system-config-kickstart.gladestrings:199
 msgid "Probe for monitor"
 msgstr "Beeldscherm onderzoeken"
 
-#: system-config-kickstart.gladestrings:204
+#: system-config-kickstart.gladestrings:200
 msgid "Use custom monitor sync rates"
 msgstr "Gebruik aangepaste beeldscherm sync waarden"
 
-#: system-config-kickstart.gladestrings:205
+#: system-config-kickstart.gladestrings:201
 msgid "Hz"
 msgstr "Hz"
 
-#: system-config-kickstart.gladestrings:206
+#: system-config-kickstart.gladestrings:202
 msgid "kHz"
 msgstr "kHz"
 
-#: system-config-kickstart.gladestrings:207
+#: system-config-kickstart.gladestrings:203
 msgid "Vertical Sync:"
 msgstr "Verticale sync:"
 
-#: system-config-kickstart.gladestrings:208
+#: system-config-kickstart.gladestrings:204
 msgid "Horizontal Sync:"
 msgstr "Horizontale sync:"
 
-#: system-config-kickstart.gladestrings:209
+#: system-config-kickstart.gladestrings:205
 msgid "Monitor"
 msgstr "Beeldscherm"
 
-#: system-config-kickstart.gladestrings:210
+#: system-config-kickstart.gladestrings:206
 msgid "Display configuration is not applicable on upgrades."
 msgstr "Display-configuratie is niet van toepassing bij upgrades."
 
-#: system-config-kickstart.gladestrings:212
+#: system-config-kickstart.gladestrings:208
 msgid "label88"
 msgstr "label88"
 
-#: system-config-kickstart.gladestrings:213
+#: system-config-kickstart.gladestrings:209
 msgid "Select packages to install."
 msgstr "Selecteer pakketten om te installeren."
 
-#: system-config-kickstart.gladestrings:214
+#: system-config-kickstart.gladestrings:210
 msgid "_Install Everything"
 msgstr "_Alles installeren"
 
-#: system-config-kickstart.gladestrings:215
+#: system-config-kickstart.gladestrings:211
 msgid "Desktops"
 msgstr "Desktops"
 
-#: system-config-kickstart.gladestrings:216
+#: system-config-kickstart.gladestrings:212
 msgid "Applications"
 msgstr "Toepassingen"
 
-#: system-config-kickstart.gladestrings:217
+#: system-config-kickstart.gladestrings:213
 msgid "Servers"
 msgstr "Servers"
 
-#: system-config-kickstart.gladestrings:218
+#: system-config-kickstart.gladestrings:214
 msgid "Development"
 msgstr "Ontwikkeling"
 
-#: system-config-kickstart.gladestrings:219
+#: system-config-kickstart.gladestrings:215
 msgid "System"
 msgstr "Systeem"
 
-#: system-config-kickstart.gladestrings:220
+#: system-config-kickstart.gladestrings:216
 msgid "Package selection is not applicable on upgrades."
 msgstr "Pakket-selectie is niet van toepassing bij upgrades."
 
-#: system-config-kickstart.gladestrings:222
+#: system-config-kickstart.gladestrings:218
 msgid "label34"
 msgstr "label34"
 
-#: system-config-kickstart.gladestrings:223
+#: system-config-kickstart.gladestrings:219
 #, c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1247,21 +1245,21 @@ msgstr ""
 "Waarschuwing: een fout in dit script zou er voor kunnen zorgen dat uw "
 "kickstart installatie mislukt. Gebruik niet het %pre commando aan het begin."
 
-#: system-config-kickstart.gladestrings:224
-#: system-config-kickstart.gladestrings:230
+#: system-config-kickstart.gladestrings:220
+#: system-config-kickstart.gladestrings:226
 msgid "Use an interpreter:"
 msgstr "Een interpreter gebruiken:"
 
-#: system-config-kickstart.gladestrings:225
+#: system-config-kickstart.gladestrings:221
 #, c-format
 msgid "Type your %pre script below:"
 msgstr "Typ hieronder uw %pre script:"
 
-#: system-config-kickstart.gladestrings:227
+#: system-config-kickstart.gladestrings:223
 msgid "label89"
 msgstr "label89"
 
-#: system-config-kickstart.gladestrings:228
+#: system-config-kickstart.gladestrings:224
 #, c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1270,28 +1268,28 @@ msgstr ""
 "Waarschuwing: een fout in dit script zou er voor kunnen zorgen dat uw "
 "kickstart installatie mislukt. Gebruik niet het %post commando aan het begin."
 
-#: system-config-kickstart.gladestrings:229
+#: system-config-kickstart.gladestrings:225
 msgid "Run outside of the chroot environment"
 msgstr "Buiten de chroot-omgeving starten"
 
-#: system-config-kickstart.gladestrings:231
+#: system-config-kickstart.gladestrings:227
 #, c-format
 msgid "Type your %post script below:"
 msgstr "Typ hieronder uw %post script:"
 
-#: system-config-kickstart.gladestrings:233
+#: system-config-kickstart.gladestrings:229
 msgid "label93"
 msgstr "label93"
 
-#: system-config-kickstart.gladestrings:234
+#: system-config-kickstart.gladestrings:230
 msgid "Preview Options"
 msgstr "Opties vooraf bekijken"
 
-#: system-config-kickstart.gladestrings:235
+#: system-config-kickstart.gladestrings:231
 msgid "_Save to File"
 msgstr "Opslaan naar _bestand"
 
-#: system-config-kickstart.gladestrings:236
+#: system-config-kickstart.gladestrings:232
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
@@ -1299,11 +1297,11 @@ msgstr ""
 "U heeft de volgende configuratie gekozen. Klik op Bestand opslaan om het "
 "kickstart bestand op te slaan. "
 
-#: system-config-kickstart.gladestrings:237
+#: system-config-kickstart.gladestrings:233
 msgid "RAID Options"
 msgstr "RAID opties"
 
-#: system-config-kickstart.gladestrings:238
+#: system-config-kickstart.gladestrings:234
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -1316,7 +1314,7 @@ msgstr ""
 "een individuele schijf.  Voor meer informatie over het gebruik van RAID-"
 "apparaten kunt u de kickstart documentatie raadplegen."
 
-#: system-config-kickstart.gladestrings:239
+#: system-config-kickstart.gladestrings:235
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -1325,46 +1323,50 @@ msgstr ""
 "van de soort 'software RAID'.  U kunt dan een RAID-apparaat aanmaken dat kan "
 "worden geformatteerd en gekoppeld."
 
-#: system-config-kickstart.gladestrings:240
+#: system-config-kickstart.gladestrings:236
 msgid "Choose one of the following options:"
 msgstr "Kies één van de volgende opties:"
 
-#: system-config-kickstart.gladestrings:241
+#: system-config-kickstart.gladestrings:237
 msgid "Create a software RAID partition"
 msgstr "Software RAID partitie aanmaken"
 
-#: system-config-kickstart.gladestrings:242
+#: system-config-kickstart.gladestrings:238
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "RAID-apparaat aanmaken [standaard is /dev/md0]"
 
-#: system-config-kickstart.gladestrings:243
+#: system-config-kickstart.gladestrings:239
 msgid "Network Device Information"
 msgstr "Netwerk-apparaat informatie"
 
-#: system-config-kickstart.gladestrings:244
+#: system-config-kickstart.gladestrings:240
 msgid "Network Device:"
 msgstr "Netwerk-apparaat:"
 
-#: system-config-kickstart.gladestrings:245
+#: system-config-kickstart.gladestrings:241
 msgid "Network Type:"
 msgstr "Soort netwerk:"
 
-#: system-config-kickstart.gladestrings:246
+#: system-config-kickstart.gladestrings:242
 msgid "IP Address:"
 msgstr "IP-adres:"
 
-#: system-config-kickstart.gladestrings:247
+#: system-config-kickstart.gladestrings:243
 msgid "Netmask: "
 msgstr "Netmask: "
 
-#: system-config-kickstart.gladestrings:248
+#: system-config-kickstart.gladestrings:244
 msgid "Gateway:"
 msgstr "Gateway:"
 
-#: system-config-kickstart.gladestrings:249
+#: system-config-kickstart.gladestrings:245
 msgid "Name Server:"
 msgstr "Naamserver:"
 
+#: system-config-kickstart.gladestrings:246
+#: system-config-kickstart.gladestrings:247
+#: system-config-kickstart.gladestrings:248
+#: system-config-kickstart.gladestrings:249
 #: system-config-kickstart.gladestrings:250
 #: system-config-kickstart.gladestrings:251
 #: system-config-kickstart.gladestrings:252
@@ -1373,12 +1375,23 @@ msgstr "Naamserver:"
 #: system-config-kickstart.gladestrings:255
 #: system-config-kickstart.gladestrings:256
 #: system-config-kickstart.gladestrings:257
-#: system-config-kickstart.gladestrings:258
-#: system-config-kickstart.gladestrings:259
-#: system-config-kickstart.gladestrings:260
-#: system-config-kickstart.gladestrings:261
 msgid "."
 msgstr "."
+
+#~ msgid "/comps.xml file."
+#~ msgstr "/comps.xml bestand."
+
+#~ msgid "Save File"
+#~ msgstr "Bestand opslaan"
+
+#~ msgid "Mouse:"
+#~ msgstr "Muis:"
+
+#~ msgid "Emulate 3 Buttons"
+#~ msgstr "3 knoppen emuleren"
+
+#~ msgid "Language Support:"
+#~ msgstr "Taalondersteuning:"
 
 #~ msgid "X Window System"
 #~ msgstr "X Window systeem"
