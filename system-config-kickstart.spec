@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.5.23
+Version: 2.5.24
 Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -73,6 +73,12 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Tue Sep 13 2005 Chris Lumens <clumens@redhat.com> 2.5.24-1
+- Remove mouse and langsupport.  These two options have been removed from
+  kickstart so we shouldn't be generating invalid files.
+- Fail if we read a line we don't understand instead of being silent.
+- Deal with drivers instead of cards due to kudzu changes.
+
 * Tue May 31 2005 Chris Lumens <clumens@redhat.com> 2.5.23-1
 - Use random module instead of whrandom (#159115).
 

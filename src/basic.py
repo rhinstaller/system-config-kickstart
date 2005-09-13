@@ -56,7 +56,6 @@ class basic:
 
         self.root_passwd_entry = xml.get_widget("root_passwd_entry")
         self.root_passwd_confirm_entry = xml.get_widget("root_passwd_confirm_entry")        
-        self.lang_support_view = xml.get_widget("lang_support_view")
         self.reboot_checkbutton = xml.get_widget("reboot_checkbutton")
         self.text_install_checkbutton = xml.get_widget("text_install_checkbutton")
         self.interactive_checkbutton = xml.get_widget("interactive_checkbutton")                
@@ -70,18 +69,6 @@ class basic:
         self.platform_combo.set_popdown_strings(self.platform_list)
         self.platform_combo.entry.connect("changed", self.platformChanged)
 
-        self.lang_support_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
-        self.lang_support_view.set_model(self.lang_support_store)
-        self.checkbox = gtk.CellRendererToggle()
-        col = gtk.TreeViewColumn('', self.checkbox, active = 0)
-        col.set_fixed_width(20)
-        col.set_clickable(True)
-        self.checkbox.connect("toggled", self.langToggled)
-        self.lang_support_view.append_column(col)
-
-        col = gtk.TreeViewColumn("", gtk.CellRendererText(), text=1)
-        self.lang_support_view.append_column(col)
-
         self.langDict = langDict
 
         #populate language combo
@@ -91,10 +78,6 @@ class basic:
 
         #set default to English
         self.lang_combo.list.select_item(self.lang_list.index('English (USA)'))
-
-        self.populateLangSupport()
-#        for lang in lang_list:
-#            self.lang_support_list.append([lang])
 
         #populate keyboard combo, add keyboards here
         self.keyboard_dict = keyboard_models.KeyboardModels().get_models()
@@ -153,19 +136,7 @@ class basic:
         lang = self.languageLookup(self.lang_combo.entry.get_text())
         self.kickstartData.setLang([self.languageLookup(self.lang_combo.entry.get_text())])
 
-        lang_list = []
-        iter = self.lang_support_store.get_iter_first()
-
-        while iter:
-            if self.lang_support_store.get_value(iter, 0) == True:
-                lang = self.lang_support_store.get_value(iter, 1) 
-                lang_list.append(self.langDict[lang])
-
-            iter = self.lang_support_store.iter_next(iter)
-
         defaultLang = self.languageLookup(self.lang_combo.entry.get_text())
-
-        self.kickstartData.setLangSupport(lang_list)
         self.kickstartData.setDefaultLang(defaultLang)
 
         keys = self.keyboard_dict.keys()
@@ -259,12 +230,6 @@ class basic:
     def languageLookup(self, args):
         return self.langDict [args]
 
-    def populateLangSupport(self):
-        for lang in self.lang_list:
-            iter = self.lang_support_store.append()
-            self.lang_support_store.set_value(iter, 0, False)
-            self.lang_support_store.set_value(iter, 1, lang)
-
     def platformChanged(self, entry):
         platform = entry.get_text()
         if platform:
@@ -285,25 +250,6 @@ class basic:
 
         #set timezone
         self.timezone_combo.list.select_item(self.timezone_list.index(self.kickstartData.getTimezone()))
-
-        #set the supported lang list
-        langSupportList = self.kickstartData.getLangSupport()
-
-        if langSupportList == []:
-            iter = self.lang_support_store.get_iter_root()
-            while iter:
-                self.lang_support_store.set_value(iter, 0, True)
-                iter = self.lang_support_store.iter_next(iter)
-        else:
-            langSupportList.append(self.kickstartData.getDefaultLang())
-            
-            iter = self.lang_support_store.get_iter_root()
-
-            while iter:
-                if self.langDict[self.lang_support_store.get_value(iter, 1)] in langSupportList:
-                    self.lang_support_store.set_value(iter, 0, True)
-                iter = self.lang_support_store.iter_next(iter)
-
 
         if self.kickstartData.getReboot():
             self.reboot_checkbutton.set_active(True)

@@ -22,7 +22,6 @@ import string
 class KickstartData:
     def __init__(self):
         self.lang = None
-        self.langsupport = None
         self.defaultLang = None
         self.keyboard = None
         self.timezone = None
@@ -66,24 +65,6 @@ class KickstartData:
     def getLang(self):
         return self.lang
 
-    def setLangSupport(self, args):
-        list = []
-
-        if args == None:
-            self.langsupport = []
-            return
-        
-        for item in args:
-            if item[:10] == "--default=":
-                self.setDefaultLang(item[10:])
-            else:
-                list.append(item)
-
-        self.langsupport = list
-
-    def getLangSupport(self):
-        return self.langsupport
-        
     def setDefaultLang(self, default):
         self.defaultLang = default
 
@@ -360,24 +341,6 @@ class KickstartData:
         file.append("#platform=%s\n" % self.platform)
         file.append("#System  language")
         file.append("lang %s" % self.getLang())
-
-        file.append("#Language modules to install")
-        if len(self.langsupport) == 0:
-            file.append("langsupport " + self.getDefaultLang())
-
-        elif len(self.langsupport) == 1:
-            if self.getDefaultLang() in self.getLangSupport():
-                file.append("langsupport " + self.langsupport[0])
-            else:
-                file.append("langsupport " + self.langsupport[0] + " --default=" + self.getDefaultLang())
-
-        elif len(self.langsupport) > 1:
-            if self.getDefaultLang() in self.getLangSupport():
-                self.langsupport.remove(self.getDefaultLang())
-                            
-            list = string.join(self.langsupport, " ")
-            file.append("langsupport " + list + " --default=" + self.getDefaultLang())
-
         file.append("#System keyboard")
         file.append("keyboard " + self.getKeyboard())
         file.append("#Sytem timezone")
