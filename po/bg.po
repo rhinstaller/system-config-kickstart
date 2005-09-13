@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-23 14:24-0500\n"
+"POT-Creation-Date: 2005-09-13 13:29-0400\n"
 "PO-Revision-Date: 2005-04-09 12:31+0300\n"
 "Last-Translator: Doncho N. Gunchev <mr700@globalnet.bg>\n"
 "Language-Team: Bulgarian <Bulgarian Translators' Team <dict@fsa-bg.org>>\n"
@@ -17,43 +17,44 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.10\n"
 
-#: ../src/basic.py:72
+#: ../src/basic.py:67
 msgid "x86, AMD64, or Intel EM64T"
 msgstr "x86, AMD64, или Intel EM64T"
 
-#: ../src/basic.py:72
+#: ../src/basic.py:67
 msgid "Intel Itanium"
 msgstr "Intel Itanium"
 
-#: ../src/basic.py:72
+#: ../src/basic.py:67
 msgid "IBM iSeries"
 msgstr "IBM iSeries"
 
-#: ../src/basic.py:73
+#: ../src/basic.py:68
 msgid "IBM pSeries"
 msgstr "IBM pSeries"
 
-#: ../src/basic.py:73
+#: ../src/basic.py:68
 msgid "IBM zSeries/s390"
 msgstr "IBM zSeries/s390"
 
-#: ../src/basic.py:206
+#: ../src/basic.py:156
 msgid "Root passwords do not match."
 msgstr "Паролите за root не съвпадат."
 
-#: ../src/basic.py:207 ../src/basic.py:226 ../src/install.py:214
+#: ../src/basic.py:157 ../src/basic.py:176 ../src/install.py:214
 #: ../src/partWindow.py:513 ../src/partition.py:317 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "Грешка"
 
-#: ../src/basic.py:225
+#: ../src/basic.py:175
 msgid "Please select a root password."
 msgstr "Моля изберете парола за root."
 
 #: ../src/bootloader.py:76
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
-msgstr "Опциите на програмата за начално зареждане са неприложими за платформа %s"
+msgstr ""
+"Опциите на програмата за начално зареждане са неприложими за платформа %s"
 
 #: ../src/bootloader.py:117
 msgid "Grub passwords do not match.  Please try again."
@@ -140,7 +141,7 @@ msgstr "Настройки на програмата за начално зар�
 msgid "Partition Information"
 msgstr "Информация за дяла"
 
-#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:140
+#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:136
 msgid "Network Configuration"
 msgstr "Мрежова конфигурация"
 
@@ -148,23 +149,23 @@ msgstr "Мрежова конфигурация"
 msgid "Authentication"
 msgstr "Удостоверяване"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:186
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:182
 msgid "Firewall Configuration"
 msgstr "Конфигуриране на защитна стена"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:211
+#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:207
 msgid "Display Configuration"
 msgstr "Конфигуриране на дисплея"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:221
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:217
 msgid "Package Selection"
 msgstr "Избор на пакети"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:226
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:222
 msgid "Pre-Installation Script"
 msgstr "Преди-инсталационен скрипт"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:232
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:228
 msgid "Post-Installation Script"
 msgstr "След-инсталационен скрипт"
 
@@ -190,10 +191,25 @@ msgstr "Относно kickstart конфигуратора"
 msgid "Help is not available."
 msgstr "Няма помощна информация."
 
-#: ../src/kickstartGui.py:273
+#: ../src/kickstartGui.py:275
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "Не може да се достъпи файл \"%s\"."
+
+#: ../src/kickstartParser.py:72
+#, python-format
+msgid ""
+"There was a problem reading the following line from the kickstart file. This "
+"could be due to an error on the line or using a keyword that no longer "
+"exists.\n"
+"\n"
+"%s"
+msgstr ""
+
+#: ../src/kickstartParser.py:77
+#, fuzzy
+msgid "Kickstart Error"
+msgstr "Kickstart"
 
 #: ../src/network.py:87
 msgid "Device"
@@ -221,23 +237,20 @@ msgstr ""
 "Мрежово устройство с име %s вече съществува.  Моля изберете друго име на "
 "устройство"
 
-#: ../src/packageGroupList.py:16
-msgid "Could not start because there is no /usr/share/comps/"
+#: ../src/packageGroupList.py:18
+#, fuzzy, python-format
+msgid "Could not start because there is no %s file."
 msgstr "Не може да стартира поради липсата на /usr/share/comps/"
 
-#: ../src/packageGroupList.py:16
-msgid "/comps.xml file."
-msgstr "/comps.xml файл."
-
-#: ../src/packageGroupList.py:17
+#: ../src/packageGroupList.py:19
 msgid "Please make sure the comps package is installed."
 msgstr "Уверете се, че пакета comps е инсталиран."
 
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:53
+#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:52
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:54
+#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:53
 msgid "ext3"
 msgstr "ext3"
 
@@ -246,11 +259,11 @@ msgstr "ext3"
 msgid "software RAID"
 msgstr "софтуерен RAID"
 
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:55
+#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:54
 msgid "swap"
 msgstr "swap"
 
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:56
+#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:55
 msgid "vfat"
 msgstr "vfat"
 
@@ -282,7 +295,8 @@ msgstr "Укажете точка на монтиране за дяла."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:429
 #, python-format
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "Точката на монтиране \"%s\" вече се ползва.  Моля изберете друга точка на "
 "монтиране."
@@ -413,8 +427,9 @@ msgstr "Не може да се отвори дисплей защото ням�
 msgid "Try running 'system-config-kickstart --help' for a list of options."
 msgstr "Стартирайте 'system-config-kickstart --help' за списък с параметри."
 
-#: ../src/xconfig.py:106
-msgid "Could not read video card database"
+#: ../src/xconfig.py:115
+#, fuzzy
+msgid "Could not read video driver database"
 msgstr "Не може да се прочете базата с данни с видео карти"
 
 #.
@@ -423,810 +438,795 @@ msgstr "Не може да се прочете базата с данни с в�
 #. * DO NOT compile it as part of your application.
 #.
 #: system-config-kickstart.gladestrings:7
-msgid "Save File"
-msgstr "Запис на файл"
-
-#: system-config-kickstart.gladestrings:8
 msgid "Partition Options"
 msgstr "Параметри на дял"
 
-#: system-config-kickstart.gladestrings:9
-#: system-config-kickstart.gladestrings:28
+#: system-config-kickstart.gladestrings:8
+#: system-config-kickstart.gladestrings:27
 msgid "Mount Point:"
 msgstr "Точка на монтиране:"
 
-#: system-config-kickstart.gladestrings:10
-#: system-config-kickstart.gladestrings:32
+#: system-config-kickstart.gladestrings:9
+#: system-config-kickstart.gladestrings:31
 msgid "File System Type:"
 msgstr "Тип файловата система:"
 
-#: system-config-kickstart.gladestrings:11
+#: system-config-kickstart.gladestrings:10
 msgid "Size (MB):"
 msgstr "Размер (MB):"
 
-#: system-config-kickstart.gladestrings:12
+#: system-config-kickstart.gladestrings:11
 msgid "Fill all unused space on disk"
 msgstr "Използвай цялото свободно пространство на диска"
 
-#: system-config-kickstart.gladestrings:13
+#: system-config-kickstart.gladestrings:12
 msgid "Grow to maximum of (MB):"
 msgstr "Нарастване максимум до (MB):"
 
-#: system-config-kickstart.gladestrings:14
+#: system-config-kickstart.gladestrings:13
 msgid "Fixed size"
 msgstr "Фиксиран размер"
 
-#: system-config-kickstart.gladestrings:15
+#: system-config-kickstart.gladestrings:14
 msgid "Use recommended swap size"
 msgstr "Използване на препоръчителен обем swap"
 
-#: system-config-kickstart.gladestrings:16
+#: system-config-kickstart.gladestrings:15
 msgid "Additional Size Options"
 msgstr "Допълнителен опции за размер"
 
-#: system-config-kickstart.gladestrings:17
+#: system-config-kickstart.gladestrings:16
 msgid "Force to be a primary partition (asprimary)"
 msgstr "Принудително да бъде основен дял (asprimary)"
 
-#: system-config-kickstart.gladestrings:18
+#: system-config-kickstart.gladestrings:17
 msgid "Make partition on specific drive (ondisk)"
 msgstr "Създаване дяла на определен диск (ondisk)"
 
-#: system-config-kickstart.gladestrings:19
-#: system-config-kickstart.gladestrings:23
+#: system-config-kickstart.gladestrings:18
+#: system-config-kickstart.gladestrings:22
 msgid "         "
 msgstr "         "
 
-#: system-config-kickstart.gladestrings:20
+#: system-config-kickstart.gladestrings:19
 msgid "Drive :"
 msgstr "Устройство :"
 
-#: system-config-kickstart.gladestrings:21
+#: system-config-kickstart.gladestrings:20
 msgid "(for example: hda or sdc)"
 msgstr "(примерно: hda или sdc)"
 
-#: system-config-kickstart.gladestrings:22
+#: system-config-kickstart.gladestrings:21
 msgid "Use existing partition (onpart)"
 msgstr "Ползване на съществуващ дял (onpart)"
 
-#: system-config-kickstart.gladestrings:24
+#: system-config-kickstart.gladestrings:23
 msgid "Partition :"
 msgstr "Дял :"
 
-#: system-config-kickstart.gladestrings:25
+#: system-config-kickstart.gladestrings:24
 msgid "(for example: hda1 or sdc3)"
 msgstr "(примерно: hda1 или sdc3)"
 
-#: system-config-kickstart.gladestrings:26
+#: system-config-kickstart.gladestrings:25
 msgid "Format partition"
 msgstr "Форматиране на дял"
 
-#: system-config-kickstart.gladestrings:27
+#: system-config-kickstart.gladestrings:26
 msgid "Make RAID Device"
 msgstr "Създаване на RAID устройство"
 
-#: system-config-kickstart.gladestrings:29
+#: system-config-kickstart.gladestrings:28
 msgid "Number of spares:"
 msgstr "Брой spares:"
 
-#: system-config-kickstart.gladestrings:30
+#: system-config-kickstart.gladestrings:29
 msgid "Raid Members"
 msgstr "Raid членове"
 
-#: system-config-kickstart.gladestrings:31
+#: system-config-kickstart.gladestrings:30
 msgid "RAID Level:"
 msgstr "RAID ниво:"
 
-#: system-config-kickstart.gladestrings:33
+#: system-config-kickstart.gladestrings:32
 msgid "RAID Device:"
 msgstr "RAID устройство:"
 
-#: system-config-kickstart.gladestrings:34
+#: system-config-kickstart.gladestrings:33
 msgid "md0"
 msgstr "md0"
 
-#: system-config-kickstart.gladestrings:35
+#: system-config-kickstart.gladestrings:34
 msgid "md1"
 msgstr "md1"
 
-#: system-config-kickstart.gladestrings:36
+#: system-config-kickstart.gladestrings:35
 msgid "md2"
 msgstr "md2"
 
-#: system-config-kickstart.gladestrings:37
+#: system-config-kickstart.gladestrings:36
 msgid "md3"
 msgstr "md3"
 
-#: system-config-kickstart.gladestrings:38
+#: system-config-kickstart.gladestrings:37
 msgid "md4"
 msgstr "md4"
 
-#: system-config-kickstart.gladestrings:39
+#: system-config-kickstart.gladestrings:38
 msgid "md5"
 msgstr "md5"
 
-#: system-config-kickstart.gladestrings:40
+#: system-config-kickstart.gladestrings:39
 msgid "md6"
 msgstr "md6"
 
-#: system-config-kickstart.gladestrings:41
+#: system-config-kickstart.gladestrings:40
 msgid "md7"
 msgstr "md7"
 
-#: system-config-kickstart.gladestrings:42
+#: system-config-kickstart.gladestrings:41
 msgid "md8"
 msgstr "md8"
 
-#: system-config-kickstart.gladestrings:43
+#: system-config-kickstart.gladestrings:42
 msgid "md9"
 msgstr "md9"
 
-#: system-config-kickstart.gladestrings:44
+#: system-config-kickstart.gladestrings:43
 msgid "md10"
 msgstr "md10"
 
-#: system-config-kickstart.gladestrings:45
+#: system-config-kickstart.gladestrings:44
 msgid "md11"
 msgstr "md11"
 
-#: system-config-kickstart.gladestrings:46
+#: system-config-kickstart.gladestrings:45
 msgid "md12"
 msgstr "md12"
 
-#: system-config-kickstart.gladestrings:47
+#: system-config-kickstart.gladestrings:46
 msgid "md13"
 msgstr "md13"
 
-#: system-config-kickstart.gladestrings:48
+#: system-config-kickstart.gladestrings:47
 msgid "md14"
 msgstr "md14"
 
-#: system-config-kickstart.gladestrings:49
+#: system-config-kickstart.gladestrings:48
 msgid "md15"
 msgstr "md15"
 
-#: system-config-kickstart.gladestrings:50
+#: system-config-kickstart.gladestrings:49
 msgid "0"
 msgstr "0"
 
-#: system-config-kickstart.gladestrings:51
+#: system-config-kickstart.gladestrings:50
 msgid "1"
 msgstr "1"
 
-#: system-config-kickstart.gladestrings:52
+#: system-config-kickstart.gladestrings:51
 msgid "5"
 msgstr "5"
 
-#: system-config-kickstart.gladestrings:57
+#: system-config-kickstart.gladestrings:56
 msgid "Format RAID device"
 msgstr "Форматиране на RAID устройство"
 
-#: system-config-kickstart.gladestrings:58
+#: system-config-kickstart.gladestrings:57
 msgid "Kickstart Configurator"
 msgstr "Kickstart конфигуратор"
 
-#: system-config-kickstart.gladestrings:59
+#: system-config-kickstart.gladestrings:58
 msgid "_File"
 msgstr "_Файл"
 
-#: system-config-kickstart.gladestrings:60
+#: system-config-kickstart.gladestrings:59
 msgid "_Open File"
 msgstr "_Отваряне на файл"
 
-#: system-config-kickstart.gladestrings:61
+#: system-config-kickstart.gladestrings:60
 msgid "_Preview"
 msgstr "_Преглед"
 
-#: system-config-kickstart.gladestrings:62
+#: system-config-kickstart.gladestrings:61
 msgid "_Save File"
 msgstr "_Запис на файл"
 
-#: system-config-kickstart.gladestrings:63
+#: system-config-kickstart.gladestrings:62
 msgid "_Quit"
 msgstr "Из_ход"
 
-#: system-config-kickstart.gladestrings:64
+#: system-config-kickstart.gladestrings:63
 msgid "_Help"
 msgstr "_Помощ"
 
-#: system-config-kickstart.gladestrings:65
+#: system-config-kickstart.gladestrings:64
 msgid "_Contents"
 msgstr "_Съдържание"
 
-#: system-config-kickstart.gladestrings:66
+#: system-config-kickstart.gladestrings:65
 msgid "_About"
 msgstr "З_а програмата"
 
-#: system-config-kickstart.gladestrings:67
+#: system-config-kickstart.gladestrings:66
 msgid "Default Language:"
 msgstr "Език по подразбиране:"
 
-#: system-config-kickstart.gladestrings:68
-msgid "Encrypt root password"
-msgstr "Криптиране паролата на root"
-
-#: system-config-kickstart.gladestrings:69
+#: system-config-kickstart.gladestrings:67
 msgid "Keyboard:"
 msgstr "Клавиатура:"
 
-#: system-config-kickstart.gladestrings:70
-msgid "Mouse:"
-msgstr "Мишка:"
-
-#: system-config-kickstart.gladestrings:71
-msgid "Emulate 3 Buttons"
-msgstr "Емулация на 3 бутона"
-
-#: system-config-kickstart.gladestrings:72
+#: system-config-kickstart.gladestrings:68
 msgid "Time Zone:"
 msgstr "Часова зона:"
 
-#: system-config-kickstart.gladestrings:73
-msgid "Root Password:"
-msgstr "Root парола:"
-
-#: system-config-kickstart.gladestrings:74
-msgid "Language Support:"
-msgstr "Езикова поддръжка:"
-
-#: system-config-kickstart.gladestrings:75
+#: system-config-kickstart.gladestrings:69
 msgid "Use UTC clock"
 msgstr "Ползване на UTC часовник"
 
-#: system-config-kickstart.gladestrings:76
-#: system-config-kickstart.gladestrings:115
+#: system-config-kickstart.gladestrings:70
+msgid "Root Password:"
+msgstr "Root парола:"
+
+#: system-config-kickstart.gladestrings:71
+#: system-config-kickstart.gladestrings:111
 msgid "Confirm Password:"
 msgstr "Потвърдете паролата:"
 
-#: system-config-kickstart.gladestrings:77
+#: system-config-kickstart.gladestrings:72
+msgid "Encrypt root password"
+msgstr "Криптиране паролата на root"
+
+#: system-config-kickstart.gladestrings:73
 msgid "Target Architecture:"
 msgstr "Целева архитектура:"
 
-#: system-config-kickstart.gladestrings:78
+#: system-config-kickstart.gladestrings:74
 msgid "Reboot system after installation"
 msgstr "Рестарт на системата след инсталация"
 
-#: system-config-kickstart.gladestrings:79
+#: system-config-kickstart.gladestrings:75
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "Инсталиране в текстови режим (графичния се подразбира)"
 
-#: system-config-kickstart.gladestrings:80
+#: system-config-kickstart.gladestrings:76
 msgid "Perform installation in interactive mode"
 msgstr "Инсталиране в интерактивен режим"
 
-#: system-config-kickstart.gladestrings:81
+#: system-config-kickstart.gladestrings:77
 msgid "Basic Configuration (required)"
 msgstr "Базова конфигурация (задължителна)"
 
-#: system-config-kickstart.gladestrings:82
+#: system-config-kickstart.gladestrings:78
 msgid "label28"
 msgstr "label28"
 
-#: system-config-kickstart.gladestrings:83
+#: system-config-kickstart.gladestrings:79
 msgid "Perform new installation"
 msgstr "Извършване на нова инсталация"
 
-#: system-config-kickstart.gladestrings:84
+#: system-config-kickstart.gladestrings:80
 msgid "Upgrade an existing installation"
 msgstr "Обновяване на съществуваща инсталация"
 
-#: system-config-kickstart.gladestrings:85
+#: system-config-kickstart.gladestrings:81
 msgid "Choose the Installation Method:"
 msgstr "Избор на инсталационен метод:"
 
-#: system-config-kickstart.gladestrings:86
-#: system-config-kickstart.gladestrings:91
+#: system-config-kickstart.gladestrings:82
+#: system-config-kickstart.gladestrings:87
 msgid "CD-ROM"
 msgstr "CD-ROM"
 
-#: system-config-kickstart.gladestrings:87
-#: system-config-kickstart.gladestrings:94
+#: system-config-kickstart.gladestrings:83
+#: system-config-kickstart.gladestrings:90
 msgid "NFS"
 msgstr "NFS"
 
-#: system-config-kickstart.gladestrings:88
-#: system-config-kickstart.gladestrings:100
+#: system-config-kickstart.gladestrings:84
+#: system-config-kickstart.gladestrings:96
 msgid "FTP"
 msgstr "FTP"
 
-#: system-config-kickstart.gladestrings:89
-#: system-config-kickstart.gladestrings:103
+#: system-config-kickstart.gladestrings:85
+#: system-config-kickstart.gladestrings:99
 msgid "HTTP"
 msgstr "HTTP"
 
-#: system-config-kickstart.gladestrings:90
-#: system-config-kickstart.gladestrings:106
+#: system-config-kickstart.gladestrings:86
+#: system-config-kickstart.gladestrings:102
 msgid "Hard Drive"
 msgstr "Дисково устройство"
 
-#: system-config-kickstart.gladestrings:92
+#: system-config-kickstart.gladestrings:88
 msgid "NFS Server:"
 msgstr "NFS сървър:"
 
-#: system-config-kickstart.gladestrings:93
+#: system-config-kickstart.gladestrings:89
 msgid "NFS Directory:"
 msgstr "NFS директория:"
 
-#: system-config-kickstart.gladestrings:95
+#: system-config-kickstart.gladestrings:91
 msgid "FTP Server:"
 msgstr "FTP сървър:"
 
-#: system-config-kickstart.gladestrings:96
+#: system-config-kickstart.gladestrings:92
 msgid "FTP Directory:"
 msgstr "FTP директория:"
 
-#: system-config-kickstart.gladestrings:97
+#: system-config-kickstart.gladestrings:93
 msgid "Specify an FTP username and password"
 msgstr "Укажете FTP потребител и парола"
 
-#: system-config-kickstart.gladestrings:98
+#: system-config-kickstart.gladestrings:94
 msgid "FTP Username"
 msgstr "FTP потребител"
 
-#: system-config-kickstart.gladestrings:99
+#: system-config-kickstart.gladestrings:95
 msgid "FTP Password"
 msgstr "FTP парола"
 
-#: system-config-kickstart.gladestrings:101
+#: system-config-kickstart.gladestrings:97
 msgid "HTTP Server:"
 msgstr "HTTP сървър:"
 
-#: system-config-kickstart.gladestrings:102
+#: system-config-kickstart.gladestrings:98
 msgid "HTTP Directory:"
 msgstr "HTTP Директория:"
 
-#: system-config-kickstart.gladestrings:104
+#: system-config-kickstart.gladestrings:100
 msgid "Hard Drive Partition:"
 msgstr "Дисков дял:"
 
-#: system-config-kickstart.gladestrings:105
+#: system-config-kickstart.gladestrings:101
 msgid "Hard Drive Directory:"
 msgstr "Дискова директория:"
 
-#: system-config-kickstart.gladestrings:107
+#: system-config-kickstart.gladestrings:103
 msgid "Installation Method (required)"
 msgstr "Изисква се инсталационен метод (задължителен)"
 
-#: system-config-kickstart.gladestrings:108
+#: system-config-kickstart.gladestrings:104
 msgid "label128"
 msgstr "label128"
 
-#: system-config-kickstart.gladestrings:109
+#: system-config-kickstart.gladestrings:105
 msgid "Install new boot loader"
 msgstr "Инсталиране нова програмата за начално зареждане"
 
-#: system-config-kickstart.gladestrings:110
+#: system-config-kickstart.gladestrings:106
 msgid "Do not install a boot loader"
 msgstr "Да не се инсталира програмата за начално зареждане"
 
-#: system-config-kickstart.gladestrings:111
+#: system-config-kickstart.gladestrings:107
 msgid "Upgrade existing boot loader"
 msgstr "Обновяване наличната програмата за начално зареждане"
 
-#: system-config-kickstart.gladestrings:112
+#: system-config-kickstart.gladestrings:108
 msgid "GRUB Options:"
 msgstr "Настройки на GRUB:"
 
-#: system-config-kickstart.gladestrings:113
+#: system-config-kickstart.gladestrings:109
 msgid "Use GRUB password"
 msgstr "Ползване парола за GRUB"
 
-#: system-config-kickstart.gladestrings:114
+#: system-config-kickstart.gladestrings:110
 msgid "Password:"
 msgstr "Парола:"
 
-#: system-config-kickstart.gladestrings:116
+#: system-config-kickstart.gladestrings:112
 msgid "Encrypt GRUB password"
 msgstr "Криптирана парола за GRUB"
 
-#: system-config-kickstart.gladestrings:117
+#: system-config-kickstart.gladestrings:113
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "Инсталира програмата за начално зареждане в Master Boot Record (MBR)"
 
-#: system-config-kickstart.gladestrings:118
+#: system-config-kickstart.gladestrings:114
 msgid "Install boot loader on first sector of the boot partition"
 msgstr ""
 "Инсталира програмата за начално зареждане на първия сектор на дяла за "
 "зареждане"
 
-#: system-config-kickstart.gladestrings:119
+#: system-config-kickstart.gladestrings:115
 msgid "Kernel parameters:"
 msgstr "Параметри на ядрото:"
 
-#: system-config-kickstart.gladestrings:120
+#: system-config-kickstart.gladestrings:116
 msgid "label216"
 msgstr "label216"
 
-#: system-config-kickstart.gladestrings:121
+#: system-config-kickstart.gladestrings:117
 msgid "Boot Loader Options (required)"
 msgstr "Настройки на програмата за начално зареждане (задължително)"
 
-#: system-config-kickstart.gladestrings:122
+#: system-config-kickstart.gladestrings:118
 msgid "label35"
 msgstr "label35"
 
-#: system-config-kickstart.gladestrings:123
+#: system-config-kickstart.gladestrings:119
 msgid "Clear Master Boot Record"
 msgstr "Изчистване на MBR"
 
-#: system-config-kickstart.gladestrings:124
+#: system-config-kickstart.gladestrings:120
 msgid "Do not clear Master Boot Record"
 msgstr "Да не се изчиства MBR"
 
-#: system-config-kickstart.gladestrings:125
+#: system-config-kickstart.gladestrings:121
 msgid "Remove all existing partitions"
 msgstr "Премахване на всички налични дялове"
 
-#: system-config-kickstart.gladestrings:126
+#: system-config-kickstart.gladestrings:122
 msgid "Remove existing Linux partitions"
 msgstr "Изтриване на наличните Linux дялове"
 
-#: system-config-kickstart.gladestrings:127
+#: system-config-kickstart.gladestrings:123
 msgid "Preserve existing partitions"
 msgstr "Запазване наличните дялове"
 
-#: system-config-kickstart.gladestrings:128
+#: system-config-kickstart.gladestrings:124
 msgid "Initialize the disk label"
 msgstr "Инициализация на дисковия етикет"
 
-#: system-config-kickstart.gladestrings:129
+#: system-config-kickstart.gladestrings:125
 msgid "Do not initialize the disk label"
 msgstr "Да не се инициализира дисковия етикет"
 
-#: system-config-kickstart.gladestrings:130
+#: system-config-kickstart.gladestrings:126
 msgid "_Add"
 msgstr "Добавя_не"
 
-#: system-config-kickstart.gladestrings:131
+#: system-config-kickstart.gladestrings:127
 msgid "_Edit"
 msgstr "_Редакция"
 
-#: system-config-kickstart.gladestrings:132
+#: system-config-kickstart.gladestrings:128
 msgid "_Delete"
 msgstr "_Изтриване"
 
-#: system-config-kickstart.gladestrings:133
+#: system-config-kickstart.gladestrings:129
 msgid "RAID"
 msgstr "RAID"
 
-#: system-config-kickstart.gladestrings:134
+#: system-config-kickstart.gladestrings:130
 msgid "Partition options are not applicable on upgrades."
 msgstr "Настойката на дяловете е неприложима при обновяване."
 
-#: system-config-kickstart.gladestrings:135
+#: system-config-kickstart.gladestrings:131
 msgid "Partition Information (required)"
 msgstr "Информация за дял (задължително)"
 
-#: system-config-kickstart.gladestrings:136
+#: system-config-kickstart.gladestrings:132
 msgid "label30"
 msgstr "label30"
 
-#: system-config-kickstart.gladestrings:137
+#: system-config-kickstart.gladestrings:133
 msgid "_Add Network Device"
 msgstr "_Ново мрежово устройство"
 
-#: system-config-kickstart.gladestrings:138
+#: system-config-kickstart.gladestrings:134
 msgid "_Edit Network Device"
 msgstr "Р_едакция на мрежово устройство"
 
-#: system-config-kickstart.gladestrings:139
+#: system-config-kickstart.gladestrings:135
 msgid "_Delete Network Device"
 msgstr "И_зтриване на мрежово устройство"
 
-#: system-config-kickstart.gladestrings:141
+#: system-config-kickstart.gladestrings:137
 msgid "label31"
 msgstr "label31"
 
-#: system-config-kickstart.gladestrings:142
+#: system-config-kickstart.gladestrings:138
 msgid "Authentication:"
 msgstr "Удостоверяване:"
 
-#: system-config-kickstart.gladestrings:143
+#: system-config-kickstart.gladestrings:139
 msgid "Use Shadow Passwords"
 msgstr "Използване на shadow пароли"
 
-#: system-config-kickstart.gladestrings:144
+#: system-config-kickstart.gladestrings:140
 msgid "Use MD5"
 msgstr "Използване на MD5"
 
-#: system-config-kickstart.gladestrings:145
+#: system-config-kickstart.gladestrings:141
 msgid "Enable NIS"
 msgstr "Разрешаване на NIS"
 
-#: system-config-kickstart.gladestrings:146
+#: system-config-kickstart.gladestrings:142
 msgid "NIS Domain:"
 msgstr "NIS Домейн:"
 
-#: system-config-kickstart.gladestrings:147
+#: system-config-kickstart.gladestrings:143
 msgid "Use broadcast to find NIS server"
 msgstr "Намиране на NIS сървър чрез broadcast"
 
-#: system-config-kickstart.gladestrings:148
+#: system-config-kickstart.gladestrings:144
 msgid "NIS Server:"
 msgstr "NIS Сървър:"
 
-#: system-config-kickstart.gladestrings:149
+#: system-config-kickstart.gladestrings:145
 msgid "NIS Authentication"
 msgstr "NIS удостоверяване"
 
-#: system-config-kickstart.gladestrings:150
+#: system-config-kickstart.gladestrings:146
 msgid "NIS"
 msgstr "NIS"
 
-#: system-config-kickstart.gladestrings:151
+#: system-config-kickstart.gladestrings:147
 msgid "Enable LDAP"
 msgstr "Разрешаване на LDAP"
 
-#: system-config-kickstart.gladestrings:152
+#: system-config-kickstart.gladestrings:148
 msgid "LDAP Server: "
 msgstr "LDAP Сървър: "
 
-#: system-config-kickstart.gladestrings:153
+#: system-config-kickstart.gladestrings:149
 msgid "LDAP Base Name: "
 msgstr "LDAP базово име: "
 
-#: system-config-kickstart.gladestrings:154
+#: system-config-kickstart.gladestrings:150
 msgid "LDAP Authentication"
 msgstr "LDAP удостоверяване"
 
-#: system-config-kickstart.gladestrings:155
+#: system-config-kickstart.gladestrings:151
 msgid "LDAP "
 msgstr "LDAP "
 
-#: system-config-kickstart.gladestrings:156
+#: system-config-kickstart.gladestrings:152
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Разрешаване на kerberos 5 удостоверяване"
 
-#: system-config-kickstart.gladestrings:157
+#: system-config-kickstart.gladestrings:153
 msgid "Kerberos Realm:"
 msgstr "Kerberos Realm:"
 
-#: system-config-kickstart.gladestrings:158
+#: system-config-kickstart.gladestrings:154
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Kerberos домейн контролер (KDC):"
 
-#: system-config-kickstart.gladestrings:159
+#: system-config-kickstart.gladestrings:155
 msgid "Kerberos Master Server:"
 msgstr "Главен kerberos сървър:"
 
-#: system-config-kickstart.gladestrings:160
+#: system-config-kickstart.gladestrings:156
 msgid "Kerberos 5 Authentication"
 msgstr "Кerberos 5 удостоверяване"
 
-#: system-config-kickstart.gladestrings:161
+#: system-config-kickstart.gladestrings:157
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: system-config-kickstart.gladestrings:162
+#: system-config-kickstart.gladestrings:158
 msgid "Enable Hesiod Support"
 msgstr "Разрешаване на Hesiod"
 
-#: system-config-kickstart.gladestrings:163
+#: system-config-kickstart.gladestrings:159
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS:"
 
-#: system-config-kickstart.gladestrings:164
+#: system-config-kickstart.gladestrings:160
 msgid "Hesiod RHS:"
 msgstr "Hesiod RHS:"
 
-#: system-config-kickstart.gladestrings:165
+#: system-config-kickstart.gladestrings:161
 msgid "Hesiod Authentication"
 msgstr "Hesiod удостоверяване"
 
-#: system-config-kickstart.gladestrings:166
+#: system-config-kickstart.gladestrings:162
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: system-config-kickstart.gladestrings:167
+#: system-config-kickstart.gladestrings:163
 msgid "Enable SMB Authentication"
 msgstr "Разрешаване на SMB удостоверяване"
 
-#: system-config-kickstart.gladestrings:168
+#: system-config-kickstart.gladestrings:164
 msgid "SMB Servers:"
 msgstr "SMB сървъри:"
 
-#: system-config-kickstart.gladestrings:169
+#: system-config-kickstart.gladestrings:165
 msgid "SMB Workgroup:"
 msgstr "SMB група:"
 
-#: system-config-kickstart.gladestrings:170
+#: system-config-kickstart.gladestrings:166
 msgid "SMB Authentication"
 msgstr "SMB удостоверяване"
 
-#: system-config-kickstart.gladestrings:171
+#: system-config-kickstart.gladestrings:167
 msgid "SMB"
 msgstr "SMB"
 
-#: system-config-kickstart.gladestrings:172
+#: system-config-kickstart.gladestrings:168
 msgid "Enable nscd"
 msgstr "Разрешаване на nscd"
 
-#: system-config-kickstart.gladestrings:173
+#: system-config-kickstart.gladestrings:169
 msgid "Name Switch Cache Daemon (nscd) Authentication"
 msgstr "Name Switch Cache Daemon (nscd) удостоверяване"
 
-#: system-config-kickstart.gladestrings:174
+#: system-config-kickstart.gladestrings:170
 msgid "Name Switch Cache"
 msgstr "Name Switch кеш"
 
-#: system-config-kickstart.gladestrings:175
+#: system-config-kickstart.gladestrings:171
 msgid "Authentication options are not applicable on upgrades."
 msgstr "Настройките за удостоверяване не са приложими при обновяване."
 
-#: system-config-kickstart.gladestrings:176
+#: system-config-kickstart.gladestrings:172
 msgid "Authentication Configuration"
 msgstr "Конфигуриране на удостоверяването"
 
-#: system-config-kickstart.gladestrings:177
+#: system-config-kickstart.gladestrings:173
 msgid "label32"
 msgstr "label32"
 
-#: system-config-kickstart.gladestrings:178
+#: system-config-kickstart.gladestrings:174
 msgid "Security level:"
 msgstr "Ниво на сигурност:"
 
-#: system-config-kickstart.gladestrings:179
+#: system-config-kickstart.gladestrings:175
 msgid "Enable firewall"
 msgstr "Разрешаване на защитна стена"
 
-#: system-config-kickstart.gladestrings:180
+#: system-config-kickstart.gladestrings:176
 msgid "Disable firewall"
 msgstr "Забрана на защитна стена"
 
-#: system-config-kickstart.gladestrings:181
+#: system-config-kickstart.gladestrings:177
 msgid "SELinux:"
 msgstr "SELinux:"
 
-#: system-config-kickstart.gladestrings:182
+#: system-config-kickstart.gladestrings:178
 msgid "Active"
 msgstr "Активен"
 
-#: system-config-kickstart.gladestrings:183
+#: system-config-kickstart.gladestrings:179
 msgid "Warn"
 msgstr "Предупреждава"
 
-#: system-config-kickstart.gladestrings:184
-#: system-config-kickstart.gladestrings:196
+#: system-config-kickstart.gladestrings:180
+#: system-config-kickstart.gladestrings:192
 msgid "Disabled"
 msgstr "Неактивен"
 
-#: system-config-kickstart.gladestrings:185
+#: system-config-kickstart.gladestrings:181
 msgid "Firewall configuration is not applicable on upgrades."
 msgstr "Настройките на защитната стена не са приложими при обновяване."
 
-#: system-config-kickstart.gladestrings:187
+#: system-config-kickstart.gladestrings:183
 msgid "label33"
 msgstr "label33"
 
-#: system-config-kickstart.gladestrings:188
+#: system-config-kickstart.gladestrings:184
 msgid "Configure the X Window System"
 msgstr "Настройки на графичната среда"
 
-#: system-config-kickstart.gladestrings:189
+#: system-config-kickstart.gladestrings:185
 msgid "Color Depth"
 msgstr "Дълбочина на цвят"
 
-#: system-config-kickstart.gladestrings:190
+#: system-config-kickstart.gladestrings:186
 msgid "Resolution"
 msgstr "Разделителна способност"
 
-#: system-config-kickstart.gladestrings:191
+#: system-config-kickstart.gladestrings:187
 msgid "Default Desktop:"
 msgstr "Работен плот по подразбиране:"
 
-#: system-config-kickstart.gladestrings:192
+#: system-config-kickstart.gladestrings:188
 msgid "GNOME"
 msgstr "GNOME"
 
-#: system-config-kickstart.gladestrings:193
+#: system-config-kickstart.gladestrings:189
 msgid "KDE"
 msgstr "KDE"
 
-#: system-config-kickstart.gladestrings:194
+#: system-config-kickstart.gladestrings:190
 msgid "Start the X Window System on boot"
 msgstr "Стартиране на X Window System при зареждане"
 
-#: system-config-kickstart.gladestrings:195
+#: system-config-kickstart.gladestrings:191
 msgid "On first boot, Setup Agent is: "
 msgstr "При първо зареждане, агента за настройки е: "
 
-#: system-config-kickstart.gladestrings:197
+#: system-config-kickstart.gladestrings:193
 msgid "Enabled"
 msgstr "Разрешен"
 
-#: system-config-kickstart.gladestrings:198
+#: system-config-kickstart.gladestrings:194
 msgid "Enabled in reconfiguration mode"
 msgstr "Разрешен в режим на реконфигурация"
 
-#: system-config-kickstart.gladestrings:199
+#: system-config-kickstart.gladestrings:195
 msgid "General"
 msgstr "Основни"
 
-#: system-config-kickstart.gladestrings:200
-msgid "Probe for video card"
+#: system-config-kickstart.gladestrings:196
+#, fuzzy
+msgid "Probe for video card driver"
 msgstr "Търсене на видео карта"
 
-#: system-config-kickstart.gladestrings:201
+#: system-config-kickstart.gladestrings:197
 msgid "Video Card RAM: "
 msgstr "Памет на видео картата: "
 
-#: system-config-kickstart.gladestrings:202
+#: system-config-kickstart.gladestrings:198
 msgid "Video Card"
 msgstr "Видео карта"
 
-#: system-config-kickstart.gladestrings:203
+#: system-config-kickstart.gladestrings:199
 msgid "Probe for monitor"
 msgstr "Търсене на монитор"
 
-#: system-config-kickstart.gladestrings:204
+#: system-config-kickstart.gladestrings:200
 msgid "Use custom monitor sync rates"
 msgstr "Ръчни синхр. честоти на монитора"
 
-#: system-config-kickstart.gladestrings:205
+#: system-config-kickstart.gladestrings:201
 msgid "Hz"
 msgstr "Hz"
 
-#: system-config-kickstart.gladestrings:206
+#: system-config-kickstart.gladestrings:202
 msgid "kHz"
 msgstr "kHz"
 
-#: system-config-kickstart.gladestrings:207
+#: system-config-kickstart.gladestrings:203
 msgid "Vertical Sync:"
 msgstr "Вертикална синхронизация:"
 
-#: system-config-kickstart.gladestrings:208
+#: system-config-kickstart.gladestrings:204
 msgid "Horizontal Sync:"
 msgstr "Хоризонтална синхронизация:"
 
-#: system-config-kickstart.gladestrings:209
+#: system-config-kickstart.gladestrings:205
 msgid "Monitor"
 msgstr "Монитор"
 
-#: system-config-kickstart.gladestrings:210
+#: system-config-kickstart.gladestrings:206
 msgid "Display configuration is not applicable on upgrades."
 msgstr "Конфигурирането на дисплея не е приложимо при обновяване."
 
-#: system-config-kickstart.gladestrings:212
+#: system-config-kickstart.gladestrings:208
 msgid "label88"
 msgstr "label88"
 
-#: system-config-kickstart.gladestrings:213
+#: system-config-kickstart.gladestrings:209
 msgid "Select packages to install."
 msgstr "Изберете пакети за инсталиране."
 
-#: system-config-kickstart.gladestrings:214
+#: system-config-kickstart.gladestrings:210
 msgid "_Install Everything"
 msgstr "_Пълна инсталация"
 
-#: system-config-kickstart.gladestrings:215
+#: system-config-kickstart.gladestrings:211
 msgid "Desktops"
 msgstr "Работни среди"
 
-#: system-config-kickstart.gladestrings:216
+#: system-config-kickstart.gladestrings:212
 msgid "Applications"
 msgstr "Приложения"
 
-#: system-config-kickstart.gladestrings:217
+#: system-config-kickstart.gladestrings:213
 msgid "Servers"
 msgstr "Сървъри"
 
-#: system-config-kickstart.gladestrings:218
+#: system-config-kickstart.gladestrings:214
 msgid "Development"
 msgstr "Разработка"
 
-#: system-config-kickstart.gladestrings:219
+#: system-config-kickstart.gladestrings:215
 msgid "System"
 msgstr "Система"
 
-#: system-config-kickstart.gladestrings:220
+#: system-config-kickstart.gladestrings:216
 msgid "Package selection is not applicable on upgrades."
 msgstr "Избора на пакети е неприложим при обновяване."
 
-#: system-config-kickstart.gladestrings:222
+#: system-config-kickstart.gladestrings:218
 msgid "label34"
 msgstr "label34"
 
-#: system-config-kickstart.gladestrings:223
+#: system-config-kickstart.gladestrings:219
 #, c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1235,21 +1235,21 @@ msgstr ""
 "Внимание: Грешка в този скрипт може да провали инсталацията с kickstart "
 "файла Ви. Не включвайте %pre команда в началото."
 
-#: system-config-kickstart.gladestrings:224
-#: system-config-kickstart.gladestrings:230
+#: system-config-kickstart.gladestrings:220
+#: system-config-kickstart.gladestrings:226
 msgid "Use an interpreter:"
 msgstr "Ползване на интерпретатор:"
 
-#: system-config-kickstart.gladestrings:225
+#: system-config-kickstart.gladestrings:221
 #, c-format
 msgid "Type your %pre script below:"
 msgstr "Въведете своя %pre скрипт по-долу:"
 
-#: system-config-kickstart.gladestrings:227
+#: system-config-kickstart.gladestrings:223
 msgid "label89"
 msgstr "label89"
 
-#: system-config-kickstart.gladestrings:228
+#: system-config-kickstart.gladestrings:224
 #, c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1258,28 +1258,28 @@ msgstr ""
 "Внимание: Грешка в този скрипт може да провали инсталацията с kickstart "
 "файла Ви. Не включвайте %post команда в началото."
 
-#: system-config-kickstart.gladestrings:229
+#: system-config-kickstart.gladestrings:225
 msgid "Run outside of the chroot environment"
 msgstr "Изпълнение извън chroot средата"
 
-#: system-config-kickstart.gladestrings:231
+#: system-config-kickstart.gladestrings:227
 #, c-format
 msgid "Type your %post script below:"
 msgstr "Въведете своя %post скрипт по-долу:"
 
-#: system-config-kickstart.gladestrings:233
+#: system-config-kickstart.gladestrings:229
 msgid "label93"
 msgstr "label93"
 
-#: system-config-kickstart.gladestrings:234
+#: system-config-kickstart.gladestrings:230
 msgid "Preview Options"
 msgstr "Преглед на настройките"
 
-#: system-config-kickstart.gladestrings:235
+#: system-config-kickstart.gladestrings:231
 msgid "_Save to File"
 msgstr "_Запис във файл"
 
-#: system-config-kickstart.gladestrings:236
+#: system-config-kickstart.gladestrings:232
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
@@ -1287,11 +1287,11 @@ msgstr ""
 "Вие избрахте следната конфигурация. Натиснете Запис във файл за да запишете "
 "kickstart файл. "
 
-#: system-config-kickstart.gladestrings:237
+#: system-config-kickstart.gladestrings:233
 msgid "RAID Options"
 msgstr "RAID опции"
 
-#: system-config-kickstart.gladestrings:238
+#: system-config-kickstart.gladestrings:234
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -1304,7 +1304,7 @@ msgstr ""
 "повече информация за употребата на RAID устройства моля консултирайте се с "
 "документацията на kickstart."
 
-#: system-config-kickstart.gladestrings:239
+#: system-config-kickstart.gladestrings:235
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -1313,46 +1313,50 @@ msgstr ""
 "'софтуерен RAID'.  Тогава можете да създадете RAID устройство, което може да "
 "бъде форматирано и монтирано."
 
-#: system-config-kickstart.gladestrings:240
+#: system-config-kickstart.gladestrings:236
 msgid "Choose one of the following options:"
 msgstr "Изберете една от следните възможности:"
 
-#: system-config-kickstart.gladestrings:241
+#: system-config-kickstart.gladestrings:237
 msgid "Create a software RAID partition"
 msgstr "Създаване на софтуерен RAID дял"
 
-#: system-config-kickstart.gladestrings:242
+#: system-config-kickstart.gladestrings:238
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "Създаване на RAID устройство [подразбиращо се е /dev/md0]"
 
-#: system-config-kickstart.gladestrings:243
+#: system-config-kickstart.gladestrings:239
 msgid "Network Device Information"
 msgstr "Информация за мрежовите устройства"
 
-#: system-config-kickstart.gladestrings:244
+#: system-config-kickstart.gladestrings:240
 msgid "Network Device:"
 msgstr "Мрежово устройство:"
 
-#: system-config-kickstart.gladestrings:245
+#: system-config-kickstart.gladestrings:241
 msgid "Network Type:"
 msgstr "Тип мрежа:"
 
-#: system-config-kickstart.gladestrings:246
+#: system-config-kickstart.gladestrings:242
 msgid "IP Address:"
 msgstr "IP Адрес:"
 
-#: system-config-kickstart.gladestrings:247
+#: system-config-kickstart.gladestrings:243
 msgid "Netmask: "
 msgstr "Мрежова маска:"
 
-#: system-config-kickstart.gladestrings:248
+#: system-config-kickstart.gladestrings:244
 msgid "Gateway:"
 msgstr "Шлюз:"
 
-#: system-config-kickstart.gladestrings:249
+#: system-config-kickstart.gladestrings:245
 msgid "Name Server:"
 msgstr "DNS сървър:"
 
+#: system-config-kickstart.gladestrings:246
+#: system-config-kickstart.gladestrings:247
+#: system-config-kickstart.gladestrings:248
+#: system-config-kickstart.gladestrings:249
 #: system-config-kickstart.gladestrings:250
 #: system-config-kickstart.gladestrings:251
 #: system-config-kickstart.gladestrings:252
@@ -1361,10 +1365,20 @@ msgstr "DNS сървър:"
 #: system-config-kickstart.gladestrings:255
 #: system-config-kickstart.gladestrings:256
 #: system-config-kickstart.gladestrings:257
-#: system-config-kickstart.gladestrings:258
-#: system-config-kickstart.gladestrings:259
-#: system-config-kickstart.gladestrings:260
-#: system-config-kickstart.gladestrings:261
 msgid "."
 msgstr "."
 
+#~ msgid "/comps.xml file."
+#~ msgstr "/comps.xml файл."
+
+#~ msgid "Save File"
+#~ msgstr "Запис на файл"
+
+#~ msgid "Mouse:"
+#~ msgstr "Мишка:"
+
+#~ msgid "Emulate 3 Buttons"
+#~ msgstr "Емулация на 3 бутона"
+
+#~ msgid "Language Support:"
+#~ msgstr "Езикова поддръжка:"
