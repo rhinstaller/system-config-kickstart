@@ -26,6 +26,15 @@ import string
 import getopt
 from rhpl.xhwstate import *
 
+##
+## I18N
+##
+from rhpl.translate import _, N_
+import rhpl.translate as translate
+domain = 'system-config-kickstart'
+translate.textdomain (domain)
+gtk.glade.bindtextdomain(domain)
+
 class xconfig:
 
     def __init__(self, xml, kickstartData):
@@ -33,7 +42,7 @@ class xconfig:
         self.xconfig_vbox = xml.get_widget("xconfig_vbox")
         self.xconfig_label_box = xml.get_widget("xconfig_label_box")
         self.config_x_button = xml.get_widget("config_x_button")
-        self.card_view = xml.get_widget("card_view")
+        self.driver_view = xml.get_widget("driver_view")
         self.monitor_view = xml.get_widget("monitor_view")
         self.sync_button = xml.get_widget("sync_button")
         self.sync_table = xml.get_widget("sync_table")        
@@ -47,15 +56,15 @@ class xconfig:
         self.kde_radiobutton = xml.get_widget("kde_radiobutton")
         self.startxonboot_checkbutton = xml.get_widget("startxonboot_checkbutton")
         self.firstboot_optionmenu = xml.get_widget("firstboot_optionmenu")
-        self.card_vbox = xml.get_widget("card_vbox")
+        self.driver_vbox = xml.get_widget("driver_vbox")
         self.monitor_vbox = xml.get_widget("monitor_vbox")
-        self.card_probe_check = xml.get_widget("card_probe_check")
+        self.driver_probe_check = xml.get_widget("driver_probe_check")
         self.monitor_probe_check = xml.get_widget("monitor_probe_check")
         
-        self.card_store = gtk.ListStore(gobject.TYPE_STRING)
-        self.card_view.set_model(self.card_store)
-        self.card_col = gtk.TreeViewColumn("", gtk.CellRendererText(), text = 0)
-        self.card_view.append_column(self.card_col)
+        self.driver_store = gtk.ListStore(gobject.TYPE_STRING)
+        self.driver_view.set_model(self.driver_store)
+        self.driver_col = gtk.TreeViewColumn("", gtk.CellRendererText(), text = 0)
+        self.driver_view.append_column(self.driver_col)
         
         self.monitor_store = gtk.ListStore(gobject.TYPE_STRING)
         self.monitor_view.set_model(self.monitor_store)
@@ -65,10 +74,10 @@ class xconfig:
 
         self.config_x_button.connect("toggled", self.toggleXconfig)
         self.monitor_probe_check.connect("toggled", self.on_monitor_probe_check_toggled)
-        self.card_probe_check.connect("toggled", self.on_card_probe_check_toggled)
+        self.driver_probe_check.connect("toggled", self.on_driver_probe_check_toggled)
         self.sync_button.connect("toggled", self.toggle_sync)
 
-        self.fill_card_list()
+        self.fill_driver_list()
         self.fill_monitor_list()
 
         #add color depths
@@ -98,26 +107,23 @@ class xconfig:
                              "64 MB" : "65536",
                              }
 
-    def fill_card_list(self):
-        #add video cards to list
+    def fill_driver_list(self):
+        #add video drivers to list
         try:
-            cardsFile = open("/usr/share/hwdata/Cards", "r")
+            driverFile = open("/usr/share/hwdata/videodrivers", "r")
         except:
-            raise RuntimeError, (_("Could not read video card database"))
+            raise RuntimeError, (_("Could not read video driver database"))
             
-        lines = cardsFile.readlines ()
-        cardsFile.close ()
+        lines = driverFile.readlines ()
+        driverFile.close ()
         lines.sort()
         for line in lines:
             line = string.strip (line)
-
-            if len (line) > 4 and line[0:4] == 'NAME':
-                name = line[5:]
-                iter = self.card_store.append()
-                self.card_store.set_value(iter, 0, name)
+	    name = line.split("\t", 2)[0]
+	    iter = self.driver_store.append()
+	    self.driver_store.set_value(iter, 0, name)
 
     def fill_monitor_list(self):
-
 	hardware_state = XF86HardwareState(None)
 	db = hardware_state.monitor.readMonitorsDB()
 	l = db.keys()
@@ -145,8 +151,8 @@ class xconfig:
                             iter = self.monitor_store.append()
                             self.monitor_store.set_value(iter, 0, model)
 
-    def on_card_probe_check_toggled(self, *args):
-        self.card_vbox.set_sensitive(not self.card_probe_check.get_active())
+    def on_driver_probe_check_toggled(self, *args):
+        self.driver_vbox.set_sensitive(not self.driver_probe_check.get_active())
 
     def on_monitor_probe_check_toggled(self, *args):
         self.monitor_vbox.set_sensitive(not self.monitor_probe_check.get_active())
@@ -200,11 +206,11 @@ class xconfig:
             if self.startxonboot_checkbutton.get_active():
                 buf = buf + " --startxonboot"
 
-            if not self.card_probe_check.get_active():
-                #video card and monitor
-                temp, iter = self.card_view.get_selection().get_selected()
-                card = self.card_store.get_value(iter, 0)
-                buf = buf + " --card=\"" + card + "\""
+            if not self.driver_probe_check.get_active():
+                #video card driver and monitor
+                temp, iter = self.driver_view.get_selection().get_selected()
+                driver = self.driver_store.get_value(iter, 0)
+                buf = buf + " --driver=\"" + driver + "\""
 
                 #translate MB to KB 
                 buf = buf + " --videoram=" + self.ramsize_dict [self.videoram_combo.entry.get_text()]
@@ -263,19 +269,19 @@ class xconfig:
                     value = opt[12:]
                     self.resolution_combo.entry.set_text(string.strip(value))
 
-                if opt[:6] == "--card":
-                    value = string.strip(opt[6:])
-                    self.card_probe_check.set_active(False)
+                if opt[:8] == "--driver":
+                    value = string.strip(opt[8:])
+                    self.driver_probe_check.set_active(False)
                     value = string.replace(value, '"', '')
 
-                    iter = self.card_store.get_iter_first()
+                    iter = self.driver_store.get_iter_first()
 
                     while iter:
-                        if self.card_store.get_value(iter, 0) == value:
-                            path = self.card_store.get_path(iter)
-                            self.card_view.set_cursor(path, self.card_col, False)
-                            self.card_view.scroll_to_cell(path, self.card_col, True, 0.5, 0.5)
-                        iter = self.card_store.iter_next(iter)
+                        if self.driver_store.get_value(iter, 0) == value:
+                            path = self.driver_store.get_path(iter)
+                            self.driver_view.set_cursor(path, self.driver_col, False)
+                            self.driver_view.scroll_to_cell(path, self.driver_col, True, 0.5, 0.5)
+                        iter = self.driver_store.iter_next(iter)
 
                 if opt[:10] == "--videoram":
                     value = opt[10:]

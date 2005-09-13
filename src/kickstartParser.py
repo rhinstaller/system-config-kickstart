@@ -47,7 +47,6 @@ class KickstartParser:
  		     "install"		: self.kickstartData.setInstall,
  		     "keyboard"		: self.kickstartData.setKeyboard,
        		     "lang"		: self.kickstartData.setLang,
-                     "langsupport"	: self.kickstartData.setLangSupport,
  		     "network"		: self.kickstartData.setNetwork,
  		     "nfs"		: self.kickstartData.setNfs,
  		     "part"		: self.kickstartData.definePartition,

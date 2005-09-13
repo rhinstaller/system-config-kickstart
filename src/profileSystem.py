@@ -43,7 +43,6 @@ class ProfileSystem:
         default, langs = self.languageBackend.getInstalledLangs()
         self.kickstartData.setLang([default])
         self.kickstartData.setDefaultLang(default)
-        self.kickstartData.setLangSupport(langs)
 
     def getKeyboard(self):
         kbd = keyboard.Keyboard()
