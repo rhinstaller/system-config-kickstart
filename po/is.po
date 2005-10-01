@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: ksconfig 1.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-13 13:29-0400\n"
-"PO-Revision-Date: 2005-04-11 16:08:22 2001\n"
+"PO-Revision-Date: 2005-10-01 16:08:22 2001\n"
 "Last-Translator: Richard Allen <ra@ra.is>\n"
 "Language-Team: is <kde-isl@molar.is>\n"
 "MIME-Version: 1.0\n"
@@ -202,11 +202,14 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Það kom upp villa við lestur eftirfarandi línu úr hraðuppsetningarskránni. "
+"Þetta er líklega innsláttarvilla eða skipun sem er ekki notuð lengur.\n"
+"\n"
+"%s"
 
 #: ../src/kickstartParser.py:77
-#, fuzzy
 msgid "Kickstart Error"
-msgstr "Hraðuppsetning"
+msgstr "Hraðuppsetningarvilla"
 
 #: ../src/network.py:87
 msgid "Device"
@@ -233,9 +236,9 @@ msgid ""
 msgstr "Netkort með heitinu %s er þegar til. Vinsamlegast veldu annað heiti"
 
 #: ../src/packageGroupList.py:18
-#, fuzzy, python-format
+#, python-format
 msgid "Could not start because there is no %s file."
-msgstr "Gat ekki ræst vegna þess að það er engin /usr/share/comps/ mappa"
+msgstr "Gat ekki ræst vegna þess að það er engin %s skrá."
 
 #: ../src/packageGroupList.py:19
 msgid "Please make sure the comps package is installed."
@@ -428,7 +431,6 @@ msgstr ""
 "þekktir eru."
 
 #: ../src/xconfig.py:115
-#, fuzzy
 msgid "Could not read video driver database"
 msgstr "Gat ekki lesið skjákortagrunninn"
 
@@ -1140,9 +1142,8 @@ msgid "General"
 msgstr "Almennt"
 
 #: system-config-kickstart.gladestrings:196
-#, fuzzy
 msgid "Probe for video card driver"
-msgstr "Leita að skjákorti"
+msgstr "Leita að skjákortsrekli"
 
 #: system-config-kickstart.gladestrings:197
 msgid "Video Card RAM: "
@@ -1364,18 +1365,3 @@ msgstr "Nafnaþjónn:"
 #: system-config-kickstart.gladestrings:257
 msgid "."
 msgstr "."
-
-#~ msgid "/comps.xml file."
-#~ msgstr "/comps.xml skrá."
-
-#~ msgid "Save File"
-#~ msgstr "Vista skrá"
-
-#~ msgid "Mouse:"
-#~ msgstr "Mús:"
-
-#~ msgid "Emulate 3 Buttons"
-#~ msgstr "Herma eftir þrem hnöppum"
-
-#~ msgid "Language Support:"
-#~ msgstr "Tungumálastuðningur:"
