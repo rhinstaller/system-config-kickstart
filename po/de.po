@@ -1,26 +1,29 @@
+# translation of de.po to German / Deutsch
 # translation of de.po to German
 # translation of redhat-config-kickstart.po to Deutsch
 # translation of redhat-config-kickstart.po to
 # translation of de.po to Deutsch
-# Copyright (C) 2001,2002,2003, 2004 Free Software Foundation, Inc.
+# Copyright (C) 2001,2002,2003, 2004, 2005 Free Software Foundation, Inc.
+# Ronny Buchmann <ronny-vlug@vlugnet.org 2004, 2005
 # Claudia Krug <fhonig@redhat.it>, 2001.
 # Bernd Groh <bgroh@redhat.com>, 2002,2003.
 # Bernd Bartmann <Bernd.Bartmann@sohanet.de>, 2004.
 # Andreas Müller <redhat@andreas-mueller.com>, 2004.
-# Ronny Buchmann <ronny-vlug@vlugnet.org 2004, 2005
+# Severin Heiniger <severinheiniger@gmail.com>, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-13 13:29-0400\n"
-"PO-Revision-Date: 2005-04-03 15:15+0200\n"
-"Last-Translator: Ronny Buchmann <ronny-vlug@vlugnet.org>\n"
-"Language-Team: Deutsch <de@li.org>\n"
+"PO-Revision-Date: 2005-10-03 19:48+0200\n"
+"Last-Translator: Severin Heiniger <severinheiniger@gmail.com>\n"
+"Language-Team: German / Deutsch <fedora-i18n-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0.2\n"
+"X-Generator: KBabel 1.10.2\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../src/basic.py:67
 msgid "x86, AMD64, or Intel EM64T"
@@ -58,12 +61,11 @@ msgstr "Bitte ein Root-Passwort wählen."
 #: ../src/bootloader.py:76
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
-msgstr "Bootloader Optionen sind auf die %s Plattform nicht anwendbar"
+msgstr "Bootloader-Optionen sind auf die %s Plattform nicht anwendbar"
 
 #: ../src/bootloader.py:117
 msgid "Grub passwords do not match.  Please try again."
-msgstr ""
-"Grub-Passwörter stimmen nicht überein.  Bitte geben Sie diese erneut ein."
+msgstr "Grub-Passwörter stimmen nicht überein.  Bitte geben Sie diese erneut ein."
 
 #. create table with custom checklists
 #: ../src/firewall.py:60
@@ -190,11 +192,11 @@ msgstr ""
 
 #: ../src/kickstartGui.py:194
 msgid "About Kickstart Configurator"
-msgstr "Infos über den Kickstart Configurator"
+msgstr "Über den Kickstart Configurator"
 
 #: ../src/kickstartGui.py:224
 msgid "Help is not available."
-msgstr "Hilfe nicht verfügbar"
+msgstr "Hilfe nicht verfügbar."
 
 #: ../src/kickstartGui.py:275
 #, python-format
@@ -210,11 +212,13 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Beim Lesen der folgenden Zeile in der Kickstart-Datei ist ein Problem aufgetreten. Dies wurde möglicherweise durch einen Fehler in dieser Zeile oder ein nicht mehr existierendes Schlüsselwort verursacht.\n"
+"\n"
+"%s"
 
 #: ../src/kickstartParser.py:77
-#, fuzzy
 msgid "Kickstart Error"
-msgstr "Kickstart"
+msgstr "Kickstart-Fehler"
 
 #: ../src/network.py:87
 msgid "Device"
@@ -231,7 +235,7 @@ msgstr "Statische IP"
 
 #: ../src/network.py:213
 msgid "Please fill in the network information"
-msgstr "Bitte füllen Sie die Information zum Netzwerk aus"
+msgstr "Bitte geben Sie die Information zum Netzwerk ein"
 
 #: ../src/network.py:318
 #, python-format
@@ -243,13 +247,13 @@ msgstr ""
 "einen anderen Gerätenamen"
 
 #: ../src/packageGroupList.py:18
-#, fuzzy, python-format
+#, python-format
 msgid "Could not start because there is no %s file."
-msgstr "Konnte nicht starten, weil /usr/share/comps nicht existiert"
+msgstr "Konnte nicht starten, weil die Datei %s nicht existiert."
 
 #: ../src/packageGroupList.py:19
 msgid "Please make sure the comps package is installed."
-msgstr "Bitte stellen Sie sicher, dass das comps Paket installiert ist."
+msgstr "Bitte stellen Sie sicher, dass das comps-Paket installiert ist."
 
 #: ../src/partWindow.py:83 system-config-kickstart.gladestrings:52
 msgid "ext2"
@@ -262,7 +266,7 @@ msgstr "ext3"
 #. _("physical volume (LVM)"):"lvm",
 #: ../src/partWindow.py:85 ../src/partWindow.py:148
 msgid "software RAID"
-msgstr "Software RAID"
+msgstr "Software-RAID"
 
 #: ../src/partWindow.py:86 system-config-kickstart.gladestrings:54
 msgid "swap"
@@ -300,8 +304,7 @@ msgstr "Geben Sie einen Einhängepunkt für die Partition an."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:429
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "Der Einhängepunkt \"%s\" wird bereits verwendet. Wählen Sie einen anderen "
 "Einhängepunkt."
@@ -380,7 +383,7 @@ msgstr "Wählen Sie eine Partition aus der Liste."
 #: ../src/raidOptionsWindow.py:72
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
-msgstr "Sie können derzeit noch %d Software RAID Partition(en) verwenden."
+msgstr "Sie können derzeit noch %d Software-RAID-Partition(en) verwenden."
 
 #: ../src/raidWindow.py:172
 #, python-format
@@ -415,13 +418,13 @@ msgstr ""
 "Benutzung: system-config-kickstart [--help] [--generate <Dateiname>] "
 "[<Kickstart_Dateiname>]\n"
 "        \n"
-"--help                  Anzeige dieser Meldung\n"
-"--generate <Dateiname>  Erzeuge eine Kickstart-Datei vom aktuellen Rechner "
-"und schreibe\n"
-"                        diese in <Dateiname>.  Diese Option läuft auf der "
-"Konsole und ist deswegen\n"
-"                        nützlich für Server, auf welchen X zur Zeit nicht "
-"läuft.\n"
+"--help                  Diese Meldung anzeigen\n"
+"--generate <Dateiname>  Eine Kickstart-Datei vom aktuellen Rechner "
+"erstellen und\n"
+"                        diese in <Dateiname> speichern.  Diese Option wird auf der "
+"Konsole ausgeführt und ist deswegen\n"
+"                        hilfreich für Server, auf welchen X zur Zeit nicht "
+"ausgeführt wird.\n"
 "<Kickstart_Dateiname>   Diese Option wird dafür sorgen, dass die GUI bereits "
 "mit den in\n"
 "                        der Kickstart-Datei angegebenen Werten gestartet "
@@ -429,7 +432,7 @@ msgstr ""
 
 #: ../src/system-config-kickstart.py:77
 msgid "Could not open display because no X server is running."
-msgstr "Konnte Anzeige nicht öffnen, da kein X Server läuft."
+msgstr "Konnte Anzeige nicht öffnen, da kein X-Server läuft."
 
 #: ../src/system-config-kickstart.py:78
 msgid "Try running 'system-config-kickstart --help' for a list of options."
@@ -438,9 +441,8 @@ msgstr ""
 "von Optionen zu erhalten."
 
 #: ../src/xconfig.py:115
-#, fuzzy
 msgid "Could not read video driver database"
-msgstr "Grafikkarten-Datenbank konnte nicht gelesen werden."
+msgstr "Datenbank mit den Grafikkarten-Treibern konnte nicht gelesen werden"
 
 #.
 #. * Translatable strings file generated by Glade.
@@ -467,7 +469,7 @@ msgstr "Größe (MB):"
 
 #: system-config-kickstart.gladestrings:11
 msgid "Fill all unused space on disk"
-msgstr "Den gesamten nicht genutzten Platz der Festplatte füllen"
+msgstr "Den gesamten nicht belegten Platz der Festplatte füllen"
 
 #: system-config-kickstart.gladestrings:12
 msgid "Grow to maximum of (MB):"
@@ -624,7 +626,7 @@ msgstr "RAID-Gerät formatieren"
 
 #: system-config-kickstart.gladestrings:57
 msgid "Kickstart Configurator"
-msgstr "Kickstart Konfiguratorion"
+msgstr "Kickstart Configurator"
 
 #: system-config-kickstart.gladestrings:58
 msgid "_File"
@@ -672,7 +674,7 @@ msgstr "Zeitzone:"
 
 #: system-config-kickstart.gladestrings:69
 msgid "Use UTC clock"
-msgstr "Benutze UTC Zeit"
+msgstr "UTC-Zeit benutzen"
 
 #: system-config-kickstart.gladestrings:70
 msgid "Root Password:"
@@ -685,11 +687,11 @@ msgstr "Passwort bestätigen:"
 
 #: system-config-kickstart.gladestrings:72
 msgid "Encrypt root password"
-msgstr "Verschlüsseltes Root-Passwort:"
+msgstr "Root-Passwort verschlüsseln"
 
 #: system-config-kickstart.gladestrings:73
 msgid "Target Architecture:"
-msgstr "Ziel Architektur:"
+msgstr "Ziel-Architektur:"
 
 #: system-config-kickstart.gladestrings:74
 msgid "Reboot system after installation"
@@ -713,7 +715,7 @@ msgstr "label28"
 
 #: system-config-kickstart.gladestrings:79
 msgid "Perform new installation"
-msgstr "Führen Sie eine neue Installation aus."
+msgstr "Neuinstallation duchführen"
 
 #: system-config-kickstart.gladestrings:80
 msgid "Upgrade an existing installation"
@@ -770,7 +772,7 @@ msgstr "Geben Sie einen FTP-Benutzernamen und Passwort an."
 
 #: system-config-kickstart.gladestrings:94
 msgid "FTP Username"
-msgstr "FTP-Benutzer-Name:"
+msgstr "FTP-Benutzername:"
 
 #: system-config-kickstart.gladestrings:95
 msgid "FTP Password"
@@ -826,7 +828,7 @@ msgstr "Passwort:"
 
 #: system-config-kickstart.gladestrings:112
 msgid "Encrypt GRUB password"
-msgstr "GRUB-Passwort verschlüsseln:"
+msgstr "GRUB-Passwort verschlüsseln"
 
 #: system-config-kickstart.gladestrings:113
 msgid "Install boot loader on Master Boot Record (MBR)"
@@ -846,7 +848,7 @@ msgstr "label216"
 
 #: system-config-kickstart.gladestrings:117
 msgid "Boot Loader Options (required)"
-msgstr "Bootloader-Optionen (obligatorisch)"
+msgstr "Bootloader-Optionen (benötigt)"
 
 #: system-config-kickstart.gladestrings:118
 msgid "label35"
@@ -986,19 +988,19 @@ msgstr "Authentifizierung mit Kerberos 5 aktivieren"
 
 #: system-config-kickstart.gladestrings:153
 msgid "Kerberos Realm:"
-msgstr "Kerberos Realm:"
+msgstr "Kerberos-Realm:"
 
 #: system-config-kickstart.gladestrings:154
 msgid "Kerberos Domain Controller (KDC):"
-msgstr "Kerberos Domänen Controller (KDC):"
+msgstr "Kerberos-Domänen-Controller (KDC):"
 
 #: system-config-kickstart.gladestrings:155
 msgid "Kerberos Master Server:"
-msgstr "Kerberos Master Server:"
+msgstr "Kerberos-Master-Server:"
 
 #: system-config-kickstart.gladestrings:156
 msgid "Kerberos 5 Authentication"
-msgstr "Kerberos 5 Authentifizierung"
+msgstr "Kerberos 5-Authentifizierung"
 
 #: system-config-kickstart.gladestrings:157
 msgid "Kerberos 5"
@@ -1010,11 +1012,11 @@ msgstr "Hesiod-Support aktivieren"
 
 #: system-config-kickstart.gladestrings:159
 msgid "Hesiod LHS:"
-msgstr "Hesiod LHS:"
+msgstr "Hesiod-LHS:"
 
 #: system-config-kickstart.gladestrings:160
 msgid "Hesiod RHS:"
-msgstr "Hesiod RHS:"
+msgstr "Hesiod-RHS:"
 
 #: system-config-kickstart.gladestrings:161
 msgid "Hesiod Authentication"
@@ -1050,7 +1052,7 @@ msgstr "nscd aktivieren"
 
 #: system-config-kickstart.gladestrings:169
 msgid "Name Switch Cache Daemon (nscd) Authentication"
-msgstr "Authentifizierung des Name Switch Cache Dämon (nscd)"
+msgstr "Authentifizierung des Name Switch Cache-Dämons (nscd)"
 
 #: system-config-kickstart.gladestrings:170
 msgid "Name Switch Cache"
@@ -1099,7 +1101,7 @@ msgstr "Deaktiviert"
 
 #: system-config-kickstart.gladestrings:181
 msgid "Firewall configuration is not applicable on upgrades."
-msgstr "Firewall Konfiguration ist bei Upgrades nicht anwendbar"
+msgstr "Firewall-Konfiguration ist bei Upgrades nicht anwendbar"
 
 #: system-config-kickstart.gladestrings:183
 msgid "label33"
@@ -1107,7 +1109,7 @@ msgstr "label33"
 
 #: system-config-kickstart.gladestrings:184
 msgid "Configure the X Window System"
-msgstr "X-Window System konfigurieren"
+msgstr "X-Window-System konfigurieren"
 
 #: system-config-kickstart.gladestrings:185
 msgid "Color Depth"
@@ -1135,7 +1137,7 @@ msgstr "Beim Booten das X-Window System starten"
 
 #: system-config-kickstart.gladestrings:191
 msgid "On first boot, Setup Agent is: "
-msgstr "Beim ersten Booten ist der Setup Agent: "
+msgstr "Beim ersten Booten ist der Setup-Agent: "
 
 #: system-config-kickstart.gladestrings:193
 msgid "Enabled"
@@ -1150,13 +1152,12 @@ msgid "General"
 msgstr "Allgemein"
 
 #: system-config-kickstart.gladestrings:196
-#, fuzzy
 msgid "Probe for video card driver"
-msgstr "Suche nach Grafikkarte"
+msgstr "Grafikkarten-Treiber suchen"
 
 #: system-config-kickstart.gladestrings:197
 msgid "Video Card RAM: "
-msgstr "RAM Grafikkarte: "
+msgstr "RAM-Grafikkarte: "
 
 #: system-config-kickstart.gladestrings:198
 msgid "Video Card"
@@ -1164,7 +1165,7 @@ msgstr "Grafikkarte"
 
 #: system-config-kickstart.gladestrings:199
 msgid "Probe for monitor"
-msgstr "Suche nach Monitor"
+msgstr "Monitor suchen"
 
 #: system-config-kickstart.gladestrings:200
 msgid "Use custom monitor sync rates"
@@ -1239,9 +1240,7 @@ msgstr "label34"
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %pre command at the beginning."
-msgstr ""
-"Warnung: ein Fehler in diesem Skript könnte dazu führen, dass Ihre Kickstart-"
-"Installation fehlschlägt. Lassen Sie den Befehl %pre zu Beginn weg."
+msgstr "Warnung: Ein Fehler in diesem Skript könnte dazu führen, dass Ihre Kickstart-Installation fehlschlägt. Lassen Sie den Befehl %pre zu Beginn weg."
 
 #: system-config-kickstart.gladestrings:220
 #: system-config-kickstart.gladestrings:226
@@ -1262,9 +1261,7 @@ msgstr "label89"
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %post command at the beginning."
-msgstr ""
-"Warnung: ein Fehler in diesem Skript könnte dazu führen, dass Ihre Kickstart-"
-"Installation fehlschlägt. Lassen Sie den Befehl %post zu Beginn weg."
+msgstr "Warnung: Ein Fehler in diesem Skript könnte dazu führen, dass Ihre Kickstart-Installation fehlschlägt. Lassen Sie den Befehl %post zu Beginn weg."
 
 #: system-config-kickstart.gladestrings:225
 msgid "Run outside of the chroot environment"
@@ -1297,7 +1294,7 @@ msgstr ""
 
 #: system-config-kickstart.gladestrings:233
 msgid "RAID Options"
-msgstr "RAID Optionen"
+msgstr "RAID-Optionen"
 
 #: system-config-kickstart.gladestrings:234
 msgid ""
@@ -1306,11 +1303,11 @@ msgid ""
 "reliability compared to using an individual drive.  For more information on "
 "using RAID devices please consult the kickstart documentation."
 msgstr ""
-"Mit Software RAID können Sie verschiedene Festplatten auf einem größeren "
+"Mit Software-RAID können Sie verschiedene Festplatten auf einem größeren "
 "RAID-Gerät kombinieren. Ein RAID-Gerät kann konfiguriert werden, um "
 "zusätzliche Geschwindigkeit und Zuverlässigkeit im Vergleich zu einem "
 "einzigen Laufwerk zu bieten. Weitere Informationen über den Gebrauch der "
-"RAID-Geräte finden Sie in der kickstart-Dokumentation."
+"RAID-Geräte finden Sie in der Kickstart-Dokumentation."
 
 #: system-config-kickstart.gladestrings:235
 msgid ""
@@ -1318,8 +1315,8 @@ msgid ""
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
 msgstr ""
 "Wenn Sie RAID verwenden möchten, müssen Sie zunächst mindestens zwei "
-"Partitionen des Typs 'Software RAID' anlegen. Anschließend können Sie ein "
-"RAID-Gerät anlegen, das formatiert und gemountet werden kann."
+"Partitionen des Typs 'Software-RAID' anlegen. Anschließend können Sie ein "
+"RAID-Gerät anlegen, das formatiert und eingehängt werden kann."
 
 #: system-config-kickstart.gladestrings:236
 msgid "Choose one of the following options:"
@@ -1327,7 +1324,7 @@ msgstr "Wählen Sie eine der folgenden Optionen:"
 
 #: system-config-kickstart.gladestrings:237
 msgid "Create a software RAID partition"
-msgstr "Software RAID-Partition erstellen"
+msgstr "Software-RAID-Partition erstellen"
 
 #: system-config-kickstart.gladestrings:238
 msgid "Create a RAID device [default = /dev/md0]"
@@ -1335,7 +1332,7 @@ msgstr "RAID-Gerät anlegen [Standard = /dev/md0]"
 
 #: system-config-kickstart.gladestrings:239
 msgid "Network Device Information"
-msgstr "Information zum Netzwerk-Gerät"
+msgstr "Informationen zum Netzwerk-Gerät"
 
 #: system-config-kickstart.gladestrings:240
 msgid "Network Device:"
@@ -1376,316 +1373,3 @@ msgstr "Name Server:"
 msgid "."
 msgstr "."
 
-#~ msgid "/comps.xml file."
-#~ msgstr "/comps.xml Datei."
-
-#~ msgid "Save File"
-#~ msgstr "Datei speichern"
-
-#~ msgid "Mouse:"
-#~ msgstr "Maus:"
-
-#~ msgid "Emulate 3 Buttons"
-#~ msgstr "3 Tasten emulieren"
-
-#~ msgid "Language Support:"
-#~ msgstr "Sprachunterstützung:"
-
-#~ msgid "X Window System"
-#~ msgstr "X-Window System"
-
-#~ msgid "GNOME Desktop Environment"
-#~ msgstr "GNOME Desktopumgebung"
-
-#, fuzzy
-#~ msgid "KDE (K Desktop Environment)"
-#~ msgstr "KDE Desktopumgebung"
-
-#~ msgid "Editors"
-#~ msgstr "Editoren"
-
-#~ msgid "Engineering and Scientific"
-#~ msgstr "Wissenschaft und Technik"
-
-#~ msgid "Graphical Internet"
-#~ msgstr "Grafisches Internet"
-
-#~ msgid "Text-based Internet"
-#~ msgstr "Textbasiertes Internet"
-
-#~ msgid "Office/Productivity"
-#~ msgstr "Büro"
-
-#~ msgid "Sound and Video"
-#~ msgstr "Audio und Video"
-
-#~ msgid "Graphics"
-#~ msgstr "Grafik"
-
-#~ msgid "Games and Entertainment"
-#~ msgstr "Spiele und Unterhaltung"
-
-#~ msgid "Authoring and Publishing"
-#~ msgstr "Schreiben und Publizieren"
-
-#~ msgid "Server Configuration Tools (AS and ES only)"
-#~ msgstr "Server-Konfigurationswerkzeuge (nur AS und ES)"
-
-#~ msgid "Web Server"
-#~ msgstr "Web-Server"
-
-#~ msgid "Mail Server"
-#~ msgstr "Mail-Server"
-
-#~ msgid "Windows File Server"
-#~ msgstr "Windows Datei-Server"
-
-#~ msgid "DNS Name Server"
-#~ msgstr "DNS Name-Server"
-
-#~ msgid "FTP Server"
-#~ msgstr "FTP-Server"
-
-#~ msgid "SQL Database Server"
-#~ msgstr "SQL Datenbank-Server"
-
-#~ msgid "News Server"
-#~ msgstr "News-Server"
-
-#~ msgid "Network Servers (AS and ES only)"
-#~ msgstr "Netzwerk-Server (nur AS und ES)"
-
-#~ msgid "Development Tools"
-#~ msgstr "Entwicklungswerkzeuge"
-
-#~ msgid "Kernel Development"
-#~ msgstr "Kernel-Entwicklung"
-
-#~ msgid "X Software Development"
-#~ msgstr "X Softwareentwicklung"
-
-#~ msgid "GNOME Software Development"
-#~ msgstr "GNOME Softwareentwicklung"
-
-#~ msgid "KDE Software Development"
-#~ msgstr "KDE Softwareentwicklung"
-
-#~ msgid "Administration Tools"
-#~ msgstr "Verwaltungswerkzeuge"
-
-#~ msgid "System Tools"
-#~ msgstr "Systemwerkzeuge"
-
-#~ msgid "Printing Support"
-#~ msgstr "Druckerunterstützung"
-
-#~ msgid "*"
-#~ msgstr "*"
-
-#~ msgid "Server Configuration Tools"
-#~ msgstr "Server Konfigurationswerkzeuge"
-
-#~ msgid "Network Servers"
-#~ msgstr "Netzwerk-Server"
-
-#~ msgid "Could not read monitor database"
-#~ msgstr "Monitor-Datenbank konnte nicht gelesen werden."
-
-#~ msgid "_Automatically Resolve Dependencies"
-#~ msgstr "Abhängigkeiten _automatisch lösen"
-
-#~ msgid "_Ignore Dependencies"
-#~ msgstr "Abhängigkeiten _ignorieren"
-
-#~ msgid "Use GRUB for the boot loader"
-#~ msgstr "GRUB als Bootloader verwenden"
-
-#~ msgid "Use LILO for the boot loader"
-#~ msgstr "LILO als Bootloader verwenden"
-
-#~ msgid "label173"
-#~ msgstr "label173"
-
-#~ msgid "LILO Options:"
-#~ msgstr "LILO-Optionen:"
-
-#~ msgid "Use linear mode"
-#~ msgstr "Linearen Modus verwenden"
-
-#~ msgid "Force use of lba32 mode"
-#~ msgstr "Verwenden des LBA32 Modus erzwingen"
-
-#~ msgid "label174"
-#~ msgstr "label174"
-
-#~ msgid "Specify hsync and vsync instead of monitor"
-#~ msgstr "hsync und vsync statt Monitor angeben"
-
-#~ msgid "Allow incoming:"
-#~ msgstr "Eingehend erlauben:"
-
-#~ msgid "Use default firewall rules"
-#~ msgstr "Standard-Firewallregeln verwenden"
-
-#~ msgid "Select the default firewall level:"
-#~ msgstr "Wählen Sie den Standard-Firewalllevel:"
-
-#~ msgid "High"
-#~ msgstr "Hoch"
-
-#~ msgid "Customize"
-#~ msgstr "Benutzerdefinieren"
-
-#~ msgid "Medium"
-#~ msgstr "Mittel"
-
-#, fuzzy
-#~ msgid "DIsabled"
-#~ msgstr "Deaktiviert"
-
-#~ msgid "None"
-#~ msgstr "Kein"
-
-#~ msgid "DHCP"
-#~ msgstr "DHCP"
-
-#~ msgid "Miscellaneous"
-#~ msgstr "Verschiedenes"
-
-#~ msgid "Make LVM Partition"
-#~ msgstr "LVM-Partition erstellen"
-
-#~ msgid "physical volume (LVM)"
-#~ msgstr "Physisches Volumen (LVM)"
-
-#~ msgid "_Yes"
-#~ msgstr "_Ja"
-
-#~ msgid "A_ll"
-#~ msgstr "A_lle"
-
-#~ msgid "N_one"
-#~ msgstr "_Keinen"
-
-#~ msgid "Upgrade"
-#~ msgstr "Aktualisieren"
-
-#~ msgid "Install"
-#~ msgstr "Installieren"
-
-#~ msgid "Message"
-#~ msgstr "Meldung"
-
-#~ msgid "_No"
-#~ msgstr "_Nein"
-
-#~ msgid "RAID 0"
-#~ msgstr "RAID 0"
-
-#~ msgid "RAID 1"
-#~ msgstr "RAID 1"
-
-#~ msgid "Specify an existing partition on which to create the RAID partition."
-#~ msgstr ""
-#~ "Geben Sie eine existierende Partition an, auf der die RAID-Partition "
-#~ "angelegt werden soll."
-
-#~ msgid "_LILO"
-#~ msgstr "_LILO"
-
-#~ msgid "Size"
-#~ msgstr "Größe"
-
-#~ msgid "Existing Partition"
-#~ msgstr "Existierende Partitionen:"
-
-#~ msgid "File System Type"
-#~ msgstr "Typ des Dateisystems"
-
-#~ msgid "Upgrade Only Options:"
-#~ msgstr "Nur Optionen aktualisieren:"
-
-#~ msgid "_MBR"
-#~ msgstr "_MBR"
-
-#~ msgid "_GRUB"
-#~ msgstr "_GRUB"
-
-#~ msgid "Specify a device on which to create the RAID partition."
-#~ msgstr ""
-#~ "Geben Sie ein Gerät an, auf dem die RAID-Partition angelegt werden soll."
-
-#~ msgid "Specify an existing partition to use."
-#~ msgstr ""
-#~ "Geben Sie eine existierende Partition an, die verwendet werden soll."
-
-#~ msgid "Choose boot loader: "
-#~ msgstr "Bootloader wählen: "
-
-#~ msgid "Format Partition"
-#~ msgstr "Partition formatieren"
-
-#~ msgid "You must specify a size for the partition."
-#~ msgstr "Geben Sie eine Größe für die Partition an."
-
-#~ msgid "onPart and onDisk can not be used at the same time."
-#~ msgstr "onPart und onDisk können nicht gleichzeitig verwendet werden."
-
-#~ msgid "Fill to maximum allowable size"
-#~ msgstr "Auf maximal zulässige Größe füllen"
-
-#~ msgid "_Save File..."
-#~ msgstr "Datei _speichern..."
-
-#~ msgid "A graphical interface for creating a kickstart file."
-#~ msgstr "Ein grafisches Interface für die Erstellung einer Kickstart-Datei."
-
-#~ msgid "3"
-#~ msgstr "3"
-
-#~ msgid "Kickstart Configuration"
-#~ msgstr "Kickstart-Konfiguration"
-
-#~ msgid "Cancel"
-#~ msgstr "Abbrechen"
-
-#~ msgid "Package Group Selection"
-#~ msgstr "Auswahl der Paketgruppe"
-
-#~ msgid "2"
-#~ msgstr "2"
-
-#~ msgid "Save File..."
-#~ msgstr "Datei speichern..."
-
-#~ msgid "Select a Monitor"
-#~ msgstr "Monitor wählen"
-
-#~ msgid "OK"
-#~ msgstr "Ok"
-
-#~ msgid "Force as primary number (1-4):"
-#~ msgstr "Als primäre Nummer erzwingen (1-4):"
-
-#~ msgid "_Manual"
-#~ msgstr "_Manuell"
-
-#~ msgid "4"
-#~ msgstr "4"
-
-#~ msgid "Select a Video Card"
-#~ msgstr "Eine Grafikkarte wählen"
-
-#~ msgid ""
-#~ "1\n"
-#~ "2\n"
-#~ "3\n"
-#~ "4\n"
-#~ msgstr ""
-#~ "1\n"
-#~ "2\n"
-#~ "3\n"
-#~ "4\n"
-
-#~ msgid "category_clist"
-#~ msgstr "category_clist"
