@@ -24,6 +24,8 @@ import gobject
 import string
 import getopt
 import gtk.glade
+import firewall
+from pykickstart.data import *
 
 ##
 ## I18N
@@ -34,12 +36,10 @@ domain = 'system-config-kickstart'
 translate.textdomain (domain)
 gtk.glade.bindtextdomain(domain)
 
-import firewall
-
 class network:
 
-    def __init__(self, xml, kickstartData):
-        self.kickstartData = kickstartData
+    def __init__(self, xml, ksdata):
+        self.ksdata = ksdata
         self.network_frame = xml.get_widget("network_frame")
         self.network_device_tree = xml.get_widget("network_device_tree")
         self.add_device_button = xml.get_widget("add_device_button")
@@ -355,23 +355,22 @@ class network:
         return True
 
     def getData(self):
-        self.kickstartData.clearNetwork()
         iter = self.network_device_store.get_iter_first()
         while iter:
-            data = []
-            if self.network_device_store.get_value(iter, 1) == "DHCP":
-                data.append("--bootproto=dhcp")
-            elif self.network_device_store.get_value(iter, 1) == "BOOTP":
-                data.append("--bootproto=bootp")
-            else:
-                data.append("--bootproto=static")
-                data.append("--ip=%s" %self.network_device_store.get_value(iter, 2))
-                data.append("--netmask=%s" % self.network_device_store.get_value(iter, 3))
-                data.append("--gateway=%s" % self.network_device_store.get_value(iter, 4))
-                data.append("--nameserver=%s" % self.network_device_store.get_value(iter, 5))
+            nd = KickstartNetworkData()
 
-            data.append("--device=%s" % self.network_device_store.get_value(iter, 0))
-            self.kickstartData.setNetwork(data)                    
+            if self.network_device_store.get_value(iter, 1) == "DHCP":
+                nd.bootProto = "dhcp"
+            elif self.network_device_store.get_value(iter, 1) == "BOOTP":
+                nd.bootProto = "bootp"
+            else:
+                nd.bootProto = "static"
+                nd.ip = self.network_device_store.get_value(iter, 2)
+                nd.netmask = self.network_device_store.get_value(iter, 3)
+                nd.gateway = self.network_device_store.get_value(iter, 4)
+                nd.nameserver = self.network_device_store.get_value(iter, 5)
+
+            nd.device = self.network_device_store.get_value(iter, 0)
             iter = self.network_device_store.iter_next(iter)
 
     def typeChanged(self, *args):
@@ -391,41 +390,32 @@ class network:
             
     def fillData(self):
         self.network_device_store.clear()
-        networkList = self.kickstartData.getNetwork()
 
-        for line in networkList:
+        for nic in self.ksdata.network:
             iter = self.network_device_store.append()
 
-            
-            opts, args = getopt.getopt(line, "d:h", ["bootproto=", "device=", "ip=", "gateway=",
-                                                     "nameserver=", "nodns=", "netmask=",
-                                                     "hostname="])
-            
-            for opt, value in opts:
-                if opt == "--device":
-                    self.network_device_store.set_value(iter, 0, value)
-                    firewall_iter = firewall.trustedStore.append()
-                    firewall.trustedStore.set_value(firewall_iter, 0, False)
-                    firewall.trustedStore.set_value(firewall_iter, 1, value)
+            if nic.device != "":
+                self.network_device_store.set_value(iter, 0, nic.device)
+                firewall_iter = firewall.trustedStore.append()
+                firewall.trustedStore.set_value(firewall_iter, 0, False)
+                firewall.trustedStore.set_value(firewall_iter, 1, nic.device)
 
-                if opt == "--bootproto":
-                    if value == "dhcp":
-                        self.network_device_store.set_value(iter, 1, "DHCP")
-                    elif value == "static":
-                        self.network_device_store.set_value(iter, 1, (_("Static IP")))
-                    elif value == "bootp":
-                        self.network_device_store.set_value(iter, 1, "BOOTP")
+            if nic.bootProto != "":
+                if nic.bootProto == "dhcp":
+                    self.network_device_store.set_value(iter, 1, "DHCP")
+                elif nic.bootProto == "static":
+                    self.network_device_store.set_value(iter, 1, (_("Static IP")))
+                elif nic.bootProto == "bootp":
+                    self.network_device_store.set_value(iter, 1, "BOOTP")
 
-                if opt == "--ip":
-                    self.network_device_store.set_value(iter, 2, value)
+            if nic.ip != "":
+                self.network_device_store.set_value(iter, 2, nic.ip)
 
-                if opt == "--netmask":
-                    self.network_device_store.set_value(iter, 3, value)
+            if nic.netmask != "":
+                self.network_device_store.set_value(iter, 3, nic.netmask)
 
-                if opt == "--gateway":
-                    self.network_device_store.set_value(iter, 4, value)
+            if nic.gateway != "":
+                self.network_device_store.set_value(iter, 4, nic.gateway)
 
-                if opt == "--nameserver":
-                    self.network_device_store.set_value(iter, 5, value)
-
-
+            if nic.nameserver != "":
+                self.network_device_store.set_value(iter, 5, nic.nameserver)

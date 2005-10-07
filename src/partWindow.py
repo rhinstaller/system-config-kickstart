@@ -24,6 +24,7 @@ import signal
 import getopt
 import partEntry
 import kickstartGui
+from pykickstart.data import *
 
 ##
 ## I18N
@@ -159,6 +160,7 @@ class partWindow:
         for type in self.fsTypesDict.keys():
             if part_object.fsType == self.fsTypesDict[type]:
                 fsType = type
+                break
         self.fsTypeCombo.entry.set_text(fsType) 
         self.asPrimaryCheck.set_active(part_object.asPrimary)
 
@@ -541,62 +543,37 @@ class partWindow:
 
         self.part_view.expand_all()
         
-    def populateList(self, line):
+    def populateList(self, kspart):
         part_object = partEntry.partEntry()
-        result = self.parseLine(part_object, line)
-        
-        if result is None:
-            return
-        else:
-            self.setValues(part_object)
 
-    def parseLine(self, part_object, line):
-        if line[0][:4] == "raid":
-            part_object.raidNumber = line[0]
+        if kspart.mountpoint[:5] == "raid.":
+            part_object.raidNumber = kspart.mountpoint[6:]
             part_object.fsType = "raid"
+        else:
+            part_object.fsType = kspart.fstype
+            part_object.mountPoint = kspart.mountpoint
 
-        opts, args = getopt.gnu_getopt(line[1:], "d:h", ["recommended", "fstype=", "size=", "onpart=",
-                                                     "grow", "maxsize=", "noformat",
-                                                     "usepart", "ondisk=", "ondrive", "asprimary"
-                                                     "bytes-per-inode", "start", "end", "badblocks"
-                                                     ])
+        if kspart.recommended == True:
+            part_object.size = "recommended"
+        elif kspart.size != 0:
+            part_object.size = kspart.size
 
-        for (opt, value) in opts:
-            if line[0] == "swap":
-                part_object.fsType = "swap"
-                part_object.mountPoint = ""
-            elif opt == "--fstype":
-                if value == "\"PPC":
-                    value = "PPC PReP Boot"
-                    part_object.fsType = value
-                    part_object.mountPoint = ""
-                else:
-                    part_object.fsType = value
-                    part_object.mountPoint = line[0]                
+        if kspart.disk != "":
+            part_object.device = kspart.disk
 
-            if opt == "--recommended":
-                part_object.size = "recommended"
+        if kspart.onPart != "":
+            part_object.device = kspart.onPart
 
-            if opt == "--size":
-                part_object.size = value
+        if kspart.grow == True:
+            part_object.sizeStrategy = "max"
 
-            if opt == "--ondisk":
-                part_object.device = value
+        if kspart.maxSizeMB != 0:
+            part_object.sizeStrategy = "grow"
+            part_object.setSizeVal = kspart.maxSizeMB
 
-            if opt == "--onpart":
-                self.partition = value
-
-            if opt == "--grow":
-                part_object.sizeStrategy = "max"
-
-            if opt == "--maxsize":
-                part_object.sizeStrategy = "grow"
-                part_object.setSizeVal = value
-
-            if opt == "--noformat":
-                part_object.doFormat = 0
-            else:
-                part_object.doFormat = 1
-
-        return 0
-
+        if kspart.format == True:
+            part_object.doFormat = 1
+        else:
+            part_object.doFormat = 0
+        
+        self.setValues(part_object)

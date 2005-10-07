@@ -36,8 +36,8 @@ import kickstartGui
 
 class bootloader:
 
-    def __init__(self, xml, notebook, kickstartData):
-        self.kickstartData = kickstartData
+    def __init__(self, xml, notebook, ksdata):
+        self.ksdata = ksdata
         self.notebook = notebook
         self.bootloader_vbox = xml.get_widget("bootloader_vbox")
         self.bootloader_label = xml.get_widget("bootloader_label")
@@ -87,19 +87,19 @@ class bootloader:
         if self.install_bootloader_radio.get_active():
             buf = ""
             if self.mbr_radiobutton.get_active():
-                buf = buf + "--location=mbr "
+                self.ksdata.bootloader["location"] = "mbr"
             elif self.firstsector_radiobutton.get_active():
-                buf = buf + "--location=partition "                
+                self.ksdata.bootloader["location"] = "partition"
+
             params = string.strip (self.parameters_entry.get_text())
-            length = len (params)
-            if length > 0:
-                buf = buf + "--append " + params + " "
+            if len(params) > 0:
+                self.ksdata.bootloader["appendLine"] = params
 
             if self.grub_password_checkbutton.get_active() == True:
                 gp = string.strip (self.grub_password_entry.get_text())
                 cp = string.strip (self.grub_password_confirm.get_text())
-                length = len(gp)
-                if length > 0:
+
+                if len(gp) > 0:
                     if gp == cp:
                         if self.grub_password_encrypt_checkbutton.get_active():
                             salt = "$1$"
@@ -107,10 +107,9 @@ class bootloader:
                             for i in range(saltLen):
                                 salt = salt + random.choice (string.letters + string.digits + './')
                             self.passwd = crypt.crypt (gp, salt)
-                            temp = unicode (self.passwd, 'iso-8859-1')
-                            buf = buf + "--md5pass=" + temp
+                            self.ksdata.bootloader["md5pass"] = unicode(self.passwd, 'iso-8859-1')
                         else:
-                            buf = buf + "--password=" + gp + " "
+                            self.ksdata.bootloader["password"] = gp
 
                     else:
                         dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_WARNING, gtk.BUTTONS_OK,
@@ -127,38 +126,29 @@ class bootloader:
                         return None
                         
         elif self.upgrade_bootloader_radio.get_active():
-            buf = "--upgrade"
+            self.ksdata.bootloader["upgrade"] = True
         else:
-            buf = "--location=none"
+            self.ksdata.bootloader["location"] = "none"
 
-        self.kickstartData.setBootloader([buf])
         return 0
 
     def fillData(self):
-        list = self.kickstartData.getBootloader()
+        if self.ksdata.bootloader["location"] == "none":
+            self.no_bootloader_radio.set_active(True)
+        elif self.ksdata.bootloader["location"] == "mbr":
+            self.mbr_radiobutton.set_active(True)
+        elif self.ksdata.bootloader["location"] == "partition":
+            self.firstsector_radiobutton.set_active(True)
 
-        if list == None:
-            return
+        if self.ksdata.bootloader["password"] != "":
+            self.grub_password_entry.set_text(self.ksdata.bootloader["password"])
+            self.grub_password_confirm.set_text(self.ksdata.bootloader["password"])
 
-        for item in list:
-            if item[:11] == "--location=":
-                if item[11:] == "none":
-                    self.no_bootloader_radio.set_active(True)
-                elif item[11:] == "mbr":
-                    self.mbr_radiobutton.set_active(True)
-                elif item[11:] == "partition":
-                    self.firstsector_radiobutton.set_active(True)
+        if self.ksdata.bootloader["appendLine"] != "":
+            self.parameters_entry.set_text(self.ksdata.bootloader["appendLine"])
 
-            if item[:10] == "--password":
-                self.grub_password_entry.set_text(item[10:])
-                self.grub_password_confirm.set_text(item[10:])                
-
-        if "--append" in list:
-            self.parameters_entry.set_text(list[list.index(item)])
-
-        if "--md5pass" in list:
+        if self.ksdata.bootloader["md5pass"] != "":
             self.grub_password_encrypt_checkbutton.set_active(True)
 
-        if "--upgrade" in list:
+        if self.ksdata.bootloader["upgrade"] == True:
             self.upgrade_bootloader_radio.set_active(True)
-            

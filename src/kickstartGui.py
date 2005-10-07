@@ -39,8 +39,8 @@ import xconfig
 import packages
 import scripts
 import os
-import kickstartData
-import kickstartParser
+from pykickstart.parser import *
+from pykickstart.data import KickstartData
 
 try:
     from gtk import _disable_gdk_threading
@@ -75,18 +75,22 @@ if os.access("system-config-kickstart.glade", os.F_OK):
 else:
     xml = gtk.glade.XML ("/usr/share/system-config-kickstart/system-config-kickstart.glade", domain=domain)
 
-
 class kickstartGui:
-	
     def destroy(self, args):
         gtk.main_quit()
 
     def __init__ (self, file):
+        self.kickstartData = KickstartData()
+
+        if file:
+            self.kickstartHandlers = KickstartHandlers(self.kickstartData)
+            self.parser = KickstartParser (self.kickstartData,
+                                           self.kickstartHandlers)
+            self.parser.readKickstart(file)
+
         self.xml = xml
         name_tag = (_("Kickstart"))
         comment_tag = (_("Create a kickstart file"))
-
-        self.kickstartData = kickstartData.KickstartData()
 
 	self.toplevel = xml.get_widget("main_window")
 	self.toplevel.connect ("destroy", self.destroy)
@@ -129,8 +133,6 @@ class kickstartGui:
 	#bring in X functions
 	self.X_class = xconfig.xconfig(xml, self.kickstartData)
 	#bring in package function
-        #self.packages_class = packages.headerList(xml)
-	#FIXME
 	self.packages_class = packages.Packages(xml, self.kickstartData)
 	#bring in scripts function
 	self.scripts_class = scripts.scripts(xml, self.kickstartData)
@@ -158,12 +160,9 @@ class kickstartGui:
 	self.about_menu.connect("activate", self.on_about_activate)
 	self.category_view.connect("cursor_changed", self.on_list_view_row_activated)
 	self.options_notebook.connect("switch-page", self.on_notebook_changed)
-
-        if file:
-            self.kickstartParser = kickstartParser.KickstartParser(self.kickstartData, file)
-            self.fillData()
             
 	#show gui
+        self.fillData()
 	self.toplevel.show()
 
 	gtk.main()
@@ -203,18 +202,10 @@ class kickstartGui:
 
     #display help manual
     def on_help_button_clicked (self, args):
-        help_pages = ["file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-basic.html",
-		      "file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-bootloader.html",
-		      "file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-install.html",
-		      "file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-partitions.html",
-		      "file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-network.html",
-		      "file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-auth.html",
-		      "file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-firewall.html",
-		      "file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-xconfig.html",
-		      "file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-pkgs.html",
-		      "file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-prescript.html",
-		      "file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-postinstall.html",
-		      ]
+        help_pages = map (lambda str: "file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-" + str + ".html",
+                          ["basic", "bootloader", "install", "partitions",
+                          "network", "auth", "firewall", "xconfig",
+                          "pkgs", "prescript", "postinstall"])
 	page = (help_pages [self.options_notebook.get_current_page ()])
 
 	path = "/usr/bin/htmlview"
@@ -227,12 +218,12 @@ class kickstartGui:
 	    dlg.run()
 	    dlg.destroy()
 	    return
-		
+
 	pid = os.fork()
 	if not pid:
 	    os.execv(path, [path, page])
 
-    #get all buffers to save to file
+    # Copy possible UI changes back to the kickstartData object.
     def getAllData(self, *args):
         if self.install_class.getData() is None:
             return None
@@ -267,9 +258,13 @@ class kickstartGui:
 
         if result == gtk.RESPONSE_OK:
             if os.access(file, os.R_OK) == 1:
-                self.kickstartData.clearNetwork()
-                self.kickstartParser = kickstartParser.KickstartParser(self.kickstartData, file)
+                self.kickstartData = KickstartData()
+                self.kickstartHandlers = KickstartHandlers(self.kickstartData)
+                self.parser = KickstartParser (self.kickstartData,
+                                               self.kickstartHandlers)
+                self.parser.readKickstart(file)
                 self.fillData()
+	        self.toplevel.show()
             else:
                 dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_WARNING, gtk.BUTTONS_OK,
                                         (_("The file \"%s\" cannot be accessed.")) % file)
@@ -283,21 +278,15 @@ class kickstartGui:
     #show chosen options for preview
     def on_activate_preview_options (self, *args):
         if self.getAllData() != None:
-            list = self.kickstartData.getAll()
-            if list:
-	        #show preview dialog window
-                previewDialog = savefile.saveFile (list, self.xml)
-            else:
-                return
+            from pykickstart.writer import Writer
+            writer = Writer(self.kickstartData)
+            previewDialog = savefile.saveFile (writer.write(), self.xml)
 
     def on_activate_save_options (self, *args):
         if self.getAllData() != None:
-            list = self.kickstartData.getAll()
-            if list:
-                #show file selection dialog
-                fileDialog = savedialog.saveDialog(list, self.xml)
-            else:
-                return		
+            from pykickstart.writer import Writer
+            writer = Writer(self.kickstartData)
+            fileDialog = savedialog.saveDialog(writer.write(), self.xml)
 
     def fillData(self):
         self.basic_class.fillData()

@@ -36,9 +36,8 @@ translate.textdomain (domain)
 gtk.glade.bindtextdomain(domain)
 
 class Packages:
-
-    def __init__(self, xml, kickstartData):
-        self.kickstartData = kickstartData
+    def __init__(self, xml, ksdata):
+        self.ksdata = ksdata
         self.package_vbox = xml.get_widget("package_vbox")
         self.package_label_box = xml.get_widget("package_label_box")
 
@@ -137,7 +136,7 @@ class Packages:
 
     def toggled_everything_checkbutton (self, args):
         self.package_vbox.set_sensitive(not self.package_everything_checkbutton.get_active())
-        self.kickstartData.setEverything(self.package_everything_checkbutton.get_active())
+        self.ksdata.groupList.append("Everything")
 
     def create_columns(self, view, store):
         self.checkbox = gtk.CellRendererToggle()
@@ -165,7 +164,7 @@ class Packages:
         packageList = self.getPkgData(self.development_store, packageList)
         packageList = self.getPkgData(self.system_store, packageList)
 
-        self.kickstartData.setPackageGroupList(packageList)
+        self.ksdata.groupList = packageList
 
     def getPkgData(self, store, packageList):
         iter = store.get_iter_first()
@@ -194,17 +193,23 @@ class Packages:
             self.package_label_box.hide()
 
     def fillData(self):
-        if self.kickstartData.getEverything():
+        # We might be killing the everything group in the future
+        hasEverything = False
+        for grp in self.ksdata.groupList:
+            if string.lower(string.replace(grp, " ", "")) == "@everything":
+                hasEverything = True
+                break
+
+        if hasEverything == True:
             self.package_vbox.set_sensitive(False)
             self.package_everything_checkbutton.set_active(True)
-        else:
-            packageList = self.kickstartData.getPackageGroupList()
 
-            for package in packageList:
-                package = string.replace(package, "@", "")
-                package = string.strip(package)
-                self.lookupPackageInList(package, self.desktops_store)
-                self.lookupPackageInList(package, self.applications_store)
-                self.lookupPackageInList(package, self.servers_store)
-                self.lookupPackageInList(package, self.development_store)
-                self.lookupPackageInList(package, self.system_store)
+        for package in self.ksdata.groupList:
+            package = string.replace(package, "@", "")
+            package = string.strip(package)
+
+            self.lookupPackageInList(package, self.desktops_store)
+            self.lookupPackageInList(package, self.applications_store)
+            self.lookupPackageInList(package, self.servers_store)
+            self.lookupPackageInList(package, self.development_store)
+            self.lookupPackageInList(package, self.system_store)

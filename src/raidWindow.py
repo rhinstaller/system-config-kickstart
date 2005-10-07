@@ -259,50 +259,40 @@ class raidWindow:
         self.raid_window.hide()
         return True
 
-    def populateRaid(self, line):
+    def populateRaid(self, kspart):
         raid_object = partEntry.partEntry()
         raid_object.isRaidDevice = 1
         self.original_iter = None
-        result = self.parseRaidLine(raid_object, line)
 
-        if result is None:
-            return
+        if kspart.level != "":
+            raid_object.raidLevel = string.lstrip(kspart.level, "RAID")
+
+        if kspart.device != "":
+            raid_object.raidDevice = "md%s" % kspart.device
+
+        if kspart.format == True:
+            raid_object.doFormat = 1
         else:
-#            self.markRaidPartitions(raid_object)
-            self.raid_partition_store.foreach(self.markRaidPartitions, raid_object)
-            self.addRaidDeviceToTree(raid_object)
+            raid_object.doFormat = 0
 
-    def parseRaidLine(self, raid_object, line):
-        opts, raidPartitions = getopt.getopt(line[1:], "d:h", ["level=", "device=", "spares=", "fstype=", "noformat"])
+        if kspart.fstype == "swap":
+            raid_object.fsType = "swap"
+            raid_object.mountPoint = "swap"
+        else:
+            raid_object.fsType = kspart.fstype
+            raid_object.mountPoint = kspart.mountpoint
 
-        for (opt, value) in opts:
-            if line[0] == "swap":
-                raid_object.fsType = "swap"
-                raid_object.mountPoint = "swap"
-            elif opt == "--fstype":
-                raid_object.fsType = value
-                raid_object.mountPoint = line[0]
-
-            if opt == "--level":
-                raid_object.raidLevel = value
-            if opt == "--device":
-                raid_object.raidDevice = value
-            if opt == "--noformat":
-                raid_object.doFormat = 0
-            else:
-                raid_object.doFormat = 1
-
-        self.partition_list = raidPartitions
-        raid_object.raidPartitions = raidPartitions
+        self.partition_list = kspart.members
+        raid_object.raidPartitions = kspart.members
 
         self.raid_partition_store.clear()
         self.part_store.foreach(self.countRaidPartitions)
 
-        return 0
-    
+        self.raid_partition_store.foreach(self.markRaidPartitions, raid_object)
+        self.addRaidDeviceToTree(raid_object)
+
     def markRaidPartitions(self, store, data, iter, raid_object):
         if self.raid_partition_store.get_value(iter, 1) in raid_object.raidPartitions:
-
             partition_iter = self.raid_partition_store.get_value(iter, 2)
             part_object = self.raid_partition_store.get_value(iter, 3)
             self.part_store.set_value(partition_iter, 1, raid_object.raidDevice)

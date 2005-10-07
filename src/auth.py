@@ -213,18 +213,21 @@ class auth:
             buf = " --useshadow "
         if self.md5_checkbutton.get_active():
             buf = buf + " --enablemd5 "
+
         buf = buf + self.myNisClass.return_data()
         buf = buf + self.myLDAPClass.return_data()
         buf = buf + self.myKerberosClass.return_data()
         buf = buf + self.myHesiodClass.return_data()
         buf = buf + self.mySambaClass.return_data()
+	
         if (self.nscd_checkbutton.get_active()):
             buf = buf + " --enablecache"
-        self.kickstartData.setAuth([buf])
+
+        self.ksdata.authconfig = buf
         return 0
     
-    def __init__(self, xml, kickstartData):
-        self.kickstartData = kickstartData
+    def __init__(self, xml, ksdata):
+        self.ksdata = ksdata
 
         self.myNisClass = nisData()
         self.myLDAPClass = ldapData()
@@ -332,8 +335,8 @@ class auth:
             self.auth_label_box.hide()
 
     def fillData(self):
-        if self.kickstartData.getAuth():
-            opts, args = getopt.getopt(self.kickstartData.getAuth(), "d:h", ["enablemd5", "enablenis",
+        if self.ksdata.authconfig != "":
+            opts, args = getopt.getopt(self.ksdata.authconfig, "d:h", ["enablemd5", "enablenis",
                                        "nisdomain=", "nisserver=", "useshadow", "enableshadow",
                                        "enableldap", "enableldapauth", "ldapserver=", "ldapbasedn=",
                                        "enableldaptls",
@@ -342,7 +345,6 @@ class auth:
                                        "smbservers=", "smbworkgroup=", "enablecache"])
 
             for opt, value in opts:
-
                 if opt == "--enablemd5cache":
                     self.md5_checkbutton.set_active(True)
 
@@ -373,9 +375,6 @@ class auth:
                 if opt == "--ldapbasedn":
                     self.ldapDNEntry.set_text(value)
                     self.ldapCheck.set_active(True)
-    #XXX FIXME
-    #            if opt == "--enableldaptls":
-    #                self.
 
                 if opt == "--enablekrb5":
                     self.kerberosCheck.set_active(True)

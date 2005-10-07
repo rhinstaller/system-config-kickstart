@@ -28,9 +28,9 @@ class saveDialog:
 	def destroy(self, args):
 		self.dialog.destroy()
 
-        def __init__ (self, dataList, xml):
+        def __init__ (self, buf, xml):
 		self.xml = xml
-		self.dataList = dataList
+		self.buf = buf
 		self.dialog = self.xml.get_widget("save_dialog")
 		self.dialog.connect("delete-event", self.hide)
 		self.dialog.set_modal(True)
@@ -55,9 +55,7 @@ class saveDialog:
         def saveFile(self, *args):		
 		self.dialog.filePath = self.dialog.get_filename()
 		ksFile = open(self.dialog.filePath, "w")
-		for line in self.dataList:
-			ksFile.write(line + "\n")
- 
+                ksFile.write(self.buf)
 		ksFile.close()
 		self.dialog.hide()
 
