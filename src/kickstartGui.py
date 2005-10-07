@@ -278,14 +278,14 @@ class kickstartGui:
     #show chosen options for preview
     def on_activate_preview_options (self, *args):
         if self.getAllData() != None:
-            from pykickstart.writer import Writer
-            writer = Writer(self.kickstartData)
+            from pykickstart.writer import KickstartWriter
+            writer = KickstartWriter(self.kickstartData)
             previewDialog = savefile.saveFile (writer.write(), self.xml)
 
     def on_activate_save_options (self, *args):
         if self.getAllData() != None:
-            from pykickstart.writer import Writer
-            writer = Writer(self.kickstartData)
+            from pykickstart.writer import KickstartWriter
+            writer = KickstartWriter(self.kickstartData)
             fileDialog = savedialog.saveDialog(writer.write(), self.xml)
 
     def fillData(self):
