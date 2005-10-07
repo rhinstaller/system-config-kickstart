@@ -50,7 +50,7 @@ class bootloader:
         self.parameters_entry = xml.get_widget("parameters_entry")
         self.linear_checkbutton = xml.get_widget("linear_checkbutton")
         self.lba32_checkbutton = xml.get_widget("lba32_checkbutton")
-        self.grub_password_label = xml.get_widget("grub_password_label")
+        self.grub_options_label = xml.get_widget("grub_options_label")
         self.grub_password_checkbutton = xml.get_widget("grub_password_checkbutton")
         self.grub_password_hbox = xml.get_widget("grub_password_hbox")
         self.grub_password_entry = xml.get_widget("grub_password_entry")
@@ -66,6 +66,11 @@ class bootloader:
         self.parameters_entry.set_sensitive(status)
         self.mbr_radiobutton.set_sensitive(status)
         self.firstsector_radiobutton.set_sensitive(status)
+        self.grub_options_label.set_sensitive(status)
+        self.grub_password_checkbutton.set_sensitive(status)
+        self.grub_password_entry.set_sensitive(status)
+        self.grub_password_confirm.set_sensitive(status)
+        self.grub_password_encrypt_checkbutton.set_sensitive(status)
 
     def toggled_grub_password(self, args):
         self.grub_password_hbox.set_sensitive(self.grub_password_checkbutton.get_active())
@@ -92,8 +97,7 @@ class bootloader:
                 self.ksdata.bootloader["location"] = "partition"
 
             params = string.strip (self.parameters_entry.get_text())
-            if len(params) > 0:
-                self.ksdata.bootloader["appendLine"] = params
+            self.ksdata.bootloader["appendLine"] = params
 
             if self.grub_password_checkbutton.get_active() == True:
                 gp = string.strip (self.grub_password_entry.get_text())
@@ -110,6 +114,7 @@ class bootloader:
                             self.ksdata.bootloader["md5pass"] = unicode(self.passwd, 'iso-8859-1')
                         else:
                             self.ksdata.bootloader["password"] = gp
+                            self.ksdata.bootloader["md5pass"] = ""
 
                     else:
                         dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_WARNING, gtk.BUTTONS_OK,
@@ -124,11 +129,16 @@ class bootloader:
                         self.notebook.set_current_page(2)
                         self.grub_password_entry.grab_focus()
                         return None
+            else:
+                self.ksdata.bootloader["md5pass"] = ""
+                self.ksdata.bootloader["password"] = ""
                         
         elif self.upgrade_bootloader_radio.get_active():
             self.ksdata.bootloader["upgrade"] = True
         else:
             self.ksdata.bootloader["location"] = "none"
+            self.ksdata.bootloader["md5pass"] = ""
+            self.ksdata.bootloader["password"] = ""
 
         return 0
 
@@ -144,11 +154,14 @@ class bootloader:
             self.grub_password_entry.set_text(self.ksdata.bootloader["password"])
             self.grub_password_confirm.set_text(self.ksdata.bootloader["password"])
 
-        if self.ksdata.bootloader["appendLine"] != "":
-            self.parameters_entry.set_text(self.ksdata.bootloader["appendLine"])
+        self.parameters_entry.set_text(self.ksdata.bootloader["appendLine"])
 
         if self.ksdata.bootloader["md5pass"] != "":
             self.grub_password_encrypt_checkbutton.set_active(True)
+        else:
+            self.grub_password_encrypt_checkbutton.set_active(False)
 
         if self.ksdata.bootloader["upgrade"] == True:
             self.upgrade_bootloader_radio.set_active(True)
+        else:
+            self.upgrade_bootloader_radio.set_active(False)
