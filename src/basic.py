@@ -60,6 +60,8 @@ class basic:
         self.root_passwd_confirm_entry = xml.get_widget("root_passwd_confirm_entry")        
         self.reboot_checkbutton = xml.get_widget("reboot_checkbutton")
         self.text_install_checkbutton = xml.get_widget("text_install_checkbutton")
+        self.ksdata.bootloader["md5pass"] = ""
+        self.ksdata.bootloader["password"] = ""
         self.interactive_checkbutton = xml.get_widget("interactive_checkbutton")                
         self.encrypt_root_pw_checkbutton = xml.get_widget("encrypt_root_pw_checkbutton")
         self.lang_support_list = xml.get_widget("lang_support_list")
