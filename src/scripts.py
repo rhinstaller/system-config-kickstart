@@ -24,6 +24,7 @@ import gtk.glade
 import getopt
 import string
 from pykickstart.parser import Script
+from pykickstart.constants import *
 
 class scripts:
     def __init__(self, xml, ksdata):
@@ -56,19 +57,24 @@ class scripts:
 
         if data == "":
             return
-        
-        if len(self.ksdata.preScripts) == 0:
-            script = Script("")
+
+        preScripts = filter(lambda s: s.type == KS_SCRIPT_PRE,
+                            self.ksdata.scripts)
+
+        if len(preScripts) == 0:
+            script = Script("", type=KS_SCRIPT_PRE)
         else:
-            script = self.ksdata.preScripts[0]
+            script = preScripts[0]
 
         if self.pre_interpreter_checkbutton.get_active():
             script.interp = self.pre_interpreter_entry.get_text()
+        else:
+            script.interp = ""
 
         script.script = data
 
-        if len(self.ksdata.preScripts) == 0:
-            self.ksdata.preScripts.append(script)
+        if len(preScripts) == 0:
+            self.ksdata.scripts.append(script)
 
     def postData(self):
         post_buffer = self.post_textview.get_buffer()
@@ -78,10 +84,13 @@ class scripts:
         if data == "":
             return
 
-        if len(self.ksdata.postScripts) == 0:
-            script = Script("")
+        postScripts = filter(lambda s: s.type == KS_SCRIPT_POST,
+                             self.ksdata.scripts)
+
+        if len(postScripts) == 0:
+            script = Script("", type=KS_SCRIPT_POST)
         else:
-            script = self.ksdata.postScripts[0]
+            script = postScripts[0]
 
         if self.chroot_checkbutton.get_active():
             script.inChroot = False
@@ -90,16 +99,23 @@ class scripts:
 
         if self.interpreter_checkbutton.get_active():
             script.interp = self.interpreter_entry.get_text()
+        else:
+            script.interp = ""
 
         script.script = data
 
-        if len(self.ksdata.postScripts) == 0:
-            self.ksdata.postScripts.append(script)
+        if len(postScripts) == 0:
+            self.ksdata.scripts.append(script)
 
     def fillData(self):
+        preScripts = filter(lambda s: s.type == KS_SCRIPT_PRE,
+                            self.ksdata.scripts)
+        postScripts = filter(lambda s: s.type == KS_SCRIPT_POST,
+                             self.ksdata.scripts)
+
         # We're kind of a crappy UI and assume they only have one script.
-        if len(self.ksdata.preScripts) > 0:
-            script = self.ksdata.preScripts[0]
+        if len(preScripts) > 0:
+            script = preScripts[0]
 
             if script.interp != "":
                 self.pre_interpreter_checkbutton.set_active(True)
@@ -107,8 +123,8 @@ class scripts:
 
             self.pre_textview.get_buffer().set_text(script.script)
 
-        if len(self.ksdata.postScripts) > 0:
-            script = self.ksdata.postScripts[0]
+        if len(postScripts) > 0:
+            script = postScripts[0]
 
             if script.interp != "":
                 self.interpreter_checkbutton.set_active(True)
