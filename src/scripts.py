@@ -23,11 +23,11 @@ import gtk
 import gtk.glade
 import getopt
 import string
+from pykickstart.parser import Script
 
 class scripts:
-
-    def __init__(self, xml, kickstartData):
-        self.kickstartData = kickstartData
+    def __init__(self, xml, ksdata):
+        self.ksdata = ksdata
         self.chroot_checkbutton = xml.get_widget("chroot_checkbutton")
         self.interpreter_checkbutton = xml.get_widget("interpreter_checkbutton")
         self.interpreter_entry = xml.get_widget("interpreter_entry")
@@ -50,80 +50,71 @@ class scripts:
         self.postData()
     
     def preData(self):
-        if self.pre_interpreter_checkbutton.get_active():
-            pre_command = "--interpreter=" + self.pre_interpreter_entry.get_text()
-            self.kickstartData.setPreLine(pre_command)
-        else:
-            self.kickstartData.setPreLine(None)
-
         pre_buffer = self.pre_textview.get_buffer()
         data = pre_buffer.get_text(pre_buffer.get_start_iter(),pre_buffer.get_end_iter(),True)
         data = string.strip(data)
 
-        if data != "":
-            self.kickstartData.setPreList([data])
+        if data == "":
+            return
+        
+        if len(self.ksdata.preScripts) == 0:
+            script = Script("")
+        else:
+            script = self.ksdata.preScripts[0]
 
+        if self.pre_interpreter_checkbutton.get_active():
+            script.interp = self.pre_interpreter_entry.get_text()
+
+        script.script = data
+
+        if len(self.ksdata.preScripts) == 0:
+            self.ksdata.preScripts.append(script)
 
     def postData(self):
-        post_command = ""
-        if self.chroot_checkbutton.get_active():
-            post_command = "--nochroot "
-
-        if self.interpreter_checkbutton.get_active():
-            post_command = post_command + "--interpreter=" + self.interpreter_entry.get_text()
-
-        if post_command == "":
-            self.kickstartData.setPostLine(None)
-        else:
-            self.kickstartData.setPostLine(post_command)
-
         post_buffer = self.post_textview.get_buffer()
         data = post_buffer.get_text(post_buffer.get_start_iter(),post_buffer.get_end_iter(),True)
-
         data = string.strip(data)
 
         if data == "":
-            self.kickstartData.setPostList([])
+            return
+
+        if len(self.ksdata.postScripts) == 0:
+            script = Script("")
         else:
-            self.kickstartData.setPostList([data])
+            script = self.ksdata.postScripts[0]
+
+        if self.chroot_checkbutton.get_active():
+            script.inChroot = False
+        else:
+            script.inChroot = True
+
+        if self.interpreter_checkbutton.get_active():
+            script.interp = self.interpreter_entry.get_text()
+
+        script.script = data
+
+        if len(self.ksdata.postScripts) == 0:
+            self.ksdata.postScripts.append(script)
 
     def fillData(self):
-        if self.kickstartData.getPreLine():
-            line = self.kickstartData.getPreLine()
+        # We're kind of a crappy UI and assume they only have one script.
+        if len(self.ksdata.preScripts) > 0:
+            script = self.ksdata.preScripts[0]
 
-            opts, args = getopt.getopt(line, "i:", ["interpreter="])
+            if script.interp != "":
+                self.pre_interpreter_checkbutton.set_active(True)
+                self.pre_interpreter_entry.set_text(script.interp)
 
-            for opt, value in opts:
-                if opt == "--interpreter":
-                    self.pre_interpreter_checkbutton.set_active(True)
-                    self.pre_interpreter_entry.set_text(value)
-            
-        if self.kickstartData.getPreList():
-            list = self.kickstartData.getPreList()
-            iter = self.pre_textview.get_buffer().get_iter_at_offset(0)
+            self.pre_textview.get_buffer().set_text(script.script)
 
-            for line in list:
-                self.pre_textview.get_buffer().insert(iter, (line + "\n"))
+        if len(self.ksdata.postScripts) > 0:
+            script = self.ksdata.postScripts[0]
 
-        if self.kickstartData.getPostLine():
-            line = self.kickstartData.getPostLine()
+            if script.interp != "":
+                self.interpreter_checkbutton.set_active(True)
+                self.interpreter_entry.set_text(script.interp)
 
-            opts, args = getopt.getopt(line, "i:", ["interpreter=", "nochroot"])
+            if script.inChroot == False:
+                self.chroot_checkbutton.set_active(True)
 
-            for opt, value in opts:
-                if opt == "--interpreter":
-                    self.interpreter_checkbutton.set_active(True)
-                    self.interpreter_entry.set_text(value)
-
-                if opt == "--nochroot":
-                    self.chroot_checkbutton.set_active(True)
-            
-        if self.kickstartData.getPostList():
-            list = self.kickstartData.getPostList()
-            iter = self.post_textview.get_buffer().get_iter_at_offset(0)
-
-            for line in list:
-                self.post_textview.get_buffer().insert(iter, (line + "\n"))
-
-
-
+            self.post_textview.get_buffer().set_text(script.script)

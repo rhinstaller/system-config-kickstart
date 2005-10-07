@@ -24,7 +24,8 @@ import gtk.glade
 import gobject
 import string
 import getopt
-from rhpl.xhwstate import *
+from rhpxl.xhwstate import *
+from pykickstart.constants import *
 
 ##
 ## I18N
@@ -37,8 +38,8 @@ gtk.glade.bindtextdomain(domain)
 
 class xconfig:
 
-    def __init__(self, xml, kickstartData):
-        self.kickstartData = kickstartData
+    def __init__(self, xml, ksdata):
+        self.ksdata = ksdata
         self.xconfig_vbox = xml.get_widget("xconfig_vbox")
         self.xconfig_label_box = xml.get_widget("xconfig_label_box")
         self.config_x_button = xml.get_widget("config_x_button")
@@ -70,7 +71,6 @@ class xconfig:
         self.monitor_view.set_model(self.monitor_store)
         self.monitor_col = gtk.TreeViewColumn("", gtk.CellRendererText(), text = 0)
         self.monitor_view.append_column(self.monitor_col)
-        self.upgrade_flag = False
 
         self.config_x_button.connect("toggled", self.toggleXconfig)
         self.monitor_probe_check.connect("toggled", self.on_monitor_probe_check_toggled)
@@ -134,22 +134,21 @@ class xconfig:
         tmp = l[l.index("Generic LCD Display")]
         l.remove(l[l.index("Generic LCD Display")])
         l = [tmp] + l
-                                                                                                                             
+
         tmp = l[l.index("Generic CRT Display")]
         l.remove(l[l.index("Generic CRT Display")])
         l = [tmp] + l
 
-        
         for manufacturer in l:
-		for mon in db[manufacturer]:
-                        model = mon[0]
-                        id = mon[1]
-                        hsync = mon[2]
-                        vsync = mon[3]
-                        if model not in mon_list:
-                            mon_list.append(model)
-                            iter = self.monitor_store.append()
-                            self.monitor_store.set_value(iter, 0, model)
+            for mon in db[manufacturer]:
+                model = mon[0]
+                id = mon[1]
+                hsync = mon[2]
+                vsync = mon[3]
+                if model not in mon_list:
+                    mon_list.append(model)
+                    iter = self.monitor_store.append()
+                    self.monitor_store.set_value(iter, 0, model)
 
     def on_driver_probe_check_toggled(self, *args):
         self.driver_vbox.set_sensitive(not self.driver_probe_check.get_active())
@@ -171,147 +170,121 @@ class xconfig:
         if boolean == False:
             self.xconfig_vbox.hide()
             self.xconfig_label_box.show()
-            self.upgrade_flag = True
         else:
             self.xconfig_vbox.show()
             self.xconfig_label_box.hide()
-            self.upgrade_flag = False
 
     def getData(self):
-        if self.upgrade_flag == True:
-            self.kickstartData.setXconfig(None)
-            self.kickstartData.setFirstboot(None)
+        if self.ksdata.upgrade == True:
+            self.ksdata.firstboot = FIRSTBOOT_SKIP
             return
 
         if self.config_x_button.get_active():
             if self.firstboot_optionmenu.get_history() == 0:
-                self.kickstartData.setFirstboot(None)
+                self.ksdata.firstboot = FIRSTBOOT_SKIP
             elif self.firstboot_optionmenu.get_history() == 1:
-                self.kickstartData.setFirstboot(["--enable"])
+                self.ksdata.firstboot = FIRSTBOOT_DEFAULT
             elif self.firstboot_optionmenu.get_history() == 2:
-                self.kickstartData.setFirstboot(["--reconfig"])
+                self.ksdata.firstboot = FIRSTBOOT_RECONFIG
 
-            self.kickstartData.setSkipX(None)
-            buf = ""
+            self.ksdata.skipx = False
+
             #color depth - translate
-            buf = "--depth=" + self.color_depth_combo.entry.get_text()
+            self.ksdata.xconfig["depth"] = int(self.color_depth_combo.entry.get_text())
             #resolution
-            buf = buf + " --resolution=" + self.resolution_combo.entry.get_text()            
+            self.ksdata.xconfig["resolution"] = self.resolution_combo.entry.get_text()
             #default desktop
             if self.gnome_radiobutton.get_active():
-                buf = buf + " --defaultdesktop=GNOME"
+                self.ksdata.xconfig["defaultdesktop"] = "GNOME"
             elif self.kde_radiobutton.get_active():
-                buf = buf + " --defaultdesktop=KDE"
+                self.ksdata.xconfig["defaultdesktop"] = "KDE"
+
             #startxonboot
             if self.startxonboot_checkbutton.get_active():
-                buf = buf + " --startxonboot"
+                self.ksdata.xconfig["startX"] = True
 
             if not self.driver_probe_check.get_active():
                 #video card driver and monitor
                 temp, iter = self.driver_view.get_selection().get_selected()
                 driver = self.driver_store.get_value(iter, 0)
-                buf = buf + " --driver=\"" + driver + "\""
+                self.ksdata.xconfig["driver"] = driver
 
                 #translate MB to KB 
-                buf = buf + " --videoram=" + self.ramsize_dict [self.videoram_combo.entry.get_text()]
+                self.ksdata.xconfig["videoRam"] = self.ramsize_dict [self.videoram_combo.entry.get_text()]
 
             if not self.monitor_probe_check.get_active():
                 if self.sync_button.get_active():
-                    buf = buf + " --hsync=" + self.hsync_entry.get_text()
-                    buf = buf + " --vsync=" + self.vsync_entry.get_text()
+                    self.ksdata.xconfig["hsync"] = self.hsync_entry.get_text()
+                    self.ksdata.xconfig["vsync"] = self.vsync_entry.get_text()
                 else:
                     temp, iter = self.monitor_view.get_selection().get_selected()
                     name = self.monitor_store.get_value(iter, 0)
-                    buf = buf + " --monitor=\"" + name + "\""
-
-            self.kickstartData.setXconfig([buf])
+                    self.ksdata.xconfig["monitor"] = name
         else:
-            self.kickstartData.setSkipX(["skipx"])
-            self.kickstartData.setXconfig(None)
+            self.ksdata.skipx = True
 
     def fillData(self):
-        if self.kickstartData.getSkipX():
+        if self.ksdata.skipx == True:
             self.config_x_button.set_active(False)
-        elif self.kickstartData.getXconfig():
+        else:
             self.config_x_button.set_active(True)
 
-            if self.kickstartData.getFirstboot() == "--enable":
+            if self.ksdata.firstboot == FIRSTBOOT_DEFAULT:
                 self.firstboot_optionmenu.set_history(1)
-            elif self.kickstartData.getFirstboot() == "--reconfig":
+            elif self.ksdata.firstboot == FIRSTBOOT_RECONFIG:
                 self.firstboot_optionmenu.set_history(2)
-                
-            xLine = self.kickstartData.getXconfig()
-            xLine = string.join (xLine, " ")
-            xList = string.split(xLine, " --")
 
-            for item in xList:
-                if item[:2] != "--":
-                    xList[xList.index(item)] = ("--" + item)
+            if self.ksdata.xconfig["startX"] == True:
+                self.startxonboot_checkbutton.set_active(True)
 
-            for opt in xList:
-                opt = string.replace(opt, "=", " ")
-            
-                if opt == "--startxonboot":
-                    self.startxonboot_checkbutton.set_active(True)
+            if self.ksdata.xconfig["defaultdesktop"] != "":
+                if string.lower(self.ksdata.xconfig["defaultdesktop"]) == "gnome":
+                    self.gnome_radiobutton.set_active(True)
+                if string.lower(self.ksdata.xconfig["defaultdesktop"]) == "kde":
+                    self.kde_radiobutton.set_active(True)
 
-                if opt[:16] == "--defaultdesktop":
-                    value = opt[16:]
-                    if string.lower(value) == "gnome":
-                        self.gnome_radiobutton.set_active(True)
-                    if string.lower(value) == "kde":
-                        self.kde_radiobutton.set_active(True)
+            if self.ksdata.xconfig["depth"] != 0:
+                self.color_depth_combo.entry.set_text(str(self.ksdata.xconfig["depth"]))
 
-                if opt[:7] == "--depth":
-                    value = opt[7:]
-                    self.color_depth_combo.entry.set_text(string.strip(value))
+            if self.ksdata.xconfig["resolution"] != "":
+                self.resolution_combo.entry.set_text(string.strip(self.ksdata.xconfig["resolution"]))
 
-                if opt[:12] == "--resolution":
-                    value = opt[12:]
-                    self.resolution_combo.entry.set_text(string.strip(value))
+            if self.ksdata.xconfig["driver"] != "":
+                self.driver_probe_check.set_active(False)
+                value = string.replace(self.ksdata.xconfig["driver"], '"', '')
 
-                if opt[:8] == "--driver":
-                    value = string.strip(opt[8:])
-                    self.driver_probe_check.set_active(False)
-                    value = string.replace(value, '"', '')
+                iter = self.driver_store.get_iter_first()
 
-                    iter = self.driver_store.get_iter_first()
+                while iter:
+                    if self.driver_store.get_value(iter, 0) == value:
+                        path = self.driver_store.get_path(iter)
+                        self.driver_view.set_cursor(path, self.driver_col, False)
+                        self.driver_view.scroll_to_cell(path, self.driver_col, True, 0.5, 0.5)
+                    iter = self.driver_store.iter_next(iter)
 
-                    while iter:
-                        if self.driver_store.get_value(iter, 0) == value:
-                            path = self.driver_store.get_path(iter)
-                            self.driver_view.set_cursor(path, self.driver_col, False)
-                            self.driver_view.scroll_to_cell(path, self.driver_col, True, 0.5, 0.5)
-                        iter = self.driver_store.iter_next(iter)
+            if self.ksdata.xconfig["videoRam"] != "":
+                for size in self.ramsize_dict.keys():
+                    if int(self.ksdata.xconfig["videoRam"]) == int(self.ramsize_dict[size]):
+                        self.videoram_combo.entry.set_text(size)                            
+            if self.ksdata.xconfig["monitor"] != "":
+                self.monitor_probe_check.set_active(False)
+                value = string.replace(self.ksdata.xconfig["monitor"], '"', '')
 
-                if opt[:10] == "--videoram":
-                    value = opt[10:]
+                iter = self.monitor_store.get_iter_first()
 
-                    for size in self.ramsize_dict.keys():
-                        if int(value) == int(self.ramsize_dict[size]):
-                            self.videoram_combo.entry.set_text(size)                            
+                while iter:
+                    if self.monitor_store.get_value(iter, 0) == value:
+                        path = self.monitor_store.get_path(iter)
+                        self.monitor_view.set_cursor(path, self.monitor_col, False)
+                        self.monitor_view.scroll_to_cell(path, self.monitor_col, True, 0.5, 0.5)
+                    iter = self.monitor_store.iter_next(iter)
 
-                if opt[:9] == "--monitor":
-                    opt = string.strip(opt[9:])
-                    self.monitor_probe_check.set_active(False)
-                    value = string.replace(value, '"', '')
+            if self.ksdata.xconfig["hsync"] != "":
+                self.sync_button.set_active(True)
+                self.hsync_entry.set_text(string.strip(self.ksdata.xconfig["hsync"]))
+                self.monitor_probe_check.set_active(False)
 
-                    iter = self.monitor_store.get_iter_first()
-
-                    while iter:
-                        if self.monitor_store.get_value(iter, 0) == value:
-                            path = self.monitor_store.get_path(iter)
-                            self.monitor_view.set_cursor(path, self.monitor_col, False)
-                            self.monitor_view.scroll_to_cell(path, self.monitor_col, True, 0.5, 0.5)
-                        iter = self.monitor_store.iter_next(iter)
-
-                if opt[:7] == "--hsync":
-                    value = opt[7:]
-                    self.sync_button.set_active(True)
-                    self.hsync_entry.set_text(string.strip(value))
-                    self.monitor_probe_check.set_active(False)
-
-                if opt[:7] == "--vsync":
-                    value = opt[7:]
-                    self.sync_button.set_active(True)
-                    self.vsync_entry.set_text(string.strip(value))
-                    self.monitor_probe_check.set_active(False)
+            if self.ksdata.xconfig["vsync"] != "":
+                self.sync_button.set_active(True)
+                self.vsync_entry.set_text(string.strip(self.ksdata.xconfig["vsync"]))
+                self.monitor_probe_check.set_active(False)

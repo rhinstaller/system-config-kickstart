@@ -35,6 +35,7 @@ import rhpl.translate as translate
 domain = 'system-config-kickstart'
 translate.textdomain (domain)
 
+# FIXME
 def useCliMode(value):
     import kickstartData
     import profileSystem

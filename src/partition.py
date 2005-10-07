@@ -29,6 +29,8 @@ import raidOptionsWindow
 import raidWindow
 import partEntry
 import kickstartGui
+from pykickstart.constants import *
+from pykickstart.data import *
 
 ##
 ## I18N
@@ -40,9 +42,9 @@ translate.textdomain (domain)
 gtk.glade.bindtextdomain(domain)
 
 class partition:
-    def __init__(self, xml, kickstartData):
+    def __init__(self, xml, ksdata):
         self.xml = xml
-        self.kickstartData = kickstartData
+        self.ksdata = ksdata
         self.partition_vbox = self.xml.get_widget("partition_vbox")
         self.partition_label_box = self.xml.get_widget("partition_label_box")
         self.clear_mbr_yes_radiobutton = self.xml.get_widget("clear_mbr_yes_radiobutton")
@@ -71,7 +73,6 @@ class partition:
         self.part_view.set_model(self.part_store)
         col = gtk.TreeViewColumn(_("Device/\nPartition Number"), gtk.CellRendererText(), text=0)
         self.part_view.append_column(col)
-#        col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
         col = gtk.TreeViewColumn(_("Mount Point/\nRAID"), gtk.CellRendererText(), text=1)
         self.part_view.append_column(col)
         col = gtk.TreeViewColumn(_("Type"), gtk.CellRendererText(), text=2)
@@ -87,61 +88,6 @@ class partition:
         self.partWindow = partWindow.partWindow(self.xml, self.part_store, self.part_view)
         self.raidWindow = raidWindow.raidWindow(self.xml, self.part_store, self.part_view)
         self.raidOptionsWindow = raidOptionsWindow.raidOptionsWindow(self.xml, self.part_store, self.part_view, self.partWindow, self.raidWindow)
-
-##         #XXX-FIXME-FOR TESTING ONLY
-##         hard_drive_parent_iter = self.part_store.append(None)
-##         self.part_store.set_value(hard_drive_parent_iter, 0, (_("Hard Drives")))
-
-##         hda_iter = self.part_store.append(hard_drive_parent_iter)
-##         self.part_store.set_value(hda_iter, 0, (_("hda")))
-
-##         part_object = partEntry.partEntry()
-##         part_object.fsType = "raid"
-##         part_object.device = "Auto"
-##         part_object.raidNumber = "raid.01"
-##         part_object.format = 1
-##         part_object.size = 1
-
-##         part_iter = self.part_store.append(hda_iter)
-##         self.part_store.set_value(part_iter, 0, part_object.raidNumber)
-##         self.part_store.set_value(part_iter, 2, part_object.fsType)
-##         self.part_store.set_value(part_iter, 3, part_object.format)
-##         self.part_store.set_value(part_iter, 4, part_object.size)
-##         self.part_store.set_value(part_iter, 5, part_object)
-
-##         hdb_iter = self.part_store.append(hard_drive_parent_iter)
-##         self.part_store.set_value(hdb_iter, 0, (_("hdb")))
-
-##         part_object = partEntry.partEntry()
-##         part_object.fsType = "raid"
-##         part_object.device = "Auto"
-##         part_object.format = 1
-##         part_object.raidNumber = "raid.02"
-##         part_object.size = 1
-
-##         part_iter = self.part_store.append(hdb_iter)
-##         self.part_store.set_value(part_iter, 0, part_object.raidNumber)
-##         self.part_store.set_value(part_iter, 2, part_object.fsType)
-##         self.part_store.set_value(part_iter, 3, part_object.format)
-##         self.part_store.set_value(part_iter, 4, part_object.size)
-##         self.part_store.set_value(part_iter, 5, part_object)
-
-##         hdc_iter = self.part_store.append(hard_drive_parent_iter)
-##         self.part_store.set_value(hdc_iter, 0, (_("hdc")))
-
-##         part_object = partEntry.partEntry()
-##         part_object.fsType = "raid"
-##         part_object.device = "Auto"
-##         part_object.format = 1
-##         part_object.raidNumber = "raid.03"
-##         part_object.size = 1
-
-##         part_iter = self.part_store.append(hdc_iter)
-##         self.part_store.set_value(part_iter, 0, part_object.raidNumber)
-##         self.part_store.set_value(part_iter, 2, part_object.fsType)
-##         self.part_store.set_value(part_iter, 3, part_object.format)
-##         self.part_store.set_value(part_iter, 4, part_object.size)
-##         self.part_store.set_value(part_iter, 5, part_object)
 
         self.part_view.expand_all()
 
@@ -203,30 +149,23 @@ class partition:
         self.raidOptionsWindow.showOptionsWindow()
 
     def getData(self):
-        self.kickstartData.clearPartList()
-
         #zerombr and clearpart options
-        if self.clear_mbr_yes_radiobutton.get_active():
-            self.kickstartData.setZeroMbr("yes")
-        else:
-            self.kickstartData.setZeroMbr(None)
-            
+        self.ksdata.zerombr = self.clear_mbr_yes_radiobutton.get_active()
+
         if self.remove_parts_none_radiobutton.get_active():
             # We want to preserve all partitions, so don't write the
             # clearpart line
-            self.kickstartData.setClearPart(None)
+            self.ksdata.clearpart["drives"] = []
+            self.ksdata.clearpart["type"] = CLEARPART_TYPE_NONE
             pass
         else:
-            # Prepart the clearpart line
-            buf = ""
             if self.remove_parts_all_radiobutton.get_active():
-                buf = "--all "
+                self.ksdata.clearpart["type"] = CLEARPART_TYPE_ALL
             elif self.remove_parts_linux_radiobutton.get_active():
-                buf = buf + "--linux "
+                self.ksdata.clearpart["type"] = CLEARPART_TYPE_LINUX
 
             if self.initlabel_yes_radiobutton.get_active():
-                buf = buf + "--initlabel "
-            self.kickstartData.setClearPart([buf])
+                self.ksdata.clearpart["initAll"] = True
 
         self.partDataBuf = []
         self.part_store.foreach(self.getPartData)
@@ -237,65 +176,52 @@ class partition:
         part_object = self.part_store.get_value(iter, 5)
 
         if part_object:
-
             if part_object.isRaidDevice == None:
-                
-                if part_object.fsType == "swap":
-                    buf = part_object.mountPoint
-                    buf = buf + "swap "
-                elif part_object.fsType == "raid":
-                    buf = part_object.raidNumber + " "
-                elif part_object.fsType == "PPC PReP Boot":
-                    buf = "None --fstype \"PPC PReP Boot\" "
-                else:
-                    buf = part_object.mountPoint
-                    buf = buf + " --fstype " + part_object.fsType + " " 
+                pd = KickstartPartData()
+                pd.mountpoint = part_object.mountPoint
+                pd.fstype = part_object.fsType
 
                 if part_object.size == "recommended":
-                    buf = buf + "--recommended "
+                    pd.recommended = True
                 else:
-                    buf = buf + "--size %s " % (part_object.size)
+                    pd.size = part_object.size
 
                 if part_object.sizeStrategy == "grow":
-                    buf = buf + "--grow --maxsize %s " % (part_object.setSizeVal)
+                    pd.grow = True
+                    pd.maxSizeMB = part_object.setSizeVal
                 elif part_object.sizeStrategy == "max":
-                    buf = buf + "--grow "
+                    pd.grow = True
 
                 if part_object.asPrimary:
-                    buf = buf + "--asprimary "
+                    pd.primOnly = True
 
                 if part_object.partition:
-                    buf = buf + "--onpart %s " % (part_object.partition)
-
+                    pd.onPart = part_object.partition
                 elif part_object.device:
-                    buf = buf + "--ondisk %s " % (part_object.device)
+                    pd.disk = part_object.device
 
                 if not part_object.doFormat:
-                    buf = buf + "--noformat "
-
+                    pd.format = False
             else:
                 #This is a raid device
-                buf = "raid %s " % (part_object.mountPoint)
+                rd = KickstartRaidData()
+                rd.mountpoint = part_object.mountPoint
 
                 if part_object.raidLevel:
-                    buf = buf + "--level=%s" % part_object.raidLevel + " "
+                    rd.level = part_object.raidLevel
 
                 if part_object.raidDevice:
-                    buf = buf + "--device=%s" % part_object.raidDevice + " "
+                    rd.device = part_object.raidDevice
 
                 if part_object.fsType:
-                    buf = buf + "--fstype " + part_object.fsType + " " 
+                    rd.fstype = part_object.fsType
 
                 if not part_object.doFormat:
-                    buf = buf + "--noformat "
+                    rd.format = False
 
                 if part_object.raidPartitions != None:
-                    partitions = string.join(part_object.raidPartitions, " ")
-                    buf = buf + partitions + " "
+                    rd.members = string.join(part_object.raidPartitions, " ")
 
-            self.kickstartData.definePartition([buf])
-            self.partDataBuf.append(buf)
-            
     def rowSelected(self, *args):
         store, iter = self.part_view.get_selection().get_selected()
         if iter == None:
@@ -340,21 +266,17 @@ class partition:
             self.partition_label_box.hide()
 
     def fillData(self):
-        if self.kickstartData.getZeroMbr():
-            if self.kickstartData.getZeroMbr() == "yes":
-                self.clear_mbr_yes_radiobutton.set_active(True)
+        if self.ksdata.zerombr == True:
+            self.clear_mbr_yes_radiobutton.set_active(True)
         else:
             self.clear_mbr_no_radiobutton.set_active(True)            
 
-        if self.kickstartData.getClearPart():
-            partList = self.kickstartData.getClearPart()
-            
-            if "--all" in partList:
+        if self.ksdata.clearpart["type"] != CLEARPART_TYPE_NONE:
+            if self.ksdata.clearpart["type"] == CLEARPART_TYPE_ALL:
                 self.remove_parts_all_radiobutton.set_active(True)
-            elif "--linux" in partList:
+            elif self.ksdata.clearpart["type"] == CLEARPART_TYPE_LINUX:
                 self.remove_parts_linux_radiobutton.set_active(True)                
-
-            if "--initlabel" in partList:
+            if self.ksdata.clearpart["initAll"] == True:
                 self.initlabel_yes_radiobutton.set_active(True)
             else:
                 self.initlabel_no_radiobutton.set_active(True)
@@ -362,10 +284,8 @@ class partition:
         else:
             self.remove_parts_none_radiobutton.set_active(True)
 
-        if self.kickstartData.getPartitions() != []:
-            for line in self.kickstartData.getPartitions():
-                self.partWindow.populateList(line)
+        for part in self.ksdata.partitions:
+             self.partWindow.populateList(part)
 
-        if self.kickstartData.getRaid() != []:
-            for line in self.kickstartData.getRaid():
-                self.raidWindow.populateRaid(line)
+        for part in self.ksdata.raidList:
+            self.raidWindow.populateRaid(part)

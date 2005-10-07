@@ -38,13 +38,13 @@ trustedStore = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING)
 
 class firewall:
     
-    def __init__(self, xml, kickstartData):
-        self.kickstartData = kickstartData
+    def __init__(self, xml, ksdata):
+        self.ksdata = ksdata
         self.firewall_frame = xml.get_widget("firewall_frame")
         self.firewall_vbox = xml.get_widget("firewall_vbox")
         self.firewall_label_box = xml.get_widget("firewall_label_box")
         self.securityOptionMenu = xml.get_widget("securityOptionMenu")
-	self.selinuxOptionMenu = xml.get_widget("selinuxOptionMenu")
+        self.selinuxOptionMenu = xml.get_widget("selinuxOptionMenu")
         self.firewallDefaultRadio = xml.get_widget("firewallDefaultRadio")
         self.trusted_devices_label = xml.get_widget("trusted_devices_label")
         self.allow_incoming_label = xml.get_widget("allow_incoming_label")
@@ -52,7 +52,6 @@ class firewall:
         self.firewall_ports_entry = xml.get_widget("firewall_ports_entry")
         self.customTable = xml.get_widget("customTable")
         self.customFrame = xml.get_widget("customFrame")
-        self.upgrade_flag = False
 
         self.securityOptionMenu.connect("changed", self.disable_firewall)
 
@@ -145,105 +144,77 @@ class firewall:
         if boolean == False:
             self.firewall_vbox.hide()
             self.firewall_label_box.show()
-            self.upgrade_flag = True
         else:
             self.firewall_vbox.show()
             self.firewall_label_box.hide()
-            self.upgrade_flag = False
 
     def getData(self):
-        if self.upgrade_flag == True:
-            self.kickstartData.setFirewall(None)
+        if self.ksdata.upgrade == True:
             return
 
-        buf = ""
-
         if self.securityOptionMenu.get_history() == 0:
-            buf = "--enabled "
-        elif self.securityOptionMenu.get_history() == 1:
-            buf = "--disabled "
+            self.ksdata.firewall["enabled"] = True
+        else:
+            self.ksdata.firewall["enabled"] = False
 
         iter = trustedStore.get_iter_first()
-
         while iter:
-            if trustedStore.get_value(iter, 0) == True:
-                buf = buf + "--trust=" + trustedStore.get_value(iter, 1) + " "
+            val = trustedStore.get_value(iter, 0)
+
+            if val == True:
+                self.ksdata.firewall["trusts"].append(val)
             iter = trustedStore.iter_next(iter)
 
+        # trusted services stuff here
+#        iter = self.incomingStore.get_iter_first()
+#
+#        while iter:
+#            if self.incomingStore.get_value(iter, 0) == True:
+#                service = self.list[self.incomingStore.get_value(iter, 1)]
+#                buf = buf + "--" + service + " "
+#            iter = self.incomingStore.iter_next(iter)
 
-        iter = self.incomingStore.get_iter_first()
-
-        while iter:
-            if self.incomingStore.get_value(iter, 0) == True:
-                service = self.list[self.incomingStore.get_value(iter, 1)]
-                buf = buf + "--" + service + " "
-            iter = self.incomingStore.iter_next(iter)
-
-        portlist = self.portsEntry.get_text()
-        ports = []
-
-        if portlist != "":
-            buf = buf + '--port=' + portlist
-            
-        self.kickstartData.setFirewall([buf])
+        self.ksdata.firewall["ports"].extend(string.split(self.portsEntry.get_text()))
 
         if self.selinuxOptionMenu.get_history() == 0:
-            self.kickstartData.setSELinux("--enforcing")
+            self.ksdata.selinux = 1
         elif self.selinuxOptionMenu.get_history() == 1:
-            self.kickstartData.setSELinux("--permissive")
+            self.ksdata.selinux = 2
         elif self.selinuxOptionMenu.get_history() == 2:
-            self.kickstartData.setSELinux("--disabled")
-        
+            self.ksdata.selinux = 0
+
     def fillData(self):
-        if self.kickstartData.getFirewall():
-            opts, args = getopt.getopt(self.kickstartData.getFirewall(), "d:h", ["high", "medium", "enabled",
-                                       "disabled", "trust=", "port=", "dhcp", "ssh", "telnet",
-                                       "smtp", "http", "ftp"])
+        if self.ksdata.firewall["enabled"] == True:
+            self.securityOptionMenu.set_history(0)
+        else:
+            self.securityOptionMenu.set_history(1)
 
-            for opt, value in opts:
-                if opt == "--high":
-                    self.securityOptionMenu.set_history(0)
+        if len(self.ksdata.firewall["trusts"]) > 0:
+            iter = trustedStore.get_iter_first()
 
-                if opt == "--medium":
-                    self.securityOptionMenu.set_history(0)
+            while iter:
+                device = trustedStore.get_value(iter, 1)
+                if device in self.ksdata.firewall["trusts"]:
+                    trustedStore.set_value(iter, 0, True)
+                iter = trustedStore.iter_next(iter)
 
-                if opt == "--enabled":
-                    self.securityOptionMenu.set_history(0)
+        # trusted services stuff goes here
+#        for opt, value in opts:
+#            if opt=="--dhcp" or opt=="--ssh" or opt=="--telnet" or opt=="--smtp" or opt=="--http" or opt=="--ftp":
+#                iter = self.incomingStore.get_iter_first()
+#
+#                while iter:
+#                    service = self.list[self.incomingStore.get_value(iter, 1)]
+#                    if service == opt[2:]:
+#                        self.incomingStore.set_value(iter, 0, True)
+#                    iter = self.incomingStore.iter_next(iter)
 
-                if opt == "--disabled":
-                    self.securityOptionMenu.set_history(1)
+        if len(self.ksdata.firewall["ports"]) > 0:
+            self.portsEntry.set_text(string.join(self.ksdata.firewall["ports"], ","))
 
-                if opt=="--dhcp" or opt=="--ssh" or opt=="--telnet" or opt=="--smtp" or opt=="--http" or opt=="--ftp":
-                    iter = self.incomingStore.get_iter_first()
-
-                    while iter:
-                        service = self.list[self.incomingStore.get_value(iter, 1)]
-                        if service == opt[2:]:
-                            self.incomingStore.set_value(iter, 0, True)
-                        iter = self.incomingStore.iter_next(iter)
-
-                if opt == "--trust":
-                    iter = trustedStore.get_iter_first()
-
-                    while iter:
-                        device = trustedStore.get_value(iter, 1) 
-                        if device == value:
-                            trustedStore.set_value(iter, 0, True)
-                        iter = trustedStore.iter_next(iter)
-
-                if opt == "--port":
-                    current = self.portsEntry.get_text()
-                    self.portsEntry.set_text(value)
-
-	if self.kickstartData.getSELinux():
-            opts, args = getopt.getopt(self.kickstartData.getSELinux(), "", ["disabled", "permissive", "enforcing"])
-
-            for opt, value in opts:
-                if opt == "--disabled":
-                    self.selinuxOptionMenu.set_history(2)
-
-                if opt == "--permissive":
-                    self.selinuxOptionMenu.set_history(1)
-
-                if opt == "--enforcing":
-                    self.selinuxOptionMenu.set_history(0)
+        if self.ksdata.selinux == 0:
+            self.selinuxOptionMenu.set_history(2)
+        elif self.ksdata.selinux == 1:
+            self.selinuxOptionMenu.set_history(0)
+        elif self.ksdata.selinux == 2:
+            self.selinuxOptionMenu.set_history(1)
