@@ -209,9 +209,9 @@ class basic:
             self.ksdata.reboot = False
 
         if self.text_install_checkbutton.get_active():
-            self.ksdata.displayMethod = DISPLAY_MODE_TEXT
+            self.ksdata.displayMode = DISPLAY_MODE_TEXT
         else:
-            self.ksdata.displayMethod = DISPLAY_MODE_GRAPHICAL
+            self.ksdata.displayMode = DISPLAY_MODE_GRAPHICAL
 
         if self.interactive_checkbutton.get_active():
             self.ksdata.interactive = True
