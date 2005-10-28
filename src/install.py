@@ -127,10 +127,12 @@ class install:
             self.ksdata.method["method"] = "cdrom"
         elif self.nfs_radiobutton.get_active():
             server = self.nfsserver_entry.get_text()
+            dir = self.nfsdir_entry.get_text()
+
             if server == "":
                 self.showDialog(_("Please enter an NFS server."), self.nfsserver_entry)
                 return
-            if server == "":
+            if dir == "":
                 self.showDialog(_("Please enter an NFS directory."), self.nfsdir_entry)
                 return
             if server [-1] == "/":
@@ -138,7 +140,7 @@ class install:
 
             self.ksdata.method["method"] = "nfs"
             self.ksdata.method["server"] = server
-            self.ksdata.method["dir"] = self.nfsdir_entry.get_text()
+            self.ksdata.method["dir"] = dir
         elif self.ftp_radiobutton.get_active():
             ftpserver = string.strip(self.ftpserver_entry.get_text())
             if ftpserver == "":
