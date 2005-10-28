@@ -166,6 +166,8 @@ class partition:
 
             if self.initlabel_yes_radiobutton.get_active():
                 self.ksdata.clearpart["initAll"] = True
+            elif self.initlabel_no_radiobutton.get_active():
+                self.ksdata.clearpart["initAll"] = False
 
         self.partDataBuf = []
         self.part_store.foreach(self.getPartData)
