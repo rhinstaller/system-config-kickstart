@@ -136,7 +136,6 @@ class Packages:
 
     def toggled_everything_checkbutton (self, args):
         self.package_vbox.set_sensitive(not self.package_everything_checkbutton.get_active())
-        self.ksdata.groupList.append("Everything")
 
     def create_columns(self, view, store):
         self.checkbox = gtk.CellRendererToggle()
@@ -165,6 +164,7 @@ class Packages:
         packageList = self.getPkgData(self.system_store, packageList)
 
         self.ksdata.groupList = packageList
+        self.ksdata.groupList.append("everything")
 
     def getPkgData(self, store, packageList):
         iter = store.get_iter_first()
@@ -196,7 +196,7 @@ class Packages:
         # We might be killing the everything group in the future
         hasEverything = False
         for grp in self.ksdata.groupList:
-            if string.lower(string.replace(grp, " ", "")) == "@everything":
+            if string.lower(string.strip(grp)) == "everything":
                 hasEverything = True
                 break
 
