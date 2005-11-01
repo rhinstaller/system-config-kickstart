@@ -186,6 +186,16 @@ class network:
         self.handler = self.network_ok_button.connect("clicked", self.editDevice, iter)
         self.network_device_dialog.show_all()
 
+    def deviceIsFilledIn(self):
+        return self.ip_entry1.get_text() != "" and self.ip_entry2.get_text() != "" and \
+               self.ip_entry3.get_text() != "" and self.ip_entry4.get_text() != "" and \
+               self.netmask_entry1.get_text() != "" and self.netmask_entry2.get_text() != "" and \
+               self.netmask_entry3.get_text() != "" and self.netmask_entry4.get_text() != "" and \
+               self.gw_entry1.get_text() != "" and self.gw_entry2.get_text() != "" and \
+               self.gw_entry3.get_text() != "" and self.gw_entry4.get_text() != "" and \
+               self.nameserver_entry1.get_text() != "" and self.nameserver_entry2.get_text() != "" and \
+               self.nameserver_entry3.get_text() != "" and self.nameserver_entry4.get_text() != ""
+
     def addDevice(self, *args):
         devNum = self.network_device_option_menu.get_history()
         devName = self.deviceList[devNum]
@@ -202,14 +212,7 @@ class network:
             self.network_device_store.set_value(iter, 0, devName)
             self.network_device_store.set_value(iter, 1, "BOOTP")
         else:
-            if self.ip_entry1.get_text() == "" or self.ip_entry2.get_text() == "" or \
-            self.ip_entry3.get_text() == "" or self.ip_entry4.get_text() == "" or \
-            self.netmask_entry1.get_text() == "" or self.netmask_entry2.get_text() == "" or \
-            self.netmask_entry3.get_text() == "" or self.netmask_entry4.get_text() == "" or \
-            self.gw_entry1.get_text() == "" or self.gw_entry2.get_text() == "" or \
-            self.gw_entry3.get_text() == "" or self.gw_entry4.get_text() == "" or \
-            self.nameserver_entry1.get_text() == "" or self.nameserver_entry2.get_text() == "" or \
-            self.nameserver_entry3.get_text() == "" or self.nameserver_entry4.get_text() == "":
+            if not self.deviceIsFilledIn():
                 text = (_("Please fill in the network information"))
                 dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
                 dlg.set_position(gtk.WIN_POS_CENTER)
@@ -271,6 +274,15 @@ class network:
         elif self.network_type_option_menu.get_history() == 2:
             self.network_device_store.set_value(iter, 1, "BOOTP")
         else:
+            if not self.deviceIsFilledIn():
+                text = (_("Please fill in the network information"))
+                dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
+                dlg.set_position(gtk.WIN_POS_CENTER)
+                dlg.set_modal(True)
+                rc = dlg.run()
+                dlg.destroy()
+                return None
+
             self.network_device_store.set_value(iter, 1, _("Static IP"))
         
             ipBuf = ("%s.%s.%s.%s" %
@@ -355,7 +367,9 @@ class network:
         return True
 
     def getData(self):
+        self.ksdata.network = []
         iter = self.network_device_store.get_iter_first()
+
         while iter:
             nd = KickstartNetworkData()
 
@@ -371,6 +385,7 @@ class network:
                 nd.nameserver = self.network_device_store.get_value(iter, 5)
 
             nd.device = self.network_device_store.get_value(iter, 0)
+            self.ksdata.network.append(nd)
             iter = self.network_device_store.iter_next(iter)
 
     def typeChanged(self, *args):
