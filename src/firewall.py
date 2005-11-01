@@ -152,6 +152,8 @@ class firewall:
         if self.ksdata.upgrade == True:
             return
 
+        self.ksdata.firewall["trusts"] = []
+
         if self.securityOptionMenu.get_history() == 0:
             self.ksdata.firewall["enabled"] = True
         else:
@@ -159,10 +161,8 @@ class firewall:
 
         iter = trustedStore.get_iter_first()
         while iter:
-            val = trustedStore.get_value(iter, 0)
-
-            if val == True:
-                self.ksdata.firewall["trusts"].append(val)
+            if trustedStore.get_value(iter, 0) == True:
+                self.ksdata.firewall["trusts"].append(trustedStore.get_value(iter, 1))
             iter = trustedStore.iter_next(iter)
 
         # trusted services stuff here
