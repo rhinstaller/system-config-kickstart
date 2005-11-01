@@ -164,7 +164,9 @@ class Packages:
         packageList = self.getPkgData(self.system_store, packageList)
 
         self.ksdata.groupList = packageList
-        self.ksdata.groupList.append("everything")
+
+	if self.package_everything_checkbutton.get_active() == True:
+            self.ksdata.groupList.append("everything")
 
     def getPkgData(self, store, packageList):
         iter = store.get_iter_first()
