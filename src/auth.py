@@ -17,10 +17,19 @@
 ## along with this program; if not, write to the Free Software
 ## Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-
 import gtk
 import gtk.glade
 import getopt
+import string
+
+##
+## I18N
+## 
+from rhpl.translate import _, N_
+import rhpl.translate as translate
+domain = 'system-config-kickstart'
+translate.textdomain (domain)
+gtk.glade.bindtextdomain(domain)
 
 class nisData:
     def __init__(self, quit_cb=None):
@@ -51,10 +60,16 @@ class nisData:
         if self.enabled == 0:
             return ""
         else:
-            if (self.return_broadcast() == 'ON'):
-                return " --enablenis --nisdomain " + self.nisdomain
-            else:				
-                return " --enablenis --nisdomain " + self.nisdomain + " --nisserver " + self.nisserver
+            if self.return_broadcast() == 'ON':
+                if self.nisdomain == "":
+                    return ""
+                else:
+                    return " --enablenis --nisdomain=" + self.nisdomain
+            else:
+                if self.nisdomain == "" or self.nisserver == "":
+                    return ""
+                else:
+                    return " --enablenis --nisdomain=" + self.nisdomain + " --nisserver=" + self.nisserver
 			
 class ldapData:
     def __init__(self, quit_cb=None):
@@ -84,8 +99,10 @@ class ldapData:
     def return_data(self):
         if self.enabled == 0:
             return ""
+        elif self.ldapServer == "" or self.ldapDN == "":
+            return ""
         else:
-            return " --enableldap --enableldapauth --ldapserver " + self.ldapServer + " --ldapbasedn " + self.ldapDN
+            return " --enableldap --enableldapauth --ldapserver=" + self.ldapServer + " --ldapbasedn=" + self.ldapDN
 
 class kerberosData:
     def __init__(self, quit_cb=None):
@@ -115,8 +132,10 @@ class kerberosData:
     def return_data(self):
         if self.enabled == 0:
             return ""
+        elif self.kerberosRealm == "" or self.kerberosKDC == "" or self.kerberosMaster == "":
+            return ""
         else:
-            return " --enablekrb5 --krb5realm " + self.kerberosRealm + " --krb5kdc " + self.kerberosKDC + " --krb5adminserver " + self.kerberosMaster
+            return " --enablekrb5 --krb5realm=" + self.kerberosRealm + " --krb5kdc=" + self.kerberosKDC + " --krb5adminserver=" + self.kerberosMaster
             
 class hesiodData:
     def __init__(self, quit_cb=None):
@@ -140,8 +159,10 @@ class hesiodData:
     def return_data(self):
         if self.enabled == 0:
             return ""
+        elif self.hesiodLHS == "" or self.hesiodRHS == "":
+            return ""
         else:
-            return " --enablehesiod --hesiodlhs " + self.hesiodLHS + " --hesiodrhs " + self.hesiodRHS
+            return " --enablehesiod --hesiodlhs=" + self.hesiodLHS + " --hesiodrhs=" + self.hesiodRHS
 
 class sambaData:
 	def __init__(self, quit_cb=None):
@@ -165,46 +186,67 @@ class sambaData:
 	def return_data(self):
 		if self.enabled == 0:
 			return ""
-		else:
-			return " --enablesmbauth --smbservers " + self.sambaServer + " --smbworkgroup " + self.sambaWorkgroup
+                elif self.sambaServer == "" or self.sambaWorkgroup == "":
+                        return ""
+                else:
+			return " --enablesmbauth --smbservers=" + self.sambaServer + " --smbworkgroup=" + self.sambaWorkgroup
 
       
 class auth:
     def getData(self):
-        if (self.nisCheck.get_active()):
+        if self.nisCheck.get_active():
             self.myNisClass.set_domain(self.nisDomainEntry.get_text())
             self.myNisClass.set_server(self.nisServerEntry.get_text())
 
-            if (self.nisBroadcastCheck.get_active()):
+            if self.nisBroadcastCheck.get_active():
                 self.myNisClass.set_broadcast("ON")
             else:
                 self.myNisClass.set_broadcast("OFF")
 
+            if self.myNisClass.return_data() == "":
+                self.showDialog()
+                return
         else:
             self.myNisClass.set_enabled(self.nisCheck.get_active())
 
-        if (self.ldapCheck.get_active()):
+        if self.ldapCheck.get_active():
             self.myLDAPClass.set_server(self.ldapServerEntry.get_text())
             self.myLDAPClass.set_DN(self.ldapDNEntry.get_text())
+
+            if self.myLDAPClass.return_data() == "":
+                self.showDialog()
+                return
         else:
             self.myLDAPClass.set_enabled(self.ldapCheck.get_active())
 
-        if (self.kerberosCheck.get_active()):
+        if self.kerberosCheck.get_active():
             self.myKerberosClass.set_realm(self.kerberosRealmEntry.get_text())
             self.myKerberosClass.set_KDC(self.kerberosKDCEntry.get_text())
             self.myKerberosClass.set_master(self.kerberosMasterEntry.get_text())
+
+            if self.myKerberosClass.return_data() == "":
+                self.showDialog()
+                return
         else:
             self.myKerberosClass.set_enabled(self.kerberosCheck.get_active())
 
-        if (self.hesiodCheck.get_active()):
+        if self.hesiodCheck.get_active():
             self.myHesiodClass.set_LHS(self.hesiodLHSEntry.get_text())
             self.myHesiodClass.set_RHS(self.hesiodRHSEntry.get_text())
+
+            if self.myHesiodClass.return_data() == "":
+                self.showDialog()
+                return
         else:
             self.myHesiodClass.set_enabled(self.hesiodCheck.get_active())
 
-        if (self.sambaCheck.get_active()):
+        if self.sambaCheck.get_active():
             self.mySambaClass.set_server(self.sambaServerEntry.get_text())
             self.mySambaClass.set_workgroup(self.sambaWorkgroupEntry.get_text())
+
+            if self.mySambaClass.return_data() == "":
+                self.showDialog()
+                return
         else:
             self.mySambaClass.set_enabled(self.sambaCheck.get_active())
 
@@ -277,6 +319,15 @@ class auth:
         self.hesiodCheck.connect("toggled", self.enableHesiod)
         self.sambaCheck.connect("toggled", self.enableSamba)
 
+    def showDialog(self):
+        text = _("Please fill in the authentication information")
+        dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
+        dlg.set_position(gtk.WIN_POS_CENTER)
+        dlg.set_modal(True)
+        rc = dlg.run()
+        dlg.destroy()
+        return None
+
     def enableNIS(self, args):
         self.nisDomainLabel.set_sensitive(self.nisCheck.get_active())
         self.nisDomainEntry.set_sensitive(self.nisCheck.get_active())
@@ -336,7 +387,8 @@ class auth:
 
     def fillData(self):
         if self.ksdata.authconfig != "":
-            opts, args = getopt.getopt(self.ksdata.authconfig, "d:h", ["enablemd5", "enablenis",
+            authstr = string.split(self.ksdata.authconfig)
+            opts, args = getopt.getopt(authstr, "d:h",["enablemd5", "enablenis",
                                        "nisdomain=", "nisserver=", "useshadow", "enableshadow",
                                        "enableldap", "enableldapauth", "ldapserver=", "ldapbasedn=",
                                        "enableldaptls",

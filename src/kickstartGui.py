@@ -236,8 +236,10 @@ class kickstartGui:
         if self.basic_class.getData(doInstall) is None:
             return None
 
+        if self.auth_class.getData() is None:
+            return None
+
 	self.network_class.getData()
-	self.auth_class.getData()
 	self.firewall_class.getData()
 	self.X_class.getData()
 
