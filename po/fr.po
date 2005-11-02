@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-13 13:29-0400\n"
+"POT-Creation-Date: 2005-11-02 16:17-0500\n"
 "PO-Revision-Date: 2005-09-14 09:19+1000\n"
 "Last-Translator: Audrey Simons <asimons@redhat.com>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -18,66 +18,72 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0.2\n"
 
-#: ../src/basic.py:67
+#: ../src/auth.py:323
+#, fuzzy
+msgid "Please fill in the authentication information"
+msgstr "Veuillez fournir les informations réseau"
+
+#: ../src/basic.py:70
 msgid "x86, AMD64, or Intel EM64T"
 msgstr "x86, AMD64, ou Intel EM64T"
 
-#: ../src/basic.py:67
+#: ../src/basic.py:70
 msgid "Intel Itanium"
 msgstr "Intel Itanium"
 
-#: ../src/basic.py:67
+#: ../src/basic.py:70
 msgid "IBM iSeries"
 msgstr "IBM iSeries"
 
-#: ../src/basic.py:68
+#: ../src/basic.py:71
 msgid "IBM pSeries"
 msgstr "IBM pSeries"
 
-#: ../src/basic.py:68
+#: ../src/basic.py:71
 msgid "IBM zSeries/s390"
 msgstr "IBM zSeries/s390"
 
-#: ../src/basic.py:156
+#: ../src/basic.py:149
 msgid "Root passwords do not match."
 msgstr "Les mots de passe root ne correspondent pas."
 
-#: ../src/basic.py:157 ../src/basic.py:176 ../src/install.py:214
-#: ../src/partWindow.py:513 ../src/partition.py:317 ../src/raidWindow.py:247
+#: ../src/basic.py:150 ../src/basic.py:168 ../src/install.py:218
+#: ../src/partWindow.py:515 ../src/partition.py:245 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "Erreur"
 
-#: ../src/basic.py:175
+#: ../src/basic.py:167
 msgid "Please select a root password."
 msgstr "Veuillez choisir un mot de passe root."
 
-#: ../src/bootloader.py:76
+#: ../src/bootloader.py:81
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
 msgstr "Les options de chargement ne s'applique sur la platforme %s"
 
-#: ../src/bootloader.py:117
+#: ../src/bootloader.py:121
 msgid "Grub passwords do not match.  Please try again."
-msgstr "Les mots de passe Grub ne correspondent pas. Veuillez essayer de nouveau."
+msgstr ""
+"Les mots de passe Grub ne correspondent pas. Veuillez essayer de nouveau."
 
 #. create table with custom checklists
-#: ../src/firewall.py:60
+#: ../src/firewall.py:59
 msgid "Trusted devices:"
 msgstr "Périphériques sûrs :"
 
-#: ../src/firewall.py:85
+#: ../src/firewall.py:84
 msgid "Trusted services:"
 msgstr "Services sécurisés :"
 
-#: ../src/firewall.py:117
+#: ../src/firewall.py:116
 msgid "Other ports: (1029:tcp)"
 msgstr "Autres ports : (1029:tcp)"
 
-#: ../src/install.py:134
+#: ../src/install.py:133
 msgid "Please enter an NFS server."
 msgstr "Veuillez saisir un serveur NFS."
 
-#: ../src/install.py:137
+#: ../src/install.py:136
 msgid "Please enter an NFS directory."
 msgstr "Veuillez saisir un répertoire NFS."
 
@@ -97,79 +103,79 @@ msgstr "Veuillez saisir un nom d'utilisateur FTP."
 msgid "Please enter an FTP password."
 msgstr "Veuillez saisir un mot de passe FTP."
 
-#: ../src/install.py:178
+#: ../src/install.py:179
 msgid "Please enter an HTTP server."
 msgstr "Veuillez saisir un serveur HTTP."
 
-#: ../src/install.py:181
+#: ../src/install.py:182
 msgid "Please enter an HTTP server directory."
 msgstr "Veuillez saisir un répertoire pour le serveur HTTP."
 
-#: ../src/install.py:202
+#: ../src/install.py:204
 msgid "Please enter a hard drive directory."
 msgstr "Veuillez saisir un répertoire de disque dur."
 
-#: ../src/install.py:205
+#: ../src/install.py:207
 msgid "Please enter a hard drive partition."
 msgstr "Veuillez saisir une partition du disque dur."
 
-#: ../src/kickstartGui.py:86
+#: ../src/kickstartGui.py:92
 msgid "Kickstart"
 msgstr "Kickstart"
 
-#: ../src/kickstartGui.py:87
+#: ../src/kickstartGui.py:93
 msgid "Create a kickstart file"
 msgstr "Créer un fichier kickstart"
 
-#: ../src/kickstartGui.py:138
+#: ../src/kickstartGui.py:140
 msgid "Subsection"
 msgstr "Sous-section"
 
-#: ../src/kickstartGui.py:142
+#: ../src/kickstartGui.py:144
 msgid "Basic Configuration"
 msgstr "Configuration de base"
 
-#: ../src/kickstartGui.py:142
+#: ../src/kickstartGui.py:144
 msgid "Installation Method"
 msgstr "Méthode d'installation"
 
-#: ../src/kickstartGui.py:143
+#: ../src/kickstartGui.py:145
 msgid "Boot Loader Options"
 msgstr "Options du chargeur de démarrage"
 
-#: ../src/kickstartGui.py:143
+#: ../src/kickstartGui.py:145
 msgid "Partition Information"
 msgstr "Informations sur la partition"
 
-#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:136
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:136
 msgid "Network Configuration"
 msgstr "Configuration réseau"
 
-#: ../src/kickstartGui.py:144
+#: ../src/kickstartGui.py:146
 msgid "Authentication"
 msgstr "Authentification"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:182
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:182
 msgid "Firewall Configuration"
 msgstr "Configuration du pare-feu"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:207
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:207
 msgid "Display Configuration"
 msgstr "Configuration de l'affichage"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:217
+#: ../src/kickstartGui.py:148 system-config-kickstart.gladestrings:217
 msgid "Package Selection"
 msgstr "Sélection des paquetages"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:222
+#: ../src/kickstartGui.py:148 system-config-kickstart.gladestrings:222
 msgid "Pre-Installation Script"
 msgstr "Script de pré-installation"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:228
+#: ../src/kickstartGui.py:149 system-config-kickstart.gladestrings:228
 msgid "Post-Installation Script"
 msgstr "Script post-installation"
 
-#: ../src/kickstartGui.py:193
+#: ../src/kickstartGui.py:192
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -183,37 +189,18 @@ msgstr ""
 " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
 "Interface graphique pour la création d'un fichier kickstart"
 
-#: ../src/kickstartGui.py:194
+#: ../src/kickstartGui.py:193
 msgid "About Kickstart Configurator"
 msgstr "À propos de la configuration de Kickstart"
 
-#: ../src/kickstartGui.py:224
+#: ../src/kickstartGui.py:215
 msgid "Help is not available."
 msgstr "L'aide n'est pas disponible."
 
-#: ../src/kickstartGui.py:275
+#: ../src/kickstartGui.py:282
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "Le fichier \"%s\" n'est pas accessible."
-
-#: ../src/kickstartParser.py:72
-#, python-format
-msgid ""
-"There was a problem reading the following line from the kickstart file. This "
-"could be due to an error on the line or using a keyword that no longer "
-"exists.\n"
-"\n"
-"%s"
-msgstr ""
-"Une erreur s'est produite lors de la lecture de la ligne suivante dans le fichier "
-"kickstart. Il se peut qu'une erreur existe sur la ligne ou un mot-clé qui n'existe "
-"plus est utilisé.\n"
-"\n"
-"%s"
-
-#: ../src/kickstartParser.py:77
-msgid "Kickstart Error"
-msgstr "Erreur de kickstart"
 
 #: ../src/network.py:87
 msgid "Device"
@@ -223,16 +210,16 @@ msgstr "Périphérique"
 msgid "Network Type"
 msgstr "Type de réseau"
 
-#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:223
-#: ../src/network.py:274 ../src/network.py:415
+#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:226
+#: ../src/network.py:286 ../src/network.py:422
 msgid "Static IP"
 msgstr "IP statique"
 
-#: ../src/network.py:213
+#: ../src/network.py:216 ../src/network.py:278
 msgid "Please fill in the network information"
 msgstr "Veuillez fournir les informations réseau"
 
-#: ../src/network.py:318
+#: ../src/network.py:330
 #, python-format
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
@@ -250,61 +237,62 @@ msgstr "Impossible de démarrer car le fichier %s n'existe pas."
 msgid "Please make sure the comps package is installed."
 msgstr "Veuillez vérifier que le paquetage comps est installé."
 
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:52
+#: ../src/partWindow.py:84 system-config-kickstart.gladestrings:52
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:53
+#: ../src/partWindow.py:84 system-config-kickstart.gladestrings:53
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:85 ../src/partWindow.py:148
+#: ../src/partWindow.py:86 ../src/partWindow.py:149
 msgid "software RAID"
 msgstr "RAID logiciel"
 
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:54
+#: ../src/partWindow.py:87 system-config-kickstart.gladestrings:54
 msgid "swap"
 msgstr "swap"
 
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:55
+#: ../src/partWindow.py:87 system-config-kickstart.gladestrings:55
 msgid "vfat"
 msgstr "vfat"
 
-#: ../src/partWindow.py:87
+#: ../src/partWindow.py:88
 msgid "PPC PReP Boot"
 msgstr "PPC PReP Boot"
 
-#: ../src/partWindow.py:260 ../src/partWindow.py:535 ../src/raidWindow.py:212
+#: ../src/partWindow.py:262 ../src/partWindow.py:537 ../src/raidWindow.py:212
 msgid "Yes"
 msgstr "Oui"
 
-#: ../src/partWindow.py:262 ../src/partWindow.py:537 ../src/raidWindow.py:214
+#: ../src/partWindow.py:264 ../src/partWindow.py:539 ../src/raidWindow.py:214
 msgid "No"
 msgstr "Non"
 
-#: ../src/partWindow.py:285 ../src/partWindow.py:300 ../src/partWindow.py:319
-#: ../src/partWindow.py:333
+#: ../src/partWindow.py:287 ../src/partWindow.py:302 ../src/partWindow.py:321
+#: ../src/partWindow.py:335
 msgid "Auto"
 msgstr "Auto"
 
-#: ../src/partWindow.py:294
+#: ../src/partWindow.py:296
 msgid "Hard Drives"
 msgstr "Disques durs"
 
-#: ../src/partWindow.py:420
+#: ../src/partWindow.py:422
 msgid "Specify a mount point for the partition."
 msgstr "Spécifier un point de montage pour la partition."
 
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:429
+#: ../src/partWindow.py:431
 #, python-format
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "Le point de montage \"%s\" est déjà utilisé. Veuillez sélectionner un autre "
 "point de montage."
 
-#: ../src/partWindow.py:449
+#: ../src/partWindow.py:451
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -312,11 +300,11 @@ msgstr ""
 "Pour créer une nouvelle partition RAID, vous devez spécifier un nom de "
 "disque dur ou une partition existante."
 
-#: ../src/partWindow.py:488
+#: ../src/partWindow.py:490
 msgid "Specify a device on which to create the partition."
 msgstr "Spécifier un périphérique sur lequel créer la partition."
 
-#: ../src/partWindow.py:490
+#: ../src/partWindow.py:492
 msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
@@ -324,7 +312,7 @@ msgstr ""
 "Le périphérique que vous avez spécifié n'a pas de nom de périphérique "
 "valable. Utilisez un nom de périphérique valable, comme \"hda1\" ou \"sda3\"."
 
-#: ../src/partWindow.py:500
+#: ../src/partWindow.py:502
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -333,7 +321,7 @@ msgstr ""
 "partitions doivent comporter un numéro de partition comme \"hda1\" ou \"sda3"
 "\"."
 
-#: ../src/partWindow.py:506
+#: ../src/partWindow.py:508
 msgid ""
 "The partition you specified does not begin with \"hd\" or \"sd\".  "
 "Partitions must have a valid device name and partition number such as \"hda1"
@@ -343,7 +331,7 @@ msgstr ""
 "Les partitions doivent comporter un nom de périphérique valide et un numéro "
 "de partition comme \"hda1\" ou \"sda3\"."
 
-#: ../src/partition.py:72
+#: ../src/partition.py:74
 msgid ""
 "Device/\n"
 "Partition Number"
@@ -351,8 +339,7 @@ msgstr ""
 "Périphérique/\n"
 "Numéro de partition"
 
-#. col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
-#: ../src/partition.py:75
+#: ../src/partition.py:76
 msgid ""
 "Mount Point/\n"
 "RAID"
@@ -360,19 +347,19 @@ msgstr ""
 "Point de montage/\n"
 "RAID"
 
-#: ../src/partition.py:77
+#: ../src/partition.py:78
 msgid "Type"
 msgstr "Type"
 
-#: ../src/partition.py:79
+#: ../src/partition.py:80
 msgid "Format"
 msgstr "Format"
 
-#: ../src/partition.py:81
+#: ../src/partition.py:82
 msgid "Size (MB)"
 msgstr "Taille (Mo) "
 
-#: ../src/partition.py:151 ../src/partition.py:191
+#: ../src/partition.py:97 ../src/partition.py:137
 msgid "Please select a partition from the list."
 msgstr "Veuillez sélectionner une partition dans la liste."
 
@@ -395,7 +382,7 @@ msgstr "Vous devez sélectionner au moins 3 partitions afin d'utiliser RAID %s"
 msgid "Raid Devices"
 msgstr "Périphériques RAID"
 
-#: ../src/system-config-kickstart.py:60
+#: ../src/system-config-kickstart.py:61
 msgid ""
 "Usage: system-config-kickstart [--help] [--generate <filename>] "
 "[<kickstart_filename>]\n"
@@ -425,13 +412,13 @@ msgstr ""
 "les valeurs\n"
 "                       du fichier kickstart déjà remplies."
 
-#: ../src/system-config-kickstart.py:77
+#: ../src/system-config-kickstart.py:78
 msgid "Could not open display because no X server is running."
 msgstr ""
 "L'affichage n'est pas possible car aucun serveur X n'est en cours "
 "d'exécution."
 
-#: ../src/system-config-kickstart.py:78
+#: ../src/system-config-kickstart.py:79
 msgid "Try running 'system-config-kickstart --help' for a list of options."
 msgstr ""
 "Essayer d'exécuter 'system-config-kickstart --help' pour obtenir une liste "
@@ -1061,7 +1048,8 @@ msgstr "Cache de commutateur de nom"
 
 #: system-config-kickstart.gladestrings:171
 msgid "Authentication options are not applicable on upgrades."
-msgstr "Les options d'authentification ne s'appliquent pas sur une mise à jour."
+msgstr ""
+"Les options d'authentification ne s'appliquent pas sur une mise à jour."
 
 #: system-config-kickstart.gladestrings:172
 msgid "Authentication Configuration"
@@ -1378,6 +1366,22 @@ msgstr "Serveur de noms :"
 msgid "."
 msgstr "."
 
+#~ msgid ""
+#~ "There was a problem reading the following line from the kickstart file. "
+#~ "This could be due to an error on the line or using a keyword that no "
+#~ "longer exists.\n"
+#~ "\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Une erreur s'est produite lors de la lecture de la ligne suivante dans le "
+#~ "fichier kickstart. Il se peut qu'une erreur existe sur la ligne ou un mot-"
+#~ "clé qui n'existe plus est utilisé.\n"
+#~ "\n"
+#~ "%s"
+
+#~ msgid "Kickstart Error"
+#~ msgstr "Erreur de kickstart"
+
 #~ msgid "/comps.xml file."
 #~ msgstr "fichier /comps.xml"
 
@@ -1498,4 +1502,3 @@ msgstr "."
 
 #~ msgid "_Ignore Dependencies"
 #~ msgstr "_Ignorer les dépendances"
-

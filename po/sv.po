@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-13 13:29-0400\n"
+"POT-Creation-Date: 2005-11-02 16:17-0500\n"
 "PO-Revision-Date: 2005-10-21 08:56+0200\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -15,66 +15,71 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: UTF-8\n"
 
-#: ../src/basic.py:67
+#: ../src/auth.py:323
+#, fuzzy
+msgid "Please fill in the authentication information"
+msgstr "Fyll i nätverksinformationen"
+
+#: ../src/basic.py:70
 msgid "x86, AMD64, or Intel EM64T"
 msgstr "x86, AMD64 eller Intel EM64T"
 
-#: ../src/basic.py:67
+#: ../src/basic.py:70
 msgid "Intel Itanium"
 msgstr "Intel Itanium"
 
-#: ../src/basic.py:67
+#: ../src/basic.py:70
 msgid "IBM iSeries"
 msgstr "IBM iSeries"
 
-#: ../src/basic.py:68
+#: ../src/basic.py:71
 msgid "IBM pSeries"
 msgstr "IBM pSeries"
 
-#: ../src/basic.py:68
+#: ../src/basic.py:71
 msgid "IBM zSeries/s390"
 msgstr "IBM zSeries/s390"
 
-#: ../src/basic.py:156
+#: ../src/basic.py:149
 msgid "Root passwords do not match."
 msgstr "Rootlösenorden stämmer inte överens."
 
-#: ../src/basic.py:157 ../src/basic.py:176 ../src/install.py:214
-#: ../src/partWindow.py:513 ../src/partition.py:317 ../src/raidWindow.py:247
+#: ../src/basic.py:150 ../src/basic.py:168 ../src/install.py:218
+#: ../src/partWindow.py:515 ../src/partition.py:245 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "Fel"
 
-#: ../src/basic.py:175
+#: ../src/basic.py:167
 msgid "Please select a root password."
 msgstr "Välj ett rootlösenord."
 
-#: ../src/bootloader.py:76
+#: ../src/bootloader.py:81
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
 msgstr "Startprogramsalternativ är inte tillämpbara på %s-plattformen"
 
-#: ../src/bootloader.py:117
+#: ../src/bootloader.py:121
 msgid "Grub passwords do not match.  Please try again."
 msgstr "Grub-lösenorden stämmer inte överens. Försök igen."
 
 #. create table with custom checklists
-#: ../src/firewall.py:60
+#: ../src/firewall.py:59
 msgid "Trusted devices:"
 msgstr "Pålitliga enheter:"
 
-#: ../src/firewall.py:85
+#: ../src/firewall.py:84
 msgid "Trusted services:"
 msgstr "Pålitliga tjänster:"
 
-#: ../src/firewall.py:117
+#: ../src/firewall.py:116
 msgid "Other ports: (1029:tcp)"
 msgstr "Andra portar: (1029:tcp)"
 
-#: ../src/install.py:134
+#: ../src/install.py:133
 msgid "Please enter an NFS server."
 msgstr "Ange en NFS-server."
 
-#: ../src/install.py:137
+#: ../src/install.py:136
 msgid "Please enter an NFS directory."
 msgstr "Ange en NFS-katalog."
 
@@ -94,79 +99,79 @@ msgstr "Ange ett FTP-användarnamn."
 msgid "Please enter an FTP password."
 msgstr "Ange ett FTP-lösenord."
 
-#: ../src/install.py:178
+#: ../src/install.py:179
 msgid "Please enter an HTTP server."
 msgstr "Ange en HTTP-server."
 
-#: ../src/install.py:181
+#: ../src/install.py:182
 msgid "Please enter an HTTP server directory."
 msgstr "Ange en HTTP-serverkatalog."
 
-#: ../src/install.py:202
+#: ../src/install.py:204
 msgid "Please enter a hard drive directory."
 msgstr "Ange en hårddiskkatalog."
 
-#: ../src/install.py:205
+#: ../src/install.py:207
 msgid "Please enter a hard drive partition."
 msgstr "Ange en hårddiskpartition."
 
-#: ../src/kickstartGui.py:86
+#: ../src/kickstartGui.py:92
 msgid "Kickstart"
 msgstr "Kickstart"
 
-#: ../src/kickstartGui.py:87
+#: ../src/kickstartGui.py:93
 msgid "Create a kickstart file"
 msgstr "Skapa en kickstartfil"
 
-#: ../src/kickstartGui.py:138
+#: ../src/kickstartGui.py:140
 msgid "Subsection"
 msgstr "Undersektion"
 
-#: ../src/kickstartGui.py:142
+#: ../src/kickstartGui.py:144
 msgid "Basic Configuration"
 msgstr "Grundläggande konfiguration"
 
-#: ../src/kickstartGui.py:142
+#: ../src/kickstartGui.py:144
 msgid "Installation Method"
 msgstr "Installationsmetod"
 
-#: ../src/kickstartGui.py:143
+#: ../src/kickstartGui.py:145
 msgid "Boot Loader Options"
 msgstr "Startprogramalternativ"
 
-#: ../src/kickstartGui.py:143
+#: ../src/kickstartGui.py:145
 msgid "Partition Information"
 msgstr "Partitionsinformation"
 
-#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:136
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:136
 msgid "Network Configuration"
 msgstr "Nätverkskonfiguration"
 
-#: ../src/kickstartGui.py:144
+#: ../src/kickstartGui.py:146
 msgid "Authentication"
 msgstr "Autentisering"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:182
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:182
 msgid "Firewall Configuration"
 msgstr "Brandväggskonfiguration"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:207
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:207
 msgid "Display Configuration"
 msgstr "Displaykonfiguration"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:217
+#: ../src/kickstartGui.py:148 system-config-kickstart.gladestrings:217
 msgid "Package Selection"
 msgstr "Val av paket"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:222
+#: ../src/kickstartGui.py:148 system-config-kickstart.gladestrings:222
 msgid "Pre-Installation Script"
 msgstr "Förinstallationsskript"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:228
+#: ../src/kickstartGui.py:149 system-config-kickstart.gladestrings:228
 msgid "Post-Installation Script"
 msgstr "Postinstallationsskript"
 
-#: ../src/kickstartGui.py:193
+#: ../src/kickstartGui.py:192
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -180,37 +185,18 @@ msgstr ""
 " Copyright © 2000-2002 Tammy Fox <tfox@redhat.com>\n"
 " Ett grafiskt gränssnitt för skapande av en kickstart-fil"
 
-#: ../src/kickstartGui.py:194
+#: ../src/kickstartGui.py:193
 msgid "About Kickstart Configurator"
 msgstr "Om Kickstart-konfigurationsprogrammet"
 
-#: ../src/kickstartGui.py:224
+#: ../src/kickstartGui.py:215
 msgid "Help is not available."
 msgstr "Hjälp är inte tillgänglig."
 
-#: ../src/kickstartGui.py:275
+#: ../src/kickstartGui.py:282
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "Filen \"%s\" kan inte kommas åt."
-
-#: ../src/kickstartParser.py:72
-#, python-format
-msgid ""
-"There was a problem reading the following line from the kickstart file. This "
-"could be due to an error on the line or using a keyword that no longer "
-"exists.\n"
-"\n"
-"%s"
-msgstr ""
-"Ett fel uppstod vid läsandet av följande rad från kickstart-filen. Detta kan "
-"bero på ett fel på raden eller att ett nyckelord som inte längre finns "
-"används.\n"
-"\n"
-"%s"
-
-#: ../src/kickstartParser.py:77
-msgid "Kickstart Error"
-msgstr "Kickstart-fel"
 
 #: ../src/network.py:87
 msgid "Device"
@@ -220,16 +206,16 @@ msgstr "Enhet"
 msgid "Network Type"
 msgstr "Nätverkstyp"
 
-#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:223
-#: ../src/network.py:274 ../src/network.py:415
+#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:226
+#: ../src/network.py:286 ../src/network.py:422
 msgid "Static IP"
 msgstr "Statiskt IP"
 
-#: ../src/network.py:213
+#: ../src/network.py:216 ../src/network.py:278
 msgid "Please fill in the network information"
 msgstr "Fyll i nätverksinformationen"
 
-#: ../src/network.py:318
+#: ../src/network.py:330
 #, python-format
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
@@ -245,60 +231,60 @@ msgstr "Kunde inte starta eftersom det inte finns någon fil %s."
 msgid "Please make sure the comps package is installed."
 msgstr "Försäkra dig om att paketet comps är installerat."
 
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:52
+#: ../src/partWindow.py:84 system-config-kickstart.gladestrings:52
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:53
+#: ../src/partWindow.py:84 system-config-kickstart.gladestrings:53
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:85 ../src/partWindow.py:148
+#: ../src/partWindow.py:86 ../src/partWindow.py:149
 msgid "software RAID"
 msgstr "programvaru-RAID"
 
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:54
+#: ../src/partWindow.py:87 system-config-kickstart.gladestrings:54
 msgid "swap"
 msgstr "växling"
 
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:55
+#: ../src/partWindow.py:87 system-config-kickstart.gladestrings:55
 msgid "vfat"
 msgstr "vfat"
 
-#: ../src/partWindow.py:87
+#: ../src/partWindow.py:88
 msgid "PPC PReP Boot"
 msgstr "PPC PReP-start"
 
-#: ../src/partWindow.py:260 ../src/partWindow.py:535 ../src/raidWindow.py:212
+#: ../src/partWindow.py:262 ../src/partWindow.py:537 ../src/raidWindow.py:212
 msgid "Yes"
 msgstr "Ja"
 
-#: ../src/partWindow.py:262 ../src/partWindow.py:537 ../src/raidWindow.py:214
+#: ../src/partWindow.py:264 ../src/partWindow.py:539 ../src/raidWindow.py:214
 msgid "No"
 msgstr "Nej"
 
-#: ../src/partWindow.py:285 ../src/partWindow.py:300 ../src/partWindow.py:319
-#: ../src/partWindow.py:333
+#: ../src/partWindow.py:287 ../src/partWindow.py:302 ../src/partWindow.py:321
+#: ../src/partWindow.py:335
 msgid "Auto"
 msgstr "Automatiskt"
 
-#: ../src/partWindow.py:294
+#: ../src/partWindow.py:296
 msgid "Hard Drives"
 msgstr "Hårddiskar"
 
-#: ../src/partWindow.py:420
+#: ../src/partWindow.py:422
 msgid "Specify a mount point for the partition."
 msgstr "Ange en monteringspunkt för partitionen."
 
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:429
+#: ../src/partWindow.py:431
 #, python-format
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "Monteringspunkten \"%s\" används redan. Välj en annan monteringspunkt."
 
-#: ../src/partWindow.py:449
+#: ../src/partWindow.py:451
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -306,11 +292,11 @@ msgstr ""
 "För att skapa en ny RAID-partition måste du antingen ange enhetsnamnet på en "
 "hårddisk eller en befintlig partition."
 
-#: ../src/partWindow.py:488
+#: ../src/partWindow.py:490
 msgid "Specify a device on which to create the partition."
 msgstr "Ange en enhet på vilken partitionen ska skapas."
 
-#: ../src/partWindow.py:490
+#: ../src/partWindow.py:492
 msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
@@ -318,7 +304,7 @@ msgstr ""
 "Enheten som du angav är inte ett giltigt enetsnamn. Ange ett giltigt "
 "enhetsnamn som exempelvis \"hda1\" eller \"sda3\"."
 
-#: ../src/partWindow.py:500
+#: ../src/partWindow.py:502
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -326,7 +312,7 @@ msgstr ""
 "Partitionen du angav slutar inte med ett tal. Partitioner måste ha ett "
 "partitionsnummer som exempelvis \"hda1\" eller \"sda3\"."
 
-#: ../src/partWindow.py:506
+#: ../src/partWindow.py:508
 msgid ""
 "The partition you specified does not begin with \"hd\" or \"sd\".  "
 "Partitions must have a valid device name and partition number such as \"hda1"
@@ -336,7 +322,7 @@ msgstr ""
 "måste ha ett giltigt enhetsnamn och partitionsnummer som exempelvis \"hda1\" "
 "eller \"sda3\"."
 
-#: ../src/partition.py:72
+#: ../src/partition.py:74
 msgid ""
 "Device/\n"
 "Partition Number"
@@ -344,8 +330,7 @@ msgstr ""
 "Enhet/\n"
 "Partitionsnummer"
 
-#. col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
-#: ../src/partition.py:75
+#: ../src/partition.py:76
 msgid ""
 "Mount Point/\n"
 "RAID"
@@ -353,19 +338,19 @@ msgstr ""
 "Monteringspunkt/\n"
 "RAID"
 
-#: ../src/partition.py:77
+#: ../src/partition.py:78
 msgid "Type"
 msgstr "Typ"
 
-#: ../src/partition.py:79
+#: ../src/partition.py:80
 msgid "Format"
 msgstr "Format"
 
-#: ../src/partition.py:81
+#: ../src/partition.py:82
 msgid "Size (MB)"
 msgstr "Storlek (MB)"
 
-#: ../src/partition.py:151 ../src/partition.py:191
+#: ../src/partition.py:97 ../src/partition.py:137
 msgid "Please select a partition from the list."
 msgstr "Välj en partition från listan."
 
@@ -389,7 +374,7 @@ msgstr "Du måste välja minst 3 partitioner för att kunna använda RAID %s"
 msgid "Raid Devices"
 msgstr "Raid-enheter"
 
-#: ../src/system-config-kickstart.py:60
+#: ../src/system-config-kickstart.py:61
 msgid ""
 "Usage: system-config-kickstart [--help] [--generate <filename>] "
 "[<kickstart_filename>]\n"
@@ -417,11 +402,11 @@ msgstr ""
 "                        användargränssnittet startar med värdena från\n"
 "                        kickstartfilen redan ifyllda."
 
-#: ../src/system-config-kickstart.py:77
+#: ../src/system-config-kickstart.py:78
 msgid "Could not open display because no X server is running."
 msgstr "Kunde inte öppna display eftersom ingen X-server körs."
 
-#: ../src/system-config-kickstart.py:78
+#: ../src/system-config-kickstart.py:79
 msgid "Try running 'system-config-kickstart --help' for a list of options."
 msgstr ""
 "Prova att köra \"system-config-kickstart --help\" för en lista med flaggor."
@@ -1362,6 +1347,22 @@ msgstr "Namnserver:"
 #: system-config-kickstart.gladestrings:257
 msgid "."
 msgstr "."
+
+#~ msgid ""
+#~ "There was a problem reading the following line from the kickstart file. "
+#~ "This could be due to an error on the line or using a keyword that no "
+#~ "longer exists.\n"
+#~ "\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Ett fel uppstod vid läsandet av följande rad från kickstart-filen. Detta "
+#~ "kan bero på ett fel på raden eller att ett nyckelord som inte längre "
+#~ "finns används.\n"
+#~ "\n"
+#~ "%s"
+
+#~ msgid "Kickstart Error"
+#~ msgstr "Kickstart-fel"
 
 #~ msgid "Could not start because there is no /usr/share/comps/"
 #~ msgstr "Kunde inte starta eftersom det inte finns någon /usr/share/comps/"
