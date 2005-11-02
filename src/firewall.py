@@ -153,6 +153,7 @@ class firewall:
             return
 
         self.ksdata.firewall["trusts"] = []
+        self.ksdata.firewall["ports"] = []
 
         if self.securityOptionMenu.get_history() == 0:
             self.ksdata.firewall["enabled"] = True
@@ -165,14 +166,13 @@ class firewall:
                 self.ksdata.firewall["trusts"].append(trustedStore.get_value(iter, 1))
             iter = trustedStore.iter_next(iter)
 
-        # trusted services stuff here
-#        iter = self.incomingStore.get_iter_first()
-#
-#        while iter:
-#            if self.incomingStore.get_value(iter, 0) == True:
-#                service = self.list[self.incomingStore.get_value(iter, 1)]
-#                buf = buf + "--" + service + " "
-#            iter = self.incomingStore.iter_next(iter)
+        iter = self.incomingStore.get_iter_first()
+
+        while iter:
+            if self.incomingStore.get_value(iter, 0) == True:
+                service = self.list[self.incomingStore.get_value(iter, 1)]
+                self.ksdata.firewall["ports"].append(service)
+            iter = self.incomingStore.iter_next(iter)
 
         self.ksdata.firewall["ports"].extend(string.split(self.portsEntry.get_text()))
 
@@ -198,19 +198,34 @@ class firewall:
                     trustedStore.set_value(iter, 0, True)
                 iter = trustedStore.iter_next(iter)
 
-        # trusted services stuff goes here
-#        for opt, value in opts:
-#            if opt=="--dhcp" or opt=="--ssh" or opt=="--telnet" or opt=="--smtp" or opt=="--http" or opt=="--ftp":
-#                iter = self.incomingStore.get_iter_first()
-#
-#                while iter:
-#                    service = self.list[self.incomingStore.get_value(iter, 1)]
-#                    if service == opt[2:]:
-#                        self.incomingStore.set_value(iter, 0, True)
-#                    iter = self.incomingStore.iter_next(iter)
+        iter = self.incomingStore.get_iter_first()
+
+        filteredPorts = self.ksdata.firewall["ports"]
+
+        while iter:
+            service = self.list[self.incomingStore.get_value(iter, 1)]
+
+            if service == "ssh" and "22:tcp" in filteredPorts:
+                self.incomingStore.set_value(iter, 0, True)
+                filteredPorts.remove("22:tcp")
+            elif service == "telnet" and "23:tcp" in filteredPorts:
+                self.incomingStore.set_value(iter, 0, True)
+                filteredPorts.remove("23:tcp")
+            elif service == "http" and "80:tcp" in filteredPorts:
+                self.incomingStore.set_value(iter, 0, True)
+                filteredPorts.remove("80:tcp")
+                filteredPorts.remove("443:tcp")
+            elif service == "smtp" and "25:tcp" in filteredPorts:
+                self.incomingStore.set_value(iter, 0, True)
+                filteredPorts.remove("25:tcp")
+            elif service == "ftp" and "21:tcp" in filteredPorts:
+                self.incomingStore.set_value(iter, 0, True)
+                filteredPorts.remove("21:tcp")
+
+            iter = self.incomingStore.iter_next(iter)
 
         if len(self.ksdata.firewall["ports"]) > 0:
-            self.portsEntry.set_text(string.join(self.ksdata.firewall["ports"], ","))
+            self.portsEntry.set_text(string.join(filteredPorts, ","))
 
         if self.ksdata.selinux == 0:
             self.selinuxOptionMenu.set_history(2)
