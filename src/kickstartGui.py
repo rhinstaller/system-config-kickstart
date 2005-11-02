@@ -265,6 +265,16 @@ class kickstartGui:
                 self.parser = KickstartParser (self.kickstartData,
                                                self.kickstartHandlers)
                 self.parser.readKickstart(file)
+
+                # Refresh ksdata pointers in every subclass for the new
+                # data we loaded in from the file.
+                for cl in [self.basic_class, self.bootloader_class,
+                           self.install_class, self.partition_class,
+                           self.network_class, self.auth_class, self.X_class,
+                           self.firewall_class, self.packages_class,
+                           self.scripts_class]:
+                    cl.ksdata = self.kickstartData
+
                 self.fillData()
 	        self.toplevel.show()
             else:

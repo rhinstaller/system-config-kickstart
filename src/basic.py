@@ -229,7 +229,6 @@ class basic:
             self.parent_class.platformTypeChanged(entry.get_text())
 
     def fillData(self):
-        # FIXME: set platform
         if self.ksdata.platform in self.platform_list:
             self.platform_combo.entry.set_text(self.ksdata.platform)
 
