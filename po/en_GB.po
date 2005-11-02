@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-13 13:29-0400\n"
+"POT-Creation-Date: 2005-11-02 16:17-0500\n"
 "PO-Revision-Date: 2004-03-29 17:11-0500\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,79 +17,84 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/basic.py:67
+#: ../src/auth.py:323
+#, fuzzy
+msgid "Please fill in the authentication information"
+msgstr "Please fill in the network information"
+
+#: ../src/basic.py:70
 #, fuzzy
 msgid "x86, AMD64, or Intel EM64T"
 msgstr "x86, AMD64, or Intel EM64T"
 
-#: ../src/basic.py:67
+#: ../src/basic.py:70
 #, fuzzy
 msgid "Intel Itanium"
 msgstr "Intel Itanium"
 
-#: ../src/basic.py:67
+#: ../src/basic.py:70
 #, fuzzy
 msgid "IBM iSeries"
 msgstr "IBM iSeries"
 
-#: ../src/basic.py:68
+#: ../src/basic.py:71
 #, fuzzy
 msgid "IBM pSeries"
 msgstr "IBM pSeries"
 
-#: ../src/basic.py:68
+#: ../src/basic.py:71
 #, fuzzy
 msgid "IBM zSeries/s390"
 msgstr "IBM zSeries/s390"
 
-#: ../src/basic.py:156
+#: ../src/basic.py:149
 #, fuzzy
 msgid "Root passwords do not match."
 msgstr "Root passwords do not match."
 
-#: ../src/basic.py:157 ../src/basic.py:176 ../src/install.py:214
-#: ../src/partWindow.py:513 ../src/partition.py:317 ../src/raidWindow.py:247
+#: ../src/basic.py:150 ../src/basic.py:168 ../src/install.py:218
+#: ../src/partWindow.py:515 ../src/partition.py:245 ../src/raidWindow.py:247
 #, fuzzy
 msgid "Error"
 msgstr "Error"
 
-#: ../src/basic.py:175
+#: ../src/basic.py:167
 #, fuzzy
 msgid "Please select a root password."
 msgstr "Please select a root password."
 
-#: ../src/bootloader.py:76
+#: ../src/bootloader.py:81
 #, fuzzy, python-format
 msgid "Bootloader options are not applicable to the %s platform"
 msgstr "Bootloader options are not applicable to the %s platform"
 
-#: ../src/bootloader.py:117
+#: ../src/bootloader.py:121
 #, fuzzy
 msgid "Grub passwords do not match.  Please try again."
 msgstr "Grub passwords do not match.  Please try again."
 
 #. create table with custom checklists
-#: ../src/firewall.py:60
+#: ../src/firewall.py:59
 #, fuzzy
 msgid "Trusted devices:"
 msgstr "Trusted devices:"
 
-#: ../src/firewall.py:85
+#: ../src/firewall.py:84
 #, fuzzy
 msgid "Trusted services:"
 msgstr "Trusted services:"
 
-#: ../src/firewall.py:117
+#: ../src/firewall.py:116
 #, fuzzy
 msgid "Other ports: (1029:tcp)"
 msgstr "Other ports: (1029:tcp)"
 
-#: ../src/install.py:134
+#: ../src/install.py:133
 #, fuzzy
 msgid "Please enter an NFS server."
 msgstr "Please enter an NFS server."
 
-#: ../src/install.py:137
+#: ../src/install.py:136
 #, fuzzy
 msgid "Please enter an NFS directory."
 msgstr "Please enter an NFS directory."
@@ -114,97 +119,97 @@ msgstr "Please enter an FTP user name."
 msgid "Please enter an FTP password."
 msgstr "Please enter an FTP password."
 
-#: ../src/install.py:178
+#: ../src/install.py:179
 #, fuzzy
 msgid "Please enter an HTTP server."
 msgstr "Please enter an HTTP server."
 
-#: ../src/install.py:181
+#: ../src/install.py:182
 #, fuzzy
 msgid "Please enter an HTTP server directory."
 msgstr "Please enter an HTTP server directory."
 
-#: ../src/install.py:202
+#: ../src/install.py:204
 #, fuzzy
 msgid "Please enter a hard drive directory."
 msgstr "Please enter a hard drive directory."
 
-#: ../src/install.py:205
+#: ../src/install.py:207
 #, fuzzy
 msgid "Please enter a hard drive partition."
 msgstr "Please enter a hard drive partition."
 
-#: ../src/kickstartGui.py:86
+#: ../src/kickstartGui.py:92
 #, fuzzy
 msgid "Kickstart"
 msgstr "Kickstart"
 
-#: ../src/kickstartGui.py:87
+#: ../src/kickstartGui.py:93
 #, fuzzy
 msgid "Create a kickstart file"
 msgstr "Create a kickstart file"
 
-#: ../src/kickstartGui.py:138
+#: ../src/kickstartGui.py:140
 #, fuzzy
 msgid "Subsection"
 msgstr "Subsection"
 
-#: ../src/kickstartGui.py:142
+#: ../src/kickstartGui.py:144
 #, fuzzy
 msgid "Basic Configuration"
 msgstr "Basic Configuration"
 
-#: ../src/kickstartGui.py:142
+#: ../src/kickstartGui.py:144
 #, fuzzy
 msgid "Installation Method"
 msgstr "Installation Method"
 
-#: ../src/kickstartGui.py:143
+#: ../src/kickstartGui.py:145
 #, fuzzy
 msgid "Boot Loader Options"
 msgstr "Boot Loader Options"
 
-#: ../src/kickstartGui.py:143
+#: ../src/kickstartGui.py:145
 #, fuzzy
 msgid "Partition Information"
 msgstr "Partition Information"
 
-#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:136
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:136
 #, fuzzy
 msgid "Network Configuration"
 msgstr "Network Configuration"
 
-#: ../src/kickstartGui.py:144
+#: ../src/kickstartGui.py:146
 #, fuzzy
 msgid "Authentication"
 msgstr "Authentication"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:182
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:182
 #, fuzzy
 msgid "Firewall Configuration"
 msgstr "Firewall Configuration"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:207
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:207
 #, fuzzy
 msgid "Display Configuration"
 msgstr "Display Configuration"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:217
+#: ../src/kickstartGui.py:148 system-config-kickstart.gladestrings:217
 #, fuzzy
 msgid "Package Selection"
 msgstr "Package Selection"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:222
+#: ../src/kickstartGui.py:148 system-config-kickstart.gladestrings:222
 #, fuzzy
 msgid "Pre-Installation Script"
 msgstr "Pre-Installation Script"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:228
+#: ../src/kickstartGui.py:149 system-config-kickstart.gladestrings:228
 #, fuzzy
 msgid "Post-Installation Script"
 msgstr "Post-Installation Script"
 
-#: ../src/kickstartGui.py:193
+#: ../src/kickstartGui.py:192
 #, fuzzy
 msgid ""
 "Kickstart Configurator @VERSION@\n"
@@ -219,35 +224,20 @@ msgstr ""
 " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
 " A graphical interface for creating a kickstart file"
 
-#: ../src/kickstartGui.py:194
+#: ../src/kickstartGui.py:193
 #, fuzzy
 msgid "About Kickstart Configurator"
 msgstr "About Kickstart Configurator"
 
-#: ../src/kickstartGui.py:224
+#: ../src/kickstartGui.py:215
 #, fuzzy
 msgid "Help is not available."
 msgstr "Help is not available."
 
-#: ../src/kickstartGui.py:275
+#: ../src/kickstartGui.py:282
 #, fuzzy, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "The file \"%s\" cannot be accessed."
-
-#: ../src/kickstartParser.py:72
-#, python-format
-msgid ""
-"There was a problem reading the following line from the kickstart file. This "
-"could be due to an error on the line or using a keyword that no longer "
-"exists.\n"
-"\n"
-"%s"
-msgstr ""
-
-#: ../src/kickstartParser.py:77
-#, fuzzy
-msgid "Kickstart Error"
-msgstr "Kickstart"
 
 #: ../src/network.py:87
 #, fuzzy
@@ -259,18 +249,18 @@ msgstr "Device"
 msgid "Network Type"
 msgstr "Network Type"
 
-#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:223
-#: ../src/network.py:274 ../src/network.py:415
+#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:226
+#: ../src/network.py:286 ../src/network.py:422
 #, fuzzy
 msgid "Static IP"
 msgstr "Static IP"
 
-#: ../src/network.py:213
+#: ../src/network.py:216 ../src/network.py:278
 #, fuzzy
 msgid "Please fill in the network information"
 msgstr "Please fill in the network information"
 
-#: ../src/network.py:318
+#: ../src/network.py:330
 #, fuzzy, python-format
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
@@ -288,72 +278,72 @@ msgstr "Could not open display because no X server is running."
 msgid "Please make sure the comps package is installed."
 msgstr ""
 
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:52
+#: ../src/partWindow.py:84 system-config-kickstart.gladestrings:52
 #, fuzzy
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:53
+#: ../src/partWindow.py:84 system-config-kickstart.gladestrings:53
 #, fuzzy
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:85 ../src/partWindow.py:148
+#: ../src/partWindow.py:86 ../src/partWindow.py:149
 #, fuzzy
 msgid "software RAID"
 msgstr "software RAID"
 
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:54
+#: ../src/partWindow.py:87 system-config-kickstart.gladestrings:54
 #, fuzzy
 msgid "swap"
 msgstr "swap"
 
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:55
+#: ../src/partWindow.py:87 system-config-kickstart.gladestrings:55
 #, fuzzy
 msgid "vfat"
 msgstr "vfat"
 
-#: ../src/partWindow.py:87
+#: ../src/partWindow.py:88
 #, fuzzy
 msgid "PPC PReP Boot"
 msgstr "PPC PReP Boot"
 
-#: ../src/partWindow.py:260 ../src/partWindow.py:535 ../src/raidWindow.py:212
+#: ../src/partWindow.py:262 ../src/partWindow.py:537 ../src/raidWindow.py:212
 #, fuzzy
 msgid "Yes"
 msgstr "Yes"
 
-#: ../src/partWindow.py:262 ../src/partWindow.py:537 ../src/raidWindow.py:214
+#: ../src/partWindow.py:264 ../src/partWindow.py:539 ../src/raidWindow.py:214
 #, fuzzy
 msgid "No"
 msgstr "No"
 
-#: ../src/partWindow.py:285 ../src/partWindow.py:300 ../src/partWindow.py:319
-#: ../src/partWindow.py:333
+#: ../src/partWindow.py:287 ../src/partWindow.py:302 ../src/partWindow.py:321
+#: ../src/partWindow.py:335
 #, fuzzy
 msgid "Auto"
 msgstr "Auto"
 
-#: ../src/partWindow.py:294
+#: ../src/partWindow.py:296
 #, fuzzy
 msgid "Hard Drives"
 msgstr "Hard Drives"
 
-#: ../src/partWindow.py:420
+#: ../src/partWindow.py:422
 #, fuzzy
 msgid "Specify a mount point for the partition."
 msgstr "Specify a mount point for the partition."
 
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:429
+#: ../src/partWindow.py:431
 #, fuzzy, python-format
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
 
-#: ../src/partWindow.py:449
+#: ../src/partWindow.py:451
 #, fuzzy
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
@@ -362,12 +352,12 @@ msgstr ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
 
-#: ../src/partWindow.py:488
+#: ../src/partWindow.py:490
 #, fuzzy
 msgid "Specify a device on which to create the partition."
 msgstr "Specify a device on which to create the partition."
 
-#: ../src/partWindow.py:490
+#: ../src/partWindow.py:492
 #, fuzzy
 msgid ""
 "The device you specified is not a valid device name. Please use a valid "
@@ -376,7 +366,7 @@ msgstr ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
 
-#: ../src/partWindow.py:500
+#: ../src/partWindow.py:502
 #, fuzzy
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
@@ -385,7 +375,7 @@ msgstr ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
 
-#: ../src/partWindow.py:506
+#: ../src/partWindow.py:508
 #, fuzzy
 msgid ""
 "The partition you specified does not begin with \"hd\" or \"sd\".  "
@@ -396,7 +386,7 @@ msgstr ""
 "Partitions must have a valid device name and partition number such as \"hda1"
 "\" or \"sda3\"."
 
-#: ../src/partition.py:72
+#: ../src/partition.py:74
 #, fuzzy
 msgid ""
 "Device/\n"
@@ -405,8 +395,7 @@ msgstr ""
 "Device/\n"
 "Partition Number"
 
-#. col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
-#: ../src/partition.py:75
+#: ../src/partition.py:76
 #, fuzzy
 msgid ""
 "Mount Point/\n"
@@ -415,22 +404,22 @@ msgstr ""
 "Mount Point/\n"
 "RAID"
 
-#: ../src/partition.py:77
+#: ../src/partition.py:78
 #, fuzzy
 msgid "Type"
 msgstr "Type"
 
-#: ../src/partition.py:79
+#: ../src/partition.py:80
 #, fuzzy
 msgid "Format"
 msgstr "Format"
 
-#: ../src/partition.py:81
+#: ../src/partition.py:82
 #, fuzzy
 msgid "Size (MB)"
 msgstr "Size (MB)"
 
-#: ../src/partition.py:151 ../src/partition.py:191
+#: ../src/partition.py:97 ../src/partition.py:137
 #, fuzzy
 msgid "Please select a partition from the list."
 msgstr "Please select a partition from the list."
@@ -455,7 +444,7 @@ msgstr "You must select at least 3 partitions in order to use RAID %s"
 msgid "Raid Devices"
 msgstr "Raid Devices"
 
-#: ../src/system-config-kickstart.py:60
+#: ../src/system-config-kickstart.py:61
 #, fuzzy
 msgid ""
 "Usage: system-config-kickstart [--help] [--generate <filename>] "
@@ -486,12 +475,12 @@ msgstr ""
 "values from\n"
 "                        the kickstart file already filled in."
 
-#: ../src/system-config-kickstart.py:77
+#: ../src/system-config-kickstart.py:78
 #, fuzzy
 msgid "Could not open display because no X server is running."
 msgstr "Could not open display because no X server is running."
 
-#: ../src/system-config-kickstart.py:78
+#: ../src/system-config-kickstart.py:79
 #, fuzzy
 msgid "Try running 'system-config-kickstart --help' for a list of options."
 msgstr "Try running 'system-config-kickstart --help' for a list of options."
@@ -1642,6 +1631,10 @@ msgstr "Name Server:"
 #, fuzzy
 msgid "."
 msgstr "."
+
+#, fuzzy
+#~ msgid "Kickstart Error"
+#~ msgstr "Kickstart"
 
 #, fuzzy
 #~ msgid "Save File"

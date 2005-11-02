@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ko\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-13 13:29-0400\n"
+"POT-Creation-Date: 2005-11-02 16:17-0500\n"
 "PO-Revision-Date: 2005-09-14 11:42+1000\n"
 "Last-Translator: Michelle Ji Yeen Kim <mkim@redhat.com>\n"
 "Language-Team: Korean\n"
@@ -17,66 +17,71 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
 
-#: ../src/basic.py:67
+#: ../src/auth.py:323
+#, fuzzy
+msgid "Please fill in the authentication information"
+msgstr "네트워크 정보를 입력해 주십시오."
+
+#: ../src/basic.py:70
 msgid "x86, AMD64, or Intel EM64T"
 msgstr "x86, AMD64, 또는 Intel EM64T"
 
-#: ../src/basic.py:67
+#: ../src/basic.py:70
 msgid "Intel Itanium"
 msgstr "Intel Itanium"
 
-#: ../src/basic.py:67
+#: ../src/basic.py:70
 msgid "IBM iSeries"
 msgstr "IBM iSeries"
 
-#: ../src/basic.py:68
+#: ../src/basic.py:71
 msgid "IBM pSeries"
 msgstr "IBM pSeries"
 
-#: ../src/basic.py:68
+#: ../src/basic.py:71
 msgid "IBM zSeries/s390"
 msgstr "IBM zSeries/s390"
 
-#: ../src/basic.py:156
+#: ../src/basic.py:149
 msgid "Root passwords do not match."
 msgstr "Root 암호가 일치하지 않습니다."
 
-#: ../src/basic.py:157 ../src/basic.py:176 ../src/install.py:214
-#: ../src/partWindow.py:513 ../src/partition.py:317 ../src/raidWindow.py:247
+#: ../src/basic.py:150 ../src/basic.py:168 ../src/install.py:218
+#: ../src/partWindow.py:515 ../src/partition.py:245 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "오류"
 
-#: ../src/basic.py:175
+#: ../src/basic.py:167
 msgid "Please select a root password."
 msgstr "Root 암호를 선택해 주십시오."
 
-#: ../src/bootloader.py:76
+#: ../src/bootloader.py:81
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
 msgstr "%s 플랫폼에서는 부트로더 옵션을 사용할 수 없습니다"
 
-#: ../src/bootloader.py:117
+#: ../src/bootloader.py:121
 msgid "Grub passwords do not match.  Please try again."
 msgstr "Grub 암호가 일치하지 않습니다.  다시 입력해 주십시오."
 
 #. create table with custom checklists
-#: ../src/firewall.py:60
+#: ../src/firewall.py:59
 msgid "Trusted devices:"
 msgstr "신뢰하는 장치:"
 
-#: ../src/firewall.py:85
+#: ../src/firewall.py:84
 msgid "Trusted services:"
 msgstr "신뢰하는 서비스:"
 
-#: ../src/firewall.py:117
+#: ../src/firewall.py:116
 msgid "Other ports: (1029:tcp)"
 msgstr "그 외의 포트: (1029:tcp)"
 
-#: ../src/install.py:134
+#: ../src/install.py:133
 msgid "Please enter an NFS server."
 msgstr "NFS 서버를 입력해 주십시오."
 
-#: ../src/install.py:137
+#: ../src/install.py:136
 msgid "Please enter an NFS directory."
 msgstr "NFS 디렉토리를 입력해 주십시오."
 
@@ -96,79 +101,79 @@ msgstr "FTP 사용자명을 입력해 주십시오."
 msgid "Please enter an FTP password."
 msgstr "FTP 암호를 입력해 주십시오."
 
-#: ../src/install.py:178
+#: ../src/install.py:179
 msgid "Please enter an HTTP server."
 msgstr "HTTP 서버를 입력해 주십시오."
 
-#: ../src/install.py:181
+#: ../src/install.py:182
 msgid "Please enter an HTTP server directory."
 msgstr "HTTP 서버 디렉토리를 입력해 주십시오."
 
-#: ../src/install.py:202
+#: ../src/install.py:204
 msgid "Please enter a hard drive directory."
 msgstr "하드 드라이브 디렉토리를 입력해 주십시오."
 
-#: ../src/install.py:205
+#: ../src/install.py:207
 msgid "Please enter a hard drive partition."
 msgstr "하드 드라이브 파티션을 입력해 주십시오."
 
-#: ../src/kickstartGui.py:86
+#: ../src/kickstartGui.py:92
 msgid "Kickstart"
 msgstr "킥스타트"
 
-#: ../src/kickstartGui.py:87
+#: ../src/kickstartGui.py:93
 msgid "Create a kickstart file"
 msgstr "킥스타트 파일 생성"
 
-#: ../src/kickstartGui.py:138
+#: ../src/kickstartGui.py:140
 msgid "Subsection"
 msgstr "하부 섹션"
 
-#: ../src/kickstartGui.py:142
+#: ../src/kickstartGui.py:144
 msgid "Basic Configuration"
 msgstr "기본 설정"
 
-#: ../src/kickstartGui.py:142
+#: ../src/kickstartGui.py:144
 msgid "Installation Method"
 msgstr "설치 방법"
 
-#: ../src/kickstartGui.py:143
+#: ../src/kickstartGui.py:145
 msgid "Boot Loader Options"
 msgstr "부트로더 옵션"
 
-#: ../src/kickstartGui.py:143
+#: ../src/kickstartGui.py:145
 msgid "Partition Information"
 msgstr "파티션 정보"
 
-#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:136
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:136
 msgid "Network Configuration"
 msgstr "네트워크 설정"
 
-#: ../src/kickstartGui.py:144
+#: ../src/kickstartGui.py:146
 msgid "Authentication"
 msgstr "인증"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:182
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:182
 msgid "Firewall Configuration"
 msgstr "방화벽 설정"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:207
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:207
 msgid "Display Configuration"
 msgstr "화면 설정"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:217
+#: ../src/kickstartGui.py:148 system-config-kickstart.gladestrings:217
 msgid "Package Selection"
 msgstr "패키지 선택"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:222
+#: ../src/kickstartGui.py:148 system-config-kickstart.gladestrings:222
 msgid "Pre-Installation Script"
 msgstr "설치-전(Pre) 스크립트"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:228
+#: ../src/kickstartGui.py:149 system-config-kickstart.gladestrings:228
 msgid "Post-Installation Script"
 msgstr "설치-후(Post) 스크립트"
 
-#: ../src/kickstartGui.py:193
+#: ../src/kickstartGui.py:192
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -182,36 +187,18 @@ msgstr ""
 " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
 " 킥스타트 파일을 생성하는데 사용되는 그래픽 인터페이스"
 
-#: ../src/kickstartGui.py:194
+#: ../src/kickstartGui.py:193
 msgid "About Kickstart Configurator"
 msgstr "킥스타트 설정 프로그램에 대하여"
 
-#: ../src/kickstartGui.py:224
+#: ../src/kickstartGui.py:215
 msgid "Help is not available."
 msgstr "도움말 자료가 없습니다."
 
-#: ../src/kickstartGui.py:275
+#: ../src/kickstartGui.py:282
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "\"%s\" 파일을 읽을 수 없습니다."
-
-#: ../src/kickstartParser.py:72
-#, python-format
-msgid ""
-"There was a problem reading the following line from the kickstart file. This "
-"could be due to an error on the line or using a keyword that no longer "
-"exists.\n"
-"\n"
-"%s"
-msgstr ""
-"킥스타트 파일에서 다음 줄을 읽는데 문제가 발생했습니다. 이 줄에 오류가 있거나 "
-"존재하지 않는 키워드를 사용된 것 같습니다.\n"
-"\n"
-"%s"
-
-#: ../src/kickstartParser.py:77
-msgid "Kickstart Error"
-msgstr "킥스타트 오류"
 
 #: ../src/network.py:87
 msgid "Device"
@@ -221,16 +208,16 @@ msgstr "장치"
 msgid "Network Type"
 msgstr "네트워크 유형"
 
-#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:223
-#: ../src/network.py:274 ../src/network.py:415
+#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:226
+#: ../src/network.py:286 ../src/network.py:422
 msgid "Static IP"
 msgstr "고정 IP 주소"
 
-#: ../src/network.py:213
+#: ../src/network.py:216 ../src/network.py:278
 msgid "Please fill in the network information"
 msgstr "네트워크 정보를 입력해 주십시오."
 
-#: ../src/network.py:318
+#: ../src/network.py:330
 #, python-format
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
@@ -248,59 +235,61 @@ msgstr "%s 파일이 없어서 시작하지 못했습니다"
 msgid "Please make sure the comps package is installed."
 msgstr "comps 패키지가 설치되었는지 확인해주십시오."
 
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:52
+#: ../src/partWindow.py:84 system-config-kickstart.gladestrings:52
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:53
+#: ../src/partWindow.py:84 system-config-kickstart.gladestrings:53
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:85 ../src/partWindow.py:148
+#: ../src/partWindow.py:86 ../src/partWindow.py:149
 msgid "software RAID"
 msgstr "소프트웨어 RAID"
 
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:54
+#: ../src/partWindow.py:87 system-config-kickstart.gladestrings:54
 msgid "swap"
 msgstr "스왑 (swap)"
 
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:55
+#: ../src/partWindow.py:87 system-config-kickstart.gladestrings:55
 msgid "vfat"
 msgstr "vfat"
 
-#: ../src/partWindow.py:87
+#: ../src/partWindow.py:88
 msgid "PPC PReP Boot"
 msgstr "PPC PReP 부트"
 
-#: ../src/partWindow.py:260 ../src/partWindow.py:535 ../src/raidWindow.py:212
+#: ../src/partWindow.py:262 ../src/partWindow.py:537 ../src/raidWindow.py:212
 msgid "Yes"
 msgstr "예"
 
-#: ../src/partWindow.py:262 ../src/partWindow.py:537 ../src/raidWindow.py:214
+#: ../src/partWindow.py:264 ../src/partWindow.py:539 ../src/raidWindow.py:214
 msgid "No"
 msgstr "아니오"
 
-#: ../src/partWindow.py:285 ../src/partWindow.py:300 ../src/partWindow.py:319
-#: ../src/partWindow.py:333
+#: ../src/partWindow.py:287 ../src/partWindow.py:302 ../src/partWindow.py:321
+#: ../src/partWindow.py:335
 msgid "Auto"
 msgstr "자동"
 
-#: ../src/partWindow.py:294
+#: ../src/partWindow.py:296
 msgid "Hard Drives"
 msgstr "하드 드라이브"
 
-#: ../src/partWindow.py:420
+#: ../src/partWindow.py:422
 msgid "Specify a mount point for the partition."
 msgstr "해당 파티션에 대한 마운트 지점을 지정해 주십시오."
 
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:429
+#: ../src/partWindow.py:431
 #, python-format
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr "\"%s\" 마운트 지점은 이미 사용중입니다.  다른 마운트 지점을 선택해 주십시오."
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr ""
+"\"%s\" 마운트 지점은 이미 사용중입니다.  다른 마운트 지점을 선택해 주십시오."
 
-#: ../src/partWindow.py:449
+#: ../src/partWindow.py:451
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -308,11 +297,11 @@ msgstr ""
 "새로운 RAID 파티션을 생성하기 위해서는 반드시 하드 드라이브 또는 기존의 파티"
 "션을 지정하셔야 합니다. "
 
-#: ../src/partWindow.py:488
+#: ../src/partWindow.py:490
 msgid "Specify a device on which to create the partition."
 msgstr "파티션이 생성될 장치를 지정해 주십시오."
 
-#: ../src/partWindow.py:490
+#: ../src/partWindow.py:492
 msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
@@ -320,7 +309,7 @@ msgstr ""
 "지정하신 장치명이 올바르지 않습니다. \"hda1\"나 \"sda3\"와 같은 올바른 장치명"
 "을 사용해 주십시오."
 
-#: ../src/partWindow.py:500
+#: ../src/partWindow.py:502
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -328,7 +317,7 @@ msgstr ""
 "지정하신 파티션명이 숫자로 끝나지 않습니다.  파티션명에는 \"hda1\"나 \"sda3"
 "\"와 같은 파티션 번호가 포함되어야 합니다."
 
-#: ../src/partWindow.py:506
+#: ../src/partWindow.py:508
 msgid ""
 "The partition you specified does not begin with \"hd\" or \"sd\".  "
 "Partitions must have a valid device name and partition number such as \"hda1"
@@ -337,7 +326,7 @@ msgstr ""
 "지정하신 파티션명이 \"hd\"나 \"sd\"로 시작하지 않습니다. 파티션명은 \"hda1"
 "\"나 \"sda3\"처럼 유효한 장치명과 파티션 번호로 구성되어야 합니다."
 
-#: ../src/partition.py:72
+#: ../src/partition.py:74
 msgid ""
 "Device/\n"
 "Partition Number"
@@ -345,8 +334,7 @@ msgstr ""
 "장치/\n"
 "파티션 번호"
 
-#. col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
-#: ../src/partition.py:75
+#: ../src/partition.py:76
 msgid ""
 "Mount Point/\n"
 "RAID"
@@ -354,19 +342,19 @@ msgstr ""
 "마운트 지점/\n"
 "RAID"
 
-#: ../src/partition.py:77
+#: ../src/partition.py:78
 msgid "Type"
 msgstr "유형"
 
-#: ../src/partition.py:79
+#: ../src/partition.py:80
 msgid "Format"
 msgstr "포맷"
 
-#: ../src/partition.py:81
+#: ../src/partition.py:82
 msgid "Size (MB)"
 msgstr "용량 (MB)"
 
-#: ../src/partition.py:151 ../src/partition.py:191
+#: ../src/partition.py:97 ../src/partition.py:137
 msgid "Please select a partition from the list."
 msgstr "목록에서 파티션을 선택해 주십시오."
 
@@ -389,7 +377,7 @@ msgstr "RAID %s을(를) 사용하시려면 최소한 3개의 파티션을 선택
 msgid "Raid Devices"
 msgstr "RAID 장치"
 
-#: ../src/system-config-kickstart.py:60
+#: ../src/system-config-kickstart.py:61
 msgid ""
 "Usage: system-config-kickstart [--help] [--generate <filename>] "
 "[<kickstart_filename>]\n"
@@ -417,11 +405,11 @@ msgstr ""
 "을\n"
 "                        사용하여 GUI가 시작될 것입니다."
 
-#: ../src/system-config-kickstart.py:77
+#: ../src/system-config-kickstart.py:78
 msgid "Could not open display because no X server is running."
 msgstr "X 서버가 실행 중이지 않아 화면을 열 수 없습니다."
 
-#: ../src/system-config-kickstart.py:78
+#: ../src/system-config-kickstart.py:79
 msgid "Try running 'system-config-kickstart --help' for a list of options."
 msgstr ""
 "'system-config-kickstart --help' 명령을 실행하여 사용 가능한 옵션을 살펴보십"
@@ -1362,3 +1350,17 @@ msgstr "네임서버:"
 msgid "."
 msgstr "."
 
+#~ msgid ""
+#~ "There was a problem reading the following line from the kickstart file. "
+#~ "This could be due to an error on the line or using a keyword that no "
+#~ "longer exists.\n"
+#~ "\n"
+#~ "%s"
+#~ msgstr ""
+#~ "킥스타트 파일에서 다음 줄을 읽는데 문제가 발생했습니다. 이 줄에 오류가 있"
+#~ "거나 존재하지 않는 키워드를 사용된 것 같습니다.\n"
+#~ "\n"
+#~ "%s"
+
+#~ msgid "Kickstart Error"
+#~ msgstr "킥스타트 오류"

@@ -8,70 +8,75 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-13 13:29-0400\n"
+"POT-Creation-Date: 2005-11-02 16:17-0500\n"
 "PO-Revision-Date: 2005-09-19 20:40+0200\n"
 "Last-Translator: Peter van Egdom <p.van.egdom@chello.nl>\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/basic.py:67
+#: ../src/auth.py:323
+#, fuzzy
+msgid "Please fill in the authentication information"
+msgstr "Informatie over het netwerk invoeren"
+
+#: ../src/basic.py:70
 msgid "x86, AMD64, or Intel EM64T"
 msgstr "x86, AMD64, of Intel EM64T"
 
-#: ../src/basic.py:67
+#: ../src/basic.py:70
 msgid "Intel Itanium"
 msgstr "Intel Itanium"
 
-#: ../src/basic.py:67
+#: ../src/basic.py:70
 msgid "IBM iSeries"
 msgstr "IBM iSeries"
 
-#: ../src/basic.py:68
+#: ../src/basic.py:71
 msgid "IBM pSeries"
 msgstr "IBM pSeries"
 
-#: ../src/basic.py:68
+#: ../src/basic.py:71
 msgid "IBM zSeries/s390"
 msgstr "IBM zSeries/s390"
 
-#: ../src/basic.py:156
+#: ../src/basic.py:149
 msgid "Root passwords do not match."
 msgstr "Root wachtwoorden komen niet overeen."
 
-#: ../src/basic.py:157 ../src/basic.py:176 ../src/install.py:214
-#: ../src/partWindow.py:513 ../src/partition.py:317 ../src/raidWindow.py:247
+#: ../src/basic.py:150 ../src/basic.py:168 ../src/install.py:218
+#: ../src/partWindow.py:515 ../src/partition.py:245 ../src/raidWindow.py:247
 msgid "Error"
 msgstr "Fout"
 
-#: ../src/basic.py:175
+#: ../src/basic.py:167
 msgid "Please select a root password."
 msgstr "Selecteer een root wachtwoord."
 
-#: ../src/bootloader.py:76
+#: ../src/bootloader.py:81
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
 msgstr "Bootloader-opties zijn niet van toepassing bij het %s platform"
 
-#: ../src/bootloader.py:117
+#: ../src/bootloader.py:121
 msgid "Grub passwords do not match.  Please try again."
 msgstr "Grub wachtwoorden komen niet overeen.  Probeer het nog een keer."
 
 #. create table with custom checklists
-#: ../src/firewall.py:60
+#: ../src/firewall.py:59
 msgid "Trusted devices:"
 msgstr "Vertrouwde apparaten:"
 
-#: ../src/firewall.py:85
+#: ../src/firewall.py:84
 msgid "Trusted services:"
 msgstr "Vertrouwde diensten:"
 
-#: ../src/firewall.py:117
+#: ../src/firewall.py:116
 msgid "Other ports: (1029:tcp)"
 msgstr "Andere poorten: (1029:tcp)"
 
-#: ../src/install.py:134
+#: ../src/install.py:133
 msgid "Please enter an NFS server."
 msgstr "Voer een NFS-server in."
 
@@ -81,7 +86,7 @@ msgstr "Voer een NFS-server in."
 # Geef een NFS map
 # Een NFS map opgeven
 # Een NFS map invoeren
-#: ../src/install.py:137
+#: ../src/install.py:136
 msgid "Please enter an NFS directory."
 msgstr "Voer een NFS map in."
 
@@ -101,82 +106,82 @@ msgstr "Voer een FTP gebruikersnaam in."
 msgid "Please enter an FTP password."
 msgstr "Voer een FTP wachtwoord in."
 
-#: ../src/install.py:178
+#: ../src/install.py:179
 msgid "Please enter an HTTP server."
 msgstr "Voer een HTTP-server in."
 
-#: ../src/install.py:181
+#: ../src/install.py:182
 msgid "Please enter an HTTP server directory."
 msgstr "Voer een HTTP-servermap in."
 
-#: ../src/install.py:202
+#: ../src/install.py:204
 msgid "Please enter a hard drive directory."
 msgstr "Voer een harde schijf map in."
 
-#: ../src/install.py:205
+#: ../src/install.py:207
 msgid "Please enter a hard drive partition."
 msgstr "Voer een harde schijf partitie in."
 
-#: ../src/kickstartGui.py:86
+#: ../src/kickstartGui.py:92
 msgid "Kickstart"
 msgstr "Kickstart"
 
-#: ../src/kickstartGui.py:87
+#: ../src/kickstartGui.py:93
 msgid "Create a kickstart file"
 msgstr "Een kickstart-bestand aanmaken"
 
-#: ../src/kickstartGui.py:138
+#: ../src/kickstartGui.py:140
 msgid "Subsection"
 msgstr "Subsectie"
 
-#: ../src/kickstartGui.py:142
+#: ../src/kickstartGui.py:144
 msgid "Basic Configuration"
 msgstr "Basisconfiguratie"
 
-#: ../src/kickstartGui.py:142
+#: ../src/kickstartGui.py:144
 msgid "Installation Method"
 msgstr "Installatiemethode"
 
-#: ../src/kickstartGui.py:143
+#: ../src/kickstartGui.py:145
 msgid "Boot Loader Options"
 msgstr "Bootloader opties"
 
-#: ../src/kickstartGui.py:143
+#: ../src/kickstartGui.py:145
 msgid "Partition Information"
 msgstr "Partitie informatie"
 
-#: ../src/kickstartGui.py:144 system-config-kickstart.gladestrings:136
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:136
 msgid "Network Configuration"
 msgstr "Netwerk configuratie"
 
-#: ../src/kickstartGui.py:144
+#: ../src/kickstartGui.py:146
 msgid "Authentication"
 msgstr "Aanmeldingscontrole"
 
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:182
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:182
 msgid "Firewall Configuration"
 msgstr "Firewall configuratie"
 
 # Was: X configuratie
 # weergave configuratie
 # grafische configuratie
-#: ../src/kickstartGui.py:145 system-config-kickstart.gladestrings:207
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:207
 msgid "Display Configuration"
 msgstr "Display configuratie"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:217
+#: ../src/kickstartGui.py:148 system-config-kickstart.gladestrings:217
 msgid "Package Selection"
 msgstr "Pakket selectie"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:222
+#: ../src/kickstartGui.py:148 system-config-kickstart.gladestrings:222
 msgid "Pre-Installation Script"
 msgstr "Voor-installatie script"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:228
+#: ../src/kickstartGui.py:149 system-config-kickstart.gladestrings:228
 msgid "Post-Installation Script"
 msgstr "Na-installatie script"
 
-#: ../src/kickstartGui.py:193
+#: ../src/kickstartGui.py:192
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -190,37 +195,18 @@ msgstr ""
 " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
 " Een grafische interface om een kickstart bestand te maken"
 
-#: ../src/kickstartGui.py:194
+#: ../src/kickstartGui.py:193
 msgid "About Kickstart Configurator"
 msgstr "Over Kickstart Configurator"
 
-#: ../src/kickstartGui.py:224
+#: ../src/kickstartGui.py:215
 msgid "Help is not available."
 msgstr "Hulp is niet beschikbaar."
 
-#: ../src/kickstartGui.py:275
+#: ../src/kickstartGui.py:282
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "Kon geen toegang krijgen tot het bestand \"%s\"."
-
-#: ../src/kickstartParser.py:72
-#, python-format
-msgid ""
-"There was a problem reading the following line from the kickstart file. This "
-"could be due to an error on the line or using a keyword that no longer "
-"exists.\n"
-"\n"
-"%s"
-msgstr ""
-"Er was een probleem met het lezen van de volgende lijn in het kickstart-bestand. "
-"Dit kan door een fout op een lijn of door het gebruik van een niet meer bestaand "
-"sleutelwoord.\nn"
-"\n"
-"%s"
-
-#: ../src/kickstartParser.py:77
-msgid "Kickstart Error"
-msgstr "Kickstart Probleem"
 
 #: ../src/network.py:87
 msgid "Device"
@@ -230,16 +216,16 @@ msgstr "Apparaat"
 msgid "Network Type"
 msgstr "Soort netwerk"
 
-#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:223
-#: ../src/network.py:274 ../src/network.py:415
+#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:226
+#: ../src/network.py:286 ../src/network.py:422
 msgid "Static IP"
 msgstr "Statisch IP"
 
-#: ../src/network.py:213
+#: ../src/network.py:216 ../src/network.py:278
 msgid "Please fill in the network information"
 msgstr "Informatie over het netwerk invoeren"
 
-#: ../src/network.py:318
+#: ../src/network.py:330
 #, python-format
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
@@ -256,61 +242,61 @@ msgstr "Kon niet starten omdat het bestand %s ontbreekt"
 msgid "Please make sure the comps package is installed."
 msgstr "Zorg ervoor dat het comps pakket geïnstalleerd is."
 
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:52
+#: ../src/partWindow.py:84 system-config-kickstart.gladestrings:52
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:83 system-config-kickstart.gladestrings:53
+#: ../src/partWindow.py:84 system-config-kickstart.gladestrings:53
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:85 ../src/partWindow.py:148
+#: ../src/partWindow.py:86 ../src/partWindow.py:149
 msgid "software RAID"
 msgstr "software RAID"
 
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:54
+#: ../src/partWindow.py:87 system-config-kickstart.gladestrings:54
 msgid "swap"
 msgstr "swap"
 
-#: ../src/partWindow.py:86 system-config-kickstart.gladestrings:55
+#: ../src/partWindow.py:87 system-config-kickstart.gladestrings:55
 msgid "vfat"
 msgstr "vfat"
 
-#: ../src/partWindow.py:87
+#: ../src/partWindow.py:88
 msgid "PPC PReP Boot"
 msgstr "PPC PReP Boot"
 
-#: ../src/partWindow.py:260 ../src/partWindow.py:535 ../src/raidWindow.py:212
+#: ../src/partWindow.py:262 ../src/partWindow.py:537 ../src/raidWindow.py:212
 msgid "Yes"
 msgstr "Ja"
 
-#: ../src/partWindow.py:262 ../src/partWindow.py:537 ../src/raidWindow.py:214
+#: ../src/partWindow.py:264 ../src/partWindow.py:539 ../src/raidWindow.py:214
 msgid "No"
 msgstr "Nee"
 
-#: ../src/partWindow.py:285 ../src/partWindow.py:300 ../src/partWindow.py:319
-#: ../src/partWindow.py:333
+#: ../src/partWindow.py:287 ../src/partWindow.py:302 ../src/partWindow.py:321
+#: ../src/partWindow.py:335
 msgid "Auto"
 msgstr "Auto"
 
-#: ../src/partWindow.py:294
+#: ../src/partWindow.py:296
 msgid "Hard Drives"
 msgstr "Harde schijven"
 
-#: ../src/partWindow.py:420
+#: ../src/partWindow.py:422
 msgid "Specify a mount point for the partition."
 msgstr "Een koppelpunt aangeven voor de partitie."
 
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:429
+#: ../src/partWindow.py:431
 #, python-format
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "Het koppelpunt \"%s\" is al in gebruik.  Selecteer een ander koppelpunt."
 
-#: ../src/partWindow.py:449
+#: ../src/partWindow.py:451
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -318,11 +304,11 @@ msgstr ""
 "Om een nieuwe RAID partitie te maken, is het nodig dat u ofwel een harde "
 "schijf apparaatnaam aangeeft, ofwel een bestaande partitie."
 
-#: ../src/partWindow.py:488
+#: ../src/partWindow.py:490
 msgid "Specify a device on which to create the partition."
 msgstr "Geef een apparaat aan waarop de partitie moet worden aangemaakt."
 
-#: ../src/partWindow.py:490
+#: ../src/partWindow.py:492
 msgid ""
 "The device you specified is not a valid device name. Please use a valid "
 "device name such as \"hda1\" or \"sda3\"."
@@ -330,7 +316,7 @@ msgstr ""
 "Het apparaat dat u heeft aangegeven is geen geldige apparaatnaam. Gebruik "
 "een geldige apparaatnaam zoals \"hda1\" of \"sda3\"."
 
-#: ../src/partWindow.py:500
+#: ../src/partWindow.py:502
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -338,7 +324,7 @@ msgstr ""
 "De partitie die u heeft aangegeven eindigt niet met een getal.  Partities "
 "moeten een partitienummer hebben zoals \"hda1\" of \"sda3\"."
 
-#: ../src/partWindow.py:506
+#: ../src/partWindow.py:508
 msgid ""
 "The partition you specified does not begin with \"hd\" or \"sd\".  "
 "Partitions must have a valid device name and partition number such as \"hda1"
@@ -348,7 +334,7 @@ msgstr ""
 "Partities moeten een juiste apparaatnaam en een juist partitienummer hebben "
 "zoals \"hda1\" of \"sda3\"."
 
-#: ../src/partition.py:72
+#: ../src/partition.py:74
 msgid ""
 "Device/\n"
 "Partition Number"
@@ -356,8 +342,7 @@ msgstr ""
 "Apparaat/\n"
 "Partitienummer"
 
-#. col = gtk.TreeViewColumn(_("Mount Point/\nRAID/Volume"), gtk.CellRendererText(), text=1)
-#: ../src/partition.py:75
+#: ../src/partition.py:76
 msgid ""
 "Mount Point/\n"
 "RAID"
@@ -365,19 +350,19 @@ msgstr ""
 "Koppelpunt/\n"
 "RAID"
 
-#: ../src/partition.py:77
+#: ../src/partition.py:78
 msgid "Type"
 msgstr "Soort"
 
-#: ../src/partition.py:79
+#: ../src/partition.py:80
 msgid "Format"
 msgstr "Formatteren"
 
-#: ../src/partition.py:81
+#: ../src/partition.py:82
 msgid "Size (MB)"
 msgstr "Grootte (MB)"
 
-#: ../src/partition.py:151 ../src/partition.py:191
+#: ../src/partition.py:97 ../src/partition.py:137
 msgid "Please select a partition from the list."
 msgstr "Selecteer een partitie uit de lijst."
 
@@ -403,7 +388,7 @@ msgstr ""
 msgid "Raid Devices"
 msgstr "Raid apparaten"
 
-#: ../src/system-config-kickstart.py:60
+#: ../src/system-config-kickstart.py:61
 msgid ""
 "Usage: system-config-kickstart [--help] [--generate <filename>] "
 "[<kickstart_filename>]\n"
@@ -434,11 +419,11 @@ msgstr ""
 "opstarten met de\n"
 "                           waarden uit het kickstart-bestand reeds ingevuld."
 
-#: ../src/system-config-kickstart.py:77
+#: ../src/system-config-kickstart.py:78
 msgid "Could not open display because no X server is running."
 msgstr "Kon display niet openen omdat er geen X-server loopt."
 
-#: ../src/system-config-kickstart.py:78
+#: ../src/system-config-kickstart.py:79
 msgid "Try running 'system-config-kickstart --help' for a list of options."
 msgstr "Probeer 'system-config-kickstart --help' voor een lijst met opties."
 
@@ -1378,6 +1363,22 @@ msgstr "Naamserver:"
 #: system-config-kickstart.gladestrings:257
 msgid "."
 msgstr "."
+
+#~ msgid ""
+#~ "There was a problem reading the following line from the kickstart file. "
+#~ "This could be due to an error on the line or using a keyword that no "
+#~ "longer exists.\n"
+#~ "\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Er was een probleem met het lezen van de volgende lijn in het kickstart-"
+#~ "bestand. Dit kan door een fout op een lijn of door het gebruik van een "
+#~ "niet meer bestaand sleutelwoord.\n"
+#~ "n\n"
+#~ "%s"
+
+#~ msgid "Kickstart Error"
+#~ msgstr "Kickstart Probleem"
 
 #~ msgid "/comps.xml file."
 #~ msgstr "/comps.xml bestand."
