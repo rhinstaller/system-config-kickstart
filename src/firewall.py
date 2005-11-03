@@ -23,6 +23,7 @@ import gobject
 import string
 import os
 import getopt
+from pykickstart.constants import *
 
 ##
 ## I18N
@@ -177,11 +178,11 @@ class firewall:
         self.ksdata.firewall["ports"].extend(string.split(self.portsEntry.get_text()))
 
         if self.selinuxOptionMenu.get_history() == 0:
-            self.ksdata.selinux = 1
+            self.ksdata.selinux = SELINUX_ENFORCING
         elif self.selinuxOptionMenu.get_history() == 1:
-            self.ksdata.selinux = 2
+            self.ksdata.selinux = SELINUX_PERMISSIVE
         elif self.selinuxOptionMenu.get_history() == 2:
-            self.ksdata.selinux = 0
+            self.ksdata.selinux = SELINUX_DISABLED
 
     def fillData(self):
         if self.ksdata.firewall["enabled"] == True:
@@ -227,9 +228,9 @@ class firewall:
         if len(self.ksdata.firewall["ports"]) > 0:
             self.portsEntry.set_text(string.join(filteredPorts, ","))
 
-        if self.ksdata.selinux == 0:
+        if self.ksdata.selinux == SELINUX_DISABLED:
             self.selinuxOptionMenu.set_history(2)
-        elif self.ksdata.selinux == 1:
+        elif self.ksdata.selinux == SELINUX_ENFORCING:
             self.selinuxOptionMenu.set_history(0)
-        elif self.ksdata.selinux == 2:
+        elif self.ksdata.selinux == SELINUX_PERMISSIVE:
             self.selinuxOptionMenu.set_history(1)
