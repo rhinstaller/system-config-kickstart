@@ -24,7 +24,6 @@ import gtk.glade
 import gobject
 import string
 import getopt
-from rhpxl.xhwstate import *
 from pykickstart.constants import *
 
 ##
@@ -124,8 +123,14 @@ class xconfig:
 	    self.driver_store.set_value(iter, 0, name)
 
     def fill_monitor_list(self):
-	hardware_state = XF86HardwareState(None)
-	db = hardware_state.monitor.readMonitorsDB()
+        try:
+            from rhpxl.xhwstate import XF86HardwareState
+        except ImportError:
+            return
+
+        hardware_state = XF86HardwareState(None)
+        db = hardware_state.monitor.readMonitorsDB()
+
 	l = db.keys()
 	l.sort()
 	mon_list = []
