@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.6.0
+Version: 2.6.1
 Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -19,7 +19,6 @@ Requires: python >= 2.3.3
 Requires: hwdata
 Requires: rhpl
 Requires: system-config-language
-Requires: rhpxl
 Requires: pykickstart
 Prereq: gtk2 >= 2.6
 
@@ -75,6 +74,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Thu Nov 03 2005 Chris Lumens <clumens@redhat.com> 2.6.1-1
+- Remove requirement on rhpxl since we can work around it.
+
 * Wed Nov 02 2005 Chris Lumens <clumens@redhat.com> 2.6.0-1
 - Use pykickstart instead of our own kickstart file parsing code.
 
