@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: System-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-11-02 16:17-0500\n"
-"PO-Revision-Date: 2005-04-18 09:07+0200\n"
-"Last-Translator: Allan Sims <allsi@eau.ee>\n"
+"PO-Revision-Date: 2005-11-04 09:06+0200\n"
+"Last-Translator: Allan Sims <allan.sims@eau.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,9 +19,8 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 
 #: ../src/auth.py:323
-#, fuzzy
 msgid "Please fill in the authentication information"
-msgstr "Palun täida võrgu info"
+msgstr "Palun täida tuvastamise info"
 
 #: ../src/basic.py:70
 msgid "x86, AMD64, or Intel EM64T"
@@ -47,8 +46,12 @@ msgstr "IBM zSeries/s390"
 msgid "Root passwords do not match."
 msgstr "Juurkasutaja parool ei sobinud."
 
-#: ../src/basic.py:150 ../src/basic.py:168 ../src/install.py:218
-#: ../src/partWindow.py:515 ../src/partition.py:245 ../src/raidWindow.py:247
+#: ../src/basic.py:150
+#: ../src/basic.py:168
+#: ../src/install.py:218
+#: ../src/partWindow.py:515
+#: ../src/partition.py:245
+#: ../src/raidWindow.py:247
 msgid "Error"
 msgstr "Viga"
 
@@ -146,7 +149,8 @@ msgstr "Algkäivituse valikud"
 msgid "Partition Information"
 msgstr "Partitsiooni info"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:136
+#: ../src/kickstartGui.py:146
+#: system-config-kickstart.gladestrings:136
 msgid "Network Configuration"
 msgstr "Võrgu seadistus"
 
@@ -154,23 +158,28 @@ msgstr "Võrgu seadistus"
 msgid "Authentication"
 msgstr "Autentimine"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:182
+#: ../src/kickstartGui.py:147
+#: system-config-kickstart.gladestrings:182
 msgid "Firewall Configuration"
 msgstr "Tulemüüri seadistus"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:207
+#: ../src/kickstartGui.py:147
+#: system-config-kickstart.gladestrings:207
 msgid "Display Configuration"
 msgstr "Kuva seadistus"
 
-#: ../src/kickstartGui.py:148 system-config-kickstart.gladestrings:217
+#: ../src/kickstartGui.py:148
+#: system-config-kickstart.gladestrings:217
 msgid "Package Selection"
 msgstr "Pakettide valik"
 
-#: ../src/kickstartGui.py:148 system-config-kickstart.gladestrings:222
+#: ../src/kickstartGui.py:148
+#: system-config-kickstart.gladestrings:222
 msgid "Pre-Installation Script"
 msgstr "Installeerimiseelne skript"
 
-#: ../src/kickstartGui.py:149 system-config-kickstart.gladestrings:228
+#: ../src/kickstartGui.py:149
+#: system-config-kickstart.gladestrings:228
 msgid "Post-Installation Script"
 msgstr "Installeerimisjärgne skript"
 
@@ -209,49 +218,56 @@ msgstr "Seade"
 msgid "Network Type"
 msgstr "Võrgutüüp"
 
-#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:226
-#: ../src/network.py:286 ../src/network.py:422
+#: ../src/network.py:109
+#: ../src/network.py:155
+#: ../src/network.py:226
+#: ../src/network.py:286
+#: ../src/network.py:422
 msgid "Static IP"
 msgstr "Staatiline IP"
 
-#: ../src/network.py:216 ../src/network.py:278
+#: ../src/network.py:216
+#: ../src/network.py:278
 msgid "Please fill in the network information"
 msgstr "Palun täida võrgu info"
 
 #: ../src/network.py:330
 #, python-format
-msgid ""
-"A network device with the name %s already exists.  Please choose another "
-"device name"
+msgid "A network device with the name %s already exists.  Please choose another device name"
 msgstr "Võrguseade nimega %s on juba olemas. Palun vali mõni teine seadme nimi"
 
 #: ../src/packageGroupList.py:18
-#, fuzzy, python-format
+#, python-format
 msgid "Could not start because there is no %s file."
-msgstr "Ei suudeta käivitada, kuna puudub /usr/share/comps/ kataloog"
+msgstr "Ei suudeta käivitada, kuna puudub fail %s"
 
 #: ../src/packageGroupList.py:19
 msgid "Please make sure the comps package is installed."
 msgstr "Kontrolli, kas comps pakett on installeeritud."
 
-#: ../src/partWindow.py:84 system-config-kickstart.gladestrings:52
+#: ../src/partWindow.py:84
+#: system-config-kickstart.gladestrings:52
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:84 system-config-kickstart.gladestrings:53
+#: ../src/partWindow.py:84
+#: system-config-kickstart.gladestrings:53
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:86 ../src/partWindow.py:149
+#: ../src/partWindow.py:86
+#: ../src/partWindow.py:149
 msgid "software RAID"
 msgstr "tarkvara RAID"
 
-#: ../src/partWindow.py:87 system-config-kickstart.gladestrings:54
+#: ../src/partWindow.py:87
+#: system-config-kickstart.gladestrings:54
 msgid "swap"
 msgstr "saale"
 
-#: ../src/partWindow.py:87 system-config-kickstart.gladestrings:55
+#: ../src/partWindow.py:87
+#: system-config-kickstart.gladestrings:55
 msgid "vfat"
 msgstr "vfat"
 
@@ -259,15 +275,21 @@ msgstr "vfat"
 msgid "PPC PReP Boot"
 msgstr "PPC PReP Boot"
 
-#: ../src/partWindow.py:262 ../src/partWindow.py:537 ../src/raidWindow.py:212
+#: ../src/partWindow.py:262
+#: ../src/partWindow.py:537
+#: ../src/raidWindow.py:212
 msgid "Yes"
 msgstr "Jah"
 
-#: ../src/partWindow.py:264 ../src/partWindow.py:539 ../src/raidWindow.py:214
+#: ../src/partWindow.py:264
+#: ../src/partWindow.py:539
+#: ../src/raidWindow.py:214
 msgid "No"
 msgstr "Ei"
 
-#: ../src/partWindow.py:287 ../src/partWindow.py:302 ../src/partWindow.py:321
+#: ../src/partWindow.py:287
+#: ../src/partWindow.py:302
+#: ../src/partWindow.py:321
 #: ../src/partWindow.py:335
 msgid "Auto"
 msgstr "Auto"
@@ -283,48 +305,28 @@ msgstr "Määra partitsioonile ühenduspunkt."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:431
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr ""
-"Ühenduspunkt \"%s\" on juba kasutusel. Palun vali mõni teine ühenduspunkt."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr "Ühenduspunkt \"%s\" on juba kasutusel. Palun vali mõni teine ühenduspunkt."
 
 #: ../src/partWindow.py:451
-msgid ""
-"To create a new RAID partition, you must specify either a hard drive device "
-"name or an existing partition."
-msgstr ""
-"RAID partitsiooni loomiseks on vaja määrata kas kõvaketta seadme nimi võ "
-"olemasolev partitsioon."
+msgid "To create a new RAID partition, you must specify either a hard drive device name or an existing partition."
+msgstr "RAID partitsiooni loomiseks on vaja määrata kas kõvaketta seadme nimi võ olemasolev partitsioon."
 
 #: ../src/partWindow.py:490
 msgid "Specify a device on which to create the partition."
 msgstr "Määratakse seade, millisele luuakse partitsioon."
 
 #: ../src/partWindow.py:492
-msgid ""
-"The device you specified is not a valid device name. Please use a valid "
-"device name such as \"hda1\" or \"sda3\"."
-msgstr ""
-"Määratud seadmenimi ei ole sobiv. Palun kasuta sobivat seadmenime nagu \"hda1"
-"\" või \"sda3\"."
+msgid "The device you specified is not a valid device name. Please use a valid device name such as \"hda1\" or \"sda3\"."
+msgstr "Määratud seadmenimi ei ole sobiv. Palun kasuta sobivat seadmenime nagu \"hda1\" või \"sda3\"."
 
 #: ../src/partWindow.py:502
-msgid ""
-"The partition you specified does not end in a number.  Partitions must have "
-"a partition number such as \"hda1\" or \"sda3\"."
-msgstr ""
-"Määratud partitsioon ei lõppe numbriga. Partitsioonil peab olema number nagu "
-"\"hda1\" või \"sda3\"."
+msgid "The partition you specified does not end in a number.  Partitions must have a partition number such as \"hda1\" or \"sda3\"."
+msgstr "Määratud partitsioon ei lõppe numbriga. Partitsioonil peab olema number nagu \"hda1\" või \"sda3\"."
 
 #: ../src/partWindow.py:508
-msgid ""
-"The partition you specified does not begin with \"hd\" or \"sd\".  "
-"Partitions must have a valid device name and partition number such as \"hda1"
-"\" or \"sda3\"."
-msgstr ""
-"Valitud partitsioon ei alga tähtedega \"hd\" või \"sd\". Partitsioonidel "
-"peavad olema sobivad seadmenimed ja partitsiooni numbrid nagu \"hda1\" või "
-"\"sda3\"."
+msgid "The partition you specified does not begin with \"hd\" or \"sd\".  Partitions must have a valid device name and partition number such as \"hda1\" or \"sda3\"."
+msgstr "Valitud partitsioon ei alga tähtedega \"hd\" või \"sd\". Partitsioonidel peavad olema sobivad seadmenimed ja partitsiooni numbrid nagu \"hda1\" või \"sda3\"."
 
 #: ../src/partition.py:74
 msgid ""
@@ -354,7 +356,8 @@ msgstr "Vorming"
 msgid "Size (MB)"
 msgstr "Suurus (MB)"
 
-#: ../src/partition.py:97 ../src/partition.py:137
+#: ../src/partition.py:97
+#: ../src/partition.py:137
 msgid "Please select a partition from the list."
 msgstr "Palun vali loendist partitsioon."
 
@@ -373,34 +376,27 @@ msgstr "RAID %s kasutamiseks on vaja valida vähemalt 2 partitsiooni."
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "RAID %s kasutamiseks on vaja valida vähemalt 3 partitsiooni."
 
-#: ../src/raidWindow.py:192 ../src/raidWindow.py:218
+#: ../src/raidWindow.py:192
+#: ../src/raidWindow.py:218
 msgid "Raid Devices"
 msgstr "Raid seadmed"
 
 #: ../src/system-config-kickstart.py:61
 msgid ""
-"Usage: system-config-kickstart [--help] [--generate <filename>] "
-"[<kickstart_filename>]\n"
+"Usage: system-config-kickstart [--help] [--generate <filename>] [<kickstart_filename>]\n"
 "        \n"
 "--help                  Print out this message\n"
-"--generate <filename>   Generate a kickstart file from the current machine "
-"and write\n"
-"                        it to <filename>.  This option runs on the console, "
-"so it is\n"
-"                        useful for servers that do not have X currently "
-"running.\n"
-"<kickstart_filename>    This option will cause the GUI to launch with the "
-"values from\n"
+"--generate <filename>   Generate a kickstart file from the current machine and write\n"
+"                        it to <filename>.  This option runs on the console, so it is\n"
+"                        useful for servers that do not have X currently running.\n"
+"<kickstart_filename>    This option will cause the GUI to launch with the values from\n"
 "                        the kickstart file already filled in."
 msgstr ""
-"Kasutus: system-config-kickstart [--help] [--generate <failinimi>] "
-"[<kiirstardi_failinimi>]\n"
+"Kasutus: system-config-kickstart [--help] [--generate <failinimi>] [<kiirstardi_failinimi>]\n"
 "        \n"
 "--help                  Prinditakse käesolev teade\n"
-"--generate <failinimi>   Luuakse kiirstardi fail sellest masinast ning "
-"kirjutatakse etteantud\n"
-"                       faili.  Antud valik käivitatakse konsoolil, nii on "
-"see sobilik serveritele,\n"
+"--generate <failinimi>   Luuakse kiirstardi fail sellest masinast ning kirjutatakse etteantud\n"
+"                       faili.  Antud valik käivitatakse konsoolil, nii on see sobilik serveritele,\n"
 "                        millistel puudub graafiline keskkond.\n"
 "<kiirstardi_failinimi>  See valik käivitab graafilise liidese väärtustega, \n"
 "                        mis on antud kiirstardi failis."
@@ -411,13 +407,11 @@ msgstr "Kuva pole võimalik avada, kuna puudub käiv X server."
 
 #: ../src/system-config-kickstart.py:79
 msgid "Try running 'system-config-kickstart --help' for a list of options."
-msgstr ""
-"Proovi käivitada 'system-config-kickstart --help' valikute loendi saamiseks."
+msgstr "Proovi käivitada 'system-config-kickstart --help' valikute loendi saamiseks."
 
 #: ../src/xconfig.py:115
-#, fuzzy
 msgid "Could not read video driver database"
-msgstr "Videokaardi andmebaasi polnud võimalik lugeda"
+msgstr "Videokaardi draiverite andmebaasi polnud võimalik lugeda"
 
 #.
 #. * Translatable strings file generated by Glade.
@@ -1127,9 +1121,8 @@ msgid "General"
 msgstr "Üldine"
 
 #: system-config-kickstart.gladestrings:196
-#, fuzzy
 msgid "Probe for video card driver"
-msgstr "Proovi videokaarti"
+msgstr "Proovi videokaardi draiverit"
 
 #: system-config-kickstart.gladestrings:197
 msgid "Video Card RAM: "
@@ -1213,12 +1206,8 @@ msgstr "label34"
 
 #: system-config-kickstart.gladestrings:219
 #, c-format
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %pre command at the beginning."
-msgstr ""
-"Hoiatus: vigane skript võib põhjustada kiirstardi installeerimise "
-"ebaõnnestumise. %pre käsku mitte lisada kõige algusesse."
+msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %pre command at the beginning."
+msgstr "Hoiatus: vigane skript võib põhjustada kiirstardi installeerimise ebaõnnestumise. %pre käsku mitte lisada kõige algusesse."
 
 #: system-config-kickstart.gladestrings:220
 #: system-config-kickstart.gladestrings:226
@@ -1236,12 +1225,8 @@ msgstr "label89"
 
 #: system-config-kickstart.gladestrings:224
 #, c-format
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %post command at the beginning."
-msgstr ""
-"Hoiatus: vigane skript võib põhjustada kiirstardi installeerimise "
-"ebaõnnestumise. %post käsku mitte lisada kõige algusesse."
+msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %post command at the beginning."
+msgstr "Hoiatus: vigane skript võib põhjustada kiirstardi installeerimise ebaõnnestumise. %post käsku mitte lisada kõige algusesse."
 
 #: system-config-kickstart.gladestrings:225
 msgid "Run outside of the chroot environment"
@@ -1265,36 +1250,20 @@ msgid "_Save to File"
 msgstr "_Salvesta faili"
 
 #: system-config-kickstart.gladestrings:232
-msgid ""
-"You have choosen the following configuration. Click Save File to save the "
-"kickstart file. "
-msgstr ""
-"Valitud on järgnev seadistus. Faili salvestamiseks vajutada Salvesta fail."
+msgid "You have choosen the following configuration. Click Save File to save the kickstart file. "
+msgstr "Valitud on järgnev seadistus. Faili salvestamiseks vajutada Salvesta fail."
 
 #: system-config-kickstart.gladestrings:233
 msgid "RAID Options"
 msgstr "RAID valikud"
 
 #: system-config-kickstart.gladestrings:234
-msgid ""
-"Software RAID allows you to combine several disks into a larger RAID "
-"device.  A RAID device can be configured to provide additional speed and "
-"reliability compared to using an individual drive.  For more information on "
-"using RAID devices please consult the kickstart documentation."
-msgstr ""
-"Tarkvara RAID võimaldab kombineerida mitmeid kettaid ühte suurde RAID "
-"seadmesse. RAID seadet on võimalik seadistada tagamaks suuremat kiirust ja "
-"töökindlust võrreldes üksiku seadmega. RAID seadmete kohta saab lugeda "
-"lähemalt kiirstardi dokumentatsioonist."
+msgid "Software RAID allows you to combine several disks into a larger RAID device.  A RAID device can be configured to provide additional speed and reliability compared to using an individual drive.  For more information on using RAID devices please consult the kickstart documentation."
+msgstr "Tarkvara RAID võimaldab kombineerida mitmeid kettaid ühte suurde RAID seadmesse. RAID seadet on võimalik seadistada tagamaks suuremat kiirust ja töökindlust võrreldes üksiku seadmega. RAID seadmete kohta saab lugeda lähemalt kiirstardi dokumentatsioonist."
 
 #: system-config-kickstart.gladestrings:235
-msgid ""
-"To use RAID you must first create at least two partitions of type 'software "
-"RAID'.  Then you can create a RAID device which can be formatted and mounted."
-msgstr ""
-"RAID kasutamiseks on vajalik luua vähemalt kaks 'tarkvara RAID' "
-"partitsiooni. Seljuhul on võimalik luua RAID seadmeid, milliseid saab "
-"vormindada ja ühendada."
+msgid "To use RAID you must first create at least two partitions of type 'software RAID'.  Then you can create a RAID device which can be formatted and mounted."
+msgstr "RAID kasutamiseks on vajalik luua vähemalt kaks 'tarkvara RAID' partitsiooni. Seljuhul on võimalik luua RAID seadmeid, milliseid saab vormindada ja ühendada."
 
 #: system-config-kickstart.gladestrings:236
 msgid "Choose one of the following options:"
@@ -1354,123 +1323,84 @@ msgstr "."
 #, fuzzy
 #~ msgid "Kickstart Error"
 #~ msgstr "Kiirstart"
-
 #~ msgid "/comps.xml file."
 #~ msgstr "/comps.xml fail."
-
 #~ msgid "Save File"
 #~ msgstr "Salvesta fail"
-
 #~ msgid "Mouse:"
 #~ msgstr "Hiir:"
-
 #~ msgid "Emulate 3 Buttons"
 #~ msgstr "Imiteeri 3 nuppu"
-
 #~ msgid "Language Support:"
 #~ msgstr "Keele toetus:"
-
 #~ msgid "X Window System"
 #~ msgstr "X Window süsteem"
-
 #~ msgid "GNOME Desktop Environment"
 #~ msgstr "GNOME Töölaua keskkond"
-
 #~ msgid "KDE Desktop Environment"
 #~ msgstr "KDE Töölaua keskkond"
-
 #~ msgid "Editors"
 #~ msgstr "Redaktorid"
-
 #~ msgid "Engineering and Scientific"
 #~ msgstr "Inseneriteadus ja teaduslik"
-
 #~ msgid "Graphical Internet"
 #~ msgstr "Graafiline internet"
-
 #~ msgid "Text-based Internet"
 #~ msgstr "Tekstipõhine internet"
-
 #~ msgid "Office/Productivity"
 #~ msgstr "Kontor/tootlikus"
-
 #~ msgid "Sound and Video"
 #~ msgstr "Heli ja video"
-
 #~ msgid "Graphics"
 #~ msgstr "Graafika"
-
 #~ msgid "Games and Entertainment"
 #~ msgstr "Mängud ja meelelahutus"
-
 #~ msgid "Authoring and Publishing"
 #~ msgstr "Loometöö ja avaldamine"
-
 #~ msgid "Server Configuration Tools"
 #~ msgstr "Serveri seadistamise vahendid"
-
 #~ msgid "Web Server"
 #~ msgstr "Veebiserver"
-
 #~ msgid "Mail Server"
 #~ msgstr "Postiserver"
-
 #~ msgid "Windows File Server"
 #~ msgstr "Windowsi failiserver"
-
 #~ msgid "DNS Name Server"
 #~ msgstr "DNS nimeserver"
-
 #~ msgid "FTP Server"
 #~ msgstr "Ftp server"
-
 #~ msgid "SQL Database Server"
 #~ msgstr "SQL andmebaasiserver"
-
 #~ msgid "News Server"
 #~ msgstr "Uudisteserver"
-
 #~ msgid "Network Servers"
 #~ msgstr "Võrguserverid"
-
 #~ msgid "Development Tools"
 #~ msgstr "Arendusvahendid"
-
 #~ msgid "Kernel Development"
 #~ msgstr "Tuuma arendus"
-
 #~ msgid "X Software Development"
 #~ msgstr "X tarkvara arendus"
-
 #~ msgid "GNOME Software Development"
 #~ msgstr "GNOME tarkvara arendus"
-
 #~ msgid "KDE Software Development"
 #~ msgstr "KDE tarkvara arendus"
-
 #~ msgid "Administration Tools"
 #~ msgstr "Administreerimise vahendid"
-
 #~ msgid "System Tools"
 #~ msgstr "Süsteemi vahendid"
-
 #~ msgid "Printing Support"
 #~ msgstr "Printimise toetus"
-
 #~ msgid "Server Configuration Tools (AS and ES only)"
 #~ msgstr "Serveri seadistamise vahend (ainult AS ja ES)"
-
 #~ msgid "Network Servers (AS and ES only)"
 #~ msgstr "Võrgu serverid (ainult AS ja ES)"
-
 #~ msgid "Could not read monitor database"
 #~ msgstr "Monitori andmebaasi polnud võimalik lugeda"
-
 #~ msgid "*"
 #~ msgstr "*"
-
 #~ msgid "_Automatically Resolve Dependencies"
 #~ msgstr "L_ahenda sõltuvused automaatselt"
-
 #~ msgid "_Ignore Dependencies"
 #~ msgstr "_Ignoreeri sõltuvusi"
+
