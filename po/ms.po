@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: redhat-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-11-02 16:17-0500\n"
-"PO-Revision-Date: 2005-10-28 23:58+0800\n"
+"PO-Revision-Date: 2005-11-13 18:30+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -17,9 +17,8 @@ msgstr ""
 "X-Generator: KBabel 1.0\n"
 
 #: ../src/auth.py:323
-#, fuzzy
 msgid "Please fill in the authentication information"
-msgstr "Sila penuhkan maklumat rangkaian"
+msgstr "Sila isikan maklumat pengesahan"
 
 #: ../src/basic.py:70
 msgid "x86, AMD64, or Intel EM64T"
@@ -45,8 +44,12 @@ msgstr "IBM zSeries/s390"
 msgid "Root passwords do not match."
 msgstr "Katalaluan root tidak sepadan."
 
-#: ../src/basic.py:150 ../src/basic.py:168 ../src/install.py:218
-#: ../src/partWindow.py:515 ../src/partition.py:245 ../src/raidWindow.py:247
+#: ../src/basic.py:150
+#: ../src/basic.py:168
+#: ../src/install.py:218
+#: ../src/partWindow.py:515
+#: ../src/partition.py:245
+#: ../src/raidWindow.py:247
 msgid "Error"
 msgstr "Ralat"
 
@@ -144,7 +147,8 @@ msgstr "Pilihan Pemuat Boot"
 msgid "Partition Information"
 msgstr "Maklumat Partisyen"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:136
+#: ../src/kickstartGui.py:146
+#: system-config-kickstart.gladestrings:136
 msgid "Network Configuration"
 msgstr "Konfigurasi Rangkaian"
 
@@ -152,23 +156,28 @@ msgstr "Konfigurasi Rangkaian"
 msgid "Authentication"
 msgstr "Pengesahan"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:182
+#: ../src/kickstartGui.py:147
+#: system-config-kickstart.gladestrings:182
 msgid "Firewall Configuration"
 msgstr "Tentutetap Firewall"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:207
+#: ../src/kickstartGui.py:147
+#: system-config-kickstart.gladestrings:207
 msgid "Display Configuration"
 msgstr "Tetapan Paparan"
 
-#: ../src/kickstartGui.py:148 system-config-kickstart.gladestrings:217
+#: ../src/kickstartGui.py:148
+#: system-config-kickstart.gladestrings:217
 msgid "Package Selection"
 msgstr "Pemilihan Pakej"
 
-#: ../src/kickstartGui.py:148 system-config-kickstart.gladestrings:222
+#: ../src/kickstartGui.py:148
+#: system-config-kickstart.gladestrings:222
 msgid "Pre-Installation Script"
 msgstr "Skrip Pra-Pemasangan"
 
-#: ../src/kickstartGui.py:149 system-config-kickstart.gladestrings:228
+#: ../src/kickstartGui.py:149
+#: system-config-kickstart.gladestrings:228
 msgid "Post-Installation Script"
 msgstr "Skrip Pasca-Pemasangan"
 
@@ -207,22 +216,23 @@ msgstr "Peranti"
 msgid "Network Type"
 msgstr "Jenis Rangkaian"
 
-#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:226
-#: ../src/network.py:286 ../src/network.py:422
+#: ../src/network.py:109
+#: ../src/network.py:155
+#: ../src/network.py:226
+#: ../src/network.py:286
+#: ../src/network.py:422
 msgid "Static IP"
 msgstr "IP Statik"
 
-#: ../src/network.py:216 ../src/network.py:278
+#: ../src/network.py:216
+#: ../src/network.py:278
 msgid "Please fill in the network information"
 msgstr "Sila penuhkan maklumat rangkaian"
 
 #: ../src/network.py:330
 #, python-format
-msgid ""
-"A network device with the name %s already exists.  Please choose another "
-"device name"
-msgstr ""
-"Peranti rangkaian dengan nama %s telah wujud.  Sila pilih nama peranti lain."
+msgid "A network device with the name %s already exists.  Please choose another device name"
+msgstr "Peranti rangkaian dengan nama %s telah wujud.  Sila pilih nama peranti lain."
 
 #: ../src/packageGroupList.py:18
 #, python-format
@@ -233,24 +243,29 @@ msgstr "Tidak dapat bermula kerana tiada fail %s."
 msgid "Please make sure the comps package is installed."
 msgstr "Sila pastikan pakej comps dipasang."
 
-#: ../src/partWindow.py:84 system-config-kickstart.gladestrings:52
+#: ../src/partWindow.py:84
+#: system-config-kickstart.gladestrings:52
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:84 system-config-kickstart.gladestrings:53
+#: ../src/partWindow.py:84
+#: system-config-kickstart.gladestrings:53
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:86 ../src/partWindow.py:149
+#: ../src/partWindow.py:86
+#: ../src/partWindow.py:149
 msgid "software RAID"
 msgstr "RAID perisian"
 
-#: ../src/partWindow.py:87 system-config-kickstart.gladestrings:54
+#: ../src/partWindow.py:87
+#: system-config-kickstart.gladestrings:54
 msgid "swap"
 msgstr "swap"
 
-#: ../src/partWindow.py:87 system-config-kickstart.gladestrings:55
+#: ../src/partWindow.py:87
+#: system-config-kickstart.gladestrings:55
 msgid "vfat"
 msgstr "vfat"
 
@@ -258,15 +273,21 @@ msgstr "vfat"
 msgid "PPC PReP Boot"
 msgstr "Boot PPC PReP"
 
-#: ../src/partWindow.py:262 ../src/partWindow.py:537 ../src/raidWindow.py:212
+#: ../src/partWindow.py:262
+#: ../src/partWindow.py:537
+#: ../src/raidWindow.py:212
 msgid "Yes"
 msgstr "Ya"
 
-#: ../src/partWindow.py:264 ../src/partWindow.py:539 ../src/raidWindow.py:214
+#: ../src/partWindow.py:264
+#: ../src/partWindow.py:539
+#: ../src/raidWindow.py:214
 msgid "No"
 msgstr "Tidak"
 
-#: ../src/partWindow.py:287 ../src/partWindow.py:302 ../src/partWindow.py:321
+#: ../src/partWindow.py:287
+#: ../src/partWindow.py:302
+#: ../src/partWindow.py:321
 #: ../src/partWindow.py:335
 msgid "Auto"
 msgstr "Auto"
@@ -282,47 +303,28 @@ msgstr "Nyatakan titik lekapan bagi partisyen ini."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:431
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "Titik lekapan \"%s\" sedang digunakan.  Sila pilih titik lekapan lain."
 
 #: ../src/partWindow.py:451
-msgid ""
-"To create a new RAID partition, you must specify either a hard drive device "
-"name or an existing partition."
-msgstr ""
-"Untuk mencipta partisyen RAID baru, anda mesti menyatakan sama ada nama "
-"peranti cakera keras atau partisyen sedia wujud."
+msgid "To create a new RAID partition, you must specify either a hard drive device name or an existing partition."
+msgstr "Untuk mencipta partisyen RAID baru, anda mesti menyatakan sama ada nama peranti cakera keras atau partisyen sedia wujud."
 
 #: ../src/partWindow.py:490
 msgid "Specify a device on which to create the partition."
 msgstr "Nyatakan peranti dimana untuk mencipta partition."
 
 #: ../src/partWindow.py:492
-msgid ""
-"The device you specified is not a valid device name. Please use a valid "
-"device name such as \"hda1\" or \"sda3\"."
-msgstr ""
-"Peranti yang anda nyatakan adalah nama peranti yang tidak sah. Sila gunakan "
-"nama peranti yang sah seperti \"hda1\" atau \"sda3\"."
+msgid "The device you specified is not a valid device name. Please use a valid device name such as \"hda1\" or \"sda3\"."
+msgstr "Peranti yang anda nyatakan adalah nama peranti yang tidak sah. Sila gunakan nama peranti yang sah seperti \"hda1\" atau \"sda3\"."
 
 #: ../src/partWindow.py:502
-msgid ""
-"The partition you specified does not end in a number.  Partitions must have "
-"a partition number such as \"hda1\" or \"sda3\"."
-msgstr ""
-"Partisyen yang anda nyatakan tidak diakhiri dengan nombor. Partisyen mesti "
-"mempunyai nombor partisyen seperti \"hda1\" atau \"sda3\""
+msgid "The partition you specified does not end in a number.  Partitions must have a partition number such as \"hda1\" or \"sda3\"."
+msgstr "Partisyen yang anda nyatakan tidak diakhiri dengan nombor. Partisyen mesti mempunyai nombor partisyen seperti \"hda1\" atau \"sda3\""
 
 #: ../src/partWindow.py:508
-msgid ""
-"The partition you specified does not begin with \"hd\" or \"sd\".  "
-"Partitions must have a valid device name and partition number such as \"hda1"
-"\" or \"sda3\"."
-msgstr ""
-"Partisyen yang anda nyatakan tidak dimulakan dengan \"hd\" atau \"sd\". "
-"Partisyen mesti mempunyai nama peranti yang sah dan nombor partisyen seperti "
-"\"hda1\" atau \"sda3\""
+msgid "The partition you specified does not begin with \"hd\" or \"sd\".  Partitions must have a valid device name and partition number such as \"hda1\" or \"sda3\"."
+msgstr "Partisyen yang anda nyatakan tidak dimulakan dengan \"hd\" atau \"sd\". Partisyen mesti mempunyai nama peranti yang sah dan nombor partisyen seperti \"hda1\" atau \"sda3\""
 
 #: ../src/partition.py:74
 msgid ""
@@ -352,47 +354,41 @@ msgstr "Format"
 msgid "Size (MB)"
 msgstr "Saiz (MB)"
 
-#: ../src/partition.py:97 ../src/partition.py:137
+#: ../src/partition.py:97
+#: ../src/partition.py:137
 msgid "Please select a partition from the list."
 msgstr "Sila pilih partisyen daripada senarai."
 
 #: ../src/raidOptionsWindow.py:72
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
-msgstr ""
-"Anda sedang mempunyai %d partisyen RAID perisian yang bebas untuk digunakan."
+msgstr "Anda sedang mempunyai %d partisyen RAID perisian yang bebas untuk digunakan."
 
 #: ../src/raidWindow.py:172
 #, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr ""
-"Anda mesti memilih sekurang-kurangnya 2 partisyen untuk menggunakan RAID %s"
+msgstr "Anda mesti memilih sekurang-kurangnya 2 partisyen untuk menggunakan RAID %s"
 
 #: ../src/raidWindow.py:178
 #, python-format
 msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr ""
-"Anda mesti memilih sekurang-kurangnya 3 partisyen untuk menggunakan RAID %s"
+msgstr "Anda mesti memilih sekurang-kurangnya 3 partisyen untuk menggunakan RAID %s"
 
-#: ../src/raidWindow.py:192 ../src/raidWindow.py:218
+#: ../src/raidWindow.py:192
+#: ../src/raidWindow.py:218
 msgid "Raid Devices"
 msgstr "Peranti RAID"
 
 #: ../src/system-config-kickstart.py:61
 #, fuzzy
 msgid ""
-"Usage: system-config-kickstart [--help] [--generate <filename>] "
-"[<kickstart_filename>]\n"
+"Usage: system-config-kickstart [--help] [--generate <filename>] [<kickstart_filename>]\n"
 "        \n"
 "--help                  Print out this message\n"
-"--generate <filename>   Generate a kickstart file from the current machine "
-"and write\n"
-"                        it to <filename>.  This option runs on the console, "
-"so it is\n"
-"                        useful for servers that do not have X currently "
-"running.\n"
-"<kickstart_filename>    This option will cause the GUI to launch with the "
-"values from\n"
+"--generate <filename>   Generate a kickstart file from the current machine and write\n"
+"                        it to <filename>.  This option runs on the console, so it is\n"
+"                        useful for servers that do not have X currently running.\n"
+"<kickstart_filename>    This option will cause the GUI to launch with the values from\n"
 "                        the kickstart file already filled in."
 msgstr ""
 "<filename><kickstart_filename>\n"
@@ -408,8 +404,7 @@ msgstr "Tidak dapat membuka paparan kerana tiada pelayan X dilaksanakan."
 
 #: ../src/system-config-kickstart.py:79
 msgid "Try running 'system-config-kickstart --help' for a list of options."
-msgstr ""
-"Cuba laksanakan 'system-config-kickstart --help' untuk senarai pilihan."
+msgstr "Cuba laksanakan 'system-config-kickstart --help' untuk senarai pilihan."
 
 #: ../src/xconfig.py:115
 msgid "Could not read video driver database"
@@ -971,28 +966,24 @@ msgid "Kerberos Master Server:"
 msgstr "Pelayan Induk Kerberos:"
 
 #: system-config-kickstart.gladestrings:156
-#, fuzzy
 msgid "Kerberos 5 Authentication"
-msgstr "Konfigurasi Autentifikasi"
+msgstr "Pengesahan Kerberos 5"
 
 #: system-config-kickstart.gladestrings:157
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
 #: system-config-kickstart.gladestrings:158
-#, fuzzy
 msgid "Enable Hesiod Support"
-msgstr "Hidupkan Sokongan _Hesiod"
+msgstr "Hidupkan Sokongan Hesiod"
 
 #: system-config-kickstart.gladestrings:159
-#, fuzzy
 msgid "Hesiod LHS:"
-msgstr "Hesiod _LHS"
+msgstr "Hesiod LHS:"
 
 #: system-config-kickstart.gladestrings:160
-#, fuzzy
 msgid "Hesiod RHS:"
-msgstr "Hesiod _RHS"
+msgstr "Hesiod RHS:"
 
 #: system-config-kickstart.gladestrings:161
 msgid "Hesiod Authentication"
@@ -1230,12 +1221,8 @@ msgstr "label34"
 
 #: system-config-kickstart.gladestrings:219
 #, c-format
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %pre command at the beginning."
-msgstr ""
-"Amaran: Ralat dalam skrip ini mungkin menyebabkan pemasangan kickstart anda "
-"gagal. Jangan sertakan arahan %pre pada permulaan."
+msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %pre command at the beginning."
+msgstr "Amaran: Ralat dalam skrip ini mungkin menyebabkan pemasangan kickstart anda gagal. Jangan sertakan arahan %pre pada permulaan."
 
 #: system-config-kickstart.gladestrings:220
 #: system-config-kickstart.gladestrings:226
@@ -1254,12 +1241,8 @@ msgstr "label89"
 
 #: system-config-kickstart.gladestrings:224
 #, fuzzy, c-format
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %post command at the beginning."
-msgstr ""
-"Amaran: Ralat dalam skrip ini mungkin menyebabkan pemasangan kickstart anda "
-"gagal. Jangan sertakan arahan %pre pada permulaan."
+msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %post command at the beginning."
+msgstr "Amaran: Ralat dalam skrip ini mungkin menyebabkan pemasangan kickstart anda gagal. Jangan sertakan arahan %pre pada permulaan."
 
 #: system-config-kickstart.gladestrings:225
 #, fuzzy
@@ -1286,9 +1269,7 @@ msgstr "Simpan ke fail"
 
 #: system-config-kickstart.gladestrings:232
 #, fuzzy
-msgid ""
-"You have choosen the following configuration. Click Save File to save the "
-"kickstart file. "
+msgid "You have choosen the following configuration. Click Save File to save the kickstart file. "
 msgstr "Simpan Fail kepada fail "
 
 #: system-config-kickstart.gladestrings:233
@@ -1297,21 +1278,12 @@ msgstr "Pilihan RAID"
 
 #: system-config-kickstart.gladestrings:234
 #, fuzzy
-msgid ""
-"Software RAID allows you to combine several disks into a larger RAID "
-"device.  A RAID device can be configured to provide additional speed and "
-"reliability compared to using an individual drive.  For more information on "
-"using RAID devices please consult the kickstart documentation."
+msgid "Software RAID allows you to combine several disks into a larger RAID device.  A RAID device can be configured to provide additional speed and reliability compared to using an individual drive.  For more information on using RAID devices please consult the kickstart documentation."
 msgstr "RAD kepada RAD A RAD kepada dan kepada on RAD."
 
 #: system-config-kickstart.gladestrings:235
-msgid ""
-"To use RAID you must first create at least two partitions of type 'software "
-"RAID'.  Then you can create a RAID device which can be formatted and mounted."
-msgstr ""
-"Untuk menggunakan RAID anda mesti cipta sekurang-kurangnya dua partisyen "
-"berjenis 'RAID perisian'.  Kemudian anda boleh cipta peranti RAID yang boleh "
-"diformat dan dilekapkan."
+msgid "To use RAID you must first create at least two partitions of type 'software RAID'.  Then you can create a RAID device which can be formatted and mounted."
+msgstr "Untuk menggunakan RAID anda mesti cipta sekurang-kurangnya dua partisyen berjenis 'RAID perisian'.  Kemudian anda boleh cipta peranti RAID yang boleh diformat dan dilekapkan."
 
 #: system-config-kickstart.gladestrings:236
 msgid "Choose one of the following options:"
@@ -1368,5 +1340,3 @@ msgstr "Pelayan Nama:"
 msgid "."
 msgstr "."
 
-#~ msgid "Kickstart Error"
-#~ msgstr "Ralat Kickstart"
