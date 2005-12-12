@@ -219,12 +219,12 @@ class xconfig:
 
             if not self.monitor_probe_check.get_active():
                 if self.sync_button.get_active():
-                    self.ksdata.xconfig["hsync"] = self.hsync_entry.get_text()
-                    self.ksdata.xconfig["vsync"] = self.vsync_entry.get_text()
+                    self.ksdata.monitor["hsync"] = self.hsync_entry.get_text()
+                    self.ksdata.monitor["vsync"] = self.vsync_entry.get_text()
                 else:
                     temp, iter = self.monitor_view.get_selection().get_selected()
                     name = self.monitor_store.get_value(iter, 0)
-                    self.ksdata.xconfig["monitor"] = name
+                    self.ksdata.monitor["monitor"] = name
         else:
             self.ksdata.skipx = True
 
@@ -284,12 +284,12 @@ class xconfig:
                         self.monitor_view.scroll_to_cell(path, self.monitor_col, True, 0.5, 0.5)
                     iter = self.monitor_store.iter_next(iter)
 
-            if self.ksdata.xconfig["hsync"] != "":
+            if self.ksdata.monitor["hsync"] != "":
                 self.sync_button.set_active(True)
-                self.hsync_entry.set_text(string.strip(self.ksdata.xconfig["hsync"]))
+                self.hsync_entry.monitort(string.strip(self.ksdata.monitor["hsync"]))
                 self.monitor_probe_check.set_active(False)
 
-            if self.ksdata.xconfig["vsync"] != "":
+            if self.ksdata.monitor["vsync"] != "":
                 self.sync_button.set_active(True)
-                self.vsync_entry.set_text(string.strip(self.ksdata.xconfig["vsync"]))
+                self.vsync_entry.set_text(string.strip(self.ksdata.monitor["vsync"]))
                 self.monitor_probe_check.set_active(False)
