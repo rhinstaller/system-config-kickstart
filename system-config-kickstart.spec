@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.6.2
+Version: 2.6.3
 Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -74,6 +74,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Wed Jan 04 2006 Chris Lumens <clumens@redhat.com> 2.6.3-1
+- Remove references to monitor in xconfig (#176537).
+
 * Mon Dec 12 2005 Chris Lumens <clumens@redhat.com> 2.6.2-1
 - Use monitor keyword instead of deprecated xconfig options.
 
