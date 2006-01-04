@@ -271,9 +271,10 @@ class xconfig:
                 for size in self.ramsize_dict.keys():
                     if int(self.ksdata.xconfig["videoRam"]) == int(self.ramsize_dict[size]):
                         self.videoram_combo.entry.set_text(size)                            
-            if self.ksdata.xconfig["monitor"] != "":
+
+            if self.ksdata.monitor["monitor"] != "":
                 self.monitor_probe_check.set_active(False)
-                value = string.replace(self.ksdata.xconfig["monitor"], '"', '')
+                value = string.replace(self.ksdata.monitor["monitor"], '"', '')
 
                 iter = self.monitor_store.get_iter_first()
 
