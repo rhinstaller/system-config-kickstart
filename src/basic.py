@@ -204,9 +204,9 @@ class basic:
         self.ksdata.platform = self.platform_combo.entry.get_text()
 
         if self.reboot_checkbutton.get_active():
-            self.ksdata.reboot = True
+            self.ksdata.reboot["action"] = KS_REBOOT
         else:
-            self.ksdata.reboot = False
+            self.ksdata.reboot["action"] = KS_WAIT
 
         if self.text_install_checkbutton.get_active():
             self.ksdata.displayMode = DISPLAY_MODE_TEXT
@@ -242,7 +242,7 @@ class basic:
         if self.ksdata.timezone["timezone"] != "":
             self.timezone_combo.list.select_item(self.timezone_list.index(self.ksdata.timezone["timezone"]))
 
-        if self.ksdata.reboot == True:
+        if self.ksdata.reboot["action"] == KS_REBOOT:
             self.reboot_checkbutton.set_active(True)
 
         if self.ksdata.displayMode == DISPLAY_MODE_TEXT:
