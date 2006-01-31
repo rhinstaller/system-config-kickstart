@@ -25,6 +25,9 @@ import gobject
 import string
 import getopt
 import os
+import yum
+from yum.constants import *
+from pirut import GroupSelector
 
 ##
 ## I18N
@@ -35,183 +38,122 @@ domain = 'system-config-kickstart'
 translate.textdomain (domain)
 gtk.glade.bindtextdomain(domain)
 
+class sckYumBase(yum.YumBase):
+    def log(self, value, msg):
+        pass
+
+    def errorlog(self, value, msg):
+        pass
+
+    def filelog(self, value, msg):
+        pass
+
+    def isPackageInstalled(self, name=None, epoch=None, version=None,
+                           release=None, arch=None, po=None):
+        if po is not None:
+            (name, epoch, version, release, arch) = po.returnNevraTuple()
+
+        installed = False
+
+        lst = self.tsInfo.matchNaevr(name = name, epoch = epoch,
+                                     ver = version, rel = release,
+                                     arch = arch)
+        for txmbr in lst:
+            if txmbr.output_state in TS_INSTALL_STATES:
+                return True
+        if installed and len(lst) > 0:
+            # if we get here, then it was installed, but it's in the tsInfo
+            # for an erase or obsoleted --> not going to be installed at end
+            return False
+        return installed
+
+    def isGroupInstalled(self, grp):
+        return grp.selected
+
+    def getBaseRepoName(self):
+        fd = open("/etc/redhat-release", "r")
+        lines = fd.readlines()
+        fd.close()
+
+        if lines[0].__contains__("Rawhide"):
+            return "development"
+        else:
+            return "base"
+
+    def __init__ (self):
+        import tempfile
+
+        yum.YumBase.__init__(self)
+
+        # Set up a temporary root for RPM so it thinks there's nothing
+        # installed.
+        self.temproot = tempfile.mkdtemp(dir="/tmp")
+        self.doConfigSetup(root=self.temproot)
+        self.conf.installroot = self.temproot
+
+        # Only enable the base repo, whatever it may be called.
+        self.doTsSetup()
+        self.repos.disableRepo("*")
+        self.repos.enableRepo(self.getBaseRepoName())
+
+        self.doRepoSetup()
+        self.doGroupSetup()
+        self.doSackSetup()
+
+    def cleanup(self):
+        for root, dirs, files in os.walk(self.temproot, topdown=False):
+            for name in files:
+                os.remove(os.path.join(root, name))
+            for name in dirs:
+                os.rmdir(os.path.join(root, name))
+
+        os.rmdir(self.temproot)
+
 class Packages:
     def __init__(self, xml, ksdata):
-        self.ksdata = ksdata
-        self.package_vbox = xml.get_widget("package_vbox")
-        self.package_label_box = xml.get_widget("package_label_box")
-
-        self.desktops_eventbox = xml.get_widget("desktops_eventbox")
-        self.desktops_eventbox.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#4a59a6"))
-        self.desktops_label = xml.get_widget("desktops_label")
-        self.desktops_label.set_markup("<span foreground='white'><big><b>%s</b></big></span>" % (self.desktops_label.get(),))
-
-        self.applications_eventbox = xml.get_widget("applications_eventbox")
-        self.applications_eventbox.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#4a59a6"))
-        self.applications_label = xml.get_widget("applications_label")
-        self.applications_label.set_markup("<span foreground='white'><big><b>%s</b></big></span>" % (self.applications_label.get(),))
-
-        self.servers_eventbox = xml.get_widget("servers_eventbox")
-        self.servers_eventbox.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#4a59a6"))
-        self.servers_label = xml.get_widget("servers_label")
-        self.servers_label.set_markup("<span foreground='white'><big><b>%s</b></big></span>" % (self.servers_label.get(),))
-
-        self.development_eventbox = xml.get_widget("development_eventbox")
-        self.development_eventbox.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#4a59a6"))
-        self.development_label = xml.get_widget("development_label")
-        self.development_label.set_markup("<span foreground='white'><big><b>%s</b></big></span>" % (self.development_label.get(),))
-
-        self.system_eventbox = xml.get_widget("system_eventbox")
-        self.system_eventbox.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#4a59a6"))
-        self.system_label = xml.get_widget("system_label")
-        self.system_label.set_markup("<span foreground='white'><big><b>%s</b></big></span>" % (self.system_label.get(),))
-
-        self.desktops_view = xml.get_widget("desktops_view")
-        self.desktops_view.get_selection().set_mode(gtk.SELECTION_NONE)
-        self.applications_view = xml.get_widget("applications_treeview")
-        self.applications_view.get_selection().set_mode(gtk.SELECTION_NONE)
-        self.servers_view = xml.get_widget("servers_treeview")
-        self.servers_view.get_selection().set_mode(gtk.SELECTION_NONE)
-        self.development_view = xml.get_widget("development_treeview")
-        self.development_view.get_selection().set_mode(gtk.SELECTION_NONE)
-        self.systems_view = xml.get_widget("systems_treeview")
-        self.systems_view.get_selection().set_mode(gtk.SELECTION_NONE)
-
-        self.package_vbox = xml.get_widget("package_vbox")
-        self.package_everything_checkbutton = xml.get_widget("package_everything_checkbutton")
-        self.package_everything_checkbutton.connect("toggled", self.toggled_everything_checkbutton)
-
-        self.desktops_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING, gobject.TYPE_STRING)
-        self.desktops_view.set_model(self.desktops_store)
-
-        self.applications_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING, gobject.TYPE_STRING)
-        self.applications_view.set_model(self.applications_store)
-
-        self.servers_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING, gobject.TYPE_STRING)
-        self.servers_view.set_model(self.servers_store)
-
-        self.development_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING, gobject.TYPE_STRING)
-        self.development_view.set_model(self.development_store)
-
-        self.system_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING, gobject.TYPE_STRING)
-        self.systems_view.set_model(self.system_store)
-
-        self.create_columns(self.desktops_view, self.desktops_store)
-        self.create_columns(self.applications_view, self.applications_store)
-        self.create_columns(self.servers_view, self.servers_store)
-        self.create_columns(self.development_view, self.development_store)
-        self.create_columns(self.systems_view, self.system_store)
-
-        import packageGroupList
-        desktopsList = packageGroupList.desktopsList
-        applicationsList = packageGroupList.applicationsList
-        serversList = packageGroupList.serversList
-        developmentList = packageGroupList.developmentList
-        systemList = packageGroupList.systemList
-
-        for pkg in desktopsList:
-            iter = self.desktops_store.append()
-            self.desktops_store.set_value(iter, 1, pkg[0])
-            self.desktops_store.set_value(iter, 2, pkg[1])
-
-        for pkg in applicationsList:
-            iter = self.applications_store.append()
-            self.applications_store.set_value(iter, 1, pkg[0])
-            self.applications_store.set_value(iter, 2, pkg[1])
-
-        for pkg in serversList:
-            iter = self.servers_store.append()
-            self.servers_store.set_value(iter, 1, pkg[0])
-            self.servers_store.set_value(iter, 2, pkg[1])
-
-        for pkg in developmentList:
-            iter = self.development_store.append()
-            self.development_store.set_value(iter, 1, pkg[0])
-            self.development_store.set_value(iter, 2, pkg[1])            
-
-        for pkg in systemList:
-            iter = self.system_store.append()
-            self.system_store.set_value(iter, 1, pkg[0])
-            self.system_store.set_value(iter, 2, pkg[1])            
-
-    def toggled_everything_checkbutton (self, args):
-        self.package_vbox.set_sensitive(not self.package_everything_checkbutton.get_active())
-
-    def create_columns(self, view, store):
-        self.checkbox = gtk.CellRendererToggle()
-        col = gtk.TreeViewColumn('', self.checkbox, active = 0)
-        col.set_fixed_width(20)
-        col.set_clickable(True)
-        self.checkbox.connect("toggled", self.packageToggled, store)
-        view.append_column(col)
-
-        col = gtk.TreeViewColumn("", gtk.CellRendererText(), text=1)
-        view.append_column(col)
-
-    def packageToggled(self, data, row, store):
-        iter = store.get_iter((int(row),))
-        val = store.get_value(iter, 0)
-        store.set_value(iter, 0 , not val)
-
-    def getData(self):
-        packageList = []
-
-        packageList = self.getPkgData(self.desktops_store, packageList)
-
-        packageList = self.getPkgData(self.applications_store, packageList)
-        packageList = self.getPkgData(self.servers_store, packageList)
-        packageList = self.getPkgData(self.development_store, packageList)
-        packageList = self.getPkgData(self.system_store, packageList)
-
-        self.ksdata.groupList = packageList
-
-	if self.package_everything_checkbutton.get_active() == True:
-            self.ksdata.groupList.append("everything")
-
-    def getPkgData(self, store, packageList):
-        iter = store.get_iter_first()
+        gsFileName = lambda fn: "/usr/share/pirut/ui/" + fn
         
-        #Loop over the package list and see what was selected
-        while iter:
-            if store.get_value(iter, 0) == True:
-                packageList.append(store.get_value(iter, 2))
-            iter = store.iter_next(iter)
+        self.ksdata = ksdata
+        self.y = sckYumBase()
+        self.gs = GroupSelector.GroupSelector(self.y, gsFileName)
+        self.gs.doRefresh()
 
-        return packageList
+        self.package_frame = xml.get_widget("package_frame")
+        self.package_frame.add(self.gs.vbox)
 
-    def lookupPackageInList(self, package, store):
-        iter = store.get_iter_first()
-        while iter:
-            if package == store.get_value(iter, 2):
-                store.set_value(iter, 0, True)
-            iter = store.iter_next(iter)
+    def cleanup(self):
+        self.y.cleanup()
 
-    def setSensitive(self, boolean):
-        if boolean == False:
-            self.package_vbox.hide()
-            self.package_label_box.show()
-        else:
-            self.package_vbox.show()
-            self.package_label_box.hide()
+    def formToKsdata(self):
+        self.ksdata.groupList = []
+        self.ksdata.packageList = []
+        self.ksdata.excludedList = []
 
-    def fillData(self):
-        # We might be killing the everything group in the future
-        hasEverything = False
+        self.y.tsInfo.makelists()
+        print self.y.tsInfo.removed
+        for txmbr in self.y.tsInfo.getMembers():
+            if txmbr.groups:
+                for g in txmbr.groups:
+                    grp = self.y.comps.return_group(g)
+                    if g not in self.ksdata.groupList:
+                        self.ksdata.groupList.append(g)
+                    if txmbr.name in grp.optional_packages.keys():
+                        self.ksdata.packageList.append(txmbr.name)
+            else:
+                self.ksdata.packageList.append(txmbr.name)
+
+    def applyKsdata(self):
+        # We don't really care about invalid names here.  Perhaps we should
+        # at least throw them out of the ksdata lists so they don't keep
+        # coming back?
+        for pkg in self.ksdata.packageList:
+            try:
+                self.y.install(name=pkg)
+            except:
+                pass
+
         for grp in self.ksdata.groupList:
-            if string.lower(string.strip(grp)) == "everything":
-                hasEverything = True
-                break
-
-        if hasEverything == True:
-            self.package_vbox.set_sensitive(False)
-            self.package_everything_checkbutton.set_active(True)
-
-        for package in self.ksdata.groupList:
-            package = string.replace(package, "@", "")
-            package = string.strip(package)
-
-            self.lookupPackageInList(package, self.desktops_store)
-            self.lookupPackageInList(package, self.applications_store)
-            self.lookupPackageInList(package, self.servers_store)
-            self.lookupPackageInList(package, self.development_store)
-            self.lookupPackageInList(package, self.system_store)
+            try:
+                self.y.selectGroup(grp)
+            except:
+                pass
