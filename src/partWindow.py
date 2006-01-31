@@ -226,7 +226,7 @@ class partWindow:
 
     def on_edit_ok_button_clicked(self, *args):
         part_object = self.part_store.get_value(self.current_iter, 5)
-        result = self.getData(part_object)
+        result = self.formToKsdata(part_object)
 
         if result is None:
             return
@@ -273,7 +273,7 @@ class partWindow:
 
     def on_ok_button_clicked(self, *args):
         part_object = partEntry.partEntry()
-        result = self.getData(part_object)
+        result = self.formToKsdata(part_object)
 
         if result is None:
             return
@@ -341,7 +341,7 @@ class partWindow:
         self.sizeCombo.set_sensitive(not active)
         self.sizeOptionsTable.set_sensitive(not active)
 
-    def getData(self, part_object):
+    def formToKsdata(self, part_object):
         onDiskVal = ""
         onPartVal = ""
         setSizeVal = ""

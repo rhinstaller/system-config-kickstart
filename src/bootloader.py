@@ -88,7 +88,7 @@ class bootloader:
     def enableUpgradeRadio(self, boolean):
         self.upgrade_bootloader_radio.set_sensitive(not boolean)
 
-    def getData (self):
+    def formToKsdata (self):
         if self.install_bootloader_radio.get_active():
             buf = ""
             if self.mbr_radiobutton.get_active():
@@ -142,7 +142,7 @@ class bootloader:
 
         return 0
 
-    def fillData(self):
+    def applyKsdata(self):
         if self.ksdata.bootloader["location"] == "none":
             self.no_bootloader_radio.set_active(True)
         elif self.ksdata.bootloader["location"] == "mbr":

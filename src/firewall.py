@@ -149,7 +149,7 @@ class firewall:
             self.firewall_vbox.show()
             self.firewall_label_box.hide()
 
-    def getData(self):
+    def formToKsdata(self):
         if self.ksdata.upgrade == True:
             return
 
@@ -184,7 +184,7 @@ class firewall:
         elif self.selinuxOptionMenu.get_history() == 2:
             self.ksdata.selinux = SELINUX_DISABLED
 
-    def fillData(self):
+    def applyKsdata(self):
         if self.ksdata.firewall["enabled"] == True:
             self.securityOptionMenu.set_history(0)
         else:

@@ -78,6 +78,7 @@ else:
 class kickstartGui:
     def destroy(self, args):
         gtk.main_quit()
+        self.packages_class.cleanup()
 
     def __init__ (self, file):
         self.kickstartData = KickstartData()
@@ -162,7 +163,7 @@ class kickstartGui:
 	self.options_notebook.connect("switch-page", self.on_notebook_changed)
             
 	#show gui
-        self.fillData()
+        self.applyKsdata()
 	self.toplevel.show()
 
 	gtk.main()
@@ -225,30 +226,30 @@ class kickstartGui:
 
     # Copy possible UI changes back to the kickstartData object.
     def getAllData(self, *args):
-        if self.install_class.getData() is None:
+        if self.install_class.formToKsdata() is None:
             return None
         
-        if self.bootloader_class.getData() is None:
+        if self.bootloader_class.formToKsdata() is None:
             return None
 
         doInstall = self.install_radiobutton.get_active()
 
-        if self.basic_class.getData(doInstall) is None:
+        if self.basic_class.formToKsdata(doInstall) is None:
             return None
 
-        if self.auth_class.getData() is None:
+        if self.auth_class.formToKsdata() is None:
             return None
 
-	self.network_class.getData()
-	self.firewall_class.getData()
-	self.X_class.getData()
+	self.network_class.formToKsdata()
+	self.firewall_class.formToKsdata()
+	self.X_class.formToKsdata()
 
         #only do these things in installs, not upgrades
 	if doInstall:
-            self.partition_class.getData()
-            self.packages_class.getData()
+            self.partition_class.formToKsdata()
+            self.packages_class.formToKsdata()
 
-	self.scripts_class.getData()
+	self.scripts_class.formToKsdata()
         return 0
 
     def on_activate_open(self, *args):
@@ -275,7 +276,7 @@ class kickstartGui:
                            self.scripts_class]:
                     cl.ksdata = self.kickstartData
 
-                self.fillData()
+                self.applyKsdata()
 	        self.toplevel.show()
             else:
                 dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_WARNING, gtk.BUTTONS_OK,
@@ -300,17 +301,17 @@ class kickstartGui:
             writer = KickstartWriter(self.kickstartData)
             fileDialog = savedialog.saveDialog(writer.write(), self.xml)
 
-    def fillData(self):
-        self.basic_class.fillData()
-        self.install_class.fillData()
-        self.bootloader_class.fillData()
-        self.partition_class.fillData()
-        self.auth_class.fillData()
-        self.network_class.fillData()
-        self.firewall_class.fillData()
-        self.X_class.fillData()
-        self.packages_class.fillData()
-        self.scripts_class.fillData()
+    def applyKsdata(self):
+        self.basic_class.applyKsdata()
+        self.install_class.applyKsdata()
+        self.bootloader_class.applyKsdata()
+        self.partition_class.applyKsdata()
+        self.auth_class.applyKsdata()
+        self.network_class.applyKsdata()
+        self.firewall_class.applyKsdata()
+        self.X_class.applyKsdata()
+        self.packages_class.applyKsdata()
+        self.scripts_class.applyKsdata()
 
     def platformTypeChanged(self, platform):
         self.bootloader_class.platformTypeChanged(platform)

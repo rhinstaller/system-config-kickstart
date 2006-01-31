@@ -131,7 +131,7 @@ class basic:
         self.timezone_combo.set_popdown_strings(self.timezone_list)
         self.timezone_combo.list.select_item(select)
 
-    def getData(self, doInstall):
+    def formToKsdata(self, doInstall):
         self.ksdata.lang = self.languageLookup(self.lang_combo.entry.get_text())
 
         keys = self.keyboard_dict.keys()
@@ -228,7 +228,7 @@ class basic:
         if platform:
             self.parent_class.platformTypeChanged(entry.get_text())
 
-    def fillData(self):
+    def applyKsdata(self):
         if self.ksdata.platform in self.platform_list:
             self.platform_combo.entry.set_text(self.ksdata.platform)
 
