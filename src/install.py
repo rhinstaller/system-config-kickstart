@@ -117,7 +117,7 @@ class install:
         elif self.hd_radiobutton.get_active():
             self.install_notebook.set_current_page(4)
                                      
-    def getData(self):
+    def formToKsdata(self):
         if self.install_radiobutton.get_active():
             self.ksdata.upgrade = False
         elif self.upgrade_radiobutton.get_active():
@@ -241,7 +241,7 @@ class install:
         dir = "/" + dir
         return host, dir
 
-    def fillData(self):
+    def applyKsdata(self):
         if self.ksdata.upgrade == False:
             self.install_radiobutton.set_active(True)            
         else:

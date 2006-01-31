@@ -179,7 +179,7 @@ class xconfig:
             self.xconfig_vbox.show()
             self.xconfig_label_box.hide()
 
-    def getData(self):
+    def formToKsdata(self):
         if self.ksdata.upgrade == True:
             self.ksdata.firstboot = FIRSTBOOT_SKIP
             return
@@ -228,7 +228,7 @@ class xconfig:
         else:
             self.ksdata.skipx = True
 
-    def fillData(self):
+    def applyKsdata(self):
         if self.ksdata.skipx == True:
             self.config_x_button.set_active(False)
         else:

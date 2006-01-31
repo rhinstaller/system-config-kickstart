@@ -366,7 +366,7 @@ class network:
         self.network_device_dialog.hide()
         return True
 
-    def getData(self):
+    def formToKsdata(self):
         self.ksdata.network = []
         iter = self.network_device_store.get_iter_first()
 
@@ -403,7 +403,7 @@ class network:
             self.edit_device_button.set_sensitive(True)
             self.delete_device_button.set_sensitive(True)
             
-    def fillData(self):
+    def applyKsdata(self):
         self.network_device_store.clear()
 
         for nic in self.ksdata.network:

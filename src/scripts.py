@@ -46,7 +46,7 @@ class scripts:
     def pre_interpreter_cb(self, args):
         self.pre_interpreter_entry.set_sensitive(self.pre_interpreter_checkbutton.get_active())        
 
-    def getData(self):
+    def formToKsdata(self):
         self.preData()
         self.postData()
     
@@ -107,7 +107,7 @@ class scripts:
         if len(postScripts) == 0:
             self.ksdata.scripts.append(script)
 
-    def fillData(self):
+    def applyKsdata(self):
         preScripts = filter(lambda s: s.type == KS_SCRIPT_PRE,
                             self.ksdata.scripts)
         postScripts = filter(lambda s: s.type == KS_SCRIPT_POST,

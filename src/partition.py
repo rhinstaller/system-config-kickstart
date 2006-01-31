@@ -148,7 +148,7 @@ class partition:
     def raidPartition(self, *args):
         self.raidOptionsWindow.showOptionsWindow()
 
-    def getData(self):
+    def formToKsdata(self):
         #zerombr and clearpart options
         self.ksdata.zerombr = self.clear_mbr_yes_radiobutton.get_active()
 
@@ -267,7 +267,7 @@ class partition:
             self.partition_vbox.show_all()
             self.partition_label_box.hide()
 
-    def fillData(self):
+    def applyKsdata(self):
         if self.ksdata.zerombr == True:
             self.clear_mbr_yes_radiobutton.set_active(True)
         else:

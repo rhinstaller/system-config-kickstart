@@ -193,7 +193,7 @@ class sambaData:
 
       
 class auth:
-    def getData(self):
+    def formToKsdata(self):
         if self.nisCheck.get_active():
             self.myNisClass.set_domain(self.nisDomainEntry.get_text())
             self.myNisClass.set_server(self.nisServerEntry.get_text())
@@ -385,7 +385,7 @@ class auth:
             self.auth_vbox.show()
             self.auth_label_box.hide()
 
-    def fillData(self):
+    def applyKsdata(self):
         if self.ksdata.authconfig != "":
             authstr = string.split(self.ksdata.authconfig)
             opts, args = getopt.getopt(authstr, "d:h",["enablemd5", "enablenis",
