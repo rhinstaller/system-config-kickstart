@@ -175,6 +175,12 @@ class partition:
         return None
 
     def getPartData(self, store, data, iter):
+        self.ksdata.partitions = []
+        self.ksdata.raidList = []
+        self.ksdata.lvList = []
+        self.ksdata.vgList = []
+        self.ksdata.dmraids = []
+
         part_object = self.part_store.get_value(iter, 5)
 
         if part_object:
@@ -186,7 +192,7 @@ class partition:
                 if part_object.size == "recommended":
                     pd.recommended = True
                 else:
-                    pd.size = part_object.size
+                    pd.size = int(part_object.size)
 
                 if part_object.sizeStrategy == "grow":
                     pd.grow = True
@@ -204,6 +210,8 @@ class partition:
 
                 if not part_object.doFormat:
                     pd.format = False
+
+                self.ksdata.partitions.append(pd)
             else:
                 #This is a raid device
                 rd = KickstartRaidData()
@@ -223,6 +231,8 @@ class partition:
 
                 if part_object.raidPartitions != None:
                     rd.members = string.join(part_object.raidPartitions, " ")
+
+                self.ksdata.raidList.append(rd)
 
     def rowSelected(self, *args):
         store, iter = self.part_view.get_selection().get_selected()
