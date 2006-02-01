@@ -16,23 +16,22 @@ msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-11-02 16:17-0500\n"
-"PO-Revision-Date: 2005-10-03 19:54+0200\n"
+"PO-Revision-Date: 2006-02-01 14:24+0100\n"
 "Last-Translator: Severin Heiniger <severinheiniger@gmail.com>\n"
 "Language-Team: German / Deutsch <fedora-i18n-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.10.2\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/auth.py:323
-#, fuzzy
 msgid "Please fill in the authentication information"
-msgstr "Bitte geben Sie die Informationen zum Netzwerk ein"
+msgstr "Bitte geben Sie die Informationen zur Authentifizierung ein"
 
 #: ../src/basic.py:70
 msgid "x86, AMD64, or Intel EM64T"
-msgstr "x86, AMD64, oder Intel EM64T"
+msgstr "x86, AMD64 oder Intel EM64T"
 
 #: ../src/basic.py:70
 msgid "Intel Itanium"
@@ -54,24 +53,27 @@ msgstr "IBM zSeries/s390"
 msgid "Root passwords do not match."
 msgstr "Root-Passwörter stimmen nicht überein."
 
-#: ../src/basic.py:150 ../src/basic.py:168 ../src/install.py:218
-#: ../src/partWindow.py:515 ../src/partition.py:245 ../src/raidWindow.py:247
+#: ../src/basic.py:150
+#: ../src/basic.py:168
+#: ../src/install.py:218
+#: ../src/partWindow.py:515
+#: ../src/partition.py:245
+#: ../src/raidWindow.py:247
 msgid "Error"
 msgstr "Fehler"
 
 #: ../src/basic.py:167
 msgid "Please select a root password."
-msgstr "Bitte ein Root-Passwort wählen."
+msgstr "Bitte wählen Sie ein Root-Passwort."
 
 #: ../src/bootloader.py:81
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
-msgstr "Bootloader-Optionen sind auf die %s Plattform nicht anwendbar"
+msgstr "Bootloader-Optionen sind auf die %s-Plattform nicht anwendbar"
 
 #: ../src/bootloader.py:121
 msgid "Grub passwords do not match.  Please try again."
-msgstr ""
-"Grub-Passwörter stimmen nicht überein.  Bitte geben Sie diese erneut ein."
+msgstr "Grub-Passwörter stimmen nicht überein. Bitte geben Sie diese erneut ein."
 
 #. create table with custom checklists
 #: ../src/firewall.py:59
@@ -132,7 +134,7 @@ msgstr "Kickstart"
 
 #: ../src/kickstartGui.py:93
 msgid "Create a kickstart file"
-msgstr "Eine kickstart-Datei erstellen"
+msgstr "Eine Kickstart-Datei anlegen"
 
 #: ../src/kickstartGui.py:140
 msgid "Subsection"
@@ -154,7 +156,8 @@ msgstr "Bootloader-Optionen"
 msgid "Partition Information"
 msgstr "Partitionsinformationen"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:136
+#: ../src/kickstartGui.py:146
+#: system-config-kickstart.gladestrings:136
 msgid "Network Configuration"
 msgstr "Netzwerk-Konfiguration"
 
@@ -162,23 +165,28 @@ msgstr "Netzwerk-Konfiguration"
 msgid "Authentication"
 msgstr "Authentifizierung"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:182
+#: ../src/kickstartGui.py:147
+#: system-config-kickstart.gladestrings:182
 msgid "Firewall Configuration"
 msgstr "Firewall-Konfiguration"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:207
+#: ../src/kickstartGui.py:147
+#: system-config-kickstart.gladestrings:207
 msgid "Display Configuration"
 msgstr "Display-Konfiguration"
 
-#: ../src/kickstartGui.py:148 system-config-kickstart.gladestrings:217
+#: ../src/kickstartGui.py:148
+#: system-config-kickstart.gladestrings:217
 msgid "Package Selection"
 msgstr "Paketauswahl"
 
-#: ../src/kickstartGui.py:148 system-config-kickstart.gladestrings:222
+#: ../src/kickstartGui.py:148
+#: system-config-kickstart.gladestrings:222
 msgid "Pre-Installation Script"
 msgstr "Skript vor der Installation"
 
-#: ../src/kickstartGui.py:149 system-config-kickstart.gladestrings:228
+#: ../src/kickstartGui.py:149
+#: system-config-kickstart.gladestrings:228
 msgid "Post-Installation Script"
 msgstr "Skript nach der Installation"
 
@@ -217,23 +225,23 @@ msgstr "Gerät"
 msgid "Network Type"
 msgstr "Netzwerk-Typ"
 
-#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:226
-#: ../src/network.py:286 ../src/network.py:422
+#: ../src/network.py:109
+#: ../src/network.py:155
+#: ../src/network.py:226
+#: ../src/network.py:286
+#: ../src/network.py:422
 msgid "Static IP"
 msgstr "Statische IP"
 
-#: ../src/network.py:216 ../src/network.py:278
+#: ../src/network.py:216
+#: ../src/network.py:278
 msgid "Please fill in the network information"
 msgstr "Bitte geben Sie die Informationen zum Netzwerk ein"
 
 #: ../src/network.py:330
 #, python-format
-msgid ""
-"A network device with the name %s already exists.  Please choose another "
-"device name"
-msgstr ""
-"Ein Netzwerkgerät mit dem Namen %s existiert bereits.  Bitte wählen Sie "
-"einen anderen Gerätenamen"
+msgid "A network device with the name %s already exists.  Please choose another device name"
+msgstr "Ein Netzwerkgerät mit dem Namen %s existiert bereits. Bitte wählen Sie einen anderen Gerätenamen"
 
 #: ../src/packageGroupList.py:18
 #, python-format
@@ -244,24 +252,29 @@ msgstr "Konnte nicht starten, weil die Datei %s nicht existiert."
 msgid "Please make sure the comps package is installed."
 msgstr "Bitte stellen Sie sicher, dass das comps-Paket installiert ist."
 
-#: ../src/partWindow.py:84 system-config-kickstart.gladestrings:52
+#: ../src/partWindow.py:84
+#: system-config-kickstart.gladestrings:52
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:84 system-config-kickstart.gladestrings:53
+#: ../src/partWindow.py:84
+#: system-config-kickstart.gladestrings:53
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:86 ../src/partWindow.py:149
+#: ../src/partWindow.py:86
+#: ../src/partWindow.py:149
 msgid "software RAID"
 msgstr "Software-RAID"
 
-#: ../src/partWindow.py:87 system-config-kickstart.gladestrings:54
+#: ../src/partWindow.py:87
+#: system-config-kickstart.gladestrings:54
 msgid "swap"
 msgstr "swap"
 
-#: ../src/partWindow.py:87 system-config-kickstart.gladestrings:55
+#: ../src/partWindow.py:87
+#: system-config-kickstart.gladestrings:55
 msgid "vfat"
 msgstr "vfat"
 
@@ -269,15 +282,21 @@ msgstr "vfat"
 msgid "PPC PReP Boot"
 msgstr "PPC PReP Boot"
 
-#: ../src/partWindow.py:262 ../src/partWindow.py:537 ../src/raidWindow.py:212
+#: ../src/partWindow.py:262
+#: ../src/partWindow.py:537
+#: ../src/raidWindow.py:212
 msgid "Yes"
 msgstr "Ja"
 
-#: ../src/partWindow.py:264 ../src/partWindow.py:539 ../src/raidWindow.py:214
+#: ../src/partWindow.py:264
+#: ../src/partWindow.py:539
+#: ../src/raidWindow.py:214
 msgid "No"
 msgstr "Nein"
 
-#: ../src/partWindow.py:287 ../src/partWindow.py:302 ../src/partWindow.py:321
+#: ../src/partWindow.py:287
+#: ../src/partWindow.py:302
+#: ../src/partWindow.py:321
 #: ../src/partWindow.py:335
 msgid "Auto"
 msgstr "Automatisch"
@@ -293,49 +312,28 @@ msgstr "Geben Sie einen Einhängepunkt für die Partition an."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:431
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr ""
-"Der Einhängepunkt \"%s\" wird bereits verwendet. Wählen Sie einen anderen "
-"Einhängepunkt."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr "Der Einhängepunkt \"%s\" wird bereits verwendet. Wählen Sie einen anderen Einhängepunkt."
 
 #: ../src/partWindow.py:451
-msgid ""
-"To create a new RAID partition, you must specify either a hard drive device "
-"name or an existing partition."
-msgstr ""
-"Geben Sie einen Festplatten-Gerätenamen oder eine existierende Partition an, "
-"um eine neue RAID-Partition anzulegen."
+msgid "To create a new RAID partition, you must specify either a hard drive device name or an existing partition."
+msgstr "Geben Sie einen Festplatten-Gerätenamen oder eine existierende Partition an, um eine neue RAID-Partition anzulegen."
 
 #: ../src/partWindow.py:490
 msgid "Specify a device on which to create the partition."
 msgstr "Geben Sie ein Gerät an, auf dem die Partition angelegt werden soll."
 
 #: ../src/partWindow.py:492
-msgid ""
-"The device you specified is not a valid device name. Please use a valid "
-"device name such as \"hda1\" or \"sda3\"."
-msgstr ""
-"Das angegebene Gerät besitzt keinen gültigen Gerätenamen. Verwenden Sie "
-"einen Gerätenamen wie zum Beispiel \"hda1\" oder \"sda3\"."
+msgid "The device you specified is not a valid device name. Please use a valid device name such as \"hda1\" or \"sda3\"."
+msgstr "Das angegebene Gerät besitzt keinen gültigen Gerätenamen. Verwenden Sie einen Gerätenamen wie zum Beispiel \"hda1\" oder \"sda3\"."
 
 #: ../src/partWindow.py:502
-msgid ""
-"The partition you specified does not end in a number.  Partitions must have "
-"a partition number such as \"hda1\" or \"sda3\"."
-msgstr ""
-"Die angegebene Partition endet nicht mit einer Zahl. Die Partitionen müssen "
-"eine Partitionsnummer wie \"hda1\" oder \"sda3\" besitzen."
+msgid "The partition you specified does not end in a number.  Partitions must have a partition number such as \"hda1\" or \"sda3\"."
+msgstr "Die angegebene Partition endet nicht mit einer Zahl. Die Partitionen müssen eine Partitionsnummer wie \"hda1\" oder \"sda3\" besitzen."
 
 #: ../src/partWindow.py:508
-msgid ""
-"The partition you specified does not begin with \"hd\" or \"sd\".  "
-"Partitions must have a valid device name and partition number such as \"hda1"
-"\" or \"sda3\"."
-msgstr ""
-"Die angegebene Partition beginnt nicht mit \"hd\" oder \"sd\".  Die "
-"Partitionen müssen einen gültigen Gerätenamen und Partitionsnummer wie "
-"beispielsweise \"hda1\" oder \"sda3\" besitzen."
+msgid "The partition you specified does not begin with \"hd\" or \"sd\".  Partitions must have a valid device name and partition number such as \"hda1\" or \"sda3\"."
+msgstr "Die angegebene Partition beginnt nicht mit \"hd\" oder \"sd\".  Die Partitionen müssen einen gültigen Gerätenamen und Partitionsnummer wie beispielsweise \"hda1\" oder \"sda3\" besitzen."
 
 #: ../src/partition.py:74
 msgid ""
@@ -365,7 +363,8 @@ msgstr "Format"
 msgid "Size (MB)"
 msgstr "Größe (MB)"
 
-#: ../src/partition.py:97 ../src/partition.py:137
+#: ../src/partition.py:97
+#: ../src/partition.py:137
 msgid "Please select a partition from the list."
 msgstr "Wählen Sie eine Partition aus der Liste."
 
@@ -384,40 +383,30 @@ msgstr "Sie müssen mindestens 2 Partitionen wählen, um RAID %s zu verwenden"
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "Sie müssen mindestens 3 Partitionen wählen, um RAID %s zu verwenden"
 
-#: ../src/raidWindow.py:192 ../src/raidWindow.py:218
+#: ../src/raidWindow.py:192
+#: ../src/raidWindow.py:218
 msgid "Raid Devices"
 msgstr "RAID-Geräte"
 
 #: ../src/system-config-kickstart.py:61
 msgid ""
-"Usage: system-config-kickstart [--help] [--generate <filename>] "
-"[<kickstart_filename>]\n"
+"Usage: system-config-kickstart [--help] [--generate <filename>] [<kickstart_filename>]\n"
 "        \n"
 "--help                  Print out this message\n"
-"--generate <filename>   Generate a kickstart file from the current machine "
-"and write\n"
-"                        it to <filename>.  This option runs on the console, "
-"so it is\n"
-"                        useful for servers that do not have X currently "
-"running.\n"
-"<kickstart_filename>    This option will cause the GUI to launch with the "
-"values from\n"
+"--generate <filename>   Generate a kickstart file from the current machine and write\n"
+"                        it to <filename>.  This option runs on the console, so it is\n"
+"                        useful for servers that do not have X currently running.\n"
+"<kickstart_filename>    This option will cause the GUI to launch with the values from\n"
 "                        the kickstart file already filled in."
 msgstr ""
-"Benutzung: system-config-kickstart [--help] [--generate <Dateiname>] "
-"[<Kickstart_Dateiname>]\n"
+"Verwendung: system-config-kickstart [--help] [--generate <Dateiname>] [<Kickstart_Dateiname>]\n"
 "        \n"
 "--help                  Diese Meldung anzeigen\n"
-"--generate <Dateiname>  Eine Kickstart-Datei vom aktuellen Rechner erstellen "
-"und\n"
-"                        diese in <Dateiname> speichern.  Diese Option wird "
-"auf der Konsole ausgeführt und ist deswegen\n"
-"                        hilfreich für Server, auf welchen X zur Zeit nicht "
-"ausgeführt wird.\n"
-"<Kickstart_Dateiname>   Diese Option wird dafür sorgen, dass die GUI bereits "
-"mit den in\n"
-"                        der Kickstart-Datei angegebenen Werten gestartet "
-"wird."
+"--generate <Dateiname>  Eine Kickstart-Datei vom aktuellen Rechner erstellen und\n"
+"                        diese in <Dateiname> speichern.  Diese Option wird auf der Konsole ausgeführt und ist deswegen\n"
+"                        hilfreich für Server, auf welchen X zur Zeit nicht ausgeführt wird.\n"
+"<Kickstart_Dateiname>   Diese Option wird dafür sorgen, dass die GUI bereits mit den in\n"
+"                        der Kickstart-Datei angegebenen Werten gestartet wird."
 
 #: ../src/system-config-kickstart.py:78
 msgid "Could not open display because no X server is running."
@@ -425,9 +414,7 @@ msgstr "Konnte Anzeige nicht öffnen, da kein X-Server läuft."
 
 #: ../src/system-config-kickstart.py:79
 msgid "Try running 'system-config-kickstart --help' for a list of options."
-msgstr ""
-"Versuchen Sie 'system-config-kickstart --help' auszuführen, um eine Liste "
-"von Optionen zu erhalten."
+msgstr "Versuchen Sie 'system-config-kickstart --help' auszuführen, um eine Liste von Optionen zu erhalten."
 
 #: ../src/xconfig.py:115
 msgid "Could not read video driver database"
@@ -688,11 +675,11 @@ msgstr "System nach der Installation neu starten"
 
 #: system-config-kickstart.gladestrings:75
 msgid "Perform installation in text mode (graphical is default)"
-msgstr "Installation im Textmodus ausführen (Standard ist der Grafikmodus)"
+msgstr "Installation im Textmodus durchführen (Standard ist der Grafikmodus)"
 
 #: system-config-kickstart.gladestrings:76
 msgid "Perform installation in interactive mode"
-msgstr "Installation im interaktiven Modus ausführen"
+msgstr "Installation im interaktiven Modus durchführen"
 
 #: system-config-kickstart.gladestrings:77
 msgid "Basic Configuration (required)"
@@ -757,7 +744,7 @@ msgstr "FTP-Verzeichnis:"
 
 #: system-config-kickstart.gladestrings:93
 msgid "Specify an FTP username and password"
-msgstr "Geben Sie einen FTP-Benutzernamen und Passwort an."
+msgstr "Geben Sie einen FTP-Benutzernamen und ein Passwort an"
 
 #: system-config-kickstart.gladestrings:94
 msgid "FTP Username"
@@ -837,7 +824,7 @@ msgstr "label216"
 
 #: system-config-kickstart.gladestrings:117
 msgid "Boot Loader Options (required)"
-msgstr "Bootloader-Optionen (benötigt)"
+msgstr "Bootloader-Optionen (erforderlich)"
 
 #: system-config-kickstart.gladestrings:118
 msgid "label35"
@@ -909,7 +896,7 @@ msgstr "Netzwerk-Gerät _bearbeiten"
 
 #: system-config-kickstart.gladestrings:135
 msgid "_Delete Network Device"
-msgstr "_Lösche Netzwerk-Gerät"
+msgstr "Netzwerk-Gerät _löschen"
 
 #: system-config-kickstart.gladestrings:137
 msgid "label31"
@@ -997,7 +984,7 @@ msgstr "Kerberos 5"
 
 #: system-config-kickstart.gladestrings:158
 msgid "Enable Hesiod Support"
-msgstr "Hesiod-Support aktivieren"
+msgstr "Hesiod-Unterstützung aktivieren"
 
 #: system-config-kickstart.gladestrings:159
 msgid "Hesiod LHS:"
@@ -1073,7 +1060,7 @@ msgstr "Firewall deaktivieren"
 
 #: system-config-kickstart.gladestrings:177
 msgid "SELinux:"
-msgstr "SELinux"
+msgstr "SELinux:"
 
 #: system-config-kickstart.gladestrings:178
 msgid "Active"
@@ -1122,11 +1109,11 @@ msgstr "KDE"
 
 #: system-config-kickstart.gladestrings:190
 msgid "Start the X Window System on boot"
-msgstr "Beim Booten das X-Window System starten"
+msgstr "Beim Systemstart das X-Window-System starten"
 
 #: system-config-kickstart.gladestrings:191
 msgid "On first boot, Setup Agent is: "
-msgstr "Beim ersten Booten ist der Setup-Agent: "
+msgstr "Beim ersten Systemstart ist der Setup-Agent: "
 
 #: system-config-kickstart.gladestrings:193
 msgid "Enabled"
@@ -1146,7 +1133,7 @@ msgstr "Grafikkarten-Treiber suchen"
 
 #: system-config-kickstart.gladestrings:197
 msgid "Video Card RAM: "
-msgstr "RAM-Grafikkarte: "
+msgstr "Grafikkarten-RAM: "
 
 #: system-config-kickstart.gladestrings:198
 msgid "Video Card"
@@ -1158,7 +1145,7 @@ msgstr "Monitor suchen"
 
 #: system-config-kickstart.gladestrings:200
 msgid "Use custom monitor sync rates"
-msgstr "Benutzerspezifische Monitor Sync-Raten verwenden"
+msgstr "Benutzerspezifische Sync-Raten für den Monitor verwenden"
 
 #: system-config-kickstart.gladestrings:201
 msgid "Hz"
@@ -1226,12 +1213,8 @@ msgstr "label34"
 
 #: system-config-kickstart.gladestrings:219
 #, c-format
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %pre command at the beginning."
-msgstr ""
-"Warnung: Ein Fehler in diesem Skript könnte dazu führen, dass Ihre Kickstart-"
-"Installation fehlschlägt. Lassen Sie den Befehl %pre zu Beginn weg."
+msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %pre command at the beginning."
+msgstr "Warnung: Ein Fehler in diesem Skript könnte dazu führen, dass Ihre Kickstart-Installation fehlschlägt. Lassen Sie den Befehl %pre zu Beginn weg."
 
 #: system-config-kickstart.gladestrings:220
 #: system-config-kickstart.gladestrings:226
@@ -1249,12 +1232,8 @@ msgstr "label89"
 
 #: system-config-kickstart.gladestrings:224
 #, c-format
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %post command at the beginning."
-msgstr ""
-"Warnung: Ein Fehler in diesem Skript könnte dazu führen, dass Ihre Kickstart-"
-"Installation fehlschlägt. Lassen Sie den Befehl %post zu Beginn weg."
+msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %post command at the beginning."
+msgstr "Warnung: Ein Fehler in diesem Skript könnte dazu führen, dass Ihre Kickstart-Installation fehlschlägt. Lassen Sie den Befehl %post zu Beginn weg."
 
 #: system-config-kickstart.gladestrings:225
 msgid "Run outside of the chroot environment"
@@ -1263,7 +1242,7 @@ msgstr "Außerhalb der chroot-Umgebung ausführen"
 #: system-config-kickstart.gladestrings:227
 #, c-format
 msgid "Type your %post script below:"
-msgstr "Geben Sie Ihr %post-Skript unten ein:"
+msgstr "Geben Sie unten Ihr %post-Skript ein:"
 
 #: system-config-kickstart.gladestrings:229
 msgid "label93"
@@ -1278,38 +1257,20 @@ msgid "_Save to File"
 msgstr "In Datei _speichern"
 
 #: system-config-kickstart.gladestrings:232
-msgid ""
-"You have choosen the following configuration. Click Save File to save the "
-"kickstart file. "
-msgstr ""
-"Sie haben die folgende Konfiguration gewählt. Klicken Sie auf Datei "
-"speichern, um die Kickstart-Datei zu speichern."
+msgid "You have choosen the following configuration. Click Save File to save the kickstart file. "
+msgstr "Sie haben die folgende Konfiguration gewählt. Klicken Sie auf 'Datei speichern', um die Kickstart-Datei zu speichern."
 
 #: system-config-kickstart.gladestrings:233
 msgid "RAID Options"
 msgstr "RAID-Optionen"
 
 #: system-config-kickstart.gladestrings:234
-msgid ""
-"Software RAID allows you to combine several disks into a larger RAID "
-"device.  A RAID device can be configured to provide additional speed and "
-"reliability compared to using an individual drive.  For more information on "
-"using RAID devices please consult the kickstart documentation."
-msgstr ""
-"Mit Software-RAID können Sie verschiedene Festplatten auf einem größeren "
-"RAID-Gerät kombinieren. Ein RAID-Gerät kann konfiguriert werden, um "
-"zusätzliche Geschwindigkeit und Zuverlässigkeit im Vergleich zu einem "
-"einzigen Laufwerk zu bieten. Weitere Informationen über den Gebrauch der "
-"RAID-Geräte finden Sie in der Kickstart-Dokumentation."
+msgid "Software RAID allows you to combine several disks into a larger RAID device.  A RAID device can be configured to provide additional speed and reliability compared to using an individual drive.  For more information on using RAID devices please consult the kickstart documentation."
+msgstr "Mit Software-RAID können Sie verschiedene Festplatten auf einem größeren RAID-Gerät kombinieren. Ein RAID-Gerät kann konfiguriert werden, um zusätzliche Geschwindigkeit und Zuverlässigkeit im Vergleich zu einem einzelnen Laufwerk zu bieten. Weitere Informationen über den Gebrauch von RAID-Geräten finden Sie in der Kickstart-Dokumentation."
 
 #: system-config-kickstart.gladestrings:235
-msgid ""
-"To use RAID you must first create at least two partitions of type 'software "
-"RAID'.  Then you can create a RAID device which can be formatted and mounted."
-msgstr ""
-"Wenn Sie RAID verwenden möchten, müssen Sie zunächst mindestens zwei "
-"Partitionen des Typs 'Software-RAID' anlegen. Anschließend können Sie ein "
-"RAID-Gerät anlegen, das formatiert und eingehängt werden kann."
+msgid "To use RAID you must first create at least two partitions of type 'software RAID'.  Then you can create a RAID device which can be formatted and mounted."
+msgstr "Wenn Sie RAID verwenden möchten, müssen Sie zunächst mindestens zwei Partitionen des Typs 'Software-RAID' anlegen. Anschließend können Sie ein RAID-Gerät anlegen, das formatiert und eingehängt werden kann."
 
 #: system-config-kickstart.gladestrings:236
 msgid "Choose one of the following options:"
@@ -1317,7 +1278,7 @@ msgstr "Wählen Sie eine der folgenden Optionen:"
 
 #: system-config-kickstart.gladestrings:237
 msgid "Create a software RAID partition"
-msgstr "Software-RAID-Partition erstellen"
+msgstr "Software-RAID-Partition anlegen"
 
 #: system-config-kickstart.gladestrings:238
 msgid "Create a RAID device [default = /dev/md0]"
@@ -1349,7 +1310,7 @@ msgstr "Gateway:"
 
 #: system-config-kickstart.gladestrings:245
 msgid "Name Server:"
-msgstr "Name Server:"
+msgstr "Name-Server:"
 
 #: system-config-kickstart.gladestrings:246
 #: system-config-kickstart.gladestrings:247
@@ -1378,6 +1339,6 @@ msgstr "."
 #~ "oder ein nicht mehr existierendes Schlüsselwort verursacht.\n"
 #~ "\n"
 #~ "%s"
-
 #~ msgid "Kickstart Error"
 #~ msgstr "Kickstart-Fehler"
+
