@@ -1,0 +1,1339 @@
+# Slovak translations for system-config-kickstart package
+# Slovenské preklady pre balík system-config-kickstart.
+# Copyright (C) 2006 THE system-config-kickstart'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the system-config-kickstart package.
+# Mike Karas <zoliqe@gmail.com>, 2006.
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: system-config-kickstart\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-11-02 16:17-0500\n"
+"PO-Revision-Date: 2006-02-01 11:34+0100\n"
+"Last-Translator: Mike Karas <zoliqe@gmail.com>\n"
+"Language-Team: Slovak <sk-i18n@linux.sk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;"
+
+#: ../src/auth.py:323
+msgid "Please fill in the authentication information"
+msgstr "Prosím vyplňte autentifikačné informácie"
+
+#: ../src/basic.py:70
+msgid "x86, AMD64, or Intel EM64T"
+msgstr "x86, AMD64, alebo Intel EM64T"
+
+#: ../src/basic.py:70
+msgid "Intel Itanium"
+msgstr "Intel Itanium"
+
+#: ../src/basic.py:70
+msgid "IBM iSeries"
+msgstr "IBM iSeries"
+
+#: ../src/basic.py:71
+msgid "IBM pSeries"
+msgstr "IBM pSeries"
+
+#: ../src/basic.py:71
+msgid "IBM zSeries/s390"
+msgstr "IBM zSeries/s390"
+
+#: ../src/basic.py:149
+msgid "Root passwords do not match."
+msgstr "Heslá správcu sa nezhodujú."
+
+#: ../src/basic.py:150 ../src/basic.py:168 ../src/install.py:218
+#: ../src/partWindow.py:515 ../src/partition.py:245 ../src/raidWindow.py:247
+msgid "Error"
+msgstr "Chyba"
+
+#: ../src/basic.py:167
+msgid "Please select a root password."
+msgstr "Prosím vyplňte heslo správcu."
+
+#: ../src/bootloader.py:81
+#, python-format
+msgid "Bootloader options are not applicable to the %s platform"
+msgstr "Voľby systémového zavádzača nie sú aplikovateľné na platforme %s"
+
+#: ../src/bootloader.py:121
+msgid "Grub passwords do not match.  Please try again."
+msgstr "Heslá pre Grub sa nezhodujú.  Prosím skúste znovu."
+
+#. create table with custom checklists
+#: ../src/firewall.py:59
+msgid "Trusted devices:"
+msgstr "Dôveryhodné zariadenia:"
+
+#: ../src/firewall.py:84
+msgid "Trusted services:"
+msgstr "Dôveryhodné služby:"
+
+#: ../src/firewall.py:116
+msgid "Other ports: (1029:tcp)"
+msgstr "Ostatné porty: (1029:tcp)"
+
+#: ../src/install.py:133
+msgid "Please enter an NFS server."
+msgstr "Prosím zadajte NFS server."
+
+#: ../src/install.py:136
+msgid "Please enter an NFS directory."
+msgstr "Prosím zadajte NFS priečinok."
+
+#: ../src/install.py:147
+msgid "Please enter an FTP server."
+msgstr "Prosím zadajte FTP server."
+
+#: ../src/install.py:154
+msgid "Please enter an FTP directory."
+msgstr "Prosím zadajte FTP priečinok."
+
+#: ../src/install.py:160
+msgid "Please enter an FTP user name."
+msgstr "Prosím zadajte meno FTP užívateľa."
+
+#: ../src/install.py:163
+msgid "Please enter an FTP password."
+msgstr "Prosím zadajte FTP heslo."
+
+#: ../src/install.py:179
+msgid "Please enter an HTTP server."
+msgstr "Prosím zadajte HTTP server."
+
+#: ../src/install.py:182
+msgid "Please enter an HTTP server directory."
+msgstr "Prosím zadajte priečinok HTTP servera."
+
+#: ../src/install.py:204
+msgid "Please enter a hard drive directory."
+msgstr "Prosím zadajte priečinok pevného disku."
+
+#: ../src/install.py:207
+msgid "Please enter a hard drive partition."
+msgstr "Prosím zadajte partíciu pevného disku."
+
+#: ../src/kickstartGui.py:92
+msgid "Kickstart"
+msgstr "Rýchly štart"
+
+#: ../src/kickstartGui.py:93
+msgid "Create a kickstart file"
+msgstr "Vytvoriť súbor rýchleho štartu"
+
+#: ../src/kickstartGui.py:140
+msgid "Subsection"
+msgstr "Podsekcia"
+
+#: ../src/kickstartGui.py:144
+msgid "Basic Configuration"
+msgstr "Základné nastavenia"
+
+#: ../src/kickstartGui.py:144
+msgid "Installation Method"
+msgstr "Spôsob inštalácie"
+
+#: ../src/kickstartGui.py:145
+msgid "Boot Loader Options"
+msgstr "Voľby sys. zavádzača"
+
+#: ../src/kickstartGui.py:145
+msgid "Partition Information"
+msgstr "Informácie o partíciach"
+
+#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:136
+msgid "Network Configuration"
+msgstr "Nastavenie siete"
+
+#: ../src/kickstartGui.py:146
+msgid "Authentication"
+msgstr "Overenie totožnosti"
+
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:182
+msgid "Firewall Configuration"
+msgstr "Nastavenie firewallu"
+
+#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:207
+msgid "Display Configuration"
+msgstr "Nastavenie grafiky"
+
+#: ../src/kickstartGui.py:148 system-config-kickstart.gladestrings:217
+msgid "Package Selection"
+msgstr "Výber balíkov"
+
+#: ../src/kickstartGui.py:148 system-config-kickstart.gladestrings:222
+msgid "Pre-Installation Script"
+msgstr "Predinštalačný skript"
+
+#: ../src/kickstartGui.py:149 system-config-kickstart.gladestrings:228
+msgid "Post-Installation Script"
+msgstr "Poinštalačný skript"
+
+#: ../src/kickstartGui.py:192
+msgid ""
+"Kickstart Configurator @VERSION@\n"
+" Copyright (c) 2000-2002 Red Hat, Inc.\n"
+" Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
+" Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
+" A graphical interface for creating a kickstart file"
+msgstr ""
+"Konfigurátor rýchleho štartu @VERSION@\n"
+" Copyright (c) 2000-2002 Red Hat, Inc.\n"
+" Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
+" Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
+" Grafické rozhranie pre vytvorenie súboru rýchleho štartu"
+
+#: ../src/kickstartGui.py:193
+msgid "About Kickstart Configurator"
+msgstr "O Konfigurátore rýchleho štartu"
+
+#: ../src/kickstartGui.py:215
+msgid "Help is not available."
+msgstr "Pomocník nie je dostupný."
+
+#: ../src/kickstartGui.py:282
+#, python-format
+msgid "The file \"%s\" cannot be accessed."
+msgstr "Súbor \"%s\" nemôže byť sprístupnený."
+
+#: ../src/network.py:87
+msgid "Device"
+msgstr "Zariadenie"
+
+#: ../src/network.py:90
+msgid "Network Type"
+msgstr "Typ siete"
+
+#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:226
+#: ../src/network.py:286 ../src/network.py:422
+msgid "Static IP"
+msgstr "Statická IP"
+
+#: ../src/network.py:216 ../src/network.py:278
+msgid "Please fill in the network information"
+msgstr "Prosím vyplňte informácie o sieti"
+
+#: ../src/network.py:330
+#, python-format
+msgid ""
+"A network device with the name %s already exists.  Please choose another "
+"device name"
+msgstr ""
+"Sieťové zariadenie s menom %s už existuje.  Prosím zvoľte iné meno zariadenia"
+
+#: ../src/packageGroupList.py:18
+#, python-format
+msgid "Could not start because there is no %s file."
+msgstr "Nemožno začat pretože súbor %s nie je dostupný."
+
+#: ../src/packageGroupList.py:19
+msgid "Please make sure the comps package is installed."
+msgstr "Prosím zistite či je nainštalovaný balik comps."
+
+#: ../src/partWindow.py:84 system-config-kickstart.gladestrings:52
+msgid "ext2"
+msgstr "ext2"
+
+#: ../src/partWindow.py:84 system-config-kickstart.gladestrings:53
+msgid "ext3"
+msgstr "ext3"
+
+#. _("physical volume (LVM)"):"lvm",
+#: ../src/partWindow.py:86 ../src/partWindow.py:149
+msgid "software RAID"
+msgstr "softvérový RAID"
+
+#: ../src/partWindow.py:87 system-config-kickstart.gladestrings:54
+msgid "swap"
+msgstr "swap"
+
+#: ../src/partWindow.py:87 system-config-kickstart.gladestrings:55
+msgid "vfat"
+msgstr "vfat"
+
+#: ../src/partWindow.py:88
+msgid "PPC PReP Boot"
+msgstr "PPC PReP Štart"
+
+#: ../src/partWindow.py:262 ../src/partWindow.py:537 ../src/raidWindow.py:212
+msgid "Yes"
+msgstr "Áno"
+
+#: ../src/partWindow.py:264 ../src/partWindow.py:539 ../src/raidWindow.py:214
+msgid "No"
+msgstr "Nie"
+
+#: ../src/partWindow.py:287 ../src/partWindow.py:302 ../src/partWindow.py:321
+#: ../src/partWindow.py:335
+msgid "Auto"
+msgstr "Automaticky"
+
+#: ../src/partWindow.py:296
+msgid "Hard Drives"
+msgstr "Pevné disky"
+
+#: ../src/partWindow.py:422
+msgid "Specify a mount point for the partition."
+msgstr "Špecifikujte bod pripojenia pre partíciu."
+
+#. They are trying to use a mount point already in use.  Let's complain
+#: ../src/partWindow.py:431
+#, python-format
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr ""
+"Bod pripojenia \"%s\" je už používaný.  Prosím zvoľte odlišný bod pripojenia."
+
+#: ../src/partWindow.py:451
+msgid ""
+"To create a new RAID partition, you must specify either a hard drive device "
+"name or an existing partition."
+msgstr ""
+"Na vytvorenie novej RAID partície musíte špecifikovať názov zariadenia pevného disku, alebo existujúcej partície."
+
+#: ../src/partWindow.py:490
+msgid "Specify a device on which to create the partition."
+msgstr "Špecifikujte zariadenie, na ktorom vytvoriť partíciu."
+
+#: ../src/partWindow.py:492
+msgid ""
+"The device you specified is not a valid device name. Please use a valid "
+"device name such as \"hda1\" or \"sda3\"."
+msgstr ""
+"Zariadenie, ktoré ste zadali nie je správnym názvom zariadenia. Prosím použite správny názov zariadenia, ako \"hda1\" alebo \"sda3\"."
+
+#: ../src/partWindow.py:502
+msgid ""
+"The partition you specified does not end in a number.  Partitions must have "
+"a partition number such as \"hda1\" or \"sda3\"."
+msgstr ""
+"Partíciu, ktorú ste zadali nekončí číslom.  Partície musia mať číslo partície, ako \"hda1\" alebo \"sda3\"."
+
+#: ../src/partWindow.py:508
+msgid ""
+"The partition you specified does not begin with \"hd\" or \"sd\".  "
+"Partitions must have a valid device name and partition number such as \"hda1"
+"\" or \"sda3\"."
+msgstr ""
+"Partícia, ktorú ste zadali nezačína na \"hd\" alebo \"sd\".  Partície musia mať správny názov zariadenia a číslo partície, ako \"hda1\" alebo \"sda3\"."
+
+#: ../src/partition.py:74
+msgid ""
+"Device/\n"
+"Partition Number"
+msgstr ""
+"Zariadenie/\n"
+"Číslo partície"
+
+#: ../src/partition.py:76
+msgid ""
+"Mount Point/\n"
+"RAID"
+msgstr ""
+"Bod pripojenia/\n"
+"RAID"
+
+#: ../src/partition.py:78
+msgid "Type"
+msgstr "Typ"
+
+#: ../src/partition.py:80
+msgid "Format"
+msgstr "Formát"
+
+#: ../src/partition.py:82
+msgid "Size (MB)"
+msgstr "Veľkosť (MB)"
+
+#: ../src/partition.py:97 ../src/partition.py:137
+msgid "Please select a partition from the list."
+msgstr "Prosím vyberte partíciu zo zoznamu."
+
+#: ../src/raidOptionsWindow.py:72
+#, python-format
+msgid "You currently have %d software RAID partition(s) free to use."
+msgstr "Momentálne máte %d softvérových RAID partícii voľných pre použitie."
+
+#: ../src/raidWindow.py:172
+#, python-format
+msgid "You must select at least 2 partitions in order to use RAID %s"
+msgstr "Musíte zvoliť najmenej 2 partície v poradí pre použitie RAID %s"
+
+#: ../src/raidWindow.py:178
+#, python-format
+msgid "You must select at least 3 partitions in order to use RAID %s"
+msgstr "Musíte zvoliť najmenej 3 partície v poradí pre použitie RAID %s"
+
+#: ../src/raidWindow.py:192 ../src/raidWindow.py:218
+msgid "Raid Devices"
+msgstr "Zariadenia RAID"
+
+#: ../src/system-config-kickstart.py:61
+msgid ""
+"Usage: system-config-kickstart [--help] [--generate <filename>] "
+"[<kickstart_filename>]\n"
+"        \n"
+"--help                  Print out this message\n"
+"--generate <filename>   Generate a kickstart file from the current machine "
+"and write\n"
+"                        it to <filename>.  This option runs on the console, "
+"so it is\n"
+"                        useful for servers that do not have X currently "
+"running.\n"
+"<kickstart_filename>    This option will cause the GUI to launch with the "
+"values from\n"
+"                        the kickstart file already filled in."
+msgstr ""
+"Použitie: system-config-kickstart [--help] [--generate <súbor>] "
+"[<súbor_rýchleho_štartu>]\n"
+"        \n"
+"--help                  Vypíše túto správu\n"
+"--generate <súbor>       Vygeneruje súbor rýchleho štartu podľa tohoto systému a·zapíše\n"
+"                        ho do <súbor>.  Táto voľba beží v konzole, "
+"takže je\n"
+"                        použiteľná pre servery, ktoré nemajú momentálne "
+"bežiace X.\n"
+"<súbor_rýchleho_štartu> Táto voľba spôsobí, že GUI sa spustí "
+"s hodnotami\n"
+"                        z už vytvoreného súboru rýchleho štartu."
+
+#: ../src/system-config-kickstart.py:78
+msgid "Could not open display because no X server is running."
+msgstr "Nepodarilo sa aktivovať grafiku pretože nebeží žiaden X server."
+
+#: ../src/system-config-kickstart.py:79
+msgid "Try running 'system-config-kickstart --help' for a list of options."
+msgstr "Skúste spustiť 'system-config-kickstart --help' pre výpis volieb."
+
+#: ../src/xconfig.py:115
+msgid "Could not read video driver database"
+msgstr "Nemožno načítať databázu grafických ovládačov"
+
+#.
+#. * Translatable strings file generated by Glade.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
+#: system-config-kickstart.gladestrings:7
+msgid "Partition Options"
+msgstr "Voľby partície"
+
+#: system-config-kickstart.gladestrings:8
+#: system-config-kickstart.gladestrings:27
+msgid "Mount Point:"
+msgstr "Bod pripojenia:"
+
+#: system-config-kickstart.gladestrings:9
+#: system-config-kickstart.gladestrings:31
+msgid "File System Type:"
+msgstr "Typ súborového systému:"
+
+#: system-config-kickstart.gladestrings:10
+msgid "Size (MB):"
+msgstr "Veľkosť (MB):"
+
+#: system-config-kickstart.gladestrings:11
+msgid "Fill all unused space on disk"
+msgstr "Vyplniť všetok nevyužitý priestor na disku"
+
+#: system-config-kickstart.gladestrings:12
+msgid "Grow to maximum of (MB):"
+msgstr "Zväčšiť na maximum z (MB):"
+
+#: system-config-kickstart.gladestrings:13
+msgid "Fixed size"
+msgstr "Pevná veľkosť"
+
+#: system-config-kickstart.gladestrings:14
+msgid "Use recommended swap size"
+msgstr "Použiť odporúčanú veľkosť swap"
+
+#: system-config-kickstart.gladestrings:15
+msgid "Additional Size Options"
+msgstr "Dodatočné voľby veľkosti"
+
+#: system-config-kickstart.gladestrings:16
+msgid "Force to be a primary partition (asprimary)"
+msgstr "Vnútiť nastavenie primárnej partície (ako primárna)"
+
+#: system-config-kickstart.gladestrings:17
+msgid "Make partition on specific drive (ondisk)"
+msgstr "Vytvoriť paríciu na špecifickom zariadení (na disku)"
+
+#: system-config-kickstart.gladestrings:18
+#: system-config-kickstart.gladestrings:22
+msgid "         "
+msgstr "         "
+
+#: system-config-kickstart.gladestrings:19
+msgid "Drive :"
+msgstr "Zariadenie :"
+
+#: system-config-kickstart.gladestrings:20
+msgid "(for example: hda or sdc)"
+msgstr "(napríklad: hda alebo sdc)"
+
+#: system-config-kickstart.gladestrings:21
+msgid "Use existing partition (onpart)"
+msgstr "Použiť existujúcu partíciu (na partícii)"
+
+#: system-config-kickstart.gladestrings:23
+msgid "Partition :"
+msgstr "Partícia :"
+
+#: system-config-kickstart.gladestrings:24
+msgid "(for example: hda1 or sdc3)"
+msgstr "(napríklad: hda1 alebo sdc3)"
+
+#: system-config-kickstart.gladestrings:25
+msgid "Format partition"
+msgstr "Formátovať partíciu"
+
+#: system-config-kickstart.gladestrings:26
+msgid "Make RAID Device"
+msgstr "Vytvoriť RAID zariadenie"
+
+#: system-config-kickstart.gladestrings:28
+msgid "Number of spares:"
+msgstr "Počet oddielov:"
+
+#: system-config-kickstart.gladestrings:29
+msgid "Raid Members"
+msgstr "Súčasti RAID"
+
+#: system-config-kickstart.gladestrings:30
+msgid "RAID Level:"
+msgstr "Úroveň RAID:"
+
+#: system-config-kickstart.gladestrings:32
+msgid "RAID Device:"
+msgstr "Zariadenie RAID:"
+
+#: system-config-kickstart.gladestrings:33
+msgid "md0"
+msgstr "md0"
+
+#: system-config-kickstart.gladestrings:34
+msgid "md1"
+msgstr "md1"
+
+#: system-config-kickstart.gladestrings:35
+msgid "md2"
+msgstr "md2"
+
+#: system-config-kickstart.gladestrings:36
+msgid "md3"
+msgstr "md3"
+
+#: system-config-kickstart.gladestrings:37
+msgid "md4"
+msgstr "md4"
+
+#: system-config-kickstart.gladestrings:38
+msgid "md5"
+msgstr "md5"
+
+#: system-config-kickstart.gladestrings:39
+msgid "md6"
+msgstr "md6"
+
+#: system-config-kickstart.gladestrings:40
+msgid "md7"
+msgstr "md7"
+
+#: system-config-kickstart.gladestrings:41
+msgid "md8"
+msgstr "md8"
+
+#: system-config-kickstart.gladestrings:42
+msgid "md9"
+msgstr "md9"
+
+#: system-config-kickstart.gladestrings:43
+msgid "md10"
+msgstr "md10"
+
+#: system-config-kickstart.gladestrings:44
+msgid "md11"
+msgstr "md11"
+
+#: system-config-kickstart.gladestrings:45
+msgid "md12"
+msgstr "md12"
+
+#: system-config-kickstart.gladestrings:46
+msgid "md13"
+msgstr "md13"
+
+#: system-config-kickstart.gladestrings:47
+msgid "md14"
+msgstr "md14"
+
+#: system-config-kickstart.gladestrings:48
+msgid "md15"
+msgstr "md15"
+
+#: system-config-kickstart.gladestrings:49
+msgid "0"
+msgstr "0"
+
+#: system-config-kickstart.gladestrings:50
+msgid "1"
+msgstr "1"
+
+#: system-config-kickstart.gladestrings:51
+msgid "5"
+msgstr "5"
+
+#: system-config-kickstart.gladestrings:56
+msgid "Format RAID device"
+msgstr "Formátovať RAID zariadenie"
+
+#: system-config-kickstart.gladestrings:57
+msgid "Kickstart Configurator"
+msgstr "Konfigurätor rýchleho štartu"
+
+#: system-config-kickstart.gladestrings:58
+msgid "_File"
+msgstr "_Súbor"
+
+#: system-config-kickstart.gladestrings:59
+msgid "_Open File"
+msgstr "_Otvoriť súbor"
+
+#: system-config-kickstart.gladestrings:60
+msgid "_Preview"
+msgstr "_Náhľad"
+
+#: system-config-kickstart.gladestrings:61
+msgid "_Save File"
+msgstr "_Uložiť súbor"
+
+#: system-config-kickstart.gladestrings:62
+msgid "_Quit"
+msgstr "_Koniec"
+
+#: system-config-kickstart.gladestrings:63
+msgid "_Help"
+msgstr "_Pomocník"
+
+#: system-config-kickstart.gladestrings:64
+msgid "_Contents"
+msgstr "_Obsah"
+
+#: system-config-kickstart.gladestrings:65
+msgid "_About"
+msgstr "O progr_ame"
+
+#: system-config-kickstart.gladestrings:66
+msgid "Default Language:"
+msgstr "Štandardný jazyk:"
+
+#: system-config-kickstart.gladestrings:67
+msgid "Keyboard:"
+msgstr "Klávesnica:"
+
+#: system-config-kickstart.gladestrings:68
+msgid "Time Zone:"
+msgstr "Časová zóna:"
+
+#: system-config-kickstart.gladestrings:69
+msgid "Use UTC clock"
+msgstr "Použiť UTC čas"
+
+#: system-config-kickstart.gladestrings:70
+msgid "Root Password:"
+msgstr "Heslo správcu:"
+
+#: system-config-kickstart.gladestrings:71
+#: system-config-kickstart.gladestrings:111
+msgid "Confirm Password:"
+msgstr "Potvrdenie hesla:"
+
+#: system-config-kickstart.gladestrings:72
+msgid "Encrypt root password"
+msgstr "Zašifrovať heslo správcu"
+
+#: system-config-kickstart.gladestrings:73
+msgid "Target Architecture:"
+msgstr "Cieľová architektúra:"
+
+#: system-config-kickstart.gladestrings:74
+msgid "Reboot system after installation"
+msgstr "Reštartovať systém po inštalácií"
+
+#: system-config-kickstart.gladestrings:75
+msgid "Perform installation in text mode (graphical is default)"
+msgstr "Vykonať inštaláciu v textovom režime (štandardne je grafické)"
+
+#: system-config-kickstart.gladestrings:76
+msgid "Perform installation in interactive mode"
+msgstr "Vykonať inštaláciu v interaktívnom režime"
+
+#: system-config-kickstart.gladestrings:77
+msgid "Basic Configuration (required)"
+msgstr "Základné nastavenia (vyžadované)"
+
+#: system-config-kickstart.gladestrings:78
+msgid "label28"
+msgstr "label28"
+
+#: system-config-kickstart.gladestrings:79
+msgid "Perform new installation"
+msgstr "Vykonať novú inštaláciu"
+
+#: system-config-kickstart.gladestrings:80
+msgid "Upgrade an existing installation"
+msgstr "Aktualizovať existujúcu inštaláciu"
+
+#: system-config-kickstart.gladestrings:81
+msgid "Choose the Installation Method:"
+msgstr "Zvoľte spôsob inštalácie:"
+
+#: system-config-kickstart.gladestrings:82
+#: system-config-kickstart.gladestrings:87
+msgid "CD-ROM"
+msgstr "CD-ROM"
+
+#: system-config-kickstart.gladestrings:83
+#: system-config-kickstart.gladestrings:90
+msgid "NFS"
+msgstr "NFS"
+
+#: system-config-kickstart.gladestrings:84
+#: system-config-kickstart.gladestrings:96
+msgid "FTP"
+msgstr "FTP"
+
+#: system-config-kickstart.gladestrings:85
+#: system-config-kickstart.gladestrings:99
+msgid "HTTP"
+msgstr "HTTP"
+
+#: system-config-kickstart.gladestrings:86
+#: system-config-kickstart.gladestrings:102
+msgid "Hard Drive"
+msgstr "Pevný disk"
+
+#: system-config-kickstart.gladestrings:88
+msgid "NFS Server:"
+msgstr "NFS server:"
+
+#: system-config-kickstart.gladestrings:89
+msgid "NFS Directory:"
+msgstr "NFS priečinok:"
+
+#: system-config-kickstart.gladestrings:91
+msgid "FTP Server:"
+msgstr "FTP server:"
+
+#: system-config-kickstart.gladestrings:92
+msgid "FTP Directory:"
+msgstr "FTP priečinok:"
+
+#: system-config-kickstart.gladestrings:93
+msgid "Specify an FTP username and password"
+msgstr "Zadajte meno FTP užívateľa a jeho heslo"
+
+#: system-config-kickstart.gladestrings:94
+msgid "FTP Username"
+msgstr "FTP užívateľ"
+
+#: system-config-kickstart.gladestrings:95
+msgid "FTP Password"
+msgstr "FTP heslo"
+
+#: system-config-kickstart.gladestrings:97
+msgid "HTTP Server:"
+msgstr "HTTP server:"
+
+#: system-config-kickstart.gladestrings:98
+msgid "HTTP Directory:"
+msgstr "HTTP priečinok:"
+
+#: system-config-kickstart.gladestrings:100
+msgid "Hard Drive Partition:"
+msgstr "Partícia pevného disku:"
+
+#: system-config-kickstart.gladestrings:101
+msgid "Hard Drive Directory:"
+msgstr "Priečinok pevného disku:"
+
+#: system-config-kickstart.gladestrings:103
+msgid "Installation Method (required)"
+msgstr "Spôsob inštalácie (vyžadované)"
+
+#: system-config-kickstart.gladestrings:104
+msgid "label128"
+msgstr "label128"
+
+#: system-config-kickstart.gladestrings:105
+msgid "Install new boot loader"
+msgstr "Inštalovať nový systémový zavádzač"
+
+#: system-config-kickstart.gladestrings:106
+msgid "Do not install a boot loader"
+msgstr "Neinštalovať systémový zavádzač"
+
+#: system-config-kickstart.gladestrings:107
+msgid "Upgrade existing boot loader"
+msgstr "Aktualizovať existujúci systémový zavádzač"
+
+#: system-config-kickstart.gladestrings:108
+msgid "GRUB Options:"
+msgstr "Voľby GRUB:"
+
+#: system-config-kickstart.gladestrings:109
+msgid "Use GRUB password"
+msgstr "Použiť heslo pre GRUB"
+
+#: system-config-kickstart.gladestrings:110
+msgid "Password:"
+msgstr "Heslo:"
+
+#: system-config-kickstart.gladestrings:112
+msgid "Encrypt GRUB password"
+msgstr "Zašifrovať heslo pre GRUB"
+
+#: system-config-kickstart.gladestrings:113
+msgid "Install boot loader on Master Boot Record (MBR)"
+msgstr "Inštalovať systémový zavádzač do Master Boot Record (MBR)"
+
+#: system-config-kickstart.gladestrings:114
+msgid "Install boot loader on first sector of the boot partition"
+msgstr "Inštalovať systémový zavádzač na prvý sektor štartovacej partície"
+
+#: system-config-kickstart.gladestrings:115
+msgid "Kernel parameters:"
+msgstr "Parametre jadra:"
+
+#: system-config-kickstart.gladestrings:116
+msgid "label216"
+msgstr "label216"
+
+#: system-config-kickstart.gladestrings:117
+msgid "Boot Loader Options (required)"
+msgstr "Voľby systémového zavádzača (vyžadované)"
+
+#: system-config-kickstart.gladestrings:118
+msgid "label35"
+msgstr "label35"
+
+#: system-config-kickstart.gladestrings:119
+msgid "Clear Master Boot Record"
+msgstr "Vyčistiť Master Boot Record"
+
+#: system-config-kickstart.gladestrings:120
+msgid "Do not clear Master Boot Record"
+msgstr "Nevyčistiť Master Boot Record"
+
+#: system-config-kickstart.gladestrings:121
+msgid "Remove all existing partitions"
+msgstr "Odstrániť všetky existujúce partície"
+
+#: system-config-kickstart.gladestrings:122
+msgid "Remove existing Linux partitions"
+msgstr "Odstrániť existujúce Linux partície"
+
+#: system-config-kickstart.gladestrings:123
+msgid "Preserve existing partitions"
+msgstr "Zachovať existujúce partície"
+
+#: system-config-kickstart.gladestrings:124
+msgid "Initialize the disk label"
+msgstr "Inicializovať menovku disku"
+
+#: system-config-kickstart.gladestrings:125
+msgid "Do not initialize the disk label"
+msgstr "Neinicializovať menovku disku"
+
+#: system-config-kickstart.gladestrings:126
+msgid "_Add"
+msgstr "Prid_ať"
+
+#: system-config-kickstart.gladestrings:127
+msgid "_Edit"
+msgstr "_Upraviť"
+
+#: system-config-kickstart.gladestrings:128
+msgid "_Delete"
+msgstr "_Zmazať"
+
+#: system-config-kickstart.gladestrings:129
+msgid "RAID"
+msgstr "RAID"
+
+#: system-config-kickstart.gladestrings:130
+msgid "Partition options are not applicable on upgrades."
+msgstr "Voľby partícií nie sú aplikovateľné pri aktualizáciach."
+
+#: system-config-kickstart.gladestrings:131
+msgid "Partition Information (required)"
+msgstr "Informácie o partíciach (vyžadované)"
+
+#: system-config-kickstart.gladestrings:132
+msgid "label30"
+msgstr "label30"
+
+#: system-config-kickstart.gladestrings:133
+msgid "_Add Network Device"
+msgstr "Prid_ať sieťové zariadenie"
+
+#: system-config-kickstart.gladestrings:134
+msgid "_Edit Network Device"
+msgstr "_Upraviť sieťové zariadenie"
+
+#: system-config-kickstart.gladestrings:135
+msgid "_Delete Network Device"
+msgstr "_Zmazať sieťové zariadenie"
+
+#: system-config-kickstart.gladestrings:137
+msgid "label31"
+msgstr "label31"
+
+#: system-config-kickstart.gladestrings:138
+msgid "Authentication:"
+msgstr "Overenie totožnosti:"
+
+#: system-config-kickstart.gladestrings:139
+msgid "Use Shadow Passwords"
+msgstr "Použiť shadow heslá"
+
+#: system-config-kickstart.gladestrings:140
+msgid "Use MD5"
+msgstr "Použiť MD5"
+
+#: system-config-kickstart.gladestrings:141
+msgid "Enable NIS"
+msgstr "Povoliť NIS"
+
+#: system-config-kickstart.gladestrings:142
+msgid "NIS Domain:"
+msgstr "NIS doména:"
+
+#: system-config-kickstart.gladestrings:143
+msgid "Use broadcast to find NIS server"
+msgstr "Použiť broadcast na vyhľadanie NIS servera"
+
+#: system-config-kickstart.gladestrings:144
+msgid "NIS Server:"
+msgstr "NIS server:"
+
+#: system-config-kickstart.gladestrings:145
+msgid "NIS Authentication"
+msgstr "Overenie totožnosti cez NIS"
+
+#: system-config-kickstart.gladestrings:146
+msgid "NIS"
+msgstr "NIS"
+
+#: system-config-kickstart.gladestrings:147
+msgid "Enable LDAP"
+msgstr "Poviliť LDAP"
+
+#: system-config-kickstart.gladestrings:148
+msgid "LDAP Server: "
+msgstr "LDAP server:"
+
+#: system-config-kickstart.gladestrings:149
+msgid "LDAP Base Name: "
+msgstr "Názov LDAP bázy:"
+
+#: system-config-kickstart.gladestrings:150
+msgid "LDAP Authentication"
+msgstr "Overenie totožnosti cez LDAP"
+
+#: system-config-kickstart.gladestrings:151
+msgid "LDAP "
+msgstr "LDAP "
+
+#: system-config-kickstart.gladestrings:152
+msgid "Enable Kerberos 5 Authentication"
+msgstr "Povoliť overenie totožnosti cez Kerberos 5"
+
+#: system-config-kickstart.gladestrings:153
+msgid "Kerberos Realm:"
+msgstr "Oblasť Kerberos:"
+
+#: system-config-kickstart.gladestrings:154
+msgid "Kerberos Domain Controller (KDC):"
+msgstr "Radič domény Kerberos (KDC):"
+
+#: system-config-kickstart.gladestrings:155
+msgid "Kerberos Master Server:"
+msgstr "Nadriadený Kerberos server:"
+
+#: system-config-kickstart.gladestrings:156
+msgid "Kerberos 5 Authentication"
+msgstr "Overenie totožnosti cez Kerberos 5"
+
+#: system-config-kickstart.gladestrings:157
+msgid "Kerberos 5"
+msgstr "Kerberos 5"
+
+#: system-config-kickstart.gladestrings:158
+msgid "Enable Hesiod Support"
+msgstr "Povoliť podporu Hesiod"
+
+#: system-config-kickstart.gladestrings:159
+msgid "Hesiod LHS:"
+msgstr "Hesiod LHS:"
+
+#: system-config-kickstart.gladestrings:160
+msgid "Hesiod RHS:"
+msgstr "Hesiod RHS:"
+
+#: system-config-kickstart.gladestrings:161
+msgid "Hesiod Authentication"
+msgstr "Overenie totožnosti cez Hesiod"
+
+#: system-config-kickstart.gladestrings:162
+msgid "Hesiod"
+msgstr "Hesiod"
+
+#: system-config-kickstart.gladestrings:163
+msgid "Enable SMB Authentication"
+msgstr "Povoliť overenie totožnosti cez SMB"
+
+#: system-config-kickstart.gladestrings:164
+msgid "SMB Servers:"
+msgstr "SMB servery:"
+
+#: system-config-kickstart.gladestrings:165
+msgid "SMB Workgroup:"
+msgstr "SMB pracovná skupina:"
+
+#: system-config-kickstart.gladestrings:166
+msgid "SMB Authentication"
+msgstr "Overenie totožnosti cez SMB"
+
+#: system-config-kickstart.gladestrings:167
+msgid "SMB"
+msgstr "SMB"
+
+#: system-config-kickstart.gladestrings:168
+msgid "Enable nscd"
+msgstr "Povoliť nscd"
+
+#: system-config-kickstart.gladestrings:169
+msgid "Name Switch Cache Daemon (nscd) Authentication"
+msgstr "Overenie totožnosti cez Name Switch Cache démona (nscd)"
+
+#: system-config-kickstart.gladestrings:170
+msgid "Name Switch Cache"
+msgstr "Name Switch Cache"
+
+#: system-config-kickstart.gladestrings:171
+msgid "Authentication options are not applicable on upgrades."
+msgstr "Voľby overenia totožnosti nie sú aplikovateľné pri aktualizáciach."
+
+#: system-config-kickstart.gladestrings:172
+msgid "Authentication Configuration"
+msgstr "Nastavenie overenia totožnosti"
+
+#: system-config-kickstart.gladestrings:173
+msgid "label32"
+msgstr "label32"
+
+#: system-config-kickstart.gladestrings:174
+msgid "Security level:"
+msgstr "Úroveň bezpečnosti:"
+
+#: system-config-kickstart.gladestrings:175
+msgid "Enable firewall"
+msgstr "Povoliť firewall"
+
+#: system-config-kickstart.gladestrings:176
+msgid "Disable firewall"
+msgstr "Zakázať firewall"
+
+#: system-config-kickstart.gladestrings:177
+msgid "SELinux:"
+msgstr "SELinux:"
+
+#: system-config-kickstart.gladestrings:178
+msgid "Active"
+msgstr "Aktívne"
+
+#: system-config-kickstart.gladestrings:179
+msgid "Warn"
+msgstr "Varovné"
+
+#: system-config-kickstart.gladestrings:180
+#: system-config-kickstart.gladestrings:192
+msgid "Disabled"
+msgstr "Zakázané"
+
+#: system-config-kickstart.gladestrings:181
+msgid "Firewall configuration is not applicable on upgrades."
+msgstr "Nastavenie firewallu nie je aplikovateľné pri aktualizáciach."
+
+#: system-config-kickstart.gladestrings:183
+msgid "label33"
+msgstr "label33"
+
+#: system-config-kickstart.gladestrings:184
+msgid "Configure the X Window System"
+msgstr "Nastavenie X Window systému"
+
+#: system-config-kickstart.gladestrings:185
+msgid "Color Depth"
+msgstr "Farebná hĺbka"
+
+#: system-config-kickstart.gladestrings:186
+msgid "Resolution"
+msgstr "Rozlíšenie"
+
+#: system-config-kickstart.gladestrings:187
+msgid "Default Desktop:"
+msgstr "Štandardné pracovné prostredie:"
+
+#: system-config-kickstart.gladestrings:188
+msgid "GNOME"
+msgstr "GNOME"
+
+#: system-config-kickstart.gladestrings:189
+msgid "KDE"
+msgstr "KDE"
+
+#: system-config-kickstart.gladestrings:190
+msgid "Start the X Window System on boot"
+msgstr "Spustiť X Window systém po štarte"
+
+#: system-config-kickstart.gladestrings:191
+msgid "On first boot, Setup Agent is: "
+msgstr "Po prvom spustení je Sprievodca nastavení: "
+
+#: system-config-kickstart.gladestrings:193
+msgid "Enabled"
+msgstr "Povolený"
+
+#: system-config-kickstart.gladestrings:194
+msgid "Enabled in reconfiguration mode"
+msgstr "Povolený v prenastavovacom režime"
+
+#: system-config-kickstart.gladestrings:195
+msgid "General"
+msgstr "Hlavné"
+
+#: system-config-kickstart.gladestrings:196
+msgid "Probe for video card driver"
+msgstr "Zistiť ovládač grafickej karty"
+
+#: system-config-kickstart.gladestrings:197
+msgid "Video Card RAM: "
+msgstr "Pamäť grafickej karty: "
+
+#: system-config-kickstart.gladestrings:198
+msgid "Video Card"
+msgstr "Grafická karta"
+
+#: system-config-kickstart.gladestrings:199
+msgid "Probe for monitor"
+msgstr "Zistiť monitor"
+
+#: system-config-kickstart.gladestrings:200
+msgid "Use custom monitor sync rates"
+msgstr "Použiť vlastné sync hodnoty monitora"
+
+#: system-config-kickstart.gladestrings:201
+msgid "Hz"
+msgstr "Hz"
+
+#: system-config-kickstart.gladestrings:202
+msgid "kHz"
+msgstr "kHz"
+
+#: system-config-kickstart.gladestrings:203
+msgid "Vertical Sync:"
+msgstr "Vertikálna sync:"
+
+#: system-config-kickstart.gladestrings:204
+msgid "Horizontal Sync:"
+msgstr "Horizontálna sync:"
+
+#: system-config-kickstart.gladestrings:205
+msgid "Monitor"
+msgstr "Monitor"
+
+#: system-config-kickstart.gladestrings:206
+msgid "Display configuration is not applicable on upgrades."
+msgstr "Nastavenie grafiky nie je aplikovateľné pri aktualizáciach."
+
+#: system-config-kickstart.gladestrings:208
+msgid "label88"
+msgstr "label88"
+
+#: system-config-kickstart.gladestrings:209
+msgid "Select packages to install."
+msgstr "Zvoľte balíky pre inštaláciu."
+
+#: system-config-kickstart.gladestrings:210
+msgid "_Install Everything"
+msgstr "_Inštalovať všetko"
+
+#: system-config-kickstart.gladestrings:211
+msgid "Desktops"
+msgstr "Pracovné prostredia"
+
+#: system-config-kickstart.gladestrings:212
+msgid "Applications"
+msgstr "Aplikácie"
+
+#: system-config-kickstart.gladestrings:213
+msgid "Servers"
+msgstr "Servery"
+
+#: system-config-kickstart.gladestrings:214
+msgid "Development"
+msgstr "Vývoj"
+
+#: system-config-kickstart.gladestrings:215
+msgid "System"
+msgstr "Systém"
+
+#: system-config-kickstart.gladestrings:216
+msgid "Package selection is not applicable on upgrades."
+msgstr "Výber balíkov nie je aplikovateľný pri aktualizáciach."
+
+#: system-config-kickstart.gladestrings:218
+msgid "label34"
+msgstr "label34"
+
+#: system-config-kickstart.gladestrings:219
+#, c-format
+msgid ""
+"Warning: An error in this script might cause your kickstart installation to "
+"fail. Do not include the %pre command at the beginning."
+msgstr ""
+"Varovanie: Chyba v tomto skripte môže spôsobiť zlyhanie celej inštalácie. Na začiatok nevkladajte príkaz %pre."
+
+#: system-config-kickstart.gladestrings:220
+#: system-config-kickstart.gladestrings:226
+msgid "Use an interpreter:"
+msgstr "Použiť interpreter:"
+
+#: system-config-kickstart.gladestrings:221
+#, c-format
+msgid "Type your %pre script below:"
+msgstr "Sem napíšte váš %pre skript:"
+
+#: system-config-kickstart.gladestrings:223
+msgid "label89"
+msgstr "label89"
+
+#: system-config-kickstart.gladestrings:224
+#, c-format
+msgid ""
+"Warning: An error in this script might cause your kickstart installation to "
+"fail. Do not include the %post command at the beginning."
+msgstr ""
+"Varovanie: Chyba v tomto skripte môže spôsobiť zlyhanie celej inštalácie. Na začiatok nevkladajte príkaz %post."
+
+#: system-config-kickstart.gladestrings:225
+msgid "Run outside of the chroot environment"
+msgstr "Spustiť mimo chroot prostredia"
+
+#: system-config-kickstart.gladestrings:227
+#, c-format
+msgid "Type your %post script below:"
+msgstr "Sem napíšte váš %post skript:"
+
+#: system-config-kickstart.gladestrings:229
+msgid "label93"
+msgstr "label93"
+
+#: system-config-kickstart.gladestrings:230
+msgid "Preview Options"
+msgstr "Voľby náhľadu"
+
+#: system-config-kickstart.gladestrings:231
+msgid "_Save to File"
+msgstr "_Uložiť do súboru"
+
+#: system-config-kickstart.gladestrings:232
+msgid ""
+"You have choosen the following configuration. Click Save File to save the "
+"kickstart file. "
+msgstr ""
+"Zvolili ste následujúcu konfiguráciu. Kliknite na 'Uložiť súbor' pre uloženie súboru rýchleho štartu. "
+
+#: system-config-kickstart.gladestrings:233
+msgid "RAID Options"
+msgstr "Voľby RAID"
+
+#: system-config-kickstart.gladestrings:234
+msgid ""
+"Software RAID allows you to combine several disks into a larger RAID "
+"device.  A RAID device can be configured to provide additional speed and "
+"reliability compared to using an individual drive.  For more information on "
+"using RAID devices please consult the kickstart documentation."
+msgstr ""
+"Softvérový RAID vám umožňuje skombinovať niekoľko diskov do jedného väčšieho RAID zariadenia.  Zariadenie RAID môže byť nastavené na poskytovanie väčšej rýchlosti a spoľahlivosti v porovnaní s používaním jednotlivých diskov.  Pre viac informácií o používaní RAID zariadení si prezrite dokumentáciu rýchleho štartu."
+
+#: system-config-kickstart.gladestrings:235
+msgid ""
+"To use RAID you must first create at least two partitions of type 'software "
+"RAID'.  Then you can create a RAID device which can be formatted and mounted."
+msgstr ""
+"Na použitie RAID musíte najskôr vytvoriť najmenej dve partície typu 'Softvérový RAID'.  Potom môžete vytvoriť RAID zariadenie, ktoré môže byť naformátované a pripojené."
+
+#: system-config-kickstart.gladestrings:236
+msgid "Choose one of the following options:"
+msgstr "Zvoľte jednu z následujúcich volieb:"
+
+#: system-config-kickstart.gladestrings:237
+msgid "Create a software RAID partition"
+msgstr "Vytvoriť softvérovú RAID partíciu"
+
+#: system-config-kickstart.gladestrings:238
+msgid "Create a RAID device [default = /dev/md0]"
+msgstr "Vytvoriť RAID zariadenie [štandardne = /dev/md0]"
+
+#: system-config-kickstart.gladestrings:239
+msgid "Network Device Information"
+msgstr "Informácie o sieťovom zariadení"
+
+#: system-config-kickstart.gladestrings:240
+msgid "Network Device:"
+msgstr "Sieťové zariadenie:"
+
+#: system-config-kickstart.gladestrings:241
+msgid "Network Type:"
+msgstr "Typ siete:"
+
+#: system-config-kickstart.gladestrings:242
+msgid "IP Address:"
+msgstr "IP adresa:"
+
+#: system-config-kickstart.gladestrings:243
+msgid "Netmask: "
+msgstr "Maska siete:"
+
+#: system-config-kickstart.gladestrings:244
+msgid "Gateway:"
+msgstr "Brána:"
+
+#: system-config-kickstart.gladestrings:245
+msgid "Name Server:"
+msgstr "Menný server:"
+
+#: system-config-kickstart.gladestrings:246
+#: system-config-kickstart.gladestrings:247
+#: system-config-kickstart.gladestrings:248
+#: system-config-kickstart.gladestrings:249
+#: system-config-kickstart.gladestrings:250
+#: system-config-kickstart.gladestrings:251
+#: system-config-kickstart.gladestrings:252
+#: system-config-kickstart.gladestrings:253
+#: system-config-kickstart.gladestrings:254
+#: system-config-kickstart.gladestrings:255
+#: system-config-kickstart.gladestrings:256
+#: system-config-kickstart.gladestrings:257
+msgid "."
+msgstr "."
+
