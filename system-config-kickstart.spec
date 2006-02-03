@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.6.3
+Version: 2.6.4
 Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -20,6 +20,8 @@ Requires: hwdata
 Requires: rhpl
 Requires: system-config-language
 Requires: pykickstart
+Requires: yum
+Requires: pirut
 Prereq: gtk2 >= 2.6
 
 %description
@@ -29,6 +31,7 @@ Kickstart Configurator is a graphical tool for creating kickstart files.
 %setup -q
 
 %install
+rm -rf $RPM_BUILD_ROOT
 make INSTROOT=$RPM_BUILD_ROOT install
 desktop-file-install --vendor system --delete-original      \
   --dir $RPM_BUILD_ROOT%{_datadir}/applications             \
@@ -63,17 +66,22 @@ fi
 %defattr(-,root,root)
 %doc COPYING
 %doc doc/*
-/usr/sbin/%{name}
-/usr/sbin/ksconfig
+/etc/pam.d/system-config-kickstart
+/etc/security/console.apps/system-config-kickstart
+/usr/bin/%{name}
 %dir /usr/share/%{name}
 /usr/share/%{name}/*
-/usr/share/%{name}/pixmaps/%{name}.png
 %{_mandir}/man8/%{name}*
 %lang(ja) %{_mandir}/ja/man8/%{name}*
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Fri Feb 03 2006 Chris Lumens <clumens@redhat.com> 2.6.4-1
+- Convert package selection to using pirut (#178759).
+- Partitioning screen fixes for cciss.
+- Use consolehelper.
+
 * Wed Jan 04 2006 Chris Lumens <clumens@redhat.com> 2.6.3-1
 - Remove references to monitor in xconfig (#176537).
 

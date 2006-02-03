@@ -13,6 +13,9 @@ DATADIR=${PREFIX}/share
 
 PKGDATADIR=${DATADIR}/${PKGNAME}
 
+PAMD_DIR=/etc/pam.d
+SECURITY_DIR=/etc/security/console.apps
+
 default:
 
 subdirs:
@@ -22,12 +25,16 @@ subdirs:
 	done && test -z "$$fail"
 
 install: ${PKGNAME}.desktop
-	mkdir -p $(INSTROOT)/usr/sbin
+	mkdir -p $(INSTROOT)/$(PAMD_DIR)
+	mkdir -p $(INSTROOT)/$(SECURITY_DIR)
 	mkdir -p $(INSTROOT)$(PKGDATADIR)
 	mkdir -p $(INSTROOT)$(PKGDATADIR)/pixmaps
+	mkdir -p $(INSTROOT)/usr/bin
 	mkdir -p $(INSTROOT)/usr/share/applications
 	mkdir -p $(INSTROOT)/usr/share/icons/hicolor/48x48/apps
-	install ${PKGNAME} $(INSTROOT)/usr/sbin/${PKGNAME}
+	ln -sf consolehelper $(INSTROOT)/usr/bin/$(PKGNAME)
+	install $(PKGNAME).console $(INSTROOT)$(SECURITY_DIR)/$(PKGNAME)
+	install $(PKGNAME).pam $(INSTROOT)$(PAMD_DIR)/$(PKGNAME)
 	install src/*.py $(INSTROOT)$(PKGDATADIR)
 	for py in src/*.py ; do \
 		sed -e s,@VERSION@,$(VERSION),g $${py} > $(INSTROOT)$(PKGDATADIR)/`basename $${py}` ; \
@@ -36,7 +43,6 @@ install: ${PKGNAME}.desktop
 	install pixmaps/*.png $(INSTROOT)$(PKGDATADIR)/pixmaps
 	install pixmaps/${PKGNAME}.png $(INSTROOT)/usr/share/icons/hicolor/48x48/apps
 	install ${PKGNAME}.desktop $(INSTROOT)/usr/share/applications/${PKGNAME}.desktop
-	ln -sf /usr/sbin/${PKGNAME} $(INSTROOT)/usr/sbin/ksconfig
 	for d in $(SUBDIRS); do \
 	(cd $$d; $(MAKE) INSTROOT=$(INSTROOT) MANDIR=$(MANDIR) install) \
 		|| case "$(MFLAGS)" in *k*) fail=yes;; *) exit 1;; esac; \
