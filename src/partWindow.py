@@ -22,6 +22,7 @@ import gtk.glade
 import string
 import signal
 import getopt
+import re
 import partEntry
 import kickstartGui
 from pykickstart.data import *
@@ -341,6 +342,21 @@ class partWindow:
         self.sizeCombo.set_sensitive(not active)
         self.sizeOptionsTable.set_sensitive(not active)
 
+    def deviceFromPartition(self, part):
+        if self.isPartitionValid(part) == 1:
+            device = part
+
+            # XXX: temporary until we have a better way of displaying
+            # all these crazy device types
+            if device.startswith("cciss"):
+                device = re.sub("p[0-9]+$", "", device)
+            else:
+                device = re.sub("[0-9]+$", "", device)
+        else:
+            return None
+
+        return device
+
     def formToKsdata(self, part_object):
         onDiskVal = ""
         onPartVal = ""
@@ -374,19 +390,20 @@ class partWindow:
                 part_object.device = device
             else:
                 return None
+        else:
+            part_object.device = ""
 
         if self.onPartCheck.get_active() == True:
             part = self.onPartEntry.get_text()
+            device = self.deviceFromPartition(part)
 
-            if self.isPartitionValid(part) == 1:
-                device = part
-                for i in string.digits:
-                    device = string.replace(device, i, "")
-                
+            if device == None:
+                return None
+            else:
                 part_object.device = device
                 part_object.partition = part
-            else:
-                return None
+        else:
+            part_object.partition = ""
 
         part_object.doFormat = self.formatCheck.get_active()
 
@@ -550,6 +567,7 @@ class partWindow:
 
         if kspart.onPart != "":
             part_object.partition = kspart.onPart
+            part_object.device = self.deviceFromPartition(kspart.onPart)
 
         if kspart.grow == True:
             part_object.sizeStrategy = "max"
