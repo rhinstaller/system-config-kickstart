@@ -17,7 +17,8 @@
 ## along with this program; if not, write to the Free Software
 ## Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-#Kickstart Configurator Package Selection
+# Kickstart package selection UI
+# FIXME:  package-level selection and deselection doesn't currently work.
 
 import gtk
 import gtk.glade
@@ -121,39 +122,62 @@ class Packages:
         self.package_frame = xml.get_widget("package_frame")
         self.package_frame.add(self.gs.vbox)
 
+        self.detailsButton = self.gs.xml.get_widget("detailsButton")
+        self.detailsButton.hide()
+        self.optionalLabel = self.gs.xml.get_widget("optionalLabel")
+        self.optionalLabel.hide()
+
     def cleanup(self):
         self.y.cleanup()
 
     def formToKsdata(self):
         self.ksdata.groupList = []
-        self.ksdata.packageList = []
-        self.ksdata.excludedList = []
+#        self.ksdata.packageList = []
+#        self.ksdata.excludedList = []
 
         self.y.tsInfo.makelists()
-        print self.y.tsInfo.removed
         for txmbr in self.y.tsInfo.getMembers():
+#            if txmbr.ts_state == '-':
+#                self.ksdata.excludedList.append(txmbr.name)
+#                continue
             if txmbr.groups:
                 for g in txmbr.groups:
                     grp = self.y.comps.return_group(g)
                     if g not in self.ksdata.groupList:
                         self.ksdata.groupList.append(g)
-                    if txmbr.name in grp.optional_packages.keys():
-                        self.ksdata.packageList.append(txmbr.name)
-            else:
-                self.ksdata.packageList.append(txmbr.name)
+#                    if txmbr.name in grp.optional_packages.keys():
+#                        self.ksdata.packageList.append(txmbr.name)
+#            else:
+#                self.ksdata.packageList.append(txmbr.name)
 
     def applyKsdata(self):
-        # We don't really care about invalid names here.  Perhaps we should
-        # at least throw them out of the ksdata lists so they don't keep
-        # coming back?
-        for pkg in self.ksdata.packageList:
-            try:
-                self.y.install(name=pkg)
-            except:
-                pass
+#        # We don't really care about invalid names here.  Perhaps we should
+#        # at least throw them out of the ksdata lists so they don't keep
+#        # coming back?
+#        for pkg in self.ksdata.packageList:
+#            try:
+#                self.y.install(name=pkg)
+#            except:
+#                pass
 
-        for grp in self.ksdata.groupList:
-            try:
-                self.y.selectGroup(grp)
-            except:
-                pass
+        self.y.tsInfo = self.y._transactionDataFactory()
+
+        for grp in self.y.comps.groups:
+            if grp.groupid in self.ksdata.groupList:
+                print "selecting group %s" % grp.groupid
+                self.y.selectGroup(grp.groupid)
+            else:
+                self.y.deselectGroup(grp.groupid)
+
+#        # This is a whole lot like __deselectPackage in OptionalPackageSelector
+#        # in pirut.  If only we could get to that.
+#        for pkg in self.ksdata.excludedList:
+#            pkgs = self.y.pkgSack.returnNewestByName(pkg)
+#            if pkgs:
+#                pkgs = self.y.bestPackagesFromList(pkgs)
+#            for po in pkgs:
+#                txmbrs = self.y.tsInfo.getMembers(pkgtup=po.pkgtup)
+#                self.y.tsInfo.remove(po.pkgtup)
+
+        # Refresh UI to get whatever selections the ks file specified.
+        self.gs.doRefresh()
