@@ -149,6 +149,12 @@ class partition:
         self.raidOptionsWindow.showOptionsWindow()
 
     def formToKsdata(self):
+        self.ksdata.partitions = []
+        self.ksdata.raidList = []
+        self.ksdata.lvList = []
+        self.ksdata.vgList = []
+        self.ksdata.dmraids = []
+
         #zerombr and clearpart options
         self.ksdata.zerombr = self.clear_mbr_yes_radiobutton.get_active()
 
@@ -175,12 +181,6 @@ class partition:
         return None
 
     def getPartData(self, store, data, iter):
-        self.ksdata.partitions = []
-        self.ksdata.raidList = []
-        self.ksdata.lvList = []
-        self.ksdata.vgList = []
-        self.ksdata.dmraids = []
-
         part_object = self.part_store.get_value(iter, 5)
 
         if part_object:
