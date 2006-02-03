@@ -164,7 +164,6 @@ class Packages:
 
         for grp in self.y.comps.groups:
             if grp.groupid in self.ksdata.groupList:
-                print "selecting group %s" % grp.groupid
                 self.y.selectGroup(grp.groupid)
             else:
                 self.y.deselectGroup(grp.groupid)
