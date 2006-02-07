@@ -23,10 +23,12 @@
 import gtk
 import gtk.glade
 import gobject
-import string
 import getopt
 import os
+import string
+import sys
 import yum
+import yum.Errors
 from yum.constants import *
 from pirut import GroupSelector
 
@@ -71,16 +73,6 @@ class sckYumBase(yum.YumBase):
     def isGroupInstalled(self, grp):
         return grp.selected
 
-    def getBaseRepoName(self):
-        fd = open("/etc/redhat-release", "r")
-        lines = fd.readlines()
-        fd.close()
-
-        if lines[0].__contains__("Rawhide"):
-            return "development"
-        else:
-            return "base"
-
     def __init__ (self):
         import tempfile
 
@@ -92,10 +84,25 @@ class sckYumBase(yum.YumBase):
         self.doConfigSetup(root=self.temproot)
         self.conf.installroot = self.temproot
 
-        # Only enable the base repo, whatever it may be called.
         self.doTsSetup()
+
+        # If we're on a release, we want to try the base repo first.  Otherwise,
+        # try development.  If neither of those works, we have a problem.
+        if "base" in map(lambda repo: repo.id, self.repos.listEnabled()):
+            repoorder = ["base", "development"]
+        else:
+            repoorder = ["development", "base"]
+
         self.repos.disableRepo("*")
-        self.repos.enableRepo(self.getBaseRepoName())
+
+        try:
+            self.repos.enableRepo(repoorder[0])
+        except yum.Errors.RepoError:
+            try:
+                self.repos.enableRepo(repoorder[1])
+            except yum.Errors.RepoError:
+                print _("system-config-kickstart requires either the base or development yum repository enabled for package selection.  Please enable one of these in /etc/yum.repos.d and restart the program.")
+                sys._exit(1)
 
         self.doRepoSetup()
         self.doGroupSetup()
