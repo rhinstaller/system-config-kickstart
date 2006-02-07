@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.6.4
+Version: 2.6.5
 Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -77,6 +77,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Tue Feb 07 2006 Chris Lumens <clumens@redhat.com> 2.6.5-1
+- Smarter repo-enabling code (#180097).
+
 * Fri Feb 03 2006 Chris Lumens <clumens@redhat.com> 2.6.4-1
 - Convert package selection to using pirut (#178759).
 - Partitioning screen fixes for cciss.
