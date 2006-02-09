@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.6.5
+Version: 2.6.6
 Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -77,6 +77,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Thu Feb 09 2006 Chris Lumens <clumens@redhat.com> 2.6.6-1
+- Fix .desktop file, other references to /usr/sbin.
+
 * Tue Feb 07 2006 Chris Lumens <clumens@redhat.com> 2.6.5-1
 - Smarter repo-enabling code (#180097).
 
