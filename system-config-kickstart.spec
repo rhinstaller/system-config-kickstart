@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
 Version: 2.6.6
-Release: 1
+Release: 2
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
 ExclusiveOS: Linux
@@ -22,6 +22,7 @@ Requires: system-config-language
 Requires: pykickstart
 Requires: yum
 Requires: pirut
+Requires: hicolor-icon-theme
 Prereq: gtk2 >= 2.6
 
 %description
@@ -77,6 +78,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Fri Feb 24 2006 Chris Lumens <clumens@redhat.com> 2.6.6-2
+- Add requirement for scriptlets (#182865, #182866).
+
 * Thu Feb 09 2006 Chris Lumens <clumens@redhat.com> 2.6.6-1
 - Fix .desktop file, other references to /usr/sbin.
 
