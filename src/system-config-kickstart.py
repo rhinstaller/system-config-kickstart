@@ -35,18 +35,16 @@ import rhpl.translate as translate
 domain = 'system-config-kickstart'
 translate.textdomain (domain)
 
-# FIXME
 def useCliMode(value):
-    import kickstartData
+    from pykickstart.data import KickstartData
+    from pykickstart.writer import KickstartWriter
     import profileSystem
-    data = kickstartData.KickstartData()
+
+    data = KickstartData()
     profileSystem = profileSystem.ProfileSystem(data)
-    file = data.getAll()
+
     fd = open(value, "w")
-
-    for line in file:
-        fd.write(line + "\n")
-
+    fd.write(KickstartWriter(data).write())
     fd.close()
 
     
