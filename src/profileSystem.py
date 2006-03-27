@@ -23,6 +23,8 @@ sys.path.append("/usr/share/system-config-language")
 import language_backend
 import rhpl.keyboard as keyboard
 
+from pykickstart.constants import *
+
 class ProfileSystem:
     def __init__(self, kickstartData):
         self.kickstartData = kickstartData
@@ -32,22 +34,22 @@ class ProfileSystem:
         self.getKeyboard()
         self.getTimezone()
         self.getRootPassword()
+        self.getSELinux()
         self.getPackages()
 
-        self.kickstartData.setCdrom("cdrom")
-        self.kickstartData.setInstall("install")
-        self.kickstartData.setZeroMbr("yes")
-        self.kickstartData.setClearPart(["--linux"])
+        self.kickstartData.method["method"] = "cdrom"
+        self.kickstartData.upgrade = False
+        self.kickstartData.zerombr = True
+        self.kickstartData.clearpart["type"] = CLEARPART_TYPE_LINUX
 
     def getLang(self):
         default, langs = self.languageBackend.getInstalledLangs()
-        self.kickstartData.setLang([default])
-        self.kickstartData.setDefaultLang(default)
+        self.kickstartData.lang = default
 
     def getKeyboard(self):
         kbd = keyboard.Keyboard()
         kbd.read()
-        self.kickstartData.setKeyboard([kbd.get()])
+        self.kickstartData.keyboard = kbd.get()
 
     def getTimezone(self):
         lines = open('/etc/sysconfig/clock', 'r').readlines()
@@ -59,17 +61,28 @@ class ProfileSystem:
         zone = string.replace(zone, '"', "")
         zone = string.replace(zone, "'", "")
         zone = string.strip(zone)
-        
-        self.kickstartData.setTimezone([zone])
+
+        self.kickstartData.timezone["timezone"] = zone
+        self.kickstartData.timezone["isUtc"] = False
 
     def getRootPassword(self):
         if os.access('/etc/shadow', os.R_OK) == 1:
             line = open('/etc/shadow', 'r').readline()
             tokens = string.split(line, ":")
-            passwd = "--iscrypted " + tokens[1]
-            self.kickstartData.setRootPw([passwd])
+            self.kickstartData.rootpw["isCrypted"] = True
+            self.kickstartData.rootpw["password"] = tokens[1]
         else:
             print "no access to /etc/shadow"
+
+    def getSELinux(self):
+        lines = os.popen("/usr/sbin/getenforce").readlines()
+
+        if lines[0].lower().startswith("disabled"):
+            self.kickstartData.selinux = SELINUX_DISABLED
+        elif lines[0].lower().startswith("permissive"):
+            self.kickstartData.selinux = SELINUX_PERMISSIVE
+        elif lines[0].lower().startswith("enforcing"):
+            self.kickstartData.selinux = SELINUX_ENFORCING
 
     def getPackages(self):
         fd = os.popen("/bin/rpm -qa --queryformat \"%{NAME}\n\"")
@@ -80,4 +93,4 @@ class ProfileSystem:
         for package in packages:
             packages[packages.index(package)] = string.strip(package)
 
-        self.kickstartData.setIndividualPackageList(packages)
+        self.kickstartData.packageList = packages
