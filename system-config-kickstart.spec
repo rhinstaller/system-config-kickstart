@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.6.6
-Release: 2
+Version: 2.6.7
+Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
 ExclusiveOS: Linux
@@ -78,6 +78,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Mon Mar 27 2006 Chris Lumens <clumens@redhat.com> 2.6.7-1 
+- Fix support for --generate (#186635).
+
 * Fri Feb 24 2006 Chris Lumens <clumens@redhat.com> 2.6.6-2
 - Add requirement for scriptlets (#182865, #182866).
 
