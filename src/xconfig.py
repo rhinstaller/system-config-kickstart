@@ -287,7 +287,7 @@ class xconfig:
 
             if self.ksdata.monitor["hsync"] != "":
                 self.sync_button.set_active(True)
-                self.hsync_entry.monitort(string.strip(self.ksdata.monitor["hsync"]))
+                self.hsync_entry.set_text(string.strip(self.ksdata.monitor["hsync"]))
                 self.monitor_probe_check.set_active(False)
 
             if self.ksdata.monitor["vsync"] != "":
