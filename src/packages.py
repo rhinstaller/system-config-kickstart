@@ -102,7 +102,7 @@ class sckYumBase(yum.YumBase):
                 self.repos.enableRepo(repoorder[1])
             except yum.Errors.RepoError:
                 print _("system-config-kickstart requires either the base or development yum repository enabled for package selection.  Please enable one of these in /etc/yum.repos.d and restart the program.")
-                sys._exit(1)
+                sys.exit(1)
 
         self.doRepoSetup()
         self.doGroupSetup()
