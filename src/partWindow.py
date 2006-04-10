@@ -346,10 +346,11 @@ class partWindow:
         if self.isPartitionValid(part) == 1:
             device = part
 
-            # XXX: temporary until we have a better way of displaying
-            # all these crazy device types
-            if device.startswith("cciss"):
+            if device.startswith("cciss") or device.startswith("rd") or \
+               device.startswith("ida") or device.startswith("sx8"):
                 device = re.sub("p[0-9]+$", "", device)
+            elif device.startswith("i2o"):
+                device = re.sub("[0-9]+$", "", device)
             else:
                 device = re.sub("[0-9]+$", "", device)
         else:
