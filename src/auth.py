@@ -205,7 +205,7 @@ class auth:
 
             if self.myNisClass.return_data() == "":
                 self.showDialog()
-                return
+                return None
         else:
             self.myNisClass.set_enabled(self.nisCheck.get_active())
 
@@ -215,7 +215,7 @@ class auth:
 
             if self.myLDAPClass.return_data() == "":
                 self.showDialog()
-                return
+                return None
         else:
             self.myLDAPClass.set_enabled(self.ldapCheck.get_active())
 
@@ -226,7 +226,7 @@ class auth:
 
             if self.myKerberosClass.return_data() == "":
                 self.showDialog()
-                return
+                return None
         else:
             self.myKerberosClass.set_enabled(self.kerberosCheck.get_active())
 
@@ -236,7 +236,7 @@ class auth:
 
             if self.myHesiodClass.return_data() == "":
                 self.showDialog()
-                return
+                return None
         else:
             self.myHesiodClass.set_enabled(self.hesiodCheck.get_active())
 
@@ -246,7 +246,7 @@ class auth:
 
             if self.mySambaClass.return_data() == "":
                 self.showDialog()
-                return
+                return None
         else:
             self.mySambaClass.set_enabled(self.sambaCheck.get_active())
 
