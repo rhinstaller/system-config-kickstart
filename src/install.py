@@ -131,10 +131,10 @@ class install:
 
             if server == "":
                 self.showDialog(_("Please enter an NFS server."), self.nfsserver_entry)
-                return
+                return None
             if dir == "":
                 self.showDialog(_("Please enter an NFS directory."), self.nfsdir_entry)
-                return
+                return None
             if server [-1] == "/":
                 server = server[:-1]
 
@@ -145,23 +145,23 @@ class install:
             ftpserver = string.strip(self.ftpserver_entry.get_text())
             if ftpserver == "":
                 self.showDialog(_("Please enter an FTP server."), self.ftpserver_entry)
-                return
+                return None
             if ftpserver[:6] == "ftp://":
                 ftpserver = ftpserver[6:]
             if ftpserver[-1] == "/":
                 ftpserver = ftpserver[:-1]
             if self.ftpdir_entry.get_text() == "":
                 self.showDialog(_("Please enter an FTP directory."), self.ftpserver_entry)
-                return
+                return None
 
             buf = "ftp://"
             if self.ftpuserpass_checkbutton.get_active():
                 if self.ftpuser_entry.get_text() == "":
                     self.showDialog(_("Please enter an FTP user name."), self.ftpuser_entry)
-                    return
+                    return None
                 if self.ftppasswd_entry.get_text() == "":
                     self.showDialog(_("Please enter an FTP password."), self.ftpuser_entry)
-                    return
+                    return None
 
                 buf = buf + self.ftpuser_entry.get_text() + ":" + self.ftppasswd_entry.get_text() + "@"
             
@@ -177,10 +177,10 @@ class install:
         elif self.http_radiobutton.get_active():
             if self.httpserver_entry.get_text() == "":
                 self.showDialog(_("Please enter an HTTP server."), self.httpserver_entry)
-                return
+                return None
             if self.httpdir_entry.get_text() == "":
                 self.showDialog(_("Please enter an HTTP server directory."), self.httpdir_entry)
-                return
+                return None
 
             loc = string.strip(self.httpserver_entry.get_text())
 
@@ -202,10 +202,10 @@ class install:
         elif self.hd_radiobutton.get_active():
             if self.hddir_entry.get_text() == "":
                 self.showDialog(_("Please enter a hard drive directory."), self.hddir_entry)
-                return
+                return None
             if self.hdpart_entry.get_text() == "":
                 self.showDialog(_("Please enter a hard drive partition."), self.hdpart_entry)
-                return
+                return None
 
             self.ksdata.method["method"] = "harddrive"
             self.ksdata.method["partition"] = self.hdpart_entry.get_text()
