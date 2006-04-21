@@ -30,7 +30,7 @@ import sys
 import yum
 import yum.Errors
 from yum.constants import *
-from pirut import GroupSelector
+from pirut import GroupSelector, PirutProgressCallback
 
 ##
 ## I18N
@@ -73,18 +73,24 @@ class sckYumBase(yum.YumBase):
     def isGroupInstalled(self, grp):
         return grp.selected
 
-    def __init__ (self):
+    def __init__ (self, callback=None):
         import tempfile
 
         yum.YumBase.__init__(self)
+
+        if callback:
+            callback.log = self.log
+            self.repos.callback = callback
 
         # Set up a temporary root for RPM so it thinks there's nothing
         # installed.
         self.temproot = tempfile.mkdtemp(dir="/tmp")
         self.doConfigSetup(root=self.temproot)
+        if callback: callback.next_task()
         self.conf.installroot = self.temproot
 
         self.doTsSetup()
+        if callback: callback.next_task()
 
         # If we're on a release, we want to try the base repo first.  Otherwise,
         # try development.  If neither of those works, we have a problem.
@@ -94,6 +100,7 @@ class sckYumBase(yum.YumBase):
             repoorder = ["development", "base"]
 
         self.repos.disableRepo("*")
+        if callback: callback.next_task()
 
         try:
             self.repos.enableRepo(repoorder[0])
@@ -105,8 +112,13 @@ class sckYumBase(yum.YumBase):
                 sys.exit(1)
 
         self.doRepoSetup()
+        if callback: callback.next_task()
         self.doGroupSetup()
+        if callback: callback.next_task(next=5)
         self.doSackSetup()
+        if callback:
+            callback.next_task()
+            self.repos.callback = None
 
     def cleanup(self):
         for root, dirs, files in os.walk(self.temproot, topdown=False):
@@ -119,12 +131,16 @@ class sckYumBase(yum.YumBase):
 
 class Packages:
     def __init__(self, xml, ksdata):
-        gsFileName = lambda fn: "/usr/share/pirut/ui/" + fn
-        
+        self.toplevel = xml.get_widget("main_window")
         self.ksdata = ksdata
-        self.y = sckYumBase()
-        self.gs = GroupSelector.GroupSelector(self.y, gsFileName)
+        pbar = PirutProgressCallback(_("Retrieving package information"),
+                                     self.toplevel, num_tasks=10)
+        pbar.show()
+
+        self.y = sckYumBase(pbar)
+        self.gs = GroupSelector.GroupSelector(self.y, lambda fn: "/usr/share/pirut/ui/" + fn)
         self.gs.doRefresh()
+        pbar.destroy()
 
         self.package_frame = xml.get_widget("package_frame")
         self.package_frame.add(self.gs.vbox)
