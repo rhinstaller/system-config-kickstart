@@ -112,10 +112,31 @@ class kickstartGui:
 	self.category_view = xml.get_widget("list_view")
 	self.category_store = gtk.ListStore(gobject.TYPE_STRING)
 	self.category_view.set_model(self.category_store)
+	
+	col = gtk.TreeViewColumn(_("Subsection"), gtk.CellRendererText(), text=0)
+	col.set_sort_column_id(0)
+	self.category_view.append_column(col)
+	
+	self.category_list = [ (_("Basic Configuration")), (_("Installation Method")),
+			       (_("Boot Loader Options")), (_("Partition Information")),
+			       (_("Network Configuration")), (_("Authentication")),
+			       (_("Firewall Configuration")), (_("Display Configuration")),
+			       (_("Package Selection")), (_("Pre-Installation Script")),
+			       (_("Post-Installation Script")) ]
+		
+	for item in self.category_list:
+		iter = self.category_store.append()
+		self.category_store.set_value(iter, 0, item)
 
 	#bring in basic functions
 	self.basic_class = basic.basic(self, xml, self.options_notebook, self.kickstartData)
         
+        # Now that we've loaded the UI elements for the first active thing in the notebook,
+        # draw it so we can display a progress bar when yum starts doing stuff.
+        self.toplevel.show()
+        while gtk.events_pending():
+            gtk.main_iteration()
+
 	#bring in bootloader functions
 	self.bootloader_class = bootloader.bootloader(xml, self.options_notebook, self.kickstartData)
                                                       
@@ -137,21 +158,6 @@ class kickstartGui:
 	self.packages_class = packages.Packages(xml, self.kickstartData)
 	#bring in scripts function
 	self.scripts_class = scripts.scripts(xml, self.kickstartData)
-	
-	col = gtk.TreeViewColumn(_("Subsection"), gtk.CellRendererText(), text=0)
-	col.set_sort_column_id(0)
-	self.category_view.append_column(col)
-	
-	self.category_list = [ (_("Basic Configuration")), (_("Installation Method")),
-			       (_("Boot Loader Options")), (_("Partition Information")),
-			       (_("Network Configuration")), (_("Authentication")),
-			       (_("Firewall Configuration")), (_("Display Configuration")),
-			       (_("Package Selection")), (_("Pre-Installation Script")),
-			       (_("Post-Installation Script")) ]
-		
-	for item in self.category_list:
-		iter = self.category_store.append()
-		self.category_store.set_value(iter, 0, item)
 
         self.open_menu.connect("activate", self.on_activate_open)
 	self.preview_menu.connect("activate", self.on_activate_preview_options)
