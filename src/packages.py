@@ -95,21 +95,24 @@ class sckYumBase(yum.YumBase):
         # If we're on a release, we want to try the base repo first.  Otherwise,
         # try development.  If neither of those works, we have a problem.
         if "base" in map(lambda repo: repo.id, self.repos.listEnabled()):
-            repoorder = ["base", "development"]
+            repoorder = ["core", "base", "development"]
         else:
-            repoorder = ["development", "base"]
+            repoorder = ["development", "core", "base"]
 
         self.repos.disableRepo("*")
         if callback: callback.next_task()
 
-        try:
-            self.repos.enableRepo(repoorder[0])
-        except yum.Errors.RepoError:
+        enabledBaseRepo = False
+        for repo in repoorder:
             try:
-                self.repos.enableRepo(repoorder[1])
+                self.repos.enableRepo(repo)
+                enabledBaseRepo = True
             except yum.Errors.RepoError:
-                print _("system-config-kickstart requires either the base or development yum repository enabled for package selection.  Please enable one of these in /etc/yum.repos.d and restart the program.")
-                sys.exit(1)
+                pass
+
+        if not enabledBaseRepo:
+            print _("system-config-kickstart requires either the base or development yum repository enabled for package selection.  Please enable one of these in /etc/yum.repos.d and restart the program.")
+            sys.exit(1)
 
         self.doRepoSetup()
         if callback: callback.next_task()
