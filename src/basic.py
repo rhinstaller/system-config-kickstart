@@ -179,9 +179,9 @@ class basic:
             self.root_passwd_entry.grab_focus()
             return None
 
-        if self.encrypt_root_pw_checkbutton.get_active() == True:
-            pure = self.root_passwd_entry.get_text()
+        pure = self.root_passwd_entry.get_text()
 
+        if self.encrypt_root_pw_checkbutton.get_active() == True:
             salt = "$1$"
             saltLen = 8
 
