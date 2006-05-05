@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.6.9
+Version: 2.6.10
 Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -78,6 +78,10 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Fri May 05 2006 Chris Lumens <clumens@redhat.com> 2.6.10-1
+- Fix unencrypted root password traceback (#190487).
+- Try harder to get a base repo enabled (#190508).
+
 * Fri Apr 21 2006 Chris Lumens <clumens@redhat.com> 2.6.9-1
 - Add support for more device names.
 - Display a progress bar while yum is working (#187435).
