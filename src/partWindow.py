@@ -427,10 +427,10 @@ class partWindow:
             if part_object.fsType == "swap":   
                 #If it's a swap partition, set fsType to be swap
                 part_object.fsType = "swap"
-                part_object.mountPoint = ""
+                part_object.mountPoint = "swap"
 
             elif part_object.fsType == "PPC PReP Boot":
-                part_object.mountPoint = ""
+                part_object.mountPoint = "prepboot"
 
             else:
                 #It's not raid and it's not swap, so it must be a regular partition
@@ -484,6 +484,8 @@ class partWindow:
                 part_object.raidNumber = "raid.0%s" % str(tmpNum)
             else:
                 part_object.raidNumber = "raid.%s" % str(tmpNum)
+
+        part_object.mountPoint = part_object.raidNumber
             
         #If all the checks pass, then return
         return 1
