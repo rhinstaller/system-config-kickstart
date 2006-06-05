@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.6.10
+Version: 2.6.11
 Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -78,6 +78,10 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Mon Jun 05 2006 Chris Lumens <clumens@redhat.com> 2.6.11-1
+- Write out a mount point for swap and raid partitions (#193262).
+- Fix RAID member list printing.
+
 * Fri May 05 2006 Chris Lumens <clumens@redhat.com> 2.6.10-1
 - Fix unencrypted root password traceback (#190487).
 - Try harder to get a base repo enabled (#190508).
