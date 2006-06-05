@@ -230,7 +230,7 @@ class partition:
                     rd.format = False
 
                 if part_object.raidPartitions != None:
-                    rd.members = string.join(part_object.raidPartitions, " ")
+                    rd.members = part_object.raidPartitions
 
                 self.ksdata.raidList.append(rd)
 
