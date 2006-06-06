@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
 Version: 2.6.11
-Release: 1
+Release: 2
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
 ExclusiveOS: Linux
@@ -12,7 +12,7 @@ Source0: %{name}-%{version}.tar.bz2
 Obsoletes: ksconfig
 Obsoletes: redhat-config-kickstart
 BuildRequires: desktop-file-utils
-BuildRequires: intltool
+BuildRequires: intltool gettext
 Requires: pygtk2 >= 1.99.11
 Requires: pygtk2-libglade 
 Requires: python >= 2.3.3
@@ -23,7 +23,8 @@ Requires: pykickstart
 Requires: yum
 Requires: pirut
 Requires: hicolor-icon-theme
-Prereq: gtk2 >= 2.6
+Requires(post): gtk2 >= 2.6
+Requires(postun): gtk2 >= 2.6
 
 %description
 Kickstart Configurator is a graphical tool for creating kickstart files.  
@@ -78,6 +79,10 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Mon Jun 05 2006 Jesse Keating <jkeating@redhat.com> 2.6.11-2
+- Add gettext as a BR
+- Fix up requires(post) and (postun)
+
 * Mon Jun 05 2006 Chris Lumens <clumens@redhat.com> 2.6.11-1
 - Write out a mount point for swap and raid partitions (#193262).
 - Fix RAID member list printing.
