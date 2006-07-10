@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.6.11
-Release: 2
+Version: 2.6.12
+Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
 ExclusiveOS: Linux
@@ -79,6 +79,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Mon Jul 10 2006 Chris Lumens <clumens@redhat.com> 2.6.12-1
+- Fix for yum config API changes (#196841).
+
 * Mon Jun 05 2006 Jesse Keating <jkeating@redhat.com> 2.6.11-2
 - Add gettext as a BR
 - Fix up requires(post) and (postun)
