@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.6.12
+Version: 2.6.13
 Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -79,6 +79,10 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Thu Jul 27 2006 Chris Lumens <clumens@redhat.com> 2.6.13-1
+- Fix for yum config API changes again (#200095).
+- Add 1280x800 to the resolution list (#156585).
+
 * Mon Jul 10 2006 Chris Lumens <clumens@redhat.com> 2.6.12-1
 - Fix for yum config API changes (#196841).
 
