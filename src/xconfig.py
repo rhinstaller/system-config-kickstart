@@ -85,8 +85,9 @@ class xconfig:
         self.color_depth_combo.entry.set_editable(False)
 
         #add resolutions
-        resolutions = ["640x480", "800x600", "1024x768", "1152x864", "1280x1024", "1400x1050",
-                       "1600x1200", "1920x1440", "2048x1536"]
+        resolutions = ["640x480", "800x600", "1024x768", "1152x864", "1280x800",
+                       "1280x1024", "1400x1050", "1600x1200", "1920x1440",
+                       "2048x1536"]
         self.resolution_combo.set_popdown_strings(resolutions)
         self.resolution_combo.entry.set_editable(False)
         
