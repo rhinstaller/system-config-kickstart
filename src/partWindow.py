@@ -22,6 +22,7 @@ import gtk.glade
 import string
 import signal
 import getopt
+import re
 import partEntry
 import kickstartGui
 
@@ -339,6 +340,22 @@ class partWindow:
         self.sizeCombo.set_sensitive(not active)
         self.sizeOptionsTable.set_sensitive(not active)
 
+    def deviceFromPartition(self, part):
+        if self.isPartitionValid(part) == 1:
+            device = part
+
+            if device.startswith("cciss") or device.startswith("rd") or \
+               device.startswith("ida") or device.startswith("sx8"):
+                device = re.sub("p[0-9]+$", "", device)
+            elif device.startswith("i2o"):
+                device = re.sub("[0-9]+$", "", device)
+            else:
+                device = re.sub("[0-9]+$", "", device)
+        else:
+            return None
+
+        return device
+
     def getData(self, part_object):
         onDiskVal = ""
         onPartVal = ""
@@ -372,19 +389,20 @@ class partWindow:
                 part_object.device = device
             else:
                 return None
+        else:
+            part_object.device = ""
 
         if self.onPartCheck.get_active() == gtk.TRUE:
             part = self.onPartEntry.get_text()
+            device = self.deviceFromPartition(part)
 
-            if self.isPartitionValid(part) == 1:
-                device = part
-                for i in string.digits:
-                    device = string.replace(device, i, "")
-                
+            if device == None:
+                return None
+            else:
                 part_object.device = device
                 part_object.partition = part
-            else:
-                return None
+        else:
+            part_object.partition = ""
 
         part_object.doFormat = self.formatCheck.get_active()
 
@@ -480,33 +498,20 @@ class partWindow:
                 self.lastRaidNumber = number
     
     def isDeviceValid(self, device):
-        if device[:2] == "hd" or device[:2] == "sd":
-            return 1
+        if device == "":
+            self.deviceNotValid(_("Specify a device on which to create the partition."))
+            return 0
         else:
-            #the entry doesn't start with "hd" or "sd" so it's probably not valid
-            if device == "":
-                self.deviceNotValid(_("Specify a device on which to create the partition."))
-            else:
-                self.deviceNotValid(_("The device you specified is not a valid device name. "
-                                         "Please use a valid device name "
-                                         "such as \"hda1\" or \"sda3\"."))
-            return
+            return 1
 
     def isPartitionValid(self, partition):
-        if partition[:2] == "hd" or partition[:2] == "sd":
-            if partition[-1] in string.digits:
-                return 1
-            else:
-                self.deviceNotValid(_("The partition you specified does not end "
-                                         "in a number.  Partitions must have a partition number "
-                                         "such as \"hda1\" or \"sda3\"."))
-                return
+        if partition[-1] in string.digits:
+            return 1
         else:
-                
-            self.deviceNotValid(_("The partition you specified does not begin with "
-                                     "\"hd\" or \"sd\".  Partitions must have a valid device name "
-                                     "and partition number such as \"hda1\" or \"sda3\"."))
-            return
+            self.deviceNotValid(_("The partition you specified does not end "
+                                     "in a number.  Partitions must have a partition number "
+                                     "such as \"hda1\" or \"sda3\"."))
+            return 0
 
     def deviceNotValid(self, label):
         dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, label)
@@ -585,6 +590,8 @@ class partWindow:
 
             if opt == "--onpart":
                 self.partition = value
+                part_object.partition = value
+                part_object.device = self.deviceFromPartition(value)
 
             if opt == "--grow":
                 part_object.sizeStrategy = "max"
