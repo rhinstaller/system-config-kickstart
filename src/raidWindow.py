@@ -167,18 +167,20 @@ class raidWindow:
     def addRaidDeviceToTree(self, raid_object):        
         self.raid_partition_store.foreach(self.isRowToggled, raid_object)
 
+        device_is_valid = False
+
         if raid_object.raidLevel == "0" or raid_object.raidLevel == "1":
             if len(self.partition_list) < 2:
-                device_is_valid = self.deviceNotValid(_("You must select at least 2 partitions in order to use "
+                self.deviceNotValid(_("You must select at least 2 partitions in order to use "
                                       "RAID %s" % raid_object.raidLevel))
             else:
-                device_is_valid = 1
+                device_is_valid = True
         elif raid_object.raidLevel == "5":
             if len(self.partition_list) < 3:
-                device_is_valid = self.deviceNotValid(_("You must select at least 3 partitions in order to use "
+                self.deviceNotValid(_("You must select at least 3 partitions in order to use "
                                       "RAID %s" % raid_object.raidLevel))
             else:
-                device_is_valid = 1
+                device_is_valid = True
 
         if device_is_valid:
 
