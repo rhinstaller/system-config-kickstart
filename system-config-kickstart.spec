@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.5.16.3
+Version: 2.5.16.4
 Release: 1
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -60,6 +60,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Tue Oct 03 2006 Chris Lumens <clumens@redhat.com> - 2.5.16.4-1
+- Fix startup UI warnings from broken glade file.
+
 * Tue Sep 26 2006 Chris Lumens <clumens@redhat.com> - 2.5.16.3-1
 - Add support for cciss and other special disk devices (#178334).
 
