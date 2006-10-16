@@ -117,9 +117,16 @@ CLASS="GUILABEL"
 	reject incoming connections that are not in response to outbound
 	requests, such as DNS replies or DHCP requests. If access to services
 	running on this machine is needed, you can choose to allow specific
-	services through the firewall.</P
-><P
->	Only devices configured in the <B
+	services through the firewall.</P>
+<P>
+Selecting <B CLASS="GUILABEL">SELinux Active</B> sets SELinux to enabled
+and enforcing.  Selecting <B CLASS="GUILABEL">SELinux Warn</B> sets
+SELinux to enabled, but errors are logged instead of refusing to allow
+programs to run.  Selecting <B CLASS="GUILABEL">SELinux Disabled</B>
+disables SELinux entirely.
+</P>
+<P>
+Only devices configured in the <B
 CLASS="GUILABEL"
 >Network
 	Configuration</B
