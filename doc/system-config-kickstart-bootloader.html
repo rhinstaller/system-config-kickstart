@@ -90,7 +90,7 @@ SRC="./figs/ksconfig-bootloader.png"></P
 ></P
 ></DIV
 ><P
->	You have the option of installing GRUB or LILO as the boot loader. If
+>	You have the option of installing GRUB as the boot loader. If
 	you do not want to install a boot loader, select <B
 CLASS="GUILABEL"
 >Do not
@@ -100,15 +100,14 @@ CLASS="GUILABEL"
 	(such as a third-party boot loader) your system.
       </P
 ><P
->	If you choose to install a boot loader, you must also choose which
-	boot loader to install (GRUB or LILO) and where to
+>	If you choose to install a boot loader, you must also choose where
 	to install the boot loader (the Master Boot Record or
 	the first sector of the <TT
 CLASS="FILENAME"
 >/boot</TT
 > partition). Install
 	the boot loader on the MBR if you plan to use it as your boot loader. If
-	you are using a different boot loader, install LILO or GRUB on the first
+	you are using a different boot loader, install GRUB on the first
 	sector of the <TT
 CLASS="FILENAME"
 >/boot/</TT
@@ -164,11 +163,8 @@ CLASS="GUILABEL"
 	written to the kickstart file. Do not type an already encrypted password
 	and select to encrypt it.
       </P
-><P
->	If you choose LILO as the boot loader, choose whether you want to use
-	linear mode and whether you want to force the use of lba32 mode.
-      </P
-><P
+>
+<P
 >	If <B
 CLASS="GUILABEL"
 >Upgrade an existing installation</B
