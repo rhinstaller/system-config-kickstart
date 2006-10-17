@@ -41,6 +41,16 @@ domain = 'system-config-kickstart'
 translate.textdomain (domain)
 gtk.glade.bindtextdomain(domain)
 
+class sckGroupSelector(GroupSelector.GroupSelector):
+    def __doGroupPopup(self, button, time):
+        pass
+
+    def _groupListButtonPress(self, widget, event):
+        pass
+
+    def _groupListPopup(self, widget):
+        pass
+
 class sckYumBase(yum.YumBase):
     def log(self, value, msg):
         pass
@@ -141,7 +151,7 @@ class Packages:
         pbar.show()
 
         self.y = sckYumBase(pbar)
-        self.gs = GroupSelector.GroupSelector(self.y, lambda fn: "/usr/share/pirut/ui/" + fn)
+        self.gs = sckGroupSelector(self.y, lambda fn: "/usr/share/pirut/ui/" + fn)
         self.gs.doRefresh()
         pbar.destroy()
 
