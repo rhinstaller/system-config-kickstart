@@ -85,7 +85,7 @@ class sckYumBase(yum.YumBase):
         # Set up a temporary root for RPM so it thinks there's nothing
         # installed.
         self.temproot = tempfile.mkdtemp(dir="/tmp")
-        self.doConfigSetup(root=self.temproot)
+        self.doConfigSetup(root=self.temproot, init_plugins=False)
         if callback: callback.next_task()
         self.conf.installroot = self.temproot
 
