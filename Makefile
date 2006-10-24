@@ -3,20 +3,21 @@
 
 PKGNAME=system-config-kickstart
 VERSION=$(shell awk '/Version:/ { print $$2 }' ${PKGNAME}.spec)
-CVSTAG=r$(subst .,-,$(VERSION))
+RELEASE=$(shell awk '/Release:/ { print $$2 }' ${PKGNAME}.spec | sed -e 's|%.*$$||g')
+CVSTAG=r$(subst .,_,$(VERSION)-$(RELEASE))
 SUBDIRS=man po
 
 PREFIX=/usr
 
-MANDIR=/usr/share/man
+MANDIR=${PREFIX}/share/man
 DATADIR=${PREFIX}/share
 
 PKGDATADIR=${DATADIR}/${PKGNAME}
 
-PAMD_DIR=/etc/pam.d
-SECURITY_DIR=/etc/security/console.apps
+default: subdirs
 
-default:
+tag:
+	cvs tag -FR $(CVSTAG)
 
 subdirs:
 	for d in $(SUBDIRS); do \
@@ -25,16 +26,12 @@ subdirs:
 	done && test -z "$$fail"
 
 install: ${PKGNAME}.desktop
-	mkdir -p $(INSTROOT)/$(PAMD_DIR)
-	mkdir -p $(INSTROOT)/$(SECURITY_DIR)
 	mkdir -p $(INSTROOT)$(PKGDATADIR)
 	mkdir -p $(INSTROOT)$(PKGDATADIR)/pixmaps
 	mkdir -p $(INSTROOT)/usr/bin
 	mkdir -p $(INSTROOT)/usr/share/applications
 	mkdir -p $(INSTROOT)/usr/share/icons/hicolor/48x48/apps
-	ln -sf consolehelper $(INSTROOT)/usr/bin/$(PKGNAME)
-	install $(PKGNAME).console $(INSTROOT)$(SECURITY_DIR)/$(PKGNAME)
-	install $(PKGNAME).pam $(INSTROOT)$(PAMD_DIR)/$(PKGNAME)
+	install src/system-config-kickstart $(INSTROOT)/usr/bin
 	install src/*.py $(INSTROOT)$(PKGDATADIR)
 	for py in src/*.py ; do \
 		sed -e s,@VERSION@,$(VERSION),g $${py} > $(INSTROOT)$(PKGDATADIR)/`basename $${py}` ; \
@@ -48,33 +45,31 @@ install: ${PKGNAME}.desktop
 		|| case "$(MFLAGS)" in *k*) fail=yes;; *) exit 1;; esac; \
 	done && test -z "$$fail"
 
-archive:
-	cvs tag -F $(CVSTAG) .
+archive: tag
 	@rm -rf /tmp/${PKGNAME}-$(VERSION) /tmp/${PKGNAME}
-	@cvsroot=`cat CVS/Root` 2>/dev/null; \
-	cd /tmp; cvs -d$$cvsroot export -r$(CVSTAG) ${PKGNAME}; exit
+	@CVSROOT=`cat CVS/Root`; cd /tmp; cvs -d $$CVSROOT export -r$(CVSTAG) ${PKGNAME}
 	@mv /tmp/${PKGNAME} /tmp/${PKGNAME}-$(VERSION)
-	@dir=$$PWD; cd /tmp; tar --bzip2 -cSpf $$dir/${PKGNAME}-$(VERSION).tar.bz2 ${PKGNAME}-$(VERSION)
+	@dir=$$PWD; cd /tmp; tar -czSpf $$dir/${PKGNAME}-$(VERSION).tar.gz ${PKGNAME}-$(VERSION)
 	@rm -rf /tmp/${PKGNAME}-$(VERSION)
-	@echo "The archive is in ${PKGNAME}-$(VERSION).tar.bz2"
+	@echo "The archive is in ${PKGNAME}-$(VERSION).tar.gz"
 
 snapsrc: archive
 	@rpmbuild -ta $(PKGNAME)-$(VERSION).tar.bz2
 
 local:
-	@rm -rf ${PKGNAME}-$(VERSION).tar.bz2
+	@rm -rf ${PKGNAME}-$(VERSION).tar.gz
 	@rm -rf /tmp/${PKGNAME}-$(VERSION) /tmp/${PKGNAME}
-	@dir=$$PWD; cd /tmp; cp -a $$dir ${PKGNAME}
-	@mv /tmp/${PKGNAME} /tmp/${PKGNAME}-$(VERSION)
-	@dir=$$PWD; cd /tmp; tar --bzip2 -cSpf $$dir/${PKGNAME}-$(VERSION).tar.bz2 ${PKGNAME}-$(VERSION)
+	@dir=$$PWD; cp -a $$dir /tmp/${PKGNAME}-$(VERSION)
+	@dir=$$PWD; cd /tmp; tar -czSpf $$dir/${PKGNAME}-$(VERSION).tar.gz ${PKGNAME}-$(VERSION)
 	@rm -rf /tmp/${PKGNAME}-$(VERSION)	
-	@echo "The archive is in ${PKGNAME}-$(VERSION).tar.bz2"
+	@echo "The archive is in ${PKGNAME}-$(VERSION).tar.gz"
 
 clean:
 	@rm -f *~
 	@rm -f src/*~
 	@rm -f src/*.pyc
 	@rm -f ${PKGNAME}.desktop
+	@rm -f ${PKGNAME}-$(VERSION).tar.gz
 
 %.desktop: %.desktop.in
 	@intltool-merge -d -u po/ $< $@
