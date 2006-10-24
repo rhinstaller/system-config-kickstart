@@ -30,6 +30,7 @@ import sys
 import yum
 import yum.Errors
 from yum.constants import *
+from yum.misc import getCacheDir
 from pirut import GroupSelector, PirutProgressCallback
 
 ##
@@ -96,6 +97,13 @@ class sckYumBase(yum.YumBase):
         # installed.
         self.temproot = tempfile.mkdtemp(dir="/tmp")
         self.doConfigSetup(root=self.temproot, init_plugins=False)
+        if os.geteuid() != 0:
+            cachedir = getCacheDir()
+            if cachedir is None:
+                self.errorlog("0, Error: Could not make cachedir, exiting")
+                sys.exit(1)
+            self.repos.setCacheDir(cachedir)
+
         if callback: callback.next_task()
         self.conf.installroot = self.temproot
 
