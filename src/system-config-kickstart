@@ -24,6 +24,8 @@ import signal
 import getopt
 import os
 
+sys.path.append("/usr/share/system-config-kickstart")
+
 if __name__ == "__main__":
     signal.signal (signal.SIGINT, signal.SIG_DFL)
 
