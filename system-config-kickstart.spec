@@ -8,7 +8,7 @@ ExclusiveOS: Linux
 Group: System Environment/Base
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildArch: noarch
-Source0: %{name}-%{version}.tar.bz2
+Source0: %{name}-%{version}.tar.gz
 Obsoletes: ksconfig
 Obsoletes: redhat-config-kickstart
 BuildRequires: desktop-file-utils
