@@ -196,7 +196,7 @@ class partition:
 
                 if part_object.sizeStrategy == "grow":
                     pd.grow = True
-                    pd.maxSizeMB = part_object.setSizeVal
+                    pd.maxSizeMB = int(part_object.setSizeVal)
                 elif part_object.sizeStrategy == "max":
                     pd.grow = True
 
