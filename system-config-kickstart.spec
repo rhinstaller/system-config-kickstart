@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.6.15
+Version: 2.6.16
 Release: 1%{?dist}
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -77,6 +77,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Fri Nov 03 2006 Chris Lumens <clumens@redhat.com> 2.6.16-1
+- Fix partition growing traceback (#212955).
+
 * Tue Oct 24 2006 Chris Lumens <clumens@redhat.com> 2.6.15-1
 - Don't need to be root to run system-config-kickstart (patch from
   Panu Matilainen <Panu.Matilainen@nokia.com>, #211998).
