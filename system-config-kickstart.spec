@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.6.16
+Version: 2.6.17
 Release: 1%{?dist}
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -77,6 +77,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Wed Nov 08 2006 Chris Lumens <clumens@redhat.com> 2.6.17-1
+- Fix traceback when looking for the base Fedora repo (#190999).
+
 * Fri Nov 03 2006 Chris Lumens <clumens@redhat.com> 2.6.16-1
 - Fix partition growing traceback (#212955).
 
