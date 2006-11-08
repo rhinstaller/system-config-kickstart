@@ -94,9 +94,12 @@ class sckYumBase(yum.YumBase):
             self.repos.callback = callback
 
         # Set up a temporary root for RPM so it thinks there's nothing
-        # installed.
+        # installed, but don't use it until after we set up the config info.
+        # We need to find the fedora-release package in the real root so
+        # we can set $releasever and other variables from /etc/yum.repos.d/*
+        # (#190999).
         self.temproot = tempfile.mkdtemp(dir="/tmp")
-        self.doConfigSetup(root=self.temproot, init_plugins=False)
+        self.doConfigSetup(init_plugins=False)
         if os.geteuid() != 0:
             cachedir = getCacheDir()
             if cachedir is None:
