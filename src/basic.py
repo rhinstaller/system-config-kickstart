@@ -244,6 +244,8 @@ class basic:
 
         if self.ksdata.reboot["action"] == KS_REBOOT:
             self.reboot_checkbutton.set_active(True)
+        else:
+            self.reboot_checkbutton.set_active(False)
 
         if self.ksdata.displayMode == DISPLAY_MODE_TEXT:
             self.text_install_checkbutton.set_active(True)
