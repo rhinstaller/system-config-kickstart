@@ -8,12 +8,12 @@ msgstr ""
 "Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-11-02 16:17-0500\n"
-"PO-Revision-Date: 2006-08-29 13:55-0400\n"
-"Last-Translator: Игор Милетић <grejigl-gnomeprevod@yahoo.ca>\n"
+"PO-Revision-Date: 2006-11-12 17:32+0100\n"
+"Last-Translator: Miloš Komarčević <kmilos@gmail.com>\n"
 "Language-Team: Serbian (sr) <fedora@prevod.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: ../src/auth.py:323
 msgid "Please fill in the authentication information"
@@ -43,8 +43,12 @@ msgstr "IBM zСерије/s390"
 msgid "Root passwords do not match."
 msgstr "Root лозинке се не слажу."
 
-#: ../src/basic.py:150 ../src/basic.py:168 ../src/install.py:218
-#: ../src/partWindow.py:515 ../src/partition.py:245 ../src/raidWindow.py:247
+#: ../src/basic.py:150
+#: ../src/basic.py:168
+#: ../src/install.py:218
+#: ../src/partWindow.py:515
+#: ../src/partition.py:245
+#: ../src/raidWindow.py:247
 msgid "Error"
 msgstr "Грешка"
 
@@ -142,7 +146,8 @@ msgstr "Опције подизача система"
 msgid "Partition Information"
 msgstr "Подаци о партицији"
 
-#: ../src/kickstartGui.py:146 system-config-kickstart.gladestrings:136
+#: ../src/kickstartGui.py:146
+#: system-config-kickstart.gladestrings:136
 msgid "Network Configuration"
 msgstr "Подешавање мреже"
 
@@ -150,23 +155,28 @@ msgstr "Подешавање мреже"
 msgid "Authentication"
 msgstr "Аутентификација"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:182
+#: ../src/kickstartGui.py:147
+#: system-config-kickstart.gladestrings:182
 msgid "Firewall Configuration"
 msgstr "Подешавање заштитног зида"
 
-#: ../src/kickstartGui.py:147 system-config-kickstart.gladestrings:207
+#: ../src/kickstartGui.py:147
+#: system-config-kickstart.gladestrings:207
 msgid "Display Configuration"
 msgstr "Подешавање приказа"
 
-#: ../src/kickstartGui.py:148 system-config-kickstart.gladestrings:217
+#: ../src/kickstartGui.py:148
+#: system-config-kickstart.gladestrings:217
 msgid "Package Selection"
 msgstr "Одабир пакета"
 
-#: ../src/kickstartGui.py:148 system-config-kickstart.gladestrings:222
+#: ../src/kickstartGui.py:148
+#: system-config-kickstart.gladestrings:222
 msgid "Pre-Installation Script"
 msgstr "Скрипта пред инсталацију"
 
-#: ../src/kickstartGui.py:149 system-config-kickstart.gladestrings:228
+#: ../src/kickstartGui.py:149
+#: system-config-kickstart.gladestrings:228
 msgid "Post-Installation Script"
 msgstr "Скрипта након инсталације"
 
@@ -205,20 +215,22 @@ msgstr "Уређај"
 msgid "Network Type"
 msgstr "Тип мреже"
 
-#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:226
-#: ../src/network.py:286 ../src/network.py:422
+#: ../src/network.py:109
+#: ../src/network.py:155
+#: ../src/network.py:226
+#: ../src/network.py:286
+#: ../src/network.py:422
 msgid "Static IP"
 msgstr "Статични IP"
 
-#: ../src/network.py:216 ../src/network.py:278
+#: ../src/network.py:216
+#: ../src/network.py:278
 msgid "Please fill in the network information"
 msgstr "Попуните податке о мрежи"
 
 #: ../src/network.py:330
 #, python-format
-msgid ""
-"A network device with the name %s already exists.  Please choose another "
-"device name"
+msgid "A network device with the name %s already exists.  Please choose another device name"
 msgstr "Мрежни уређај имена %s већ постоји.  Изаберите друго име за уређај"
 
 #: ../src/packageGroupList.py:18
@@ -230,24 +242,29 @@ msgstr "Није могуће покретање пошто нема датот�
 msgid "Please make sure the comps package is installed."
 msgstr "Проверите да ли је инсталиран comps пакет."
 
-#: ../src/partWindow.py:84 system-config-kickstart.gladestrings:52
+#: ../src/partWindow.py:84
+#: system-config-kickstart.gladestrings:52
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:84 system-config-kickstart.gladestrings:53
+#: ../src/partWindow.py:84
+#: system-config-kickstart.gladestrings:53
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:86 ../src/partWindow.py:149
+#: ../src/partWindow.py:86
+#: ../src/partWindow.py:149
 msgid "software RAID"
 msgstr "софтверски RAID"
 
-#: ../src/partWindow.py:87 system-config-kickstart.gladestrings:54
+#: ../src/partWindow.py:87
+#: system-config-kickstart.gladestrings:54
 msgid "swap"
 msgstr "swap"
 
-#: ../src/partWindow.py:87 system-config-kickstart.gladestrings:55
+#: ../src/partWindow.py:87
+#: system-config-kickstart.gladestrings:55
 msgid "vfat"
 msgstr "vfat"
 
@@ -255,15 +272,21 @@ msgstr "vfat"
 msgid "PPC PReP Boot"
 msgstr "PPC PReP покретање"
 
-#: ../src/partWindow.py:262 ../src/partWindow.py:537 ../src/raidWindow.py:212
+#: ../src/partWindow.py:262
+#: ../src/partWindow.py:537
+#: ../src/raidWindow.py:212
 msgid "Yes"
 msgstr "Да"
 
-#: ../src/partWindow.py:264 ../src/partWindow.py:539 ../src/raidWindow.py:214
+#: ../src/partWindow.py:264
+#: ../src/partWindow.py:539
+#: ../src/raidWindow.py:214
 msgid "No"
 msgstr "Не"
 
-#: ../src/partWindow.py:287 ../src/partWindow.py:302 ../src/partWindow.py:321
+#: ../src/partWindow.py:287
+#: ../src/partWindow.py:302
+#: ../src/partWindow.py:321
 #: ../src/partWindow.py:335
 msgid "Auto"
 msgstr "Ауто"
@@ -279,47 +302,28 @@ msgstr "Наведите тачку монтирања за партицију."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:431
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr ""
-"Тачка монтирања „%s“ већ је у употреби.  Изаберите другу тачку монтирања."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr "Тачка монтирања „%s“ већ је у употреби.  Изаберите другу тачку монтирања."
 
 #: ../src/partWindow.py:451
-msgid ""
-"To create a new RAID partition, you must specify either a hard drive device "
-"name or an existing partition."
-msgstr ""
-"Ради прављења нове RAID партиције, морате навести било назив тврдог диска, "
-"било постојећу партицију."
+msgid "To create a new RAID partition, you must specify either a hard drive device name or an existing partition."
+msgstr "Ради прављења нове RAID партиције, морате навести било назив тврдог диска, било постојећу партицију."
 
 #: ../src/partWindow.py:490
 msgid "Specify a device on which to create the partition."
 msgstr "Наведите уређај на коме правите партицију."
 
 #: ../src/partWindow.py:492
-msgid ""
-"The device you specified is not a valid device name. Please use a valid "
-"device name such as \"hda1\" or \"sda3\"."
-msgstr ""
-"Уређај који сте навели није исправан назив уређаја. Користите исправан назив "
-"као што је „hda1“ или „sda3“."
+msgid "The device you specified is not a valid device name. Please use a valid device name such as \"hda1\" or \"sda3\"."
+msgstr "Уређај који сте навели није исправан назив уређаја. Користите исправан назив као што је „hda1“ или „sda3“."
 
 #: ../src/partWindow.py:502
-msgid ""
-"The partition you specified does not end in a number.  Partitions must have "
-"a partition number such as \"hda1\" or \"sda3\"."
-msgstr ""
-"Партиција коју сте навели се не завршава бројем.  Партиције морају имати "
-"свој број као што је „hda1“ или „sda3“"
+msgid "The partition you specified does not end in a number.  Partitions must have a partition number such as \"hda1\" or \"sda3\"."
+msgstr "Партиција коју сте навели се не завршава бројем.  Партиције морају имати свој број као што је „hda1“ или „sda3“"
 
 #: ../src/partWindow.py:508
-msgid ""
-"The partition you specified does not begin with \"hd\" or \"sd\".  "
-"Partitions must have a valid device name and partition number such as \"hda1"
-"\" or \"sda3\"."
-msgstr ""
-"Партиција коју сте навели не почиње са „hd“ или „sd“.  Партиције морају "
-"имати исправан назив и број партиције, као што су „hda1“ или „sda3“."
+msgid "The partition you specified does not begin with \"hd\" or \"sd\".  Partitions must have a valid device name and partition number such as \"hda1\" or \"sda3\"."
+msgstr "Партиција коју сте навели не почиње са „hd“ или „sd“.  Партиције морају имати исправан назив и број партиције, као што су „hda1“ или „sda3“."
 
 #: ../src/partition.py:74
 msgid ""
@@ -349,15 +353,15 @@ msgstr "Формат"
 msgid "Size (MB)"
 msgstr "Величина (MБ)"
 
-#: ../src/partition.py:97 ../src/partition.py:137
+#: ../src/partition.py:97
+#: ../src/partition.py:137
 msgid "Please select a partition from the list."
 msgstr "Изаберите партицију са листе."
 
 #: ../src/raidOptionsWindow.py:72
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
-msgstr ""
-"Тренутно имате %d софтверских RAID партиција које су слободне за коришћење."
+msgstr "Тренутно имате %d софтверских RAID партиција које су слободне за коришћење."
 
 #: ../src/raidWindow.py:172
 #, python-format
@@ -369,38 +373,29 @@ msgstr "Морате изабрати најмање 2 партиције как
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "Морате изабрати најмање 3 партиције како би користили RAID %s"
 
-#: ../src/raidWindow.py:192 ../src/raidWindow.py:218
+#: ../src/raidWindow.py:192
+#: ../src/raidWindow.py:218
 msgid "Raid Devices"
 msgstr "Raid уређаји"
 
 #: ../src/system-config-kickstart.py:61
 msgid ""
-"Usage: system-config-kickstart [--help] [--generate <filename>] "
-"[<kickstart_filename>]\n"
+"Usage: system-config-kickstart [--help] [--generate <filename>] [<kickstart_filename>]\n"
 "        \n"
 "--help                  Print out this message\n"
-"--generate <filename>   Generate a kickstart file from the current machine "
-"and write\n"
-"                        it to <filename>.  This option runs on the console, "
-"so it is\n"
-"                        useful for servers that do not have X currently "
-"running.\n"
-"<kickstart_filename>    This option will cause the GUI to launch with the "
-"values from\n"
+"--generate <filename>   Generate a kickstart file from the current machine and write\n"
+"                        it to <filename>.  This option runs on the console, so it is\n"
+"                        useful for servers that do not have X currently running.\n"
+"<kickstart_filename>    This option will cause the GUI to launch with the values from\n"
 "                        the kickstart file already filled in."
 msgstr ""
-"Употреба: system-config-kickstart [--help] [--generate <датотека>] "
-"[<kickstart_датотека>]\n"
+"Употреба: system-config-kickstart [--help] [--generate <датотека>] [<kickstart_датотека>]\n"
 "        \n"
 "--help                  Исписује ову поруку\n"
-"--generate <датотека>   Ствара kickstart датотеку са тренутне машине и "
-"уписује\n"
-"                        је као <датотека>.  Ова опција се покреће из "
-"конзоле, па је\n"
-"                        корисна на серверима који тренутно немају покренут "
-"X.\n"
-"<kickstart_датотека>    Ова опција ће условити покретање графичког програма "
-"са унапред\n"
+"--generate <датотека>   Ствара kickstart датотеку са тренутне машине и уписује\n"
+"                        је као <датотека>.  Ова опција се покреће из конзоле, па је\n"
+"                        корисна на серверима који тренутно немају покренут X.\n"
+"<kickstart_датотека>    Ова опција ће условити покретање графичког програма са унапред\n"
 "                        попуњеним вредностима из kickstart датотеке."
 
 #: ../src/system-config-kickstart.py:78
@@ -1208,12 +1203,8 @@ msgstr "label34"
 
 #: system-config-kickstart.gladestrings:219
 #, c-format
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %pre command at the beginning."
-msgstr ""
-"Упозорење: грешка у овој скрипти може довести до неуспеле kickstart "
-"инсталације. Не укључујте %pre команду на почетку."
+msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %pre command at the beginning."
+msgstr "Упозорење: грешка у овој скрипти може довести до неуспеле kickstart инсталације. Не укључујте %pre команду на почетку."
 
 #: system-config-kickstart.gladestrings:220
 #: system-config-kickstart.gladestrings:226
@@ -1231,12 +1222,8 @@ msgstr "label89"
 
 #: system-config-kickstart.gladestrings:224
 #, c-format
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %post command at the beginning."
-msgstr ""
-"Упозорење: грешка у овој скрипти може довести до неуспеле kickstart "
-"инсталације. Не укључујте %post команду на почетку."
+msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %post command at the beginning."
+msgstr "Упозорење: грешка у овој скрипти може довести до неуспеле kickstart инсталације. Не укључујте %post команду на почетку."
 
 #: system-config-kickstart.gladestrings:225
 msgid "Run outside of the chroot environment"
@@ -1260,37 +1247,20 @@ msgid "_Save to File"
 msgstr "_Сачувај у датотеку"
 
 #: system-config-kickstart.gladestrings:232
-msgid ""
-"You have choosen the following configuration. Click Save File to save the "
-"kickstart file. "
-msgstr ""
-"Изабрали сте следеће подешавање. Клините Сачувај датотеку да би сачували "
-"kickstart датотеку. "
+msgid "You have choosen the following configuration. Click Save File to save the kickstart file. "
+msgstr "Изабрали сте следеће подешавање. Клините Сачувај датотеку да би сачували kickstart датотеку. "
 
 #: system-config-kickstart.gladestrings:233
 msgid "RAID Options"
 msgstr "RAID опције"
 
 #: system-config-kickstart.gladestrings:234
-msgid ""
-"Software RAID allows you to combine several disks into a larger RAID "
-"device.  A RAID device can be configured to provide additional speed and "
-"reliability compared to using an individual drive.  For more information on "
-"using RAID devices please consult the kickstart documentation."
-msgstr ""
-"Софтверски RAID Вам омогућава комбиновање више дискова у већи RAID уређај.  "
-"RAID уређај може се подесити тако да пружи додатну брзину и поузданост у "
-"поређењу са појединачним диском.  За више информација о коришћењуRAID "
-"уређаја погледајте kickstart документацију. "
+msgid "Software RAID allows you to combine several disks into a larger RAID device.  A RAID device can be configured to provide additional speed and reliability compared to using an individual drive.  For more information on using RAID devices please consult the kickstart documentation."
+msgstr "Софтверски RAID Вам омогућава комбиновање више дискова у већи RAID уређај.  RAID уређај може се подесити тако да пружи додатну брзину и поузданост у поређењу са појединачним диском.  За више информација о коришћењуRAID уређаја погледајте kickstart документацију. "
 
 #: system-config-kickstart.gladestrings:235
-msgid ""
-"To use RAID you must first create at least two partitions of type 'software "
-"RAID'.  Then you can create a RAID device which can be formatted and mounted."
-msgstr ""
-"Да би користили RAID прво морате направити најмање две партиције типа "
-"’софтверски RAID‘.  Потом можете направити RAID уређај који може бити "
-"форматиран и монтиран."
+msgid "To use RAID you must first create at least two partitions of type 'software RAID'.  Then you can create a RAID device which can be formatted and mounted."
+msgstr "Да би користили RAID прво морате направити најмање две партиције типа ’софтверски RAID‘.  Потом можете направити RAID уређај који може бити форматиран и монтиран."
 
 #: system-config-kickstart.gladestrings:236
 msgid "Choose one of the following options:"
@@ -1350,12 +1320,10 @@ msgstr "."
 #, fuzzy
 #~ msgid "Kickstart Error"
 #~ msgstr "Kickstart"
-
 #~ msgid "Mouse:"
 #~ msgstr "Миш:"
-
 #~ msgid "Emulate 3 Buttons"
 #~ msgstr "Опонашај 3 дугмета"
-
 #~ msgid "Language Support:"
 #~ msgstr "Језичка подршка:"
+
