@@ -163,43 +163,28 @@ class basic:
             self.root_passwd_entry.grab_focus()
             return None
 
-        if self.root_passwd_entry.get_text() == "" and doInstall:
-            dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, _("Please select a root password."))
-            dlg.set_title(_("Error"))
-            dlg.set_default_size(100, 100)
-            dlg.set_position (gtk.WIN_POS_CENTER)
-            dlg.set_icon(kickstartGui.iconPixbuf)
-            dlg.set_border_width(2)
-            dlg.set_modal(True)
-            toplevel = self.xml.get_widget("main_window")
-            dlg.set_transient_for(toplevel)
-            dlg.run()
-            dlg.hide()
-            self.notebook.set_current_page(0)
-            self.root_passwd_entry.grab_focus()
-            return None
-
         pure = self.root_passwd_entry.get_text()
 
-        if self.encrypt_root_pw_checkbutton.get_active() == True:
-            salt = "$1$"
-            saltLen = 8
+        if pure != "":
+            if self.encrypt_root_pw_checkbutton.get_active() == True:
+                salt = "$1$"
+                saltLen = 8
 
-            if not pure.startswith(salt):
-                for i in range(saltLen):
-                    salt = salt + random.choice (string.letters + string.digits + './')
+                if not pure.startswith(salt):
+                    for i in range(saltLen):
+                        salt = salt + random.choice (string.letters + string.digits + './')
 
-                self.passwd = crypt.crypt (pure, salt)
+                    self.passwd = crypt.crypt (pure, salt)
 
-                temp = unicode (self.passwd, 'iso-8859-1')
-                self.ksdata.rootpw["isCrypted"] = True
-                self.ksdata.rootpw["password"] = temp
+                    temp = unicode (self.passwd, 'iso-8859-1')
+                    self.ksdata.rootpw["isCrypted"] = True
+                    self.ksdata.rootpw["password"] = temp
+                else:
+                    self.ksdata.rootpw["isCrypted"] = True
+                    self.ksdata.rootpw["password"] = pure
             else:
-                self.ksdata.rootpw["isCrypted"] = True
+                self.passwd = self.root_passwd_entry.get_text()
                 self.ksdata.rootpw["password"] = pure
-        else:
-            self.passwd = self.root_passwd_entry.get_text()
-            self.ksdata.rootpw["password"] = pure
 
         self.ksdata.platform = self.platform_combo.entry.get_text()
 
