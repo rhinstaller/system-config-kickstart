@@ -87,6 +87,8 @@ class sckYumBase(yum.YumBase):
     def __init__ (self, callback=None):
         import tempfile
 
+        self.packagesEnabled = True
+
         yum.YumBase.__init__(self)
 
         if callback:
@@ -132,8 +134,8 @@ class sckYumBase(yum.YumBase):
                 pass
 
         if not enabledBaseRepo:
-            print _("system-config-kickstart requires either the base or development yum repository enabled for package selection.  Please enable one of these in /etc/yum.repos.d and restart the program.")
-            sys.exit(1)
+            self.packagesEnabled = False
+            return
 
         self.doRepoSetup()
         if callback: callback.next_task()
@@ -156,17 +158,28 @@ class sckYumBase(yum.YumBase):
 class Packages:
     def __init__(self, xml, ksdata):
         self.toplevel = xml.get_widget("main_window")
+        self.package_frame = xml.get_widget("package_frame")
         self.ksdata = ksdata
         pbar = PirutProgressCallback(_("Retrieving package information"),
                                      self.toplevel, num_tasks=10)
         pbar.show()
 
         self.y = sckYumBase(pbar)
+
+        # If we failed to initialize yum, we should still be able to run
+        # the program.  Just disable the package screen.
+        if not self.y.packagesEnabled:
+            disabledLabel = gtk.Label(_("Package selection is disabled due to problems downloading package information."))
+            disabledLabel.set_line_wrap(True)
+            self.package_frame.add(disabledLabel)
+            self.package_frame.show_all()
+            pbar.destroy()
+            return
+
         self.gs = sckGroupSelector(self.y, lambda fn: "/usr/share/pirut/ui/" + fn)
         self.gs.doRefresh()
         pbar.destroy()
 
-        self.package_frame = xml.get_widget("package_frame")
         self.package_frame.add(self.gs.vbox)
 
         self.detailsButton = self.gs.xml.get_widget("detailsButton")
@@ -175,12 +188,16 @@ class Packages:
         self.optionalLabel.hide()
 
     def cleanup(self):
-        self.y.cleanup()
+        if self.y.packagesEnabled:
+            self.y.cleanup()
 
     def formToKsdata(self):
         self.ksdata.groupList = []
 #        self.ksdata.packageList = []
 #        self.ksdata.excludedList = []
+
+        if not self.y.packagesEnabled:
+            return
 
         self.y.tsInfo.makelists()
         for txmbr in self.y.tsInfo.getMembers():
@@ -206,6 +223,9 @@ class Packages:
 #                self.y.install(name=pkg)
 #            except:
 #                pass
+
+        if not self.y.packagesEnabled:
+            return
 
         self.y.tsInfo = self.y._transactionDataFactory()
 
