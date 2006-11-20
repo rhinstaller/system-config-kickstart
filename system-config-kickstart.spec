@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.6.17
+Version: 2.6.18
 Release: 1%{?dist}
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -77,6 +77,10 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Mon Nov 20 2006 Chris Lumens <clumens@redhat.com> 2.6.18-1
+- Don't require a root password (#215190).
+- Disable package screen if yum couldn't download (#216439).
+
 * Wed Nov 08 2006 Chris Lumens <clumens@redhat.com> 2.6.17-1
 - Fix traceback when looking for the base Fedora repo (#190999).
 
