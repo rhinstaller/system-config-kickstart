@@ -1,22 +1,22 @@
-# translation of fr.po to French
-# translation of fr.po to french
-# Copyright (C) 2003,2004, 2005 Free Software Foundation, Inc.
+# translation of fr.po to Français
+# Copyright (C) 2003,2004, 2005, 2006 Free Software Foundation, Inc.
+#
 # Audrey Simons <asimons@redhat.com>, 2003,2004, 2005.
 # Jean-Paul Aubry <jpaubry@redhat.com>, 2003,2004.
 # Stephane Raimbault <stephane.raimbault@free.fr>, 2004.
-#
+# Thomas Canniot <thomas.canniot@laposte.net>, 2006.
 msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-21 11:59-0500\n"
-"PO-Revision-Date: 2005-11-03 10:26-0500\n"
-"Last-Translator: Daniel Cote <dcote@uottawa.ca>\n"
-"Language-Team: French <fr@li.org>\n"
+"PO-Revision-Date: 2006-11-21 18:32+0100\n"
+"Last-Translator: Thomas Canniot <thomas.canniot@laposte.net>\n"
+"Language-Team: Français <fedora-trans-fr-request@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0.2\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../src/auth.py:323
 msgid "Please fill in the authentication information"
@@ -58,8 +58,7 @@ msgstr "Les options de chargement ne s'applique sur la platforme %s"
 
 #: ../src/bootloader.py:121
 msgid "Grub passwords do not match.  Please try again."
-msgstr ""
-"Les mots de passe Grub ne correspondent pas. Veuillez essayer de nouveau."
+msgstr "Les mots de passe Grub ne correspondent pas. Veuillez essayer de nouveau."
 
 #. create table with custom checklists
 #: ../src/firewall.py:60
@@ -224,15 +223,14 @@ msgstr ""
 "autre nom de périphérique. "
 
 #: ../src/packages.py:163
-#, fuzzy
 msgid "Retrieving package information"
-msgstr "Informations sur le périphérique réseau"
+msgstr "Récupération des informations sur les paquetages"
 
 #: ../src/packages.py:172
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
-msgstr ""
+msgstr "La séclection de paquetages est désactivée car un problème est survenu durant la récupération des informations les concernant."
 
 #: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:193
 msgid "ext2"
@@ -283,8 +281,7 @@ msgstr "Spécifier un point de montage pour la partition."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:449
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "Le point de montage \"%s\" est déjà utilisé. Veuillez sélectionner un autre "
 "point de montage."
@@ -407,8 +404,7 @@ msgstr "Configuration de l'authentification"
 
 #: tmp/system-config-kickstart.glade.h:11
 msgid "Authentication options are not applicable on upgrades."
-msgstr ""
-"Les options d'authentification ne s'appliquent pas sur une mise à jour."
+msgstr "Les options d'authentification ne s'appliquent pas sur une mise à jour."
 
 #: tmp/system-config-kickstart.glade.h:12
 msgid "Authentication:"
@@ -1196,264 +1192,3 @@ msgstr "md8"
 msgid "md9"
 msgstr "md9"
 
-#~ msgid "Please select a root password."
-#~ msgstr "Veuillez choisir un mot de passe root."
-
-#~ msgid "Could not start because there is no %s file."
-#~ msgstr "Impossible de démarrer car le fichier %s n'existe pas."
-
-#~ msgid "Please make sure the comps package is installed."
-#~ msgstr "Veuillez vérifier que le paquetage comps est installé."
-
-#~ msgid ""
-#~ "The device you specified is not a valid device name. Please use a valid "
-#~ "device name such as \"hda1\" or \"sda3\"."
-#~ msgstr ""
-#~ "Le périphérique que vous avez spécifié n'a pas de nom de périphérique "
-#~ "valable. Utilisez un nom de périphérique valable, comme \"hda1\" ou \"sda3"
-#~ "\"."
-
-#~ msgid ""
-#~ "The partition you specified does not begin with \"hd\" or \"sd\".  "
-#~ "Partitions must have a valid device name and partition number such as "
-#~ "\"hda1\" or \"sda3\"."
-#~ msgstr ""
-#~ "La partition que vous avez spécifiée ne commence pas par \"hd\" ou \"sd"
-#~ "\".  Les partitions doivent comporter un nom de périphérique valide et un "
-#~ "numéro de partition comme \"hda1\" ou \"sda3\"."
-
-#~ msgid ""
-#~ "Usage: system-config-kickstart [--help] [--generate <filename>] "
-#~ "[<kickstart_filename>]\n"
-#~ "        \n"
-#~ "--help                  Print out this message\n"
-#~ "--generate <filename>   Generate a kickstart file from the current "
-#~ "machine and write\n"
-#~ "                        it to <filename>.  This option runs on the "
-#~ "console, so it is\n"
-#~ "                        useful for servers that do not have X currently "
-#~ "running.\n"
-#~ "<kickstart_filename>    This option will cause the GUI to launch with the "
-#~ "values from\n"
-#~ "                        the kickstart file already filled in."
-#~ msgstr ""
-#~ "Utilisation : system-config-kickstart [--help] [--generate <filename>] "
-#~ "[<kickstart_filename>]\n"
-#~ "        \n"
-#~ "--help                  Imprimer ce message\n"
-#~ "--generate <filename>   Créer un fichier kickstart à partir de votre "
-#~ "machine courante et écrire\n"
-#~ "                        ce dernier dans <filename>. Cette option est "
-#~ "exécutéesur la console, elle est\n"
-#~ "                        utile pour les serveurs dont l'exécution de X "
-#~ "n'est pas actuellement en cours.\n"
-#~ "<kickstart_filename>    Cette option entraînera le lancement de la GUI "
-#~ "avec les valeurs\n"
-#~ "                       du fichier kickstart déjà remplies."
-
-#~ msgid "Could not open display because no X server is running."
-#~ msgstr ""
-#~ "L'affichage n'est pas possible car aucun serveur X n'est en cours "
-#~ "d'exécution."
-
-#~ msgid "Try running 'system-config-kickstart --help' for a list of options."
-#~ msgstr ""
-#~ "Essayer d'exécuter 'system-config-kickstart --help' pour obtenir une "
-#~ "liste des options."
-
-#~ msgid "label28"
-#~ msgstr "label28"
-
-#~ msgid "label128"
-#~ msgstr "label128"
-
-#~ msgid "label216"
-#~ msgstr "label216"
-
-#~ msgid "label35"
-#~ msgstr "label35"
-
-#~ msgid "label30"
-#~ msgstr "label30"
-
-#~ msgid "label31"
-#~ msgstr "label31"
-
-#~ msgid "label32"
-#~ msgstr "label32"
-
-#~ msgid "label33"
-#~ msgstr "label33"
-
-#~ msgid "label88"
-#~ msgstr "label88"
-
-#~ msgid "Select packages to install."
-#~ msgstr "Sélectionnez les paquetages à installer."
-
-#~ msgid "_Install Everything"
-#~ msgstr "_Installer Tout"
-
-#~ msgid "Desktops"
-#~ msgstr "Bureaux"
-
-#~ msgid "Applications"
-#~ msgstr "Applications"
-
-#~ msgid "Servers"
-#~ msgstr "Serveurs"
-
-#~ msgid "Development"
-#~ msgstr "Développement"
-
-#~ msgid "System"
-#~ msgstr "Système"
-
-#~ msgid "Package selection is not applicable on upgrades."
-#~ msgstr "La sélection de paquetages ne s'applique pas sur une mise à jour"
-
-#~ msgid "label34"
-#~ msgstr "label34"
-
-#~ msgid "label89"
-#~ msgstr "label89"
-
-#~ msgid "label93"
-#~ msgstr "label93"
-
-#~ msgid ""
-#~ "There was a problem reading the following line from the kickstart file. "
-#~ "This could be due to an error on the line or using a keyword that no "
-#~ "longer exists.\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Une erreur s'est produite lors de la lecture de la ligne suivante dans le "
-#~ "fichier kickstart. Il se peut qu'une erreur existe sur la ligne ou un mot-"
-#~ "clé qui n'existe plus est utilisé.\n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid "Kickstart Error"
-#~ msgstr "Erreur de kickstart"
-
-#~ msgid "/comps.xml file."
-#~ msgstr "fichier /comps.xml"
-
-#~ msgid "Save File"
-#~ msgstr "Enregistrer le fichier"
-
-#~ msgid "Mouse:"
-#~ msgstr "Souris :"
-
-#~ msgid "Emulate 3 Buttons"
-#~ msgstr "Émuler trois boutons"
-
-#~ msgid "Language Support:"
-#~ msgstr "Support de langues :"
-
-#~ msgid "X Window System"
-#~ msgstr "Système X Window"
-
-#~ msgid "GNOME Desktop Environment"
-#~ msgstr "Environnement de bureau GNOME"
-
-#, fuzzy
-#~ msgid "KDE (K Desktop Environment)"
-#~ msgstr "Environnement de bureau KDE"
-
-#~ msgid "Editors"
-#~ msgstr "Éditeurs"
-
-#~ msgid "Engineering and Scientific"
-#~ msgstr "Ingénierie et scientifique"
-
-#~ msgid "Graphical Internet"
-#~ msgstr "Internet en mode graphique"
-
-#~ msgid "Text-based Internet"
-#~ msgstr "Internet en mode texte"
-
-#~ msgid "Office/Productivity"
-#~ msgstr "Bureautique / Productivité"
-
-#~ msgid "Sound and Video"
-#~ msgstr "Son et vidéo"
-
-#~ msgid "Graphics"
-#~ msgstr "Imagerie"
-
-#~ msgid "Games and Entertainment"
-#~ msgstr "Jeux et divertissement"
-
-#~ msgid "Authoring and Publishing"
-#~ msgstr "Édition et publication"
-
-#~ msgid "Server Configuration Tools (AS and ES only)"
-#~ msgstr "Outils de configuration du serveur (AS et ES seulement)"
-
-#~ msgid "Web Server"
-#~ msgstr "Serveur Web"
-
-#~ msgid "Mail Server"
-#~ msgstr "Serveur de courrier électronique"
-
-#~ msgid "Windows File Server"
-#~ msgstr "Serveur de fichiers Windows"
-
-#~ msgid "DNS Name Server"
-#~ msgstr "Serveur de noms de domaines (DNS)"
-
-#~ msgid "FTP Server"
-#~ msgstr "Serveur FTP"
-
-#~ msgid "SQL Database Server"
-#~ msgstr "Serveur de base de données SQL"
-
-#~ msgid "News Server"
-#~ msgstr "Serveur de nouvelles (news)"
-
-#~ msgid "Network Servers (AS and ES only)"
-#~ msgstr "Serveurs réseau (AS et ES seulement)"
-
-#~ msgid "Development Tools"
-#~ msgstr "Outils de développement"
-
-#~ msgid "Kernel Development"
-#~ msgstr "Développement du noyau (kernel)"
-
-#~ msgid "X Software Development"
-#~ msgstr "Développement des logiciels X"
-
-#~ msgid "GNOME Software Development"
-#~ msgstr "Développement des logiciels GNOME"
-
-#~ msgid "KDE Software Development"
-#~ msgstr "Développement des logiciels KDE"
-
-#~ msgid "Administration Tools"
-#~ msgstr "Outils d'administration"
-
-#~ msgid "System Tools"
-#~ msgstr "Outils système"
-
-#~ msgid "Printing Support"
-#~ msgstr "Support de l'impression :"
-
-#~ msgid "*"
-#~ msgstr "*"
-
-#~ msgid "Server Configuration Tools"
-#~ msgstr "Outils de configuration du serveur"
-
-#~ msgid "Network Servers"
-#~ msgstr "Serveurs réseau"
-
-#~ msgid "Could not read monitor database"
-#~ msgstr "Impossible de lire la base de données du moniteur"
-
-#~ msgid "_Automatically Resolve Dependencies"
-#~ msgstr "Résoudre _automatiquement les dépendances"
-
-#~ msgid "_Ignore Dependencies"
-#~ msgstr "_Ignorer les dépendances"
