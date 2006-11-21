@@ -22,22 +22,28 @@ XGETTEXT	= xgettext --default-domain=$(NLSPACKAGE) \
 MSGFMT		= msgfmt --statistics --verbose
 
 # What do we need to do
+GLADEFILES = ../src/*.glade
 POFILES		= $(wildcard *.po)
 MOFILES		= $(patsubst %.po,%.mo,$(POFILES))
-PYSRC		= $(wildcard ../src/*.py)
-SRCFILES 	= $(PYSRC) system-config-kickstart.gladestrings
+SRCFILES	= $(wildcard ../src/*.py)
 
 #default:: clean
 
 all::  update-po $(MOFILES)
 
-$(POTFILE): $(SRCFILES)
-	$(XGETTEXT) --keyword=_ --keyword=N_ $(SRCFILES)
+$(POTFILE): $(SRCFILES) glade-po
+	$(XGETTEXT) --keyword=_ --keyword=N_ $(SRCFILES) tmp/*.h
 	@if cmp -s $(NLSPACKAGE).po $(POTFILE); then \
 	    rm -f $(NLSPACKAGE).po; \
 	else \
 	    mv -f $(NLSPACKAGE).po $(POTFILE); \
 	fi; \
+
+glade-po: $(GLADEFILES)
+	rm -rf tmp/
+	for f in $(GLADEFILES); do \
+		intltool-extract --type=gettext/glade -l $$f ;\
+	done
 
 update-po: Makefile $(POTFILE) refresh-po
 
@@ -55,6 +61,7 @@ refresh-po: Makefile
 
 clean:
 	@rm -fv *mo *~ .depend
+	@rm -rf tmp
 
 install: $(MOFILES)
 	@for n in $(MOFILES); do \

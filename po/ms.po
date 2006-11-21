@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ms\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-11-02 16:17-0500\n"
+"POT-Creation-Date: 2006-11-21 11:59-0500\n"
 "PO-Revision-Date: 2006-08-29 01:52+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
@@ -44,18 +44,10 @@ msgstr "IBM zSeries/s390"
 msgid "Root passwords do not match."
 msgstr "Katalaluan root tidak sepadan."
 
-#: ../src/basic.py:150
-#: ../src/basic.py:168
-#: ../src/install.py:218
-#: ../src/partWindow.py:515
-#: ../src/partition.py:245
-#: ../src/raidWindow.py:247
+#: ../src/basic.py:150 ../src/install.py:218 ../src/partWindow.py:522
+#: ../src/partition.py:255 ../src/raidWindow.py:249
 msgid "Error"
 msgstr "Ralat"
-
-#: ../src/basic.py:167
-msgid "Please select a root password."
-msgstr "Sila pilih katalaluan root."
 
 #: ../src/bootloader.py:81
 #, python-format
@@ -67,15 +59,15 @@ msgid "Grub passwords do not match.  Please try again."
 msgstr "Katalaluan Grub tidak sepadan.  Sila cuba lagi."
 
 #. create table with custom checklists
-#: ../src/firewall.py:59
+#: ../src/firewall.py:60
 msgid "Trusted devices:"
 msgstr "Peranti dipercayai:"
 
-#: ../src/firewall.py:84
+#: ../src/firewall.py:85
 msgid "Trusted services:"
 msgstr "Servis dipercayai:"
 
-#: ../src/firewall.py:116
+#: ../src/firewall.py:117
 msgid "Other ports: (1029:tcp)"
 msgstr "Port lain: (1029:tcp)"
 
@@ -119,69 +111,63 @@ msgstr "Sila masukkan direktori cakera keras."
 msgid "Please enter a hard drive partition."
 msgstr "Sila masukkan partisyen cakera keras."
 
-#: ../src/kickstartGui.py:92
+#: ../src/kickstartGui.py:93
 msgid "Kickstart"
 msgstr "Kickstart"
 
-#: ../src/kickstartGui.py:93
+#: ../src/kickstartGui.py:94
 msgid "Create a kickstart file"
 msgstr "Cipta fail kickstart"
 
-#: ../src/kickstartGui.py:140
+#: ../src/kickstartGui.py:116
 msgid "Subsection"
 msgstr "Subseksyen"
 
-#: ../src/kickstartGui.py:144
+#: ../src/kickstartGui.py:120
 msgid "Basic Configuration"
 msgstr "Tetapan Asas"
 
-#: ../src/kickstartGui.py:144
+#: ../src/kickstartGui.py:120
 msgid "Installation Method"
 msgstr "Kaedah Pemasangan"
 
-#: ../src/kickstartGui.py:145
+#: ../src/kickstartGui.py:121
 msgid "Boot Loader Options"
 msgstr "Pilihan Pemuat Boot"
 
-#: ../src/kickstartGui.py:145
+#: ../src/kickstartGui.py:121
 msgid "Partition Information"
 msgstr "Maklumat Partisyen"
 
-#: ../src/kickstartGui.py:146
-#: system-config-kickstart.gladestrings:136
+#: ../src/kickstartGui.py:122 tmp/system-config-kickstart.glade.h:109
 msgid "Network Configuration"
 msgstr "Konfigurasi Rangkaian"
 
-#: ../src/kickstartGui.py:146
+#: ../src/kickstartGui.py:122
 msgid "Authentication"
 msgstr "Pengesahan"
 
-#: ../src/kickstartGui.py:147
-#: system-config-kickstart.gladestrings:182
+#: ../src/kickstartGui.py:123 tmp/system-config-kickstart.glade.h:52
 msgid "Firewall Configuration"
 msgstr "Tentutetap Firewall"
 
-#: ../src/kickstartGui.py:147
-#: system-config-kickstart.gladestrings:207
+#: ../src/kickstartGui.py:123 tmp/system-config-kickstart.glade.h:28
 msgid "Display Configuration"
 msgstr "Tetapan Paparan"
 
-#: ../src/kickstartGui.py:148
-#: system-config-kickstart.gladestrings:217
+#: ../src/kickstartGui.py:124 tmp/system-config-kickstart.glade.h:115
 msgid "Package Selection"
 msgstr "Pemilihan Pakej"
 
-#: ../src/kickstartGui.py:148
-#: system-config-kickstart.gladestrings:222
+#: ../src/kickstartGui.py:124 tmp/system-config-kickstart.glade.h:125
 msgid "Pre-Installation Script"
 msgstr "Skrip Pra-Pemasangan"
 
-#: ../src/kickstartGui.py:149
-#: system-config-kickstart.gladestrings:228
+#: ../src/kickstartGui.py:125 tmp/system-config-kickstart.glade.h:124
 msgid "Post-Installation Script"
 msgstr "Skrip Pasca-Pemasangan"
 
-#: ../src/kickstartGui.py:192
+#: ../src/kickstartGui.py:199
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -195,15 +181,15 @@ msgstr ""
 " Hakcipta (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
 " Antaramuka bergrafik untuk menghasilkan fail kickstart"
 
-#: ../src/kickstartGui.py:193
+#: ../src/kickstartGui.py:200
 msgid "About Kickstart Configurator"
 msgstr "Perihal Penentutetap Kickstart"
 
-#: ../src/kickstartGui.py:215
+#: ../src/kickstartGui.py:222
 msgid "Help is not available."
 msgstr "Bantuan tiada."
 
-#: ../src/kickstartGui.py:282
+#: ../src/kickstartGui.py:289
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "Fail \"%s\" tidak dapat diakses."
@@ -216,115 +202,106 @@ msgstr "Peranti"
 msgid "Network Type"
 msgstr "Jenis Rangkaian"
 
-#: ../src/network.py:109
-#: ../src/network.py:155
-#: ../src/network.py:226
-#: ../src/network.py:286
-#: ../src/network.py:422
+#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:226
+#: ../src/network.py:286 ../src/network.py:422
 msgid "Static IP"
 msgstr "IP Statik"
 
-#: ../src/network.py:216
-#: ../src/network.py:278
+#: ../src/network.py:216 ../src/network.py:278
 msgid "Please fill in the network information"
 msgstr "Sila penuhkan maklumat rangkaian"
 
 #: ../src/network.py:330
 #, python-format
-msgid "A network device with the name %s already exists.  Please choose another device name"
-msgstr "Peranti rangkaian dengan nama %s telah wujud.  Sila pilih nama peranti lain."
+msgid ""
+"A network device with the name %s already exists.  Please choose another "
+"device name"
+msgstr ""
+"Peranti rangkaian dengan nama %s telah wujud.  Sila pilih nama peranti lain."
 
-#: ../src/packageGroupList.py:18
-#, python-format
-msgid "Could not start because there is no %s file."
-msgstr "Tidak dapat bermula kerana tiada fail %s."
+#: ../src/packages.py:163
+#, fuzzy
+msgid "Retrieving package information"
+msgstr "Maklumat Peranti Rangkaian"
 
-#: ../src/packageGroupList.py:19
-msgid "Please make sure the comps package is installed."
-msgstr "Sila pastikan pakej comps dipasang."
+#: ../src/packages.py:172
+msgid ""
+"Package selection is disabled due to problems downloading package "
+"information."
+msgstr ""
 
-#: ../src/partWindow.py:84
-#: system-config-kickstart.gladestrings:52
+#: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:193
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:84
-#: system-config-kickstart.gladestrings:53
+#: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:194
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:86
-#: ../src/partWindow.py:149
+#: ../src/partWindow.py:87 ../src/partWindow.py:150
 msgid "software RAID"
 msgstr "RAID perisian"
 
-#: ../src/partWindow.py:87
-#: system-config-kickstart.gladestrings:54
+#: ../src/partWindow.py:88 tmp/system-config-kickstart.glade.h:212
 msgid "swap"
 msgstr "swap"
 
-#: ../src/partWindow.py:87
-#: system-config-kickstart.gladestrings:55
+#: ../src/partWindow.py:88 tmp/system-config-kickstart.glade.h:213
 msgid "vfat"
 msgstr "vfat"
 
-#: ../src/partWindow.py:88
+#: ../src/partWindow.py:89
 msgid "PPC PReP Boot"
 msgstr "Boot PPC PReP"
 
-#: ../src/partWindow.py:262
-#: ../src/partWindow.py:537
-#: ../src/raidWindow.py:212
+#: ../src/partWindow.py:263 ../src/partWindow.py:544 ../src/raidWindow.py:214
 msgid "Yes"
 msgstr "Ya"
 
-#: ../src/partWindow.py:264
-#: ../src/partWindow.py:539
-#: ../src/raidWindow.py:214
+#: ../src/partWindow.py:265 ../src/partWindow.py:546 ../src/raidWindow.py:216
 msgid "No"
 msgstr "Tidak"
 
-#: ../src/partWindow.py:287
-#: ../src/partWindow.py:302
-#: ../src/partWindow.py:321
-#: ../src/partWindow.py:335
+#: ../src/partWindow.py:288 ../src/partWindow.py:303 ../src/partWindow.py:322
+#: ../src/partWindow.py:336
 msgid "Auto"
 msgstr "Auto"
 
-#: ../src/partWindow.py:296
+#: ../src/partWindow.py:297
 msgid "Hard Drives"
 msgstr "Pemacu Keras"
 
-#: ../src/partWindow.py:422
+#: ../src/partWindow.py:440
 msgid "Specify a mount point for the partition."
 msgstr "Nyatakan titik lekapan bagi partisyen ini."
 
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:431
+#: ../src/partWindow.py:449
 #, python-format
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "Titik lekapan \"%s\" sedang digunakan.  Sila pilih titik lekapan lain."
 
-#: ../src/partWindow.py:451
-msgid "To create a new RAID partition, you must specify either a hard drive device name or an existing partition."
-msgstr "Untuk mencipta partisyen RAID baru, anda mesti menyatakan sama ada nama peranti cakera keras atau partisyen sedia wujud."
+#: ../src/partWindow.py:469
+msgid ""
+"To create a new RAID partition, you must specify either a hard drive device "
+"name or an existing partition."
+msgstr ""
+"Untuk mencipta partisyen RAID baru, anda mesti menyatakan sama ada nama "
+"peranti cakera keras atau partisyen sedia wujud."
 
-#: ../src/partWindow.py:490
+#: ../src/partWindow.py:506
 msgid "Specify a device on which to create the partition."
 msgstr "Nyatakan peranti dimana untuk mencipta partition."
 
-#: ../src/partWindow.py:492
-msgid "The device you specified is not a valid device name. Please use a valid device name such as \"hda1\" or \"sda3\"."
-msgstr "Peranti yang anda nyatakan adalah nama peranti yang tidak sah. Sila gunakan nama peranti yang sah seperti \"hda1\" atau \"sda3\"."
-
-#: ../src/partWindow.py:502
-msgid "The partition you specified does not end in a number.  Partitions must have a partition number such as \"hda1\" or \"sda3\"."
-msgstr "Partisyen yang anda nyatakan tidak diakhiri dengan nombor. Partisyen mesti mempunyai nombor partisyen seperti \"hda1\" atau \"sda3\""
-
-#: ../src/partWindow.py:508
-msgid "The partition you specified does not begin with \"hd\" or \"sd\".  Partitions must have a valid device name and partition number such as \"hda1\" or \"sda3\"."
-msgstr "Partisyen yang anda nyatakan tidak dimulakan dengan \"hd\" atau \"sd\". Partisyen mesti mempunyai nama peranti yang sah dan nombor partisyen seperti \"hda1\" atau \"sda3\""
+#: ../src/partWindow.py:515
+msgid ""
+"The partition you specified does not end in a number.  Partitions must have "
+"a partition number such as \"hda1\" or \"sda3\"."
+msgstr ""
+"Partisyen yang anda nyatakan tidak diakhiri dengan nombor. Partisyen mesti "
+"mempunyai nombor partisyen seperti \"hda1\" atau \"sda3\""
 
 #: ../src/partition.py:74
 msgid ""
@@ -354,967 +331,979 @@ msgstr "Format"
 msgid "Size (MB)"
 msgstr "Saiz (MB)"
 
-#: ../src/partition.py:97
-#: ../src/partition.py:137
+#: ../src/partition.py:97 ../src/partition.py:137
 msgid "Please select a partition from the list."
 msgstr "Sila pilih partisyen daripada senarai."
 
 #: ../src/raidOptionsWindow.py:72
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
-msgstr "Anda sedang mempunyai %d partisyen RAID perisian yang bebas untuk digunakan."
+msgstr ""
+"Anda sedang mempunyai %d partisyen RAID perisian yang bebas untuk digunakan."
 
-#: ../src/raidWindow.py:172
+#: ../src/raidWindow.py:174
 #, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr "Anda mesti memilih sekurang-kurangnya 2 partisyen untuk menggunakan RAID %s"
+msgstr ""
+"Anda mesti memilih sekurang-kurangnya 2 partisyen untuk menggunakan RAID %s"
 
-#: ../src/raidWindow.py:178
+#: ../src/raidWindow.py:180
 #, python-format
 msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr "Anda mesti memilih sekurang-kurangnya 3 partisyen untuk menggunakan RAID %s"
+msgstr ""
+"Anda mesti memilih sekurang-kurangnya 3 partisyen untuk menggunakan RAID %s"
 
-#: ../src/raidWindow.py:192
-#: ../src/raidWindow.py:218
+#: ../src/raidWindow.py:194 ../src/raidWindow.py:220
 msgid "Raid Devices"
 msgstr "Peranti RAID"
-
-#: ../src/system-config-kickstart.py:61
-msgid ""
-"Usage: system-config-kickstart [--help] [--generate <filename>] [<kickstart_filename>]\n"
-"        \n"
-"--help                  Print out this message\n"
-"--generate <filename>   Generate a kickstart file from the current machine and write\n"
-"                        it to <filename>.  This option runs on the console, so it is\n"
-"                        useful for servers that do not have X currently running.\n"
-"<kickstart_filename>    This option will cause the GUI to launch with the values from\n"
-"                        the kickstart file already filled in."
-msgstr ""
-"Penggunaan: system-config-kickstart [--help] [--generate <namafail>] [<namafail_kickstart>]\n"
-"        \n"
-"--help                  Papar mesej ini\n"
-"--generate <namafail>   Jana fail kickstart daripada mesin semasa dan tulis\n"
-"                        kepada <namafail>.  Pilihan ini dilaksana pada konsol, jadi ia\n"
-"                        berguna untuk pelayan yang tidak mempunyai X sedang dilaksanakan.\n"
-"<namafail_kickstart>    Pilihan ini akan menyebabkan GUI untuk dilaksanakan dengan nilai\n"
-"                        dari fail kickstart yang telah diisi."
-
-#: ../src/system-config-kickstart.py:78
-msgid "Could not open display because no X server is running."
-msgstr "Tidak dapat membuka paparan kerana tiada pelayan X dilaksanakan."
-
-#: ../src/system-config-kickstart.py:79
-msgid "Try running 'system-config-kickstart --help' for a list of options."
-msgstr "Cuba laksanakan 'system-config-kickstart --help' untuk senarai pilihan."
 
 #: ../src/xconfig.py:115
 msgid "Could not read video driver database"
 msgstr "Tidak dapat membaca pengkalan data pemandu video"
 
-#.
-#. * Translatable strings file generated by Glade.
-#. * Add this file to your project's POTFILES.in.
-#. * DO NOT compile it as part of your application.
-#.
-#: system-config-kickstart.gladestrings:7
-msgid "Partition Options"
-msgstr "Pilihan Partisyen"
-
-#: system-config-kickstart.gladestrings:8
-#: system-config-kickstart.gladestrings:27
-msgid "Mount Point:"
-msgstr "Titik Lekapan:"
-
-#: system-config-kickstart.gladestrings:9
-#: system-config-kickstart.gladestrings:31
-msgid "File System Type:"
-msgstr "Jenis Sistem Fail:"
-
-#: system-config-kickstart.gladestrings:10
-msgid "Size (MB):"
-msgstr "Saiz (MB):"
-
-#: system-config-kickstart.gladestrings:11
-msgid "Fill all unused space on disk"
-msgstr "Isi semua ruang yang belum digunakan pada cakera"
-
-#: system-config-kickstart.gladestrings:12
-msgid "Grow to maximum of (MB):"
-msgstr "Membesar ke maksima (MB):"
-
-#: system-config-kickstart.gladestrings:13
-msgid "Fixed size"
-msgstr "Saiz tetap"
-
-#: system-config-kickstart.gladestrings:14
-msgid "Use recommended swap size"
-msgstr "Guna saiz swap yang disyorkan"
-
-#: system-config-kickstart.gladestrings:15
-msgid "Additional Size Options"
-msgstr "Opsyen Saiz Tambahan"
-
-#: system-config-kickstart.gladestrings:16
-msgid "Force to be a primary partition (asprimary)"
-msgstr "Paksa untuk menjadi partisyen utama (asprimary)"
-
-#: system-config-kickstart.gladestrings:17
-msgid "Make partition on specific drive (ondisk)"
-msgstr "Buat partisyen pada pemacu spesifik (ondisk)"
-
-#: system-config-kickstart.gladestrings:18
-#: system-config-kickstart.gladestrings:22
+#: tmp/system-config-kickstart.glade.h:1
 msgid "         "
 msgstr "         "
 
-#: system-config-kickstart.gladestrings:19
-msgid "Drive :"
-msgstr "Pemacu :"
-
-#: system-config-kickstart.gladestrings:20
+#: tmp/system-config-kickstart.glade.h:2
 msgid "(for example: hda or sdc)"
 msgstr "(sebagai contoh: hda atau sdc)"
 
-#: system-config-kickstart.gladestrings:21
-msgid "Use existing partition (onpart)"
-msgstr "Guna partisyen sedia ada (onpart)"
-
-#: system-config-kickstart.gladestrings:23
-msgid "Partition :"
-msgstr "Partisyen :"
-
-#: system-config-kickstart.gladestrings:24
+#: tmp/system-config-kickstart.glade.h:3
 msgid "(for example: hda1 or sdc3)"
 msgstr "(sebagai contoh: hda1 atau sdc3)"
 
-#: system-config-kickstart.gladestrings:25
-msgid "Format partition"
-msgstr "Format partisyen"
-
-#: system-config-kickstart.gladestrings:26
-msgid "Make RAID Device"
-msgstr "Jadikan Peranti RAID."
-
-#: system-config-kickstart.gladestrings:28
-msgid "Number of spares:"
-msgstr "Bilangan gantian:"
-
-#: system-config-kickstart.gladestrings:29
-msgid "Raid Members"
-msgstr "Ahli RAID"
-
-#: system-config-kickstart.gladestrings:30
-msgid "RAID Level:"
-msgstr "Aras RAID:"
-
-#: system-config-kickstart.gladestrings:32
-msgid "RAID Device:"
-msgstr "Peranti RAID:"
-
-#: system-config-kickstart.gladestrings:33
-msgid "md0"
-msgstr "md0"
-
-#: system-config-kickstart.gladestrings:34
-msgid "md1"
-msgstr "md1"
-
-#: system-config-kickstart.gladestrings:35
-msgid "md2"
-msgstr "md2"
-
-#: system-config-kickstart.gladestrings:36
-msgid "md3"
-msgstr "md3"
-
-#: system-config-kickstart.gladestrings:37
-msgid "md4"
-msgstr "md4"
-
-#: system-config-kickstart.gladestrings:38
-msgid "md5"
-msgstr "md5"
-
-#: system-config-kickstart.gladestrings:39
-msgid "md6"
-msgstr "md6"
-
-#: system-config-kickstart.gladestrings:40
-msgid "md7"
-msgstr "md7"
-
-#: system-config-kickstart.gladestrings:41
-msgid "md8"
-msgstr "md8"
-
-#: system-config-kickstart.gladestrings:42
-msgid "md9"
-msgstr "md9"
-
-#: system-config-kickstart.gladestrings:43
-msgid "md10"
-msgstr "md10"
-
-#: system-config-kickstart.gladestrings:44
-msgid "md11"
-msgstr "md11"
-
-#: system-config-kickstart.gladestrings:45
-msgid "md12"
-msgstr "md12"
-
-#: system-config-kickstart.gladestrings:46
-msgid "md13"
-msgstr "md13"
-
-#: system-config-kickstart.gladestrings:47
-msgid "md14"
-msgstr "md14"
-
-#: system-config-kickstart.gladestrings:48
-msgid "md15"
-msgstr "md15"
-
-#: system-config-kickstart.gladestrings:49
-msgid "0"
-msgstr "0"
-
-#: system-config-kickstart.gladestrings:50
-msgid "1"
-msgstr "1"
-
-#: system-config-kickstart.gladestrings:51
-msgid "5"
-msgstr "5"
-
-#: system-config-kickstart.gladestrings:56
-msgid "Format RAID device"
-msgstr "Format peranti RAID"
-
-#: system-config-kickstart.gladestrings:57
-msgid "Kickstart Configurator"
-msgstr "Penentutetap Kickstart"
-
-#: system-config-kickstart.gladestrings:58
-msgid "_File"
-msgstr "_Fail"
-
-#: system-config-kickstart.gladestrings:59
-msgid "_Open File"
-msgstr "_Buka Fail"
-
-#: system-config-kickstart.gladestrings:60
-msgid "_Preview"
-msgstr "_Pralihat"
-
-#: system-config-kickstart.gladestrings:61
-msgid "_Save File"
-msgstr "_Simpan Fail"
-
-#: system-config-kickstart.gladestrings:62
-msgid "_Quit"
-msgstr "_Keluar"
-
-#: system-config-kickstart.gladestrings:63
-msgid "_Help"
-msgstr "_Bantuan"
-
-#: system-config-kickstart.gladestrings:64
-msgid "_Contents"
-msgstr "_Kandungan"
-
-#: system-config-kickstart.gladestrings:65
-msgid "_About"
-msgstr "_Perihal"
-
-#: system-config-kickstart.gladestrings:66
-msgid "Default Language:"
-msgstr "Bahasa Default:"
-
-#: system-config-kickstart.gladestrings:67
-msgid "Keyboard:"
-msgstr "Papan Kekunci:"
-
-#: system-config-kickstart.gladestrings:68
-msgid "Time Zone:"
-msgstr "Zon Waktu:"
-
-#: system-config-kickstart.gladestrings:69
-msgid "Use UTC clock"
-msgstr "Guna Jam UTC"
-
-#: system-config-kickstart.gladestrings:70
-msgid "Root Password:"
-msgstr "Katalaluan Root:"
-
-#: system-config-kickstart.gladestrings:71
-#: system-config-kickstart.gladestrings:111
-msgid "Confirm Password:"
-msgstr "Kepastian Katalaluan:"
-
-#: system-config-kickstart.gladestrings:72
-msgid "Encrypt root password"
-msgstr "Enkrip katalaluan root"
-
-#: system-config-kickstart.gladestrings:73
-msgid "Target Architecture:"
-msgstr "Rekabentuk Sasaran:"
-
-#: system-config-kickstart.gladestrings:74
-msgid "Reboot system after installation"
-msgstr "Ulangbut sistem selepas pemasangan"
-
-#: system-config-kickstart.gladestrings:75
-msgid "Perform installation in text mode (graphical is default)"
-msgstr "Laksana pemasangan dalam mod teks (bergrafik adalah default)"
-
-#: system-config-kickstart.gladestrings:76
-msgid "Perform installation in interactive mode"
-msgstr "Laksana pemasangan dalam mod interaktif"
-
-#: system-config-kickstart.gladestrings:77
-msgid "Basic Configuration (required)"
-msgstr "Tetapan Asas (diperlukan)"
-
-#: system-config-kickstart.gladestrings:78
-msgid "label28"
-msgstr "label28"
-
-#: system-config-kickstart.gladestrings:79
-msgid "Perform new installation"
-msgstr "Laksana pemasangan baru"
-
-#: system-config-kickstart.gladestrings:80
-msgid "Upgrade an existing installation"
-msgstr "Naiktaraf pemasangan sedia ada"
-
-#: system-config-kickstart.gladestrings:81
-msgid "Choose the Installation Method:"
-msgstr "Pilih Kaedah Pemasangan:"
-
-#: system-config-kickstart.gladestrings:82
-#: system-config-kickstart.gladestrings:87
-msgid "CD-ROM"
-msgstr "CD-ROM"
-
-#: system-config-kickstart.gladestrings:83
-#: system-config-kickstart.gladestrings:90
-msgid "NFS"
-msgstr "NFS"
-
-#: system-config-kickstart.gladestrings:84
-#: system-config-kickstart.gladestrings:96
-msgid "FTP"
-msgstr "FTP"
-
-#: system-config-kickstart.gladestrings:85
-#: system-config-kickstart.gladestrings:99
-msgid "HTTP"
-msgstr "HTTP"
-
-#: system-config-kickstart.gladestrings:86
-#: system-config-kickstart.gladestrings:102
-msgid "Hard Drive"
-msgstr "Pemacu Keras"
-
-#: system-config-kickstart.gladestrings:88
-msgid "NFS Server:"
-msgstr "Pelayan NFS:"
-
-#: system-config-kickstart.gladestrings:89
-msgid "NFS Directory:"
-msgstr "Direktori NFS:"
-
-#: system-config-kickstart.gladestrings:91
-msgid "FTP Server:"
-msgstr "Pelayan FTP:"
-
-#: system-config-kickstart.gladestrings:92
-msgid "FTP Directory:"
-msgstr "Direktori FTP:"
-
-#: system-config-kickstart.gladestrings:93
-msgid "Specify an FTP username and password"
-msgstr "Nyatakan namapengguna FTP dan katalaluan"
-
-#: system-config-kickstart.gladestrings:94
-msgid "FTP Username"
-msgstr "Namapengguna FTP"
-
-#: system-config-kickstart.gladestrings:95
-msgid "FTP Password"
-msgstr "Katalaluan FTP"
-
-#: system-config-kickstart.gladestrings:97
-msgid "HTTP Server:"
-msgstr "Pelayan HTTP:"
-
-#: system-config-kickstart.gladestrings:98
-msgid "HTTP Directory:"
-msgstr "Direktori HTTP:"
-
-#: system-config-kickstart.gladestrings:100
-msgid "Hard Drive Partition:"
-msgstr "Partisyen Pemacu Keras:"
-
-#: system-config-kickstart.gladestrings:101
-msgid "Hard Drive Directory:"
-msgstr "Direktori Pemacu Keras:"
-
-#: system-config-kickstart.gladestrings:103
-msgid "Installation Method (required)"
-msgstr "Kaedah Pemasangan (diperlukan)"
-
-#: system-config-kickstart.gladestrings:104
-msgid "label128"
-msgstr "label128"
-
-#: system-config-kickstart.gladestrings:105
-msgid "Install new boot loader"
-msgstr "Pasang pemuat but baru"
-
-#: system-config-kickstart.gladestrings:106
-msgid "Do not install a boot loader"
-msgstr "Jangan pasang pemuat but"
-
-#: system-config-kickstart.gladestrings:107
-msgid "Upgrade existing boot loader"
-msgstr "Naiktaraf pemuat boot sedia ada"
-
-#: system-config-kickstart.gladestrings:108
-msgid "GRUB Options:"
-msgstr "Pilihan GRUB:"
-
-#: system-config-kickstart.gladestrings:109
-msgid "Use GRUB password"
-msgstr "Guna katalaluan GRUB"
-
-#: system-config-kickstart.gladestrings:110
-msgid "Password:"
-msgstr "Katalaluan:"
-
-#: system-config-kickstart.gladestrings:112
-msgid "Encrypt GRUB password"
-msgstr "Enkrip katalaluan GRUB"
-
-#: system-config-kickstart.gladestrings:113
-msgid "Install boot loader on Master Boot Record (MBR)"
-msgstr "Pasang pemuat boot pada Master Boot Record (MBR)"
-
-#: system-config-kickstart.gladestrings:114
-msgid "Install boot loader on first sector of the boot partition"
-msgstr "Pasang pemuat boot pada sektor pertama bagi partisyen boot"
-
-#: system-config-kickstart.gladestrings:115
-msgid "Kernel parameters:"
-msgstr "Parameter kernel:"
-
-#: system-config-kickstart.gladestrings:116
-msgid "label216"
-msgstr "label216"
-
-#: system-config-kickstart.gladestrings:117
-msgid "Boot Loader Options (required)"
-msgstr "Pilihan Pemuat Boot (diperlukan)"
-
-#: system-config-kickstart.gladestrings:118
-msgid "label35"
-msgstr "label35"
-
-#: system-config-kickstart.gladestrings:119
-msgid "Clear Master Boot Record"
-msgstr "Kosongkan Master Boot Record"
-
-#: system-config-kickstart.gladestrings:120
-msgid "Do not clear Master Boot Record"
-msgstr "Jangan kosongkan Master Boot Record"
-
-#: system-config-kickstart.gladestrings:121
-msgid "Remove all existing partitions"
-msgstr "Buang semua partisyen yang ada"
-
-#: system-config-kickstart.gladestrings:122
-msgid "Remove existing Linux partitions"
-msgstr "Buang partisyen Linux yang ada"
-
-#: system-config-kickstart.gladestrings:123
-msgid "Preserve existing partitions"
-msgstr "Kekalkan partisyen yang ada"
-
-#: system-config-kickstart.gladestrings:124
-msgid "Initialize the disk label"
-msgstr "Mulakan label cakera"
-
-#: system-config-kickstart.gladestrings:125
-msgid "Do not initialize the disk label"
-msgstr "Tidak dapat memulakan label cakera"
-
-#: system-config-kickstart.gladestrings:126
-msgid "_Add"
-msgstr "_Tambah"
-
-#: system-config-kickstart.gladestrings:127
-msgid "_Edit"
-msgstr "_Edit"
-
-#: system-config-kickstart.gladestrings:128
-msgid "_Delete"
-msgstr "Pa_dam"
-
-#: system-config-kickstart.gladestrings:129
-msgid "RAID"
-msgstr "RAID"
-
-#: system-config-kickstart.gladestrings:130
-msgid "Partition options are not applicable on upgrades."
-msgstr "Pilihan partisyen tidak digunapakai ketika naiktaraf."
-
-#: system-config-kickstart.gladestrings:131
-msgid "Partition Information (required)"
-msgstr "Maklumat Partisyen (diperlukan)"
-
-#: system-config-kickstart.gladestrings:132
-msgid "label30"
-msgstr "label30"
-
-#: system-config-kickstart.gladestrings:133
-msgid "_Add Network Device"
-msgstr "T_ambah Peranti Rangkaian"
-
-#: system-config-kickstart.gladestrings:134
-msgid "_Edit Network Device"
-msgstr "Sunting P_eranti Rangkaian"
-
-#: system-config-kickstart.gladestrings:135
-msgid "_Delete Network Device"
-msgstr "_Buang Peranti Rangkaian"
-
-#: system-config-kickstart.gladestrings:137
-msgid "label31"
-msgstr "label31"
-
-#: system-config-kickstart.gladestrings:138
-msgid "Authentication:"
-msgstr "Pengesahan:"
-
-#: system-config-kickstart.gladestrings:139
-msgid "Use Shadow Passwords"
-msgstr "Guna Katalaluan Bayang"
-
-#: system-config-kickstart.gladestrings:140
-msgid "Use MD5"
-msgstr "Guna MD5"
-
-#: system-config-kickstart.gladestrings:141
-msgid "Enable NIS"
-msgstr "Hidupkan NIS"
-
-#: system-config-kickstart.gladestrings:142
-msgid "NIS Domain:"
-msgstr "Domain NIS:"
-
-#: system-config-kickstart.gladestrings:143
-msgid "Use broadcast to find NIS server"
-msgstr "Guna siaran untuk mencari pelayan NIS"
-
-#: system-config-kickstart.gladestrings:144
-msgid "NIS Server:"
-msgstr "Pelayan NIS:"
-
-#: system-config-kickstart.gladestrings:145
-msgid "NIS Authentication"
-msgstr "Pengesahan NIS"
-
-#: system-config-kickstart.gladestrings:146
-msgid "NIS"
-msgstr "NIS"
-
-#: system-config-kickstart.gladestrings:147
-msgid "Enable LDAP"
-msgstr "Hidupkan LDAP"
-
-#: system-config-kickstart.gladestrings:148
-msgid "LDAP Server: "
-msgstr "Pelayan LDAP: "
-
-#: system-config-kickstart.gladestrings:149
-msgid "LDAP Base Name: "
-msgstr "Nama Asas LDAP:"
-
-#: system-config-kickstart.gladestrings:150
-msgid "LDAP Authentication"
-msgstr "Pengesahan LDAP"
-
-#: system-config-kickstart.gladestrings:151
-msgid "LDAP "
-msgstr "LDAP "
-
-#: system-config-kickstart.gladestrings:152
-msgid "Enable Kerberos 5 Authentication"
-msgstr "Hidupkan Pengesahan Kerberos 5"
-
-#: system-config-kickstart.gladestrings:153
-msgid "Kerberos Realm:"
-msgstr "Realm Kerberos:"
-
-#: system-config-kickstart.gladestrings:154
-msgid "Kerberos Domain Controller (KDC):"
-msgstr "Pengawal Domain Kerberos (KDC):"
-
-#: system-config-kickstart.gladestrings:155
-msgid "Kerberos Master Server:"
-msgstr "Pelayan Induk Kerberos:"
-
-#: system-config-kickstart.gladestrings:156
-msgid "Kerberos 5 Authentication"
-msgstr "Pengesahan Kerberos 5"
-
-#: system-config-kickstart.gladestrings:157
-msgid "Kerberos 5"
-msgstr "Kerberos 5"
-
-#: system-config-kickstart.gladestrings:158
-msgid "Enable Hesiod Support"
-msgstr "Hidupkan Sokongan Hesiod"
-
-#: system-config-kickstart.gladestrings:159
-msgid "Hesiod LHS:"
-msgstr "Hesiod LHS:"
-
-#: system-config-kickstart.gladestrings:160
-msgid "Hesiod RHS:"
-msgstr "Hesiod RHS:"
-
-#: system-config-kickstart.gladestrings:161
-msgid "Hesiod Authentication"
-msgstr "Pengesahan Hesiod"
-
-#: system-config-kickstart.gladestrings:162
-msgid "Hesiod"
-msgstr "Hesiod"
-
-#: system-config-kickstart.gladestrings:163
-msgid "Enable SMB Authentication"
-msgstr "Hidupkan Pengesahan SMB"
-
-#: system-config-kickstart.gladestrings:164
-msgid "SMB Servers:"
-msgstr "Pelayan SMB:"
-
-#: system-config-kickstart.gladestrings:165
-msgid "SMB Workgroup:"
-msgstr "Kumpulankerja SMB:"
-
-#: system-config-kickstart.gladestrings:166
-msgid "SMB Authentication"
-msgstr "Pengesahan SMB"
-
-#: system-config-kickstart.gladestrings:167
-msgid "SMB"
-msgstr "SMB"
-
-#: system-config-kickstart.gladestrings:168
-msgid "Enable nscd"
-msgstr "Hidupkan nscd"
-
-#: system-config-kickstart.gladestrings:169
-msgid "Name Switch Cache Daemon (nscd) Authentication"
-msgstr "Pengesahan Name Switch Cache Daemon (nscd)"
-
-#: system-config-kickstart.gladestrings:170
-msgid "Name Switch Cache"
-msgstr "Name Switch Cache"
-
-#: system-config-kickstart.gladestrings:171
-msgid "Authentication options are not applicable on upgrades."
-msgstr "Pilihan pengesahan tidak digunapakai ketika naiktaraf."
-
-#: system-config-kickstart.gladestrings:172
-msgid "Authentication Configuration"
-msgstr "Konfigurasi Pengesahan"
-
-#: system-config-kickstart.gladestrings:173
-msgid "label32"
-msgstr "label32"
-
-#: system-config-kickstart.gladestrings:174
-msgid "Security level:"
-msgstr "Tahap keselamatan:"
-
-#: system-config-kickstart.gladestrings:175
-msgid "Enable firewall"
-msgstr "Hidupkan firewall"
-
-#: system-config-kickstart.gladestrings:176
-msgid "Disable firewall"
-msgstr "Matikan firewall"
-
-#: system-config-kickstart.gladestrings:177
-msgid "SELinux:"
-msgstr "SELinux:"
-
-#: system-config-kickstart.gladestrings:178
-msgid "Active"
-msgstr "Aktif"
-
-#: system-config-kickstart.gladestrings:179
-msgid "Warn"
-msgstr "Amaran"
-
-#: system-config-kickstart.gladestrings:180
-#: system-config-kickstart.gladestrings:192
-msgid "Disabled"
-msgstr "Dimatikan"
-
-#: system-config-kickstart.gladestrings:181
-msgid "Firewall configuration is not applicable on upgrades."
-msgstr "Tetapan firewall tidak digunapakai ketika naiktaraf."
-
-#: system-config-kickstart.gladestrings:183
-msgid "label33"
-msgstr "label33"
-
-#: system-config-kickstart.gladestrings:184
-msgid "Configure the X Window System"
-msgstr "Tetapkan X Window System"
-
-#: system-config-kickstart.gladestrings:185
-msgid "Color Depth"
-msgstr "Kedalaman Warna"
-
-#: system-config-kickstart.gladestrings:186
-msgid "Resolution"
-msgstr "Resolusi"
-
-#: system-config-kickstart.gladestrings:187
-msgid "Default Desktop:"
-msgstr "Desktop Default:"
-
-#: system-config-kickstart.gladestrings:188
-msgid "GNOME"
-msgstr "GNOME"
-
-#: system-config-kickstart.gladestrings:189
-msgid "KDE"
-msgstr "KDE"
-
-#: system-config-kickstart.gladestrings:190
-msgid "Start the X Window System on boot"
-msgstr "Mula X Window System ketika boot"
-
-#: system-config-kickstart.gladestrings:191
-msgid "On first boot, Setup Agent is: "
-msgstr "Ketika boot pertama, Agen Tetapan ialah: "
-
-#: system-config-kickstart.gladestrings:193
-msgid "Enabled"
-msgstr "Hidupkan"
-
-#: system-config-kickstart.gladestrings:194
-msgid "Enabled in reconfiguration mode"
-msgstr "Dihidupkan dalam mod ulang tetapan"
-
-#: system-config-kickstart.gladestrings:195
-msgid "General"
-msgstr "Umum"
-
-#: system-config-kickstart.gladestrings:196
-msgid "Probe for video card driver"
-msgstr "Kesan pemandu kad video"
-
-#: system-config-kickstart.gladestrings:197
-msgid "Video Card RAM: "
-msgstr "RAM Video Kad:"
-
-#: system-config-kickstart.gladestrings:198
-msgid "Video Card"
-msgstr "Kad Video"
-
-#: system-config-kickstart.gladestrings:199
-msgid "Probe for monitor"
-msgstr "Kesan monitor"
-
-#: system-config-kickstart.gladestrings:200
-msgid "Use custom monitor sync rates"
-msgstr "Guna kadar segerak monitor sendiri"
-
-#: system-config-kickstart.gladestrings:201
-msgid "Hz"
-msgstr "Hz"
-
-#: system-config-kickstart.gladestrings:202
-msgid "kHz"
-msgstr "kHz"
-
-#: system-config-kickstart.gladestrings:203
-msgid "Vertical Sync:"
-msgstr "Gerakan Menegak:"
-
-#: system-config-kickstart.gladestrings:204
-msgid "Horizontal Sync:"
-msgstr "Gerakan Melintang:"
-
-#: system-config-kickstart.gladestrings:205
-msgid "Monitor"
-msgstr "Monitor"
-
-#: system-config-kickstart.gladestrings:206
-msgid "Display configuration is not applicable on upgrades."
-msgstr "Tetapan paparan tidak digunapakai ketika naiktaraf."
-
-#: system-config-kickstart.gladestrings:208
-msgid "label88"
-msgstr "label88"
-
-#: system-config-kickstart.gladestrings:209
-msgid "Select packages to install."
-msgstr "Pilih pakej untuk dipasang."
-
-#: system-config-kickstart.gladestrings:210
-msgid "_Install Everything"
-msgstr "_Pasang Semua"
-
-#: system-config-kickstart.gladestrings:211
-msgid "Desktops"
-msgstr "Desktop"
-
-#: system-config-kickstart.gladestrings:212
-msgid "Applications"
-msgstr "Aplikasi"
-
-#: system-config-kickstart.gladestrings:213
-msgid "Servers"
-msgstr "Pelayan"
-
-#: system-config-kickstart.gladestrings:214
-msgid "Development"
-msgstr "Pembangunan"
-
-#: system-config-kickstart.gladestrings:215
-msgid "System"
-msgstr "Sistem"
-
-#: system-config-kickstart.gladestrings:216
-msgid "Package selection is not applicable on upgrades."
-msgstr "Pilihan pakej tidak digunapakai ketika naiktaraf."
-
-#: system-config-kickstart.gladestrings:218
-msgid "label34"
-msgstr "label34"
-
-#: system-config-kickstart.gladestrings:219
-#, c-format
-msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %pre command at the beginning."
-msgstr "Amaran: Ralat dalam skrip ini mungkin menyebabkan pemasangan kickstart anda gagal. Jangan sertakan arahan %pre pada permulaan."
-
-#: system-config-kickstart.gladestrings:220
-#: system-config-kickstart.gladestrings:226
-msgid "Use an interpreter:"
-msgstr "Guna pentafsir:"
-
-#: system-config-kickstart.gladestrings:221
-#, c-format
-msgid "Type your %pre script below:"
-msgstr "Taip skrip %pre anda dibawah:"
-
-#: system-config-kickstart.gladestrings:223
-msgid "label89"
-msgstr "label89"
-
-#: system-config-kickstart.gladestrings:224
-#, c-format
-msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %post command at the beginning."
-msgstr "Amaran: Ralat dalam skrip ini mungkin menyebabkan pemasangan kickstart anda gagal. Jangan sertakan arahan %post pada permulaan."
-
-#: system-config-kickstart.gladestrings:225
-msgid "Run outside of the chroot environment"
-msgstr "Laksana diluar persekitaran chroot"
-
-#: system-config-kickstart.gladestrings:227
-#, c-format
-msgid "Type your %post script below:"
-msgstr "Taip skrip %post anda dibawah:"
-
-#: system-config-kickstart.gladestrings:229
-msgid "label93"
-msgstr "label93"
-
-#: system-config-kickstart.gladestrings:230
-msgid "Preview Options"
-msgstr "Pilihan Pralihat"
-
-#: system-config-kickstart.gladestrings:231
-msgid "_Save to File"
-msgstr "_Simpan ke fail"
-
-#: system-config-kickstart.gladestrings:232
-msgid "You have choosen the following configuration. Click Save File to save the kickstart file. "
-msgstr "Anda telah memilih tetapan berikut. Pilih Simpan Fail untuk menyimpan fail kickstart."
-
-#: system-config-kickstart.gladestrings:233
-msgid "RAID Options"
-msgstr "Pilihan RAID"
-
-#: system-config-kickstart.gladestrings:234
-msgid "Software RAID allows you to combine several disks into a larger RAID device.  A RAID device can be configured to provide additional speed and reliability compared to using an individual drive.  For more information on using RAID devices please consult the kickstart documentation."
-msgstr "RAID perisian membolehkan anda untuk menggabungkan beberapa cakera ke dalam peranti RAID yang besar. Peranti RAID boleh ditetapkan untuk memberikan kelajuan tambahan dan kebolehpercayaan berbanding menggunakan cakera individu. Untuk maklumat lanjut bagaimana menggunakan peranti RAID sila rujuk dokumentasi kickstart."
-
-#: system-config-kickstart.gladestrings:235
-msgid "To use RAID you must first create at least two partitions of type 'software RAID'.  Then you can create a RAID device which can be formatted and mounted."
-msgstr "Untuk menggunakan RAID anda mesti cipta sekurang-kurangnya dua partisyen berjenis 'RAID perisian'.  Kemudian anda boleh cipta peranti RAID yang boleh diformat dan dilekapkan."
-
-#: system-config-kickstart.gladestrings:236
-msgid "Choose one of the following options:"
-msgstr "Pilih salah satu daripada pilihan berikut:"
-
-#: system-config-kickstart.gladestrings:237
-msgid "Create a software RAID partition"
-msgstr "Cipta partisyen RAID perisian"
-
-#: system-config-kickstart.gladestrings:238
-msgid "Create a RAID device [default = /dev/md0]"
-msgstr "Cipta peranti RAID [default=/dev/md0]."
-
-#: system-config-kickstart.gladestrings:239
-msgid "Network Device Information"
-msgstr "Maklumat Peranti Rangkaian"
-
-#: system-config-kickstart.gladestrings:240
-msgid "Network Device:"
-msgstr "Peranti Rangkaian:"
-
-#: system-config-kickstart.gladestrings:241
-msgid "Network Type:"
-msgstr "Jenis Rangkaian:"
-
-#: system-config-kickstart.gladestrings:242
-msgid "IP Address:"
-msgstr "Alamat IP:"
-
-#: system-config-kickstart.gladestrings:243
-msgid "Netmask: "
-msgstr "Netmask: "
-
-#: system-config-kickstart.gladestrings:244
-msgid "Gateway:"
-msgstr "Gateway:"
-
-#: system-config-kickstart.gladestrings:245
-msgid "Name Server:"
-msgstr "Pelayan Nama:"
-
-#: system-config-kickstart.gladestrings:246
-#: system-config-kickstart.gladestrings:247
-#: system-config-kickstart.gladestrings:248
-#: system-config-kickstart.gladestrings:249
-#: system-config-kickstart.gladestrings:250
-#: system-config-kickstart.gladestrings:251
-#: system-config-kickstart.gladestrings:252
-#: system-config-kickstart.gladestrings:253
-#: system-config-kickstart.gladestrings:254
-#: system-config-kickstart.gladestrings:255
-#: system-config-kickstart.gladestrings:256
-#: system-config-kickstart.gladestrings:257
+#: tmp/system-config-kickstart.glade.h:4
 msgid "."
 msgstr "."
 
+#: tmp/system-config-kickstart.glade.h:5
+msgid "0"
+msgstr "0"
+
+#: tmp/system-config-kickstart.glade.h:6
+msgid "1"
+msgstr "1"
+
+#: tmp/system-config-kickstart.glade.h:7
+msgid "5"
+msgstr "5"
+
+#: tmp/system-config-kickstart.glade.h:8
+msgid "Active"
+msgstr "Aktif"
+
+#: tmp/system-config-kickstart.glade.h:9
+msgid "Additional Size Options"
+msgstr "Opsyen Saiz Tambahan"
+
+#: tmp/system-config-kickstart.glade.h:10
+msgid "Authentication Configuration"
+msgstr "Konfigurasi Pengesahan"
+
+#: tmp/system-config-kickstart.glade.h:11
+msgid "Authentication options are not applicable on upgrades."
+msgstr "Pilihan pengesahan tidak digunapakai ketika naiktaraf."
+
+#: tmp/system-config-kickstart.glade.h:12
+msgid "Authentication:"
+msgstr "Pengesahan:"
+
+#: tmp/system-config-kickstart.glade.h:13
+msgid "Basic Configuration (required)"
+msgstr "Tetapan Asas (diperlukan)"
+
+#: tmp/system-config-kickstart.glade.h:14
+msgid "Boot Loader Options (required)"
+msgstr "Pilihan Pemuat Boot (diperlukan)"
+
+#: tmp/system-config-kickstart.glade.h:15
+msgid "CD-ROM"
+msgstr "CD-ROM"
+
+#: tmp/system-config-kickstart.glade.h:16
+msgid "Choose one of the following options:"
+msgstr "Pilih salah satu daripada pilihan berikut:"
+
+#: tmp/system-config-kickstart.glade.h:17
+msgid "Choose the Installation Method:"
+msgstr "Pilih Kaedah Pemasangan:"
+
+#: tmp/system-config-kickstart.glade.h:18
+msgid "Clear Master Boot Record"
+msgstr "Kosongkan Master Boot Record"
+
+#: tmp/system-config-kickstart.glade.h:19
+msgid "Color Depth"
+msgstr "Kedalaman Warna"
+
+#: tmp/system-config-kickstart.glade.h:20
+msgid "Configure the X Window System"
+msgstr "Tetapkan X Window System"
+
+#: tmp/system-config-kickstart.glade.h:21
+msgid "Confirm Password:"
+msgstr "Kepastian Katalaluan:"
+
+#: tmp/system-config-kickstart.glade.h:22
+msgid "Create a RAID device [default = /dev/md0]"
+msgstr "Cipta peranti RAID [default=/dev/md0]."
+
+#: tmp/system-config-kickstart.glade.h:23
+msgid "Create a software RAID partition"
+msgstr "Cipta partisyen RAID perisian"
+
+#: tmp/system-config-kickstart.glade.h:24
+msgid "Default Desktop:"
+msgstr "Desktop Default:"
+
+#: tmp/system-config-kickstart.glade.h:25
+msgid "Default Language:"
+msgstr "Bahasa Default:"
+
+#: tmp/system-config-kickstart.glade.h:26
+msgid "Disable firewall"
+msgstr "Matikan firewall"
+
+#: tmp/system-config-kickstart.glade.h:27
+msgid "Disabled"
+msgstr "Dimatikan"
+
+#: tmp/system-config-kickstart.glade.h:29
+msgid "Display configuration is not applicable on upgrades."
+msgstr "Tetapan paparan tidak digunapakai ketika naiktaraf."
+
+#: tmp/system-config-kickstart.glade.h:30
+msgid "Do not clear Master Boot Record"
+msgstr "Jangan kosongkan Master Boot Record"
+
+#: tmp/system-config-kickstart.glade.h:31
+msgid "Do not initialize the disk label"
+msgstr "Tidak dapat memulakan label cakera"
+
+#: tmp/system-config-kickstart.glade.h:32
+msgid "Do not install a boot loader"
+msgstr "Jangan pasang pemuat but"
+
+#: tmp/system-config-kickstart.glade.h:33
+msgid "Drive :"
+msgstr "Pemacu :"
+
+#: tmp/system-config-kickstart.glade.h:34
+msgid "Enable Hesiod Support"
+msgstr "Hidupkan Sokongan Hesiod"
+
+#: tmp/system-config-kickstart.glade.h:35
+msgid "Enable Kerberos 5 Authentication"
+msgstr "Hidupkan Pengesahan Kerberos 5"
+
+#: tmp/system-config-kickstart.glade.h:36
+msgid "Enable LDAP"
+msgstr "Hidupkan LDAP"
+
+#: tmp/system-config-kickstart.glade.h:37
+msgid "Enable NIS"
+msgstr "Hidupkan NIS"
+
+#: tmp/system-config-kickstart.glade.h:38
+msgid "Enable SMB Authentication"
+msgstr "Hidupkan Pengesahan SMB"
+
+#: tmp/system-config-kickstart.glade.h:39
+msgid "Enable firewall"
+msgstr "Hidupkan firewall"
+
+#: tmp/system-config-kickstart.glade.h:40
+msgid "Enable nscd"
+msgstr "Hidupkan nscd"
+
+#: tmp/system-config-kickstart.glade.h:41
+msgid "Enabled"
+msgstr "Hidupkan"
+
+#: tmp/system-config-kickstart.glade.h:42
+msgid "Enabled in reconfiguration mode"
+msgstr "Dihidupkan dalam mod ulang tetapan"
+
+#: tmp/system-config-kickstart.glade.h:43
+msgid "Encrypt GRUB password"
+msgstr "Enkrip katalaluan GRUB"
+
+#: tmp/system-config-kickstart.glade.h:44
+msgid "Encrypt root password"
+msgstr "Enkrip katalaluan root"
+
+#: tmp/system-config-kickstart.glade.h:45
+msgid "FTP"
+msgstr "FTP"
+
+#: tmp/system-config-kickstart.glade.h:46
+msgid "FTP Directory:"
+msgstr "Direktori FTP:"
+
+#: tmp/system-config-kickstart.glade.h:47
+msgid "FTP Password"
+msgstr "Katalaluan FTP"
+
+#: tmp/system-config-kickstart.glade.h:48
+msgid "FTP Server:"
+msgstr "Pelayan FTP:"
+
+#: tmp/system-config-kickstart.glade.h:49
+msgid "FTP Username"
+msgstr "Namapengguna FTP"
+
+#: tmp/system-config-kickstart.glade.h:50
+msgid "File System Type:"
+msgstr "Jenis Sistem Fail:"
+
+#: tmp/system-config-kickstart.glade.h:51
+msgid "Fill all unused space on disk"
+msgstr "Isi semua ruang yang belum digunakan pada cakera"
+
+#: tmp/system-config-kickstart.glade.h:53
+msgid "Firewall configuration is not applicable on upgrades."
+msgstr "Tetapan firewall tidak digunapakai ketika naiktaraf."
+
+#: tmp/system-config-kickstart.glade.h:54
+msgid "Fixed size"
+msgstr "Saiz tetap"
+
+#: tmp/system-config-kickstart.glade.h:55
+msgid "Force to be a primary partition (asprimary)"
+msgstr "Paksa untuk menjadi partisyen utama (asprimary)"
+
+#: tmp/system-config-kickstart.glade.h:56
+msgid "Format RAID device"
+msgstr "Format peranti RAID"
+
+#: tmp/system-config-kickstart.glade.h:57
+msgid "Format partition"
+msgstr "Format partisyen"
+
+#: tmp/system-config-kickstart.glade.h:58
+msgid "GNOME"
+msgstr "GNOME"
+
+#: tmp/system-config-kickstart.glade.h:59
+msgid "GRUB Options:"
+msgstr "Pilihan GRUB:"
+
+#: tmp/system-config-kickstart.glade.h:60
+msgid "Gateway:"
+msgstr "Gateway:"
+
+#: tmp/system-config-kickstart.glade.h:61
+msgid "General"
+msgstr "Umum"
+
+#: tmp/system-config-kickstart.glade.h:62
+msgid "Grow to maximum of (MB):"
+msgstr "Membesar ke maksima (MB):"
+
+#: tmp/system-config-kickstart.glade.h:63
+msgid "HTTP"
+msgstr "HTTP"
+
+#: tmp/system-config-kickstart.glade.h:64
+msgid "HTTP Directory:"
+msgstr "Direktori HTTP:"
+
+#: tmp/system-config-kickstart.glade.h:65
+msgid "HTTP Server:"
+msgstr "Pelayan HTTP:"
+
+#: tmp/system-config-kickstart.glade.h:66
+msgid "Hard Drive"
+msgstr "Pemacu Keras"
+
+#: tmp/system-config-kickstart.glade.h:67
+msgid "Hard Drive Directory:"
+msgstr "Direktori Pemacu Keras:"
+
+#: tmp/system-config-kickstart.glade.h:68
+msgid "Hard Drive Partition:"
+msgstr "Partisyen Pemacu Keras:"
+
+#: tmp/system-config-kickstart.glade.h:69
+msgid "Hesiod"
+msgstr "Hesiod"
+
+#: tmp/system-config-kickstart.glade.h:70
+msgid "Hesiod Authentication"
+msgstr "Pengesahan Hesiod"
+
+#: tmp/system-config-kickstart.glade.h:71
+msgid "Hesiod LHS:"
+msgstr "Hesiod LHS:"
+
+#: tmp/system-config-kickstart.glade.h:72
+msgid "Hesiod RHS:"
+msgstr "Hesiod RHS:"
+
+#: tmp/system-config-kickstart.glade.h:73
+msgid "Horizontal Sync:"
+msgstr "Gerakan Melintang:"
+
+#: tmp/system-config-kickstart.glade.h:74
+msgid "Hz"
+msgstr "Hz"
+
+#: tmp/system-config-kickstart.glade.h:75
+msgid "IP Address:"
+msgstr "Alamat IP:"
+
+#: tmp/system-config-kickstart.glade.h:76
+msgid "Initialize the disk label"
+msgstr "Mulakan label cakera"
+
+#: tmp/system-config-kickstart.glade.h:77
+msgid "Install boot loader on Master Boot Record (MBR)"
+msgstr "Pasang pemuat boot pada Master Boot Record (MBR)"
+
+#: tmp/system-config-kickstart.glade.h:78
+msgid "Install boot loader on first sector of the boot partition"
+msgstr "Pasang pemuat boot pada sektor pertama bagi partisyen boot"
+
+#: tmp/system-config-kickstart.glade.h:79
+msgid "Install new boot loader"
+msgstr "Pasang pemuat but baru"
+
+#: tmp/system-config-kickstart.glade.h:80
+msgid "Installation Method (required)"
+msgstr "Kaedah Pemasangan (diperlukan)"
+
+#: tmp/system-config-kickstart.glade.h:81
+msgid "KDE"
+msgstr "KDE"
+
+#: tmp/system-config-kickstart.glade.h:82
+msgid "Kerberos 5"
+msgstr "Kerberos 5"
+
+#: tmp/system-config-kickstart.glade.h:83
+msgid "Kerberos 5 Authentication"
+msgstr "Pengesahan Kerberos 5"
+
+#: tmp/system-config-kickstart.glade.h:84
+msgid "Kerberos Domain Controller (KDC):"
+msgstr "Pengawal Domain Kerberos (KDC):"
+
+#: tmp/system-config-kickstart.glade.h:85
+msgid "Kerberos Master Server:"
+msgstr "Pelayan Induk Kerberos:"
+
+#: tmp/system-config-kickstart.glade.h:86
+msgid "Kerberos Realm:"
+msgstr "Realm Kerberos:"
+
+#: tmp/system-config-kickstart.glade.h:87
+msgid "Kernel parameters:"
+msgstr "Parameter kernel:"
+
+#: tmp/system-config-kickstart.glade.h:88
+msgid "Keyboard:"
+msgstr "Papan Kekunci:"
+
+#: tmp/system-config-kickstart.glade.h:89
+msgid "Kickstart Configurator"
+msgstr "Penentutetap Kickstart"
+
+#: tmp/system-config-kickstart.glade.h:90
+msgid "LDAP "
+msgstr "LDAP "
+
+#: tmp/system-config-kickstart.glade.h:91
+msgid "LDAP Authentication"
+msgstr "Pengesahan LDAP"
+
+#: tmp/system-config-kickstart.glade.h:92
+msgid "LDAP Base Name: "
+msgstr "Nama Asas LDAP:"
+
+#: tmp/system-config-kickstart.glade.h:93
+msgid "LDAP Server: "
+msgstr "Pelayan LDAP: "
+
+#: tmp/system-config-kickstart.glade.h:94
+msgid "Make RAID Device"
+msgstr "Jadikan Peranti RAID."
+
+#: tmp/system-config-kickstart.glade.h:95
+msgid "Make partition on specific drive (ondisk)"
+msgstr "Buat partisyen pada pemacu spesifik (ondisk)"
+
+#: tmp/system-config-kickstart.glade.h:96
+msgid "Monitor"
+msgstr "Monitor"
+
+#: tmp/system-config-kickstart.glade.h:97
+msgid "Mount Point:"
+msgstr "Titik Lekapan:"
+
+#: tmp/system-config-kickstart.glade.h:98
+msgid "NFS"
+msgstr "NFS"
+
+#: tmp/system-config-kickstart.glade.h:99
+msgid "NFS Directory:"
+msgstr "Direktori NFS:"
+
+#: tmp/system-config-kickstart.glade.h:100
+msgid "NFS Server:"
+msgstr "Pelayan NFS:"
+
+#: tmp/system-config-kickstart.glade.h:101
+msgid "NIS"
+msgstr "NIS"
+
+#: tmp/system-config-kickstart.glade.h:102
+msgid "NIS Authentication"
+msgstr "Pengesahan NIS"
+
+#: tmp/system-config-kickstart.glade.h:103
+msgid "NIS Domain:"
+msgstr "Domain NIS:"
+
+#: tmp/system-config-kickstart.glade.h:104
+msgid "NIS Server:"
+msgstr "Pelayan NIS:"
+
+#: tmp/system-config-kickstart.glade.h:105
+msgid "Name Server:"
+msgstr "Pelayan Nama:"
+
+#: tmp/system-config-kickstart.glade.h:106
+msgid "Name Switch Cache"
+msgstr "Name Switch Cache"
+
+#: tmp/system-config-kickstart.glade.h:107
+msgid "Name Switch Cache Daemon (nscd) Authentication"
+msgstr "Pengesahan Name Switch Cache Daemon (nscd)"
+
+#: tmp/system-config-kickstart.glade.h:108
+msgid "Netmask: "
+msgstr "Netmask: "
+
+#: tmp/system-config-kickstart.glade.h:110
+msgid "Network Device Information"
+msgstr "Maklumat Peranti Rangkaian"
+
+#: tmp/system-config-kickstart.glade.h:111
+msgid "Network Device:"
+msgstr "Peranti Rangkaian:"
+
+#: tmp/system-config-kickstart.glade.h:112
+msgid "Network Type:"
+msgstr "Jenis Rangkaian:"
+
+#: tmp/system-config-kickstart.glade.h:113
+msgid "Number of spares:"
+msgstr "Bilangan gantian:"
+
+#: tmp/system-config-kickstart.glade.h:114
+msgid "On first boot, Setup Agent is: "
+msgstr "Ketika boot pertama, Agen Tetapan ialah: "
+
+#: tmp/system-config-kickstart.glade.h:116
+msgid "Partition :"
+msgstr "Partisyen :"
+
+#: tmp/system-config-kickstart.glade.h:117
+msgid "Partition Information (required)"
+msgstr "Maklumat Partisyen (diperlukan)"
+
+#: tmp/system-config-kickstart.glade.h:118
+msgid "Partition Options"
+msgstr "Pilihan Partisyen"
+
+#: tmp/system-config-kickstart.glade.h:119
+msgid "Partition options are not applicable on upgrades."
+msgstr "Pilihan partisyen tidak digunapakai ketika naiktaraf."
+
+#: tmp/system-config-kickstart.glade.h:120
+msgid "Password:"
+msgstr "Katalaluan:"
+
+#: tmp/system-config-kickstart.glade.h:121
+msgid "Perform installation in interactive mode"
+msgstr "Laksana pemasangan dalam mod interaktif"
+
+#: tmp/system-config-kickstart.glade.h:122
+msgid "Perform installation in text mode (graphical is default)"
+msgstr "Laksana pemasangan dalam mod teks (bergrafik adalah default)"
+
+#: tmp/system-config-kickstart.glade.h:123
+msgid "Perform new installation"
+msgstr "Laksana pemasangan baru"
+
+#: tmp/system-config-kickstart.glade.h:126
+msgid "Preserve existing partitions"
+msgstr "Kekalkan partisyen yang ada"
+
+#: tmp/system-config-kickstart.glade.h:127
+msgid "Preview Options"
+msgstr "Pilihan Pralihat"
+
+#: tmp/system-config-kickstart.glade.h:128
+msgid "Probe for monitor"
+msgstr "Kesan monitor"
+
+#: tmp/system-config-kickstart.glade.h:129
+msgid "Probe for video card driver"
+msgstr "Kesan pemandu kad video"
+
+#: tmp/system-config-kickstart.glade.h:130
+msgid "RAID"
+msgstr "RAID"
+
+#: tmp/system-config-kickstart.glade.h:131
+msgid "RAID Device:"
+msgstr "Peranti RAID:"
+
+#: tmp/system-config-kickstart.glade.h:132
+msgid "RAID Level:"
+msgstr "Aras RAID:"
+
+#: tmp/system-config-kickstart.glade.h:133
+msgid "RAID Options"
+msgstr "Pilihan RAID"
+
+#: tmp/system-config-kickstart.glade.h:134
+msgid "Raid Members"
+msgstr "Ahli RAID"
+
+#: tmp/system-config-kickstart.glade.h:135
+msgid "Reboot system after installation"
+msgstr "Ulangbut sistem selepas pemasangan"
+
+#: tmp/system-config-kickstart.glade.h:136
+msgid "Remove all existing partitions"
+msgstr "Buang semua partisyen yang ada"
+
+#: tmp/system-config-kickstart.glade.h:137
+msgid "Remove existing Linux partitions"
+msgstr "Buang partisyen Linux yang ada"
+
+#: tmp/system-config-kickstart.glade.h:138
+msgid "Resolution"
+msgstr "Resolusi"
+
+#: tmp/system-config-kickstart.glade.h:139
+msgid "Root Password:"
+msgstr "Katalaluan Root:"
+
+#: tmp/system-config-kickstart.glade.h:140
+msgid "Run outside of the chroot environment"
+msgstr "Laksana diluar persekitaran chroot"
+
+#: tmp/system-config-kickstart.glade.h:141
+msgid "SELinux:"
+msgstr "SELinux:"
+
+#: tmp/system-config-kickstart.glade.h:142
+msgid "SMB"
+msgstr "SMB"
+
+#: tmp/system-config-kickstart.glade.h:143
+msgid "SMB Authentication"
+msgstr "Pengesahan SMB"
+
+#: tmp/system-config-kickstart.glade.h:144
+msgid "SMB Servers:"
+msgstr "Pelayan SMB:"
+
+#: tmp/system-config-kickstart.glade.h:145
+msgid "SMB Workgroup:"
+msgstr "Kumpulankerja SMB:"
+
+#: tmp/system-config-kickstart.glade.h:146
+msgid "Security level:"
+msgstr "Tahap keselamatan:"
+
+#: tmp/system-config-kickstart.glade.h:147
+msgid "Size (MB):"
+msgstr "Saiz (MB):"
+
+#: tmp/system-config-kickstart.glade.h:148
+msgid ""
+"Software RAID allows you to combine several disks into a larger RAID "
+"device.  A RAID device can be configured to provide additional speed and "
+"reliability compared to using an individual drive.  For more information on "
+"using RAID devices please consult the kickstart documentation."
+msgstr ""
+"RAID perisian membolehkan anda untuk menggabungkan beberapa cakera ke dalam "
+"peranti RAID yang besar. Peranti RAID boleh ditetapkan untuk memberikan "
+"kelajuan tambahan dan kebolehpercayaan berbanding menggunakan cakera "
+"individu. Untuk maklumat lanjut bagaimana menggunakan peranti RAID sila "
+"rujuk dokumentasi kickstart."
+
+#: tmp/system-config-kickstart.glade.h:149
+msgid "Specify an FTP username and password"
+msgstr "Nyatakan namapengguna FTP dan katalaluan"
+
+#: tmp/system-config-kickstart.glade.h:150
+msgid "Start the X Window System on boot"
+msgstr "Mula X Window System ketika boot"
+
+#: tmp/system-config-kickstart.glade.h:151
+msgid "Target Architecture:"
+msgstr "Rekabentuk Sasaran:"
+
+#: tmp/system-config-kickstart.glade.h:152
+msgid "Time Zone:"
+msgstr "Zon Waktu:"
+
+#: tmp/system-config-kickstart.glade.h:153
+msgid ""
+"To use RAID you must first create at least two partitions of type 'software "
+"RAID'.  Then you can create a RAID device which can be formatted and mounted."
+msgstr ""
+"Untuk menggunakan RAID anda mesti cipta sekurang-kurangnya dua partisyen "
+"berjenis 'RAID perisian'.  Kemudian anda boleh cipta peranti RAID yang boleh "
+"diformat dan dilekapkan."
+
+#: tmp/system-config-kickstart.glade.h:155
+#, no-c-format
+msgid "Type your %post script below:"
+msgstr "Taip skrip %post anda dibawah:"
+
+#: tmp/system-config-kickstart.glade.h:157
+#, no-c-format
+msgid "Type your %pre script below:"
+msgstr "Taip skrip %pre anda dibawah:"
+
+#: tmp/system-config-kickstart.glade.h:158
+msgid "Upgrade an existing installation"
+msgstr "Naiktaraf pemasangan sedia ada"
+
+#: tmp/system-config-kickstart.glade.h:159
+msgid "Upgrade existing boot loader"
+msgstr "Naiktaraf pemuat boot sedia ada"
+
+#: tmp/system-config-kickstart.glade.h:160
+msgid "Use GRUB password"
+msgstr "Guna katalaluan GRUB"
+
+#: tmp/system-config-kickstart.glade.h:161
+msgid "Use MD5"
+msgstr "Guna MD5"
+
+#: tmp/system-config-kickstart.glade.h:162
+msgid "Use Shadow Passwords"
+msgstr "Guna Katalaluan Bayang"
+
+#: tmp/system-config-kickstart.glade.h:163
+msgid "Use UTC clock"
+msgstr "Guna Jam UTC"
+
+#: tmp/system-config-kickstart.glade.h:164
+msgid "Use an interpreter:"
+msgstr "Guna pentafsir:"
+
+#: tmp/system-config-kickstart.glade.h:165
+msgid "Use broadcast to find NIS server"
+msgstr "Guna siaran untuk mencari pelayan NIS"
+
+#: tmp/system-config-kickstart.glade.h:166
+msgid "Use custom monitor sync rates"
+msgstr "Guna kadar segerak monitor sendiri"
+
+#: tmp/system-config-kickstart.glade.h:167
+msgid "Use existing partition (onpart)"
+msgstr "Guna partisyen sedia ada (onpart)"
+
+#: tmp/system-config-kickstart.glade.h:168
+msgid "Use recommended swap size"
+msgstr "Guna saiz swap yang disyorkan"
+
+#: tmp/system-config-kickstart.glade.h:169
+msgid "Vertical Sync:"
+msgstr "Gerakan Menegak:"
+
+#: tmp/system-config-kickstart.glade.h:170
+msgid "Video Card"
+msgstr "Kad Video"
+
+#: tmp/system-config-kickstart.glade.h:171
+msgid "Video Card RAM: "
+msgstr "RAM Video Kad:"
+
+#: tmp/system-config-kickstart.glade.h:172
+msgid "Warn"
+msgstr "Amaran"
+
+#: tmp/system-config-kickstart.glade.h:174
+#, no-c-format
+msgid ""
+"Warning: An error in this script might cause your kickstart installation to "
+"fail. Do not include the %post command at the beginning."
+msgstr ""
+"Amaran: Ralat dalam skrip ini mungkin menyebabkan pemasangan kickstart anda "
+"gagal. Jangan sertakan arahan %post pada permulaan."
+
+#: tmp/system-config-kickstart.glade.h:176
+#, no-c-format
+msgid ""
+"Warning: An error in this script might cause your kickstart installation to "
+"fail. Do not include the %pre command at the beginning."
+msgstr ""
+"Amaran: Ralat dalam skrip ini mungkin menyebabkan pemasangan kickstart anda "
+"gagal. Jangan sertakan arahan %pre pada permulaan."
+
+#: tmp/system-config-kickstart.glade.h:177
+msgid ""
+"You have choosen the following configuration. Click Save File to save the "
+"kickstart file. "
+msgstr ""
+"Anda telah memilih tetapan berikut. Pilih Simpan Fail untuk menyimpan fail "
+"kickstart."
+
+#: tmp/system-config-kickstart.glade.h:178
+msgid "_About"
+msgstr "_Perihal"
+
+#: tmp/system-config-kickstart.glade.h:179
+msgid "_Add"
+msgstr "_Tambah"
+
+#: tmp/system-config-kickstart.glade.h:180
+msgid "_Add Network Device"
+msgstr "T_ambah Peranti Rangkaian"
+
+#: tmp/system-config-kickstart.glade.h:181
+msgid "_Contents"
+msgstr "_Kandungan"
+
+#: tmp/system-config-kickstart.glade.h:182
+msgid "_Delete"
+msgstr "Pa_dam"
+
+#: tmp/system-config-kickstart.glade.h:183
+msgid "_Delete Network Device"
+msgstr "_Buang Peranti Rangkaian"
+
+#: tmp/system-config-kickstart.glade.h:184
+msgid "_Edit"
+msgstr "_Edit"
+
+#: tmp/system-config-kickstart.glade.h:185
+msgid "_Edit Network Device"
+msgstr "Sunting P_eranti Rangkaian"
+
+#: tmp/system-config-kickstart.glade.h:186
+msgid "_File"
+msgstr "_Fail"
+
+#: tmp/system-config-kickstart.glade.h:187
+msgid "_Help"
+msgstr "_Bantuan"
+
+#: tmp/system-config-kickstart.glade.h:188
+msgid "_Open File"
+msgstr "_Buka Fail"
+
+#: tmp/system-config-kickstart.glade.h:189
+msgid "_Preview"
+msgstr "_Pralihat"
+
+#: tmp/system-config-kickstart.glade.h:190
+msgid "_Quit"
+msgstr "_Keluar"
+
+#: tmp/system-config-kickstart.glade.h:191
+msgid "_Save File"
+msgstr "_Simpan Fail"
+
+#: tmp/system-config-kickstart.glade.h:192
+msgid "_Save to File"
+msgstr "_Simpan ke fail"
+
+#: tmp/system-config-kickstart.glade.h:195
+msgid "kHz"
+msgstr "kHz"
+
+#: tmp/system-config-kickstart.glade.h:196
+msgid "md0"
+msgstr "md0"
+
+#: tmp/system-config-kickstart.glade.h:197
+msgid "md1"
+msgstr "md1"
+
+#: tmp/system-config-kickstart.glade.h:198
+msgid "md10"
+msgstr "md10"
+
+#: tmp/system-config-kickstart.glade.h:199
+msgid "md11"
+msgstr "md11"
+
+#: tmp/system-config-kickstart.glade.h:200
+msgid "md12"
+msgstr "md12"
+
+#: tmp/system-config-kickstart.glade.h:201
+msgid "md13"
+msgstr "md13"
+
+#: tmp/system-config-kickstart.glade.h:202
+msgid "md14"
+msgstr "md14"
+
+#: tmp/system-config-kickstart.glade.h:203
+msgid "md15"
+msgstr "md15"
+
+#: tmp/system-config-kickstart.glade.h:204
+msgid "md2"
+msgstr "md2"
+
+#: tmp/system-config-kickstart.glade.h:205
+msgid "md3"
+msgstr "md3"
+
+#: tmp/system-config-kickstart.glade.h:206
+msgid "md4"
+msgstr "md4"
+
+#: tmp/system-config-kickstart.glade.h:207
+msgid "md5"
+msgstr "md5"
+
+#: tmp/system-config-kickstart.glade.h:208
+msgid "md6"
+msgstr "md6"
+
+#: tmp/system-config-kickstart.glade.h:209
+msgid "md7"
+msgstr "md7"
+
+#: tmp/system-config-kickstart.glade.h:210
+msgid "md8"
+msgstr "md8"
+
+#: tmp/system-config-kickstart.glade.h:211
+msgid "md9"
+msgstr "md9"
+
+#~ msgid "Please select a root password."
+#~ msgstr "Sila pilih katalaluan root."
+
+#~ msgid "Could not start because there is no %s file."
+#~ msgstr "Tidak dapat bermula kerana tiada fail %s."
+
+#~ msgid "Please make sure the comps package is installed."
+#~ msgstr "Sila pastikan pakej comps dipasang."
+
+#~ msgid ""
+#~ "The device you specified is not a valid device name. Please use a valid "
+#~ "device name such as \"hda1\" or \"sda3\"."
+#~ msgstr ""
+#~ "Peranti yang anda nyatakan adalah nama peranti yang tidak sah. Sila "
+#~ "gunakan nama peranti yang sah seperti \"hda1\" atau \"sda3\"."
+
+#~ msgid ""
+#~ "The partition you specified does not begin with \"hd\" or \"sd\".  "
+#~ "Partitions must have a valid device name and partition number such as "
+#~ "\"hda1\" or \"sda3\"."
+#~ msgstr ""
+#~ "Partisyen yang anda nyatakan tidak dimulakan dengan \"hd\" atau \"sd\". "
+#~ "Partisyen mesti mempunyai nama peranti yang sah dan nombor partisyen "
+#~ "seperti \"hda1\" atau \"sda3\""
+
+#~ msgid ""
+#~ "Usage: system-config-kickstart [--help] [--generate <filename>] "
+#~ "[<kickstart_filename>]\n"
+#~ "        \n"
+#~ "--help                  Print out this message\n"
+#~ "--generate <filename>   Generate a kickstart file from the current "
+#~ "machine and write\n"
+#~ "                        it to <filename>.  This option runs on the "
+#~ "console, so it is\n"
+#~ "                        useful for servers that do not have X currently "
+#~ "running.\n"
+#~ "<kickstart_filename>    This option will cause the GUI to launch with the "
+#~ "values from\n"
+#~ "                        the kickstart file already filled in."
+#~ msgstr ""
+#~ "Penggunaan: system-config-kickstart [--help] [--generate <namafail>] "
+#~ "[<namafail_kickstart>]\n"
+#~ "        \n"
+#~ "--help                  Papar mesej ini\n"
+#~ "--generate <namafail>   Jana fail kickstart daripada mesin semasa dan "
+#~ "tulis\n"
+#~ "                        kepada <namafail>.  Pilihan ini dilaksana pada "
+#~ "konsol, jadi ia\n"
+#~ "                        berguna untuk pelayan yang tidak mempunyai X "
+#~ "sedang dilaksanakan.\n"
+#~ "<namafail_kickstart>    Pilihan ini akan menyebabkan GUI untuk "
+#~ "dilaksanakan dengan nilai\n"
+#~ "                        dari fail kickstart yang telah diisi."
+
+#~ msgid "Could not open display because no X server is running."
+#~ msgstr "Tidak dapat membuka paparan kerana tiada pelayan X dilaksanakan."
+
+#~ msgid "Try running 'system-config-kickstart --help' for a list of options."
+#~ msgstr ""
+#~ "Cuba laksanakan 'system-config-kickstart --help' untuk senarai pilihan."
+
+#~ msgid "label28"
+#~ msgstr "label28"
+
+#~ msgid "label128"
+#~ msgstr "label128"
+
+#~ msgid "label216"
+#~ msgstr "label216"
+
+#~ msgid "label35"
+#~ msgstr "label35"
+
+#~ msgid "label30"
+#~ msgstr "label30"
+
+#~ msgid "label31"
+#~ msgstr "label31"
+
+#~ msgid "label32"
+#~ msgstr "label32"
+
+#~ msgid "label33"
+#~ msgstr "label33"
+
+#~ msgid "label88"
+#~ msgstr "label88"
+
+#~ msgid "Select packages to install."
+#~ msgstr "Pilih pakej untuk dipasang."
+
+#~ msgid "_Install Everything"
+#~ msgstr "_Pasang Semua"
+
+#~ msgid "Desktops"
+#~ msgstr "Desktop"
+
+#~ msgid "Applications"
+#~ msgstr "Aplikasi"
+
+#~ msgid "Servers"
+#~ msgstr "Pelayan"
+
+#~ msgid "Development"
+#~ msgstr "Pembangunan"
+
+#~ msgid "System"
+#~ msgstr "Sistem"
+
+#~ msgid "Package selection is not applicable on upgrades."
+#~ msgstr "Pilihan pakej tidak digunapakai ketika naiktaraf."
+
+#~ msgid "label34"
+#~ msgstr "label34"
+
+#~ msgid "label89"
+#~ msgstr "label89"
+
+#~ msgid "label93"
+#~ msgstr "label93"
