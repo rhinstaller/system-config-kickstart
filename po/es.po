@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-21 11:59-0500\n"
-"PO-Revision-Date: 2005-04-09 19:54-0300\n"
-"Last-Translator: Rodolfo Raya <rodolfo@heartsome.net>\n"
+"PO-Revision-Date: 2006-11-22 19:13-0300\n"
+"Last-Translator: Domingo E. Becker <beckerde@hotmail.com>\n"
 "Language-Team: Spanish <fedora-trans-es@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,16 +51,18 @@ msgstr "IBM zSeries/s390"
 msgid "Root passwords do not match."
 msgstr "Las contraseñas de root no coinciden."
 
-#: ../src/basic.py:150 ../src/install.py:218 ../src/partWindow.py:522
-#: ../src/partition.py:255 ../src/raidWindow.py:249
+#: ../src/basic.py:150
+#: ../src/install.py:218
+#: ../src/partWindow.py:522
+#: ../src/partition.py:255
+#: ../src/raidWindow.py:249
 msgid "Error"
 msgstr "Error"
 
 #: ../src/bootloader.py:81
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
-msgstr ""
-"Las opciones del gestor de arranque no son aplicables a la plataforma %s"
+msgstr "Las opciones del gestor de arranque no son aplicables a la plataforma %s"
 
 #: ../src/bootloader.py:121
 msgid "Grub passwords do not match.  Please try again."
@@ -156,7 +158,8 @@ msgid "Partition Information"
 msgstr "Información de las particiones"
 
 # ../src/ksconfig_gui.py:120 ksconfig.gladestrings:81
-#: ../src/kickstartGui.py:122 tmp/system-config-kickstart.glade.h:109
+#: ../src/kickstartGui.py:122
+#: tmp/system-config-kickstart.glade.h:109
 msgid "Network Configuration"
 msgstr "Configuración de red"
 
@@ -166,27 +169,32 @@ msgid "Authentication"
 msgstr "Autenticación"
 
 # ../src/ksconfig_gui.py:122 ksconfig.gladestrings:138
-#: ../src/kickstartGui.py:123 tmp/system-config-kickstart.glade.h:52
+#: ../src/kickstartGui.py:123
+#: tmp/system-config-kickstart.glade.h:52
 msgid "Firewall Configuration"
 msgstr "Configuración del cortafuegos"
 
 # ../src/ksconfig_gui.py:123 ksconfig.gladestrings:147
-#: ../src/kickstartGui.py:123 tmp/system-config-kickstart.glade.h:28
+#: ../src/kickstartGui.py:123
+#: tmp/system-config-kickstart.glade.h:28
 msgid "Display Configuration"
 msgstr "Configuración de pantalla"
 
 # ../src/ksconfig_gui.py:124
-#: ../src/kickstartGui.py:124 tmp/system-config-kickstart.glade.h:115
+#: ../src/kickstartGui.py:124
+#: tmp/system-config-kickstart.glade.h:115
 msgid "Package Selection"
 msgstr "Selección de paquetes"
 
 # ../src/ksconfig_gui.py:125 ksconfig.gladestrings:169
-#: ../src/kickstartGui.py:124 tmp/system-config-kickstart.glade.h:125
+#: ../src/kickstartGui.py:124
+#: tmp/system-config-kickstart.glade.h:125
 msgid "Pre-Installation Script"
 msgstr "Script de pre-instalación"
 
 # ../src/ksconfig_gui.py:126 ksconfig.gladestrings:173
-#: ../src/kickstartGui.py:125 tmp/system-config-kickstart.glade.h:124
+#: ../src/kickstartGui.py:125
+#: tmp/system-config-kickstart.glade.h:124
 msgid "Post-Installation Script"
 msgstr "Script de post-instalación"
 
@@ -229,54 +237,56 @@ msgid "Network Type"
 msgstr "Tipo de red"
 
 # ksconfig.gladestrings:84
-#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:226
-#: ../src/network.py:286 ../src/network.py:422
+#: ../src/network.py:109
+#: ../src/network.py:155
+#: ../src/network.py:226
+#: ../src/network.py:286
+#: ../src/network.py:422
 msgid "Static IP"
 msgstr "IP estática"
 
-#: ../src/network.py:216 ../src/network.py:278
+#: ../src/network.py:216
+#: ../src/network.py:278
 msgid "Please fill in the network information"
 msgstr "Por favor complete la información de la red"
 
 #: ../src/network.py:330
 #, python-format
-msgid ""
-"A network device with the name %s already exists.  Please choose another "
-"device name"
-msgstr ""
-"Ya existe un dispositivo de red con el  nombre %s.  Por favor seleccione "
-"otro nombre para el dispositivo. "
+msgid "A network device with the name %s already exists.  Please choose another device name"
+msgstr "Ya existe un dispositivo de red con el  nombre %s.  Por favor seleccione otro nombre para el dispositivo. "
 
 # ../src/ksconfig_gui.py:120 ksconfig.gladestrings:81
 #: ../src/packages.py:163
-#, fuzzy
 msgid "Retrieving package information"
-msgstr "Información de dispositivo de red"
+msgstr "Extrayendo información de paquetes"
 
 #: ../src/packages.py:172
-msgid ""
-"Package selection is disabled due to problems downloading package "
-"information."
-msgstr ""
+msgid "Package selection is disabled due to problems downloading package information."
+msgstr "La selección de paquetes está deshabilitada debido a problemas en la descarga de la información de paquetes."
 
-#: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:193
+#: ../src/partWindow.py:85
+#: tmp/system-config-kickstart.glade.h:193
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:194
+#: ../src/partWindow.py:85
+#: tmp/system-config-kickstart.glade.h:194
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:87 ../src/partWindow.py:150
+#: ../src/partWindow.py:87
+#: ../src/partWindow.py:150
 msgid "software RAID"
 msgstr "RAID de software"
 
-#: ../src/partWindow.py:88 tmp/system-config-kickstart.glade.h:212
+#: ../src/partWindow.py:88
+#: tmp/system-config-kickstart.glade.h:212
 msgid "swap"
 msgstr "swap"
 
-#: ../src/partWindow.py:88 tmp/system-config-kickstart.glade.h:213
+#: ../src/partWindow.py:88
+#: tmp/system-config-kickstart.glade.h:213
 msgid "vfat"
 msgstr "vfat"
 
@@ -285,16 +295,22 @@ msgid "PPC PReP Boot"
 msgstr "Partición de arranque PPC PReP"
 
 # ksconfig.gladestrings:71
-#: ../src/partWindow.py:263 ../src/partWindow.py:544 ../src/raidWindow.py:214
+#: ../src/partWindow.py:263
+#: ../src/partWindow.py:544
+#: ../src/raidWindow.py:214
 msgid "Yes"
 msgstr "Sí"
 
 # ksconfig.gladestrings:72
-#: ../src/partWindow.py:265 ../src/partWindow.py:546 ../src/raidWindow.py:216
+#: ../src/partWindow.py:265
+#: ../src/partWindow.py:546
+#: ../src/raidWindow.py:216
 msgid "No"
 msgstr "No"
 
-#: ../src/partWindow.py:288 ../src/partWindow.py:303 ../src/partWindow.py:322
+#: ../src/partWindow.py:288
+#: ../src/partWindow.py:303
+#: ../src/partWindow.py:322
 #: ../src/partWindow.py:336
 msgid "Auto"
 msgstr "Auto"
@@ -311,31 +327,20 @@ msgstr "Especificar un punto de montaje para la partición."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:449
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr ""
-"El punto de montaje \"%s\" ya se está usando.  Seleccione otro punto de "
-"montaje."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr "El punto de montaje \"%s\" ya se está usando.  Seleccione otro punto de montaje."
 
 #: ../src/partWindow.py:469
-msgid ""
-"To create a new RAID partition, you must specify either a hard drive device "
-"name or an existing partition."
-msgstr ""
-"Para crear una nueva partición RAID debe especificar o un disco duro o una "
-"partición existente."
+msgid "To create a new RAID partition, you must specify either a hard drive device name or an existing partition."
+msgstr "Para crear una nueva partición RAID debe especificar o un disco duro o una partición existente."
 
 #: ../src/partWindow.py:506
 msgid "Specify a device on which to create the partition."
 msgstr "Especificar un dispositivo en el que crear la partición."
 
 #: ../src/partWindow.py:515
-msgid ""
-"The partition you specified does not end in a number.  Partitions must have "
-"a partition number such as \"hda1\" or \"sda3\"."
-msgstr ""
-"La partición que ha especificado no acaba en un número. Las particiones "
-"deben tener  un número de partición como \"hda1\" o \"sda3\"."
+msgid "The partition you specified does not end in a number.  Partitions must have a partition number such as \"hda1\" or \"sda3\"."
+msgstr "La partición que ha especificado no acaba en un número. Las particiones deben tener  un número de partición como \"hda1\" o \"sda3\"."
 
 #: ../src/partition.py:74
 msgid ""
@@ -368,16 +373,15 @@ msgid "Size (MB)"
 msgstr "Tamaño (MB)"
 
 # ksconfig.gladestrings:19
-#: ../src/partition.py:97 ../src/partition.py:137
+#: ../src/partition.py:97
+#: ../src/partition.py:137
 msgid "Please select a partition from the list."
 msgstr "Seleccione una partición desde la lista. "
 
 #: ../src/raidOptionsWindow.py:72
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
-msgstr ""
-"En la actualidad posee particiones RAID de software  %d libres para ser "
-"usadas."
+msgstr "En la actualidad posee particiones RAID de software  %d libres para ser usadas."
 
 #: ../src/raidWindow.py:174
 #, python-format
@@ -390,7 +394,8 @@ msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "Debe seleccionar al menos 3 particiones para usar RAID %s"
 
 # ksconfig.gladestrings:209
-#: ../src/raidWindow.py:194 ../src/raidWindow.py:220
+#: ../src/raidWindow.py:194
+#: ../src/raidWindow.py:220
 msgid "Raid Devices"
 msgstr "Dispositivos Raid"
 
@@ -765,8 +770,7 @@ msgstr "Instalar el gestor de arranque en el Master Boot Record (MBR)"
 # ksconfig.gladestrings:29
 #: tmp/system-config-kickstart.glade.h:78
 msgid "Install boot loader on first sector of the boot partition"
-msgstr ""
-"Instale el gestor de arranque en el primer sector de la partición de arranque"
+msgstr "Instale el gestor de arranque en el primer sector de la partición de arranque"
 
 # ksconfig.gladestrings:25
 #: tmp/system-config-kickstart.glade.h:79
@@ -1087,17 +1091,8 @@ msgid "Size (MB):"
 msgstr "Tamaño (MB):"
 
 #: tmp/system-config-kickstart.glade.h:148
-msgid ""
-"Software RAID allows you to combine several disks into a larger RAID "
-"device.  A RAID device can be configured to provide additional speed and "
-"reliability compared to using an individual drive.  For more information on "
-"using RAID devices please consult the kickstart documentation."
-msgstr ""
-"El RAID de software le permite combinar diversos discos en un dispositivo "
-"RAID. Un dispositivo RAID puede ser configurado para proporcionar velocidad "
-"adicional y fiabilidad comparado al uso de una unidad individual. Para "
-"obtener más información sobre el uso de dispositivos RAID consulte la "
-"documentación kickstart."
+msgid "Software RAID allows you to combine several disks into a larger RAID device.  A RAID device can be configured to provide additional speed and reliability compared to using an individual drive.  For more information on using RAID devices please consult the kickstart documentation."
+msgstr "El RAID de software le permite combinar diversos discos en un dispositivo RAID. Un dispositivo RAID puede ser configurado para proporcionar velocidad adicional y fiabilidad comparado al uso de una unidad individual. Para obtener más información sobre el uso de dispositivos RAID consulte la documentación kickstart."
 
 #: tmp/system-config-kickstart.glade.h:149
 msgid "Specify an FTP username and password"
@@ -1118,13 +1113,8 @@ msgid "Time Zone:"
 msgstr "Zona horaria:"
 
 #: tmp/system-config-kickstart.glade.h:153
-msgid ""
-"To use RAID you must first create at least two partitions of type 'software "
-"RAID'.  Then you can create a RAID device which can be formatted and mounted."
-msgstr ""
-"Para usar RAID debería crear al menos dos particiones del tipo 'RAID de "
-"software'. A continuación puede crear un dispositivo RAID que podrá ser "
-"formateado y montado. ."
+msgid "To use RAID you must first create at least two partitions of type 'software RAID'.  Then you can create a RAID device which can be formatted and mounted."
+msgstr "Para usar RAID debería crear al menos dos particiones del tipo 'RAID de software'. A continuación puede crear un dispositivo RAID que podrá ser formateado y montado. ."
 
 # ksconfig.gladestrings:177
 #: tmp/system-config-kickstart.glade.h:155
@@ -1210,31 +1200,19 @@ msgstr "Advertencia"
 # ksconfig.gladestrings:174
 #: tmp/system-config-kickstart.glade.h:174
 #, no-c-format
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %post command at the beginning."
-msgstr ""
-"Atención: un error en este script puede provocar que falle su instalación "
-"con kickstart. No incluya el comando %post al principio."
+msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %post command at the beginning."
+msgstr "Atención: un error en este script puede provocar que falle su instalación con kickstart. No incluya el comando %post al principio."
 
 # ksconfig.gladestrings:170
 #: tmp/system-config-kickstart.glade.h:176
 #, no-c-format
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %pre command at the beginning."
-msgstr ""
-"Atención: un error en este script puede provocar que falle su instalación "
-"con kickstart. No incluya el comando %pre al principio."
+msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %pre command at the beginning."
+msgstr "Atención: un error en este script puede provocar que falle su instalación con kickstart. No incluya el comando %pre al principio."
 
 # ksconfig.gladestrings:182
 #: tmp/system-config-kickstart.glade.h:177
-msgid ""
-"You have choosen the following configuration. Click Save File to save the "
-"kickstart file. "
-msgstr ""
-"Ha elegido la siguiente configuración. Pulse en Guardar archivo para guardar "
-"el archivo kickstart. "
+msgid "You have choosen the following configuration. Click Save File to save the kickstart file. "
+msgstr "Ha elegido la siguiente configuración. Pulse en Guardar archivo para guardar el archivo kickstart. "
 
 #: tmp/system-config-kickstart.glade.h:178
 msgid "_About"
@@ -1371,3 +1349,4 @@ msgstr "md8"
 #: tmp/system-config-kickstart.glade.h:211
 msgid "md9"
 msgstr "md9"
+
