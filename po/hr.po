@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: system-config-kickstart 0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-21 11:59-0500\n"
-"PO-Revision-Date: 2006-09-24 05:29+0100\n"
+"PO-Revision-Date: 2006-11-22 01:51+0100\n"
 "Last-Translator: Renato Pavicic <renato@translator-shop.org>\n"
 "Language-Team: Renato Pavicic <www.translator-shop.org>\n"
 "MIME-Version: 1.0\n"
@@ -39,8 +39,11 @@ msgstr "IBM zSeries/s390"
 msgid "Root passwords do not match."
 msgstr "Root lozinke se ne podudaraju."
 
-#: ../src/basic.py:150 ../src/install.py:218 ../src/partWindow.py:522
-#: ../src/partition.py:255 ../src/raidWindow.py:249
+#: ../src/basic.py:150
+#: ../src/install.py:218
+#: ../src/partWindow.py:522
+#: ../src/partition.py:255
+#: ../src/raidWindow.py:249
 msgid "Error"
 msgstr "Pogreška"
 
@@ -134,7 +137,8 @@ msgstr "Opcije pokretača sustava"
 msgid "Partition Information"
 msgstr "Podaci o particijama"
 
-#: ../src/kickstartGui.py:122 tmp/system-config-kickstart.glade.h:109
+#: ../src/kickstartGui.py:122
+#: tmp/system-config-kickstart.glade.h:109
 msgid "Network Configuration"
 msgstr "Konfiguracija mreže"
 
@@ -142,23 +146,28 @@ msgstr "Konfiguracija mreže"
 msgid "Authentication"
 msgstr "Provjera autentičnosti"
 
-#: ../src/kickstartGui.py:123 tmp/system-config-kickstart.glade.h:52
+#: ../src/kickstartGui.py:123
+#: tmp/system-config-kickstart.glade.h:52
 msgid "Firewall Configuration"
 msgstr "Konfiguracija vatrozida"
 
-#: ../src/kickstartGui.py:123 tmp/system-config-kickstart.glade.h:28
+#: ../src/kickstartGui.py:123
+#: tmp/system-config-kickstart.glade.h:28
 msgid "Display Configuration"
 msgstr "Konfiguracija zaslona"
 
-#: ../src/kickstartGui.py:124 tmp/system-config-kickstart.glade.h:115
+#: ../src/kickstartGui.py:124
+#: tmp/system-config-kickstart.glade.h:115
 msgid "Package Selection"
 msgstr "Odabir paketa"
 
-#: ../src/kickstartGui.py:124 tmp/system-config-kickstart.glade.h:125
+#: ../src/kickstartGui.py:124
+#: tmp/system-config-kickstart.glade.h:125
 msgid "Pre-Installation Script"
 msgstr "Skripta prije instalacije"
 
-#: ../src/kickstartGui.py:125 tmp/system-config-kickstart.glade.h:124
+#: ../src/kickstartGui.py:125
+#: tmp/system-config-kickstart.glade.h:124
 msgid "Post-Installation Script"
 msgstr "Skripta poslije instalacije"
 
@@ -197,51 +206,55 @@ msgstr "Uređaj"
 msgid "Network Type"
 msgstr "Vrsta mreža"
 
-#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:226
-#: ../src/network.py:286 ../src/network.py:422
+#: ../src/network.py:109
+#: ../src/network.py:155
+#: ../src/network.py:226
+#: ../src/network.py:286
+#: ../src/network.py:422
 msgid "Static IP"
 msgstr "Statični IP"
 
-#: ../src/network.py:216 ../src/network.py:278
+#: ../src/network.py:216
+#: ../src/network.py:278
 msgid "Please fill in the network information"
 msgstr "Ispunite podatke o mreži"
 
 #: ../src/network.py:330
 #, python-format
-msgid ""
-"A network device with the name %s already exists.  Please choose another "
-"device name"
+msgid "A network device with the name %s already exists.  Please choose another device name"
 msgstr "Mrežni uređaj naziva %s već postoji. Odaberite drugi naziv uređaja."
 
 #: ../src/packages.py:163
-#, fuzzy
 msgid "Retrieving package information"
-msgstr "Podaci o mrežnom uređaju"
+msgstr "Dohvaćanje podataka o paketu"
 
 #: ../src/packages.py:172
-msgid ""
-"Package selection is disabled due to problems downloading package "
-"information."
-msgstr ""
+msgid "Package selection is disabled due to problems downloading package information."
+msgstr "Odabir paketa je onemogućen zbog problema tijekom preuzimanja podataka o paketu."
 
-#: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:193
+#: ../src/partWindow.py:85
+#: tmp/system-config-kickstart.glade.h:193
 msgid "ext2"
 msgstr "Ext2"
 
-#: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:194
+#: ../src/partWindow.py:85
+#: tmp/system-config-kickstart.glade.h:194
 msgid "ext3"
 msgstr "Ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:87 ../src/partWindow.py:150
+#: ../src/partWindow.py:87
+#: ../src/partWindow.py:150
 msgid "software RAID"
 msgstr "Softverski RAID"
 
-#: ../src/partWindow.py:88 tmp/system-config-kickstart.glade.h:212
+#: ../src/partWindow.py:88
+#: tmp/system-config-kickstart.glade.h:212
 msgid "swap"
 msgstr "Razmjena"
 
-#: ../src/partWindow.py:88 tmp/system-config-kickstart.glade.h:213
+#: ../src/partWindow.py:88
+#: tmp/system-config-kickstart.glade.h:213
 msgid "vfat"
 msgstr "VFAT"
 
@@ -249,15 +262,21 @@ msgstr "VFAT"
 msgid "PPC PReP Boot"
 msgstr "PPC PReP pokretanje sustava"
 
-#: ../src/partWindow.py:263 ../src/partWindow.py:544 ../src/raidWindow.py:214
+#: ../src/partWindow.py:263
+#: ../src/partWindow.py:544
+#: ../src/raidWindow.py:214
 msgid "Yes"
 msgstr "Da"
 
-#: ../src/partWindow.py:265 ../src/partWindow.py:546 ../src/raidWindow.py:216
+#: ../src/partWindow.py:265
+#: ../src/partWindow.py:546
+#: ../src/raidWindow.py:216
 msgid "No"
 msgstr "Ne"
 
-#: ../src/partWindow.py:288 ../src/partWindow.py:303 ../src/partWindow.py:322
+#: ../src/partWindow.py:288
+#: ../src/partWindow.py:303
+#: ../src/partWindow.py:322
 #: ../src/partWindow.py:336
 msgid "Auto"
 msgstr "Automatski"
@@ -273,30 +292,20 @@ msgstr "Odredite točku pristupa za particiju."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:449
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr ""
-"Točka pristupa \"%s\" već je u upotrebi. Odaberite drugu točku pristupa."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr "Točka pristupa \"%s\" već je u upotrebi. Odaberite drugu točku pristupa."
 
 #: ../src/partWindow.py:469
-msgid ""
-"To create a new RAID partition, you must specify either a hard drive device "
-"name or an existing partition."
-msgstr ""
-"Da biste izradili novu RAID particiju, potrebno je odrediti naziv uređaja "
-"tvrdog diska ili postojeću particiju."
+msgid "To create a new RAID partition, you must specify either a hard drive device name or an existing partition."
+msgstr "Da biste izradili novu RAID particiju, potrebno je odrediti naziv uređaja tvrdog diska ili postojeću particiju."
 
 #: ../src/partWindow.py:506
 msgid "Specify a device on which to create the partition."
 msgstr "Odredite uređaj na kojem će biti izrađena particija."
 
 #: ../src/partWindow.py:515
-msgid ""
-"The partition you specified does not end in a number.  Partitions must have "
-"a partition number such as \"hda1\" or \"sda3\"."
-msgstr ""
-"Naziv particije koju ste naveli ne završava brojem. Particije moraju imati "
-"broj particije, poput \"hda1\" ili \"sda3\"."
+msgid "The partition you specified does not end in a number.  Partitions must have a partition number such as \"hda1\" or \"sda3\"."
+msgstr "Naziv particije koju ste naveli ne završava brojem. Particije moraju imati broj particije, poput \"hda1\" ili \"sda3\"."
 
 #: ../src/partition.py:74
 msgid ""
@@ -326,7 +335,8 @@ msgstr "Oblikovanje"
 msgid "Size (MB)"
 msgstr "Veličina (MB)"
 
-#: ../src/partition.py:97 ../src/partition.py:137
+#: ../src/partition.py:97
+#: ../src/partition.py:137
 msgid "Please select a partition from the list."
 msgstr "S popisa odaberite particiju."
 
@@ -345,7 +355,8 @@ msgstr "Za upotrebu RAID-a %s potrebno je odabrati najmanje 2 particije"
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "Za upotrebu RAID-a %s potrebno je odabrati najmanje 3 particije"
 
-#: ../src/raidWindow.py:194 ../src/raidWindow.py:220
+#: ../src/raidWindow.py:194
+#: ../src/raidWindow.py:220
 msgid "Raid Devices"
 msgstr "RAID uređaji"
 
@@ -651,8 +662,7 @@ msgstr "Inicijaliziraj oznaku diska"
 
 #: tmp/system-config-kickstart.glade.h:77
 msgid "Install boot loader on Master Boot Record (MBR)"
-msgstr ""
-"Pokretač sustava instaliraj na glavni zapis za pokretanja sustava (MBR)"
+msgstr "Pokretač sustava instaliraj na glavni zapis za pokretanja sustava (MBR)"
 
 #: tmp/system-config-kickstart.glade.h:78
 msgid "Install boot loader on first sector of the boot partition"
@@ -824,8 +834,7 @@ msgstr "Instalaciju izvedi u interaktivnom načinu rada"
 
 #: tmp/system-config-kickstart.glade.h:122
 msgid "Perform installation in text mode (graphical is default)"
-msgstr ""
-"Instalaciju izvedi u tekstualnom načinu rada (zadani način je grafički)"
+msgstr "Instalaciju izvedi u tekstualnom načinu rada (zadani način je grafički)"
 
 #: tmp/system-config-kickstart.glade.h:123
 msgid "Perform new installation"
@@ -920,16 +929,8 @@ msgid "Size (MB):"
 msgstr "Veličina (MB):"
 
 #: tmp/system-config-kickstart.glade.h:148
-msgid ""
-"Software RAID allows you to combine several disks into a larger RAID "
-"device.  A RAID device can be configured to provide additional speed and "
-"reliability compared to using an individual drive.  For more information on "
-"using RAID devices please consult the kickstart documentation."
-msgstr ""
-"Softverski RAID omogućuje kombiniranje nekoliko diskova u veći RAID uređaj. "
-"RAID uređaj može biti konfiguriran za pružanje veće brzine i pouzdanosti u "
-"usporedbi s pojedinačnim diskovima. Za dodatne podatke o upotrebi RAID "
-"uređaja konzultirajte dokumentaciju Kickstart-a."
+msgid "Software RAID allows you to combine several disks into a larger RAID device.  A RAID device can be configured to provide additional speed and reliability compared to using an individual drive.  For more information on using RAID devices please consult the kickstart documentation."
+msgstr "Softverski RAID omogućuje kombiniranje nekoliko diskova u veći RAID uređaj. RAID uređaj može biti konfiguriran za pružanje veće brzine i pouzdanosti u usporedbi s pojedinačnim diskovima. Za dodatne podatke o upotrebi RAID uređaja konzultirajte dokumentaciju Kickstart-a."
 
 #: tmp/system-config-kickstart.glade.h:149
 msgid "Specify an FTP username and password"
@@ -948,13 +949,8 @@ msgid "Time Zone:"
 msgstr "Vremenska zona:"
 
 #: tmp/system-config-kickstart.glade.h:153
-msgid ""
-"To use RAID you must first create at least two partitions of type 'software "
-"RAID'.  Then you can create a RAID device which can be formatted and mounted."
-msgstr ""
-"Da biste upotrebljavali RAID prvo je potrebno izraditi najmanje dvije "
-"particije vrste 'softverski RAID'. Nakon toga moguće je izraditi RAID uređaj "
-"koji se može oblikovati i pristupiti."
+msgid "To use RAID you must first create at least two partitions of type 'software RAID'.  Then you can create a RAID device which can be formatted and mounted."
+msgstr "Da biste upotrebljavali RAID prvo je potrebno izraditi najmanje dvije particije vrste 'softverski RAID'. Nakon toga moguće je izraditi RAID uređaj koji se može oblikovati i pristupiti."
 
 #: tmp/system-config-kickstart.glade.h:155
 #, no-c-format
@@ -1028,29 +1024,17 @@ msgstr "Upozori"
 
 #: tmp/system-config-kickstart.glade.h:174
 #, no-c-format
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %post command at the beginning."
-msgstr ""
-"Upozorenje: Pogreška u ovoj skripti mogla bi prouzrokovati neuspjeh vaše "
-"kickstart instalacije. Naredbu %post ne upotrebljavajte u početku."
+msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %post command at the beginning."
+msgstr "Upozorenje: Pogreška u ovoj skripti mogla bi prouzrokovati neuspjeh vaše kickstart instalacije. Naredbu %post ne upotrebljavajte u početku."
 
 #: tmp/system-config-kickstart.glade.h:176
 #, no-c-format
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %pre command at the beginning."
-msgstr ""
-"Upozorenje: Pogreška u ovoj skripti mogla bi prouzrokovati neuspjeh vaše "
-"kickstart instalacije. Naredbu %pre ne upotrebljavajte u početku."
+msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %pre command at the beginning."
+msgstr "Upozorenje: Pogreška u ovoj skripti mogla bi prouzrokovati neuspjeh vaše kickstart instalacije. Naredbu %pre ne upotrebljavajte u početku."
 
 #: tmp/system-config-kickstart.glade.h:177
-msgid ""
-"You have choosen the following configuration. Click Save File to save the "
-"kickstart file. "
-msgstr ""
-"Izabrali ste sljedeću konfiguraciju. Za spremanje kickstart datoteke "
-"kliknite \"Spremi\". "
+msgid "You have choosen the following configuration. Click Save File to save the kickstart file. "
+msgstr "Izabrali ste sljedeću konfiguraciju. Za spremanje kickstart datoteke kliknite \"Spremi\". "
 
 #: tmp/system-config-kickstart.glade.h:178
 msgid "_About"
@@ -1182,20 +1166,16 @@ msgstr "md9"
 
 #~ msgid "Please select a root password."
 #~ msgstr "Odaberite lozinku root korisnika."
-
 #~ msgid "Could not start because there is no %s file."
 #~ msgstr "Nije moguće pokrenuti jer datoteka %s ne postoji."
-
 #~ msgid "Please make sure the comps package is installed."
 #~ msgstr "Provjerite je li paket comps instaliran."
-
 #~ msgid ""
 #~ "The device you specified is not a valid device name. Please use a valid "
 #~ "device name such as \"hda1\" or \"sda3\"."
 #~ msgstr ""
 #~ "Naziv uređaja koji ste odredili nije valjani naziv uređaja. Upotrijebite "
 #~ "valjan naziv uređaja, poput \"hda1\" ili \"sda3\"."
-
 #~ msgid ""
 #~ "The partition you specified does not begin with \"hd\" or \"sd\".  "
 #~ "Partitions must have a valid device name and partition number such as "
@@ -1204,7 +1184,6 @@ msgstr "md9"
 #~ "Naziv particije koju ste naveli ne započinje s \"hd\" ili \"sd\". "
 #~ "Particije moraju imati valjani naziv uređaja i broj particije, poput "
 #~ "\"hda1\" ili \"sda3\"."
-
 #~ msgid ""
 #~ "Usage: system-config-kickstart [--help] [--generate <filename>] "
 #~ "[<kickstart_filename>]\n"
@@ -1233,71 +1212,50 @@ msgstr "md9"
 #~ "<kickstart_datoteka>    Ova opcija će prouzrokovati pokretanje grafičkog "
 #~ "sučelja s već ispunjenim  vrijednostima\n"
 #~ "                        iz kickstart datoteke."
-
 #~ msgid "Could not open display because no X server is running."
 #~ msgstr "Nije moguće otvoriti zaslon je nije pokrenut X poslužitelj."
-
 #~ msgid "Try running 'system-config-kickstart --help' for a list of options."
 #~ msgstr ""
 #~ "Za popis opcija pokušajte pokrenuti naredbu 'system-config-kickstart --"
 #~ "help'."
-
 #~ msgid "label28"
 #~ msgstr "label28"
-
 #~ msgid "label128"
 #~ msgstr "label128"
-
 #~ msgid "label216"
 #~ msgstr "label28"
-
 #~ msgid "label35"
 #~ msgstr "label35"
-
 #~ msgid "label30"
 #~ msgstr "label30"
-
 #~ msgid "label31"
 #~ msgstr "label31"
-
 #~ msgid "label32"
 #~ msgstr "label32"
-
 #~ msgid "label33"
 #~ msgstr "label33"
-
 #~ msgid "label88"
 #~ msgstr "label88"
-
 #~ msgid "Select packages to install."
 #~ msgstr "Odaberite pakete za instaliranje."
-
 #~ msgid "_Install Everything"
 #~ msgstr "_Instaliraj sve"
-
 #~ msgid "Desktops"
 #~ msgstr "Radne površine"
-
 #~ msgid "Applications"
 #~ msgstr "Aplikacije"
-
 #~ msgid "Servers"
 #~ msgstr "Poslužitelji"
-
 #~ msgid "Development"
 #~ msgstr "Razvoj"
-
 #~ msgid "System"
 #~ msgstr "Sustav"
-
 #~ msgid "Package selection is not applicable on upgrades."
 #~ msgstr "Odabir paketa nije primjenjiv na nadogradnjama."
-
 #~ msgid "label34"
 #~ msgstr "label34"
-
 #~ msgid "label89"
 #~ msgstr "label89"
-
 #~ msgid "label93"
 #~ msgstr "label93"
+
