@@ -1,24 +1,25 @@
+# translation of it.po to 
 # translation of  it to italian
-# Copyright (C) 2001, 2004, 2005 Free Software Foundation, Inc.
+# Copyright (C) 2001, 2004, 2005, 2006 Free Software Foundation, Inc.
 # Bettina De Monti <bdemonti@redhat.it>, 2001.
 # Luca Ferrari <alexluca@inwind.it>, 2004.
 # Paolo Dona' <vik@3jv.com>, 2004.
 # Francesco Valente <fvalen@redhat.com>, 2004.
 # Lorenzo Stobbione <lorenzo.stobbione@clsengineering.it>, 2005.
-# Francesco Tombolini <tombo@adamantio.net>, 2005.
+# Francesco Tombolini <tombo@adamantio.net>, 2005, 2006.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: it\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-21 11:59-0500\n"
-"PO-Revision-Date: 2005-11-04 20:16+0100\n"
-"Last-Translator: Francesco Tombolini <tombo@adamantio.net>\n"
-"Language-Team: Italiano <Fedora-trans-it@redhat.com>\n"
+"PO-Revision-Date: 2006-11-24 00:22+0100\n"
+"Last-Translator: \n"
+"Language-Team:  <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10.2\n"
+"X-Generator: KBabel 1.9.1\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../src/auth.py:323
@@ -226,15 +227,14 @@ msgstr ""
 "scegliere un altro nome"
 
 #: ../src/packages.py:163
-#, fuzzy
 msgid "Retrieving package information"
-msgstr "Informazioni del Dispositivo della Rete"
+msgstr "Ripristino informazioni del pacchetto"
 
 #: ../src/packages.py:172
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
-msgstr ""
+msgstr "La selezione del pacchetto è stata disabilitata a causa di problemi durante il download delle informazioni del pacchetto."
 
 #: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:193
 msgid "ext2"
@@ -285,8 +285,7 @@ msgstr "Specificare un mount point per la partizione."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:449
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "Il mount point \"%s\" è già in uso. Selezionare un altro mount point."
 
 #: ../src/partWindow.py:469
@@ -406,8 +405,7 @@ msgstr "Configurazione di autenticazione"
 
 #: tmp/system-config-kickstart.glade.h:11
 msgid "Authentication options are not applicable on upgrades."
-msgstr ""
-"Le opzioni per l'autenticazione non sono applicabili con gli aggiornamenti"
+msgstr "Le opzioni per l'autenticazione non sono applicabili con gli aggiornamenti"
 
 #: tmp/system-config-kickstart.glade.h:12
 msgid "Authentication:"
@@ -823,8 +821,7 @@ msgstr "Opzioni di partizione"
 
 #: tmp/system-config-kickstart.glade.h:119
 msgid "Partition options are not applicable on upgrades."
-msgstr ""
-"Non sono applicabili con gli aggiornamenti le opzioni per la partizione."
+msgstr "Non sono applicabili con gli aggiornamenti le opzioni per la partizione."
 
 #: tmp/system-config-kickstart.glade.h:120
 msgid "Password:"
@@ -836,8 +833,7 @@ msgstr "Eseguire l'installazione in modalità interattiva"
 
 #: tmp/system-config-kickstart.glade.h:122
 msgid "Perform installation in text mode (graphical is default)"
-msgstr ""
-"Eseguire l'installazione in modalità testo (quella grafica è di default)"
+msgstr "Eseguire l'installazione in modalità testo (quella grafica è di default)"
 
 #: tmp/system-config-kickstart.glade.h:123
 msgid "Perform new installation"
@@ -1192,123 +1188,3 @@ msgstr "md8"
 msgid "md9"
 msgstr "md9"
 
-#~ msgid "Please select a root password."
-#~ msgstr "Selezionare una password di root."
-
-#~ msgid "Could not start because there is no %s file."
-#~ msgstr "Impossibile eseguire l'avvio poiché il file %s non è esistente."
-
-#~ msgid "Please make sure the comps package is installed."
-#~ msgstr "Si prega di verificare che il pacchetto comps sia installato."
-
-#~ msgid ""
-#~ "The device you specified is not a valid device name. Please use a valid "
-#~ "device name such as \"hda1\" or \"sda3\"."
-#~ msgstr ""
-#~ "Il nome del dispositivo specificato non è valido. Utilizzare un nome "
-#~ "valido come \"hda1\" o \"sda3\"."
-
-#~ msgid ""
-#~ "The partition you specified does not begin with \"hd\" or \"sd\".  "
-#~ "Partitions must have a valid device name and partition number such as "
-#~ "\"hda1\" or \"sda3\"."
-#~ msgstr ""
-#~ "La partizione specificata non inizia con \"hd\" o \"sd\". Le partizioni "
-#~ "devono avere un nome e un numero valido quale \"hda1\" o \"sda3\"."
-
-#~ msgid ""
-#~ "Usage: system-config-kickstart [--help] [--generate <filename>] "
-#~ "[<kickstart_filename>]\n"
-#~ "        \n"
-#~ "--help                  Print out this message\n"
-#~ "--generate <filename>   Generate a kickstart file from the current "
-#~ "machine and write\n"
-#~ "                        it to <filename>.  This option runs on the "
-#~ "console, so it is\n"
-#~ "                        useful for servers that do not have X currently "
-#~ "running.\n"
-#~ "<kickstart_filename>    This option will cause the GUI to launch with the "
-#~ "values from\n"
-#~ "                        the kickstart file already filled in."
-#~ msgstr ""
-#~ "Uso: system-config-kickstart [--help] [--generate <filename>] "
-#~ "[<kickstart_filename>]\n"
-#~ "        \n"
-#~ "--help                          Stampare questo messaggio\n"
-#~ "generare <filename>   Generare un file kickstart dal dispositivo attuale "
-#~ "e scriverlo\n"
-#~ "                 sul <filename>.  Questa opzione viene eseguita sulla "
-#~ "console, per questo motivo\n"
-#~ "                    é utile per gli utenti che non hanno attualmente X "
-#~ "operativo\n"
-#~ "<kickstart_filename>   Questa opzione causerá il lancio da parte di GUI "
-#~ "dei i valori dal\n"
-#~ "                                       file kickstart"
-
-#~ msgid "Could not open display because no X server is running."
-#~ msgstr "Impossibile aprire il display perché nessun server di X è presente."
-
-#~ msgid "Try running 'system-config-kickstart --help' for a list of options."
-#~ msgstr ""
-#~ "Provate ad avviare 'system-config-kickstart --help'  per ottenere una "
-#~ "lista di opzioni."
-
-#~ msgid "label28"
-#~ msgstr "label28"
-
-#~ msgid "label128"
-#~ msgstr "label128"
-
-#~ msgid "label216"
-#~ msgstr "label216"
-
-#~ msgid "label35"
-#~ msgstr "label35"
-
-#~ msgid "label30"
-#~ msgstr "label30"
-
-#~ msgid "label31"
-#~ msgstr "label31"
-
-#~ msgid "label32"
-#~ msgstr "label32"
-
-#~ msgid "label33"
-#~ msgstr "label33"
-
-#~ msgid "label88"
-#~ msgstr "label88"
-
-#~ msgid "Select packages to install."
-#~ msgstr "Selezionare i pacchetti da installare."
-
-#~ msgid "_Install Everything"
-#~ msgstr "_Installazione completa"
-
-#~ msgid "Desktops"
-#~ msgstr "Desktop"
-
-#~ msgid "Applications"
-#~ msgstr "Applicazioni"
-
-#~ msgid "Servers"
-#~ msgstr "Server"
-
-#~ msgid "Development"
-#~ msgstr "Sviluppo"
-
-#~ msgid "System"
-#~ msgstr "Sistema"
-
-#~ msgid "Package selection is not applicable on upgrades."
-#~ msgstr "La selezione del pacchetto non è applicabile con gli aggiornamenti."
-
-#~ msgid "label34"
-#~ msgstr "label34"
-
-#~ msgid "label89"
-#~ msgstr "label89"
-
-#~ msgid "label93"
-#~ msgstr "label93"
