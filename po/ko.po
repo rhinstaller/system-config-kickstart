@@ -3,15 +3,16 @@
 # Michelle Kim <mkim@redhat.com>, 2002.
 # Michelle J Kim <mkim@redhat.com>, 2003,2004.
 # Michelle Ji Yeen Kim <mkim@redhat.com>, 2005.
+# Eunju Kim <eukim@redhat.com>, 2006.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ko\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-21 11:59-0500\n"
-"PO-Revision-Date: 2005-11-29 14:05+1000\n"
-"Last-Translator: Michelle Ji Yeen Kim <mkim@redhat.com>\n"
-"Language-Team: Korean\n"
+"PO-Revision-Date: 2006-11-23 10:12+1000\n"
+"Last-Translator: Eunju Kim <eukim@redhat.com>\n"
+"Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -222,15 +223,14 @@ msgstr ""
 "오."
 
 #: ../src/packages.py:163
-#, fuzzy
 msgid "Retrieving package information"
-msgstr "네트워크 장치 정보"
+msgstr "패키지 정보 검색 중"
 
 #: ../src/packages.py:172
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
-msgstr ""
+msgstr "패키지 정보를 다운로드하는데 문제가 있어 패키지 선택을 할 수 없습니다."
 
 #: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:193
 msgid "ext2"
@@ -281,10 +281,8 @@ msgstr "해당 파티션에 대한 마운트 지점을 지정해 주십시오."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:449
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr ""
-"\"%s\" 마운트 지점은 이미 사용중입니다.  다른 마운트 지점을 선택해 주십시오."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr "\"%s\" 마운트 지점은 이미 사용중입니다.  다른 마운트 지점을 선택해 주십시오."
 
 #: ../src/partWindow.py:469
 msgid ""
@@ -1185,121 +1183,3 @@ msgstr "md8"
 msgid "md9"
 msgstr "md9"
 
-#~ msgid "Please select a root password."
-#~ msgstr "Root 암호를 선택해 주십시오."
-
-#~ msgid "Could not start because there is no %s file."
-#~ msgstr "%s 파일이 없어서 시작하지 못했습니다"
-
-#~ msgid "Please make sure the comps package is installed."
-#~ msgstr "comps 패키지가 설치되었는지 확인해주십시오."
-
-#~ msgid ""
-#~ "The device you specified is not a valid device name. Please use a valid "
-#~ "device name such as \"hda1\" or \"sda3\"."
-#~ msgstr ""
-#~ "지정하신 장치명이 올바르지 않습니다. \"hda1\"나 \"sda3\"와 같은 올바른 장"
-#~ "치명을 사용해 주십시오."
-
-#~ msgid ""
-#~ "The partition you specified does not begin with \"hd\" or \"sd\".  "
-#~ "Partitions must have a valid device name and partition number such as "
-#~ "\"hda1\" or \"sda3\"."
-#~ msgstr ""
-#~ "지정하신 파티션명이 \"hd\"나 \"sd\"로 시작하지 않습니다. 파티션명은 \"hda1"
-#~ "\"나 \"sda3\"처럼 유효한 장치명과 파티션 번호로 구성되어야 합니다."
-
-#~ msgid ""
-#~ "Usage: system-config-kickstart [--help] [--generate <filename>] "
-#~ "[<kickstart_filename>]\n"
-#~ "        \n"
-#~ "--help                  Print out this message\n"
-#~ "--generate <filename>   Generate a kickstart file from the current "
-#~ "machine and write\n"
-#~ "                        it to <filename>.  This option runs on the "
-#~ "console, so it is\n"
-#~ "                        useful for servers that do not have X currently "
-#~ "running.\n"
-#~ "<kickstart_filename>    This option will cause the GUI to launch with the "
-#~ "values from\n"
-#~ "                        the kickstart file already filled in."
-#~ msgstr ""
-#~ "사용법: redhat-config-kickstart [--help] [--generate <filename>] "
-#~ "[<kickstart_filename>]\n"
-#~ "        \n"
-#~ "--help                  이 메시지를 출력하기\n"
-#~ "--generate <filename>   현재 시스템에서 킥스타트 파일을 생성하여\n"
-#~ "                        <filename> 파일로 기록함.  이 옵션은 콘솔에서 실행"
-#~ "되므로,\n"
-#~ "                        현재 X가 실행 중이지 않은 서버에서 유용합니다.\n"
-#~ "<kickstart_filename>    이 옵션을 사용하시면 킥스타트 파일에 이미 기입된 "
-#~ "값을\n"
-#~ "                        사용하여 GUI가 시작될 것입니다."
-
-#~ msgid "Could not open display because no X server is running."
-#~ msgstr "X 서버가 실행 중이지 않아 화면을 열 수 없습니다."
-
-#~ msgid "Try running 'system-config-kickstart --help' for a list of options."
-#~ msgstr ""
-#~ "'system-config-kickstart --help' 명령을 실행하여 사용 가능한 옵션을 살펴보"
-#~ "십시오."
-
-#~ msgid "label28"
-#~ msgstr "label28"
-
-#~ msgid "label128"
-#~ msgstr "label128"
-
-#~ msgid "label216"
-#~ msgstr "label216"
-
-#~ msgid "label35"
-#~ msgstr "label35"
-
-#~ msgid "label30"
-#~ msgstr "label30"
-
-#~ msgid "label31"
-#~ msgstr "label31"
-
-#~ msgid "label32"
-#~ msgstr "label32"
-
-#~ msgid "label33"
-#~ msgstr "label33"
-
-#~ msgid "label88"
-#~ msgstr "label88"
-
-#~ msgid "Select packages to install."
-#~ msgstr "설치될 패키지를 선택해 주십시오."
-
-#~ msgid "_Install Everything"
-#~ msgstr "전부 설치(_I)"
-
-#~ msgid "Desktops"
-#~ msgstr "데스크탑"
-
-#~ msgid "Applications"
-#~ msgstr "응용 프로그램"
-
-#~ msgid "Servers"
-#~ msgstr "서버"
-
-#~ msgid "Development"
-#~ msgstr "개발"
-
-#~ msgid "System"
-#~ msgstr "시스템"
-
-#~ msgid "Package selection is not applicable on upgrades."
-#~ msgstr "업그레이드 설치시에는 패키지를 선택할 수 없습니다."
-
-#~ msgid "label34"
-#~ msgstr "label34"
-
-#~ msgid "label89"
-#~ msgstr "label89"
-
-#~ msgid "label93"
-#~ msgstr "label93"
