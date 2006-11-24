@@ -1,9 +1,9 @@
 # translation of ja.po to Japanese
 # Japanese translation of ksconfig
-# Copyright (C) 2001,2002,2003, 2004 Free Software Foundation, Inc.
+# Copyright (C) 2001,2002,2003, 2004, 2006 Free Software Foundation, Inc.
 # Yukihiro Nakai <ynakai@redhat.com>, 2001.
 # James Hashida <khashida@redhat.com>, 2002,2003.
-# Noriko Mizumoto <noriko@redhat.com>, 2003.
+# Noriko Mizumoto <noriko@redhat.com>, 2003, 2006.
 # Tadashi Jokagi <fedora@elf.no-ip.org>, 2004.
 # Hirofumi Saito <hi_saito@yk.rim.or.jp>, 2005.
 #
@@ -12,13 +12,13 @@ msgstr ""
 "Project-Id-Version: ja\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-11-21 11:59-0500\n"
-"PO-Revision-Date: 2006-03-25 06:26+0900\n"
-"Last-Translator: Hirofumi Saito <hi_saito@yk.rim.or.jp>\n"
+"PO-Revision-Date: 2006-11-24 14:49+1000\n"
+"Last-Translator: Noriko Mizumoto <noriko@redhat.com>\n"
 "Language-Team: Japanese <fedora-trans-ja@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3\n"
+"X-Generator: KBabel 1.9.1\n"
 
 #: ../src/auth.py:323
 msgid "Please fill in the authentication information"
@@ -225,15 +225,14 @@ msgstr ""
 "さい"
 
 #: ../src/packages.py:163
-#, fuzzy
 msgid "Retrieving package information"
-msgstr "ネットワークデバイス情報"
+msgstr "パッケージ情報の検索中"
 
 #: ../src/packages.py:172
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
-msgstr ""
+msgstr "パッケージ情報のダウンロードに問題があるためパッケージ選択が無効になっています。"
 
 #: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:193
 msgid "ext2"
@@ -284,8 +283,7 @@ msgstr "パーティション用のマウントポイントを指定して下さ
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:449
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "マウントポイント\"%s\"は既に使用中です。他のマウントポイントを使用して下さ"
 "い。"
@@ -350,14 +348,12 @@ msgstr "現在使用出来る%d ソフトウェア RAID パーティションが
 #: ../src/raidWindow.py:174
 #, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr ""
-"RAID %sを使用するには、最低 2 つのパーティションを選択する必要があります。"
+msgstr "RAID %sを使用するには、最低 2 つのパーティションを選択する必要があります。"
 
 #: ../src/raidWindow.py:180
 #, python-format
 msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr ""
-"RAID %s を使用するには最低3つのパーティションを選択する必要があります。"
+msgstr "RAID %s を使用するには最低3つのパーティションを選択する必要があります。"
 
 #: ../src/raidWindow.py:194 ../src/raidWindow.py:220
 msgid "Raid Devices"
@@ -1191,3 +1187,4 @@ msgstr "md8"
 #: tmp/system-config-kickstart.glade.h:211
 msgid "md9"
 msgstr "md9"
+
