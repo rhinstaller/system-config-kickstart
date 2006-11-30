@@ -77,7 +77,7 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
-* Tue Nov 21 2006 Chris Lumens <clumens@redhat.com> 2.6.19-1
+* Thu Nov 30 2006 Chris Lumens <clumens@redhat.com> 2.6.19-1
 - Update translation files (#216593).
 
 * Mon Nov 20 2006 Chris Lumens <clumens@redhat.com> 2.6.18-1
