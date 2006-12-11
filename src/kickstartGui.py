@@ -137,26 +137,16 @@ class kickstartGui:
         while gtk.events_pending():
             gtk.main_iteration()
 
-	#bring in bootloader functions
 	self.bootloader_class = bootloader.bootloader(xml, self.options_notebook, self.kickstartData)
-                                                      
-	#bring in install functions
 	self.install_class = install.install(self, xml, self.category_store,
 					     self.category_view, self.options_notebook,
 					     self.kickstartData)
-	#bring in partitions functions
 	self.partition_class = partition.partition(xml, self.kickstartData)
-	#bring in network functions
 	self.network_class = network.network(xml, self.kickstartData)
-	#bring in auth functions
 	self.auth_class = auth.auth(xml, self.kickstartData)
-	#bring in firewall functions
 	self.firewall_class = firewall.Firewall(xml, self.kickstartData)
-	#bring in X functions
 	self.X_class = xconfig.xconfig(xml, self.kickstartData)
-	#bring in package function
 	self.packages_class = packages.Packages(xml, self.kickstartData)
-	#bring in scripts function
 	self.scripts_class = scripts.scripts(xml, self.kickstartData)
 
         self.open_menu.connect("activate", self.on_activate_open)
