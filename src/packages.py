@@ -25,6 +25,7 @@ import gtk.glade
 import gobject
 import getopt
 import os
+import shutil
 import string
 import sys
 import yum
@@ -147,13 +148,7 @@ class sckYumBase(yum.YumBase):
             self.repos.callback = None
 
     def cleanup(self):
-        for root, dirs, files in os.walk(self.temproot, topdown=False):
-            for name in files:
-                os.remove(os.path.join(root, name))
-            for name in dirs:
-                os.rmdir(os.path.join(root, name))
-
-        os.rmdir(self.temproot)
+        shutil.rmtree(self.temproot)
 
 class Packages:
     def __init__(self, xml, ksdata):
