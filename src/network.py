@@ -253,10 +253,6 @@ class network:
                               self.nameserver_entry4.get_text()))     
             self.network_device_store.set_value(iter, 5, nameserverBuf)
 
-        iter = firewall.trustedStore.append()
-        firewall.trustedStore.set_value(iter, 0, False)
-        firewall.trustedStore.set_value(iter, 1, devName)        
-
         self.resetDialog()
         
     def editDevice(self, button, iter):
@@ -411,9 +407,6 @@ class network:
 
             if nic.device != "":
                 self.network_device_store.set_value(iter, 0, nic.device)
-                firewall_iter = firewall.trustedStore.append()
-                firewall.trustedStore.set_value(firewall_iter, 0, False)
-                firewall.trustedStore.set_value(firewall_iter, 1, nic.device)
 
             if nic.bootProto != "":
                 if nic.bootProto == "dhcp":

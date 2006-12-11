@@ -19,6 +19,7 @@ Requires: python >= 2.3.3
 Requires: hwdata
 Requires: rhpl
 Requires: system-config-language
+Requires: system-config-securitylevel
 Requires: pykickstart
 Requires: yum
 Requires: pirut
