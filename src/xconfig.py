@@ -67,7 +67,7 @@ class xconfig:
         self.driver_view.append_column(self.driver_col)
         
         self.monitor_store = gtk.ListStore(gobject.TYPE_STRING)
-        self.monitor_view.set_model(self.monitor_store)
+        self.monitor_view.set_model(None)
         self.monitor_col = gtk.TreeViewColumn("", gtk.CellRendererText(), text = 0)
         self.monitor_view.append_column(self.monitor_col)
 
@@ -148,13 +148,15 @@ class xconfig:
         for manufacturer in l:
             for mon in db[manufacturer]:
                 model = mon[0]
-                id = mon[1]
-                hsync = mon[2]
-                vsync = mon[3]
+
                 if model not in mon_list:
                     mon_list.append(model)
                     iter = self.monitor_store.append()
                     self.monitor_store.set_value(iter, 0, model)
+
+        # Don't set the model on the view until after we've done those
+        # thousands of appends.
+        self.monitor_view.set_model(self.monitor_store)
 
     def on_driver_probe_check_toggled(self, *args):
         self.driver_vbox.set_sensitive(not self.driver_probe_check.get_active())
