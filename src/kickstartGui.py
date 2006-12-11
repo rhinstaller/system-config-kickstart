@@ -151,7 +151,7 @@ class kickstartGui:
 	#bring in auth functions
 	self.auth_class = auth.auth(xml, self.kickstartData)
 	#bring in firewall functions
-	self.firewall_class = firewall.firewall(xml, self.kickstartData)
+	self.firewall_class = firewall.Firewall(xml, self.kickstartData)
 	#bring in X functions
 	self.X_class = xconfig.xconfig(xml, self.kickstartData)
 	#bring in package function
