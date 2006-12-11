@@ -20,7 +20,7 @@
 import gtk
 import gtk.glade
 import sys
-sys.path.append("../../../system-config-securitylevel/head/src")
+sys.path.append("/usr/share/system-config-securitylevel/head/src")
 from securitylevel import childWindow as scslWindow
 from pykickstart.constants import *
 
