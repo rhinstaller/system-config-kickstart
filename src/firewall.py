@@ -20,8 +20,10 @@
 import gtk
 import gtk.glade
 import sys
-sys.path.append("/usr/share/system-config-securitylevel/head/src")
+sys.path.append("../../../system-config-securitylevel/head/src")
+from securitylevel import xml as selinuxXml
 from securitylevel import childWindow as scslWindow
+from selinuxPage import selinuxPage
 from pykickstart.constants import *
 
 ##
@@ -32,6 +34,26 @@ import rhpl.translate as translate
 domain = 'system-config-kickstart'
 translate.textdomain (domain)
 gtk.glade.bindtextdomain(domain)
+
+class selinuxWindow(selinuxPage):
+    def __init__(self, xml, doDebug=None, inFirstboot=False):
+        selinuxPage.__init__(self, xml, doDebug, inFirstboot)
+
+    def read_selinux_config(self):
+        return 0
+
+    def enabled_changed(self, combo):
+        pass
+
+    def apply(self, *args):
+        self.ksdata = args[0]
+
+        if self.enabledOptionMenu.get_active() == 0:
+            self.ksdata.selinux = SELINUX_ENFORCING
+        elif self.enabledOptionMenu.get_active() == 1:
+            self.ksdata.selinux = SELINUX_PERMISSIVE
+        elif self.enabledOptionMenu.get_active() == 2:
+            self.ksdata.selinux = SELINUX_DISABLED
 
 class FirewallWindow(scslWindow):
     def __init__(self):
@@ -65,13 +87,6 @@ class FirewallWindow(scslWindow):
                                                             model.get_value(iter, 1)))
             iter = model.iter_next(iter)
 
-#        if self.selinuxOptionMenu.get_history() == 0:
-#            self.ksdata.selinux = SELINUX_ENFORCING
-#        elif self.selinuxOptionMenu.get_history() == 1:
-#            self.ksdata.selinux = SELINUX_PERMISSIVE
-#        elif self.selinuxOptionMenu.get_history() == 2:
-#            self.ksdata.selinux = SELINUX_DISABLED
-
 class Firewall:
     def __init__(self, xml, ksdata):
         self.toplevel = xml.get_widget("main_window")
@@ -85,24 +100,26 @@ class Firewall:
             self.firewall_frame.show_all()
             return
 
-        # Bring in window from system-config-securitylevel.
+        # Bring in windows from system-config-securitylevel.
         self.scsl_window = FirewallWindow()
+        self.selinuxWindow = selinuxWindow(selinuxXml)
         self.scsl_window.setupScreen()
-        self.scsl_vbox = self.scsl_window.xml.get_widget("mainVBox")
+        self.scsl_notebook = self.scsl_window.xml.get_widget("scsNotebook")
 
         # Set some defaults that can be overridden by applyKsdata later.
         self.scsl_window.securityOptionMenu.set_active(0)
         self.scsl_window.trustedServicesBox.set_sensitive(True)
         self.scsl_window.otherPortsExpander.set_sensitive(True)
 
-        self.scsl_vbox.reparent(self.firewall_frame)
-        self.scsl_vbox.show_all()
+        self.scsl_notebook.reparent(self.firewall_frame)
+        self.scsl_notebook.show_all()
 
     def formToKsdata(self):
         if self.ksdata.upgrade:
             return
 
         self.scsl_window.apply(self.ksdata)
+        self.selinuxWindow.apply(self.ksdata)
 
     def applyKsdata(self):
         # If we convert everything into a list of arguments, then
@@ -117,11 +134,11 @@ class Firewall:
         for port in self.ksdata.firewall["ports"]:
             args.append("--port=%s" % port)
 
-#        if self.ksdata.selinux == SELINUX_DISABLED:
-#            self.selinuxOptionMenu.set_history(2)
-#        elif self.ksdata.selinux == SELINUX_ENFORCING:
-#            self.selinuxOptionMenu.set_history(0)
-#        elif self.ksdata.selinux == SELINUX_PERMISSIVE:
-#            self.selinuxOptionMenu.set_history(1)
+        if self.ksdata.selinux == SELINUX_DISABLED:
+            self.selinuxWindow.enabledOptionMenu.set_active(2)
+        elif self.ksdata.selinux == SELINUX_ENFORCING:
+            self.selinuxWindow.enabledOptionMenu.set_active(0)
+        elif self.ksdata.selinux == SELINUX_PERMISSIVE:
+            self.selinuxWindow.enabledOptionMenu.set_active(1)
 
         self.scsl_window.parseArgList(args)
