@@ -25,7 +25,6 @@ import gtk.glade
 import gobject
 import getopt
 import os
-import shutil
 import string
 import sys
 import yum
@@ -148,7 +147,13 @@ class sckYumBase(yum.YumBase):
             self.repos.callback = None
 
     def cleanup(self):
-        shutil.rmtree(self.temproot)
+        for root, dirs, files in os.walk(self.temproot, topdown=False):
+            for name in files:
+                os.remove(os.path.join(root, name))
+            for name in dirs:
+                os.rmdir(os.path.join(root, name))
+
+        os.rmdir(self.temproot)
 
 class Packages:
     def __init__(self, xml, ksdata):
@@ -187,12 +192,15 @@ class Packages:
             self.y.cleanup()
 
     def formToKsdata(self):
+        if not self.y.packagesEnabled:
+            return
+
+        # Don't clear the lists out until now.  This means that if we failed
+        # to start yum up, we can still write out the initial %packages
+        # section.
         self.ksdata.groupList = []
 #        self.ksdata.packageList = []
 #        self.ksdata.excludedList = []
-
-        if not self.y.packagesEnabled:
-            return
 
         self.y.tsInfo.makelists()
         for txmbr in self.y.tsInfo.getMembers():
