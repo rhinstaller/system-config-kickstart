@@ -192,12 +192,15 @@ class Packages:
             self.y.cleanup()
 
     def formToKsdata(self):
+        if not self.y.packagesEnabled:
+            return
+
+        # Don't clear the lists out until now.  This means that if we failed
+        # to start yum up, we can still write out the initial %packages
+        # section.
         self.ksdata.groupList = []
 #        self.ksdata.packageList = []
 #        self.ksdata.excludedList = []
-
-        if not self.y.packagesEnabled:
-            return
 
         self.y.tsInfo.makelists()
         for txmbr in self.y.tsInfo.getMembers():
