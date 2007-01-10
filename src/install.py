@@ -35,13 +35,13 @@ gtk.glade.bindtextdomain(domain)
 
 class install:
   
-    def __init__(self, parent_class, xml, store, view, notebook, ksdata):
+    def __init__(self, parent_class, xml, store, view, notebook, ksHandler):
         self.xml = xml
         self.parent_class = parent_class
         self.store = store
         self.view = view
         self.notebook = notebook
-        self.ksdata = ksdata
+        self.ks = ksHandler
         self.install_radiobutton = xml.get_widget("install_radiobutton")
         self.upgrade_radiobutton = xml.get_widget("upgrade_radiobutton")
         self.partitioning_frame = xml.get_widget("partitioning_frame")
@@ -117,14 +117,11 @@ class install:
         elif self.hd_radiobutton.get_active():
             self.install_notebook.set_current_page(4)
                                      
-    def formToKsdata(self):
-        if self.install_radiobutton.get_active():
-            self.ksdata.upgrade = False
-        elif self.upgrade_radiobutton.get_active():
-            self.ksdata.upgrade = True
+    def formToKickstart(self):
+        self.ks.upgrade(upgrade=self.install_radiobutton.get_active())
 
         if self.cdrom_radiobutton.get_active():
-            self.ksdata.method["method"] = "cdrom"
+            self.ks.method.method = "cdrom"
         elif self.nfs_radiobutton.get_active():
             server = self.nfsserver_entry.get_text()
             dir = self.nfsdir_entry.get_text()
@@ -138,9 +135,9 @@ class install:
             if server [-1] == "/":
                 server = server[:-1]
 
-            self.ksdata.method["method"] = "nfs"
-            self.ksdata.method["server"] = server
-            self.ksdata.method["dir"] = dir
+            self.ks.method.method = "nfs"
+            self.ks.method.server = server
+            self.ks.method.dir = dir
         elif self.ftp_radiobutton.get_active():
             ftpserver = string.strip(self.ftpserver_entry.get_text())
             if ftpserver == "":
@@ -172,8 +169,8 @@ class install:
             else:
                 buf = buf + "/" + directory
 
-            self.ksdata.method["method"] = "url"
-            self.ksdata.method["url"] = buf
+            self.ks.method.method = "url"
+            self.ks.method.url = buf
         elif self.http_radiobutton.get_active():
             if self.httpserver_entry.get_text() == "":
                 self.showDialog(_("Please enter an HTTP server."), self.httpserver_entry)
@@ -197,8 +194,8 @@ class install:
             else:
                 buf = buf + "/" + directory
 
-            self.ksdata.method["method"] = "url"
-            self.ksdata.method["url"] = buf
+            self.ks.method.method = "url"
+            self.ks.method.url = buf
         elif self.hd_radiobutton.get_active():
             if self.hddir_entry.get_text() == "":
                 self.showDialog(_("Please enter a hard drive directory."), self.hddir_entry)
@@ -207,9 +204,9 @@ class install:
                 self.showDialog(_("Please enter a hard drive partition."), self.hdpart_entry)
                 return None
 
-            self.ksdata.method["method"] = "harddrive"
-            self.ksdata.method["partition"] = self.hdpart_entry.get_text()
-            self.ksdata.method["dir"] = self.hddir_entry.get_text()
+            self.ks.method.method = "harddrive"
+            self.ks.method.partition = self.hdpart_entry.get_text()
+            self.ks.method.dir = self.hddir_entry.get_text()
 
         return 0
 
@@ -241,33 +238,33 @@ class install:
         dir = "/" + dir
         return host, dir
 
-    def applyKsdata(self):
-        if self.ksdata.upgrade == False:
+    def applyKickstart(self):
+        if self.ks.upgrade.upgrade == False:
             self.install_radiobutton.set_active(True)            
         else:
             self.upgrade_radiobutton.set_active(True)
 
-        if self.ksdata.method["method"] == "cdrom":
+        if self.ks.method.method == "cdrom":
             self.cdrom_radiobutton.set_active(True)
 
-        elif self.ksdata.method["method"] == "harddrive":
+        elif self.ks.method.method == "harddrive":
             self.hd_radiobutton.set_active(True)
 
-            if self.ksdata.method["partition"] != "":
-                self.hdpart_entry.set_text(self.ksdata.method["partition"])
-            if self.ksdata.method["dir"] != "":
-                self.hddir_entry.set_text(self.ksdata.method["dir"])
+            if self.ks.method.partition != "":
+                self.hdpart_entry.set_text(self.ks.method.partition)
+            if self.ks.method.dir != "":
+                self.hddir_entry.set_text(self.ks.method.dir)
 
-        elif self.ksdata.method["method"] == "nfs":
+        elif self.ks.method.method == "nfs":
             self.nfs_radiobutton.set_active(True)
 
-            if self.ksdata.method["server"] != "":
-                self.nfsserver_entry.set_text(self.ksdata.method["server"])
-            if self.ksdata.method["dir"]  != "":
-                self.nfsdir_entry.set_text(self.ksdata.method["dir"])
+            if self.ks.method.server != "":
+                self.nfsserver_entry.set_text(self.ks.method.server)
+            if self.ks.method.dir  != "":
+                self.nfsdir_entry.set_text(self.ks.method.dir)
 
-        elif self.ksdata.method["method"] == "url":
-            tokens = string.split(self.ksdata.method["url"], "://")
+        elif self.ks.method.method == "url":
+            tokens = string.split(self.ks.method.url, "://")
 
             protocol = tokens[0]
             data = tokens[1]

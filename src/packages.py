@@ -151,10 +151,10 @@ class sckYumBase(yum.YumBase):
         shutil.rmtree(self.temproot)
 
 class Packages:
-    def __init__(self, xml, ksdata):
+    def __init__(self, xml, ksHandler):
         self.toplevel = xml.get_widget("main_window")
         self.package_frame = xml.get_widget("package_frame")
-        self.ksdata = ksdata
+        self.ks = ksHandler
         pbar = PirutProgressCallback(_("Retrieving package information"),
                                      self.toplevel, num_tasks=10)
         pbar.show()
@@ -186,37 +186,37 @@ class Packages:
         if self.y.packagesEnabled:
             self.y.cleanup()
 
-    def formToKsdata(self):
+    def formToKickstart(self):
         if not self.y.packagesEnabled:
             return
 
         # Don't clear the lists out until now.  This means that if we failed
         # to start yum up, we can still write out the initial %packages
         # section.
-        self.ksdata.groupList = []
-#        self.ksdata.packageList = []
-#        self.ksdata.excludedList = []
+        self.ks.packages.groupList = []
+#        self.ks.packages.packageList = []
+#        self.ks.packages.excludedList = []
 
         self.y.tsInfo.makelists()
         for txmbr in self.y.tsInfo.getMembers():
 #            if txmbr.ts_state == '-':
-#                self.ksdata.excludedList.append(txmbr.name)
+#                self.ks.packages.excludedList.append(txmbr.name)
 #                continue
             if txmbr.groups:
                 for g in txmbr.groups:
                     grp = self.y.comps.return_group(g)
-                    if g not in self.ksdata.groupList:
-                        self.ksdata.groupList.append(g)
+                    if g not in self.ks.packages.groupList:
+                        self.ks.packages.groupList.append(g)
 #                    if txmbr.name in grp.optional_packages.keys():
-#                        self.ksdata.packageList.append(txmbr.name)
+#                        self.ks.packages.packageList.append(txmbr.name)
 #            else:
-#                self.ksdata.packageList.append(txmbr.name)
+#                self.ks.packages.packageList.append(txmbr.name)
 
-    def applyKsdata(self):
+    def applyKickstart(self):
 #        # We don't really care about invalid names here.  Perhaps we should
-#        # at least throw them out of the ksdata lists so they don't keep
+#        # at least throw them out of the packages lists so they don't keep
 #        # coming back?
-#        for pkg in self.ksdata.packageList:
+#        for pkg in self.ks.packages.packageList:
 #            try:
 #                self.y.install(name=pkg)
 #            except:
@@ -228,14 +228,14 @@ class Packages:
         self.y.tsInfo = self.y._transactionDataFactory()
 
         for grp in self.y.comps.groups:
-            if grp.groupid in self.ksdata.groupList:
+            if grp.groupid in self.ks.packages.groupList:
                 self.y.selectGroup(grp.groupid)
             else:
                 self.y.deselectGroup(grp.groupid)
 
 #        # This is a whole lot like __deselectPackage in OptionalPackageSelector
 #        # in pirut.  If only we could get to that.
-#        for pkg in self.ksdata.excludedList:
+#        for pkg in self.ks.packages.excludedList:
 #            pkgs = self.y.pkgSack.returnNewestByName(pkg)
 #            if pkgs:
 #                pkgs = self.y.bestPackagesFromList(pkgs)

@@ -27,8 +27,8 @@ from pykickstart.parser import Script
 from pykickstart.constants import *
 
 class scripts:
-    def __init__(self, xml, ksdata):
-        self.ksdata = ksdata
+    def __init__(self, xml, ksHandler):
+        self.ks = ksHandler
         self.chroot_checkbutton = xml.get_widget("chroot_checkbutton")
         self.interpreter_checkbutton = xml.get_widget("interpreter_checkbutton")
         self.interpreter_entry = xml.get_widget("interpreter_entry")
@@ -46,7 +46,7 @@ class scripts:
     def pre_interpreter_cb(self, args):
         self.pre_interpreter_entry.set_sensitive(self.pre_interpreter_checkbutton.get_active())        
 
-    def formToKsdata(self):
+    def formToKickstart(self):
         self.preData()
         self.postData()
     
@@ -59,7 +59,7 @@ class scripts:
             return
 
         preScripts = filter(lambda s: s.type == KS_SCRIPT_PRE,
-                            self.ksdata.scripts)
+                            self.ks.scripts)
 
         if len(preScripts) == 0:
             script = Script("", type=KS_SCRIPT_PRE)
@@ -74,7 +74,7 @@ class scripts:
         script.script = data
 
         if len(preScripts) == 0:
-            self.ksdata.scripts.append(script)
+            self.ks.scripts.append(script)
 
     def postData(self):
         post_buffer = self.post_textview.get_buffer()
@@ -85,7 +85,7 @@ class scripts:
             return
 
         postScripts = filter(lambda s: s.type == KS_SCRIPT_POST,
-                             self.ksdata.scripts)
+                             self.ks.scripts)
 
         if len(postScripts) == 0:
             script = Script("", type=KS_SCRIPT_POST)
@@ -105,13 +105,13 @@ class scripts:
         script.script = data
 
         if len(postScripts) == 0:
-            self.ksdata.scripts.append(script)
+            self.ks.scripts.append(script)
 
-    def applyKsdata(self):
+    def applyKickstart(self):
         preScripts = filter(lambda s: s.type == KS_SCRIPT_PRE,
-                            self.ksdata.scripts)
+                            self.ks.scripts)
         postScripts = filter(lambda s: s.type == KS_SCRIPT_POST,
-                             self.ksdata.scripts)
+                             self.ks.scripts)
 
         # We're kind of a crappy UI and assume they only have one script.
         if len(preScripts) > 0:

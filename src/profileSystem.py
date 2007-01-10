@@ -26,8 +26,8 @@ import rhpl.keyboard as keyboard
 from pykickstart.constants import *
 
 class ProfileSystem:
-    def __init__(self, kickstartData):
-        self.kickstartData = kickstartData
+    def __init__(self, ksHandler):
+        self.ks = ksHandler
         self.languageBackend = language_backend.LanguageBackend()
         
         self.getLang()
@@ -37,19 +37,19 @@ class ProfileSystem:
         self.getSELinux()
         self.getPackages()
 
-        self.kickstartData.method["method"] = "cdrom"
-        self.kickstartData.upgrade = False
-        self.kickstartData.zerombr = True
-        self.kickstartData.clearpart["type"] = CLEARPART_TYPE_LINUX
+        self.ks.method(method="cdrom")
+        self.ks.upgrade(upgrade=False)
+        self.ks.zerombr(zerombr=True)
+        self.ks.clearpart(type=CLEARPART_TYPE_LINUX)
 
     def getLang(self):
         default, langs = self.languageBackend.getInstalledLangs()
-        self.kickstartData.lang = default
+        self.ks.lang(lang=default)
 
     def getKeyboard(self):
         kbd = keyboard.Keyboard()
         kbd.read()
-        self.kickstartData.keyboard = kbd.get()
+        self.ks.keyboard(keyboard=kbd.get())
 
     def getTimezone(self):
         lines = open('/etc/sysconfig/clock', 'r').readlines()
@@ -62,15 +62,13 @@ class ProfileSystem:
         zone = string.replace(zone, "'", "")
         zone = string.strip(zone)
 
-        self.kickstartData.timezone["timezone"] = zone
-        self.kickstartData.timezone["isUtc"] = False
+        self.ks.timezone(timezone=zone, isUtc=False)
 
     def getRootPassword(self):
         if os.access('/etc/shadow', os.R_OK) == 1:
             line = open('/etc/shadow', 'r').readline()
             tokens = string.split(line, ":")
-            self.kickstartData.rootpw["isCrypted"] = True
-            self.kickstartData.rootpw["password"] = tokens[1]
+            self.ks.rootpw(isCrypted=True, password=tokens[1])
         else:
             print "no access to /etc/shadow"
 
@@ -78,11 +76,11 @@ class ProfileSystem:
         lines = os.popen("/usr/sbin/getenforce").readlines()
 
         if lines[0].lower().startswith("disabled"):
-            self.kickstartData.selinux = SELINUX_DISABLED
+            self.ks.selinux(selinux=SELINUX_DISABLED)
         elif lines[0].lower().startswith("permissive"):
-            self.kickstartData.selinux = SELINUX_PERMISSIVE
+            self.ks.selinux(selinux=SELINUX_PERMISSIVE)
         elif lines[0].lower().startswith("enforcing"):
-            self.kickstartData.selinux = SELINUX_ENFORCING
+            self.ks.selinux(selinux=SELINUX_ENFORCING)
 
     def getPackages(self):
         fd = os.popen("/bin/rpm -qa --queryformat \"%{NAME}\n\"")
@@ -93,4 +91,4 @@ class ProfileSystem:
         for package in packages:
             packages[packages.index(package)] = string.strip(package)
 
-        self.kickstartData.packageList = packages
+        self.ks.packages.add(packages)

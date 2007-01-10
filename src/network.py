@@ -25,7 +25,6 @@ import string
 import getopt
 import gtk.glade
 import firewall
-from pykickstart.data import *
 
 ##
 ## I18N
@@ -38,8 +37,8 @@ gtk.glade.bindtextdomain(domain)
 
 class network:
 
-    def __init__(self, xml, ksdata):
-        self.ksdata = ksdata
+    def __init__(self, xml, ksHandler):
+        self.ks = ksHandler
         self.network_frame = xml.get_widget("network_frame")
         self.network_device_tree = xml.get_widget("network_device_tree")
         self.add_device_button = xml.get_widget("add_device_button")
@@ -362,12 +361,12 @@ class network:
         self.network_device_dialog.hide()
         return True
 
-    def formToKsdata(self):
-        self.ksdata.network = []
+    def formToKickstart(self):
+        self.ks.network.network = []
         iter = self.network_device_store.get_iter_first()
 
         while iter:
-            nd = KickstartNetworkData()
+            nd = self.ks.NetworkData()
 
             if self.network_device_store.get_value(iter, 1) == "DHCP":
                 nd.bootProto = "dhcp"
@@ -381,7 +380,7 @@ class network:
                 nd.nameserver = self.network_device_store.get_value(iter, 5)
 
             nd.device = self.network_device_store.get_value(iter, 0)
-            self.ksdata.network.append(nd)
+            self.ks.network.add(nd)
             iter = self.network_device_store.iter_next(iter)
 
     def typeChanged(self, *args):
@@ -399,10 +398,10 @@ class network:
             self.edit_device_button.set_sensitive(True)
             self.delete_device_button.set_sensitive(True)
             
-    def applyKsdata(self):
+    def applyKickstart(self):
         self.network_device_store.clear()
 
-        for nic in self.ksdata.network:
+        for nic in self.ks.network.network:
             iter = self.network_device_store.append()
 
             if nic.device != "":

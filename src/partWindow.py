@@ -25,7 +25,6 @@ import getopt
 import re
 import partEntry
 import kickstartGui
-from pykickstart.data import *
 
 ##
 ## I18N
@@ -358,7 +357,7 @@ class partWindow:
 
         return device
 
-    def formToKsdata(self, part_object):
+    def formToKickstart(self, part_object):
         onDiskVal = ""
         onPartVal = ""
         setSizeVal = ""

@@ -193,7 +193,7 @@ class sambaData:
 
       
 class auth:
-    def formToKsdata(self):
+    def formToKickstart(self):
         if self.nisCheck.get_active():
             self.myNisClass.set_domain(self.nisDomainEntry.get_text())
             self.myNisClass.set_server(self.nisServerEntry.get_text())
@@ -265,11 +265,11 @@ class auth:
         if (self.nscd_checkbutton.get_active()):
             buf = buf + " --enablecache"
 
-        self.ksdata.authconfig = buf
+        self.ks.authconfig(authconfig=buf)
         return 0
     
-    def __init__(self, xml, ksdata):
-        self.ksdata = ksdata
+    def __init__(self, xml, ksHandler):
+        self.ks = ksHandler
 
         self.myNisClass = nisData()
         self.myLDAPClass = ldapData()
@@ -385,9 +385,9 @@ class auth:
             self.auth_vbox.show()
             self.auth_label_box.hide()
 
-    def applyKsdata(self):
-        if self.ksdata.authconfig != "":
-            authstr = string.split(self.ksdata.authconfig)
+    def applyKickstart(self):
+        if self.ks.authconfig.authconfig != "":
+            authstr = string.split(self.ks.authconfig.authconfig)
             opts, args = getopt.getopt(authstr, "d:h",["enablemd5", "enablenis",
                                        "nisdomain=", "nisserver=", "useshadow", "enableshadow",
                                        "enableldap", "enableldapauth", "ldapserver=", "ldapbasedn=",
