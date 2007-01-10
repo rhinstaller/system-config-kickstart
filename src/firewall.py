@@ -46,36 +46,32 @@ class selinuxWindow(selinuxPage):
         pass
 
     def apply(self, *args):
-        self.ksdata = args[0]
+        self.ks = args[0]
 
         if self.enabledOptionMenu.get_active() == 0:
-            self.ksdata.selinux = SELINUX_ENFORCING
+            self.ks.selinux.selinux = SELINUX_ENFORCING
         elif self.enabledOptionMenu.get_active() == 1:
-            self.ksdata.selinux = SELINUX_PERMISSIVE
+            self.ks.selinux.selinux = SELINUX_PERMISSIVE
         elif self.enabledOptionMenu.get_active() == 2:
-            self.ksdata.selinux = SELINUX_DISABLED
+            self.ks.selinux.selinux = SELINUX_DISABLED
 
 class FirewallWindow(scslWindow):
     def __init__(self):
         scslWindow.__init__(self)
 
     def apply(self, *args):
-        self.ksdata = args[0]
+        self.ks = args[0]
 
-        self.ksdata.firewall["trusts"] = []
-        self.ksdata.firewall["ports"] = []
-
-        if self.securityOptionMenu.get_active() == 0:
-            self.ksdata.firewall["enabled"] = True
-        else:
-            self.ksdata.firewall["enabled"] = False
+        self.ks.firewall.trusts = []
+        self.ks.firewall.ports = []
+        self.ks.firewall.enabled = self.securityOptionMenu.get_active()
 
         iter = self.incomingList.store.get_iter_first()
         while iter:
             svc = self._getServiceByDesc(self.incomingList.store.get_value(iter, 1))
             if self.incomingList.store.get_value(iter, 0):
                 for (port, proto) in svc.ports:
-                    self.ksdata.firewall["ports"].append("%s:%s" % (port, proto))
+                    self.ks.firewall.ports.append("%s:%s" % (port, proto))
 
             iter = self.incomingList.store.iter_next(iter)
 
@@ -83,17 +79,17 @@ class FirewallWindow(scslWindow):
         iter = model.get_iter_first()
 
         while iter:
-            self.ksdata.firewall["ports"].append("%s:%s" % (model.get_value(iter, 0),
-                                                            model.get_value(iter, 1)))
+            self.ks.firewall.ports.append("%s:%s" % (model.get_value(iter, 0),
+                                                     model.get_value(iter, 1)))
             iter = model.iter_next(iter)
 
 class Firewall:
-    def __init__(self, xml, ksdata):
+    def __init__(self, xml, ksHandler):
         self.toplevel = xml.get_widget("main_window")
         self.firewall_frame = xml.get_widget("firewall_frame")
-        self.ksdata = ksdata
+        self.ks = ksHandler
 
-        if self.ksdata.upgrade:
+        if self.ks.upgrade.upgrade:
             disabledLabel = gtk.Label(_("Firewall configuration is not applicable on upgrades."))
             disabledLabel.set_line_wrap(True)
             self.firewall_frame.add(disabledLabel)
@@ -114,31 +110,31 @@ class Firewall:
         self.scsl_notebook.reparent(self.firewall_frame)
         self.scsl_notebook.show_all()
 
-    def formToKsdata(self):
-        if self.ksdata.upgrade:
+    def formToKickstart(self):
+        if self.ks.upgrade.upgrade:
             return
 
-        self.scsl_window.apply(self.ksdata)
-        self.selinuxWindow.apply(self.ksdata)
+        self.scsl_window.apply(self.ks)
+        self.selinuxWindow.apply(self.ks)
 
-    def applyKsdata(self):
+    def applyKickstart(self):
         # If we convert everything into a list of arguments, then
         # system-config-securitylevel already knows how to handle it.
         args = []
 
-        if self.ksdata.firewall["enabled"]:
+        if self.ks.firewall.enabled:
             args.append("--enabled")
         else:
             args.append("--disabled")
 
-        for port in self.ksdata.firewall["ports"]:
+        for port in self.ks.firewall.ports:
             args.append("--port=%s" % port)
 
-        if self.ksdata.selinux == SELINUX_DISABLED:
+        if self.ks.selinux.selinux == SELINUX_DISABLED:
             self.selinuxWindow.enabledOptionMenu.set_active(2)
-        elif self.ksdata.selinux == SELINUX_ENFORCING:
+        elif self.ks.selinux.selinux == SELINUX_ENFORCING:
             self.selinuxWindow.enabledOptionMenu.set_active(0)
-        elif self.ksdata.selinux == SELINUX_PERMISSIVE:
+        elif self.ks.selinux.selinux == SELINUX_PERMISSIVE:
             self.selinuxWindow.enabledOptionMenu.set_active(1)
 
         self.scsl_window.parseArgList(args)

@@ -30,7 +30,6 @@ import raidWindow
 import partEntry
 import kickstartGui
 from pykickstart.constants import *
-from pykickstart.data import *
 
 ##
 ## I18N
@@ -42,9 +41,9 @@ translate.textdomain (domain)
 gtk.glade.bindtextdomain(domain)
 
 class partition:
-    def __init__(self, xml, ksdata):
+    def __init__(self, xml, ksHandler):
         self.xml = xml
-        self.ksdata = ksdata
+        self.ks = ksHandler
         self.partition_vbox = self.xml.get_widget("partition_vbox")
         self.partition_label_box = self.xml.get_widget("partition_label_box")
         self.clear_mbr_yes_radiobutton = self.xml.get_widget("clear_mbr_yes_radiobutton")
@@ -148,32 +147,33 @@ class partition:
     def raidPartition(self, *args):
         self.raidOptionsWindow.showOptionsWindow()
 
-    def formToKsdata(self):
-        self.ksdata.partitions = []
-        self.ksdata.raidList = []
-        self.ksdata.lvList = []
-        self.ksdata.vgList = []
-        self.ksdata.dmraids = []
+    def formToKickstart(self):
+        # Reset lists to empty.
+        self.ks.partition()
+        self.ks.raid()
+        self.ks.logvol()
+        self.ks.volgroup()
+        self.ks.dmraid()
 
-        #zerombr and clearpart options
-        self.ksdata.zerombr = self.clear_mbr_yes_radiobutton.get_active()
+        # zerombr and clearpart options
+        self.ks.zerombr(zerombr=self.clear_mbr_yes_radiobutton.get_active())
 
         if self.remove_parts_none_radiobutton.get_active():
             # We want to preserve all partitions, so don't write the
             # clearpart line
-            self.ksdata.clearpart["drives"] = []
-            self.ksdata.clearpart["type"] = CLEARPART_TYPE_NONE
+            self.ks.clearpart.drives = []
+            self.ks.clearpart.type = CLEARPART_TYPE_NONE
             pass
         else:
             if self.remove_parts_all_radiobutton.get_active():
-                self.ksdata.clearpart["type"] = CLEARPART_TYPE_ALL
+                self.ks.clearpart.type = CLEARPART_TYPE_ALL
             elif self.remove_parts_linux_radiobutton.get_active():
-                self.ksdata.clearpart["type"] = CLEARPART_TYPE_LINUX
+                self.ks.clearpart.type = CLEARPART_TYPE_LINUX
 
             if self.initlabel_yes_radiobutton.get_active():
-                self.ksdata.clearpart["initAll"] = True
+                self.ks.clearpart.initAll = True
             elif self.initlabel_no_radiobutton.get_active():
-                self.ksdata.clearpart["initAll"] = False
+                self.ks.clearpart.initAll = False
 
         self.partDataBuf = []
         self.part_store.foreach(self.getPartData)
@@ -185,7 +185,7 @@ class partition:
 
         if part_object:
             if part_object.isRaidDevice == None:
-                pd = KickstartPartData()
+                pd = self.ks.PartData()
                 pd.mountpoint = part_object.mountPoint
                 pd.fstype = part_object.fsType
 
@@ -211,10 +211,10 @@ class partition:
                 if not part_object.doFormat:
                     pd.format = False
 
-                self.ksdata.partitions.append(pd)
+                self.ks.partition.append(pd)
             else:
                 #This is a raid device
-                rd = KickstartRaidData()
+                rd = self.ks.RaidData()
                 rd.mountpoint = part_object.mountPoint
 
                 if part_object.raidLevel:
@@ -232,7 +232,7 @@ class partition:
                 if part_object.raidPartitions != None:
                     rd.members = part_object.raidPartitions
 
-                self.ksdata.raidList.append(rd)
+                self.ks.raid.add(rd)
 
     def rowSelected(self, *args):
         store, iter = self.part_view.get_selection().get_selected()
@@ -277,18 +277,18 @@ class partition:
             self.partition_vbox.show_all()
             self.partition_label_box.hide()
 
-    def applyKsdata(self):
-        if self.ksdata.zerombr == True:
+    def applyKickstart(self):
+        if self.ks.zerombr.zerombr:
             self.clear_mbr_yes_radiobutton.set_active(True)
         else:
             self.clear_mbr_no_radiobutton.set_active(True)            
 
-        if self.ksdata.clearpart["type"] != CLEARPART_TYPE_NONE:
-            if self.ksdata.clearpart["type"] == CLEARPART_TYPE_ALL:
+        if self.ks.clearpart.type != CLEARPART_TYPE_NONE:
+            if self.ks.clearpart.type == CLEARPART_TYPE_ALL:
                 self.remove_parts_all_radiobutton.set_active(True)
-            elif self.ksdata.clearpart["type"] == CLEARPART_TYPE_LINUX:
+            elif self.ks.clearpart.type == CLEARPART_TYPE_LINUX:
                 self.remove_parts_linux_radiobutton.set_active(True)                
-            if self.ksdata.clearpart["initAll"] == True:
+            if self.ks.clearpart.initAll == True:
                 self.initlabel_yes_radiobutton.set_active(True)
             else:
                 self.initlabel_no_radiobutton.set_active(True)
@@ -296,8 +296,8 @@ class partition:
         else:
             self.remove_parts_none_radiobutton.set_active(True)
 
-        for part in self.ksdata.partitions:
+        for part in self.ks.partition.partitions:
              self.partWindow.populateList(part)
 
-        for part in self.ksdata.raidList:
+        for part in self.ks.raid.raidList:
             self.raidWindow.populateRaid(part)

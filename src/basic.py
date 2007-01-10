@@ -46,10 +46,10 @@ translate.textdomain (domain)
 gtk.glade.bindtextdomain(domain)
 
 class basic:
-    def __init__(self, parent_class, xml, notebook, ksdata):
+    def __init__(self, parent_class, xml, notebook, ksHandler):
         self.parent_class = parent_class
         self.notebook = notebook
-        self.ksdata = ksdata
+        self.ks = ksHandler
         self.xml = xml
         self.lang_combo = xml.get_widget("lang_combo")
         self.keyboard_combo = xml.get_widget("keyboard_combo")
@@ -60,8 +60,7 @@ class basic:
         self.root_passwd_confirm_entry = xml.get_widget("root_passwd_confirm_entry")        
         self.reboot_checkbutton = xml.get_widget("reboot_checkbutton")
         self.text_install_checkbutton = xml.get_widget("text_install_checkbutton")
-        self.ksdata.bootloader["md5pass"] = ""
-        self.ksdata.bootloader["password"] = ""
+        self.ks.bootloader(md5pass="", password="")
         self.interactive_checkbutton = xml.get_widget("interactive_checkbutton")                
         self.encrypt_root_pw_checkbutton = xml.get_widget("encrypt_root_pw_checkbutton")
         self.lang_support_list = xml.get_widget("lang_support_list")
@@ -131,19 +130,17 @@ class basic:
         self.timezone_combo.set_popdown_strings(self.timezone_list)
         self.timezone_combo.list.select_item(select)
 
-    def formToKsdata(self, doInstall):
-        self.ksdata.lang = self.languageLookup(self.lang_combo.entry.get_text())
+    def formToKickstart(self, doInstall):
+        self.ks.lang(lang=self.languageLookup(self.lang_combo.entry.get_text()))
 
         keys = self.keyboard_dict.keys()
         keys.sort()
         for item in keys:
             if self.keyboard_dict[item][0] == self.keyboard_combo.entry.get_text():
-                self.ksdata.keyboard = item
+                self.ks.keyboard(keyboard=item)
                 break
 
-        self.ksdata.timezone["timezone"] = self.timezone_combo.entry.get_text()
-        if self.utc_check_button.get_active() == True:
-            self.ksdata.timezone["isUtc"] = True
+        self.ks.timezone(timezone=self.timezone_combo.entry.get_text(), isUtc=self.utc_check_button.get_active())
 
         if self.root_passwd_entry.get_text() != self.root_passwd_confirm_entry.get_text():
             dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, _("Root passwords do not match."))
@@ -177,31 +174,26 @@ class basic:
                     self.passwd = crypt.crypt (pure, salt)
 
                     temp = unicode (self.passwd, 'iso-8859-1')
-                    self.ksdata.rootpw["isCrypted"] = True
-                    self.ksdata.rootpw["password"] = temp
+                    self.ks.rootpw(isCrypted=True, password=temp)
                 else:
-                    self.ksdata.rootpw["isCrypted"] = True
-                    self.ksdata.rootpw["password"] = pure
+                    self.ks.rootpw(isCrypted=True, password=pure)
             else:
                 self.passwd = self.root_passwd_entry.get_text()
-                self.ksdata.rootpw["password"] = pure
+                self.ks.rootpw(isCrypted=False, password=self.passwd)
 
-        self.ksdata.platform = self.platform_combo.entry.get_text()
+        self.ks.platform = self.platform_combo.entry.get_text()
 
         if self.reboot_checkbutton.get_active():
-            self.ksdata.reboot["action"] = KS_REBOOT
+            self.ks.reboot(action=KS_REBOOT)
         else:
-            self.ksdata.reboot["action"] = KS_WAIT
+            self.ks.reboot(action=KS_WAIT)
 
         if self.text_install_checkbutton.get_active():
-            self.ksdata.displayMode = DISPLAY_MODE_TEXT
+            self.ks.displaymode(displayMode=DISPLAY_MODE_TEXT)
         else:
-            self.ksdata.displayMode = DISPLAY_MODE_GRAPHICAL
+            self.ks.displaymode(displayMode=DISPLAY_MODE_GRAPHICAL)
 
-        if self.interactive_checkbutton.get_active():
-            self.ksdata.interactive = True
-        else:
-            self.ksdata.interactive = False
+        self.ks.interactive(interactive=self.interactive_checkbutton.get_active())
 
         return 0
 
@@ -213,32 +205,29 @@ class basic:
         if platform:
             self.parent_class.platformTypeChanged(entry.get_text())
 
-    def applyKsdata(self):
-        if self.ksdata.platform in self.platform_list:
-            self.platform_combo.entry.set_text(self.ksdata.platform)
+    def applyKickstart(self):
+        if self.ks.platform in self.platform_list:
+            self.platform_combo.entry.set_text(self.ks.platform)
 
         for lang in self.langDict.keys():
-            if self.langDict[lang] == self.ksdata.lang:
+            if self.langDict[lang] == self.ks.lang.lang:
                 self.lang_combo.list.select_item(self.lang_list.index(lang))
 
-        if self.ksdata.keyboard != "":
-            self.keyboard_combo.entry.set_text(self.keyboard_dict[self.ksdata.keyboard][0])
+        if self.ks.keyboard.keyboard != "":
+            self.keyboard_combo.entry.set_text(self.keyboard_dict[self.ks.keyboard.keyboard][0])
 
-        if self.ksdata.timezone["timezone"] != "":
-            self.timezone_combo.list.select_item(self.timezone_list.index(self.ksdata.timezone["timezone"]))
+        if self.ks.timezone.timezone != "":
+            self.timezone_combo.list.select_item(self.timezone_list.index(self.ks.timezone.timezone))
 
-        if self.ksdata.reboot["action"] == KS_REBOOT:
-            self.reboot_checkbutton.set_active(True)
-        else:
-            self.reboot_checkbutton.set_active(False)
+        self.reboot_checkbutton.set_active(self.ks.reboot.action == KS_REBOOT)
 
-        if self.ksdata.displayMode == DISPLAY_MODE_TEXT:
+        if self.ks.displaymode.displayMode == DISPLAY_MODE_TEXT:
             self.text_install_checkbutton.set_active(True)
 
-        if self.ksdata.interactive == True:
+        if self.ks.interactive.interactive == True:
             self.interactive_checkbutton.set_active(True)
 
-        if self.ksdata.rootpw["password"] != "":
-            self.root_passwd_entry.set_text(self.ksdata.rootpw["password"])
-            self.root_passwd_confirm_entry.set_text(self.ksdata.rootpw["password"])
-            self.encrypt_root_pw_checkbutton.set_active(self.ksdata.rootpw["isCrypted"])
+        if self.ks.rootpw.password != "":
+            self.root_passwd_entry.set_text(self.ks.rootpw.password)
+            self.root_passwd_confirm_entry.set_text(self.ks.rootpw.password)
+            self.encrypt_root_pw_checkbutton.set_active(self.ks.rootpw.isCrypted)

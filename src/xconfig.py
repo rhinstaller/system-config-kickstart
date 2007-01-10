@@ -37,8 +37,8 @@ gtk.glade.bindtextdomain(domain)
 
 class xconfig:
 
-    def __init__(self, xml, ksdata):
-        self.ksdata = ksdata
+    def __init__(self, xml, ksHandler):
+        self.ks = ksHandler
         self.xconfig_vbox = xml.get_widget("xconfig_vbox")
         self.xconfig_label_box = xml.get_widget("xconfig_label_box")
         self.config_x_button = xml.get_widget("config_x_button")
@@ -182,84 +182,84 @@ class xconfig:
             self.xconfig_vbox.show()
             self.xconfig_label_box.hide()
 
-    def formToKsdata(self):
-        if self.ksdata.upgrade == True:
-            self.ksdata.firstboot = FIRSTBOOT_SKIP
+    def formToKickstart(self):
+        if self.ks.upgrade.upgrade == True:
+            self.ks.firstboot.firstboot = FIRSTBOOT_SKIP
             return
 
         if self.config_x_button.get_active():
             if self.firstboot_optionmenu.get_history() == 0:
-                self.ksdata.firstboot = FIRSTBOOT_SKIP
+                self.ks.firstboot.firstboot = FIRSTBOOT_SKIP
             elif self.firstboot_optionmenu.get_history() == 1:
-                self.ksdata.firstboot = FIRSTBOOT_DEFAULT
+                self.ks.firstboot.firstboot = FIRSTBOOT_DEFAULT
             elif self.firstboot_optionmenu.get_history() == 2:
-                self.ksdata.firstboot = FIRSTBOOT_RECONFIG
+                self.ks.firstboot.firstboot = FIRSTBOOT_RECONFIG
 
-            self.ksdata.skipx = False
+            self.ks.skipx.skipx = False
 
             #color depth - translate
-            self.ksdata.xconfig["depth"] = int(self.color_depth_combo.entry.get_text())
+            self.ks.xconfig.depth = int(self.color_depth_combo.entry.get_text())
             #resolution
-            self.ksdata.xconfig["resolution"] = self.resolution_combo.entry.get_text()
+            self.ks.xconfig.resolution = self.resolution_combo.entry.get_text()
             #default desktop
             if self.gnome_radiobutton.get_active():
-                self.ksdata.xconfig["defaultdesktop"] = "GNOME"
+                self.ks.xconfig.defaultdesktop = "GNOME"
             elif self.kde_radiobutton.get_active():
-                self.ksdata.xconfig["defaultdesktop"] = "KDE"
+                self.ks.xconfig.defaultdesktop = "KDE"
 
             #startxonboot
             if self.startxonboot_checkbutton.get_active():
-                self.ksdata.xconfig["startX"] = True
+                self.ks.xconfig.startX = True
 
             if not self.driver_probe_check.get_active():
                 #video card driver and monitor
                 temp, iter = self.driver_view.get_selection().get_selected()
                 driver = self.driver_store.get_value(iter, 0)
-                self.ksdata.xconfig["driver"] = driver
+                self.ks.xconfig.driver = driver
 
                 #translate MB to KB 
-                self.ksdata.xconfig["videoRam"] = self.ramsize_dict [self.videoram_combo.entry.get_text()]
+                self.ks.xconfig.videoRam = self.ramsize_dict [self.videoram_combo.entry.get_text()]
 
             if not self.monitor_probe_check.get_active():
                 if self.sync_button.get_active():
-                    self.ksdata.monitor["hsync"] = self.hsync_entry.get_text()
-                    self.ksdata.monitor["vsync"] = self.vsync_entry.get_text()
+                    self.ks.monitor.hsync = self.hsync_entry.get_text()
+                    self.ks.monitor.vsync = self.vsync_entry.get_text()
                 else:
                     temp, iter = self.monitor_view.get_selection().get_selected()
                     name = self.monitor_store.get_value(iter, 0)
-                    self.ksdata.monitor["monitor"] = name
+                    self.ks.monitor.monitor = name
         else:
-            self.ksdata.skipx = True
+            self.ks.skipx.skipx = True
 
-    def applyKsdata(self):
-        if self.ksdata.skipx == True:
+    def applyKickstart(self):
+        if self.ks.skipx.skipx == True:
             self.config_x_button.set_active(False)
         else:
             self.config_x_button.set_active(True)
 
-            if self.ksdata.firstboot == FIRSTBOOT_DEFAULT:
+            if self.ks.firstboot.firstboot == FIRSTBOOT_DEFAULT:
                 self.firstboot_optionmenu.set_history(1)
-            elif self.ksdata.firstboot == FIRSTBOOT_RECONFIG:
+            elif self.ks.firstboot.firstboot == FIRSTBOOT_RECONFIG:
                 self.firstboot_optionmenu.set_history(2)
 
-            if self.ksdata.xconfig["startX"] == True:
+            if self.ks.xconfig.startX == True:
                 self.startxonboot_checkbutton.set_active(True)
 
-            if self.ksdata.xconfig["defaultdesktop"] != "":
-                if string.lower(self.ksdata.xconfig["defaultdesktop"]) == "gnome":
+            if self.ks.xconfig.defaultdesktop != "":
+                if string.lower(self.ks.xconfig.defaultdesktop) == "gnome":
                     self.gnome_radiobutton.set_active(True)
-                if string.lower(self.ksdata.xconfig["defaultdesktop"]) == "kde":
+                if string.lower(self.ks.xconfig.defaultdesktop) == "kde":
                     self.kde_radiobutton.set_active(True)
 
-            if self.ksdata.xconfig["depth"] != 0:
-                self.color_depth_combo.entry.set_text(str(self.ksdata.xconfig["depth"]))
+            if self.ks.xconfig.depth != 0:
+                self.color_depth_combo.entry.set_text(str(self.ks.xconfig.depth))
 
-            if self.ksdata.xconfig["resolution"] != "":
-                self.resolution_combo.entry.set_text(string.strip(self.ksdata.xconfig["resolution"]))
+            if self.ks.xconfig.resolution != "":
+                self.resolution_combo.entry.set_text(string.strip(self.ks.xconfig.resolution))
 
-            if self.ksdata.xconfig["driver"] != "":
+            if self.ks.xconfig.driver != "":
                 self.driver_probe_check.set_active(False)
-                value = string.replace(self.ksdata.xconfig["driver"], '"', '')
+                value = string.replace(self.ks.xconfig.driver, '"', '')
 
                 iter = self.driver_store.get_iter_first()
 
@@ -270,14 +270,14 @@ class xconfig:
                         self.driver_view.scroll_to_cell(path, self.driver_col, True, 0.5, 0.5)
                     iter = self.driver_store.iter_next(iter)
 
-            if self.ksdata.xconfig["videoRam"] != "":
+            if self.ks.xconfig.videoRam != "":
                 for size in self.ramsize_dict.keys():
-                    if int(self.ksdata.xconfig["videoRam"]) == int(self.ramsize_dict[size]):
+                    if int(self.ks.xconfig.videoRam) == int(self.ramsize_dict[size]):
                         self.videoram_combo.entry.set_text(size)                            
 
-            if self.ksdata.monitor["monitor"] != "":
+            if self.ks.monitor.monitor != "":
                 self.monitor_probe_check.set_active(False)
-                value = string.replace(self.ksdata.monitor["monitor"], '"', '')
+                value = string.replace(self.ks.monitor.monitor, '"', '')
 
                 iter = self.monitor_store.get_iter_first()
 
@@ -288,12 +288,12 @@ class xconfig:
                         self.monitor_view.scroll_to_cell(path, self.monitor_col, True, 0.5, 0.5)
                     iter = self.monitor_store.iter_next(iter)
 
-            if self.ksdata.monitor["hsync"] != "":
+            if self.ks.monitor.hsync != "":
                 self.sync_button.set_active(True)
-                self.hsync_entry.set_text(string.strip(self.ksdata.monitor["hsync"]))
+                self.hsync_entry.set_text(string.strip(self.ks.monitor.hsync))
                 self.monitor_probe_check.set_active(False)
 
-            if self.ksdata.monitor["vsync"] != "":
+            if self.ks.monitor.vsync != "":
                 self.sync_button.set_active(True)
-                self.vsync_entry.set_text(string.strip(self.ksdata.monitor["vsync"]))
+                self.vsync_entry.set_text(string.strip(self.ks.monitor.vsync))
                 self.monitor_probe_check.set_active(False)

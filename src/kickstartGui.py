@@ -40,7 +40,7 @@ import packages
 import scripts
 import os
 from pykickstart.parser import *
-from pykickstart.data import KickstartData
+from pykickstart.version import makeVersion
 
 try:
     from gtk import _disable_gdk_threading
@@ -81,12 +81,10 @@ class kickstartGui:
         self.packages_class.cleanup()
 
     def __init__ (self, file):
-        self.kickstartData = KickstartData()
+        self.ksHandler = makeVersion()
 
         if file:
-            self.kickstartHandlers = KickstartHandlers(self.kickstartData)
-            self.parser = KickstartParser (self.kickstartData,
-                                           self.kickstartHandlers)
+            self.parser = KickstartParser(self.ksHandler)
             self.parser.readKickstart(file)
 
         self.xml = xml
@@ -117,11 +115,16 @@ class kickstartGui:
 	col.set_sort_column_id(0)
 	self.category_view.append_column(col)
 	
-	self.category_list = [ (_("Basic Configuration")), (_("Installation Method")),
-			       (_("Boot Loader Options")), (_("Partition Information")),
-			       (_("Network Configuration")), (_("Authentication")),
-			       (_("Firewall Configuration")), (_("Display Configuration")),
-			       (_("Package Selection")), (_("Pre-Installation Script")),
+	self.category_list = [ (_("Basic Configuration")),
+                               (_("Installation Method")),
+			       (_("Boot Loader Options")),
+                               (_("Partition Information")),
+			       (_("Network Configuration")),
+                               (_("Authentication")),
+			       (_("Firewall Configuration")),
+                               (_("Display Configuration")),
+			       (_("Package Selection")),
+                               (_("Pre-Installation Script")),
 			       (_("Post-Installation Script")) ]
 		
 	for item in self.category_list:
@@ -129,7 +132,7 @@ class kickstartGui:
 		self.category_store.set_value(iter, 0, item)
 
 	#bring in basic functions
-	self.basic_class = basic.basic(self, xml, self.options_notebook, self.kickstartData)
+	self.basic_class = basic.basic(self, xml, self.options_notebook, self.ksHandler)
         
         # Now that we've loaded the UI elements for the first active thing in the notebook,
         # draw it so we can display a progress bar when yum starts doing stuff.
@@ -137,17 +140,18 @@ class kickstartGui:
         while gtk.events_pending():
             gtk.main_iteration()
 
-	self.bootloader_class = bootloader.bootloader(xml, self.options_notebook, self.kickstartData)
+	self.bootloader_class = bootloader.bootloader(xml, self.options_notebook, self.ksHandler)
 	self.install_class = install.install(self, xml, self.category_store,
-					     self.category_view, self.options_notebook,
-					     self.kickstartData)
-	self.partition_class = partition.partition(xml, self.kickstartData)
-	self.network_class = network.network(xml, self.kickstartData)
-	self.auth_class = auth.auth(xml, self.kickstartData)
-	self.firewall_class = firewall.Firewall(xml, self.kickstartData)
-	self.X_class = xconfig.xconfig(xml, self.kickstartData)
-	self.packages_class = packages.Packages(xml, self.kickstartData)
-	self.scripts_class = scripts.scripts(xml, self.kickstartData)
+					     self.category_view,
+                                             self.options_notebook,
+					     self.ksHandler)
+	self.partition_class = partition.partition(xml, self.ksHandler)
+	self.network_class = network.network(xml, self.ksHandler)
+	self.auth_class = auth.auth(xml, self.ksHandler)
+	self.firewall_class = firewall.Firewall(xml, self.ksHandler)
+	self.X_class = xconfig.xconfig(xml, self.ksHandler)
+	self.packages_class = packages.Packages(xml, self.ksHandler)
+	self.scripts_class = scripts.scripts(xml, self.ksHandler)
 
         self.open_menu.connect("activate", self.on_activate_open)
 	self.preview_menu.connect("activate", self.on_activate_preview_options)
@@ -159,7 +163,7 @@ class kickstartGui:
 	self.options_notebook.connect("switch-page", self.on_notebook_changed)
             
 	#show gui
-        self.applyKsdata()
+        self.applyKickstart()
 	self.toplevel.show()
 
 	gtk.main()
@@ -222,30 +226,30 @@ class kickstartGui:
 
     # Copy possible UI changes back to the kickstartData object.
     def getAllData(self, *args):
-        if self.install_class.formToKsdata() is None:
+        if self.install_class.formToKickstart() is None:
             return None
         
-        if self.bootloader_class.formToKsdata() is None:
+        if self.bootloader_class.formToKickstart() is None:
             return None
 
         doInstall = self.install_radiobutton.get_active()
 
-        if self.basic_class.formToKsdata(doInstall) is None:
+        if self.basic_class.formToKickstart(doInstall) is None:
             return None
 
-        if self.auth_class.formToKsdata() is None:
+        if self.auth_class.formToKickstart() is None:
             return None
 
-	self.network_class.formToKsdata()
-	self.firewall_class.formToKsdata()
-	self.X_class.formToKsdata()
+	self.network_class.formToKickstart()
+	self.firewall_class.formToKickstart()
+	self.X_class.formToKickstart()
 
         #only do these things in installs, not upgrades
 	if doInstall:
-            self.partition_class.formToKsdata()
-            self.packages_class.formToKsdata()
+            self.partition_class.formToKickstart()
+            self.packages_class.formToKickstart()
 
-	self.scripts_class.formToKsdata()
+	self.scripts_class.formToKickstart()
         return 0
 
     def on_activate_open(self, *args):
@@ -257,10 +261,8 @@ class kickstartGui:
 
         if result == gtk.RESPONSE_OK:
             if os.access(file, os.R_OK) == 1:
-                self.kickstartData = KickstartData()
-                self.kickstartHandlers = KickstartHandlers(self.kickstartData)
-                self.parser = KickstartParser (self.kickstartData,
-                                               self.kickstartHandlers)
+                self.ksHandler = makeVersion()
+                self.parser = KickstartParser(self.ksHandler)
                 self.parser.readKickstart(file)
 
                 # Refresh ksdata pointers in every subclass for the new
@@ -270,9 +272,9 @@ class kickstartGui:
                            self.network_class, self.auth_class, self.X_class,
                            self.firewall_class, self.packages_class,
                            self.scripts_class]:
-                    cl.ksdata = self.kickstartData
+                    cl.kshandler = self.ksHandler
 
-                self.applyKsdata()
+                self.applyKickstart()
 	        self.toplevel.show()
             else:
                 dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_WARNING, gtk.BUTTONS_OK,
@@ -287,27 +289,25 @@ class kickstartGui:
     #show chosen options for preview
     def on_activate_preview_options (self, *args):
         if self.getAllData() != None:
-            from pykickstart.writer import KickstartWriter
-            writer = KickstartWriter(self.kickstartData)
-            previewDialog = savefile.saveFile (writer.write(), self.xml)
+            previewDialog = savefile.saveFile (self.ksHandler.__str__(),
+                                               self.xml)
 
     def on_activate_save_options (self, *args):
         if self.getAllData() != None:
-            from pykickstart.writer import KickstartWriter
-            writer = KickstartWriter(self.kickstartData)
-            fileDialog = savedialog.saveDialog(writer.write(), self.xml)
+            fileDialog = savedialog.saveDialog(self.ksHandler.__str__(),
+                                               self.xml)
 
-    def applyKsdata(self):
-        self.basic_class.applyKsdata()
-        self.install_class.applyKsdata()
-        self.bootloader_class.applyKsdata()
-        self.partition_class.applyKsdata()
-        self.auth_class.applyKsdata()
-        self.network_class.applyKsdata()
-        self.firewall_class.applyKsdata()
-        self.X_class.applyKsdata()
-        self.packages_class.applyKsdata()
-        self.scripts_class.applyKsdata()
+    def applyKickstart(self):
+        self.basic_class.applyKickstart()
+        self.install_class.applyKickstart()
+        self.bootloader_class.applyKickstart()
+        self.partition_class.applyKickstart()
+        self.auth_class.applyKickstart()
+        self.network_class.applyKickstart()
+        self.firewall_class.applyKickstart()
+        self.X_class.applyKickstart()
+        self.packages_class.applyKickstart()
+        self.scripts_class.applyKickstart()
 
     def platformTypeChanged(self, platform):
         self.bootloader_class.platformTypeChanged(platform)
