@@ -149,11 +149,10 @@ class partition:
 
     def formToKickstart(self):
         # Reset lists to empty.
-        self.ks.partition()
-        self.ks.raid()
-        self.ks.logvol()
-        self.ks.volgroup()
-        self.ks.dmraid()
+        self.ks.partition = self.ks.Partition()
+        self.ks.raid = self.ks.Raid()
+        self.ks.logvol = self.ks.LogVol()
+        self.ks.volgroup = self.ks.VolGroup()
 
         # zerombr and clearpart options
         self.ks.zerombr(zerombr=self.clear_mbr_yes_radiobutton.get_active())
@@ -211,7 +210,7 @@ class partition:
                 if not part_object.doFormat:
                     pd.format = False
 
-                self.ks.partition.append(pd)
+                self.ks.partition.add(pd)
             else:
                 #This is a raid device
                 rd = self.ks.RaidData()
