@@ -235,6 +235,7 @@ class xconfig:
                     self.ks.monitor.monitor = name
         else:
             self.ks.skipx(skipx=True)
+            self.ks.monitor = self.ks.Monitor()
             self.ks.xconfig = self.ks.XConfig()
 
     def applyKickstart(self):
