@@ -155,6 +155,14 @@ class Packages:
         self.toplevel = xml.get_widget("main_window")
         self.package_frame = xml.get_widget("package_frame")
         self.ks = ksHandler
+
+        if self.ks.upgrade.upgrade:
+            disabledLabel = gtk.Label(_("Firewall configuration is not applicable on upgrades."))
+            disabledLabel.set_line_wrap(True)
+            self.package_frame.add(disabledLabel)
+            self.package_frame.show_all()
+            return
+
         pbar = PirutProgressCallback(_("Retrieving package information"),
                                      self.toplevel, num_tasks=10)
         pbar.show()
