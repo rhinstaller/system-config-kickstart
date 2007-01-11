@@ -47,6 +47,7 @@ class scripts:
         self.pre_interpreter_entry.set_sensitive(self.pre_interpreter_checkbutton.get_active())        
 
     def formToKickstart(self):
+        self.ks.scripts = []
         self.preData()
         self.postData()
     
@@ -58,8 +59,7 @@ class scripts:
         if data == "":
             return
 
-        preScripts = filter(lambda s: s.type == KS_SCRIPT_PRE,
-                            self.ks.scripts)
+        preScripts = filter(lambda s: s.type == KS_SCRIPT_PRE, self.ks.scripts)
 
         if len(preScripts) == 0:
             script = Script("", type=KS_SCRIPT_PRE)
@@ -108,10 +108,8 @@ class scripts:
             self.ks.scripts.append(script)
 
     def applyKickstart(self):
-        preScripts = filter(lambda s: s.type == KS_SCRIPT_PRE,
-                            self.ks.scripts)
-        postScripts = filter(lambda s: s.type == KS_SCRIPT_POST,
-                             self.ks.scripts)
+        preScripts = filter(lambda s: s.type == KS_SCRIPT_PRE, self.ks.scripts)
+        postScripts = filter(lambda s: s.type == KS_SCRIPT_POST, self.ks.scripts)
 
         # We're kind of a crappy UI and assume they only have one script.
         if len(preScripts) > 0:
