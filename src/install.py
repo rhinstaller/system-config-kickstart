@@ -118,7 +118,7 @@ class install:
             self.install_notebook.set_current_page(4)
                                      
     def formToKickstart(self):
-        self.ks.upgrade(upgrade=self.install_radiobutton.get_active())
+        self.ks.upgrade(upgrade=self.upgrade_radiobutton.get_active())
 
         if self.cdrom_radiobutton.get_active():
             self.ks.method.method = "cdrom"
