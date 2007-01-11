@@ -92,7 +92,7 @@ class xconfig:
         self.resolution_combo.entry.set_editable(False)
         
         #add video card RAM sizes to option menu
-        vram_list = ["256 KB", "512 KB", "1 MB", "2 MB", "4 MB", "8 MB", "16 MB", "32 MB", "64 MB"]
+        vram_list = ["256 KB", "512 KB", "1 MB", "2 MB", "4 MB", "8 MB", "16 MB", "32 MB", "64 MB", "128 MB", "256 MB"]
         self.videoram_combo.set_popdown_strings(vram_list)
         self.videoram_combo.entry.set_editable(False)
 
@@ -105,6 +105,8 @@ class xconfig:
                              "16 MB" : "16384",
                              "32 MB" : "32768",
                              "64 MB" : "65536",
+                             "128 MB" : "131072",
+                             "256 MB" : "262144"
                              }
 
     def fill_driver_list(self):
@@ -165,9 +167,8 @@ class xconfig:
         self.monitor_vbox.set_sensitive(not self.monitor_probe_check.get_active())
 
     def toggleXconfig (self, args):
-        config = self.config_x_button.get_active()
         #disable xconfig notebook
-        self.xconfig_notebook.set_sensitive(config)
+        self.xconfig_notebook.set_sensitive(self.config_x_button.get_active())
 
     def toggle_sync (self, args):
         sync_instead = self.sync_button.get_active()
@@ -208,10 +209,12 @@ class xconfig:
                 self.ks.xconfig.defaultdesktop = "KDE"
 
             #startxonboot
-            if self.startxonboot_checkbutton.get_active():
-                self.ks.xconfig.startX = True
+            self.ks.xconfig.startX = self.startxonboot_checkbutton.get_active()
 
-            if not self.driver_probe_check.get_active():
+            if self.driver_probe_check.get_active():
+                self.ks.xconfig.driver = ""
+                self.ks.xconfig.wideoRam = ""
+            else:
                 #video card driver and monitor
                 temp, iter = self.driver_view.get_selection().get_selected()
                 driver = self.driver_store.get_value(iter, 0)
@@ -220,7 +223,9 @@ class xconfig:
                 #translate MB to KB 
                 self.ks.xconfig.videoRam = self.ramsize_dict [self.videoram_combo.entry.get_text()]
 
-            if not self.monitor_probe_check.get_active():
+            if self.monitor_probe_check.get_active():
+                self.ks.monitor = self.ks.Monitor()
+            else:
                 if self.sync_button.get_active():
                     self.ks.monitor.hsync = self.hsync_entry.get_text()
                     self.ks.monitor.vsync = self.vsync_entry.get_text()
@@ -229,7 +234,8 @@ class xconfig:
                     name = self.monitor_store.get_value(iter, 0)
                     self.ks.monitor.monitor = name
         else:
-            self.ks.skipx.skipx = True
+            self.ks.skipx(skipx=True)
+            self.ks.xconfig = self.ks.XConfig()
 
     def applyKickstart(self):
         if self.ks.skipx.skipx == True:
