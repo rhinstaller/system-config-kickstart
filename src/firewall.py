@@ -49,11 +49,11 @@ class selinuxWindow(selinuxPage):
         self.ks = args[0]
 
         if self.enabledOptionMenu.get_active() == 0:
-            self.ks.selinux.selinux = SELINUX_ENFORCING
+            self.ks.selinux(selinux=SELINUX_ENFORCING)
         elif self.enabledOptionMenu.get_active() == 1:
-            self.ks.selinux.selinux = SELINUX_PERMISSIVE
+            self.ks.selinux(selinux=SELINUX_PERMISSIVE)
         elif self.enabledOptionMenu.get_active() == 2:
-            self.ks.selinux.selinux = SELINUX_DISABLED
+            self.ks.selinux(selinux=SELINUX_DISABLED)
 
 class FirewallWindow(scslWindow):
     def __init__(self):
@@ -61,10 +61,8 @@ class FirewallWindow(scslWindow):
 
     def apply(self, *args):
         self.ks = args[0]
-
-        self.ks.firewall.trusts = []
-        self.ks.firewall.ports = []
-        self.ks.firewall.enabled = self.securityOptionMenu.get_active()
+        self.ks.firewall(trusts=[], ports=[],
+                         enabled=self.securityOptionMenu.get_active() == 0)
 
         iter = self.incomingList.store.get_iter_first()
         while iter:
