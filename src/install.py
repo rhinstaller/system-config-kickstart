@@ -294,5 +294,3 @@ class install:
                 self.http_radiobutton.set_active(True)
                 self.httpserver_entry.set_text(host)
                 self.httpdir_entry.set_text(dir)
-
-
