@@ -20,7 +20,7 @@
 import gtk
 import gtk.glade
 import sys
-sys.path.append("../../../system-config-securitylevel/head/src")
+sys.path.append("/usr/share/system-config-securitylevel")
 from securitylevel import xml as selinuxXml
 from securitylevel import childWindow as scslWindow
 from selinuxPage import selinuxPage
@@ -99,6 +99,7 @@ class Firewall:
         self.selinuxWindow = selinuxWindow(selinuxXml)
         self.scsl_window.setupScreen()
         self.scsl_notebook = self.scsl_window.xml.get_widget("scsNotebook")
+        self.scsl_notebook.remove_page(1)
 
         # Set some defaults that can be overridden by applyKsdata later.
         self.scsl_window.securityOptionMenu.set_active(0)
