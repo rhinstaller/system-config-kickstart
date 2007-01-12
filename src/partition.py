@@ -149,10 +149,10 @@ class partition:
 
     def formToKickstart(self):
         # Reset lists to empty.
-        self.ks.partition = self.ks.Partition()
-        self.ks.raid = self.ks.Raid()
-        self.ks.logvol = self.ks.LogVol()
-        self.ks.volgroup = self.ks.VolGroup()
+        self.ks.partition(partitions=[])
+        self.ks.raid(raidList=[])
+        self.ks.logvol(lvList=[])
+        self.ks.volgroup(vgList=[])
 
         # zerombr and clearpart options
         self.ks.zerombr(zerombr=self.clear_mbr_yes_radiobutton.get_active())

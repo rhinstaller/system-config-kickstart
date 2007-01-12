@@ -362,7 +362,7 @@ class network:
         return True
 
     def formToKickstart(self):
-        self.ks.network.network = []
+        self.ks.network(network=[])
         iter = self.network_device_store.get_iter_first()
 
         while iter:
