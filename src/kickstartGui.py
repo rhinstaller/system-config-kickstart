@@ -272,7 +272,7 @@ class kickstartGui:
                            self.network_class, self.auth_class, self.X_class,
                            self.firewall_class, self.packages_class,
                            self.scripts_class]:
-                    cl.kshandler = self.ksHandler
+                    cl.ks = self.ksHandler
 
                 self.applyKickstart()
 	        self.toplevel.show()
