@@ -224,7 +224,7 @@ class xconfig:
                 self.ks.xconfig.videoRam = self.ramsize_dict [self.videoram_combo.entry.get_text()]
 
             if self.monitor_probe_check.get_active():
-                self.ks.monitor(hsync="", monitor="", vsync="")
+                self.ks.overrideCommand(self.ks.Monitor())
             else:
                 if self.sync_button.get_active():
                     self.ks.monitor.hsync = self.hsync_entry.get_text()
@@ -235,9 +235,8 @@ class xconfig:
                     self.ks.monitor.monitor = name
         else:
             self.ks.skipx(skipx=True)
-            self.ks.monitor(hsync="", monitor="", vsync="")
-            self.ks.xconfig(driver="", defaultdesktop="", depth=0,
-                            resolution="", startX=False, videoRam="")
+            self.ks.overrideCommand(self.ks.Monitor())
+            self.ks.overrideCommand(self.ks.XConfig())
 
     def applyKickstart(self):
         if self.ks.skipx.skipx == True:
