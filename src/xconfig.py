@@ -36,7 +36,6 @@ translate.textdomain (domain)
 gtk.glade.bindtextdomain(domain)
 
 class xconfig:
-
     def __init__(self, xml, ksHandler):
         self.ks = ksHandler
         self.xconfig_vbox = xml.get_widget("xconfig_vbox")
@@ -108,6 +107,14 @@ class xconfig:
                              "128 MB" : "131072",
                              "256 MB" : "262144"
                              }
+
+    def showDialog(self, text):
+        dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
+        dlg.set_position(gtk.WIN_POS_CENTER)
+        dlg.set_modal(True)
+        rc = dlg.run()
+        dlg.destroy()
+        return None
 
     def fill_driver_list(self):
         #add video drivers to list
@@ -217,6 +224,11 @@ class xconfig:
             else:
                 #video card driver and monitor
                 temp, iter = self.driver_view.get_selection().get_selected()
+
+                if iter is None:
+                    self.showDialog(_("Please select an X driver."))
+                    return None
+
                 driver = self.driver_store.get_value(iter, 0)
                 self.ks.xconfig.driver = driver
 
@@ -231,12 +243,19 @@ class xconfig:
                     self.ks.monitor.vsync = self.vsync_entry.get_text()
                 else:
                     temp, iter = self.monitor_view.get_selection().get_selected()
+
+                    if iter is None:
+                        self.showDialog(_("Please select a monitor."))
+                        return None
+
                     name = self.monitor_store.get_value(iter, 0)
                     self.ks.monitor.monitor = name
         else:
             self.ks.skipx(skipx=True)
             self.ks.overrideCommand(self.ks.Monitor())
             self.ks.overrideCommand(self.ks.XConfig())
+
+        return 0
 
     def applyKickstart(self):
         if self.ks.skipx.skipx == True:
