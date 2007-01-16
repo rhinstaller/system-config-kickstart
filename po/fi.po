@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-11-21 11:59-0500\n"
+"POT-Creation-Date: 2007-01-16 14:37-0500\n"
 "PO-Revision-Date: 2004-04-26 14:22+0300\n"
 "Last-Translator: Lauri Nurmi <lanurmi@iki.fi>\n"
 "Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
@@ -22,34 +22,34 @@ msgstr ""
 msgid "Please fill in the authentication information"
 msgstr "Syötä verkkotiedot"
 
-#: ../src/basic.py:70
+#: ../src/basic.py:69
 msgid "x86, AMD64, or Intel EM64T"
 msgstr ""
 
-#: ../src/basic.py:70
+#: ../src/basic.py:69
 msgid "Intel Itanium"
 msgstr ""
 
-#: ../src/basic.py:70
+#: ../src/basic.py:69
 #, fuzzy
 msgid "IBM iSeries"
 msgstr "SMB-palvelimet:"
 
-#: ../src/basic.py:71
+#: ../src/basic.py:70
 #, fuzzy
 msgid "IBM pSeries"
 msgstr "SMB-palvelimet:"
 
-#: ../src/basic.py:71
+#: ../src/basic.py:70
 msgid "IBM zSeries/s390"
 msgstr ""
 
-#: ../src/basic.py:149
+#: ../src/basic.py:146
 msgid "Root passwords do not match."
 msgstr "Pääkäyttäjän salasanat eivät täsmää."
 
-#: ../src/basic.py:150 ../src/install.py:218 ../src/partWindow.py:522
-#: ../src/partition.py:255 ../src/raidWindow.py:249
+#: ../src/basic.py:147 ../src/install.py:215 ../src/partWindow.py:521
+#: ../src/partition.py:254 ../src/raidWindow.py:249
 msgid "Error"
 msgstr "Virhe"
 
@@ -62,117 +62,121 @@ msgstr ""
 msgid "Grub passwords do not match.  Please try again."
 msgstr "Grubin salasanat eivät täsmää. Yritä uudelleen."
 
-#. create table with custom checklists
-#: ../src/firewall.py:60
-msgid "Trusted devices:"
-msgstr "Luotetut laitteet:"
+#: ../src/firewall.py:91 ../src/packages.py:160
+msgid "Firewall configuration is not applicable on upgrades."
+msgstr ""
 
-#: ../src/firewall.py:85
-msgid "Trusted services:"
-msgstr "Luotetut palvelut:"
-
-#: ../src/firewall.py:117
-msgid "Other ports: (1029:tcp)"
-msgstr "Muut portit: (1029:tcp)"
-
-#: ../src/install.py:133
+#: ../src/install.py:130
 msgid "Please enter an NFS server."
 msgstr "Syötä NFS-palvelin."
 
-#: ../src/install.py:136
+#: ../src/install.py:133
 msgid "Please enter an NFS directory."
 msgstr "Syötä NFS-hakemisto."
 
-#: ../src/install.py:147
+#: ../src/install.py:144
 msgid "Please enter an FTP server."
 msgstr "Syötä FTP-palvelin."
 
-#: ../src/install.py:154
+#: ../src/install.py:151
 msgid "Please enter an FTP directory."
 msgstr "Syötä FTP-hakemisto."
 
-#: ../src/install.py:160
+#: ../src/install.py:157
 msgid "Please enter an FTP user name."
 msgstr "Syötä FTP-käyttäjänimi."
 
-#: ../src/install.py:163
+#: ../src/install.py:160
 msgid "Please enter an FTP password."
 msgstr "Syötä FTP-salasana."
 
-#: ../src/install.py:179
+#: ../src/install.py:176
 msgid "Please enter an HTTP server."
 msgstr "Syötä HTTP-palvelin."
 
-#: ../src/install.py:182
+#: ../src/install.py:179
 msgid "Please enter an HTTP server directory."
 msgstr "Syötä HTTP-palvelimen hakemisto."
 
-#: ../src/install.py:204
+#: ../src/install.py:201
 msgid "Please enter a hard drive directory."
 msgstr "Syötä kiintolevyn hakemisto."
 
-#: ../src/install.py:207
+#: ../src/install.py:204
 msgid "Please enter a hard drive partition."
 msgstr "Syötä kiintolevyn osio."
 
-#: ../src/kickstartGui.py:93
+#: ../src/kickstartGui.py:94 ../src/kickstartGui.py:288
+#, python-format
+msgid ""
+"The following error was found while parsing your kickstart configuration:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: ../src/kickstartGui.py:97 ../src/kickstartGui.py:291
+#, fuzzy
+msgid "Error Parsing Kickstart Config"
+msgstr "Tietoja Kickstart Configuratorista"
+
+#: ../src/kickstartGui.py:105
 msgid "Kickstart"
 msgstr "Kickstart"
 
-#: ../src/kickstartGui.py:94
+#: ../src/kickstartGui.py:106
 msgid "Create a kickstart file"
 msgstr "Luo kickstart-tiedosto"
 
-#: ../src/kickstartGui.py:116
+#: ../src/kickstartGui.py:128
 msgid "Subsection"
 msgstr ""
 
-#: ../src/kickstartGui.py:120
+#: ../src/kickstartGui.py:132
 msgid "Basic Configuration"
 msgstr "Perusasetukset"
 
-#: ../src/kickstartGui.py:120
+#: ../src/kickstartGui.py:133
 msgid "Installation Method"
 msgstr "Asennustapa"
 
-#: ../src/kickstartGui.py:121
+#: ../src/kickstartGui.py:134
 msgid "Boot Loader Options"
 msgstr "Käynnistyslataimen valinnat"
 
-#: ../src/kickstartGui.py:121
+#: ../src/kickstartGui.py:135
 msgid "Partition Information"
 msgstr "Osiotiedot"
 
-#: ../src/kickstartGui.py:122 tmp/system-config-kickstart.glade.h:109
+#: ../src/kickstartGui.py:136 tmp/system-config-kickstart.glade.h:105
 msgid "Network Configuration"
 msgstr "Verkkoasetukset"
 
-#: ../src/kickstartGui.py:122
+#: ../src/kickstartGui.py:137
 msgid "Authentication"
 msgstr "Todennus"
 
-#: ../src/kickstartGui.py:123 tmp/system-config-kickstart.glade.h:52
+#: ../src/kickstartGui.py:138 tmp/system-config-kickstart.glade.h:49
 msgid "Firewall Configuration"
 msgstr "Palomuuriasetukset"
 
-#: ../src/kickstartGui.py:123 tmp/system-config-kickstart.glade.h:28
+#: ../src/kickstartGui.py:139 tmp/system-config-kickstart.glade.h:26
 #, fuzzy
 msgid "Display Configuration"
 msgstr "X-asetukset"
 
-#: ../src/kickstartGui.py:124 tmp/system-config-kickstart.glade.h:115
+#: ../src/kickstartGui.py:140 tmp/system-config-kickstart.glade.h:111
 msgid "Package Selection"
 msgstr "Paketin valinta"
 
-#: ../src/kickstartGui.py:124 tmp/system-config-kickstart.glade.h:125
+#: ../src/kickstartGui.py:141 tmp/system-config-kickstart.glade.h:121
 msgid "Pre-Installation Script"
 msgstr "Esiasennusskripti"
 
-#: ../src/kickstartGui.py:125 tmp/system-config-kickstart.glade.h:124
+#: ../src/kickstartGui.py:142 tmp/system-config-kickstart.glade.h:120
 msgid "Post-Installation Script"
 msgstr "Jälkiasennusskripti"
 
-#: ../src/kickstartGui.py:199
+#: ../src/kickstartGui.py:207
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -186,108 +190,108 @@ msgstr ""
 " Tekijänoikeus (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
 " Graafinen käyttöliittymä kickstart-tiedoston luontia varten."
 
-#: ../src/kickstartGui.py:200
+#: ../src/kickstartGui.py:208
 msgid "About Kickstart Configurator"
 msgstr "Tietoja Kickstart Configuratorista"
 
-#: ../src/kickstartGui.py:222
+#: ../src/kickstartGui.py:230
 msgid "Help is not available."
 msgstr "Ohje ei ole saatavilla."
 
-#: ../src/kickstartGui.py:289
+#: ../src/kickstartGui.py:312
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "Tiedostoon \"%s\" ei päästä."
 
-#: ../src/network.py:87
+#: ../src/network.py:86
 msgid "Device"
 msgstr "Laite"
 
-#: ../src/network.py:90
+#: ../src/network.py:89
 msgid "Network Type"
 msgstr "Verkon tyyppi"
 
-#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:226
-#: ../src/network.py:286 ../src/network.py:422
+#: ../src/network.py:108 ../src/network.py:154 ../src/network.py:225
+#: ../src/network.py:281 ../src/network.py:414
 msgid "Static IP"
 msgstr "Staattinen IP"
 
-#: ../src/network.py:216 ../src/network.py:278
+#: ../src/network.py:215 ../src/network.py:273
 msgid "Please fill in the network information"
 msgstr "Syötä verkkotiedot"
 
-#: ../src/network.py:330
+#: ../src/network.py:325
 #, python-format
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
 msgstr "%s niminen verkkolaite on jo olemassa. Valitse toinen laitenimi."
 
-#: ../src/packages.py:163
+#: ../src/packages.py:166
 #, fuzzy
 msgid "Retrieving package information"
 msgstr "Verkkolaitetietoja"
 
-#: ../src/packages.py:172
+#: ../src/packages.py:175
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
 msgstr ""
 
-#: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:193
+#: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:186
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:194
+#: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:187
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:87 ../src/partWindow.py:150
+#: ../src/partWindow.py:86 ../src/partWindow.py:149
 msgid "software RAID"
 msgstr "ohjelmisto-RAID"
 
-#: ../src/partWindow.py:88 tmp/system-config-kickstart.glade.h:212
+#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:205
 msgid "swap"
 msgstr "sivutus"
 
-#: ../src/partWindow.py:88 tmp/system-config-kickstart.glade.h:213
+#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:206
 msgid "vfat"
 msgstr "vfat"
 
-#: ../src/partWindow.py:89
+#: ../src/partWindow.py:88
 msgid "PPC PReP Boot"
 msgstr ""
 
-#: ../src/partWindow.py:263 ../src/partWindow.py:544 ../src/raidWindow.py:214
+#: ../src/partWindow.py:262 ../src/partWindow.py:543 ../src/raidWindow.py:214
 msgid "Yes"
 msgstr "Kyllä"
 
-#: ../src/partWindow.py:265 ../src/partWindow.py:546 ../src/raidWindow.py:216
+#: ../src/partWindow.py:264 ../src/partWindow.py:545 ../src/raidWindow.py:216
 msgid "No"
 msgstr "Ei"
 
-#: ../src/partWindow.py:288 ../src/partWindow.py:303 ../src/partWindow.py:322
-#: ../src/partWindow.py:336
+#: ../src/partWindow.py:287 ../src/partWindow.py:302 ../src/partWindow.py:321
+#: ../src/partWindow.py:335
 msgid "Auto"
 msgstr "Automaattinen"
 
-#: ../src/partWindow.py:297
+#: ../src/partWindow.py:296
 msgid "Hard Drives"
 msgstr "Kiintolevyt"
 
-#: ../src/partWindow.py:440
+#: ../src/partWindow.py:439
 msgid "Specify a mount point for the partition."
 msgstr "Määrittele liitospiste osiolle."
 
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:449
+#: ../src/partWindow.py:448
 #, python-format
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "Liitospiste \"%s\" on jo käytössä. Valitse toinen liitospiste."
 
-#: ../src/partWindow.py:469
+#: ../src/partWindow.py:468
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -295,11 +299,11 @@ msgstr ""
 "Luodaksesi uuden RAID-osion määritte joko kiintolevyn laitenimi tai olemassa "
 "oleva osio."
 
-#: ../src/partWindow.py:506
+#: ../src/partWindow.py:505
 msgid "Specify a device on which to create the partition."
 msgstr "Määrittele laite, jolle uusi osio luodaan."
 
-#: ../src/partWindow.py:515
+#: ../src/partWindow.py:514
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -307,7 +311,7 @@ msgstr ""
 "Osio, jonka määrittelit, ei sisällä numeroa lopussa. Osiot sisältävät "
 "osionumeron lopussa, kuten \"hda1\" tai \"sda3\"."
 
-#: ../src/partition.py:74
+#: ../src/partition.py:73
 msgid ""
 "Device/\n"
 "Partition Number"
@@ -315,7 +319,7 @@ msgstr ""
 "Laite/\n"
 "Osion numero"
 
-#: ../src/partition.py:76
+#: ../src/partition.py:75
 msgid ""
 "Mount Point/\n"
 "RAID"
@@ -323,19 +327,19 @@ msgstr ""
 "Liitospiste/\n"
 "RAID"
 
-#: ../src/partition.py:78
+#: ../src/partition.py:77
 msgid "Type"
 msgstr "Tyyppi"
 
-#: ../src/partition.py:80
+#: ../src/partition.py:79
 msgid "Format"
 msgstr "Alusta"
 
-#: ../src/partition.py:82
+#: ../src/partition.py:81
 msgid "Size (MB)"
 msgstr "Koko (MB)"
 
-#: ../src/partition.py:97 ../src/partition.py:137
+#: ../src/partition.py:96 ../src/partition.py:136
 msgid "Please select a partition from the list."
 msgstr "Valitse osio listasta."
 
@@ -359,10 +363,20 @@ msgstr "Tarvitset ainakin kolme osiota käyttääksesi RAID %s:stä."
 msgid "Raid Devices"
 msgstr "RAID-laitteet"
 
-#: ../src/xconfig.py:115
+#: ../src/xconfig.py:124
 #, fuzzy
 msgid "Could not read video driver database"
 msgstr "Ei voitu lukea näytönohjaintietokantaa"
+
+#: ../src/xconfig.py:229
+#, fuzzy
+msgid "Please select an X driver."
+msgstr "Syötä NFS-palvelin."
+
+#: ../src/xconfig.py:248
+#, fuzzy
+msgid "Please select a monitor."
+msgstr "Valitse pääkäyttäjän salasana."
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -393,550 +407,526 @@ msgid "5"
 msgstr "5"
 
 #: tmp/system-config-kickstart.glade.h:8
-msgid "Active"
-msgstr ""
-
-#: tmp/system-config-kickstart.glade.h:9
 msgid "Additional Size Options"
 msgstr "Koon lisävalinnat"
 
-#: tmp/system-config-kickstart.glade.h:10
+#: tmp/system-config-kickstart.glade.h:9
 msgid "Authentication Configuration"
 msgstr "Todennusasetukset"
 
-#: tmp/system-config-kickstart.glade.h:11
+#: tmp/system-config-kickstart.glade.h:10
 msgid "Authentication options are not applicable on upgrades."
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:12
+#: tmp/system-config-kickstart.glade.h:11
 msgid "Authentication:"
 msgstr "Todennus:"
 
-#: tmp/system-config-kickstart.glade.h:13
+#: tmp/system-config-kickstart.glade.h:12
 #, fuzzy
 msgid "Basic Configuration (required)"
 msgstr "Peruskonfiguraatio (tarvittu)"
 
-#: tmp/system-config-kickstart.glade.h:14
+#: tmp/system-config-kickstart.glade.h:13
 #, fuzzy
 msgid "Boot Loader Options (required)"
 msgstr "Käynnistyslataimen valinnat (tarvittu)"
 
-#: tmp/system-config-kickstart.glade.h:15
+#: tmp/system-config-kickstart.glade.h:14
 msgid "CD-ROM"
 msgstr "CD-ROM"
 
-#: tmp/system-config-kickstart.glade.h:16
+#: tmp/system-config-kickstart.glade.h:15
 msgid "Choose one of the following options:"
 msgstr "Valitse jokin seuraavista:"
 
-#: tmp/system-config-kickstart.glade.h:17
+#: tmp/system-config-kickstart.glade.h:16
 msgid "Choose the Installation Method:"
 msgstr "Valitse asennustapa:"
 
-#: tmp/system-config-kickstart.glade.h:18
+#: tmp/system-config-kickstart.glade.h:17
 #, fuzzy
 msgid "Clear Master Boot Record"
 msgstr "Tyhjää pääkäynnistyslohko (MBR)"
 
-#: tmp/system-config-kickstart.glade.h:19
+#: tmp/system-config-kickstart.glade.h:18
 msgid "Color Depth"
 msgstr "Värisyvyys"
 
-#: tmp/system-config-kickstart.glade.h:20
+#: tmp/system-config-kickstart.glade.h:19
 msgid "Configure the X Window System"
 msgstr "Konfiguroi X-ikkunointijärjestelmä"
 
-#: tmp/system-config-kickstart.glade.h:21
+#: tmp/system-config-kickstart.glade.h:20
 msgid "Confirm Password:"
 msgstr "Vahvista salasana:"
 
-#: tmp/system-config-kickstart.glade.h:22
+#: tmp/system-config-kickstart.glade.h:21
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "Luo RAID-laite [oletus = /dev/md0]"
 
-#: tmp/system-config-kickstart.glade.h:23
+#: tmp/system-config-kickstart.glade.h:22
 msgid "Create a software RAID partition"
 msgstr "Luo ohjelmisto-RAID-osio"
 
-#: tmp/system-config-kickstart.glade.h:24
+#: tmp/system-config-kickstart.glade.h:23
 msgid "Default Desktop:"
 msgstr "Oletustyöpöytä:"
 
-#: tmp/system-config-kickstart.glade.h:25
+#: tmp/system-config-kickstart.glade.h:24
 msgid "Default Language:"
 msgstr "Oletuskieli:"
 
-#: tmp/system-config-kickstart.glade.h:26
-msgid "Disable firewall"
-msgstr "Älä käytä palomuuria"
-
-#: tmp/system-config-kickstart.glade.h:27
+#: tmp/system-config-kickstart.glade.h:25
 msgid "Disabled"
 msgstr "Ei käytössä"
 
-#: tmp/system-config-kickstart.glade.h:29
+#: tmp/system-config-kickstart.glade.h:27
 msgid "Display configuration is not applicable on upgrades."
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:30
+#: tmp/system-config-kickstart.glade.h:28
 #, fuzzy
 msgid "Do not clear Master Boot Record"
 msgstr "Älä tyhjää pääkäynnistyslohkoa (MBR)"
 
-#: tmp/system-config-kickstart.glade.h:31
+#: tmp/system-config-kickstart.glade.h:29
 msgid "Do not initialize the disk label"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:32
+#: tmp/system-config-kickstart.glade.h:30
 msgid "Do not install a boot loader"
 msgstr "Älä asenna käynnistyslatainta"
 
-#: tmp/system-config-kickstart.glade.h:33
+#: tmp/system-config-kickstart.glade.h:31
 msgid "Drive :"
 msgstr "Levy:"
 
-#: tmp/system-config-kickstart.glade.h:34
+#: tmp/system-config-kickstart.glade.h:32
 msgid "Enable Hesiod Support"
 msgstr "Käytä Hesioid-tukea"
 
-#: tmp/system-config-kickstart.glade.h:35
+#: tmp/system-config-kickstart.glade.h:33
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Käytä Kerberos 5 -todennusta"
 
-#: tmp/system-config-kickstart.glade.h:36
+#: tmp/system-config-kickstart.glade.h:34
 msgid "Enable LDAP"
 msgstr "Käytä LDAP:a"
 
-#: tmp/system-config-kickstart.glade.h:37
+#: tmp/system-config-kickstart.glade.h:35
 msgid "Enable NIS"
 msgstr "Käytä NIS:ä"
 
-#: tmp/system-config-kickstart.glade.h:38
+#: tmp/system-config-kickstart.glade.h:36
 msgid "Enable SMB Authentication"
 msgstr "Käytä SMB-todennusta"
 
-#: tmp/system-config-kickstart.glade.h:39
-msgid "Enable firewall"
-msgstr "Käytä palomuuria"
-
-#: tmp/system-config-kickstart.glade.h:40
+#: tmp/system-config-kickstart.glade.h:37
 msgid "Enable nscd"
 msgstr "Käytä nscd:tä"
 
-#: tmp/system-config-kickstart.glade.h:41
+#: tmp/system-config-kickstart.glade.h:38
 msgid "Enabled"
 msgstr "Käytössä"
 
-#: tmp/system-config-kickstart.glade.h:42
+#: tmp/system-config-kickstart.glade.h:39
 msgid "Enabled in reconfiguration mode"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:43
+#: tmp/system-config-kickstart.glade.h:40
 msgid "Encrypt GRUB password"
 msgstr "Kryptaa GRUB:n salasana"
 
-#: tmp/system-config-kickstart.glade.h:44
+#: tmp/system-config-kickstart.glade.h:41
 msgid "Encrypt root password"
 msgstr "Kryptaa pääkäyttäjän salasana"
 
-#: tmp/system-config-kickstart.glade.h:45
+#: tmp/system-config-kickstart.glade.h:42
 msgid "FTP"
 msgstr "FTP"
 
-#: tmp/system-config-kickstart.glade.h:46
+#: tmp/system-config-kickstart.glade.h:43
 msgid "FTP Directory:"
 msgstr "FTP-hakemisto:"
 
-#: tmp/system-config-kickstart.glade.h:47
+#: tmp/system-config-kickstart.glade.h:44
 msgid "FTP Password"
 msgstr "FTP-salasana"
 
-#: tmp/system-config-kickstart.glade.h:48
+#: tmp/system-config-kickstart.glade.h:45
 msgid "FTP Server:"
 msgstr "FTP-palvelin:"
 
-#: tmp/system-config-kickstart.glade.h:49
+#: tmp/system-config-kickstart.glade.h:46
 msgid "FTP Username"
 msgstr "FTP-käyttäjänimi"
 
-#: tmp/system-config-kickstart.glade.h:50
+#: tmp/system-config-kickstart.glade.h:47
 msgid "File System Type:"
 msgstr "Tiedostojärjestelmän tyyppi:"
 
-#: tmp/system-config-kickstart.glade.h:51
+#: tmp/system-config-kickstart.glade.h:48
 msgid "Fill all unused space on disk"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:53
-msgid "Firewall configuration is not applicable on upgrades."
-msgstr ""
-
-#: tmp/system-config-kickstart.glade.h:54
+#: tmp/system-config-kickstart.glade.h:50
 msgid "Fixed size"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:55
+#: tmp/system-config-kickstart.glade.h:51
 msgid "Force to be a primary partition (asprimary)"
 msgstr "Pakota ensisijaiseksi osioksi (asprimary)"
 
-#: tmp/system-config-kickstart.glade.h:56
+#: tmp/system-config-kickstart.glade.h:52
 msgid "Format RAID device"
 msgstr "Alusta RAID-laite"
 
-#: tmp/system-config-kickstart.glade.h:57
+#: tmp/system-config-kickstart.glade.h:53
 msgid "Format partition"
 msgstr "Alusta osio"
 
-#: tmp/system-config-kickstart.glade.h:58
+#: tmp/system-config-kickstart.glade.h:54
 msgid "GNOME"
 msgstr "GNOME"
 
-#: tmp/system-config-kickstart.glade.h:59
+#: tmp/system-config-kickstart.glade.h:55
 msgid "GRUB Options:"
 msgstr "GRUB:n valinnat:"
 
-#: tmp/system-config-kickstart.glade.h:60
+#: tmp/system-config-kickstart.glade.h:56
 msgid "Gateway:"
 msgstr "Yhdyskäytävä:"
 
-#: tmp/system-config-kickstart.glade.h:61
+#: tmp/system-config-kickstart.glade.h:57
 msgid "General"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:62
+#: tmp/system-config-kickstart.glade.h:58
 msgid "Grow to maximum of (MB):"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:63
+#: tmp/system-config-kickstart.glade.h:59
 msgid "HTTP"
 msgstr "HTTP"
 
-#: tmp/system-config-kickstart.glade.h:64
+#: tmp/system-config-kickstart.glade.h:60
 msgid "HTTP Directory:"
 msgstr "HTTP-hakemisto:"
 
-#: tmp/system-config-kickstart.glade.h:65
+#: tmp/system-config-kickstart.glade.h:61
 msgid "HTTP Server:"
 msgstr "HTTP-palvelin:"
 
-#: tmp/system-config-kickstart.glade.h:66
+#: tmp/system-config-kickstart.glade.h:62
 msgid "Hard Drive"
 msgstr "Kiintolevy"
 
-#: tmp/system-config-kickstart.glade.h:67
+#: tmp/system-config-kickstart.glade.h:63
 msgid "Hard Drive Directory:"
 msgstr "Kiintolevyn hakemisto:"
 
-#: tmp/system-config-kickstart.glade.h:68
+#: tmp/system-config-kickstart.glade.h:64
 msgid "Hard Drive Partition:"
 msgstr "Kiintolevyn osio:"
 
-#: tmp/system-config-kickstart.glade.h:69
+#: tmp/system-config-kickstart.glade.h:65
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: tmp/system-config-kickstart.glade.h:70
+#: tmp/system-config-kickstart.glade.h:66
 msgid "Hesiod Authentication"
 msgstr "Hesiod-todennus"
 
-#: tmp/system-config-kickstart.glade.h:71
+#: tmp/system-config-kickstart.glade.h:67
 msgid "Hesiod LHS:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:72
+#: tmp/system-config-kickstart.glade.h:68
 msgid "Hesiod RHS:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:73
+#: tmp/system-config-kickstart.glade.h:69
 msgid "Horizontal Sync:"
 msgstr "Vaakasynkronointi:"
 
-#: tmp/system-config-kickstart.glade.h:74
+#: tmp/system-config-kickstart.glade.h:70
 msgid "Hz"
 msgstr "Hz"
 
-#: tmp/system-config-kickstart.glade.h:75
+#: tmp/system-config-kickstart.glade.h:71
 msgid "IP Address:"
 msgstr "IP-osoite:"
 
-#: tmp/system-config-kickstart.glade.h:76
+#: tmp/system-config-kickstart.glade.h:72
 msgid "Initialize the disk label"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:77
+#: tmp/system-config-kickstart.glade.h:73
 #, fuzzy
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "Asenna käynnistyslatain pääkäynnistyslohkoon (MBR)"
 
-#: tmp/system-config-kickstart.glade.h:78
+#: tmp/system-config-kickstart.glade.h:74
 msgid "Install boot loader on first sector of the boot partition"
 msgstr "Asenna käynnistyslatain käynnistysosion ensimmäiselle sektorille"
 
-#: tmp/system-config-kickstart.glade.h:79
+#: tmp/system-config-kickstart.glade.h:75
 msgid "Install new boot loader"
 msgstr "Asenna uusi käynnistyslatain"
 
-#: tmp/system-config-kickstart.glade.h:80
+#: tmp/system-config-kickstart.glade.h:76
 #, fuzzy
 msgid "Installation Method (required)"
 msgstr "Asennustapa (tarvittu)"
 
-#: tmp/system-config-kickstart.glade.h:81
+#: tmp/system-config-kickstart.glade.h:77
 msgid "KDE"
 msgstr "KDE"
 
-#: tmp/system-config-kickstart.glade.h:82
+#: tmp/system-config-kickstart.glade.h:78
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: tmp/system-config-kickstart.glade.h:83
+#: tmp/system-config-kickstart.glade.h:79
 msgid "Kerberos 5 Authentication"
 msgstr "Kerberos 5 -todennus"
 
-#: tmp/system-config-kickstart.glade.h:84
+#: tmp/system-config-kickstart.glade.h:80
 msgid "Kerberos Domain Controller (KDC):"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:85
+#: tmp/system-config-kickstart.glade.h:81
 msgid "Kerberos Master Server:"
 msgstr "Kerberos-pääpavelin: "
 
-#: tmp/system-config-kickstart.glade.h:86
+#: tmp/system-config-kickstart.glade.h:82
 msgid "Kerberos Realm:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:87
+#: tmp/system-config-kickstart.glade.h:83
 msgid "Kernel parameters:"
 msgstr "Ytimen parametrit:"
 
-#: tmp/system-config-kickstart.glade.h:88
+#: tmp/system-config-kickstart.glade.h:84
 msgid "Keyboard:"
 msgstr "Näppäimistö:"
 
-#: tmp/system-config-kickstart.glade.h:89
+#: tmp/system-config-kickstart.glade.h:85
 #, fuzzy
 msgid "Kickstart Configurator"
 msgstr "Kickstart-konfiguraattori"
 
-#: tmp/system-config-kickstart.glade.h:90
+#: tmp/system-config-kickstart.glade.h:86
 msgid "LDAP "
 msgstr "LDAP "
 
-#: tmp/system-config-kickstart.glade.h:91
+#: tmp/system-config-kickstart.glade.h:87
 msgid "LDAP Authentication"
 msgstr "LDAP-todennus"
 
-#: tmp/system-config-kickstart.glade.h:92
+#: tmp/system-config-kickstart.glade.h:88
 msgid "LDAP Base Name: "
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:93
+#: tmp/system-config-kickstart.glade.h:89
 msgid "LDAP Server: "
 msgstr "LDAP-palvelin: "
 
-#: tmp/system-config-kickstart.glade.h:94
+#: tmp/system-config-kickstart.glade.h:90
 msgid "Make RAID Device"
 msgstr "Luo RAID-laite"
 
-#: tmp/system-config-kickstart.glade.h:95
+#: tmp/system-config-kickstart.glade.h:91
 msgid "Make partition on specific drive (ondisk)"
 msgstr "Luo osio tietylle levylle (ondisk)"
 
-#: tmp/system-config-kickstart.glade.h:96
+#: tmp/system-config-kickstart.glade.h:92
 msgid "Monitor"
 msgstr "Näyttö"
 
-#: tmp/system-config-kickstart.glade.h:97
+#: tmp/system-config-kickstart.glade.h:93
 msgid "Mount Point:"
 msgstr "Liitospiste:"
 
-#: tmp/system-config-kickstart.glade.h:98
+#: tmp/system-config-kickstart.glade.h:94
 msgid "NFS"
 msgstr "NFS"
 
-#: tmp/system-config-kickstart.glade.h:99
+#: tmp/system-config-kickstart.glade.h:95
 msgid "NFS Directory:"
 msgstr "NFS-hakemisto:"
 
-#: tmp/system-config-kickstart.glade.h:100
+#: tmp/system-config-kickstart.glade.h:96
 msgid "NFS Server:"
 msgstr "NFS-palvelin:"
 
-#: tmp/system-config-kickstart.glade.h:101
+#: tmp/system-config-kickstart.glade.h:97
 msgid "NIS"
 msgstr "NIS"
 
-#: tmp/system-config-kickstart.glade.h:102
+#: tmp/system-config-kickstart.glade.h:98
 msgid "NIS Authentication"
 msgstr "NIS-todennus"
 
-#: tmp/system-config-kickstart.glade.h:103
+#: tmp/system-config-kickstart.glade.h:99
 msgid "NIS Domain:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:104
+#: tmp/system-config-kickstart.glade.h:100
 msgid "NIS Server:"
 msgstr "NIS-palvelin:"
 
-#: tmp/system-config-kickstart.glade.h:105
+#: tmp/system-config-kickstart.glade.h:101
 msgid "Name Server:"
 msgstr "Nimipalvelin:"
 
-#: tmp/system-config-kickstart.glade.h:106
+#: tmp/system-config-kickstart.glade.h:102
 msgid "Name Switch Cache"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:107
+#: tmp/system-config-kickstart.glade.h:103
 msgid "Name Switch Cache Daemon (nscd) Authentication"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:108
+#: tmp/system-config-kickstart.glade.h:104
 msgid "Netmask: "
 msgstr "Aliverkon peite: "
 
-#: tmp/system-config-kickstart.glade.h:110
+#: tmp/system-config-kickstart.glade.h:106
 msgid "Network Device Information"
 msgstr "Verkkolaitetietoja"
 
-#: tmp/system-config-kickstart.glade.h:111
+#: tmp/system-config-kickstart.glade.h:107
 msgid "Network Device:"
 msgstr "Verkkolaite:"
 
-#: tmp/system-config-kickstart.glade.h:112
+#: tmp/system-config-kickstart.glade.h:108
 msgid "Network Type:"
 msgstr "Verkon tyyppi:"
 
-#: tmp/system-config-kickstart.glade.h:113
+#: tmp/system-config-kickstart.glade.h:109
 msgid "Number of spares:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:114
+#: tmp/system-config-kickstart.glade.h:110
 msgid "On first boot, Setup Agent is: "
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:116
+#: tmp/system-config-kickstart.glade.h:112
 msgid "Partition :"
 msgstr "Osio: "
 
-#: tmp/system-config-kickstart.glade.h:117
+#: tmp/system-config-kickstart.glade.h:113
 msgid "Partition Information (required)"
 msgstr "Osiotiedot (tarvittu)"
 
-#: tmp/system-config-kickstart.glade.h:118
+#: tmp/system-config-kickstart.glade.h:114
 msgid "Partition Options"
 msgstr "Osiovalinnat"
 
-#: tmp/system-config-kickstart.glade.h:119
+#: tmp/system-config-kickstart.glade.h:115
 msgid "Partition options are not applicable on upgrades."
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:120
+#: tmp/system-config-kickstart.glade.h:116
 msgid "Password:"
 msgstr "Salasana:"
 
-#: tmp/system-config-kickstart.glade.h:121
+#: tmp/system-config-kickstart.glade.h:117
 msgid "Perform installation in interactive mode"
 msgstr "Interaktiivinen asennus"
 
-#: tmp/system-config-kickstart.glade.h:122
+#: tmp/system-config-kickstart.glade.h:118
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "Tekstitila-asennus (oletus on graafinen)"
 
-#: tmp/system-config-kickstart.glade.h:123
+#: tmp/system-config-kickstart.glade.h:119
 msgid "Perform new installation"
 msgstr "Uusi asennus"
 
-#: tmp/system-config-kickstart.glade.h:126
+#: tmp/system-config-kickstart.glade.h:122
 msgid "Preserve existing partitions"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:127
+#: tmp/system-config-kickstart.glade.h:123
 msgid "Preview Options"
 msgstr "Esikatseluvailnnat"
 
-#: tmp/system-config-kickstart.glade.h:128
+#: tmp/system-config-kickstart.glade.h:124
 msgid "Probe for monitor"
 msgstr "Etsi näyttöä"
 
-#: tmp/system-config-kickstart.glade.h:129
+#: tmp/system-config-kickstart.glade.h:125
 #, fuzzy
 msgid "Probe for video card driver"
 msgstr "Etsi näytönohjainta"
 
-#: tmp/system-config-kickstart.glade.h:130
+#: tmp/system-config-kickstart.glade.h:126
 msgid "RAID"
 msgstr "RAID"
 
-#: tmp/system-config-kickstart.glade.h:131
+#: tmp/system-config-kickstart.glade.h:127
 msgid "RAID Device:"
 msgstr "RAID-laite:"
 
-#: tmp/system-config-kickstart.glade.h:132
+#: tmp/system-config-kickstart.glade.h:128
 msgid "RAID Level:"
 msgstr "RAID-taso:"
 
-#: tmp/system-config-kickstart.glade.h:133
+#: tmp/system-config-kickstart.glade.h:129
 msgid "RAID Options"
 msgstr "RAID-valinnat"
 
-#: tmp/system-config-kickstart.glade.h:134
+#: tmp/system-config-kickstart.glade.h:130
 msgid "Raid Members"
 msgstr "Raid-jäsenet"
 
-#: tmp/system-config-kickstart.glade.h:135
+#: tmp/system-config-kickstart.glade.h:131
 msgid "Reboot system after installation"
 msgstr "Käynnistä järjestelmä uudelleen asennuksen jälkeen"
 
-#: tmp/system-config-kickstart.glade.h:136
+#: tmp/system-config-kickstart.glade.h:132
 msgid "Remove all existing partitions"
 msgstr "Poista kaikki olemassa olevat osiot"
 
-#: tmp/system-config-kickstart.glade.h:137
+#: tmp/system-config-kickstart.glade.h:133
 msgid "Remove existing Linux partitions"
 msgstr "Poista olemassa olevat Linux-osiot"
 
-#: tmp/system-config-kickstart.glade.h:138
+#: tmp/system-config-kickstart.glade.h:134
 msgid "Resolution"
 msgstr "Resoluutio"
 
-#: tmp/system-config-kickstart.glade.h:139
+#: tmp/system-config-kickstart.glade.h:135
 msgid "Root Password:"
 msgstr "Pääkäyttäjän salasana:"
 
-#: tmp/system-config-kickstart.glade.h:140
+#: tmp/system-config-kickstart.glade.h:136
 msgid "Run outside of the chroot environment"
 msgstr "Suorita chroot-ympäristön ulkopuolella"
 
-#: tmp/system-config-kickstart.glade.h:141
-msgid "SELinux:"
-msgstr ""
-
-#: tmp/system-config-kickstart.glade.h:142
+#: tmp/system-config-kickstart.glade.h:137
 msgid "SMB"
 msgstr "SMB"
 
-#: tmp/system-config-kickstart.glade.h:143
+#: tmp/system-config-kickstart.glade.h:138
 msgid "SMB Authentication"
 msgstr "SMB-todennus"
 
-#: tmp/system-config-kickstart.glade.h:144
+#: tmp/system-config-kickstart.glade.h:139
 msgid "SMB Servers:"
 msgstr "SMB-palvelimet:"
 
-#: tmp/system-config-kickstart.glade.h:145
+#: tmp/system-config-kickstart.glade.h:140
 msgid "SMB Workgroup:"
 msgstr "SMB-työryhmä:"
 
-#: tmp/system-config-kickstart.glade.h:146
-msgid "Security level:"
-msgstr "Turvataso:"
-
-#: tmp/system-config-kickstart.glade.h:147
+#: tmp/system-config-kickstart.glade.h:141
 msgid "Size (MB):"
 msgstr "Koko (MB):"
 
-#: tmp/system-config-kickstart.glade.h:148
+#: tmp/system-config-kickstart.glade.h:142
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -948,23 +938,23 @@ msgstr ""
 "luotettavuutta verrattuna yhteen levyyn. Lisätietoja RAID-laitteista löydät "
 "kickstartin dokumentaatiosta."
 
-#: tmp/system-config-kickstart.glade.h:149
+#: tmp/system-config-kickstart.glade.h:143
 msgid "Specify an FTP username and password"
 msgstr "Määrittele FTP-käyttäjänimi ja -salasana"
 
-#: tmp/system-config-kickstart.glade.h:150
+#: tmp/system-config-kickstart.glade.h:144
 msgid "Start the X Window System on boot"
 msgstr "Käynnistä X-ikkunointijärjestelmä käynnistyksessä"
 
-#: tmp/system-config-kickstart.glade.h:151
+#: tmp/system-config-kickstart.glade.h:145
 msgid "Target Architecture:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:152
+#: tmp/system-config-kickstart.glade.h:146
 msgid "Time Zone:"
 msgstr "Aikavyöhyke:"
 
-#: tmp/system-config-kickstart.glade.h:153
+#: tmp/system-config-kickstart.glade.h:147
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -973,78 +963,74 @@ msgstr ""
 "osiota. Sen jälkeen voit luoda RAID-laitteen, joka voidaan alustaa ja "
 "liittää."
 
-#: tmp/system-config-kickstart.glade.h:155
+#: tmp/system-config-kickstart.glade.h:149
 #, no-c-format
 msgid "Type your %post script below:"
 msgstr "Syötä %post-skriptisi alapuolelle:"
 
-#: tmp/system-config-kickstart.glade.h:157
+#: tmp/system-config-kickstart.glade.h:151
 #, no-c-format
 msgid "Type your %pre script below:"
 msgstr "Syötä %pre-skripti alapuolelle:"
 
-#: tmp/system-config-kickstart.glade.h:158
+#: tmp/system-config-kickstart.glade.h:152
 msgid "Upgrade an existing installation"
 msgstr "Päivitä nykyinen asennus"
 
-#: tmp/system-config-kickstart.glade.h:159
+#: tmp/system-config-kickstart.glade.h:153
 msgid "Upgrade existing boot loader"
 msgstr "Päivitä nykyinen käynnistyslatain"
 
-#: tmp/system-config-kickstart.glade.h:160
+#: tmp/system-config-kickstart.glade.h:154
 msgid "Use GRUB password"
 msgstr "Käytä GRUB:n salasanaa"
 
-#: tmp/system-config-kickstart.glade.h:161
+#: tmp/system-config-kickstart.glade.h:155
 msgid "Use MD5"
 msgstr "Käytä MD5:ttä"
 
-#: tmp/system-config-kickstart.glade.h:162
+#: tmp/system-config-kickstart.glade.h:156
 #, fuzzy
 msgid "Use Shadow Passwords"
 msgstr "Käytä varjosalasanoja"
 
-#: tmp/system-config-kickstart.glade.h:163
+#: tmp/system-config-kickstart.glade.h:157
 msgid "Use UTC clock"
 msgstr "Käytä UTC-kelloa"
 
-#: tmp/system-config-kickstart.glade.h:164
+#: tmp/system-config-kickstart.glade.h:158
 msgid "Use an interpreter:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:165
+#: tmp/system-config-kickstart.glade.h:159
 msgid "Use broadcast to find NIS server"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:166
+#: tmp/system-config-kickstart.glade.h:160
 msgid "Use custom monitor sync rates"
 msgstr "Käytä omia näytön synkronointiarvoja"
 
-#: tmp/system-config-kickstart.glade.h:167
+#: tmp/system-config-kickstart.glade.h:161
 msgid "Use existing partition (onpart)"
 msgstr "Käytä olemassa olevaa osiota (onpart)"
 
-#: tmp/system-config-kickstart.glade.h:168
+#: tmp/system-config-kickstart.glade.h:162
 msgid "Use recommended swap size"
 msgstr "Käytä suositeltua sivutuskokoa"
 
-#: tmp/system-config-kickstart.glade.h:169
+#: tmp/system-config-kickstart.glade.h:163
 msgid "Vertical Sync:"
 msgstr "Pystysynkronointi:"
 
-#: tmp/system-config-kickstart.glade.h:170
+#: tmp/system-config-kickstart.glade.h:164
 msgid "Video Card"
 msgstr "Näytönohjain"
 
-#: tmp/system-config-kickstart.glade.h:171
+#: tmp/system-config-kickstart.glade.h:165
 msgid "Video Card RAM: "
 msgstr "Näytönohjaimen muisti: "
 
-#: tmp/system-config-kickstart.glade.h:172
-msgid "Warn"
-msgstr ""
-
-#: tmp/system-config-kickstart.glade.h:174
+#: tmp/system-config-kickstart.glade.h:167
 #, no-c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1053,7 +1039,7 @@ msgstr ""
 "Varoitus: Virhe tässä skriptissä saattaa tehdä kickstart-asennuksen "
 "toimimattomaksi. Älä sisällytä %post-komentoa alkuun."
 
-#: tmp/system-config-kickstart.glade.h:176
+#: tmp/system-config-kickstart.glade.h:169
 #, no-c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1062,7 +1048,7 @@ msgstr ""
 "Varoitus: Virhe tässä skriptissä saattaa tehdä kickstart-asennuksen "
 "toimimattomaksi. Älä sisällytä %pre-komentoa alkuun."
 
-#: tmp/system-config-kickstart.glade.h:177
+#: tmp/system-config-kickstart.glade.h:170
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
@@ -1070,324 +1056,131 @@ msgstr ""
 "Olet valinnut seuraavanlaiset asetukset. Napsauta \"Tallenna tiedostoon\" "
 "tallentaaksesi kickstart-tiedoston tiedostoon."
 
-#: tmp/system-config-kickstart.glade.h:178
+#: tmp/system-config-kickstart.glade.h:171
 msgid "_About"
 msgstr "_Tietoja"
 
-#: tmp/system-config-kickstart.glade.h:179
+#: tmp/system-config-kickstart.glade.h:172
 msgid "_Add"
 msgstr "_Lisää"
 
-#: tmp/system-config-kickstart.glade.h:180
+#: tmp/system-config-kickstart.glade.h:173
 msgid "_Add Network Device"
 msgstr "_Lisää verkkolaite"
 
-#: tmp/system-config-kickstart.glade.h:181
+#: tmp/system-config-kickstart.glade.h:174
 msgid "_Contents"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:182
+#: tmp/system-config-kickstart.glade.h:175
 msgid "_Delete"
 msgstr "_Poista"
 
-#: tmp/system-config-kickstart.glade.h:183
+#: tmp/system-config-kickstart.glade.h:176
 msgid "_Delete Network Device"
 msgstr "_Poista verkkolaite"
 
-#: tmp/system-config-kickstart.glade.h:184
+#: tmp/system-config-kickstart.glade.h:177
 msgid "_Edit"
 msgstr "_Muokkaa"
 
-#: tmp/system-config-kickstart.glade.h:185
+#: tmp/system-config-kickstart.glade.h:178
 msgid "_Edit Network Device"
 msgstr "_Muokkaa verkkolaitetta"
 
-#: tmp/system-config-kickstart.glade.h:186
+#: tmp/system-config-kickstart.glade.h:179
 msgid "_File"
 msgstr "_Tiedosto"
 
-#: tmp/system-config-kickstart.glade.h:187
+#: tmp/system-config-kickstart.glade.h:180
 msgid "_Help"
 msgstr "_Ohje"
 
-#: tmp/system-config-kickstart.glade.h:188
+#: tmp/system-config-kickstart.glade.h:181
 msgid "_Open File"
 msgstr "_Avaa tiedosto"
 
-#: tmp/system-config-kickstart.glade.h:189
+#: tmp/system-config-kickstart.glade.h:182
 msgid "_Preview"
 msgstr "_Esikatsele"
 
-#: tmp/system-config-kickstart.glade.h:190
+#: tmp/system-config-kickstart.glade.h:183
 msgid "_Quit"
 msgstr "_Lopeta"
 
-#: tmp/system-config-kickstart.glade.h:191
+#: tmp/system-config-kickstart.glade.h:184
 msgid "_Save File"
 msgstr "_Tallenna tiedosto"
 
-#: tmp/system-config-kickstart.glade.h:192
+#: tmp/system-config-kickstart.glade.h:185
 #, fuzzy
 msgid "_Save to File"
 msgstr "Tallenna tiedostoon"
 
-#: tmp/system-config-kickstart.glade.h:195
+#: tmp/system-config-kickstart.glade.h:188
 msgid "kHz"
 msgstr "kHz"
 
-#: tmp/system-config-kickstart.glade.h:196
+#: tmp/system-config-kickstart.glade.h:189
 msgid "md0"
 msgstr "md0"
 
-#: tmp/system-config-kickstart.glade.h:197
+#: tmp/system-config-kickstart.glade.h:190
 msgid "md1"
 msgstr "md1"
 
-#: tmp/system-config-kickstart.glade.h:198
+#: tmp/system-config-kickstart.glade.h:191
 msgid "md10"
 msgstr "md10"
 
-#: tmp/system-config-kickstart.glade.h:199
+#: tmp/system-config-kickstart.glade.h:192
 msgid "md11"
 msgstr "md11"
 
-#: tmp/system-config-kickstart.glade.h:200
+#: tmp/system-config-kickstart.glade.h:193
 msgid "md12"
 msgstr "md12"
 
-#: tmp/system-config-kickstart.glade.h:201
+#: tmp/system-config-kickstart.glade.h:194
 msgid "md13"
 msgstr "md13"
 
-#: tmp/system-config-kickstart.glade.h:202
+#: tmp/system-config-kickstart.glade.h:195
 msgid "md14"
 msgstr "md14"
 
-#: tmp/system-config-kickstart.glade.h:203
+#: tmp/system-config-kickstart.glade.h:196
 msgid "md15"
 msgstr "md15"
 
-#: tmp/system-config-kickstart.glade.h:204
+#: tmp/system-config-kickstart.glade.h:197
 msgid "md2"
 msgstr "md2"
 
-#: tmp/system-config-kickstart.glade.h:205
+#: tmp/system-config-kickstart.glade.h:198
 msgid "md3"
 msgstr "md3"
 
-#: tmp/system-config-kickstart.glade.h:206
+#: tmp/system-config-kickstart.glade.h:199
 msgid "md4"
 msgstr "md4"
 
-#: tmp/system-config-kickstart.glade.h:207
+#: tmp/system-config-kickstart.glade.h:200
 msgid "md5"
 msgstr "md5"
 
-#: tmp/system-config-kickstart.glade.h:208
+#: tmp/system-config-kickstart.glade.h:201
 msgid "md6"
 msgstr "md6"
 
-#: tmp/system-config-kickstart.glade.h:209
+#: tmp/system-config-kickstart.glade.h:202
 msgid "md7"
 msgstr "md7"
 
-#: tmp/system-config-kickstart.glade.h:210
+#: tmp/system-config-kickstart.glade.h:203
 msgid "md8"
 msgstr "md8"
 
-#: tmp/system-config-kickstart.glade.h:211
+#: tmp/system-config-kickstart.glade.h:204
 msgid "md9"
 msgstr "md9"
-
-#~ msgid "Please select a root password."
-#~ msgstr "Valitse pääkäyttäjän salasana."
-
-#~ msgid ""
-#~ "The device you specified is not a valid device name. Please use a valid "
-#~ "device name such as \"hda1\" or \"sda3\"."
-#~ msgstr ""
-#~ "Laitteella jonka määrittelit, on virheellinen laitenimi. Käytä oikeaa "
-#~ "laitenimeä, kuten \"hda1\" tai \"sda3\"."
-
-#~ msgid ""
-#~ "The partition you specified does not begin with \"hd\" or \"sd\".  "
-#~ "Partitions must have a valid device name and partition number such as "
-#~ "\"hda1\" or \"sda3\"."
-#~ msgstr ""
-#~ "Osiot, jotka määrittelit, eivät ala kirjaimilla \"hd\" tai \"sd\". "
-#~ "Osioilla täytyy olla oikea laitenimi ja osionumero, kuten \"hda1\" tai "
-#~ "\"sda3\"."
-
-#~ msgid "Try running 'system-config-kickstart --help' for a list of options."
-#~ msgstr ""
-#~ "Suorita \"system-config-kickstart --help\" listataksesi kaikki valitsimet."
-
-#~ msgid "label28"
-#~ msgstr "label28"
-
-#~ msgid "label128"
-#~ msgstr "label128"
-
-#, fuzzy
-#~ msgid "label216"
-#~ msgstr "label28"
-
-#~ msgid "label35"
-#~ msgstr "label35"
-
-#~ msgid "label30"
-#~ msgstr "label30"
-
-#~ msgid "label31"
-#~ msgstr "label31"
-
-#~ msgid "label32"
-#~ msgstr "label32"
-
-#~ msgid "label33"
-#~ msgstr "label33"
-
-#~ msgid "label88"
-#~ msgstr "label88"
-
-#~ msgid "Select packages to install."
-#~ msgstr "Valitse asennettavat paketit."
-
-#~ msgid "Desktops"
-#~ msgstr "Työpöydät"
-
-#~ msgid "Applications"
-#~ msgstr "Ohjelmat"
-
-#~ msgid "Servers"
-#~ msgstr "Palvelimet"
-
-#~ msgid "Development"
-#~ msgstr "Kehitys"
-
-#~ msgid "System"
-#~ msgstr "Järjestelmä"
-
-#~ msgid "label34"
-#~ msgstr "label34"
-
-#~ msgid "label89"
-#~ msgstr "label89"
-
-#~ msgid "label93"
-#~ msgstr "label93"
-
-#, fuzzy
-#~ msgid "Kickstart Error"
-#~ msgstr "Kickstart"
-
-#~ msgid "Save File"
-#~ msgstr "Tallenna tiedosto"
-
-#~ msgid "Mouse:"
-#~ msgstr "Hiiri:"
-
-#~ msgid "Emulate 3 Buttons"
-#~ msgstr "Emuloi kolmea näppäintä"
-
-#~ msgid "Language Support:"
-#~ msgstr "Kielituki:"
-
-#~ msgid "X Window System"
-#~ msgstr "X-ikkunointijärjestelmä"
-
-#~ msgid "GNOME Desktop Environment"
-#~ msgstr "Gnome-työpöytäympäristö"
-
-#~ msgid "KDE Desktop Environment"
-#~ msgstr "KDE-työpöytäympäristö"
-
-#, fuzzy
-#~ msgid "Editors"
-#~ msgstr "_Muokkaa"
-
-#, fuzzy
-#~ msgid "Server Configuration Tools"
-#~ msgstr "X-asetukset"
-
-#, fuzzy
-#~ msgid "Web Server"
-#~ msgstr "Nimipalvelin:"
-
-#, fuzzy
-#~ msgid "Mail Server"
-#~ msgstr "Nimipalvelin:"
-
-#, fuzzy
-#~ msgid "DNS Name Server"
-#~ msgstr "Nimipalvelin:"
-
-#~ msgid "FTP Server"
-#~ msgstr "FTP-palvelin"
-
-#~ msgid "SQL Database Server"
-#~ msgstr "SQL-tietokantapalvelin"
-
-#, fuzzy
-#~ msgid "News Server"
-#~ msgstr "Nimipalvelin:"
-
-#, fuzzy
-#~ msgid "Network Servers"
-#~ msgstr "Verkkolaite:"
-
-#~ msgid "Development Tools"
-#~ msgstr "Ohjelmistokehitystyökalut"
-
-#, fuzzy
-#~ msgid "Kernel Development"
-#~ msgstr "Kehitys"
-
-#, fuzzy
-#~ msgid "X Software Development"
-#~ msgstr "Kehitys"
-
-#, fuzzy
-#~ msgid "KDE Software Development"
-#~ msgstr "Kehitys"
-
-#, fuzzy
-#~ msgid "System Tools"
-#~ msgstr "Järjestelmä"
-
-#, fuzzy
-#~ msgid "Printing Support"
-#~ msgstr "Kielituki:"
-
-#~ msgid "Could not read monitor database"
-#~ msgstr "Ei voitu lukea näyttötietokantaa"
-
-#~ msgid "*"
-#~ msgstr "*"
-
-#~ msgid "_Automatically Resolve Dependencies"
-#~ msgstr "_Selvitä riippuvuudet automaattisesti"
-
-#~ msgid "_Ignore Dependencies"
-#~ msgstr "_Ohita riippuvuudet"
-
-#~ msgid "Use GRUB for the boot loader"
-#~ msgstr "Käytä GRUB:a käynnistyslataimena"
-
-#~ msgid "Use LILO for the boot loader"
-#~ msgstr "Käytä LILO:a käynnistyslataimena"
-
-#~ msgid "label173"
-#~ msgstr "label173"
-
-#~ msgid "LILO Options:"
-#~ msgstr "LILO:n valinnat:"
-
-#~ msgid "Use linear mode"
-#~ msgstr "Käytä lineaarista tilaa"
-
-#~ msgid "Force use of lba32 mode"
-#~ msgstr "Pakota lba32-tilan käyttö"
-
-#~ msgid "label174"
-#~ msgstr "label174"
