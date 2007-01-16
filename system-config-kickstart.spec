@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.7.0
+Version: 2.7.1
 Release: 1%{?dist}
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -20,7 +20,7 @@ Requires: hwdata
 Requires: rhpl
 Requires: system-config-language
 Requires: system-config-securitylevel
-Requires: pykickstart
+Requires: pykickstart >= 0.90
 Requires: yum
 Requires: pirut
 Requires: hicolor-icon-theme
@@ -78,6 +78,11 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Tue Jan 16 2007 Chris Lumens <clumens@redhat.com> 2.7.1-1
+- Update to use new pykickstart.
+- Don't traceback if no monitor or x driver is selected.
+- Handle pykickstart exceptions by displaying an error dialog.
+
 * Fri Dec 22 2006 Chris Lumens <clumens@redhat.com> 2.7.0-1
 - Use system-config-securitylevel to provide the firewall page.
 - Speed up startup and shutdown.
