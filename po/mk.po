@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-11-21 11:59-0500\n"
+"POT-Creation-Date: 2007-01-16 14:37-0500\n"
 "PO-Revision-Date: 2005-04-24 23:59+0200\n"
 "Last-Translator: Tomislav Markovski <herrera@users.sourceforge.net>\n"
 "Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
@@ -24,32 +24,32 @@ msgstr ""
 msgid "Please fill in the authentication information"
 msgstr "Ве молам пополнете ги информациите за мрежата"
 
-#: ../src/basic.py:70
+#: ../src/basic.py:69
 msgid "x86, AMD64, or Intel EM64T"
 msgstr "x86, AMD64, или Intel EM64T"
 
-#: ../src/basic.py:70
+#: ../src/basic.py:69
 msgid "Intel Itanium"
 msgstr "Intel Itanium"
 
-#: ../src/basic.py:70
+#: ../src/basic.py:69
 msgid "IBM iSeries"
 msgstr "IBM iSeries"
 
-#: ../src/basic.py:71
+#: ../src/basic.py:70
 msgid "IBM pSeries"
 msgstr "IBM pSeries"
 
-#: ../src/basic.py:71
+#: ../src/basic.py:70
 msgid "IBM zSeries/s390"
 msgstr "IBM zSeries/s390"
 
-#: ../src/basic.py:149
+#: ../src/basic.py:146
 msgid "Root passwords do not match."
 msgstr "Root лозинките не се совпаѓаат."
 
-#: ../src/basic.py:150 ../src/install.py:218 ../src/partWindow.py:522
-#: ../src/partition.py:255 ../src/raidWindow.py:249
+#: ../src/basic.py:147 ../src/install.py:215 ../src/partWindow.py:521
+#: ../src/partition.py:254 ../src/raidWindow.py:249
 msgid "Error"
 msgstr "Грешка"
 
@@ -62,116 +62,120 @@ msgstr "Опциите на подигнувачот не се применли�
 msgid "Grub passwords do not match.  Please try again."
 msgstr "Лозинките на grub не се совпаѓаат.  Ве молам пробајте пак."
 
-#. create table with custom checklists
-#: ../src/firewall.py:60
-msgid "Trusted devices:"
-msgstr "Доверливи уреди:"
+#: ../src/firewall.py:91 ../src/packages.py:160
+msgid "Firewall configuration is not applicable on upgrades."
+msgstr "Конфигурацијата на огнениот ѕид не е достапна при надградби."
 
-#: ../src/firewall.py:85
-msgid "Trusted services:"
-msgstr "Доверливи сервиси:"
-
-#: ../src/firewall.py:117
-msgid "Other ports: (1029:tcp)"
-msgstr "Други порти: (1029:tcp)"
-
-#: ../src/install.py:133
+#: ../src/install.py:130
 msgid "Please enter an NFS server."
 msgstr "Ве молам внесете NFS сервер."
 
-#: ../src/install.py:136
+#: ../src/install.py:133
 msgid "Please enter an NFS directory."
 msgstr "Ве молам внесете директориум за NFS."
 
-#: ../src/install.py:147
+#: ../src/install.py:144
 msgid "Please enter an FTP server."
 msgstr "Ве молам внесете FTP сервер."
 
-#: ../src/install.py:154
+#: ../src/install.py:151
 msgid "Please enter an FTP directory."
 msgstr "Ве молам внесете директориум за FTP."
 
-#: ../src/install.py:160
+#: ../src/install.py:157
 msgid "Please enter an FTP user name."
 msgstr "Ве молам внесете корисничко име за FTP."
 
-#: ../src/install.py:163
+#: ../src/install.py:160
 msgid "Please enter an FTP password."
 msgstr "Ве молам внесете лозинка за FTP."
 
-#: ../src/install.py:179
+#: ../src/install.py:176
 msgid "Please enter an HTTP server."
 msgstr "Ве молам внесете HTTP сервер."
 
-#: ../src/install.py:182
+#: ../src/install.py:179
 msgid "Please enter an HTTP server directory."
 msgstr "Ве молам внесете серверски директориум за HTTP."
 
-#: ../src/install.py:204
+#: ../src/install.py:201
 msgid "Please enter a hard drive directory."
 msgstr "Ве молам внесете директориум на тврдиот диск."
 
-#: ../src/install.py:207
+#: ../src/install.py:204
 msgid "Please enter a hard drive partition."
 msgstr "Ве молам внесете партиција на тврдиот диск."
 
-#: ../src/kickstartGui.py:93
+#: ../src/kickstartGui.py:94 ../src/kickstartGui.py:288
+#, python-format
+msgid ""
+"The following error was found while parsing your kickstart configuration:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: ../src/kickstartGui.py:97 ../src/kickstartGui.py:291
+#, fuzzy
+msgid "Error Parsing Kickstart Config"
+msgstr "За конфигуратор за kickstart"
+
+#: ../src/kickstartGui.py:105
 msgid "Kickstart"
 msgstr "Kickstart"
 
-#: ../src/kickstartGui.py:94
+#: ../src/kickstartGui.py:106
 msgid "Create a kickstart file"
 msgstr "Креирај kickstart датотека"
 
-#: ../src/kickstartGui.py:116
+#: ../src/kickstartGui.py:128
 msgid "Subsection"
 msgstr "Под-оддел"
 
-#: ../src/kickstartGui.py:120
+#: ../src/kickstartGui.py:132
 msgid "Basic Configuration"
 msgstr "Основна конфигурација"
 
-#: ../src/kickstartGui.py:120
+#: ../src/kickstartGui.py:133
 msgid "Installation Method"
 msgstr "Метод на инсталација"
 
-#: ../src/kickstartGui.py:121
+#: ../src/kickstartGui.py:134
 msgid "Boot Loader Options"
 msgstr "Опции на подигнувачот"
 
-#: ../src/kickstartGui.py:121
+#: ../src/kickstartGui.py:135
 msgid "Partition Information"
 msgstr "Информации за партициите"
 
-#: ../src/kickstartGui.py:122 tmp/system-config-kickstart.glade.h:109
+#: ../src/kickstartGui.py:136 tmp/system-config-kickstart.glade.h:105
 msgid "Network Configuration"
 msgstr "Мрежна конфигурација"
 
-#: ../src/kickstartGui.py:122
+#: ../src/kickstartGui.py:137
 msgid "Authentication"
 msgstr "Автентикација"
 
-#: ../src/kickstartGui.py:123 tmp/system-config-kickstart.glade.h:52
+#: ../src/kickstartGui.py:138 tmp/system-config-kickstart.glade.h:49
 msgid "Firewall Configuration"
 msgstr "Конфигурација на огнен ѕид"
 
-#: ../src/kickstartGui.py:123 tmp/system-config-kickstart.glade.h:28
+#: ../src/kickstartGui.py:139 tmp/system-config-kickstart.glade.h:26
 msgid "Display Configuration"
 msgstr "Конфигурација за приказ"
 
-#: ../src/kickstartGui.py:124 tmp/system-config-kickstart.glade.h:115
+#: ../src/kickstartGui.py:140 tmp/system-config-kickstart.glade.h:111
 msgid "Package Selection"
 msgstr "Избор на пакети"
 
-#: ../src/kickstartGui.py:124 tmp/system-config-kickstart.glade.h:125
+#: ../src/kickstartGui.py:141 tmp/system-config-kickstart.glade.h:121
 msgid "Pre-Installation Script"
 msgstr "Пре-инсталациона скрипта"
 
-#: ../src/kickstartGui.py:125 tmp/system-config-kickstart.glade.h:124
+#: ../src/kickstartGui.py:142 tmp/system-config-kickstart.glade.h:120
 msgid "Post-Installation Script"
 msgstr "Пост-инсталациона скрипта"
 
-#: ../src/kickstartGui.py:199
+#: ../src/kickstartGui.py:207
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -185,37 +189,37 @@ msgstr ""
 " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
 " Графички интерфејс за креирање на kickstart датотека"
 
-#: ../src/kickstartGui.py:200
+#: ../src/kickstartGui.py:208
 msgid "About Kickstart Configurator"
 msgstr "За конфигуратор за kickstart"
 
-#: ../src/kickstartGui.py:222
+#: ../src/kickstartGui.py:230
 msgid "Help is not available."
 msgstr "Помошта не е достапна."
 
-#: ../src/kickstartGui.py:289
+#: ../src/kickstartGui.py:312
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "Датотеката \"%s\"е непристапна."
 
-#: ../src/network.py:87
+#: ../src/network.py:86
 msgid "Device"
 msgstr "Уред"
 
-#: ../src/network.py:90
+#: ../src/network.py:89
 msgid "Network Type"
 msgstr "Тип на мрежа"
 
-#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:226
-#: ../src/network.py:286 ../src/network.py:422
+#: ../src/network.py:108 ../src/network.py:154 ../src/network.py:225
+#: ../src/network.py:281 ../src/network.py:414
 msgid "Static IP"
 msgstr "Статична IP"
 
-#: ../src/network.py:216 ../src/network.py:278
+#: ../src/network.py:215 ../src/network.py:273
 msgid "Please fill in the network information"
 msgstr "Ве молам пополнете ги информациите за мрежата"
 
-#: ../src/network.py:330
+#: ../src/network.py:325
 #, python-format
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
@@ -223,65 +227,65 @@ msgid ""
 msgstr ""
 "Мрежен уред со името %s веќе постои.  Ве молам изберете друго име за уредот."
 
-#: ../src/packages.py:163
+#: ../src/packages.py:166
 #, fuzzy
 msgid "Retrieving package information"
 msgstr "Информации за мрежниот уред"
 
-#: ../src/packages.py:172
+#: ../src/packages.py:175
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
 msgstr ""
 
-#: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:193
+#: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:186
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:194
+#: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:187
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:87 ../src/partWindow.py:150
+#: ../src/partWindow.py:86 ../src/partWindow.py:149
 msgid "software RAID"
 msgstr "софтверски RAID"
 
-#: ../src/partWindow.py:88 tmp/system-config-kickstart.glade.h:212
+#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:205
 msgid "swap"
 msgstr "swap"
 
-#: ../src/partWindow.py:88 tmp/system-config-kickstart.glade.h:213
+#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:206
 msgid "vfat"
 msgstr "vfat"
 
-#: ../src/partWindow.py:89
+#: ../src/partWindow.py:88
 msgid "PPC PReP Boot"
 msgstr "PPC PReP подигнување"
 
-#: ../src/partWindow.py:263 ../src/partWindow.py:544 ../src/raidWindow.py:214
+#: ../src/partWindow.py:262 ../src/partWindow.py:543 ../src/raidWindow.py:214
 msgid "Yes"
 msgstr "Да"
 
-#: ../src/partWindow.py:265 ../src/partWindow.py:546 ../src/raidWindow.py:216
+#: ../src/partWindow.py:264 ../src/partWindow.py:545 ../src/raidWindow.py:216
 msgid "No"
 msgstr "Не"
 
-#: ../src/partWindow.py:288 ../src/partWindow.py:303 ../src/partWindow.py:322
-#: ../src/partWindow.py:336
+#: ../src/partWindow.py:287 ../src/partWindow.py:302 ../src/partWindow.py:321
+#: ../src/partWindow.py:335
 msgid "Auto"
 msgstr "Автоматски"
 
-#: ../src/partWindow.py:297
+#: ../src/partWindow.py:296
 msgid "Hard Drives"
 msgstr "Тврди дискови"
 
-#: ../src/partWindow.py:440
+#: ../src/partWindow.py:439
 msgid "Specify a mount point for the partition."
 msgstr "Одредете точка за монтирање на партицијата."
 
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:449
+#: ../src/partWindow.py:448
 #, python-format
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
@@ -289,7 +293,7 @@ msgstr ""
 "Точката на монтирање \"%s\" е веќе во употреба.  Ве молам изберете друга "
 "точка за монтирање."
 
-#: ../src/partWindow.py:469
+#: ../src/partWindow.py:468
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -297,11 +301,11 @@ msgstr ""
 "За да креирате нова RAID партиција, мора да одредите име на уредот тврд диск "
 "или постоечка партиција."
 
-#: ../src/partWindow.py:506
+#: ../src/partWindow.py:505
 msgid "Specify a device on which to create the partition."
 msgstr "Одредете уред на кој што треба да биде креирана партиција."
 
-#: ../src/partWindow.py:515
+#: ../src/partWindow.py:514
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -309,7 +313,7 @@ msgstr ""
 "Партицијата која што ја одредивте не завршува со број  Партициите мора да "
 "имаат број на партиција како што се \"hda1\" or \"sda3\"."
 
-#: ../src/partition.py:74
+#: ../src/partition.py:73
 msgid ""
 "Device/\n"
 "Partition Number"
@@ -317,7 +321,7 @@ msgstr ""
 "Уред/\n"
 "Број на партиција"
 
-#: ../src/partition.py:76
+#: ../src/partition.py:75
 msgid ""
 "Mount Point/\n"
 "RAID"
@@ -325,19 +329,19 @@ msgstr ""
 "Точка на монтирање/\n"
 "RAID"
 
-#: ../src/partition.py:78
+#: ../src/partition.py:77
 msgid "Type"
 msgstr "Тип"
 
-#: ../src/partition.py:80
+#: ../src/partition.py:79
 msgid "Format"
 msgstr "Формат"
 
-#: ../src/partition.py:82
+#: ../src/partition.py:81
 msgid "Size (MB)"
 msgstr "Големина (MB)"
 
-#: ../src/partition.py:97 ../src/partition.py:137
+#: ../src/partition.py:96 ../src/partition.py:136
 msgid "Please select a partition from the list."
 msgstr "Ве молам изберете партиција од листата."
 
@@ -360,10 +364,20 @@ msgstr "Мора да одредите најмалку 3 партиции за 
 msgid "Raid Devices"
 msgstr "Raid уреди"
 
-#: ../src/xconfig.py:115
+#: ../src/xconfig.py:124
 #, fuzzy
 msgid "Could not read video driver database"
 msgstr "Не можам да ја прочитам базата со видео картички"
+
+#: ../src/xconfig.py:229
+#, fuzzy
+msgid "Please select an X driver."
+msgstr "Ве молам внесете NFS сервер."
+
+#: ../src/xconfig.py:248
+#, fuzzy
+msgid "Please select a monitor."
+msgstr "Ве молам изберете партиција од листата."
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -394,544 +408,520 @@ msgid "5"
 msgstr "5"
 
 #: tmp/system-config-kickstart.glade.h:8
-msgid "Active"
-msgstr "Активно"
-
-#: tmp/system-config-kickstart.glade.h:9
 msgid "Additional Size Options"
 msgstr "Додатни опции за големина"
 
-#: tmp/system-config-kickstart.glade.h:10
+#: tmp/system-config-kickstart.glade.h:9
 msgid "Authentication Configuration"
 msgstr "Конфигурација за автентикација"
 
-#: tmp/system-config-kickstart.glade.h:11
+#: tmp/system-config-kickstart.glade.h:10
 msgid "Authentication options are not applicable on upgrades."
 msgstr "Опциите за автентикација не се достапни при надградби."
 
-#: tmp/system-config-kickstart.glade.h:12
+#: tmp/system-config-kickstart.glade.h:11
 msgid "Authentication:"
 msgstr "Автентикација:"
 
-#: tmp/system-config-kickstart.glade.h:13
+#: tmp/system-config-kickstart.glade.h:12
 msgid "Basic Configuration (required)"
 msgstr "Основна конфигурација (потребно)"
 
-#: tmp/system-config-kickstart.glade.h:14
+#: tmp/system-config-kickstart.glade.h:13
 msgid "Boot Loader Options (required)"
 msgstr "Опции на подигнувачот (потребно)"
 
-#: tmp/system-config-kickstart.glade.h:15
+#: tmp/system-config-kickstart.glade.h:14
 msgid "CD-ROM"
 msgstr "Це-де ROM"
 
-#: tmp/system-config-kickstart.glade.h:16
+#: tmp/system-config-kickstart.glade.h:15
 msgid "Choose one of the following options:"
 msgstr "Изберете една од наведените опции:"
 
-#: tmp/system-config-kickstart.glade.h:17
+#: tmp/system-config-kickstart.glade.h:16
 msgid "Choose the Installation Method:"
 msgstr "Изберете го методот на инсталација:"
 
-#: tmp/system-config-kickstart.glade.h:18
+#: tmp/system-config-kickstart.glade.h:17
 msgid "Clear Master Boot Record"
 msgstr "Исчисти го Master Boot Record"
 
-#: tmp/system-config-kickstart.glade.h:19
+#: tmp/system-config-kickstart.glade.h:18
 msgid "Color Depth"
 msgstr "Длабочина на боја"
 
-#: tmp/system-config-kickstart.glade.h:20
+#: tmp/system-config-kickstart.glade.h:19
 msgid "Configure the X Window System"
 msgstr "Конфигурирај го системот за прозорци X"
 
-#: tmp/system-config-kickstart.glade.h:21
+#: tmp/system-config-kickstart.glade.h:20
 msgid "Confirm Password:"
 msgstr "Потврди лозинка:"
 
-#: tmp/system-config-kickstart.glade.h:22
+#: tmp/system-config-kickstart.glade.h:21
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "Креирај RAID уред [стандардно = /dev/md0]"
 
-#: tmp/system-config-kickstart.glade.h:23
+#: tmp/system-config-kickstart.glade.h:22
 msgid "Create a software RAID partition"
 msgstr "Креирај софтверска RAID партиција"
 
-#: tmp/system-config-kickstart.glade.h:24
+#: tmp/system-config-kickstart.glade.h:23
 msgid "Default Desktop:"
 msgstr "Стандардна работна околина:"
 
-#: tmp/system-config-kickstart.glade.h:25
+#: tmp/system-config-kickstart.glade.h:24
 msgid "Default Language:"
 msgstr "Стандарден јазик:"
 
-#: tmp/system-config-kickstart.glade.h:26
-msgid "Disable firewall"
-msgstr "Оневозможи огнен ѕид"
-
-#: tmp/system-config-kickstart.glade.h:27
+#: tmp/system-config-kickstart.glade.h:25
 msgid "Disabled"
 msgstr "Оневозможено"
 
-#: tmp/system-config-kickstart.glade.h:29
+#: tmp/system-config-kickstart.glade.h:27
 msgid "Display configuration is not applicable on upgrades."
 msgstr "Прикажување на конфигурацијата не е достапно при надградби."
 
-#: tmp/system-config-kickstart.glade.h:30
+#: tmp/system-config-kickstart.glade.h:28
 msgid "Do not clear Master Boot Record"
 msgstr "Не го чисти Master Boot Record"
 
-#: tmp/system-config-kickstart.glade.h:31
+#: tmp/system-config-kickstart.glade.h:29
 msgid "Do not initialize the disk label"
 msgstr "Не ја иницијализирај етикетата на дискот"
 
-#: tmp/system-config-kickstart.glade.h:32
+#: tmp/system-config-kickstart.glade.h:30
 msgid "Do not install a boot loader"
 msgstr "Не инсталирај подигнувач"
 
-#: tmp/system-config-kickstart.glade.h:33
+#: tmp/system-config-kickstart.glade.h:31
 msgid "Drive :"
 msgstr "Уред :"
 
-#: tmp/system-config-kickstart.glade.h:34
+#: tmp/system-config-kickstart.glade.h:32
 msgid "Enable Hesiod Support"
 msgstr "Овозможи поддршка за Hesiod"
 
-#: tmp/system-config-kickstart.glade.h:35
+#: tmp/system-config-kickstart.glade.h:33
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Овозможи автентикација со Kerberos 5"
 
-#: tmp/system-config-kickstart.glade.h:36
+#: tmp/system-config-kickstart.glade.h:34
 msgid "Enable LDAP"
 msgstr "Овозможи LDAP"
 
-#: tmp/system-config-kickstart.glade.h:37
+#: tmp/system-config-kickstart.glade.h:35
 msgid "Enable NIS"
 msgstr "Овозможи NIS"
 
-#: tmp/system-config-kickstart.glade.h:38
+#: tmp/system-config-kickstart.glade.h:36
 msgid "Enable SMB Authentication"
 msgstr "Овозможи автентикација за SMB"
 
-#: tmp/system-config-kickstart.glade.h:39
-msgid "Enable firewall"
-msgstr "Овозможи огнен ѕид"
-
-#: tmp/system-config-kickstart.glade.h:40
+#: tmp/system-config-kickstart.glade.h:37
 msgid "Enable nscd"
 msgstr "Овозможи nscd"
 
-#: tmp/system-config-kickstart.glade.h:41
+#: tmp/system-config-kickstart.glade.h:38
 msgid "Enabled"
 msgstr "Овозможено"
 
-#: tmp/system-config-kickstart.glade.h:42
+#: tmp/system-config-kickstart.glade.h:39
 msgid "Enabled in reconfiguration mode"
 msgstr "Овозможено во режим за реконфигурација"
 
-#: tmp/system-config-kickstart.glade.h:43
+#: tmp/system-config-kickstart.glade.h:40
 msgid "Encrypt GRUB password"
 msgstr "Енкритпирај лозинка за GRUB:"
 
-#: tmp/system-config-kickstart.glade.h:44
+#: tmp/system-config-kickstart.glade.h:41
 msgid "Encrypt root password"
 msgstr "Енкриптирај ja root лозинката"
 
-#: tmp/system-config-kickstart.glade.h:45
+#: tmp/system-config-kickstart.glade.h:42
 msgid "FTP"
 msgstr "FTP"
 
-#: tmp/system-config-kickstart.glade.h:46
+#: tmp/system-config-kickstart.glade.h:43
 msgid "FTP Directory:"
 msgstr "FTP директориум:"
 
-#: tmp/system-config-kickstart.glade.h:47
+#: tmp/system-config-kickstart.glade.h:44
 msgid "FTP Password"
 msgstr "Лозинка за FTP"
 
-#: tmp/system-config-kickstart.glade.h:48
+#: tmp/system-config-kickstart.glade.h:45
 msgid "FTP Server:"
 msgstr "FTP сервер:"
 
-#: tmp/system-config-kickstart.glade.h:49
+#: tmp/system-config-kickstart.glade.h:46
 msgid "FTP Username"
 msgstr "Корисничко име за FTP"
 
-#: tmp/system-config-kickstart.glade.h:50
+#: tmp/system-config-kickstart.glade.h:47
 msgid "File System Type:"
 msgstr "Тип на датотечен систем:"
 
-#: tmp/system-config-kickstart.glade.h:51
+#: tmp/system-config-kickstart.glade.h:48
 msgid "Fill all unused space on disk"
 msgstr "Пополни го цел неискористен простор на дискот"
 
-#: tmp/system-config-kickstart.glade.h:53
-msgid "Firewall configuration is not applicable on upgrades."
-msgstr "Конфигурацијата на огнениот ѕид не е достапна при надградби."
-
-#: tmp/system-config-kickstart.glade.h:54
+#: tmp/system-config-kickstart.glade.h:50
 msgid "Fixed size"
 msgstr "Фиксна големина"
 
-#: tmp/system-config-kickstart.glade.h:55
+#: tmp/system-config-kickstart.glade.h:51
 msgid "Force to be a primary partition (asprimary)"
 msgstr "Наметни да биде примарна партиција"
 
-#: tmp/system-config-kickstart.glade.h:56
+#: tmp/system-config-kickstart.glade.h:52
 msgid "Format RAID device"
 msgstr "Форматирај го RAID уредот"
 
-#: tmp/system-config-kickstart.glade.h:57
+#: tmp/system-config-kickstart.glade.h:53
 msgid "Format partition"
 msgstr "Форматирај партиција"
 
-#: tmp/system-config-kickstart.glade.h:58
+#: tmp/system-config-kickstart.glade.h:54
 msgid "GNOME"
 msgstr "GNOME"
 
-#: tmp/system-config-kickstart.glade.h:59
+#: tmp/system-config-kickstart.glade.h:55
 msgid "GRUB Options:"
 msgstr "Опции за GRUB:"
 
-#: tmp/system-config-kickstart.glade.h:60
+#: tmp/system-config-kickstart.glade.h:56
 msgid "Gateway:"
 msgstr "Премин:"
 
-#: tmp/system-config-kickstart.glade.h:61
+#: tmp/system-config-kickstart.glade.h:57
 msgid "General"
 msgstr "Општо"
 
-#: tmp/system-config-kickstart.glade.h:62
+#: tmp/system-config-kickstart.glade.h:58
 msgid "Grow to maximum of (MB):"
 msgstr "Оди до максимум (MB):"
 
-#: tmp/system-config-kickstart.glade.h:63
+#: tmp/system-config-kickstart.glade.h:59
 msgid "HTTP"
 msgstr "HTTP"
 
-#: tmp/system-config-kickstart.glade.h:64
+#: tmp/system-config-kickstart.glade.h:60
 msgid "HTTP Directory:"
 msgstr "HTTP директориум:"
 
-#: tmp/system-config-kickstart.glade.h:65
+#: tmp/system-config-kickstart.glade.h:61
 msgid "HTTP Server:"
 msgstr "HTTP сервер:"
 
-#: tmp/system-config-kickstart.glade.h:66
+#: tmp/system-config-kickstart.glade.h:62
 msgid "Hard Drive"
 msgstr "Тврд диск"
 
-#: tmp/system-config-kickstart.glade.h:67
+#: tmp/system-config-kickstart.glade.h:63
 msgid "Hard Drive Directory:"
 msgstr "Директориум на тврдиот диск:"
 
-#: tmp/system-config-kickstart.glade.h:68
+#: tmp/system-config-kickstart.glade.h:64
 msgid "Hard Drive Partition:"
 msgstr "Партиција на тврдиот диск:"
 
-#: tmp/system-config-kickstart.glade.h:69
+#: tmp/system-config-kickstart.glade.h:65
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: tmp/system-config-kickstart.glade.h:70
+#: tmp/system-config-kickstart.glade.h:66
 msgid "Hesiod Authentication"
 msgstr "Автентикација за Hesiod "
 
-#: tmp/system-config-kickstart.glade.h:71
+#: tmp/system-config-kickstart.glade.h:67
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS:"
 
-#: tmp/system-config-kickstart.glade.h:72
+#: tmp/system-config-kickstart.glade.h:68
 msgid "Hesiod RHS:"
 msgstr "Hesiod RHS:"
 
-#: tmp/system-config-kickstart.glade.h:73
+#: tmp/system-config-kickstart.glade.h:69
 msgid "Horizontal Sync:"
 msgstr "Хоризонтална фреквенција:"
 
-#: tmp/system-config-kickstart.glade.h:74
+#: tmp/system-config-kickstart.glade.h:70
 msgid "Hz"
 msgstr "Hz"
 
-#: tmp/system-config-kickstart.glade.h:75
+#: tmp/system-config-kickstart.glade.h:71
 msgid "IP Address:"
 msgstr "IP адреса:"
 
-#: tmp/system-config-kickstart.glade.h:76
+#: tmp/system-config-kickstart.glade.h:72
 msgid "Initialize the disk label"
 msgstr "Иницијализирај ја етикетата на дискот"
 
-#: tmp/system-config-kickstart.glade.h:77
+#: tmp/system-config-kickstart.glade.h:73
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "Инсталирај го подигнувачот во Master Boot Record (MBR)"
 
-#: tmp/system-config-kickstart.glade.h:78
+#: tmp/system-config-kickstart.glade.h:74
 msgid "Install boot loader on first sector of the boot partition"
 msgstr ""
 "Инсталирај го подигнувачот во првиот сектор од партицијата за подигнување"
 
-#: tmp/system-config-kickstart.glade.h:79
+#: tmp/system-config-kickstart.glade.h:75
 msgid "Install new boot loader"
 msgstr "Инсталирај нов подигнувач"
 
-#: tmp/system-config-kickstart.glade.h:80
+#: tmp/system-config-kickstart.glade.h:76
 msgid "Installation Method (required)"
 msgstr "Метод на инсталација (потребно)"
 
-#: tmp/system-config-kickstart.glade.h:81
+#: tmp/system-config-kickstart.glade.h:77
 msgid "KDE"
 msgstr "KDE"
 
-#: tmp/system-config-kickstart.glade.h:82
+#: tmp/system-config-kickstart.glade.h:78
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: tmp/system-config-kickstart.glade.h:83
+#: tmp/system-config-kickstart.glade.h:79
 msgid "Kerberos 5 Authentication"
 msgstr "Автентикација со Kerberos 5"
 
-#: tmp/system-config-kickstart.glade.h:84
+#: tmp/system-config-kickstart.glade.h:80
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Домен контролер за Kerberos (KDC):"
 
-#: tmp/system-config-kickstart.glade.h:85
+#: tmp/system-config-kickstart.glade.h:81
 msgid "Kerberos Master Server:"
 msgstr "Главен сервер на Kerberos:"
 
-#: tmp/system-config-kickstart.glade.h:86
+#: tmp/system-config-kickstart.glade.h:82
 msgid "Kerberos Realm:"
 msgstr "Kerberos Realm:"
 
-#: tmp/system-config-kickstart.glade.h:87
+#: tmp/system-config-kickstart.glade.h:83
 msgid "Kernel parameters:"
 msgstr "Параметри за кернелот:"
 
-#: tmp/system-config-kickstart.glade.h:88
+#: tmp/system-config-kickstart.glade.h:84
 msgid "Keyboard:"
 msgstr "Тастатура:"
 
-#: tmp/system-config-kickstart.glade.h:89
+#: tmp/system-config-kickstart.glade.h:85
 msgid "Kickstart Configurator"
 msgstr "Kickstart конфигуратор"
 
-#: tmp/system-config-kickstart.glade.h:90
+#: tmp/system-config-kickstart.glade.h:86
 msgid "LDAP "
 msgstr "LDAP "
 
-#: tmp/system-config-kickstart.glade.h:91
+#: tmp/system-config-kickstart.glade.h:87
 msgid "LDAP Authentication"
 msgstr "Автентикација за LDAP"
 
-#: tmp/system-config-kickstart.glade.h:92
+#: tmp/system-config-kickstart.glade.h:88
 msgid "LDAP Base Name: "
 msgstr "основно име на LDAP: "
 
-#: tmp/system-config-kickstart.glade.h:93
+#: tmp/system-config-kickstart.glade.h:89
 msgid "LDAP Server: "
 msgstr "LDAP сервер: "
 
-#: tmp/system-config-kickstart.glade.h:94
+#: tmp/system-config-kickstart.glade.h:90
 msgid "Make RAID Device"
 msgstr "Направи RAID уред"
 
-#: tmp/system-config-kickstart.glade.h:95
+#: tmp/system-config-kickstart.glade.h:91
 msgid "Make partition on specific drive (ondisk)"
 msgstr "Направи партиција на одреден уред (ondisk)"
 
-#: tmp/system-config-kickstart.glade.h:96
+#: tmp/system-config-kickstart.glade.h:92
 msgid "Monitor"
 msgstr "Монитор"
 
-#: tmp/system-config-kickstart.glade.h:97
+#: tmp/system-config-kickstart.glade.h:93
 msgid "Mount Point:"
 msgstr "Точка на монтирање:"
 
-#: tmp/system-config-kickstart.glade.h:98
+#: tmp/system-config-kickstart.glade.h:94
 msgid "NFS"
 msgstr "NFS"
 
-#: tmp/system-config-kickstart.glade.h:99
+#: tmp/system-config-kickstart.glade.h:95
 msgid "NFS Directory:"
 msgstr "NFS директориум:"
 
-#: tmp/system-config-kickstart.glade.h:100
+#: tmp/system-config-kickstart.glade.h:96
 msgid "NFS Server:"
 msgstr "NFS сервер:"
 
-#: tmp/system-config-kickstart.glade.h:101
+#: tmp/system-config-kickstart.glade.h:97
 msgid "NIS"
 msgstr "NIS"
 
-#: tmp/system-config-kickstart.glade.h:102
+#: tmp/system-config-kickstart.glade.h:98
 msgid "NIS Authentication"
 msgstr "Автентикација за NIS"
 
-#: tmp/system-config-kickstart.glade.h:103
+#: tmp/system-config-kickstart.glade.h:99
 msgid "NIS Domain:"
 msgstr "Домен на NIS:"
 
-#: tmp/system-config-kickstart.glade.h:104
+#: tmp/system-config-kickstart.glade.h:100
 msgid "NIS Server:"
 msgstr "NIS сервер:"
 
-#: tmp/system-config-kickstart.glade.h:105
+#: tmp/system-config-kickstart.glade.h:101
 msgid "Name Server:"
 msgstr "Сервер за имиња:"
 
-#: tmp/system-config-kickstart.glade.h:106
+#: tmp/system-config-kickstart.glade.h:102
 msgid "Name Switch Cache"
 msgstr "Кеш за промена на име"
 
-#: tmp/system-config-kickstart.glade.h:107
+#: tmp/system-config-kickstart.glade.h:103
 msgid "Name Switch Cache Daemon (nscd) Authentication"
 msgstr "Автентикација за nscd"
 
-#: tmp/system-config-kickstart.glade.h:108
+#: tmp/system-config-kickstart.glade.h:104
 msgid "Netmask: "
 msgstr "Маска: "
 
-#: tmp/system-config-kickstart.glade.h:110
+#: tmp/system-config-kickstart.glade.h:106
 msgid "Network Device Information"
 msgstr "Информации за мрежниот уред"
 
-#: tmp/system-config-kickstart.glade.h:111
+#: tmp/system-config-kickstart.glade.h:107
 msgid "Network Device:"
 msgstr "Мрежен уред:"
 
-#: tmp/system-config-kickstart.glade.h:112
+#: tmp/system-config-kickstart.glade.h:108
 msgid "Network Type:"
 msgstr "Тип на мрежа:"
 
-#: tmp/system-config-kickstart.glade.h:113
+#: tmp/system-config-kickstart.glade.h:109
 msgid "Number of spares:"
 msgstr "Број на резерви:"
 
-#: tmp/system-config-kickstart.glade.h:114
+#: tmp/system-config-kickstart.glade.h:110
 msgid "On first boot, Setup Agent is: "
 msgstr "При првото подигнување, агентот за поставување е: "
 
-#: tmp/system-config-kickstart.glade.h:116
+#: tmp/system-config-kickstart.glade.h:112
 msgid "Partition :"
 msgstr "Партиција :"
 
-#: tmp/system-config-kickstart.glade.h:117
+#: tmp/system-config-kickstart.glade.h:113
 msgid "Partition Information (required)"
 msgstr "Информации за партициите (потребно)"
 
-#: tmp/system-config-kickstart.glade.h:118
+#: tmp/system-config-kickstart.glade.h:114
 msgid "Partition Options"
 msgstr "Опции за партициите"
 
-#: tmp/system-config-kickstart.glade.h:119
+#: tmp/system-config-kickstart.glade.h:115
 msgid "Partition options are not applicable on upgrades."
 msgstr "Опциите за партициите не се достапни при надградби."
 
-#: tmp/system-config-kickstart.glade.h:120
+#: tmp/system-config-kickstart.glade.h:116
 msgid "Password:"
 msgstr "Лозинка:"
 
-#: tmp/system-config-kickstart.glade.h:121
+#: tmp/system-config-kickstart.glade.h:117
 msgid "Perform installation in interactive mode"
 msgstr "Направи инсталација во интерактивен режим"
 
-#: tmp/system-config-kickstart.glade.h:122
+#: tmp/system-config-kickstart.glade.h:118
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "Направи инсталација во текстуален режим (стандарден е графички)"
 
-#: tmp/system-config-kickstart.glade.h:123
+#: tmp/system-config-kickstart.glade.h:119
 msgid "Perform new installation"
 msgstr "Направи нова инсталација"
 
-#: tmp/system-config-kickstart.glade.h:126
+#: tmp/system-config-kickstart.glade.h:122
 msgid "Preserve existing partitions"
 msgstr "Чувај ги постоечките партиции"
 
-#: tmp/system-config-kickstart.glade.h:127
+#: tmp/system-config-kickstart.glade.h:123
 msgid "Preview Options"
 msgstr "Опции за преглед"
 
-#: tmp/system-config-kickstart.glade.h:128
+#: tmp/system-config-kickstart.glade.h:124
 msgid "Probe for monitor"
 msgstr "Тест за монитор"
 
-#: tmp/system-config-kickstart.glade.h:129
+#: tmp/system-config-kickstart.glade.h:125
 #, fuzzy
 msgid "Probe for video card driver"
 msgstr "Тест за видео картичка"
 
-#: tmp/system-config-kickstart.glade.h:130
+#: tmp/system-config-kickstart.glade.h:126
 msgid "RAID"
 msgstr "RAID"
 
-#: tmp/system-config-kickstart.glade.h:131
+#: tmp/system-config-kickstart.glade.h:127
 msgid "RAID Device:"
 msgstr "RAID уред:"
 
-#: tmp/system-config-kickstart.glade.h:132
+#: tmp/system-config-kickstart.glade.h:128
 msgid "RAID Level:"
 msgstr "Ниво на RAID:"
 
-#: tmp/system-config-kickstart.glade.h:133
+#: tmp/system-config-kickstart.glade.h:129
 msgid "RAID Options"
 msgstr "Опции за RAID"
 
-#: tmp/system-config-kickstart.glade.h:134
+#: tmp/system-config-kickstart.glade.h:130
 msgid "Raid Members"
 msgstr "Членови на Raid"
 
-#: tmp/system-config-kickstart.glade.h:135
+#: tmp/system-config-kickstart.glade.h:131
 msgid "Reboot system after installation"
 msgstr "Рестартирај го системот по инсталацијата"
 
-#: tmp/system-config-kickstart.glade.h:136
+#: tmp/system-config-kickstart.glade.h:132
 msgid "Remove all existing partitions"
 msgstr "Отстрани ги сите постоечки партиции"
 
-#: tmp/system-config-kickstart.glade.h:137
+#: tmp/system-config-kickstart.glade.h:133
 msgid "Remove existing Linux partitions"
 msgstr "Отстрани ги сите постоечки Linux партиции"
 
-#: tmp/system-config-kickstart.glade.h:138
+#: tmp/system-config-kickstart.glade.h:134
 msgid "Resolution"
 msgstr "Резолуција"
 
-#: tmp/system-config-kickstart.glade.h:139
+#: tmp/system-config-kickstart.glade.h:135
 msgid "Root Password:"
 msgstr "Root лозинка:"
 
-#: tmp/system-config-kickstart.glade.h:140
+#: tmp/system-config-kickstart.glade.h:136
 msgid "Run outside of the chroot environment"
 msgstr "Изврши надвор од chroot околината"
 
-#: tmp/system-config-kickstart.glade.h:141
-msgid "SELinux:"
-msgstr "SELinux:"
-
-#: tmp/system-config-kickstart.glade.h:142
+#: tmp/system-config-kickstart.glade.h:137
 msgid "SMB"
 msgstr "SMB"
 
-#: tmp/system-config-kickstart.glade.h:143
+#: tmp/system-config-kickstart.glade.h:138
 msgid "SMB Authentication"
 msgstr "Автентикација за SMB"
 
-#: tmp/system-config-kickstart.glade.h:144
+#: tmp/system-config-kickstart.glade.h:139
 msgid "SMB Servers:"
 msgstr "SMB сервери:"
 
-#: tmp/system-config-kickstart.glade.h:145
+#: tmp/system-config-kickstart.glade.h:140
 msgid "SMB Workgroup:"
 msgstr "SMB работна група:"
 
-#: tmp/system-config-kickstart.glade.h:146
-msgid "Security level:"
-msgstr "Безбедносно ниво:"
-
-#: tmp/system-config-kickstart.glade.h:147
+#: tmp/system-config-kickstart.glade.h:141
 msgid "Size (MB):"
 msgstr "Големина (MB):"
 
-#: tmp/system-config-kickstart.glade.h:148
+#: tmp/system-config-kickstart.glade.h:142
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -944,23 +934,23 @@ msgstr ""
 "информации за користење на RAID уредеите, ве молам консултирајте се со "
 "документацијата за kickstart."
 
-#: tmp/system-config-kickstart.glade.h:149
+#: tmp/system-config-kickstart.glade.h:143
 msgid "Specify an FTP username and password"
 msgstr "Одредете корисничко име и лозинка за FTP"
 
-#: tmp/system-config-kickstart.glade.h:150
+#: tmp/system-config-kickstart.glade.h:144
 msgid "Start the X Window System on boot"
 msgstr "Подигни го системот за прозорц X при подигнување"
 
-#: tmp/system-config-kickstart.glade.h:151
+#: tmp/system-config-kickstart.glade.h:145
 msgid "Target Architecture:"
 msgstr "Целна архитектура:"
 
-#: tmp/system-config-kickstart.glade.h:152
+#: tmp/system-config-kickstart.glade.h:146
 msgid "Time Zone:"
 msgstr "Временска зона:"
 
-#: tmp/system-config-kickstart.glade.h:153
+#: tmp/system-config-kickstart.glade.h:147
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -969,77 +959,73 @@ msgstr ""
 "'софтверски RAID'.  Потоа можете да креирате RAID уред кој што ќе биде "
 "форматиран и монтиран."
 
-#: tmp/system-config-kickstart.glade.h:155
+#: tmp/system-config-kickstart.glade.h:149
 #, no-c-format
 msgid "Type your %post script below:"
 msgstr "Откуцајте ја %post скриптата подолу:"
 
-#: tmp/system-config-kickstart.glade.h:157
+#: tmp/system-config-kickstart.glade.h:151
 #, no-c-format
 msgid "Type your %pre script below:"
 msgstr "Откуцајте ја вашата %pre скрипта подолу:"
 
-#: tmp/system-config-kickstart.glade.h:158
+#: tmp/system-config-kickstart.glade.h:152
 msgid "Upgrade an existing installation"
 msgstr "Надгради постоечка инсталација"
 
-#: tmp/system-config-kickstart.glade.h:159
+#: tmp/system-config-kickstart.glade.h:153
 msgid "Upgrade existing boot loader"
 msgstr "Надгради го постоечкиот подигнувач"
 
-#: tmp/system-config-kickstart.glade.h:160
+#: tmp/system-config-kickstart.glade.h:154
 msgid "Use GRUB password"
 msgstr "Користи лозинка за GRUB"
 
-#: tmp/system-config-kickstart.glade.h:161
+#: tmp/system-config-kickstart.glade.h:155
 msgid "Use MD5"
 msgstr "Користи MD5"
 
-#: tmp/system-config-kickstart.glade.h:162
+#: tmp/system-config-kickstart.glade.h:156
 msgid "Use Shadow Passwords"
 msgstr "Користи засенети лозинки"
 
-#: tmp/system-config-kickstart.glade.h:163
+#: tmp/system-config-kickstart.glade.h:157
 msgid "Use UTC clock"
 msgstr "Користи UTC часовник"
 
-#: tmp/system-config-kickstart.glade.h:164
+#: tmp/system-config-kickstart.glade.h:158
 msgid "Use an interpreter:"
 msgstr "Користи интерпретер:"
 
-#: tmp/system-config-kickstart.glade.h:165
+#: tmp/system-config-kickstart.glade.h:159
 msgid "Use broadcast to find NIS server"
 msgstr "Користи емитување за да го пронајдеш NIS серверот"
 
-#: tmp/system-config-kickstart.glade.h:166
+#: tmp/system-config-kickstart.glade.h:160
 msgid "Use custom monitor sync rates"
 msgstr "Користи сопствени фреквенции за освежување"
 
-#: tmp/system-config-kickstart.glade.h:167
+#: tmp/system-config-kickstart.glade.h:161
 msgid "Use existing partition (onpart)"
 msgstr "Користи посточка партиција (onpart)"
 
-#: tmp/system-config-kickstart.glade.h:168
+#: tmp/system-config-kickstart.glade.h:162
 msgid "Use recommended swap size"
 msgstr "Користи препорачлива големина на swap"
 
-#: tmp/system-config-kickstart.glade.h:169
+#: tmp/system-config-kickstart.glade.h:163
 msgid "Vertical Sync:"
 msgstr "Вертикална фреквенција:"
 
-#: tmp/system-config-kickstart.glade.h:170
+#: tmp/system-config-kickstart.glade.h:164
 msgid "Video Card"
 msgstr "Видео картичка"
 
-#: tmp/system-config-kickstart.glade.h:171
+#: tmp/system-config-kickstart.glade.h:165
 msgid "Video Card RAM: "
 msgstr "RAM на видео картичка:"
 
-#: tmp/system-config-kickstart.glade.h:172
-msgid "Warn"
-msgstr "Предупреди"
-
-#: tmp/system-config-kickstart.glade.h:174
+#: tmp/system-config-kickstart.glade.h:167
 #, no-c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1048,7 +1034,7 @@ msgstr ""
 "Предупредување: грешка во оваа скрипта може да предизвика вашата kickstart "
 "инсталација да не успее. Не ја додавајте командата %post на почетокот."
 
-#: tmp/system-config-kickstart.glade.h:176
+#: tmp/system-config-kickstart.glade.h:169
 #, no-c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1057,7 +1043,7 @@ msgstr ""
 "Предупредување: Грешка во оваа скрипта може да предизвика Вашата kickstart "
 "инсталација да не успее. Не вклучувајте  %p команда на почетокот."
 
-#: tmp/system-config-kickstart.glade.h:177
+#: tmp/system-config-kickstart.glade.h:170
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
@@ -1065,130 +1051,157 @@ msgstr ""
 "Ја избравте следнава конфигурација. Кликнете на „Зачувај датотека“, за да ја "
 "зачувате kickstart датотеката."
 
-#: tmp/system-config-kickstart.glade.h:178
+#: tmp/system-config-kickstart.glade.h:171
 msgid "_About"
 msgstr "_За"
 
-#: tmp/system-config-kickstart.glade.h:179
+#: tmp/system-config-kickstart.glade.h:172
 msgid "_Add"
 msgstr "_Додади"
 
-#: tmp/system-config-kickstart.glade.h:180
+#: tmp/system-config-kickstart.glade.h:173
 msgid "_Add Network Device"
 msgstr "_Додади мрежен уред"
 
-#: tmp/system-config-kickstart.glade.h:181
+#: tmp/system-config-kickstart.glade.h:174
 msgid "_Contents"
 msgstr "_Содржини"
 
-#: tmp/system-config-kickstart.glade.h:182
+#: tmp/system-config-kickstart.glade.h:175
 msgid "_Delete"
 msgstr "_Отстрани"
 
-#: tmp/system-config-kickstart.glade.h:183
+#: tmp/system-config-kickstart.glade.h:176
 msgid "_Delete Network Device"
 msgstr "_Избриши мрежен уред"
 
-#: tmp/system-config-kickstart.glade.h:184
+#: tmp/system-config-kickstart.glade.h:177
 msgid "_Edit"
 msgstr "_Уреди"
 
-#: tmp/system-config-kickstart.glade.h:185
+#: tmp/system-config-kickstart.glade.h:178
 msgid "_Edit Network Device"
 msgstr "_Уреди мрежен уред"
 
-#: tmp/system-config-kickstart.glade.h:186
+#: tmp/system-config-kickstart.glade.h:179
 msgid "_File"
 msgstr "_Датотека"
 
-#: tmp/system-config-kickstart.glade.h:187
+#: tmp/system-config-kickstart.glade.h:180
 msgid "_Help"
 msgstr "_Помош"
 
-#: tmp/system-config-kickstart.glade.h:188
+#: tmp/system-config-kickstart.glade.h:181
 msgid "_Open File"
 msgstr "_Отвори датотека"
 
-#: tmp/system-config-kickstart.glade.h:189
+#: tmp/system-config-kickstart.glade.h:182
 msgid "_Preview"
 msgstr "_Преглед"
 
-#: tmp/system-config-kickstart.glade.h:190
+#: tmp/system-config-kickstart.glade.h:183
 msgid "_Quit"
 msgstr "_Излез"
 
-#: tmp/system-config-kickstart.glade.h:191
+#: tmp/system-config-kickstart.glade.h:184
 msgid "_Save File"
 msgstr "_Зачувај датотека"
 
-#: tmp/system-config-kickstart.glade.h:192
+#: tmp/system-config-kickstart.glade.h:185
 msgid "_Save to File"
 msgstr "_Завувај во датотека"
 
-#: tmp/system-config-kickstart.glade.h:195
+#: tmp/system-config-kickstart.glade.h:188
 msgid "kHz"
 msgstr "kHz"
 
-#: tmp/system-config-kickstart.glade.h:196
+#: tmp/system-config-kickstart.glade.h:189
 msgid "md0"
 msgstr "md0"
 
-#: tmp/system-config-kickstart.glade.h:197
+#: tmp/system-config-kickstart.glade.h:190
 msgid "md1"
 msgstr "md1"
 
-#: tmp/system-config-kickstart.glade.h:198
+#: tmp/system-config-kickstart.glade.h:191
 msgid "md10"
 msgstr "md10"
 
-#: tmp/system-config-kickstart.glade.h:199
+#: tmp/system-config-kickstart.glade.h:192
 msgid "md11"
 msgstr "md11"
 
-#: tmp/system-config-kickstart.glade.h:200
+#: tmp/system-config-kickstart.glade.h:193
 msgid "md12"
 msgstr "md12"
 
-#: tmp/system-config-kickstart.glade.h:201
+#: tmp/system-config-kickstart.glade.h:194
 msgid "md13"
 msgstr "md13"
 
-#: tmp/system-config-kickstart.glade.h:202
+#: tmp/system-config-kickstart.glade.h:195
 msgid "md14"
 msgstr "md14"
 
-#: tmp/system-config-kickstart.glade.h:203
+#: tmp/system-config-kickstart.glade.h:196
 msgid "md15"
 msgstr "md15"
 
-#: tmp/system-config-kickstart.glade.h:204
+#: tmp/system-config-kickstart.glade.h:197
 msgid "md2"
 msgstr "md2"
 
-#: tmp/system-config-kickstart.glade.h:205
+#: tmp/system-config-kickstart.glade.h:198
 msgid "md3"
 msgstr "md3"
 
-#: tmp/system-config-kickstart.glade.h:206
+#: tmp/system-config-kickstart.glade.h:199
 msgid "md4"
 msgstr "md4"
 
-#: tmp/system-config-kickstart.glade.h:207
+#: tmp/system-config-kickstart.glade.h:200
 msgid "md5"
 msgstr "md5"
 
-#: tmp/system-config-kickstart.glade.h:208
+#: tmp/system-config-kickstart.glade.h:201
 msgid "md6"
 msgstr "md6"
 
-#: tmp/system-config-kickstart.glade.h:209
+#: tmp/system-config-kickstart.glade.h:202
 msgid "md7"
 msgstr "md7"
 
-#: tmp/system-config-kickstart.glade.h:210
+#: tmp/system-config-kickstart.glade.h:203
 msgid "md8"
 msgstr "md8"
 
-#: tmp/system-config-kickstart.glade.h:211
+#: tmp/system-config-kickstart.glade.h:204
 msgid "md9"
 msgstr "md9"
+
+#~ msgid "Trusted devices:"
+#~ msgstr "Доверливи уреди:"
+
+#~ msgid "Trusted services:"
+#~ msgstr "Доверливи сервиси:"
+
+#~ msgid "Other ports: (1029:tcp)"
+#~ msgstr "Други порти: (1029:tcp)"
+
+#~ msgid "Active"
+#~ msgstr "Активно"
+
+#~ msgid "Disable firewall"
+#~ msgstr "Оневозможи огнен ѕид"
+
+#~ msgid "Enable firewall"
+#~ msgstr "Овозможи огнен ѕид"
+
+#~ msgid "SELinux:"
+#~ msgstr "SELinux:"
+
+#~ msgid "Security level:"
+#~ msgstr "Безбедносно ниво:"
+
+#~ msgid "Warn"
+#~ msgstr "Предупреди"

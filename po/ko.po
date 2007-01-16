@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ko\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-11-21 11:59-0500\n"
+"POT-Creation-Date: 2007-01-16 14:37-0500\n"
 "PO-Revision-Date: 2006-11-23 10:12+1000\n"
 "Last-Translator: Eunju Kim <eukim@redhat.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -22,32 +22,32 @@ msgstr ""
 msgid "Please fill in the authentication information"
 msgstr "인증 정보를 입력해 주십시오."
 
-#: ../src/basic.py:70
+#: ../src/basic.py:69
 msgid "x86, AMD64, or Intel EM64T"
 msgstr "x86, AMD64, 또는 Intel EM64T"
 
-#: ../src/basic.py:70
+#: ../src/basic.py:69
 msgid "Intel Itanium"
 msgstr "Intel Itanium"
 
-#: ../src/basic.py:70
+#: ../src/basic.py:69
 msgid "IBM iSeries"
 msgstr "IBM iSeries"
 
-#: ../src/basic.py:71
+#: ../src/basic.py:70
 msgid "IBM pSeries"
 msgstr "IBM pSeries"
 
-#: ../src/basic.py:71
+#: ../src/basic.py:70
 msgid "IBM zSeries/s390"
 msgstr "IBM zSeries/s390"
 
-#: ../src/basic.py:149
+#: ../src/basic.py:146
 msgid "Root passwords do not match."
 msgstr "Root 암호가 일치하지 않습니다."
 
-#: ../src/basic.py:150 ../src/install.py:218 ../src/partWindow.py:522
-#: ../src/partition.py:255 ../src/raidWindow.py:249
+#: ../src/basic.py:147 ../src/install.py:215 ../src/partWindow.py:521
+#: ../src/partition.py:254 ../src/raidWindow.py:249
 msgid "Error"
 msgstr "오류"
 
@@ -60,116 +60,120 @@ msgstr "%s 플랫폼에서는 부트로더 옵션을 사용할 수 없습니다"
 msgid "Grub passwords do not match.  Please try again."
 msgstr "Grub 암호가 일치하지 않습니다.  다시 입력해 주십시오."
 
-#. create table with custom checklists
-#: ../src/firewall.py:60
-msgid "Trusted devices:"
-msgstr "신뢰하는 장치:"
+#: ../src/firewall.py:91 ../src/packages.py:160
+msgid "Firewall configuration is not applicable on upgrades."
+msgstr "업그레이드 설치시에는 방화벽 설정을 사용할 수 없습니다."
 
-#: ../src/firewall.py:85
-msgid "Trusted services:"
-msgstr "신뢰하는 서비스:"
-
-#: ../src/firewall.py:117
-msgid "Other ports: (1029:tcp)"
-msgstr "그 외의 포트: (1029:tcp)"
-
-#: ../src/install.py:133
+#: ../src/install.py:130
 msgid "Please enter an NFS server."
 msgstr "NFS 서버를 입력해 주십시오."
 
-#: ../src/install.py:136
+#: ../src/install.py:133
 msgid "Please enter an NFS directory."
 msgstr "NFS 디렉토리를 입력해 주십시오."
 
-#: ../src/install.py:147
+#: ../src/install.py:144
 msgid "Please enter an FTP server."
 msgstr "FTP 서버를 입력해 주십시오."
 
-#: ../src/install.py:154
+#: ../src/install.py:151
 msgid "Please enter an FTP directory."
 msgstr "FTP 디렉토리를 입력해 주십시오."
 
-#: ../src/install.py:160
+#: ../src/install.py:157
 msgid "Please enter an FTP user name."
 msgstr "FTP 사용자명을 입력해 주십시오."
 
-#: ../src/install.py:163
+#: ../src/install.py:160
 msgid "Please enter an FTP password."
 msgstr "FTP 암호를 입력해 주십시오."
 
-#: ../src/install.py:179
+#: ../src/install.py:176
 msgid "Please enter an HTTP server."
 msgstr "HTTP 서버를 입력해 주십시오."
 
-#: ../src/install.py:182
+#: ../src/install.py:179
 msgid "Please enter an HTTP server directory."
 msgstr "HTTP 서버 디렉토리를 입력해 주십시오."
 
-#: ../src/install.py:204
+#: ../src/install.py:201
 msgid "Please enter a hard drive directory."
 msgstr "하드 드라이브 디렉토리를 입력해 주십시오."
 
-#: ../src/install.py:207
+#: ../src/install.py:204
 msgid "Please enter a hard drive partition."
 msgstr "하드 드라이브 파티션을 입력해 주십시오."
 
-#: ../src/kickstartGui.py:93
+#: ../src/kickstartGui.py:94 ../src/kickstartGui.py:288
+#, python-format
+msgid ""
+"The following error was found while parsing your kickstart configuration:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: ../src/kickstartGui.py:97 ../src/kickstartGui.py:291
+#, fuzzy
+msgid "Error Parsing Kickstart Config"
+msgstr "킥스타트 설정 프로그램에 대하여"
+
+#: ../src/kickstartGui.py:105
 msgid "Kickstart"
 msgstr "킥스타트"
 
-#: ../src/kickstartGui.py:94
+#: ../src/kickstartGui.py:106
 msgid "Create a kickstart file"
 msgstr "킥스타트 파일 생성"
 
-#: ../src/kickstartGui.py:116
+#: ../src/kickstartGui.py:128
 msgid "Subsection"
 msgstr "하부 섹션"
 
-#: ../src/kickstartGui.py:120
+#: ../src/kickstartGui.py:132
 msgid "Basic Configuration"
 msgstr "기본 설정"
 
-#: ../src/kickstartGui.py:120
+#: ../src/kickstartGui.py:133
 msgid "Installation Method"
 msgstr "설치 방법"
 
-#: ../src/kickstartGui.py:121
+#: ../src/kickstartGui.py:134
 msgid "Boot Loader Options"
 msgstr "부트로더 옵션"
 
-#: ../src/kickstartGui.py:121
+#: ../src/kickstartGui.py:135
 msgid "Partition Information"
 msgstr "파티션 정보"
 
-#: ../src/kickstartGui.py:122 tmp/system-config-kickstart.glade.h:109
+#: ../src/kickstartGui.py:136 tmp/system-config-kickstart.glade.h:105
 msgid "Network Configuration"
 msgstr "네트워크 설정"
 
-#: ../src/kickstartGui.py:122
+#: ../src/kickstartGui.py:137
 msgid "Authentication"
 msgstr "인증"
 
-#: ../src/kickstartGui.py:123 tmp/system-config-kickstart.glade.h:52
+#: ../src/kickstartGui.py:138 tmp/system-config-kickstart.glade.h:49
 msgid "Firewall Configuration"
 msgstr "방화벽 설정"
 
-#: ../src/kickstartGui.py:123 tmp/system-config-kickstart.glade.h:28
+#: ../src/kickstartGui.py:139 tmp/system-config-kickstart.glade.h:26
 msgid "Display Configuration"
 msgstr "화면 설정"
 
-#: ../src/kickstartGui.py:124 tmp/system-config-kickstart.glade.h:115
+#: ../src/kickstartGui.py:140 tmp/system-config-kickstart.glade.h:111
 msgid "Package Selection"
 msgstr "패키지 선택"
 
-#: ../src/kickstartGui.py:124 tmp/system-config-kickstart.glade.h:125
+#: ../src/kickstartGui.py:141 tmp/system-config-kickstart.glade.h:121
 msgid "Pre-Installation Script"
 msgstr "설치-전(Pre) 스크립트"
 
-#: ../src/kickstartGui.py:125 tmp/system-config-kickstart.glade.h:124
+#: ../src/kickstartGui.py:142 tmp/system-config-kickstart.glade.h:120
 msgid "Post-Installation Script"
 msgstr "설치-후(Post) 스크립트"
 
-#: ../src/kickstartGui.py:199
+#: ../src/kickstartGui.py:207
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -183,37 +187,37 @@ msgstr ""
 " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
 " 킥스타트 파일을 생성하는데 사용되는 그래픽 인터페이스"
 
-#: ../src/kickstartGui.py:200
+#: ../src/kickstartGui.py:208
 msgid "About Kickstart Configurator"
 msgstr "킥스타트 설정 프로그램에 대하여"
 
-#: ../src/kickstartGui.py:222
+#: ../src/kickstartGui.py:230
 msgid "Help is not available."
 msgstr "도움말 자료가 없습니다."
 
-#: ../src/kickstartGui.py:289
+#: ../src/kickstartGui.py:312
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "\"%s\" 파일을 읽을 수 없습니다."
 
-#: ../src/network.py:87
+#: ../src/network.py:86
 msgid "Device"
 msgstr "장치"
 
-#: ../src/network.py:90
+#: ../src/network.py:89
 msgid "Network Type"
 msgstr "네트워크 유형"
 
-#: ../src/network.py:109 ../src/network.py:155 ../src/network.py:226
-#: ../src/network.py:286 ../src/network.py:422
+#: ../src/network.py:108 ../src/network.py:154 ../src/network.py:225
+#: ../src/network.py:281 ../src/network.py:414
 msgid "Static IP"
 msgstr "고정 IP 주소"
 
-#: ../src/network.py:216 ../src/network.py:278
+#: ../src/network.py:215 ../src/network.py:273
 msgid "Please fill in the network information"
 msgstr "네트워크 정보를 입력해 주십시오."
 
-#: ../src/network.py:330
+#: ../src/network.py:325
 #, python-format
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
@@ -222,71 +226,71 @@ msgstr ""
 "%s 이름을 지닌 네트워크 장치가 이미 존재합니다.  다른 장치명을 선택해 주십시"
 "오."
 
-#: ../src/packages.py:163
+#: ../src/packages.py:166
 msgid "Retrieving package information"
 msgstr "패키지 정보 검색 중"
 
-#: ../src/packages.py:172
+#: ../src/packages.py:175
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
 msgstr "패키지 정보를 다운로드하는데 문제가 있어 패키지 선택을 할 수 없습니다."
 
-#: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:193
+#: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:186
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:194
+#: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:187
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:87 ../src/partWindow.py:150
+#: ../src/partWindow.py:86 ../src/partWindow.py:149
 msgid "software RAID"
 msgstr "소프트웨어 RAID"
 
-#: ../src/partWindow.py:88 tmp/system-config-kickstart.glade.h:212
+#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:205
 msgid "swap"
 msgstr "스왑 (swap)"
 
-#: ../src/partWindow.py:88 tmp/system-config-kickstart.glade.h:213
+#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:206
 msgid "vfat"
 msgstr "vfat"
 
-#: ../src/partWindow.py:89
+#: ../src/partWindow.py:88
 msgid "PPC PReP Boot"
 msgstr "PPC PReP 부트"
 
-#: ../src/partWindow.py:263 ../src/partWindow.py:544 ../src/raidWindow.py:214
+#: ../src/partWindow.py:262 ../src/partWindow.py:543 ../src/raidWindow.py:214
 msgid "Yes"
 msgstr "예"
 
-#: ../src/partWindow.py:265 ../src/partWindow.py:546 ../src/raidWindow.py:216
+#: ../src/partWindow.py:264 ../src/partWindow.py:545 ../src/raidWindow.py:216
 msgid "No"
 msgstr "아니오"
 
-#: ../src/partWindow.py:288 ../src/partWindow.py:303 ../src/partWindow.py:322
-#: ../src/partWindow.py:336
+#: ../src/partWindow.py:287 ../src/partWindow.py:302 ../src/partWindow.py:321
+#: ../src/partWindow.py:335
 msgid "Auto"
 msgstr "자동"
 
-#: ../src/partWindow.py:297
+#: ../src/partWindow.py:296
 msgid "Hard Drives"
 msgstr "하드 드라이브"
 
-#: ../src/partWindow.py:440
+#: ../src/partWindow.py:439
 msgid "Specify a mount point for the partition."
 msgstr "해당 파티션에 대한 마운트 지점을 지정해 주십시오."
 
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:449
+#: ../src/partWindow.py:448
 #, python-format
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "\"%s\" 마운트 지점은 이미 사용중입니다.  다른 마운트 지점을 선택해 주십시오."
 
-#: ../src/partWindow.py:469
+#: ../src/partWindow.py:468
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -294,11 +298,11 @@ msgstr ""
 "새로운 RAID 파티션을 생성하기 위해서는 반드시 하드 드라이브 또는 기존의 파티"
 "션을 지정하셔야 합니다. "
 
-#: ../src/partWindow.py:506
+#: ../src/partWindow.py:505
 msgid "Specify a device on which to create the partition."
 msgstr "파티션이 생성될 장치를 지정해 주십시오."
 
-#: ../src/partWindow.py:515
+#: ../src/partWindow.py:514
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -306,7 +310,7 @@ msgstr ""
 "지정하신 파티션명이 숫자로 끝나지 않습니다.  파티션명에는 \"hda1\"나 \"sda3"
 "\"와 같은 파티션 번호가 포함되어야 합니다."
 
-#: ../src/partition.py:74
+#: ../src/partition.py:73
 msgid ""
 "Device/\n"
 "Partition Number"
@@ -314,7 +318,7 @@ msgstr ""
 "장치/\n"
 "파티션 번호"
 
-#: ../src/partition.py:76
+#: ../src/partition.py:75
 msgid ""
 "Mount Point/\n"
 "RAID"
@@ -322,19 +326,19 @@ msgstr ""
 "마운트 지점/\n"
 "RAID"
 
-#: ../src/partition.py:78
+#: ../src/partition.py:77
 msgid "Type"
 msgstr "유형"
 
-#: ../src/partition.py:80
+#: ../src/partition.py:79
 msgid "Format"
 msgstr "포맷"
 
-#: ../src/partition.py:82
+#: ../src/partition.py:81
 msgid "Size (MB)"
 msgstr "용량 (MB)"
 
-#: ../src/partition.py:97 ../src/partition.py:137
+#: ../src/partition.py:96 ../src/partition.py:136
 msgid "Please select a partition from the list."
 msgstr "목록에서 파티션을 선택해 주십시오."
 
@@ -357,9 +361,19 @@ msgstr "RAID %s을(를) 사용하시려면 최소한 3개의 파티션을 선택
 msgid "Raid Devices"
 msgstr "RAID 장치"
 
-#: ../src/xconfig.py:115
+#: ../src/xconfig.py:124
 msgid "Could not read video driver database"
 msgstr "비디오 드라이버 데이터베이스를 읽지 못했습니다"
+
+#: ../src/xconfig.py:229
+#, fuzzy
+msgid "Please select an X driver."
+msgstr "NFS 서버를 입력해 주십시오."
+
+#: ../src/xconfig.py:248
+#, fuzzy
+msgid "Please select a monitor."
+msgstr "목록에서 파티션을 선택해 주십시오."
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -390,542 +404,518 @@ msgid "5"
 msgstr "5"
 
 #: tmp/system-config-kickstart.glade.h:8
-msgid "Active"
-msgstr "활성"
-
-#: tmp/system-config-kickstart.glade.h:9
 msgid "Additional Size Options"
 msgstr "추가 용량 옵션"
 
-#: tmp/system-config-kickstart.glade.h:10
+#: tmp/system-config-kickstart.glade.h:9
 msgid "Authentication Configuration"
 msgstr "인증 설정"
 
-#: tmp/system-config-kickstart.glade.h:11
+#: tmp/system-config-kickstart.glade.h:10
 msgid "Authentication options are not applicable on upgrades."
 msgstr "업그레이드 설치시에는 인증 옵션을 사용할 수 없습니다."
 
-#: tmp/system-config-kickstart.glade.h:12
+#: tmp/system-config-kickstart.glade.h:11
 msgid "Authentication:"
 msgstr "인증:"
 
-#: tmp/system-config-kickstart.glade.h:13
+#: tmp/system-config-kickstart.glade.h:12
 msgid "Basic Configuration (required)"
 msgstr "기본 설정 (필수사항)"
 
-#: tmp/system-config-kickstart.glade.h:14
+#: tmp/system-config-kickstart.glade.h:13
 msgid "Boot Loader Options (required)"
 msgstr "부트로더 옵션 (필수)"
 
-#: tmp/system-config-kickstart.glade.h:15
+#: tmp/system-config-kickstart.glade.h:14
 msgid "CD-ROM"
 msgstr "CD-ROM"
 
-#: tmp/system-config-kickstart.glade.h:16
+#: tmp/system-config-kickstart.glade.h:15
 msgid "Choose one of the following options:"
 msgstr "다음 중 한가지 옵션을 선택해 주십시오:"
 
-#: tmp/system-config-kickstart.glade.h:17
+#: tmp/system-config-kickstart.glade.h:16
 msgid "Choose the Installation Method:"
 msgstr "설치 방법 선택:"
 
-#: tmp/system-config-kickstart.glade.h:18
+#: tmp/system-config-kickstart.glade.h:17
 msgid "Clear Master Boot Record"
 msgstr "마스터 부트 레코드 내용 삭제"
 
-#: tmp/system-config-kickstart.glade.h:19
+#: tmp/system-config-kickstart.glade.h:18
 msgid "Color Depth"
 msgstr "색상 수"
 
-#: tmp/system-config-kickstart.glade.h:20
+#: tmp/system-config-kickstart.glade.h:19
 msgid "Configure the X Window System"
 msgstr "X 윈도우 시스템 설정"
 
-#: tmp/system-config-kickstart.glade.h:21
+#: tmp/system-config-kickstart.glade.h:20
 msgid "Confirm Password:"
 msgstr "암호 확인:"
 
-#: tmp/system-config-kickstart.glade.h:22
+#: tmp/system-config-kickstart.glade.h:21
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "RAID 장치 만들기 [기본 = /dev/md0]"
 
-#: tmp/system-config-kickstart.glade.h:23
+#: tmp/system-config-kickstart.glade.h:22
 msgid "Create a software RAID partition"
 msgstr "소프트웨어 RAID 파티션 만들기"
 
-#: tmp/system-config-kickstart.glade.h:24
+#: tmp/system-config-kickstart.glade.h:23
 msgid "Default Desktop:"
 msgstr "기본 데스크탑:"
 
-#: tmp/system-config-kickstart.glade.h:25
+#: tmp/system-config-kickstart.glade.h:24
 msgid "Default Language:"
 msgstr "기본 언어:"
 
-#: tmp/system-config-kickstart.glade.h:26
-msgid "Disable firewall"
-msgstr "방화벽을 사용하지 않음"
-
-#: tmp/system-config-kickstart.glade.h:27
+#: tmp/system-config-kickstart.glade.h:25
 msgid "Disabled"
 msgstr "사용하지 않음"
 
-#: tmp/system-config-kickstart.glade.h:29
+#: tmp/system-config-kickstart.glade.h:27
 msgid "Display configuration is not applicable on upgrades."
 msgstr "업그레이드 설치시에는 화면 설정을 사용할 수 없습니다."
 
-#: tmp/system-config-kickstart.glade.h:30
+#: tmp/system-config-kickstart.glade.h:28
 msgid "Do not clear Master Boot Record"
 msgstr "마스터 부트 레코드 내용 삭제하지 않음"
 
-#: tmp/system-config-kickstart.glade.h:31
+#: tmp/system-config-kickstart.glade.h:29
 msgid "Do not initialize the disk label"
 msgstr "디스크 레이블 초기화하지 않음"
 
-#: tmp/system-config-kickstart.glade.h:32
+#: tmp/system-config-kickstart.glade.h:30
 msgid "Do not install a boot loader"
 msgstr "부트로더를 설치하지 않음"
 
-#: tmp/system-config-kickstart.glade.h:33
+#: tmp/system-config-kickstart.glade.h:31
 msgid "Drive :"
 msgstr "드라이브 :"
 
-#: tmp/system-config-kickstart.glade.h:34
+#: tmp/system-config-kickstart.glade.h:32
 msgid "Enable Hesiod Support"
 msgstr "Hesiod 지원 사용"
 
-#: tmp/system-config-kickstart.glade.h:35
+#: tmp/system-config-kickstart.glade.h:33
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Kerberos 5 인증 사용"
 
-#: tmp/system-config-kickstart.glade.h:36
+#: tmp/system-config-kickstart.glade.h:34
 msgid "Enable LDAP"
 msgstr "LDAP 사용"
 
-#: tmp/system-config-kickstart.glade.h:37
+#: tmp/system-config-kickstart.glade.h:35
 msgid "Enable NIS"
 msgstr "NIS 사용"
 
-#: tmp/system-config-kickstart.glade.h:38
+#: tmp/system-config-kickstart.glade.h:36
 msgid "Enable SMB Authentication"
 msgstr "SMB 인증 사용"
 
-#: tmp/system-config-kickstart.glade.h:39
-msgid "Enable firewall"
-msgstr "방화벽 사용"
-
-#: tmp/system-config-kickstart.glade.h:40
+#: tmp/system-config-kickstart.glade.h:37
 msgid "Enable nscd"
 msgstr "nscd 사용"
 
-#: tmp/system-config-kickstart.glade.h:41
+#: tmp/system-config-kickstart.glade.h:38
 msgid "Enabled"
 msgstr "활성화"
 
-#: tmp/system-config-kickstart.glade.h:42
+#: tmp/system-config-kickstart.glade.h:39
 msgid "Enabled in reconfiguration mode"
 msgstr "재설정 모드에서 사용 가능"
 
-#: tmp/system-config-kickstart.glade.h:43
+#: tmp/system-config-kickstart.glade.h:40
 msgid "Encrypt GRUB password"
 msgstr "GRUB 암호 암호화"
 
-#: tmp/system-config-kickstart.glade.h:44
+#: tmp/system-config-kickstart.glade.h:41
 msgid "Encrypt root password"
 msgstr "Root 암호 암호화"
 
-#: tmp/system-config-kickstart.glade.h:45
+#: tmp/system-config-kickstart.glade.h:42
 msgid "FTP"
 msgstr "FTP"
 
-#: tmp/system-config-kickstart.glade.h:46
+#: tmp/system-config-kickstart.glade.h:43
 msgid "FTP Directory:"
 msgstr "FTP 디렉토리:"
 
-#: tmp/system-config-kickstart.glade.h:47
+#: tmp/system-config-kickstart.glade.h:44
 msgid "FTP Password"
 msgstr "FTP 암호"
 
-#: tmp/system-config-kickstart.glade.h:48
+#: tmp/system-config-kickstart.glade.h:45
 msgid "FTP Server:"
 msgstr "FTP 서버:"
 
-#: tmp/system-config-kickstart.glade.h:49
+#: tmp/system-config-kickstart.glade.h:46
 msgid "FTP Username"
 msgstr "FTP 사용자명:"
 
-#: tmp/system-config-kickstart.glade.h:50
+#: tmp/system-config-kickstart.glade.h:47
 msgid "File System Type:"
 msgstr "파일시스템 유형:"
 
-#: tmp/system-config-kickstart.glade.h:51
+#: tmp/system-config-kickstart.glade.h:48
 msgid "Fill all unused space on disk"
 msgstr "사용안된 디스크 공간 모두 채움"
 
-#: tmp/system-config-kickstart.glade.h:53
-msgid "Firewall configuration is not applicable on upgrades."
-msgstr "업그레이드 설치시에는 방화벽 설정을 사용할 수 없습니다."
-
-#: tmp/system-config-kickstart.glade.h:54
+#: tmp/system-config-kickstart.glade.h:50
 msgid "Fixed size"
 msgstr "수정된(Fixed) 용량"
 
-#: tmp/system-config-kickstart.glade.h:55
+#: tmp/system-config-kickstart.glade.h:51
 msgid "Force to be a primary partition (asprimary)"
 msgstr "첫번째(primary) 파티션으로 함"
 
-#: tmp/system-config-kickstart.glade.h:56
+#: tmp/system-config-kickstart.glade.h:52
 msgid "Format RAID device"
 msgstr "RAID 장치 포맷"
 
-#: tmp/system-config-kickstart.glade.h:57
+#: tmp/system-config-kickstart.glade.h:53
 msgid "Format partition"
 msgstr "파티션 포맷"
 
-#: tmp/system-config-kickstart.glade.h:58
+#: tmp/system-config-kickstart.glade.h:54
 msgid "GNOME"
 msgstr "GNOME"
 
-#: tmp/system-config-kickstart.glade.h:59
+#: tmp/system-config-kickstart.glade.h:55
 msgid "GRUB Options:"
 msgstr "GRUB 옵션:"
 
-#: tmp/system-config-kickstart.glade.h:60
+#: tmp/system-config-kickstart.glade.h:56
 msgid "Gateway:"
 msgstr "게이트웨이:"
 
-#: tmp/system-config-kickstart.glade.h:61
+#: tmp/system-config-kickstart.glade.h:57
 msgid "General"
 msgstr "일반(General)"
 
-#: tmp/system-config-kickstart.glade.h:62
+#: tmp/system-config-kickstart.glade.h:58
 msgid "Grow to maximum of (MB):"
 msgstr "다음의 용량까지 모두 채움 (MB):"
 
-#: tmp/system-config-kickstart.glade.h:63
+#: tmp/system-config-kickstart.glade.h:59
 msgid "HTTP"
 msgstr "HTTP"
 
-#: tmp/system-config-kickstart.glade.h:64
+#: tmp/system-config-kickstart.glade.h:60
 msgid "HTTP Directory:"
 msgstr "HTTP 디렉토리:"
 
-#: tmp/system-config-kickstart.glade.h:65
+#: tmp/system-config-kickstart.glade.h:61
 msgid "HTTP Server:"
 msgstr "HTTP 서버:"
 
-#: tmp/system-config-kickstart.glade.h:66
+#: tmp/system-config-kickstart.glade.h:62
 msgid "Hard Drive"
 msgstr "하드 드라이브"
 
-#: tmp/system-config-kickstart.glade.h:67
+#: tmp/system-config-kickstart.glade.h:63
 msgid "Hard Drive Directory:"
 msgstr "하드 드라이브 디렉토리:"
 
-#: tmp/system-config-kickstart.glade.h:68
+#: tmp/system-config-kickstart.glade.h:64
 msgid "Hard Drive Partition:"
 msgstr "하드 드라이브 파티션:"
 
-#: tmp/system-config-kickstart.glade.h:69
+#: tmp/system-config-kickstart.glade.h:65
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: tmp/system-config-kickstart.glade.h:70
+#: tmp/system-config-kickstart.glade.h:66
 msgid "Hesiod Authentication"
 msgstr "Hesiod 인증"
 
-#: tmp/system-config-kickstart.glade.h:71
+#: tmp/system-config-kickstart.glade.h:67
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS:"
 
-#: tmp/system-config-kickstart.glade.h:72
+#: tmp/system-config-kickstart.glade.h:68
 msgid "Hesiod RHS:"
 msgstr "Hesiod RHS:"
 
-#: tmp/system-config-kickstart.glade.h:73
+#: tmp/system-config-kickstart.glade.h:69
 msgid "Horizontal Sync:"
 msgstr "수평동기:"
 
-#: tmp/system-config-kickstart.glade.h:74
+#: tmp/system-config-kickstart.glade.h:70
 msgid "Hz"
 msgstr "Hz"
 
-#: tmp/system-config-kickstart.glade.h:75
+#: tmp/system-config-kickstart.glade.h:71
 msgid "IP Address:"
 msgstr "IP 주소:"
 
-#: tmp/system-config-kickstart.glade.h:76
+#: tmp/system-config-kickstart.glade.h:72
 msgid "Initialize the disk label"
 msgstr "디스크 레이블 초기화"
 
-#: tmp/system-config-kickstart.glade.h:77
+#: tmp/system-config-kickstart.glade.h:73
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "마스터 부트 레코드 (MBR)에 부트로더를 설치"
 
-#: tmp/system-config-kickstart.glade.h:78
+#: tmp/system-config-kickstart.glade.h:74
 msgid "Install boot loader on first sector of the boot partition"
 msgstr "부트 파티션의 첫번째 섹터에 부트로더를 설치"
 
-#: tmp/system-config-kickstart.glade.h:79
+#: tmp/system-config-kickstart.glade.h:75
 msgid "Install new boot loader"
 msgstr "새로운 부트로더 설치"
 
-#: tmp/system-config-kickstart.glade.h:80
+#: tmp/system-config-kickstart.glade.h:76
 msgid "Installation Method (required)"
 msgstr "설치 방법 (필수사항)"
 
-#: tmp/system-config-kickstart.glade.h:81
+#: tmp/system-config-kickstart.glade.h:77
 msgid "KDE"
 msgstr "KDE"
 
-#: tmp/system-config-kickstart.glade.h:82
+#: tmp/system-config-kickstart.glade.h:78
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: tmp/system-config-kickstart.glade.h:83
+#: tmp/system-config-kickstart.glade.h:79
 msgid "Kerberos 5 Authentication"
 msgstr "Kerberos 5 인증"
 
-#: tmp/system-config-kickstart.glade.h:84
+#: tmp/system-config-kickstart.glade.h:80
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Kerberos 도메인 컨트롤러 (KDC):"
 
-#: tmp/system-config-kickstart.glade.h:85
+#: tmp/system-config-kickstart.glade.h:81
 msgid "Kerberos Master Server:"
 msgstr "Kerberos 메인 서버:"
 
-#: tmp/system-config-kickstart.glade.h:86
+#: tmp/system-config-kickstart.glade.h:82
 msgid "Kerberos Realm:"
 msgstr "Kerberos Realm:"
 
-#: tmp/system-config-kickstart.glade.h:87
+#: tmp/system-config-kickstart.glade.h:83
 msgid "Kernel parameters:"
 msgstr "커널 매개변수:"
 
-#: tmp/system-config-kickstart.glade.h:88
+#: tmp/system-config-kickstart.glade.h:84
 msgid "Keyboard:"
 msgstr "키보드:"
 
-#: tmp/system-config-kickstart.glade.h:89
+#: tmp/system-config-kickstart.glade.h:85
 msgid "Kickstart Configurator"
 msgstr "킥스타트 설정 프로그램"
 
-#: tmp/system-config-kickstart.glade.h:90
+#: tmp/system-config-kickstart.glade.h:86
 msgid "LDAP "
 msgstr "LDAP "
 
-#: tmp/system-config-kickstart.glade.h:91
+#: tmp/system-config-kickstart.glade.h:87
 msgid "LDAP Authentication"
 msgstr "LDAP 인증"
 
-#: tmp/system-config-kickstart.glade.h:92
+#: tmp/system-config-kickstart.glade.h:88
 msgid "LDAP Base Name: "
 msgstr "이름 기반의 LDAP: "
 
-#: tmp/system-config-kickstart.glade.h:93
+#: tmp/system-config-kickstart.glade.h:89
 msgid "LDAP Server: "
 msgstr "LDAP 서버: "
 
-#: tmp/system-config-kickstart.glade.h:94
+#: tmp/system-config-kickstart.glade.h:90
 msgid "Make RAID Device"
 msgstr "RAID 장치 생성"
 
-#: tmp/system-config-kickstart.glade.h:95
+#: tmp/system-config-kickstart.glade.h:91
 msgid "Make partition on specific drive (ondisk)"
 msgstr "지정된 드라이브에 파티션 생성"
 
-#: tmp/system-config-kickstart.glade.h:96
+#: tmp/system-config-kickstart.glade.h:92
 msgid "Monitor"
 msgstr "모니터"
 
-#: tmp/system-config-kickstart.glade.h:97
+#: tmp/system-config-kickstart.glade.h:93
 msgid "Mount Point:"
 msgstr "마운트할 지점:"
 
-#: tmp/system-config-kickstart.glade.h:98
+#: tmp/system-config-kickstart.glade.h:94
 msgid "NFS"
 msgstr "NFS"
 
-#: tmp/system-config-kickstart.glade.h:99
+#: tmp/system-config-kickstart.glade.h:95
 msgid "NFS Directory:"
 msgstr "NFS 디렉토리:"
 
-#: tmp/system-config-kickstart.glade.h:100
+#: tmp/system-config-kickstart.glade.h:96
 msgid "NFS Server:"
 msgstr "NFS 서버:"
 
-#: tmp/system-config-kickstart.glade.h:101
+#: tmp/system-config-kickstart.glade.h:97
 msgid "NIS"
 msgstr "NIS"
 
-#: tmp/system-config-kickstart.glade.h:102
+#: tmp/system-config-kickstart.glade.h:98
 msgid "NIS Authentication"
 msgstr "NIS 인증"
 
-#: tmp/system-config-kickstart.glade.h:103
+#: tmp/system-config-kickstart.glade.h:99
 msgid "NIS Domain:"
 msgstr "NIS 도메인:"
 
-#: tmp/system-config-kickstart.glade.h:104
+#: tmp/system-config-kickstart.glade.h:100
 msgid "NIS Server:"
 msgstr "NIS 서버:"
 
-#: tmp/system-config-kickstart.glade.h:105
+#: tmp/system-config-kickstart.glade.h:101
 msgid "Name Server:"
 msgstr "네임서버:"
 
-#: tmp/system-config-kickstart.glade.h:106
+#: tmp/system-config-kickstart.glade.h:102
 msgid "Name Switch Cache"
 msgstr "이름 스위치 캐시"
 
-#: tmp/system-config-kickstart.glade.h:107
+#: tmp/system-config-kickstart.glade.h:103
 msgid "Name Switch Cache Daemon (nscd) Authentication"
 msgstr "이름 스위치 캐시 데몬 (nscd) 인증"
 
-#: tmp/system-config-kickstart.glade.h:108
+#: tmp/system-config-kickstart.glade.h:104
 msgid "Netmask: "
 msgstr "넷매스크: "
 
-#: tmp/system-config-kickstart.glade.h:110
+#: tmp/system-config-kickstart.glade.h:106
 msgid "Network Device Information"
 msgstr "네트워크 장치 정보"
 
-#: tmp/system-config-kickstart.glade.h:111
+#: tmp/system-config-kickstart.glade.h:107
 msgid "Network Device:"
 msgstr "네트워크 장치:"
 
-#: tmp/system-config-kickstart.glade.h:112
+#: tmp/system-config-kickstart.glade.h:108
 msgid "Network Type:"
 msgstr "네트워크 유형:"
 
-#: tmp/system-config-kickstart.glade.h:113
+#: tmp/system-config-kickstart.glade.h:109
 msgid "Number of spares:"
 msgstr "여분(spare)의 수:"
 
-#: tmp/system-config-kickstart.glade.h:114
+#: tmp/system-config-kickstart.glade.h:110
 msgid "On first boot, Setup Agent is: "
 msgstr "첫 부팅시, 설정 에이전트는: "
 
-#: tmp/system-config-kickstart.glade.h:116
+#: tmp/system-config-kickstart.glade.h:112
 msgid "Partition :"
 msgstr "파티션 :"
 
-#: tmp/system-config-kickstart.glade.h:117
+#: tmp/system-config-kickstart.glade.h:113
 msgid "Partition Information (required)"
 msgstr "파티션 정보 (필수사항)"
 
-#: tmp/system-config-kickstart.glade.h:118
+#: tmp/system-config-kickstart.glade.h:114
 msgid "Partition Options"
 msgstr "파티션 옵션"
 
-#: tmp/system-config-kickstart.glade.h:119
+#: tmp/system-config-kickstart.glade.h:115
 msgid "Partition options are not applicable on upgrades."
 msgstr "업그레이드 설치시에는 파티션 옵션을 사용할 수 없습니다."
 
-#: tmp/system-config-kickstart.glade.h:120
+#: tmp/system-config-kickstart.glade.h:116
 msgid "Password:"
 msgstr "암호:"
 
-#: tmp/system-config-kickstart.glade.h:121
+#: tmp/system-config-kickstart.glade.h:117
 msgid "Perform installation in interactive mode"
 msgstr "대화식 모드로 설치"
 
-#: tmp/system-config-kickstart.glade.h:122
+#: tmp/system-config-kickstart.glade.h:118
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "텍스트 모드로 설치 (기본값은 그래픽 모드임)"
 
-#: tmp/system-config-kickstart.glade.h:123
+#: tmp/system-config-kickstart.glade.h:119
 msgid "Perform new installation"
 msgstr "새로운 설치 실행"
 
-#: tmp/system-config-kickstart.glade.h:126
+#: tmp/system-config-kickstart.glade.h:122
 msgid "Preserve existing partitions"
 msgstr "기존 파티션 보존"
 
-#: tmp/system-config-kickstart.glade.h:127
+#: tmp/system-config-kickstart.glade.h:123
 msgid "Preview Options"
 msgstr "미리보기 옵션"
 
-#: tmp/system-config-kickstart.glade.h:128
+#: tmp/system-config-kickstart.glade.h:124
 msgid "Probe for monitor"
 msgstr "모니터 검색"
 
-#: tmp/system-config-kickstart.glade.h:129
+#: tmp/system-config-kickstart.glade.h:125
 msgid "Probe for video card driver"
 msgstr "비디오 카드 드라이버 검색"
 
-#: tmp/system-config-kickstart.glade.h:130
+#: tmp/system-config-kickstart.glade.h:126
 msgid "RAID"
 msgstr "RAID"
 
-#: tmp/system-config-kickstart.glade.h:131
+#: tmp/system-config-kickstart.glade.h:127
 msgid "RAID Device:"
 msgstr "RAID 장치:"
 
-#: tmp/system-config-kickstart.glade.h:132
+#: tmp/system-config-kickstart.glade.h:128
 msgid "RAID Level:"
 msgstr "RAID 레벨:"
 
-#: tmp/system-config-kickstart.glade.h:133
+#: tmp/system-config-kickstart.glade.h:129
 msgid "RAID Options"
 msgstr "RAID 옵션"
 
-#: tmp/system-config-kickstart.glade.h:134
+#: tmp/system-config-kickstart.glade.h:130
 msgid "Raid Members"
 msgstr "RAID 요소(Member)"
 
-#: tmp/system-config-kickstart.glade.h:135
+#: tmp/system-config-kickstart.glade.h:131
 msgid "Reboot system after installation"
 msgstr "설치후 시스템 재부팅"
 
-#: tmp/system-config-kickstart.glade.h:136
+#: tmp/system-config-kickstart.glade.h:132
 msgid "Remove all existing partitions"
 msgstr "모든 기존 파티션 삭제"
 
-#: tmp/system-config-kickstart.glade.h:137
+#: tmp/system-config-kickstart.glade.h:133
 msgid "Remove existing Linux partitions"
 msgstr "기존 Linux 파티션 삭제"
 
-#: tmp/system-config-kickstart.glade.h:138
+#: tmp/system-config-kickstart.glade.h:134
 msgid "Resolution"
 msgstr "해상도"
 
-#: tmp/system-config-kickstart.glade.h:139
+#: tmp/system-config-kickstart.glade.h:135
 msgid "Root Password:"
 msgstr "root 암호:"
 
-#: tmp/system-config-kickstart.glade.h:140
+#: tmp/system-config-kickstart.glade.h:136
 msgid "Run outside of the chroot environment"
 msgstr "chroot 환경 밖(outside)에서 실행"
 
-#: tmp/system-config-kickstart.glade.h:141
-msgid "SELinux:"
-msgstr "SELinux:"
-
-#: tmp/system-config-kickstart.glade.h:142
+#: tmp/system-config-kickstart.glade.h:137
 msgid "SMB"
 msgstr "SMB"
 
-#: tmp/system-config-kickstart.glade.h:143
+#: tmp/system-config-kickstart.glade.h:138
 msgid "SMB Authentication"
 msgstr "SMB 인증"
 
-#: tmp/system-config-kickstart.glade.h:144
+#: tmp/system-config-kickstart.glade.h:139
 msgid "SMB Servers:"
 msgstr "SMB 서버:"
 
-#: tmp/system-config-kickstart.glade.h:145
+#: tmp/system-config-kickstart.glade.h:140
 msgid "SMB Workgroup:"
 msgstr "SMB 작업그룹:"
 
-#: tmp/system-config-kickstart.glade.h:146
-msgid "Security level:"
-msgstr "보안 수준:"
-
-#: tmp/system-config-kickstart.glade.h:147
+#: tmp/system-config-kickstart.glade.h:141
 msgid "Size (MB):"
 msgstr "용량 (MB):"
 
-#: tmp/system-config-kickstart.glade.h:148
+#: tmp/system-config-kickstart.glade.h:142
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -937,23 +927,23 @@ msgstr ""
 "와 놓은 신뢰성을 얻을 수 있습니다.  RAID 장치 사용법에 대한 보다 많은 정보를 "
 "원하신다면, 킥스타트 문서 자료를 참조해 보십시오."
 
-#: tmp/system-config-kickstart.glade.h:149
+#: tmp/system-config-kickstart.glade.h:143
 msgid "Specify an FTP username and password"
 msgstr "FTP 사용자명과 암호를 지정해 주십시오"
 
-#: tmp/system-config-kickstart.glade.h:150
+#: tmp/system-config-kickstart.glade.h:144
 msgid "Start the X Window System on boot"
 msgstr "부팅시 X 윈도우 시스템 시작"
 
-#: tmp/system-config-kickstart.glade.h:151
+#: tmp/system-config-kickstart.glade.h:145
 msgid "Target Architecture:"
 msgstr "목표 아키텍쳐:"
 
-#: tmp/system-config-kickstart.glade.h:152
+#: tmp/system-config-kickstart.glade.h:146
 msgid "Time Zone:"
 msgstr "시간대:"
 
-#: tmp/system-config-kickstart.glade.h:153
+#: tmp/system-config-kickstart.glade.h:147
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -961,77 +951,73 @@ msgstr ""
 "RAID를 사용하기 위해서는, 우선 최소한 두개의 '소프트웨어 RAID' 유형 파티션을 "
 "만드셔야 합니다. 그 후 RAID 장치를 만들어 포맷하거나 마운트하실 수 있습니다."
 
-#: tmp/system-config-kickstart.glade.h:155
+#: tmp/system-config-kickstart.glade.h:149
 #, no-c-format
 msgid "Type your %post script below:"
 msgstr "%post 스크립트를 입력해 주십시요:"
 
-#: tmp/system-config-kickstart.glade.h:157
+#: tmp/system-config-kickstart.glade.h:151
 #, no-c-format
 msgid "Type your %pre script below:"
 msgstr "%pre 스크립트를 입력해 주십시요:"
 
-#: tmp/system-config-kickstart.glade.h:158
+#: tmp/system-config-kickstart.glade.h:152
 msgid "Upgrade an existing installation"
 msgstr "기존 설치 업그레이드"
 
-#: tmp/system-config-kickstart.glade.h:159
+#: tmp/system-config-kickstart.glade.h:153
 msgid "Upgrade existing boot loader"
 msgstr "기존 부트 로더 업그레이드"
 
-#: tmp/system-config-kickstart.glade.h:160
+#: tmp/system-config-kickstart.glade.h:154
 msgid "Use GRUB password"
 msgstr "GRUB 암호 사용"
 
-#: tmp/system-config-kickstart.glade.h:161
+#: tmp/system-config-kickstart.glade.h:155
 msgid "Use MD5"
 msgstr "MD5 사용"
 
-#: tmp/system-config-kickstart.glade.h:162
+#: tmp/system-config-kickstart.glade.h:156
 msgid "Use Shadow Passwords"
 msgstr "섀도우 암호 사용"
 
-#: tmp/system-config-kickstart.glade.h:163
+#: tmp/system-config-kickstart.glade.h:157
 msgid "Use UTC clock"
 msgstr "UTC 시간 사용"
 
-#: tmp/system-config-kickstart.glade.h:164
+#: tmp/system-config-kickstart.glade.h:158
 msgid "Use an interpreter:"
 msgstr "해석기(interpreter) 사용:"
 
-#: tmp/system-config-kickstart.glade.h:165
+#: tmp/system-config-kickstart.glade.h:159
 msgid "Use broadcast to find NIS server"
 msgstr "NIS 서버를 찾기 위해 브로드캐스트 사용"
 
-#: tmp/system-config-kickstart.glade.h:166
+#: tmp/system-config-kickstart.glade.h:160
 msgid "Use custom monitor sync rates"
 msgstr "사용자 설정 모니터 동기율을 사용"
 
-#: tmp/system-config-kickstart.glade.h:167
+#: tmp/system-config-kickstart.glade.h:161
 msgid "Use existing partition (onpart)"
 msgstr "기존의 파티션 사용"
 
-#: tmp/system-config-kickstart.glade.h:168
+#: tmp/system-config-kickstart.glade.h:162
 msgid "Use recommended swap size"
 msgstr "추천된 스왑 용량 사용하기"
 
-#: tmp/system-config-kickstart.glade.h:169
+#: tmp/system-config-kickstart.glade.h:163
 msgid "Vertical Sync:"
 msgstr "수직 동기:"
 
-#: tmp/system-config-kickstart.glade.h:170
+#: tmp/system-config-kickstart.glade.h:164
 msgid "Video Card"
 msgstr "비디오 카드"
 
-#: tmp/system-config-kickstart.glade.h:171
+#: tmp/system-config-kickstart.glade.h:165
 msgid "Video Card RAM: "
 msgstr "비디오 카드의 램 용량: "
 
-#: tmp/system-config-kickstart.glade.h:172
-msgid "Warn"
-msgstr "경고"
-
-#: tmp/system-config-kickstart.glade.h:174
+#: tmp/system-config-kickstart.glade.h:167
 #, no-c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1040,7 +1026,7 @@ msgstr ""
 "주의: 이 스크립트에서 오류가 발생시에는 킥스타트 설치가 실패할 수 있습니다. "
 "초기에 %post 명령을 포함시키지 마십시요."
 
-#: tmp/system-config-kickstart.glade.h:176
+#: tmp/system-config-kickstart.glade.h:169
 #, no-c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1049,7 +1035,7 @@ msgstr ""
 "주의: 이 스크립트에서 오류가 발생시에는 킥스타트 설치가 실패할 수 있습니다. "
 "초기에 %pre 명령을 포함시키지 마십시요."
 
-#: tmp/system-config-kickstart.glade.h:177
+#: tmp/system-config-kickstart.glade.h:170
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
@@ -1057,130 +1043,157 @@ msgstr ""
 "여러분은 다음의 설정을 선택하셨습니다. 킥스타트 파일을 저장하시려면, [파일 저"
 "장] 버튼을 클릭하십시요."
 
-#: tmp/system-config-kickstart.glade.h:178
+#: tmp/system-config-kickstart.glade.h:171
 msgid "_About"
 msgstr "이 프로그램은(_A)"
 
-#: tmp/system-config-kickstart.glade.h:179
+#: tmp/system-config-kickstart.glade.h:172
 msgid "_Add"
 msgstr "추가(_A)"
 
-#: tmp/system-config-kickstart.glade.h:180
+#: tmp/system-config-kickstart.glade.h:173
 msgid "_Add Network Device"
 msgstr "네트워크 장치 추가(_A)"
 
-#: tmp/system-config-kickstart.glade.h:181
+#: tmp/system-config-kickstart.glade.h:174
 msgid "_Contents"
 msgstr "도움말 내용(_C)"
 
-#: tmp/system-config-kickstart.glade.h:182
+#: tmp/system-config-kickstart.glade.h:175
 msgid "_Delete"
 msgstr "삭제(_D)"
 
-#: tmp/system-config-kickstart.glade.h:183
+#: tmp/system-config-kickstart.glade.h:176
 msgid "_Delete Network Device"
 msgstr "네트워크 장치 삭제(_D)"
 
-#: tmp/system-config-kickstart.glade.h:184
+#: tmp/system-config-kickstart.glade.h:177
 msgid "_Edit"
 msgstr "편집(_E)"
 
-#: tmp/system-config-kickstart.glade.h:185
+#: tmp/system-config-kickstart.glade.h:178
 msgid "_Edit Network Device"
 msgstr "네트워크 장치 편집(_E)"
 
-#: tmp/system-config-kickstart.glade.h:186
+#: tmp/system-config-kickstart.glade.h:179
 msgid "_File"
 msgstr "파일(_F)"
 
-#: tmp/system-config-kickstart.glade.h:187
+#: tmp/system-config-kickstart.glade.h:180
 msgid "_Help"
 msgstr "도움말(_H)"
 
-#: tmp/system-config-kickstart.glade.h:188
+#: tmp/system-config-kickstart.glade.h:181
 msgid "_Open File"
 msgstr "파일 열기(_O)"
 
-#: tmp/system-config-kickstart.glade.h:189
+#: tmp/system-config-kickstart.glade.h:182
 msgid "_Preview"
 msgstr "미리보기(_P)"
 
-#: tmp/system-config-kickstart.glade.h:190
+#: tmp/system-config-kickstart.glade.h:183
 msgid "_Quit"
 msgstr "종료(_Q)"
 
-#: tmp/system-config-kickstart.glade.h:191
+#: tmp/system-config-kickstart.glade.h:184
 msgid "_Save File"
 msgstr "파일 저장(_S)"
 
-#: tmp/system-config-kickstart.glade.h:192
+#: tmp/system-config-kickstart.glade.h:185
 msgid "_Save to File"
 msgstr "파일로 저장(_S)"
 
-#: tmp/system-config-kickstart.glade.h:195
+#: tmp/system-config-kickstart.glade.h:188
 msgid "kHz"
 msgstr "kHz"
 
-#: tmp/system-config-kickstart.glade.h:196
+#: tmp/system-config-kickstart.glade.h:189
 msgid "md0"
 msgstr "md0"
 
-#: tmp/system-config-kickstart.glade.h:197
+#: tmp/system-config-kickstart.glade.h:190
 msgid "md1"
 msgstr "md1"
 
-#: tmp/system-config-kickstart.glade.h:198
+#: tmp/system-config-kickstart.glade.h:191
 msgid "md10"
 msgstr "md10"
 
-#: tmp/system-config-kickstart.glade.h:199
+#: tmp/system-config-kickstart.glade.h:192
 msgid "md11"
 msgstr "md11"
 
-#: tmp/system-config-kickstart.glade.h:200
+#: tmp/system-config-kickstart.glade.h:193
 msgid "md12"
 msgstr "md12"
 
-#: tmp/system-config-kickstart.glade.h:201
+#: tmp/system-config-kickstart.glade.h:194
 msgid "md13"
 msgstr "md13"
 
-#: tmp/system-config-kickstart.glade.h:202
+#: tmp/system-config-kickstart.glade.h:195
 msgid "md14"
 msgstr "md14"
 
-#: tmp/system-config-kickstart.glade.h:203
+#: tmp/system-config-kickstart.glade.h:196
 msgid "md15"
 msgstr "md15"
 
-#: tmp/system-config-kickstart.glade.h:204
+#: tmp/system-config-kickstart.glade.h:197
 msgid "md2"
 msgstr "md2"
 
-#: tmp/system-config-kickstart.glade.h:205
+#: tmp/system-config-kickstart.glade.h:198
 msgid "md3"
 msgstr "md3"
 
-#: tmp/system-config-kickstart.glade.h:206
+#: tmp/system-config-kickstart.glade.h:199
 msgid "md4"
 msgstr "md4"
 
-#: tmp/system-config-kickstart.glade.h:207
+#: tmp/system-config-kickstart.glade.h:200
 msgid "md5"
 msgstr "md5"
 
-#: tmp/system-config-kickstart.glade.h:208
+#: tmp/system-config-kickstart.glade.h:201
 msgid "md6"
 msgstr "md6"
 
-#: tmp/system-config-kickstart.glade.h:209
+#: tmp/system-config-kickstart.glade.h:202
 msgid "md7"
 msgstr "md7"
 
-#: tmp/system-config-kickstart.glade.h:210
+#: tmp/system-config-kickstart.glade.h:203
 msgid "md8"
 msgstr "md8"
 
-#: tmp/system-config-kickstart.glade.h:211
+#: tmp/system-config-kickstart.glade.h:204
 msgid "md9"
 msgstr "md9"
+
+#~ msgid "Trusted devices:"
+#~ msgstr "신뢰하는 장치:"
+
+#~ msgid "Trusted services:"
+#~ msgstr "신뢰하는 서비스:"
+
+#~ msgid "Other ports: (1029:tcp)"
+#~ msgstr "그 외의 포트: (1029:tcp)"
+
+#~ msgid "Active"
+#~ msgstr "활성"
+
+#~ msgid "Disable firewall"
+#~ msgstr "방화벽을 사용하지 않음"
+
+#~ msgid "Enable firewall"
+#~ msgstr "방화벽 사용"
+
+#~ msgid "SELinux:"
+#~ msgstr "SELinux:"
+
+#~ msgid "Security level:"
+#~ msgstr "보안 수준:"
+
+#~ msgid "Warn"
+#~ msgstr "경고"
