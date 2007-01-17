@@ -3,14 +3,14 @@
 # Michelle Kim <mkim@redhat.com>, 2002.
 # Michelle J Kim <mkim@redhat.com>, 2003,2004.
 # Michelle Ji Yeen Kim <mkim@redhat.com>, 2005.
-# Eunju Kim <eukim@redhat.com>, 2006.
+# Eunju Kim <eukim@redhat.com>, 2006, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ko\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-01-16 14:37-0500\n"
-"PO-Revision-Date: 2006-11-23 10:12+1000\n"
+"PO-Revision-Date: 2007-01-17 10:10+1000\n"
 "Last-Translator: Eunju Kim <eukim@redhat.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -111,11 +111,13 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"킥스타트 설정을 읽는 도중 다음과 같은 오류가 발생했습니다:\n"
+"\n"
+"%s"
 
 #: ../src/kickstartGui.py:97 ../src/kickstartGui.py:291
-#, fuzzy
 msgid "Error Parsing Kickstart Config"
-msgstr "킥스타트 설정 프로그램에 대하여"
+msgstr "킥스타트 설정을 읽는 도중 오류 발생"
 
 #: ../src/kickstartGui.py:105
 msgid "Kickstart"
@@ -285,10 +287,8 @@ msgstr "해당 파티션에 대한 마운트 지점을 지정해 주십시오."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:448
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr ""
-"\"%s\" 마운트 지점은 이미 사용중입니다.  다른 마운트 지점을 선택해 주십시오."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr "\"%s\" 마운트 지점은 이미 사용중입니다.  다른 마운트 지점을 선택해 주십시오."
 
 #: ../src/partWindow.py:468
 msgid ""
@@ -366,14 +366,12 @@ msgid "Could not read video driver database"
 msgstr "비디오 드라이버 데이터베이스를 읽지 못했습니다"
 
 #: ../src/xconfig.py:229
-#, fuzzy
 msgid "Please select an X driver."
-msgstr "NFS 서버를 입력해 주십시오."
+msgstr "X 서버를 선택해 주십시오."
 
 #: ../src/xconfig.py:248
-#, fuzzy
 msgid "Please select a monitor."
-msgstr "목록에서 파티션을 선택해 주십시오."
+msgstr "모니터를 선택해 주십시오."
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -1171,29 +1169,3 @@ msgstr "md8"
 msgid "md9"
 msgstr "md9"
 
-#~ msgid "Trusted devices:"
-#~ msgstr "신뢰하는 장치:"
-
-#~ msgid "Trusted services:"
-#~ msgstr "신뢰하는 서비스:"
-
-#~ msgid "Other ports: (1029:tcp)"
-#~ msgstr "그 외의 포트: (1029:tcp)"
-
-#~ msgid "Active"
-#~ msgstr "활성"
-
-#~ msgid "Disable firewall"
-#~ msgstr "방화벽을 사용하지 않음"
-
-#~ msgid "Enable firewall"
-#~ msgstr "방화벽 사용"
-
-#~ msgid "SELinux:"
-#~ msgstr "SELinux:"
-
-#~ msgid "Security level:"
-#~ msgstr "보안 수준:"
-
-#~ msgid "Warn"
-#~ msgstr "경고"
