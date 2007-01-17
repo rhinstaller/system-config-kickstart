@@ -1,24 +1,25 @@
 # translation of de.po to 
+# translation of de.po to
 # translation of de.po to German / Deutsch
 # translation of de.po to German
 # translation of redhat-config-kickstart.po to Deutsch
 # translation of redhat-config-kickstart.po to
 # translation of de.po to Deutsch
-# Copyright (C) 2001,2002,2003, 2004, 2005, 2006 Free Software Foundation, Inc.
+# Copyright (C) 2001,2002,2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
 # Ronny Buchmann <ronny-vlug@vlugnet.org 2004, 2005
 # Claudia Krug <fhonig@redhat.it>, 2001.
 # Bernd Groh <bgroh@redhat.com>, 2002,2003.
 # Bernd Bartmann <Bernd.Bartmann@sohanet.de>, 2004.
 # Andreas Müller <redhat@andreas-mueller.com>, 2004.
 # Severin Heiniger <severinheiniger@gmail.com>, 2005.
-# Timo Trinks <ttrinks@redhat.com>, 2006.
+# Timo Trinks <ttrinks@redhat.com>, 2006, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-01-16 14:37-0500\n"
-"PO-Revision-Date: 2006-11-22 08:36+1000\n"
+"PO-Revision-Date: 2007-01-18 08:56+1000\n"
 "Last-Translator: Timo Trinks <ttrinks@redhat.com>\n"
 "Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -67,8 +68,7 @@ msgstr "Bootloader-Optionen sind auf die %s-Plattform nicht anwendbar"
 
 #: ../src/bootloader.py:121
 msgid "Grub passwords do not match.  Please try again."
-msgstr ""
-"Grub-Passwörter stimmen nicht überein. Bitte geben Sie diese erneut ein."
+msgstr "Grub-Passwörter stimmen nicht überein. Bitte geben Sie diese erneut ein."
 
 #: ../src/firewall.py:91 ../src/packages.py:160
 msgid "Firewall configuration is not applicable on upgrades."
@@ -121,11 +121,13 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Der folgende Fehler trat bei der Analyse Ihrer Kickstartkonfiguration auf:\n"
+"\n"
+"%s"
 
 #: ../src/kickstartGui.py:97 ../src/kickstartGui.py:291
-#, fuzzy
 msgid "Error Parsing Kickstart Config"
-msgstr "Über den Kickstart Configurator"
+msgstr "Fehler bei der Analyse der Kickstartkonfiguration"
 
 #: ../src/kickstartGui.py:105
 msgid "Kickstart"
@@ -297,8 +299,7 @@ msgstr "Geben Sie einen Einhängepunkt für die Partition an."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:448
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "Der Einhängepunkt \"%s\" wird bereits verwendet. Wählen Sie einen anderen "
 "Einhängepunkt."
@@ -379,14 +380,12 @@ msgid "Could not read video driver database"
 msgstr "Datenbank mit den Grafikkarten-Treibern konnte nicht gelesen werden"
 
 #: ../src/xconfig.py:229
-#, fuzzy
 msgid "Please select an X driver."
-msgstr "Geben Sie einen NFS-Server ein."
+msgstr "Bitte wählen Sie einen X-Treiber."
 
 #: ../src/xconfig.py:248
-#, fuzzy
 msgid "Please select a monitor."
-msgstr "Wählen Sie eine Partition aus der Liste."
+msgstr "Bitte wählen Sie einen Monitor."
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -1186,29 +1185,3 @@ msgstr "md8"
 msgid "md9"
 msgstr "md9"
 
-#~ msgid "Trusted devices:"
-#~ msgstr "Sichere Geräte:"
-
-#~ msgid "Trusted services:"
-#~ msgstr "Sichere Dienste:"
-
-#~ msgid "Other ports: (1029:tcp)"
-#~ msgstr "Andere Ports: (1029:tcp)"
-
-#~ msgid "Active"
-#~ msgstr "Aktiv"
-
-#~ msgid "Disable firewall"
-#~ msgstr "Firewall deaktivieren"
-
-#~ msgid "Enable firewall"
-#~ msgstr "Firewall aktivieren"
-
-#~ msgid "SELinux:"
-#~ msgstr "SELinux:"
-
-#~ msgid "Security level:"
-#~ msgstr "Sicherheitsstufe:"
-
-#~ msgid "Warn"
-#~ msgstr "Warnen"
