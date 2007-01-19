@@ -1,5 +1,6 @@
 # Swedish messages for system-config-kickstart.
 # Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006 Christian Rose <menthos@menthos.com>.
+# Copyright (C) 2007 Magnus Larsson <fedoratrans@gmail.com>.
 #
 # $Id$
 #
@@ -8,7 +9,7 @@ msgstr ""
 "Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-01-16 14:37-0500\n"
-"PO-Revision-Date: 2006-01-02 23:36+0100\n"
+"PO-Revision-Date: 2007-01-18 17:58-0500\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -108,11 +109,13 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Följande fel hittades när kickstarts-konfigurationen analyserades:\n"
+"\n"
+"%s"
 
 #: ../src/kickstartGui.py:97 ../src/kickstartGui.py:291
-#, fuzzy
 msgid "Error Parsing Kickstart Config"
-msgstr "Om Kickstart-konfigurationsprogrammet"
+msgstr "Fel vid analys av kickstart-konfigurationen"
 
 #: ../src/kickstartGui.py:105
 msgid "Kickstart"
@@ -222,15 +225,14 @@ msgid ""
 msgstr "En nätverksenhet med namnet %s finns redan. Välj ett annat enhetsnamn"
 
 #: ../src/packages.py:166
-#, fuzzy
 msgid "Retrieving package information"
-msgstr "Nätverksenhetsinformation"
+msgstr "Hämtar paketinformation"
 
 #: ../src/packages.py:175
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
-msgstr ""
+msgstr "Paketval är inaktiv pga problem med nedladdning av paketinformation."
 
 #: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:186
 msgid "ext2"
@@ -362,14 +364,12 @@ msgid "Could not read video driver database"
 msgstr "Kunde inte läsa grafikdrivrutinsdatabas"
 
 #: ../src/xconfig.py:229
-#, fuzzy
 msgid "Please select an X driver."
-msgstr "Ange en NFS-server."
+msgstr "Välj en X-drivrutin."
 
 #: ../src/xconfig.py:248
-#, fuzzy
 msgid "Please select a monitor."
-msgstr "Välj en partition från listan."
+msgstr "Välj en skärm."
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
