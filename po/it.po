@@ -1,25 +1,24 @@
-# translation of it.po to 
-# translation of  it to italian
-# Copyright (C) 2001, 2004, 2005, 2006 Free Software Foundation, Inc.
+# translation of it.po to italiano
+# Copyright (C) 2001, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
+#
 # Bettina De Monti <bdemonti@redhat.it>, 2001.
 # Luca Ferrari <alexluca@inwind.it>, 2004.
 # Paolo Dona' <vik@3jv.com>, 2004.
 # Francesco Valente <fvalen@redhat.com>, 2004.
 # Lorenzo Stobbione <lorenzo.stobbione@clsengineering.it>, 2005.
-# Francesco Tombolini <tombo@adamantio.net>, 2005, 2006.
-#
+# Francesco Tombolini <tombo@adamantio.net>, 2005, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: it\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-01-16 14:37-0500\n"
-"PO-Revision-Date: 2006-11-24 00:22+0100\n"
-"Last-Translator: \n"
-"Language-Team:  <it@li.org>\n"
+"PO-Revision-Date: 2007-01-21 05:39+0100\n"
+"Last-Translator: Francesco Tombolini <tombo@adamantio.net>\n"
+"Language-Team: italiano <fedora-trans-it@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../src/auth.py:323
@@ -115,11 +114,13 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"I seguenti errori sono stati rilevati durante il parsing della configurazione del kickstart:\n"
+"\n"
+"%s"
 
 #: ../src/kickstartGui.py:97 ../src/kickstartGui.py:291
-#, fuzzy
 msgid "Error Parsing Kickstart Config"
-msgstr "Informazioni su Kickstart Configurator"
+msgstr "Errore nel parsing della configurazione del Kickstart"
 
 #: ../src/kickstartGui.py:105
 msgid "Kickstart"
@@ -291,8 +292,7 @@ msgstr "Specificare un mount point per la partizione."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:448
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "Il mount point \"%s\" è già in uso. Selezionare un altro mount point."
 
 #: ../src/partWindow.py:468
@@ -371,14 +371,12 @@ msgid "Could not read video driver database"
 msgstr "Impossibile leggere il database del driver video"
 
 #: ../src/xconfig.py:229
-#, fuzzy
 msgid "Please select an X driver."
-msgstr "Specificare il server NFS."
+msgstr "Selezionare un driver X."
 
 #: ../src/xconfig.py:248
-#, fuzzy
 msgid "Please select a monitor."
-msgstr "Selezionare una partizione dall'elenco."
+msgstr "Selezionare un monitor."
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -418,8 +416,7 @@ msgstr "Configurazione di autenticazione"
 
 #: tmp/system-config-kickstart.glade.h:10
 msgid "Authentication options are not applicable on upgrades."
-msgstr ""
-"Le opzioni per l'autenticazione non sono applicabili con gli aggiornamenti"
+msgstr "Le opzioni per l'autenticazione non sono applicabili con gli aggiornamenti"
 
 #: tmp/system-config-kickstart.glade.h:11
 msgid "Authentication:"
@@ -823,8 +820,7 @@ msgstr "Opzioni di partizione"
 
 #: tmp/system-config-kickstart.glade.h:115
 msgid "Partition options are not applicable on upgrades."
-msgstr ""
-"Non sono applicabili con gli aggiornamenti le opzioni per la partizione."
+msgstr "Non sono applicabili con gli aggiornamenti le opzioni per la partizione."
 
 #: tmp/system-config-kickstart.glade.h:116
 msgid "Password:"
@@ -836,8 +832,7 @@ msgstr "Eseguire l'installazione in modalità interattiva"
 
 #: tmp/system-config-kickstart.glade.h:118
 msgid "Perform installation in text mode (graphical is default)"
-msgstr ""
-"Eseguire l'installazione in modalità testo (quella grafica è di default)"
+msgstr "Eseguire l'installazione in modalità testo (quella grafica è di default)"
 
 #: tmp/system-config-kickstart.glade.h:119
 msgid "Perform new installation"
@@ -1180,29 +1175,3 @@ msgstr "md8"
 msgid "md9"
 msgstr "md9"
 
-#~ msgid "Trusted devices:"
-#~ msgstr "Periferiche fidate:"
-
-#~ msgid "Trusted services:"
-#~ msgstr "Periferiche fidate:"
-
-#~ msgid "Other ports: (1029:tcp)"
-#~ msgstr "Altre porte: (1029:tcp)"
-
-#~ msgid "Active"
-#~ msgstr "Attivo"
-
-#~ msgid "Disable firewall"
-#~ msgstr "Disabilita firewall"
-
-#~ msgid "Enable firewall"
-#~ msgstr "Abilita firewall"
-
-#~ msgid "SELinux:"
-#~ msgstr "SELinux:"
-
-#~ msgid "Security level:"
-#~ msgstr "Livello di sicurezza:"
-
-#~ msgid "Warn"
-#~ msgstr "Avvertimento"
