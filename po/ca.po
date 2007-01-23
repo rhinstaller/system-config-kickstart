@@ -1,9 +1,9 @@
 # Catalan translations for system-config-kickstart package.
-# Copyright (C) 2004, 2005 Free Software Foundation
+# Copyright © 2004-2007 Free Software Foundation
 # This file is distributed under the same license as the
 #      system-config-kickstart package.
 # Àngels Sala <m_angels15@yahoo.es>, 2004.
-# Josep Puigdemont <josep.puigdemont@gmail.com>, 2004, 2005
+# Josep Puigdemont <josep.puigdemont@gmail.com>, 2004-2007.
 #
 # This file is translated according to the glossary and style guide of
 #   Softcatalà. If you plan to modify this file, please read first the page
@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-01-16 14:37-0500\n"
-"PO-Revision-Date: 2005-11-18 19:24+0100\n"
+"PO-Revision-Date: 2007-01-23 08:51+0100\n"
 "Last-Translator: Josep Puigdemont <josep.puigdemont@gmail.com>\n"
 "Language-Team: Catalan <fedora@softcatala.net>\n"
 "MIME-Version: 1.0\n"
@@ -125,11 +125,13 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"S'han trobat aquests errors en analitzar la configuració del kickstart:\n"
+"\n"
+"%s"
 
 #: ../src/kickstartGui.py:97 ../src/kickstartGui.py:291
-#, fuzzy
 msgid "Error Parsing Kickstart Config"
-msgstr "Quant al configurador de l'inici ràpid"
+msgstr "S'ha produït un error en analitzar la configuració del Kickstart"
 
 #: ../src/kickstartGui.py:105
 msgid "Kickstart"
@@ -241,15 +243,16 @@ msgstr ""
 "dispositiu."
 
 #: ../src/packages.py:166
-#, fuzzy
 msgid "Retrieving package information"
-msgstr "Informació sobre el dispositiu de la xarxa"
+msgstr "S'està recuperant informació del paquet"
 
 #: ../src/packages.py:175
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
 msgstr ""
+"Atès els problemes en baixar la informació dels paquets, la selecció n'està "
+"inhabilitada"
 
 #: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:186
 msgid "ext2"
@@ -382,14 +385,12 @@ msgid "Could not read video driver database"
 msgstr "No s'ha pogut llegir la base de dades de controladors de vídeo"
 
 #: ../src/xconfig.py:229
-#, fuzzy
 msgid "Please select an X driver."
-msgstr "Introduïu un servidor NFS."
+msgstr "Seleccioneu un controlador d'X."
 
 #: ../src/xconfig.py:248
-#, fuzzy
 msgid "Please select a monitor."
-msgstr "Seleccioneu una partició de la llista."
+msgstr "Seleccioneu un monitor."
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
