@@ -2,21 +2,21 @@
 # translation of system-config-kickstart.po to Gujarati
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
-# Ankit Patel <ankit@redhat.com>, 2004, 2005, 2006.
+# Ankit Patel <ankit@redhat.com>, 2004, 2005, 2006, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-01-16 14:37-0500\n"
-"PO-Revision-Date: 2006-11-22 10:52+0530\n"
+"PO-Revision-Date: 2007-01-24 11:00+0530\n"
 "Last-Translator: Ankit Patel <ankit@redhat.com>\n"
 "Language-Team: Gujarati <fedora-trans-gu@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
 "\n"
 "\n"
 "\n"
@@ -117,11 +117,13 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"તમારી કિકસ્ટાર્ટ રૂપરેખાંકન ફાઈલનું પદચ્છેદન કરતી વખતે નીચેની ભૂલ મળી આવી હતી:\n"
+"\n"
+"%s"
 
 #: ../src/kickstartGui.py:97 ../src/kickstartGui.py:291
-#, fuzzy
 msgid "Error Parsing Kickstart Config"
-msgstr "કિકસ્ટાર્ટ રુપરેખાંકન કરનાર વિશે"
+msgstr "કિકસ્ટાર્ટ રૂપરેખાનું પદચ્છેદન કરવામાં ભૂલ"
 
 #: ../src/kickstartGui.py:105
 msgid "Kickstart"
@@ -228,8 +230,7 @@ msgstr "મહેરબાની કરીને નેટવર્કની જ
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
-msgstr ""
-"%s નામવાળું નેટવર્ક ઉપકરણ પહેલાથી જ હાજર છે.  મહેરબાની કરીને બીજું ઉપકરણ નામ પસંદ કરો"
+msgstr "%s નામવાળું નેટવર્ક ઉપકરણ પહેલાથી જ હાજર છે.  મહેરબાની કરીને બીજું ઉપકરણ નામ પસંદ કરો"
 
 #: ../src/packages.py:166
 msgid "Retrieving package information"
@@ -239,8 +240,7 @@ msgstr "પેકેજ જાણકારી પ્રાપ્ત કરી �
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
-msgstr ""
-"પેકેજ જાણકારી ડાઉનલોડ કરવામાં સમસ્યાઓને કારણે પેકેજ પસંદગી નિષ્ક્રિય કરવામાં આવેલ છે."
+msgstr "પેકેજ જાણકારી ડાઉનલોડ કરવામાં સમસ્યાઓને કારણે પેકેજ પસંદગી નિષ્ક્રિય કરવામાં આવેલ છે."
 
 #: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:186
 msgid "ext2"
@@ -291,10 +291,8 @@ msgstr "પાર્ટીશન માટે માઉન્ટ પોઈન્
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:448
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr ""
-"માઉન્ટ પોઈન્ટ \"%s\" પહેલાથી જ વપરાશમાં છે.  મહેરબાની કરીને બીજું માઉન્ટ પોઈન્ટ પસંદ કરો."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr "માઉન્ટ પોઈન્ટ \"%s\" પહેલાથી જ વપરાશમાં છે.  મહેરબાની કરીને બીજું માઉન્ટ પોઈન્ટ પસંદ કરો."
 
 #: ../src/partWindow.py:468
 msgid ""
@@ -372,14 +370,12 @@ msgid "Could not read video driver database"
 msgstr "વીડિયો ડ્રાઈવર ડેટાબેઝ વાંચી શક્યા નહિં"
 
 #: ../src/xconfig.py:229
-#, fuzzy
 msgid "Please select an X driver."
-msgstr "મહેરબાની કરીને NFS સર્વર દાખલ કરો."
+msgstr "મહેરબાની કરીને X ડ્રાઈવર પસંદ કરો."
 
 #: ../src/xconfig.py:248
-#, fuzzy
 msgid "Please select a monitor."
-msgstr "મહેરબાની કરીને યાદીમાંથી પાર્ટીશન પસંદ કરો."
+msgstr "મહેરબાની કરીને મોનીટર પસંદ કરો."
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -1045,8 +1041,7 @@ msgstr ""
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
-msgstr ""
-"તમે નીચેનું રુપરેખાંકન પસંદ કરેલ છે. કિકસ્ટાર્ટ ફાઈલ સંગ્રહવા માટે ફાઈલ સંગ્રહો પર ક્લિક કરો. "
+msgstr "તમે નીચેનું રુપરેખાંકન પસંદ કરેલ છે. કિકસ્ટાર્ટ ફાઈલ સંગ્રહવા માટે ફાઈલ સંગ્રહો પર ક્લિક કરો. "
 
 #: tmp/system-config-kickstart.glade.h:171
 msgid "_About"
@@ -1176,29 +1171,3 @@ msgstr "md8"
 msgid "md9"
 msgstr "md9"
 
-#~ msgid "Trusted devices:"
-#~ msgstr "વિશ્વાસુ ઉપકરણો:"
-
-#~ msgid "Trusted services:"
-#~ msgstr "વિશ્વાસુ સેવાઓ:"
-
-#~ msgid "Other ports: (1029:tcp)"
-#~ msgstr "બીજા પોર્ટ: (1029:tcp)"
-
-#~ msgid "Active"
-#~ msgstr "સક્રિય"
-
-#~ msgid "Disable firewall"
-#~ msgstr "ફાયરવોલ નિષ્ક્રિય કરો"
-
-#~ msgid "Enable firewall"
-#~ msgstr "ફાયરવોલ સક્રિય કરો"
-
-#~ msgid "SELinux:"
-#~ msgstr "SELinux:"
-
-#~ msgid "Security level:"
-#~ msgstr "સુરક્ષા સ્તર:"
-
-#~ msgid "Warn"
-#~ msgstr "ચેતવો"
