@@ -1,14 +1,14 @@
 # Ukrainian translation to redhat-config-kickstart.
 # Copyright (C) Free Software Foundation
-# Maxim Dziumanenko <mvd@mylinux.com.ua>, 2003.
+# Maxim Dziumanenko <dziumanenko@gmail.com>, 2003-2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: redhat-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-01-16 14:37-0500\n"
-"PO-Revision-Date: 2006-04-02 13:04+0200 2003\n"
-"Last-Translator: Maxim Dziumanenko <mvd@mylinux.com.ua>\n"
+"PO-Revision-Date: 2007-01-24 13:04+0200 2003\n"
+"Last-Translator: Maxim Dziumanenko <dziumanenko@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -108,11 +108,13 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"При читанні конфігурації kickstart виникла наступна помилка:\n"
+"\n"
+"%s"
 
 #: ../src/kickstartGui.py:97 ../src/kickstartGui.py:291
-#, fuzzy
 msgid "Error Parsing Kickstart Config"
-msgstr "Про програму налаштовування Kickstart"
+msgstr "Помилка розбору файлів Kickstart"
 
 #: ../src/kickstartGui.py:105
 msgid "Kickstart"
@@ -222,15 +224,14 @@ msgid ""
 msgstr "Мережний пристрій з назвою %s вже існує. Виберіть іншу назву пристрою"
 
 #: ../src/packages.py:166
-#, fuzzy
 msgid "Retrieving package information"
-msgstr "Інформація про мережний пристрій"
+msgstr "Отримання інформації про пакети"
 
 #: ../src/packages.py:175
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
-msgstr ""
+msgstr "Вибір пакетів вимкнений внаслідок проблеми при отриманні інформації про пакетах."
 
 #: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:186
 msgid "ext2"
@@ -360,17 +361,15 @@ msgstr "Пристрої Raid"
 
 #: ../src/xconfig.py:124
 msgid "Could not read video driver database"
-msgstr "Неможливо прочитати базу даних відеокарт"
+msgstr "Неможливо прочитати базу даних відеокарток"
 
 #: ../src/xconfig.py:229
-#, fuzzy
 msgid "Please select an X driver."
-msgstr "Вкажіть NFS сервер."
+msgstr "Виберіть драйвер X-Window."
 
 #: ../src/xconfig.py:248
-#, fuzzy
 msgid "Please select a monitor."
-msgstr "Вкажіть пароль root."
+msgstr "Виберіть дзеркало."
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -446,7 +445,7 @@ msgstr "Якість передачі кольору"
 
 #: tmp/system-config-kickstart.glade.h:19
 msgid "Configure the X Window System"
-msgstr "Налаштовувати X Window"
+msgstr "Налаштувати X Window"
 
 #: tmp/system-config-kickstart.glade.h:20
 msgid "Confirm Password:"
@@ -494,35 +493,35 @@ msgstr "Пристрій:"
 
 #: tmp/system-config-kickstart.glade.h:32
 msgid "Enable Hesiod Support"
-msgstr "Ввімкнути підтримку Hesiod"
+msgstr "Увімкнути підтримку Hesiod"
 
 #: tmp/system-config-kickstart.glade.h:33
 msgid "Enable Kerberos 5 Authentication"
-msgstr "Ввімкнути автентифікацію Kerberos 5"
+msgstr "Увімкнути автентифікацію Kerberos 5"
 
 #: tmp/system-config-kickstart.glade.h:34
 msgid "Enable LDAP"
-msgstr "Ввімкнути LDAP"
+msgstr "Увімкнути LDAP"
 
 #: tmp/system-config-kickstart.glade.h:35
 msgid "Enable NIS"
-msgstr "Ввімкнути NIS"
+msgstr "Увімкнути NIS"
 
 #: tmp/system-config-kickstart.glade.h:36
 msgid "Enable SMB Authentication"
-msgstr "Ввімкнути автентифікацію SMB"
+msgstr "Увімкнути автентифікацію SMB"
 
 #: tmp/system-config-kickstart.glade.h:37
 msgid "Enable nscd"
-msgstr "Ввімкнути nscd"
+msgstr "Увімкнути nscd"
 
 #: tmp/system-config-kickstart.glade.h:38
 msgid "Enabled"
-msgstr "Ввімкнений"
+msgstr "Увімкнений"
 
 #: tmp/system-config-kickstart.glade.h:39
 msgid "Enabled in reconfiguration mode"
-msgstr "Ввімкнений у режимі реконфігурації"
+msgstr "Увімкнений у режимі переконфігурації"
 
 #: tmp/system-config-kickstart.glade.h:40
 msgid "Encrypt GRUB password"
@@ -919,7 +918,7 @@ msgid ""
 "reliability compared to using an individual drive.  For more information on "
 "using RAID devices please consult the kickstart documentation."
 msgstr ""
-"Програмний RAID дозволяє об'єднувати декілька дисків у великий пристій RAID. "
+"Програмний RAID дозволяє об'єднувати декілька дисків у великий пристрій RAID. "
 "Пристрій RAID можна настроїти для отримання додаткової швидкості та "
 "надійності у порівнянні з окремим диском. Докладнішу інформацію про "
 "використання RAID дивіться у документацій з kickstart."
@@ -1047,11 +1046,11 @@ msgstr "_Про програму"
 
 #: tmp/system-config-kickstart.glade.h:172
 msgid "_Add"
-msgstr "_Додати"
+msgstr "Д_одати"
 
 #: tmp/system-config-kickstart.glade.h:173
 msgid "_Add Network Device"
-msgstr "_Додати мережний пристрій"
+msgstr "Д_одати мережний пристрій"
 
 #: tmp/system-config-kickstart.glade.h:174
 msgid "_Contents"
