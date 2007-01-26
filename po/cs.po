@@ -2,10 +2,7 @@
 #
 # Czech translation for ksconfig
 # Copyright (C) 2001 Free Software Foundation, Inc.
-# Copyright (C) 2002, 2003, 2004, 2005 ksconfig'S COPYRIGHT HOLDER
-# Copyright (C) 2004, 2005 Miloslav Trmac <mitr@volny.cz>
-#
-# Milan Kerslager <kerslage@linux.cz>, 2001
+# Milan Kerslager <kerslage@linux.cz>, 2001, 2007.
 # Miloslav Trmac <mitr@volny.cz>, 2002, 2003, 2004, 2005.
 #
 msgid ""
@@ -13,8 +10,8 @@ msgstr ""
 "Project-Id-Version: redhat-config-kickstart VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-01-16 14:37-0500\n"
-"PO-Revision-Date: 2005-11-12 17:12+0100\n"
-"Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
+"PO-Revision-Date: 2007-01-26 16:09+0100\n"
+"Last-Translator: Milan Kerslager <kerslage@linux.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -114,11 +111,13 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Při parsování kickstart souboru byla nalezena následující chyba:\n"
+"\n"
+"%s"
 
 #: ../src/kickstartGui.py:97 ../src/kickstartGui.py:291
-#, fuzzy
 msgid "Error Parsing Kickstart Config"
-msgstr "O Nastavení kickstartu"
+msgstr "Chyba při parsování kickstart souboru"
 
 #: ../src/kickstartGui.py:105
 msgid "Kickstart"
@@ -229,15 +228,15 @@ msgstr ""
 "Síťové zařízení se jménem %s již existuje. Zvolte prosím jiné jméno zařízení"
 
 #: ../src/packages.py:166
-#, fuzzy
 msgid "Retrieving package information"
-msgstr "Informace o síťovém zařízení"
+msgstr "Stahuji informace o balíčku"
 
 #: ../src/packages.py:175
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
 msgstr ""
+"Výběr balíčků byl deaktivován, protože při stahování popisů došlo k chybě."
 
 #: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:186
 msgid "ext2"
@@ -369,14 +368,12 @@ msgid "Could not read video driver database"
 msgstr "Nemohu číst databázi ovladačů videa"
 
 #: ../src/xconfig.py:229
-#, fuzzy
 msgid "Please select an X driver."
-msgstr "Zadejte prosím NFS server."
+msgstr "Zvolte prosím ovladač pro X."
 
 #: ../src/xconfig.py:248
-#, fuzzy
 msgid "Please select a monitor."
-msgstr "Zadejte prosím heslo pro uživatele root."
+msgstr "Zvolte prosím monitor."
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
