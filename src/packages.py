@@ -18,8 +18,6 @@
 ## Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 # Kickstart package selection UI
-# FIXME:  package-level selection and deselection doesn't currently work.
-
 import gtk
 import gtk.glade
 import gobject
@@ -84,6 +82,14 @@ class sckYumBase(yum.YumBase):
 
     def isGroupInstalled(self, grp):
         return grp.selected
+
+    def simpleDBInstalled(self, name):
+        # FIXME: doing this directly instead of using self.rpmdb.installed()
+        # speeds things up by 400%
+        mi = self.ts.ts.dbMatch('name', name)
+        if mi.count() > 0:
+            return True
+        return False
 
     def __init__ (self, callback=None):
         import tempfile
@@ -185,11 +191,6 @@ class Packages:
 
         self.package_frame.add(self.gs.vbox)
 
-        self.detailsButton = self.gs.xml.get_widget("detailsButton")
-        self.detailsButton.hide()
-        self.optionalLabel = self.gs.xml.get_widget("optionalLabel")
-        self.optionalLabel.hide()
-
     def cleanup(self):
         if self.y.packagesEnabled:
             self.y.cleanup()
@@ -202,34 +203,29 @@ class Packages:
         # to start yum up, we can still write out the initial %packages
         # section.
         self.ks.packages.groupList = []
-#        self.ks.packages.packageList = []
-#        self.ks.packages.excludedList = []
+        self.ks.packages.packageList = []
+        self.ks.packages.excludedList = []
 
         self.y.tsInfo.makelists()
-        for txmbr in self.y.tsInfo.getMembers():
-#            if txmbr.ts_state == '-':
-#                self.ks.packages.excludedList.append(txmbr.name)
-#                continue
-            if txmbr.groups:
-                for g in txmbr.groups:
-                    grp = self.y.comps.return_group(g)
-                    if g not in self.ks.packages.groupList:
-                        self.ks.packages.groupList.append(g)
-#                    if txmbr.name in grp.optional_packages.keys():
-#                        self.ks.packages.packageList.append(txmbr.name)
-#            else:
-#                self.ks.packages.packageList.append(txmbr.name)
+
+        txmbrNames = map (lambda x: x.name, self.y.tsInfo.getMembers())
+
+        for grp in self.y.comps.groups:
+            if grp.selected:
+                self.ks.packages.groupList.append(grp.groupid)
+
+                defaults = grp.default_packages.keys()
+                optionals = grp.optional_packages.keys()
+
+                for pkg in grp.packages:
+                    if pkg in defaults and not pkg in txmbrNames:
+                        self.ks.packages.excludedList.append(pkg)
+
+                for pkg in optionals:
+                    if pkg in txmbrNames:
+                        self.ks.packages.packageList.append(pkg)
 
     def applyKickstart(self):
-#        # We don't really care about invalid names here.  Perhaps we should
-#        # at least throw them out of the packages lists so they don't keep
-#        # coming back?
-#        for pkg in self.ks.packages.packageList:
-#            try:
-#                self.y.install(name=pkg)
-#            except:
-#                pass
-
         if not self.y.packagesEnabled:
             return
 
@@ -241,15 +237,24 @@ class Packages:
             else:
                 self.y.deselectGroup(grp.groupid)
 
-#        # This is a whole lot like __deselectPackage in OptionalPackageSelector
-#        # in pirut.  If only we could get to that.
-#        for pkg in self.ks.packages.excludedList:
-#            pkgs = self.y.pkgSack.returnNewestByName(pkg)
-#            if pkgs:
-#                pkgs = self.y.bestPackagesFromList(pkgs)
-#            for po in pkgs:
-#                txmbrs = self.y.tsInfo.getMembers(pkgtup=po.pkgtup)
-#                self.y.tsInfo.remove(po.pkgtup)
+        # We don't really care about invalid names here.  Perhaps we should
+        # at least throw them out of the packages lists so they don't keep
+        # coming back?
+        for pkg in self.ks.packages.packageList:
+            try:
+                self.y.install(name=pkg)
+            except:
+                pass
+
+        # This is a whole lot like __deselectPackage in OptionalPackageSelector
+        # in pirut.  If only we could get to that.
+        for pkg in self.ks.packages.excludedList:
+            pkgs = self.y.pkgSack.returnNewestByName(pkg)
+            if pkgs:
+                pkgs = self.y.bestPackagesFromList(pkgs)
+            for po in pkgs:
+                txmbrs = self.y.tsInfo.getMembers(pkgtup=po.pkgtup)
+                self.y.tsInfo.remove(po.pkgtup)
 
         # Refresh UI to get whatever selections the ks file specified.
         self.gs.doRefresh()
