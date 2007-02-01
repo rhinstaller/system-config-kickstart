@@ -3,21 +3,21 @@
 # Copyright (C) YEAR ORGANIZATION.
 # Jayaradha N <jaya@pune.redhat.com>, 2004.
 # Jayaradha N <njaya@redhat.com>, 2004, 2005, 2006.
-# Felix <ifelix@redhat.com>, 2006.
+# Felix <ifelix@redhat.com>, 2006, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ta\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-01-16 14:37-0500\n"
-"PO-Revision-Date: 2006-11-29 21:57+0530\n"
+"PO-Revision-Date: 2007-02-01 10:54+0530\n"
 "Last-Translator: Felix <ifelix@redhat.com>\n"
 "Language-Team: Tamil <ta@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
 "\n"
 "\n"
 "\n"
@@ -115,11 +115,13 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"உங்கள் கிக்ஸ்டார்ட் கட்டமைப்பை ஆராயும் போது பின்வரும் பிழை கண்டுபிடிக்கப்பட்டது:\n"
+"\n"
+"%s"
 
 #: ../src/kickstartGui.py:97 ../src/kickstartGui.py:291
-#, fuzzy
 msgid "Error Parsing Kickstart Config"
-msgstr " Kickstart அமைப்பாளரை பற்றிய அறிமுகம்"
+msgstr "கிக்ஸ்டார்ட் கட்டமைப்பில் பிழை"
 
 #: ../src/kickstartGui.py:105
 msgid "Kickstart"
@@ -226,8 +228,7 @@ msgstr "வலைப்பின்னல் தகவலை உள்ளிட�
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
-msgstr ""
-"%s என்ற வலைப்பின்னல் கருவி ஏற்கெனவே உள்ளது.தயவு செய்து வேறு கருவிப் பெயரை தேர்வுசெய்க"
+msgstr "%s என்ற வலைப்பின்னல் கருவி ஏற்கெனவே உள்ளது.தயவு செய்து வேறு கருவிப் பெயரை தேர்வுசெய்க"
 
 #: ../src/packages.py:166
 msgid "Retrieving package information"
@@ -290,8 +291,7 @@ msgstr "இந்த பகிர்வுக்கான ஏற்றப்ப�
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:448
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "\"%s\" என்ற ஏற்றப்புள்ளி ஏற்கெனவே பயன்பாட்டில் உள்ளது, ஏற்றப்புள்ளியை தேர்வு செய்க."
 
 #: ../src/partWindow.py:468
@@ -370,14 +370,12 @@ msgid "Could not read video driver database"
 msgstr "ஒலி அட்டை தரவுத்தளத்தை படிக்க முடியவில்லை"
 
 #: ../src/xconfig.py:229
-#, fuzzy
 msgid "Please select an X driver."
-msgstr "NFS சேவையகத்தை உள்ளிடவும்."
+msgstr "ஒரு X driverஐ தேர்ந்தெடுக்கவும்."
 
 #: ../src/xconfig.py:248
-#, fuzzy
 msgid "Please select a monitor."
-msgstr "பட்டியலிருந்து ஒரு பகிர்வை தேர்வு செய்யவும்."
+msgstr "ஒரு திரையகத்தை தேர்வு செய்யவும்."
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -1174,29 +1172,3 @@ msgstr "md8"
 msgid "md9"
 msgstr "md9"
 
-#~ msgid "Trusted devices:"
-#~ msgstr "நம்பகமான சாதனங்கள்:"
-
-#~ msgid "Trusted services:"
-#~ msgstr "நம்பகமான சேவைகள்:"
-
-#~ msgid "Other ports: (1029:tcp)"
-#~ msgstr "மற்ற துறைகள்: (1029:tcp)"
-
-#~ msgid "Active"
-#~ msgstr "செயல்"
-
-#~ msgid "Disable firewall"
-#~ msgstr "தீச்சுவர் செயலை நிறுத்துக"
-
-#~ msgid "Enable firewall"
-#~ msgstr "தீச்சுவரை செயல்படுத்து"
-
-#~ msgid "SELinux:"
-#~ msgstr "SELinux:"
-
-#~ msgid "Security level:"
-#~ msgstr "பாதுகாப்பு மட்டம்:"
-
-#~ msgid "Warn"
-#~ msgstr "எச்சரிக்கை"
