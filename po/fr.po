@@ -1,18 +1,18 @@
-# translation of fr.po to Français
-# Copyright (C) 2003,2004, 2005, 2006 Free Software Foundation, Inc.
+# translation of fr.po to Francais
+# Copyright (C) 2003,2004, 2005, 2006, 2007 Free Software Foundation, Inc.
 #
 # Audrey Simons <asimons@redhat.com>, 2003,2004, 2005.
 # Jean-Paul Aubry <jpaubry@redhat.com>, 2003,2004.
 # Stephane Raimbault <stephane.raimbault@free.fr>, 2004.
-# Thomas Canniot <thomas.canniot@laposte.net>, 2006.
+# Thomas Canniot <thomas.canniot@laposte.net>, 2006, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-01-16 14:37-0500\n"
-"PO-Revision-Date: 2006-11-21 18:32+0100\n"
+"PO-Revision-Date: 2007-01-26 20:17+0100\n"
 "Last-Translator: Thomas Canniot <thomas.canniot@laposte.net>\n"
-"Language-Team: Français <fedora-trans-fr-request@redhat.com>\n"
+"Language-Team: Francais <fedora-trans-fr@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../src/auth.py:323
 msgid "Please fill in the authentication information"
-msgstr "Veuillez fournir les donées pour l'authentification"
+msgstr "Veuillez fournir les données pour l'authentification"
 
 #: ../src/basic.py:69
 msgid "x86, AMD64, or Intel EM64T"
@@ -44,7 +44,7 @@ msgstr "IBM zSeries/s390"
 
 #: ../src/basic.py:146
 msgid "Root passwords do not match."
-msgstr "Les mots de passe root ne correspondent pas."
+msgstr "Les mots de passe super-utilisateur ne correspondent pas."
 
 #: ../src/basic.py:147 ../src/install.py:215 ../src/partWindow.py:521
 #: ../src/partition.py:254 ../src/raidWindow.py:249
@@ -54,56 +54,55 @@ msgstr "Erreur"
 #: ../src/bootloader.py:81
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
-msgstr "Les options de chargement ne s'applique sur la platforme %s"
+msgstr "Les options de chargement ne s'appliquent pas à la platforme %s"
 
 #: ../src/bootloader.py:121
 msgid "Grub passwords do not match.  Please try again."
-msgstr ""
-"Les mots de passe Grub ne correspondent pas. Veuillez essayer de nouveau."
+msgstr "Les mots de passe Grub ne correspondent pas. Veuillez essayer de nouveau."
 
 #: ../src/firewall.py:91 ../src/packages.py:160
 msgid "Firewall configuration is not applicable on upgrades."
-msgstr "La configuration du pare-feu ne s'applique pas sur une mise à jour"
+msgstr "La configuration du pare-feu ne s'applique pas à une mise à jour"
 
 #: ../src/install.py:130
 msgid "Please enter an NFS server."
-msgstr "Veuillez saisir un serveur NFS."
+msgstr "Veuillez renseigner un serveur NFS."
 
 #: ../src/install.py:133
 msgid "Please enter an NFS directory."
-msgstr "Veuillez saisir un répertoire NFS."
+msgstr "Veuillez renseigner un répertoire NFS."
 
 #: ../src/install.py:144
 msgid "Please enter an FTP server."
-msgstr "Veuillez saisir un serveur FTP."
+msgstr "Veuillez renseigner un serveur FTP."
 
 #: ../src/install.py:151
 msgid "Please enter an FTP directory."
-msgstr "Veuillez saisir un répertoire FTP."
+msgstr "Veuillez renseigner un répertoire FTP."
 
 #: ../src/install.py:157
 msgid "Please enter an FTP user name."
-msgstr "Veuillez saisir un nom d'utilisateur FTP."
+msgstr "Veuillez renseigner un nom d'utilisateur FTP."
 
 #: ../src/install.py:160
 msgid "Please enter an FTP password."
-msgstr "Veuillez saisir un mot de passe FTP."
+msgstr "Veuillez renseigner un mot de passe FTP."
 
 #: ../src/install.py:176
 msgid "Please enter an HTTP server."
-msgstr "Veuillez saisir un serveur HTTP."
+msgstr "Veuillez renseigner un serveur HTTP."
 
 #: ../src/install.py:179
 msgid "Please enter an HTTP server directory."
-msgstr "Veuillez saisir un répertoire pour le serveur HTTP."
+msgstr "Veuillez renseigner un répertoire pour le serveur HTTP."
 
 #: ../src/install.py:201
 msgid "Please enter a hard drive directory."
-msgstr "Veuillez saisir un répertoire de disque dur."
+msgstr "Veuillez renseigner un répertoire de disque dur."
 
 #: ../src/install.py:204
 msgid "Please enter a hard drive partition."
-msgstr "Veuillez saisir une partition du disque dur."
+msgstr "Veuillez renseigner une partition du disque dur."
 
 #: ../src/kickstartGui.py:94 ../src/kickstartGui.py:288
 #, python-format
@@ -112,11 +111,13 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Les erreurs suivantes ont été décelées durant l'analyse de votre configuration kickstart :\n"
+"\n"
+"%s"
 
 #: ../src/kickstartGui.py:97 ../src/kickstartGui.py:291
-#, fuzzy
 msgid "Error Parsing Kickstart Config"
-msgstr "À propos de la configuration de Kickstart"
+msgstr "Erreur durant l'analyse de la configuration kickstart"
 
 #: ../src/kickstartGui.py:105
 msgid "Kickstart"
@@ -190,7 +191,7 @@ msgstr ""
 
 #: ../src/kickstartGui.py:208
 msgid "About Kickstart Configurator"
-msgstr "À propos de la configuration de Kickstart"
+msgstr "À propos de la configuration de kickstart"
 
 #: ../src/kickstartGui.py:230
 msgid "Help is not available."
@@ -212,11 +213,11 @@ msgstr "Type de réseau"
 #: ../src/network.py:108 ../src/network.py:154 ../src/network.py:225
 #: ../src/network.py:281 ../src/network.py:414
 msgid "Static IP"
-msgstr "IP statique"
+msgstr "IP fixe"
 
 #: ../src/network.py:215 ../src/network.py:273
 msgid "Please fill in the network information"
-msgstr "Veuillez fournir les informations réseau"
+msgstr "Veuillez renseigner les informations réseau"
 
 #: ../src/network.py:325
 #, python-format
@@ -236,8 +237,8 @@ msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
 msgstr ""
-"La séclection de paquetages est désactivée car un problème est survenu "
-"durant la récupération des informations les concernant."
+"La sélection de paquetages est désactivée car un problème est survenu "
+"durant la récupération de leurs informations."
 
 #: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:186
 msgid "ext2"
@@ -288,8 +289,7 @@ msgstr "Spécifier un point de montage pour la partition."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:448
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "Le point de montage \"%s\" est déjà utilisé. Veuillez sélectionner un autre "
 "point de montage."
@@ -310,10 +310,7 @@ msgstr "Spécifier un périphérique sur lequel créer la partition."
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
-msgstr ""
-"La partition que vous avez spécifiée ne termine pas par un chiffre. Les "
-"partitions doivent comporter un numéro de partition comme \"hda1\" ou \"sda3"
-"\"."
+msgstr "Le nom de la partition que vous avez spécifiée ne se termine pas par un chiffre. Les noms de partitions doivent comporter un numéro de partition comme \"hda1\" ou \"sda3\"."
 
 #: ../src/partition.py:73
 msgid ""
@@ -371,14 +368,12 @@ msgid "Could not read video driver database"
 msgstr "Impossible de lire la base de données du pilote vidéo"
 
 #: ../src/xconfig.py:229
-#, fuzzy
 msgid "Please select an X driver."
-msgstr "Veuillez saisir un serveur NFS."
+msgstr "Veuillez sélectionner un pilote pour X."
 
 #: ../src/xconfig.py:248
-#, fuzzy
 msgid "Please select a monitor."
-msgstr "Veuillez sélectionner une partition dans la liste."
+msgstr "Veuillez sélectionner un moniteur."
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -418,8 +413,7 @@ msgstr "Configuration de l'authentification"
 
 #: tmp/system-config-kickstart.glade.h:10
 msgid "Authentication options are not applicable on upgrades."
-msgstr ""
-"Les options d'authentification ne s'appliquent pas sur une mise à jour."
+msgstr "Les options d'authentification ne s'appliquent pas aux les mises à jour."
 
 #: tmp/system-config-kickstart.glade.h:11
 msgid "Authentication:"
@@ -443,7 +437,7 @@ msgstr "Sélectionnez l'une des options suivantes :"
 
 #: tmp/system-config-kickstart.glade.h:16
 msgid "Choose the Installation Method:"
-msgstr "Choisir la méthode d'installation :"
+msgstr "Choisissez la méthode d'installation :"
 
 #: tmp/system-config-kickstart.glade.h:17
 msgid "Clear Master Boot Record"
@@ -483,7 +477,7 @@ msgstr "Désactivé"
 
 #: tmp/system-config-kickstart.glade.h:27
 msgid "Display configuration is not applicable on upgrades."
-msgstr "La configuration de l'affichage ne s'applique pas sur une mise à jour"
+msgstr "La configuration de l'affichage ne s'applique pas aux mises à jour."
 
 #: tmp/system-config-kickstart.glade.h:28
 msgid "Do not clear Master Boot Record"
@@ -539,7 +533,7 @@ msgstr "Crypter le mot de passe GRUB"
 
 #: tmp/system-config-kickstart.glade.h:41
 msgid "Encrypt root password"
-msgstr "Crypter le mot de passe root"
+msgstr "Crypter le mot de passe super-utilisateur"
 
 #: tmp/system-config-kickstart.glade.h:42
 msgid "FTP"
@@ -567,7 +561,7 @@ msgstr "Type de système de fichiers :"
 
 #: tmp/system-config-kickstart.glade.h:48
 msgid "Fill all unused space on disk"
-msgstr "Remplir tout l'espace disponible du disque"
+msgstr "Remplir tout l'espace disponible sur le disque"
 
 #: tmp/system-config-kickstart.glade.h:50
 msgid "Fixed size"
@@ -579,7 +573,7 @@ msgstr "Configurer comme partition primaire (asprimary)"
 
 #: tmp/system-config-kickstart.glade.h:52
 msgid "Format RAID device"
-msgstr "Format du périphérique RAID"
+msgstr "Formater le périphérique RAID"
 
 #: tmp/system-config-kickstart.glade.h:53
 msgid "Format partition"
@@ -715,7 +709,7 @@ msgstr "Clavier :"
 
 #: tmp/system-config-kickstart.glade.h:85
 msgid "Kickstart Configurator"
-msgstr "Configuration de Kickstart"
+msgstr "Outil de configuration de kickstart"
 
 #: tmp/system-config-kickstart.glade.h:86
 msgid "LDAP "
@@ -811,7 +805,7 @@ msgstr "Disques restants :"
 
 #: tmp/system-config-kickstart.glade.h:110
 msgid "On first boot, Setup Agent is: "
-msgstr "Au premier démarrage, l'agent de mise à jour est :"
+msgstr "Au premier démarrage, l'agent d'installation est :"
 
 #: tmp/system-config-kickstart.glade.h:112
 msgid "Partition :"
@@ -827,7 +821,7 @@ msgstr "Options de partition"
 
 #: tmp/system-config-kickstart.glade.h:115
 msgid "Partition options are not applicable on upgrades."
-msgstr "Les options de partition ne s'applique pas sur une mise à jour."
+msgstr "Les options de partition ne s'appliquent pas aux mises à jour."
 
 #: tmp/system-config-kickstart.glade.h:116
 msgid "Password:"
@@ -887,7 +881,7 @@ msgstr "Redémarrer le système après l'installation"
 
 #: tmp/system-config-kickstart.glade.h:132
 msgid "Remove all existing partitions"
-msgstr "Supprimer toutes les partitions existantes "
+msgstr "Supprimer toutes les partitions existantes"
 
 #: tmp/system-config-kickstart.glade.h:133
 msgid "Remove existing Linux partitions"
@@ -899,7 +893,7 @@ msgstr "Résolution"
 
 #: tmp/system-config-kickstart.glade.h:135
 msgid "Root Password:"
-msgstr "Mot de passe root :"
+msgstr "Mot de passe super-utilisateur :"
 
 #: tmp/system-config-kickstart.glade.h:136
 msgid "Run outside of the chroot environment"
@@ -932,11 +926,9 @@ msgid ""
 "reliability compared to using an individual drive.  For more information on "
 "using RAID devices please consult the kickstart documentation."
 msgstr ""
-"Le logiciel RAID vous permet de rassembler plusieurs disques dans un "
-"périphérique RAID plus grand. Un périphérique RAID peut être configuré pour "
-"fournir une plus grande vitesse et une meilleure fiabilité pour utiliser un "
-"disque individuel. Pour obtenir de plus amples informations concernant les "
-"périphériques RAID, veuillez consulter la documentation kickstart."
+"Le RAID logiciel vous permet de regrouper plusieurs disques en un seul "
+"périphérique RAID de plus grande taille. Un périphérique RAID peut être configuré pour "
+"améliorer la vitesse et la fiabilité par rapport à l'utilisation d'un disque seul. Pour obtenir de plus amples informations concernant les périphériques RAID, veuillez consulter la documentation de kickstart."
 
 #: tmp/system-config-kickstart.glade.h:143
 msgid "Specify an FTP username and password"
@@ -960,18 +952,18 @@ msgid ""
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
 msgstr ""
 "Pour utiliser RAID, vous devez avant tout créer deux partitions de type "
-"'software RAID'. Vous pourrez ensuite créer un périphérique RAID qui pourra "
+"« RAID logiciel». Vous pourrez ensuite créer un périphérique RAID qui pourra "
 "être formaté et monté."
 
 #: tmp/system-config-kickstart.glade.h:149
 #, no-c-format
 msgid "Type your %post script below:"
-msgstr "Saisissez votre script %post ici :"
+msgstr "Saisissez votre script %post ci-dessous :"
 
 #: tmp/system-config-kickstart.glade.h:151
 #, no-c-format
 msgid "Type your %pre script below:"
-msgstr "Saisissez ici votre script %pre :"
+msgstr "Saisissez votre script %pre ci-dessous :"
 
 #: tmp/system-config-kickstart.glade.h:152
 msgid "Upgrade an existing installation"
@@ -995,11 +987,11 @@ msgstr "Utiliser les mots de passe masqués"
 
 #: tmp/system-config-kickstart.glade.h:157
 msgid "Use UTC clock"
-msgstr "Utiliser l'horloge en temps universel"
+msgstr "Utiliser l'horloge de temps universel"
 
 #: tmp/system-config-kickstart.glade.h:158
 msgid "Use an interpreter:"
-msgstr "Utiliser un interprète :"
+msgstr "Utiliser un interpréteur :"
 
 #: tmp/system-config-kickstart.glade.h:159
 msgid "Use broadcast to find NIS server"
@@ -1035,8 +1027,8 @@ msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %post command at the beginning."
 msgstr ""
-"Avertissement : une erreur dans ce script pourrait faire échouer votre "
-"installation de kickstart. N'introduisez pas la commande %post au début."
+"Avertissement : Une erreur dans ce script pourrait faire échouer votre "
+"installation de kickstart. N'incluez pas la commande %post au début."
 
 #: tmp/system-config-kickstart.glade.h:169
 #, no-c-format
@@ -1052,12 +1044,12 @@ msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
 msgstr ""
-"Vous avez choisi la configuration suivante. Cliquez sur Enregistrer le "
-"fichier pour enregistrer le fichier Kickstart. "
+"Vous avez choisi la configuration suivante. Cliquez sur « Enregistrer le "
+"fichier » pour enregistrer le fichier Kickstart. "
 
 #: tmp/system-config-kickstart.glade.h:171
 msgid "_About"
-msgstr "À _propos"
+msgstr "_À propos"
 
 #: tmp/system-config-kickstart.glade.h:172
 msgid "_Add"
@@ -1069,7 +1061,7 @@ msgstr "_Ajouter un périphérique réseau"
 
 #: tmp/system-config-kickstart.glade.h:174
 msgid "_Contents"
-msgstr "_Contenu"
+msgstr "_Contenus"
 
 #: tmp/system-config-kickstart.glade.h:175
 msgid "_Delete"
@@ -1183,29 +1175,3 @@ msgstr "md8"
 msgid "md9"
 msgstr "md9"
 
-#~ msgid "Trusted devices:"
-#~ msgstr "Périphériques sûrs :"
-
-#~ msgid "Trusted services:"
-#~ msgstr "Services sécurisés :"
-
-#~ msgid "Other ports: (1029:tcp)"
-#~ msgstr "Autres ports : (1029:tcp)"
-
-#~ msgid "Active"
-#~ msgstr "Actif"
-
-#~ msgid "Disable firewall"
-#~ msgstr "Désactiver le pare-feu"
-
-#~ msgid "Enable firewall"
-#~ msgstr "Activer le pare-feu"
-
-#~ msgid "SELinux:"
-#~ msgstr "SELinux :"
-
-#~ msgid "Security level:"
-#~ msgstr "Niveau de sécurité :"
-
-#~ msgid "Warn"
-#~ msgstr "Avertir"
