@@ -233,13 +233,39 @@ class partWindow:
 
         parent_iter = self.part_store.iter_parent(self.current_iter)
 
-        if part_object.device == None:
-            self.part_store.set_value(self.current_iter, 0, "")
+        if not part_object.device:
+            # Move the partition object to under the Auto tree.
+            if self.part_store.iter_n_children(parent_iter) == 1:
+                # If this was previously in a hard drive drop down, we need
+                # to remove the now-invalid iter as well.
+                oldDevice = self.part_store.get_value(parent_iter, 0)
+                try:
+                    self.device_iter_dict.pop(oldDevice)
+                except KeyError:
+                    pass
+
+                # If the current iter is the only child, delete the parent and
+                # the child
+                self.part_store.remove(self.current_iter)
+                self.part_store.remove(parent_iter)
+            else:
+                # If there are other children, just delete this child
+                self.part_store.remove(self.current_iter)
+
+            self.current_iter = self.addPartitionToTree(part_object, self.current_iter)
         else:
             if self.part_store.get_value(parent_iter, 0) != part_object.device:
-
                 if self.part_store.iter_n_children(parent_iter) == 1:
-                    #If the current iter is the only child, delete the parent and the child
+                    # If this was previously in a hard drive drop down, we need
+                    # to remove the now-invalid iter as well.
+                    oldDevice = self.part_store.get_value(parent_iter, 0)
+                    try:
+                        self.device_iter_dict.pop(oldDevice)
+                    except KeyError:
+                        pass
+
+                    # If the current iter is the only child, delete the parent
+                    # and the child
                     self.part_store.remove(self.current_iter)
                     self.part_store.remove(parent_iter)
                 else:
@@ -285,7 +311,7 @@ class partWindow:
 
     def find_auto_parent(self, store, data, iter):
         if self.part_store.get_value(iter, 0) == (_("Auto")):
-            self.auto_parent_iter = iter
+                self.auto_parent_iter = iter
 
     def addPartitionToTree(self, part_object, iter):
         self.auto_parent_iter = None
@@ -295,7 +321,7 @@ class partWindow:
             self.hard_drive_parent_iter = self.part_store.append(None)
             self.part_store.set_value(self.hard_drive_parent_iter, 0, (_("Hard Drives")))
 
-        if part_object.device == None:
+        if not part_object.device:
             #If they didn't specify a device, create a group called "Auto"
             if self.auto_parent_iter == None:
                 self.auto_parent_iter = self.part_store.append(self.hard_drive_parent_iter)
