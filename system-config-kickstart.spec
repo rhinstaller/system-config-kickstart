@@ -78,6 +78,11 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Wed Feb 07 2007 Chris Lumens <clumens@redhat.com> 2.7.2-1
+- Add package-level selection and removal (#222592).
+- Add UI for the key command (#226718).
+- Fix iter handling on the partition screen for auto partitions (#225087).
+
 * Tue Jan 16 2007 Chris Lumens <clumens@redhat.com> 2.7.1-1
 - Update to use new pykickstart.
 - Don't traceback if no monitor or x driver is selected.
