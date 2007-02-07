@@ -163,7 +163,7 @@ class Packages:
         self.ks = ksHandler
 
         if self.ks.upgrade.upgrade:
-            disabledLabel = gtk.Label(_("Firewall configuration is not applicable on upgrades."))
+            disabledLabel = gtk.Label(_("Package configuration is not applicable on upgrades."))
             disabledLabel.set_line_wrap(True)
             self.package_frame.add(disabledLabel)
             self.package_frame.show_all()
