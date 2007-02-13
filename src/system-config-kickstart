@@ -28,6 +28,7 @@ sys.path.append("/usr/share/system-config-kickstart")
 ##
 ## I18N
 ## 
+from rhpl.exception import installExceptionHandler
 from rhpl.translate import _, N_
 import rhpl.translate as translate
 domain = 'system-config-kickstart'
@@ -76,4 +77,5 @@ if __name__ == "__main__":
         print (_("Try running 'system-config-kickstart --help' for a list of options."))
         sys.exit(0)
 
+    installExceptionHandler("system-config-kickstart", "")
     kickstartGui.kickstartGui(file)
