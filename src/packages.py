@@ -32,6 +32,8 @@ from yum.constants import *
 from yum.misc import getCacheDir
 from pirut import GroupSelector, PirutProgressCallback
 
+from pykickstart.parser import Group
+
 ##
 ## I18N
 ## 
@@ -212,7 +214,7 @@ class Packages:
 
         for grp in self.y.comps.groups:
             if grp.selected:
-                self.ks.packages.groupList.append(grp.groupid)
+                self.ks.packages.groupList.append(Group(name=grp.groupid))
 
                 defaults = grp.default_packages.keys()
                 optionals = grp.optional_packages.keys()
@@ -229,10 +231,11 @@ class Packages:
         if not self.y.packagesEnabled:
             return
 
+        selectedGroups = map (lambda grp: grp[1], self.ks.packages.groupList)
         self.y.tsInfo = self.y._transactionDataFactory()
 
         for grp in self.y.comps.groups:
-            if grp.groupid in self.ks.packages.groupList:
+            if grp.groupid in selectedGroups:
                 self.y.selectGroup(grp.groupid)
             else:
                 self.y.deselectGroup(grp.groupid)
