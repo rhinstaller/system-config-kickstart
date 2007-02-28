@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.7.2
+Version: 2.7.3
 Release: 1%{?dist}
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -20,7 +20,7 @@ Requires: hwdata
 Requires: rhpl
 Requires: system-config-language
 Requires: system-config-securitylevel
-Requires: pykickstart >= 0.90
+Requires: pykickstart >= 0.96
 Requires: yum
 Requires: pirut
 Requires: hicolor-icon-theme
@@ -78,6 +78,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Wed Feb 28 2007 Chris Lumens <clumens@redhat.com> 2.7.3-1
+- Updated for the newer pykickstart interface.
+
 * Wed Feb 07 2007 Chris Lumens <clumens@redhat.com> 2.7.2-1
 - Add package-level selection and removal (#222592).
 - Add UI for the key command (#226718).
