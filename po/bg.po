@@ -3,19 +3,19 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
 # Doncho N. Gunchev <mr700@globalnet.bg>, 2004, 2005.
-# Doncho N. Gunchev <gunchev@gmail.com>, 2006.
+# Doncho N. Gunchev <gunchev@gmail.com>, 2006, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: bg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-01-16 14:37-0500\n"
-"PO-Revision-Date: 2006-01-14 05:02+0200\n"
+"PO-Revision-Date: 2007-03-10 03:03+0200\n"
 "Last-Translator: Doncho N. Gunchev <gunchev@gmail.com>\n"
 "Language-Team: Bulgarian <Bulgarian Translators' Team <dict@fsa-bg.org>>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../src/auth.py:323
 msgid "Please fill in the authentication information"
@@ -53,8 +53,7 @@ msgstr "Грешка"
 #: ../src/bootloader.py:81
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
-msgstr ""
-"Опциите на програмата за начално зареждане са неприложими за платформа %s"
+msgstr "Опциите на програмата за начално зареждане са неприложими за платформа %s"
 
 #: ../src/bootloader.py:121
 msgid "Grub passwords do not match.  Please try again."
@@ -111,11 +110,13 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Бе открита следната грешка при разбор на kickstart конфигурационния файл:\n"
+"\n"
+"%s"
 
 #: ../src/kickstartGui.py:97 ../src/kickstartGui.py:291
-#, fuzzy
 msgid "Error Parsing Kickstart Config"
-msgstr "Относно kickstart конфигуратора"
+msgstr "Грешка при разбор на kickstart конфигурацията"
 
 #: ../src/kickstartGui.py:105
 msgid "Kickstart"
@@ -227,15 +228,16 @@ msgstr ""
 "устройство"
 
 #: ../src/packages.py:166
-#, fuzzy
 msgid "Retrieving package information"
-msgstr "Информация за мрежовите устройства"
+msgstr "Изтегляне информация за пакета"
 
 #: ../src/packages.py:175
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
 msgstr ""
+"Избора на пакети е изключен поради проблеми при сваляне на "
+"информация за пакет."
 
 #: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:186
 msgid "ext2"
@@ -286,8 +288,7 @@ msgstr "Укажете точка на монтиране за дяла."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:448
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "Точката на монтиране \"%s\" вече се ползва.  Моля изберете друга точка на "
 "монтиране."
@@ -368,14 +369,12 @@ msgid "Could not read video driver database"
 msgstr "Базата данни с видео драйвери не се чете"
 
 #: ../src/xconfig.py:229
-#, fuzzy
 msgid "Please select an X driver."
-msgstr "Моля въведете NFS сървър."
+msgstr "Моля изберете X драйвер."
 
 #: ../src/xconfig.py:248
-#, fuzzy
 msgid "Please select a monitor."
-msgstr "Моля изберете дял от списъка."
+msgstr "Моля изберете монитор."
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -431,7 +430,7 @@ msgstr "Настройки на програмата за начално зар�
 
 #: tmp/system-config-kickstart.glade.h:14
 msgid "CD-ROM"
-msgstr "CD-ROM"
+msgstr "Компакт диск"
 
 #: tmp/system-config-kickstart.glade.h:15
 msgid "Choose one of the following options:"
@@ -459,7 +458,7 @@ msgstr "Потвърдете паролата:"
 
 #: tmp/system-config-kickstart.glade.h:21
 msgid "Create a RAID device [default = /dev/md0]"
-msgstr "Създаване на RAID устройство [подразбиращо се е /dev/md0]"
+msgstr "Създаване на RAID устройство [подразбира се /dev/md0]"
 
 #: tmp/system-config-kickstart.glade.h:22
 msgid "Create a software RAID partition"
@@ -571,7 +570,7 @@ msgstr "Фиксиран размер"
 
 #: tmp/system-config-kickstart.glade.h:51
 msgid "Force to be a primary partition (asprimary)"
-msgstr "Принудително да бъде основен дял (asprimary)"
+msgstr "Задължително да бъде основен дял (asprimary)"
 
 #: tmp/system-config-kickstart.glade.h:52
 msgid "Format RAID device"
@@ -599,7 +598,7 @@ msgstr "Основни"
 
 #: tmp/system-config-kickstart.glade.h:58
 msgid "Grow to maximum of (MB):"
-msgstr "Нарастване максимум до (MB):"
+msgstr "Нарастване максимум до (МБ):"
 
 #: tmp/system-config-kickstart.glade.h:59
 msgid "HTTP"
@@ -917,7 +916,7 @@ msgstr "SMB група:"
 
 #: tmp/system-config-kickstart.glade.h:141
 msgid "Size (MB):"
-msgstr "Размер (MB):"
+msgstr "Размер (МБ):"
 
 #: tmp/system-config-kickstart.glade.h:142
 msgid ""
@@ -1177,29 +1176,3 @@ msgstr "md8"
 msgid "md9"
 msgstr "md9"
 
-#~ msgid "Trusted devices:"
-#~ msgstr "Доверени устройства:"
-
-#~ msgid "Trusted services:"
-#~ msgstr "Доверени услуги:"
-
-#~ msgid "Other ports: (1029:tcp)"
-#~ msgstr "Други портове: (1029:tcp)"
-
-#~ msgid "Active"
-#~ msgstr "Активен"
-
-#~ msgid "Disable firewall"
-#~ msgstr "Забрана на защитна стена"
-
-#~ msgid "Enable firewall"
-#~ msgstr "Разрешаване на защитна стена"
-
-#~ msgid "SELinux:"
-#~ msgstr "SELinux:"
-
-#~ msgid "Security level:"
-#~ msgstr "Ниво на сигурност:"
-
-#~ msgid "Warn"
-#~ msgstr "Предупреждава"
