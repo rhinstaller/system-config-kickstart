@@ -231,7 +231,7 @@ class Packages:
         if not self.y.packagesEnabled:
             return
 
-        selectedGroups = map (lambda grp: grp[1], self.ks.packages.groupList)
+        selectedGroups = map (lambda grp: grp.name, self.ks.packages.groupList)
         self.y.tsInfo = self.y._transactionDataFactory()
 
         for grp in self.y.comps.groups:
