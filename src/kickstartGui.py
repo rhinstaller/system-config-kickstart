@@ -256,9 +256,7 @@ class kickstartGui:
 
 	self.network_class.formToKickstart()
 	self.firewall_class.formToKickstart()
-
-        if self.X_class.formToKickstart() is None:
-            return None
+        self.X_class.formToKickstart()
 
         #only do these things in installs, not upgrades
 	if doInstall:
