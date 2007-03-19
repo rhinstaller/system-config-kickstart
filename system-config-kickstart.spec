@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.7.3
+Version: 2.7.4
 Release: 1%{?dist}
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -78,6 +78,11 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Mon Mar 19 2007 Chris Lumens <clumens@redhat.com> 2.7.4-1
+- Fix loading packages section (#232285).
+- Fix preview/save on upgrade (#232282).
+- Add UI for authconfig's --ldaploadcert option (#232664).
+
 * Wed Feb 28 2007 Chris Lumens <clumens@redhat.com> 2.7.3-1
 - Updated for the newer pykickstart interface.
 
