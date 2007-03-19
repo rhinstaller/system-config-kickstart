@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zh_TW\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-16 14:37-0500\n"
+"POT-Creation-Date: 2007-03-19 16:41-0400\n"
 "PO-Revision-Date: 2006-11-26 01:26+1000\n"
 "Last-Translator: Chester Cheng <ccheng@redhat.com>\n"
 "Language-Team: Chinese, Traditional <zh_TW@li.org>\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Generated-By: pygettext.py 1.1\n"
 "X-Generator: KBabel 1.9.1\n"
 
-#: ../src/auth.py:323
+#: ../src/auth.py:340
 msgid "Please fill in the authentication information"
 msgstr "請填入身份認證資訊"
 
@@ -49,11 +49,11 @@ msgstr "IBM pSeries"
 msgid "IBM zSeries/s390"
 msgstr "IBM zSeries/s390"
 
-#: ../src/basic.py:146
+#: ../src/basic.py:150
 msgid "Root passwords do not match."
 msgstr "root 密碼不相符。"
 
-#: ../src/basic.py:147 ../src/install.py:215 ../src/partWindow.py:521
+#: ../src/basic.py:151 ../src/install.py:215 ../src/partWindow.py:547
 #: ../src/partition.py:254 ../src/raidWindow.py:249
 msgid "Error"
 msgstr "錯誤"
@@ -67,7 +67,7 @@ msgstr "開機管理程式選項不適用於 %s 平台"
 msgid "Grub passwords do not match.  Please try again."
 msgstr "Grub 密碼不相符，請再試一次。"
 
-#: ../src/firewall.py:91 ../src/packages.py:160
+#: ../src/firewall.py:91
 msgid "Firewall configuration is not applicable on upgrades."
 msgstr "防火牆設定不適用於系統升級。"
 
@@ -111,7 +111,7 @@ msgstr "請輸入一個硬碟的目錄。"
 msgid "Please enter a hard drive partition."
 msgstr "請輸入一個硬碟分割區。"
 
-#: ../src/kickstartGui.py:94 ../src/kickstartGui.py:288
+#: ../src/kickstartGui.py:94 ../src/kickstartGui.py:286
 #, python-format
 msgid ""
 "The following error was found while parsing your kickstart configuration:\n"
@@ -119,7 +119,7 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../src/kickstartGui.py:97 ../src/kickstartGui.py:291
+#: ../src/kickstartGui.py:97 ../src/kickstartGui.py:289
 #, fuzzy
 msgid "Error Parsing Kickstart Config"
 msgstr "關於 Kickstart 設定程式"
@@ -152,7 +152,7 @@ msgstr "開機管理程式選項"
 msgid "Partition Information"
 msgstr "分割區資訊"
 
-#: ../src/kickstartGui.py:136 tmp/system-config-kickstart.glade.h:105
+#: ../src/kickstartGui.py:136 tmp/system-config-kickstart.glade.h:107
 msgid "Network Configuration"
 msgstr "網路組態設定"
 
@@ -160,23 +160,23 @@ msgstr "網路組態設定"
 msgid "Authentication"
 msgstr "認證"
 
-#: ../src/kickstartGui.py:138 tmp/system-config-kickstart.glade.h:49
+#: ../src/kickstartGui.py:138 tmp/system-config-kickstart.glade.h:50
 msgid "Firewall Configuration"
 msgstr "防火牆組態設定"
 
-#: ../src/kickstartGui.py:139 tmp/system-config-kickstart.glade.h:26
+#: ../src/kickstartGui.py:139 tmp/system-config-kickstart.glade.h:27
 msgid "Display Configuration"
 msgstr "顯示卡設定"
 
-#: ../src/kickstartGui.py:140 tmp/system-config-kickstart.glade.h:111
+#: ../src/kickstartGui.py:140 tmp/system-config-kickstart.glade.h:113
 msgid "Package Selection"
 msgstr "選取套件"
 
-#: ../src/kickstartGui.py:141 tmp/system-config-kickstart.glade.h:121
+#: ../src/kickstartGui.py:141 tmp/system-config-kickstart.glade.h:123
 msgid "Pre-Installation Script"
 msgstr "前置安裝程式碼"
 
-#: ../src/kickstartGui.py:142 tmp/system-config-kickstart.glade.h:120
+#: ../src/kickstartGui.py:142 tmp/system-config-kickstart.glade.h:122
 msgid "Post-Installation Script"
 msgstr "後續安裝程式碼"
 
@@ -202,7 +202,7 @@ msgstr "關於 Kickstart 設定程式"
 msgid "Help is not available."
 msgstr "無法取得輔助說明。"
 
-#: ../src/kickstartGui.py:312
+#: ../src/kickstartGui.py:310
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "無法存取 \"%s\" 檔案。"
@@ -231,21 +231,26 @@ msgid ""
 "device name"
 msgstr "命名為 %s 名稱的網路裝置已經存在，請選擇另一個裝置名稱"
 
-#: ../src/packages.py:166
+#: ../src/packages.py:168
+#, fuzzy
+msgid "Package configuration is not applicable on upgrades."
+msgstr "顯示卡設定不適用於系統升級。"
+
+#: ../src/packages.py:174
 msgid "Retrieving package information"
 msgstr "讀取套件資訊"
 
-#: ../src/packages.py:175
+#: ../src/packages.py:183
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
 msgstr "下載套件資訊時發生問題，所以選擇套件的功能已經停用。"
 
-#: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:186
+#: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:189
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:187
+#: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:190
 msgid "ext3"
 msgstr "ext3"
 
@@ -254,11 +259,11 @@ msgstr "ext3"
 msgid "software RAID"
 msgstr "軟體 RAID"
 
-#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:205
+#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:208
 msgid "swap"
 msgstr "swap"
 
-#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:206
+#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:209
 msgid "vfat"
 msgstr "vfat"
 
@@ -266,46 +271,46 @@ msgstr "vfat"
 msgid "PPC PReP Boot"
 msgstr "PPC PReP 開機"
 
-#: ../src/partWindow.py:262 ../src/partWindow.py:543 ../src/raidWindow.py:214
+#: ../src/partWindow.py:288 ../src/partWindow.py:569 ../src/raidWindow.py:214
 msgid "Yes"
 msgstr "確定"
 
-#: ../src/partWindow.py:264 ../src/partWindow.py:545 ../src/raidWindow.py:216
+#: ../src/partWindow.py:290 ../src/partWindow.py:571 ../src/raidWindow.py:216
 msgid "No"
 msgstr "否"
 
-#: ../src/partWindow.py:287 ../src/partWindow.py:302 ../src/partWindow.py:321
-#: ../src/partWindow.py:335
+#: ../src/partWindow.py:313 ../src/partWindow.py:328 ../src/partWindow.py:347
+#: ../src/partWindow.py:361
 msgid "Auto"
 msgstr "自動"
 
-#: ../src/partWindow.py:296
+#: ../src/partWindow.py:322
 msgid "Hard Drives"
 msgstr "硬碟"
 
-#: ../src/partWindow.py:439
+#: ../src/partWindow.py:465
 msgid "Specify a mount point for the partition."
 msgstr "請指定這個分割區的掛載點。"
 
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:448
+#: ../src/partWindow.py:474
 #, python-format
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "掛載點 \"%s\" 已經被使用。  請選擇另一個掛載點。"
 
-#: ../src/partWindow.py:468
+#: ../src/partWindow.py:494
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
 msgstr ""
 "要建立一個新的 RAID 分割區，您必須指定一個硬碟裝置名稱或一個現有的分割區。"
 
-#: ../src/partWindow.py:505
+#: ../src/partWindow.py:531
 msgid "Specify a device on which to create the partition."
 msgstr "請指定要用來建立分割區的裝置。"
 
-#: ../src/partWindow.py:514
+#: ../src/partWindow.py:540
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -431,494 +436,502 @@ msgid "Boot Loader Options (required)"
 msgstr "開機管理程式選項（必要的）"
 
 #: tmp/system-config-kickstart.glade.h:14
+msgid "CA Cert URL:"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:15
 msgid "CD-ROM"
 msgstr "光碟機"
 
-#: tmp/system-config-kickstart.glade.h:15
+#: tmp/system-config-kickstart.glade.h:16
 msgid "Choose one of the following options:"
 msgstr "選擇下列的其中一種選項:"
 
-#: tmp/system-config-kickstart.glade.h:16
+#: tmp/system-config-kickstart.glade.h:17
 msgid "Choose the Installation Method:"
 msgstr "選取安裝方式:"
 
-#: tmp/system-config-kickstart.glade.h:17
+#: tmp/system-config-kickstart.glade.h:18
 msgid "Clear Master Boot Record"
 msgstr "清除 MBR"
 
-#: tmp/system-config-kickstart.glade.h:18
+#: tmp/system-config-kickstart.glade.h:19
 msgid "Color Depth"
 msgstr "彩度"
 
-#: tmp/system-config-kickstart.glade.h:19
+#: tmp/system-config-kickstart.glade.h:20
 msgid "Configure the X Window System"
 msgstr "設定 X 視窗系統"
 
-#: tmp/system-config-kickstart.glade.h:20
+#: tmp/system-config-kickstart.glade.h:21
 msgid "Confirm Password:"
 msgstr "密碼確認:"
 
-#: tmp/system-config-kickstart.glade.h:21
+#: tmp/system-config-kickstart.glade.h:22
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "建立一個 RAID 裝置 [default = /dev/md0]"
 
-#: tmp/system-config-kickstart.glade.h:22
+#: tmp/system-config-kickstart.glade.h:23
 msgid "Create a software RAID partition"
 msgstr "建立一個軟體 RAID 分割區"
 
-#: tmp/system-config-kickstart.glade.h:23
+#: tmp/system-config-kickstart.glade.h:24
 msgid "Default Desktop:"
 msgstr "預設桌面:"
 
-#: tmp/system-config-kickstart.glade.h:24
+#: tmp/system-config-kickstart.glade.h:25
 msgid "Default Language:"
 msgstr "預設語言:"
 
-#: tmp/system-config-kickstart.glade.h:25
+#: tmp/system-config-kickstart.glade.h:26
 msgid "Disabled"
 msgstr "已停用"
 
-#: tmp/system-config-kickstart.glade.h:27
+#: tmp/system-config-kickstart.glade.h:28
 msgid "Display configuration is not applicable on upgrades."
 msgstr "顯示卡設定不適用於系統升級。"
 
-#: tmp/system-config-kickstart.glade.h:28
+#: tmp/system-config-kickstart.glade.h:29
 msgid "Do not clear Master Boot Record"
 msgstr "不要清除 MBR"
 
-#: tmp/system-config-kickstart.glade.h:29
+#: tmp/system-config-kickstart.glade.h:30
 msgid "Do not initialize the disk label"
 msgstr "不要初始化磁碟標籤"
 
-#: tmp/system-config-kickstart.glade.h:30
+#: tmp/system-config-kickstart.glade.h:31
 msgid "Do not install a boot loader"
 msgstr "不安裝開機管理程式"
 
-#: tmp/system-config-kickstart.glade.h:31
+#: tmp/system-config-kickstart.glade.h:32
 msgid "Drive :"
 msgstr "磁碟機 :"
 
-#: tmp/system-config-kickstart.glade.h:32
+#: tmp/system-config-kickstart.glade.h:33
 msgid "Enable Hesiod Support"
 msgstr "啟動 Hesiod 支援"
 
-#: tmp/system-config-kickstart.glade.h:33
+#: tmp/system-config-kickstart.glade.h:34
 msgid "Enable Kerberos 5 Authentication"
 msgstr "啟用 Kerberos 5 認證"
 
-#: tmp/system-config-kickstart.glade.h:34
+#: tmp/system-config-kickstart.glade.h:35
 msgid "Enable LDAP"
 msgstr "啟用 LDAP"
 
-#: tmp/system-config-kickstart.glade.h:35
+#: tmp/system-config-kickstart.glade.h:36
 msgid "Enable NIS"
 msgstr "啟用 NIS"
 
-#: tmp/system-config-kickstart.glade.h:36
+#: tmp/system-config-kickstart.glade.h:37
 msgid "Enable SMB Authentication"
 msgstr "啟用 SMB 認證"
 
-#: tmp/system-config-kickstart.glade.h:37
+#: tmp/system-config-kickstart.glade.h:38
 msgid "Enable nscd"
 msgstr "啟用 nscd"
 
-#: tmp/system-config-kickstart.glade.h:38
+#: tmp/system-config-kickstart.glade.h:39
 msgid "Enabled"
 msgstr "已啟用"
 
-#: tmp/system-config-kickstart.glade.h:39
+#: tmp/system-config-kickstart.glade.h:40
 msgid "Enabled in reconfiguration mode"
 msgstr "在重新設定模式已啟用"
 
-#: tmp/system-config-kickstart.glade.h:40
+#: tmp/system-config-kickstart.glade.h:41
 msgid "Encrypt GRUB password"
 msgstr "編譯 GRUB 密碼"
 
-#: tmp/system-config-kickstart.glade.h:41
+#: tmp/system-config-kickstart.glade.h:42
 msgid "Encrypt root password"
 msgstr "編譯系統管理員(root)密碼"
 
-#: tmp/system-config-kickstart.glade.h:42
+#: tmp/system-config-kickstart.glade.h:43
 msgid "FTP"
 msgstr "FTP"
 
-#: tmp/system-config-kickstart.glade.h:43
+#: tmp/system-config-kickstart.glade.h:44
 msgid "FTP Directory:"
 msgstr "FTP 目錄:"
 
-#: tmp/system-config-kickstart.glade.h:44
+#: tmp/system-config-kickstart.glade.h:45
 msgid "FTP Password"
 msgstr "FTP 密碼"
 
-#: tmp/system-config-kickstart.glade.h:45
+#: tmp/system-config-kickstart.glade.h:46
 msgid "FTP Server:"
 msgstr "FTP 伺服器"
 
-#: tmp/system-config-kickstart.glade.h:46
+#: tmp/system-config-kickstart.glade.h:47
 msgid "FTP Username"
 msgstr "FTP 使用者名稱"
 
-#: tmp/system-config-kickstart.glade.h:47
+#: tmp/system-config-kickstart.glade.h:48
 msgid "File System Type:"
 msgstr "檔案系統類型:"
 
-#: tmp/system-config-kickstart.glade.h:48
+#: tmp/system-config-kickstart.glade.h:49
 msgid "Fill all unused space on disk"
 msgstr "填滿磁碟上所有的剩餘空間"
 
-#: tmp/system-config-kickstart.glade.h:50
+#: tmp/system-config-kickstart.glade.h:51
 msgid "Fixed size"
 msgstr "固定大小"
 
-#: tmp/system-config-kickstart.glade.h:51
+#: tmp/system-config-kickstart.glade.h:52
 msgid "Force to be a primary partition (asprimary)"
 msgstr "強制成為主要分割區 (asprimary)"
 
-#: tmp/system-config-kickstart.glade.h:52
+#: tmp/system-config-kickstart.glade.h:53
 msgid "Format RAID device"
 msgstr "格式化 RAID 裝置"
 
-#: tmp/system-config-kickstart.glade.h:53
+#: tmp/system-config-kickstart.glade.h:54
 msgid "Format partition"
 msgstr "格式化分割區"
 
-#: tmp/system-config-kickstart.glade.h:54
+#: tmp/system-config-kickstart.glade.h:55
 msgid "GNOME"
 msgstr "GNOME"
 
-#: tmp/system-config-kickstart.glade.h:55
+#: tmp/system-config-kickstart.glade.h:56
 msgid "GRUB Options:"
 msgstr "GRUB 選項:"
 
-#: tmp/system-config-kickstart.glade.h:56
+#: tmp/system-config-kickstart.glade.h:57
 msgid "Gateway:"
 msgstr "閘道器:"
 
-#: tmp/system-config-kickstart.glade.h:57
+#: tmp/system-config-kickstart.glade.h:58
 msgid "General"
 msgstr "一般"
 
-#: tmp/system-config-kickstart.glade.h:58
+#: tmp/system-config-kickstart.glade.h:59
 msgid "Grow to maximum of (MB):"
 msgstr "填滿最大值到(MB):"
 
-#: tmp/system-config-kickstart.glade.h:59
+#: tmp/system-config-kickstart.glade.h:60
 msgid "HTTP"
 msgstr "HTTP"
 
-#: tmp/system-config-kickstart.glade.h:60
+#: tmp/system-config-kickstart.glade.h:61
 msgid "HTTP Directory:"
 msgstr "HTTP 目錄:"
 
-#: tmp/system-config-kickstart.glade.h:61
+#: tmp/system-config-kickstart.glade.h:62
 msgid "HTTP Server:"
 msgstr "HTTP 伺服器:"
 
-#: tmp/system-config-kickstart.glade.h:62
+#: tmp/system-config-kickstart.glade.h:63
 msgid "Hard Drive"
 msgstr "硬碟"
 
-#: tmp/system-config-kickstart.glade.h:63
+#: tmp/system-config-kickstart.glade.h:64
 msgid "Hard Drive Directory:"
 msgstr "硬碟目錄:"
 
-#: tmp/system-config-kickstart.glade.h:64
+#: tmp/system-config-kickstart.glade.h:65
 msgid "Hard Drive Partition:"
 msgstr "硬碟分割區:"
 
-#: tmp/system-config-kickstart.glade.h:65
+#: tmp/system-config-kickstart.glade.h:66
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: tmp/system-config-kickstart.glade.h:66
+#: tmp/system-config-kickstart.glade.h:67
 msgid "Hesiod Authentication"
 msgstr "Hesiod 認證"
 
-#: tmp/system-config-kickstart.glade.h:67
+#: tmp/system-config-kickstart.glade.h:68
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS:"
 
-#: tmp/system-config-kickstart.glade.h:68
+#: tmp/system-config-kickstart.glade.h:69
 msgid "Hesiod RHS:"
 msgstr "Hesiod RHS:"
 
-#: tmp/system-config-kickstart.glade.h:69
+#: tmp/system-config-kickstart.glade.h:70
 msgid "Horizontal Sync:"
 msgstr "水平掃描頻率:"
 
-#: tmp/system-config-kickstart.glade.h:70
+#: tmp/system-config-kickstart.glade.h:71
 msgid "Hz"
 msgstr "赫茲"
 
-#: tmp/system-config-kickstart.glade.h:71
+#: tmp/system-config-kickstart.glade.h:72
 msgid "IP Address:"
 msgstr "IP 位址:"
 
-#: tmp/system-config-kickstart.glade.h:72
+#: tmp/system-config-kickstart.glade.h:73
 msgid "Initialize the disk label"
 msgstr "初始化磁碟標籤"
 
-#: tmp/system-config-kickstart.glade.h:73
+#: tmp/system-config-kickstart.glade.h:74
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "安裝開機管理程式在 MBR"
 
-#: tmp/system-config-kickstart.glade.h:74
+#: tmp/system-config-kickstart.glade.h:75
 msgid "Install boot loader on first sector of the boot partition"
 msgstr "安裝開機管理程式在開機磁區的第一扇區"
 
-#: tmp/system-config-kickstart.glade.h:75
+#: tmp/system-config-kickstart.glade.h:76
 msgid "Install new boot loader"
 msgstr "安裝新的開機管理程式"
 
-#: tmp/system-config-kickstart.glade.h:76
+#: tmp/system-config-kickstart.glade.h:77
 msgid "Installation Method (required)"
 msgstr "安裝方式 (必要的)"
 
-#: tmp/system-config-kickstart.glade.h:77
+#: tmp/system-config-kickstart.glade.h:78
 msgid "KDE"
 msgstr "KDE"
 
-#: tmp/system-config-kickstart.glade.h:78
+#: tmp/system-config-kickstart.glade.h:79
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: tmp/system-config-kickstart.glade.h:79
+#: tmp/system-config-kickstart.glade.h:80
 msgid "Kerberos 5 Authentication"
 msgstr "Kerberos 5 認證"
 
-#: tmp/system-config-kickstart.glade.h:80
+#: tmp/system-config-kickstart.glade.h:81
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Kerberos 網域控制器 (KDC):"
 
-#: tmp/system-config-kickstart.glade.h:81
+#: tmp/system-config-kickstart.glade.h:82
 msgid "Kerberos Master Server:"
 msgstr "Kerberos 主要伺服器:"
 
-#: tmp/system-config-kickstart.glade.h:82
+#: tmp/system-config-kickstart.glade.h:83
 msgid "Kerberos Realm:"
 msgstr "Kerberos Realm:"
 
-#: tmp/system-config-kickstart.glade.h:83
+#: tmp/system-config-kickstart.glade.h:84
 msgid "Kernel parameters:"
 msgstr "核心參數:"
 
-#: tmp/system-config-kickstart.glade.h:84
+#: tmp/system-config-kickstart.glade.h:85
 msgid "Keyboard:"
 msgstr "鍵盤:"
 
-#: tmp/system-config-kickstart.glade.h:85
+#: tmp/system-config-kickstart.glade.h:86
 msgid "Kickstart Configurator"
 msgstr "Kickstart 設定程式"
 
-#: tmp/system-config-kickstart.glade.h:86
+#: tmp/system-config-kickstart.glade.h:87
 msgid "LDAP "
 msgstr "LDAP"
 
-#: tmp/system-config-kickstart.glade.h:87
+#: tmp/system-config-kickstart.glade.h:88
 msgid "LDAP Authentication"
 msgstr "LDAP 認證"
 
-#: tmp/system-config-kickstart.glade.h:88
+#: tmp/system-config-kickstart.glade.h:89
 msgid "LDAP Base Name: "
 msgstr "LDAP Base 名稱:"
 
-#: tmp/system-config-kickstart.glade.h:89
+#: tmp/system-config-kickstart.glade.h:90
 msgid "LDAP Server: "
 msgstr "LDAP 伺服器:"
 
-#: tmp/system-config-kickstart.glade.h:90
+#: tmp/system-config-kickstart.glade.h:91
+msgid "Load CA certificate"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:92
 msgid "Make RAID Device"
 msgstr "建立磁碟陣列(RAID)裝置"
 
-#: tmp/system-config-kickstart.glade.h:91
+#: tmp/system-config-kickstart.glade.h:93
 msgid "Make partition on specific drive (ondisk)"
 msgstr "在特定磁碟機上建立分割區 (ondisk)"
 
-#: tmp/system-config-kickstart.glade.h:92
+#: tmp/system-config-kickstart.glade.h:94
 msgid "Monitor"
 msgstr "螢幕"
 
-#: tmp/system-config-kickstart.glade.h:93
+#: tmp/system-config-kickstart.glade.h:95
 msgid "Mount Point:"
 msgstr "掛載點:"
 
-#: tmp/system-config-kickstart.glade.h:94
+#: tmp/system-config-kickstart.glade.h:96
 msgid "NFS"
 msgstr "NFS"
 
-#: tmp/system-config-kickstart.glade.h:95
+#: tmp/system-config-kickstart.glade.h:97
 msgid "NFS Directory:"
 msgstr "NFS 目錄:"
 
-#: tmp/system-config-kickstart.glade.h:96
+#: tmp/system-config-kickstart.glade.h:98
 msgid "NFS Server:"
 msgstr "NFS 伺服器:"
 
-#: tmp/system-config-kickstart.glade.h:97
+#: tmp/system-config-kickstart.glade.h:99
 msgid "NIS"
 msgstr "NIS"
 
-#: tmp/system-config-kickstart.glade.h:98
+#: tmp/system-config-kickstart.glade.h:100
 msgid "NIS Authentication"
 msgstr "NIS 認證"
 
-#: tmp/system-config-kickstart.glade.h:99
+#: tmp/system-config-kickstart.glade.h:101
 msgid "NIS Domain:"
 msgstr "NIS 網域:"
 
-#: tmp/system-config-kickstart.glade.h:100
+#: tmp/system-config-kickstart.glade.h:102
 msgid "NIS Server:"
 msgstr "NIS 伺服器:"
 
-#: tmp/system-config-kickstart.glade.h:101
+#: tmp/system-config-kickstart.glade.h:103
 msgid "Name Server:"
 msgstr "名稱伺服器:"
 
-#: tmp/system-config-kickstart.glade.h:102
+#: tmp/system-config-kickstart.glade.h:104
 msgid "Name Switch Cache"
 msgstr "名稱置換快取(Name Switch Cache)"
 
-#: tmp/system-config-kickstart.glade.h:103
+#: tmp/system-config-kickstart.glade.h:105
 msgid "Name Switch Cache Daemon (nscd) Authentication"
 msgstr "Name Switch Cache Daemon (nscd) 認證"
 
-#: tmp/system-config-kickstart.glade.h:104
+#: tmp/system-config-kickstart.glade.h:106
 msgid "Netmask: "
 msgstr "Netmask:"
 
-#: tmp/system-config-kickstart.glade.h:106
+#: tmp/system-config-kickstart.glade.h:108
 msgid "Network Device Information"
 msgstr "網路裝置資訊"
 
-#: tmp/system-config-kickstart.glade.h:107
+#: tmp/system-config-kickstart.glade.h:109
 msgid "Network Device:"
 msgstr "網路裝置:"
 
-#: tmp/system-config-kickstart.glade.h:108
+#: tmp/system-config-kickstart.glade.h:110
 msgid "Network Type:"
 msgstr "網路類型:"
 
-#: tmp/system-config-kickstart.glade.h:109
+#: tmp/system-config-kickstart.glade.h:111
 msgid "Number of spares:"
 msgstr "spares 的數量:"
 
-#: tmp/system-config-kickstart.glade.h:110
+#: tmp/system-config-kickstart.glade.h:112
 msgid "On first boot, Setup Agent is: "
 msgstr "在第一次開機時，設定代理程式為： "
 
-#: tmp/system-config-kickstart.glade.h:112
+#: tmp/system-config-kickstart.glade.h:114
 msgid "Partition :"
 msgstr "分割區 :"
 
-#: tmp/system-config-kickstart.glade.h:113
+#: tmp/system-config-kickstart.glade.h:115
 msgid "Partition Information (required)"
 msgstr "分割區資訊 (必要的)"
 
-#: tmp/system-config-kickstart.glade.h:114
+#: tmp/system-config-kickstart.glade.h:116
 msgid "Partition Options"
 msgstr "分割區選項"
 
-#: tmp/system-config-kickstart.glade.h:115
+#: tmp/system-config-kickstart.glade.h:117
 msgid "Partition options are not applicable on upgrades."
 msgstr "分割區選項不適用於系統升級。"
 
-#: tmp/system-config-kickstart.glade.h:116
+#: tmp/system-config-kickstart.glade.h:118
 msgid "Password:"
 msgstr "密碼:"
 
-#: tmp/system-config-kickstart.glade.h:117
+#: tmp/system-config-kickstart.glade.h:119
 msgid "Perform installation in interactive mode"
 msgstr "使用互動模式執行安裝程式"
 
-#: tmp/system-config-kickstart.glade.h:118
+#: tmp/system-config-kickstart.glade.h:120
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "執行文字模式安裝程式 (預設是圖形模式)"
 
-#: tmp/system-config-kickstart.glade.h:119
+#: tmp/system-config-kickstart.glade.h:121
 msgid "Perform new installation"
 msgstr "執行全新安裝"
 
-#: tmp/system-config-kickstart.glade.h:122
+#: tmp/system-config-kickstart.glade.h:124
 msgid "Preserve existing partitions"
 msgstr "保留既有的分割區"
 
-#: tmp/system-config-kickstart.glade.h:123
+#: tmp/system-config-kickstart.glade.h:125
 msgid "Preview Options"
 msgstr "預視選項"
 
-#: tmp/system-config-kickstart.glade.h:124
+#: tmp/system-config-kickstart.glade.h:126
 msgid "Probe for monitor"
 msgstr "偵測螢幕"
 
-#: tmp/system-config-kickstart.glade.h:125
+#: tmp/system-config-kickstart.glade.h:127
 msgid "Probe for video card driver"
 msgstr "偵測影像卡驅動程式"
 
-#: tmp/system-config-kickstart.glade.h:126
+#: tmp/system-config-kickstart.glade.h:128
 msgid "RAID"
 msgstr "RAID"
 
-#: tmp/system-config-kickstart.glade.h:127
+#: tmp/system-config-kickstart.glade.h:129
 msgid "RAID Device:"
 msgstr "RAID 裝置:"
 
-#: tmp/system-config-kickstart.glade.h:128
+#: tmp/system-config-kickstart.glade.h:130
 msgid "RAID Level:"
 msgstr "RAID 等級:"
 
-#: tmp/system-config-kickstart.glade.h:129
+#: tmp/system-config-kickstart.glade.h:131
 msgid "RAID Options"
 msgstr "RAID 選項"
 
-#: tmp/system-config-kickstart.glade.h:130
+#: tmp/system-config-kickstart.glade.h:132
 msgid "Raid Members"
 msgstr "Raid 的成員"
 
-#: tmp/system-config-kickstart.glade.h:131
+#: tmp/system-config-kickstart.glade.h:133
 msgid "Reboot system after installation"
 msgstr "安裝完後系統將重新啟動"
 
-#: tmp/system-config-kickstart.glade.h:132
+#: tmp/system-config-kickstart.glade.h:134
 msgid "Remove all existing partitions"
 msgstr "移除所有既有的分割區"
 
-#: tmp/system-config-kickstart.glade.h:133
+#: tmp/system-config-kickstart.glade.h:135
 msgid "Remove existing Linux partitions"
 msgstr "移除既有的 Linux 分割區"
 
-#: tmp/system-config-kickstart.glade.h:134
+#: tmp/system-config-kickstart.glade.h:136
 msgid "Resolution"
 msgstr "解析度"
 
-#: tmp/system-config-kickstart.glade.h:135
+#: tmp/system-config-kickstart.glade.h:137
 msgid "Root Password:"
 msgstr "系統管理者(root)密碼"
 
-#: tmp/system-config-kickstart.glade.h:136
+#: tmp/system-config-kickstart.glade.h:138
 msgid "Run outside of the chroot environment"
 msgstr "在 chroot 環境之外執行"
 
-#: tmp/system-config-kickstart.glade.h:137
+#: tmp/system-config-kickstart.glade.h:139
 msgid "SMB"
 msgstr "SMB"
 
-#: tmp/system-config-kickstart.glade.h:138
+#: tmp/system-config-kickstart.glade.h:140
 msgid "SMB Authentication"
 msgstr "SMB 認證"
 
-#: tmp/system-config-kickstart.glade.h:139
+#: tmp/system-config-kickstart.glade.h:141
 msgid "SMB Servers:"
 msgstr "SMB 伺服器:"
 
-#: tmp/system-config-kickstart.glade.h:140
+#: tmp/system-config-kickstart.glade.h:142
 msgid "SMB Workgroup:"
 msgstr "SMB 群組:"
 
-#: tmp/system-config-kickstart.glade.h:141
+#: tmp/system-config-kickstart.glade.h:143
 msgid "Size (MB):"
 msgstr "大小 (MB):"
 
-#: tmp/system-config-kickstart.glade.h:142
+#: tmp/system-config-kickstart.glade.h:144
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -929,23 +942,28 @@ msgstr ""
 "設定為提供比使用單一磁碟更快的速度與較佳的可靠性。 如需關於使用 RAID 裝置的更"
 "多資訊，請參閱 kickstart 的說明文件。"
 
-#: tmp/system-config-kickstart.glade.h:143
+#: tmp/system-config-kickstart.glade.h:145
 msgid "Specify an FTP username and password"
 msgstr "請指定一個 FTP 使用者名稱與密碼"
 
-#: tmp/system-config-kickstart.glade.h:144
+#: tmp/system-config-kickstart.glade.h:146
+#, fuzzy
+msgid "Specify installation key:"
+msgstr "執行全新安裝"
+
+#: tmp/system-config-kickstart.glade.h:147
 msgid "Start the X Window System on boot"
 msgstr "開機時啟動 X 視窗系統"
 
-#: tmp/system-config-kickstart.glade.h:145
+#: tmp/system-config-kickstart.glade.h:148
 msgid "Target Architecture:"
 msgstr "目標的主機架構："
 
-#: tmp/system-config-kickstart.glade.h:146
+#: tmp/system-config-kickstart.glade.h:149
 msgid "Time Zone:"
 msgstr "時區:"
 
-#: tmp/system-config-kickstart.glade.h:147
+#: tmp/system-config-kickstart.glade.h:150
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -953,73 +971,73 @@ msgstr ""
 "如要使用 RAID，您必須建立至少兩個 '軟體 RAID' 類型的分割區。 然後您可以建立一"
 "個可格式化與可掛載的 RAID 裝置。"
 
-#: tmp/system-config-kickstart.glade.h:149
+#: tmp/system-config-kickstart.glade.h:152
 #, no-c-format
 msgid "Type your %post script below:"
 msgstr "在以下輸入您的 %post 程式碼:"
 
-#: tmp/system-config-kickstart.glade.h:151
+#: tmp/system-config-kickstart.glade.h:154
 #, no-c-format
 msgid "Type your %pre script below:"
 msgstr "在以下輸入 %pre 程式碼:"
 
-#: tmp/system-config-kickstart.glade.h:152
+#: tmp/system-config-kickstart.glade.h:155
 msgid "Upgrade an existing installation"
 msgstr "升級目前的安裝"
 
-#: tmp/system-config-kickstart.glade.h:153
+#: tmp/system-config-kickstart.glade.h:156
 msgid "Upgrade existing boot loader"
 msgstr "升級目前的開機管理程式"
 
-#: tmp/system-config-kickstart.glade.h:154
+#: tmp/system-config-kickstart.glade.h:157
 msgid "Use GRUB password"
 msgstr "使用 GRUB 密碼"
 
-#: tmp/system-config-kickstart.glade.h:155
+#: tmp/system-config-kickstart.glade.h:158
 msgid "Use MD5"
 msgstr "使用 MD5"
 
-#: tmp/system-config-kickstart.glade.h:156
+#: tmp/system-config-kickstart.glade.h:159
 msgid "Use Shadow Passwords"
 msgstr "使用 Shadow 密碼"
 
-#: tmp/system-config-kickstart.glade.h:157
+#: tmp/system-config-kickstart.glade.h:160
 msgid "Use UTC clock"
 msgstr "使用 UTC 時鐘"
 
-#: tmp/system-config-kickstart.glade.h:158
+#: tmp/system-config-kickstart.glade.h:161
 msgid "Use an interpreter:"
 msgstr "使用編譯器:"
 
-#: tmp/system-config-kickstart.glade.h:159
+#: tmp/system-config-kickstart.glade.h:162
 msgid "Use broadcast to find NIS server"
 msgstr "使用廣播方式搜尋 NIS 伺服器"
 
-#: tmp/system-config-kickstart.glade.h:160
+#: tmp/system-config-kickstart.glade.h:163
 msgid "Use custom monitor sync rates"
 msgstr "使用自訂的螢幕掃描頻率"
 
-#: tmp/system-config-kickstart.glade.h:161
+#: tmp/system-config-kickstart.glade.h:164
 msgid "Use existing partition (onpart)"
 msgstr "使用現有的分割區 (onpart)"
 
-#: tmp/system-config-kickstart.glade.h:162
+#: tmp/system-config-kickstart.glade.h:165
 msgid "Use recommended swap size"
 msgstr "使用建議的 swap 大小"
 
-#: tmp/system-config-kickstart.glade.h:163
+#: tmp/system-config-kickstart.glade.h:166
 msgid "Vertical Sync:"
 msgstr "垂直掃描頻率:"
 
-#: tmp/system-config-kickstart.glade.h:164
+#: tmp/system-config-kickstart.glade.h:167
 msgid "Video Card"
 msgstr "顯示卡"
 
-#: tmp/system-config-kickstart.glade.h:165
+#: tmp/system-config-kickstart.glade.h:168
 msgid "Video Card RAM: "
 msgstr "顯示卡記憶體:"
 
-#: tmp/system-config-kickstart.glade.h:167
+#: tmp/system-config-kickstart.glade.h:170
 #, no-c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1028,7 +1046,7 @@ msgstr ""
 "警告:程式碼中的錯誤也許會導致 kickstart 安裝程式失敗。開始時不要使用 %post 指"
 "令。"
 
-#: tmp/system-config-kickstart.glade.h:169
+#: tmp/system-config-kickstart.glade.h:172
 #, no-c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1037,137 +1055,137 @@ msgstr ""
 "警告: 程式碼中的錯誤也許會導致 kickstart 安裝程式失敗。在開始時請勿使用 %pre "
 "指令。"
 
-#: tmp/system-config-kickstart.glade.h:170
+#: tmp/system-config-kickstart.glade.h:173
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
 msgstr "您已選取下列的組態設定。請按下 『儲存檔案』 來儲存 kickstart 檔案。"
 
-#: tmp/system-config-kickstart.glade.h:171
+#: tmp/system-config-kickstart.glade.h:174
 msgid "_About"
 msgstr "關於(_A)"
 
-#: tmp/system-config-kickstart.glade.h:172
+#: tmp/system-config-kickstart.glade.h:175
 msgid "_Add"
 msgstr "新增(_A)"
 
-#: tmp/system-config-kickstart.glade.h:173
+#: tmp/system-config-kickstart.glade.h:176
 msgid "_Add Network Device"
 msgstr "新增網路裝置(_A)"
 
-#: tmp/system-config-kickstart.glade.h:174
+#: tmp/system-config-kickstart.glade.h:177
 msgid "_Contents"
 msgstr "內容(_C)"
 
-#: tmp/system-config-kickstart.glade.h:175
+#: tmp/system-config-kickstart.glade.h:178
 msgid "_Delete"
 msgstr "刪除(_D)"
 
-#: tmp/system-config-kickstart.glade.h:176
+#: tmp/system-config-kickstart.glade.h:179
 msgid "_Delete Network Device"
 msgstr "刪除網路裝置(_D)"
 
-#: tmp/system-config-kickstart.glade.h:177
+#: tmp/system-config-kickstart.glade.h:180
 msgid "_Edit"
 msgstr "編輯(_E)"
 
-#: tmp/system-config-kickstart.glade.h:178
+#: tmp/system-config-kickstart.glade.h:181
 msgid "_Edit Network Device"
 msgstr "編輯網路裝置(_E)"
 
-#: tmp/system-config-kickstart.glade.h:179
+#: tmp/system-config-kickstart.glade.h:182
 msgid "_File"
 msgstr "檔案(_F)"
 
-#: tmp/system-config-kickstart.glade.h:180
+#: tmp/system-config-kickstart.glade.h:183
 msgid "_Help"
 msgstr "說明(_H)"
 
-#: tmp/system-config-kickstart.glade.h:181
+#: tmp/system-config-kickstart.glade.h:184
 msgid "_Open File"
 msgstr "開啟檔案(_O)"
 
-#: tmp/system-config-kickstart.glade.h:182
+#: tmp/system-config-kickstart.glade.h:185
 msgid "_Preview"
 msgstr "預覽(_P)"
 
-#: tmp/system-config-kickstart.glade.h:183
+#: tmp/system-config-kickstart.glade.h:186
 msgid "_Quit"
 msgstr "離開(_Q)"
 
-#: tmp/system-config-kickstart.glade.h:184
+#: tmp/system-config-kickstart.glade.h:187
 msgid "_Save File"
 msgstr "儲存檔案(_S)"
 
-#: tmp/system-config-kickstart.glade.h:185
+#: tmp/system-config-kickstart.glade.h:188
 msgid "_Save to File"
 msgstr "儲存到檔案(_S)"
 
-#: tmp/system-config-kickstart.glade.h:188
+#: tmp/system-config-kickstart.glade.h:191
 msgid "kHz"
 msgstr "仟赫茲"
 
-#: tmp/system-config-kickstart.glade.h:189
+#: tmp/system-config-kickstart.glade.h:192
 msgid "md0"
 msgstr "md0"
 
-#: tmp/system-config-kickstart.glade.h:190
+#: tmp/system-config-kickstart.glade.h:193
 msgid "md1"
 msgstr "md1"
 
-#: tmp/system-config-kickstart.glade.h:191
+#: tmp/system-config-kickstart.glade.h:194
 msgid "md10"
 msgstr "md10"
 
-#: tmp/system-config-kickstart.glade.h:192
+#: tmp/system-config-kickstart.glade.h:195
 msgid "md11"
 msgstr "md11"
 
-#: tmp/system-config-kickstart.glade.h:193
+#: tmp/system-config-kickstart.glade.h:196
 msgid "md12"
 msgstr "md12"
 
-#: tmp/system-config-kickstart.glade.h:194
+#: tmp/system-config-kickstart.glade.h:197
 msgid "md13"
 msgstr "md13"
 
-#: tmp/system-config-kickstart.glade.h:195
+#: tmp/system-config-kickstart.glade.h:198
 msgid "md14"
 msgstr "md14"
 
-#: tmp/system-config-kickstart.glade.h:196
+#: tmp/system-config-kickstart.glade.h:199
 msgid "md15"
 msgstr "md15"
 
-#: tmp/system-config-kickstart.glade.h:197
+#: tmp/system-config-kickstart.glade.h:200
 msgid "md2"
 msgstr "md2"
 
-#: tmp/system-config-kickstart.glade.h:198
+#: tmp/system-config-kickstart.glade.h:201
 msgid "md3"
 msgstr "md3"
 
-#: tmp/system-config-kickstart.glade.h:199
+#: tmp/system-config-kickstart.glade.h:202
 msgid "md4"
 msgstr "md4"
 
-#: tmp/system-config-kickstart.glade.h:200
+#: tmp/system-config-kickstart.glade.h:203
 msgid "md5"
 msgstr "md5"
 
-#: tmp/system-config-kickstart.glade.h:201
+#: tmp/system-config-kickstart.glade.h:204
 msgid "md6"
 msgstr "md6"
 
-#: tmp/system-config-kickstart.glade.h:202
+#: tmp/system-config-kickstart.glade.h:205
 msgid "md7"
 msgstr "md7"
 
-#: tmp/system-config-kickstart.glade.h:203
+#: tmp/system-config-kickstart.glade.h:206
 msgid "md8"
 msgstr "md8"
 
-#: tmp/system-config-kickstart.glade.h:204
+#: tmp/system-config-kickstart.glade.h:207
 msgid "md9"
 msgstr "md9"
 

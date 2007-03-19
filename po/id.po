@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-16 14:37-0500\n"
+"POT-Creation-Date: 2007-03-19 16:41-0400\n"
 "PO-Revision-Date: 2005-11-11 13:02+0700\n"
 "Last-Translator: Teguh DC <dheche@bradjamoesti.or.id>\n"
 "Language-Team: Linux Indonesia <http://www.linux.or.id>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Poedit-Language: Indonesian\n"
 "X-Poedit-Country: INDONESIA\n"
 
-#: ../src/auth.py:323
+#: ../src/auth.py:340
 msgid "Please fill in the authentication information"
 msgstr "Silakan isi pada informasi otentikasi"
 
@@ -41,11 +41,11 @@ msgstr "IBM pSeries"
 msgid "IBM zSeries/s390"
 msgstr "IBM zSeries/s390"
 
-#: ../src/basic.py:146
+#: ../src/basic.py:150
 msgid "Root passwords do not match."
 msgstr "Password root tidak cocok"
 
-#: ../src/basic.py:147 ../src/install.py:215 ../src/partWindow.py:521
+#: ../src/basic.py:151 ../src/install.py:215 ../src/partWindow.py:547
 #: ../src/partition.py:254 ../src/raidWindow.py:249
 msgid "Error"
 msgstr "Kesalahan"
@@ -59,7 +59,7 @@ msgstr "Pilihan dari bootloader tidak bisa dipakai pada platform %s"
 msgid "Grub passwords do not match.  Please try again."
 msgstr "Password grub tidak cocok. Silakan coba lagi."
 
-#: ../src/firewall.py:91 ../src/packages.py:160
+#: ../src/firewall.py:91
 msgid "Firewall configuration is not applicable on upgrades."
 msgstr "Konfigurasi firewall tidak bisa digunakan pada saat upgrade"
 
@@ -103,7 +103,7 @@ msgstr "Silakan masukan direktori dari hardisk."
 msgid "Please enter a hard drive partition."
 msgstr "Silakan masukan patisi dari hardisk."
 
-#: ../src/kickstartGui.py:94 ../src/kickstartGui.py:288
+#: ../src/kickstartGui.py:94 ../src/kickstartGui.py:286
 #, python-format
 msgid ""
 "The following error was found while parsing your kickstart configuration:\n"
@@ -111,7 +111,7 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../src/kickstartGui.py:97 ../src/kickstartGui.py:291
+#: ../src/kickstartGui.py:97 ../src/kickstartGui.py:289
 #, fuzzy
 msgid "Error Parsing Kickstart Config"
 msgstr "Tentang Konfigurator Kickstart"
@@ -144,7 +144,7 @@ msgstr "Pilihan dari Boot Loader"
 msgid "Partition Information"
 msgstr "Informasi Partisi"
 
-#: ../src/kickstartGui.py:136 tmp/system-config-kickstart.glade.h:105
+#: ../src/kickstartGui.py:136 tmp/system-config-kickstart.glade.h:107
 msgid "Network Configuration"
 msgstr "Konfigurasi Jaringan"
 
@@ -152,23 +152,23 @@ msgstr "Konfigurasi Jaringan"
 msgid "Authentication"
 msgstr "Autentikasi"
 
-#: ../src/kickstartGui.py:138 tmp/system-config-kickstart.glade.h:49
+#: ../src/kickstartGui.py:138 tmp/system-config-kickstart.glade.h:50
 msgid "Firewall Configuration"
 msgstr "Konfigurasi Firewall"
 
-#: ../src/kickstartGui.py:139 tmp/system-config-kickstart.glade.h:26
+#: ../src/kickstartGui.py:139 tmp/system-config-kickstart.glade.h:27
 msgid "Display Configuration"
 msgstr "Konfigurasi Tampilan"
 
-#: ../src/kickstartGui.py:140 tmp/system-config-kickstart.glade.h:111
+#: ../src/kickstartGui.py:140 tmp/system-config-kickstart.glade.h:113
 msgid "Package Selection"
 msgstr "Pilihan Paket"
 
-#: ../src/kickstartGui.py:141 tmp/system-config-kickstart.glade.h:121
+#: ../src/kickstartGui.py:141 tmp/system-config-kickstart.glade.h:123
 msgid "Pre-Installation Script"
 msgstr "Script Pra-instalasi"
 
-#: ../src/kickstartGui.py:142 tmp/system-config-kickstart.glade.h:120
+#: ../src/kickstartGui.py:142 tmp/system-config-kickstart.glade.h:122
 msgid "Post-Installation Script"
 msgstr "Script Pasca-Instalasi"
 
@@ -194,7 +194,7 @@ msgstr "Tentang Konfigurator Kickstart"
 msgid "Help is not available."
 msgstr "Bantuan tidak tersedia."
 
-#: ../src/kickstartGui.py:312
+#: ../src/kickstartGui.py:310
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "Berkas dari \"%s\" tidak bisa diakses."
@@ -225,22 +225,27 @@ msgstr ""
 "Perangkat dari jaringan dengan nama %s sudah ada. Silakan pilih nama "
 "perangkat yang lainnya"
 
-#: ../src/packages.py:166
+#: ../src/packages.py:168
+#, fuzzy
+msgid "Package configuration is not applicable on upgrades."
+msgstr "Konfigurasi tampilan tidak bisa digunakan pada saat upgrade"
+
+#: ../src/packages.py:174
 #, fuzzy
 msgid "Retrieving package information"
 msgstr "Informasi Perangkat Jaringan "
 
-#: ../src/packages.py:175
+#: ../src/packages.py:183
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
 msgstr ""
 
-#: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:186
+#: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:189
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:187
+#: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:190
 msgid "ext3"
 msgstr "ext3"
 
@@ -249,11 +254,11 @@ msgstr "ext3"
 msgid "software RAID"
 msgstr "perangkat-lunak RAID"
 
-#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:205
+#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:208
 msgid "swap"
 msgstr "swap"
 
-#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:206
+#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:209
 msgid "vfat"
 msgstr "vfat"
 
@@ -261,29 +266,29 @@ msgstr "vfat"
 msgid "PPC PReP Boot"
 msgstr "PPC PReP Boot"
 
-#: ../src/partWindow.py:262 ../src/partWindow.py:543 ../src/raidWindow.py:214
+#: ../src/partWindow.py:288 ../src/partWindow.py:569 ../src/raidWindow.py:214
 msgid "Yes"
 msgstr "Ya"
 
-#: ../src/partWindow.py:264 ../src/partWindow.py:545 ../src/raidWindow.py:216
+#: ../src/partWindow.py:290 ../src/partWindow.py:571 ../src/raidWindow.py:216
 msgid "No"
 msgstr "Tidak"
 
-#: ../src/partWindow.py:287 ../src/partWindow.py:302 ../src/partWindow.py:321
-#: ../src/partWindow.py:335
+#: ../src/partWindow.py:313 ../src/partWindow.py:328 ../src/partWindow.py:347
+#: ../src/partWindow.py:361
 msgid "Auto"
 msgstr "Otomatis"
 
-#: ../src/partWindow.py:296
+#: ../src/partWindow.py:322
 msgid "Hard Drives"
 msgstr "Hardisk"
 
-#: ../src/partWindow.py:439
+#: ../src/partWindow.py:465
 msgid "Specify a mount point for the partition."
 msgstr "Spesifikasikan mount point untuk partisi."
 
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:448
+#: ../src/partWindow.py:474
 #, python-format
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
@@ -291,7 +296,7 @@ msgstr ""
 "Mount point dari \"%s\" sedang digunakan. Silakan pilih mount point yang "
 "lainnya. "
 
-#: ../src/partWindow.py:468
+#: ../src/partWindow.py:494
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -299,11 +304,11 @@ msgstr ""
 "Untuk membuat partisi RAID yang baru, anda harus menspesifikasikan nama "
 "perangkat dari hardisk ataupun dari partisi yang sudah ada."
 
-#: ../src/partWindow.py:505
+#: ../src/partWindow.py:531
 msgid "Specify a device on which to create the partition."
 msgstr "Spesifikasikan perangkat yang akan digunakan untuk membuat partisi."
 
-#: ../src/partWindow.py:514
+#: ../src/partWindow.py:540
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -431,494 +436,502 @@ msgid "Boot Loader Options (required)"
 msgstr "Pilihan Boot Loader (dibutuhkan)"
 
 #: tmp/system-config-kickstart.glade.h:14
+msgid "CA Cert URL:"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:15
 msgid "CD-ROM"
 msgstr "CD-ROM"
 
-#: tmp/system-config-kickstart.glade.h:15
+#: tmp/system-config-kickstart.glade.h:16
 msgid "Choose one of the following options:"
 msgstr "Pilih salah satu dari pilihan berikut:"
 
-#: tmp/system-config-kickstart.glade.h:16
+#: tmp/system-config-kickstart.glade.h:17
 msgid "Choose the Installation Method:"
 msgstr "Pilih metoda Instalasi:"
 
-#: tmp/system-config-kickstart.glade.h:17
+#: tmp/system-config-kickstart.glade.h:18
 msgid "Clear Master Boot Record"
 msgstr "Bersihkan Master Boot Record"
 
-#: tmp/system-config-kickstart.glade.h:18
+#: tmp/system-config-kickstart.glade.h:19
 msgid "Color Depth"
 msgstr "Kedalaman warna"
 
-#: tmp/system-config-kickstart.glade.h:19
+#: tmp/system-config-kickstart.glade.h:20
 msgid "Configure the X Window System"
 msgstr "Konfigur sistem X Window"
 
-#: tmp/system-config-kickstart.glade.h:20
+#: tmp/system-config-kickstart.glade.h:21
 msgid "Confirm Password:"
 msgstr "Konfirmasi Pasword:"
 
-#: tmp/system-config-kickstart.glade.h:21
+#: tmp/system-config-kickstart.glade.h:22
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "Buat perangkat RAID [default = /dev/md0]"
 
-#: tmp/system-config-kickstart.glade.h:22
+#: tmp/system-config-kickstart.glade.h:23
 msgid "Create a software RAID partition"
 msgstr "Buat partisi perangkat-lunak RAID"
 
-#: tmp/system-config-kickstart.glade.h:23
+#: tmp/system-config-kickstart.glade.h:24
 msgid "Default Desktop:"
 msgstr "Desktop default:"
 
-#: tmp/system-config-kickstart.glade.h:24
+#: tmp/system-config-kickstart.glade.h:25
 msgid "Default Language:"
 msgstr "Bahasa default:"
 
-#: tmp/system-config-kickstart.glade.h:25
+#: tmp/system-config-kickstart.glade.h:26
 msgid "Disabled"
 msgstr "Nonaktifkan"
 
-#: tmp/system-config-kickstart.glade.h:27
+#: tmp/system-config-kickstart.glade.h:28
 msgid "Display configuration is not applicable on upgrades."
 msgstr "Konfigurasi tampilan tidak bisa digunakan pada saat upgrade"
 
-#: tmp/system-config-kickstart.glade.h:28
+#: tmp/system-config-kickstart.glade.h:29
 msgid "Do not clear Master Boot Record"
 msgstr "Jangan bersihkan Master Boot Record"
 
-#: tmp/system-config-kickstart.glade.h:29
+#: tmp/system-config-kickstart.glade.h:30
 msgid "Do not initialize the disk label"
 msgstr "Jangan inisialisasikan label untuk disk"
 
-#: tmp/system-config-kickstart.glade.h:30
+#: tmp/system-config-kickstart.glade.h:31
 msgid "Do not install a boot loader"
 msgstr "Jangan install boot loader"
 
-#: tmp/system-config-kickstart.glade.h:31
+#: tmp/system-config-kickstart.glade.h:32
 msgid "Drive :"
 msgstr "Drive :"
 
-#: tmp/system-config-kickstart.glade.h:32
+#: tmp/system-config-kickstart.glade.h:33
 msgid "Enable Hesiod Support"
 msgstr "Aktifkan Dukungan Hesiod"
 
-#: tmp/system-config-kickstart.glade.h:33
+#: tmp/system-config-kickstart.glade.h:34
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Aktifkan Otentikasi Kerberos 5"
 
-#: tmp/system-config-kickstart.glade.h:34
+#: tmp/system-config-kickstart.glade.h:35
 msgid "Enable LDAP"
 msgstr "Aktifkan LDAP"
 
-#: tmp/system-config-kickstart.glade.h:35
+#: tmp/system-config-kickstart.glade.h:36
 msgid "Enable NIS"
 msgstr "Aktifkan NIS"
 
-#: tmp/system-config-kickstart.glade.h:36
+#: tmp/system-config-kickstart.glade.h:37
 msgid "Enable SMB Authentication"
 msgstr "Aktifkan Autentikasi SMB"
 
-#: tmp/system-config-kickstart.glade.h:37
+#: tmp/system-config-kickstart.glade.h:38
 msgid "Enable nscd"
 msgstr "Aktifkan nscd"
 
-#: tmp/system-config-kickstart.glade.h:38
+#: tmp/system-config-kickstart.glade.h:39
 msgid "Enabled"
 msgstr "Aktifkan"
 
-#: tmp/system-config-kickstart.glade.h:39
+#: tmp/system-config-kickstart.glade.h:40
 msgid "Enabled in reconfiguration mode"
 msgstr "Aktifkan mode pengkonfigurasian ulang"
 
-#: tmp/system-config-kickstart.glade.h:40
+#: tmp/system-config-kickstart.glade.h:41
 msgid "Encrypt GRUB password"
 msgstr "Enkripsi password GRUB"
 
-#: tmp/system-config-kickstart.glade.h:41
+#: tmp/system-config-kickstart.glade.h:42
 msgid "Encrypt root password"
 msgstr "Enkripsi password root"
 
-#: tmp/system-config-kickstart.glade.h:42
+#: tmp/system-config-kickstart.glade.h:43
 msgid "FTP"
 msgstr "FTP"
 
-#: tmp/system-config-kickstart.glade.h:43
+#: tmp/system-config-kickstart.glade.h:44
 msgid "FTP Directory:"
 msgstr "Direktori FTP:"
 
-#: tmp/system-config-kickstart.glade.h:44
+#: tmp/system-config-kickstart.glade.h:45
 msgid "FTP Password"
 msgstr "Password FTP"
 
-#: tmp/system-config-kickstart.glade.h:45
+#: tmp/system-config-kickstart.glade.h:46
 msgid "FTP Server:"
 msgstr "Server FTP:"
 
-#: tmp/system-config-kickstart.glade.h:46
+#: tmp/system-config-kickstart.glade.h:47
 msgid "FTP Username"
 msgstr "Nama user FTP"
 
-#: tmp/system-config-kickstart.glade.h:47
+#: tmp/system-config-kickstart.glade.h:48
 msgid "File System Type:"
 msgstr "Tipe Sistem File:"
 
-#: tmp/system-config-kickstart.glade.h:48
+#: tmp/system-config-kickstart.glade.h:49
 msgid "Fill all unused space on disk"
 msgstr "Isi semua tempat dalam disk yang tidak digunakan"
 
-#: tmp/system-config-kickstart.glade.h:50
+#: tmp/system-config-kickstart.glade.h:51
 msgid "Fixed size"
 msgstr "Ukuran tetap"
 
-#: tmp/system-config-kickstart.glade.h:51
+#: tmp/system-config-kickstart.glade.h:52
 msgid "Force to be a primary partition (asprimary)"
 msgstr "Paksa untuk menjadi partisi utama (asprimary)"
 
-#: tmp/system-config-kickstart.glade.h:52
+#: tmp/system-config-kickstart.glade.h:53
 msgid "Format RAID device"
 msgstr "Format perangkat RAID"
 
-#: tmp/system-config-kickstart.glade.h:53
+#: tmp/system-config-kickstart.glade.h:54
 msgid "Format partition"
 msgstr "Format partisi"
 
-#: tmp/system-config-kickstart.glade.h:54
+#: tmp/system-config-kickstart.glade.h:55
 msgid "GNOME"
 msgstr "GNOME"
 
-#: tmp/system-config-kickstart.glade.h:55
+#: tmp/system-config-kickstart.glade.h:56
 msgid "GRUB Options:"
 msgstr "Pilihan dari GRUB:"
 
-#: tmp/system-config-kickstart.glade.h:56
+#: tmp/system-config-kickstart.glade.h:57
 msgid "Gateway:"
 msgstr "Gateway:"
 
-#: tmp/system-config-kickstart.glade.h:57
+#: tmp/system-config-kickstart.glade.h:58
 msgid "General"
 msgstr "Umum"
 
-#: tmp/system-config-kickstart.glade.h:58
+#: tmp/system-config-kickstart.glade.h:59
 msgid "Grow to maximum of (MB):"
 msgstr "Besarkan sampai maximal dari (MB):"
 
-#: tmp/system-config-kickstart.glade.h:59
+#: tmp/system-config-kickstart.glade.h:60
 msgid "HTTP"
 msgstr "HTTP"
 
-#: tmp/system-config-kickstart.glade.h:60
+#: tmp/system-config-kickstart.glade.h:61
 msgid "HTTP Directory:"
 msgstr "Direktori HTTP:"
 
-#: tmp/system-config-kickstart.glade.h:61
+#: tmp/system-config-kickstart.glade.h:62
 msgid "HTTP Server:"
 msgstr "Server HTTP:"
 
-#: tmp/system-config-kickstart.glade.h:62
+#: tmp/system-config-kickstart.glade.h:63
 msgid "Hard Drive"
 msgstr "Hardisk"
 
-#: tmp/system-config-kickstart.glade.h:63
+#: tmp/system-config-kickstart.glade.h:64
 msgid "Hard Drive Directory:"
 msgstr "Direktori Hardisk:"
 
-#: tmp/system-config-kickstart.glade.h:64
+#: tmp/system-config-kickstart.glade.h:65
 msgid "Hard Drive Partition:"
 msgstr "Partisi Hardisk:"
 
-#: tmp/system-config-kickstart.glade.h:65
+#: tmp/system-config-kickstart.glade.h:66
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: tmp/system-config-kickstart.glade.h:66
+#: tmp/system-config-kickstart.glade.h:67
 msgid "Hesiod Authentication"
 msgstr "Autentikasi Hesiod"
 
-#: tmp/system-config-kickstart.glade.h:67
+#: tmp/system-config-kickstart.glade.h:68
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS:"
 
-#: tmp/system-config-kickstart.glade.h:68
+#: tmp/system-config-kickstart.glade.h:69
 msgid "Hesiod RHS:"
 msgstr "Hesiod RHS:"
 
-#: tmp/system-config-kickstart.glade.h:69
+#: tmp/system-config-kickstart.glade.h:70
 msgid "Horizontal Sync:"
 msgstr "Horisontal Sync:"
 
-#: tmp/system-config-kickstart.glade.h:70
+#: tmp/system-config-kickstart.glade.h:71
 msgid "Hz"
 msgstr "Hz"
 
-#: tmp/system-config-kickstart.glade.h:71
+#: tmp/system-config-kickstart.glade.h:72
 msgid "IP Address:"
 msgstr "Alamat IP:"
 
-#: tmp/system-config-kickstart.glade.h:72
+#: tmp/system-config-kickstart.glade.h:73
 msgid "Initialize the disk label"
 msgstr "Inisialisasikan label untuk disk"
 
-#: tmp/system-config-kickstart.glade.h:73
+#: tmp/system-config-kickstart.glade.h:74
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "Install boot loader pada Master Boot Record (MBR)"
 
-#: tmp/system-config-kickstart.glade.h:74
+#: tmp/system-config-kickstart.glade.h:75
 msgid "Install boot loader on first sector of the boot partition"
 msgstr "Install boot loader pda sektor pertama dari partisi boot"
 
-#: tmp/system-config-kickstart.glade.h:75
+#: tmp/system-config-kickstart.glade.h:76
 msgid "Install new boot loader"
 msgstr "Install boot loader baru"
 
-#: tmp/system-config-kickstart.glade.h:76
+#: tmp/system-config-kickstart.glade.h:77
 msgid "Installation Method (required)"
 msgstr "Metoda Instlasi (dibutuhkan)"
 
-#: tmp/system-config-kickstart.glade.h:77
+#: tmp/system-config-kickstart.glade.h:78
 msgid "KDE"
 msgstr "KDE"
 
-#: tmp/system-config-kickstart.glade.h:78
+#: tmp/system-config-kickstart.glade.h:79
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: tmp/system-config-kickstart.glade.h:79
+#: tmp/system-config-kickstart.glade.h:80
 msgid "Kerberos 5 Authentication"
 msgstr "Otentikasi Kerberos 5"
 
-#: tmp/system-config-kickstart.glade.h:80
+#: tmp/system-config-kickstart.glade.h:81
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Kerberos Domain Controller (KDC):"
 
-#: tmp/system-config-kickstart.glade.h:81
+#: tmp/system-config-kickstart.glade.h:82
 msgid "Kerberos Master Server:"
 msgstr "Server Master Kerberos:"
 
-#: tmp/system-config-kickstart.glade.h:82
+#: tmp/system-config-kickstart.glade.h:83
 msgid "Kerberos Realm:"
 msgstr "Realm Kerberos:"
 
-#: tmp/system-config-kickstart.glade.h:83
+#: tmp/system-config-kickstart.glade.h:84
 msgid "Kernel parameters:"
 msgstr "Parameter kernel:"
 
-#: tmp/system-config-kickstart.glade.h:84
+#: tmp/system-config-kickstart.glade.h:85
 msgid "Keyboard:"
 msgstr "Keyboard:"
 
-#: tmp/system-config-kickstart.glade.h:85
+#: tmp/system-config-kickstart.glade.h:86
 msgid "Kickstart Configurator"
 msgstr "Konfigurator Kickstart"
 
-#: tmp/system-config-kickstart.glade.h:86
+#: tmp/system-config-kickstart.glade.h:87
 msgid "LDAP "
 msgstr "LDAP "
 
-#: tmp/system-config-kickstart.glade.h:87
+#: tmp/system-config-kickstart.glade.h:88
 msgid "LDAP Authentication"
 msgstr "Autentikasi LDAP"
 
-#: tmp/system-config-kickstart.glade.h:88
+#: tmp/system-config-kickstart.glade.h:89
 msgid "LDAP Base Name: "
 msgstr "Nama dasar LDAP:"
 
-#: tmp/system-config-kickstart.glade.h:89
+#: tmp/system-config-kickstart.glade.h:90
 msgid "LDAP Server: "
 msgstr "Server LDAP:"
 
-#: tmp/system-config-kickstart.glade.h:90
+#: tmp/system-config-kickstart.glade.h:91
+msgid "Load CA certificate"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:92
 msgid "Make RAID Device"
 msgstr "Buat Perangkat RAID"
 
-#: tmp/system-config-kickstart.glade.h:91
+#: tmp/system-config-kickstart.glade.h:93
 msgid "Make partition on specific drive (ondisk)"
 msgstr "Membuat partisi dalam drive spesifik (ondisk)"
 
-#: tmp/system-config-kickstart.glade.h:92
+#: tmp/system-config-kickstart.glade.h:94
 msgid "Monitor"
 msgstr "Monitor"
 
-#: tmp/system-config-kickstart.glade.h:93
+#: tmp/system-config-kickstart.glade.h:95
 msgid "Mount Point:"
 msgstr "Mount Point:"
 
-#: tmp/system-config-kickstart.glade.h:94
+#: tmp/system-config-kickstart.glade.h:96
 msgid "NFS"
 msgstr "NFS"
 
-#: tmp/system-config-kickstart.glade.h:95
+#: tmp/system-config-kickstart.glade.h:97
 msgid "NFS Directory:"
 msgstr "Direktori NFS:"
 
-#: tmp/system-config-kickstart.glade.h:96
+#: tmp/system-config-kickstart.glade.h:98
 msgid "NFS Server:"
 msgstr "Server NFS"
 
-#: tmp/system-config-kickstart.glade.h:97
+#: tmp/system-config-kickstart.glade.h:99
 msgid "NIS"
 msgstr "NIS"
 
-#: tmp/system-config-kickstart.glade.h:98
+#: tmp/system-config-kickstart.glade.h:100
 msgid "NIS Authentication"
 msgstr "Autentikasi NIS"
 
-#: tmp/system-config-kickstart.glade.h:99
+#: tmp/system-config-kickstart.glade.h:101
 msgid "NIS Domain:"
 msgstr "Domain NIS"
 
-#: tmp/system-config-kickstart.glade.h:100
+#: tmp/system-config-kickstart.glade.h:102
 msgid "NIS Server:"
 msgstr "Server NIS:"
 
-#: tmp/system-config-kickstart.glade.h:101
+#: tmp/system-config-kickstart.glade.h:103
 msgid "Name Server:"
 msgstr "Name Server:"
 
-#: tmp/system-config-kickstart.glade.h:102
+#: tmp/system-config-kickstart.glade.h:104
 msgid "Name Switch Cache"
 msgstr "Name Switch Cache"
 
-#: tmp/system-config-kickstart.glade.h:103
+#: tmp/system-config-kickstart.glade.h:105
 msgid "Name Switch Cache Daemon (nscd) Authentication"
 msgstr "Autentikasi Name Switch Cache Daemon (nscd)"
 
-#: tmp/system-config-kickstart.glade.h:104
+#: tmp/system-config-kickstart.glade.h:106
 msgid "Netmask: "
 msgstr "Netmask: "
 
-#: tmp/system-config-kickstart.glade.h:106
+#: tmp/system-config-kickstart.glade.h:108
 msgid "Network Device Information"
 msgstr "Informasi Perangkat Jaringan "
 
-#: tmp/system-config-kickstart.glade.h:107
+#: tmp/system-config-kickstart.glade.h:109
 msgid "Network Device:"
 msgstr "Perangkat Jaringan:"
 
-#: tmp/system-config-kickstart.glade.h:108
+#: tmp/system-config-kickstart.glade.h:110
 msgid "Network Type:"
 msgstr "Tipe Jaringan:"
 
-#: tmp/system-config-kickstart.glade.h:109
+#: tmp/system-config-kickstart.glade.h:111
 msgid "Number of spares:"
 msgstr "Nomor cadangan:"
 
-#: tmp/system-config-kickstart.glade.h:110
+#: tmp/system-config-kickstart.glade.h:112
 msgid "On first boot, Setup Agent is: "
 msgstr "Saat boot pertama, Agen setup adalah:"
 
-#: tmp/system-config-kickstart.glade.h:112
+#: tmp/system-config-kickstart.glade.h:114
 msgid "Partition :"
 msgstr "Partisi:"
 
-#: tmp/system-config-kickstart.glade.h:113
+#: tmp/system-config-kickstart.glade.h:115
 msgid "Partition Information (required)"
 msgstr "Informasi Partisi (dubutuhkan)"
 
-#: tmp/system-config-kickstart.glade.h:114
+#: tmp/system-config-kickstart.glade.h:116
 msgid "Partition Options"
 msgstr "Pilihan untuk Partisi"
 
-#: tmp/system-config-kickstart.glade.h:115
+#: tmp/system-config-kickstart.glade.h:117
 msgid "Partition options are not applicable on upgrades."
 msgstr "Pilihan partisi tidak dapat diterapkan pada saat upgrade."
 
-#: tmp/system-config-kickstart.glade.h:116
+#: tmp/system-config-kickstart.glade.h:118
 msgid "Password:"
 msgstr "Password:"
 
-#: tmp/system-config-kickstart.glade.h:117
+#: tmp/system-config-kickstart.glade.h:119
 msgid "Perform installation in interactive mode"
 msgstr "Melakukan instalasi dengan mode interaktif"
 
-#: tmp/system-config-kickstart.glade.h:118
+#: tmp/system-config-kickstart.glade.h:120
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "Melakukan instalasi dengan mode text ( dafaultnya adalah grafis)"
 
-#: tmp/system-config-kickstart.glade.h:119
+#: tmp/system-config-kickstart.glade.h:121
 msgid "Perform new installation"
 msgstr "Melakukan instalasi baru"
 
-#: tmp/system-config-kickstart.glade.h:122
+#: tmp/system-config-kickstart.glade.h:124
 msgid "Preserve existing partitions"
 msgstr "Siapkan partisi yang ada"
 
-#: tmp/system-config-kickstart.glade.h:123
+#: tmp/system-config-kickstart.glade.h:125
 msgid "Preview Options"
 msgstr "Perlihatkan Pilihan"
 
-#: tmp/system-config-kickstart.glade.h:124
+#: tmp/system-config-kickstart.glade.h:126
 msgid "Probe for monitor"
 msgstr "Probe untuk monitor"
 
-#: tmp/system-config-kickstart.glade.h:125
+#: tmp/system-config-kickstart.glade.h:127
 msgid "Probe for video card driver"
 msgstr "Probe untuk driver kartu video"
 
-#: tmp/system-config-kickstart.glade.h:126
+#: tmp/system-config-kickstart.glade.h:128
 msgid "RAID"
 msgstr "RAID"
 
-#: tmp/system-config-kickstart.glade.h:127
+#: tmp/system-config-kickstart.glade.h:129
 msgid "RAID Device:"
 msgstr "Perangkat RAID:"
 
-#: tmp/system-config-kickstart.glade.h:128
+#: tmp/system-config-kickstart.glade.h:130
 msgid "RAID Level:"
 msgstr "Level RAID:"
 
-#: tmp/system-config-kickstart.glade.h:129
+#: tmp/system-config-kickstart.glade.h:131
 msgid "RAID Options"
 msgstr "Pilihan RAID"
 
-#: tmp/system-config-kickstart.glade.h:130
+#: tmp/system-config-kickstart.glade.h:132
 msgid "Raid Members"
 msgstr "Anggota-anggota Raid"
 
-#: tmp/system-config-kickstart.glade.h:131
+#: tmp/system-config-kickstart.glade.h:133
 msgid "Reboot system after installation"
 msgstr "Reboot sistem setelah instalasi"
 
-#: tmp/system-config-kickstart.glade.h:132
+#: tmp/system-config-kickstart.glade.h:134
 msgid "Remove all existing partitions"
 msgstr "Hilangkan semua patisi yang ada"
 
-#: tmp/system-config-kickstart.glade.h:133
+#: tmp/system-config-kickstart.glade.h:135
 msgid "Remove existing Linux partitions"
 msgstr "Hilangkan patisi Linux yang ada"
 
-#: tmp/system-config-kickstart.glade.h:134
+#: tmp/system-config-kickstart.glade.h:136
 msgid "Resolution"
 msgstr "Resolusi"
 
-#: tmp/system-config-kickstart.glade.h:135
+#: tmp/system-config-kickstart.glade.h:137
 msgid "Root Password:"
 msgstr "Pasword Root:"
 
-#: tmp/system-config-kickstart.glade.h:136
+#: tmp/system-config-kickstart.glade.h:138
 msgid "Run outside of the chroot environment"
 msgstr "Jalankan di luar lingkungan chroot"
 
-#: tmp/system-config-kickstart.glade.h:137
+#: tmp/system-config-kickstart.glade.h:139
 msgid "SMB"
 msgstr "SMB"
 
-#: tmp/system-config-kickstart.glade.h:138
+#: tmp/system-config-kickstart.glade.h:140
 msgid "SMB Authentication"
 msgstr "Autentikasi SMB"
 
-#: tmp/system-config-kickstart.glade.h:139
+#: tmp/system-config-kickstart.glade.h:141
 msgid "SMB Servers:"
 msgstr "Server SMB:"
 
-#: tmp/system-config-kickstart.glade.h:140
+#: tmp/system-config-kickstart.glade.h:142
 msgid "SMB Workgroup:"
 msgstr "SMB Workgroup:"
 
-#: tmp/system-config-kickstart.glade.h:141
+#: tmp/system-config-kickstart.glade.h:143
 msgid "Size (MB):"
 msgstr "Ukuran (MB):"
 
-#: tmp/system-config-kickstart.glade.h:142
+#: tmp/system-config-kickstart.glade.h:144
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -931,23 +944,28 @@ msgstr ""
 "menggunakan drive secara sendiri-sendiri. Untuk informasi selanjutnya dalam "
 "menggunakan perangkat RAID silahkan periksa dokumentasi kickstart. "
 
-#: tmp/system-config-kickstart.glade.h:143
+#: tmp/system-config-kickstart.glade.h:145
 msgid "Specify an FTP username and password"
 msgstr "Spesifikasikan nama user dan password FTP"
 
-#: tmp/system-config-kickstart.glade.h:144
+#: tmp/system-config-kickstart.glade.h:146
+#, fuzzy
+msgid "Specify installation key:"
+msgstr "Melakukan instalasi baru"
+
+#: tmp/system-config-kickstart.glade.h:147
 msgid "Start the X Window System on boot"
 msgstr "Mulai sistem X Windows pada saat boot"
 
-#: tmp/system-config-kickstart.glade.h:145
+#: tmp/system-config-kickstart.glade.h:148
 msgid "Target Architecture:"
 msgstr "Targer Arsitektur:"
 
-#: tmp/system-config-kickstart.glade.h:146
+#: tmp/system-config-kickstart.glade.h:149
 msgid "Time Zone:"
 msgstr "Zona Waktu:"
 
-#: tmp/system-config-kickstart.glade.h:147
+#: tmp/system-config-kickstart.glade.h:150
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -956,73 +974,73 @@ msgstr ""
 "'perangkat-lunak RAID'. Kemudian anda dapat membuat perangkat RAID yang "
 "dapat diformat dan dimount."
 
-#: tmp/system-config-kickstart.glade.h:149
+#: tmp/system-config-kickstart.glade.h:152
 #, no-c-format
 msgid "Type your %post script below:"
 msgstr "Ketik script %post anda dibawah ini:"
 
-#: tmp/system-config-kickstart.glade.h:151
+#: tmp/system-config-kickstart.glade.h:154
 #, no-c-format
 msgid "Type your %pre script below:"
 msgstr "Ketik script %pre anda dibawah ini:"
 
-#: tmp/system-config-kickstart.glade.h:152
+#: tmp/system-config-kickstart.glade.h:155
 msgid "Upgrade an existing installation"
 msgstr "Upgarde instalasi yang ada"
 
-#: tmp/system-config-kickstart.glade.h:153
+#: tmp/system-config-kickstart.glade.h:156
 msgid "Upgrade existing boot loader"
 msgstr "Upgrade boot loader yang ada"
 
-#: tmp/system-config-kickstart.glade.h:154
+#: tmp/system-config-kickstart.glade.h:157
 msgid "Use GRUB password"
 msgstr "Gunakan password GRUB"
 
-#: tmp/system-config-kickstart.glade.h:155
+#: tmp/system-config-kickstart.glade.h:158
 msgid "Use MD5"
 msgstr "Gunakan MD5"
 
-#: tmp/system-config-kickstart.glade.h:156
+#: tmp/system-config-kickstart.glade.h:159
 msgid "Use Shadow Passwords"
 msgstr "Gunakan Password Bayangan"
 
-#: tmp/system-config-kickstart.glade.h:157
+#: tmp/system-config-kickstart.glade.h:160
 msgid "Use UTC clock"
 msgstr "Gunakan jam UTC"
 
-#: tmp/system-config-kickstart.glade.h:158
+#: tmp/system-config-kickstart.glade.h:161
 msgid "Use an interpreter:"
 msgstr "Gunakan interpreter:"
 
-#: tmp/system-config-kickstart.glade.h:159
+#: tmp/system-config-kickstart.glade.h:162
 msgid "Use broadcast to find NIS server"
 msgstr "Gunakan broadcast untuk mencari Server NIS"
 
-#: tmp/system-config-kickstart.glade.h:160
+#: tmp/system-config-kickstart.glade.h:163
 msgid "Use custom monitor sync rates"
 msgstr "Gunakan kustomisasi untuk rate sync dari monitor"
 
-#: tmp/system-config-kickstart.glade.h:161
+#: tmp/system-config-kickstart.glade.h:164
 msgid "Use existing partition (onpart)"
 msgstr "Gunakan partisi yang sudah ada (onpart)"
 
-#: tmp/system-config-kickstart.glade.h:162
+#: tmp/system-config-kickstart.glade.h:165
 msgid "Use recommended swap size"
 msgstr "Gunakan ukuran swap yang direkomendasikan"
 
-#: tmp/system-config-kickstart.glade.h:163
+#: tmp/system-config-kickstart.glade.h:166
 msgid "Vertical Sync:"
 msgstr "Vertikal Sync:"
 
-#: tmp/system-config-kickstart.glade.h:164
+#: tmp/system-config-kickstart.glade.h:167
 msgid "Video Card"
 msgstr "Kartu Video"
 
-#: tmp/system-config-kickstart.glade.h:165
+#: tmp/system-config-kickstart.glade.h:168
 msgid "Video Card RAM: "
 msgstr "RAM Kartu video "
 
-#: tmp/system-config-kickstart.glade.h:167
+#: tmp/system-config-kickstart.glade.h:170
 #, no-c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1031,7 +1049,7 @@ msgstr ""
 "Peringatan: Kesalahan pada skrip bukan karena instalasi kickstart yang "
 "gagal. Jangan sertakan perintah %post di awal skrip."
 
-#: tmp/system-config-kickstart.glade.h:169
+#: tmp/system-config-kickstart.glade.h:172
 #, no-c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1040,7 +1058,7 @@ msgstr ""
 "Peringatan: Kesalahan pada skrip bukan karena instalasi kickstart yang "
 "gagal. Jangan sertakan perintah %pre di awal skrip."
 
-#: tmp/system-config-kickstart.glade.h:170
+#: tmp/system-config-kickstart.glade.h:173
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
@@ -1048,130 +1066,130 @@ msgstr ""
 "Anda harus memilih konfigurasi berikut, Klik Simpan Berkas untuk menyimpan "
 "berkas kickstart."
 
-#: tmp/system-config-kickstart.glade.h:171
+#: tmp/system-config-kickstart.glade.h:174
 msgid "_About"
 msgstr "Tent_ang"
 
-#: tmp/system-config-kickstart.glade.h:172
+#: tmp/system-config-kickstart.glade.h:175
 msgid "_Add"
 msgstr "T_ambah"
 
-#: tmp/system-config-kickstart.glade.h:173
+#: tmp/system-config-kickstart.glade.h:176
 msgid "_Add Network Device"
 msgstr "T_ambahkan Perangkat Jaringan"
 
-#: tmp/system-config-kickstart.glade.h:174
+#: tmp/system-config-kickstart.glade.h:177
 msgid "_Contents"
 msgstr "K_onten"
 
-#: tmp/system-config-kickstart.glade.h:175
+#: tmp/system-config-kickstart.glade.h:178
 msgid "_Delete"
 msgstr "_Hapus"
 
-#: tmp/system-config-kickstart.glade.h:176
+#: tmp/system-config-kickstart.glade.h:179
 msgid "_Delete Network Device"
 msgstr "Hapus _Perangkat Jaringan"
 
-#: tmp/system-config-kickstart.glade.h:177
+#: tmp/system-config-kickstart.glade.h:180
 msgid "_Edit"
 msgstr "_Ubah"
 
-#: tmp/system-config-kickstart.glade.h:178
+#: tmp/system-config-kickstart.glade.h:181
 msgid "_Edit Network Device"
 msgstr "Ubah P_erangkat Jaringan"
 
-#: tmp/system-config-kickstart.glade.h:179
+#: tmp/system-config-kickstart.glade.h:182
 msgid "_File"
 msgstr "_Berkas"
 
-#: tmp/system-config-kickstart.glade.h:180
+#: tmp/system-config-kickstart.glade.h:183
 msgid "_Help"
 msgstr "Ban_tuan"
 
-#: tmp/system-config-kickstart.glade.h:181
+#: tmp/system-config-kickstart.glade.h:184
 msgid "_Open File"
 msgstr "B_uka Berkas"
 
-#: tmp/system-config-kickstart.glade.h:182
+#: tmp/system-config-kickstart.glade.h:185
 msgid "_Preview"
 msgstr "_Preview"
 
-#: tmp/system-config-kickstart.glade.h:183
+#: tmp/system-config-kickstart.glade.h:186
 msgid "_Quit"
 msgstr "_Keluar"
 
-#: tmp/system-config-kickstart.glade.h:184
+#: tmp/system-config-kickstart.glade.h:187
 msgid "_Save File"
 msgstr "_Simpan Berkas"
 
-#: tmp/system-config-kickstart.glade.h:185
+#: tmp/system-config-kickstart.glade.h:188
 msgid "_Save to File"
 msgstr "_Simpan ke berkas"
 
-#: tmp/system-config-kickstart.glade.h:188
+#: tmp/system-config-kickstart.glade.h:191
 msgid "kHz"
 msgstr "kHz"
 
-#: tmp/system-config-kickstart.glade.h:189
+#: tmp/system-config-kickstart.glade.h:192
 msgid "md0"
 msgstr "md0"
 
-#: tmp/system-config-kickstart.glade.h:190
+#: tmp/system-config-kickstart.glade.h:193
 msgid "md1"
 msgstr "md1"
 
-#: tmp/system-config-kickstart.glade.h:191
+#: tmp/system-config-kickstart.glade.h:194
 msgid "md10"
 msgstr "md10"
 
-#: tmp/system-config-kickstart.glade.h:192
+#: tmp/system-config-kickstart.glade.h:195
 msgid "md11"
 msgstr "md11"
 
-#: tmp/system-config-kickstart.glade.h:193
+#: tmp/system-config-kickstart.glade.h:196
 msgid "md12"
 msgstr "md12"
 
-#: tmp/system-config-kickstart.glade.h:194
+#: tmp/system-config-kickstart.glade.h:197
 msgid "md13"
 msgstr "md13"
 
-#: tmp/system-config-kickstart.glade.h:195
+#: tmp/system-config-kickstart.glade.h:198
 msgid "md14"
 msgstr "md14"
 
-#: tmp/system-config-kickstart.glade.h:196
+#: tmp/system-config-kickstart.glade.h:199
 msgid "md15"
 msgstr "md15"
 
-#: tmp/system-config-kickstart.glade.h:197
+#: tmp/system-config-kickstart.glade.h:200
 msgid "md2"
 msgstr "md2"
 
-#: tmp/system-config-kickstart.glade.h:198
+#: tmp/system-config-kickstart.glade.h:201
 msgid "md3"
 msgstr "md3"
 
-#: tmp/system-config-kickstart.glade.h:199
+#: tmp/system-config-kickstart.glade.h:202
 msgid "md4"
 msgstr "md4"
 
-#: tmp/system-config-kickstart.glade.h:200
+#: tmp/system-config-kickstart.glade.h:203
 msgid "md5"
 msgstr "md5"
 
-#: tmp/system-config-kickstart.glade.h:201
+#: tmp/system-config-kickstart.glade.h:204
 msgid "md6"
 msgstr "md6"
 
-#: tmp/system-config-kickstart.glade.h:202
+#: tmp/system-config-kickstart.glade.h:205
 msgid "md7"
 msgstr "md7"
 
-#: tmp/system-config-kickstart.glade.h:203
+#: tmp/system-config-kickstart.glade.h:206
 msgid "md8"
 msgstr "md8"
 
-#: tmp/system-config-kickstart.glade.h:204
+#: tmp/system-config-kickstart.glade.h:207
 msgid "md9"
 msgstr "md9"
