@@ -79,6 +79,7 @@ class ldapData:
         self.ldapAuth = "YES"
         self.ldapServer = ''
         self.ldapDN = ''
+        self.ldapCert = ''
         self.enabled = 0
     def set_auth(self, name):
         self.ldapAuth = name
@@ -86,6 +87,8 @@ class ldapData:
         self.ldapServer = name
     def set_DN(self, name):
         self.ldapDN = name
+    def set_cert(self, name):
+        self.ldapCert = name
     def set_enabled(self, val):
         self.enabled = val
     def return_auth(self):
@@ -102,7 +105,12 @@ class ldapData:
         elif self.ldapServer == "" or self.ldapDN == "":
             return ""
         else:
-            return " --enableldap --enableldapauth --ldapserver=" + self.ldapServer + " --ldapbasedn=" + self.ldapDN
+            retval = " --enableldap --enableldapauth --ldapserver=" + self.ldapServer + " --ldapbasedn=" + self.ldapDN
+
+            if self.ldapCert == "":
+                return retval
+            else:
+                return retval + " --ldaploadcert=" + self.ldapCert
 
 class kerberosData:
     def __init__(self, quit_cb=None):
@@ -213,6 +221,11 @@ class auth:
             self.myLDAPClass.set_server(self.ldapServerEntry.get_text())
             self.myLDAPClass.set_DN(self.ldapDNEntry.get_text())
 
+            if self.ldapCertCheck.get_active():
+                self.myLDAPClass.set_cert(self.ldapCertEntry.get_text())
+            else:
+                self.myLDAPClass.set_cert("")
+
             if self.myLDAPClass.return_data() == "":
                 self.showDialog()
                 return None
@@ -288,8 +301,11 @@ class auth:
         self.ldapCheck = xml.get_widget("ldapCheck")
         self.ldapLabel1 = xml.get_widget("ldapLabel1")
         self.ldapLabel2 = xml.get_widget("ldapLabel2")
+        self.ldapLabel3 = xml.get_widget("ldapLabel3")
         self.ldapServerEntry = xml.get_widget("ldapServerEntry")
         self.ldapDNEntry = xml.get_widget("ldapDNEntry")
+        self.ldapCertCheck = xml.get_widget("ldapCertCheck")
+        self.ldapCertEntry = xml.get_widget("ldapCertEntry")
         self.kerberosCheck = xml.get_widget("kerberosCheck")
         self.kerberosLabel1 = xml.get_widget("kerberosLabel1")
         self.kerberosLabel2 = xml.get_widget("kerberosLabel2")
@@ -315,6 +331,7 @@ class auth:
         self.nisCheck.connect("toggled", self.enableNIS)
         self.nisBroadcastCheck.connect("toggled", self.enableBroadcast)
         self.ldapCheck.connect("toggled", self.enableLDAP)
+        self.ldapCertCheck.connect("toggled", self.enableCert)
         self.kerberosCheck.connect("toggled", self.enableKerberos)
         self.hesiodCheck.connect("toggled", self.enableHesiod)
         self.sambaCheck.connect("toggled", self.enableSamba)
@@ -346,7 +363,15 @@ class auth:
         self.ldapLabel2.set_sensitive(self.ldapCheck.get_active())		
         self.ldapServerEntry.set_sensitive(self.ldapCheck.get_active())
         self.ldapDNEntry.set_sensitive(self.ldapCheck.get_active())				
+        self.ldapCertCheck.set_sensitive(self.ldapCheck.get_active())
+        self.ldapLabel3.set_sensitive(self.ldapCheck.get_active() and self.ldapCertCheck.get_active())
+        self.ldapCertEntry.set_sensitive(self.ldapCheck.get_active() and self.ldapCertCheck.get_active())
         self.myLDAPClass.set_enabled(self.ldapCheck.get_active())
+
+    def enableCert(self, checkbutton):
+        val = checkbutton.get_active()
+        self.ldapLabel3.set_sensitive(val)
+        self.ldapCertEntry.set_sensitive(val)
 
     def enableKerberos(self, args):
         self.kerberosLabel1.set_sensitive(self.kerberosCheck.get_active())
@@ -391,7 +416,7 @@ class auth:
             opts, args = getopt.getopt(authstr, "d:h",["enablemd5", "enablenis",
                                        "nisdomain=", "nisserver=", "useshadow", "enableshadow",
                                        "enableldap", "enableldapauth", "ldapserver=", "ldapbasedn=",
-                                       "enableldaptls",
+                                       "ldaploadcert=", "enableldaptls",
                                        "enablekrb5", "krb5realm=", "krb5kdc=", "krb5adminserver=",
                                        "enablehesiod", "hesiodlhs=", "hesiodrhs=", "enablesmbauth",
                                        "smbservers=", "smbworkgroup=", "enablecache"])
@@ -427,6 +452,11 @@ class auth:
                 if opt == "--ldapbasedn":
                     self.ldapDNEntry.set_text(value)
                     self.ldapCheck.set_active(True)
+
+                if opt == "--ldaploadcert":
+                    self.ldapCertEntry.set_text(value)
+                    self.ldapCheck.set_active(True)
+                    self.ldapCertCheck.set_active(True)
 
                 if opt == "--enablekrb5":
                     self.kerberosCheck.set_active(True)
