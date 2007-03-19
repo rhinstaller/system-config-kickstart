@@ -7,13 +7,13 @@
 # Andrew Martynov <andrewm@inventa.ru>, 2005.
 # Yuliya Poyarkova <ypoyarko@brisbane.redhat.com>, 2005.
 # Yulia Poyarkova <ypoyarko@redhat.com>, 2006.
-#
+# Nikolay Sivov <bunglehead@gmail.com>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-03-19 16:41-0400\n"
-"PO-Revision-Date: 2007-01-17 21:51+0300\n"
+"PO-Revision-Date: 2007-03-20 00:13+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -50,8 +50,11 @@ msgstr "IBM zSeries/s390"
 msgid "Root passwords do not match."
 msgstr "Пароли root не совпадают"
 
-#: ../src/basic.py:151 ../src/install.py:215 ../src/partWindow.py:547
-#: ../src/partition.py:254 ../src/raidWindow.py:249
+#: ../src/basic.py:151
+#: ../src/install.py:215
+#: ../src/partWindow.py:547
+#: ../src/partition.py:254
+#: ../src/raidWindow.py:249
 msgid "Error"
 msgstr "Ошибка"
 
@@ -108,7 +111,8 @@ msgstr "Введите каталог жесткого диска."
 msgid "Please enter a hard drive partition."
 msgstr "Введите раздел жесткого диска."
 
-#: ../src/kickstartGui.py:94 ../src/kickstartGui.py:286
+#: ../src/kickstartGui.py:94
+#: ../src/kickstartGui.py:286
 #, python-format
 msgid ""
 "The following error was found while parsing your kickstart configuration:\n"
@@ -119,7 +123,8 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../src/kickstartGui.py:97 ../src/kickstartGui.py:289
+#: ../src/kickstartGui.py:97
+#: ../src/kickstartGui.py:289
 msgid "Error Parsing Kickstart Config"
 msgstr "Ошибка разбора файла Kickstart"
 
@@ -151,7 +156,8 @@ msgstr "Параметры загрузчика"
 msgid "Partition Information"
 msgstr "Информация о разделах"
 
-#: ../src/kickstartGui.py:136 tmp/system-config-kickstart.glade.h:107
+#: ../src/kickstartGui.py:136
+#: tmp/system-config-kickstart.glade.h:107
 msgid "Network Configuration"
 msgstr "Настройка сети"
 
@@ -159,23 +165,28 @@ msgstr "Настройка сети"
 msgid "Authentication"
 msgstr "Аутентификация"
 
-#: ../src/kickstartGui.py:138 tmp/system-config-kickstart.glade.h:50
+#: ../src/kickstartGui.py:138
+#: tmp/system-config-kickstart.glade.h:50
 msgid "Firewall Configuration"
 msgstr "Настройка брандмауэра"
 
-#: ../src/kickstartGui.py:139 tmp/system-config-kickstart.glade.h:27
+#: ../src/kickstartGui.py:139
+#: tmp/system-config-kickstart.glade.h:27
 msgid "Display Configuration"
 msgstr "Настройка дисплея"
 
-#: ../src/kickstartGui.py:140 tmp/system-config-kickstart.glade.h:113
+#: ../src/kickstartGui.py:140
+#: tmp/system-config-kickstart.glade.h:113
 msgid "Package Selection"
 msgstr "Выбор пакетов"
 
-#: ../src/kickstartGui.py:141 tmp/system-config-kickstart.glade.h:123
+#: ../src/kickstartGui.py:141
+#: tmp/system-config-kickstart.glade.h:123
 msgid "Pre-Installation Script"
 msgstr "Сценарий до установки"
 
-#: ../src/kickstartGui.py:142 tmp/system-config-kickstart.glade.h:122
+#: ../src/kickstartGui.py:142
+#: tmp/system-config-kickstart.glade.h:122
 msgid "Post-Installation Script"
 msgstr "Сценарий после установки"
 
@@ -214,59 +225,59 @@ msgstr "Устройство"
 msgid "Network Type"
 msgstr "Тип сети"
 
-#: ../src/network.py:108 ../src/network.py:154 ../src/network.py:225
-#: ../src/network.py:281 ../src/network.py:414
+#: ../src/network.py:108
+#: ../src/network.py:154
+#: ../src/network.py:225
+#: ../src/network.py:281
+#: ../src/network.py:414
 msgid "Static IP"
 msgstr "Статический IP"
 
-#: ../src/network.py:215 ../src/network.py:273
+#: ../src/network.py:215
+#: ../src/network.py:273
 msgid "Please fill in the network information"
 msgstr "Укажите параметры сети"
 
 #: ../src/network.py:325
 #, python-format
-msgid ""
-"A network device with the name %s already exists.  Please choose another "
-"device name"
-msgstr ""
-"Сетевое устройство с именем %s уже существует.  Выберите другое имя "
-"устройства"
+msgid "A network device with the name %s already exists.  Please choose another device name"
+msgstr "Сетевое устройство с именем %s уже существует.  Выберите другое имя устройства"
 
 #: ../src/packages.py:168
-#, fuzzy
 msgid "Package configuration is not applicable on upgrades."
-msgstr "Настройка дисплея не применима при обновлении системы."
+msgstr "Конфигурация пакетов не применима при обновлении."
 
 #: ../src/packages.py:174
 msgid "Retrieving package information"
 msgstr "Получение информации о пакетах"
 
 #: ../src/packages.py:183
-msgid ""
-"Package selection is disabled due to problems downloading package "
-"information."
-msgstr ""
-"Выбор пакетов отключен вследствие проблемы при получении информации о "
-"пакетах."
+msgid "Package selection is disabled due to problems downloading package information."
+msgstr "Выбор пакетов отключен вследствие проблемы при получении информации о пакетах."
 
-#: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:189
+#: ../src/partWindow.py:84
+#: tmp/system-config-kickstart.glade.h:189
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:190
+#: ../src/partWindow.py:84
+#: tmp/system-config-kickstart.glade.h:190
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:86 ../src/partWindow.py:149
+#: ../src/partWindow.py:86
+#: ../src/partWindow.py:149
 msgid "software RAID"
 msgstr "программный RAID"
 
-#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:208
+#: ../src/partWindow.py:87
+#: tmp/system-config-kickstart.glade.h:208
 msgid "swap"
 msgstr "swap"
 
-#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:209
+#: ../src/partWindow.py:87
+#: tmp/system-config-kickstart.glade.h:209
 msgid "vfat"
 msgstr "vfat"
 
@@ -274,15 +285,21 @@ msgstr "vfat"
 msgid "PPC PReP Boot"
 msgstr "PPC PReP Boot"
 
-#: ../src/partWindow.py:288 ../src/partWindow.py:569 ../src/raidWindow.py:214
+#: ../src/partWindow.py:288
+#: ../src/partWindow.py:569
+#: ../src/raidWindow.py:214
 msgid "Yes"
 msgstr "Да"
 
-#: ../src/partWindow.py:290 ../src/partWindow.py:571 ../src/raidWindow.py:216
+#: ../src/partWindow.py:290
+#: ../src/partWindow.py:571
+#: ../src/raidWindow.py:216
 msgid "No"
 msgstr "Нет"
 
-#: ../src/partWindow.py:313 ../src/partWindow.py:328 ../src/partWindow.py:347
+#: ../src/partWindow.py:313
+#: ../src/partWindow.py:328
+#: ../src/partWindow.py:347
 #: ../src/partWindow.py:361
 msgid "Auto"
 msgstr "Авто"
@@ -298,31 +315,20 @@ msgstr "Укажите точку монтирования для раздела
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:474
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr ""
-"Точка монтирования \"%s\" уже используется. Выберите другую точку "
-"монтирования."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr "Точка монтирования \"%s\" уже используется. Выберите другую точку монтирования."
 
 #: ../src/partWindow.py:494
-msgid ""
-"To create a new RAID partition, you must specify either a hard drive device "
-"name or an existing partition."
-msgstr ""
-"Для создания нового раздела RAID вам нужно указать имя устройства жесткого "
-"диска или существующего раздела."
+msgid "To create a new RAID partition, you must specify either a hard drive device name or an existing partition."
+msgstr "Для создания нового раздела RAID вам нужно указать имя устройства жесткого диска или существующего раздела."
 
 #: ../src/partWindow.py:531
 msgid "Specify a device on which to create the partition."
 msgstr "Укажите устройство на котором будет создан раздел."
 
 #: ../src/partWindow.py:540
-msgid ""
-"The partition you specified does not end in a number.  Partitions must have "
-"a partition number such as \"hda1\" or \"sda3\"."
-msgstr ""
-"Указанный вами раздел не оканчивается числом.  Разделы должны иметь номер "
-"раздела, такой как \"hda1\" или \"sda3\"."
+msgid "The partition you specified does not end in a number.  Partitions must have a partition number such as \"hda1\" or \"sda3\"."
+msgstr "Указанный вами раздел не оканчивается числом.  Разделы должны иметь номер раздела, такой как \"hda1\" или \"sda3\"."
 
 #: ../src/partition.py:73
 msgid ""
@@ -352,15 +358,15 @@ msgstr "Формат"
 msgid "Size (MB)"
 msgstr "Размер (MB)"
 
-#: ../src/partition.py:96 ../src/partition.py:136
+#: ../src/partition.py:96
+#: ../src/partition.py:136
 msgid "Please select a partition from the list."
 msgstr "Выберите раздел из списка."
 
 #: ../src/raidOptionsWindow.py:72
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
-msgstr ""
-"Сейчас для использования доступно %d свободных разделов программного RAID."
+msgstr "Сейчас для использования доступно %d свободных разделов программного RAID."
 
 #: ../src/raidWindow.py:174
 #, python-format
@@ -372,7 +378,8 @@ msgstr "Для использования RAID %s нужно выбрать не
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "Для использования RAID %s нужно выбрать не меньше 3 разделов"
 
-#: ../src/raidWindow.py:194 ../src/raidWindow.py:220
+#: ../src/raidWindow.py:194
+#: ../src/raidWindow.py:220
 msgid "Raid Devices"
 msgstr "Устройства RAID"
 
@@ -442,7 +449,7 @@ msgstr "Параметры загрузчика (требуются)"
 
 #: tmp/system-config-kickstart.glade.h:14
 msgid "CA Cert URL:"
-msgstr ""
+msgstr "URL серт. CA:"
 
 #: tmp/system-config-kickstart.glade.h:15
 msgid "CD-ROM"
@@ -742,7 +749,7 @@ msgstr "Сервер LDAP: "
 
 #: tmp/system-config-kickstart.glade.h:91
 msgid "Load CA certificate"
-msgstr ""
+msgstr "Загрузить сертификат CA"
 
 #: tmp/system-config-kickstart.glade.h:92
 msgid "Make RAID Device"
@@ -939,26 +946,16 @@ msgid "Size (MB):"
 msgstr "Размер (MB):"
 
 #: tmp/system-config-kickstart.glade.h:144
-msgid ""
-"Software RAID allows you to combine several disks into a larger RAID "
-"device.  A RAID device can be configured to provide additional speed and "
-"reliability compared to using an individual drive.  For more information on "
-"using RAID devices please consult the kickstart documentation."
-msgstr ""
-"Программный RAID позволяет вам объединять несколько дисков в устройство RAID "
-"большего размера. Устройство RAID может быть настроено для повышения "
-"производительности и надежности по сравнению с отдельным диском. За "
-"дополнительной информацией по использованию устройств RAID обратитесь к "
-"документации kickstart."
+msgid "Software RAID allows you to combine several disks into a larger RAID device.  A RAID device can be configured to provide additional speed and reliability compared to using an individual drive.  For more information on using RAID devices please consult the kickstart documentation."
+msgstr "Программный RAID позволяет вам объединять несколько дисков в устройство RAID большего размера. Устройство RAID может быть настроено для повышения производительности и надежности по сравнению с отдельным диском. За дополнительной информацией по использованию устройств RAID обратитесь к документации kickstart."
 
 #: tmp/system-config-kickstart.glade.h:145
 msgid "Specify an FTP username and password"
 msgstr "Укажите имя пользователя FTP и пароль"
 
 #: tmp/system-config-kickstart.glade.h:146
-#, fuzzy
 msgid "Specify installation key:"
-msgstr "Выполнить новую установку"
+msgstr "Укажите установочный ключ:"
 
 #: tmp/system-config-kickstart.glade.h:147
 msgid "Start the X Window System on boot"
@@ -973,13 +970,8 @@ msgid "Time Zone:"
 msgstr "Часовой пояс:"
 
 #: tmp/system-config-kickstart.glade.h:150
-msgid ""
-"To use RAID you must first create at least two partitions of type 'software "
-"RAID'.  Then you can create a RAID device which can be formatted and mounted."
-msgstr ""
-"Для использования RAID вы должны сперва создать не меньше двух разделов типа "
-"'программный RAID'. После этого вы можете создать устройство RAID, которое "
-"может быть отформатировано и смонтировано."
+msgid "To use RAID you must first create at least two partitions of type 'software RAID'.  Then you can create a RAID device which can be formatted and mounted."
+msgstr "Для использования RAID вы должны сперва создать не меньше двух разделов типа 'программный RAID'. После этого вы можете создать устройство RAID, которое может быть отформатировано и смонтировано."
 
 #: tmp/system-config-kickstart.glade.h:152
 #, no-c-format
@@ -1049,29 +1041,17 @@ msgstr "ОЗУ видеокарты: "
 
 #: tmp/system-config-kickstart.glade.h:170
 #, no-c-format
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %post command at the beginning."
-msgstr ""
-"Внимание: ошибка в этом скрипте может привести к сбою установки. Не "
-"включайте команду %post в начале."
+msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %post command at the beginning."
+msgstr "Внимание: ошибка в этом скрипте может привести к сбою установки. Не включайте команду %post в начале."
 
 #: tmp/system-config-kickstart.glade.h:172
 #, no-c-format
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %pre command at the beginning."
-msgstr ""
-"Внимание: ошибка в скрипте может привести к сбою установки. Не включайте "
-"команду %pre в начале."
+msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %pre command at the beginning."
+msgstr "Внимание: ошибка в скрипте может привести к сбою установки. Не включайте команду %pre в начале."
 
 #: tmp/system-config-kickstart.glade.h:173
-msgid ""
-"You have choosen the following configuration. Click Save File to save the "
-"kickstart file. "
-msgstr ""
-"Вы выбрали следующую конфигурацию. Нажмите \"Сохранить\" для сохранения "
-"файла kickstart."
+msgid "You have choosen the following configuration. Click Save File to save the kickstart file. "
+msgstr "Вы выбрали следующую конфигурацию. Нажмите \"Сохранить\" для сохранения файла kickstart."
 
 #: tmp/system-config-kickstart.glade.h:174
 msgid "_About"
@@ -1203,27 +1183,20 @@ msgstr "md9"
 
 #~ msgid "Trusted devices:"
 #~ msgstr "Доверенные устройства:"
-
 #~ msgid "Trusted services:"
 #~ msgstr "Доверенные службы:"
-
 #~ msgid "Other ports: (1029:tcp)"
 #~ msgstr "Другие порты: (1029:tcp)"
-
 #~ msgid "Active"
 #~ msgstr "Включен"
-
 #~ msgid "Disable firewall"
 #~ msgstr "Отключить брандмауэр"
-
 #~ msgid "Enable firewall"
 #~ msgstr "Включить брандмауэр"
-
 #~ msgid "SELinux:"
 #~ msgstr "SELinux:"
-
 #~ msgid "Security level:"
 #~ msgstr "Уровень защиты:"
-
 #~ msgid "Warn"
 #~ msgstr "Предупреждения"
+
