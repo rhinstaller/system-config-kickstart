@@ -252,7 +252,11 @@ class Packages:
         # This is a whole lot like __deselectPackage in OptionalPackageSelector
         # in pirut.  If only we could get to that.
         for pkg in self.ks.packages.excludedList:
-            pkgs = self.y.pkgSack.returnNewestByName(pkg)
+            try:
+                pkgs = self.y.pkgSack.returnNewestByName(pkg)
+            except PackageSackError:
+                continue
+
             if pkgs:
                 pkgs = self.y.bestPackagesFromList(pkgs)
             for po in pkgs:
