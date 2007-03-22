@@ -254,7 +254,7 @@ class Packages:
         for pkg in self.ks.packages.excludedList:
             try:
                 pkgs = self.y.pkgSack.returnNewestByName(pkg)
-            except PackageSackError:
+            except yum.Errors.PackageSackError:
                 continue
 
             if pkgs:
