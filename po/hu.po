@@ -1,23 +1,21 @@
-# translation of hu.po to hungarian
-# translation of hu.po to Hungarian
 # Copyright (C) YEAR ORGANIZATION.
-# Tamas Szanto <tszanto@mol.hu>, 2003.
-# Arpad Biro <biro_arpad@yahoo.com>, 2004, 2005.
-# Szentiványi Gábor <szentivanyi.gabor@ulx.hu>, 2006.
 #
+# Tamas Szanto <tszanto@mol.hu>, 2003.
+# Arpad Biro <biro_arpad@yahoo.com>, 2004, 2005, 2007.
+# Szentiványi Gábor <szentivanyi.gabor@ulx.hu>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: hu\n"
+"Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-03-19 16:41-0400\n"
-"PO-Revision-Date: 2006-02-01 23:39+0100\n"
-"Last-Translator: Szentiványi Gábor <szentivanyi.gabor@ulx.hu>\n"
-"Language-Team: hungarian\n"
+"PO-Revision-Date: 2007-03-26 22:47+0200\n"
+"Last-Translator: Arpad Biro <biro_arpad@yahoo.com>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: pygettext.py 1.1\n"
-"X-Generator: KBabel 1.10.2\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../src/auth.py:340
 msgid "Please fill in the authentication information"
@@ -112,11 +110,13 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"A Kickstart-beállítások vizsgálatakor a következő hibát találta a rendszer:\n"
+"\n"
+"%s"
 
 #: ../src/kickstartGui.py:97 ../src/kickstartGui.py:289
-#, fuzzy
 msgid "Error Parsing Kickstart Config"
-msgstr "A Kickstart Configurator névjegye"
+msgstr "Hiba a Kickstart-beállítások vizsgálatakor"
 
 #: ../src/kickstartGui.py:105
 msgid "Kickstart"
@@ -226,20 +226,20 @@ msgid ""
 msgstr "Már létezik %s nevű hálózati eszköz, válasszon egy másik nevet."
 
 #: ../src/packages.py:168
-#, fuzzy
 msgid "Package configuration is not applicable on upgrades."
-msgstr "A képernyőbeállítások nem alkalmazhatók frissítéskor."
+msgstr "A csomagbeállítások nem alkalmazhatók frissítéskor."
 
 #: ../src/packages.py:174
-#, fuzzy
 msgid "Retrieving package information"
-msgstr "A hálózati eszköz jellemzői"
+msgstr "Csomaginformációk lekérdezése"
 
 #: ../src/packages.py:183
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
 msgstr ""
+"A csomaginformációk letöltésénél fellépett problémák miatt "
+"a csomagválasztás ki lett kapcsolva."
 
 #: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:189
 msgid "ext2"
@@ -290,8 +290,7 @@ msgstr "Adja meg a partíció csatlakoztatási (mount) pontját."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:474
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "A(z) \"%s\" csatlakoztatási pont már foglalt, válasszon egy másikat."
 
 #: ../src/partWindow.py:494
@@ -370,14 +369,12 @@ msgid "Could not read video driver database"
 msgstr "Nem sikerült olvasni a videokártya adatbázisból"
 
 #: ../src/xconfig.py:229
-#, fuzzy
 msgid "Please select an X driver."
-msgstr "Adjon meg egy NFS-kiszolgálót."
+msgstr "Válasszon meghajtóprogramot az X grafikus rendszerhez."
 
 #: ../src/xconfig.py:248
-#, fuzzy
 msgid "Please select a monitor."
-msgstr "Válasszon egy rendszergazdai jelszót."
+msgstr "Válasszon monitort."
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -433,7 +430,7 @@ msgstr "A rendszerindító paraméterei (kötelező)"
 
 #: tmp/system-config-kickstart.glade.h:14
 msgid "CA Cert URL:"
-msgstr ""
+msgstr "CA-tanúsítvány URL-je:"
 
 #: tmp/system-config-kickstart.glade.h:15
 msgid "CD-ROM"
@@ -733,7 +730,7 @@ msgstr "LDAP-kiszolgáló:"
 
 #: tmp/system-config-kickstart.glade.h:91
 msgid "Load CA certificate"
-msgstr ""
+msgstr "CA-tanúsítvány betöltése"
 
 #: tmp/system-config-kickstart.glade.h:92
 msgid "Make RAID Device"
@@ -944,9 +941,8 @@ msgid "Specify an FTP username and password"
 msgstr "Adja meg az FTP-felhasználónevet és -jelszót"
 
 #: tmp/system-config-kickstart.glade.h:146
-#, fuzzy
 msgid "Specify installation key:"
-msgstr "Új telepítés végrehajtása"
+msgstr "Adja meg a telepítési kulcsot:"
 
 #: tmp/system-config-kickstart.glade.h:147
 msgid "Start the X Window System on boot"
@@ -1189,3 +1185,4 @@ msgstr "md8"
 #: tmp/system-config-kickstart.glade.h:207
 msgid "md9"
 msgstr "md9"
+
