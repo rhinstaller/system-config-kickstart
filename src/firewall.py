@@ -129,6 +129,9 @@ class Firewall:
         for port in self.ks.firewall.ports:
             args.append("--port=%s" % port)
 
+        if not self.ks.selinux.selinux:
+            self.ks.selinux.selinux = SELINUX_ENFORCING
+
         if self.ks.selinux.selinux == SELINUX_DISABLED:
             self.selinuxWindow.enabledOptionMenu.set_active(2)
         elif self.ks.selinux.selinux == SELINUX_ENFORCING:
