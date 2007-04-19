@@ -52,7 +52,7 @@ class partition:
         self.remove_parts_all_radiobutton = self.xml.get_widget("remove_parts_all_radiobutton")
         self.remove_parts_linux_radiobutton = self.xml.get_widget("remove_parts_linux_radiobutton")
         self.initlabel_yes_radiobutton = self.xml.get_widget("initlabel_yes_radiobutton")
-        self.initlabel_no_radiobutton = self.xml.get_widget("initlabel_no_radiobutton")        
+        self.initlabel_no_radiobutton = self.xml.get_widget("initlabel_no_radiobutton")
         self.part_view = self.xml.get_widget("part_view")
         self.add_part_button = self.xml.get_widget("add_part_button")
         self.edit_part_button = self.xml.get_widget("edit_part_button")
@@ -106,7 +106,7 @@ class partition:
                  # the parent.
                  grandparent = self.part_store.iter_parent(parent)
                  self.part_store.remove(iter)
-                 self.part_store.remove(parent)            
+                 self.part_store.remove(parent)
 
                  # Delete the iter from the dict so that if we go to add
                  # more partitions later, we won't reference a bad iter
@@ -245,7 +245,7 @@ class partition:
             if part_object == None:
                 self.edit_part_button.set_sensitive(False)
                 self.del_part_button.set_sensitive(False)
-            else:                
+            else:
                 self.edit_part_button.set_sensitive(True)
                 self.del_part_button.set_sensitive(True)
 
@@ -257,7 +257,7 @@ class partition:
         dlg.set_border_width(2)
         dlg.set_modal(True)
         toplevel = self.xml.get_widget("main_window")
-        dlg.set_transient_for(toplevel)        
+        dlg.set_transient_for(toplevel)
         dlg.set_icon(kickstartGui.iconPixbuf)
         rc = dlg.run()
         if rc == gtk.RESPONSE_OK:
@@ -280,18 +280,18 @@ class partition:
         if self.ks.zerombr.zerombr:
             self.clear_mbr_yes_radiobutton.set_active(True)
         else:
-            self.clear_mbr_no_radiobutton.set_active(True)            
+            self.clear_mbr_no_radiobutton.set_active(True)
 
         if self.ks.clearpart.type != CLEARPART_TYPE_NONE:
             if self.ks.clearpart.type == CLEARPART_TYPE_ALL:
                 self.remove_parts_all_radiobutton.set_active(True)
             elif self.ks.clearpart.type == CLEARPART_TYPE_LINUX:
-                self.remove_parts_linux_radiobutton.set_active(True)                
+                self.remove_parts_linux_radiobutton.set_active(True)
             if self.ks.clearpart.initAll == True:
                 self.initlabel_yes_radiobutton.set_active(True)
             else:
                 self.initlabel_no_radiobutton.set_active(True)
-                
+
         else:
             self.remove_parts_none_radiobutton.set_active(True)
 

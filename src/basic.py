@@ -57,11 +57,11 @@ class basic:
         self.utc_check_button = xml.get_widget("utc_check_button")
 
         self.root_passwd_entry = xml.get_widget("root_passwd_entry")
-        self.root_passwd_confirm_entry = xml.get_widget("root_passwd_confirm_entry")        
+        self.root_passwd_confirm_entry = xml.get_widget("root_passwd_confirm_entry")
         self.reboot_checkbutton = xml.get_widget("reboot_checkbutton")
         self.text_install_checkbutton = xml.get_widget("text_install_checkbutton")
         self.ks.bootloader(md5pass="", password="")
-        self.interactive_checkbutton = xml.get_widget("interactive_checkbutton")                
+        self.interactive_checkbutton = xml.get_widget("interactive_checkbutton")
         self.encrypt_root_pw_checkbutton = xml.get_widget("encrypt_root_pw_checkbutton")
         self.lang_support_list = xml.get_widget("lang_support_list")
         self.platform_combo = xml.get_widget("platform_combo")
@@ -160,7 +160,7 @@ class basic:
             dlg.hide()
             self.notebook.set_current_page(0)
             self.root_passwd_entry.set_text("")
-            self.root_passwd_confirm_entry.set_text("")            
+            self.root_passwd_confirm_entry.set_text("")
             self.root_passwd_entry.grab_focus()
             return None
 

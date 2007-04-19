@@ -48,7 +48,7 @@ class network:
         self.network_device_dialog.connect("delete-event", self.resetDialog)
 
         self.network_device_option_menu = xml.get_widget("network_device_option_menu")
-        self.network_type_option_menu = xml.get_widget("network_type_option_menu")        
+        self.network_type_option_menu = xml.get_widget("network_type_option_menu")
         self.network_type_hbox = xml.get_widget("network_type_hbox")
 
         self.ip_entry1 = xml.get_widget("ip_entry1")
@@ -73,7 +73,7 @@ class network:
 
         self.network_device_tree.get_selection().connect("changed", self.rowSelected)
         self.add_device_button.connect("clicked", self.showAddNetworkDialog)
-        self.edit_device_button.connect("clicked", self.showEditNetworkDialog)        
+        self.edit_device_button.connect("clicked", self.showEditNetworkDialog)
         self.delete_device_button.connect("clicked", self.deleteDevice)
 
         self.network_device_store = gtk.ListStore(gobject.TYPE_STRING, gobject.TYPE_STRING,
@@ -88,7 +88,6 @@ class network:
 
         col = gtk.TreeViewColumn(_("Network Type"), gtk.CellRendererText(), text = 1)
         self.network_device_tree.append_column(col)
-        
 
         self.deviceMenu = gtk.Menu()
         self.deviceList = []
@@ -116,7 +115,7 @@ class network:
         self.network_type_option_menu.connect("changed", self.typeChanged)
         self.network_cancel_button.connect("clicked", self.resetDialog)
         self.network_frame.show_all()
-        
+
     def showAddNetworkDialog(self, *args):
         self.handler = self.network_ok_button.connect("clicked", self.addDevice)
 
@@ -153,7 +152,7 @@ class network:
                 self.network_type_option_menu.set_history(0)
             elif type == (_("Static IP")):
                 self.network_type_option_menu.set_history(1)
-                
+
                 ip = self.network_device_store.get_value(iter, 2)
                 ip1, ip2, ip3, ip4 = string.split(ip, ".")
                 self.ip_entry1.set_text(ip1)
@@ -180,7 +179,7 @@ class network:
                 self.nameserver_entry1.set_text(ip1)
                 self.nameserver_entry2.set_text(ip2)
                 self.nameserver_entry3.set_text(ip3)
-                self.nameserver_entry4.set_text(ip4)            
+                self.nameserver_entry4.set_text(ip4)
 
         self.handler = self.network_ok_button.connect("clicked", self.editDevice, iter)
         self.network_device_dialog.show_all()
@@ -253,11 +252,11 @@ class network:
             self.network_device_store.set_value(iter, 5, nameserverBuf)
 
         self.resetDialog()
-        
+
     def editDevice(self, button, iter):
         devNum = self.network_device_option_menu.get_history()
         devName = self.deviceList[devNum]
-        
+
         if self.network_device_store.get_value(iter, 0) != devName:
             if self.doesDeviceExist(devName) is None:
                 return
@@ -279,7 +278,7 @@ class network:
                 return None
 
             self.network_device_store.set_value(iter, 1, _("Static IP"))
-        
+
             ipBuf = ("%s.%s.%s.%s" %
                      (self.ip_entry1.get_text(),
                       self.ip_entry2.get_text(),
@@ -305,11 +304,11 @@ class network:
                              (self.nameserver_entry1.get_text(),
                               self.nameserver_entry2.get_text(),
                               self.nameserver_entry3.get_text(),
-                              self.nameserver_entry4.get_text()))     
+                              self.nameserver_entry4.get_text()))
             self.network_device_store.set_value(iter, 5, nameserverBuf)
 
         self.resetDialog()
-        
+
     def deleteDevice(self, *args):
         rc = self.network_device_tree.get_selection().get_selected()
 
@@ -331,12 +330,12 @@ class network:
                 dlg.destroy()
                 return None
             iter = self.network_device_store.iter_next(iter)
-            
+
         return 0
 
     def resetDialog(self, *args):
         self.network_device_option_menu.set_history(0)
-        self.network_type_option_menu.set_history(0)        
+        self.network_type_option_menu.set_history(0)
         self.ip_entry1.set_text("")
         self.ip_entry2.set_text("")
         self.ip_entry3.set_text("")
@@ -355,7 +354,7 @@ class network:
         self.nameserver_entry1.set_text("")
         self.nameserver_entry2.set_text("")
         self.nameserver_entry3.set_text("")
-        self.nameserver_entry4.set_text("")            
+        self.nameserver_entry4.set_text("")
 
         self.network_ok_button.disconnect(self.handler)
         self.network_device_dialog.hide()
@@ -387,7 +386,7 @@ class network:
         if self.network_type_option_menu.get_history() == 1:
             self.network_table.set_sensitive(True)
         else:
-            self.network_table.set_sensitive(False)            
+            self.network_table.set_sensitive(False)
 
     def rowSelected(self, *args):
         store, iter = self.network_device_tree.get_selection().get_selected()
@@ -397,7 +396,7 @@ class network:
         else:
             self.edit_device_button.set_sensitive(True)
             self.delete_device_button.set_sensitive(True)
-            
+
     def applyKickstart(self):
         self.network_device_store.clear()
 
