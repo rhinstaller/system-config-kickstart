@@ -60,10 +60,10 @@ gtk.glade.bindtextdomain(domain)
 ##
 ## Icon for windows
 ##
-iconPixbuf = None      
+iconPixbuf = None
 try:
     iconPixbuf = gtk.gdk.pixbuf_new_from_file("/usr/share/system-config-kickstart/pixmaps/system-config-kickstart.png")
-     
+
 except:
     pass
 
@@ -85,7 +85,7 @@ class kickstartGui:
 
         if file:
             self.parser = KickstartParser(self.ksHandler)
-            
+
             try:
                 self.parser.readKickstart(file)
             except KickstartError, e:
@@ -147,7 +147,7 @@ class kickstartGui:
 
 	#bring in basic functions
 	self.basic_class = basic.basic(self, xml, self.options_notebook, self.ksHandler)
-        
+
         # Now that we've loaded the UI elements for the first active thing in the notebook,
         # draw it so we can display a progress bar when yum starts doing stuff.
         self.toplevel.show()
@@ -175,7 +175,7 @@ class kickstartGui:
 	self.about_menu.connect("activate", self.on_about_activate)
 	self.category_view.connect("cursor_changed", self.on_list_view_row_activated)
 	self.options_notebook.connect("switch-page", self.on_notebook_changed)
-            
+
 	#show gui
         self.applyKickstart()
 	self.toplevel.show()
@@ -186,7 +186,7 @@ class kickstartGui:
         count = 0
         iter = self.category_store.get_iter_first()
         if num == 0:
-            self.category_view.get_selection().select_iter(iter)            
+            self.category_view.get_selection().select_iter(iter)
         else:
             while iter:
                 if count == num:
@@ -200,7 +200,7 @@ class kickstartGui:
 	category = self.category_store.get_value(iter, 0)
 	row = self.category_list.index(category)
 	self.options_notebook.set_current_page(row)
-        
+
     #about box
     def on_about_activate(self, args):
         dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_INFO, gtk.BUTTONS_OK,
@@ -242,7 +242,7 @@ class kickstartGui:
     def getAllData(self, *args):
         if self.install_class.formToKickstart() is None:
             return None
-        
+
         if self.bootloader_class.formToKickstart() is None:
             return None
 
@@ -277,7 +277,7 @@ class kickstartGui:
             if os.access(file, os.R_OK) == 1:
                 self.ksHandler = makeVersion()
                 self.parser = KickstartParser(self.ksHandler)
-                
+
                 try:
                     self.parser.readKickstart(file)
                 except KickstartError, e:

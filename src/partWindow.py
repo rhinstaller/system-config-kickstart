@@ -77,7 +77,7 @@ class partWindow:
         self.onPartCheck.connect("toggled", self.on_onPartCheck_toggled)
         self.onDiskCheck.connect("toggled", self.on_onDiskCheck_toggled)
         self.swap_checkbutton.connect("toggled", self.on_swap_recommended_toggled)
-        
+
         mountPoints = ["/", "/boot", "/home", "/var", "/tmp", "/usr", "/opt"]
         self.mountPointCombo.set_popdown_strings(mountPoints)
 
@@ -86,7 +86,7 @@ class partWindow:
                              _("software RAID"):"raid",
                              _("swap"):"swap", _("vfat"):"vfat",
                              _("PPC PReP Boot"): "PPC PReP Boot"}
-        
+
         self.fsTypes = self.fsTypesDict.keys()
         self.fsTypes.sort()
         self.fsTypeCombo.set_popdown_strings(self.fsTypes)
@@ -95,7 +95,7 @@ class partWindow:
             fsTypeSelect = self.fsTypes.index("ext3")
         except:
             fsTypeSelect = 0
-        
+
         self.fsTypeCombo.list.select_item(fsTypeSelect)
 
     def on_fsTypeCombo_set_focus_child(self, *args):
@@ -103,7 +103,7 @@ class partWindow:
 
         if key == None or key == "":
             return
-        
+
         index = self.fsTypesDict[key]
 
         if index == "swap":
@@ -171,13 +171,13 @@ class partWindow:
             self.onDiskCheck.set_active(True)
             self.onDiskEntry.set_text(part_object.device)
 
-        self.formatCheck.set_active(part_object.doFormat)        
+        self.formatCheck.set_active(part_object.doFormat)
 
         fsTypeKey = self.fsTypeCombo.entry.get_text()
         curr = self.fsTypesDict[fsTypeKey]
         if curr in self.fsTypes:
             index = self.fsTypes.index(curr)
-        
+
             if index == 2:
                 self.mountPointCombo.set_sensitive(False)
                 self.formatCheck.set_sensitive(False)
@@ -191,13 +191,13 @@ class partWindow:
             self.setSizeCombo.set_text(part_object.setSizeVal)
         elif part_object.sizeStrategy == "max":
             self.sizeMaxRadio.set_active(True)
-        
+
         #XXX - have to do this after the show_all due to a bug in gtkSpinButton, I suspect
         if part_object.size == "recommended":
             self.swap_checkbutton.set_active(True)
         else:
             self.sizeCombo.set_text(str(part_object.size))
-        
+
     def win_reset(self):
         self.mountPointCombo.entry.set_text("")
         self.mountPointCombo.set_sensitive(True)
@@ -217,7 +217,7 @@ class partWindow:
         self.setSizeCombo.set_text("1")
         self.swap_checkbutton.set_active(False)
         self.formatCheck.set_active(True)
-        
+
     def on_part_cancel_button_clicked(self, *args):
         self.partOkButton.disconnect(self.ok_handler)
         self.win_reset()
@@ -330,7 +330,7 @@ class partWindow:
             #If the auto parent node already exits, just add the new auto partition to it
             iter = self.part_store.append(self.auto_parent_iter)
             self.part_store.set_value(iter, 0, "")
-            
+
         else:
             #Now, there's a device specified for this partition, so let's see if it already has a parent node
             if part_object.device in self.device_iter_dict.keys():
@@ -359,7 +359,7 @@ class partWindow:
                         self.part_store.set_value(iter, 0, part_object.raidNumber)
                     else:
                         self.part_store.set_value(iter, 0, (_("Auto")))
-                
+
         return iter
 
     def on_swap_recommended_toggled(self, *args):
@@ -447,7 +447,7 @@ class partWindow:
         else:
             #Erase any exiting raid data if we've edited a RAID partition to be non-RAID
             part_object.raidNumber = ""
-            
+
             #It's not raid, so move on
             if part_object.fsType == "swap":   
                 #If it's a swap partition, set fsType to be swap
@@ -460,7 +460,7 @@ class partWindow:
             else:
                 #It's not raid and it's not swap, so it must be a regular partition
                 mountPoint = self.mountPointCombo.entry.get_text()
-                
+
                 if mountPoint == "":
                     self.deviceNotValid(_("Specify a mount point for the partition."))
                     return None
@@ -489,7 +489,7 @@ class partWindow:
         device = part_object.device
         partition = part_object.partition
 
-        mountPoint = ""            
+        mountPoint = ""
         if not device:
             self.deviceNotValid(_("To create a new RAID partition, you must specify either "
                                   "a hard drive device name or an existing partition."))
@@ -511,7 +511,7 @@ class partWindow:
                 part_object.raidNumber = "raid.%s" % str(tmpNum)
 
         part_object.mountPoint = part_object.raidNumber
-            
+
         #If all the checks pass, then return
         return 1
 
@@ -525,7 +525,7 @@ class partWindow:
             tag, number = string.split(part_object.raidNumber, '.')
             if self.lastRaidNumber < number:
                 self.lastRaidNumber = number
-    
+
     def isDeviceValid(self, device):
         if device == "":
             self.deviceNotValid(_("Specify a device on which to create the partition."))
@@ -569,12 +569,12 @@ class partWindow:
             self.part_store.set_value(iter, 3, (_("Yes")))
         else:
             self.part_store.set_value(iter, 3, (_("No")))
-            
+
         self.part_store.set_value(iter, 4, part_object.size)
         self.part_store.set_value(iter, 5, part_object)
 
         self.part_view.expand_all()
-        
+
     def populateList(self, kspart):
         part_object = partEntry.partEntry()
 
@@ -608,5 +608,5 @@ class partWindow:
             part_object.doFormat = 1
         else:
             part_object.doFormat = 0
-        
+
         self.setValues(part_object)

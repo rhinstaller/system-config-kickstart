@@ -44,8 +44,8 @@ class xconfig:
         self.driver_view = xml.get_widget("driver_view")
         self.monitor_view = xml.get_widget("monitor_view")
         self.sync_button = xml.get_widget("sync_button")
-        self.sync_table = xml.get_widget("sync_table")        
-        self.xconfig_notebook = xml.get_widget("xconfig_notebook")        
+        self.sync_table = xml.get_widget("sync_table")
+        self.xconfig_notebook = xml.get_widget("xconfig_notebook")
         self.hsync_entry = xml.get_widget("hsync_entry")
         self.vsync_entry = xml.get_widget("vsync_entry")
         self.color_depth_combo = xml.get_widget("color_depth_combo")
@@ -59,12 +59,12 @@ class xconfig:
         self.monitor_vbox = xml.get_widget("monitor_vbox")
         self.driver_probe_check = xml.get_widget("driver_probe_check")
         self.monitor_probe_check = xml.get_widget("monitor_probe_check")
-        
+
         self.driver_store = gtk.ListStore(gobject.TYPE_STRING)
         self.driver_view.set_model(self.driver_store)
         self.driver_col = gtk.TreeViewColumn("", gtk.CellRendererText(), text = 0)
         self.driver_view.append_column(self.driver_col)
-        
+
         self.monitor_store = gtk.ListStore(gobject.TYPE_STRING)
         self.monitor_view.set_model(None)
         self.monitor_col = gtk.TreeViewColumn("", gtk.CellRendererText(), text = 0)
@@ -89,7 +89,7 @@ class xconfig:
                        "2048x1536"]
         self.resolution_combo.set_popdown_strings(resolutions)
         self.resolution_combo.entry.set_editable(False)
-        
+
         #add video card RAM sizes to option menu
         vram_list = ["256 KB", "512 KB", "1 MB", "2 MB", "4 MB", "8 MB", "16 MB", "32 MB", "64 MB", "128 MB", "256 MB"]
         self.videoram_combo.set_popdown_strings(vram_list)
@@ -122,7 +122,7 @@ class xconfig:
             driverFile = open("/usr/share/hwdata/videodrivers", "r")
         except:
             raise RuntimeError, (_("Could not read video driver database"))
-            
+
         lines = driverFile.readlines ()
         driverFile.close ()
         lines.sort()
@@ -144,7 +144,7 @@ class xconfig:
 	l = db.keys()
 	l.sort()
 	mon_list = []
-        
+
 	#put Generic LCD and Generic CRT at the front of the list
         tmp = l[l.index("Generic LCD Display")]
         l.remove(l[l.index("Generic LCD Display")])
@@ -180,7 +180,7 @@ class xconfig:
     def toggle_sync (self, args):
         sync_instead = self.sync_button.get_active()
         self.sync_table.set_sensitive(sync_instead)
-        self.monitor_view.set_sensitive(not sync_instead)        
+        self.monitor_view.set_sensitive(not sync_instead)
 
     def setSensitive(self, boolean):
         if boolean == False:
@@ -300,7 +300,7 @@ class xconfig:
             if self.ks.xconfig.videoRam != "":
                 for size in self.ramsize_dict.keys():
                     if int(self.ks.xconfig.videoRam) == int(self.ramsize_dict[size]):
-                        self.videoram_combo.entry.set_text(size)                            
+                        self.videoram_combo.entry.set_text(size)
 
             if self.ks.monitor.monitor != "":
                 self.monitor_probe_check.set_active(False)

@@ -26,7 +26,7 @@ import kickstartGui
 
 ##
 ## I18N
-## 
+##
 from rhpl.translate import _, N_
 import rhpl.translate as translate
 domain = 'system-config-kickstart'
@@ -34,7 +34,7 @@ translate.textdomain (domain)
 gtk.glade.bindtextdomain(domain)
 
 class install:
-  
+
     def __init__(self, parent_class, xml, store, view, notebook, ksHandler):
         self.xml = xml
         self.parent_class = parent_class
@@ -52,14 +52,14 @@ class install:
         self.nfs_radiobutton = xml.get_widget("nfs_radiobutton")
         self.ftp_radiobutton = xml.get_widget("ftp_radiobutton")
         self.http_radiobutton = xml.get_widget("http_radiobutton")
-        self.hd_radiobutton = xml.get_widget("hd_radiobutton")		
+        self.hd_radiobutton = xml.get_widget("hd_radiobutton")
 
         self.nfsdir_label = xml.get_widget("nfsdir_label")
         self.nfsserver_label = xml.get_widget("nfsserver_label")
         self.ftpdir_label = xml.get_widget("ftpdir_label")
         self.ftpserver_label = xml.get_widget("ftpserver_label")
         self.ftpuser_label = xml.get_widget("ftpuser_label")
-        self.ftppasswd_label = xml.get_widget("ftppasswd_label")        
+        self.ftppasswd_label = xml.get_widget("ftppasswd_label")
         self.hdpart_label = xml.get_widget("hdpart_label")
         self.hddir_label = xml.get_widget("hddir_label")
         self.httpserver_label = xml.get_widget("httpserver_label")
@@ -70,7 +70,7 @@ class install:
         self.ftpdir_entry = xml.get_widget("ftpdir_entry")
         self.ftpserver_entry = xml.get_widget("ftpserver_entry")
         self.ftpuser_entry = xml.get_widget("ftpuser_entry")
-        self.ftppasswd_entry = xml.get_widget("ftppasswd_entry")        
+        self.ftppasswd_entry = xml.get_widget("ftppasswd_entry")
         self.hdpart_entry = xml.get_widget("hdpart_entry")
         self.hddir_entry = xml.get_widget("hddir_entry")
         self.httpserver_entry = xml.get_widget("httpserver_entry")
@@ -79,7 +79,7 @@ class install:
         self.ftpuserpass_checkbutton = xml.get_widget("ftpuserpass_checkbutton")
 
         self.install_notebook = xml.get_widget("install_notebook")
-        
+
         self.install_radiobutton.connect("toggled", self.toggleInstall)
         self.cdrom_radiobutton.connect("toggled", self.setState)
         self.nfs_radiobutton.connect("toggled", self.setState)
@@ -116,7 +116,7 @@ class install:
             return
         elif self.hd_radiobutton.get_active():
             self.install_notebook.set_current_page(4)
-                                     
+
     def formToKickstart(self):
         self.ks.upgrade(upgrade=self.upgrade_radiobutton.get_active())
 
@@ -161,9 +161,9 @@ class install:
                     return None
 
                 buf = buf + self.ftpuser_entry.get_text() + ":" + self.ftppasswd_entry.get_text() + "@"
-            
+
             buf = buf + ftpserver
-            directory = self.ftpdir_entry.get_text()		
+            directory = self.ftpdir_entry.get_text()
             if directory[0] == '/':
                 buf = buf + directory
             else:
@@ -188,7 +188,7 @@ class install:
                 loc = loc[:-1]
 
             buf = "http://" + loc
-            directory = self.httpdir_entry.get_text()		
+            directory = self.httpdir_entry.get_text()
             if directory[0] == '/':
                 buf = buf + directory
             else:
@@ -240,7 +240,7 @@ class install:
 
     def applyKickstart(self):
         if self.ks.upgrade.upgrade == False:
-            self.install_radiobutton.set_active(True)            
+            self.install_radiobutton.set_active(True)
         else:
             self.upgrade_radiobutton.set_active(True)
 
@@ -290,7 +290,7 @@ class install:
 
             elif protocol == "http":
                 host, dir = self.splitUrl(data)
-                
+
                 self.http_radiobutton.set_active(True)
                 self.httpserver_entry.set_text(host)
                 self.httpdir_entry.set_text(dir)
