@@ -208,24 +208,26 @@ class Packages:
         self.ks.packages.packageList = []
         self.ks.packages.excludedList = []
 
+        # Faster to grab all the package names up front rather than call
+        # searchNevra in the loop below.
+        allPkgNames = map(lambda pkg: pkg.name, self.y.pkgSack.returnPackages())
+        allPkgNames.sort()
+
         self.y.tsInfo.makelists()
 
         txmbrNames = map (lambda x: x.name, self.y.tsInfo.getMembers())
 
-        for grp in self.y.comps.groups:
-            if grp.selected:
-                self.ks.packages.groupList.append(Group(name=grp.groupid))
+        for grp in filter(lambda x: x.selected, self.y.comps.groups):
+            self.ks.packages.groupList.append(Group(name=grp.groupid))
 
-                defaults = grp.default_packages.keys()
-                optionals = grp.optional_packages.keys()
+            defaults = grp.default_packages.keys()
+            optionals = grp.optional_packages.keys()
 
-                for pkg in grp.packages:
-                    if pkg in defaults and not pkg in txmbrNames:
-                        self.ks.packages.excludedList.append(pkg)
+            for pkg in filter(lambda x: x in defaults and (not x in txmbrNames and x in allPkgNames), grp.packages):
+                self.ks.packages.excludedList.append(pkg)
 
-                for pkg in optionals:
-                    if pkg in txmbrNames:
-                        self.ks.packages.packageList.append(pkg)
+            for pkg in filter(lambda x: x in txmbrNames, optionals):
+                self.ks.packages.packageList.append(pkg)
 
     def applyKickstart(self):
         if not self.y.packagesEnabled:
