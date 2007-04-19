@@ -239,7 +239,7 @@ class install:
         return host, dir
 
     def applyKickstart(self):
-        if self.ks.upgrade.upgrade == False:
+        if not self.ks.upgrade.upgrade:
             self.install_radiobutton.set_active(True)
         else:
             self.upgrade_radiobutton.set_active(True)
