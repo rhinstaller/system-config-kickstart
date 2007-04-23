@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.7.4
+Version: 2.7.5
 Release: 1%{?dist}
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -28,7 +28,7 @@ Requires(post): gtk2 >= 2.6
 Requires(postun): gtk2 >= 2.6
 
 %description
-Kickstart Configurator is a graphical tool for creating kickstart files.  
+Kickstart Configurator is a graphical tool for creating kickstart files.
 
 %prep
 %setup -q
@@ -78,6 +78,12 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Mon Apr 23 2007 Chris Lumens <clumens@redhat.com> 2.7.5-1
+- Default to installing instead of upgrading.
+- Set a default SELinux setting when started up.
+- Don't write out remove lines for packages not available on the
+  installation architecture.
+
 * Mon Mar 19 2007 Chris Lumens <clumens@redhat.com> 2.7.4-1
 - Fix loading packages section (#232285).
 - Fix preview/save on upgrade (#232282).
