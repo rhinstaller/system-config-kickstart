@@ -1,8 +1,8 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.7.5
+Version: 2.7.6
 Release: 1%{?dist}
-URL: http://fedora.redhat.com/projects/config-tools/
+URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPL
 ExclusiveOS: Linux
 Group: System Environment/Base
@@ -78,6 +78,10 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Fri Apr 27 2007 Chris Lumens <clumens@redhat.com> 2.7.6-1
+- Update package URL (#237712).
+- Correctly set the language if it ends with ".UTF-8" (#238119).
+
 * Mon Apr 23 2007 Chris Lumens <clumens@redhat.com> 2.7.5-1
 - Default to installing instead of upgrading.
 - Set a default SELinux setting when started up.
