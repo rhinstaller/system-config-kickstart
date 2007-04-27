@@ -222,8 +222,13 @@ class basic:
         if self.ks.platform in self.platform_list:
             self.platform_combo.entry.set_text(self.ks.platform)
 
+        if self.ks.lang.lang.find (".") != -1:
+            ksLang = self.ks.lang.lang.split(".")[0]
+        else:
+            ksLang = self.ks.lang.lang
+
         for lang in self.langDict.keys():
-            if self.langDict[lang] == self.ks.lang.lang:
+            if self.langDict[lang] == ksLang:
                 self.lang_combo.list.select_item(self.lang_list.index(lang))
 
         if self.ks.keyboard.keyboard != "":
