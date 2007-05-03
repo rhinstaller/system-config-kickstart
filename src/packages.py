@@ -134,16 +134,16 @@ class sckYumBase(yum.YumBase):
         self.repos.disableRepo("*")
         if callback: callback.next_task()
 
-        enabledBaseRepo = False
+        self.packagesEnabled = False
         for repo in repoorder:
             try:
                 self.repos.enableRepo(repo)
-                enabledBaseRepo = True
-            except yum.Errors.RepoError:
+                self.packagesEnabled = True
+                break
+            except yum.Error.RepoError:
                 pass
 
-        if not enabledBaseRepo:
-            self.packagesEnabled = False
+        if not self.packagesEnabled:
             return
 
         self.doRepoSetup()
