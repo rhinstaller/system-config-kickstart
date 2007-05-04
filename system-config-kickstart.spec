@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.7.6
+Version: 2.7.7
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPL
@@ -78,6 +78,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Fri May 04 2007 Chris Lumens <clumens@redhat.com> 2.7.7-1
+- Don't try to enable all repos for the packaging screen (#238503).
+
 * Fri Apr 27 2007 Chris Lumens <clumens@redhat.com> 2.7.6-1
 - Update package URL (#237712).
 - Correctly set the language if it ends with ".UTF-8" (#238119).
