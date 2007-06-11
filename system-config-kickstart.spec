@@ -32,7 +32,7 @@ Kickstart Configurator is a graphical tool for creating kickstart files.
 %install
 rm -rf %{buildroot}
 make INSTROOT=%{buildroot} install
-desktop-file-install --vendor "fedora" --delete-original \
+desktop-file-install --vendor "" --delete-original \
   --dir=%{buildroot}%{_datadir}/applications \
   --add-category Application \
   --add-category System \
