@@ -1,29 +1,23 @@
-Summary: A graphical interface for making kickstart files.
+Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
 Version: 2.7.7
-Release: 1%{?dist}
+Release: 2%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPL
 ExclusiveOS: Linux
 Group: System Environment/Base
-BuildRoot: %{_tmppath}/%{name}-%{version}-root
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
+# This is a Red Hat maintained package which is specific to
+# our distribution.  Thus the source is only available from
+# within this srpm.
 Source0: %{name}-%{version}.tar.gz
-Obsoletes: ksconfig
-Obsoletes: redhat-config-kickstart
-BuildRequires: desktop-file-utils
-BuildRequires: intltool gettext
-Requires: pygtk2 >= 1.99.11
-Requires: pygtk2-libglade 
-Requires: python >= 2.3.3
-Requires: hwdata
-Requires: rhpl
-Requires: system-config-language
-Requires: system-config-securitylevel
-Requires: pykickstart >= 0.96
-Requires: yum
-Requires: pirut
-Requires: hicolor-icon-theme
+
+Obsoletes: ksconfig, redhat-config-kickstart
+BuildRequires: desktop-file-utils, intltool, gettext
+Requires: pygtk2 >= 1.99.11, pygtk2-libglade, python >= 2.3.3, hwdata, rhpl
+Requires: system-config-language, system-config-securitylevel <= 1.7.0
+Requires: pykickstart >= 0.96, yum, pirut, hicolor-icon-theme
 Requires(post): gtk2 >= 2.6
 Requires(postun): gtk2 >= 2.6
 
@@ -33,20 +27,22 @@ Kickstart Configurator is a graphical tool for creating kickstart files.
 %prep
 %setup -q
 
+%build
+
 %install
-rm -rf $RPM_BUILD_ROOT
-make INSTROOT=$RPM_BUILD_ROOT install
-desktop-file-install --vendor system --delete-original      \
-  --dir $RPM_BUILD_ROOT%{_datadir}/applications             \
+rm -rf %{buildroot}
+make INSTROOT=%{buildroot} install
+desktop-file-install --vendor "fedora" --delete-original \
+  --dir=%{buildroot}%{_datadir}/applications \
   --add-category Application \
   --add-category System \
-  --add-category X-Red-Hat-Base          \
-  $RPM_BUILD_ROOT%{_datadir}/applications/%{name}.desktop
+  --add-category X-Red-Hat-Base \
+  %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 %find_lang %name
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %post
 touch --no-create %{_datadir}/icons/hicolor
@@ -66,18 +62,20 @@ if [ -x /usr/bin/gtk-update-icon-cache ]; then
 fi
 
 %files -f %{name}.lang
-%defattr(-,root,root)
-%doc COPYING
-%doc doc/*
-/usr/bin/%{name}
-%dir /usr/share/%{name}
-/usr/share/%{name}/*
+%defattr(-,root,root,-)
+%doc COPYING doc/*
+%{_bindir}/%{name}
+%dir %{_datadir}/%{name}
+%{_datadir}/%{name}/*
 %{_mandir}/man8/%{name}*
 %lang(ja) %{_mandir}/ja/man8/%{name}*
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Mon Jun 11 2007 Chris Lumens <clumens@redhat.com> 2.7.7-2
+- Fixes for package review (#226459).
+
 * Fri May 04 2007 Chris Lumens <clumens@redhat.com> 2.7.7-1
 - Don't try to enable all repos for the packaging screen (#238503).
 
