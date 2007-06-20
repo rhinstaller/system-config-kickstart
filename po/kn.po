@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-03-19 16:41-0400\n"
-"PO-Revision-Date: 2007-06-19 11:38+0530\n"
+"PO-Revision-Date: 2007-06-20 17:54+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -229,17 +229,19 @@ msgstr ""
 
 #: ../src/packages.py:168
 msgid "Package configuration is not applicable on upgrades."
-msgstr ""
+msgstr "ಪ್ಯಾಕೇಜು ಸಂರಚನೆಯು ಅಪ್ಗ್ರೇಡುಗಳಿಗೆ ಅನ್ವಯವಾಗುವುದಿಲ್ಲ."
 
 #: ../src/packages.py:174
 msgid "Retrieving package information"
-msgstr ""
+msgstr "ಪ್ಯಾಕೇಜು ಮಾಹಿತಿಯನ್ನು ಹಿಂಪಡೆಯುತ್ತಿರುವುದು"
 
 #: ../src/packages.py:183
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
 msgstr ""
+"ಪ್ಯಾಕೇಜು ಮಾಹಿತಿಯನ್ನು ಡೌನ್ ಲೋಡ್ ಮಾಡುವಲ್ಲಿ ಉಂಟಾದ ತೊಂದರೆಗಳ ಕಾರಣದಿಂದಾಗಿ ಪ್ಯಾಕೇಜು "
+"ಆಯ್ಕೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸಲಾಗಿದೆ."
 
 #: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:189
 msgid "ext2"
@@ -252,11 +254,11 @@ msgstr "ext3"
 #. _("physical volume (LVM)"):"lvm",
 #: ../src/partWindow.py:86 ../src/partWindow.py:149
 msgid "software RAID"
-msgstr ""
+msgstr "ತಂತ್ರಾಂಶ RAID"
 
 #: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:208
 msgid "swap"
-msgstr ""
+msgstr "ಸ್ವಾಪ್"
 
 #: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:209
 msgid "vfat"
@@ -277,96 +279,104 @@ msgstr "ಇಲ್ಲ"
 #: ../src/partWindow.py:313 ../src/partWindow.py:328 ../src/partWindow.py:347
 #: ../src/partWindow.py:361
 msgid "Auto"
-msgstr ""
+msgstr "ಸ್ವಯಂಚಾಲಿತ"
 
 #: ../src/partWindow.py:322
 msgid "Hard Drives"
-msgstr ""
+msgstr "ಹಾರ್ಡ್ ಡ್ರೈವುಗಳು"
 
 #: ../src/partWindow.py:465
 msgid "Specify a mount point for the partition."
-msgstr ""
+msgstr "ವಿಭಜನೆಗಾಗಿ ಒಂದು ಆರೋಹಣ ತಾಣವನ್ನು ಸೂಚಿಸಿ."
 
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:474
 #, python-format
 msgid "The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr ""
+msgstr "\"%s\" ಆರೋಹಣ ತಾಣವು ಈಗಾಗಲೆ ಬಳಸಲ್ಪಡುತ್ತ್ತಿದೆ.  ದಯವಿಟ್ಟು ಬೇರೊಂದು ಆರೋಹಣ ತಾಣವನ್ನು ಸೂಚಿಸಿ."
 
 #: ../src/partWindow.py:494
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
 msgstr ""
+"ಒಂದು ಹೊಸ RAID ವಿಭಜನೆಯನ್ನು ರಚಿಸಲು, ನೀವು ಒಂದು ಹಾರ್ಡ್ ಡ್ರೈವ್ ಸಾಧನ ಹೆಸರು ಅಥವ ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ "
+"ಒಂದು ವಿಭಜನೆಯನ್ನು ಸೂಚಿಸಬೇಕು."
 
 #: ../src/partWindow.py:531
 msgid "Specify a device on which to create the partition."
-msgstr ""
+msgstr "ವಿಭಜನೆಯನ್ನು ಮಾಡಬೇಕೆಂದಿರುವ ಒಂದು ಸಾಧನವನ್ನು ಸೂಚಿಸಿ."
 
 #: ../src/partWindow.py:540
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
 msgstr ""
+"ನೀವು ಸೂಚಿಸಿದ ವಿಭಜನೆಯು ಒಂದು ಅಂಕೆಯಿಂದ ಕೊನೆಗೊಳ್ಳುತ್ತಿಲ್ಲ.  ವಿಭಾಗಗಳು \"hda1\" ಅಥವ \"sda3\" "
+"ನಂತಹ ವಿಭಾಗ ಸಂಖ್ಯೆಗಳನ್ನು ಹೊಂದಿರಬೇಕು."
 
 #: ../src/partition.py:73
 msgid ""
 "Device/\n"
 "Partition Number"
 msgstr ""
+"ಸಾಧನ/\n"
+"ವಿಭಾಗ ಸಂಖ್ಯೆ"
 
 #: ../src/partition.py:75
 msgid ""
 "Mount Point/\n"
 "RAID"
 msgstr ""
+"ಆರೋಹಣ ತಾಣ/\n"
+"RAID"
 
 #: ../src/partition.py:77
 msgid "Type"
-msgstr ""
+msgstr "ಪ್ರಕಾರ"
 
 #: ../src/partition.py:79
 msgid "Format"
-msgstr ""
+msgstr "ವಿನ್ಯಾಸ"
 
 #: ../src/partition.py:81
 msgid "Size (MB)"
-msgstr ""
+msgstr "ಗಾತ್ರ (MB)"
 
 #: ../src/partition.py:96 ../src/partition.py:136
 msgid "Please select a partition from the list."
-msgstr ""
+msgstr "ದಯವಿಟ್ಟು ಪಟ್ಟಿಯಿಂದ ದಯವಿಟ್ಟು ಒಂದು ವಿಭಾಗವನ್ನು ಆರಿಸಿ."
 
 #: ../src/raidOptionsWindow.py:72
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
-msgstr ""
+msgstr "ನಿಮ್ಮಲ್ಲಿ ಪ್ರಸ್ತುತ %d ತಂತ್ರಾಂಶ RAID ವಿಭಾಗ(ಗಳು) ಬಳಸಲು ಮುಕ್ತವಾಗಿದೆ(ವೆ)."
 
 #: ../src/raidWindow.py:174
 #, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr ""
+msgstr "RAID %s ಅನ್ನು ಬಳಸಲು ನೀವು ಕನಿಷ್ಠ ೨ ವಿಭಾಗಗಳನ್ನಾದರೂ ಆರಿಸಬೇಕು"
 
 #: ../src/raidWindow.py:180
 #, python-format
 msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr ""
+msgstr "RAID %s ಅನ್ನು ಬಳಸಲು ನೀವು ಕನಿಷ್ಠ ೩ ವಿಭಾಗಗಳನ್ನಾದರೂ ಆರಿಸಬೇಕು"
 
 #: ../src/raidWindow.py:194 ../src/raidWindow.py:220
 msgid "Raid Devices"
-msgstr ""
+msgstr "Raid ಸಾಧನಗಳು"
 
 #: ../src/xconfig.py:124
 msgid "Could not read video driver database"
-msgstr ""
+msgstr "ವೀಡಿಯೋ ಚಾಲಕ ದತ್ತಾಂಶಗಳನ್ನು ಓದಲಾಗಿಲ್ಲ"
 
 #: ../src/xconfig.py:229
 msgid "Please select an X driver."
-msgstr ""
+msgstr "ದಯವಿಟ್ಟು ಒಂದು x ಚಾಲಕವನ್ನು ಆರಿಸಿ."
 
 #: ../src/xconfig.py:248
 msgid "Please select a monitor."
-msgstr ""
+msgstr "ದಯವಿಟ್ಟು ಒಂದು ತೆರೆಯನ್ನು ಆರಿಸಿ."
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -374,11 +384,11 @@ msgstr "         "
 
 #: tmp/system-config-kickstart.glade.h:2
 msgid "(for example: hda or sdc)"
-msgstr ""
+msgstr "(ಉದಾಹರಣೆಗೆ: hda ಅಥವ sdc)"
 
 #: tmp/system-config-kickstart.glade.h:3
 msgid "(for example: hda1 or sdc3)"
-msgstr ""
+msgstr "(ಉದಾಹರಣೆಗೆ: hda1 ಅಥವ sdc3)"
 
 #: tmp/system-config-kickstart.glade.h:4
 msgid "."
@@ -386,39 +396,39 @@ msgstr "."
 
 #: tmp/system-config-kickstart.glade.h:5
 msgid "0"
-msgstr "0"
+msgstr "೦"
 
 #: tmp/system-config-kickstart.glade.h:6
 msgid "1"
-msgstr "1"
+msgstr "೧"
 
 #: tmp/system-config-kickstart.glade.h:7
 msgid "5"
-msgstr "5"
+msgstr "೫"
 
 #: tmp/system-config-kickstart.glade.h:8
 msgid "Additional Size Options"
-msgstr ""
+msgstr "ಹೆಚ್ಚುವರಿ ಗಾತ್ರ ಆಯ್ಕೆಗಳು"
 
 #: tmp/system-config-kickstart.glade.h:9
 msgid "Authentication Configuration"
-msgstr ""
+msgstr "ದೃಢೀಕರಣ ಸಂರಚನೆ"
 
 #: tmp/system-config-kickstart.glade.h:10
 msgid "Authentication options are not applicable on upgrades."
-msgstr ""
+msgstr "ದೃಢೀಕರಣ ಆಯ್ಕೆಗಳು ಅಪ್ಗ್ರೇಡುಗಳ ಮೇಲೆ ಅನ್ವಯವಾಗುವುದಿಲ್ಲ."
 
 #: tmp/system-config-kickstart.glade.h:11
 msgid "Authentication:"
-msgstr ""
+msgstr "ದೃಢೀಕರಣ:"
 
 #: tmp/system-config-kickstart.glade.h:12
 msgid "Basic Configuration (required)"
-msgstr ""
+msgstr "ಮೂಲಭೂತ ಸಂರಚನೆ (ಅಗತ್ಯವಿದೆ)"
 
 #: tmp/system-config-kickstart.glade.h:13
 msgid "Boot Loader Options (required)"
-msgstr ""
+msgstr "ಬೂಟ್ ಲೋಡರ್ ಆಯ್ಕೆಗಳು (ಅಗತ್ಯವಿದೆ)"
 
 #: tmp/system-config-kickstart.glade.h:14
 msgid "CA Cert URL:"
@@ -430,107 +440,107 @@ msgstr "CD-ROM"
 
 #: tmp/system-config-kickstart.glade.h:16
 msgid "Choose one of the following options:"
-msgstr ""
+msgstr "ಈ ಕೆಳಗಿನ ಯಾವುದಾದರೂ ಆಯ್ಕೆಗಳನ್ನು ಆರಿಸಿ:"
 
 #: tmp/system-config-kickstart.glade.h:17
 msgid "Choose the Installation Method:"
-msgstr ""
+msgstr "ಅನುಸ್ಥಾಪನ ಕ್ರಮವನ್ನು ಆರಿಸಿ:"
 
 #: tmp/system-config-kickstart.glade.h:18
 msgid "Clear Master Boot Record"
-msgstr ""
+msgstr "ಮಾಸ್ಟರ್ ಬೂಟ್ ರೆಕಾರ್ಡನ್ನು ತೊಲಗಿಸಿ"
 
 #: tmp/system-config-kickstart.glade.h:19
 msgid "Color Depth"
-msgstr ""
+msgstr "ಬಣ್ಣದ ಗಾಢತೆ"
 
 #: tmp/system-config-kickstart.glade.h:20
 msgid "Configure the X Window System"
-msgstr ""
+msgstr "X ವಿಂಡೋ ವ್ಯವಸ್ಥೆಯನ್ನು ಸಂರಚಿಸಿ"
 
 #: tmp/system-config-kickstart.glade.h:21
 msgid "Confirm Password:"
-msgstr ""
+msgstr "ಗುಪ್ತಪದವನ್ನು ಖಾತ್ರಿಗೊಳಿಸಿ:"
 
 #: tmp/system-config-kickstart.glade.h:22
 msgid "Create a RAID device [default = /dev/md0]"
-msgstr ""
+msgstr "ಒಂದು RAID ಸಾಧನವನ್ನು ರಚಿಸಿ [ಡೀಫಾಲ್ಟ್ = /dev/md0]"
 
 #: tmp/system-config-kickstart.glade.h:23
 msgid "Create a software RAID partition"
-msgstr ""
+msgstr "ಒಂದು ತಂತ್ರಾಂಶ RAID ವಿಭಾಗಗಳನ್ನು ರಚಿಸಿ"
 
 #: tmp/system-config-kickstart.glade.h:24
 msgid "Default Desktop:"
-msgstr ""
+msgstr "ಡಿಫಾಲ್ಟ್ ಡೆಸ್ಕ್ ಟಾಪ್:"
 
 #: tmp/system-config-kickstart.glade.h:25
 msgid "Default Language:"
-msgstr ""
+msgstr "ಡಿಫಾಲ್ಟ್ ಭಾಷೆ:"
 
 #: tmp/system-config-kickstart.glade.h:26
 msgid "Disabled"
-msgstr ""
+msgstr "ಅಶಕ್ತಗೊಳಿಸಲಾಗಿದೆ"
 
 #: tmp/system-config-kickstart.glade.h:28
 msgid "Display configuration is not applicable on upgrades."
-msgstr ""
+msgstr "ಪ್ರದರ್ಶಕದ ಸಂರಚನೆಗಳು ಅಪ್ಗ್ರೇಡುಗಳ ಮೇಲೆ ಅನ್ವಯವಾಗುವುದಿಲ್ಲ."
 
 #: tmp/system-config-kickstart.glade.h:29
 msgid "Do not clear Master Boot Record"
-msgstr ""
+msgstr "ಮಾಸ್ಟರ್ ಬೂಟ್ ದಾಖಲೆಯನ್ನು ತೊಲಗಿಸಬೇಡಿ"
 
 #: tmp/system-config-kickstart.glade.h:30
 msgid "Do not initialize the disk label"
-msgstr ""
+msgstr "ಡಿಸ್ಕ್ ಲೇಬಲ್ಲನ್ನು ಆರಂಭಿಸ ಬೇಡಿ"
 
 #: tmp/system-config-kickstart.glade.h:31
 msgid "Do not install a boot loader"
-msgstr ""
+msgstr "ಒಂದು ಬೂಟ್ ಲೋಡರನ್ನು ಅನುಸ್ಥಾಪಿಸಬೇಡಿ"
 
 #: tmp/system-config-kickstart.glade.h:32
 msgid "Drive :"
-msgstr ""
+msgstr "ಡ್ರೈವ್:"
 
 #: tmp/system-config-kickstart.glade.h:33
 msgid "Enable Hesiod Support"
-msgstr ""
+msgstr "Hesiod ಬೆಂಬಲವನ್ನು ಶಕ್ತಗೊಳಿಸಿ"
 
 #: tmp/system-config-kickstart.glade.h:34
 msgid "Enable Kerberos 5 Authentication"
-msgstr ""
+msgstr "Kerberos ೫ ದೃಢೀಕರಣವನ್ನು ಶಕ್ತಗೊಳಿಸಿ"
 
 #: tmp/system-config-kickstart.glade.h:35
 msgid "Enable LDAP"
-msgstr ""
+msgstr "LDAP ಅನ್ನು ಶಕ್ತಗೊಳಿಸಿ"
 
 #: tmp/system-config-kickstart.glade.h:36
 msgid "Enable NIS"
-msgstr ""
+msgstr "NIS ಅನ್ನು ಶಕ್ತಗೊಳಿಸಿ"
 
 #: tmp/system-config-kickstart.glade.h:37
 msgid "Enable SMB Authentication"
-msgstr ""
+msgstr "SMB ದೃಢೀಕರಣವನ್ನು ಶಕ್ತಗೊಳಿಸಿ"
 
 #: tmp/system-config-kickstart.glade.h:38
 msgid "Enable nscd"
-msgstr ""
+msgstr "nscd ಯನ್ನು ಶಕ್ತಗೊಳಿಸಿ"
 
 #: tmp/system-config-kickstart.glade.h:39
 msgid "Enabled"
-msgstr ""
+msgstr "ಶಕ್ತಗೊಳಿಸಲಾಗಿದೆ"
 
 #: tmp/system-config-kickstart.glade.h:40
 msgid "Enabled in reconfiguration mode"
-msgstr ""
+msgstr "ಪುನರ್ ಸಂರಚನಾ ಕ್ರಮದಲ್ಲಿ ಶಕ್ತಗೊಳಿಸಲಾಗಿದೆ"
 
 #: tmp/system-config-kickstart.glade.h:41
 msgid "Encrypt GRUB password"
-msgstr ""
+msgstr "GRUB ಗುಪ್ತಪದವನ್ನು ಗೂಢಲಿಪಿಕರಣ ಮಾಡಿ"
 
 #: tmp/system-config-kickstart.glade.h:42
 msgid "Encrypt root password"
-msgstr ""
+msgstr "ಮೂಲ ಗುಪ್ತಪದವನ್ನು ಗೂಢಲಿಪಿಕರಣ ಮಾಡಿ"
 
 #: tmp/system-config-kickstart.glade.h:43
 msgid "FTP"
@@ -538,43 +548,43 @@ msgstr "FTP"
 
 #: tmp/system-config-kickstart.glade.h:44
 msgid "FTP Directory:"
-msgstr ""
+msgstr "FTP ಕೋಶ:"
 
 #: tmp/system-config-kickstart.glade.h:45
 msgid "FTP Password"
-msgstr ""
+msgstr "FTP ಗುಪ್ತಪದ"
 
 #: tmp/system-config-kickstart.glade.h:46
 msgid "FTP Server:"
-msgstr ""
+msgstr "FTP ಪರಿಚಾರಕ:"
 
 #: tmp/system-config-kickstart.glade.h:47
 msgid "FTP Username"
-msgstr ""
+msgstr "FTP ಬಳಕೆದಾರ ಹೆಸರು"
 
 #: tmp/system-config-kickstart.glade.h:48
 msgid "File System Type:"
-msgstr ""
+msgstr "ಕಡತ ವ್ಯವಸ್ಥೆಯ ಪ್ರಕಾರ:"
 
 #: tmp/system-config-kickstart.glade.h:49
 msgid "Fill all unused space on disk"
-msgstr ""
+msgstr "ಡಿಸ್ಕಿನಲ್ಲಿ ಬಳಸದೇ ಮಿಕ್ಕುಳಿದ ಎಲ್ಲಾ ಜಾಗವನ್ನು ತುಂಬಿಸಿ"
 
 #: tmp/system-config-kickstart.glade.h:51
 msgid "Fixed size"
-msgstr ""
+msgstr "ನಿಗದಿತವಾದ ಗಾತ್ರ"
 
 #: tmp/system-config-kickstart.glade.h:52
 msgid "Force to be a primary partition (asprimary)"
-msgstr ""
+msgstr "ಪ್ರಾಥಮಿಕ ವಿಭಾಗವಾಗಿ ಇರುವಂತೆ ಒತ್ತಾಯಿಸಿ (asprimary)"
 
 #: tmp/system-config-kickstart.glade.h:53
 msgid "Format RAID device"
-msgstr ""
+msgstr "RAID ಸಾಧನವನ್ನು ವಿನ್ಯಸಿಸಿ"
 
 #: tmp/system-config-kickstart.glade.h:54
 msgid "Format partition"
-msgstr ""
+msgstr "ವಿಭಾಗವನ್ನು ವಿನ್ಯಸಿಸಿ"
 
 #: tmp/system-config-kickstart.glade.h:55
 msgid "GNOME"
@@ -582,19 +592,19 @@ msgstr "GNOME"
 
 #: tmp/system-config-kickstart.glade.h:56
 msgid "GRUB Options:"
-msgstr ""
+msgstr "GRUB ಆಯ್ಕೆಗಳು:"
 
 #: tmp/system-config-kickstart.glade.h:57
 msgid "Gateway:"
-msgstr ""
+msgstr "ಗೇಟ್ ವೇ:"
 
 #: tmp/system-config-kickstart.glade.h:58
 msgid "General"
-msgstr ""
+msgstr "ಸಾಮಾನ್ಯ"
 
 #: tmp/system-config-kickstart.glade.h:59
 msgid "Grow to maximum of (MB):"
-msgstr ""
+msgstr "ಇಲ್ಲಿ ಹೇಳಿದ ಗರಿಷ್ಟ ಮಟ್ಟದ ಅಭಿವೃದ್ಧಿ ಹೊಂದು (MB):"
 
 #: tmp/system-config-kickstart.glade.h:60
 msgid "HTTP"
@@ -602,23 +612,23 @@ msgstr "HTTP"
 
 #: tmp/system-config-kickstart.glade.h:61
 msgid "HTTP Directory:"
-msgstr ""
+msgstr "HTTP ಕಡತಕೋಶ:"
 
 #: tmp/system-config-kickstart.glade.h:62
 msgid "HTTP Server:"
-msgstr ""
+msgstr "HTTP ಪರಿಚಾರಕ:"
 
 #: tmp/system-config-kickstart.glade.h:63
 msgid "Hard Drive"
-msgstr ""
+msgstr "ಹಾರ್ಡ್ ಡ್ರೈವ್"
 
 #: tmp/system-config-kickstart.glade.h:64
 msgid "Hard Drive Directory:"
-msgstr ""
+msgstr "ಹಾರ್ಡ್ ಡ್ರೈವ್ ಕಡತ ಕೋಶ:"
 
 #: tmp/system-config-kickstart.glade.h:65
 msgid "Hard Drive Partition:"
-msgstr ""
+msgstr "ಹಾರ್ಡ್ ಡ್ರೈವ್ ವಿಭಾಗ:"
 
 #: tmp/system-config-kickstart.glade.h:66
 msgid "Hesiod"
@@ -626,19 +636,19 @@ msgstr "Hesiod"
 
 #: tmp/system-config-kickstart.glade.h:67
 msgid "Hesiod Authentication"
-msgstr ""
+msgstr "Hesiod ದೃಢೀಕರಣ"
 
 #: tmp/system-config-kickstart.glade.h:68
 msgid "Hesiod LHS:"
-msgstr ""
+msgstr "Hesiod LHS:"
 
 #: tmp/system-config-kickstart.glade.h:69
 msgid "Hesiod RHS:"
-msgstr ""
+msgstr "Hesiod RHS:"
 
 #: tmp/system-config-kickstart.glade.h:70
 msgid "Horizontal Sync:"
-msgstr ""
+msgstr "ಅಡ್ಡ Sync:"
 
 #: tmp/system-config-kickstart.glade.h:71
 msgid "Hz"
@@ -646,27 +656,27 @@ msgstr "Hz"
 
 #: tmp/system-config-kickstart.glade.h:72
 msgid "IP Address:"
-msgstr ""
+msgstr "IP ವಿಳಾಸ:"
 
 #: tmp/system-config-kickstart.glade.h:73
 msgid "Initialize the disk label"
-msgstr ""
+msgstr "ಡಿಸ್ಕ್ ಲೇಬಲ್ಲನ್ನು ಆರಂಭಿಸಿ"
 
 #: tmp/system-config-kickstart.glade.h:74
 msgid "Install boot loader on Master Boot Record (MBR)"
-msgstr ""
+msgstr "ಮಾಸ್ಟರ್ ಬೂಟ್ ದಾಖಲೆಯ (MBR) ಮೇಲೆ ಬೂಟ್ ಲೋಡರನ್ನು ಅನುಸ್ಥಾಪಿಸಿ"
 
 #: tmp/system-config-kickstart.glade.h:75
 msgid "Install boot loader on first sector of the boot partition"
-msgstr ""
+msgstr "ಬೂಟ್ ವಿಭಾಗದ ಪ್ರಥಮ ಖಂಡದಲ್ಲಿ ಬೂಟ್ ಲೋಡರನ್ನು ಅನುಸ್ಥಾಪಿಸಿ"
 
 #: tmp/system-config-kickstart.glade.h:76
 msgid "Install new boot loader"
-msgstr ""
+msgstr "ಹೊಸ ಬೂಟ್ ಲೋಡರನ್ನು ಅನುಸ್ಥಾಪಿಸಿ"
 
 #: tmp/system-config-kickstart.glade.h:77
 msgid "Installation Method (required)"
-msgstr ""
+msgstr "ಅನುಸ್ಥಾಪನಾ ಕ್ರಮ (ಅಗತ್ಯವಿದೆ)"
 
 #: tmp/system-config-kickstart.glade.h:78
 msgid "KDE"
@@ -678,31 +688,31 @@ msgstr "Kerberos 5"
 
 #: tmp/system-config-kickstart.glade.h:80
 msgid "Kerberos 5 Authentication"
-msgstr ""
+msgstr "Kerberos ೫ ದೃಢೀಕರಣ"
 
 #: tmp/system-config-kickstart.glade.h:81
 msgid "Kerberos Domain Controller (KDC):"
-msgstr ""
+msgstr "Kerberos ಡೊಮೈನ್ ನಿಯಂತ್ರಕ (KDC):"
 
 #: tmp/system-config-kickstart.glade.h:82
 msgid "Kerberos Master Server:"
-msgstr ""
+msgstr "Kerberos ಮಾಸ್ಟರ್ ಪರಿಚಾರಕ:"
 
 #: tmp/system-config-kickstart.glade.h:83
 msgid "Kerberos Realm:"
-msgstr ""
+msgstr "Kerberos ಕ್ಷೇತ್ರ:"
 
 #: tmp/system-config-kickstart.glade.h:84
 msgid "Kernel parameters:"
-msgstr ""
+msgstr "ಕರ್ನಲ್ ನಿಯತಾಂಕಗಳು:"
 
 #: tmp/system-config-kickstart.glade.h:85
 msgid "Keyboard:"
-msgstr ""
+msgstr "ಕೀಲಿಮಣೆ:"
 
 #: tmp/system-config-kickstart.glade.h:86
 msgid "Kickstart Configurator"
-msgstr ""
+msgstr "ಕಿಕ್-ಸ್ಟಾರ್ಟ್ ಸಂರಚಕ"
 
 #: tmp/system-config-kickstart.glade.h:87
 msgid "LDAP "
@@ -710,35 +720,35 @@ msgstr "LDAP "
 
 #: tmp/system-config-kickstart.glade.h:88
 msgid "LDAP Authentication"
-msgstr ""
+msgstr "LDAP ದೃಢೀಕರಣ"
 
 #: tmp/system-config-kickstart.glade.h:89
 msgid "LDAP Base Name: "
-msgstr ""
+msgstr "LDAP ಮೂಲ ಹೆಸರು: "
 
 #: tmp/system-config-kickstart.glade.h:90
 msgid "LDAP Server: "
-msgstr ""
+msgstr "LDAP ಪರಿಚಾರಕ: "
 
 #: tmp/system-config-kickstart.glade.h:91
 msgid "Load CA certificate"
-msgstr ""
+msgstr "CA ಪ್ರಮಾಣಪತ್ರವನ್ನು ಲೋಡ್ ಮಾಡಿ"
 
 #: tmp/system-config-kickstart.glade.h:92
 msgid "Make RAID Device"
-msgstr ""
+msgstr "RAID ಸಾಧನವನ್ನು ಮಾಡಿ"
 
 #: tmp/system-config-kickstart.glade.h:93
 msgid "Make partition on specific drive (ondisk)"
-msgstr ""
+msgstr "ನಿಗದಿತ ಡ್ರೈವಿನಲ್ಲಿ ವಿಭಾಗವನ್ನು ಮಾಡಿ (ondisk)"
 
 #: tmp/system-config-kickstart.glade.h:94
 msgid "Monitor"
-msgstr ""
+msgstr "ತೆರೆ"
 
 #: tmp/system-config-kickstart.glade.h:95
 msgid "Mount Point:"
-msgstr ""
+msgstr "ಆರೋಹಣ ತಾಣ:"
 
 #: tmp/system-config-kickstart.glade.h:96
 msgid "NFS"
@@ -746,11 +756,11 @@ msgstr "NFS"
 
 #: tmp/system-config-kickstart.glade.h:97
 msgid "NFS Directory:"
-msgstr ""
+msgstr "NFS ಕೋಶ:"
 
 #: tmp/system-config-kickstart.glade.h:98
 msgid "NFS Server:"
-msgstr ""
+msgstr "NFS ಪರಿಚಾರಕ:"
 
 #: tmp/system-config-kickstart.glade.h:99
 msgid "NIS"
@@ -758,43 +768,43 @@ msgstr "NIS"
 
 #: tmp/system-config-kickstart.glade.h:100
 msgid "NIS Authentication"
-msgstr ""
+msgstr "NIS ದೃಢೀಕರಣ"
 
 #: tmp/system-config-kickstart.glade.h:101
 msgid "NIS Domain:"
-msgstr ""
+msgstr "NIS ಡೊಮೈನ್:"
 
 #: tmp/system-config-kickstart.glade.h:102
 msgid "NIS Server:"
-msgstr ""
+msgstr "NIS ಪರಿಚಾರಕ:"
 
 #: tmp/system-config-kickstart.glade.h:103
 msgid "Name Server:"
-msgstr ""
+msgstr "ನಾಮ ಪರಿಚಾರಕ:"
 
 #: tmp/system-config-kickstart.glade.h:104
 msgid "Name Switch Cache"
-msgstr ""
+msgstr "ನೇಮ್ ಸ್ವಿಚ್ ಕ್ಯಾಶೆ"
 
 #: tmp/system-config-kickstart.glade.h:105
 msgid "Name Switch Cache Daemon (nscd) Authentication"
-msgstr ""
+msgstr "ನೇಮ್ ಸ್ವಿಚ್ ಕ್ಯಾಶೆ ಡೆಮೊನ್ (nscd) ದೃಢೀಕರಣ"
 
 #: tmp/system-config-kickstart.glade.h:106
 msgid "Netmask: "
-msgstr ""
+msgstr "ಜಾಲಮುಸುಕು: "
 
 #: tmp/system-config-kickstart.glade.h:108
 msgid "Network Device Information"
-msgstr ""
+msgstr "ಜಾಲಬಂಧ ಸಾಧನ ಮಾಹಿತಿ "
 
 #: tmp/system-config-kickstart.glade.h:109
 msgid "Network Device:"
-msgstr ""
+msgstr "ಜಾಲಬಂಧ ಸಾಧನ:"
 
 #: tmp/system-config-kickstart.glade.h:110
 msgid "Network Type:"
-msgstr ""
+msgstr "ಜಾಲಬಂಧದ ಪ್ರಕಾರ:"
 
 #: tmp/system-config-kickstart.glade.h:111
 msgid "Number of spares:"
@@ -802,43 +812,43 @@ msgstr ""
 
 #: tmp/system-config-kickstart.glade.h:112
 msgid "On first boot, Setup Agent is: "
-msgstr ""
+msgstr "ಪ್ರಥಮ ಬೂಟಿನಲ್ಲಿ, ಸಂಯೋಜನಾ ಮಧ್ಯವರ್ತಿಯು:"
 
 #: tmp/system-config-kickstart.glade.h:114
 msgid "Partition :"
-msgstr ""
+msgstr "ವಿಭಜನೆ :"
 
 #: tmp/system-config-kickstart.glade.h:115
 msgid "Partition Information (required)"
-msgstr ""
+msgstr "ವಿಭಾಗದ ಮಾಹಿತಿ (ಅಗತ್ಯವಿದೆ)"
 
 #: tmp/system-config-kickstart.glade.h:116
 msgid "Partition Options"
-msgstr ""
+msgstr "ವಿಭಾಗದಲ್ಲಿನ ಆಯ್ಕೆಗಳು"
 
 #: tmp/system-config-kickstart.glade.h:117
 msgid "Partition options are not applicable on upgrades."
-msgstr ""
+msgstr "ವಿಭಾಗದಲ್ಲಿನ ಆಯ್ಕೆಗಳು ಅಪ್ಗ್ರೇಡುಗಳ ಮೇಲೆ ಅನ್ವಯವಾಗುವುದಿಲ್ಲ."
 
 #: tmp/system-config-kickstart.glade.h:118
 msgid "Password:"
-msgstr ""
+msgstr "ಗುಪ್ತಪದ:"
 
 #: tmp/system-config-kickstart.glade.h:119
 msgid "Perform installation in interactive mode"
-msgstr ""
+msgstr "ಅನುಸ್ಥಾಪನೆಯನ್ನು ಸಂವಾದಾತ್ಮಕ ಕ್ರಮದಲ್ಲಿ ನಿರ್ವಹಿಸು"
 
 #: tmp/system-config-kickstart.glade.h:120
 msgid "Perform installation in text mode (graphical is default)"
-msgstr ""
+msgstr "ಅನುಸ್ಥಾಪನೆಯನ್ನು ಪಠ್ಯಕ್ರಮದಲ್ಲಿ ನಿರ್ವಹಿಸು (ಚಿತ್ರಾತ್ಮಕವು ಡೀಫಾಲ್ಟ್ ಆಗಿರುತ್ತದೆ)"
 
 #: tmp/system-config-kickstart.glade.h:121
 msgid "Perform new installation"
-msgstr ""
+msgstr "ಹೊಸ ಅನುಸ್ಥಾಪನೆಯನ್ನು ನಿರ್ವಹಿಸು"
 
 #: tmp/system-config-kickstart.glade.h:124
 msgid "Preserve existing partitions"
-msgstr ""
+msgstr "ಈಗಿರುವ ವಿಭಾಗಗಳನ್ನು ಉಳಿಸಿಕೊ"
 
 #: tmp/system-config-kickstart.glade.h:125
 msgid "Preview Options"
@@ -858,11 +868,11 @@ msgstr "RAID"
 
 #: tmp/system-config-kickstart.glade.h:129
 msgid "RAID Device:"
-msgstr ""
+msgstr "RAID ಸಾಧನ:"
 
 #: tmp/system-config-kickstart.glade.h:130
 msgid "RAID Level:"
-msgstr ""
+msgstr "RAID ಮಟ್ಟ:"
 
 #: tmp/system-config-kickstart.glade.h:131
 msgid "RAID Options"
@@ -890,7 +900,7 @@ msgstr ""
 
 #: tmp/system-config-kickstart.glade.h:137
 msgid "Root Password:"
-msgstr ""
+msgstr "ಮೂಲದ ಗುಪ್ತಪದ:"
 
 #: tmp/system-config-kickstart.glade.h:138
 msgid "Run outside of the chroot environment"
@@ -906,15 +916,15 @@ msgstr ""
 
 #: tmp/system-config-kickstart.glade.h:141
 msgid "SMB Servers:"
-msgstr ""
+msgstr "SMB ಪರಿಚಾರಕಗಳು:"
 
 #: tmp/system-config-kickstart.glade.h:142
 msgid "SMB Workgroup:"
-msgstr ""
+msgstr "SMB ಕಾರ್ಯಸಮೂಹ:"
 
 #: tmp/system-config-kickstart.glade.h:143
 msgid "Size (MB):"
-msgstr ""
+msgstr "ಗಾತ್ರ (MB):"
 
 #: tmp/system-config-kickstart.glade.h:144
 msgid ""
@@ -942,7 +952,7 @@ msgstr ""
 
 #: tmp/system-config-kickstart.glade.h:149
 msgid "Time Zone:"
-msgstr ""
+msgstr "ಕಾಲ ವಲಯ:"
 
 #: tmp/system-config-kickstart.glade.h:150
 msgid ""
@@ -970,11 +980,11 @@ msgstr ""
 
 #: tmp/system-config-kickstart.glade.h:157
 msgid "Use GRUB password"
-msgstr ""
+msgstr "GRUB ಗುಪ್ತಪದವನ್ನು ಬಳಸಿ"
 
 #: tmp/system-config-kickstart.glade.h:158
 msgid "Use MD5"
-msgstr ""
+msgstr "MD5ಯನ್ನು ಬಳಸಿ"
 
 #: tmp/system-config-kickstart.glade.h:159
 msgid "Use Shadow Passwords"
