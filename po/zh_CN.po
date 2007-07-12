@@ -14,8 +14,8 @@ msgstr ""
 "Project-Id-Version: zh_CN\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-03-19 16:41-0400\n"
-"PO-Revision-Date: 2006-12-01 10:36+1000\n"
-"Last-Translator: Xi Huang <xhuang@redhat.com>\n"
+"PO-Revision-Date: 2007-07-12 23:42+0800\n"
+"Last-Translator: zhangnan <znflint@126.com>\n"
 "Language-Team:  <zh@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,8 +50,11 @@ msgstr "IBM zSeries/s390"
 msgid "Root passwords do not match."
 msgstr "根口令不匹配。"
 
-#: ../src/basic.py:151 ../src/install.py:215 ../src/partWindow.py:547
-#: ../src/partition.py:254 ../src/raidWindow.py:249
+#: ../src/basic.py:151
+#: ../src/install.py:215
+#: ../src/partWindow.py:547
+#: ../src/partition.py:254
+#: ../src/raidWindow.py:249
 msgid "Error"
 msgstr "错误"
 
@@ -108,18 +111,22 @@ msgstr "请输入硬盘驱动器目录。"
 msgid "Please enter a hard drive partition."
 msgstr "请输入一个硬盘驱动器分区。"
 
-#: ../src/kickstartGui.py:94 ../src/kickstartGui.py:286
+#: ../src/kickstartGui.py:94
+#: ../src/kickstartGui.py:286
 #, python-format
 msgid ""
 "The following error was found while parsing your kickstart configuration:\n"
 "\n"
 "%s"
 msgstr ""
+"分析Kickstart 配置时发现以下错误:\n"
+"\n"
+"%s"
 
-#: ../src/kickstartGui.py:97 ../src/kickstartGui.py:289
-#, fuzzy
+#: ../src/kickstartGui.py:97
+#: ../src/kickstartGui.py:289
 msgid "Error Parsing Kickstart Config"
-msgstr "关于 Kickstart 配置程序"
+msgstr "分析Kickstart 配置出错"
 
 #: ../src/kickstartGui.py:105
 msgid "Kickstart"
@@ -149,7 +156,8 @@ msgstr "引导装载程序选项"
 msgid "Partition Information"
 msgstr "分区信息"
 
-#: ../src/kickstartGui.py:136 tmp/system-config-kickstart.glade.h:107
+#: ../src/kickstartGui.py:136
+#: tmp/system-config-kickstart.glade.h:107
 msgid "Network Configuration"
 msgstr "网络配置"
 
@@ -157,23 +165,28 @@ msgstr "网络配置"
 msgid "Authentication"
 msgstr "验证"
 
-#: ../src/kickstartGui.py:138 tmp/system-config-kickstart.glade.h:50
+#: ../src/kickstartGui.py:138
+#: tmp/system-config-kickstart.glade.h:50
 msgid "Firewall Configuration"
 msgstr "防火墙配置"
 
-#: ../src/kickstartGui.py:139 tmp/system-config-kickstart.glade.h:27
+#: ../src/kickstartGui.py:139
+#: tmp/system-config-kickstart.glade.h:27
 msgid "Display Configuration"
 msgstr "显示配置"
 
-#: ../src/kickstartGui.py:140 tmp/system-config-kickstart.glade.h:113
+#: ../src/kickstartGui.py:140
+#: tmp/system-config-kickstart.glade.h:113
 msgid "Package Selection"
 msgstr "软件包选择"
 
-#: ../src/kickstartGui.py:141 tmp/system-config-kickstart.glade.h:123
+#: ../src/kickstartGui.py:141
+#: tmp/system-config-kickstart.glade.h:123
 msgid "Pre-Installation Script"
 msgstr "预安装脚本"
 
-#: ../src/kickstartGui.py:142 tmp/system-config-kickstart.glade.h:122
+#: ../src/kickstartGui.py:142
+#: tmp/system-config-kickstart.glade.h:122
 msgid "Post-Installation Script"
 msgstr "安装后脚本"
 
@@ -212,55 +225,59 @@ msgstr "设备"
 msgid "Network Type"
 msgstr "网络类型"
 
-#: ../src/network.py:108 ../src/network.py:154 ../src/network.py:225
-#: ../src/network.py:281 ../src/network.py:414
+#: ../src/network.py:108
+#: ../src/network.py:154
+#: ../src/network.py:225
+#: ../src/network.py:281
+#: ../src/network.py:414
 msgid "Static IP"
 msgstr "静态 IP"
 
-#: ../src/network.py:215 ../src/network.py:273
+#: ../src/network.py:215
+#: ../src/network.py:273
 msgid "Please fill in the network information"
 msgstr "请填充网络信息"
 
 #: ../src/network.py:325
 #, python-format
-msgid ""
-"A network device with the name %s already exists.  Please choose another "
-"device name"
+msgid "A network device with the name %s already exists.  Please choose another device name"
 msgstr "名称为 %s 的网络设备已经存在。请另选一个设备名称。"
 
 #: ../src/packages.py:168
-#, fuzzy
 msgid "Package configuration is not applicable on upgrades."
-msgstr "显示配置不适用于升级"
+msgstr "软件包配置不适用于升级"
 
 #: ../src/packages.py:174
 msgid "Retrieving package information"
 msgstr "获取软件包信息"
 
 #: ../src/packages.py:183
-msgid ""
-"Package selection is disabled due to problems downloading package "
-"information."
+msgid "Package selection is disabled due to problems downloading package information."
 msgstr "由于下载软件包信息失败，软件包选择被禁止。"
 
-#: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:189
+#: ../src/partWindow.py:84
+#: tmp/system-config-kickstart.glade.h:189
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:190
+#: ../src/partWindow.py:84
+#: tmp/system-config-kickstart.glade.h:190
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:86 ../src/partWindow.py:149
+#: ../src/partWindow.py:86
+#: ../src/partWindow.py:149
 msgid "software RAID"
 msgstr "软件 RAID"
 
-#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:208
+#: ../src/partWindow.py:87
+#: tmp/system-config-kickstart.glade.h:208
 msgid "swap"
 msgstr "交换"
 
-#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:209
+#: ../src/partWindow.py:87
+#: tmp/system-config-kickstart.glade.h:209
 msgid "vfat"
 msgstr "vfat"
 
@@ -268,15 +285,21 @@ msgstr "vfat"
 msgid "PPC PReP Boot"
 msgstr "PPC PReP 启动"
 
-#: ../src/partWindow.py:288 ../src/partWindow.py:569 ../src/raidWindow.py:214
+#: ../src/partWindow.py:288
+#: ../src/partWindow.py:569
+#: ../src/raidWindow.py:214
 msgid "Yes"
 msgstr "是"
 
-#: ../src/partWindow.py:290 ../src/partWindow.py:571 ../src/raidWindow.py:216
+#: ../src/partWindow.py:290
+#: ../src/partWindow.py:571
+#: ../src/raidWindow.py:216
 msgid "No"
 msgstr "否"
 
-#: ../src/partWindow.py:313 ../src/partWindow.py:328 ../src/partWindow.py:347
+#: ../src/partWindow.py:313
+#: ../src/partWindow.py:328
+#: ../src/partWindow.py:347
 #: ../src/partWindow.py:361
 msgid "Auto"
 msgstr "自动"
@@ -292,14 +315,11 @@ msgstr "为分区指定挂载点。"
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:474
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "挂载点“%s”已被使用。请另选一个挂载点。"
 
 #: ../src/partWindow.py:494
-msgid ""
-"To create a new RAID partition, you must specify either a hard drive device "
-"name or an existing partition."
+msgid "To create a new RAID partition, you must specify either a hard drive device name or an existing partition."
 msgstr "要创建新的 RAID 分区，您必须指定一个硬盘驱动器设备名称或一个现存分区。"
 
 #: ../src/partWindow.py:531
@@ -307,9 +327,7 @@ msgid "Specify a device on which to create the partition."
 msgstr "指定要在其中创建分区的设备。"
 
 #: ../src/partWindow.py:540
-msgid ""
-"The partition you specified does not end in a number.  Partitions must have "
-"a partition number such as \"hda1\" or \"sda3\"."
+msgid "The partition you specified does not end in a number.  Partitions must have a partition number such as \"hda1\" or \"sda3\"."
 msgstr "您指定的分区不以数字结尾。分区必须有一个分区号码，如“hda1”或“sda3”。"
 
 #: ../src/partition.py:73
@@ -340,7 +358,8 @@ msgstr "格式"
 msgid "Size (MB)"
 msgstr "大小(MB)"
 
-#: ../src/partition.py:96 ../src/partition.py:136
+#: ../src/partition.py:96
+#: ../src/partition.py:136
 msgid "Please select a partition from the list."
 msgstr "请从列表中选择分区。"
 
@@ -359,7 +378,8 @@ msgstr "您必须至少选择两个分区来使用 RAID %s"
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "您必须至少选择 3 个分区来使用 RAID %s"
 
-#: ../src/raidWindow.py:194 ../src/raidWindow.py:220
+#: ../src/raidWindow.py:194
+#: ../src/raidWindow.py:220
 msgid "Raid Devices"
 msgstr "RAID 设备"
 
@@ -368,14 +388,12 @@ msgid "Could not read video driver database"
 msgstr "无法读取视频驱动程序数据库"
 
 #: ../src/xconfig.py:229
-#, fuzzy
 msgid "Please select an X driver."
-msgstr "请输入 NFS 服务器。"
+msgstr "请选择一个X驱动器."
 
 #: ../src/xconfig.py:248
-#, fuzzy
 msgid "Please select a monitor."
-msgstr "请从列表中选择分区。"
+msgstr "请选择显示器。"
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -431,7 +449,7 @@ msgstr "引导装载程序选项(必需)"
 
 #: tmp/system-config-kickstart.glade.h:14
 msgid "CA Cert URL:"
-msgstr ""
+msgstr "CA证书的URL "
 
 #: tmp/system-config-kickstart.glade.h:15
 msgid "CD-ROM"
@@ -731,7 +749,7 @@ msgstr "LDAP 服务器："
 
 #: tmp/system-config-kickstart.glade.h:91
 msgid "Load CA certificate"
-msgstr ""
+msgstr "加载CA证书"
 
 #: tmp/system-config-kickstart.glade.h:92
 msgid "Make RAID Device"
@@ -926,24 +944,16 @@ msgid "Size (MB):"
 msgstr "大小(MB)："
 
 #: tmp/system-config-kickstart.glade.h:144
-msgid ""
-"Software RAID allows you to combine several disks into a larger RAID "
-"device.  A RAID device can be configured to provide additional speed and "
-"reliability compared to using an individual drive.  For more information on "
-"using RAID devices please consult the kickstart documentation."
-msgstr ""
-"软件 RAID 允许您把几个磁盘组合成一个大型 RAID 设备。与单独驱动器相比，RAID 设"
-"备可以被配置来提供额外的速度和可靠性。关于使用 RAID 的详细信息，请参考 "
-"kickstart 文档。"
+msgid "Software RAID allows you to combine several disks into a larger RAID device.  A RAID device can be configured to provide additional speed and reliability compared to using an individual drive.  For more information on using RAID devices please consult the kickstart documentation."
+msgstr "软件 RAID 允许您把几个磁盘组合成一个大型 RAID 设备。与单独驱动器相比，RAID 设备可以被配置来提供额外的速度和可靠性。关于使用 RAID 的详细信息，请参考 kickstart 文档。"
 
 #: tmp/system-config-kickstart.glade.h:145
 msgid "Specify an FTP username and password"
 msgstr "指定 FTP 用户名和口令"
 
 #: tmp/system-config-kickstart.glade.h:146
-#, fuzzy
 msgid "Specify installation key:"
-msgstr "执行新安装"
+msgstr "指定安装密码:"
 
 #: tmp/system-config-kickstart.glade.h:147
 msgid "Start the X Window System on boot"
@@ -958,12 +968,8 @@ msgid "Time Zone:"
 msgstr "时区："
 
 #: tmp/system-config-kickstart.glade.h:150
-msgid ""
-"To use RAID you must first create at least two partitions of type 'software "
-"RAID'.  Then you can create a RAID device which can be formatted and mounted."
-msgstr ""
-"要使用 RAID，您必须首先至少创建两个类型为“软件 RAID”的分区。然后，您才可以创"
-"建能够被格式化并挂载的 RAID 设备。"
+msgid "To use RAID you must first create at least two partitions of type 'software RAID'.  Then you can create a RAID device which can be formatted and mounted."
+msgstr "要使用 RAID，您必须首先至少创建两个类型为“软件 RAID”的分区。然后，您才可以创建能够被格式化并挂载的 RAID 设备。"
 
 #: tmp/system-config-kickstart.glade.h:152
 #, no-c-format
@@ -1033,26 +1039,16 @@ msgstr "视频卡内存："
 
 #: tmp/system-config-kickstart.glade.h:170
 #, no-c-format
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %post command at the beginning."
-msgstr ""
-"警告：脚本中的错误可能会导致您的 Kickstart 安装失败。在起始处请不要包括 %"
-"post 命令。"
+msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %post command at the beginning."
+msgstr "警告：脚本中的错误可能会导致您的 Kickstart 安装失败。在起始处请不要包括 %post 命令。"
 
 #: tmp/system-config-kickstart.glade.h:172
 #, no-c-format
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %pre command at the beginning."
-msgstr ""
-"警告：脚本中的错误可能会导致 Kickstart 安装失败。在起始处请不要包括 %pre 命"
-"令。"
+msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %pre command at the beginning."
+msgstr "警告：脚本中的错误可能会导致 Kickstart 安装失败。在起始处请不要包括 %pre 命令。"
 
 #: tmp/system-config-kickstart.glade.h:173
-msgid ""
-"You have choosen the following configuration. Click Save File to save the "
-"kickstart file. "
+msgid "You have choosen the following configuration. Click Save File to save the kickstart file. "
 msgstr "您已选定下列配置。点击保存文件来保存 kickstart 文件。"
 
 #: tmp/system-config-kickstart.glade.h:174
@@ -1185,27 +1181,20 @@ msgstr "md9"
 
 #~ msgid "Trusted devices:"
 #~ msgstr "信任的设备："
-
 #~ msgid "Trusted services:"
 #~ msgstr "信任的服务："
-
 #~ msgid "Other ports: (1029:tcp)"
 #~ msgstr "其它端口：(1029:tcp)"
-
 #~ msgid "Active"
 #~ msgstr "启用"
-
 #~ msgid "Disable firewall"
 #~ msgstr "禁用防火墙"
-
 #~ msgid "Enable firewall"
 #~ msgstr "启用防火墙"
-
 #~ msgid "SELinux:"
 #~ msgstr "Linux安全增强版"
-
 #~ msgid "Security level:"
 #~ msgstr "安全级别："
-
 #~ msgid "Warn"
 #~ msgstr "警告"
+
