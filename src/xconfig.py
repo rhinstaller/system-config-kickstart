@@ -220,7 +220,7 @@ class xconfig:
 
             if self.driver_probe_check.get_active():
                 self.ks.xconfig.driver = ""
-                self.ks.xconfig.wideoRam = ""
+                self.ks.xconfig.videoRam = ""
             else:
                 #video card driver and monitor
                 temp, iter = self.driver_view.get_selection().get_selected()
