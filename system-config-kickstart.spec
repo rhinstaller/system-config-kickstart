@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.7.7
-Release: 2%{?dist}
+Version: 2.7.8
+Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPL
 ExclusiveOS: Linux
@@ -73,6 +73,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Mon Jul 30 2007 Chris Lumens <clumens@redhat.com> 2.7.8-1
+- Fix traceback on X configuration screen (#248600).
+
 * Mon Jun 11 2007 Chris Lumens <clumens@redhat.com> 2.7.7-2
 - Fixes for package review (#226459).
 
