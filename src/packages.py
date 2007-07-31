@@ -96,8 +96,6 @@ class sckYumBase(yum.YumBase):
     def __init__ (self, callback=None):
         import tempfile
 
-        self.packagesEnabled = True
-
         yum.YumBase.__init__(self)
 
         if callback:
@@ -146,14 +144,17 @@ class sckYumBase(yum.YumBase):
         if not self.packagesEnabled:
             return
 
-        self.doRepoSetup()
-        if callback: callback.next_task()
-        self.doGroupSetup()
-        if callback: callback.next_task(next=5)
-        self.doSackSetup()
-        if callback:
-            callback.next_task()
-            self.repos.callback = None
+        try:
+            self.doRepoSetup()
+            if callback: callback.next_task()
+            self.doGroupSetup()
+            if callback: callback.next_task(next=5)
+            self.doSackSetup()
+            if callback:
+                callback.next_task()
+                self.repos.callback = None
+        except:
+            self.packagesEnabled = False
 
     def cleanup(self):
         shutil.rmtree(self.temproot)
