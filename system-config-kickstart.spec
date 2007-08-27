@@ -3,7 +3,7 @@ Name: system-config-kickstart
 Version: 2.7.10
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
-License: GPL
+License: GPLv2+
 ExclusiveOS: Linux
 Group: System Environment/Base
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -75,6 +75,7 @@ fi
 %changelog
 * Mon Aug 27 2007 Chris Lumens <clumens@redhat.com> 2.7.10-1
 - Remove dependency on system-config-securitylevel.
+- Clarify licensing.
 
 * Fri Aug 03 2007 Chris Lumens <clumens@redhat.com> 2.7.9-1
 - Disable package selection if there are any problems setting up yum
