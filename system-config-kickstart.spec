@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.7.9
+Version: 2.7.10
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPL
@@ -16,7 +16,7 @@ Source0: %{name}-%{version}.tar.gz
 Obsoletes: ksconfig, redhat-config-kickstart
 BuildRequires: desktop-file-utils, intltool, gettext
 Requires: pygtk2 >= 1.99.11, pygtk2-libglade, python >= 2.3.3, hwdata, rhpl
-Requires: system-config-language, system-config-securitylevel <= 1.7.0
+Requires: system-config-language
 Requires: pykickstart >= 0.96, yum, pirut, hicolor-icon-theme
 Requires(post): gtk2 >= 2.6
 Requires(postun): gtk2 >= 2.6
@@ -73,6 +73,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Mon Aug 27 2007 Chris Lumens <clumens@redhat.com> 2.7.10-1
+- Remove dependency on system-config-securitylevel.
+
 * Fri Aug 03 2007 Chris Lumens <clumens@redhat.com> 2.7.9-1
 - Disable package selection if there are any problems setting up yum
   (#250268).
