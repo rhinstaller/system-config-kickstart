@@ -126,10 +126,10 @@ class sckYumBase(yum.YumBase):
 
         # If we're on a release, we want to try the base repo first.  Otherwise,
         # try development.  If neither of those works, we have a problem.
-        if "base" in map(lambda repo: repo.id, self.repos.listEnabled()):
-            repoorder = ["core", "base", "development"]
+        if "fedora" in map(lambda repo: repo.id, self.repos.listEnabled()):
+            repoorder = ["fedora", "development"]
         else:
-            repoorder = ["development", "core", "base"]
+            repoorder = ["development", "fedora"]
 
         self.repos.disableRepo("*")
         if callback: callback.next_task()
