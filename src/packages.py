@@ -96,8 +96,6 @@ class sckYumBase(yum.YumBase):
     def __init__ (self, callback=None):
         import tempfile
 
-        self.packagesEnabled = True
-
         yum.YumBase.__init__(self)
 
         if callback:
@@ -126,10 +124,10 @@ class sckYumBase(yum.YumBase):
 
         # If we're on a release, we want to try the base repo first.  Otherwise,
         # try development.  If neither of those works, we have a problem.
-        if "base" in map(lambda repo: repo.id, self.repos.listEnabled()):
-            repoorder = ["core", "base", "development"]
+        if "fedora" in map(lambda repo: repo.id, self.repos.listEnabled()):
+            repoorder = ["fedora", "development"]
         else:
-            repoorder = ["development", "core", "base"]
+            repoorder = ["development", "fedora"]
 
         self.repos.disableRepo("*")
         if callback: callback.next_task()
@@ -146,14 +144,17 @@ class sckYumBase(yum.YumBase):
         if not self.packagesEnabled:
             return
 
-        self.doRepoSetup()
-        if callback: callback.next_task()
-        self.doGroupSetup()
-        if callback: callback.next_task(next=5)
-        self.doSackSetup()
-        if callback:
-            callback.next_task()
-            self.repos.callback = None
+        try:
+            self.doRepoSetup()
+            if callback: callback.next_task()
+            self.doGroupSetup()
+            if callback: callback.next_task(next=5)
+            self.doSackSetup()
+            if callback:
+                callback.next_task()
+                self.repos.callback = None
+        except:
+            self.packagesEnabled = False
 
     def cleanup(self):
         shutil.rmtree(self.temproot)
