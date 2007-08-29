@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: redhat-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-19 16:41-0400\n"
+"POT-Creation-Date: 2007-08-29 17:26-0400\n"
 "PO-Revision-Date: 2007-01-24 13:04+0200 2003\n"
 "Last-Translator: Maxim Dziumanenko <dziumanenko@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -15,89 +15,93 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: pygettext.py 1.1\n"
 
-#: ../src/auth.py:340
+#: ../src/auth.py:343
 msgid "Please fill in the authentication information"
 msgstr "Вкажіть інформацію про автентифікацію"
 
-#: ../src/basic.py:69
+#: ../src/basic.py:71
 msgid "x86, AMD64, or Intel EM64T"
 msgstr "x86, AMD64, чи Intel EM64T"
 
-#: ../src/basic.py:69
+#: ../src/basic.py:71
 msgid "Intel Itanium"
 msgstr "Intel Itanium"
 
-#: ../src/basic.py:69
+#: ../src/basic.py:71
 msgid "IBM iSeries"
 msgstr "IBM iSeries"
 
-#: ../src/basic.py:70
+#: ../src/basic.py:72
 msgid "IBM pSeries"
 msgstr "IBM pSeries"
 
-#: ../src/basic.py:70
+#: ../src/basic.py:72
 msgid "IBM zSeries/s390"
 msgstr "IBM zSeries/s390"
 
-#: ../src/basic.py:150
+#: ../src/basic.py:152
 msgid "Root passwords do not match."
 msgstr "Паролі користувача root не співпадають."
 
-#: ../src/basic.py:151 ../src/install.py:215 ../src/partWindow.py:547
-#: ../src/partition.py:254 ../src/raidWindow.py:249
+#: ../src/basic.py:153 ../src/install.py:216 ../src/partWindow.py:550
+#: ../src/partition.py:255 ../src/raidWindow.py:252
 msgid "Error"
 msgstr "Помилка"
 
-#: ../src/bootloader.py:81
+#: ../src/bootloader.py:84
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
 msgstr "Параметри завантажувача не застосовні до платформи %s"
 
-#: ../src/bootloader.py:121
+#: ../src/bootloader.py:124
 msgid "Grub passwords do not match.  Please try again."
 msgstr "Паролі GRUB не співпадають. Спробуйте ще раз."
 
-#: ../src/firewall.py:91
-msgid "Firewall configuration is not applicable on upgrades."
-msgstr "Параметри брандмауера не застосовні при оновленнях."
+#: ../src/firewall.py:60
+msgid "Trusted services:"
+msgstr ""
 
-#: ../src/install.py:130
+#: ../src/firewall.py:92
+msgid "Other ports: (1029:tcp)"
+msgstr ""
+
+#: ../src/install.py:131
 msgid "Please enter an NFS server."
 msgstr "Вкажіть NFS сервер."
 
-#: ../src/install.py:133
+#: ../src/install.py:134
 msgid "Please enter an NFS directory."
 msgstr "Вкажіть каталог NFS."
 
-#: ../src/install.py:144
+#: ../src/install.py:145
 msgid "Please enter an FTP server."
 msgstr "Вкажіть FTP сервер."
 
-#: ../src/install.py:151
+#: ../src/install.py:152
 msgid "Please enter an FTP directory."
 msgstr "Вкажіть каталог FTP."
 
-#: ../src/install.py:157
+#: ../src/install.py:158
 msgid "Please enter an FTP user name."
 msgstr "Вкажіть користувача FTP."
 
-#: ../src/install.py:160
+#: ../src/install.py:161
 msgid "Please enter an FTP password."
 msgstr "Вкажіть пароль FTP."
 
-#: ../src/install.py:176
+#: ../src/install.py:177
 msgid "Please enter an HTTP server."
 msgstr "Вкажіть сервер HTTP."
 
-#: ../src/install.py:179
+#: ../src/install.py:180
 msgid "Please enter an HTTP server directory."
 msgstr "Введіть каталогу на HTTP сервері."
 
-#: ../src/install.py:201
+#: ../src/install.py:202
 msgid "Please enter a hard drive directory."
 msgstr "Введіть каталог жорсткого диску."
 
-#: ../src/install.py:204
+#: ../src/install.py:205
 msgid "Please enter a hard drive partition."
 msgstr "Вкажіть розділ жорсткого диску."
 
@@ -144,7 +148,7 @@ msgstr "Параметри завантажувача"
 msgid "Partition Information"
 msgstr "Інформація про розділи"
 
-#: ../src/kickstartGui.py:136 tmp/system-config-kickstart.glade.h:107
+#: ../src/kickstartGui.py:136 tmp/system-config-kickstart.glade.h:110
 msgid "Network Configuration"
 msgstr "Конфігурація мережі"
 
@@ -152,23 +156,23 @@ msgstr "Конфігурація мережі"
 msgid "Authentication"
 msgstr "Автентифікація"
 
-#: ../src/kickstartGui.py:138 tmp/system-config-kickstart.glade.h:50
+#: ../src/kickstartGui.py:138 tmp/system-config-kickstart.glade.h:52
 msgid "Firewall Configuration"
 msgstr "Конфігурація брандмауера"
 
-#: ../src/kickstartGui.py:139 tmp/system-config-kickstart.glade.h:27
+#: ../src/kickstartGui.py:139 tmp/system-config-kickstart.glade.h:28
 msgid "Display Configuration"
 msgstr "Конфігурація дисплею"
 
-#: ../src/kickstartGui.py:140 tmp/system-config-kickstart.glade.h:113
+#: ../src/kickstartGui.py:140 tmp/system-config-kickstart.glade.h:116
 msgid "Package Selection"
 msgstr "Вибір пакетів"
 
-#: ../src/kickstartGui.py:141 tmp/system-config-kickstart.glade.h:123
+#: ../src/kickstartGui.py:141 tmp/system-config-kickstart.glade.h:126
 msgid "Pre-Installation Script"
 msgstr "Сценарій перед встановленням"
 
-#: ../src/kickstartGui.py:142 tmp/system-config-kickstart.glade.h:122
+#: ../src/kickstartGui.py:142 tmp/system-config-kickstart.glade.h:125
 msgid "Post-Installation Script"
 msgstr "Сценарій після встановлення"
 
@@ -199,39 +203,49 @@ msgstr "Довідка недоступна."
 msgid "The file \"%s\" cannot be accessed."
 msgstr "Не вдається отримати доступ до файлу \"%s\"."
 
-#: ../src/network.py:86
+#: ../src/network.py:76
 msgid "Device"
 msgstr "Пристрій"
 
-#: ../src/network.py:89
+#: ../src/network.py:79
 msgid "Network Type"
 msgstr "Тип мережі"
 
-#: ../src/network.py:108 ../src/network.py:154 ../src/network.py:225
-#: ../src/network.py:281 ../src/network.py:414
+#: ../src/network.py:97 ../src/network.py:143 ../src/network.py:225
+#: ../src/network.py:281 ../src/network.py:376
 msgid "Static IP"
 msgstr "Статичний IP"
 
-#: ../src/network.py:215 ../src/network.py:273
+#: ../src/network.py:190 ../src/network.py:249
 msgid "Please fill in the network information"
 msgstr "Вкажіть параметри мережі"
 
-#: ../src/network.py:325
+#: ../src/network.py:202 ../src/network.py:261
+#, fuzzy
+msgid "Please enter a valid gateway address."
+msgstr "Введіть каталог жорсткого диску."
+
+#: ../src/network.py:214 ../src/network.py:273
+#, fuzzy
+msgid "Please enter a valid nameserver address."
+msgstr "Введіть каталогу на HTTP сервері."
+
+#: ../src/network.py:301
 #, python-format
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
 msgstr "Мережний пристрій з назвою %s вже існує. Виберіть іншу назву пристрою"
 
-#: ../src/packages.py:168
+#: ../src/packages.py:171
 msgid "Package configuration is not applicable on upgrades."
 msgstr "Конфігурація пакетів не застосовна при оновленнях."
 
-#: ../src/packages.py:174
+#: ../src/packages.py:177
 msgid "Retrieving package information"
 msgstr "Отримання інформації про пакети"
 
-#: ../src/packages.py:183
+#: ../src/packages.py:186
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
@@ -239,61 +253,61 @@ msgstr ""
 "Вибір пакетів вимкнений внаслідок проблеми при отриманні інформації про "
 "пакетах."
 
-#: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:189
+#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:195
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:84 tmp/system-config-kickstart.glade.h:190
+#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:196
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:86 ../src/partWindow.py:149
+#: ../src/partWindow.py:89 ../src/partWindow.py:152
 msgid "software RAID"
 msgstr "програмний RAID"
 
-#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:208
+#: ../src/partWindow.py:90 tmp/system-config-kickstart.glade.h:214
 msgid "swap"
 msgstr "swap"
 
-#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:209
+#: ../src/partWindow.py:90 tmp/system-config-kickstart.glade.h:215
 msgid "vfat"
 msgstr "vfat"
 
-#: ../src/partWindow.py:88
+#: ../src/partWindow.py:91
 msgid "PPC PReP Boot"
 msgstr "PPC PReP Boot"
 
-#: ../src/partWindow.py:288 ../src/partWindow.py:569 ../src/raidWindow.py:214
+#: ../src/partWindow.py:291 ../src/partWindow.py:572 ../src/raidWindow.py:217
 msgid "Yes"
 msgstr "Так"
 
-#: ../src/partWindow.py:290 ../src/partWindow.py:571 ../src/raidWindow.py:216
+#: ../src/partWindow.py:293 ../src/partWindow.py:574 ../src/raidWindow.py:219
 msgid "No"
 msgstr "Ні"
 
-#: ../src/partWindow.py:313 ../src/partWindow.py:328 ../src/partWindow.py:347
-#: ../src/partWindow.py:361
+#: ../src/partWindow.py:316 ../src/partWindow.py:331 ../src/partWindow.py:350
+#: ../src/partWindow.py:364
 msgid "Auto"
 msgstr "Автоматично"
 
-#: ../src/partWindow.py:322
+#: ../src/partWindow.py:325
 msgid "Hard Drives"
 msgstr "Жорсткі диски"
 
-#: ../src/partWindow.py:465
+#: ../src/partWindow.py:468
 msgid "Specify a mount point for the partition."
 msgstr "Вкажіть точку монтування розділу."
 
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:474
+#: ../src/partWindow.py:477
 #, python-format
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "Точка монтування \"%s\" вже використовується. Вкажіть іншу точку монтування."
 
-#: ../src/partWindow.py:494
+#: ../src/partWindow.py:497
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -302,11 +316,11 @@ msgstr ""
 "диску або існуючий розділ."
 
 # msgstr "програмний RAID"
-#: ../src/partWindow.py:531
+#: ../src/partWindow.py:534
 msgid "Specify a device on which to create the partition."
 msgstr "Вкажіть розділ на якому створити розділ."
 
-#: ../src/partWindow.py:540
+#: ../src/partWindow.py:543
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -314,7 +328,7 @@ msgstr ""
 "Вказаний вами розділ не закінчується на число. Назви розділів повинні "
 "містити число, наприклад \"hda1\" чи \"sda3\"."
 
-#: ../src/partition.py:73
+#: ../src/partition.py:74
 msgid ""
 "Device/\n"
 "Partition Number"
@@ -322,7 +336,7 @@ msgstr ""
 "Пристрій/\n"
 "Номер розділу"
 
-#: ../src/partition.py:75
+#: ../src/partition.py:76
 msgid ""
 "Mount Point/\n"
 "RAID"
@@ -330,50 +344,50 @@ msgstr ""
 "Точка монтування/\n"
 "RAID"
 
-#: ../src/partition.py:77
+#: ../src/partition.py:78
 msgid "Type"
 msgstr "Тип"
 
-#: ../src/partition.py:79
+#: ../src/partition.py:80
 msgid "Format"
 msgstr "Формат"
 
-#: ../src/partition.py:81
+#: ../src/partition.py:82
 msgid "Size (MB)"
 msgstr "Розмір (Мб)"
 
-#: ../src/partition.py:96 ../src/partition.py:136
+#: ../src/partition.py:97 ../src/partition.py:137
 msgid "Please select a partition from the list."
 msgstr "Виберіть розділ зі списку."
 
-#: ../src/raidOptionsWindow.py:72
+#: ../src/raidOptionsWindow.py:75
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
 msgstr "Наразі є %d вільних розділи(ів) програмного RAID."
 
-#: ../src/raidWindow.py:174
+#: ../src/raidWindow.py:177
 #, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
 msgstr "Для використання RAID %s необхідно вказати принаймні 2 розділи"
 
-#: ../src/raidWindow.py:180
+#: ../src/raidWindow.py:183
 #, python-format
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "Для використання RAID %s необхідно вказати принаймні 3 розділи"
 
-#: ../src/raidWindow.py:194 ../src/raidWindow.py:220
+#: ../src/raidWindow.py:197 ../src/raidWindow.py:223
 msgid "Raid Devices"
 msgstr "Пристрої Raid"
 
-#: ../src/xconfig.py:124
+#: ../src/xconfig.py:125
 msgid "Could not read video driver database"
 msgstr "Неможливо прочитати базу даних відеокарток"
 
-#: ../src/xconfig.py:229
+#: ../src/xconfig.py:230
 msgid "Please select an X driver."
 msgstr "Виберіть драйвер X-Window."
 
-#: ../src/xconfig.py:248
+#: ../src/xconfig.py:249
 msgid "Please select a monitor."
 msgstr "Виберіть дзеркало."
 
@@ -390,20 +404,20 @@ msgid "(for example: hda1 or sdc3)"
 msgstr "(наприклад: hda1 чи sdc3)"
 
 #: tmp/system-config-kickstart.glade.h:4
-msgid "."
-msgstr "."
-
-#: tmp/system-config-kickstart.glade.h:5
 msgid "0"
 msgstr "0"
 
-#: tmp/system-config-kickstart.glade.h:6
+#: tmp/system-config-kickstart.glade.h:5
 msgid "1"
 msgstr "1"
 
-#: tmp/system-config-kickstart.glade.h:7
+#: tmp/system-config-kickstart.glade.h:6
 msgid "5"
 msgstr "5"
+
+#: tmp/system-config-kickstart.glade.h:7
+msgid "Active"
+msgstr ""
 
 #: tmp/system-config-kickstart.glade.h:8
 msgid "Additional Size Options"
@@ -478,454 +492,474 @@ msgid "Default Language:"
 msgstr "Типова мова:"
 
 #: tmp/system-config-kickstart.glade.h:26
+msgid "Disable firewall"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:27
 msgid "Disabled"
 msgstr "Вимкнений"
 
-#: tmp/system-config-kickstart.glade.h:28
+#: tmp/system-config-kickstart.glade.h:29
 msgid "Display configuration is not applicable on upgrades."
 msgstr "Конфігурація дисплею не застосовна при оновленнях."
 
-#: tmp/system-config-kickstart.glade.h:29
+#: tmp/system-config-kickstart.glade.h:30
 msgid "Do not clear Master Boot Record"
 msgstr "Не очищати головний завантажувальний запис (MBR)"
 
-#: tmp/system-config-kickstart.glade.h:30
+#: tmp/system-config-kickstart.glade.h:31
 msgid "Do not initialize the disk label"
 msgstr "Не ініціалізувати мітку диску"
 
-#: tmp/system-config-kickstart.glade.h:31
+#: tmp/system-config-kickstart.glade.h:32
 msgid "Do not install a boot loader"
 msgstr "Не встановлювати завантажувач"
 
-#: tmp/system-config-kickstart.glade.h:32
+#: tmp/system-config-kickstart.glade.h:33
 msgid "Drive :"
 msgstr "Пристрій:"
 
-#: tmp/system-config-kickstart.glade.h:33
+#: tmp/system-config-kickstart.glade.h:34
 msgid "Enable Hesiod Support"
 msgstr "Увімкнути підтримку Hesiod"
 
-#: tmp/system-config-kickstart.glade.h:34
+#: tmp/system-config-kickstart.glade.h:35
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Увімкнути автентифікацію Kerberos 5"
 
-#: tmp/system-config-kickstart.glade.h:35
+#: tmp/system-config-kickstart.glade.h:36
 msgid "Enable LDAP"
 msgstr "Увімкнути LDAP"
 
-#: tmp/system-config-kickstart.glade.h:36
+#: tmp/system-config-kickstart.glade.h:37
 msgid "Enable NIS"
 msgstr "Увімкнути NIS"
 
-#: tmp/system-config-kickstart.glade.h:37
+#: tmp/system-config-kickstart.glade.h:38
 msgid "Enable SMB Authentication"
 msgstr "Увімкнути автентифікацію SMB"
 
-#: tmp/system-config-kickstart.glade.h:38
+#: tmp/system-config-kickstart.glade.h:39
+msgid "Enable firewall"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:40
 msgid "Enable nscd"
 msgstr "Увімкнути nscd"
 
-#: tmp/system-config-kickstart.glade.h:39
+#: tmp/system-config-kickstart.glade.h:41
 msgid "Enabled"
 msgstr "Увімкнений"
 
-#: tmp/system-config-kickstart.glade.h:40
+#: tmp/system-config-kickstart.glade.h:42
 msgid "Enabled in reconfiguration mode"
 msgstr "Увімкнений у режимі переконфігурації"
 
-#: tmp/system-config-kickstart.glade.h:41
+#: tmp/system-config-kickstart.glade.h:43
 msgid "Encrypt GRUB password"
 msgstr "Зашифрувати пароль GRUB"
 
-#: tmp/system-config-kickstart.glade.h:42
+#: tmp/system-config-kickstart.glade.h:44
 msgid "Encrypt root password"
 msgstr "Шифрувати пароль root"
 
-#: tmp/system-config-kickstart.glade.h:43
+#: tmp/system-config-kickstart.glade.h:45
 msgid "FTP"
 msgstr "FTP"
 
-#: tmp/system-config-kickstart.glade.h:44
+#: tmp/system-config-kickstart.glade.h:46
 msgid "FTP Directory:"
 msgstr "Каталог FTP:"
 
-#: tmp/system-config-kickstart.glade.h:45
+#: tmp/system-config-kickstart.glade.h:47
 msgid "FTP Password"
 msgstr "Пароль FTP"
 
-#: tmp/system-config-kickstart.glade.h:46
+#: tmp/system-config-kickstart.glade.h:48
 msgid "FTP Server:"
 msgstr "Сервер FTP:"
 
-#: tmp/system-config-kickstart.glade.h:47
+#: tmp/system-config-kickstart.glade.h:49
 msgid "FTP Username"
 msgstr "Користувач FTP"
 
-#: tmp/system-config-kickstart.glade.h:48
+#: tmp/system-config-kickstart.glade.h:50
 msgid "File System Type:"
 msgstr "Тип файлової системи:"
 
-#: tmp/system-config-kickstart.glade.h:49
+#: tmp/system-config-kickstart.glade.h:51
 msgid "Fill all unused space on disk"
 msgstr "Заповнити весь незайнятий простір диску"
 
-#: tmp/system-config-kickstart.glade.h:51
+#: tmp/system-config-kickstart.glade.h:53
+msgid "Firewall configuration is not applicable on upgrades."
+msgstr "Параметри брандмауера не застосовні при оновленнях."
+
+#: tmp/system-config-kickstart.glade.h:54
 msgid "Fixed size"
 msgstr "Фіксований розмір"
 
-#: tmp/system-config-kickstart.glade.h:52
+#: tmp/system-config-kickstart.glade.h:55
 msgid "Force to be a primary partition (asprimary)"
 msgstr "Примусово стати головним розділом (asprimary)"
 
-#: tmp/system-config-kickstart.glade.h:53
+#: tmp/system-config-kickstart.glade.h:56
 msgid "Format RAID device"
 msgstr "Форматувати пристрій RAID"
 
-#: tmp/system-config-kickstart.glade.h:54
+#: tmp/system-config-kickstart.glade.h:57
 msgid "Format partition"
 msgstr "Форматувати розділ"
 
-#: tmp/system-config-kickstart.glade.h:55
+#: tmp/system-config-kickstart.glade.h:58
 msgid "GNOME"
 msgstr "GNOME"
 
-#: tmp/system-config-kickstart.glade.h:56
+#: tmp/system-config-kickstart.glade.h:59
 msgid "GRUB Options:"
 msgstr "Параметри GRUB:"
 
-#: tmp/system-config-kickstart.glade.h:57
+#: tmp/system-config-kickstart.glade.h:60
 msgid "Gateway:"
 msgstr "Шлюз:"
 
-#: tmp/system-config-kickstart.glade.h:58
+#: tmp/system-config-kickstart.glade.h:61
 msgid "General"
 msgstr "Загальні"
 
-#: tmp/system-config-kickstart.glade.h:59
+#: tmp/system-config-kickstart.glade.h:62
 msgid "Grow to maximum of (MB):"
 msgstr "Збільшуватись до максимум (Мб):"
 
-#: tmp/system-config-kickstart.glade.h:60
+#: tmp/system-config-kickstart.glade.h:63
 msgid "HTTP"
 msgstr "HTTP"
 
-#: tmp/system-config-kickstart.glade.h:61
+#: tmp/system-config-kickstart.glade.h:64
 msgid "HTTP Directory:"
 msgstr "Каталог HTTP:"
 
-#: tmp/system-config-kickstart.glade.h:62
+#: tmp/system-config-kickstart.glade.h:65
 msgid "HTTP Server:"
 msgstr "Сервер HTTP:"
 
-#: tmp/system-config-kickstart.glade.h:63
+#: tmp/system-config-kickstart.glade.h:66
 msgid "Hard Drive"
 msgstr "Жорсткий диск"
 
-#: tmp/system-config-kickstart.glade.h:64
+#: tmp/system-config-kickstart.glade.h:67
 msgid "Hard Drive Directory:"
 msgstr "Каталог жорсткого диску:"
 
-#: tmp/system-config-kickstart.glade.h:65
+#: tmp/system-config-kickstart.glade.h:68
 msgid "Hard Drive Partition:"
 msgstr "Розділ жорсткого диску:"
 
-#: tmp/system-config-kickstart.glade.h:66
+#: tmp/system-config-kickstart.glade.h:69
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: tmp/system-config-kickstart.glade.h:67
+#: tmp/system-config-kickstart.glade.h:70
 msgid "Hesiod Authentication"
 msgstr "Автентифікація Hesiod"
 
-#: tmp/system-config-kickstart.glade.h:68
+#: tmp/system-config-kickstart.glade.h:71
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS:"
 
-#: tmp/system-config-kickstart.glade.h:69
+#: tmp/system-config-kickstart.glade.h:72
 msgid "Hesiod RHS:"
 msgstr "Hesiod RHS:"
 
-#: tmp/system-config-kickstart.glade.h:70
+#: tmp/system-config-kickstart.glade.h:73
 msgid "Horizontal Sync:"
 msgstr "Частота рядків:"
 
-#: tmp/system-config-kickstart.glade.h:71
+#: tmp/system-config-kickstart.glade.h:74
 msgid "Hz"
 msgstr "Гц"
 
-#: tmp/system-config-kickstart.glade.h:72
+#: tmp/system-config-kickstart.glade.h:75
 msgid "IP Address:"
 msgstr "Адреса IP:"
 
-#: tmp/system-config-kickstart.glade.h:73
+#: tmp/system-config-kickstart.glade.h:76
 msgid "Initialize the disk label"
 msgstr "Ініціалізувати мітку диску"
 
-#: tmp/system-config-kickstart.glade.h:74
+#: tmp/system-config-kickstart.glade.h:77
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "Встановлювати завантажувач у головний завантажувальний запис (MBR)"
 
-#: tmp/system-config-kickstart.glade.h:75
+#: tmp/system-config-kickstart.glade.h:78
 msgid "Install boot loader on first sector of the boot partition"
 msgstr "Встановлювати завантажувач у перший сектор розділу"
 
-#: tmp/system-config-kickstart.glade.h:76
+#: tmp/system-config-kickstart.glade.h:79
 msgid "Install new boot loader"
 msgstr "Встановлювати новий завантажувач"
 
-#: tmp/system-config-kickstart.glade.h:77
+#: tmp/system-config-kickstart.glade.h:80
 msgid "Installation Method (required)"
 msgstr "Метод встановлення (обов'язково)"
 
-#: tmp/system-config-kickstart.glade.h:78
+#: tmp/system-config-kickstart.glade.h:81
 msgid "KDE"
 msgstr "KDE"
 
-#: tmp/system-config-kickstart.glade.h:79
+#: tmp/system-config-kickstart.glade.h:82
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: tmp/system-config-kickstart.glade.h:80
+#: tmp/system-config-kickstart.glade.h:83
 msgid "Kerberos 5 Authentication"
 msgstr "Автентифікація Kerberos 5"
 
-#: tmp/system-config-kickstart.glade.h:81
+#: tmp/system-config-kickstart.glade.h:84
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Контролер домену Kerberos (KDC):"
 
-#: tmp/system-config-kickstart.glade.h:82
+#: tmp/system-config-kickstart.glade.h:85
 msgid "Kerberos Master Server:"
 msgstr "Головний сервер Kerberos:"
 
-#: tmp/system-config-kickstart.glade.h:83
+#: tmp/system-config-kickstart.glade.h:86
 msgid "Kerberos Realm:"
 msgstr "Kerberos Realm:"
 
-#: tmp/system-config-kickstart.glade.h:84
+#: tmp/system-config-kickstart.glade.h:87
 msgid "Kernel parameters:"
 msgstr "Параметри ядра:"
 
-#: tmp/system-config-kickstart.glade.h:85
+#: tmp/system-config-kickstart.glade.h:88
 msgid "Keyboard:"
 msgstr "Клавіатура:"
 
-#: tmp/system-config-kickstart.glade.h:86
+#: tmp/system-config-kickstart.glade.h:89
 msgid "Kickstart Configurator"
 msgstr "Налаштовування Kickstart"
 
-#: tmp/system-config-kickstart.glade.h:87
+#: tmp/system-config-kickstart.glade.h:90
 msgid "LDAP "
 msgstr "LDAP "
 
-#: tmp/system-config-kickstart.glade.h:88
+#: tmp/system-config-kickstart.glade.h:91
 msgid "LDAP Authentication"
 msgstr "Автентифікація LDAP"
 
-#: tmp/system-config-kickstart.glade.h:89
+#: tmp/system-config-kickstart.glade.h:92
 msgid "LDAP Base Name: "
 msgstr "Базове ім'я LDAP сервера:"
 
-#: tmp/system-config-kickstart.glade.h:90
+#: tmp/system-config-kickstart.glade.h:93
 msgid "LDAP Server: "
 msgstr "Сервер LDAP:"
 
-#: tmp/system-config-kickstart.glade.h:91
+#: tmp/system-config-kickstart.glade.h:94
 msgid "Load CA certificate"
 msgstr "Завантажити сертифікат CA"
 
-#: tmp/system-config-kickstart.glade.h:92
+#: tmp/system-config-kickstart.glade.h:95
 msgid "Make RAID Device"
 msgstr "Створити пристрій RAID"
 
-#: tmp/system-config-kickstart.glade.h:93
+#: tmp/system-config-kickstart.glade.h:96
 msgid "Make partition on specific drive (ondisk)"
 msgstr "Зробити розділ на вказаному пристрої (ondisk)"
 
-#: tmp/system-config-kickstart.glade.h:94
+#: tmp/system-config-kickstart.glade.h:97
 msgid "Monitor"
 msgstr "Монітор"
 
-#: tmp/system-config-kickstart.glade.h:95
+#: tmp/system-config-kickstart.glade.h:98
 msgid "Mount Point:"
 msgstr "Точка монтування:"
 
-#: tmp/system-config-kickstart.glade.h:96
+#: tmp/system-config-kickstart.glade.h:99
 msgid "NFS"
 msgstr "NFS"
 
-#: tmp/system-config-kickstart.glade.h:97
+#: tmp/system-config-kickstart.glade.h:100
 msgid "NFS Directory:"
 msgstr "Каталог NFS:"
 
-#: tmp/system-config-kickstart.glade.h:98
+#: tmp/system-config-kickstart.glade.h:101
 msgid "NFS Server:"
 msgstr "Сервер NFS:"
 
-#: tmp/system-config-kickstart.glade.h:99
+#: tmp/system-config-kickstart.glade.h:102
 msgid "NIS"
 msgstr "NIS"
 
-#: tmp/system-config-kickstart.glade.h:100
+#: tmp/system-config-kickstart.glade.h:103
 msgid "NIS Authentication"
 msgstr "Автентифікація NIS"
 
-#: tmp/system-config-kickstart.glade.h:101
+#: tmp/system-config-kickstart.glade.h:104
 msgid "NIS Domain:"
 msgstr "Домен NIS:"
 
-#: tmp/system-config-kickstart.glade.h:102
+#: tmp/system-config-kickstart.glade.h:105
 msgid "NIS Server:"
 msgstr "Сервер NIS:"
 
-#: tmp/system-config-kickstart.glade.h:103
+#: tmp/system-config-kickstart.glade.h:106
 msgid "Name Server:"
 msgstr "Сервер імен:"
 
-#: tmp/system-config-kickstart.glade.h:104
+#: tmp/system-config-kickstart.glade.h:107
 msgid "Name Switch Cache"
 msgstr "Name Switch Cache"
 
-#: tmp/system-config-kickstart.glade.h:105
+#: tmp/system-config-kickstart.glade.h:108
 msgid "Name Switch Cache Daemon (nscd) Authentication"
 msgstr "Автентифікація Name Switch Cache Daemon (nscd)"
 
-#: tmp/system-config-kickstart.glade.h:106
+#: tmp/system-config-kickstart.glade.h:109
 msgid "Netmask: "
 msgstr "Маска мережі:"
 
-#: tmp/system-config-kickstart.glade.h:108
+#: tmp/system-config-kickstart.glade.h:111
 msgid "Network Device Information"
 msgstr "Інформація про мережний пристрій"
 
-#: tmp/system-config-kickstart.glade.h:109
+#: tmp/system-config-kickstart.glade.h:112
 msgid "Network Device:"
 msgstr "Мережний пристрій:"
 
-#: tmp/system-config-kickstart.glade.h:110
+#: tmp/system-config-kickstart.glade.h:113
 msgid "Network Type:"
 msgstr "Тип мережі:"
 
-#: tmp/system-config-kickstart.glade.h:111
+#: tmp/system-config-kickstart.glade.h:114
 msgid "Number of spares:"
 msgstr "Кількість запасних"
 
-#: tmp/system-config-kickstart.glade.h:112
+#: tmp/system-config-kickstart.glade.h:115
 msgid "On first boot, Setup Agent is: "
 msgstr "При першому завантаженні, агент налаштовування:"
 
-#: tmp/system-config-kickstart.glade.h:114
+#: tmp/system-config-kickstart.glade.h:117
 msgid "Partition :"
 msgstr "Розділ:"
 
-#: tmp/system-config-kickstart.glade.h:115
+#: tmp/system-config-kickstart.glade.h:118
 msgid "Partition Information (required)"
 msgstr "Інформація про розділи (обов'язково)"
 
-#: tmp/system-config-kickstart.glade.h:116
+#: tmp/system-config-kickstart.glade.h:119
 msgid "Partition Options"
 msgstr "Параметри розділу"
 
-#: tmp/system-config-kickstart.glade.h:117
+#: tmp/system-config-kickstart.glade.h:120
 msgid "Partition options are not applicable on upgrades."
 msgstr "Параметри розділу не застосовні при оновлення."
 
-#: tmp/system-config-kickstart.glade.h:118
+#: tmp/system-config-kickstart.glade.h:121
 msgid "Password:"
 msgstr "Пароль:"
 
-#: tmp/system-config-kickstart.glade.h:119
+#: tmp/system-config-kickstart.glade.h:122
 msgid "Perform installation in interactive mode"
 msgstr "Виконувати встановлення у інтерактивному режимі"
 
-#: tmp/system-config-kickstart.glade.h:120
+#: tmp/system-config-kickstart.glade.h:123
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "Виконувати встановлення у текстовому режимі (типовим є графічний)"
 
-#: tmp/system-config-kickstart.glade.h:121
+#: tmp/system-config-kickstart.glade.h:124
 msgid "Perform new installation"
 msgstr "Виконувати нове встановлення"
 
-#: tmp/system-config-kickstart.glade.h:124
+#: tmp/system-config-kickstart.glade.h:127
 msgid "Preserve existing partitions"
 msgstr "Зберігати наявні розділи"
 
-#: tmp/system-config-kickstart.glade.h:125
+#: tmp/system-config-kickstart.glade.h:128
 msgid "Preview Options"
 msgstr "Параметри "
 
-#: tmp/system-config-kickstart.glade.h:126
+#: tmp/system-config-kickstart.glade.h:129
 msgid "Probe for monitor"
 msgstr "Визначати монітор автоматично"
 
-#: tmp/system-config-kickstart.glade.h:127
+#: tmp/system-config-kickstart.glade.h:130
 msgid "Probe for video card driver"
 msgstr "Визначати драйвер відеокарту автоматично"
 
-#: tmp/system-config-kickstart.glade.h:128
+#: tmp/system-config-kickstart.glade.h:131
 msgid "RAID"
 msgstr "RAID"
 
-#: tmp/system-config-kickstart.glade.h:129
+#: tmp/system-config-kickstart.glade.h:132
 msgid "RAID Device:"
 msgstr "Пристрій RAID:"
 
-#: tmp/system-config-kickstart.glade.h:130
+#: tmp/system-config-kickstart.glade.h:133
 msgid "RAID Level:"
 msgstr "Рівень RAID:"
 
-#: tmp/system-config-kickstart.glade.h:131
+#: tmp/system-config-kickstart.glade.h:134
 msgid "RAID Options"
 msgstr "Параметри RAID"
 
-#: tmp/system-config-kickstart.glade.h:132
+#: tmp/system-config-kickstart.glade.h:135
 msgid "Raid Members"
 msgstr "Частини RAID"
 
-#: tmp/system-config-kickstart.glade.h:133
+#: tmp/system-config-kickstart.glade.h:136
 msgid "Reboot system after installation"
 msgstr "Перезавантажувати систему після встановлення"
 
-#: tmp/system-config-kickstart.glade.h:134
+#: tmp/system-config-kickstart.glade.h:137
 msgid "Remove all existing partitions"
 msgstr "Видаляти всі існуючі розділи"
 
-#: tmp/system-config-kickstart.glade.h:135
+#: tmp/system-config-kickstart.glade.h:138
 msgid "Remove existing Linux partitions"
 msgstr "Видаляти існуючі розділи Linux"
 
-#: tmp/system-config-kickstart.glade.h:136
+#: tmp/system-config-kickstart.glade.h:139
 msgid "Resolution"
 msgstr "Роздільна здатність"
 
-#: tmp/system-config-kickstart.glade.h:137
+#: tmp/system-config-kickstart.glade.h:140
 msgid "Root Password:"
 msgstr "Пароль root:"
 
-#: tmp/system-config-kickstart.glade.h:138
+#: tmp/system-config-kickstart.glade.h:141
 msgid "Run outside of the chroot environment"
 msgstr "Запускати поза chroot оточенням"
 
-#: tmp/system-config-kickstart.glade.h:139
+#: tmp/system-config-kickstart.glade.h:142
+msgid "SELinux:"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:143
 msgid "SMB"
 msgstr "SMB"
 
-#: tmp/system-config-kickstart.glade.h:140
+#: tmp/system-config-kickstart.glade.h:144
 msgid "SMB Authentication"
 msgstr "Автентифікація SMB"
 
-#: tmp/system-config-kickstart.glade.h:141
+#: tmp/system-config-kickstart.glade.h:145
 msgid "SMB Servers:"
 msgstr "Сервери SMB:"
 
-#: tmp/system-config-kickstart.glade.h:142
+#: tmp/system-config-kickstart.glade.h:146
 msgid "SMB Workgroup:"
 msgstr "Робоча група SMB:"
 
-#: tmp/system-config-kickstart.glade.h:143
+#: tmp/system-config-kickstart.glade.h:147
+msgid "Security level:"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:148
 msgid "Size (MB):"
 msgstr "Розмір (Мб):"
 
-#: tmp/system-config-kickstart.glade.h:144
+#: tmp/system-config-kickstart.glade.h:149
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -937,27 +971,27 @@ msgstr ""
 "надійності у порівнянні з окремим диском. Докладнішу інформацію про "
 "використання RAID дивіться у документацій з kickstart."
 
-#: tmp/system-config-kickstart.glade.h:145
+#: tmp/system-config-kickstart.glade.h:150
 msgid "Specify an FTP username and password"
 msgstr "Вказати ім'я та пароль FTP користувача"
 
-#: tmp/system-config-kickstart.glade.h:146
+#: tmp/system-config-kickstart.glade.h:151
 msgid "Specify installation key:"
 msgstr "Вкажіть ключ встановлення:"
 
-#: tmp/system-config-kickstart.glade.h:147
+#: tmp/system-config-kickstart.glade.h:152
 msgid "Start the X Window System on boot"
 msgstr "Запускати X Window при завантаженні"
 
-#: tmp/system-config-kickstart.glade.h:148
+#: tmp/system-config-kickstart.glade.h:153
 msgid "Target Architecture:"
 msgstr "Цільова архітектура:"
 
-#: tmp/system-config-kickstart.glade.h:149
+#: tmp/system-config-kickstart.glade.h:154
 msgid "Time Zone:"
 msgstr "Часовий пояс:"
 
-#: tmp/system-config-kickstart.glade.h:150
+#: tmp/system-config-kickstart.glade.h:155
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -966,73 +1000,77 @@ msgstr ""
 "\"програмний RAID\". Потім ви зможете створити пристрій RAID, який можна "
 "відформатувати та змонтувати."
 
-#: tmp/system-config-kickstart.glade.h:152
+#: tmp/system-config-kickstart.glade.h:157
 #, no-c-format
 msgid "Type your %post script below:"
 msgstr "Введіть нижче ваш %post сценарій:"
 
-#: tmp/system-config-kickstart.glade.h:154
+#: tmp/system-config-kickstart.glade.h:159
 #, no-c-format
 msgid "Type your %pre script below:"
 msgstr "Введіть нижче ваш %pre сценарій:"
 
-#: tmp/system-config-kickstart.glade.h:155
+#: tmp/system-config-kickstart.glade.h:160
 msgid "Upgrade an existing installation"
 msgstr "Оновлювати існуючу систему"
 
-#: tmp/system-config-kickstart.glade.h:156
+#: tmp/system-config-kickstart.glade.h:161
 msgid "Upgrade existing boot loader"
 msgstr "Оновлювати існуючий завантажувач"
 
-#: tmp/system-config-kickstart.glade.h:157
+#: tmp/system-config-kickstart.glade.h:162
 msgid "Use GRUB password"
 msgstr "Використовувати пароль для GRUB"
 
-#: tmp/system-config-kickstart.glade.h:158
+#: tmp/system-config-kickstart.glade.h:163
 msgid "Use MD5"
 msgstr "Використовувати MD5"
 
-#: tmp/system-config-kickstart.glade.h:159
+#: tmp/system-config-kickstart.glade.h:164
 msgid "Use Shadow Passwords"
 msgstr "Використовувати тіньові паролі"
 
-#: tmp/system-config-kickstart.glade.h:160
+#: tmp/system-config-kickstart.glade.h:165
 msgid "Use UTC clock"
 msgstr "Використовувати час UTC"
 
-#: tmp/system-config-kickstart.glade.h:161
+#: tmp/system-config-kickstart.glade.h:166
 msgid "Use an interpreter:"
 msgstr "Використовувати інтерпретатор:"
 
-#: tmp/system-config-kickstart.glade.h:162
+#: tmp/system-config-kickstart.glade.h:167
 msgid "Use broadcast to find NIS server"
 msgstr "Використовувати широкомовні запити для пошуку NIS"
 
-#: tmp/system-config-kickstart.glade.h:163
+#: tmp/system-config-kickstart.glade.h:168
 msgid "Use custom monitor sync rates"
 msgstr "Власний діапазон розгорток монітора"
 
-#: tmp/system-config-kickstart.glade.h:164
+#: tmp/system-config-kickstart.glade.h:169
 msgid "Use existing partition (onpart)"
 msgstr "Використовувати існуючий розділ (onpart)"
 
-#: tmp/system-config-kickstart.glade.h:165
+#: tmp/system-config-kickstart.glade.h:170
 msgid "Use recommended swap size"
 msgstr "Використовувати рекомендований розмір swap"
 
-#: tmp/system-config-kickstart.glade.h:166
+#: tmp/system-config-kickstart.glade.h:171
 msgid "Vertical Sync:"
 msgstr "Частота кадрів:"
 
-#: tmp/system-config-kickstart.glade.h:167
+#: tmp/system-config-kickstart.glade.h:172
 msgid "Video Card"
 msgstr "Відеокарта"
 
-#: tmp/system-config-kickstart.glade.h:168
+#: tmp/system-config-kickstart.glade.h:173
 msgid "Video Card RAM: "
 msgstr "Обсяг пам'яті відеокарти:"
 
-#: tmp/system-config-kickstart.glade.h:170
+#: tmp/system-config-kickstart.glade.h:174
+msgid "Warn"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:176
 #, no-c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1041,7 +1079,7 @@ msgstr ""
 "Увага: помилка у цьому сценарії може привести до збою при встановленні через "
 "kickstart. Не вставляйте команду %post на початку."
 
-#: tmp/system-config-kickstart.glade.h:172
+#: tmp/system-config-kickstart.glade.h:178
 #, no-c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1050,7 +1088,7 @@ msgstr ""
 "Увага: помилка у цьому сценарії може привести до збою при встановленні через "
 "kickstart. Не вставляйте команду %pre на початку."
 
-#: tmp/system-config-kickstart.glade.h:173
+#: tmp/system-config-kickstart.glade.h:179
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
@@ -1058,130 +1096,133 @@ msgstr ""
 "Ви вибрали наступну конфігурацію. Щоб зберегти kickstart файл натисніть "
 "\"Зберегти файл\"."
 
-#: tmp/system-config-kickstart.glade.h:174
+#: tmp/system-config-kickstart.glade.h:180
 msgid "_About"
 msgstr "_Про програму"
 
-#: tmp/system-config-kickstart.glade.h:175
+#: tmp/system-config-kickstart.glade.h:181
 msgid "_Add"
 msgstr "Д_одати"
 
-#: tmp/system-config-kickstart.glade.h:176
+#: tmp/system-config-kickstart.glade.h:182
 msgid "_Add Network Device"
 msgstr "Д_одати мережний пристрій"
 
-#: tmp/system-config-kickstart.glade.h:177
+#: tmp/system-config-kickstart.glade.h:183
 msgid "_Contents"
 msgstr "_Зміст"
 
-#: tmp/system-config-kickstart.glade.h:178
+#: tmp/system-config-kickstart.glade.h:184
 msgid "_Delete"
 msgstr "В_идалити"
 
-#: tmp/system-config-kickstart.glade.h:179
+#: tmp/system-config-kickstart.glade.h:185
 msgid "_Delete Network Device"
 msgstr "В_идалити мережний пристрій"
 
-#: tmp/system-config-kickstart.glade.h:180
+#: tmp/system-config-kickstart.glade.h:186
 msgid "_Edit"
 msgstr "_Правка"
 
-#: tmp/system-config-kickstart.glade.h:181
+#: tmp/system-config-kickstart.glade.h:187
 msgid "_Edit Network Device"
 msgstr "_Змінити мережний пристрій"
 
-#: tmp/system-config-kickstart.glade.h:182
+#: tmp/system-config-kickstart.glade.h:188
 msgid "_File"
 msgstr "_Файл"
 
-#: tmp/system-config-kickstart.glade.h:183
+#: tmp/system-config-kickstart.glade.h:189
 msgid "_Help"
 msgstr "_Довідка"
 
-#: tmp/system-config-kickstart.glade.h:184
+#: tmp/system-config-kickstart.glade.h:190
 msgid "_Open File"
 msgstr "_Відкрити файл"
 
-#: tmp/system-config-kickstart.glade.h:185
+#: tmp/system-config-kickstart.glade.h:191
 msgid "_Preview"
 msgstr "_Перегляд"
 
-#: tmp/system-config-kickstart.glade.h:186
+#: tmp/system-config-kickstart.glade.h:192
 msgid "_Quit"
 msgstr "Ви_йти"
 
-#: tmp/system-config-kickstart.glade.h:187
+#: tmp/system-config-kickstart.glade.h:193
 msgid "_Save File"
 msgstr "З_берегти файл"
 
-#: tmp/system-config-kickstart.glade.h:188
+#: tmp/system-config-kickstart.glade.h:194
 msgid "_Save to File"
 msgstr "З_берегти файл"
 
-#: tmp/system-config-kickstart.glade.h:191
+#: tmp/system-config-kickstart.glade.h:197
 msgid "kHz"
 msgstr "кГц"
 
-#: tmp/system-config-kickstart.glade.h:192
+#: tmp/system-config-kickstart.glade.h:198
 msgid "md0"
 msgstr "md0"
 
-#: tmp/system-config-kickstart.glade.h:193
+#: tmp/system-config-kickstart.glade.h:199
 msgid "md1"
 msgstr "md1"
 
-#: tmp/system-config-kickstart.glade.h:194
+#: tmp/system-config-kickstart.glade.h:200
 msgid "md10"
 msgstr "md10"
 
-#: tmp/system-config-kickstart.glade.h:195
+#: tmp/system-config-kickstart.glade.h:201
 msgid "md11"
 msgstr "md11"
 
-#: tmp/system-config-kickstart.glade.h:196
+#: tmp/system-config-kickstart.glade.h:202
 msgid "md12"
 msgstr "md12"
 
-#: tmp/system-config-kickstart.glade.h:197
+#: tmp/system-config-kickstart.glade.h:203
 msgid "md13"
 msgstr "md13"
 
-#: tmp/system-config-kickstart.glade.h:198
+#: tmp/system-config-kickstart.glade.h:204
 msgid "md14"
 msgstr "md14"
 
-#: tmp/system-config-kickstart.glade.h:199
+#: tmp/system-config-kickstart.glade.h:205
 msgid "md15"
 msgstr "md15"
 
-#: tmp/system-config-kickstart.glade.h:200
+#: tmp/system-config-kickstart.glade.h:206
 msgid "md2"
 msgstr "md2"
 
-#: tmp/system-config-kickstart.glade.h:201
+#: tmp/system-config-kickstart.glade.h:207
 msgid "md3"
 msgstr "md3"
 
-#: tmp/system-config-kickstart.glade.h:202
+#: tmp/system-config-kickstart.glade.h:208
 msgid "md4"
 msgstr "md4"
 
-#: tmp/system-config-kickstart.glade.h:203
+#: tmp/system-config-kickstart.glade.h:209
 msgid "md5"
 msgstr "md5"
 
-#: tmp/system-config-kickstart.glade.h:204
+#: tmp/system-config-kickstart.glade.h:210
 msgid "md6"
 msgstr "md6"
 
-#: tmp/system-config-kickstart.glade.h:205
+#: tmp/system-config-kickstart.glade.h:211
 msgid "md7"
 msgstr "md7"
 
-#: tmp/system-config-kickstart.glade.h:206
+#: tmp/system-config-kickstart.glade.h:212
 msgid "md8"
 msgstr "md8"
 
-#: tmp/system-config-kickstart.glade.h:207
+#: tmp/system-config-kickstart.glade.h:213
 msgid "md9"
 msgstr "md9"
+
+#~ msgid "."
+#~ msgstr "."
