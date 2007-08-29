@@ -1,20 +1,22 @@
 # Serbian(Latin) translations for system-config-kickstart
 # Copyright (C) 2005 Red Hat, Inc.
 # This file is distributed under the same license as the system-config-kickstart package.
-# Igor Nestorović <igor@prevod.org>, 2005
+# Igor Nestorović <igor@prevod.org>, 2005.
+# Miloš Komarčević <kmilos@gmail.com>, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-08-29 17:26-0400\n"
-"PO-Revision-Date: 2007-03-22 20:53-0000\n"
+"PO-Revision-Date: 2007-08-29 23:33-0000\n"
 "Last-Translator: Miloš Komarčević <kmilos@gmail.com>\n"
-"Language-Team: Serbian (sr) <fedora@prevod.org>\n"
+"Language-Team: Serbian (sr) <fedora-trans-sr@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 0.10.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../src/auth.py:343
 msgid "Please fill in the authentication information"
@@ -60,11 +62,11 @@ msgstr "Lozinke za Grub se ne slažu.  Pokušajte ponovo."
 
 #: ../src/firewall.py:60
 msgid "Trusted services:"
-msgstr ""
+msgstr "Servisi od poverenja:"
 
 #: ../src/firewall.py:92
 msgid "Other ports: (1029:tcp)"
-msgstr ""
+msgstr "Drugi portovi: (1029:tcp)"
 
 #: ../src/install.py:131
 msgid "Please enter an NFS server."
@@ -222,14 +224,12 @@ msgid "Please fill in the network information"
 msgstr "Popunite podatke o mreži"
 
 #: ../src/network.py:202 ../src/network.py:261
-#, fuzzy
 msgid "Please enter a valid gateway address."
-msgstr "Unesite direktorijum tvrdog diska."
+msgstr "Unesite ispravnu adresu mrežnog prolaza."
 
 #: ../src/network.py:214 ../src/network.py:273
-#, fuzzy
 msgid "Please enter a valid nameserver address."
-msgstr "Unesite direktorijum HTTP servera."
+msgstr "Unesite ispravnu adresu servera imena."
 
 #: ../src/network.py:301
 #, python-format
@@ -240,7 +240,7 @@ msgstr "Mrežni uređaj imena %s već postoji.  Izaberite drugo ime za uređaj"
 
 #: ../src/packages.py:171
 msgid "Package configuration is not applicable on upgrades."
-msgstr "Podešavanje paketa nije primenljivo na nadogradnje."
+msgstr "Podešavanje paketa nije primenljivo na nadgradnje."
 
 #: ../src/packages.py:177
 msgid "Retrieving package information"
@@ -417,7 +417,7 @@ msgstr "5"
 
 #: tmp/system-config-kickstart.glade.h:7
 msgid "Active"
-msgstr ""
+msgstr "Aktivno"
 
 #: tmp/system-config-kickstart.glade.h:8
 msgid "Additional Size Options"
@@ -429,7 +429,7 @@ msgstr "Podešavanje autentifikacije"
 
 #: tmp/system-config-kickstart.glade.h:10
 msgid "Authentication options are not applicable on upgrades."
-msgstr "Opcije autentifikacije nisu primenljive na nadogradnje."
+msgstr "Opcije autentifikacije nisu primenljive na nadgradnje."
 
 #: tmp/system-config-kickstart.glade.h:11
 msgid "Authentication:"
@@ -493,7 +493,7 @@ msgstr "Podrazumevani jezik:"
 
 #: tmp/system-config-kickstart.glade.h:26
 msgid "Disable firewall"
-msgstr ""
+msgstr "Isključi zaštitni zid"
 
 #: tmp/system-config-kickstart.glade.h:27
 msgid "Disabled"
@@ -501,7 +501,7 @@ msgstr "Isključeno"
 
 #: tmp/system-config-kickstart.glade.h:29
 msgid "Display configuration is not applicable on upgrades."
-msgstr "Podešavanje prikaza nije primenljivo na nadogradnje."
+msgstr "Podešavanje prikaza nije primenljivo na nadgradnje."
 
 #: tmp/system-config-kickstart.glade.h:30
 msgid "Do not clear Master Boot Record"
@@ -541,7 +541,7 @@ msgstr "Uključi SMB autentifikaciju"
 
 #: tmp/system-config-kickstart.glade.h:39
 msgid "Enable firewall"
-msgstr ""
+msgstr "Uključi zaštitni zid"
 
 #: tmp/system-config-kickstart.glade.h:40
 msgid "Enable nscd"
@@ -593,7 +593,7 @@ msgstr "Popuni sav neiskorišćen prostor na disku"
 
 #: tmp/system-config-kickstart.glade.h:53
 msgid "Firewall configuration is not applicable on upgrades."
-msgstr "Podešavanje zaštitnog zida nije primenljivo na nadogradnje."
+msgstr "Podešavanje zaštitnog zida nije primenljivo na nadgradnje."
 
 #: tmp/system-config-kickstart.glade.h:54
 msgid "Fixed size"
@@ -853,7 +853,7 @@ msgstr "Opcije particije"
 
 #: tmp/system-config-kickstart.glade.h:120
 msgid "Partition options are not applicable on upgrades."
-msgstr "Opcije particije nisu primenljive na nadogradnje."
+msgstr "Opcije particije nisu primenljive na nadgradnje."
 
 #: tmp/system-config-kickstart.glade.h:121
 msgid "Password:"
@@ -933,7 +933,7 @@ msgstr "Pokreni izvan chroot okruženja"
 
 #: tmp/system-config-kickstart.glade.h:142
 msgid "SELinux:"
-msgstr ""
+msgstr "SELinux:"
 
 #: tmp/system-config-kickstart.glade.h:143
 msgid "SMB"
@@ -953,7 +953,7 @@ msgstr "SMB radna grupa:"
 
 #: tmp/system-config-kickstart.glade.h:147
 msgid "Security level:"
-msgstr ""
+msgstr "Nivo bezbednosti:"
 
 #: tmp/system-config-kickstart.glade.h:148
 msgid "Size (MB):"
@@ -1012,11 +1012,11 @@ msgstr "Ukucajte %pre skriptu:"
 
 #: tmp/system-config-kickstart.glade.h:160
 msgid "Upgrade an existing installation"
-msgstr "Nagogradi postojeću instalaciju"
+msgstr "Nadgradi postojeću instalaciju"
 
 #: tmp/system-config-kickstart.glade.h:161
 msgid "Upgrade existing boot loader"
-msgstr "Nadogradi postojeći pokretač sistema"
+msgstr "Nadgradi postojeći pokretač sistema"
 
 #: tmp/system-config-kickstart.glade.h:162
 msgid "Use GRUB password"
@@ -1068,7 +1068,7 @@ msgstr "RAM video karte:"
 
 #: tmp/system-config-kickstart.glade.h:174
 msgid "Warn"
-msgstr ""
+msgstr "Upozoravaj"
 
 #: tmp/system-config-kickstart.glade.h:176
 #, no-c-format
@@ -1223,6 +1223,3 @@ msgstr "md8"
 #: tmp/system-config-kickstart.glade.h:213
 msgid "md9"
 msgstr "md9"
-
-#~ msgid "."
-#~ msgstr "."
