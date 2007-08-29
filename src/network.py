@@ -52,22 +52,10 @@ class network:
         self.network_type_option_menu = xml.get_widget("network_type_option_menu")
         self.network_type_hbox = xml.get_widget("network_type_hbox")
 
-        self.ip_entry1 = xml.get_widget("ip_entry1")
-        self.ip_entry2 = xml.get_widget("ip_entry2")
-        self.ip_entry3 = xml.get_widget("ip_entry3")
-        self.ip_entry4 = xml.get_widget("ip_entry4")
-        self.netmask_entry1 = xml.get_widget("netmask_entry1")
-        self.netmask_entry2 = xml.get_widget("netmask_entry2")
-        self.netmask_entry3 = xml.get_widget("netmask_entry3")
-        self.netmask_entry4 = xml.get_widget("netmask_entry4")
-        self.gw_entry1 = xml.get_widget("gw_entry1")
-        self.gw_entry2 = xml.get_widget("gw_entry2")
-        self.gw_entry3 = xml.get_widget("gw_entry3")
-        self.gw_entry4 = xml.get_widget("gw_entry4")
-        self.nameserver_entry1 = xml.get_widget("nameserver_entry1")
-        self.nameserver_entry2 = xml.get_widget("nameserver_entry2")
-        self.nameserver_entry3 = xml.get_widget("nameserver_entry3")
-        self.nameserver_entry4 = xml.get_widget("nameserver_entry4")
+        self.ip_entry = xml.get_widget("ip_entry")
+        self.netmask_entry = xml.get_widget("netmask_entry")
+        self.gw_entry = xml.get_widget("gw_entry")
+        self.nameserver_entry = xml.get_widget("nameserver_entry")
         self.network_table = xml.get_widget("network_table")
         self.network_ok_button = xml.get_widget("network_ok_button")
         self.network_cancel_button = xml.get_widget("network_cancel_button")
@@ -154,46 +142,17 @@ class network:
             elif type == (_("Static IP")):
                 self.network_type_option_menu.set_history(1)
 
-                ip = self.network_device_store.get_value(iter, 2)
-                ip1, ip2, ip3, ip4 = string.split(ip, ".")
-                self.ip_entry1.set_text(ip1)
-                self.ip_entry2.set_text(ip2)
-                self.ip_entry3.set_text(ip3)
-                self.ip_entry4.set_text(ip4)
-
-                ip = self.network_device_store.get_value(iter, 3)
-                ip1, ip2, ip3, ip4 = string.split(ip, ".")
-                self.netmask_entry1.set_text(ip1)
-                self.netmask_entry2.set_text(ip2)
-                self.netmask_entry3.set_text(ip3)
-                self.netmask_entry4.set_text(ip4)
-
-                ip = self.network_device_store.get_value(iter, 4)
-                ip1, ip2, ip3, ip4 = string.split(ip, ".")
-                self.gw_entry1.set_text(ip1)
-                self.gw_entry2.set_text(ip2)
-                self.gw_entry3.set_text(ip3)
-                self.gw_entry4.set_text(ip4)
-
-                ip = self.network_device_store.get_value(iter, 5)
-                ip1, ip2, ip3, ip4 = string.split(ip, ".")
-                self.nameserver_entry1.set_text(ip1)
-                self.nameserver_entry2.set_text(ip2)
-                self.nameserver_entry3.set_text(ip3)
-                self.nameserver_entry4.set_text(ip4)
+                self.ip_entry.set_text(self.network_device_store.get_value(iter, 2))
+                self.netmask_entry.set_text(self.network_device_store.get_value(iter, 3))
+                self.gw_entry.set_text(self.network_device_store.get_value(iter, 4))
+                self.nameserver_entry.set_text(self.network_device_store.get_value(iter, 5))
 
         self.handler = self.network_ok_button.connect("clicked", self.editDevice, iter)
         self.network_device_dialog.show_all()
 
     def deviceIsFilledIn(self):
-        return self.ip_entry1.get_text() != "" and self.ip_entry2.get_text() != "" and \
-               self.ip_entry3.get_text() != "" and self.ip_entry4.get_text() != "" and \
-               self.netmask_entry1.get_text() != "" and self.netmask_entry2.get_text() != "" and \
-               self.netmask_entry3.get_text() != "" and self.netmask_entry4.get_text() != "" and \
-               self.gw_entry1.get_text() != "" and self.gw_entry2.get_text() != "" and \
-               self.gw_entry3.get_text() != "" and self.gw_entry4.get_text() != "" and \
-               self.nameserver_entry1.get_text() != "" and self.nameserver_entry2.get_text() != "" and \
-               self.nameserver_entry3.get_text() != "" and self.nameserver_entry4.get_text() != ""
+        return self.ip_entry.get_text() != "" and self.netmask_entry.get_text() != "" and \
+               self.gw_entry.get_text() != "" and self.nameserver_entry.get_text() != ""
 
     def addDevice(self, *args):
         devNum = self.network_device_option_menu.get_history()
@@ -221,36 +180,13 @@ class network:
                 return None
 
             iter = self.network_device_store.append()
+
             self.network_device_store.set_value(iter, 0, devName)
             self.network_device_store.set_value(iter, 1, _("Static IP"))
-
-            ipBuf = ("%s.%s.%s.%s" %
-                     (self.ip_entry1.get_text(),
-                      self.ip_entry2.get_text(),
-                      self.ip_entry3.get_text(),
-                      self.ip_entry4.get_text())) 
-            self.network_device_store.set_value(iter, 2, ipBuf)
-
-            netmaskBuf = ("%s.%s.%s.%s" %
-                          (self.netmask_entry1.get_text(),
-                           self.netmask_entry2.get_text(),
-                           self.netmask_entry3.get_text(),
-                           self.netmask_entry4.get_text()))
-            self.network_device_store.set_value(iter, 3, netmaskBuf)
-
-            gatewayBuf = ("%s.%s.%s.%s" %
-                          (self.gw_entry1.get_text(),
-                           self.gw_entry2.get_text(),
-                           self.gw_entry3.get_text(),
-                           self.gw_entry4.get_text()))
-            self.network_device_store.set_value(iter, 4, gatewayBuf)
-
-            nameserverBuf = ("%s.%s.%s.%s" %
-                             (self.nameserver_entry1.get_text(),
-                              self.nameserver_entry2.get_text(),
-                              self.nameserver_entry3.get_text(),
-                              self.nameserver_entry4.get_text()))     
-            self.network_device_store.set_value(iter, 5, nameserverBuf)
+            self.network_device_store.set_value(iter, 2, self.ip_entry.get_text())
+            self.network_device_store.set_value(iter, 3, self.netmask_entry.get_text())
+            self.network_device_store.set_value(iter, 4, self.gw_entry.get_text())
+            self.network_device_store.set_value(iter, 5, self.nameserver_entry.get_text())
 
         self.resetDialog()
 
@@ -279,34 +215,10 @@ class network:
                 return None
 
             self.network_device_store.set_value(iter, 1, _("Static IP"))
-
-            ipBuf = ("%s.%s.%s.%s" %
-                     (self.ip_entry1.get_text(),
-                      self.ip_entry2.get_text(),
-                      self.ip_entry3.get_text(),
-                      self.ip_entry4.get_text())) 
-            self.network_device_store.set_value(iter, 2, ipBuf)
-
-            netmaskBuf = ("%s.%s.%s.%s" %
-                          (self.netmask_entry1.get_text(),
-                           self.netmask_entry2.get_text(),
-                           self.netmask_entry3.get_text(),
-                           self.netmask_entry4.get_text()))
-            self.network_device_store.set_value(iter, 3, netmaskBuf)
-
-            gatewayBuf = ("%s.%s.%s.%s" %
-                          (self.gw_entry1.get_text(),
-                           self.gw_entry2.get_text(),
-                           self.gw_entry3.get_text(),
-                           self.gw_entry4.get_text()))
-            self.network_device_store.set_value(iter, 4, gatewayBuf)
-
-            nameserverBuf = ("%s.%s.%s.%s" %
-                             (self.nameserver_entry1.get_text(),
-                              self.nameserver_entry2.get_text(),
-                              self.nameserver_entry3.get_text(),
-                              self.nameserver_entry4.get_text()))
-            self.network_device_store.set_value(iter, 5, nameserverBuf)
+            self.network_device_store.set_value(iter, 2, self.ip_entry.get_text())
+            self.network_device_store.set_value(iter, 3, self.netmask_entry.get_text())
+            self.network_device_store.set_value(iter, 4, self.gw_entry.get_text())
+            self.network_device_store.set_value(iter, 5, self.nameserver_entry.get_text())
 
         self.resetDialog()
 
@@ -337,25 +249,11 @@ class network:
     def resetDialog(self, *args):
         self.network_device_option_menu.set_history(0)
         self.network_type_option_menu.set_history(0)
-        self.ip_entry1.set_text("")
-        self.ip_entry2.set_text("")
-        self.ip_entry3.set_text("")
-        self.ip_entry4.set_text("")
 
-        self.netmask_entry1.set_text("")
-        self.netmask_entry2.set_text("")
-        self.netmask_entry3.set_text("")
-        self.netmask_entry4.set_text("")
-
-        self.gw_entry1.set_text("")
-        self.gw_entry2.set_text("")
-        self.gw_entry3.set_text("")
-        self.gw_entry4.set_text("")
-
-        self.nameserver_entry1.set_text("")
-        self.nameserver_entry2.set_text("")
-        self.nameserver_entry3.set_text("")
-        self.nameserver_entry4.set_text("")
+        self.ip_entry.set_text("")
+        self.netmask_entry.set_text("")
+        self.gw_entry.set_text("")
+        self.nameserver_entry.set_text("")
 
         self.network_ok_button.disconnect(self.handler)
         self.network_device_dialog.hide()
