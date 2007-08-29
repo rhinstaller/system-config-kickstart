@@ -22,6 +22,7 @@
 
 import gtk
 import gobject
+import socket
 import string
 import getopt
 import gtk.glade
@@ -144,15 +145,30 @@ class network:
 
                 self.ip_entry.set_text(self.network_device_store.get_value(iter, 2))
                 self.netmask_entry.set_text(self.network_device_store.get_value(iter, 3))
-                self.gw_entry.set_text(self.network_device_store.get_value(iter, 4))
-                self.nameserver_entry.set_text(self.network_device_store.get_value(iter, 5))
+
+                if self.network_device_store.get_value(iter, 4) is not None:
+                    self.gw_entry.set_text(self.network_device_store.get_value(iter, 4))
+                else:
+                    self.gw_entry.set_text("")
+
+                if self.network_device_store.get_value(iter, 5) is not None:
+                    self.nameserver_entry.set_text(self.network_device_store.get_value(iter, 5))
+                else:
+                    self.nameserver_entry.set_text("")
 
         self.handler = self.network_ok_button.connect("clicked", self.editDevice, iter)
         self.network_device_dialog.show_all()
 
     def deviceIsFilledIn(self):
-        return self.ip_entry.get_text() != "" and self.netmask_entry.get_text() != "" and \
-               self.gw_entry.get_text() != "" and self.nameserver_entry.get_text() != ""
+        if self.ip_entry.get_text().strip() == "" or self.netmask_entry.get_text().strip() == "":
+            return False
+
+        try:
+            socket.inet_pton(socket.AF_INET, self.ip_entry.get_text())
+            socket.inet_pton(socket.AF_INET, self.netmask_entry.get_text())
+            return True
+        except:
+            return False
 
     def addDevice(self, *args):
         devNum = self.network_device_option_menu.get_history()
@@ -179,14 +195,38 @@ class network:
                 dlg.destroy()
                 return None
 
+            if self.gw_entry.get_text() != "":
+                try:
+                    socket.inet_pton(socket.AF_INET, self.gw_entry.get_text())
+                except:
+                    text = (_("Please enter a valid gateway address."))
+                    dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
+                    dlg.set_position(gtk.WIN_POS_CENTER)
+                    dlg.set_modal(True)
+                    rc = dlg.run()
+                    dlg.destroy()
+                    return None
+
+            if self.nameserver_entry.get_text() != "":
+                try:
+                    socket.inet_pton(socket.AF_INET, self.nameserver_entry.get_text())
+                except:
+                    text = (_("Please enter a valid nameserver address."))
+                    dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
+                    dlg.set_position(gtk.WIN_POS_CENTER)
+                    dlg.set_modal(True)
+                    rc = dlg.run()
+                    dlg.destroy()
+                    return None
+
             iter = self.network_device_store.append()
 
             self.network_device_store.set_value(iter, 0, devName)
             self.network_device_store.set_value(iter, 1, _("Static IP"))
-            self.network_device_store.set_value(iter, 2, self.ip_entry.get_text())
-            self.network_device_store.set_value(iter, 3, self.netmask_entry.get_text())
-            self.network_device_store.set_value(iter, 4, self.gw_entry.get_text())
-            self.network_device_store.set_value(iter, 5, self.nameserver_entry.get_text())
+            self.network_device_store.set_value(iter, 2, self.ip_entry.get_text().strip())
+            self.network_device_store.set_value(iter, 3, self.netmask_entry.get_text().strip())
+            self.network_device_store.set_value(iter, 4, self.gw_entry.get_text().strip())
+            self.network_device_store.set_value(iter, 5, self.nameserver_entry.get_text().strip())
 
         self.resetDialog()
 
@@ -214,11 +254,35 @@ class network:
                 dlg.destroy()
                 return None
 
+            if self.gw_entry.get_text() != "":
+                try:
+                    socket.inet_pton(socket.AF_INET, self.gw_entry.get_text())
+                except:
+                    text = (_("Please enter a valid gateway address."))
+                    dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
+                    dlg.set_position(gtk.WIN_POS_CENTER)
+                    dlg.set_modal(True)
+                    rc = dlg.run()
+                    dlg.destroy()
+                    return None
+
+            if self.nameserver_entry.get_text() != "":
+                try:
+                    socket.inet_pton(socket.AF_INET, self.nameserver_entry.get_text())
+                except:
+                    text = (_("Please enter a valid nameserver address."))
+                    dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
+                    dlg.set_position(gtk.WIN_POS_CENTER)
+                    dlg.set_modal(True)
+                    rc = dlg.run()
+                    dlg.destroy()
+                    return None
+
             self.network_device_store.set_value(iter, 1, _("Static IP"))
-            self.network_device_store.set_value(iter, 2, self.ip_entry.get_text())
-            self.network_device_store.set_value(iter, 3, self.netmask_entry.get_text())
-            self.network_device_store.set_value(iter, 4, self.gw_entry.get_text())
-            self.network_device_store.set_value(iter, 5, self.nameserver_entry.get_text())
+            self.network_device_store.set_value(iter, 2, self.ip_entry.get_text().strip())
+            self.network_device_store.set_value(iter, 3, self.netmask_entry.get_text().strip())
+            self.network_device_store.set_value(iter, 4, self.gw_entry.get_text().strip())
+            self.network_device_store.set_value(iter, 5, self.nameserver_entry.get_text().strip())
 
         self.resetDialog()
 
@@ -272,10 +336,10 @@ class network:
                 nd.bootProto = "bootp"
             else:
                 nd.bootProto = "static"
-                nd.ip = self.network_device_store.get_value(iter, 2)
-                nd.netmask = self.network_device_store.get_value(iter, 3)
-                nd.gateway = self.network_device_store.get_value(iter, 4)
-                nd.nameserver = self.network_device_store.get_value(iter, 5)
+                nd.ip = self.network_device_store.get_value(iter, 2) or ""
+                nd.netmask = self.network_device_store.get_value(iter, 3) or ""
+                nd.gateway = self.network_device_store.get_value(iter, 4) or ""
+                nd.nameserver = self.network_device_store.get_value(iter, 5) or ""
 
             nd.device = self.network_device_store.get_value(iter, 0)
             self.ks.network.add(nd)
