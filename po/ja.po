@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: ja\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-08-29 17:26-0400\n"
-"PO-Revision-Date: 2007-05-04 10:07\n"
+"PO-Revision-Date: 2007-09-01 14:57+0900\n"
 "Last-Translator: Hyu_gabaru Ryu_ichi <hyu_gabaru@yahoo.co.jp>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -66,11 +66,11 @@ msgstr "GRUB パスワードが違います。  入力し直してください�
 
 #: ../src/firewall.py:60
 msgid "Trusted services:"
-msgstr ""
+msgstr "信頼できるサービス:"
 
 #: ../src/firewall.py:92
 msgid "Other ports: (1029:tcp)"
-msgstr ""
+msgstr "他のポート: (1029:tcp)"
 
 #: ../src/install.py:131
 msgid "Please enter an NFS server."
@@ -119,7 +119,7 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"キックスタート設定を構文解析中に以下のエラーが発見されました:\n"
+"キックスタート設定の構文解析中に以下のエラーが発見されました:\n"
 "\n"
 "%s"
 
@@ -175,7 +175,7 @@ msgstr "ディスプレー設定"
 msgid "Package Selection"
 msgstr "パッケージの選択"
 
-#: ../src/kickstartGui.py:141 tmp/system-config-kickstart.glade.h:126
+#: ../src/kickstartgui.py:141 tmp/system-config-kickstart.glade.h:126
 msgid "Pre-Installation Script"
 msgstr "インストール前のスクリプト"
 
@@ -195,7 +195,7 @@ msgstr ""
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
 " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
 " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-"キックスタートファイル作成用のグラフィカルなインターフェイス"
+"キックスタートファイル作成用のグラフィカルなインターフェース"
 
 #: ../src/kickstartGui.py:208
 msgid "About Kickstart Configurator"
@@ -228,14 +228,12 @@ msgid "Please fill in the network information"
 msgstr "ネットワーク情報を入力して下さい"
 
 #: ../src/network.py:202 ../src/network.py:261
-#, fuzzy
 msgid "Please enter a valid gateway address."
-msgstr "ハードドライブのディレクトリを入力して下さい。"
+msgstr "正しいゲートウェイのアドレスを入力して下さい。"
 
 #: ../src/network.py:214 ../src/network.py:273
-#, fuzzy
 msgid "Please enter a valid nameserver address."
-msgstr "HTTP サーバーのディレクトリを入力して下さい。"
+msgstr "正しいネームサーバーのアドレスを入力して下さい。"
 
 #: ../src/network.py:301
 #, python-format
@@ -334,7 +332,7 @@ msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
 msgstr ""
-"指定されたパーティションは、番号では終了しません。パーティションは、\"hda1\" "
+"指定されたパーティションは数字で終了していません。パーティションは、\"hda1\" "
 "や \"sda3\" などのパーティション番号を持つ必要があります。"
 
 #: ../src/partition.py:74
@@ -372,7 +370,7 @@ msgstr "一覧からパーティションを選択して下さい。"
 #: ../src/raidOptionsWindow.py:75
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
-msgstr "現在使用出来る%d ソフトウェア RAID パーティションがあります。"
+msgstr "現在使用出来るソフトウェア RAID パーティションが %d 個あります。"
 
 #: ../src/raidWindow.py:177
 #, python-format
@@ -428,7 +426,7 @@ msgstr "5"
 
 #: tmp/system-config-kickstart.glade.h:7
 msgid "Active"
-msgstr ""
+msgstr "アクティブ"
 
 #: tmp/system-config-kickstart.glade.h:8
 msgid "Additional Size Options"
@@ -464,7 +462,7 @@ msgstr "CD-ROM"
 
 #: tmp/system-config-kickstart.glade.h:16
 msgid "Choose one of the following options:"
-msgstr "以下のオプションから 1 つ選択して下さい:"
+msgstr "以下のオプションから 1 つ選択:"
 
 #: tmp/system-config-kickstart.glade.h:17
 msgid "Choose the Installation Method:"
@@ -504,11 +502,11 @@ msgstr "デフォルトの言語:"
 
 #: tmp/system-config-kickstart.glade.h:26
 msgid "Disable firewall"
-msgstr ""
+msgstr "ファイアーウォールの無効化"
 
 #: tmp/system-config-kickstart.glade.h:27
 msgid "Disabled"
-msgstr "なし"
+msgstr "無効"
 
 #: tmp/system-config-kickstart.glade.h:29
 msgid "Display configuration is not applicable on upgrades."
@@ -536,7 +534,7 @@ msgstr "Hesiod サポートを有効にする"
 
 #: tmp/system-config-kickstart.glade.h:35
 msgid "Enable Kerberos 5 Authentication"
-msgstr "Kerberos5 認証を有効にする"
+msgstr "Kerberos 5 認証を有効にする"
 
 #: tmp/system-config-kickstart.glade.h:36
 msgid "Enable LDAP"
@@ -544,7 +542,7 @@ msgstr "LDAPを有効にする"
 
 #: tmp/system-config-kickstart.glade.h:37
 msgid "Enable NIS"
-msgstr "NIS 有効"
+msgstr "NIS を有効にする"
 
 #: tmp/system-config-kickstart.glade.h:38
 msgid "Enable SMB Authentication"
@@ -552,7 +550,7 @@ msgstr "SMB 認証を有効にする"
 
 #: tmp/system-config-kickstart.glade.h:39
 msgid "Enable firewall"
-msgstr ""
+msgstr "ファイアーウォールを有効にする"
 
 #: tmp/system-config-kickstart.glade.h:40
 msgid "Enable nscd"
@@ -596,7 +594,7 @@ msgstr "FTP ユーザー名"
 
 #: tmp/system-config-kickstart.glade.h:50
 msgid "File System Type:"
-msgstr "ファイル システム タイプ:"
+msgstr "ファイルシステムタイプ:"
 
 #: tmp/system-config-kickstart.glade.h:51
 msgid "Fill all unused space on disk"
@@ -720,11 +718,11 @@ msgstr "KDE"
 
 #: tmp/system-config-kickstart.glade.h:82
 msgid "Kerberos 5"
-msgstr "Kerberos5"
+msgstr "Kerberos 5"
 
 #: tmp/system-config-kickstart.glade.h:83
 msgid "Kerberos 5 Authentication"
-msgstr "Kerberos5 認証"
+msgstr "Kerberos 5 認証"
 
 #: tmp/system-config-kickstart.glade.h:84
 msgid "Kerberos Domain Controller (KDC):"
@@ -740,7 +738,7 @@ msgstr "Kerberos レルム:"
 
 #: tmp/system-config-kickstart.glade.h:87
 msgid "Kernel parameters:"
-msgstr "カーネルパラメータ:"
+msgstr "カーネルパラメーター:"
 
 #: tmp/system-config-kickstart.glade.h:88
 msgid "Keyboard:"
@@ -780,7 +778,7 @@ msgstr "指定したドライブにパーティションを作る(ディスク�
 
 #: tmp/system-config-kickstart.glade.h:97
 msgid "Monitor"
-msgstr "モニタ"
+msgstr "モニター"
 
 #: tmp/system-config-kickstart.glade.h:98
 msgid "Mount Point:"
@@ -892,7 +890,7 @@ msgstr "オプションのプレビュー"
 
 #: tmp/system-config-kickstart.glade.h:129
 msgid "Probe for monitor"
-msgstr "モニタの調査"
+msgstr "モニターの調査"
 
 #: tmp/system-config-kickstart.glade.h:130
 msgid "Probe for video card driver"
@@ -944,7 +942,7 @@ msgstr "chroot 環境の外で実行"
 
 #: tmp/system-config-kickstart.glade.h:142
 msgid "SELinux:"
-msgstr ""
+msgstr "SELinux:"
 
 #: tmp/system-config-kickstart.glade.h:143
 msgid "SMB"
@@ -964,7 +962,7 @@ msgstr "SMB ワークグループ:"
 
 #: tmp/system-config-kickstart.glade.h:147
 msgid "Security level:"
-msgstr ""
+msgstr "セキュリティレベル:"
 
 #: tmp/system-config-kickstart.glade.h:148
 msgid "Size (MB):"
@@ -992,7 +990,7 @@ msgstr "インストールキーを指定して下さい:"
 
 #: tmp/system-config-kickstart.glade.h:152
 msgid "Start the X Window System on boot"
-msgstr "ブート時にXウィンドウシステムを起動する"
+msgstr "ブート時に X ウィンドウシステムを起動する"
 
 #: tmp/system-config-kickstart.glade.h:153
 msgid "Target Architecture:"
@@ -1007,9 +1005,9 @@ msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
 msgstr ""
-"RAID を使用するには、まず少なくとも 2 つのタイプ「ソフトウェア RAID」を作成す"
-"る必要があります。そして、フォーマットとマウントができる RAID デバイスを作成"
-"します。"
+"RAID を使用するには、まず「ソフトウェア RAID」タイプのパーティションを"
+"少なくとも 2 つ作成する必要があります。そうすれば、フォーマットやマウントが"
+"できる RAID デバイスを作成できます。"
 
 #: tmp/system-config-kickstart.glade.h:157
 #, no-c-format
@@ -1047,7 +1045,7 @@ msgstr "UTC 時計を使用"
 
 #: tmp/system-config-kickstart.glade.h:166
 msgid "Use an interpreter:"
-msgstr "インタプリタを使う:"
+msgstr "インタープリターを使う:"
 
 #: tmp/system-config-kickstart.glade.h:167
 msgid "Use broadcast to find NIS server"
@@ -1055,11 +1053,11 @@ msgstr "NIS サーバーの検索にブロードキャストを使う"
 
 #: tmp/system-config-kickstart.glade.h:168
 msgid "Use custom monitor sync rates"
-msgstr "カスタムモニタ同期レートを使う"
+msgstr "カスタムモニター同期レートを使う"
 
 #: tmp/system-config-kickstart.glade.h:169
 msgid "Use existing partition (onpart)"
-msgstr "存在するパーティションを使う(一部)"
+msgstr "既存のパーティションを使う(一部)"
 
 #: tmp/system-config-kickstart.glade.h:170
 msgid "Use recommended swap size"
@@ -1079,7 +1077,7 @@ msgstr "ビデオカード RAM: "
 
 #: tmp/system-config-kickstart.glade.h:174
 msgid "Warn"
-msgstr ""
+msgstr "注意"
 
 #: tmp/system-config-kickstart.glade.h:176
 #, no-c-format
