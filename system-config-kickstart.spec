@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.7.11
+Version: 2.7.12
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -73,6 +73,10 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Tue Sep 04 2007 Chris Lumens <clumens@redhat.com> 2.7.12-1
+- Rework network device dialog to not use four input boxes for each address.
+- Don't require a gateway or nameserver address (#215191).
+
 * Tue Aug 28 2007 Chris Lumens <clumens@redhat.com> 2.7.11-1
 - The base repo's name has changed (#254601).
 
