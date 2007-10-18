@@ -140,7 +140,7 @@ class sckYumBase(yum.YumBase):
                 self.repos.enableRepo(repo)
                 self.packagesEnabled = True
                 break
-            except yum.Error.RepoError:
+            except yum.Errors.RepoError:
                 pass
 
         if not self.packagesEnabled:
