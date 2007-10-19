@@ -79,6 +79,10 @@ class basic:
 
         self.langDict = langDict
 
+        # set a default platform
+        if not self.ks.platform:
+            self.ks.platform = "x86, AMD64, or Intel EM64T"
+
         #populate language combo
         self.lang_list = self.langDict.keys()
         self.lang_list.sort()
