@@ -37,17 +37,40 @@ gtk.glade.bindtextdomain(domain)
 
 import kickstartGui
 
-class bootloader:
-
+class AbstractBootloader:
     def __init__(self, xml, notebook, ksHandler):
-        self.ks = ksHandler
+        self.xml = xml
         self.notebook = notebook
+        self.ks = ksHandler
+
+    def applyKickstart(self):
+        pass
+
+    def enableUpgrade(self, boolean):
+        pass
+
+    def formToKickstart(self):
+        return 0
+
+    def hide(self):
+        pass
+
+    def show(self, platform):
+        pass
+
+    def toggled_bootloader(self, args):
+        pass
+
+class GrubBootloader(AbstractBootloader):
+    def __init__(self, xml, notebook, ksHandler):
+        AbstractBootloader.__init__(self, xml, notebook, ksHandler)
+
         self.bootloader_vbox = xml.get_widget("bootloader_vbox")
         self.bootloader_label = xml.get_widget("bootloader_label")
         self.install_bootloader_radio = xml.get_widget("install_bootloader_radio")
         self.upgrade_bootloader_radio = xml.get_widget("upgrade_bootloader_radio")
         self.no_bootloader_radio = xml.get_widget("no_bootloader_radio")
-        self.mbr_radiobutton = xml.get_widget("mbr_radiobutton")               
+        self.mbr_radiobutton = xml.get_widget("mbr_radiobutton")
         self.firstsector_radiobutton = xml.get_widget("firstsector_radiobutton")
         self.parameters_label = xml.get_widget("parameters_label")
         self.parameters_entry = xml.get_widget("parameters_entry")
@@ -61,37 +84,39 @@ class bootloader:
         self.grub_password_encrypt_checkbutton = xml.get_widget("grub_password_encrypt_checkbutton")
 
         self.install_bootloader_radio.connect("toggled", self.toggled_bootloader)
-        self.grub_password_checkbutton.connect("toggled", self.toggled_grub_password)
+        self.grub_password_checkbutton.connect("toggled", self._toggled_grub_password)
 
-    def toggled_bootloader (self, args):
-        status = self.install_bootloader_radio.get_active()
-        self.parameters_label.set_sensitive(status)
-        self.parameters_entry.set_sensitive(status)
-        self.mbr_radiobutton.set_sensitive(status)
-        self.firstsector_radiobutton.set_sensitive(status)
-        self.grub_options_label.set_sensitive(status)
-        self.grub_password_checkbutton.set_sensitive(status)
-        self.grub_password_entry.set_sensitive(status)
-        self.grub_password_confirm.set_sensitive(status)
-        self.grub_password_encrypt_checkbutton.set_sensitive(status)
-
-    def toggled_grub_password(self, args):
+    def _toggled_grub_password(self, args):
         self.grub_password_hbox.set_sensitive(self.grub_password_checkbutton.get_active())
 
-    def platformTypeChanged(self, platform):
-        if platform != "x86, AMD64, or Intel EM64T":
-            self.bootloader_vbox.hide()
-            self.bootloader_label.set_text(_("Bootloader options are not applicable to "
-                                             "the %s platform" % platform))
-            self.bootloader_label.show()
-        else:
-            self.bootloader_vbox.show()
-            self.bootloader_label.hide()
+    def applyKickstart(self):
+        if self.ks.bootloader.location == "none":
+            self.no_bootloader_radio.set_active(True)
+        elif self.ks.bootloader.location == "mbr":
+            self.mbr_radiobutton.set_active(True)
+        elif self.ks.bootloader.location == "partition":
+            self.firstsector_radiobutton.set_active(True)
 
-    def enableUpgradeRadio(self, boolean):
+        if self.ks.bootloader.password != "":
+            self.grub_password_entry.set_text(self.ks.bootloader.password)
+            self.grub_password_confirm.set_text(self.ks.bootloader.password)
+
+        self.parameters_entry.set_text(self.ks.bootloader.appendLine)
+
+        if self.ks.bootloader.md5pass != "":
+            self.grub_password_encrypt_checkbutton.set_active(True)
+        else:
+            self.grub_password_encrypt_checkbutton.set_active(False)
+
+        if self.ks.bootloader.upgrade == True:
+            self.upgrade_bootloader_radio.set_active(True)
+        else:
+            self.upgrade_bootloader_radio.set_active(False)
+
+    def enableUpgrade(self, boolean):
         self.upgrade_bootloader_radio.set_sensitive(not boolean)
 
-    def formToKickstart (self):
+    def formToKickstart(self):
         if self.install_bootloader_radio.get_active():
             buf = ""
             if self.mbr_radiobutton.get_active():
@@ -144,26 +169,60 @@ class bootloader:
 
         return 0
 
+    def hide(self):
+        self.bootloader_vbox.hide()
+
+    def show(self, platform):
+        self.bootloader_vbox.show()
+
+    def toggled_bootloader (self, args):
+        status = self.install_bootloader_radio.get_active()
+        self.parameters_label.set_sensitive(status)
+        self.parameters_entry.set_sensitive(status)
+        self.mbr_radiobutton.set_sensitive(status)
+        self.firstsector_radiobutton.set_sensitive(status)
+        self.grub_options_label.set_sensitive(status)
+        self.grub_password_checkbutton.set_sensitive(status)
+        self.grub_password_entry.set_sensitive(status)
+        self.grub_password_confirm.set_sensitive(status)
+        self.grub_password_encrypt_checkbutton.set_sensitive(status)
+
+class UnknownBootloader(AbstractBootloader):
+    def __init__(self, xml, notebook, ksHandler):
+        AbstractBootloader.__init__(self, xml, notebook, ksHandler)
+
+        self.bootloader_label = xml.get_widget("bootloader_label")
+
+    def hide(self):
+        self.bootloader_label.hide()
+
+    def show(self, platform):
+        self.bootloader_label.set_text(_("Bootloader options are not applicable to "
+                                         "the %s platform" % platform))
+        self.bootloader_label.show()
+
+class bootloader:
+    def __init__(self, xml, notebook, ksHandler):
+        self.default = UnknownBootloader(xml, notebook, ksHandler)
+        self.blDict = {"x86, AMD64, or Intel EM64T": GrubBootloader(xml, notebook, ksHandler)}
+        self._setBl(ksHandler.platform)
+
+    def _setBl(self, platform):
+        try:
+            self.bl = self.blDict[platform]
+        except:
+            self.bl = self.default
+
     def applyKickstart(self):
-        if self.ks.bootloader.location == "none":
-            self.no_bootloader_radio.set_active(True)
-        elif self.ks.bootloader.location == "mbr":
-            self.mbr_radiobutton.set_active(True)
-        elif self.ks.bootloader.location == "partition":
-            self.firstsector_radiobutton.set_active(True)
+        self.bl.applyKickstart()
 
-        if self.ks.bootloader.password != "":
-            self.grub_password_entry.set_text(self.ks.bootloader.password)
-            self.grub_password_confirm.set_text(self.ks.bootloader.password)
+    def enableUpgrade(self, boolean):
+        self.bl.enableUpgrade(not boolean)
 
-        self.parameters_entry.set_text(self.ks.bootloader.appendLine)
+    def formToKickstart(self):
+        return self.bl.formToKickstart()
 
-        if self.ks.bootloader.md5pass != "":
-            self.grub_password_encrypt_checkbutton.set_active(True)
-        else:
-            self.grub_password_encrypt_checkbutton.set_active(False)
-
-        if self.ks.bootloader.upgrade == True:
-            self.upgrade_bootloader_radio.set_active(True)
-        else:
-            self.upgrade_bootloader_radio.set_active(False)
+    def platformTypeChanged(self, platform):
+        self.bl.hide()
+        self._setBl(platform)
+        self.bl.show(platform)
