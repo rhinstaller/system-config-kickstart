@@ -196,6 +196,9 @@ class Packages:
 
         self.package_frame.add(self.gs.vbox)
 
+    def updateKS(self, ksHandler):
+        self.ks = ksHandler
+
     def cleanup(self):
         if self.y.packagesEnabled:
             self.y.cleanup()

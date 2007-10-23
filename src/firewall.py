@@ -97,6 +97,9 @@ class Firewall:
 
         self.firewall_vbox.show_all()
 
+    def updateKS(self, ksHandler):
+        self.ks = ksHandler
+
     def item_toggled(self, data, row, store):
         iter = store.get_iter((int(row),))
         val = store.get_value(iter, 0)

@@ -140,6 +140,9 @@ class basic:
         self.timezone_combo.set_popdown_strings(self.timezone_list)
         self.timezone_combo.list.select_item(select)
 
+    def updateKS(self, ksHandler):
+        self.ks = ksHandler
+
     def formToKickstart(self, doInstall):
         self.ks.lang(lang=self.languageLookup(self.lang_combo.entry.get_text()))
 

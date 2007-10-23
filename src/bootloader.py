@@ -226,3 +226,10 @@ class bootloader:
         self.bl.hide()
         self._setBl(platform)
         self.bl.show(platform)
+
+    def updateKS(self, ksHandler):
+        self.ks = ksHandler
+        self.default.ks = ksHandler
+
+        for bl in self.blDict.values():
+            bl.ks = ksHandler

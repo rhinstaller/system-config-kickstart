@@ -91,6 +91,9 @@ class partition:
 
         self.part_view.expand_all()
 
+    def updateKS(self, ksHandler):
+        self.ks = ksHandler
+
     def delPartition(self, *args):
         data, iter = self.part_view.get_selection().get_selected()
         if iter == None:

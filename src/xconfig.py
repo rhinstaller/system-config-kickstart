@@ -109,6 +109,9 @@ class xconfig:
                              "256 MB" : "262144"
                              }
 
+    def updateKS(self, ksHandler):
+        self.ks = ksHandler
+
     def showDialog(self, text):
         dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
         dlg.set_position(gtk.WIN_POS_CENTER)

@@ -339,6 +339,9 @@ class auth:
         self.hesiodCheck.connect("toggled", self.enableHesiod)
         self.sambaCheck.connect("toggled", self.enableSamba)
 
+    def updateKS(self, ksHandler):
+        self.ks = ksHandler
+
     def showDialog(self):
         text = _("Please fill in the authentication information")
         dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
