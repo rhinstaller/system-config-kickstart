@@ -27,6 +27,7 @@ Kickstart Configurator is a graphical tool for creating kickstart files.
 
 %prep
 %setup -q
+cp %{_sourcedir}/sr@latin.po %{_builddir}/%{name}-%{version}/po/
 
 %build
 
