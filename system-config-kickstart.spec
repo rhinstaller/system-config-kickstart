@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.7.12
+Version: 2.7.13
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -12,6 +12,7 @@ BuildArch: noarch
 # our distribution.  Thus the source is only available from
 # within this srpm.
 Source0: %{name}-%{version}.tar.gz
+Source1: sr@latin.po
 
 Obsoletes: ksconfig, redhat-config-kickstart
 BuildRequires: desktop-file-utils, intltool, gettext
@@ -73,6 +74,11 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Tue Oct 23 2007 Chris Lumens <clumens@redhat.com> 2.7.13-1
+- Fix a traceback when importing yum (#337161).
+- Remove obsolete translation (#332501).
+- Rework bootloader UI to make it easier to add other arches.
+
 * Tue Sep 04 2007 Chris Lumens <clumens@redhat.com> 2.7.12-1
 - Rework network device dialog to not use four input boxes for each address.
 - Don't require a gateway or nameserver address (#215191).
