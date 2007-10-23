@@ -41,6 +41,9 @@ class scripts:
         self.interpreter_checkbutton.connect("toggled", self.interpreter_cb)
         self.pre_interpreter_checkbutton.connect("toggled", self.pre_interpreter_cb)        
 
+    def updateKS(self, ksHandler):
+        self.ks = ksHandler
+
     def interpreter_cb(self, args):
         self.interpreter_entry.set_sensitive(self.interpreter_checkbutton.get_active())
 

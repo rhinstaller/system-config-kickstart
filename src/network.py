@@ -106,6 +106,9 @@ class network:
         self.network_cancel_button.connect("clicked", self.resetDialog)
         self.network_frame.show_all()
 
+    def updateKS(self, ksHandler):
+        self.ks = ksHandler
+
     def showAddNetworkDialog(self, *args):
         self.handler = self.network_ok_button.connect("clicked", self.addDevice)
 

@@ -92,6 +92,9 @@ class install:
         self.ftpuser_entry.set_sensitive(False)
         self.ftppasswd_entry.set_sensitive(False)
 
+    def updateKS(self, ksHandler):
+        self.ks = ksHandler
+
     def toggleFtp (self, args):
         userpass = self.ftpuserpass_checkbutton.get_active()
         self.ftpuser_entry.set_sensitive(userpass)
