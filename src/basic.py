@@ -184,6 +184,7 @@ class basic:
                     self.ksdata.rootpw["password"] = pure
             else:
                 self.passwd = self.root_passwd_entry.get_text()
+                self.ksdata.rootpw["isCrypted"] = False
                 self.ksdata.rootpw["password"] = pure
 
         self.ksdata.platform = self.platform_combo.entry.get_text()
