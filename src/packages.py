@@ -101,7 +101,7 @@ class sckYumBase(yum.YumBase):
         # we can set $releasever and other variables from /etc/yum.repos.d/*
         # (#190999).
         self.temproot = tempfile.mkdtemp(dir="/tmp")
-        self.doConfigSetup(init_plugins=False)
+        self.doConfigSetup()
         if os.geteuid() != 0:
             cachedir = getCacheDir()
             if cachedir is None:
@@ -117,10 +117,15 @@ class sckYumBase(yum.YumBase):
 
         # If we're on a release, we want to try the base repo first.  Otherwise,
         # try development.  If neither of those works, we have a problem.
-        if "base" in map(lambda repo: repo.id, self.repos.listEnabled()):
-            repoorder = ["core", "base", "development"]
-        else:
-            repoorder = ["development", "core", "base"]
+        repoorder = map(lambda: r: r.id,
+                        filter(lambda r: r.id.startswith("rhel-"),
+                               self.repos.listEnabled()))
+
+        if repoorder == []:
+            if "base" in map(lambda repo: repo.id, self.repos.listEnabled()):
+                repoorder = ["core", "base", "development"]
+            else:
+                repoorder = ["development", "core", "base"]
 
         self.repos.disableRepo("*")
         if callback: callback.next_task()
