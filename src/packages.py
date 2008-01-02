@@ -121,7 +121,19 @@ class sckYumBase(yum.YumBase):
         if callback: callback.next_task()
         self.conf.installroot = self.temproot
 
-        self.doTsSetup()
+        try:
+            self.doTsSetup()
+        except yum.Errors.RepoError, msg:
+            text = _("Package selection is disabled due to an error in setup.  Please fix your repository configuration and try again.\n\n%s") $ msg
+            dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
+            dlg.set_position(gtk.WIN_POS_CENTER)
+            dlg.set_modal(True)
+            rc = dlg.run()
+            dlg.destroy()
+
+            self.packagesEnabled = False
+            return
+
         if callback: callback.next_task()
 
         # If we're on a release, we want to try the base repo first.  Otherwise,
