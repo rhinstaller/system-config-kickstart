@@ -4,7 +4,7 @@
 PKGNAME=system-config-kickstart
 VERSION=$(shell awk '/Version:/ { print $$2 }' ${PKGNAME}.spec)
 RELEASE=$(shell awk '/Release:/ { print $$2 }' ${PKGNAME}.spec | sed -e 's|%.*$$||g')
-CVSTAG=r$(subst .,_,$(VERSION)-$(RELEASE))
+TAG=r$(VERSION)-$(RELEASE)
 SUBDIRS=man po
 
 PREFIX=/usr
@@ -17,7 +17,8 @@ PKGDATADIR=${DATADIR}/${PKGNAME}
 default: subdirs
 
 tag:
-	cvs tag -FR $(CVSTAG)
+	git tag -a -m "Tag as $(TAG)" -f $(TAG)
+	@echo "Tagged as $(TAG)"
 
 subdirs:
 	for d in $(SUBDIRS); do \
@@ -46,15 +47,11 @@ install: ${PKGNAME}.desktop
 	done && test -z "$$fail"
 
 archive: tag
-	@rm -rf /tmp/${PKGNAME}-$(VERSION) /tmp/${PKGNAME}
-	@CVSROOT=`cat CVS/Root`; cd /tmp; cvs -d $$CVSROOT export -r$(CVSTAG) ${PKGNAME}
-	@mv /tmp/${PKGNAME} /tmp/${PKGNAME}-$(VERSION)
-	@dir=$$PWD; cd /tmp; tar -czSpf $$dir/${PKGNAME}-$(VERSION).tar.gz ${PKGNAME}-$(VERSION)
-	@rm -rf /tmp/${PKGNAME}-$(VERSION)
-	@echo "The archive is in ${PKGNAME}-$(VERSION).tar.gz"
+	git-archive --format=tar --prefix=$(PKGNAME)-$(VERSION)/ $(TAG) | gzip -9c > $(PKGNAME)-$(VERSION).tar.gz
+	@echo "The archive is in $(PKGNAME)-$(VERSION).tar.gz"
 
 snapsrc: archive
-	@rpmbuild -ta $(PKGNAME)-$(VERSION).tar.bz2
+	@rpmbuild -ta $(PKGNAME)-$(VERSION).tar.gz
 
 local:
 	@rm -rf ${PKGNAME}-$(VERSION).tar.gz
