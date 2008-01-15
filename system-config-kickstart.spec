@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
 Version: 2.6.19.2
-Release: 1%{?dist}
+Release: 2%{?dist}
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
 ExclusiveOS: Linux
@@ -77,6 +77,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Tue Jan 15 2008 Chris Lumens <clumens@redhat.com> 2.6.19.2-2
+- Fix a typo (#217165).
+
 * Tue Jan 15 2008 Chris Lumens <clumens@redhat.com> 2.6.19.2-1
 - Support package selection through the RHN plugin if available (#217165).
 - Fix iterating over partitions (#305271).
