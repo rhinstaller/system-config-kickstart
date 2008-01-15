@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.6.19.1
+Version: 2.6.19.2
 Release: 1%{?dist}
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -27,7 +27,7 @@ Requires(post): gtk2 >= 2.6
 Requires(postun): gtk2 >= 2.6
 
 %description
-Kickstart Configurator is a graphical tool for creating kickstart files.  
+Kickstart Configurator is a graphical tool for creating kickstart files.
 
 %prep
 %setup -q
@@ -77,6 +77,14 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Tue Jan 15 2008 Chris Lumens <clumens@redhat.com> 2.6.19.2-1
+- Support package selection through the RHN plugin if available (#217165).
+- Fix iterating over partitions (#305271).
+- Add support for handling the registration key (#226718).
+- Add an option to specify the LDAP CA cert (#232664).
+- Set isCrypted to False when the encryption box is unchecked (#239817).
+- Fix a traceback causing package selection to always be disabled (#227969).
+
 * Mon Dec 18 2006 Chris Lumens <clumens@redhat.com> 2.6.19.1-1
 - If package selection is disabled, don't forget whatever was in the
   original kickstart file (#217165).
