@@ -117,7 +117,7 @@ class sckYumBase(yum.YumBase):
 
         # If we're on a release, we want to try the base repo first.  Otherwise,
         # try development.  If neither of those works, we have a problem.
-        repoorder = map(lambda: r: r.id,
+        repoorder = map(lambda r: r.id,
                         filter(lambda r: r.id.startswith("rhel-"),
                                self.repos.listEnabled()))
 
