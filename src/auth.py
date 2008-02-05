@@ -110,7 +110,7 @@ class ldapData:
             if self.ldapCert == "":
                 return retval
             else:
-                return retval + " --ldaploadcert=" + self.ldapCert
+                return retval + " --ldaploadcacert=" + self.ldapCert
 
 class kerberosData:
     def __init__(self, quit_cb=None):
@@ -416,7 +416,7 @@ class auth:
             opts, args = getopt.getopt(authstr, "d:h",["enablemd5", "enablenis",
                                        "nisdomain=", "nisserver=", "useshadow", "enableshadow",
                                        "enableldap", "enableldapauth", "ldapserver=", "ldapbasedn=",
-                                       "ldaploadcert=", "enableldaptls",
+                                       "ldaploacadcert=", "enableldaptls",
                                        "enablekrb5", "krb5realm=", "krb5kdc=", "krb5adminserver=",
                                        "enablehesiod", "hesiodlhs=", "hesiodrhs=", "enablesmbauth",
                                        "smbservers=", "smbworkgroup=", "enablecache"])
@@ -453,7 +453,7 @@ class auth:
                     self.ldapDNEntry.set_text(value)
                     self.ldapCheck.set_active(True)
 
-                if opt == "--ldaploadcert":
+                if opt == "--ldaploadcacert":
                     self.ldapCertEntry.set_text(value)
                     self.ldapCheck.set_active(True)
                     self.ldapCertCheck.set_active(True)
