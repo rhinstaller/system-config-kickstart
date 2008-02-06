@@ -87,7 +87,20 @@ class kickstartGui:
             self.kickstartHandlers = KickstartHandlers(self.kickstartData)
             self.parser = KickstartParser (self.kickstartData,
                                            self.kickstartHandlers)
-            self.parser.readKickstart(file)
+            try:
+                self.parser.readKickstart(file)
+            except KickstartError, e:
+                dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_ERROR,
+                                         gtk.BUTTONS_OK,
+                                         _("The following error was found "
+                                           "while parsing your kickstart "
+                                           "configuration:\n\n%s" % e))
+                dlg.set_title(_("Error Parsing Kickstart Config"))
+                dlg.set_position(gtk.WIN_POS_CENTER)
+                dlg.set_modal(True)
+                dlg.run()
+                dlg.destroy()
+                sys.exit(0)
 
         self.xml = xml
         name_tag = (_("Kickstart"))
@@ -271,7 +284,22 @@ class kickstartGui:
                 self.kickstartHandlers = KickstartHandlers(self.kickstartData)
                 self.parser = KickstartParser (self.kickstartData,
                                                self.kickstartHandlers)
-                self.parser.readKickstart(file)
+
+                try:
+                    self.parser.readKickstart(file)
+                except KickstartError, e:
+                    dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_ERROR,
+                                             gtk.BUTTONS_OK,
+                                             _("The following error was found "
+                                               "while parsing your kickstart "
+                                               "configuration:\n\n%s" % e))
+                    dlg.set_title(_("Error Parsing Kickstart Config"))
+                    dlg.set_position(gtk.WIN_POS_CENTER)
+                    dlg.set_modal(True)
+                    dlg.run()
+                    dlg.destroy()
+                    fs.destroy()
+                    return
 
                 # Refresh ksdata pointers in every subclass for the new
                 # data we loaded in from the file.
