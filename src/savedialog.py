@@ -26,7 +26,8 @@ import kickstartGui
 class saveDialog:
 	
 	def destroy(self, args):
-		self.dialog.destroy()
+                self.dialog.hide()
+                return True
 
         def __init__ (self, buf, xml):
 		self.xml = xml
