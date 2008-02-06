@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.7.13
+Version: 2.7.14
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -75,6 +75,15 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Wed Feb 06 2008 Chris Lumens <clumens@redhat.com> 2.7.14-1
+- Don't destroy the save dialog when it's closed.
+- If the key checkbutton is not active, remove the key setting (#226718).
+- Fix typo in LDAP authconfig parameter (#239817).
+- Use F1 as the help shortcut (#429959).
+- Translation updates (#429611).
+- More error handling when yum fails to init (#426447).
+- Update documentation license (#419071, kwade).
+
 * Tue Oct 23 2007 Chris Lumens <clumens@redhat.com> 2.7.13-1
 - Fix a traceback when importing yum (#337161).
 - Remove obsolete translation (#332501).
