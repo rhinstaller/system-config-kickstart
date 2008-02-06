@@ -12,7 +12,6 @@ BuildArch: noarch
 # our distribution.  Thus the source is only available from
 # within this srpm.
 Source0: %{name}-%{version}.tar.gz
-Source1: sr@latin.po
 
 Obsoletes: ksconfig, redhat-config-kickstart
 BuildRequires: desktop-file-utils, intltool, gettext
@@ -27,7 +26,6 @@ Kickstart Configurator is a graphical tool for creating kickstart files.
 
 %prep
 %setup -q
-cp %{_sourcedir}/sr@latin.po %{_builddir}/%{name}-%{version}/po/
 
 %build
 
