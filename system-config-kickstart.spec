@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.6.19.2
-Release: 2%{?dist}
+Version: 2.6.19.3
+Release: 1%{?dist}
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
 ExclusiveOS: Linux
@@ -77,6 +77,17 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Thu Feb 07 2008 Chris Lumens <clumens@redhat.com> 2.6.19.3-1
+- Fix adding partitions under the Auto heading.
+  Related: rhbz#305271
+- Don't destroy the save dialog when it's closed.
+- If the key checkbutton is not active, remove the key setting.
+  Related: rhbz#226718
+- Handle pykickstart exceptions by popping up a helpful dialog
+  Resolves: rhbz#431567
+- Fix typo in LDAP authconfig parameter.
+  Related: rhbz#232664
+
 * Tue Jan 15 2008 Chris Lumens <clumens@redhat.com> 2.6.19.2-2
 - Fix a typo (#217165).
 
