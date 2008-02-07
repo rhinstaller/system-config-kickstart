@@ -86,14 +86,19 @@ class kickstartGui:
         if file:
             self.parser = KickstartParser(self.ksHandler)
 
+            msg = None
+
             try:
                 self.parser.readKickstart(file)
             except KickstartError, e:
+                msg = _("The following error was found while parsing your "
+                        "kickstart configuration:\n\n%s" % e)
+            except IOError, e:
+                msg = _("The kickstart file %s could not be opened.") % file
+
+            if msg:
                 dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_ERROR,
-                                         gtk.BUTTONS_OK,
-                                         _("The following error was found "
-                                           "while parsing your kickstart "
-                                           "configuration:\n\n%s" % e))
+                                         gtk.BUTTONS_OK, msg)
                 dlg.set_title(_("Error Parsing Kickstart Config"))
                 dlg.set_position(gtk.WIN_POS_CENTER)
                 dlg.set_modal(True)
@@ -278,14 +283,19 @@ class kickstartGui:
                 self.ksHandler = makeVersion()
                 self.parser = KickstartParser(self.ksHandler)
 
+                msg = None
+
                 try:
                     self.parser.readKickstart(file)
                 except KickstartError, e:
+                    msg = _("The following error was found while parsing your "
+                            "kickstart configuration:\n\n%s" % e)
+                except IOError, e:
+                    msg = _("The kickstart file %s could not be opened.") % file
+
+                if msg:
                     dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_ERROR,
-                                             gtk.BUTTONS_OK,
-                                             _("The following error was found "
-                                               "while parsing your kickstart "
-                                               "configuration:\n\n%s" % e))
+                                             gtk.BUTTONS_OK, msg)
                     dlg.set_title(_("Error Parsing Kickstart Config"))
                     dlg.set_position(gtk.WIN_POS_CENTER)
                     dlg.set_modal(True)
