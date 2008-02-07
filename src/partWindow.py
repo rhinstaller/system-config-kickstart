@@ -310,19 +310,12 @@ class partWindow:
             self.win_reset()
             self.partitionDialog.hide()
 
-    def find_auto_parent(self, store, data, iter):
-        if self.part_store.get_value(iter, 0) == (_("Auto")):
-            self.auto_parent_iter = iter
-
     def addPartitionToTree(self, part_object, iter):
-        self.auto_parent_iter = None
-        self.part_store.foreach(self.find_auto_parent)
-
         if iter == None:
             self.hard_drive_parent_iter = self.part_store.append(None)
             self.part_store.set_value(self.hard_drive_parent_iter, 0, (_("Hard Drives")))
 
-        if part_object.device == None:
+        if not part_object.device:
             #If they didn't specify a device, create a group called "Auto"
             if self.auto_parent_iter == None:
                 self.auto_parent_iter = self.part_store.append(self.hard_drive_parent_iter)
