@@ -422,7 +422,7 @@ class auth:
             opts, args = getopt.getopt(authstr, "d:h",["enablemd5", "enablenis",
                                        "nisdomain=", "nisserver=", "useshadow", "enableshadow",
                                        "enableldap", "enableldapauth", "ldapserver=", "ldapbasedn=",
-                                       "ldaploacadcert=", "enableldaptls",
+                                       "ldaploadcacert=", "enableldaptls",
                                        "enablekrb5", "krb5realm=", "krb5kdc=", "krb5adminserver=",
                                        "enablehesiod", "hesiodlhs=", "hesiodrhs=", "enablesmbauth",
                                        "smbservers=", "smbworkgroup=", "enablecache"])
