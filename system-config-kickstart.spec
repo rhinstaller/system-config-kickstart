@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.6.19.4
+Version: 2.6.19.5
 Release: 1%{?dist}
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -77,6 +77,11 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Tue Feb 12 2008 Chris Lumens <clumens@redhat.com> 2.6.19.5-1
+- Add more parser checking.
+  Related: rhbz#431567
+- Add the .pyc and .pyo files to the package.
+
 * Thu Feb 07 2008 Chris Lumens <clumens@redhat.com> 2.6.19.4-1
 - Fix another typo in LDAP authconfig parameter.
   Related: rhbz#232664
