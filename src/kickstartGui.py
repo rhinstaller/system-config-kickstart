@@ -22,6 +22,7 @@
 
 #Patch contributed by Bill Huang - applied on 4/23/2001 for Japanese support
 
+import getopt
 import gtk
 import gtk.glade
 import gobject
@@ -180,9 +181,23 @@ class kickstartGui:
 	self.about_menu.connect("activate", self.on_about_activate)
 	self.category_view.connect("cursor_changed", self.on_list_view_row_activated)
 	self.options_notebook.connect("switch-page", self.on_notebook_changed)
-            
+
 	#show gui
-        self.applyKsdata()
+        try:
+            self.applyKsdata()
+        except (getopt.GetoptError, KickstartError), e:
+            dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_ERROR,
+                                     gtk.BUTTONS_OK,
+                                     _("The following error was found "
+                                       "while parsing your kickstart "
+                                       "configuration:\n\n%s" % e))
+            dlg.set_title(_("Error Parsing Kickstart Config"))
+            dlg.set_position(gtk.WIN_POS_CENTER)
+            dlg.set_modal(True)
+            dlg.run()
+            dlg.destroy()
+            sys.exit(0)
+
 	self.toplevel.show()
 
 	gtk.main()
