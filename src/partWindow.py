@@ -109,6 +109,9 @@ class partWindow:
 
         index = self.fsTypesDict[key]
 
+        self.onDiskCheck.set_active(self.onDiskEntry.get_text() != "")
+        self.onPartCheck.set_active(self.onPartEntry.get_text() != "")
+
         if index == "swap":
             self.mountPointCombo.set_sensitive(False)
             self.formatCheck.set_sensitive(False)
@@ -120,6 +123,9 @@ class partWindow:
             self.sizeOptionsTable.set_sensitive(True)
 
             if index == "raid":
+                if not self.onDiskCheck.get_active() and not self.onPartCheck.get_active():
+                    self.onDiskCheck.set_active(True)
+
                 self.mountPointCombo.set_sensitive(False)
                 self.formatCheck.set_sensitive(True)
             elif index == "lvm":
