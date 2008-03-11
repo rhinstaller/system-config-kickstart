@@ -43,7 +43,13 @@ def useCliMode(value):
     ksHandler = makeVersion()
     profileSystem = profileSystem.ProfileSystem(ksHandler)
 
-    fd = open(value, "w")
+    try:
+        fd = open(value, "w")
+    except IOError, e:
+        print _("The following error occurred while saving the "
+                "kickstart config %s: %s") % (e.filename, e.strerror)
+        return
+
     fd.write(ksHandler.__str__())
     fd.close()
 
