@@ -26,6 +26,15 @@ import savefile
 import signal
 import kickstartGui
 
+##
+## I18N
+##
+from rhpl.translate import _, N_
+import rhpl.translate as translate
+domain = 'system-config-kickstart'
+translate.textdomain (domain)
+gtk.glade.bindtextdomain(domain)
+
 class saveDialog:
 	
 	def destroy(self, args):
@@ -56,9 +65,23 @@ class saveDialog:
 		self.dialog.show_all()
 
 	#save file
-        def saveFile(self, *args):		
+        def saveFile(self, *args):
 		self.dialog.filePath = self.dialog.get_filename()
-		ksFile = open(self.dialog.filePath, "w")
+
+                try:
+                    ksFile = open(self.dialog.filePath, "w")
+                except IOError, e:
+                    msg = _("The following error occurred while saving the "
+                            "kickstart config %s: %s") % (e.filename, e.strerror)
+                    dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_ERROR,
+                                             gtk.BUTTONS_OK, msg)
+                    dlg.set_title(_("Error Saving Kickstart Config"))
+                    dlg.set_position(gtk.WIN_POS_CENTER)
+                    dlg.set_modal(True)
+                    dlg.run()
+                    dlg.destroy()
+                    return
+
                 ksFile.write(self.buf)
 		ksFile.close()
 		self.dialog.hide()
