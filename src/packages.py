@@ -32,7 +32,7 @@ import yum
 import yum.Errors
 from yum.constants import *
 from yum.misc import getCacheDir
-from pirut import GroupSelector, PirutProgressCallback
+from pirut import GroupSelector, PirutProgressCallback, PirutCancelledError
 
 from pykickstart.parser import Group
 
@@ -190,7 +190,10 @@ class Packages:
                                      self.toplevel, num_tasks=10)
         pbar.show()
 
-        self.y = sckYumBase(pbar)
+        try:
+            self.y = sckYumBase(pbar)
+        except PirutCancelledError:
+            sys.exit(1)
 
         # If we failed to initialize yum, we should still be able to run
         # the program.  Just disable the package screen.
