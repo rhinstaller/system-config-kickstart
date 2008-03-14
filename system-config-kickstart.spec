@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.7.14
+Version: 2.7.15
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -73,6 +73,14 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Fri Mar 14 2008 Chris Lumens <clumens@redhat.com> 2.7.15-1
+- Offer the same passalgo options that authconfig now does (#173867).
+- Don't traceback if saving doesn't work (#436406).
+- When the Cancel button is pressed, quit (#436406).
+- Prompt for a disk/part when RAID is selected (#432914).
+- Fix another typo in ldaploadcacert handling.
+- If the kickstart file cannot be opened, display an error (#431950).
+
 * Wed Feb 06 2008 Chris Lumens <clumens@redhat.com> 2.7.14-1
 - Don't destroy the save dialog when it's closed.
 - If the key checkbutton is not active, remove the key setting (#226718).
