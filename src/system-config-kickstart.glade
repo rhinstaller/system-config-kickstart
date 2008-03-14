@@ -4711,16 +4711,13 @@
 				  </child>
 
 				  <child>
-				    <widget class="GtkCheckButton" id="md5_checkbutton">
+				    <widget class="GtkComboBox" id="authCombobox">
 				      <property name="visible">True</property>
-				      <property name="can_focus">True</property>
-				      <property name="label" translatable="yes">Use MD5</property>
-				      <property name="use_underline">True</property>
-				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="items">MD5
+SHA256
+SHA512</property>
+				      <property name="add_tearoffs">False</property>
 				      <property name="focus_on_click">True</property>
-				      <property name="active">True</property>
-				      <property name="inconsistent">False</property>
-				      <property name="draw_indicator">True</property>
 				    </widget>
 				    <packing>
 				      <property name="padding">0</property>

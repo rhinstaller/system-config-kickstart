@@ -269,8 +269,12 @@ class auth:
         buf = ""
         if self.shadow_passwd_checkbutton.get_active():
             buf = " --useshadow "
-        if self.md5_checkbutton.get_active():
-            buf = buf + " --enablemd5 "
+        if self.authCombobox.get_active() == 0:
+            buf += " --passalgo=md5"
+        elif self.authCombobox.get_active() == 1:
+            buf += " --passalgo=sha256"
+        elif self.authCombobox.get_active() == 2:
+            buf += " --passalgo=sha512"
 
         buf = buf + self.myNisClass.return_data()
         buf = buf + self.myLDAPClass.return_data()
@@ -292,9 +296,10 @@ class auth:
         self.myKerberosClass = kerberosData()
         self.myHesiodClass = hesiodData()
         self.mySambaClass = sambaData()
-        
+
         self.auth_vbox = xml.get_widget("auth_vbox")
         self.auth_label_box = xml.get_widget("auth_label_box")
+        self.authCombobox = xml.get_widget("authCombobox")
         self.nisCheck = xml.get_widget("nisCheck")
         self.nisDomainLabel = xml.get_widget("nisDomainLabel")
         self.nisDomainEntry = xml.get_widget("nisDomainEntry")
@@ -329,7 +334,6 @@ class auth:
         self.sambaWorkgroupEntry = xml.get_widget("sambaWorkgroupEntry")
         self.nscd_checkbutton = xml.get_widget("nscd_checkbutton")
         self.shadow_passwd_checkbutton = xml.get_widget("shadow_passwd_checkbutton")
-        self.md5_checkbutton = xml.get_widget("md5_checkbutton")
 
         self.nisCheck.connect("toggled", self.enableNIS)
         self.nisBroadcastCheck.connect("toggled", self.enableBroadcast)
@@ -338,6 +342,8 @@ class auth:
         self.kerberosCheck.connect("toggled", self.enableKerberos)
         self.hesiodCheck.connect("toggled", self.enableHesiod)
         self.sambaCheck.connect("toggled", self.enableSamba)
+
+        self.authCombobox.set_active(0)
 
     def updateKS(self, ksHandler):
         self.ks = ksHandler
@@ -419,7 +425,7 @@ class auth:
     def applyKickstart(self):
         if self.ks.authconfig.authconfig != "":
             authstr = string.split(self.ks.authconfig.authconfig)
-            opts, args = getopt.getopt(authstr, "d:h",["enablemd5", "enablenis",
+            opts, args = getopt.getopt(authstr, "d:h",["enablemd5", "enablenis", "passalgo=",
                                        "nisdomain=", "nisserver=", "useshadow", "enableshadow",
                                        "enableldap", "enableldapauth", "ldapserver=", "ldapbasedn=",
                                        "ldaploadcacert=", "enableldaptls",
@@ -428,8 +434,16 @@ class auth:
                                        "smbservers=", "smbworkgroup=", "enablecache"])
 
             for opt, value in opts:
-                if opt == "--enablemd5cache":
-                    self.md5_checkbutton.set_active(True)
+                if opt == "--enablemd5":
+                    self.authCombobox.set_active(0)
+
+                if opt == "--passalgo":
+                    if value == "md5":
+                        self.authCombobox.set_active(0)
+                    elif value == "sha256":
+                        self.authCombobox.set_active(1)
+                    elif value == "sha512":
+                        self.authCombobox.set_active(2)
 
                 if opt == "--enableshadow" or opt == "--useshadow":
                     self.shadow_passwd_checkbutton.set_active(True)
