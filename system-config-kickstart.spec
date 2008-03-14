@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
 Version: 2.7.15
-Release: 1%{?dist}
+Release: 2%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
 ExclusiveOS: Linux
@@ -73,6 +73,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Fri Mar 14 2008 Chris Lumens <clumens@redhat.com> 2.7.15-2
+- Remove ancient .desktop file (#437519).
+
 * Fri Mar 14 2008 Chris Lumens <clumens@redhat.com> 2.7.15-1
 - Offer the same passalgo options that authconfig now does (#173867).
 - Don't traceback if saving doesn't work (#436406).
