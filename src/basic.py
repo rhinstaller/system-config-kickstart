@@ -213,6 +213,8 @@ class basic:
                 self.ks.key(key=KS_INSTKEY_SKIP)
             else:
                 self.ks.key(key=self.key_entry.get_text())
+        else:
+            self.ks.key(key="")
 
         return 0
 

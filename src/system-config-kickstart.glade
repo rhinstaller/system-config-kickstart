@@ -517,6 +517,37 @@
 	  </child>
 
 	  <child>
+	    <widget class="GtkCheckButton" id="formatCheck">
+	      <property name="border_width">2</property>
+	      <property name="visible">True</property>
+	      <property name="can_focus">True</property>
+	      <property name="label" translatable="yes">Format partition</property>
+	      <property name="use_underline">True</property>
+	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
+	      <property name="active">True</property>
+	      <property name="inconsistent">False</property>
+	      <property name="draw_indicator">True</property>
+	    </widget>
+	    <packing>
+	      <property name="padding">0</property>
+	      <property name="expand">False</property>
+	      <property name="fill">False</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkHSeparator" id="hseparator30">
+	      <property name="visible">True</property>
+	    </widget>
+	    <packing>
+	      <property name="padding">0</property>
+	      <property name="expand">True</property>
+	      <property name="fill">True</property>
+	    </packing>
+	  </child>
+
+	  <child>
 	    <widget class="GtkCheckButton" id="onDiskCheck">
 	      <property name="border_width">2</property>
 	      <property name="visible">True</property>
@@ -762,26 +793,6 @@
 		  <property name="fill">False</property>
 		</packing>
 	      </child>
-	    </widget>
-	    <packing>
-	      <property name="padding">0</property>
-	      <property name="expand">False</property>
-	      <property name="fill">False</property>
-	    </packing>
-	  </child>
-
-	  <child>
-	    <widget class="GtkCheckButton" id="formatCheck">
-	      <property name="border_width">2</property>
-	      <property name="visible">True</property>
-	      <property name="can_focus">True</property>
-	      <property name="label" translatable="yes">Format partition</property>
-	      <property name="use_underline">True</property>
-	      <property name="relief">GTK_RELIEF_NORMAL</property>
-	      <property name="focus_on_click">True</property>
-	      <property name="active">True</property>
-	      <property name="inconsistent">False</property>
-	      <property name="draw_indicator">True</property>
 	    </widget>
 	    <packing>
 	      <property name="padding">0</property>
@@ -4700,16 +4711,13 @@
 				  </child>
 
 				  <child>
-				    <widget class="GtkCheckButton" id="md5_checkbutton">
+				    <widget class="GtkComboBox" id="authCombobox">
 				      <property name="visible">True</property>
-				      <property name="can_focus">True</property>
-				      <property name="label" translatable="yes">Use MD5</property>
-				      <property name="use_underline">True</property>
-				      <property name="relief">GTK_RELIEF_NORMAL</property>
+				      <property name="items">MD5
+SHA256
+SHA512</property>
+				      <property name="add_tearoffs">False</property>
 				      <property name="focus_on_click">True</property>
-				      <property name="active">True</property>
-				      <property name="inconsistent">False</property>
-				      <property name="draw_indicator">True</property>
 				    </widget>
 				    <packing>
 				      <property name="padding">0</property>
