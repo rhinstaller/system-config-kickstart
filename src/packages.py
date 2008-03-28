@@ -32,7 +32,8 @@ import yum
 import yum.Errors
 from yum.constants import *
 from yum.misc import getCacheDir
-from pirut import GroupSelector, PirutProgressCallback, PirutCancelledError
+sys.path.append('/usr/lib/anaconda/iw')
+import GroupSelector
 
 from pykickstart.parser import Group
 
@@ -139,9 +140,9 @@ class sckYumBase(yum.YumBase):
         # If we're on a release, we want to try the base repo first.  Otherwise,
         # try development.  If neither of those works, we have a problem.
         if "fedora" in map(lambda repo: repo.id, self.repos.listEnabled()):
-            repoorder = ["fedora", "development"]
+            repoorder = ["fedora", "rawhide", "development"]
         else:
-            repoorder = ["development", "fedora"]
+            repoorder = ["rawhide", "development", "fedora"]
 
         self.repos.disableRepo("*")
         if callback: callback.next_task()
@@ -173,6 +174,31 @@ class sckYumBase(yum.YumBase):
     def cleanup(self):
         shutil.rmtree(self.temproot)
 
+class PackageRetrievalCallback:
+    def __init__(self, toplevel):
+        self.dialog = gtk.Window()
+
+        label = gtk.Label(_("Retrieving package information"))
+
+        box = gtk.Frame()
+        box.set_border_width(10)
+        box.add(label)
+        box.set_shadow_type(gtk.SHADOW_NONE)
+        self.dialog.add(box)
+
+        self.dialog.set_transient_for(toplevel)
+        self.dialog.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
+
+        self.dialog.show_all()
+
+    def destroy(self):
+        self.dialog.destroy()
+
+    def update(self, *args, **kwargs):
+        while gtk.events_pending(): gtk.main_iteration()
+    start = end = progressbar = next_task = update
+
+
 class Packages:
     def __init__(self, xml, ksHandler):
         self.toplevel = xml.get_widget("main_window")
@@ -186,14 +212,8 @@ class Packages:
             self.package_frame.show_all()
             return
 
-        pbar = PirutProgressCallback(_("Retrieving package information"),
-                                     self.toplevel, num_tasks=10)
-        pbar.show()
-
-        try:
-            self.y = sckYumBase(pbar)
-        except PirutCancelledError:
-            sys.exit(1)
+        d = PackageRetrievalCallback(self.toplevel)
+        self.y = sckYumBase(callback = d)
 
         # If we failed to initialize yum, we should still be able to run
         # the program.  Just disable the package screen.
@@ -202,12 +222,12 @@ class Packages:
             disabledLabel.set_line_wrap(True)
             self.package_frame.add(disabledLabel)
             self.package_frame.show_all()
-            pbar.destroy()
+            d.destroy()
             return
 
-        self.gs = sckGroupSelector(self.y, lambda fn: "/usr/share/pirut/ui/" + fn)
+        self.gs = sckGroupSelector(self.y, lambda fn: "/usr/share/anaconda/ui/" + fn)
         self.gs.doRefresh()
-        pbar.destroy()
+        d.destroy()
 
         self.package_frame.add(self.gs.vbox)
 

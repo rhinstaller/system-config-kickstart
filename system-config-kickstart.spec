@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.7.15
-Release: 2%{?dist}
+Version: 2.7.16
+Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
 ExclusiveOS: Linux
@@ -17,7 +17,7 @@ Obsoletes: ksconfig, redhat-config-kickstart
 BuildRequires: desktop-file-utils, intltool, gettext
 Requires: pygtk2 >= 1.99.11, pygtk2-libglade, python >= 2.3.3, hwdata, rhpl
 Requires: system-config-language
-Requires: pykickstart >= 0.96, yum, pirut, hicolor-icon-theme
+Requires: pykickstart >= 0.96, yum, anaconda >= 11.4.0.42-1, hicolor-icon-theme
 Requires(post): gtk2 >= 2.6
 Requires(postun): gtk2 >= 2.6
 
@@ -73,6 +73,10 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Fri Mar 28 2008 Jeremy Katz <katzj@redhat.com> - 2.7.16-1
+- Don't depend on pirut anymore
+- Take into account new rawhide repo name
+
 * Fri Mar 14 2008 Chris Lumens <clumens@redhat.com> 2.7.15-2
 - Remove ancient .desktop file (#437519).
 
