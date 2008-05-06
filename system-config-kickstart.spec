@@ -16,7 +16,7 @@ Source0: %{name}-%{version}.tar.gz
 Obsoletes: ksconfig, redhat-config-kickstart
 BuildRequires: desktop-file-utils, intltool, gettext
 Requires: pygtk2 >= 1.99.11, pygtk2-libglade, python >= 2.3.3, hwdata, rhpl
-Requires: system-config-language
+Requires: system-config-language, system-config-date
 Requires: pykickstart >= 0.96, yum, anaconda >= 11.4.0.42-1, hicolor-icon-theme
 Requires(post): gtk2 >= 2.6
 Requires(postun): gtk2 >= 2.6
