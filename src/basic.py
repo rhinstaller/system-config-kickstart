@@ -47,6 +47,9 @@ domain = 'system-config-kickstart'
 translate.textdomain (domain)
 gtk.glade.bindtextdomain(domain)
 
+sys.path.append("/usr/share/system-config-date")
+
+
 class basic:
     def __init__(self, parent_class, xml, notebook, ksHandler):
         self.parent_class = parent_class
@@ -113,24 +116,11 @@ class basic:
             self.keyboard_combo.entry.set_text(self.keyboard_dict["us"][0])
 
         #populate time zone combo
-        if os.access("/usr/share/zoneinfo/zone.tab", os.R_OK):
-            tz = open ("/usr/share/zoneinfo/zone.tab", "r")
-            lines = tz.readlines()
-            tz.close()
+        import zonetab
 
-        self.timezone_list = []
-
-        try:
-            for line in lines:
-                if line[:1] == "#":
-                    pass
-                else:
-                    tokens = string.split(line)
-                    self.timezone_list.append(tokens[2])
-
-            self.timezone_list.sort()
-        except:
-            self.timezone_list = []
+        zt = zonetab.ZoneTab()
+        self.timezone_list = [ x.tz for x in zt.getEntries() ]
+        self.timezone_list.sort()
 
         try:
             select = self.timezone_list.index("America/New_York")
