@@ -3,6 +3,7 @@
 # Copyright (C) 2006 THE system-config-kickstart'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the system-config-kickstart package.
 # Mike Karas <zoliqe@gmail.com>, 2006.
+# Ján ONDREJ (SAL) <ondrejj(at)salstar.sk>, 2008
 #
 #
 msgid ""
@@ -10,8 +11,8 @@ msgstr ""
 "Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-08-29 17:26-0400\n"
-"PO-Revision-Date: 2007-04-03 10:38+0200\n"
-"Last-Translator: Mike Karas <zoliqe@gmail.com>\n"
+"PO-Revision-Date: 2008-01-01 10:24+0100\n"
+"Last-Translator: Ján ONDREJ (SAL) <ondrejj(at)salstar.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -62,11 +63,11 @@ msgstr "Heslá pre Grub sa nezhodujú.  Prosím skúste znovu."
 
 #: ../src/firewall.py:60
 msgid "Trusted services:"
-msgstr ""
+msgstr "Dôveryhodné služby:"
 
 #: ../src/firewall.py:92
 msgid "Other ports: (1029:tcp)"
-msgstr ""
+msgstr "Ostatné porty: (1029:tcp)"
 
 #: ../src/install.py:131
 msgid "Please enter an NFS server."
@@ -125,11 +126,11 @@ msgstr "Chyba v Kickstart konfiguračnom súbore"
 
 #: ../src/kickstartGui.py:105
 msgid "Kickstart"
-msgstr "Rýchly štart"
+msgstr "Kickstart"
 
 #: ../src/kickstartGui.py:106
 msgid "Create a kickstart file"
-msgstr "Vytvoriť súbor rýchleho štartu"
+msgstr "Vytvoriť kickstart súbor"
 
 #: ../src/kickstartGui.py:128
 msgid "Subsection"
@@ -187,15 +188,15 @@ msgid ""
 " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
 " A graphical interface for creating a kickstart file"
 msgstr ""
-"Konfigurátor rýchleho štartu @VERSION@\n"
+"Kickstart konfigurátor @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
 " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
 " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-" Grafické rozhranie pre vytvorenie súboru rýchleho štartu"
+" Grafické rozhranie pre vytvorenie súboru pre kickstart"
 
 #: ../src/kickstartGui.py:208
 msgid "About Kickstart Configurator"
-msgstr "O Konfigurátore rýchleho štartu"
+msgstr "O kickstart konfigurátore"
 
 #: ../src/kickstartGui.py:230
 msgid "Help is not available."
@@ -224,14 +225,12 @@ msgid "Please fill in the network information"
 msgstr "Prosím vyplňte informácie o sieti"
 
 #: ../src/network.py:202 ../src/network.py:261
-#, fuzzy
 msgid "Please enter a valid gateway address."
-msgstr "Prosím zadajte priečinok pevného disku."
+msgstr "Prosím zadajte platnú adresu brány."
 
 #: ../src/network.py:214 ../src/network.py:273
-#, fuzzy
 msgid "Please enter a valid nameserver address."
-msgstr "Prosím zadajte priečinok HTTP servera."
+msgstr "Prosím zadajte platnú adresu menového servera."
 
 #: ../src/network.py:301
 #, python-format
@@ -300,7 +299,7 @@ msgstr "Pevné disky"
 
 #: ../src/partWindow.py:468
 msgid "Specify a mount point for the partition."
-msgstr "Špecifikujte bod pripojenia pre partíciu."
+msgstr "Špecifikujte bod pripojenia pre oddiel."
 
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:477
@@ -320,7 +319,7 @@ msgstr ""
 
 #: ../src/partWindow.py:534
 msgid "Specify a device on which to create the partition."
-msgstr "Špecifikujte zariadenie, na ktorom vytvoriť partíciu."
+msgstr "Špecifikujte zariadenie, na ktorom vytvoriť oddiel."
 
 #: ../src/partWindow.py:543
 msgid ""
@@ -360,12 +359,12 @@ msgstr "Veľkosť (MB)"
 
 #: ../src/partition.py:97 ../src/partition.py:137
 msgid "Please select a partition from the list."
-msgstr "Prosím vyberte partíciu zo zoznamu."
+msgstr "Prosím vyberte oddiel zo zoznamu."
 
 #: ../src/raidOptionsWindow.py:75
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
-msgstr "Momentálne máte %d softvérových RAID partícii voľných pre použitie."
+msgstr "Momentálne máte %d softvérových oddielov RAID na voľné použitie."
 
 #: ../src/raidWindow.py:177
 #, python-format
@@ -419,7 +418,7 @@ msgstr "5"
 
 #: tmp/system-config-kickstart.glade.h:7
 msgid "Active"
-msgstr ""
+msgstr "Aktívny"
 
 #: tmp/system-config-kickstart.glade.h:8
 msgid "Additional Size Options"
@@ -495,7 +494,7 @@ msgstr "Štandardný jazyk:"
 
 #: tmp/system-config-kickstart.glade.h:26
 msgid "Disable firewall"
-msgstr ""
+msgstr "Zakázať firewall"
 
 #: tmp/system-config-kickstart.glade.h:27
 msgid "Disabled"
@@ -543,7 +542,7 @@ msgstr "Povoliť overenie totožnosti cez SMB"
 
 #: tmp/system-config-kickstart.glade.h:39
 msgid "Enable firewall"
-msgstr ""
+msgstr "Povoliť firewall"
 
 #: tmp/system-config-kickstart.glade.h:40
 msgid "Enable nscd"
@@ -739,7 +738,7 @@ msgstr "Klávesnica:"
 
 #: tmp/system-config-kickstart.glade.h:89
 msgid "Kickstart Configurator"
-msgstr "Konfigurätor rýchleho štartu"
+msgstr "Kickstart konfigurátor"
 
 #: tmp/system-config-kickstart.glade.h:90
 msgid "LDAP "
@@ -935,7 +934,7 @@ msgstr "Spustiť mimo chroot prostredia"
 
 #: tmp/system-config-kickstart.glade.h:142
 msgid "SELinux:"
-msgstr ""
+msgstr "SELinux:"
 
 #: tmp/system-config-kickstart.glade.h:143
 msgid "SMB"
@@ -955,7 +954,7 @@ msgstr "SMB pracovná skupina:"
 
 #: tmp/system-config-kickstart.glade.h:147
 msgid "Security level:"
-msgstr ""
+msgstr "Úroveň zabezpečenia:"
 
 #: tmp/system-config-kickstart.glade.h:148
 msgid "Size (MB):"
@@ -1071,7 +1070,7 @@ msgstr "Pamäť grafickej karty: "
 
 #: tmp/system-config-kickstart.glade.h:174
 msgid "Warn"
-msgstr ""
+msgstr "Varovania"
 
 #: tmp/system-config-kickstart.glade.h:176
 #, no-c-format
@@ -1097,7 +1096,7 @@ msgid ""
 "kickstart file. "
 msgstr ""
 "Zvolili ste následujúcu konfiguráciu. Kliknite na 'Uložiť súbor' pre "
-"uloženie súboru rýchleho štartu. "
+"uloženie súboru rýchleho štartu."
 
 #: tmp/system-config-kickstart.glade.h:180
 msgid "_About"
