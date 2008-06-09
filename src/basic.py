@@ -97,11 +97,12 @@ class basic:
         #populate keyboard combo, add keyboards here
         self.keyboard_dict = keyboard_models.KeyboardModels().get_models()
         keys = self.keyboard_dict.keys()
-        keys.sort()
         keyboard_list = []
 
         for item in keys:
             keyboard_list.append(self.keyboard_dict[item][0])
+
+        keyboard_list.sort()
         self.keyboard_combo.set_popdown_strings(keyboard_list)
 
         #set default to English
