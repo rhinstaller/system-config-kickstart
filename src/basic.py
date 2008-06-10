@@ -3,7 +3,7 @@
 # Brent Fox <bfox@redhat.com>
 # Tammy Fox <tfox@redhat.com>
 #
-# Copyright (C) 2000-2007 Red Hat, Inc.
+# Copyright (C) 2000-2008 Red Hat, Inc.
 #
 # This copyrighted material is made available to anyone wishing to use, modify,
 # copy, or redistribute it subject to the terms and conditions of the GNU
@@ -40,12 +40,10 @@ from pykickstart.constants import *
 
 ##
 ## I18N
-## 
-from rhpl.translate import _, N_
-import rhpl.translate as translate
-domain = 'system-config-kickstart'
-translate.textdomain (domain)
-gtk.glade.bindtextdomain(domain)
+##
+import gettext
+gtk.glade.bindtextdomain("system-config-kickstart")
+_ = lambda x: gettext.ldgettext("system-config-kickstart", x)
 
 sys.path.append("/usr/share/system-config-date")
 

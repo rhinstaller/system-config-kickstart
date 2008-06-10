@@ -30,11 +30,9 @@ from pykickstart.constants import *
 ##
 ## I18N
 ##
-from rhpl.translate import _, N_
-import rhpl.translate as translate
-domain = 'system-config-kickstart'
-translate.textdomain (domain)
-gtk.glade.bindtextdomain(domain)
+import gettext
+gtk.glade.bindtextdomain("system-config-kickstart")
+_ = lambda x: gettext.ldgettext("system-config-kickstart", x)
 
 class xconfig:
     def __init__(self, xml, ksHandler):
