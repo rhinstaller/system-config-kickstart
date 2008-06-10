@@ -44,16 +44,6 @@ import gettext
 gtk.glade.bindtextdomain("system-config-kickstart")
 _ = lambda x: gettext.ldgettext("system-config-kickstart", x)
 
-class sckGroupSelector(GroupSelector.GroupSelector):
-    def __doGroupPopup(self, button, time):
-        pass
-
-    def _groupListButtonPress(self, widget, event):
-        pass
-
-    def _groupListPopup(self, widget):
-        pass
-
 class sckYumBase(yum.YumBase):
     def log(self, value, msg):
         pass
@@ -223,7 +213,7 @@ class Packages:
             d.destroy()
             return
 
-        self.gs = sckGroupSelector(self.y, lambda fn: "/usr/share/anaconda/ui/" + fn)
+        self.gs = GroupSelector.GroupSelector(self.y, lambda fn: "/usr/share/anaconda/ui/" + fn)
         self.gs.doRefresh()
         d.destroy()
 
