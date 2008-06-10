@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.7.16
+Version: 2.7.17
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -73,6 +73,13 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Tue Jun 10 2008 Chris Lumens <clumens@redhat.com> 2.7.17-1
+- Support --display= (#450431).
+- No longer use rhpl for translations.
+- Sort keyboard list by descriptive name, not by console map.
+- Remove most of the xconfig and monitor command support.
+- Use s-c-date's timezone list since that's what anaconda does (#445195).
+
 * Fri Mar 28 2008 Jeremy Katz <katzj@redhat.com> - 2.7.16-1
 - Don't depend on pirut anymore
 - Take into account new rawhide repo name
