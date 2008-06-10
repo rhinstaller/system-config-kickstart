@@ -23,7 +23,7 @@
 
 import getopt
 import signal
-import sys
+import sys, os
 from rhpl.exception import installExceptionHandler
 
 sys.path.append("/usr/share/system-config-kickstart")
@@ -56,15 +56,17 @@ if __name__ == "__main__":
     signal.signal (signal.SIGINT, signal.SIG_DFL)
 
     file = None
-    opts, file = getopt.getopt(sys.argv[1:], "g:h", ["generate=", "help"])
-    
+    opts, file = getopt.getopt(sys.argv[1:], "g:h", ["generate=", "help", "display="])
+
     for (opt, value) in opts:
+        if opt == "--display":
+            os.environ["DISPLAY"] = value
         if opt == "--generate" or opt == "-g":
             useCliMode(value)
             sys.exit(1)
         if opt == "--help" or opt == "-h":
-            print _("""Usage: system-config-kickstart [--help] [--generate <filename>] [<kickstart_filename>]
-            
+            print _("""Usage: system-config-kickstart [--help] [--generate <filename>] [--display=<display#>] [<kickstart_filename>]
+
     --help                  Print out this message
     --generate <filename>   Generate a kickstart file from the current machine and write
                             it to <filename>.  This option runs on the console, so it is
