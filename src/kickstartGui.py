@@ -353,4 +353,5 @@ class kickstartGui:
         self.partition_class.setSensitive(boolean)
         self.auth_class.setSensitive(boolean)
         self.X_class.setSensitive(boolean)
-        self.bootloader_class.enableUpgradeRadio(boolean)
+        self.firewall_class.setSensitive(boolean)
+        self.bootloader_class.enableUpgrade(boolean)

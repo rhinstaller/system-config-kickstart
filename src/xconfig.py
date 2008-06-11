@@ -39,6 +39,7 @@ class xconfig:
         self.ks = ksHandler
         self.xconfig_label_box = xml.get_widget("xconfig_label_box")
         self.config_x_button = xml.get_widget("config_x_button")
+        self.firstbootLabel = xml.get_widget("firstbootLabel")
         self.firstboot_optionmenu = xml.get_widget("firstboot_optionmenu")
 
     def updateKS(self, ksHandler):
@@ -48,10 +49,12 @@ class xconfig:
         if boolean == False:
             self.xconfig_label_box.show()
             self.config_x_button.hide()
+            self.firstbootLabel.hide()
             self.firstboot_optionmenu.hide()
         else:
             self.xconfig_label_box.hide()
             self.config_x_button.show()
+            self.firstbootLabel.show()
             self.firstboot_optionmenu.show()
 
     def formToKickstart(self):
