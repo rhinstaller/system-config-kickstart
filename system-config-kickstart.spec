@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.7.17
+Version: 2.7.18
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -73,6 +73,10 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Fri Jun 13 2008 Chris Lumens <clumens@redhat.com> 2.7.18-1
+- Fix a couple upgrade-related problems.
+- Enable right-click menu in pirut again.
+
 * Tue Jun 10 2008 Chris Lumens <clumens@redhat.com> 2.7.17-1
 - Support --display= (#450431).
 - No longer use rhpl for translations.
