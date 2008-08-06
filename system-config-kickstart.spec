@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.6.19.6
+Version: 2.6.19.7
 Release: 1%{?dist}
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -78,6 +78,12 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Wed Aug 06 2008 Chris Lumens <clumens@redhat.com> 2.6.19.7-1
+- Don't keep the .desktop file in version control.
+  Resolves: rhbz#452780
+- Use the timezone list provided by system-config-date.
+  Resolves: rhbz#445194
+
 * Thu Feb 14 2008 Chris Lumens <clumens@redhat.com> 2.6.19.6-1
 - Add more parser checking.
   Related: rhbz#431567
