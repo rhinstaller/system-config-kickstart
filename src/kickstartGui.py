@@ -61,10 +61,9 @@ gtk.glade.bindtextdomain(domain)
 ##
 ## Icon for windows
 ##
-iconPixbuf = None      
+iconPixbuf = None
 try:
-    iconPixbuf = gtk.gdk.pixbuf_new_from_file("/usr/share/system-config-kickstart/pixmaps/system-config-kickstart.png")
-     
+    iconPixbuf = gtk.gdk.pixbuf_new_from_file("/usr/share/pixmaps/system-config-kickstart.png")
 except:
     pass
 

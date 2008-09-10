@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
-Version: 2.6.19.7
+Version: 2.6.19.8
 Release: 1%{?dist}
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
@@ -70,14 +70,18 @@ fi
 %doc COPYING
 %doc doc/*
 /usr/bin/%{name}
-%dir /usr/share/%{name}
-/usr/share/%{name}/*
+%dir %{_datadir}/%{name}
+%{_datadir}/%{name}/*
+%attr(0644,root,root) %{_datadir}/pixmaps/%{name}.png
 %{_mandir}/man8/%{name}*
 %lang(ja) %{_mandir}/ja/man8/%{name}*
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
-%attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Wed Sep 10 2008 Chris Lumens <clumens@redhat.com> 2.6.19.8-1
+- Move the desktop icon to the correct directory.
+  Related: rhbz#452780
+
 * Wed Aug 06 2008 Chris Lumens <clumens@redhat.com> 2.6.19.7-1
 - Don't keep the .desktop file in version control.
   Resolves: rhbz#452780
