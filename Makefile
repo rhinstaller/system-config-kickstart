@@ -28,18 +28,16 @@ subdirs:
 
 install: ${PKGNAME}.desktop
 	mkdir -p $(INSTROOT)$(PKGDATADIR)
-	mkdir -p $(INSTROOT)$(PKGDATADIR)/pixmaps
+	mkdir -p $(INSTROOT)$(DATADIR)/pixmaps
 	mkdir -p $(INSTROOT)/usr/bin
 	mkdir -p $(INSTROOT)/usr/share/applications
-	mkdir -p $(INSTROOT)/usr/share/icons/hicolor/48x48/apps
 	install src/system-config-kickstart $(INSTROOT)/usr/bin
 	install src/*.py* $(INSTROOT)$(PKGDATADIR)
 	for py in src/*.py ; do \
 		sed -e s,@VERSION@,$(VERSION),g $${py} > $(INSTROOT)$(PKGDATADIR)/`basename $${py}` ; \
 	done
 	install src/${PKGNAME}.glade $(INSTROOT)$(PKGDATADIR)
-	install pixmaps/*.png $(INSTROOT)$(PKGDATADIR)/pixmaps
-	install pixmaps/${PKGNAME}.png $(INSTROOT)/usr/share/icons/hicolor/48x48/apps
+	install -m 0644 pixmaps/*.png $(INSTROOT)$(DATADIR)/pixmaps
 	install ${PKGNAME}.desktop $(INSTROOT)/usr/share/applications/${PKGNAME}.desktop
 	for d in $(SUBDIRS); do \
 	(cd $$d; $(MAKE) INSTROOT=$(INSTROOT) MANDIR=$(MANDIR) install) \
