@@ -50,11 +50,6 @@ if [ -x /usr/bin/gtk-update-icon-cache ]; then
   gtk-update-icon-cache -q %{_datadir}/icons/hicolor
 fi
 
-%preun
-if [ -d /usr/share/%{name} ] ; then
-  rm -rf /usr/share/%{name}/*.pyc
-fi
-
 %postun
 touch --no-create %{_datadir}/icons/hicolor
 if [ -x /usr/bin/gtk-update-icon-cache ]; then
