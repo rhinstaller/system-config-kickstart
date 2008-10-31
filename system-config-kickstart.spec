@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
 Version: 2.6.19.8
-Release: 1%{?dist}
+Release: 2%{?dist}
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
 ExclusiveOS: Linux
@@ -54,11 +54,6 @@ if [ -x /usr/bin/gtk-update-icon-cache ]; then
   gtk-update-icon-cache -q %{_datadir}/icons/hicolor
 fi
 
-%preun
-if [ -d /usr/share/%{name} ] ; then
-  rm -rf /usr/share/%{name}/*.pyc
-fi
-
 %postun
 touch --no-create %{_datadir}/icons/hicolor
 if [ -x /usr/bin/gtk-update-icon-cache ]; then
@@ -78,6 +73,10 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Fri Oct 31 2008 Chris Lumens <clumens@redhat.com> 2.6.19.8-2
+- Don't remove the .pyc files from scriptlets as this breaks rpm -V.
+  Resolves: rhbz#469146
+
 * Wed Sep 10 2008 Chris Lumens <clumens@redhat.com> 2.6.19.8-1
 - Move the desktop icon to the correct directory.
   Related: rhbz#452780
