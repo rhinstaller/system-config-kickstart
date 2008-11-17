@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.7.19
+Version: 2.7.20
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -68,6 +68,11 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Mon Nov 17 2008 Chris Lumens <clumens@redhat.com> 2.7.20-1
+- Don't make the open dialog tiny.
+- Fix a traceback caused by methods moving out of GroupSelector.py in anaconda.
+- Don't remove the byte-compiled python files from a scriptlet.
+
 * Tue Oct 14 2008 Chris Lumens <clumens@redhat.com> 2.7.19-1
 - Translation updates.
 - Include more of anaconda in the path.
