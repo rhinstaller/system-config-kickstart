@@ -273,6 +273,7 @@ class kickstartGui:
         fs = gtk.FileChooserDialog(action=gtk.FILE_CHOOSER_ACTION_OPEN,
                  buttons=(gtk.STOCK_CANCEL,gtk.RESPONSE_CANCEL,
 			  gtk.STOCK_OPEN,gtk.RESPONSE_OK))
+        fs.set_default_size(-1, -1)
         result = fs.run()
         file = fs.get_filename()
 
