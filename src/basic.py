@@ -142,7 +142,8 @@ class basic:
                 self.ks.keyboard(keyboard=item)
                 break
 
-        self.ks.timezone(timezone=self.timezone_combo.entry.get_text(), isUtc=self.utc_check_button.get_active())
+        zone = self.timezone_combo.entry.get_text()
+        self.ks.timezone(timezone=zone.replace(" ", "_"), isUtc=self.utc_check_button.get_active())
 
         if self.root_passwd_entry.get_text() != self.root_passwd_confirm_entry.get_text():
             dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, _("Root passwords do not match."))
@@ -235,7 +236,8 @@ class basic:
             self.keyboard_combo.entry.set_text(self.keyboard_dict[self.ks.keyboard.keyboard][0])
 
         if self.ks.timezone.timezone != "":
-            self.timezone_combo.list.select_item(self.timezone_list.index(self.ks.timezone.timezone))
+            zone = self.ks.timezone.timezone.replace("_", " ")
+            self.timezone_combo.list.select_item(self.timezone_list.index(zone))
 
         self.reboot_checkbutton.set_active(self.ks.reboot.action == KS_REBOOT)
 
