@@ -61,6 +61,20 @@ local:
 	@rm -rf /tmp/${PKGNAME}-$(VERSION)	
 	@echo "The archive is in ${PKGNAME}-$(VERSION).tar.gz"
 
+rpmlog:
+	@git-log --pretty="format:- %s (%ae)" $(TAG).. |sed -e 's/@.*)/)/'
+	@echo
+
+bumpver:
+	@NEWSUBVER=$$((`echo $(VERSION) |cut -d . -f 3` + 1)) ; \
+	NEWVERSION=`echo $(VERSION).$$NEWSUBVER |cut -d . -f 1-2,4` ; \
+	DATELINE="* `date "+%a %b %d %Y"` `git-config user.name` <`git-config user.email`> - $$NEWVERSION-1"  ; \
+	cl=`grep -n %changelog system-config-kickstart.spec |cut -d : -f 1` ; \
+	tail --lines=+$$(($$cl + 1)) system-config-kickstart.spec > speclog ; \
+	(head -n $$cl system-config-kickstart.spec ; echo "$$DATELINE" ; make --quiet rpmlog 2>/dev/null ; echo ""; cat speclog) > system-config-kickstart.spec.new ; \
+	mv system-config-kickstart.spec.new system-config-kickstart.spec ; rm -f speclog ; \
+	sed -i "s/Version: $(VERSION)/Version: $$NEWVERSION/" system-config-kickstart.spec ; \
+
 clean:
 	@rm -f *~
 	@rm -f src/*~
