@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.7.20
+Version: 2.7.21
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -68,6 +68,10 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Tue Dec 23 2008 Chris Lumens <clumens@redhat.com> - 2.7.21-1
+- Add "make bumpver" target from pykickstart.
+- Translate spaces in timezones to underscores when reading and writing (#475129).
+
 * Mon Nov 17 2008 Chris Lumens <clumens@redhat.com> 2.7.20-1
 - Don't make the open dialog tiny.
 - Fix a traceback caused by methods moving out of GroupSelector.py in anaconda.
