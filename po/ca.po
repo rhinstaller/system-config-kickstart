@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-29 17:26-0400\n"
+"POT-Creation-Date: 2009-03-12 17:02-0400\n"
 "PO-Revision-Date: 2007-09-07 10:59+0200\n"
 "Last-Translator: Josep Puigdemont <josep.puigdemont@gmail.com>\n"
 "Language-Team: Catalan <fedora@softcatala.net>\n"
@@ -29,100 +29,100 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/auth.py:343
+#: ../src/auth.py:350
 msgid "Please fill in the authentication information"
 msgstr "Empleneu la informació quant a l'autenticació"
 
-#: ../src/basic.py:71
+#: ../src/basic.py:72
 msgid "x86, AMD64, or Intel EM64T"
 msgstr "x86, AMD64, o Intel EM64T"
 
-#: ../src/basic.py:71
+#: ../src/basic.py:72
 msgid "Intel Itanium"
 msgstr "Intel Itanium"
 
-#: ../src/basic.py:71
+#: ../src/basic.py:72
 msgid "IBM iSeries"
 msgstr "IBM iSeries"
 
-#: ../src/basic.py:72
+#: ../src/basic.py:73
 msgid "IBM pSeries"
 msgstr "IBM pSeries"
 
-#: ../src/basic.py:72
+#: ../src/basic.py:73
 msgid "IBM zSeries/s390"
 msgstr "IBM zSeries/s390"
 
-#: ../src/basic.py:152
+#: ../src/basic.py:149
 msgid "Root passwords do not match."
 msgstr "Les contrasenyes del superusuari no coincideixen."
 
-#: ../src/basic.py:153 ../src/install.py:216 ../src/partWindow.py:550
-#: ../src/partition.py:255 ../src/raidWindow.py:252
+#: ../src/basic.py:150 ../src/install.py:217 ../src/partWindow.py:554
+#: ../src/partition.py:256 ../src/raidWindow.py:250
 msgid "Error"
 msgstr "Error"
 
-#: ../src/bootloader.py:84
+#: ../src/bootloader.py:147
+msgid "Grub passwords do not match.  Please try again."
+msgstr ""
+"Les contrasenyes per al Grub no coincideixen. Proveu-ho una altra vegada."
+
+#: ../src/bootloader.py:198
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
 msgstr ""
 "Les opcions del carregador de l'arrencada no són aplicables a la plataforma %"
 "s"
 
-#: ../src/bootloader.py:124
-msgid "Grub passwords do not match.  Please try again."
-msgstr ""
-"Les contrasenyes per al Grub no coincideixen. Proveu-ho una altra vegada."
-
-#: ../src/firewall.py:60
+#: ../src/firewall.py:58
 msgid "Trusted services:"
 msgstr "Serveis de confiança:"
 
-#: ../src/firewall.py:92
+#: ../src/firewall.py:90
 msgid "Other ports: (1029:tcp)"
 msgstr "Altres ports: (1029:tcp)"
 
-#: ../src/install.py:131
+#: ../src/install.py:132
 msgid "Please enter an NFS server."
 msgstr "Introduïu un servidor NFS."
 
-#: ../src/install.py:134
+#: ../src/install.py:135
 msgid "Please enter an NFS directory."
 msgstr "Introduïu un directori NFS."
 
-#: ../src/install.py:145
+#: ../src/install.py:146
 msgid "Please enter an FTP server."
 msgstr "Introduïu un servidor FTP."
 
-#: ../src/install.py:152
+#: ../src/install.py:153
 msgid "Please enter an FTP directory."
 msgstr "Introduïu un directori FTP."
 
-#: ../src/install.py:158
+#: ../src/install.py:159
 msgid "Please enter an FTP user name."
 msgstr "Introduïu un nom d'usuari FTP."
 
-#: ../src/install.py:161
+#: ../src/install.py:162
 msgid "Please enter an FTP password."
 msgstr "Introduïu una contrasenya FTP."
 
-#: ../src/install.py:177
+#: ../src/install.py:178
 msgid "Please enter an HTTP server."
 msgstr "Introduïu un servidor HTTP."
 
-#: ../src/install.py:180
+#: ../src/install.py:181
 msgid "Please enter an HTTP server directory."
 msgstr "Introduïu un directori del servidor HTTP."
 
-#: ../src/install.py:202
+#: ../src/install.py:203
 msgid "Please enter a hard drive directory."
 msgstr "Introduïu un directori del disc dur."
 
-#: ../src/install.py:205
+#: ../src/install.py:206
 msgid "Please enter a hard drive partition."
 msgstr "Introduïu una partició del disc dur."
 
-#: ../src/kickstartGui.py:94 ../src/kickstartGui.py:286
+#: ../src/kickstartGui.py:92 ../src/kickstartGui.py:290
 #, python-format
 msgid ""
 "The following error was found while parsing your kickstart configuration:\n"
@@ -133,67 +133,72 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../src/kickstartGui.py:97 ../src/kickstartGui.py:289
+#: ../src/kickstartGui.py:95 ../src/kickstartGui.py:293
+#, fuzzy, python-format
+msgid "The kickstart file %s could not be opened."
+msgstr "No es pot accedir al fitxer \"%s\"."
+
+#: ../src/kickstartGui.py:100 ../src/kickstartGui.py:298
 msgid "Error Parsing Kickstart Config"
 msgstr "S'ha produït un error en analitzar la configuració del Kickstart"
 
-#: ../src/kickstartGui.py:105
+#: ../src/kickstartGui.py:108
 msgid "Kickstart"
 msgstr "Inici ràpid"
 
-#: ../src/kickstartGui.py:106
+#: ../src/kickstartGui.py:109
 msgid "Create a kickstart file"
 msgstr "Crea un fitxer de l'inici ràpid"
 
-#: ../src/kickstartGui.py:128
+#: ../src/kickstartGui.py:131
 msgid "Subsection"
 msgstr "Subsecció"
 
-#: ../src/kickstartGui.py:132
+#: ../src/kickstartGui.py:135
 msgid "Basic Configuration"
 msgstr "Configuració bàsica"
 
-#: ../src/kickstartGui.py:133
+#: ../src/kickstartGui.py:136
 msgid "Installation Method"
 msgstr "Mètode d'instal·lació"
 
-#: ../src/kickstartGui.py:134
+#: ../src/kickstartGui.py:137
 msgid "Boot Loader Options"
 msgstr "Opcions del carregador de l'arrencada"
 
-#: ../src/kickstartGui.py:135
+#: ../src/kickstartGui.py:138
 msgid "Partition Information"
 msgstr "Informació de la partició"
 
-#: ../src/kickstartGui.py:136 tmp/system-config-kickstart.glade.h:110
+#: ../src/kickstartGui.py:139 tmp/system-config-kickstart.glade.h:102
 msgid "Network Configuration"
 msgstr "Configuració de la xarxa"
 
-#: ../src/kickstartGui.py:137
+#: ../src/kickstartGui.py:140
 msgid "Authentication"
 msgstr "Autenticació"
 
-#: ../src/kickstartGui.py:138 tmp/system-config-kickstart.glade.h:52
+#: ../src/kickstartGui.py:141 tmp/system-config-kickstart.glade.h:50
 msgid "Firewall Configuration"
 msgstr "Configuració del tallafocs"
 
-#: ../src/kickstartGui.py:139 tmp/system-config-kickstart.glade.h:28
+#: ../src/kickstartGui.py:142 tmp/system-config-kickstart.glade.h:26
 msgid "Display Configuration"
 msgstr "Configuració de la pantalla"
 
-#: ../src/kickstartGui.py:140 tmp/system-config-kickstart.glade.h:116
+#: ../src/kickstartGui.py:143 tmp/system-config-kickstart.glade.h:108
 msgid "Package Selection"
 msgstr "Selecció del paquet informàtic"
 
-#: ../src/kickstartGui.py:141 tmp/system-config-kickstart.glade.h:126
+#: ../src/kickstartGui.py:144 tmp/system-config-kickstart.glade.h:118
 msgid "Pre-Installation Script"
 msgstr "Seqüència de preinstal·lació"
 
-#: ../src/kickstartGui.py:142 tmp/system-config-kickstart.glade.h:125
+#: ../src/kickstartGui.py:145 tmp/system-config-kickstart.glade.h:117
 msgid "Post-Installation Script"
 msgstr "Seqüència de postinstal·lació"
 
-#: ../src/kickstartGui.py:207
+#: ../src/kickstartGui.py:210
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -207,45 +212,45 @@ msgstr ""
 " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
 "Una interfície gràfica per crear un fitxer de l'inici ràpid"
 
-#: ../src/kickstartGui.py:208
+#: ../src/kickstartGui.py:211
 msgid "About Kickstart Configurator"
 msgstr "Quant al configurador de l'inici ràpid"
 
-#: ../src/kickstartGui.py:230
+#: ../src/kickstartGui.py:233
 msgid "Help is not available."
 msgstr "L'ajuda no està disponible."
 
-#: ../src/kickstartGui.py:310
+#: ../src/kickstartGui.py:319
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "No es pot accedir al fitxer \"%s\"."
 
-#: ../src/network.py:76
+#: ../src/network.py:74
 msgid "Device"
 msgstr "Dispositiu"
 
-#: ../src/network.py:79
+#: ../src/network.py:77
 msgid "Network Type"
 msgstr "Tipus de xarxa"
 
-#: ../src/network.py:97 ../src/network.py:143 ../src/network.py:225
-#: ../src/network.py:281 ../src/network.py:376
+#: ../src/network.py:95 ../src/network.py:144 ../src/network.py:226
+#: ../src/network.py:282 ../src/network.py:377
 msgid "Static IP"
 msgstr "IP estàtica"
 
-#: ../src/network.py:190 ../src/network.py:249
+#: ../src/network.py:191 ../src/network.py:250
 msgid "Please fill in the network information"
 msgstr "Empleneu la informació de la xarxa"
 
-#: ../src/network.py:202 ../src/network.py:261
+#: ../src/network.py:203 ../src/network.py:262
 msgid "Please enter a valid gateway address."
 msgstr "Introduïu una adreça vàlida per a la passarel·la de xarxa."
 
-#: ../src/network.py:214 ../src/network.py:273
+#: ../src/network.py:215 ../src/network.py:274
 msgid "Please enter a valid nameserver address."
 msgstr "Introduïu una adreça del servidor de noms vàlid."
 
-#: ../src/network.py:301
+#: ../src/network.py:302
 #, python-format
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
@@ -254,15 +259,24 @@ msgstr ""
 "Ja existeix un dispositiu de xarxa anomenat %s. Trieu un altre nom pel "
 "dispositiu."
 
-#: ../src/packages.py:171
-msgid "Package configuration is not applicable on upgrades."
-msgstr "La configuració de paquets no és aplicable en les actualitzacions."
+#: ../src/packages.py:146
+#, python-format
+msgid ""
+"Package selection is disabled due to an error in setup.  Please fix your "
+"repository configuration and try again.\n"
+"\n"
+"%s"
+msgstr ""
 
-#: ../src/packages.py:177
+#: ../src/packages.py:199
 msgid "Retrieving package information"
 msgstr "S'està recuperant informació del paquet"
 
-#: ../src/packages.py:186
+#: ../src/packages.py:227
+msgid "Package configuration is not applicable on upgrades."
+msgstr "La configuració de paquets no és aplicable en les actualitzacions."
+
+#: ../src/packages.py:239
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
@@ -270,61 +284,61 @@ msgstr ""
 "Atès els problemes en baixar la informació dels paquets, la selecció n'està "
 "inhabilitada"
 
-#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:195
+#: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:178
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:196
+#: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:179
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:89 ../src/partWindow.py:152
+#: ../src/partWindow.py:87 ../src/partWindow.py:156
 msgid "software RAID"
 msgstr "RAID de programari"
 
-#: ../src/partWindow.py:90 tmp/system-config-kickstart.glade.h:214
+#: ../src/partWindow.py:88 tmp/system-config-kickstart.glade.h:196
 msgid "swap"
 msgstr "memòria d'intercanvi"
 
-#: ../src/partWindow.py:90 tmp/system-config-kickstart.glade.h:215
+#: ../src/partWindow.py:88 tmp/system-config-kickstart.glade.h:197
 msgid "vfat"
 msgstr "vfat"
 
-#: ../src/partWindow.py:91
+#: ../src/partWindow.py:89
 msgid "PPC PReP Boot"
 msgstr "PPC PReP Boot"
 
-#: ../src/partWindow.py:291 ../src/partWindow.py:572 ../src/raidWindow.py:217
+#: ../src/partWindow.py:295 ../src/partWindow.py:576 ../src/raidWindow.py:215
 msgid "Yes"
 msgstr "Sí"
 
-#: ../src/partWindow.py:293 ../src/partWindow.py:574 ../src/raidWindow.py:219
+#: ../src/partWindow.py:297 ../src/partWindow.py:578 ../src/raidWindow.py:217
 msgid "No"
 msgstr "No"
 
-#: ../src/partWindow.py:316 ../src/partWindow.py:331 ../src/partWindow.py:350
-#: ../src/partWindow.py:364
+#: ../src/partWindow.py:320 ../src/partWindow.py:335 ../src/partWindow.py:354
+#: ../src/partWindow.py:368
 msgid "Auto"
 msgstr "Auto"
 
-#: ../src/partWindow.py:325
+#: ../src/partWindow.py:329
 msgid "Hard Drives"
 msgstr "Discs durs"
 
-#: ../src/partWindow.py:468
+#: ../src/partWindow.py:472
 msgid "Specify a mount point for the partition."
 msgstr "Especifiqueu un punt de muntatge per a la partició."
 
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:477
+#: ../src/partWindow.py:481
 #, python-format
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "El punt de muntatge \"%s\" ja s'està utilitzant, seleccioneu-ne un altre."
 
-#: ../src/partWindow.py:497
+#: ../src/partWindow.py:501
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -332,11 +346,11 @@ msgstr ""
 "Per crear una nova partició RAID, heu d'especificar un nom per al dispositiu "
 "del disc dur o una partició ja existent."
 
-#: ../src/partWindow.py:534
+#: ../src/partWindow.py:538
 msgid "Specify a device on which to create the partition."
 msgstr "Especifiqueu un dispositiu en el qual poder crear la partició."
 
-#: ../src/partWindow.py:543
+#: ../src/partWindow.py:547
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -344,7 +358,7 @@ msgstr ""
 "La partició especificada no acaba en un número. Les particions han de tenir "
 "un número de partició com \"hda1\" o \"sda3\"."
 
-#: ../src/partition.py:74
+#: ../src/partition.py:72
 msgid ""
 "Device/\n"
 "Partition Number"
@@ -352,7 +366,7 @@ msgstr ""
 "Dispositiu/\n"
 "Número de la partició"
 
-#: ../src/partition.py:76
+#: ../src/partition.py:74
 msgid ""
 "Mount Point/\n"
 "RAID"
@@ -360,53 +374,54 @@ msgstr ""
 "Punt de muntatge/\n"
 "RAID"
 
-#: ../src/partition.py:78
+#: ../src/partition.py:76
 msgid "Type"
 msgstr "Tipus"
 
-#: ../src/partition.py:80
+#: ../src/partition.py:78
 msgid "Format"
 msgstr "Format"
 
-#: ../src/partition.py:82
+#: ../src/partition.py:80
 msgid "Size (MB)"
 msgstr "Mida (MB)"
 
-#: ../src/partition.py:97 ../src/partition.py:137
+#: ../src/partition.py:98 ../src/partition.py:138
 msgid "Please select a partition from the list."
 msgstr "Seleccioneu una partició de la llista."
 
-#: ../src/raidOptionsWindow.py:75
+#: ../src/raidOptionsWindow.py:72
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
 msgstr ""
 "Actualment hi ha %d particions del RAID de programari lliures per utilitzar."
 
-#: ../src/raidWindow.py:177
+#: ../src/raidWindow.py:175
 #, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
 msgstr "Heu de seleccionar almenys dues particions per utilitzar RAID %s"
 
-#: ../src/raidWindow.py:183
+#: ../src/raidWindow.py:181
 #, python-format
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "Heu de seleccionar almenys tres particions per utilitzar RAID %s"
 
-#: ../src/raidWindow.py:197 ../src/raidWindow.py:223
+#: ../src/raidWindow.py:195 ../src/raidWindow.py:221
 msgid "Raid Devices"
 msgstr "Dispositius Raid"
 
-#: ../src/xconfig.py:125
-msgid "Could not read video driver database"
-msgstr "No s'ha pogut llegir la base de dades de controladors de vídeo"
+#: ../src/savedialog.py:72
+#, fuzzy, python-format
+msgid "The following error occurred while saving the kickstart config %s: %s"
+msgstr ""
+"S'han trobat aquests errors en analitzar la configuració del kickstart:\n"
+"\n"
+"%s"
 
-#: ../src/xconfig.py:230
-msgid "Please select an X driver."
-msgstr "Seleccioneu un controlador d'X."
-
-#: ../src/xconfig.py:249
-msgid "Please select a monitor."
-msgstr "Seleccioneu un monitor."
+#: ../src/savedialog.py:76
+#, fuzzy
+msgid "Error Saving Kickstart Config"
+msgstr "S'ha produït un error en analitzar la configuració del Kickstart"
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -481,506 +496,462 @@ msgid "Clear Master Boot Record"
 msgstr "Neteja el registre mestre de l'arrencada"
 
 #: tmp/system-config-kickstart.glade.h:19
-msgid "Color Depth"
-msgstr "Profunditat de color"
-
-#: tmp/system-config-kickstart.glade.h:20
 msgid "Configure the X Window System"
 msgstr "Configura el sistema de finestres X"
 
-#: tmp/system-config-kickstart.glade.h:21
+#: tmp/system-config-kickstart.glade.h:20
 msgid "Confirm Password:"
 msgstr "Confirmeu la contrasenya:"
 
-#: tmp/system-config-kickstart.glade.h:22
+#: tmp/system-config-kickstart.glade.h:21
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "Crea un dispositiu RAID [default = /dev/md0] "
 
-#: tmp/system-config-kickstart.glade.h:23
+#: tmp/system-config-kickstart.glade.h:22
 msgid "Create a software RAID partition"
 msgstr "Crea una partició del RAID de programari"
 
-#: tmp/system-config-kickstart.glade.h:24
-msgid "Default Desktop:"
-msgstr "Escriptori predeterminat:"
-
-#: tmp/system-config-kickstart.glade.h:25
+#: tmp/system-config-kickstart.glade.h:23
 msgid "Default Language:"
 msgstr "Idioma predeterminat:"
 
-#: tmp/system-config-kickstart.glade.h:26
+#: tmp/system-config-kickstart.glade.h:24
 msgid "Disable firewall"
 msgstr "Inhabilita el tallafocs"
 
-#: tmp/system-config-kickstart.glade.h:27
+#: tmp/system-config-kickstart.glade.h:25
 msgid "Disabled"
 msgstr "Inhabilitat"
 
-#: tmp/system-config-kickstart.glade.h:29
+#: tmp/system-config-kickstart.glade.h:27
 msgid "Display configuration is not applicable on upgrades."
 msgstr "La configuració de la pantalla no és aplicable en les actualitzacions."
 
-#: tmp/system-config-kickstart.glade.h:30
+#: tmp/system-config-kickstart.glade.h:28
 msgid "Do not clear Master Boot Record"
 msgstr "No netegis el registre mestre de l'arrencada"
 
-#: tmp/system-config-kickstart.glade.h:31
+#: tmp/system-config-kickstart.glade.h:29
 msgid "Do not initialize the disk label"
 msgstr "No iniciïs l'etiqueta del disc"
 
-#: tmp/system-config-kickstart.glade.h:32
+#: tmp/system-config-kickstart.glade.h:30
 msgid "Do not install a boot loader"
 msgstr "No instal·lis cap carregador de l'arrencada"
 
-#: tmp/system-config-kickstart.glade.h:33
+#: tmp/system-config-kickstart.glade.h:31
 msgid "Drive :"
 msgstr "Unitat :"
 
-#: tmp/system-config-kickstart.glade.h:34
+#: tmp/system-config-kickstart.glade.h:32
 msgid "Enable Hesiod Support"
 msgstr "Habilita el suport per a Hesiod"
 
-#: tmp/system-config-kickstart.glade.h:35
+#: tmp/system-config-kickstart.glade.h:33
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Habilita l'autenticació Kerberos 5"
 
-#: tmp/system-config-kickstart.glade.h:36
+#: tmp/system-config-kickstart.glade.h:34
 msgid "Enable LDAP"
 msgstr "Habilita l'LDAP"
 
-#: tmp/system-config-kickstart.glade.h:37
+#: tmp/system-config-kickstart.glade.h:35
 msgid "Enable NIS"
 msgstr "Habilita el NIS"
 
-#: tmp/system-config-kickstart.glade.h:38
+#: tmp/system-config-kickstart.glade.h:36
 msgid "Enable SMB Authentication"
 msgstr "Habilita l'autenticació SMB"
 
-#: tmp/system-config-kickstart.glade.h:39
+#: tmp/system-config-kickstart.glade.h:37
 msgid "Enable firewall"
 msgstr "Habilita el tallafocs"
 
-#: tmp/system-config-kickstart.glade.h:40
+#: tmp/system-config-kickstart.glade.h:38
 msgid "Enable nscd"
 msgstr "Habilita nscd"
 
-#: tmp/system-config-kickstart.glade.h:41
+#: tmp/system-config-kickstart.glade.h:39
 msgid "Enabled"
 msgstr "Habilitat"
 
-#: tmp/system-config-kickstart.glade.h:42
+#: tmp/system-config-kickstart.glade.h:40
 msgid "Enabled in reconfiguration mode"
 msgstr "S'ha habilitat en el mode de reconfiguració"
 
-#: tmp/system-config-kickstart.glade.h:43
+#: tmp/system-config-kickstart.glade.h:41
 msgid "Encrypt GRUB password"
 msgstr "Xifra la contrasenya del GRUB"
 
-#: tmp/system-config-kickstart.glade.h:44
+#: tmp/system-config-kickstart.glade.h:42
 msgid "Encrypt root password"
 msgstr "Xifra la contrasenya del superusuari"
 
-#: tmp/system-config-kickstart.glade.h:45
+#: tmp/system-config-kickstart.glade.h:43
 msgid "FTP"
 msgstr "FTP"
 
-#: tmp/system-config-kickstart.glade.h:46
+#: tmp/system-config-kickstart.glade.h:44
 msgid "FTP Directory:"
 msgstr "Directori FTP:"
 
-#: tmp/system-config-kickstart.glade.h:47
+#: tmp/system-config-kickstart.glade.h:45
 msgid "FTP Password"
 msgstr "Contrasenya FTP"
 
-#: tmp/system-config-kickstart.glade.h:48
+#: tmp/system-config-kickstart.glade.h:46
 msgid "FTP Server:"
 msgstr "Servidor FTP:"
 
-#: tmp/system-config-kickstart.glade.h:49
+#: tmp/system-config-kickstart.glade.h:47
 msgid "FTP Username"
 msgstr "Nom d'usuari FTP"
 
-#: tmp/system-config-kickstart.glade.h:50
+#: tmp/system-config-kickstart.glade.h:48
 msgid "File System Type:"
 msgstr "Tipus de sistema de fitxers:"
 
-#: tmp/system-config-kickstart.glade.h:51
+#: tmp/system-config-kickstart.glade.h:49
 msgid "Fill all unused space on disk"
 msgstr "Emplena tot l'espai del disc sense utilitzar"
 
-#: tmp/system-config-kickstart.glade.h:53
+#: tmp/system-config-kickstart.glade.h:51
 msgid "Firewall configuration is not applicable on upgrades."
 msgstr "La configuració del tallafoc no és aplicable en les actualitzacions."
 
-#: tmp/system-config-kickstart.glade.h:54
+#: tmp/system-config-kickstart.glade.h:52
 msgid "Fixed size"
 msgstr "Mida fixa"
 
-#: tmp/system-config-kickstart.glade.h:55
+#: tmp/system-config-kickstart.glade.h:53
 msgid "Force to be a primary partition (asprimary)"
 msgstr "Imposa una partició primària (asprimary)"
 
-#: tmp/system-config-kickstart.glade.h:56
+#: tmp/system-config-kickstart.glade.h:54
 msgid "Format RAID device"
 msgstr "Formata el dispositiu RAID"
 
-#: tmp/system-config-kickstart.glade.h:57
+#: tmp/system-config-kickstart.glade.h:55
 msgid "Format partition"
 msgstr "Formata la partició"
 
-#: tmp/system-config-kickstart.glade.h:58
-msgid "GNOME"
-msgstr "GNOME"
-
-#: tmp/system-config-kickstart.glade.h:59
+#: tmp/system-config-kickstart.glade.h:56
 msgid "GRUB Options:"
 msgstr "Opcions del GRUB:"
 
-#: tmp/system-config-kickstart.glade.h:60
+#: tmp/system-config-kickstart.glade.h:57
 msgid "Gateway:"
 msgstr "Passarel·la:"
 
-#: tmp/system-config-kickstart.glade.h:61
-msgid "General"
-msgstr "General"
-
-#: tmp/system-config-kickstart.glade.h:62
+#: tmp/system-config-kickstart.glade.h:58
 msgid "Grow to maximum of (MB):"
 msgstr "Augmenta a un màxim de (MB):"
 
-#: tmp/system-config-kickstart.glade.h:63
+#: tmp/system-config-kickstart.glade.h:59
 msgid "HTTP"
 msgstr "HTTP"
 
-#: tmp/system-config-kickstart.glade.h:64
+#: tmp/system-config-kickstart.glade.h:60
 msgid "HTTP Directory:"
 msgstr "Directori HTTP:"
 
-#: tmp/system-config-kickstart.glade.h:65
+#: tmp/system-config-kickstart.glade.h:61
 msgid "HTTP Server:"
 msgstr "Servidor HTTP:"
 
-#: tmp/system-config-kickstart.glade.h:66
+#: tmp/system-config-kickstart.glade.h:62
 msgid "Hard Drive"
 msgstr "Disc dur"
 
-#: tmp/system-config-kickstart.glade.h:67
+#: tmp/system-config-kickstart.glade.h:63
 msgid "Hard Drive Directory:"
 msgstr "Directori del disc dur:"
 
-#: tmp/system-config-kickstart.glade.h:68
+#: tmp/system-config-kickstart.glade.h:64
 msgid "Hard Drive Partition:"
 msgstr "Partició del disc dur:"
 
-#: tmp/system-config-kickstart.glade.h:69
+#: tmp/system-config-kickstart.glade.h:65
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: tmp/system-config-kickstart.glade.h:70
+#: tmp/system-config-kickstart.glade.h:66
 msgid "Hesiod Authentication"
 msgstr "Autenticació amb el Hesiod"
 
-#: tmp/system-config-kickstart.glade.h:71
+#: tmp/system-config-kickstart.glade.h:67
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS:"
 
-#: tmp/system-config-kickstart.glade.h:72
+#: tmp/system-config-kickstart.glade.h:68
 msgid "Hesiod RHS:"
 msgstr "Hesiod RHS:"
 
-#: tmp/system-config-kickstart.glade.h:73
-msgid "Horizontal Sync:"
-msgstr "Sincronització horitzontal:"
-
-#: tmp/system-config-kickstart.glade.h:74
-msgid "Hz"
-msgstr "Hz"
-
-#: tmp/system-config-kickstart.glade.h:75
+#: tmp/system-config-kickstart.glade.h:69
 msgid "IP Address:"
 msgstr "Adreça IP:"
 
-#: tmp/system-config-kickstart.glade.h:76
+#: tmp/system-config-kickstart.glade.h:70
 msgid "Initialize the disk label"
 msgstr "Inicialitza l'etiqueta del disc"
 
-#: tmp/system-config-kickstart.glade.h:77
+#: tmp/system-config-kickstart.glade.h:71
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr ""
 "Instal·la el carregador de l'arrencada en el registre mestre de l'arrencada "
 "(MBR)"
 
-#: tmp/system-config-kickstart.glade.h:78
+#: tmp/system-config-kickstart.glade.h:72
 msgid "Install boot loader on first sector of the boot partition"
 msgstr ""
 "Instal·la el carregador de l'arrencada en el primer sector de la partició de "
 "l'arrencada"
 
-#: tmp/system-config-kickstart.glade.h:79
+#: tmp/system-config-kickstart.glade.h:73
 msgid "Install new boot loader"
 msgstr "Instal·la un nou carregador de l'arrencada"
 
-#: tmp/system-config-kickstart.glade.h:80
+#: tmp/system-config-kickstart.glade.h:74
 msgid "Installation Method (required)"
 msgstr "Mètode d'instal·lació (necessari)"
 
-#: tmp/system-config-kickstart.glade.h:81
-msgid "KDE"
-msgstr "KDE"
-
-#: tmp/system-config-kickstart.glade.h:82
+#: tmp/system-config-kickstart.glade.h:75
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: tmp/system-config-kickstart.glade.h:83
+#: tmp/system-config-kickstart.glade.h:76
 msgid "Kerberos 5 Authentication"
 msgstr "Autenticació Kerberos 5"
 
-#: tmp/system-config-kickstart.glade.h:84
+#: tmp/system-config-kickstart.glade.h:77
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Controlador del domini del Kerberos (KDC):"
 
-#: tmp/system-config-kickstart.glade.h:85
+#: tmp/system-config-kickstart.glade.h:78
 msgid "Kerberos Master Server:"
 msgstr "Servidor mestre de Kerberos:"
 
-#: tmp/system-config-kickstart.glade.h:86
+#: tmp/system-config-kickstart.glade.h:79
 msgid "Kerberos Realm:"
 msgstr "Regne del Kerberos:"
 
-#: tmp/system-config-kickstart.glade.h:87
+#: tmp/system-config-kickstart.glade.h:80
 msgid "Kernel parameters:"
 msgstr "Paràmetres del nucli:"
 
-#: tmp/system-config-kickstart.glade.h:88
+#: tmp/system-config-kickstart.glade.h:81
 msgid "Keyboard:"
 msgstr "Teclat:"
 
-#: tmp/system-config-kickstart.glade.h:89
+#: tmp/system-config-kickstart.glade.h:82
 msgid "Kickstart Configurator"
 msgstr "Configurador de l'inici ràpid"
 
-#: tmp/system-config-kickstart.glade.h:90
+#: tmp/system-config-kickstart.glade.h:83
 msgid "LDAP "
 msgstr "LDAP"
 
-#: tmp/system-config-kickstart.glade.h:91
+#: tmp/system-config-kickstart.glade.h:84
 msgid "LDAP Authentication"
 msgstr "Autenticació amb l'LDAP"
 
-#: tmp/system-config-kickstart.glade.h:92
+#: tmp/system-config-kickstart.glade.h:85
 msgid "LDAP Base Name: "
 msgstr "Nom de base de l'LDAP:"
 
-#: tmp/system-config-kickstart.glade.h:93
+#: tmp/system-config-kickstart.glade.h:86
 msgid "LDAP Server: "
 msgstr "Servidor LDAP:"
 
-#: tmp/system-config-kickstart.glade.h:94
+#: tmp/system-config-kickstart.glade.h:87
 msgid "Load CA certificate"
 msgstr "Carrega el certificat de la CA"
 
-#: tmp/system-config-kickstart.glade.h:95
+#: tmp/system-config-kickstart.glade.h:88
 msgid "Make RAID Device"
 msgstr "Fes un dispositiu RAID"
 
-#: tmp/system-config-kickstart.glade.h:96
+#: tmp/system-config-kickstart.glade.h:89
 msgid "Make partition on specific drive (ondisk)"
 msgstr "Fes la partició en un disc específic (ondisk)"
 
-#: tmp/system-config-kickstart.glade.h:97
-msgid "Monitor"
-msgstr "Monitor"
-
-#: tmp/system-config-kickstart.glade.h:98
+#: tmp/system-config-kickstart.glade.h:90
 msgid "Mount Point:"
 msgstr "Punt de muntatge:"
 
-#: tmp/system-config-kickstart.glade.h:99
+#: tmp/system-config-kickstart.glade.h:91
 msgid "NFS"
 msgstr "NFS"
 
-#: tmp/system-config-kickstart.glade.h:100
+#: tmp/system-config-kickstart.glade.h:92
 msgid "NFS Directory:"
 msgstr "Directori NFS:"
 
-#: tmp/system-config-kickstart.glade.h:101
+#: tmp/system-config-kickstart.glade.h:93
 msgid "NFS Server:"
 msgstr "Servidor NFS:"
 
-#: tmp/system-config-kickstart.glade.h:102
+#: tmp/system-config-kickstart.glade.h:94
 msgid "NIS"
 msgstr "NIS"
 
-#: tmp/system-config-kickstart.glade.h:103
+#: tmp/system-config-kickstart.glade.h:95
 msgid "NIS Authentication"
 msgstr "Autenticació amb el NIS"
 
-#: tmp/system-config-kickstart.glade.h:104
+#: tmp/system-config-kickstart.glade.h:96
 msgid "NIS Domain:"
 msgstr "Domini del NIS:"
 
-#: tmp/system-config-kickstart.glade.h:105
+#: tmp/system-config-kickstart.glade.h:97
 msgid "NIS Server:"
 msgstr "Servidor del NIS:"
 
-#: tmp/system-config-kickstart.glade.h:106
+#: tmp/system-config-kickstart.glade.h:98
 msgid "Name Server:"
 msgstr "Servidor de noms:"
 
-#: tmp/system-config-kickstart.glade.h:107
+#: tmp/system-config-kickstart.glade.h:99
 msgid "Name Switch Cache"
 msgstr "Memòria cau del commutador de noms"
 
-#: tmp/system-config-kickstart.glade.h:108
+#: tmp/system-config-kickstart.glade.h:100
 msgid "Name Switch Cache Daemon (nscd) Authentication"
 msgstr "Autenticació amb el dimoni de la memòria cau del commutador de noms"
 
-#: tmp/system-config-kickstart.glade.h:109
+#: tmp/system-config-kickstart.glade.h:101
 msgid "Netmask: "
 msgstr "Màscara de la subxarxa:"
 
-#: tmp/system-config-kickstart.glade.h:111
+#: tmp/system-config-kickstart.glade.h:103
 msgid "Network Device Information"
 msgstr "Informació sobre el dispositiu de la xarxa"
 
-#: tmp/system-config-kickstart.glade.h:112
+#: tmp/system-config-kickstart.glade.h:104
 msgid "Network Device:"
 msgstr "Dispositiu de xarxa:"
 
-#: tmp/system-config-kickstart.glade.h:113
+#: tmp/system-config-kickstart.glade.h:105
 msgid "Network Type:"
 msgstr "Tipus de xarxa:"
 
-#: tmp/system-config-kickstart.glade.h:114
+#: tmp/system-config-kickstart.glade.h:106
 msgid "Number of spares:"
 msgstr "Nombre de discs de recanvi:"
 
-#: tmp/system-config-kickstart.glade.h:115
+#: tmp/system-config-kickstart.glade.h:107
 msgid "On first boot, Setup Agent is: "
 msgstr "A la primera arrencada, l'agent de configuració està:"
 
-#: tmp/system-config-kickstart.glade.h:117
+#: tmp/system-config-kickstart.glade.h:109
 msgid "Partition :"
 msgstr "Partició :"
 
-#: tmp/system-config-kickstart.glade.h:118
+#: tmp/system-config-kickstart.glade.h:110
 msgid "Partition Information (required)"
 msgstr "Informació de la partició (necessària)"
 
-#: tmp/system-config-kickstart.glade.h:119
+#: tmp/system-config-kickstart.glade.h:111
 msgid "Partition Options"
 msgstr "Opcions de la partició"
 
-#: tmp/system-config-kickstart.glade.h:120
+#: tmp/system-config-kickstart.glade.h:112
 msgid "Partition options are not applicable on upgrades."
 msgstr "Les opcions del particionat no són aplicables en les actualitzacions."
 
-#: tmp/system-config-kickstart.glade.h:121
+#: tmp/system-config-kickstart.glade.h:113
 msgid "Password:"
 msgstr "Contrasenya:"
 
-#: tmp/system-config-kickstart.glade.h:122
+#: tmp/system-config-kickstart.glade.h:114
 msgid "Perform installation in interactive mode"
 msgstr "Realitza la instal·lació en mode interactiu"
 
-#: tmp/system-config-kickstart.glade.h:123
+#: tmp/system-config-kickstart.glade.h:115
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "Realitza la instal·lació en mode text (gràfic per defecte)"
 
-#: tmp/system-config-kickstart.glade.h:124
+#: tmp/system-config-kickstart.glade.h:116
 msgid "Perform new installation"
 msgstr "Realitza una nova instal·lació"
 
-#: tmp/system-config-kickstart.glade.h:127
+#: tmp/system-config-kickstart.glade.h:119
 msgid "Preserve existing partitions"
 msgstr "Conserva les particions existents"
 
-#: tmp/system-config-kickstart.glade.h:128
+#: tmp/system-config-kickstart.glade.h:120
 msgid "Preview Options"
 msgstr "Opcions de visualització prèvia"
 
-#: tmp/system-config-kickstart.glade.h:129
-msgid "Probe for monitor"
-msgstr "Prova el monitor"
-
-#: tmp/system-config-kickstart.glade.h:130
-msgid "Probe for video card driver"
-msgstr "Prova controladors per a la targeta de vídeo"
-
-#: tmp/system-config-kickstart.glade.h:131
+#: tmp/system-config-kickstart.glade.h:121
 msgid "RAID"
 msgstr "RAID"
 
-#: tmp/system-config-kickstart.glade.h:132
+#: tmp/system-config-kickstart.glade.h:122
 msgid "RAID Device:"
 msgstr "Dispositiu RAID:"
 
-#: tmp/system-config-kickstart.glade.h:133
+#: tmp/system-config-kickstart.glade.h:123
 msgid "RAID Level:"
 msgstr "Nivell RAID:"
 
-#: tmp/system-config-kickstart.glade.h:134
+#: tmp/system-config-kickstart.glade.h:124
 msgid "RAID Options"
 msgstr "Opcions RAID"
 
-#: tmp/system-config-kickstart.glade.h:135
+#: tmp/system-config-kickstart.glade.h:125
 msgid "Raid Members"
 msgstr "Membres Raid"
 
-#: tmp/system-config-kickstart.glade.h:136
+#: tmp/system-config-kickstart.glade.h:126
 msgid "Reboot system after installation"
 msgstr "Arranca de nou el sistema després de la instal·lació"
 
-#: tmp/system-config-kickstart.glade.h:137
+#: tmp/system-config-kickstart.glade.h:127
 msgid "Remove all existing partitions"
 msgstr "Suprimeix totes les particions existents"
 
-#: tmp/system-config-kickstart.glade.h:138
+#: tmp/system-config-kickstart.glade.h:128
 msgid "Remove existing Linux partitions"
 msgstr "Suprimeix les particions de Linux existents"
 
-#: tmp/system-config-kickstart.glade.h:139
-msgid "Resolution"
-msgstr "Resolució"
-
-#: tmp/system-config-kickstart.glade.h:140
+#: tmp/system-config-kickstart.glade.h:129
 msgid "Root Password:"
 msgstr "Contrasenya del superusuari:"
 
-#: tmp/system-config-kickstart.glade.h:141
+#: tmp/system-config-kickstart.glade.h:130
 msgid "Run outside of the chroot environment"
 msgstr "Executa fora de l'entorn chroot"
 
-#: tmp/system-config-kickstart.glade.h:142
+#: tmp/system-config-kickstart.glade.h:131
 msgid "SELinux:"
 msgstr "SELinux:"
 
-#: tmp/system-config-kickstart.glade.h:143
+#: tmp/system-config-kickstart.glade.h:132
 msgid "SMB"
 msgstr "SMB"
 
-#: tmp/system-config-kickstart.glade.h:144
+#: tmp/system-config-kickstart.glade.h:133
 msgid "SMB Authentication"
 msgstr "Autenticació SMB"
 
-#: tmp/system-config-kickstart.glade.h:145
+#: tmp/system-config-kickstart.glade.h:134
 msgid "SMB Servers:"
 msgstr "Servidors SMB:"
 
-#: tmp/system-config-kickstart.glade.h:146
+#: tmp/system-config-kickstart.glade.h:135
 msgid "SMB Workgroup:"
 msgstr "Grup de treball SMB:"
 
-#: tmp/system-config-kickstart.glade.h:147
+#: tmp/system-config-kickstart.glade.h:136
 msgid "Security level:"
 msgstr "Nivell de seguretat:"
 
-#: tmp/system-config-kickstart.glade.h:148
+#: tmp/system-config-kickstart.glade.h:137
 msgid "Size (MB):"
 msgstr "Mida (MB):"
 
-#: tmp/system-config-kickstart.glade.h:149
+#: tmp/system-config-kickstart.glade.h:138
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -993,27 +964,23 @@ msgstr ""
 "a més informació sobre com utilitzar els dispositius RAID, consulteu la "
 "documentació de l'inici ràpid."
 
-#: tmp/system-config-kickstart.glade.h:150
+#: tmp/system-config-kickstart.glade.h:139
 msgid "Specify an FTP username and password"
 msgstr "Especifiqueu un nom d'usuari i una contrasenya FTP"
 
-#: tmp/system-config-kickstart.glade.h:151
+#: tmp/system-config-kickstart.glade.h:140
 msgid "Specify installation key:"
 msgstr "Especifiqueu una clau d'instal·lació:"
 
-#: tmp/system-config-kickstart.glade.h:152
-msgid "Start the X Window System on boot"
-msgstr "Inicia el sistema de finestres X a l'arrencada"
-
-#: tmp/system-config-kickstart.glade.h:153
+#: tmp/system-config-kickstart.glade.h:141
 msgid "Target Architecture:"
 msgstr "Arquitectura objectiu:"
 
-#: tmp/system-config-kickstart.glade.h:154
+#: tmp/system-config-kickstart.glade.h:142
 msgid "Time Zone:"
 msgstr "Fus horari:"
 
-#: tmp/system-config-kickstart.glade.h:155
+#: tmp/system-config-kickstart.glade.h:143
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -1022,77 +989,57 @@ msgstr ""
 "\"RAID de programari\". Després es pot crear un dispositiu RAID que pot ser "
 "formatat i muntat."
 
-#: tmp/system-config-kickstart.glade.h:157
+#: tmp/system-config-kickstart.glade.h:145
 #, no-c-format
 msgid "Type your %post script below:"
 msgstr "Teclegeu la vostra seqüència %post aquí sota:"
 
-#: tmp/system-config-kickstart.glade.h:159
+#: tmp/system-config-kickstart.glade.h:147
 #, no-c-format
 msgid "Type your %pre script below:"
 msgstr "Teclegeu la vostra seqüència %pre a sota:"
 
-#: tmp/system-config-kickstart.glade.h:160
+#: tmp/system-config-kickstart.glade.h:148
 msgid "Upgrade an existing installation"
 msgstr "Actualitza una instal·lació ja existent"
 
-#: tmp/system-config-kickstart.glade.h:161
+#: tmp/system-config-kickstart.glade.h:149
 msgid "Upgrade existing boot loader"
 msgstr "Actualitza el carregador de l'arrencada existent"
 
-#: tmp/system-config-kickstart.glade.h:162
+#: tmp/system-config-kickstart.glade.h:150
 msgid "Use GRUB password"
 msgstr "Utilitza una contrasenya pel GRUB"
 
-#: tmp/system-config-kickstart.glade.h:163
-msgid "Use MD5"
-msgstr "Utilitza l'MD5"
-
-#: tmp/system-config-kickstart.glade.h:164
+#: tmp/system-config-kickstart.glade.h:151
 msgid "Use Shadow Passwords"
 msgstr "Utilitza les contrasenyes Shadow"
 
-#: tmp/system-config-kickstart.glade.h:165
+#: tmp/system-config-kickstart.glade.h:152
 msgid "Use UTC clock"
 msgstr "Utilitza el rellotge UTC"
 
-#: tmp/system-config-kickstart.glade.h:166
+#: tmp/system-config-kickstart.glade.h:153
 msgid "Use an interpreter:"
 msgstr "Utilitza un intèrpret:"
 
-#: tmp/system-config-kickstart.glade.h:167
+#: tmp/system-config-kickstart.glade.h:154
 msgid "Use broadcast to find NIS server"
 msgstr "Fes servir difusió per trobar el servidor NIS"
 
-#: tmp/system-config-kickstart.glade.h:168
-msgid "Use custom monitor sync rates"
-msgstr "Utilitza freqüències de sincronització del monitor personalitzades"
-
-#: tmp/system-config-kickstart.glade.h:169
+#: tmp/system-config-kickstart.glade.h:155
 msgid "Use existing partition (onpart)"
 msgstr "Utilitza una partició ja existent (onpart)"
 
-#: tmp/system-config-kickstart.glade.h:170
+#: tmp/system-config-kickstart.glade.h:156
 msgid "Use recommended swap size"
 msgstr "Utilitza la mida d'intercanvi recomanada"
 
-#: tmp/system-config-kickstart.glade.h:171
-msgid "Vertical Sync:"
-msgstr "Sincronització vertical:"
-
-#: tmp/system-config-kickstart.glade.h:172
-msgid "Video Card"
-msgstr "Targeta de vídeo"
-
-#: tmp/system-config-kickstart.glade.h:173
-msgid "Video Card RAM: "
-msgstr "Targeta de vídeo RAM:"
-
-#: tmp/system-config-kickstart.glade.h:174
+#: tmp/system-config-kickstart.glade.h:157
 msgid "Warn"
 msgstr "Avisa"
 
-#: tmp/system-config-kickstart.glade.h:176
+#: tmp/system-config-kickstart.glade.h:159
 #, no-c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1101,7 +1048,7 @@ msgstr ""
 "Avís: Un error en aquesta seqüència podria causar una fallada en la "
 "instal·lació de l'inici ràpid. No inclogueu l'ordre %post al principi."
 
-#: tmp/system-config-kickstart.glade.h:178
+#: tmp/system-config-kickstart.glade.h:161
 #, no-c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1110,7 +1057,7 @@ msgstr ""
 "Avís: Un error en aquesta seqüència podria causar una fallada en la "
 "instal·lació de l'inici ràpid. No inclogueu l'ordre %pre al principi."
 
-#: tmp/system-config-kickstart.glade.h:179
+#: tmp/system-config-kickstart.glade.h:162
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
@@ -1118,133 +1065,192 @@ msgstr ""
 "Heu triat la següent configuració. Feu clic a Desa el fitxer per desar el "
 "fitxer de l'inici ràpid."
 
-#: tmp/system-config-kickstart.glade.h:180
+#: tmp/system-config-kickstart.glade.h:163
 msgid "_About"
 msgstr "_Quant a"
 
-#: tmp/system-config-kickstart.glade.h:181
+#: tmp/system-config-kickstart.glade.h:164
 msgid "_Add"
 msgstr "_Afegeix"
 
-#: tmp/system-config-kickstart.glade.h:182
+#: tmp/system-config-kickstart.glade.h:165
 msgid "_Add Network Device"
 msgstr "_Afegeix un dispositiu de xarxa"
 
-#: tmp/system-config-kickstart.glade.h:183
+#: tmp/system-config-kickstart.glade.h:166
 msgid "_Contents"
 msgstr "_Continguts"
 
-#: tmp/system-config-kickstart.glade.h:184
+#: tmp/system-config-kickstart.glade.h:167
 msgid "_Delete"
 msgstr "_Suprimeix"
 
-#: tmp/system-config-kickstart.glade.h:185
+#: tmp/system-config-kickstart.glade.h:168
 msgid "_Delete Network Device"
 msgstr "_Suprimeix un dispositiu de xarxa"
 
-#: tmp/system-config-kickstart.glade.h:186
+#: tmp/system-config-kickstart.glade.h:169
 msgid "_Edit"
 msgstr "_Edita"
 
-#: tmp/system-config-kickstart.glade.h:187
+#: tmp/system-config-kickstart.glade.h:170
 msgid "_Edit Network Device"
 msgstr "_Edita un dispositiu de xarxa"
 
-#: tmp/system-config-kickstart.glade.h:188
+#: tmp/system-config-kickstart.glade.h:171
 msgid "_File"
 msgstr "_Fitxer"
 
-#: tmp/system-config-kickstart.glade.h:189
+#: tmp/system-config-kickstart.glade.h:172
 msgid "_Help"
 msgstr "_Ajuda"
 
-#: tmp/system-config-kickstart.glade.h:190
+#: tmp/system-config-kickstart.glade.h:173
 msgid "_Open File"
 msgstr "_Obre el fitxer"
 
-#: tmp/system-config-kickstart.glade.h:191
+#: tmp/system-config-kickstart.glade.h:174
 msgid "_Preview"
 msgstr "Visualització _prèvia"
 
-#: tmp/system-config-kickstart.glade.h:192
+#: tmp/system-config-kickstart.glade.h:175
 msgid "_Quit"
 msgstr "_Surt"
 
-#: tmp/system-config-kickstart.glade.h:193
+#: tmp/system-config-kickstart.glade.h:176
 msgid "_Save File"
 msgstr "_Desa el fitxer"
 
-#: tmp/system-config-kickstart.glade.h:194
+#: tmp/system-config-kickstart.glade.h:177
 msgid "_Save to File"
 msgstr "_Desa al fitxer"
 
-#: tmp/system-config-kickstart.glade.h:197
-msgid "kHz"
-msgstr "kHz"
-
-#: tmp/system-config-kickstart.glade.h:198
+#: tmp/system-config-kickstart.glade.h:180
 msgid "md0"
 msgstr "md0"
 
-#: tmp/system-config-kickstart.glade.h:199
+#: tmp/system-config-kickstart.glade.h:181
 msgid "md1"
 msgstr "md1"
 
-#: tmp/system-config-kickstart.glade.h:200
+#: tmp/system-config-kickstart.glade.h:182
 msgid "md10"
 msgstr "md10"
 
-#: tmp/system-config-kickstart.glade.h:201
+#: tmp/system-config-kickstart.glade.h:183
 msgid "md11"
 msgstr "md11"
 
-#: tmp/system-config-kickstart.glade.h:202
+#: tmp/system-config-kickstart.glade.h:184
 msgid "md12"
 msgstr "md12"
 
-#: tmp/system-config-kickstart.glade.h:203
+#: tmp/system-config-kickstart.glade.h:185
 msgid "md13"
 msgstr "md13"
 
-#: tmp/system-config-kickstart.glade.h:204
+#: tmp/system-config-kickstart.glade.h:186
 msgid "md14"
 msgstr "md14"
 
-#: tmp/system-config-kickstart.glade.h:205
+#: tmp/system-config-kickstart.glade.h:187
 msgid "md15"
 msgstr "md15"
 
-#: tmp/system-config-kickstart.glade.h:206
+#: tmp/system-config-kickstart.glade.h:188
 msgid "md2"
 msgstr "md2"
 
-#: tmp/system-config-kickstart.glade.h:207
+#: tmp/system-config-kickstart.glade.h:189
 msgid "md3"
 msgstr "md3"
 
-#: tmp/system-config-kickstart.glade.h:208
+#: tmp/system-config-kickstart.glade.h:190
 msgid "md4"
 msgstr "md4"
 
-#: tmp/system-config-kickstart.glade.h:209
+#: tmp/system-config-kickstart.glade.h:191
 msgid "md5"
 msgstr "md5"
 
-#: tmp/system-config-kickstart.glade.h:210
+#: tmp/system-config-kickstart.glade.h:192
 msgid "md6"
 msgstr "md6"
 
-#: tmp/system-config-kickstart.glade.h:211
+#: tmp/system-config-kickstart.glade.h:193
 msgid "md7"
 msgstr "md7"
 
-#: tmp/system-config-kickstart.glade.h:212
+#: tmp/system-config-kickstart.glade.h:194
 msgid "md8"
 msgstr "md8"
 
-#: tmp/system-config-kickstart.glade.h:213
+#: tmp/system-config-kickstart.glade.h:195
 msgid "md9"
 msgstr "md9"
+
+#~ msgid "Could not read video driver database"
+#~ msgstr "No s'ha pogut llegir la base de dades de controladors de vídeo"
+
+#~ msgid "Please select an X driver."
+#~ msgstr "Seleccioneu un controlador d'X."
+
+#~ msgid "Please select a monitor."
+#~ msgstr "Seleccioneu un monitor."
+
+#~ msgid "Color Depth"
+#~ msgstr "Profunditat de color"
+
+#~ msgid "Default Desktop:"
+#~ msgstr "Escriptori predeterminat:"
+
+#~ msgid "GNOME"
+#~ msgstr "GNOME"
+
+#~ msgid "General"
+#~ msgstr "General"
+
+#~ msgid "Horizontal Sync:"
+#~ msgstr "Sincronització horitzontal:"
+
+#~ msgid "Hz"
+#~ msgstr "Hz"
+
+#~ msgid "KDE"
+#~ msgstr "KDE"
+
+#~ msgid "Monitor"
+#~ msgstr "Monitor"
+
+#~ msgid "Probe for monitor"
+#~ msgstr "Prova el monitor"
+
+#~ msgid "Probe for video card driver"
+#~ msgstr "Prova controladors per a la targeta de vídeo"
+
+#~ msgid "Resolution"
+#~ msgstr "Resolució"
+
+#~ msgid "Start the X Window System on boot"
+#~ msgstr "Inicia el sistema de finestres X a l'arrencada"
+
+#~ msgid "Use MD5"
+#~ msgstr "Utilitza l'MD5"
+
+#~ msgid "Use custom monitor sync rates"
+#~ msgstr "Utilitza freqüències de sincronització del monitor personalitzades"
+
+#~ msgid "Vertical Sync:"
+#~ msgstr "Sincronització vertical:"
+
+#~ msgid "Video Card"
+#~ msgstr "Targeta de vídeo"
+
+#~ msgid "Video Card RAM: "
+#~ msgstr "Targeta de vídeo RAM:"
+
+#~ msgid "kHz"
+#~ msgstr "kHz"
 
 #~ msgid "."
 #~ msgstr "."

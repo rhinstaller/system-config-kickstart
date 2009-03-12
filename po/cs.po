@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-29 17:26-0400\n"
+"POT-Creation-Date: 2009-03-12 17:02-0400\n"
 "PO-Revision-Date: 2007-09-04 22:50+0200\n"
 "Last-Translator: Adam Přibyl <pribyl@lowlevel.cz>\n"
 "Language-Team: Czech <fedora-cs-list@redhat.com>\n"
@@ -21,97 +21,97 @@ msgstr ""
 "Generated-By: pygettext.py 1.1\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/auth.py:343
+#: ../src/auth.py:350
 msgid "Please fill in the authentication information"
 msgstr "Vyplňte prosím informace o autentizaci"
 
-#: ../src/basic.py:71
+#: ../src/basic.py:72
 msgid "x86, AMD64, or Intel EM64T"
 msgstr "x86, AMD64, nebo Intel EM64T"
 
-#: ../src/basic.py:71
+#: ../src/basic.py:72
 msgid "Intel Itanium"
 msgstr "Intel Itanium"
 
-#: ../src/basic.py:71
+#: ../src/basic.py:72
 msgid "IBM iSeries"
 msgstr "IBM iSeries"
 
-#: ../src/basic.py:72
+#: ../src/basic.py:73
 msgid "IBM pSeries"
 msgstr "IBM pSeries"
 
-#: ../src/basic.py:72
+#: ../src/basic.py:73
 msgid "IBM zSeries/s390"
 msgstr "IBM zSeries/s390"
 
-#: ../src/basic.py:152
+#: ../src/basic.py:149
 msgid "Root passwords do not match."
 msgstr "Hesla uživatele root nesouhlasí."
 
-#: ../src/basic.py:153 ../src/install.py:216 ../src/partWindow.py:550
-#: ../src/partition.py:255 ../src/raidWindow.py:252
+#: ../src/basic.py:150 ../src/install.py:217 ../src/partWindow.py:554
+#: ../src/partition.py:256 ../src/raidWindow.py:250
 msgid "Error"
 msgstr "Chyba"
 
-#: ../src/bootloader.py:84
+#: ../src/bootloader.py:147
+msgid "Grub passwords do not match.  Please try again."
+msgstr "Hesla pro Grub nesouhlasí. Zkuste to prosím znovu."
+
+#: ../src/bootloader.py:198
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
 msgstr "Volby pro zavaděč nemají na platformě %s význam"
 
-#: ../src/bootloader.py:124
-msgid "Grub passwords do not match.  Please try again."
-msgstr "Hesla pro Grub nesouhlasí. Zkuste to prosím znovu."
-
-#: ../src/firewall.py:60
+#: ../src/firewall.py:58
 msgid "Trusted services:"
 msgstr "Důvěryhodné služby:"
 
-#: ../src/firewall.py:92
+#: ../src/firewall.py:90
 msgid "Other ports: (1029:tcp)"
 msgstr "Ostatní porty: (1029:tcp)"
 
-#: ../src/install.py:131
+#: ../src/install.py:132
 msgid "Please enter an NFS server."
 msgstr "Zadejte prosím NFS server."
 
-#: ../src/install.py:134
+#: ../src/install.py:135
 msgid "Please enter an NFS directory."
 msgstr "Zadejte prosím adresář NFS."
 
-#: ../src/install.py:145
+#: ../src/install.py:146
 msgid "Please enter an FTP server."
 msgstr "Zadejte prosím FTP server."
 
-#: ../src/install.py:152
+#: ../src/install.py:153
 msgid "Please enter an FTP directory."
 msgstr "Zadejte prosím adresář FTP."
 
-#: ../src/install.py:158
+#: ../src/install.py:159
 msgid "Please enter an FTP user name."
 msgstr "Zadejte prosím jméno uživatele pro FTP."
 
-#: ../src/install.py:161
+#: ../src/install.py:162
 msgid "Please enter an FTP password."
 msgstr "Zadejte prosím heslo pro FTP."
 
-#: ../src/install.py:177
+#: ../src/install.py:178
 msgid "Please enter an HTTP server."
 msgstr "Zadejte prosím HTTP server."
 
-#: ../src/install.py:180
+#: ../src/install.py:181
 msgid "Please enter an HTTP server directory."
 msgstr "Zadejte prosím adresář na HTTP serveru."
 
-#: ../src/install.py:202
+#: ../src/install.py:203
 msgid "Please enter a hard drive directory."
 msgstr "Zadejte prosím adresář na disku."
 
-#: ../src/install.py:205
+#: ../src/install.py:206
 msgid "Please enter a hard drive partition."
 msgstr "Zadejte prosím oddíl na disku."
 
-#: ../src/kickstartGui.py:94 ../src/kickstartGui.py:286
+#: ../src/kickstartGui.py:92 ../src/kickstartGui.py:290
 #, python-format
 msgid ""
 "The following error was found while parsing your kickstart configuration:\n"
@@ -122,67 +122,72 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../src/kickstartGui.py:97 ../src/kickstartGui.py:289
+#: ../src/kickstartGui.py:95 ../src/kickstartGui.py:293
+#, fuzzy, python-format
+msgid "The kickstart file %s could not be opened."
+msgstr "Nemohu přistupovat k souboru \"%s\"."
+
+#: ../src/kickstartGui.py:100 ../src/kickstartGui.py:298
 msgid "Error Parsing Kickstart Config"
 msgstr "Chyba při parsování kickstart souboru"
 
-#: ../src/kickstartGui.py:105
+#: ../src/kickstartGui.py:108
 msgid "Kickstart"
 msgstr "Kickstart"
 
-#: ../src/kickstartGui.py:106
+#: ../src/kickstartGui.py:109
 msgid "Create a kickstart file"
 msgstr "Vytvořit soubor kickstart"
 
-#: ../src/kickstartGui.py:128
+#: ../src/kickstartGui.py:131
 msgid "Subsection"
 msgstr "Podoblast"
 
-#: ../src/kickstartGui.py:132
+#: ../src/kickstartGui.py:135
 msgid "Basic Configuration"
 msgstr "Základní nastavení"
 
-#: ../src/kickstartGui.py:133
+#: ../src/kickstartGui.py:136
 msgid "Installation Method"
 msgstr "Metoda instalace"
 
-#: ../src/kickstartGui.py:134
+#: ../src/kickstartGui.py:137
 msgid "Boot Loader Options"
 msgstr "Volby pro zavaděč"
 
-#: ../src/kickstartGui.py:135
+#: ../src/kickstartGui.py:138
 msgid "Partition Information"
 msgstr "Informace oddílech"
 
-#: ../src/kickstartGui.py:136 tmp/system-config-kickstart.glade.h:110
+#: ../src/kickstartGui.py:139 tmp/system-config-kickstart.glade.h:102
 msgid "Network Configuration"
 msgstr "Nastavení sítě"
 
-#: ../src/kickstartGui.py:137
+#: ../src/kickstartGui.py:140
 msgid "Authentication"
 msgstr "Autentizace"
 
-#: ../src/kickstartGui.py:138 tmp/system-config-kickstart.glade.h:52
+#: ../src/kickstartGui.py:141 tmp/system-config-kickstart.glade.h:50
 msgid "Firewall Configuration"
 msgstr "Nastavení firewallu"
 
-#: ../src/kickstartGui.py:139 tmp/system-config-kickstart.glade.h:28
+#: ../src/kickstartGui.py:142 tmp/system-config-kickstart.glade.h:26
 msgid "Display Configuration"
 msgstr "Nastavení zobrazování"
 
-#: ../src/kickstartGui.py:140 tmp/system-config-kickstart.glade.h:116
+#: ../src/kickstartGui.py:143 tmp/system-config-kickstart.glade.h:108
 msgid "Package Selection"
 msgstr "Výběr balíčků"
 
-#: ../src/kickstartGui.py:141 tmp/system-config-kickstart.glade.h:126
+#: ../src/kickstartGui.py:144 tmp/system-config-kickstart.glade.h:118
 msgid "Pre-Installation Script"
 msgstr "Předinstalační skript"
 
-#: ../src/kickstartGui.py:142 tmp/system-config-kickstart.glade.h:125
+#: ../src/kickstartGui.py:145 tmp/system-config-kickstart.glade.h:117
 msgid "Post-Installation Script"
 msgstr "Poinstalační skript"
 
-#: ../src/kickstartGui.py:207
+#: ../src/kickstartGui.py:210
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -196,118 +201,131 @@ msgstr ""
 " Copyright © 2000-2002 Tammy Fox <tfox@redhat.com>\n"
 " Grafické rozhraní pro vytváření souboru kickstart"
 
-#: ../src/kickstartGui.py:208
+#: ../src/kickstartGui.py:211
 msgid "About Kickstart Configurator"
 msgstr "O Nastavení kickstartu"
 
-#: ../src/kickstartGui.py:230
+#: ../src/kickstartGui.py:233
 msgid "Help is not available."
 msgstr "Nápověda není k dispozici."
 
-#: ../src/kickstartGui.py:310
+#: ../src/kickstartGui.py:319
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "Nemohu přistupovat k souboru \"%s\"."
 
-#: ../src/network.py:76
+#: ../src/network.py:74
 msgid "Device"
 msgstr "Zařízení"
 
-#: ../src/network.py:79
+#: ../src/network.py:77
 msgid "Network Type"
 msgstr "Typ sítě"
 
-#: ../src/network.py:97 ../src/network.py:143 ../src/network.py:225
-#: ../src/network.py:281 ../src/network.py:376
+#: ../src/network.py:95 ../src/network.py:144 ../src/network.py:226
+#: ../src/network.py:282 ../src/network.py:377
 msgid "Static IP"
 msgstr "Statická IP"
 
-#: ../src/network.py:190 ../src/network.py:249
+#: ../src/network.py:191 ../src/network.py:250
 msgid "Please fill in the network information"
 msgstr "Vyplňte prosím informace o síti"
 
-#: ../src/network.py:202 ../src/network.py:261
+#: ../src/network.py:203 ../src/network.py:262
 msgid "Please enter a valid gateway address."
 msgstr "Zadejte prosím platnou adresu brány."
 
-#: ../src/network.py:214 ../src/network.py:273
+#: ../src/network.py:215 ../src/network.py:274
 msgid "Please enter a valid nameserver address."
 msgstr "Zadejte prosím platnou adresu jmenného serveru (DNS)."
 
-#: ../src/network.py:301
+#: ../src/network.py:302
 #, python-format
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
-msgstr "Síťové zařízení se jménem %s již existuje. Zvolte prosím jiné jméno zařízení"
+msgstr ""
+"Síťové zařízení se jménem %s již existuje. Zvolte prosím jiné jméno zařízení"
 
-#: ../src/packages.py:171
-msgid "Package configuration is not applicable on upgrades."
-msgstr "Konfigurování balíčků nemá při aktualizaci význam."
+#: ../src/packages.py:146
+#, python-format
+msgid ""
+"Package selection is disabled due to an error in setup.  Please fix your "
+"repository configuration and try again.\n"
+"\n"
+"%s"
+msgstr ""
 
-#: ../src/packages.py:177
+#: ../src/packages.py:199
 msgid "Retrieving package information"
 msgstr "Stahuji informace o balíčku"
 
-#: ../src/packages.py:186
+#: ../src/packages.py:227
+msgid "Package configuration is not applicable on upgrades."
+msgstr "Konfigurování balíčků nemá při aktualizaci význam."
+
+#: ../src/packages.py:239
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
-msgstr "Výběr balíčků byl deaktivován, protože při stahování popisů došlo k chybě."
+msgstr ""
+"Výběr balíčků byl deaktivován, protože při stahování popisů došlo k chybě."
 
-#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:195
+#: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:178
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:196
+#: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:179
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:89 ../src/partWindow.py:152
+#: ../src/partWindow.py:87 ../src/partWindow.py:156
 msgid "software RAID"
 msgstr "softwarový RAID"
 
-#: ../src/partWindow.py:90 tmp/system-config-kickstart.glade.h:214
+#: ../src/partWindow.py:88 tmp/system-config-kickstart.glade.h:196
 msgid "swap"
 msgstr "swap"
 
-#: ../src/partWindow.py:90 tmp/system-config-kickstart.glade.h:215
+#: ../src/partWindow.py:88 tmp/system-config-kickstart.glade.h:197
 msgid "vfat"
 msgstr "vfat"
 
-#: ../src/partWindow.py:91
+#: ../src/partWindow.py:89
 msgid "PPC PReP Boot"
 msgstr "PPC PReP Boot"
 
-#: ../src/partWindow.py:291 ../src/partWindow.py:572 ../src/raidWindow.py:217
+#: ../src/partWindow.py:295 ../src/partWindow.py:576 ../src/raidWindow.py:215
 msgid "Yes"
 msgstr "Ano"
 
-#: ../src/partWindow.py:293 ../src/partWindow.py:574 ../src/raidWindow.py:219
+#: ../src/partWindow.py:297 ../src/partWindow.py:578 ../src/raidWindow.py:217
 msgid "No"
 msgstr "Ne"
 
-#: ../src/partWindow.py:316 ../src/partWindow.py:331 ../src/partWindow.py:350
-#: ../src/partWindow.py:364
+#: ../src/partWindow.py:320 ../src/partWindow.py:335 ../src/partWindow.py:354
+#: ../src/partWindow.py:368
 msgid "Auto"
 msgstr "Auto"
 
-#: ../src/partWindow.py:325
+#: ../src/partWindow.py:329
 msgid "Hard Drives"
 msgstr "Pevné disky"
 
-#: ../src/partWindow.py:468
+#: ../src/partWindow.py:472
 msgid "Specify a mount point for the partition."
 msgstr "Zadejte místo připojení tento oddíl"
 
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:477
+#: ../src/partWindow.py:481
 #, python-format
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr "Místo připojení \"%s\" je již použito. Zvolte prosím jiné místo připojení."
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr ""
+"Místo připojení \"%s\" je již použito. Zvolte prosím jiné místo připojení."
 
-#: ../src/partWindow.py:497
+#: ../src/partWindow.py:501
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -315,11 +333,11 @@ msgstr ""
 "Pro vytvoření nového oddílu RAID musíte zadat buď pevný disk nebo existující "
 "oddíl."
 
-#: ../src/partWindow.py:534
+#: ../src/partWindow.py:538
 msgid "Specify a device on which to create the partition."
 msgstr "Zadejte zařízení, na kterém má být oddíl vytvořen."
 
-#: ../src/partWindow.py:543
+#: ../src/partWindow.py:547
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -327,7 +345,7 @@ msgstr ""
 "Určený oddíl nekončí číslicí. Oddíly musí obsahovat číslo oddílu, např. "
 "\"hda1\" nebo \"sda3\"."
 
-#: ../src/partition.py:74
+#: ../src/partition.py:72
 msgid ""
 "Device/\n"
 "Partition Number"
@@ -335,7 +353,7 @@ msgstr ""
 "Zařízení/\n"
 "Číslo oddílu"
 
-#: ../src/partition.py:76
+#: ../src/partition.py:74
 msgid ""
 "Mount Point/\n"
 "RAID"
@@ -343,52 +361,53 @@ msgstr ""
 "Místo připojení/\n"
 "RAID"
 
-#: ../src/partition.py:78
+#: ../src/partition.py:76
 msgid "Type"
 msgstr "Typ"
 
-#: ../src/partition.py:80
+#: ../src/partition.py:78
 msgid "Format"
 msgstr "Formátovat"
 
-#: ../src/partition.py:82
+#: ../src/partition.py:80
 msgid "Size (MB)"
 msgstr "Velikost (MB)"
 
-#: ../src/partition.py:97 ../src/partition.py:137
+#: ../src/partition.py:98 ../src/partition.py:138
 msgid "Please select a partition from the list."
 msgstr "Vyberte prosím oddíl ze seznamu."
 
-#: ../src/raidOptionsWindow.py:75
+#: ../src/raidOptionsWindow.py:72
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
 msgstr "Aktuálně máte k dispozici %d oddílů softwarového RAID."
 
-#: ../src/raidWindow.py:177
+#: ../src/raidWindow.py:175
 #, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
 msgstr "Pro použití RAID %s musíte zadat alespoň dva oddíly"
 
-#: ../src/raidWindow.py:183
+#: ../src/raidWindow.py:181
 #, python-format
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "Pro použití RAID %s musíte zvolit alespoň 3 oddíly"
 
-#: ../src/raidWindow.py:197 ../src/raidWindow.py:223
+#: ../src/raidWindow.py:195 ../src/raidWindow.py:221
 msgid "Raid Devices"
 msgstr "RAID zařízení"
 
-#: ../src/xconfig.py:125
-msgid "Could not read video driver database"
-msgstr "Nemohu číst databázi ovladačů videa"
+#: ../src/savedialog.py:72
+#, fuzzy, python-format
+msgid "The following error occurred while saving the kickstart config %s: %s"
+msgstr ""
+"Při parsování kickstart souboru byla nalezena následující chyba:\n"
+"\n"
+"%s"
 
-#: ../src/xconfig.py:230
-msgid "Please select an X driver."
-msgstr "Zvolte prosím ovladač pro X."
-
-#: ../src/xconfig.py:249
-msgid "Please select a monitor."
-msgstr "Zvolte prosím monitor."
+#: ../src/savedialog.py:76
+#, fuzzy
+msgid "Error Saving Kickstart Config"
+msgstr "Chyba při parsování kickstart souboru"
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -463,502 +482,458 @@ msgid "Clear Master Boot Record"
 msgstr "Vymazat hlavní zaváděcí záznam"
 
 #: tmp/system-config-kickstart.glade.h:19
-msgid "Color Depth"
-msgstr "Barevná hloubka"
-
-#: tmp/system-config-kickstart.glade.h:20
 msgid "Configure the X Window System"
 msgstr "Nastavit X Window System"
 
-#: tmp/system-config-kickstart.glade.h:21
+#: tmp/system-config-kickstart.glade.h:20
 msgid "Confirm Password:"
 msgstr "Potvrďte heslo:"
 
-#: tmp/system-config-kickstart.glade.h:22
+#: tmp/system-config-kickstart.glade.h:21
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "Vytvořit zařízení RAID [implicitní = /dev/md0]"
 
-#: tmp/system-config-kickstart.glade.h:23
+#: tmp/system-config-kickstart.glade.h:22
 msgid "Create a software RAID partition"
 msgstr "Vytvořit oddíl softwarového RAID"
 
-#: tmp/system-config-kickstart.glade.h:24
-msgid "Default Desktop:"
-msgstr "Implicitní prostředí pracovní plochy:"
-
-#: tmp/system-config-kickstart.glade.h:25
+#: tmp/system-config-kickstart.glade.h:23
 msgid "Default Language:"
 msgstr "Implicitní jazyk:"
 
-#: tmp/system-config-kickstart.glade.h:26
+#: tmp/system-config-kickstart.glade.h:24
 msgid "Disable firewall"
 msgstr "Zakázat firewall"
 
-#: tmp/system-config-kickstart.glade.h:27
+#: tmp/system-config-kickstart.glade.h:25
 msgid "Disabled"
 msgstr "Zakázán"
 
-#: tmp/system-config-kickstart.glade.h:29
+#: tmp/system-config-kickstart.glade.h:27
 msgid "Display configuration is not applicable on upgrades."
 msgstr "Nastavení zobrazování nemá pro aktualizace význam."
 
-#: tmp/system-config-kickstart.glade.h:30
+#: tmp/system-config-kickstart.glade.h:28
 msgid "Do not clear Master Boot Record"
 msgstr "Nemazat hlavní zaváděcí záznam"
 
-#: tmp/system-config-kickstart.glade.h:31
+#: tmp/system-config-kickstart.glade.h:29
 msgid "Do not initialize the disk label"
 msgstr "Nenastavovat jmenovku disku"
 
-#: tmp/system-config-kickstart.glade.h:32
+#: tmp/system-config-kickstart.glade.h:30
 msgid "Do not install a boot loader"
 msgstr "Neinstalovat zavaděč systému"
 
-#: tmp/system-config-kickstart.glade.h:33
+#: tmp/system-config-kickstart.glade.h:31
 msgid "Drive :"
 msgstr "Disk:"
 
-#: tmp/system-config-kickstart.glade.h:34
+#: tmp/system-config-kickstart.glade.h:32
 msgid "Enable Hesiod Support"
 msgstr "Povolit podporu pro Hesiod"
 
-#: tmp/system-config-kickstart.glade.h:35
+#: tmp/system-config-kickstart.glade.h:33
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Povolit Kerberos 5 autentizaci"
 
-#: tmp/system-config-kickstart.glade.h:36
+#: tmp/system-config-kickstart.glade.h:34
 msgid "Enable LDAP"
 msgstr "Povolit LDAP"
 
-#: tmp/system-config-kickstart.glade.h:37
+#: tmp/system-config-kickstart.glade.h:35
 msgid "Enable NIS"
 msgstr "Povolit NIS"
 
-#: tmp/system-config-kickstart.glade.h:38
+#: tmp/system-config-kickstart.glade.h:36
 msgid "Enable SMB Authentication"
 msgstr "Povolit SMB autentizaci"
 
-#: tmp/system-config-kickstart.glade.h:39
+#: tmp/system-config-kickstart.glade.h:37
 msgid "Enable firewall"
 msgstr "Povolit firewall"
 
-#: tmp/system-config-kickstart.glade.h:40
+#: tmp/system-config-kickstart.glade.h:38
 msgid "Enable nscd"
 msgstr "Povolit nscd"
 
-#: tmp/system-config-kickstart.glade.h:41
+#: tmp/system-config-kickstart.glade.h:39
 msgid "Enabled"
 msgstr "Povolen"
 
-#: tmp/system-config-kickstart.glade.h:42
+#: tmp/system-config-kickstart.glade.h:40
 msgid "Enabled in reconfiguration mode"
 msgstr "Povolen v režimu rekonfigurace"
 
-#: tmp/system-config-kickstart.glade.h:43
+#: tmp/system-config-kickstart.glade.h:41
 msgid "Encrypt GRUB password"
 msgstr "Šifrovat heslo pro GRUB"
 
-#: tmp/system-config-kickstart.glade.h:44
+#: tmp/system-config-kickstart.glade.h:42
 msgid "Encrypt root password"
 msgstr "Šifrovat heslo pro uživatele root"
 
-#: tmp/system-config-kickstart.glade.h:45
+#: tmp/system-config-kickstart.glade.h:43
 msgid "FTP"
 msgstr "FTP"
 
-#: tmp/system-config-kickstart.glade.h:46
+#: tmp/system-config-kickstart.glade.h:44
 msgid "FTP Directory:"
 msgstr "FTP adresář:"
 
-#: tmp/system-config-kickstart.glade.h:47
+#: tmp/system-config-kickstart.glade.h:45
 msgid "FTP Password"
 msgstr "Heslo pro FTP"
 
-#: tmp/system-config-kickstart.glade.h:48
+#: tmp/system-config-kickstart.glade.h:46
 msgid "FTP Server:"
 msgstr "FTP server:"
 
-#: tmp/system-config-kickstart.glade.h:49
+#: tmp/system-config-kickstart.glade.h:47
 msgid "FTP Username"
 msgstr "Jméno uživatele pro FTP:"
 
-#: tmp/system-config-kickstart.glade.h:50
+#: tmp/system-config-kickstart.glade.h:48
 msgid "File System Type:"
 msgstr "Typ systému souborů:"
 
-#: tmp/system-config-kickstart.glade.h:51
+#: tmp/system-config-kickstart.glade.h:49
 msgid "Fill all unused space on disk"
 msgstr "Vyplnit všechno volné místo na disku"
 
-#: tmp/system-config-kickstart.glade.h:53
+#: tmp/system-config-kickstart.glade.h:51
 msgid "Firewall configuration is not applicable on upgrades."
 msgstr "Nastavení firewallu nemá pro aktualizace význam."
 
-#: tmp/system-config-kickstart.glade.h:54
+#: tmp/system-config-kickstart.glade.h:52
 msgid "Fixed size"
 msgstr "Pevná velikost"
 
-#: tmp/system-config-kickstart.glade.h:55
+#: tmp/system-config-kickstart.glade.h:53
 msgid "Force to be a primary partition (asprimary)"
 msgstr "Nastavit oddíl jako primární (asprimary)"
 
-#: tmp/system-config-kickstart.glade.h:56
+#: tmp/system-config-kickstart.glade.h:54
 msgid "Format RAID device"
 msgstr "Zformátovat RAID zařízení"
 
-#: tmp/system-config-kickstart.glade.h:57
+#: tmp/system-config-kickstart.glade.h:55
 msgid "Format partition"
 msgstr "Formátovat oddíl"
 
-#: tmp/system-config-kickstart.glade.h:58
-msgid "GNOME"
-msgstr "GNOME"
-
-#: tmp/system-config-kickstart.glade.h:59
+#: tmp/system-config-kickstart.glade.h:56
 msgid "GRUB Options:"
 msgstr "Volby pro GRUB:"
 
-#: tmp/system-config-kickstart.glade.h:60
+#: tmp/system-config-kickstart.glade.h:57
 msgid "Gateway:"
 msgstr "Brána:"
 
-#: tmp/system-config-kickstart.glade.h:61
-msgid "General"
-msgstr "Obecné"
-
-#: tmp/system-config-kickstart.glade.h:62
+#: tmp/system-config-kickstart.glade.h:58
 msgid "Grow to maximum of (MB):"
 msgstr "Vyplnit maximálně (MB):"
 
-#: tmp/system-config-kickstart.glade.h:63
+#: tmp/system-config-kickstart.glade.h:59
 msgid "HTTP"
 msgstr "HTTP"
 
-#: tmp/system-config-kickstart.glade.h:64
+#: tmp/system-config-kickstart.glade.h:60
 msgid "HTTP Directory:"
 msgstr "HTTP adresář:"
 
-#: tmp/system-config-kickstart.glade.h:65
+#: tmp/system-config-kickstart.glade.h:61
 msgid "HTTP Server:"
 msgstr "HTTP server:"
 
-#: tmp/system-config-kickstart.glade.h:66
+#: tmp/system-config-kickstart.glade.h:62
 msgid "Hard Drive"
 msgstr "Pevný disk"
 
-#: tmp/system-config-kickstart.glade.h:67
+#: tmp/system-config-kickstart.glade.h:63
 msgid "Hard Drive Directory:"
 msgstr "Adresář disku"
 
-#: tmp/system-config-kickstart.glade.h:68
+#: tmp/system-config-kickstart.glade.h:64
 msgid "Hard Drive Partition:"
 msgstr "Oddíl na disku:"
 
-#: tmp/system-config-kickstart.glade.h:69
+#: tmp/system-config-kickstart.glade.h:65
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: tmp/system-config-kickstart.glade.h:70
+#: tmp/system-config-kickstart.glade.h:66
 msgid "Hesiod Authentication"
 msgstr "Hesiod autentizace"
 
-#: tmp/system-config-kickstart.glade.h:71
+#: tmp/system-config-kickstart.glade.h:67
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS:"
 
-#: tmp/system-config-kickstart.glade.h:72
+#: tmp/system-config-kickstart.glade.h:68
 msgid "Hesiod RHS:"
 msgstr "Hesiod RHS:"
 
-#: tmp/system-config-kickstart.glade.h:73
-msgid "Horizontal Sync:"
-msgstr "Horiz. frekvence:"
-
-#: tmp/system-config-kickstart.glade.h:74
-msgid "Hz"
-msgstr "Hz"
-
-#: tmp/system-config-kickstart.glade.h:75
+#: tmp/system-config-kickstart.glade.h:69
 msgid "IP Address:"
 msgstr "IP adresa:"
 
-#: tmp/system-config-kickstart.glade.h:76
+#: tmp/system-config-kickstart.glade.h:70
 msgid "Initialize the disk label"
 msgstr "Inicializovat jmenovku disku"
 
-#: tmp/system-config-kickstart.glade.h:77
+#: tmp/system-config-kickstart.glade.h:71
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "Zavaděč instalovat do hlavního zaváděcího záznamu (MBR) "
 
-#: tmp/system-config-kickstart.glade.h:78
+#: tmp/system-config-kickstart.glade.h:72
 msgid "Install boot loader on first sector of the boot partition"
 msgstr "Zavaděč instalovat do prvního sektoru zaváděcího oddílu"
 
-#: tmp/system-config-kickstart.glade.h:79
+#: tmp/system-config-kickstart.glade.h:73
 msgid "Install new boot loader"
 msgstr "Nainstalovat nový zavaděč"
 
-#: tmp/system-config-kickstart.glade.h:80
+#: tmp/system-config-kickstart.glade.h:74
 msgid "Installation Method (required)"
 msgstr "Metoda instalace (povinné)"
 
-#: tmp/system-config-kickstart.glade.h:81
-msgid "KDE"
-msgstr "KDE"
-
-#: tmp/system-config-kickstart.glade.h:82
+#: tmp/system-config-kickstart.glade.h:75
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: tmp/system-config-kickstart.glade.h:83
+#: tmp/system-config-kickstart.glade.h:76
 msgid "Kerberos 5 Authentication"
 msgstr "Kerberos 5 autentizace"
 
-#: tmp/system-config-kickstart.glade.h:84
+#: tmp/system-config-kickstart.glade.h:77
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Doménový kontrolér pro Kerberos (KDC):"
 
-#: tmp/system-config-kickstart.glade.h:85
+#: tmp/system-config-kickstart.glade.h:78
 msgid "Kerberos Master Server:"
 msgstr "Master server pro Kerberos:"
 
-#: tmp/system-config-kickstart.glade.h:86
+#: tmp/system-config-kickstart.glade.h:79
 msgid "Kerberos Realm:"
 msgstr "Realm pro Kerberos:"
 
-#: tmp/system-config-kickstart.glade.h:87
+#: tmp/system-config-kickstart.glade.h:80
 msgid "Kernel parameters:"
 msgstr "Parametry jádra:"
 
-#: tmp/system-config-kickstart.glade.h:88
+#: tmp/system-config-kickstart.glade.h:81
 msgid "Keyboard:"
 msgstr "Klávesnice:"
 
-#: tmp/system-config-kickstart.glade.h:89
+#: tmp/system-config-kickstart.glade.h:82
 msgid "Kickstart Configurator"
 msgstr "Nastavení kickstartu"
 
-#: tmp/system-config-kickstart.glade.h:90
+#: tmp/system-config-kickstart.glade.h:83
 msgid "LDAP "
 msgstr "LDAP "
 
-#: tmp/system-config-kickstart.glade.h:91
+#: tmp/system-config-kickstart.glade.h:84
 msgid "LDAP Authentication"
 msgstr "LDAP autentizace"
 
-#: tmp/system-config-kickstart.glade.h:92
+#: tmp/system-config-kickstart.glade.h:85
 msgid "LDAP Base Name: "
 msgstr "Základní jméno LDAP: "
 
-#: tmp/system-config-kickstart.glade.h:93
+#: tmp/system-config-kickstart.glade.h:86
 msgid "LDAP Server: "
 msgstr "LDAP server: "
 
-#: tmp/system-config-kickstart.glade.h:94
+#: tmp/system-config-kickstart.glade.h:87
 msgid "Load CA certificate"
 msgstr "Zavést CA certifikát"
 
-#: tmp/system-config-kickstart.glade.h:95
+#: tmp/system-config-kickstart.glade.h:88
 msgid "Make RAID Device"
 msgstr "Vytvořit RAID zařízení"
 
-#: tmp/system-config-kickstart.glade.h:96
+#: tmp/system-config-kickstart.glade.h:89
 msgid "Make partition on specific drive (ondisk)"
 msgstr "Vytvořit oddíl na určitém disku (ondisk)"
 
-#: tmp/system-config-kickstart.glade.h:97
-msgid "Monitor"
-msgstr "Monitor"
-
-#: tmp/system-config-kickstart.glade.h:98
+#: tmp/system-config-kickstart.glade.h:90
 msgid "Mount Point:"
 msgstr "Místo připojení:"
 
-#: tmp/system-config-kickstart.glade.h:99
+#: tmp/system-config-kickstart.glade.h:91
 msgid "NFS"
 msgstr "NFS"
 
-#: tmp/system-config-kickstart.glade.h:100
+#: tmp/system-config-kickstart.glade.h:92
 msgid "NFS Directory:"
 msgstr "NFS adresář:"
 
-#: tmp/system-config-kickstart.glade.h:101
+#: tmp/system-config-kickstart.glade.h:93
 msgid "NFS Server:"
 msgstr "NFS server:"
 
-#: tmp/system-config-kickstart.glade.h:102
+#: tmp/system-config-kickstart.glade.h:94
 msgid "NIS"
 msgstr "NIS"
 
-#: tmp/system-config-kickstart.glade.h:103
+#: tmp/system-config-kickstart.glade.h:95
 msgid "NIS Authentication"
 msgstr "NIS autentizace"
 
-#: tmp/system-config-kickstart.glade.h:104
+#: tmp/system-config-kickstart.glade.h:96
 msgid "NIS Domain:"
 msgstr "NIS doména:"
 
-#: tmp/system-config-kickstart.glade.h:105
+#: tmp/system-config-kickstart.glade.h:97
 msgid "NIS Server:"
 msgstr "NIS server:"
 
-#: tmp/system-config-kickstart.glade.h:106
+#: tmp/system-config-kickstart.glade.h:98
 msgid "Name Server:"
 msgstr "DNS server:"
 
-#: tmp/system-config-kickstart.glade.h:107
+#: tmp/system-config-kickstart.glade.h:99
 msgid "Name Switch Cache"
 msgstr "Name Switch Cache"
 
-#: tmp/system-config-kickstart.glade.h:108
+#: tmp/system-config-kickstart.glade.h:100
 msgid "Name Switch Cache Daemon (nscd) Authentication"
 msgstr "Autentizace Name Switch Cache Démona (nscd)"
 
-#: tmp/system-config-kickstart.glade.h:109
+#: tmp/system-config-kickstart.glade.h:101
 msgid "Netmask: "
 msgstr "Síť. maska: "
 
-#: tmp/system-config-kickstart.glade.h:111
+#: tmp/system-config-kickstart.glade.h:103
 msgid "Network Device Information"
 msgstr "Informace o síťovém zařízení"
 
-#: tmp/system-config-kickstart.glade.h:112
+#: tmp/system-config-kickstart.glade.h:104
 msgid "Network Device:"
 msgstr "Síťové zařízení:"
 
-#: tmp/system-config-kickstart.glade.h:113
+#: tmp/system-config-kickstart.glade.h:105
 msgid "Network Type:"
 msgstr "Typ sítě:"
 
-#: tmp/system-config-kickstart.glade.h:114
+#: tmp/system-config-kickstart.glade.h:106
 msgid "Number of spares:"
 msgstr "Počet rezerv:"
 
-#: tmp/system-config-kickstart.glade.h:115
+#: tmp/system-config-kickstart.glade.h:107
 msgid "On first boot, Setup Agent is: "
 msgstr "Při prvním startu je Setup Agent: "
 
-#: tmp/system-config-kickstart.glade.h:117
+#: tmp/system-config-kickstart.glade.h:109
 msgid "Partition :"
 msgstr "Oddíl:"
 
-#: tmp/system-config-kickstart.glade.h:118
+#: tmp/system-config-kickstart.glade.h:110
 msgid "Partition Information (required)"
 msgstr "Informace o oddílech (povinné)"
 
-#: tmp/system-config-kickstart.glade.h:119
+#: tmp/system-config-kickstart.glade.h:111
 msgid "Partition Options"
 msgstr "Volby pro oddíly"
 
-#: tmp/system-config-kickstart.glade.h:120
+#: tmp/system-config-kickstart.glade.h:112
 msgid "Partition options are not applicable on upgrades."
 msgstr "Volby pro oddíly nemají pro aktualizace význam."
 
-#: tmp/system-config-kickstart.glade.h:121
+#: tmp/system-config-kickstart.glade.h:113
 msgid "Password:"
 msgstr "Heslo:"
 
-#: tmp/system-config-kickstart.glade.h:122
+#: tmp/system-config-kickstart.glade.h:114
 msgid "Perform installation in interactive mode"
 msgstr "Instalovat v interaktivním režimu"
 
-#: tmp/system-config-kickstart.glade.h:123
+#: tmp/system-config-kickstart.glade.h:115
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "Instalovat v textovém režimu (implicitně v grafickém)"
 
-#: tmp/system-config-kickstart.glade.h:124
+#: tmp/system-config-kickstart.glade.h:116
 msgid "Perform new installation"
 msgstr "Provést novou instalaci"
 
-#: tmp/system-config-kickstart.glade.h:127
+#: tmp/system-config-kickstart.glade.h:119
 msgid "Preserve existing partitions"
 msgstr "Zachovat existující oddíly"
 
-#: tmp/system-config-kickstart.glade.h:128
+#: tmp/system-config-kickstart.glade.h:120
 msgid "Preview Options"
 msgstr "Volby pro prohlížení"
 
-#: tmp/system-config-kickstart.glade.h:129
-msgid "Probe for monitor"
-msgstr "Detekovat monitor"
-
-#: tmp/system-config-kickstart.glade.h:130
-msgid "Probe for video card driver"
-msgstr "Detekovat ovladač videokarty"
-
-#: tmp/system-config-kickstart.glade.h:131
+#: tmp/system-config-kickstart.glade.h:121
 msgid "RAID"
 msgstr "RAID"
 
-#: tmp/system-config-kickstart.glade.h:132
+#: tmp/system-config-kickstart.glade.h:122
 msgid "RAID Device:"
 msgstr "RAID zařízení:"
 
-#: tmp/system-config-kickstart.glade.h:133
+#: tmp/system-config-kickstart.glade.h:123
 msgid "RAID Level:"
 msgstr "Úroveň RAIDu:"
 
-#: tmp/system-config-kickstart.glade.h:134
+#: tmp/system-config-kickstart.glade.h:124
 msgid "RAID Options"
 msgstr "Volby pro RAID"
 
-#: tmp/system-config-kickstart.glade.h:135
+#: tmp/system-config-kickstart.glade.h:125
 msgid "Raid Members"
 msgstr "Členové RAID"
 
-#: tmp/system-config-kickstart.glade.h:136
+#: tmp/system-config-kickstart.glade.h:126
 msgid "Reboot system after installation"
 msgstr "Restartovat po instalaci systém"
 
-#: tmp/system-config-kickstart.glade.h:137
+#: tmp/system-config-kickstart.glade.h:127
 msgid "Remove all existing partitions"
 msgstr "Odstranit všechny existující oddíly"
 
-#: tmp/system-config-kickstart.glade.h:138
+#: tmp/system-config-kickstart.glade.h:128
 msgid "Remove existing Linux partitions"
 msgstr "Odstranit existující linuxové oddíly"
 
-#: tmp/system-config-kickstart.glade.h:139
-msgid "Resolution"
-msgstr "Rozlišení"
-
-#: tmp/system-config-kickstart.glade.h:140
+#: tmp/system-config-kickstart.glade.h:129
 msgid "Root Password:"
 msgstr "Heslo uživatele root:"
 
-#: tmp/system-config-kickstart.glade.h:141
+#: tmp/system-config-kickstart.glade.h:130
 msgid "Run outside of the chroot environment"
 msgstr "Spustit mimo prostředí chroot"
 
-#: tmp/system-config-kickstart.glade.h:142
+#: tmp/system-config-kickstart.glade.h:131
 msgid "SELinux:"
 msgstr "SELinux:"
 
-#: tmp/system-config-kickstart.glade.h:143
+#: tmp/system-config-kickstart.glade.h:132
 msgid "SMB"
 msgstr "SMB"
 
-#: tmp/system-config-kickstart.glade.h:144
+#: tmp/system-config-kickstart.glade.h:133
 msgid "SMB Authentication"
 msgstr "SMB autentizace"
 
-#: tmp/system-config-kickstart.glade.h:145
+#: tmp/system-config-kickstart.glade.h:134
 msgid "SMB Servers:"
 msgstr "SMB servery:"
 
-#: tmp/system-config-kickstart.glade.h:146
+#: tmp/system-config-kickstart.glade.h:135
 msgid "SMB Workgroup:"
 msgstr "SMB skupina:"
 
-#: tmp/system-config-kickstart.glade.h:147
+#: tmp/system-config-kickstart.glade.h:136
 msgid "Security level:"
 msgstr "Úroveň zabezpečení:"
 
-#: tmp/system-config-kickstart.glade.h:148
+#: tmp/system-config-kickstart.glade.h:137
 msgid "Size (MB):"
 msgstr "Velikost (MB):"
 
-#: tmp/system-config-kickstart.glade.h:149
+#: tmp/system-config-kickstart.glade.h:138
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -970,27 +945,23 @@ msgstr ""
 "spolehlivost než jednotlivý disk. Pro více informací o používání zařízení "
 "RAID si prosím přečtěte dokumentaci kickstartu."
 
-#: tmp/system-config-kickstart.glade.h:150
+#: tmp/system-config-kickstart.glade.h:139
 msgid "Specify an FTP username and password"
 msgstr "Určit jméno uživatele a heslo pro FTP"
 
-#: tmp/system-config-kickstart.glade.h:151
+#: tmp/system-config-kickstart.glade.h:140
 msgid "Specify installation key:"
 msgstr "Vložit instalační klíč:"
 
-#: tmp/system-config-kickstart.glade.h:152
-msgid "Start the X Window System on boot"
-msgstr "Spustit při startu X Window System"
-
-#: tmp/system-config-kickstart.glade.h:153
+#: tmp/system-config-kickstart.glade.h:141
 msgid "Target Architecture:"
 msgstr "Cílová architektura:"
 
-#: tmp/system-config-kickstart.glade.h:154
+#: tmp/system-config-kickstart.glade.h:142
 msgid "Time Zone:"
 msgstr "Časová zóna:"
 
-#: tmp/system-config-kickstart.glade.h:155
+#: tmp/system-config-kickstart.glade.h:143
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -999,77 +970,57 @@ msgstr ""
 "'softwarový RAID'. Pak můžete vytvořit zařízení RAID, které lze naformátovat "
 "a připojit."
 
-#: tmp/system-config-kickstart.glade.h:157
+#: tmp/system-config-kickstart.glade.h:145
 #, no-c-format
 msgid "Type your %post script below:"
 msgstr "Zadejte váš %post skript níže:"
 
-#: tmp/system-config-kickstart.glade.h:159
+#: tmp/system-config-kickstart.glade.h:147
 #, no-c-format
 msgid "Type your %pre script below:"
 msgstr "Vložte váš %pre skript níže:"
 
-#: tmp/system-config-kickstart.glade.h:160
+#: tmp/system-config-kickstart.glade.h:148
 msgid "Upgrade an existing installation"
 msgstr "Aktualizovat existující instalaci"
 
-#: tmp/system-config-kickstart.glade.h:161
+#: tmp/system-config-kickstart.glade.h:149
 msgid "Upgrade existing boot loader"
 msgstr "Aktualizovat existující zavaděč systému"
 
-#: tmp/system-config-kickstart.glade.h:162
+#: tmp/system-config-kickstart.glade.h:150
 msgid "Use GRUB password"
 msgstr "Použít heslo pro GRUB"
 
-#: tmp/system-config-kickstart.glade.h:163
-msgid "Use MD5"
-msgstr "Použít MD5"
-
-#: tmp/system-config-kickstart.glade.h:164
+#: tmp/system-config-kickstart.glade.h:151
 msgid "Use Shadow Passwords"
 msgstr "Použít stínová hesla"
 
-#: tmp/system-config-kickstart.glade.h:165
+#: tmp/system-config-kickstart.glade.h:152
 msgid "Use UTC clock"
 msgstr "Použít UTC hodiny"
 
-#: tmp/system-config-kickstart.glade.h:166
+#: tmp/system-config-kickstart.glade.h:153
 msgid "Use an interpreter:"
 msgstr "Použít interpret:"
 
-#: tmp/system-config-kickstart.glade.h:167
+#: tmp/system-config-kickstart.glade.h:154
 msgid "Use broadcast to find NIS server"
 msgstr "Pro nalezení NIS serveru použít broadcast"
 
-#: tmp/system-config-kickstart.glade.h:168
-msgid "Use custom monitor sync rates"
-msgstr "Používat vlastní synchronizační frekvence monitoru"
-
-#: tmp/system-config-kickstart.glade.h:169
+#: tmp/system-config-kickstart.glade.h:155
 msgid "Use existing partition (onpart)"
 msgstr "Použít existující oddíly (onpart)"
 
-#: tmp/system-config-kickstart.glade.h:170
+#: tmp/system-config-kickstart.glade.h:156
 msgid "Use recommended swap size"
 msgstr "Použít doporučovanou velikost odkládacího prostoru"
 
-#: tmp/system-config-kickstart.glade.h:171
-msgid "Vertical Sync:"
-msgstr "Vert. frekvence:"
-
-#: tmp/system-config-kickstart.glade.h:172
-msgid "Video Card"
-msgstr "Video karta"
-
-#: tmp/system-config-kickstart.glade.h:173
-msgid "Video Card RAM: "
-msgstr "Paměť videokarty: "
-
-#: tmp/system-config-kickstart.glade.h:174
+#: tmp/system-config-kickstart.glade.h:157
 msgid "Warn"
 msgstr "Varovat"
 
-#: tmp/system-config-kickstart.glade.h:176
+#: tmp/system-config-kickstart.glade.h:159
 #, no-c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1078,7 +1029,7 @@ msgstr ""
 "Varování: Chyba v tomto skriptu může způsobit selhání kickstart instalace. "
 "Nevkládejte na začátek příkaz %post."
 
-#: tmp/system-config-kickstart.glade.h:178
+#: tmp/system-config-kickstart.glade.h:161
 #, no-c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1087,7 +1038,7 @@ msgstr ""
 "Varování: Chyba v tomto skriptu může způsobit selhání kickstart instalace. "
 "Nevkládejte na začátek příkaz %pre."
 
-#: tmp/system-config-kickstart.glade.h:179
+#: tmp/system-config-kickstart.glade.h:162
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
@@ -1095,134 +1046,192 @@ msgstr ""
 "Nastavili jste následující konfiguraci. Kickstart soubor uložíte kliknutím "
 "na Uložit soubor."
 
-#: tmp/system-config-kickstart.glade.h:180
+#: tmp/system-config-kickstart.glade.h:163
 msgid "_About"
 msgstr "O _aplikaci"
 
-#: tmp/system-config-kickstart.glade.h:181
+#: tmp/system-config-kickstart.glade.h:164
 msgid "_Add"
 msgstr "_Přidat"
 
-#: tmp/system-config-kickstart.glade.h:182
+#: tmp/system-config-kickstart.glade.h:165
 msgid "_Add Network Device"
 msgstr "_Přidat síťové zařízení"
 
-#: tmp/system-config-kickstart.glade.h:183
+#: tmp/system-config-kickstart.glade.h:166
 msgid "_Contents"
 msgstr "_Obsah"
 
-#: tmp/system-config-kickstart.glade.h:184
+#: tmp/system-config-kickstart.glade.h:167
 msgid "_Delete"
 msgstr "_Odstranit"
 
-#: tmp/system-config-kickstart.glade.h:185
+#: tmp/system-config-kickstart.glade.h:168
 msgid "_Delete Network Device"
 msgstr "_Odstranit síťové zařízení"
 
-#: tmp/system-config-kickstart.glade.h:186
+#: tmp/system-config-kickstart.glade.h:169
 msgid "_Edit"
 msgstr "_Upravit"
 
-#: tmp/system-config-kickstart.glade.h:187
+#: tmp/system-config-kickstart.glade.h:170
 msgid "_Edit Network Device"
 msgstr "_Upravit síťové zařízení"
 
-#: tmp/system-config-kickstart.glade.h:188
+#: tmp/system-config-kickstart.glade.h:171
 msgid "_File"
 msgstr "_Soubor"
 
-#: tmp/system-config-kickstart.glade.h:189
+#: tmp/system-config-kickstart.glade.h:172
 msgid "_Help"
 msgstr "_Nápověda"
 
-#: tmp/system-config-kickstart.glade.h:190
+#: tmp/system-config-kickstart.glade.h:173
 msgid "_Open File"
 msgstr "_Otevřít soubor"
 
-#: tmp/system-config-kickstart.glade.h:191
+#: tmp/system-config-kickstart.glade.h:174
 msgid "_Preview"
 msgstr "_Zobrazit"
 
-#: tmp/system-config-kickstart.glade.h:192
+#: tmp/system-config-kickstart.glade.h:175
 msgid "_Quit"
 msgstr "U_končit"
 
-#: tmp/system-config-kickstart.glade.h:193
+#: tmp/system-config-kickstart.glade.h:176
 msgid "_Save File"
 msgstr "_Uložit soubor"
 
-#: tmp/system-config-kickstart.glade.h:194
+#: tmp/system-config-kickstart.glade.h:177
 msgid "_Save to File"
 msgstr "_Uložit do souboru"
 
-#: tmp/system-config-kickstart.glade.h:197
-msgid "kHz"
-msgstr "kHz"
-
-#: tmp/system-config-kickstart.glade.h:198
+#: tmp/system-config-kickstart.glade.h:180
 msgid "md0"
 msgstr "md0"
 
-#: tmp/system-config-kickstart.glade.h:199
+#: tmp/system-config-kickstart.glade.h:181
 msgid "md1"
 msgstr "md1"
 
-#: tmp/system-config-kickstart.glade.h:200
+#: tmp/system-config-kickstart.glade.h:182
 msgid "md10"
 msgstr "md10"
 
-#: tmp/system-config-kickstart.glade.h:201
+#: tmp/system-config-kickstart.glade.h:183
 msgid "md11"
 msgstr "md11"
 
-#: tmp/system-config-kickstart.glade.h:202
+#: tmp/system-config-kickstart.glade.h:184
 msgid "md12"
 msgstr "md12"
 
-#: tmp/system-config-kickstart.glade.h:203
+#: tmp/system-config-kickstart.glade.h:185
 msgid "md13"
 msgstr "md13"
 
-#: tmp/system-config-kickstart.glade.h:204
+#: tmp/system-config-kickstart.glade.h:186
 msgid "md14"
 msgstr "md14"
 
-#: tmp/system-config-kickstart.glade.h:205
+#: tmp/system-config-kickstart.glade.h:187
 msgid "md15"
 msgstr "md15"
 
-#: tmp/system-config-kickstart.glade.h:206
+#: tmp/system-config-kickstart.glade.h:188
 msgid "md2"
 msgstr "md2"
 
-#: tmp/system-config-kickstart.glade.h:207
+#: tmp/system-config-kickstart.glade.h:189
 msgid "md3"
 msgstr "md3"
 
-#: tmp/system-config-kickstart.glade.h:208
+#: tmp/system-config-kickstart.glade.h:190
 msgid "md4"
 msgstr "md4"
 
-#: tmp/system-config-kickstart.glade.h:209
+#: tmp/system-config-kickstart.glade.h:191
 msgid "md5"
 msgstr "md5"
 
-#: tmp/system-config-kickstart.glade.h:210
+#: tmp/system-config-kickstart.glade.h:192
 msgid "md6"
 msgstr "md6"
 
-#: tmp/system-config-kickstart.glade.h:211
+#: tmp/system-config-kickstart.glade.h:193
 msgid "md7"
 msgstr "md7"
 
-#: tmp/system-config-kickstart.glade.h:212
+#: tmp/system-config-kickstart.glade.h:194
 msgid "md8"
 msgstr "md8"
 
-#: tmp/system-config-kickstart.glade.h:213
+#: tmp/system-config-kickstart.glade.h:195
 msgid "md9"
 msgstr "md9"
 
+#~ msgid "Could not read video driver database"
+#~ msgstr "Nemohu číst databázi ovladačů videa"
+
+#~ msgid "Please select an X driver."
+#~ msgstr "Zvolte prosím ovladač pro X."
+
+#~ msgid "Please select a monitor."
+#~ msgstr "Zvolte prosím monitor."
+
+#~ msgid "Color Depth"
+#~ msgstr "Barevná hloubka"
+
+#~ msgid "Default Desktop:"
+#~ msgstr "Implicitní prostředí pracovní plochy:"
+
+#~ msgid "GNOME"
+#~ msgstr "GNOME"
+
+#~ msgid "General"
+#~ msgstr "Obecné"
+
+#~ msgid "Horizontal Sync:"
+#~ msgstr "Horiz. frekvence:"
+
+#~ msgid "Hz"
+#~ msgstr "Hz"
+
+#~ msgid "KDE"
+#~ msgstr "KDE"
+
+#~ msgid "Monitor"
+#~ msgstr "Monitor"
+
+#~ msgid "Probe for monitor"
+#~ msgstr "Detekovat monitor"
+
+#~ msgid "Probe for video card driver"
+#~ msgstr "Detekovat ovladač videokarty"
+
+#~ msgid "Resolution"
+#~ msgstr "Rozlišení"
+
+#~ msgid "Start the X Window System on boot"
+#~ msgstr "Spustit při startu X Window System"
+
+#~ msgid "Use MD5"
+#~ msgstr "Použít MD5"
+
+#~ msgid "Use custom monitor sync rates"
+#~ msgstr "Používat vlastní synchronizační frekvence monitoru"
+
+#~ msgid "Vertical Sync:"
+#~ msgstr "Vert. frekvence:"
+
+#~ msgid "Video Card"
+#~ msgstr "Video karta"
+
+#~ msgid "Video Card RAM: "
+#~ msgstr "Paměť videokarty: "
+
+#~ msgid "kHz"
+#~ msgstr "kHz"
+
 #~ msgid "."
 #~ msgstr "."
-
