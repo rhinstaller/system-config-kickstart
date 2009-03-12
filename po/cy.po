@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cy\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-29 17:26-0400\n"
+"POT-Creation-Date: 2009-03-12 17:02-0400\n"
 "PO-Revision-Date: 2004-04-15 17:56+0100\n"
 "Last-Translator: Owain Green <owaing@oceanfree.net>\n"
 "Language-Team: Cymraeg <Cy@li.org>\n"
@@ -18,97 +18,97 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0.2\n"
 
-#: ../src/auth.py:343
+#: ../src/auth.py:350
 msgid "Please fill in the authentication information"
 msgstr "Llenwch y wybodaeth dilysiant"
 
-#: ../src/basic.py:71
+#: ../src/basic.py:72
 msgid "x86, AMD64, or Intel EM64T"
 msgstr "x86, AMD64, neu EM64T Intel"
 
-#: ../src/basic.py:71
+#: ../src/basic.py:72
 msgid "Intel Itanium"
 msgstr "Itanium Intel"
 
-#: ../src/basic.py:71
+#: ../src/basic.py:72
 msgid "IBM iSeries"
 msgstr "Cyfres-i IBM"
 
-#: ../src/basic.py:72
+#: ../src/basic.py:73
 msgid "IBM pSeries"
 msgstr "Cyfres-p IBM"
 
-#: ../src/basic.py:72
+#: ../src/basic.py:73
 msgid "IBM zSeries/s390"
 msgstr "Cyfres-z IBM/s390"
 
-#: ../src/basic.py:152
+#: ../src/basic.py:149
 msgid "Root passwords do not match."
 msgstr "Nid yw'r cyfrineiriau gwraidd yn cydweddu."
 
-#: ../src/basic.py:153 ../src/install.py:216 ../src/partWindow.py:550
-#: ../src/partition.py:255 ../src/raidWindow.py:252
+#: ../src/basic.py:150 ../src/install.py:217 ../src/partWindow.py:554
+#: ../src/partition.py:256 ../src/raidWindow.py:250
 msgid "Error"
 msgstr "Gwall"
 
-#: ../src/bootloader.py:84
+#: ../src/bootloader.py:147
+msgid "Grub passwords do not match.  Please try again."
+msgstr "Nid yw'r cyfrineiriau grub yn cydweddu.  Ceisiwch eto."
+
+#: ../src/bootloader.py:198
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
 msgstr "Nid yw'r dewisiadau cychwynnydd yn berthnasol i'r platfform %s"
 
-#: ../src/bootloader.py:124
-msgid "Grub passwords do not match.  Please try again."
-msgstr "Nid yw'r cyfrineiriau grub yn cydweddu.  Ceisiwch eto."
-
-#: ../src/firewall.py:60
+#: ../src/firewall.py:58
 msgid "Trusted services:"
 msgstr ""
 
-#: ../src/firewall.py:92
+#: ../src/firewall.py:90
 msgid "Other ports: (1029:tcp)"
 msgstr ""
 
-#: ../src/install.py:131
+#: ../src/install.py:132
 msgid "Please enter an NFS server."
 msgstr "Rhowch weinydd NFS os gwelwch yn dda."
 
-#: ../src/install.py:134
+#: ../src/install.py:135
 msgid "Please enter an NFS directory."
 msgstr "Rhowch gyfeiriadur NFS os gwelwch yn dda."
 
-#: ../src/install.py:145
+#: ../src/install.py:146
 msgid "Please enter an FTP server."
 msgstr "Rhowch weinydd FTP os gwelwch yn dda."
 
-#: ../src/install.py:152
+#: ../src/install.py:153
 msgid "Please enter an FTP directory."
 msgstr "Rhowch gyfeiriadur FTP os gwelwch yn dda."
 
-#: ../src/install.py:158
+#: ../src/install.py:159
 msgid "Please enter an FTP user name."
 msgstr "Rhowch enw defnyddiwr FTP os gwelwch yn dda."
 
-#: ../src/install.py:161
+#: ../src/install.py:162
 msgid "Please enter an FTP password."
 msgstr "Rhowch gyfrinair FTP os gwelwch yn dda."
 
-#: ../src/install.py:177
+#: ../src/install.py:178
 msgid "Please enter an HTTP server."
 msgstr "Rhowch weinydd HTTP os gwelwch yn dda."
 
-#: ../src/install.py:180
+#: ../src/install.py:181
 msgid "Please enter an HTTP server directory."
 msgstr "Rhowch gyfeiriadur gweinydd HTTP os gwelwch yn dda."
 
-#: ../src/install.py:202
+#: ../src/install.py:203
 msgid "Please enter a hard drive directory."
 msgstr "Rhowch gyfeiriadur disg galed os gwelwch yn dda."
 
-#: ../src/install.py:205
+#: ../src/install.py:206
 msgid "Please enter a hard drive partition."
 msgstr "Rhowch raniad disg galed os gwelwch yn dda."
 
-#: ../src/kickstartGui.py:94 ../src/kickstartGui.py:286
+#: ../src/kickstartGui.py:92 ../src/kickstartGui.py:290
 #, python-format
 msgid ""
 "The following error was found while parsing your kickstart configuration:\n"
@@ -116,68 +116,73 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../src/kickstartGui.py:97 ../src/kickstartGui.py:289
+#: ../src/kickstartGui.py:95 ../src/kickstartGui.py:293
+#, fuzzy, python-format
+msgid "The kickstart file %s could not be opened."
+msgstr "Nid oes modd cyrchu'r ffeil \"%s\"."
+
+#: ../src/kickstartGui.py:100 ../src/kickstartGui.py:298
 #, fuzzy
 msgid "Error Parsing Kickstart Config"
 msgstr "Ynghylch Cyflunydd Kickstart"
 
-#: ../src/kickstartGui.py:105
+#: ../src/kickstartGui.py:108
 msgid "Kickstart"
 msgstr "Kickstart"
 
-#: ../src/kickstartGui.py:106
+#: ../src/kickstartGui.py:109
 msgid "Create a kickstart file"
 msgstr "Creu ffeil kickstart"
 
-#: ../src/kickstartGui.py:128
+#: ../src/kickstartGui.py:131
 msgid "Subsection"
 msgstr "Isadran"
 
-#: ../src/kickstartGui.py:132
+#: ../src/kickstartGui.py:135
 msgid "Basic Configuration"
 msgstr "Cyfluniad Sylfaenol"
 
-#: ../src/kickstartGui.py:133
+#: ../src/kickstartGui.py:136
 msgid "Installation Method"
 msgstr "Dull Arsefydlu"
 
-#: ../src/kickstartGui.py:134
+#: ../src/kickstartGui.py:137
 msgid "Boot Loader Options"
 msgstr "Dewisiadau Cychwynnydd"
 
-#: ../src/kickstartGui.py:135
+#: ../src/kickstartGui.py:138
 msgid "Partition Information"
 msgstr "Gwybodaeth Rhaniadau"
 
-#: ../src/kickstartGui.py:136 tmp/system-config-kickstart.glade.h:110
+#: ../src/kickstartGui.py:139 tmp/system-config-kickstart.glade.h:102
 msgid "Network Configuration"
 msgstr "Cyfluniad Rhwydwaith"
 
-#: ../src/kickstartGui.py:137
+#: ../src/kickstartGui.py:140
 msgid "Authentication"
 msgstr "Dilysiant"
 
-#: ../src/kickstartGui.py:138 tmp/system-config-kickstart.glade.h:52
+#: ../src/kickstartGui.py:141 tmp/system-config-kickstart.glade.h:50
 msgid "Firewall Configuration"
 msgstr "Cyfluniad Mur Cadarn"
 
-#: ../src/kickstartGui.py:139 tmp/system-config-kickstart.glade.h:28
+#: ../src/kickstartGui.py:142 tmp/system-config-kickstart.glade.h:26
 msgid "Display Configuration"
 msgstr "Cyfluniad Dangosiad"
 
-#: ../src/kickstartGui.py:140 tmp/system-config-kickstart.glade.h:116
+#: ../src/kickstartGui.py:143 tmp/system-config-kickstart.glade.h:108
 msgid "Package Selection"
 msgstr "Dewis Pecynnau"
 
-#: ../src/kickstartGui.py:141 tmp/system-config-kickstart.glade.h:126
+#: ../src/kickstartGui.py:144 tmp/system-config-kickstart.glade.h:118
 msgid "Pre-Installation Script"
 msgstr "Sgript Cyn-Arsefydlu"
 
-#: ../src/kickstartGui.py:142 tmp/system-config-kickstart.glade.h:125
+#: ../src/kickstartGui.py:145 tmp/system-config-kickstart.glade.h:117
 msgid "Post-Installation Script"
 msgstr "Sgript Wedi-Arsefydlu"
 
-#: ../src/kickstartGui.py:207
+#: ../src/kickstartGui.py:210
 msgid ""
 "Kickstart Configurator @VERSION@\n"
 " Copyright (c) 2000-2002 Red Hat, Inc.\n"
@@ -191,47 +196,47 @@ msgstr ""
 " Hawlfraint (h)(c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
 " Rhyngwyneb graffigol ar gyfer creu ffeil kickstart"
 
-#: ../src/kickstartGui.py:208
+#: ../src/kickstartGui.py:211
 msgid "About Kickstart Configurator"
 msgstr "Ynghylch Cyflunydd Kickstart"
 
-#: ../src/kickstartGui.py:230
+#: ../src/kickstartGui.py:233
 msgid "Help is not available."
 msgstr "Nid oes cymorth ar gael."
 
-#: ../src/kickstartGui.py:310
+#: ../src/kickstartGui.py:319
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "Nid oes modd cyrchu'r ffeil \"%s\"."
 
-#: ../src/network.py:76
+#: ../src/network.py:74
 msgid "Device"
 msgstr "Dyfais"
 
-#: ../src/network.py:79
+#: ../src/network.py:77
 msgid "Network Type"
 msgstr "Math Rhwydwaith"
 
-#: ../src/network.py:97 ../src/network.py:143 ../src/network.py:225
-#: ../src/network.py:281 ../src/network.py:376
+#: ../src/network.py:95 ../src/network.py:144 ../src/network.py:226
+#: ../src/network.py:282 ../src/network.py:377
 msgid "Static IP"
 msgstr "IP Sefydlog"
 
-#: ../src/network.py:190 ../src/network.py:249
+#: ../src/network.py:191 ../src/network.py:250
 msgid "Please fill in the network information"
 msgstr "Llenwch y wybodaeth rwydwaith"
 
-#: ../src/network.py:202 ../src/network.py:261
+#: ../src/network.py:203 ../src/network.py:262
 #, fuzzy
 msgid "Please enter a valid gateway address."
 msgstr "Rhowch gyfeiriadur disg galed os gwelwch yn dda."
 
-#: ../src/network.py:214 ../src/network.py:273
+#: ../src/network.py:215 ../src/network.py:274
 #, fuzzy
 msgid "Please enter a valid nameserver address."
 msgstr "Rhowch gyfeiriadur gweinydd HTTP os gwelwch yn dda."
 
-#: ../src/network.py:301
+#: ../src/network.py:302
 #, python-format
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
@@ -240,77 +245,86 @@ msgstr ""
 "Mae dyfais rwydwaith â'r enw %s yn bodolin'n barod.  Dewiswch enw dyfais "
 "arall."
 
-#: ../src/packages.py:171
-#, fuzzy
-msgid "Package configuration is not applicable on upgrades."
-msgstr "Nid yw cyflunio dangosiad yn berthnasol ar uwchraddiadau."
+#: ../src/packages.py:146
+#, python-format
+msgid ""
+"Package selection is disabled due to an error in setup.  Please fix your "
+"repository configuration and try again.\n"
+"\n"
+"%s"
+msgstr ""
 
-#: ../src/packages.py:177
+#: ../src/packages.py:199
 #, fuzzy
 msgid "Retrieving package information"
 msgstr "Gwybodaeth Dyfais Rwydwaith"
 
-#: ../src/packages.py:186
+#: ../src/packages.py:227
+#, fuzzy
+msgid "Package configuration is not applicable on upgrades."
+msgstr "Nid yw cyflunio dangosiad yn berthnasol ar uwchraddiadau."
+
+#: ../src/packages.py:239
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
 msgstr ""
 
-#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:195
+#: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:178
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:87 tmp/system-config-kickstart.glade.h:196
+#: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:179
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:89 ../src/partWindow.py:152
+#: ../src/partWindow.py:87 ../src/partWindow.py:156
 msgid "software RAID"
 msgstr "RAID meddalweddol"
 
-#: ../src/partWindow.py:90 tmp/system-config-kickstart.glade.h:214
+#: ../src/partWindow.py:88 tmp/system-config-kickstart.glade.h:196
 msgid "swap"
 msgstr "cyfnewidfa"
 
-#: ../src/partWindow.py:90 tmp/system-config-kickstart.glade.h:215
+#: ../src/partWindow.py:88 tmp/system-config-kickstart.glade.h:197
 msgid "vfat"
 msgstr "vfat"
 
-#: ../src/partWindow.py:91
+#: ../src/partWindow.py:89
 msgid "PPC PReP Boot"
 msgstr "Cychwyn PReP PPC"
 
-#: ../src/partWindow.py:291 ../src/partWindow.py:572 ../src/raidWindow.py:217
+#: ../src/partWindow.py:295 ../src/partWindow.py:576 ../src/raidWindow.py:215
 msgid "Yes"
 msgstr "Ïe"
 
-#: ../src/partWindow.py:293 ../src/partWindow.py:574 ../src/raidWindow.py:219
+#: ../src/partWindow.py:297 ../src/partWindow.py:578 ../src/raidWindow.py:217
 msgid "No"
 msgstr "Na"
 
-#: ../src/partWindow.py:316 ../src/partWindow.py:331 ../src/partWindow.py:350
-#: ../src/partWindow.py:364
+#: ../src/partWindow.py:320 ../src/partWindow.py:335 ../src/partWindow.py:354
+#: ../src/partWindow.py:368
 msgid "Auto"
 msgstr "Awto"
 
-#: ../src/partWindow.py:325
+#: ../src/partWindow.py:329
 msgid "Hard Drives"
 msgstr "Disgiau Caled"
 
-#: ../src/partWindow.py:468
+#: ../src/partWindow.py:472
 msgid "Specify a mount point for the partition."
 msgstr "Penodwch man gosod ar gyfer y rhaniad."
 
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:477
+#: ../src/partWindow.py:481
 #, python-format
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "Mae'r man gosod \"%s\" mewn defnydd eisioes.  Dewiswch man gosod arall."
 
-#: ../src/partWindow.py:497
+#: ../src/partWindow.py:501
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -318,11 +332,11 @@ msgstr ""
 "I greu rhaniad RAID newydd, rhaid i chi benodi naill ai enw dyfais disg "
 "galed neu raniad cyfredol."
 
-#: ../src/partWindow.py:534
+#: ../src/partWindow.py:538
 msgid "Specify a device on which to create the partition."
 msgstr "Penodwch ddyfais i greu'r rhaniad arni."
 
-#: ../src/partWindow.py:543
+#: ../src/partWindow.py:547
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -330,7 +344,7 @@ msgstr ""
 "Nid yw'r rhaniad a benodoch yn gorffen mewn rhif. Rhaid bod rhif rhaniadgyda "
 "rhaniadau megis  \"hda1\" neu \"sda3\"."
 
-#: ../src/partition.py:74
+#: ../src/partition.py:72
 msgid ""
 "Device/\n"
 "Partition Number"
@@ -338,7 +352,7 @@ msgstr ""
 "Rhif Dyfais/\n"
 "Rhaniad"
 
-#: ../src/partition.py:76
+#: ../src/partition.py:74
 msgid ""
 "Mount Point/\n"
 "RAID"
@@ -346,54 +360,50 @@ msgstr ""
 "Man Gosod/\n"
 "RAID"
 
-#: ../src/partition.py:78
+#: ../src/partition.py:76
 msgid "Type"
 msgstr "Math"
 
-#: ../src/partition.py:80
+#: ../src/partition.py:78
 msgid "Format"
 msgstr "Fformat"
 
-#: ../src/partition.py:82
+#: ../src/partition.py:80
 msgid "Size (MB)"
 msgstr "Maint (MB)"
 
-#: ../src/partition.py:97 ../src/partition.py:137
+#: ../src/partition.py:98 ../src/partition.py:138
 msgid "Please select a partition from the list."
 msgstr "Dewiswch raniad o'r restr."
 
-#: ../src/raidOptionsWindow.py:75
+#: ../src/raidOptionsWindow.py:72
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
 msgstr "Mae gennych %d rhaniad RAID meddalweddol yn r(h)ydd i'w d(d)efnyddio."
 
-#: ../src/raidWindow.py:177
+#: ../src/raidWindow.py:175
 #, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
 msgstr "Rhaid i chi ddewis o leiaf 2 raniad er mwyn defnyddio RAID %s"
 
-#: ../src/raidWindow.py:183
+#: ../src/raidWindow.py:181
 #, python-format
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "Rhaid i chi ddewis o leiaf 3 rhaniad er mwyn defnyddio RAID %s"
 
-#: ../src/raidWindow.py:197 ../src/raidWindow.py:223
+#: ../src/raidWindow.py:195 ../src/raidWindow.py:221
 msgid "Raid Devices"
 msgstr "Dyfeisiau Raid"
 
-#: ../src/xconfig.py:125
-msgid "Could not read video driver database"
-msgstr "Methwyd darllen y gronfa ddata gyrrydd fideo"
+#: ../src/savedialog.py:72
+#, python-format
+msgid "The following error occurred while saving the kickstart config %s: %s"
+msgstr ""
 
-#: ../src/xconfig.py:230
+#: ../src/savedialog.py:76
 #, fuzzy
-msgid "Please select an X driver."
-msgstr "Rhowch weinydd NFS os gwelwch yn dda."
-
-#: ../src/xconfig.py:249
-#, fuzzy
-msgid "Please select a monitor."
-msgstr "Dewiswch gyfrinair gwraidd."
+msgid "Error Saving Kickstart Config"
+msgstr "Ynghylch Cyflunydd Kickstart"
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -468,502 +478,458 @@ msgid "Clear Master Boot Record"
 msgstr "Gwagio'r Prif Gofnod Cychwyn"
 
 #: tmp/system-config-kickstart.glade.h:19
-msgid "Color Depth"
-msgstr "Dyfnder Lliw"
-
-#: tmp/system-config-kickstart.glade.h:20
 msgid "Configure the X Window System"
 msgstr "Cyflunio'r System Ffenestri X"
 
-#: tmp/system-config-kickstart.glade.h:21
+#: tmp/system-config-kickstart.glade.h:20
 msgid "Confirm Password:"
 msgstr "Gwirio Cyfrinair:"
 
-#: tmp/system-config-kickstart.glade.h:22
+#: tmp/system-config-kickstart.glade.h:21
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "Creu dyfais RAID [rhagosodyn= /dev/md0]"
 
-#: tmp/system-config-kickstart.glade.h:23
+#: tmp/system-config-kickstart.glade.h:22
 msgid "Create a software RAID partition"
 msgstr "Creu rhaniad RAID meddalweddol"
 
-#: tmp/system-config-kickstart.glade.h:24
-msgid "Default Desktop:"
-msgstr "Penbwrdd rhagosodedig:"
-
-#: tmp/system-config-kickstart.glade.h:25
+#: tmp/system-config-kickstart.glade.h:23
 msgid "Default Language:"
 msgstr "Iath Ragosodedig:"
 
-#: tmp/system-config-kickstart.glade.h:26
+#: tmp/system-config-kickstart.glade.h:24
 msgid "Disable firewall"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:27
+#: tmp/system-config-kickstart.glade.h:25
 msgid "Disabled"
 msgstr "Analluog"
 
-#: tmp/system-config-kickstart.glade.h:29
+#: tmp/system-config-kickstart.glade.h:27
 msgid "Display configuration is not applicable on upgrades."
 msgstr "Nid yw cyflunio dangosiad yn berthnasol ar uwchraddiadau."
 
-#: tmp/system-config-kickstart.glade.h:30
+#: tmp/system-config-kickstart.glade.h:28
 msgid "Do not clear Master Boot Record"
 msgstr "Peidio â gwagio'r Prif Gofnod Cychwyn"
 
-#: tmp/system-config-kickstart.glade.h:31
+#: tmp/system-config-kickstart.glade.h:29
 msgid "Do not initialize the disk label"
 msgstr "Peidio âg ymgychwyn y label disg"
 
-#: tmp/system-config-kickstart.glade.h:32
+#: tmp/system-config-kickstart.glade.h:30
 msgid "Do not install a boot loader"
 msgstr "Peidio âg arsefydlu cychwynnydd"
 
-#: tmp/system-config-kickstart.glade.h:33
+#: tmp/system-config-kickstart.glade.h:31
 msgid "Drive :"
 msgstr "Gyriant :"
 
-#: tmp/system-config-kickstart.glade.h:34
+#: tmp/system-config-kickstart.glade.h:32
 msgid "Enable Hesiod Support"
 msgstr "Galluogi Cynhaliaeth Hesiod"
 
-#: tmp/system-config-kickstart.glade.h:35
+#: tmp/system-config-kickstart.glade.h:33
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Galluogi Dilysiant Kerberos 5"
 
-#: tmp/system-config-kickstart.glade.h:36
+#: tmp/system-config-kickstart.glade.h:34
 msgid "Enable LDAP"
 msgstr "Galluogi LDAP"
 
-#: tmp/system-config-kickstart.glade.h:37
+#: tmp/system-config-kickstart.glade.h:35
 msgid "Enable NIS"
 msgstr "Galluogi NIS"
 
-#: tmp/system-config-kickstart.glade.h:38
+#: tmp/system-config-kickstart.glade.h:36
 msgid "Enable SMB Authentication"
 msgstr "Galluogi Dilysiant SMB"
 
-#: tmp/system-config-kickstart.glade.h:39
+#: tmp/system-config-kickstart.glade.h:37
 msgid "Enable firewall"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:40
+#: tmp/system-config-kickstart.glade.h:38
 msgid "Enable nscd"
 msgstr "Galluogi nscd"
 
-#: tmp/system-config-kickstart.glade.h:41
+#: tmp/system-config-kickstart.glade.h:39
 msgid "Enabled"
 msgstr "Alluog"
 
-#: tmp/system-config-kickstart.glade.h:42
+#: tmp/system-config-kickstart.glade.h:40
 msgid "Enabled in reconfiguration mode"
 msgstr "Alluog ym modd ailgyflunio"
 
-#: tmp/system-config-kickstart.glade.h:43
+#: tmp/system-config-kickstart.glade.h:41
 msgid "Encrypt GRUB password"
 msgstr "Amgryptio cyfrinair GRUB"
 
-#: tmp/system-config-kickstart.glade.h:44
+#: tmp/system-config-kickstart.glade.h:42
 msgid "Encrypt root password"
 msgstr "Amgryptio cyfrinair gwraidd"
 
-#: tmp/system-config-kickstart.glade.h:45
+#: tmp/system-config-kickstart.glade.h:43
 msgid "FTP"
 msgstr "FTP"
 
-#: tmp/system-config-kickstart.glade.h:46
+#: tmp/system-config-kickstart.glade.h:44
 msgid "FTP Directory:"
 msgstr "Cyfeiriadur FTP:"
 
-#: tmp/system-config-kickstart.glade.h:47
+#: tmp/system-config-kickstart.glade.h:45
 msgid "FTP Password"
 msgstr "Cyfrinair FTP"
 
-#: tmp/system-config-kickstart.glade.h:48
+#: tmp/system-config-kickstart.glade.h:46
 msgid "FTP Server:"
 msgstr "Gweinydd FTP:"
 
-#: tmp/system-config-kickstart.glade.h:49
+#: tmp/system-config-kickstart.glade.h:47
 msgid "FTP Username"
 msgstr "Enw Defnyddiwr FTP"
 
-#: tmp/system-config-kickstart.glade.h:50
+#: tmp/system-config-kickstart.glade.h:48
 msgid "File System Type:"
 msgstr "Math System Ffeil:"
 
-#: tmp/system-config-kickstart.glade.h:51
+#: tmp/system-config-kickstart.glade.h:49
 msgid "Fill all unused space on disk"
 msgstr "Llenwi'r holl le heb ei ddefnyddio ar y ddisg"
 
-#: tmp/system-config-kickstart.glade.h:53
+#: tmp/system-config-kickstart.glade.h:51
 msgid "Firewall configuration is not applicable on upgrades."
 msgstr "Nid yw cyflunio mur cadarn yn berthnasol ar uwchraddiadau."
 
-#: tmp/system-config-kickstart.glade.h:54
+#: tmp/system-config-kickstart.glade.h:52
 msgid "Fixed size"
 msgstr "Maint gosodedig"
 
-#: tmp/system-config-kickstart.glade.h:55
+#: tmp/system-config-kickstart.glade.h:53
 msgid "Force to be a primary partition (asprimary)"
 msgstr "Gorfodi i fod yn raniad cynradd (asprimary)"
 
-#: tmp/system-config-kickstart.glade.h:56
+#: tmp/system-config-kickstart.glade.h:54
 msgid "Format RAID device"
 msgstr "Fformadu dyfais RAID"
 
-#: tmp/system-config-kickstart.glade.h:57
+#: tmp/system-config-kickstart.glade.h:55
 msgid "Format partition"
 msgstr "Fformadu rhaniad"
 
-#: tmp/system-config-kickstart.glade.h:58
-msgid "GNOME"
-msgstr "GNOME"
-
-#: tmp/system-config-kickstart.glade.h:59
+#: tmp/system-config-kickstart.glade.h:56
 msgid "GRUB Options:"
 msgstr "Dewisiadau GRUB:"
 
-#: tmp/system-config-kickstart.glade.h:60
+#: tmp/system-config-kickstart.glade.h:57
 msgid "Gateway:"
 msgstr "Porthydd:"
 
-#: tmp/system-config-kickstart.glade.h:61
-msgid "General"
-msgstr "Cyffredinol"
-
-#: tmp/system-config-kickstart.glade.h:62
+#: tmp/system-config-kickstart.glade.h:58
 msgid "Grow to maximum of (MB):"
 msgstr "Tyfu hyd uchafswm o (MB):"
 
-#: tmp/system-config-kickstart.glade.h:63
+#: tmp/system-config-kickstart.glade.h:59
 msgid "HTTP"
 msgstr "HTTP"
 
-#: tmp/system-config-kickstart.glade.h:64
+#: tmp/system-config-kickstart.glade.h:60
 msgid "HTTP Directory:"
 msgstr "Cyfeiriadur HTTP:"
 
-#: tmp/system-config-kickstart.glade.h:65
+#: tmp/system-config-kickstart.glade.h:61
 msgid "HTTP Server:"
 msgstr "Gweinydd HTTP:"
 
-#: tmp/system-config-kickstart.glade.h:66
+#: tmp/system-config-kickstart.glade.h:62
 msgid "Hard Drive"
 msgstr "Disg Galed"
 
-#: tmp/system-config-kickstart.glade.h:67
+#: tmp/system-config-kickstart.glade.h:63
 msgid "Hard Drive Directory:"
 msgstr "Cyfeiriadur Disg Galed:"
 
-#: tmp/system-config-kickstart.glade.h:68
+#: tmp/system-config-kickstart.glade.h:64
 msgid "Hard Drive Partition:"
 msgstr "Rhaniad Disg Galed:"
 
-#: tmp/system-config-kickstart.glade.h:69
+#: tmp/system-config-kickstart.glade.h:65
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: tmp/system-config-kickstart.glade.h:70
+#: tmp/system-config-kickstart.glade.h:66
 msgid "Hesiod Authentication"
 msgstr "Dilysiant Hesiod"
 
-#: tmp/system-config-kickstart.glade.h:71
+#: tmp/system-config-kickstart.glade.h:67
 msgid "Hesiod LHS:"
 msgstr "LHS Hesiod:"
 
-#: tmp/system-config-kickstart.glade.h:72
+#: tmp/system-config-kickstart.glade.h:68
 msgid "Hesiod RHS:"
 msgstr "RHS Hesiod:"
 
-#: tmp/system-config-kickstart.glade.h:73
-msgid "Horizontal Sync:"
-msgstr "Cysoni Llorweddol:"
-
-#: tmp/system-config-kickstart.glade.h:74
-msgid "Hz"
-msgstr "Hz"
-
-#: tmp/system-config-kickstart.glade.h:75
+#: tmp/system-config-kickstart.glade.h:69
 msgid "IP Address:"
 msgstr "Cyfeiriad IP:"
 
-#: tmp/system-config-kickstart.glade.h:76
+#: tmp/system-config-kickstart.glade.h:70
 msgid "Initialize the disk label"
 msgstr "Ymgychwyn y label disg"
 
-#: tmp/system-config-kickstart.glade.h:77
+#: tmp/system-config-kickstart.glade.h:71
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "Arsefydlu cychwynnydd ar y Prif Gofnod Cychwyn (MBR)"
 
-#: tmp/system-config-kickstart.glade.h:78
+#: tmp/system-config-kickstart.glade.h:72
 msgid "Install boot loader on first sector of the boot partition"
 msgstr "Arsefydlu'r cychwynnydd ar sector cyntaf y rhaniad cychwyn"
 
-#: tmp/system-config-kickstart.glade.h:79
+#: tmp/system-config-kickstart.glade.h:73
 msgid "Install new boot loader"
 msgstr "Arsefydlu cychwynnydd newydd"
 
-#: tmp/system-config-kickstart.glade.h:80
+#: tmp/system-config-kickstart.glade.h:74
 msgid "Installation Method (required)"
 msgstr "Dull Arsefydlu (angenrheidiol)"
 
-#: tmp/system-config-kickstart.glade.h:81
-msgid "KDE"
-msgstr "KDE"
-
-#: tmp/system-config-kickstart.glade.h:82
+#: tmp/system-config-kickstart.glade.h:75
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: tmp/system-config-kickstart.glade.h:83
+#: tmp/system-config-kickstart.glade.h:76
 msgid "Kerberos 5 Authentication"
 msgstr "Dilysiant Kerberos 5"
 
-#: tmp/system-config-kickstart.glade.h:84
+#: tmp/system-config-kickstart.glade.h:77
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Rheolydd Pyrth Kerberos (KDC):"
 
-#: tmp/system-config-kickstart.glade.h:85
+#: tmp/system-config-kickstart.glade.h:78
 msgid "Kerberos Master Server:"
 msgstr "Prif-Weinydd Kerberos:"
 
-#: tmp/system-config-kickstart.glade.h:86
+#: tmp/system-config-kickstart.glade.h:79
 msgid "Kerberos Realm:"
 msgstr "Bro Kerberos:"
 
-#: tmp/system-config-kickstart.glade.h:87
+#: tmp/system-config-kickstart.glade.h:80
 msgid "Kernel parameters:"
 msgstr "Paramedrau cnewyllyn:"
 
-#: tmp/system-config-kickstart.glade.h:88
+#: tmp/system-config-kickstart.glade.h:81
 msgid "Keyboard:"
 msgstr "Bysellfwrdd:"
 
-#: tmp/system-config-kickstart.glade.h:89
+#: tmp/system-config-kickstart.glade.h:82
 msgid "Kickstart Configurator"
 msgstr "Cyflunydd Kickstart"
 
-#: tmp/system-config-kickstart.glade.h:90
+#: tmp/system-config-kickstart.glade.h:83
 msgid "LDAP "
 msgstr "LDAP "
 
-#: tmp/system-config-kickstart.glade.h:91
+#: tmp/system-config-kickstart.glade.h:84
 msgid "LDAP Authentication"
 msgstr "Dilysiant LDAP"
 
-#: tmp/system-config-kickstart.glade.h:92
+#: tmp/system-config-kickstart.glade.h:85
 msgid "LDAP Base Name: "
 msgstr "Enw Sail LDAP: "
 
-#: tmp/system-config-kickstart.glade.h:93
+#: tmp/system-config-kickstart.glade.h:86
 msgid "LDAP Server: "
 msgstr "Gweinydd LDAP: "
 
-#: tmp/system-config-kickstart.glade.h:94
+#: tmp/system-config-kickstart.glade.h:87
 msgid "Load CA certificate"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:95
+#: tmp/system-config-kickstart.glade.h:88
 msgid "Make RAID Device"
 msgstr "Gwneud Dyfais RAID"
 
-#: tmp/system-config-kickstart.glade.h:96
+#: tmp/system-config-kickstart.glade.h:89
 msgid "Make partition on specific drive (ondisk)"
 msgstr "Gwneud rhaniad ar yriant penodol (ondisk)"
 
-#: tmp/system-config-kickstart.glade.h:97
-msgid "Monitor"
-msgstr "Monitor"
-
-#: tmp/system-config-kickstart.glade.h:98
+#: tmp/system-config-kickstart.glade.h:90
 msgid "Mount Point:"
 msgstr "Man Gosod:"
 
-#: tmp/system-config-kickstart.glade.h:99
+#: tmp/system-config-kickstart.glade.h:91
 msgid "NFS"
 msgstr "NFS"
 
-#: tmp/system-config-kickstart.glade.h:100
+#: tmp/system-config-kickstart.glade.h:92
 msgid "NFS Directory:"
 msgstr "Cyfeiriadur NFS:"
 
-#: tmp/system-config-kickstart.glade.h:101
+#: tmp/system-config-kickstart.glade.h:93
 msgid "NFS Server:"
 msgstr "Gweinydd NFS:"
 
-#: tmp/system-config-kickstart.glade.h:102
+#: tmp/system-config-kickstart.glade.h:94
 msgid "NIS"
 msgstr "NIS"
 
-#: tmp/system-config-kickstart.glade.h:103
+#: tmp/system-config-kickstart.glade.h:95
 msgid "NIS Authentication"
 msgstr "Dilysiant NIS"
 
-#: tmp/system-config-kickstart.glade.h:104
+#: tmp/system-config-kickstart.glade.h:96
 msgid "NIS Domain:"
 msgstr "Parth NIS:"
 
-#: tmp/system-config-kickstart.glade.h:105
+#: tmp/system-config-kickstart.glade.h:97
 msgid "NIS Server:"
 msgstr "Gweinydd NIS:"
 
-#: tmp/system-config-kickstart.glade.h:106
+#: tmp/system-config-kickstart.glade.h:98
 msgid "Name Server:"
 msgstr "Gweinydd Enwau:"
 
-#: tmp/system-config-kickstart.glade.h:107
+#: tmp/system-config-kickstart.glade.h:99
 msgid "Name Switch Cache"
 msgstr "Celc Newid Enw"
 
-#: tmp/system-config-kickstart.glade.h:108
+#: tmp/system-config-kickstart.glade.h:100
 msgid "Name Switch Cache Daemon (nscd) Authentication"
 msgstr "Dilysiant Ellyll Gelcio Newid Enw (nscd)"
 
-#: tmp/system-config-kickstart.glade.h:109
+#: tmp/system-config-kickstart.glade.h:101
 msgid "Netmask: "
 msgstr "Masg Rhwyd:"
 
-#: tmp/system-config-kickstart.glade.h:111
+#: tmp/system-config-kickstart.glade.h:103
 msgid "Network Device Information"
 msgstr "Gwybodaeth Dyfais Rwydwaith"
 
-#: tmp/system-config-kickstart.glade.h:112
+#: tmp/system-config-kickstart.glade.h:104
 msgid "Network Device:"
 msgstr "Dyfais Rwydwaith:"
 
-#: tmp/system-config-kickstart.glade.h:113
+#: tmp/system-config-kickstart.glade.h:105
 msgid "Network Type:"
 msgstr "Math Rhwydwaith:"
 
-#: tmp/system-config-kickstart.glade.h:114
+#: tmp/system-config-kickstart.glade.h:106
 msgid "Number of spares:"
 msgstr "Nifer o sbarion:"
 
-#: tmp/system-config-kickstart.glade.h:115
+#: tmp/system-config-kickstart.glade.h:107
 msgid "On first boot, Setup Agent is: "
 msgstr "Ar gychwyn cyntaf, mae'r Asiant Gosod yn:"
 
-#: tmp/system-config-kickstart.glade.h:117
+#: tmp/system-config-kickstart.glade.h:109
 msgid "Partition :"
 msgstr "Rhaniad :"
 
-#: tmp/system-config-kickstart.glade.h:118
+#: tmp/system-config-kickstart.glade.h:110
 msgid "Partition Information (required)"
 msgstr "Gwybodaeth Raniadau (angenrheidiol)"
 
-#: tmp/system-config-kickstart.glade.h:119
+#: tmp/system-config-kickstart.glade.h:111
 msgid "Partition Options"
 msgstr "Dewisiadau Rhaniadau"
 
-#: tmp/system-config-kickstart.glade.h:120
+#: tmp/system-config-kickstart.glade.h:112
 msgid "Partition options are not applicable on upgrades."
 msgstr "Nid yw dewisiadau rhannu yn berthnasol ar uwchraddiadau."
 
-#: tmp/system-config-kickstart.glade.h:121
+#: tmp/system-config-kickstart.glade.h:113
 msgid "Password:"
 msgstr "Cyfrinair:"
 
-#: tmp/system-config-kickstart.glade.h:122
+#: tmp/system-config-kickstart.glade.h:114
 msgid "Perform installation in interactive mode"
 msgstr "Gweithredu'r arsefydliad ym modd rhyngweithiol"
 
-#: tmp/system-config-kickstart.glade.h:123
+#: tmp/system-config-kickstart.glade.h:115
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "Gweithredu'r arsefydliad ym modd testun (graffigol yw'r rhagosodyn)"
 
-#: tmp/system-config-kickstart.glade.h:124
+#: tmp/system-config-kickstart.glade.h:116
 msgid "Perform new installation"
 msgstr "Gweithredu arsefydliad newydd"
 
-#: tmp/system-config-kickstart.glade.h:127
+#: tmp/system-config-kickstart.glade.h:119
 msgid "Preserve existing partitions"
 msgstr "Cadw rhaniadau cyfredol"
 
-#: tmp/system-config-kickstart.glade.h:128
+#: tmp/system-config-kickstart.glade.h:120
 msgid "Preview Options"
 msgstr "Dewisiadau Rhagolwg"
 
-#: tmp/system-config-kickstart.glade.h:129
-msgid "Probe for monitor"
-msgstr "Archwilio am fonitor"
-
-#: tmp/system-config-kickstart.glade.h:130
-msgid "Probe for video card driver"
-msgstr "Archwilio am yrrydd y cerdyn fideo"
-
-#: tmp/system-config-kickstart.glade.h:131
+#: tmp/system-config-kickstart.glade.h:121
 msgid "RAID"
 msgstr "RAID"
 
-#: tmp/system-config-kickstart.glade.h:132
+#: tmp/system-config-kickstart.glade.h:122
 msgid "RAID Device:"
 msgstr "Dyfais RAID:"
 
-#: tmp/system-config-kickstart.glade.h:133
+#: tmp/system-config-kickstart.glade.h:123
 msgid "RAID Level:"
 msgstr "Lefel RAID:"
 
-#: tmp/system-config-kickstart.glade.h:134
+#: tmp/system-config-kickstart.glade.h:124
 msgid "RAID Options"
 msgstr "Dewisiadau RAID"
 
-#: tmp/system-config-kickstart.glade.h:135
+#: tmp/system-config-kickstart.glade.h:125
 msgid "Raid Members"
 msgstr "Aelodau Raid"
 
-#: tmp/system-config-kickstart.glade.h:136
+#: tmp/system-config-kickstart.glade.h:126
 msgid "Reboot system after installation"
 msgstr "Ailgychwyn system wedi'r arsefydlu"
 
-#: tmp/system-config-kickstart.glade.h:137
+#: tmp/system-config-kickstart.glade.h:127
 msgid "Remove all existing partitions"
 msgstr "Gwaredu pob rhaniad cyfredol"
 
-#: tmp/system-config-kickstart.glade.h:138
+#: tmp/system-config-kickstart.glade.h:128
 msgid "Remove existing Linux partitions"
 msgstr "Gwaredu pob rhaniad Linux cyfredol"
 
-#: tmp/system-config-kickstart.glade.h:139
-msgid "Resolution"
-msgstr "Cydraniad"
-
-#: tmp/system-config-kickstart.glade.h:140
+#: tmp/system-config-kickstart.glade.h:129
 msgid "Root Password:"
 msgstr "Cyfrinair Gwraidd:"
 
-#: tmp/system-config-kickstart.glade.h:141
+#: tmp/system-config-kickstart.glade.h:130
 msgid "Run outside of the chroot environment"
 msgstr "Rhedeg tu allan i'r amgylched chroot"
 
-#: tmp/system-config-kickstart.glade.h:142
+#: tmp/system-config-kickstart.glade.h:131
 msgid "SELinux:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:143
+#: tmp/system-config-kickstart.glade.h:132
 msgid "SMB"
 msgstr "SMB"
 
-#: tmp/system-config-kickstart.glade.h:144
+#: tmp/system-config-kickstart.glade.h:133
 msgid "SMB Authentication"
 msgstr "Dilysiant SMB"
 
-#: tmp/system-config-kickstart.glade.h:145
+#: tmp/system-config-kickstart.glade.h:134
 msgid "SMB Servers:"
 msgstr "Gweinyddion SMB:"
 
-#: tmp/system-config-kickstart.glade.h:146
+#: tmp/system-config-kickstart.glade.h:135
 msgid "SMB Workgroup:"
 msgstr "Grŵp gwaith SMB:"
 
-#: tmp/system-config-kickstart.glade.h:147
+#: tmp/system-config-kickstart.glade.h:136
 msgid "Security level:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:148
+#: tmp/system-config-kickstart.glade.h:137
 msgid "Size (MB):"
 msgstr "Maint (MB):"
 
-#: tmp/system-config-kickstart.glade.h:149
+#: tmp/system-config-kickstart.glade.h:138
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -975,28 +941,24 @@ msgstr ""
 "ychwanegol o gymharu â defnyddio gyriant unigol.  Am ragor o wybodaeth ar "
 "ddefnyddio dyfeisiau RAID gweler y ddogfennaeth kickstart."
 
-#: tmp/system-config-kickstart.glade.h:150
+#: tmp/system-config-kickstart.glade.h:139
 msgid "Specify an FTP username and password"
 msgstr "PEnodwch enw defnyddiwr a chyfrinair FTP"
 
-#: tmp/system-config-kickstart.glade.h:151
+#: tmp/system-config-kickstart.glade.h:140
 #, fuzzy
 msgid "Specify installation key:"
 msgstr "Gweithredu arsefydliad newydd"
 
-#: tmp/system-config-kickstart.glade.h:152
-msgid "Start the X Window System on boot"
-msgstr "Dechrau'r System Ffenestri X ar gychwyn"
-
-#: tmp/system-config-kickstart.glade.h:153
+#: tmp/system-config-kickstart.glade.h:141
 msgid "Target Architecture:"
 msgstr "Saernïaeth Darged:"
 
-#: tmp/system-config-kickstart.glade.h:154
+#: tmp/system-config-kickstart.glade.h:142
 msgid "Time Zone:"
 msgstr "Cylchfa Amser:"
 
-#: tmp/system-config-kickstart.glade.h:155
+#: tmp/system-config-kickstart.glade.h:143
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -1005,77 +967,57 @@ msgstr ""
 "meddalweddol' yn gyntaf.  Wedyn gallwch greu dyfais RAID y gellir ei "
 "fformadu a'i gosod."
 
-#: tmp/system-config-kickstart.glade.h:157
+#: tmp/system-config-kickstart.glade.h:145
 #, no-c-format
 msgid "Type your %post script below:"
 msgstr "Teipiwch eich sgript %post isod:"
 
-#: tmp/system-config-kickstart.glade.h:159
+#: tmp/system-config-kickstart.glade.h:147
 #, no-c-format
 msgid "Type your %pre script below:"
 msgstr "Teipiwch eich sgript %pre isod:"
 
-#: tmp/system-config-kickstart.glade.h:160
+#: tmp/system-config-kickstart.glade.h:148
 msgid "Upgrade an existing installation"
 msgstr "Uwchraddio arsefydliad cyfredol"
 
-#: tmp/system-config-kickstart.glade.h:161
+#: tmp/system-config-kickstart.glade.h:149
 msgid "Upgrade existing boot loader"
 msgstr "Uwchraddio cychwynnydd cyfredol"
 
-#: tmp/system-config-kickstart.glade.h:162
+#: tmp/system-config-kickstart.glade.h:150
 msgid "Use GRUB password"
 msgstr "Defnyddio cyfrinair GRUB"
 
-#: tmp/system-config-kickstart.glade.h:163
-msgid "Use MD5"
-msgstr "Defnyddio MD5"
-
-#: tmp/system-config-kickstart.glade.h:164
+#: tmp/system-config-kickstart.glade.h:151
 msgid "Use Shadow Passwords"
 msgstr "Defnyddio Cyfrineiriau Cysgod"
 
-#: tmp/system-config-kickstart.glade.h:165
+#: tmp/system-config-kickstart.glade.h:152
 msgid "Use UTC clock"
 msgstr "Defnyddio cloc UTC"
 
-#: tmp/system-config-kickstart.glade.h:166
+#: tmp/system-config-kickstart.glade.h:153
 msgid "Use an interpreter:"
 msgstr "Defnyddio dehonglydd:"
 
-#: tmp/system-config-kickstart.glade.h:167
+#: tmp/system-config-kickstart.glade.h:154
 msgid "Use broadcast to find NIS server"
 msgstr "Defnyddio darlledu i ganfod gweinydd NIS"
 
-#: tmp/system-config-kickstart.glade.h:168
-msgid "Use custom monitor sync rates"
-msgstr "Defnyddio cyfraddau cysoni monitor addasiedig"
-
-#: tmp/system-config-kickstart.glade.h:169
+#: tmp/system-config-kickstart.glade.h:155
 msgid "Use existing partition (onpart)"
 msgstr "Defnyddio rhaniad cyfredol (onpart)"
 
-#: tmp/system-config-kickstart.glade.h:170
+#: tmp/system-config-kickstart.glade.h:156
 msgid "Use recommended swap size"
 msgstr "Defnyddio maint cyfnewid argymelledig"
 
-#: tmp/system-config-kickstart.glade.h:171
-msgid "Vertical Sync:"
-msgstr "Cysoni Fertigol:"
-
-#: tmp/system-config-kickstart.glade.h:172
-msgid "Video Card"
-msgstr "Cerdyn Fideo"
-
-#: tmp/system-config-kickstart.glade.h:173
-msgid "Video Card RAM: "
-msgstr "RAM Cerdyn Fideo: "
-
-#: tmp/system-config-kickstart.glade.h:174
+#: tmp/system-config-kickstart.glade.h:157
 msgid "Warn"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:176
+#: tmp/system-config-kickstart.glade.h:159
 #, no-c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1084,7 +1026,7 @@ msgstr ""
 "Rhybudd: Gallai gwall yn y sgript yma achosi i'ch arsefydliad kickstart "
 "fethu. Peidiwch â chynnwys y gorchymyn %post ar y dechrau."
 
-#: tmp/system-config-kickstart.glade.h:178
+#: tmp/system-config-kickstart.glade.h:161
 #, no-c-format
 msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
@@ -1093,7 +1035,7 @@ msgstr ""
 "Rhybudd: Gallai gwall yn y sgript yma achosi i'ch arsefydliad kickstart "
 "fethu. Peidiwch â chynnwys y gorchymyn %pre ar y dechrau."
 
-#: tmp/system-config-kickstart.glade.h:179
+#: tmp/system-config-kickstart.glade.h:162
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
@@ -1101,133 +1043,194 @@ msgstr ""
 "Rydych wedi dewis y cyfluniad canlynol. Cliciwch Cadw Ffeil i gadw'r ffeil "
 "kickstart."
 
-#: tmp/system-config-kickstart.glade.h:180
+#: tmp/system-config-kickstart.glade.h:163
 msgid "_About"
 msgstr "_Ynghylch"
 
-#: tmp/system-config-kickstart.glade.h:181
+#: tmp/system-config-kickstart.glade.h:164
 msgid "_Add"
 msgstr "_Ychwanegu"
 
-#: tmp/system-config-kickstart.glade.h:182
+#: tmp/system-config-kickstart.glade.h:165
 msgid "_Add Network Device"
 msgstr "_Ychwanegu Dyfais Rwydwaith"
 
-#: tmp/system-config-kickstart.glade.h:183
+#: tmp/system-config-kickstart.glade.h:166
 msgid "_Contents"
 msgstr "_Cynnwys"
 
-#: tmp/system-config-kickstart.glade.h:184
+#: tmp/system-config-kickstart.glade.h:167
 msgid "_Delete"
 msgstr "_Dileu"
 
-#: tmp/system-config-kickstart.glade.h:185
+#: tmp/system-config-kickstart.glade.h:168
 msgid "_Delete Network Device"
 msgstr "_Dileu Dyfais Rwydwaith"
 
-#: tmp/system-config-kickstart.glade.h:186
+#: tmp/system-config-kickstart.glade.h:169
 msgid "_Edit"
 msgstr "_Golygu"
 
-#: tmp/system-config-kickstart.glade.h:187
+#: tmp/system-config-kickstart.glade.h:170
 msgid "_Edit Network Device"
 msgstr "_Golygu Dyfais Rwydwaith"
 
-#: tmp/system-config-kickstart.glade.h:188
+#: tmp/system-config-kickstart.glade.h:171
 msgid "_File"
 msgstr "_Ffeil"
 
-#: tmp/system-config-kickstart.glade.h:189
+#: tmp/system-config-kickstart.glade.h:172
 msgid "_Help"
 msgstr "_Cymorth"
 
-#: tmp/system-config-kickstart.glade.h:190
+#: tmp/system-config-kickstart.glade.h:173
 msgid "_Open File"
 msgstr "_Agor Ffeil"
 
-#: tmp/system-config-kickstart.glade.h:191
+#: tmp/system-config-kickstart.glade.h:174
 msgid "_Preview"
 msgstr "_Rhagolygu"
 
-#: tmp/system-config-kickstart.glade.h:192
+#: tmp/system-config-kickstart.glade.h:175
 msgid "_Quit"
 msgstr "_Gadael"
 
-#: tmp/system-config-kickstart.glade.h:193
+#: tmp/system-config-kickstart.glade.h:176
 msgid "_Save File"
 msgstr "_Cadw Ffeil"
 
-#: tmp/system-config-kickstart.glade.h:194
+#: tmp/system-config-kickstart.glade.h:177
 msgid "_Save to File"
 msgstr "_Cadw i Ffeil"
 
-#: tmp/system-config-kickstart.glade.h:197
-msgid "kHz"
-msgstr "kHz"
-
-#: tmp/system-config-kickstart.glade.h:198
+#: tmp/system-config-kickstart.glade.h:180
 msgid "md0"
 msgstr "md0"
 
-#: tmp/system-config-kickstart.glade.h:199
+#: tmp/system-config-kickstart.glade.h:181
 msgid "md1"
 msgstr "md1"
 
-#: tmp/system-config-kickstart.glade.h:200
+#: tmp/system-config-kickstart.glade.h:182
 msgid "md10"
 msgstr "md10"
 
-#: tmp/system-config-kickstart.glade.h:201
+#: tmp/system-config-kickstart.glade.h:183
 msgid "md11"
 msgstr "md11"
 
-#: tmp/system-config-kickstart.glade.h:202
+#: tmp/system-config-kickstart.glade.h:184
 msgid "md12"
 msgstr "md12"
 
-#: tmp/system-config-kickstart.glade.h:203
+#: tmp/system-config-kickstart.glade.h:185
 msgid "md13"
 msgstr "md13"
 
-#: tmp/system-config-kickstart.glade.h:204
+#: tmp/system-config-kickstart.glade.h:186
 msgid "md14"
 msgstr "md14"
 
-#: tmp/system-config-kickstart.glade.h:205
+#: tmp/system-config-kickstart.glade.h:187
 msgid "md15"
 msgstr "md15"
 
-#: tmp/system-config-kickstart.glade.h:206
+#: tmp/system-config-kickstart.glade.h:188
 msgid "md2"
 msgstr "md2"
 
-#: tmp/system-config-kickstart.glade.h:207
+#: tmp/system-config-kickstart.glade.h:189
 msgid "md3"
 msgstr "md3"
 
-#: tmp/system-config-kickstart.glade.h:208
+#: tmp/system-config-kickstart.glade.h:190
 msgid "md4"
 msgstr "md4"
 
-#: tmp/system-config-kickstart.glade.h:209
+#: tmp/system-config-kickstart.glade.h:191
 msgid "md5"
 msgstr "md5"
 
-#: tmp/system-config-kickstart.glade.h:210
+#: tmp/system-config-kickstart.glade.h:192
 msgid "md6"
 msgstr "md6"
 
-#: tmp/system-config-kickstart.glade.h:211
+#: tmp/system-config-kickstart.glade.h:193
 msgid "md7"
 msgstr "md7"
 
-#: tmp/system-config-kickstart.glade.h:212
+#: tmp/system-config-kickstart.glade.h:194
 msgid "md8"
 msgstr "md8"
 
-#: tmp/system-config-kickstart.glade.h:213
+#: tmp/system-config-kickstart.glade.h:195
 msgid "md9"
 msgstr "md9"
+
+#~ msgid "Could not read video driver database"
+#~ msgstr "Methwyd darllen y gronfa ddata gyrrydd fideo"
+
+#, fuzzy
+#~ msgid "Please select an X driver."
+#~ msgstr "Rhowch weinydd NFS os gwelwch yn dda."
+
+#, fuzzy
+#~ msgid "Please select a monitor."
+#~ msgstr "Dewiswch gyfrinair gwraidd."
+
+#~ msgid "Color Depth"
+#~ msgstr "Dyfnder Lliw"
+
+#~ msgid "Default Desktop:"
+#~ msgstr "Penbwrdd rhagosodedig:"
+
+#~ msgid "GNOME"
+#~ msgstr "GNOME"
+
+#~ msgid "General"
+#~ msgstr "Cyffredinol"
+
+#~ msgid "Horizontal Sync:"
+#~ msgstr "Cysoni Llorweddol:"
+
+#~ msgid "Hz"
+#~ msgstr "Hz"
+
+#~ msgid "KDE"
+#~ msgstr "KDE"
+
+#~ msgid "Monitor"
+#~ msgstr "Monitor"
+
+#~ msgid "Probe for monitor"
+#~ msgstr "Archwilio am fonitor"
+
+#~ msgid "Probe for video card driver"
+#~ msgstr "Archwilio am yrrydd y cerdyn fideo"
+
+#~ msgid "Resolution"
+#~ msgstr "Cydraniad"
+
+#~ msgid "Start the X Window System on boot"
+#~ msgstr "Dechrau'r System Ffenestri X ar gychwyn"
+
+#~ msgid "Use MD5"
+#~ msgstr "Defnyddio MD5"
+
+#~ msgid "Use custom monitor sync rates"
+#~ msgstr "Defnyddio cyfraddau cysoni monitor addasiedig"
+
+#~ msgid "Vertical Sync:"
+#~ msgstr "Cysoni Fertigol:"
+
+#~ msgid "Video Card"
+#~ msgstr "Cerdyn Fideo"
+
+#~ msgid "Video Card RAM: "
+#~ msgstr "RAM Cerdyn Fideo: "
+
+#~ msgid "kHz"
+#~ msgstr "kHz"
 
 #~ msgid "."
 #~ msgstr "."
