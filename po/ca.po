@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-12 17:02-0400\n"
-"PO-Revision-Date: 2007-09-07 10:59+0200\n"
+"PO-Revision-Date: 2009-03-13 10:59+0200\n"
 "Last-Translator: Josep Puigdemont <josep.puigdemont@gmail.com>\n"
 "Language-Team: Catalan <fedora@softcatala.net>\n"
 "MIME-Version: 1.0\n"
@@ -134,9 +134,9 @@ msgstr ""
 "%s"
 
 #: ../src/kickstartGui.py:95 ../src/kickstartGui.py:293
-#, fuzzy, python-format
+#, python-format
 msgid "The kickstart file %s could not be opened."
-msgstr "No es pot accedir al fitxer \"%s\"."
+msgstr "No es pot obrir el fitxer «%s»."
 
 #: ../src/kickstartGui.py:100 ../src/kickstartGui.py:298
 msgid "Error Parsing Kickstart Config"
@@ -267,6 +267,10 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"S'ha desactivat la selecció de paquets per un error en la configuració. Arregleu "
+"la vostra configuració de repositoris i proveu de nou.\n"
+"\n"
+"%s"
 
 #: ../src/packages.py:199
 msgid "Retrieving package information"
@@ -411,17 +415,14 @@ msgid "Raid Devices"
 msgstr "Dispositius Raid"
 
 #: ../src/savedialog.py:72
-#, fuzzy, python-format
+#, python-format
 msgid "The following error occurred while saving the kickstart config %s: %s"
 msgstr ""
-"S'han trobat aquests errors en analitzar la configuració del kickstart:\n"
-"\n"
-"%s"
+"S'ha trobat aquest error en desar la configuració del kickstart %s: %s"
 
 #: ../src/savedialog.py:76
-#, fuzzy
 msgid "Error Saving Kickstart Config"
-msgstr "S'ha produït un error en analitzar la configuració del Kickstart"
+msgstr "S'ha produït un error en desar la configuració del Kickstart"
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
