@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-12 17:02-0400\n"
-"PO-Revision-Date: 2007-08-29 23:33-0000\n"
+"PO-Revision-Date: 2009-03-14 21:23+0100\n"
 "Last-Translator: Miloš Komarčević <kmilos@gmail.com>\n"
 "Language-Team: Serbian (sr) <fedora-trans-sr@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -53,7 +53,7 @@ msgstr "Greška"
 
 #: ../src/bootloader.py:147
 msgid "Grub passwords do not match.  Please try again."
-msgstr "Lozinke za Grub se ne slažu.  Pokušajte ponovo."
+msgstr "Lozinke za grub se ne slažu.  Pokušajte ponovo."
 
 #: ../src/bootloader.py:198
 #, python-format
@@ -120,13 +120,13 @@ msgstr ""
 "%s"
 
 #: ../src/kickstartGui.py:95 ../src/kickstartGui.py:293
-#, fuzzy, python-format
+#, python-format
 msgid "The kickstart file %s could not be opened."
-msgstr "Datoteci „%s“ nije moguće pristupiti."
+msgstr "Kickstart datoteku %s nije bilo moguće otvoriti."
 
 #: ../src/kickstartGui.py:100 ../src/kickstartGui.py:298
 msgid "Error Parsing Kickstart Config"
-msgstr "Greška pri raščlanjavanju  Kickstart podešavanja"
+msgstr "Greška pri raščlanjavanju kickstart podešavanja"
 
 #: ../src/kickstartGui.py:108
 msgid "Kickstart"
@@ -241,7 +241,7 @@ msgstr "Unesite ispravnu adresu servera imena."
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
-msgstr "Mrežni uređaj imena %s već postoji.  Izaberite drugo ime za uređaj"
+msgstr "Mrežni uređaj imena %s već postoji.  Izaberite drugo ime za uređaj."
 
 #: ../src/packages.py:146
 #, python-format
@@ -251,6 +251,10 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Biranje paketa je isključeno zbog greške u podešavanjima.  Popravite "
+"podešavanje riznice i pokušajte ponovo.\n"
+"\n"
+"%s"
 
 #: ../src/packages.py:199
 msgid "Retrieving package information"
@@ -382,29 +386,25 @@ msgstr ""
 #: ../src/raidWindow.py:175
 #, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr "Morate izabrati najmanje 2 particije kako bi koristili RAID %s"
+msgstr "Morate izabrati najmanje 2 particije kako biste koristili RAID %s"
 
 #: ../src/raidWindow.py:181
 #, python-format
 msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr "Morate izabrati najmanje 3 particije kako bi koristili RAID %s"
+msgstr "Morate izabrati najmanje 3 particije kako biste koristili RAID %s"
 
 #: ../src/raidWindow.py:195 ../src/raidWindow.py:221
 msgid "Raid Devices"
 msgstr "Raid uređaji"
 
 #: ../src/savedialog.py:72
-#, fuzzy, python-format
+#, python-format
 msgid "The following error occurred while saving the kickstart config %s: %s"
-msgstr ""
-"Sledeća se greška zadesila pri raščlanjavanju vašeg kickstart podešavanja:\n"
-"\n"
-"%s"
+msgstr "Sledeća se greška zadesila pri čuvanju kickstart podešavanja %s: %s"
 
 #: ../src/savedialog.py:76
-#, fuzzy
 msgid "Error Saving Kickstart Config"
-msgstr "Greška pri raščlanjavanju  Kickstart podešavanja"
+msgstr "Greška pri čuvanju kickstart podešavanja"
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -480,7 +480,7 @@ msgstr "Očisti glavni pokretački zapis (MBR)"
 
 #: tmp/system-config-kickstart.glade.h:19
 msgid "Configure the X Window System"
-msgstr "Podesi X okruženje"
+msgstr "Podesi X Window sistem"
 
 #: tmp/system-config-kickstart.glade.h:20
 msgid "Confirm Password:"
@@ -692,7 +692,7 @@ msgstr "Instaliraj novi pokretač sistema"
 
 #: tmp/system-config-kickstart.glade.h:74
 msgid "Installation Method (required)"
-msgstr "Metof instalacije (potrebno)"
+msgstr "Metod instalacije (potrebno)"
 
 #: tmp/system-config-kickstart.glade.h:75
 msgid "Kerberos 5"
@@ -788,15 +788,15 @@ msgstr "NIS server:"
 
 #: tmp/system-config-kickstart.glade.h:98
 msgid "Name Server:"
-msgstr "Name Server:"
+msgstr "Server imena:"
 
 #: tmp/system-config-kickstart.glade.h:99
 msgid "Name Switch Cache"
-msgstr "Name Switch Cache"
+msgstr "Keš zamene imena"
 
 #: tmp/system-config-kickstart.glade.h:100
 msgid "Name Switch Cache Daemon (nscd) Authentication"
-msgstr "Name Switch Cache Daemon (nscd) autentifikacija"
+msgstr "Autentifikacija demona keša zamene imena (nscd)"
 
 #: tmp/system-config-kickstart.glade.h:101
 msgid "Netmask: "
@@ -937,9 +937,9 @@ msgid ""
 "reliability compared to using an individual drive.  For more information on "
 "using RAID devices please consult the kickstart documentation."
 msgstr ""
-"Softverski RAID Vam omogućava kombinovanje više diskova u veći RAID uređaj.  "
+"Softverski RAID vam omogućava kombinovanje više diskova u veći RAID uređaj.  "
 "RAID uređaj može se podesiti tako da pruži dodatnu brzinu i pouzdanost u "
-"poređenju sa pojedinačnim diskom.  Za više informacija o korišćenjuRAID "
+"poređenju sa pojedinačnim diskom.  Za više informacija o korišćenju RAID "
 "uređaja pogledajte kickstart dokumentaciju. "
 
 #: tmp/system-config-kickstart.glade.h:139
@@ -963,19 +963,19 @@ msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
 msgstr ""
-"Da bi koristili RAID prvo morate napraviti najmanje dve particije tipa "
-"’softverski RAID‘.  Potom možete napraviti RAID uređaj koji može biti "
+"Da biste koristili RAID prvo morate napraviti najmanje dve particije tipa "
+"„softverski RAID“.  Potom možete napraviti RAID uređaj koji može biti "
 "formatiran i montiran."
 
 #: tmp/system-config-kickstart.glade.h:145
 #, no-c-format
 msgid "Type your %post script below:"
-msgstr "Ukucajte %post skriptu:"
+msgstr "Ukucajte %post skriptu ispod:"
 
 #: tmp/system-config-kickstart.glade.h:147
 #, no-c-format
 msgid "Type your %pre script below:"
-msgstr "Ukucajte %pre skriptu:"
+msgstr "Ukucajte %pre skriptu ispod:"
 
 #: tmp/system-config-kickstart.glade.h:148
 msgid "Upgrade an existing installation"
@@ -991,7 +991,7 @@ msgstr "Koristi GRUB lozinku"
 
 #: tmp/system-config-kickstart.glade.h:151
 msgid "Use Shadow Passwords"
-msgstr "Koristi Shadow lozinke"
+msgstr "Koristi shadow lozinke"
 
 #: tmp/system-config-kickstart.glade.h:152
 msgid "Use UTC clock"
@@ -1011,7 +1011,7 @@ msgstr "Koristi postojeću particiju (onpart)"
 
 #: tmp/system-config-kickstart.glade.h:156
 msgid "Use recommended swap size"
-msgstr "Koristi preporučenu veličinu za swap"
+msgstr "Koristi preporučenu veličinu za svap"
 
 #: tmp/system-config-kickstart.glade.h:157
 msgid "Warn"
@@ -1040,8 +1040,8 @@ msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
 msgstr ""
-"Izabrali ste sledeće podešavanje. Klinite Sačuvaj datoteku da bi sačuvali "
-"kickstart datoteku. "
+"Izabrali ste sledeće podešavanje. Kliknite Sačuvaj datoteku da biste "
+"sačuvali kickstart datoteku. "
 
 #: tmp/system-config-kickstart.glade.h:163
 msgid "_About"
@@ -1065,7 +1065,7 @@ msgstr "_Brisanje"
 
 #: tmp/system-config-kickstart.glade.h:168
 msgid "_Delete Network Device"
-msgstr "_Obriši mrežni uređaj"
+msgstr "O_briši mrežni uređaj"
 
 #: tmp/system-config-kickstart.glade.h:169
 msgid "_Edit"
@@ -1166,66 +1166,3 @@ msgstr "md8"
 #: tmp/system-config-kickstart.glade.h:195
 msgid "md9"
 msgstr "md9"
-
-#~ msgid "Could not read video driver database"
-#~ msgstr "Nije moguće pročitati bazu video karti"
-
-#~ msgid "Please select an X driver."
-#~ msgstr "Izaberite upravljački program za X."
-
-#~ msgid "Please select a monitor."
-#~ msgstr "Izaberite monitor."
-
-#~ msgid "Color Depth"
-#~ msgstr "Dubina boja"
-
-#~ msgid "Default Desktop:"
-#~ msgstr "Podrazumevano okruženje:"
-
-#~ msgid "GNOME"
-#~ msgstr "GNOME"
-
-#~ msgid "General"
-#~ msgstr "Opšte"
-
-#~ msgid "Horizontal Sync:"
-#~ msgstr "Položeno sinhronizovanje:"
-
-#~ msgid "Hz"
-#~ msgstr "Hz"
-
-#~ msgid "KDE"
-#~ msgstr "KDE"
-
-#~ msgid "Monitor"
-#~ msgstr "Monitor"
-
-#~ msgid "Probe for monitor"
-#~ msgstr "Potraži monitor"
-
-#~ msgid "Probe for video card driver"
-#~ msgstr "Potraži video kartu"
-
-#~ msgid "Resolution"
-#~ msgstr "Rezolucija"
-
-#~ msgid "Start the X Window System on boot"
-#~ msgstr "Pokreni H sistem pri pokretanju sistema"
-
-#~ msgid "Use MD5"
-#~ msgstr "Koristi MD5"
-
-#~ msgid "Use custom monitor sync rates"
-#~ msgstr "Koristi prilagođene vrednosti za sinhronizovanje monitora"
-
-#~ msgid "Vertical Sync:"
-#~ msgstr "Uspravno sinhronizovanje:"
-
-#~ msgid "Video Card"
-#~ msgstr "Video karta"
-
-#~ msgid "Video Card RAM: "
-#~ msgstr "RAM video karte:"
-
-#~ msgid "kHz"
-#~ msgstr "kHz"
