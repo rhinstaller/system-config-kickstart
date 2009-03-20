@@ -1,19 +1,22 @@
+# translation of system-config-kickstart.master.po to icelandic
 # Icelandic ksconfig.po
 # Copyright (C) 2001 Red Hat
-# Richard Allen <ra@ra.is>, 2001.
 #
+# Richard Allen <ra@ra.is>, 2001.
+# Sveinn í Felli <sveinki@nett.is>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: ksconfig 1.1\n"
+"Project-Id-Version: system-config-kickstart.master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-12 17:02-0400\n"
-"PO-Revision-Date: 2007-09-30 16:08:22 2001\n"
-"Last-Translator: Richard Allen <ra@ra.is>\n"
-"Language-Team: is <kde-isl@molar.is>\n"
+"PO-Revision-Date: 2009-03-20 07:58+0000\n"
+"Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
+"Language-Team: icelandic <kde-isl@molar.is>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: pygettext.py 1.1\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../src/auth.py:350
 msgid "Please fill in the authentication information"
@@ -112,26 +115,26 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"Eftirfarandi villa fannst við þáttun hraðuppsetningarskránnar:\n"
+"Eftirfarandi villa fannst við þáttun hraðræsiskrárinnar:\n"
 "\n"
 "%s"
 
 #: ../src/kickstartGui.py:95 ../src/kickstartGui.py:293
-#, fuzzy, python-format
+#, python-format
 msgid "The kickstart file %s could not be opened."
-msgstr "Ekki var hægt að opna skrána \"%s\"."
+msgstr "Ekki var hægt að opna hraðræsiskrána %s."
 
 #: ../src/kickstartGui.py:100 ../src/kickstartGui.py:298
 msgid "Error Parsing Kickstart Config"
-msgstr "Villa við þáttun hraðuppsetningarskrár"
+msgstr "Villa við þáttun hraðræsiskrár"
 
 #: ../src/kickstartGui.py:108
 msgid "Kickstart"
-msgstr "Hraðuppsetning"
+msgstr "Hraðræsing"
 
 #: ../src/kickstartGui.py:109
 msgid "Create a kickstart file"
-msgstr "Búa til hraðuppsetningaskrá"
+msgstr "Búa til hraðræsiskrá"
 
 #: ../src/kickstartGui.py:131
 msgid "Subsection"
@@ -190,14 +193,14 @@ msgid ""
 " A graphical interface for creating a kickstart file"
 msgstr ""
 "Kickstart stillingatól @VERSION@\n"
-" Copyright (c) 2000-2002 Red Hat, Inc.\n"
-" Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-" Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-" Myndrænt tól til að búa til hraðuppsetningarskrár (kickstart)"
+" Höfundarréttur (c) 2000-2002 Red Hat, Inc.\n"
+" Höfundarréttur (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
+" Höfundarréttur (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
+" Myndrænt tól til að búa til hraðræsiskrár (kickstart)"
 
 #: ../src/kickstartGui.py:211
 msgid "About Kickstart Configurator"
-msgstr "Um hraðuppsetningarstillingatólið"
+msgstr "Um hraðræsistillingatólið"
 
 #: ../src/kickstartGui.py:233
 msgid "Help is not available."
@@ -248,6 +251,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Ekki er hægt að velja pakka vegna galla í uppsetningu.  Vinsamlegast lagaðu uppsetningu pakkageymslanna þinna og reyndu svo aftur.\n"
+"\n"
+"%s"
 
 #: ../src/packages.py:199
 msgid "Retrieving package information"
@@ -314,8 +320,7 @@ msgstr "Veldu tengipunkt fyrir sneiðina."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:481
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "Tengipunkturinn \"%s\" er þegar í notkun. Vinsamlegast veldu annan "
 "tengipunkt."
@@ -380,31 +385,25 @@ msgstr "Þú ert núna með %d RAID disksneiðar sem eru ekki í notkun."
 #: ../src/raidWindow.py:175
 #, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr ""
-"Þú verður að velja að minnsta kosti 2 disksneiðar til að búa til RAID %s"
+msgstr "Þú verður að velja að minnsta kosti 2 disksneiðar til að búa til RAID %s"
 
 #: ../src/raidWindow.py:181
 #, python-format
 msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr ""
-"Þú verður að velja að minnsta kosti 3 disksneiðar til að búa til RAID %s"
+msgstr "Þú verður að velja að minnsta kosti 3 disksneiðar til að búa til RAID %s"
 
 #: ../src/raidWindow.py:195 ../src/raidWindow.py:221
 msgid "Raid Devices"
 msgstr "RAID tæki"
 
 #: ../src/savedialog.py:72
-#, fuzzy, python-format
+#, python-format
 msgid "The following error occurred while saving the kickstart config %s: %s"
-msgstr ""
-"Eftirfarandi villa fannst við þáttun hraðuppsetningarskránnar:\n"
-"\n"
-"%s"
+msgstr "Eftirfarandi villa fannst við þáttun hraðræsiskrárinnar %s: %s"
 
 #: ../src/savedialog.py:76
-#, fuzzy
 msgid "Error Saving Kickstart Config"
-msgstr "Villa við þáttun hraðuppsetningarskrár"
+msgstr "Villa við þáttun hraðræsiskrár"
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -724,7 +723,7 @@ msgstr "Lyklaborð:"
 
 #: tmp/system-config-kickstart.glade.h:82
 msgid "Kickstart Configurator"
-msgstr "Hraðuppsetningarstillingatól"
+msgstr "Hraðræsingarstillingatól"
 
 #: tmp/system-config-kickstart.glade.h:83
 msgid "LDAP "
@@ -1023,7 +1022,7 @@ msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %post command at the beginning."
 msgstr ""
-"Aðvörun: villa í þessu skeljaforriti getur valdið því að hraðuppsettning "
+"Aðvörun: villa í þessu skeljaforriti getur valdið því að hraðræsing "
 "bregst. Ekki nota %post skipunina til að byrja með."
 
 #: tmp/system-config-kickstart.glade.h:161
@@ -1032,7 +1031,7 @@ msgid ""
 "Warning: An error in this script might cause your kickstart installation to "
 "fail. Do not include the %pre command at the beginning."
 msgstr ""
-"Aðvörun: villa í þessu skeljaforriti getur valdið því að hraðuppsettning "
+"Aðvörun: villa í þessu skeljaforriti getur valdið því að hraðræsing "
 "bregst. Ekki nota %pre skipunina til að byrja með."
 
 #: tmp/system-config-kickstart.glade.h:162
@@ -1041,7 +1040,7 @@ msgid ""
 "kickstart file. "
 msgstr ""
 "Þú hefur kosið eftirfarandi stillingar. Veldu Vista í skrá til að vista "
-"hraðuppsetningarstillingum."
+"hraðræsistillingum."
 
 #: tmp/system-config-kickstart.glade.h:163
 msgid "_About"
@@ -1167,65 +1166,3 @@ msgstr "md8"
 msgid "md9"
 msgstr "md9"
 
-#~ msgid "Could not read video driver database"
-#~ msgstr "Gat ekki lesið skjákortagrunninn"
-
-#~ msgid "Please select an X driver."
-#~ msgstr "Vinsamlegast veldu X rekil."
-
-#~ msgid "Please select a monitor."
-#~ msgstr "Vinsamlegast veldu skjá."
-
-#~ msgid "Color Depth"
-#~ msgstr "Litadýpt"
-
-#~ msgid "Default Desktop:"
-#~ msgstr "Sjálfgefið skjáborð:"
-
-#~ msgid "GNOME"
-#~ msgstr "GNOME"
-
-#~ msgid "General"
-#~ msgstr "Almennt"
-
-#~ msgid "Horizontal Sync:"
-#~ msgstr "Lárétt samhæfing:"
-
-#~ msgid "Hz"
-#~ msgstr "Hz"
-
-#~ msgid "KDE"
-#~ msgstr "KDE"
-
-#~ msgid "Monitor"
-#~ msgstr "Skjár"
-
-#~ msgid "Probe for monitor"
-#~ msgstr "Leita að skjá"
-
-#~ msgid "Probe for video card driver"
-#~ msgstr "Leita að skjákortsrekli"
-
-#~ msgid "Resolution"
-#~ msgstr "Upplausn"
-
-#~ msgid "Start the X Window System on boot"
-#~ msgstr "Ræsa X gluggakerfið við ræsingu"
-
-#~ msgid "Use MD5"
-#~ msgstr "Nota MD5"
-
-#~ msgid "Use custom monitor sync rates"
-#~ msgstr "Nota sérsniðin tíðnisvið"
-
-#~ msgid "Vertical Sync:"
-#~ msgstr "Lóðrétt samhæfing:"
-
-#~ msgid "Video Card"
-#~ msgstr "Skjákort"
-
-#~ msgid "Video Card RAM: "
-#~ msgstr "Skjáminni:"
-
-#~ msgid "kHz"
-#~ msgstr "kHz"
