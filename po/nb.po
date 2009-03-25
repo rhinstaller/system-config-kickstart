@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: system-config-kickstart 2.7.12.\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-12 17:02-0400\n"
-"PO-Revision-Date: 2007-10-04 15:43+0200\n"
+"PO-Revision-Date: 2009-03-25 20:44+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian/Bokmaal <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -116,9 +116,9 @@ msgstr ""
 "%s"
 
 #: ../src/kickstartGui.py:95 ../src/kickstartGui.py:293
-#, fuzzy, python-format
+#, python-format
 msgid "The kickstart file %s could not be opened."
-msgstr "Filen «%s» kan ikke aksesseres."
+msgstr "Kickstart-filen %s kunne ikke åpnes."
 
 #: ../src/kickstartGui.py:100 ../src/kickstartGui.py:298
 msgid "Error Parsing Kickstart Config"
@@ -249,6 +249,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Pakkeutvalg er slått av på grunn av en feil i oppsettet. Korriger konfigurasjon av lager og prøv igjen.\n"
+"\n"
+"%s"
 
 #: ../src/packages.py:199
 msgid "Retrieving package information"
@@ -392,17 +395,13 @@ msgid "Raid Devices"
 msgstr "RAID-enheter"
 
 #: ../src/savedialog.py:72
-#, fuzzy, python-format
+#, python-format
 msgid "The following error occurred while saving the kickstart config %s: %s"
-msgstr ""
-"Følgende feil ble oppdaget under tolking av kickstart-konfigurasjonen:\n"
-"\n"
-"%s"
+msgstr "Følgende feil ble oppdaget under lagring av kickstart-konfigurasjon %s: %s"
 
 #: ../src/savedialog.py:76
-#, fuzzy
 msgid "Error Saving Kickstart Config"
-msgstr "Feil ved tolking av kickstart-konfigurasjonen"
+msgstr "Feil under lagring av kickstart-konfigurasjonen"
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -1164,66 +1163,3 @@ msgstr "md8"
 #: tmp/system-config-kickstart.glade.h:195
 msgid "md9"
 msgstr "md9"
-
-#~ msgid "Could not read video driver database"
-#~ msgstr "Kunne ikke lese database for skjermdrivere"
-
-#~ msgid "Please select an X driver."
-#~ msgstr "Vennligst velg en X driver."
-
-#~ msgid "Please select a monitor."
-#~ msgstr "Vennligst velg en monitor."
-
-#~ msgid "Color Depth"
-#~ msgstr "Fargedybde"
-
-#~ msgid "Default Desktop:"
-#~ msgstr "Standard skrivebord:"
-
-#~ msgid "GNOME"
-#~ msgstr "GNOME"
-
-#~ msgid "General"
-#~ msgstr "Generelt"
-
-#~ msgid "Horizontal Sync:"
-#~ msgstr "Horisontal synk:"
-
-#~ msgid "Hz"
-#~ msgstr "Hz"
-
-#~ msgid "KDE"
-#~ msgstr "KDE"
-
-#~ msgid "Monitor"
-#~ msgstr "Skjerm"
-
-#~ msgid "Probe for monitor"
-#~ msgstr "Søk etter skjerm"
-
-#~ msgid "Probe for video card driver"
-#~ msgstr "Søk etter driver for skjermkort"
-
-#~ msgid "Resolution"
-#~ msgstr "Oppløsning"
-
-#~ msgid "Start the X Window System on boot"
-#~ msgstr "Start X-vindussystemet ved oppstart"
-
-#~ msgid "Use MD5"
-#~ msgstr "Bruk MD5"
-
-#~ msgid "Use custom monitor sync rates"
-#~ msgstr "Bruk egendefinerte synkroniseringsrater for skjerm"
-
-#~ msgid "Vertical Sync:"
-#~ msgstr "Vertikal synk:"
-
-#~ msgid "Video Card"
-#~ msgstr "Skjermkort:"
-
-#~ msgid "Video Card RAM: "
-#~ msgstr "RAM på skjermkort:"
-
-#~ msgid "kHz"
-#~ msgstr "kHz"
