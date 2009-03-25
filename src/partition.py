@@ -212,7 +212,7 @@ class partition:
                 if not part_object.doFormat:
                     pd.format = False
 
-                self.ks.partition.add(pd)
+                self.ks.partition.dataList().append(pd)
             else:
                 #This is a raid device
                 rd = self.ks.RaidData()
@@ -233,7 +233,7 @@ class partition:
                 if part_object.raidPartitions != None:
                     rd.members = part_object.raidPartitions
 
-                self.ks.raid.add(rd)
+                self.ks.raid.dataList().append(rd)
 
     def rowSelected(self, *args):
         store, iter = self.part_view.get_selection().get_selected()

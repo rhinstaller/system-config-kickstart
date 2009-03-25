@@ -343,7 +343,7 @@ class network:
                 nd.nameserver = self.network_device_store.get_value(iter, 5) or ""
 
             nd.device = self.network_device_store.get_value(iter, 0)
-            self.ks.network.add(nd)
+            self.ks.network.dataList().append(nd)
             iter = self.network_device_store.iter_next(iter)
 
     def typeChanged(self, *args):
