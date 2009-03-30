@@ -1,26 +1,27 @@
 # translation of ja.po to Japanese
 # Japanese translation of ksconfig
-# Copyright (C) 2001,2002,2003, 2004, 2006, 2007 Free Software Foundation, Inc.
+# Copyright (C) 2001,2002,2003, 2004, 2006, 2007, 2009 Free Software Foundation, Inc.
+#
 # Yukihiro Nakai <ynakai@redhat.com>, 2001.
 # James Hashida <khashida@redhat.com>, 2002,2003.
 # Noriko Mizumoto <noriko@redhat.com>, 2003, 2006.
 # Tadashi Jokagi <fedora@elf.no-ip.org>, 2004.
 # Hirofumi Saito <hi_saito@yk.rim.or.jp>, 2005.
 # Kiyoto James Hashida <khashida@redhat.com>, 2007.
-# Hyu_gabaru Ryu_ichi <hyu_gabaru@yahoo.co.jp>, 2007
-#
+# Hyu_gabaru Ryu_ichi <hyu_gabaru@yahoo.co.jp>, 2007.
+# Kiyoto Hashida <khashida@redhat.com>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: ja\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-12 17:02-0400\n"
-"PO-Revision-Date: 2007-09-01 14:57+0900\n"
-"Last-Translator: Hyu_gabaru Ryu_ichi <hyu_gabaru@yahoo.co.jp>\n"
-"Language-Team: Japanese <ja@li.org>\n"
+"PO-Revision-Date: 2009-03-30 17:28+1000\n"
+"Last-Translator: Kiyoto Hashida <khashida@redhat.com>\n"
+"Language-Team: Japanese <jp@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../src/auth.py:350
 msgid "Please fill in the authentication information"
@@ -124,9 +125,9 @@ msgstr ""
 "%s"
 
 #: ../src/kickstartGui.py:95 ../src/kickstartGui.py:293
-#, fuzzy, python-format
+#, python-format
 msgid "The kickstart file %s could not be opened."
-msgstr "ファイル\"%s\"にアクセスできません。"
+msgstr "キックスタートファイル %s を開くことができません。"
 
 #: ../src/kickstartGui.py:100 ../src/kickstartGui.py:298
 msgid "Error Parsing Kickstart Config"
@@ -257,6 +258,10 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"パッケージ選択はセットアップのエラーにより無効になっています。ご使用の "
+"レポジトリ設定を修復してから再度、試して下さいn"
+"\n"
+"%s"
 
 #: ../src/packages.py:199
 msgid "Retrieving package information"
@@ -323,8 +328,7 @@ msgstr "パーティション用のマウントポイントを指定して下さ
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:481
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "マウントポイント\"%s\"は既に使用中です。他のマウントポイントを使用して下さ"
 "い。"
@@ -389,31 +393,25 @@ msgstr "現在使用出来るソフトウェア RAID パーティションが %d
 #: ../src/raidWindow.py:175
 #, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr ""
-"RAID %sを使用するには、最低 2 つのパーティションを選択する必要があります。"
+msgstr "RAID %sを使用するには、最低 2 つのパーティションを選択する必要があります。"
 
 #: ../src/raidWindow.py:181
 #, python-format
 msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr ""
-"RAID %s を使用するには最低3つのパーティションを選択する必要があります。"
+msgstr "RAID %s を使用するには最低3つのパーティションを選択する必要があります。"
 
 #: ../src/raidWindow.py:195 ../src/raidWindow.py:221
 msgid "Raid Devices"
 msgstr "RAID デバイス"
 
 #: ../src/savedialog.py:72
-#, fuzzy, python-format
+#, python-format
 msgid "The following error occurred while saving the kickstart config %s: %s"
-msgstr ""
-"キックスタート設定の構文解析中に以下のエラーが発見されました:\n"
-"\n"
-"%s"
+msgstr "キックスタート設定 %s の保存中に以下のエラーが発生しました: %s"
 
 #: ../src/savedialog.py:76
-#, fuzzy
 msgid "Error Saving Kickstart Config"
-msgstr "キックスタート設定の構文解析エラー"
+msgstr "キックスタート設定の保存エラー"
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -1176,68 +1174,3 @@ msgstr "md8"
 msgid "md9"
 msgstr "md9"
 
-#~ msgid "Could not read video driver database"
-#~ msgstr "ビデオドライバーのデータベースを読み込むことができませんでした"
-
-#~ msgid "Please select an X driver."
-#~ msgstr "X ドライバを選択して下さい。"
-
-#~ msgid "Please select a monitor."
-#~ msgstr "モニターを選択して下さい。"
-
-#~ msgid "Color Depth"
-#~ msgstr "色の深さ"
-
-#~ msgid "Default Desktop:"
-#~ msgstr "デフォルトデスクトップ:"
-
-#~ msgid "GNOME"
-#~ msgstr "GNOME"
-
-#~ msgid "General"
-#~ msgstr "一般"
-
-#~ msgid "Horizontal Sync:"
-#~ msgstr "水平同期周波数:"
-
-#~ msgid "Hz"
-#~ msgstr "Hz"
-
-#~ msgid "KDE"
-#~ msgstr "KDE"
-
-#~ msgid "Monitor"
-#~ msgstr "モニター"
-
-#~ msgid "Probe for monitor"
-#~ msgstr "モニターの調査"
-
-#~ msgid "Probe for video card driver"
-#~ msgstr "ビデオドライバーの調査"
-
-#~ msgid "Resolution"
-#~ msgstr "解像度"
-
-#~ msgid "Start the X Window System on boot"
-#~ msgstr "ブート時に X ウィンドウシステムを起動する"
-
-#~ msgid "Use MD5"
-#~ msgstr "MD5 を使う"
-
-#~ msgid "Use custom monitor sync rates"
-#~ msgstr "カスタムモニター同期レートを使う"
-
-#~ msgid "Vertical Sync:"
-#~ msgstr "垂直同期周波数:"
-
-#~ msgid "Video Card"
-#~ msgstr "ビデオカード"
-
-#~ msgid "Video Card RAM: "
-#~ msgstr "ビデオカード RAM: "
-
-#~ msgid "kHz"
-#~ msgstr "kHz"
-
-#~ msgid "."
-#~ msgstr "."
