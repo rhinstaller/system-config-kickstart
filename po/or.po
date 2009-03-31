@@ -1,22 +1,23 @@
-# translation of or.po to Oriya
+# translation of system-config-kickstart.master.or.po to Oriya
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
 # Subhransu Behera <sbehera@redhat.com>, 2006, 2007.
 # Subhransu Behera <arya_subhransu@yahoo.co.in>, 2007.
+# Manoj Kumar Giri <mgiri@redhat.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: or\n"
+"Project-Id-Version: system-config-kickstart.master.or\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-12 17:02-0400\n"
-"PO-Revision-Date: 2007-09-25 16:42+0530\n"
-"Last-Translator: Subhransu Behera <arya_subhransu@yahoo.co.in>\n"
-"Language-Team: Oriya <oriya-group@lists.sarovar.org>\n"
+"PO-Revision-Date: 2009-03-31 17:48+0530\n"
+"Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
+"Language-Team: Oriya <oriya-it@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Plural-Forms:  nplurals=2; plural=(n!=1);\n\n"
 "\n"
 "\n"
 "\n"
@@ -128,9 +129,9 @@ msgstr ""
 "%s"
 
 #: ../src/kickstartGui.py:95 ../src/kickstartGui.py:293
-#, fuzzy, python-format
+#, python-format
 msgid "The kickstart file %s could not be opened."
-msgstr "\"%s\" ଫାଇଲକୁ ଅଭିଗମ କରିହେବ ନାହିଁ।"
+msgstr "%s kickstart ଫାଇଲକୁ ଖୋଲି ହେଲା ନାହିଁ।"
 
 #: ../src/kickstartGui.py:100 ../src/kickstartGui.py:298
 msgid "Error Parsing Kickstart Config"
@@ -249,8 +250,7 @@ msgstr "ଦୟାକରି ଗୋଟିଏ ବୈଧ ନାମସେବକ ଠ�
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
-msgstr ""
-"%s ଦ୍ବାରା ନାମିତ ଗୋଟିଏ ନେଟୱାର୍କ ଉପକରଣ ପୂର୍ବରୁରହିଛି। ଦୟକରି ଅନ୍ଯ ଗୋଟିଏ ଉପକରଣର ନାମ ଚୟନ କରନ୍ତୁ"
+msgstr "%s ଦ୍ବାରା ନାମିତ ଗୋଟିଏ ନେଟୱାର୍କ ଉପକରଣ ପୂର୍ବରୁରହିଛି। ଦୟକରି ଅନ୍ଯ ଗୋଟିଏ ଉପକରଣର ନାମ ଚୟନ କରନ୍ତୁ"
 
 #: ../src/packages.py:146
 #, python-format
@@ -260,6 +260,10 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"ସେଟଅପରେ ତ୍ରୁଟି ଥିବା ହେତୁ ପ୍ୟାକେଜ ଚୟନକୁ ନିଷ୍କ୍ରିୟ କରାଯାଇଛି।  ଦୟାକରି ଆପଣଙ୍କର ସଂଗ୍ରହାଳୟ "
+"ସଂରଚନାକୁ ଠିକ କରନ୍ତୁ ଏବଂ ପୁଣିଥରେ ଚେଷ୍ଟାକରନ୍ତୁ।\n"
+"\n"
+"%s"
 
 #: ../src/packages.py:199
 msgid "Retrieving package information"
@@ -324,8 +328,7 @@ msgstr "ବିଭାଜନ ପାଇଁ ଗୋଟିଏ ସ୍ଥାପନ ବ�
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:481
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "\"%s\" ସ୍ଥାପନ ବିନ୍ଦୁ ଟି ପୂର୍ବରୁରହିଛି। ଦୟାକରି ଅନ୍ଯ ଗୋଟିଏ ସ୍ଥାପନ ବିନ୍ଦୁର ଚୟନ କରନ୍ତୁ।"
 
 #: ../src/partWindow.py:501
@@ -383,8 +386,7 @@ msgstr "ଦୟାକରି ତାଲିକାରୁ ଗୋଟିଏ ବିଭା
 #: ../src/raidOptionsWindow.py:72
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
-msgstr ""
-"ଆପଣଙ୍କ ନିକଟରେ ବର୍ତମାନ %d ସଫଟୱେର ବିଭାଜନ (ମାନ) ଅଛି ଯାହାକି ମାଗଣାରେ ବ୍ଯବହାର କରାଯାଇ ପାରିବ।"
+msgstr "ଆପଣଙ୍କ ନିକଟରେ ବର୍ତମାନ %d ସଫଟୱେର ବିଭାଜନ (ମାନ) ଅଛି ଯାହାକି ମାଗଣାରେ ବ୍ଯବହାର କରାଯାଇ ପାରିବ।"
 
 #: ../src/raidWindow.py:175
 #, python-format
@@ -401,17 +403,13 @@ msgid "Raid Devices"
 msgstr "RAID ଉପକରଣ ମାନ"
 
 #: ../src/savedialog.py:72
-#, fuzzy, python-format
+#, python-format
 msgid "The following error occurred while saving the kickstart config %s: %s"
-msgstr ""
-"ଆପଣଙ୍କ କିକ-ଷ୍ଟାର୍ଟ ବିନ୍ଯାସକୁ ବିଶ୍ଳେଷଣ କରିବା ସମୟରେ ନିମ୍ନଲିଖିତ ତୃଟି ଘଟିଲା:\n"
-"\n"
-"%s"
+msgstr "ଆପଣଙ୍କ kickstart config %s କୁ ସଂରକ୍ଷଣ କରିବା ସମୟରେ ନିମ୍ନଲିଖିତ ତୃଟି ଘଟିଲା:%s"
 
 #: ../src/savedialog.py:76
-#, fuzzy
 msgid "Error Saving Kickstart Config"
-msgstr "କିକ-ଷ୍ଟାର୍ଟ ବିନ୍ଯାସକୁ ବିଶ୍ଳେଷଣ କରିବା ସମୟରେ ତୃଟି"
+msgstr "Kickstart Configକୁ ସଂରକ୍ଷଣ କରିବା ସମୟରେ ତୃଟି"
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -1174,65 +1172,3 @@ msgstr "md8"
 msgid "md9"
 msgstr "md9"
 
-#~ msgid "Could not read video driver database"
-#~ msgstr "ଭିଡିଓ ଚାଳକ ତଥ୍ଯାଧାରକୁ ପଢି ପାରିଲା ନାହିଁ"
-
-#~ msgid "Please select an X driver."
-#~ msgstr "ଗୋଟିଏ X ଡ୍ରାଇଭର ଚୟନ କରନ୍ତୁ।"
-
-#~ msgid "Please select a monitor."
-#~ msgstr "ଗୋଟିଏ ପ୍ରଦର୍ଶିକା ଚୟନ କରନ୍ତୁ।"
-
-#~ msgid "Color Depth"
-#~ msgstr "ରଙ୍ଗର ସ୍ବଚ୍ଛତା"
-
-#~ msgid "Default Desktop:"
-#~ msgstr "ପୂର୍ବନିର୍ଦ୍ଧାରିତ ଡେସ୍କଟପ:"
-
-#~ msgid "GNOME"
-#~ msgstr "ନୋମ"
-
-#~ msgid "General"
-#~ msgstr "ସାଧାରଣ"
-
-#~ msgid "Horizontal Sync:"
-#~ msgstr "ଭୂସମାନ୍ତର ସିଙ୍କ:"
-
-#~ msgid "Hz"
-#~ msgstr "ହର୍ଜ"
-
-#~ msgid "KDE"
-#~ msgstr "କେ.ଡି.ଇ."
-
-#~ msgid "Monitor"
-#~ msgstr "ପ୍ରଦର୍ଶିକା"
-
-#~ msgid "Probe for monitor"
-#~ msgstr "ପ୍ରଦର୍ଶିକାକୁ ଖୋଜନ୍ତୁ"
-
-#~ msgid "Probe for video card driver"
-#~ msgstr "ଭିଡିଓ କାର୍ଡ ଡ୍ରାଇଭରକୁ ଖୋଜନ୍ତୁ"
-
-#~ msgid "Resolution"
-#~ msgstr "ବିଭେଦନ"
-
-#~ msgid "Start the X Window System on boot"
-#~ msgstr "ବୁଟ ସମୟରେ X ୱିଣ୍ଡୋ ତନ୍ତ୍ରକୁ ପ୍ରାରମ୍ଭ କରନ୍ତୁ"
-
-#~ msgid "Use MD5"
-#~ msgstr "MD5କୁ ବ୍ଯବହାର କରନ୍ତୁ"
-
-#~ msgid "Use custom monitor sync rates"
-#~ msgstr "ଇଚ୍ଛାରୂପ ପ୍ରଦର୍ଶିକା ସିଙ୍କ ହାରକୁ ବ୍ଯବହାର କରନ୍ତୁ"
-
-#~ msgid "Vertical Sync:"
-#~ msgstr "ଭୂଲମ୍ବ ସିଙ୍କ:"
-
-#~ msgid "Video Card"
-#~ msgstr "ଭିଡିଓ କାର୍ଡ"
-
-#~ msgid "Video Card RAM: "
-#~ msgstr "ଭିଡିଓ କାର୍ଡରାମ:"
-
-#~ msgid "kHz"
-#~ msgstr "କିଲୋ-ହର୍ଜ"
