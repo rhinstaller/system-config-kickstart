@@ -1,4 +1,4 @@
-# translation of system-config-kickstart.master.po to Traditional Chinese
+# translation of system-config-kickstart.master.po to
 # translation of zh_TW.po to
 # Translation of zh_TW.po to Traditional Chinese
 # Translation of zh_TW.po to Chinese (traditional)
@@ -8,15 +8,15 @@
 # Chester Cheng <ccheng@redhat.com>, 2005, 2006.
 # Leah Liu <weliu@redhat.com>, 2005.
 # Waika Liu <wliu@redhat.com>, 2005.
-# Terry Chuang <tchuang@redhat.com>, 2008.
+# Terry Chuang <tchuang@redhat.com>, 2008, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: system-config-kickstart.master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-12 17:02-0400\n"
-"PO-Revision-Date: 2008-09-24 14:50+1000\n"
+"PO-Revision-Date: 2009-03-31 15:43+1000\n"
 "Last-Translator: Terry Chuang <tchuang@redhat.com>\n"
-"Language-Team: Traditional Chinese <zh@li.org>\n"
+"Language-Team:  <zh@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -125,9 +125,9 @@ msgstr ""
 "%s"
 
 #: ../src/kickstartGui.py:95 ../src/kickstartGui.py:293
-#, fuzzy, python-format
+#, python-format
 msgid "The kickstart file %s could not be opened."
-msgstr "無法存取「%s」檔案。"
+msgstr "無法開啟 kickstart 檔案 %s。"
 
 #: ../src/kickstartGui.py:100 ../src/kickstartGui.py:298
 msgid "Error Parsing Kickstart Config"
@@ -256,6 +256,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"基於設定中含有錯誤，套件選擇已被停用。請修正您的軟體庫配置並重新嘗試。\n"
+"\n"
+"%s"
 
 #: ../src/packages.py:199
 msgid "Retrieving package information"
@@ -320,16 +323,14 @@ msgstr "請指定這個分割區的掛載點。"
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:481
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "掛載點「%s」已經被使用。請選擇另一個掛載點。"
 
 #: ../src/partWindow.py:501
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
-msgstr ""
-"要建立一個新的 RAID 分割區，您必須指定一個硬碟裝置名稱或一個現有的分割區。"
+msgstr "要建立一個新的 RAID 分割區，您必須指定一個硬碟裝置名稱或一個現有的分割區。"
 
 #: ../src/partWindow.py:538
 msgid "Specify a device on which to create the partition."
@@ -395,17 +396,13 @@ msgid "Raid Devices"
 msgstr "RAID 裝置"
 
 #: ../src/savedialog.py:72
-#, fuzzy, python-format
+#, python-format
 msgid "The following error occurred while saving the kickstart config %s: %s"
-msgstr ""
-"當剖析您的 kickstart 配置時發現了下列錯誤：\n"
-"\n"
-"%s"
+msgstr "當儲存 kickstart 配置 %s 時發生了下列錯誤：%s"
 
 #: ../src/savedialog.py:76
-#, fuzzy
 msgid "Error Saving Kickstart Config"
-msgstr "剖析 Kickstart 配置時發生錯誤"
+msgstr "儲存 Kickstart 配置時發生了錯誤"
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -1164,65 +1161,3 @@ msgstr "md8"
 msgid "md9"
 msgstr "md9"
 
-#~ msgid "Could not read video driver database"
-#~ msgstr "無法讀取影像驅動程資料庫"
-
-#~ msgid "Please select an X driver."
-#~ msgstr "請選擇一個 X 驅動程式。"
-
-#~ msgid "Please select a monitor."
-#~ msgstr "請選擇一個顯示器。"
-
-#~ msgid "Color Depth"
-#~ msgstr "彩度"
-
-#~ msgid "Default Desktop:"
-#~ msgstr "預設桌面："
-
-#~ msgid "GNOME"
-#~ msgstr "GNOME"
-
-#~ msgid "General"
-#~ msgstr "一般"
-
-#~ msgid "Horizontal Sync:"
-#~ msgstr "水平掃描頻率："
-
-#~ msgid "Hz"
-#~ msgstr "赫茲"
-
-#~ msgid "KDE"
-#~ msgstr "KDE"
-
-#~ msgid "Monitor"
-#~ msgstr "螢幕"
-
-#~ msgid "Probe for monitor"
-#~ msgstr "偵測螢幕"
-
-#~ msgid "Probe for video card driver"
-#~ msgstr "偵測影像卡驅動程式"
-
-#~ msgid "Resolution"
-#~ msgstr "解析度"
-
-#~ msgid "Start the X Window System on boot"
-#~ msgstr "開機時啟動 X 視窗系統"
-
-#~ msgid "Use MD5"
-#~ msgstr "使用 MD5"
-
-#~ msgid "Use custom monitor sync rates"
-#~ msgstr "使用自訂的螢幕掃描頻率"
-
-#~ msgid "Vertical Sync:"
-#~ msgstr "垂直掃描頻率："
-
-#~ msgid "Video Card"
-#~ msgstr "顯示卡"
-
-#~ msgid "Video Card RAM: "
-#~ msgstr "顯示卡記憶體："
-
-#~ msgid "kHz"
-#~ msgstr "仟赫茲"
