@@ -1,4 +1,4 @@
-# translation of mr1.po to marathi
+# translation of system-config-kickstart.master.mr.po to marathi
 # Marathi translations for PACKAGE package.
 # Copyright (C) 2004 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
@@ -7,19 +7,20 @@
 # Rahul Bhalerao <rbhalera@redhat.com>, 2006.
 # Rahul Bhalerao <b.rahul.pm@gmail.com>, 2006.
 # sandeep shedmake <sandeep.shedmake@gmail.com>, 2007.
+# Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: mr1\n"
+"Project-Id-Version: system-config-kickstart.master.mr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-12 17:02-0400\n"
-"PO-Revision-Date: 2007-09-23 09:10+0530\n"
-"Last-Translator: sandeep shedmake <sandeep.shedmake@gmail.com>\n"
+"PO-Revision-Date: 2009-03-31 19:07+0530\n"
+"Last-Translator: Sandeep Shedmake <sandeep.shedmake@gmail.com>\n"
 "Language-Team: marathi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "\n"
 
 #: ../src/auth.py:350
@@ -124,9 +125,9 @@ msgstr ""
 "%s"
 
 #: ../src/kickstartGui.py:95 ../src/kickstartGui.py:293
-#, fuzzy, python-format
+#, python-format
 msgid "The kickstart file %s could not be opened."
-msgstr "\"%s\" ही फाइल मिळवता येणार नाही."
+msgstr "किकस्टार्ट फाइल %s उघडणे शक्य नाही."
 
 #: ../src/kickstartGui.py:100 ../src/kickstartGui.py:298
 msgid "Error Parsing Kickstart Config"
@@ -255,6 +256,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"मांडणी अंतर्गत त्रुटीमुळे संकुल निवड अकार्यान्वीत केले गेले आहे.  कृपया आपले रेपॉजिटरी संयोजना निर्धारीत करा व पुन्हा प्रयत्न करा.\n"
+"\n"
+"%s"
 
 #: ../src/packages.py:199
 msgid "Retrieving package information"
@@ -319,8 +323,7 @@ msgstr "विभाजनासाठी आरोहण बिंदू दर
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:481
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "आरोहण बिंदू \"%s\" आधीच वापरात आहे. कृपया अन्य आरोहण बिंदू निवडा."
 
 #: ../src/partWindow.py:501
@@ -395,17 +398,13 @@ msgid "Raid Devices"
 msgstr "RAID यंत्रे"
 
 #: ../src/savedialog.py:72
-#, fuzzy, python-format
+#, python-format
 msgid "The following error occurred while saving the kickstart config %s: %s"
-msgstr ""
-"खालिल त्रूटी कीकस्टार्ट संरचना वाचतेवेळी आढळली:\n"
-"\n"
-"%s"
+msgstr "किकस्टार्ट संयोजना %s साठवतेवेळी खालिल त्रूटी आढळली:%s"
 
 #: ../src/savedialog.py:76
-#, fuzzy
 msgid "Error Saving Kickstart Config"
-msgstr "किकस्टार्ट रचना वाचतेवेळी त्रूटी"
+msgstr "किकस्टार्ट संयोजना साठवतेवेळी त्रूटी आढळली"
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -1166,3 +1165,4 @@ msgstr "md8"
 #: tmp/system-config-kickstart.glade.h:195
 msgid "md9"
 msgstr "md9"
+
