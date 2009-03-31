@@ -1,17 +1,17 @@
-# translation of bn_IN.po to Bengali INDIA
+# translation of system-config-kickstart.master.bn_IN.po to Bengali INDIA
 # Bangla Translation of system-config-kckstart.po.
 # Copyright (C) 2004 RedHat Inc.
 # This file is distributed under the same license as the system-config-kickstart package.
 #
-# Runa Bhattacharjee <runab@redhat.com>, 2004, 2005, 2006, 2007.
+# Runa Bhattacharjee <runab@redhat.com>, 2004, 2005, 2006, 2007, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: bn_IN\n"
+"Project-Id-Version: system-config-kickstart.master.bn_IN\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-12 17:02-0400\n"
-"PO-Revision-Date: 2007-08-30 09:57+0530\n"
+"PO-Revision-Date: 2009-03-31 15:27+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
-"Language-Team: Bengali INDIA\n"
+"Language-Team: Bengali INDIA <fedora-trans-bn_in@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -160,9 +160,9 @@ msgstr ""
 "%s"
 
 #: ../src/kickstartGui.py:95 ../src/kickstartGui.py:293
-#, fuzzy, python-format
+#, python-format
 msgid "The kickstart file %s could not be opened."
-msgstr "\"%s\" ফাইলটি ব্যবহার করা সম্ভব নয়।"
+msgstr "%s kickstart ফাইল খোলা যায়নি।"
 
 #: ../src/kickstartGui.py:100 ../src/kickstartGui.py:298
 msgid "Error Parsing Kickstart Config"
@@ -293,6 +293,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"সেট-আপের মধ্যে উপস্থিত একটি সমস্যার কারণে প্যাকেজ নির্বাচন ব্যবস্থা বর্তমানে নিষ্ক্রিয় করা হয়েছে।  অনুগ্রহ করে সংগ্রহস্থল সংক্রান্ত কনফিগারেশনের ত্রুটি সংশোধন করে পুনরায় প্রচেষ্টা করুন।\n"
+"\n"
+"%s"
 
 #: ../src/packages.py:199
 msgid "Retrieving package information"
@@ -306,8 +309,7 @@ msgstr "আপগ্রেডের ক্ষেত্রে প্যাকে�
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
-msgstr ""
-"প্যাকেজ সংক্রান্ত তথ্য ডাউনলোডের সমস্যার দরুণ প্যাকেজ নির্বাচন নিষ্ক্রিয় করা হয়েছে।"
+msgstr "প্যাকেজ সংক্রান্ত তথ্য ডাউনলোডের সমস্যার দরুণ প্যাকেজ নির্বাচন নিষ্ক্রিয় করা হয়েছে।"
 
 #: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:178
 msgid "ext2"
@@ -361,8 +363,7 @@ msgstr "পার্টিশনের জন্য একটি মাউন্
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:481
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "\"%s\" মাউন্ট-পয়েন্ট বর্তমানে ব্যবহৃত হচ্ছে। অনুগ্রহ করে একটি পৃথক মাউন্ট-পয়েন্ট "
 "নির্বাচন করুন।"
@@ -439,17 +440,13 @@ msgid "Raid Devices"
 msgstr "Raid ডিভাইস"
 
 #: ../src/savedialog.py:72
-#, fuzzy, python-format
+#, python-format
 msgid "The following error occurred while saving the kickstart config %s: %s"
-msgstr ""
-"আপনার kickstart কনফিগারেশন পার্স করতে নিম্নলিখিত সমস্যা পাওয়া গেছে:\n"
-"\n"
-"%s"
+msgstr "kickstart কনফিগ %s সংরক্ষণ করার সময় নিম্নলিখিত সমস্যা দেখা দিয়েছে: %s"
 
 #: ../src/savedialog.py:76
-#, fuzzy
 msgid "Error Saving Kickstart Config"
-msgstr "Kickstart কনফিগ পার্স করতে সমস্যা"
+msgstr "Kickstart কনফিগ সংরক্ষণ করতে সমস্যা"
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -1213,3 +1210,4 @@ msgstr "md8"
 #: tmp/system-config-kickstart.glade.h:195
 msgid "md9"
 msgstr "md9"
+
