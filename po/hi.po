@@ -1,21 +1,21 @@
-# translation of hi.po to Hindi
-# Copyright (C) YEAR ORGANIZATION.
-# Rajesh Ranjan <rranjan@redhat.com>, 2004, 2005, 2006.
+# translation of system-config-kickstart.master.hi.po to Hindi
+# Rajesh Ranjan <rranjan@redhat.com>, 2004, 2005, 2006, 2009.
 # hi <rranjan@redhat.com>, 2007.
-# Nizam<786.nizam@gmail.com>,2007-09-21 13:19+0530
+# Nizam<786.nizam@gmail.com>,2007-09-21 13:19+0530.
+# Copyright (C) YEAR ORGANIZATION.
 msgid ""
 msgstr ""
-"Project-Id-Version: hi\n"
+"Project-Id-Version: system-config-kickstart.master.hi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-12 17:02-0400\n"
-"PO-Revision-Date: 2007-09-21 13:37+0530\n"
-"Last-Translator: Nizam<786.nizam@gmail.com>\n"
-"Language-Team: Hindi<Sparxs>\n"
+"PO-Revision-Date: 2009-04-01 13:21+0530\n"
+"Last-Translator: Rajesh Ranjan <rranjan@redhat.com>\n"
+"Language-Team: Hindi <hindi.sf.net>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootling 0.2\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../src/auth.py:350
 msgid "Please fill in the authentication information"
@@ -121,9 +121,9 @@ msgstr ""
 "%s"
 
 #: ../src/kickstartGui.py:95 ../src/kickstartGui.py:293
-#, fuzzy, python-format
+#, python-format
 msgid "The kickstart file %s could not be opened."
-msgstr "\"%s\" फाइल का अभिगम नहीं कर सकती."
+msgstr "किकस्टार्ट फ़ाइल %s नहीं खोली जा सकी."
 
 #: ../src/kickstartGui.py:100 ../src/kickstartGui.py:298
 msgid "Error Parsing Kickstart Config"
@@ -253,6 +253,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"संकुल चयन सेटअप में किसी त्रुटि की वजह से निष्क्रिय है.  कृपया अपना रिपॉजिटरी विन्यास ठीस करें और फिर कोशिश करें.\n"
+"\n"
+"%s"
 
 #: ../src/packages.py:199
 msgid "Retrieving package information"
@@ -317,8 +320,7 @@ msgstr "विभाजन के लिए एक आरोह बिंदु 
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:481
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "\"%s\" आरोह बिंदु पहले से उपयोग में हैं. कृपया कोई अन्य आरोह बिंदु को चुनें."
 
 #: ../src/partWindow.py:501
@@ -376,8 +378,7 @@ msgstr "कृपया सूची से एक विभाजन को च
 #: ../src/raidOptionsWindow.py:72
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
-msgstr ""
-"वर्तमान में स्वतंत्रापूर्वक प्रयोग करने के लिए आपके पास %d सॉफ्टवेयर RAID विभाजन मुफ्त में है."
+msgstr "वर्तमान में स्वतंत्रापूर्वक प्रयोग करने के लिए आपके पास %d सॉफ्टवेयर RAID विभाजन मुफ्त में है."
 
 #: ../src/raidWindow.py:175
 #, python-format
@@ -394,17 +395,13 @@ msgid "Raid Devices"
 msgstr "Raid युक्तियाँ"
 
 #: ../src/savedialog.py:72
-#, fuzzy, python-format
+#, python-format
 msgid "The following error occurred while saving the kickstart config %s: %s"
-msgstr ""
-"निम्न त्रुटि पायी गई जब आपके किकस्टार्ट विन्यास को विश्लेषित किया जा रहा था:\n"
-"\n"
-"%s"
+msgstr "किकस्टार्ट कॉन्फिग %s सहेजने के दौरान निम्नलिखित त्रुटि आई: %s"
 
 #: ../src/savedialog.py:76
-#, fuzzy
 msgid "Error Saving Kickstart Config"
-msgstr "किकस्टार्ट विन्यास विश्लेषण में त्रुटि"
+msgstr "किकस्टार्ट कॉन्फिग सहेजने में त्रुटि"
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -1044,8 +1041,7 @@ msgstr ""
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
-msgstr ""
-"आपने निम्न विन्यास को चुना था. किकस्टार्ट फाइल को सुरक्षित करने के लिए 'फाइल सहेजें' दबाएँ."
+msgstr "आपने निम्न विन्यास को चुना था. किकस्टार्ट फाइल को सुरक्षित करने के लिए 'फाइल सहेजें' दबाएँ."
 
 #: tmp/system-config-kickstart.glade.h:163
 msgid "_About"
@@ -1170,3 +1166,4 @@ msgstr "md8"
 #: tmp/system-config-kickstart.glade.h:195
 msgid "md9"
 msgstr "md9"
+
