@@ -1,16 +1,16 @@
-# translation of ml.po to Malayalam
+# translation of system-config-kickstart.master.ml.po to
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
 # Ani Peter <apeter@redhat.com>, 2006, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: ml\n"
+"Project-Id-Version: system-config-kickstart.master.ml\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-12 17:02-0400\n"
-"PO-Revision-Date: 2007-08-30 17:02+0530\n"
-"Last-Translator: Ani Peter <apeter@redhat.com>\n"
-"Language-Team: Malayalam <en@li.org>\n"
+"PO-Revision-Date: 2009-04-02 04:01+0530\n"
+"Last-Translator: \n"
+"Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -121,9 +121,9 @@ msgstr ""
 "%s"
 
 #: ../src/kickstartGui.py:95 ../src/kickstartGui.py:293
-#, fuzzy, python-format
+#, python-format
 msgid "The kickstart file %s could not be opened."
-msgstr "\"%s\" എന്ന ഫൈല്‍ അക്സസ്സ് ചെയ്യുവാന്‍ സാധ്യമല്ല."
+msgstr "\"%s\" എന്ന കിക്ക്സ്റ്റാര്‍ട്ട് ഫയല്‍ തുറക്കുവാന്‍ സാധ്യമല്ല."
 
 #: ../src/kickstartGui.py:100 ../src/kickstartGui.py:298
 msgid "Error Parsing Kickstart Config"
@@ -242,8 +242,7 @@ msgstr "ദയവായി ശരിയായ നെയിം സറ്‍വറ
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
-msgstr ""
-"%s എന്ന പേരില്‍ നിലവില്‍ ഒരു നെറ്റ്വര്‍ക്ക് ഡിവൈസ് ഉണ്ട്.  ദയവായി മറ്റൊരു പേര് തിരഞ്ഞെടുക്കുക"
+msgstr "%s എന്ന പേരില്‍ നിലവില്‍ ഒരു നെറ്റ്വര്‍ക്ക് ഡിവൈസ് ഉണ്ട്.  ദയവായി മറ്റൊരു പേര് തിരഞ്ഞെടുക്കുക"
 
 #: ../src/packages.py:146
 #, python-format
@@ -253,6 +252,10 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"ക്രമീകരണത്തിലുള്ള പിശകു് കാരണം പാക്കേജ് തെരഞ്ഞെടുക്കല്‍ പ്രവര്‍ത്തന രഹിതമാക്കിയിരിക്കുന്നു. "
+"ദയവായി നിങ്ങളുടെ റിപ്പോസിറ്ററി പരിഹരിച്ച ശേഷം വീണ്ടും ശ്രമിക്കുക.\n"
+"\n"
+"%s"
 
 #: ../src/packages.py:199
 msgid "Retrieving package information"
@@ -319,8 +322,7 @@ msgstr "പാര്‍ട്ടീഷനായുളള മൌണ്ട് പ�
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:481
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "\"%s\" എന്ന മൌണ്ട് പോയിന്‍റ് നിലവില്‍ ഉപയോഗത്തിലുണ്ട്.  ദയവായി മറ്റൊരു മൌണ്ട് പോയിന്‍റ് "
 "തിരഞ്ഞെടുക്കുക."
@@ -397,17 +399,13 @@ msgid "Raid Devices"
 msgstr "റെയ്ഡ് ഡിവൈസുകള്‍"
 
 #: ../src/savedialog.py:72
-#, fuzzy, python-format
+#, python-format
 msgid "The following error occurred while saving the kickstart config %s: %s"
-msgstr ""
-"നിങ്ങളുടെ കിക്ക്സ്റ്റാറ്‍ട്ട് കോണ്‍ഫിഗറേഷന്‍ പാഴ്സ് ചെയ്തപ്പോള്‍ ലഭിച്ച പിശകുകള്‍:\n"
-"\n"
-"%s"
+msgstr "നിങ്ങളുടെ കിക്ക്സ്റ്റാറ്‍ട്ട് കോണ്‍ഫിഗറേഷന്‍ %s സൂക്ഷിക്കുമ്പോള്‍ ലഭിച്ച പിശകുകള്‍: %s"
 
 #: ../src/savedialog.py:76
-#, fuzzy
 msgid "Error Saving Kickstart Config"
-msgstr "Kickstart Config പാഴ്സ് ചെയ്യുന്പോള്‍ പിശക്"
+msgstr "Kickstart Config സൂക്ഷിക്കുന്നതില്‍ പിശക്"
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -1181,3 +1179,4 @@ msgstr "md8"
 #: tmp/system-config-kickstart.glade.h:195
 msgid "md9"
 msgstr "md9"
+
