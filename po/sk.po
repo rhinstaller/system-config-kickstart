@@ -2,22 +2,24 @@
 # Slovenské preklady pre balík system-config-kickstart.
 # Copyright (C) 2006 THE system-config-kickstart'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the system-config-kickstart package.
+#
+#
 # Mike Karas <zoliqe@gmail.com>, 2006.
-# Ján ONDREJ (SAL) <ondrejj(at)salstar.sk>, 2008
-#
-#
+# Ján ONDREJ (SAL) <ondrejj(at)salstar.sk>, 2008.
+# Ondrej Šulek <feonsu@gmail.com>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-12 17:02-0400\n"
-"PO-Revision-Date: 2008-01-01 10:24+0100\n"
-"Last-Translator: Ján ONDREJ (SAL) <ondrejj(at)salstar.sk>\n"
+"PO-Revision-Date: 2009-04-02 14:13+0200\n"
+"Last-Translator: Ondrej Šulek <feonsu@gmail.com>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 0.3\n"
 
 #: ../src/auth.py:350
 msgid "Please fill in the authentication information"
@@ -120,10 +122,9 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../src/kickstartGui.py:95 ../src/kickstartGui.py:293
-#, fuzzy, python-format
+#: ../src/kickstartGui.py:95 ../src/kickstartGui.py:293, python-format
 msgid "The kickstart file %s could not be opened."
-msgstr "Súbor \"%s\" nemôže byť sprístupnený."
+msgstr "Kickstart súbor %s sa nepodarilo otvoriť."
 
 #: ../src/kickstartGui.py:100 ../src/kickstartGui.py:298
 msgid "Error Parsing Kickstart Config"
@@ -175,7 +176,7 @@ msgstr "Nastavenie grafiky"
 
 #: ../src/kickstartGui.py:143 tmp/system-config-kickstart.glade.h:108
 msgid "Package Selection"
-msgstr "Výber balíkov"
+msgstr "Výber balíčkov"
 
 #: ../src/kickstartGui.py:144 tmp/system-config-kickstart.glade.h:118
 msgid "Pre-Installation Script"
@@ -253,21 +254,25 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Výber balíčkov ja zakázaný pre chybu v nastavení.  Prosím opravte nastavenie "
+"repozitára a skúste to znovu.\n"
+"\n"
+"%s"
 
 #: ../src/packages.py:199
 msgid "Retrieving package information"
-msgstr "Získavanie informácií o balíkoch"
+msgstr "Získavanie informácií o balíčkoch"
 
 #: ../src/packages.py:227
 msgid "Package configuration is not applicable on upgrades."
-msgstr "Konfigurácia balíkov nie je aplikovateľná pri aktualizáciách."
+msgstr "Konfigurácia balíčkov nie je aplikovateľná pri aktualizáciách."
 
 #: ../src/packages.py:239
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
 msgstr ""
-"Výber balíkov je zakázaný pre problémy so sťahovaním informácií o balíkoch."
+"Výber balíčkov je zakázaný pre problémy so sťahovaním informácií o balíčkoch."
 
 #: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:178
 msgid "ext2"
@@ -394,18 +399,15 @@ msgstr "Musíte zvoliť najmenej 3 partície v poradí pre použitie RAID %s"
 msgid "Raid Devices"
 msgstr "Zariadenia RAID"
 
-#: ../src/savedialog.py:72
-#, fuzzy, python-format
+#: ../src/savedialog.py:72, python-format
 msgid "The following error occurred while saving the kickstart config %s: %s"
 msgstr ""
-"Následovné chyby sa vyskytli vo vašom kickstart konfiguračnom súbore:\n"
-"\n"
-"%s"
+"Následovné chyby sa vyskytli pri ukladaní kickstart konfiguračného súboru "
+"%s: %s"
 
 #: ../src/savedialog.py:76
-#, fuzzy
 msgid "Error Saving Kickstart Config"
-msgstr "Chyba v Kickstart konfiguračnom súbore"
+msgstr "Chyba pri ukladaní kickstart konfiguračného súboru"
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "         "
@@ -537,7 +539,7 @@ msgstr "Povoliť overenie totožnosti cez Kerberos 5"
 
 #: tmp/system-config-kickstart.glade.h:34
 msgid "Enable LDAP"
-msgstr "Poviliť LDAP"
+msgstr "Povoliť LDAP"
 
 #: tmp/system-config-kickstart.glade.h:35
 msgid "Enable NIS"
@@ -753,7 +755,7 @@ msgstr "Vytvoriť RAID zariadenie"
 
 #: tmp/system-config-kickstart.glade.h:89
 msgid "Make partition on specific drive (ondisk)"
-msgstr "Vytvoriť paríciu na špecifickom zariadení (na disku)"
+msgstr "Vytvoriť partíciu na špecifickom zariadení (na disku)"
 
 #: tmp/system-config-kickstart.glade.h:90
 msgid "Mount Point:"
