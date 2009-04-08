@@ -190,7 +190,7 @@ class network:
             if not self.deviceIsFilledIn():
                 text = (_("Please fill in the network information"))
                 dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
-                dlg.set_position(gtk.WIN_POS_CENTER)
+                dlg.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
                 dlg.set_modal(True)
                 rc = dlg.run()
                 dlg.destroy()
@@ -202,7 +202,7 @@ class network:
                 except:
                     text = (_("Please enter a valid gateway address."))
                     dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
-                    dlg.set_position(gtk.WIN_POS_CENTER)
+                    dlg.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
                     dlg.set_modal(True)
                     rc = dlg.run()
                     dlg.destroy()
@@ -214,7 +214,7 @@ class network:
                 except:
                     text = (_("Please enter a valid nameserver address."))
                     dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
-                    dlg.set_position(gtk.WIN_POS_CENTER)
+                    dlg.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
                     dlg.set_modal(True)
                     rc = dlg.run()
                     dlg.destroy()
@@ -249,7 +249,7 @@ class network:
             if not self.deviceIsFilledIn():
                 text = (_("Please fill in the network information"))
                 dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
-                dlg.set_position(gtk.WIN_POS_CENTER)
+                dlg.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
                 dlg.set_modal(True)
                 rc = dlg.run()
                 dlg.destroy()
@@ -261,7 +261,7 @@ class network:
                 except:
                     text = (_("Please enter a valid gateway address."))
                     dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
-                    dlg.set_position(gtk.WIN_POS_CENTER)
+                    dlg.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
                     dlg.set_modal(True)
                     rc = dlg.run()
                     dlg.destroy()
@@ -273,7 +273,7 @@ class network:
                 except:
                     text = (_("Please enter a valid nameserver address."))
                     dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
-                    dlg.set_position(gtk.WIN_POS_CENTER)
+                    dlg.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
                     dlg.set_modal(True)
                     rc = dlg.run()
                     dlg.destroy()
@@ -302,7 +302,7 @@ class network:
                 text = (_("A network device with the name %s already exists.  Please "\
                           "choose another device name" % devName))
                 dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
-                dlg.set_position(gtk.WIN_POS_CENTER)
+                dlg.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
                 dlg.set_modal(True)
                 rc = dlg.run()
                 dlg.destroy()

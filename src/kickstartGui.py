@@ -98,7 +98,7 @@ class kickstartGui:
                 dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_ERROR,
                                          gtk.BUTTONS_OK, msg)
                 dlg.set_title(_("Error Parsing Kickstart Config"))
-                dlg.set_position(gtk.WIN_POS_CENTER)
+                dlg.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
                 dlg.set_modal(True)
                 dlg.run()
                 dlg.destroy()
@@ -210,7 +210,7 @@ class kickstartGui:
 				 _("Kickstart Configurator @VERSION@\n Copyright (c) 2000-2002 Red Hat, Inc.\n Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n A graphical interface for creating a kickstart file"))
 	dlg.set_title(_("About Kickstart Configurator"))
 	dlg.set_default_size(100, 100)
-	dlg.set_position (gtk.WIN_POS_CENTER)
+	dlg.set_position (gtk.WIN_POS_CENTER_ON_PARENT)
 	dlg.set_border_width(2)
 	dlg.set_modal(True)
 	dlg.set_transient_for(self.toplevel)
@@ -231,7 +231,7 @@ class kickstartGui:
 	if path == None:
 	    dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_WARNING, gtk.BUTTONS_OK,
 				    (_("Help is not available.")))
-	    dlg.set_position(gtk.WIN_POS_CENTER)
+	    dlg.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
 	    dlg.set_icon(iconPixbuf)
 	    dlg.run()
 	    dlg.destroy()
@@ -274,6 +274,8 @@ class kickstartGui:
                  buttons=(gtk.STOCK_CANCEL,gtk.RESPONSE_CANCEL,
 			  gtk.STOCK_OPEN,gtk.RESPONSE_OK))
         fs.set_default_size(-1, -1)
+        fs.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
+        fs.set_transient_for(self.toplevel)
         result = fs.run()
         file = fs.get_filename()
 
@@ -296,7 +298,7 @@ class kickstartGui:
                     dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_ERROR,
                                              gtk.BUTTONS_OK, msg)
                     dlg.set_title(_("Error Parsing Kickstart Config"))
-                    dlg.set_position(gtk.WIN_POS_CENTER)
+                    dlg.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
                     dlg.set_modal(True)
                     dlg.run()
                     dlg.destroy()
@@ -317,7 +319,7 @@ class kickstartGui:
             else:
                 dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_WARNING, gtk.BUTTONS_OK,
                                         (_("The file \"%s\" cannot be accessed.")) % file)
-                dlg.set_position(gtk.WIN_POS_CENTER)
+                dlg.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
                 dlg.set_icon(iconPixbuf)
                 dlg.run()
                 dlg.destroy()

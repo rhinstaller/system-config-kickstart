@@ -74,7 +74,7 @@ class saveDialog:
                     dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_ERROR,
                                              gtk.BUTTONS_OK, msg)
                     dlg.set_title(_("Error Saving Kickstart Config"))
-                    dlg.set_position(gtk.WIN_POS_CENTER)
+                    dlg.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
                     dlg.set_modal(True)
                     dlg.run()
                     dlg.destroy()

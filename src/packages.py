@@ -145,7 +145,7 @@ class sckYumBase(yum.YumBase):
         except yum.Errors.RepoError, msg:
             text = _("Package selection is disabled due to an error in setup.  Please fix your repository configuration and try again.\n\n%s") % msg
             dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
-            dlg.set_position(gtk.WIN_POS_CENTER)
+            dlg.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
             dlg.set_modal(True)
             rc = dlg.run()
             dlg.destroy()
