@@ -145,7 +145,7 @@ class GrubBootloader(AbstractBootloader):
                     else:
                         dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_WARNING, gtk.BUTTONS_OK,
                                                 (_("Grub passwords do not match.  Please try again.")))
-                        dlg.set_position(gtk.WIN_POS_CENTER)
+                        dlg.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
                         dlg.set_modal(True)
                         dlg.set_icon(kickstartGui.iconPixbuf)
                         dlg.run()

@@ -249,7 +249,7 @@ class raidWindow:
         dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, label)
         dlg.set_title(_("Error"))
         dlg.set_default_size(100, 100)
-        dlg.set_position (gtk.WIN_POS_CENTER)
+        dlg.set_position (gtk.WIN_POS_CENTER_ON_PARENT)
         dlg.set_border_width(2)
         dlg.set_modal(True)
         dlg.set_transient_for(self.raid_window)

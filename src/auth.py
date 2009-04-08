@@ -349,7 +349,7 @@ class auth:
     def showDialog(self):
         text = _("Please fill in the authentication information")
         dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
-        dlg.set_position(gtk.WIN_POS_CENTER)
+        dlg.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
         dlg.set_modal(True)
         rc = dlg.run()
         dlg.destroy()
