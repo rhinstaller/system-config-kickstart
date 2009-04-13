@@ -66,6 +66,34 @@ except:
     pass
 
 ##
+## Texts in about dialog
+##
+
+AUTHORS = [
+    "Chris Lumens <clumens@redhat.com>",
+    "Brent Fox <bfox@redhat.com>",
+    "Tammy Fox <tfox@redhat.com>",
+    "Roman Rakus <rrakus@redhat.com>",
+    ]
+
+LICENSE = _(
+    "This program is free software; you can redistribute it and/or modify "
+    "it under the terms of the GNU General Public License as published by "
+    "the Free Software Foundation; either version 2 of the License, or "
+    "(at your option) any later version.\n"
+    "\n"
+    "This program is distributed in the hope that it will be useful, "
+    "but WITHOUT ANY WARRANTY; without even the implied warranty of "
+    "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the "
+    "GNU General Public License for more details.\n"
+    "\n"
+    "You should have received a copy of the GNU General Public License "
+    "along with this program; if not, write to the Free Software "
+    "Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.")
+
+COPYRIGHT = '(C) 2000-2009 Red Hat, Inc.'
+VERSION = "@VERSION@"
+##
 ## Pull in the Glade file
 ##
 if os.access("system-config-kickstart.glade", os.F_OK):
@@ -206,15 +234,16 @@ class kickstartGui:
 
     #about box
     def on_about_activate(self, args):
-        dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_INFO, gtk.BUTTONS_OK,
-				 _("Kickstart Configurator @VERSION@\n Copyright (c) 2000-2002 Red Hat, Inc.\n Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n A graphical interface for creating a kickstart file"))
+        dlg = gtk.AboutDialog()
 	dlg.set_title(_("About Kickstart Configurator"))
-	dlg.set_default_size(100, 100)
 	dlg.set_position (gtk.WIN_POS_CENTER_ON_PARENT)
-	dlg.set_border_width(2)
-	dlg.set_modal(True)
 	dlg.set_transient_for(self.toplevel)
 	dlg.set_icon(iconPixbuf)
+        dlg.set_version(VERSION)
+        dlg.set_authors(AUTHORS)
+        dlg.set_license(LICENSE)
+        dlg.set_wrap_license(True)
+        dlg.set_copyright(COPYRIGHT)
 	rc = dlg.run()
         dlg.destroy()
 
