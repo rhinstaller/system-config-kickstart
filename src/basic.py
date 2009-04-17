@@ -71,8 +71,10 @@ class basic:
 
         self.platform_list =  [_("x86, AMD64, or Intel EM64T"), _("Intel Itanium"), _("IBM iSeries"),
                                _("IBM pSeries"), _("IBM zSeries/s390")]
-        self.platform_combo.set_popdown_strings(self.platform_list)
-        self.platform_combo.entry.connect("changed", self.platformChanged)
+        for i in self.platform_list:
+            self.platform_combo.append_text(i)
+        self.platform_combo.set_active(0)
+        self.platform_combo.connect("changed", self.platformChanged)
 
         self.key_checkbutton = xml.get_widget("key_checkbutton")
         self.key_entry = xml.get_widget("key_entry")
@@ -87,21 +89,23 @@ class basic:
         #populate language combo
         self.lang_list = self.langDict.keys()
         self.lang_list.sort()
-        self.lang_combo.set_popdown_strings(self.lang_list)
+        for i in self.lang_list:
+            self.lang_combo.append_text(i)
 
         #set default to English
-        self.lang_combo.list.select_item(self.lang_list.index('English (USA)'))
+        self.lang_combo.set_active(self.lang_list.index('English (USA)'))
 
         #populate keyboard combo, add keyboards here
         self.keyboard_dict = keyboard_models.KeyboardModels().get_models()
         keys = self.keyboard_dict.keys()
-        keyboard_list = []
+        self.keyboard_list = []
 
         for item in keys:
-            keyboard_list.append(self.keyboard_dict[item][0])
+            self.keyboard_list.append(self.keyboard_dict[item][0])
 
-        keyboard_list.sort()
-        self.keyboard_combo.set_popdown_strings(keyboard_list)
+        self.keyboard_list.sort()
+        for i in self.keyboard_list:
+            self.keyboard_combo.append_text(i)
 
         #set default to English
         kbd = keyboard.Keyboard()
@@ -110,9 +114,9 @@ class basic:
 
 	#set keyboard to current keymap
         try:
-            self.keyboard_combo.entry.set_text(self.keyboard_dict[currentKeymap][0])
+            self.keyboard_combo.set_active(self.keyboard_list.index(self.keyboard_dict[currentKeymap][0]))
         except:
-            self.keyboard_combo.entry.set_text(self.keyboard_dict["us"][0])
+            self.keyboard_combo.set_active(self.keyboard_list.index(self.keyboard_dict["us"][0]))
 
         #populate time zone combo
         import zonetab
@@ -126,23 +130,24 @@ class basic:
         except:
             select = 0
 
-        self.timezone_combo.set_popdown_strings(self.timezone_list)
-        self.timezone_combo.list.select_item(select)
+        for i in self.timezone_list:
+            self.timezone_combo.append_text(i)
+        self.timezone_combo.set_active(select)
 
     def updateKS(self, ksHandler):
         self.ks = ksHandler
 
     def formToKickstart(self, doInstall):
-        self.ks.lang(lang=self.languageLookup(self.lang_combo.entry.get_text()))
+        self.ks.lang(lang=self.languageLookup(self.lang_combo.get_active_text()))
 
         keys = self.keyboard_dict.keys()
         keys.sort()
         for item in keys:
-            if self.keyboard_dict[item][0] == self.keyboard_combo.entry.get_text():
+            if self.keyboard_dict[item][0] == self.keyboard_combo.get_active_text():
                 self.ks.keyboard(keyboard=item)
                 break
 
-        zone = self.timezone_combo.entry.get_text()
+        zone = self.timezone_combo.get_active_text()
         self.ks.timezone(timezone=zone.replace(" ", "_"), isUtc=self.utc_check_button.get_active())
 
         if self.root_passwd_entry.get_text() != self.root_passwd_confirm_entry.get_text():
@@ -184,7 +189,7 @@ class basic:
                 self.passwd = self.root_passwd_entry.get_text()
                 self.ks.rootpw(isCrypted=False, password=self.passwd)
 
-        self.ks.platform = self.platform_combo.entry.get_text()
+        self.ks.platform = self.platform_combo.get_active_text()
 
         if self.reboot_checkbutton.get_active():
             self.ks.reboot(action=KS_REBOOT)
@@ -212,16 +217,16 @@ class basic:
         return self.langDict [args]
 
     def platformChanged(self, entry):
-        platform = entry.get_text()
+        platform = entry.get_active_text()
         if platform:
-            self.parent_class.platformTypeChanged(entry.get_text())
+            self.parent_class.platformTypeChanged(entry.get_active_text())
 
     def keyChanged(self, args):
         self.key_entry.set_sensitive(self.key_checkbutton.get_active())
 
     def applyKickstart(self):
         if self.ks.platform in self.platform_list:
-            self.platform_combo.entry.set_text(self.ks.platform)
+            self.platform_combo.set_active(self.platform_list.index(self.ks.platform))
 
         if self.ks.lang.lang.find (".") != -1:
             ksLang = self.ks.lang.lang.split(".")[0]
@@ -230,14 +235,14 @@ class basic:
 
         for lang in self.langDict.keys():
             if self.langDict[lang] == ksLang:
-                self.lang_combo.list.select_item(self.lang_list.index(lang))
+                self.lang_combo.set_active(self.lang_list.index(lang))
 
         if self.ks.keyboard.keyboard != "":
-            self.keyboard_combo.entry.set_text(self.keyboard_dict[self.ks.keyboard.keyboard][0])
+            self.keyboard_combo.set_active(self.keyboard_list.index(self.keyboard_dict[self.ks.keyboard.keyboard][0]))
 
         if self.ks.timezone.timezone != "":
             zone = self.ks.timezone.timezone.replace("_", " ")
-            self.timezone_combo.list.select_item(self.timezone_list.index(zone))
+            self.timezone_combo.set_active(self.timezone_list.index(zone))
 
         self.reboot_checkbutton.set_active(self.ks.reboot.action == KS_REBOOT)
 

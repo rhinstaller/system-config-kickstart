@@ -50,6 +50,7 @@ class raidWindow:
         self.raid_window.set_transient_for(toplevel)
         self.raid_window.set_icon(kickstartGui.iconPixbuf)
         self.raid_mp_combo = xml.get_widget("raid_mp_combo")
+        self.raid_mp_combo.entry = self.raid_mp_combo.get_child()
         self.raid_fsType_menu = xml.get_widget("raid_fsType_menu")
         self.raid_device_menu = xml.get_widget("raid_device_menu")
         self.raid_level_menu = xml.get_widget("raid_level_menu")
@@ -66,7 +67,21 @@ class raidWindow:
                                'md12', 'md13', 'md14', 'md15']
         self.raidLevelList = [ "0", "1", "5" ]
 
-        self.raid_mp_combo.set_popdown_strings(mountPoints)
+        for i in mountPoints:
+            self.raid_mp_combo.append_text(i)
+
+        for i in self.fsTypesList:
+            self.raid_fsType_menu.append_text(i)
+        self.raid_fsType_menu.set_active(0)
+
+        for i in self.raidDeviceList:
+            self.raid_device_menu.append_text(i)
+        self.raid_device_menu.set_active(0)
+
+        for i in self.raidLevelList:
+            self.raid_level_menu.append_text(i)
+        self.raid_level_menu.set_active(0)
+
 
         self.raid_partition_store = gtk.ListStore(gobject.TYPE_BOOLEAN, gobject.TYPE_STRING,
                                                   gobject.TYPE_PYOBJECT, gobject.TYPE_PYOBJECT)
@@ -88,7 +103,7 @@ class raidWindow:
         self.raid_fsType_menu.connect("changed", self.on_raid_fsType_menu_changed)
 
     def on_raid_fsType_menu_changed(self, *args):
-        if self.raid_fsType_menu.get_children()[0].get_text() == "swap":
+        if self.raid_fsType_menu.get_active_text() == "swap":
             #it's a swap partition, so desensitize the mountPoint combo
             self.raid_mp_combo.set_sensitive(False)
         else:
@@ -108,15 +123,15 @@ class raidWindow:
 
         fsType = part_object.fsType
         index = self.fsTypesList.index(fsType)
-        self.raid_fsType_menu.set_history(index)
+        self.raid_fsType_menu.set_active(index)
 
         device = part_object.raidDevice
         index = self.raidDeviceList.index(device)
-        self.raid_device_menu.set_history(index)
+        self.raid_device_menu.set_active(index)
 
         level = part_object.raidLevel
         index = self.raidLevelList.index(level)
-        self.raid_level_menu.set_history(index)
+        self.raid_level_menu.set_active(index)
 
         self.original_partitions = part_object.raidPartitions
         self.part_store.foreach(self.countRaidPartitions, part_object.raidPartitions)
@@ -144,14 +159,14 @@ class raidWindow:
         self.raid_partition_store.set_value(iter, 0 , not val)
 
     def okClicked(self, *args):
-        fsType = self.raid_fsType_menu.get_children()[0].get_text()
+        fsType = self.raid_fsType_menu.get_active_text()
         if fsType == "swap":
             mount_point = "swap"
         else:
             mount_point = self.raid_mp_combo.entry.get_text()
 
-        raid_device = self.raid_device_menu.get_children()[0].get_text()
-        raid_level = self.raid_level_menu.get_children()[0].get_text()
+        raid_device = self.raid_device_menu.get_active_text()
+        raid_level = self.raid_level_menu.get_active_text()
 
         raid_object = partEntry.partEntry()
         raid_object.mountPoint = mount_point
