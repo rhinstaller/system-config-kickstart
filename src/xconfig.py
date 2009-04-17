@@ -63,11 +63,11 @@ class xconfig:
             return
 
         if self.config_x_button.get_active():
-            if self.firstboot_optionmenu.get_history() == 0:
+            if self.firstboot_optionmenu.get_active() == 0:
                 self.ks.firstboot.firstboot = FIRSTBOOT_SKIP
-            elif self.firstboot_optionmenu.get_history() == 1:
+            elif self.firstboot_optionmenu.get_active() == 1:
                 self.ks.firstboot.firstboot = FIRSTBOOT_DEFAULT
-            elif self.firstboot_optionmenu.get_history() == 2:
+            elif self.firstboot_optionmenu.get_active() == 2:
                 self.ks.firstboot.firstboot = FIRSTBOOT_RECONFIG
 
             self.ks.skipx.skipx = False
@@ -83,8 +83,8 @@ class xconfig:
             self.config_x_button.set_active(True)
 
         if self.ks.firstboot.firstboot == FIRSTBOOT_DEFAULT:
-            self.firstboot_optionmenu.set_history(1)
+            self.firstboot_optionmenu.set_active(1)
         elif self.ks.firstboot.firstboot == FIRSTBOOT_RECONFIG:
-            self.firstboot_optionmenu.set_history(2)
+            self.firstboot_optionmenu.set_active(2)
         else:
-            self.firstboot_optionmenu.set_history(0)
+            self.firstboot_optionmenu.set_active(0)

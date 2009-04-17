@@ -52,7 +52,10 @@ class partWindow:
         self.partitionDialog.set_transient_for(toplevel)
         self.partitionDialog.set_icon(kickstartGui.iconPixbuf)
         self.mountPointCombo = xml.get_widget("mountPointCombo")
+        self.mountPointCombo.entry = self.mountPointCombo.get_child()
         self.fsTypeCombo = xml.get_widget("fsTypeCombo")
+        self.fsTypeCombo.entry = self.fsTypeCombo.get_child()
+        self.fsTypeCombo.entry.set_property("editable", False)
         self.sizeCombo = xml.get_widget("sizeCombo")
         self.asPrimaryCheck = xml.get_widget("asPrimaryCheck")
         self.onDiskCheck = xml.get_widget("onDiskCheck")
@@ -71,7 +74,7 @@ class partWindow:
         self.sizeOptionsTable = xml.get_widget("size_options_table")
         self.swap_checkbutton = xml.get_widget("swap_checkbutton")
 
-        self.fsTypeCombo.list.connect("selection-changed", self.on_fsTypeCombo_set_focus_child)
+        self.fsTypeCombo.connect("changed", self.on_fsTypeCombo_set_focus_child)
         self.partCancelButton.connect("clicked", self.on_part_cancel_button_clicked)
         self.setSizeRadio.connect("toggled", self.on_setSizeRadio_toggled)
         self.sizeMaxRadio.connect("toggled", self.on_sizeMaxRadio_toggled)
@@ -80,7 +83,8 @@ class partWindow:
         self.swap_checkbutton.connect("toggled", self.on_swap_recommended_toggled)
 
         mountPoints = ["/", "/boot", "/home", "/var", "/tmp", "/usr", "/opt"]
-        self.mountPointCombo.set_popdown_strings(mountPoints)
+        for i in mountPoints:
+            self.mountPointCombo.append_text(i)
 
         self.fsTypesDict = { _("ext2"):"ext2", _("ext3"):"ext3",
 #                               _("physical volume (LVM)"):"lvm",
@@ -90,14 +94,15 @@ class partWindow:
 
         self.fsTypes = self.fsTypesDict.keys()
         self.fsTypes.sort()
-        self.fsTypeCombo.set_popdown_strings(self.fsTypes)
+        for i in self.fsTypes:
+            self.fsTypeCombo.append_text(i)
 
         try:
             fsTypeSelect = self.fsTypes.index("ext3")
         except:
             fsTypeSelect = 0
 
-        self.fsTypeCombo.list.select_item(fsTypeSelect)
+        self.fsTypeCombo.set_active(fsTypeSelect)
 
     def on_fsTypeCombo_set_focus_child(self, *args):
         key = self.fsTypeCombo.entry.get_text()
@@ -212,7 +217,7 @@ class partWindow:
             fsTypeSelect = self.fsTypes.index("ext3")
         except:
             fsTypeSelect = 0
-        self.fsTypeCombo.list.select_item(fsTypeSelect)
+        self.fsTypeCombo.set_active(fsTypeSelect)
         self.sizeCombo.set_text("1") 
         self.sizeCombo.set_sensitive(True)
         self.asPrimaryCheck.set_active(False)

@@ -45,6 +45,7 @@ class Firewall:
         self.firewall_label_box = xml.get_widget("firewall_label_box")
         self.securityOptionMenu = xml.get_widget("securityOptionMenu")
         self.selinuxOptionMenu = xml.get_widget("selinuxOptionMenu")
+        self.selinuxOptionMenu.set_active(0)
         self.firewallDefaultRadio = xml.get_widget("firewallDefaultRadio")
         self.trusted_devices_label = xml.get_widget("trusted_devices_label")
         self.allow_incoming_label = xml.get_widget("allow_incoming_label")
@@ -54,6 +55,7 @@ class Firewall:
         self.customFrame = xml.get_widget("customFrame")
 
         self.securityOptionMenu.connect("changed", self.disable_firewall)
+        self.securityOptionMenu.set_active(0)
 
         self.label2 = gtk.Label (_("Trusted services:"))
         self.label2.set_alignment (0.0, 0.0)
@@ -104,7 +106,7 @@ class Firewall:
         store.set_value(iter, 0 , not val)
 
     def disable_firewall (self, widget):
-        state = self.securityOptionMenu.get_history()
+        state = self.securityOptionMenu.get_active()
 
         if state == 0:
             self.customTable.set_sensitive (True)
@@ -130,7 +132,7 @@ class Firewall:
             return
 
         self.ks.firewall(trusts=[], ports=[],
-                         enabled=self.securityOptionMenu.get_history() == 0)
+                         enabled=self.securityOptionMenu.get_active() == 0)
 
         iter = self.incomingStore.get_iter_first()
 
@@ -142,18 +144,18 @@ class Firewall:
 
         self.ks.firewall.ports.extend(string.split(self.portsEntry.get_text()))
 
-        if self.selinuxOptionMenu.get_history() == 0:
+        if self.selinuxOptionMenu.get_active() == 0:
             self.ks.selinux(selinux=SELINUX_ENFORCING)
-        elif self.selinuxOptionMenu.get_history() == 1:
+        elif self.selinuxOptionMenu.get_active() == 1:
             self.ks.selinux(selinux=SELINUX_PERMISSIVE)
-        elif self.selinuxOptionMenu.get_history() == 2:
+        elif self.selinuxOptionMenu.get_active() == 2:
             self.ks.selinux(selinux=SELINUX_DISABLED)
 
     def applyKickstart(self):
         if self.ks.firewall.enabled == True:
-            self.securityOptionMenu.set_history(0)
+            self.securityOptionMenu.set_active(0)
         else:
-            self.securityOptionMenu.set_history(1)
+            self.securityOptionMenu.set_active(1)
 
         iter = self.incomingStore.get_iter_first()
 
@@ -185,8 +187,8 @@ class Firewall:
             self.portsEntry.set_text(string.join(filteredPorts, ","))
 
         if self.ks.selinux.selinux == SELINUX_DISABLED:
-            self.selinuxOptionMenu.set_history(2)
+            self.selinuxOptionMenu.set_active(2)
         elif self.ks.selinux.selinux == SELINUX_ENFORCING:
-            self.selinuxOptionMenu.set_history(0)
+            self.selinuxOptionMenu.set_active(0)
         elif self.ks.selinux.selinux == SELINUX_PERMISSIVE:
-            self.selinuxOptionMenu.set_history(1)
+            self.selinuxOptionMenu.set_active(1)

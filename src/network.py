@@ -77,28 +77,21 @@ class network:
         col = gtk.TreeViewColumn(_("Network Type"), gtk.CellRendererText(), text = 1)
         self.network_device_tree.append_column(col)
 
-        self.deviceMenu = gtk.Menu()
         self.deviceList = []
 
         for i in range(17):
             dev = "eth%d" %i
             item = gtk.MenuItem(dev)
             self.deviceList.append(dev)
-            self.deviceMenu.append(item)
+            self.network_device_option_menu.append_text(dev)
 
-        self.network_device_option_menu.set_menu(self.deviceMenu)
         self.network_device_option_menu.show_all()
+        self.network_device_option_menu.set_active(0)
 
-        self.typeMenu = gtk.Menu()
-        item = gtk.MenuItem("DHCP")
-        self.typeMenu.append(item)
-        item = gtk.MenuItem(_("Static IP"))
-        self.typeMenu.append(item)
-        item = gtk.MenuItem("BOOTP")
-        self.typeMenu.append(item)
-
-        self.network_type_option_menu.set_menu(self.typeMenu)
+        for i in ["DHCP", _("Static IP"), "BOOTP"]:
+            self.network_type_option_menu.append_text(i)
         self.network_type_hbox.show_all()
+        self.network_type_option_menu.set_active(0)
 
         self.network_type_option_menu.connect("changed", self.typeChanged)
         self.network_cancel_button.connect("clicked", self.resetDialog)
@@ -125,7 +118,7 @@ class network:
             if num < 15:
                 num = num + 1
 
-        self.network_device_option_menu.set_history(num)
+        self.network_device_option_menu.set_active(num)
         self.network_device_dialog.show_all()
 
     def showEditNetworkDialog(self, *args):
@@ -136,13 +129,13 @@ class network:
 
             device = self.network_device_store.get_value(iter, 0)
             num = self.deviceList.index(device)
-            self.network_device_option_menu.set_history(num)
+            self.network_device_option_menu.set_active(num)
 
             type = self.network_device_store.get_value(iter, 1)
             if type == "DHCP":
-                self.network_type_option_menu.set_history(0)
+                self.network_type_option_menu.set_active(0)
             elif type == (_("Static IP")):
-                self.network_type_option_menu.set_history(1)
+                self.network_type_option_menu.set_active(1)
 
                 self.ip_entry.set_text(self.network_device_store.get_value(iter, 2))
                 self.netmask_entry.set_text(self.network_device_store.get_value(iter, 3))
@@ -172,17 +165,17 @@ class network:
             return False
 
     def addDevice(self, *args):
-        devNum = self.network_device_option_menu.get_history()
+        devNum = self.network_device_option_menu.get_active()
         devName = self.deviceList[devNum]
 
         if self.doesDeviceExist(devName) is None:
             return
 
-        if self.network_type_option_menu.get_history() == 0:
+        if self.network_type_option_menu.get_active() == 0:
             iter = self.network_device_store.append()
             self.network_device_store.set_value(iter, 0, devName)
             self.network_device_store.set_value(iter, 1, "DHCP")
-        elif self.network_type_option_menu.get_history() == 2:
+        elif self.network_type_option_menu.get_active() == 2:
             iter = self.network_device_store.append()
             self.network_device_store.set_value(iter, 0, devName)
             self.network_device_store.set_value(iter, 1, "BOOTP")
@@ -232,7 +225,7 @@ class network:
         self.resetDialog()
 
     def editDevice(self, button, iter):
-        devNum = self.network_device_option_menu.get_history()
+        devNum = self.network_device_option_menu.get_active()
         devName = self.deviceList[devNum]
 
         if self.network_device_store.get_value(iter, 0) != devName:
@@ -241,9 +234,9 @@ class network:
 
         self.network_device_store.set_value(iter, 0, devName)
 
-        if self.network_type_option_menu.get_history() == 0:
+        if self.network_type_option_menu.get_active() == 0:
             self.network_device_store.set_value(iter, 1, "DHCP")
-        elif self.network_type_option_menu.get_history() == 2:
+        elif self.network_type_option_menu.get_active() == 2:
             self.network_device_store.set_value(iter, 1, "BOOTP")
         else:
             if not self.deviceIsFilledIn():
@@ -312,8 +305,8 @@ class network:
         return 0
 
     def resetDialog(self, *args):
-        self.network_device_option_menu.set_history(0)
-        self.network_type_option_menu.set_history(0)
+        self.network_device_option_menu.set_active(0)
+        self.network_type_option_menu.set_active(0)
 
         self.ip_entry.set_text("")
         self.netmask_entry.set_text("")
@@ -347,7 +340,7 @@ class network:
             iter = self.network_device_store.iter_next(iter)
 
     def typeChanged(self, *args):
-        if self.network_type_option_menu.get_history() == 1:
+        if self.network_type_option_menu.get_active() == 1:
             self.network_table.set_sensitive(True)
         else:
             self.network_table.set_sensitive(False)
