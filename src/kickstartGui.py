@@ -39,6 +39,7 @@ import xconfig
 import packages
 import scripts
 import os
+import progressWindow
 from pykickstart.parser import *
 from pykickstart.version import makeVersion
 
@@ -195,7 +196,8 @@ class kickstartGui:
 	self.auth_class = auth.auth(xml, self.ksHandler)
 	self.firewall_class = firewall.Firewall(xml, self.ksHandler)
 	self.X_class = xconfig.xconfig(xml, self.ksHandler)
-	self.packages_class = packages.Packages(xml, self.ksHandler)
+        self.progress_window = progressWindow.ProgressWindow(self.toplevel)
+	self.packages_class = packages.Packages(xml, self.ksHandler, self.progress_window)
 	self.scripts_class = scripts.scripts(xml, self.ksHandler)
 
         self.open_menu.connect("activate", self.on_activate_open)
@@ -357,14 +359,22 @@ class kickstartGui:
 
     #show chosen options for preview
     def on_activate_preview_options (self, *args):
+        self.progress_window.set_label(_("Retrieving package information"))
+        self.progress_window.show()
+        self.progress_window.next_task()
         if self.getAllData() != None:
             previewDialog = savefile.saveFile (self.ksHandler.__str__(),
                                                self.xml)
+        self.progress_window.hide()
 
     def on_activate_save_options (self, *args):
+        self.progress_window.set_label(_("Retrieving package information"))
+        self.progress_window.show()
+        self.progress_window.next_task()
         if self.getAllData() != None:
             fileDialog = savedialog.saveDialog(self.ksHandler.__str__(),
                                                self.xml)
+        self.progress_window.hide()
 
     def applyKickstart(self):
         self.basic_class.applyKickstart()
