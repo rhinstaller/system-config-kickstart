@@ -192,33 +192,9 @@ class sckYumBase(yum.YumBase):
     def cleanup(self):
         shutil.rmtree(self.temproot)
 
-class PackageRetrievalCallback:
-    def __init__(self, toplevel):
-        self.dialog = gtk.Window()
-
-        label = gtk.Label(_("Retrieving package information"))
-
-        box = gtk.Frame()
-        box.set_border_width(10)
-        box.add(label)
-        box.set_shadow_type(gtk.SHADOW_NONE)
-        self.dialog.add(box)
-
-        self.dialog.set_transient_for(toplevel)
-        self.dialog.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
-
-        self.dialog.show_all()
-
-    def destroy(self):
-        self.dialog.destroy()
-
-    def update(self, *args, **kwargs):
-        while gtk.events_pending(): gtk.main_iteration()
-    start = end = progressbar = next_task = update
-
 
 class Packages:
-    def __init__(self, xml, ksHandler):
+    def __init__(self, xml, ksHandler, progress_window):
         self.toplevel = xml.get_widget("main_window")
         self.package_frame = xml.get_widget("package_frame")
         self.ks = ksHandler
@@ -230,8 +206,9 @@ class Packages:
             self.package_frame.show_all()
             return
 
-        d = PackageRetrievalCallback(self.toplevel)
-        self.y = sckYumBase(callback = d)
+        progress_window.set_label(_("Retrieving package information"))
+        progress_window.show()
+        self.y = sckYumBase(progress_window)
 
         # If we failed to initialize yum, we should still be able to run
         # the program.  Just disable the package screen.
@@ -240,14 +217,15 @@ class Packages:
             disabledLabel.set_line_wrap(True)
             self.package_frame.add(disabledLabel)
             self.package_frame.show_all()
-            d.destroy()
+            progress_window.hide()
+            
             return
 
         self.gs = GroupSelector.GroupSelector(self.y, lambda fn: "/usr/share/anaconda/ui/" + fn)
         self.gs.doRefresh()
-        d.destroy()
 
         self.package_frame.add(self.gs.vbox)
+        progress_window.hide()
 
     def updateKS(self, ksHandler):
         self.ks = ksHandler
