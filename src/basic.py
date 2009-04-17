@@ -235,14 +235,22 @@ class basic:
 
         for lang in self.langDict.keys():
             if self.langDict[lang] == ksLang:
-                self.lang_combo.set_active(self.lang_list.index(lang))
+                try:
+                    self.lang_combo.set_active(self.lang_list.index(lang))
+                except ValueError:
+                    self.lang_combo.set_active(0)
+
+                break
 
         if self.ks.keyboard.keyboard != "":
             self.keyboard_combo.set_active(self.keyboard_list.index(self.keyboard_dict[self.ks.keyboard.keyboard][0]))
 
         if self.ks.timezone.timezone != "":
             zone = self.ks.timezone.timezone.replace("_", " ")
-            self.timezone_combo.set_active(self.timezone_list.index(zone))
+            try:
+                self.timezone_combo.set_active(self.timezone_list.index(zone))
+            except ValueError:
+                self.timezone_combo.set_active(0)
 
         self.reboot_checkbutton.set_active(self.ks.reboot.action == KS_REBOOT)
 
