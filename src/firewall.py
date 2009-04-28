@@ -86,14 +86,14 @@ class Firewall:
         viewport.set_shadow_type(gtk.SHADOW_ETCHED_IN)
         viewport.add(self.incomingView)
 
-        self.customTable.attach (self.label2, 0, 1, 2, 3, gtk.FILL, gtk.FILL, 5, 5)
-        self.customTable.attach (viewport, 1, 2, 2, 3, gtk.EXPAND|gtk.FILL, gtk.FILL, 5, 5)
+        self.customTable.attach (self.label2, 0, 1, 0, 1, gtk.FILL, gtk.FILL)
+        self.customTable.attach (viewport, 1, 2, 0, 1, gtk.EXPAND|gtk.FILL, gtk.FILL)
 
-        self.label3 = gtk.Label (_("Other ports: (1029:tcp)"))
-        self.label3.set_alignment (0.0, 0.0)
+        self.label3 = gtk.Label (_("Other ports (1029:tcp):"))
+        self.label3.set_alignment (0.0, 0.5)
         self.portsEntry = gtk.Entry ()
-        self.customTable.attach (self.label3, 0, 1, 3, 4, gtk.FILL, gtk.FILL, 5, 5)
-        self.customTable.attach (self.portsEntry, 1, 2, 3, 4, gtk.EXPAND|gtk.FILL, gtk.FILL, 5, 5)
+        self.customTable.attach (self.label3, 0, 1, 2, 3, gtk.FILL, gtk.FILL)
+        self.customTable.attach (self.portsEntry, 1, 2, 2, 3, gtk.EXPAND|gtk.FILL, gtk.FILL)
 
         self.firewall_vbox.show_all()
 

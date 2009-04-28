@@ -65,6 +65,7 @@ class GrubBootloader(AbstractBootloader):
 
         self.bootloader_vbox = xml.get_widget("bootloader_vbox")
         self.bootloader_label = xml.get_widget("bootloader_label")
+        self.bootloader_info = xml.get_widget("bootloader_info")
         self.install_bootloader_radio = xml.get_widget("install_bootloader_radio")
         self.upgrade_bootloader_radio = xml.get_widget("upgrade_bootloader_radio")
         self.no_bootloader_radio = xml.get_widget("no_bootloader_radio")
@@ -80,6 +81,8 @@ class GrubBootloader(AbstractBootloader):
         self.grub_password_entry = xml.get_widget("grub_password_entry")
         self.grub_password_confirm = xml.get_widget("grub_password_confirm")
         self.grub_password_encrypt_checkbutton = xml.get_widget("grub_password_encrypt_checkbutton")
+        self.grub_options = xml.get_widget("grub_options")
+        self.install_options = xml.get_widget("install_options")
 
         self.install_bootloader_radio.connect("toggled", self.toggled_bootloader)
         self.grub_password_checkbutton.connect("toggled", self._toggled_grub_password)
@@ -177,27 +180,23 @@ class GrubBootloader(AbstractBootloader):
         status = self.install_bootloader_radio.get_active()
         self.parameters_label.set_sensitive(status)
         self.parameters_entry.set_sensitive(status)
-        self.mbr_radiobutton.set_sensitive(status)
-        self.firstsector_radiobutton.set_sensitive(status)
-        self.grub_options_label.set_sensitive(status)
-        self.grub_password_checkbutton.set_sensitive(status)
-        self.grub_password_entry.set_sensitive(status)
-        self.grub_password_confirm.set_sensitive(status)
-        self.grub_password_encrypt_checkbutton.set_sensitive(status)
+        self.install_options.set_sensitive(status)
+        self.grub_options.set_sensitive(status)
 
 class UnknownBootloader(AbstractBootloader):
     def __init__(self, xml, notebook, ksHandler):
         AbstractBootloader.__init__(self, xml, notebook, ksHandler)
 
         self.bootloader_label = xml.get_widget("bootloader_label")
+        self.bootloader_info = xml.get_widget("bootloader_info")
 
     def hide(self):
-        self.bootloader_label.hide()
+        self.bootloader_info.hide()
 
     def show(self, platform):
         self.bootloader_label.set_text(_("Bootloader options are not applicable to "
                                          "the %s platform" % platform))
-        self.bootloader_label.show()
+        self.bootloader_info.show()
 
 class bootloader:
     def __init__(self, xml, notebook, ksHandler):
