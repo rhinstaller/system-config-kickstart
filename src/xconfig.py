@@ -41,6 +41,7 @@ class xconfig:
         self.config_x_button = xml.get_widget("config_x_button")
         self.firstbootLabel = xml.get_widget("firstbootLabel")
         self.firstboot_optionmenu = xml.get_widget("firstboot_optionmenu")
+        self.x_config_inner_frame = xml.get_widget("x_config_inner_frame")
 
     def updateKS(self, ksHandler):
         self.ks = ksHandler
@@ -48,14 +49,10 @@ class xconfig:
     def setSensitive(self, boolean):
         if boolean == False:
             self.xconfig_label_box.show()
-            self.config_x_button.hide()
-            self.firstbootLabel.hide()
-            self.firstboot_optionmenu.hide()
+            self.x_config_inner_frame.hide()
         else:
             self.xconfig_label_box.hide()
-            self.config_x_button.show()
-            self.firstbootLabel.show()
-            self.firstboot_optionmenu.show()
+            self.x_config_inner_frame.show()
 
     def formToKickstart(self):
         if self.ks.upgrade.upgrade == True:

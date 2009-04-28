@@ -49,7 +49,6 @@ class network:
 
         self.network_device_option_menu = xml.get_widget("network_device_option_menu")
         self.network_type_option_menu = xml.get_widget("network_type_option_menu")
-        self.network_type_hbox = xml.get_widget("network_type_hbox")
 
         self.ip_entry = xml.get_widget("ip_entry")
         self.netmask_entry = xml.get_widget("netmask_entry")
@@ -90,7 +89,6 @@ class network:
 
         for i in ["DHCP", _("Static IP"), "BOOTP"]:
             self.network_type_option_menu.append_text(i)
-        self.network_type_hbox.show_all()
         self.network_type_option_menu.set_active(0)
 
         self.network_type_option_menu.connect("changed", self.typeChanged)
