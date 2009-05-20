@@ -95,6 +95,12 @@ class network:
         self.network_cancel_button.connect("clicked", self.resetDialog)
         self.network_frame.show_all()
 
+        self.network_device_option_menu.connect("changed", self.enable_ok_button)
+        self.ip_entry.connect("changed", self.enable_ok_button)
+        self.netmask_entry.connect("changed", self.enable_ok_button)
+        self.gw_entry.connect("changed", self.enable_ok_button)
+        self.nameserver_entry.connect("changed", self.enable_ok_button)
+
     def updateKS(self, ksHandler):
         self.ks = ksHandler
 
@@ -149,6 +155,7 @@ class network:
                     self.nameserver_entry.set_text("")
 
         self.handler = self.network_ok_button.connect("clicked", self.editDevice, iter)
+        self.network_ok_button.set_sensitive(False)
         self.network_device_dialog.show_all()
 
     def deviceIsFilledIn(self):
@@ -342,6 +349,7 @@ class network:
             self.network_table.set_sensitive(True)
         else:
             self.network_table.set_sensitive(False)
+        self.enable_ok_button()
 
     def rowSelected(self, *args):
         store, iter = self.network_device_tree.get_selection().get_selected()
@@ -380,3 +388,6 @@ class network:
 
             if nic.nameserver != "":
                 self.network_device_store.set_value(iter, 5, nic.nameserver)
+
+    def enable_ok_button(self, *args):
+        self.network_ok_button.set_sensitive(True)

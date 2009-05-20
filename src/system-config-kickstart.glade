@@ -436,6 +436,7 @@
               <widget class="GtkButton" id="part_ok_button">
                 <property name="label">gtk-ok</property>
                 <property name="visible">True</property>
+                <property name="sensitive">False</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
                 <property name="receives_default">False</property>
@@ -503,7 +504,6 @@
             <child>
               <widget class="GtkSpinButton" id="raid_spares_spin">
                 <property name="visible">True</property>
-                <property name="sensitive">False</property>
                 <property name="can_focus">True</property>
                 <property name="adjustment">1 0 100 1 10 10</property>
                 <property name="climb_rate">1</property>
@@ -694,6 +694,7 @@
               <widget class="GtkButton" id="raid_ok_button">
                 <property name="label">gtk-ok</property>
                 <property name="visible">True</property>
+                <property name="sensitive">False</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
                 <property name="receives_default">False</property>

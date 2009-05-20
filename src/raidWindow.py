@@ -102,21 +102,30 @@ class raidWindow:
         self.raid_cancel_button.connect("clicked", self.destroy)
         self.raid_fsType_menu.connect("changed", self.on_raid_fsType_menu_changed)
 
+        self.raid_mp_combo.entry.connect("changed", self.enable_ok_button)
+        self.raid_device_menu.connect("changed", self.enable_ok_button)
+        self.raid_level_menu.connect("changed", self.enable_ok_button)
+        self.raid_spares_spin.connect("changed", self.enable_ok_button)
+
     def on_raid_fsType_menu_changed(self, *args):
         if self.raid_fsType_menu.get_active_text() == "swap":
             #it's a swap partition, so desensitize the mountPoint combo
             self.raid_mp_combo.set_sensitive(False)
         else:
             self.raid_mp_combo.set_sensitive(True)
+        self.enable_ok_button()
 
     def addPartition(self):
+        self.win_reset()
         self.raid_partition_store.clear()
         self.original_partitions = None
         self.original_iter = None
         self.part_store.foreach(self.countRaidPartitions)
         self.raid_window.show_all()
+        self.raid_ok_button.set_sensitive(False)
 
     def editDevice(self, iter, part_object):
+        self.win_reset()
         self.original_iter = iter
         self.raid_partition_store.clear()
         self.raid_mp_combo.entry.set_text(part_object.mountPoint)
@@ -137,6 +146,7 @@ class raidWindow:
         self.part_store.foreach(self.countRaidPartitions, part_object.raidPartitions)
 
         self.raid_window.show_all()
+        self.raid_ok_button.set_sensitive(False)
 
     def countRaidPartitions(self, store, data, iter, raidPartitions = None):
         part_object = self.part_store.get_value(iter, 5)
@@ -157,6 +167,7 @@ class raidWindow:
         iter = self.raid_partition_store.get_iter((int(row),))
         val = self.raid_partition_store.get_value(iter, 0)
         self.raid_partition_store.set_value(iter, 0 , not val)
+        self.enable_ok_button()
 
     def okClicked(self, *args):
         fsType = self.raid_fsType_menu.get_active_text()
@@ -314,3 +325,14 @@ class raidWindow:
             partition_iter = self.raid_partition_store.get_value(iter, 2)
             part_object = self.raid_partition_store.get_value(iter, 3)
             self.part_store.set_value(partition_iter, 1, raid_object.raidDevice)
+
+    def enable_ok_button(self, *args):
+        self.raid_ok_button.set_sensitive(True)
+
+    def win_reset(self):
+        self.raid_format_check.set_active(True)
+        self.raid_spares_spin.set_value(1)
+        self.raid_mp_combo.entry.set_text("")
+        self.raid_fsType_menu.set_active(0)
+        self.raid_device_menu.set_active(0)
+        self.raid_level_menu.set_active(0)

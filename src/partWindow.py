@@ -82,6 +82,14 @@ class partWindow:
         self.onDiskCheck.connect("toggled", self.on_onDiskCheck_toggled)
         self.swap_checkbutton.connect("toggled", self.on_swap_recommended_toggled)
 
+        self.mountPointCombo.entry.connect("changed", self.enable_ok_button)
+        self.sizeCombo.connect("changed", self.enable_ok_button)
+        self.setSizeCombo.connect("changed", self.enable_ok_button)
+        self.asPrimaryCheck.connect("toggled", self.enable_ok_button)
+        self.formatCheck.connect("toggled", self.enable_ok_button)
+        self.onDiskEntry.connect("changed", self.enable_ok_button)
+        self.onPartEntry.connect("changed", self.enable_ok_button)
+
         mountPoints = ["/", "/boot", "/home", "/var", "/tmp", "/usr", "/opt"]
         for i in mountPoints:
             self.mountPointCombo.append_text(i)
@@ -105,6 +113,7 @@ class partWindow:
         self.fsTypeCombo.set_active(fsTypeSelect)
 
     def on_fsTypeCombo_set_focus_child(self, *args):
+        self.enable_ok_button()
         key = self.fsTypeCombo.entry.get_text()
 
         if key == None or key == "":
@@ -142,17 +151,21 @@ class partWindow:
 
     def on_setSizeRadio_toggled(self, *args):
         self.setSizeCombo.set_sensitive(self.setSizeRadio.get_active())
+        self.enable_ok_button()
 
     def on_sizeMaxRadio_toggled(self, *args):
         self.sizeCombo.set_sensitive(not self.sizeMaxRadio.get_active())
+        self.enable_ok_button()
 
     def on_onPartCheck_toggled(self, *args):
         self.onPartBox.set_sensitive(self.onPartCheck.get_active())
         self.onDiskCheck.set_sensitive(not self.onPartCheck.get_active())
+        self.enable_ok_button()
 
     def on_onDiskCheck_toggled(self, *args):
         self.onDiskBox.set_sensitive(self.onDiskCheck.get_active())
         self.onPartCheck.set_sensitive(not self.onDiskCheck.get_active())
+        self.enable_ok_button()
 
     def add_partition(self, type=None):
         self.ok_handler = self.partOkButton.connect("clicked", self.on_ok_button_clicked)
@@ -160,6 +173,7 @@ class partWindow:
         if type == "TYPE_RAID":
             self.fsTypeCombo.entry.set_text(_("software RAID"))
         self.partitionDialog.show_all()
+        self.partOkButton.set_sensitive(False)
 
     def edit_partition(self, iter):
         self.current_iter = iter
@@ -209,6 +223,7 @@ class partWindow:
             self.swap_checkbutton.set_active(True)
         else:
             self.sizeCombo.set_text(str(part_object.size))
+        self.partOkButton.set_sensitive(False)
 
     def win_reset(self):
         self.mountPointCombo.entry.set_text("")
@@ -229,6 +244,7 @@ class partWindow:
         self.setSizeCombo.set_text("1")
         self.swap_checkbutton.set_active(False)
         self.formatCheck.set_active(True)
+        self.partOkButton.set_sensitive(False)
 
     def on_part_cancel_button_clicked(self, *args):
         self.partOkButton.disconnect(self.ok_handler)
@@ -378,6 +394,7 @@ class partWindow:
         active = self.swap_checkbutton.get_active()
         self.sizeCombo.set_sensitive(not active)
         self.sizeOptionsTable.set_sensitive(not active)
+        self.enable_ok_button()
 
     def deviceFromPartition(self, part):
         if self.isPartitionValid(part) == 1:
@@ -622,3 +639,6 @@ class partWindow:
             part_object.doFormat = 0
 
         self.setValues(part_object)
+
+    def enable_ok_button(self, *args):
+        self.partOkButton.set_sensitive(True)

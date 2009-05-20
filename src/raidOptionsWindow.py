@@ -94,3 +94,4 @@ class raidOptionsWindow:
     def destroy(self, *args):
         self.raid_options_window.hide()
         return True
+
