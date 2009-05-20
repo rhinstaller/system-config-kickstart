@@ -66,6 +66,9 @@ class saveDialog:
         def saveFile(self, *args):
 		self.dialog.filePath = self.dialog.get_filename()
 
+                if not self.dialog.filePath:
+                    return
+
                 try:
                     ksFile = open(self.dialog.filePath, "w")
                 except IOError, e:
