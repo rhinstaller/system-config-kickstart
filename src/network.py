@@ -47,7 +47,7 @@ class network:
         self.network_device_dialog = xml.get_widget("network_device_dialog")
         self.network_device_dialog.connect("delete-event", self.resetDialog)
 
-        self.network_device_option_menu = xml.get_widget("network_device_option_menu")
+        self.network_device_entry = xml.get_widget("network_device_entry")
         self.network_type_option_menu = xml.get_widget("network_type_option_menu")
 
         self.ip_entry = xml.get_widget("ip_entry")
@@ -76,26 +76,15 @@ class network:
         col = gtk.TreeViewColumn(_("Network Type"), gtk.CellRendererText(), text = 1)
         self.network_device_tree.append_column(col)
 
-        self.deviceList = []
-
-        for i in range(17):
-            dev = "eth%d" %i
-            item = gtk.MenuItem(dev)
-            self.deviceList.append(dev)
-            self.network_device_option_menu.append_text(dev)
-
-        self.network_device_option_menu.show_all()
-        self.network_device_option_menu.set_active(0)
-
         for i in ["DHCP", _("Static IP"), "BOOTP"]:
             self.network_type_option_menu.append_text(i)
-        self.network_type_option_menu.set_active(0)
+        self.network_device_entry.set_text("")
 
         self.network_type_option_menu.connect("changed", self.typeChanged)
         self.network_cancel_button.connect("clicked", self.resetDialog)
         self.network_frame.show_all()
 
-        self.network_device_option_menu.connect("changed", self.enable_ok_button)
+        self.network_device_entry.connect("changed", self.enable_ok_button)
         self.ip_entry.connect("changed", self.enable_ok_button)
         self.netmask_entry.connect("changed", self.enable_ok_button)
         self.gw_entry.connect("changed", self.enable_ok_button)
@@ -106,23 +95,8 @@ class network:
 
     def showAddNetworkDialog(self, *args):
         self.handler = self.network_ok_button.connect("clicked", self.addDevice)
-
-        #Let's find the last eth device in the list and increment by one to
-        #fill in the option menu with the next device
-        device = None
-        iter = self.network_device_store.get_iter_first()
-        while iter:
-            device = self.network_device_store.get_value(iter, 0)
-            iter = self.network_device_store.iter_next(iter)
-
-        if device == None:
-            num = 0
-        else:
-            num = int(device[3:])
-            if num < 15:
-                num = num + 1
-
-        self.network_device_option_menu.set_active(num)
+        self.network_type_option_menu.set_active(0)
+        self.network_device_entry.set_text("")
         self.network_device_dialog.show_all()
 
     def showEditNetworkDialog(self, *args):
@@ -132,8 +106,7 @@ class network:
             store, iter = rc
 
             device = self.network_device_store.get_value(iter, 0)
-            num = self.deviceList.index(device)
-            self.network_device_option_menu.set_active(num)
+            self.network_device_entry.set_text(str(device))
 
             type = self.network_device_store.get_value(iter, 1)
             if type == "DHCP":
@@ -170,10 +143,9 @@ class network:
             return False
 
     def addDevice(self, *args):
-        devNum = self.network_device_option_menu.get_active()
-        devName = self.deviceList[devNum]
+        devName = self.network_device_entry.get_text()
 
-        if self.doesDeviceExist(devName) is None:
+        if not devName or self.doesDeviceExist(devName) is None:
             return
 
         if self.network_type_option_menu.get_active() == 0:
@@ -230,8 +202,7 @@ class network:
         self.resetDialog()
 
     def editDevice(self, button, iter):
-        devNum = self.network_device_option_menu.get_active()
-        devName = self.deviceList[devNum]
+        devName = self.network_device_entry.get_text()
 
         if self.network_device_store.get_value(iter, 0) != devName:
             if self.doesDeviceExist(devName) is None:
@@ -310,7 +281,7 @@ class network:
         return 0
 
     def resetDialog(self, *args):
-        self.network_device_option_menu.set_active(0)
+        self.network_device_entry.set_text("")
         self.network_type_option_menu.set_active(0)
 
         self.ip_entry.set_text("")
