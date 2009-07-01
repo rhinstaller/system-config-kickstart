@@ -4639,7 +4639,6 @@ Enabled in reconfiguration mode</property>
                           <widget class="GtkImage" id="image41">
                             <property name="visible">True</property>
                             <property name="stock">gtk-save-as</property>
-                            <property name="icon-size">4</property>
                           </widget>
                           <packing>
                             <property name="expand">False</property>
@@ -4893,16 +4892,6 @@ Enabled in reconfiguration mode</property>
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkComboBox" id="network_device_option_menu">
-                    <property name="visible">True</property>
-                    <property name="items" translatable="yes"></property>
-                  </widget>
-                  <packing>
-                    <property name="left_attach">1</property>
-                    <property name="right_attach">2</property>
-                  </packing>
-                </child>
-                <child>
                   <widget class="GtkLabel" id="label209">
                     <property name="visible">True</property>
                     <property name="xalign">0</property>
@@ -4911,6 +4900,17 @@ Enabled in reconfiguration mode</property>
                   <packing>
                     <property name="x_options">GTK_FILL</property>
                     <property name="y_options">GTK_FILL</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkEntry" id="network_device_entry">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="invisible_char">&#x25CF;</property>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
                   </packing>
                 </child>
               </widget>
