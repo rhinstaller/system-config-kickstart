@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.7.22
+Version: 2.8.0
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -68,6 +68,18 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Wed Jul 01 2009 Chris Lumens <clumens@redhat.com> - 2.8.0-1
+- Allow specifying anything for a network device name, not just ethX (#508089).
+- Don't traceback when opening files with null bytes (#508092).
+- Make the OK button on some dialogs insensitive until changes happen (#493887).
+- Don't traceback if the filename entry is blank (#500409).
+- Lots more UI style/layout updates (#493842, #493857, rrakus).
+- Don't traceback if given an invalid language or timezone (#487390).
+- Update to glade3 (#495754, rrakus).
+- Add a progress window when saving or previewing files (#493879, rrakus).
+- Use the standard about/license dialog (rrakus, #493926).
+- Center dialogs on the parent (rrakus, #493823).
+
 * Wed Apr 01 2009 Chris Lumens <clumens@redhat.com> - 2.7.22-1
 - Use dataList().append when adding partitions and network devices (#492100).
 - Update translation files (#490018). (clumens)
