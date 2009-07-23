@@ -34,7 +34,7 @@ install: ${PKGNAME}.desktop
 	mkdir -p $(INSTROOT)/usr/share/icons/hicolor/48x48/apps
 	install src/system-config-kickstart $(INSTROOT)/usr/bin
 	install src/*.py $(INSTROOT)$(PKGDATADIR)
-	for py in src/*.py ; do \
+	for py in src/* ; do \
 		sed -e s,@VERSION@,$(VERSION),g $${py} > $(INSTROOT)$(PKGDATADIR)/`basename $${py}` ; \
 	done
 	install src/${PKGNAME}.glade $(INSTROOT)$(PKGDATADIR)
