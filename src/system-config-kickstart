@@ -24,7 +24,8 @@
 import getopt
 import signal
 import sys, os
-from rhpl.exception import installExceptionHandler
+
+import meh
 
 sys.path.append("/usr/share/system-config-kickstart")
 
@@ -86,5 +87,6 @@ if __name__ == "__main__":
         print (_("Try running 'system-config-kickstart --help' for a list of options."))
         sys.exit(0)
 
-    installExceptionHandler("system-config-kickstart", "")
-    kickstartGui.kickstartGui(file)
+    ksGui = kickstartGui.kickstartGui(file)
+    meh.makeRHHandler("system-config-kickstart", "@VERSION@", ksGui)
+    ksGui.run()

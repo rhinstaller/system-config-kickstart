@@ -13,10 +13,10 @@ BuildArch: noarch
 # within this srpm.
 Source0: %{name}-%{version}.tar.gz
 
-Obsoletes: ksconfig, redhat-config-kickstart
+Obsoletes: ksconfig, redhat-config-kickstart, mkkickstart
 BuildRequires: desktop-file-utils, intltool, gettext
 Requires: pygtk2 >= 1.99.11, pygtk2-libglade, python >= 2.3.3, hwdata, rhpl
-Requires: system-config-language, system-config-date
+Requires: system-config-language, system-config-date, python-meh
 Requires: pykickstart >= 0.96, yum, anaconda >= 11.4.0.42-1, hicolor-icon-theme
 Requires(post): gtk2 >= 2.6
 Requires(postun): gtk2 >= 2.6

@@ -108,23 +108,26 @@ class kickstartGui:
         self.packages_class.cleanup()
 
     def __init__ (self, file):
+        self.file = file
+
+    def run(self):
         self.ksHandler = makeVersion()
 
-        if file:
+        if self.file:
             self.parser = KickstartParser(self.ksHandler)
 
             msg = None
 
             try:
-                self.parser.readKickstart(file)
+                self.parser.readKickstart(self.file)
             except KickstartError, e:
                 if e.value.find("\x00") != -1:
-                    msg = _("The kickstart file %s could not be opened.") % file
+                    msg = _("The kickstart file %s could not be opened.") % self.file
                 else:
                     msg = _("The following error was found while parsing your "
                             "kickstart configuration:\n\n%s" % e.value)
             except IOError, e:
-                msg = _("The kickstart file %s could not be opened.") % file
+                msg = _("The kickstart file %s could not be opened.") % self.file
 
             if msg:
                 dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_ERROR,
