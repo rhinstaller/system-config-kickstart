@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.8.0
+Version: 2.8.1
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -68,6 +68,11 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Tue Jul 28 2009 Chris Lumens <clumens@redhat.com> - 2.8.1-1
+- Change the skipx blurb to make more sense (#493835).
+- Update to using python-meh for exception handling instead of rhpl.
+- Do VERSION substitution on all files.
+
 * Wed Jul 01 2009 Chris Lumens <clumens@redhat.com> - 2.8.0-1
 - Allow specifying anything for a network device name, not just ethX (#508089).
 - Don't traceback when opening files with null bytes (#508092).
