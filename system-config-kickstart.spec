@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.8.1
+Version: 2.8.2
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -15,9 +15,10 @@ Source0: %{name}-%{version}.tar.gz
 
 Obsoletes: ksconfig, redhat-config-kickstart, mkkickstart
 BuildRequires: desktop-file-utils, intltool, gettext
-Requires: pygtk2 >= 1.99.11, pygtk2-libglade, python >= 2.3.3, hwdata, rhpl
+Requires: pygtk2 >= 1.99.11, pygtk2-libglade, python >= 2.3.3, hwdata
 Requires: system-config-language, system-config-date, python-meh
 Requires: pykickstart >= 0.96, yum, anaconda >= 11.4.0.42-1, hicolor-icon-theme
+Requires: system-config-keyboard >= 1.3.1
 Requires(post): gtk2 >= 2.6
 Requires(postun): gtk2 >= 2.6
 

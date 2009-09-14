@@ -29,8 +29,8 @@ import random
 import crypt
 import getopt
 
-from rhpl import keyboard_models
-import rhpl.keyboard as keyboard
+from system_config_keyboard import keyboard, keyboard_models
+from scdate.core import zonetab
 from hardwareLists import langDict
 
 import kickstartGui
@@ -117,9 +117,6 @@ class basic:
             self.keyboard_combo.set_active(self.keyboard_list.index(self.keyboard_dict[currentKeymap][0]))
         except:
             self.keyboard_combo.set_active(self.keyboard_list.index(self.keyboard_dict["us"][0]))
-
-        #populate time zone combo
-        import zonetab
 
         zt = zonetab.ZoneTab()
         self.timezone_list = [ x.tz for x in zt.getEntries() ]
@@ -243,7 +240,12 @@ class basic:
                 break
 
         if self.ks.keyboard.keyboard != "":
-            self.keyboard_combo.set_active(self.keyboard_list.index(self.keyboard_dict[self.ks.keyboard.keyboard][0]))
+            try:
+                val = self.keyboard_dict[self.ks.keyboard.keyboard][0]
+            except (KeyError, ValueError):
+                val = self.keyboard_dict["us"][0]
+
+            self.keyboard_combo.set_active(self.keyboard_list.index(val))
 
         if self.ks.timezone.timezone != "":
             zone = self.ks.timezone.timezone.replace("_", " ")

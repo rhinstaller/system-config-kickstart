@@ -25,7 +25,7 @@ import sys
 import os
 sys.path.append("/usr/share/system-config-language")
 import language_backend
-import rhpl.keyboard as keyboard
+from system_config_keybard import keyboard
 
 from pykickstart.constants import *
 
