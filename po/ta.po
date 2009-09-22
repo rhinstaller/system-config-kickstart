@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: system-config-kickstart.master.ta\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-12 17:02-0400\n"
-"PO-Revision-Date: 2009-04-01 12:40+0530\n"
+"PO-Revision-Date: 2009-09-22 14:01+0530\n"
 "Last-Translator: I. Felix <ifelix@redhat.com>\n"
 "Language-Team: Tamil <fedora-trans-ta@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -20,6 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\\n\n"
+"\n"
 "\n"
 "\n"
 "\n"
@@ -150,7 +151,7 @@ msgstr "துணைப்பிரிவு "
 
 #: ../src/kickstartGui.py:135
 msgid "Basic Configuration"
-msgstr "பேசிக் அமைப்பு"
+msgstr "அடிப்படை கட்டமைப்பு"
 
 #: ../src/kickstartGui.py:136
 msgid "Installation Method"
@@ -158,7 +159,7 @@ msgstr "நிறுவல் முறை"
 
 #: ../src/kickstartGui.py:137
 msgid "Boot Loader Options"
-msgstr "துவக்க ஏற்றி தேர்வுகள்"
+msgstr "Boot Loader விருப்பங்கள்"
 
 #: ../src/kickstartGui.py:138
 msgid "Partition Information"
@@ -174,11 +175,11 @@ msgstr "அனுமதி சரிபார்த்தல்"
 
 #: ../src/kickstartGui.py:141 tmp/system-config-kickstart.glade.h:50
 msgid "Firewall Configuration"
-msgstr "தீச்சுவர் அமைப்பு"
+msgstr "ஃபயர்வால் கட்டமைப்பு"
 
 #: ../src/kickstartGui.py:142 tmp/system-config-kickstart.glade.h:26
 msgid "Display Configuration"
-msgstr "காட்சி அமைப்பு"
+msgstr "காட்சி கட்டமைப்பு"
 
 #: ../src/kickstartGui.py:143 tmp/system-config-kickstart.glade.h:108
 msgid "Package Selection"
@@ -186,7 +187,7 @@ msgstr "பணித்தொகுப்பு தேர்வுகள்"
 
 #: ../src/kickstartGui.py:144 tmp/system-config-kickstart.glade.h:118
 msgid "Pre-Installation Script"
-msgstr "முன்பே-நிறுவப்பட்ட சிறுநிரல்கள்"
+msgstr "முன்-நிறுவப்பட்ட சிறுநிரல்கள்"
 
 #: ../src/kickstartGui.py:145 tmp/system-config-kickstart.glade.h:117
 msgid "Post-Installation Script"
@@ -200,11 +201,11 @@ msgid ""
 " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
 " A graphical interface for creating a kickstart file"
 msgstr ""
-"Kickstart உள்ளமைப்பாளர் @VERSION@\n"
-" காப்புரிமை (c) 2000-2002 Red Hat, Inc.\n"
-" காப்புரிமை (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-" காப்புரிமை (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-"kick start கோப்பை உருவாக்க ஒரு வரைக்கலை இடைமுகம்"
+"Kickstart Configurator @VERSION@\n"
+" Copyright (c) 2000-2002 Red Hat, Inc.\n"
+" Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
+" Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
+" A graphical interface for creating a kickstart file"
 
 #: ../src/kickstartGui.py:211
 msgid "About Kickstart Configurator"
@@ -225,7 +226,7 @@ msgstr "சாதனம்"
 
 #: ../src/network.py:77
 msgid "Network Type"
-msgstr "வலைப்பின்னல் வகை"
+msgstr "பிணைய வகை"
 
 #: ../src/network.py:95 ../src/network.py:144 ../src/network.py:226
 #: ../src/network.py:282 ../src/network.py:377
@@ -234,7 +235,7 @@ msgstr "மாறாநிலை IP"
 
 #: ../src/network.py:191 ../src/network.py:250
 msgid "Please fill in the network information"
-msgstr "வலைப்பின்னல் தகவலை உள்ளிடவும்"
+msgstr "பிணைய தகவலை உள்ளிடவும்"
 
 #: ../src/network.py:203 ../src/network.py:262
 msgid "Please enter a valid gateway address."
@@ -259,7 +260,8 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"அமைவில் பிழையுள்ளதால் தொகுப்பு தேர்ந்தெடுப்பு செயல்நீக்கப்பட்டது.  உங்கள் தொகுபதிவக கட்டமைப்பை சரி செய்து மீண்டும் முயற்சிக்கவும்.\n"
+"அமைவில் பிழையுள்ளதால் தொகுப்பு தேர்ந்தெடுப்பு செயல்நீக்கப்பட்டது.  உங்கள் தொகுபதிவக "
+"கட்டமைப்பை சரி செய்து மீண்டும் முயற்சிக்கவும்.\n"
 "\n"
 "%s"
 
@@ -315,11 +317,11 @@ msgstr "இல்லை"
 #: ../src/partWindow.py:320 ../src/partWindow.py:335 ../src/partWindow.py:354
 #: ../src/partWindow.py:368
 msgid "Auto"
-msgstr "தன்னாலே"
+msgstr "தானியக்கம்"
 
 #: ../src/partWindow.py:329
 msgid "Hard Drives"
-msgstr "வன் தட்டு இயக்கிகள்"
+msgstr "நிலைவட்டுகள்"
 
 #: ../src/partWindow.py:472
 msgid "Specify a mount point for the partition."
@@ -356,7 +358,7 @@ msgid ""
 "Device/\n"
 "Partition Number"
 msgstr ""
-"Device/\n"
+"சாதனம்/\n"
 "பகிர்வு எண்"
 
 #: ../src/partition.py:74
@@ -364,7 +366,7 @@ msgid ""
 "Mount Point/\n"
 "RAID"
 msgstr ""
-"Mount Point/\n"
+"ஏற்றப்புள்ளி/\n"
 "RAID"
 
 #: ../src/partition.py:76
@@ -373,7 +375,7 @@ msgstr "வகை"
 
 #: ../src/partition.py:78
 msgid "Format"
-msgstr "வடிவமைப்பு"
+msgstr "வடிவமை"
 
 #: ../src/partition.py:80
 msgid "Size (MB)"
@@ -457,11 +459,11 @@ msgstr "அனுமதி சரிபார்த்தல்:"
 
 #: tmp/system-config-kickstart.glade.h:12
 msgid "Basic Configuration (required)"
-msgstr "அடப்படை அமைப்புகள்(தேவையான)"
+msgstr "அடிப்படை கட்டமைப்புகள் (தேவையான)"
 
 #: tmp/system-config-kickstart.glade.h:13
 msgid "Boot Loader Options (required)"
-msgstr "இயக்கி ஏற்றி தேர்வுகள் (required)"
+msgstr "இயக்கி ஏற்றி விருப்பங்கள் (தேவையானது)"
 
 #: tmp/system-config-kickstart.glade.h:14
 msgid "CA Cert URL:"
@@ -509,7 +511,7 @@ msgstr "ஃபயர்வாலை செயல்நீக்குதல்"
 
 #: tmp/system-config-kickstart.glade.h:25
 msgid "Disabled"
-msgstr "முடக்கிய"
+msgstr "செயல்நீக்கப்பட்டது"
 
 #: tmp/system-config-kickstart.glade.h:27
 msgid "Display configuration is not applicable on upgrades."
@@ -581,7 +583,7 @@ msgstr "FTP"
 
 #: tmp/system-config-kickstart.glade.h:44
 msgid "FTP Directory:"
-msgstr "FTP கோப்பகம்"
+msgstr "FTP அடைவு:"
 
 #: tmp/system-config-kickstart.glade.h:45
 msgid "FTP Password"
@@ -589,7 +591,7 @@ msgstr "FTP  கடவுச்சொல் "
 
 #: tmp/system-config-kickstart.glade.h:46
 msgid "FTP Server:"
-msgstr "வழங்கன்"
+msgstr "FTP சேவையகம்:"
 
 #: tmp/system-config-kickstart.glade.h:47
 msgid "FTP Username"
@@ -597,7 +599,7 @@ msgstr "FTP பயனர் பெயர்"
 
 #: tmp/system-config-kickstart.glade.h:48
 msgid "File System Type:"
-msgstr "கோப்பு அமைப்பு வகை:"
+msgstr "கோப்பு முறைமை வகை:"
 
 #: tmp/system-config-kickstart.glade.h:49
 msgid "Fill all unused space on disk"
@@ -605,7 +607,7 @@ msgstr "வட்டில் உள்ள பயன்படுத்தாத 
 
 #: tmp/system-config-kickstart.glade.h:51
 msgid "Firewall configuration is not applicable on upgrades."
-msgstr "நெருப்பு சுவர் அமைப்பு மேம்படுத்தலுக்கு பொருந்தாது"
+msgstr "ஃபயர்வால் கட்டமைப்பு மேம்படுத்தலுக்கு பொருந்தாது"
 
 #: tmp/system-config-kickstart.glade.h:52
 msgid "Fixed size"
@@ -641,23 +643,23 @@ msgstr "HTTP"
 
 #: tmp/system-config-kickstart.glade.h:60
 msgid "HTTP Directory:"
-msgstr "HTTP அடைவு"
+msgstr "HTTP அடைவு:"
 
 #: tmp/system-config-kickstart.glade.h:61
 msgid "HTTP Server:"
-msgstr "HTTP சேவகன்"
+msgstr "HTTP சேவையகம்:"
 
 #: tmp/system-config-kickstart.glade.h:62
 msgid "Hard Drive"
-msgstr "வன் இயக்ககம் "
+msgstr "நிலைவட்டு"
 
 #: tmp/system-config-kickstart.glade.h:63
 msgid "Hard Drive Directory:"
-msgstr "வன்தகவு அடைவு:"
+msgstr "நிலைவட்டு அடைவு:"
 
 #: tmp/system-config-kickstart.glade.h:64
 msgid "Hard Drive Partition:"
-msgstr "வன்தகடு பகிர்வு:"
+msgstr "நிலைவட்டு பகிர்வு:"
 
 #: tmp/system-config-kickstart.glade.h:65
 msgid "Hesiod"
@@ -745,7 +747,7 @@ msgstr "LDAP  அடிப் பெயர்"
 
 #: tmp/system-config-kickstart.glade.h:86
 msgid "LDAP Server: "
-msgstr "LDAP சேவகன்:"
+msgstr "LDAP சேவையகம்:"
 
 #: tmp/system-config-kickstart.glade.h:87
 msgid "Load CA certificate"
@@ -753,7 +755,7 @@ msgstr "CA சான்றிதழை ஏற்றுதல்"
 
 #: tmp/system-config-kickstart.glade.h:88
 msgid "Make RAID Device"
-msgstr "RAID சாதணத்தை உருவாக்கு"
+msgstr "RAID சாதனத்தை உருவாக்கு"
 
 #: tmp/system-config-kickstart.glade.h:89
 msgid "Make partition on specific drive (ondisk)"
@@ -769,11 +771,11 @@ msgstr "NFS"
 
 #: tmp/system-config-kickstart.glade.h:92
 msgid "NFS Directory:"
-msgstr "NFS கோப்பகம்"
+msgstr "NFS அடைவு:"
 
 #: tmp/system-config-kickstart.glade.h:93
 msgid "NFS Server:"
-msgstr "NFS வழங்கன் "
+msgstr "NFS சேவையகம்:"
 
 #: tmp/system-config-kickstart.glade.h:94
 msgid "NIS"
@@ -789,15 +791,15 @@ msgstr "NIS டொமைன்:"
 
 #: tmp/system-config-kickstart.glade.h:97
 msgid "NIS Server:"
-msgstr "NIS வழங்கன் :"
+msgstr "NIS சேவையகம்:"
 
 #: tmp/system-config-kickstart.glade.h:98
 msgid "Name Server:"
-msgstr "சேவகன் பெயர்:"
+msgstr "சேவையகப் பெயர்:"
 
 #: tmp/system-config-kickstart.glade.h:99
 msgid "Name Switch Cache"
-msgstr "Name Switch Cache"
+msgstr "புதிய சுவிட்ச் கேஷ்"
 
 #: tmp/system-config-kickstart.glade.h:100
 msgid "Name Switch Cache Daemon (nscd) Authentication"
@@ -809,15 +811,15 @@ msgstr "நெட்மஸ்க்:"
 
 #: tmp/system-config-kickstart.glade.h:103
 msgid "Network Device Information"
-msgstr "வலைப்பின்னல் சாதன தகவல்"
+msgstr "பிணைய சாதன தகவல்"
 
 #: tmp/system-config-kickstart.glade.h:104
 msgid "Network Device:"
-msgstr "வலைப்பின்னல் சாதனம்:"
+msgstr "பிணைய சாதனம்:"
 
 #: tmp/system-config-kickstart.glade.h:105
 msgid "Network Type:"
-msgstr "வலைப்பின்னல் வகை:"
+msgstr "பிணைய வகை:"
 
 #: tmp/system-config-kickstart.glade.h:106
 msgid "Number of spares:"
@@ -825,7 +827,7 @@ msgstr "உதரிபாகங்களின் எண்ணிக்கை:"
 
 #: tmp/system-config-kickstart.glade.h:107
 msgid "On first boot, Setup Agent is: "
-msgstr "முதல் இயக்கியின் அமைவு ஏவலாள்:"
+msgstr "முதல் இயக்கியின் அமைவு முகவர்:"
 
 #: tmp/system-config-kickstart.glade.h:109
 msgid "Partition :"
@@ -833,15 +835,15 @@ msgstr "பகிர்வுகள்:"
 
 #: tmp/system-config-kickstart.glade.h:110
 msgid "Partition Information (required)"
-msgstr "பகிர்வு தகவல் (required)"
+msgstr "பகிர்வு தகவல் (தேவையானது)"
 
 #: tmp/system-config-kickstart.glade.h:111
 msgid "Partition Options"
-msgstr "பகிர்வு  தேர்வுகள்"
+msgstr "பகிர்வு விருப்பங்கள்"
 
 #: tmp/system-config-kickstart.glade.h:112
 msgid "Partition options are not applicable on upgrades."
-msgstr "பகிர்வு தேர்வு மேம்படுத்தலுக்கும் பொருந்தாது"
+msgstr "பகிர்வு விருப்பங்கள் மேம்படுத்தலுக்கும் பொருந்தாது"
 
 #: tmp/system-config-kickstart.glade.h:113
 msgid "Password:"
@@ -853,7 +855,7 @@ msgstr "ஊடாடு பாங்கில் நிறுவலை பயன
 
 #: tmp/system-config-kickstart.glade.h:115
 msgid "Perform installation in text mode (graphical is default)"
-msgstr "உரை முறையில் அமைப்புகளை செயல்படுத்துக (graphical is default)"
+msgstr "உரை முறையில் அமைப்புகளை செயல்படுத்துக (வரைகலை முன்னிருப்பு)"
 
 #: tmp/system-config-kickstart.glade.h:116
 msgid "Perform new installation"
@@ -865,7 +867,7 @@ msgstr "ஏற்கெனவே உள்ள பகிர்வுகள்"
 
 #: tmp/system-config-kickstart.glade.h:120
 msgid "Preview Options"
-msgstr "முன்தோற்ற தேர்வுகள்"
+msgstr "முன்பார்வை விருப்பங்கள்"
 
 #: tmp/system-config-kickstart.glade.h:121
 msgid "RAID"
@@ -873,15 +875,15 @@ msgstr "RAID"
 
 #: tmp/system-config-kickstart.glade.h:122
 msgid "RAID Device:"
-msgstr "RAID  சாதனம் "
+msgstr "RAID  சாதனம்:"
 
 #: tmp/system-config-kickstart.glade.h:123
 msgid "RAID Level:"
-msgstr "RAID மட்டம்"
+msgstr "RAID நிலை:"
 
 #: tmp/system-config-kickstart.glade.h:124
 msgid "RAID Options"
-msgstr "RAID தேர்வுகள்"
+msgstr "RAID விருப்பங்கள்:"
 
 #: tmp/system-config-kickstart.glade.h:125
 msgid "Raid Members"
@@ -921,7 +923,7 @@ msgstr "SMB அனுமதி சரிபார்த்தல்"
 
 #: tmp/system-config-kickstart.glade.h:134
 msgid "SMB Servers:"
-msgstr "SMB வழங்கன்கள்:"
+msgstr "SMB சேவையகங்கள்:"
 
 #: tmp/system-config-kickstart.glade.h:135
 msgid "SMB Workgroup:"
@@ -1002,7 +1004,7 @@ msgstr "UTC நாள்காடியை பயன்படுத்து"
 
 #: tmp/system-config-kickstart.glade.h:153
 msgid "Use an interpreter:"
-msgstr "இடை நிலையரை பயன்படுத்தவும்:ும்"
+msgstr "இடை நிலையரை பயன்படுத்தவும்:"
 
 #: tmp/system-config-kickstart.glade.h:154
 msgid "Use broadcast to find NIS server"
@@ -1048,63 +1050,63 @@ msgstr ""
 
 #: tmp/system-config-kickstart.glade.h:163
 msgid "_About"
-msgstr "(_A)அறிமுகம்"
+msgstr "பற்றி (_A)"
 
 #: tmp/system-config-kickstart.glade.h:164
 msgid "_Add"
-msgstr "(_A)சேர்"
+msgstr "சேர் (_A)"
 
 #: tmp/system-config-kickstart.glade.h:165
 msgid "_Add Network Device"
-msgstr "(_A)வலைப்பின்னல் சாதனத்தை சேர்"
+msgstr "வலைப்பின்னல் சாதனத்தை சேர் (_A)"
 
 #: tmp/system-config-kickstart.glade.h:166
 msgid "_Contents"
-msgstr "(_C)பொருளடக்கம்"
+msgstr "பொருளடக்கம் (_C)"
 
 #: tmp/system-config-kickstart.glade.h:167
 msgid "_Delete"
-msgstr "(_D)நீக்கு"
+msgstr "அழி (_D)"
 
 #: tmp/system-config-kickstart.glade.h:168
 msgid "_Delete Network Device"
-msgstr "(_D)வலைப்பின்னல் கருவியை நீக்கு"
+msgstr "பிணைய கருவியை அழி (_D)"
 
 #: tmp/system-config-kickstart.glade.h:169
 msgid "_Edit"
-msgstr "(_E)திருத்துு"
+msgstr "திருத்து (_E)"
 
 #: tmp/system-config-kickstart.glade.h:170
 msgid "_Edit Network Device"
-msgstr "(_E)வலைப்பின்னல் சாதனத்தை திருத்து"
+msgstr "பிணைய சாதனத்தை திருத்து (_E)"
 
 #: tmp/system-config-kickstart.glade.h:171
 msgid "_File"
-msgstr "(_F)கோப்பு"
+msgstr "கோப்பு (_F)"
 
 #: tmp/system-config-kickstart.glade.h:172
 msgid "_Help"
-msgstr "(_H)உதவி"
+msgstr "உதவி (_H)"
 
 #: tmp/system-config-kickstart.glade.h:173
 msgid "_Open File"
-msgstr "(_O)கோப்பை திற"
+msgstr "கோப்பினை திற (_O)"
 
 #: tmp/system-config-kickstart.glade.h:174
 msgid "_Preview"
-msgstr "(_P)முன்காட்சி"
+msgstr "முன்பார்வை (_P)"
 
 #: tmp/system-config-kickstart.glade.h:175
 msgid "_Quit"
-msgstr "(_Q)வெளிச்செல்"
+msgstr "வெளிச்செல் (_Q)"
 
 #: tmp/system-config-kickstart.glade.h:176
 msgid "_Save File"
-msgstr "(_S)கோப்பை சேமி"
+msgstr "கோப்பினை சேமி (_S)"
 
 #: tmp/system-config-kickstart.glade.h:177
 msgid "_Save to File"
-msgstr "(_S)கோப்பில் சேமிக்கவும்"
+msgstr "கோப்பில் சேமி (_S)"
 
 #: tmp/system-config-kickstart.glade.h:180
 msgid "md0"
