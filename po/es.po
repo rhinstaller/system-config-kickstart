@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-12 17:02-0400\n"
+"POT-Creation-Date: 2009-09-22 11:01-0400\n"
 "PO-Revision-Date: 2009-03-13 00:18-0300\n"
 "Last-Translator: Domingo Becker <domingobecker@gmail.com>\n"
 "Language-Team: Fedora Spanish <fedora-trans-es@redhat.com>\n"
@@ -48,33 +48,32 @@ msgstr "IBM pSeries"
 msgid "IBM zSeries/s390"
 msgstr "IBM zSeries/s390"
 
-#: ../src/basic.py:149
+#: ../src/basic.py:151
 msgid "Root passwords do not match."
 msgstr "Las contraseñas de root no coinciden."
 
-#: ../src/basic.py:150
-#: ../src/install.py:217
-#: ../src/partWindow.py:554
-#: ../src/partition.py:256
-#: ../src/raidWindow.py:250
+#: ../src/basic.py:152 ../src/install.py:217 ../src/partWindow.py:576
+#: ../src/partition.py:256 ../src/raidWindow.py:276
 msgid "Error"
 msgstr "Error"
 
-#: ../src/bootloader.py:147
+#: ../src/bootloader.py:150
 msgid "Grub passwords do not match.  Please try again."
 msgstr "Las contraseñas GRUB no coinciden. Inténtelo nuevamente."
 
-#: ../src/bootloader.py:198
+#: ../src/bootloader.py:197
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
-msgstr "Las opciones del gestor de arranque no son aplicables a la plataforma %s"
+msgstr ""
+"Las opciones del gestor de arranque no son aplicables a la plataforma %s"
 
-#: ../src/firewall.py:58
+#: ../src/firewall.py:60
 msgid "Trusted services:"
 msgstr "Servicios confiables:"
 
-#: ../src/firewall.py:90
-msgid "Other ports: (1029:tcp)"
+#: ../src/firewall.py:92
+#, fuzzy
+msgid "Other ports (1029:tcp):"
 msgstr "Otros puertos: (1029:tcp)"
 
 #: ../src/install.py:132
@@ -118,8 +117,30 @@ msgstr "Introduzca un directorio de disco duro."
 msgid "Please enter a hard drive partition."
 msgstr "Introduzca una partición de disco duro."
 
-#: ../src/kickstartGui.py:92
-#: ../src/kickstartGui.py:290
+#: ../src/kickstartGui.py:81
+msgid ""
+"This program is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
+"Ave, Cambridge, MA 02139, USA."
+msgstr ""
+
+#: ../src/kickstartGui.py:125 ../src/kickstartGui.py:130
+#: ../src/kickstartGui.py:330 ../src/kickstartGui.py:335
+#, python-format
+msgid "The kickstart file %s could not be opened."
+msgstr "El archivo de respuestas \"%s\" no se pudo abrir."
+
+#: ../src/kickstartGui.py:127 ../src/kickstartGui.py:332
 #, python-format
 msgid ""
 "The following error was found while parsing your kickstart configuration:\n"
@@ -131,259 +152,238 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../src/kickstartGui.py:95
-#: ../src/kickstartGui.py:293
-#, python-format
-msgid "The kickstart file %s could not be opened."
-msgstr "El archivo de respuestas \"%s\" no se pudo abrir."
-
 # ../src/ksconfig_gui.py:135 ksconfig.gladestrings:7
-#: ../src/kickstartGui.py:100
-#: ../src/kickstartGui.py:298
+#: ../src/kickstartGui.py:135 ../src/kickstartGui.py:340
 msgid "Error Parsing Kickstart Config"
 msgstr "Error al Analizar Sintácticamente Configuración de Kickstart"
 
-#: ../src/kickstartGui.py:108
+#: ../src/kickstartGui.py:143
 msgid "Kickstart"
 msgstr "Kickstart"
 
-#: ../src/kickstartGui.py:109
+#: ../src/kickstartGui.py:144
 msgid "Create a kickstart file"
 msgstr "Crear un archivo kickstart"
 
-#: ../src/kickstartGui.py:131
+#: ../src/kickstartGui.py:166
 msgid "Subsection"
 msgstr "Subsección"
 
 # ../src/ksconfig_gui.py:116
-#: ../src/kickstartGui.py:135
+#: ../src/kickstartGui.py:170
 msgid "Basic Configuration"
 msgstr "Configuración básica"
 
 # ../src/ksconfig_gui.py:118
-#: ../src/kickstartGui.py:136
+#: ../src/kickstartGui.py:171
 msgid "Installation Method"
 msgstr "Método de instalación"
 
 # ../src/ksconfig_gui.py:117 ksconfig.gladestrings:24
-#: ../src/kickstartGui.py:137
+#: ../src/kickstartGui.py:172
 msgid "Boot Loader Options"
 msgstr "Opciones del gestor de arranque"
 
 # ../src/ksconfig_gui.py:119
-#: ../src/kickstartGui.py:138
+#: ../src/kickstartGui.py:173
 msgid "Partition Information"
 msgstr "Información de las particiones"
 
 # ../src/ksconfig_gui.py:120 ksconfig.gladestrings:81
-#: ../src/kickstartGui.py:139
-#: tmp/system-config-kickstart.glade.h:102
+#: ../src/kickstartGui.py:174
 msgid "Network Configuration"
 msgstr "Configuración de red"
 
 # ../src/ksconfig_gui.py:121
-#: ../src/kickstartGui.py:140
+#: ../src/kickstartGui.py:175
 msgid "Authentication"
 msgstr "Autenticación"
 
 # ../src/ksconfig_gui.py:122 ksconfig.gladestrings:138
-#: ../src/kickstartGui.py:141
-#: tmp/system-config-kickstart.glade.h:50
+#: ../src/kickstartGui.py:176
 msgid "Firewall Configuration"
 msgstr "Configuración del cortafuegos"
 
 # ../src/ksconfig_gui.py:123 ksconfig.gladestrings:147
-#: ../src/kickstartGui.py:142
-#: tmp/system-config-kickstart.glade.h:26
+#: ../src/kickstartGui.py:177
 msgid "Display Configuration"
 msgstr "Configuración de pantalla"
 
 # ../src/ksconfig_gui.py:124
-#: ../src/kickstartGui.py:143
-#: tmp/system-config-kickstart.glade.h:108
+#: ../src/kickstartGui.py:178
 msgid "Package Selection"
 msgstr "Selección de paquetes"
 
 # ../src/ksconfig_gui.py:125 ksconfig.gladestrings:169
-#: ../src/kickstartGui.py:144
-#: tmp/system-config-kickstart.glade.h:118
+#: ../src/kickstartGui.py:179
 msgid "Pre-Installation Script"
 msgstr "Script de pre-instalación"
 
 # ../src/ksconfig_gui.py:126 ksconfig.gladestrings:173
-#: ../src/kickstartGui.py:145
-#: tmp/system-config-kickstart.glade.h:117
+#: ../src/kickstartGui.py:180
 msgid "Post-Installation Script"
 msgstr "Script de post-instalación"
 
-#: ../src/kickstartGui.py:210
-msgid ""
-"Kickstart Configurator @VERSION@\n"
-" Copyright (c) 2000-2002 Red Hat, Inc.\n"
-" Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-" Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-" A graphical interface for creating a kickstart file"
-msgstr ""
-"Kickstart Configurator @VERSION@\n"
-" Copyright (c) 2000-2002 Red Hat, Inc.\n"
-" Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-" Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-"Interfaz gráfica para la creación de un archivo kickstart"
-
 # ../src/ksconfig_gui.py:135 ksconfig.gladestrings:7
-#: ../src/kickstartGui.py:211
+#: ../src/kickstartGui.py:246
 msgid "About Kickstart Configurator"
 msgstr "Acerca del configurador de Kickstart"
 
-#: ../src/kickstartGui.py:233
+#: ../src/kickstartGui.py:270
 msgid "Help is not available."
 msgstr "La ayuda no está disponible."
 
-#: ../src/kickstartGui.py:319
+#: ../src/kickstartGui.py:361
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "El archivo \"%s\" no se puede accesar."
 
+# ../src/ksconfig_gui.py:120 ksconfig.gladestrings:81
+#: ../src/kickstartGui.py:371 ../src/kickstartGui.py:380
+#: ../src/packages.py:209
+msgid "Retrieving package information"
+msgstr "Extrayendo información de paquetes"
+
 # ksconfig.gladestrings:209
-#: ../src/network.py:74
+#: ../src/network.py:73
 msgid "Device"
 msgstr "Dispositivo"
 
 # ksconfig.gladestrings:82
-#: ../src/network.py:77
+#: ../src/network.py:76
 msgid "Network Type"
 msgstr "Tipo de red"
 
 # ksconfig.gladestrings:84
-#: ../src/network.py:95
-#: ../src/network.py:144
-#: ../src/network.py:226
-#: ../src/network.py:282
-#: ../src/network.py:377
+#: ../src/network.py:79 ../src/network.py:114 ../src/network.py:196
+#: ../src/network.py:251 ../src/network.py:347
 msgid "Static IP"
 msgstr "IP estática"
 
-#: ../src/network.py:191
-#: ../src/network.py:250
+#: ../src/network.py:161 ../src/network.py:219
 msgid "Please fill in the network information"
 msgstr "Por favor complete la información de la red"
 
-#: ../src/network.py:203
-#: ../src/network.py:262
+#: ../src/network.py:173 ../src/network.py:231
 msgid "Please enter a valid gateway address."
 msgstr "Por favor, ingrese una dirección de puerta de enlace válida."
 
-#: ../src/network.py:215
-#: ../src/network.py:274
+#: ../src/network.py:185 ../src/network.py:243
 msgid "Please enter a valid nameserver address."
 msgstr "Por favor, ingrese una dirección de servidor de nombre válida."
 
-#: ../src/network.py:302
+#: ../src/network.py:271
 #, python-format
-msgid "A network device with the name %s already exists.  Please choose another device name"
-msgstr "Ya existe un dispositivo de red con el  nombre %s.  Por favor seleccione otro nombre para el dispositivo. "
+msgid ""
+"A network device with the name %s already exists.  Please choose another "
+"device name"
+msgstr ""
+"Ya existe un dispositivo de red con el  nombre %s.  Por favor seleccione "
+"otro nombre para el dispositivo. "
 
 #: ../src/packages.py:146
 #, python-format
 msgid ""
-"Package selection is disabled due to an error in setup.  Please fix your repository configuration and try again.\n"
+"Package selection is disabled due to an error in setup.  Please fix your "
+"repository configuration and try again.\n"
 "\n"
 "%s"
 msgstr ""
-"La selección de paquetes está deshabilitada debido a un error en la configuración. Por favor, corrija la configuración de su repositorio e intente nuevamente.\n"
+"La selección de paquetes está deshabilitada debido a un error en la "
+"configuración. Por favor, corrija la configuración de su repositorio e "
+"intente nuevamente.\n"
 "\n"
 "%s"
 
-# ../src/ksconfig_gui.py:120 ksconfig.gladestrings:81
-#: ../src/packages.py:199
-msgid "Retrieving package information"
-msgstr "Extrayendo información de paquetes"
-
-#: ../src/packages.py:227
+#: ../src/packages.py:203
 msgid "Package configuration is not applicable on upgrades."
 msgstr "La configuración de paquetes no es aplicable en actualizaciones."
 
-#: ../src/packages.py:239
-msgid "Package selection is disabled due to problems downloading package information."
-msgstr "La selección de paquetes está deshabilitada debido a problemas en la descarga de la información de paquetes."
+#: ../src/packages.py:216
+msgid ""
+"Package selection is disabled due to problems downloading package "
+"information."
+msgstr ""
+"La selección de paquetes está deshabilitada debido a problemas en la "
+"descarga de la información de paquetes."
 
-#: ../src/partWindow.py:85
-#: tmp/system-config-kickstart.glade.h:178
+#: ../src/partWindow.py:97
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:85
-#: tmp/system-config-kickstart.glade.h:179
+#: ../src/partWindow.py:97
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:87
-#: ../src/partWindow.py:156
+#: ../src/partWindow.py:99 ../src/partWindow.py:174
 msgid "software RAID"
 msgstr "RAID de software"
 
-#: ../src/partWindow.py:88
-#: tmp/system-config-kickstart.glade.h:196
+#: ../src/partWindow.py:100
 msgid "swap"
 msgstr "swap"
 
-#: ../src/partWindow.py:88
-#: tmp/system-config-kickstart.glade.h:197
+#: ../src/partWindow.py:100
 msgid "vfat"
 msgstr "vfat"
 
-#: ../src/partWindow.py:89
+#: ../src/partWindow.py:101
 msgid "PPC PReP Boot"
 msgstr "Partición de arranque PPC PReP"
 
 # ksconfig.gladestrings:71
-#: ../src/partWindow.py:295
-#: ../src/partWindow.py:576
-#: ../src/raidWindow.py:215
+#: ../src/partWindow.py:316 ../src/partWindow.py:598 ../src/raidWindow.py:241
 msgid "Yes"
 msgstr "Sí"
 
 # ksconfig.gladestrings:72
-#: ../src/partWindow.py:297
-#: ../src/partWindow.py:578
-#: ../src/raidWindow.py:217
+#: ../src/partWindow.py:318 ../src/partWindow.py:600 ../src/raidWindow.py:243
 msgid "No"
 msgstr "No"
 
-#: ../src/partWindow.py:320
-#: ../src/partWindow.py:335
-#: ../src/partWindow.py:354
-#: ../src/partWindow.py:368
+#: ../src/partWindow.py:341 ../src/partWindow.py:356 ../src/partWindow.py:375
+#: ../src/partWindow.py:389
 msgid "Auto"
 msgstr "Auto"
 
 # ksconfig.gladestrings:47 ksconfig.gladestrings:60
-#: ../src/partWindow.py:329
+#: ../src/partWindow.py:350
 msgid "Hard Drives"
 msgstr "Discos duros"
 
-#: ../src/partWindow.py:472
+#: ../src/partWindow.py:494
 msgid "Specify a mount point for the partition."
 msgstr "Especificar un punto de montaje para la partición."
 
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:481
+#: ../src/partWindow.py:503
 #, python-format
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr "El punto de montaje \"%s\" ya se está usando.  Seleccione otro punto de montaje."
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr ""
+"El punto de montaje \"%s\" ya se está usando.  Seleccione otro punto de "
+"montaje."
 
-#: ../src/partWindow.py:501
-msgid "To create a new RAID partition, you must specify either a hard drive device name or an existing partition."
-msgstr "Para crear una nueva partición RAID debe especificar o un disco duro o una partición existente."
+#: ../src/partWindow.py:523
+msgid ""
+"To create a new RAID partition, you must specify either a hard drive device "
+"name or an existing partition."
+msgstr ""
+"Para crear una nueva partición RAID debe especificar o un disco duro o una "
+"partición existente."
 
-#: ../src/partWindow.py:538
+#: ../src/partWindow.py:560
 msgid "Specify a device on which to create the partition."
 msgstr "Especificar un dispositivo en el que crear la partición."
 
-#: ../src/partWindow.py:547
-msgid "The partition you specified does not end in a number.  Partitions must have a partition number such as \"hda1\" or \"sda3\"."
-msgstr "La partición que ha especificado no acaba en un número. Las particiones deben tener  un número de partición como \"hda1\" o \"sda3\"."
+#: ../src/partWindow.py:569
+msgid ""
+"The partition you specified does not end in a number.  Partitions must have "
+"a partition number such as \"hda1\" or \"sda3\"."
+msgstr ""
+"La partición que ha especificado no acaba en un número. Las particiones "
+"deben tener  un número de partición como \"hda1\" o \"sda3\"."
 
 #: ../src/partition.py:72
 msgid ""
@@ -416,909 +416,1043 @@ msgid "Size (MB)"
 msgstr "Tamaño (MB)"
 
 # ksconfig.gladestrings:19
-#: ../src/partition.py:98
-#: ../src/partition.py:138
+#: ../src/partition.py:98 ../src/partition.py:138
 msgid "Please select a partition from the list."
 msgstr "Seleccione una partición desde la lista. "
 
 #: ../src/raidOptionsWindow.py:72
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
-msgstr "En la actualidad posee particiones RAID de software  %d libres para ser usadas."
+msgstr ""
+"En la actualidad posee particiones RAID de software  %d libres para ser "
+"usadas."
 
-#: ../src/raidWindow.py:175
+#: ../src/raidWindow.py:201
 #, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
 msgstr "Debe seleccionar al menos 2 particiones para poder usar RAID %s"
 
-#: ../src/raidWindow.py:181
+#: ../src/raidWindow.py:207
 #, python-format
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "Debe seleccionar al menos 3 particiones para usar RAID %s"
 
 # ksconfig.gladestrings:209
-#: ../src/raidWindow.py:195
-#: ../src/raidWindow.py:221
+#: ../src/raidWindow.py:221 ../src/raidWindow.py:247
 msgid "Raid Devices"
 msgstr "Dispositivos Raid"
 
-#: ../src/savedialog.py:72
+#: ../src/savedialog.py:75
 #, python-format
 msgid "The following error occurred while saving the kickstart config %s: %s"
-msgstr "Ocurrió el siguiente error mientras se guardaba la configuración kickstart %s: %s"
+msgstr ""
+"Ocurrió el siguiente error mientras se guardaba la configuración kickstart %"
+"s: %s"
 
 # ../src/ksconfig_gui.py:135 ksconfig.gladestrings:7
-#: ../src/savedialog.py:76
+#: ../src/savedialog.py:79
 msgid "Error Saving Kickstart Config"
 msgstr "Error al Guardar Configuración de Kickstart"
 
-# ksconfig.gladestrings:195 ksconfig.gladestrings:203
-# ksconfig.gladestrings:206
+# ../src/ksconfig_gui.py:116
 #: tmp/system-config-kickstart.glade.h:1
-msgid "         "
-msgstr "          "
-
-#: tmp/system-config-kickstart.glade.h:2
-msgid "(for example: hda or sdc)"
-msgstr "(por ejemplo: hda o sdc)"
-
-#: tmp/system-config-kickstart.glade.h:3
-msgid "(for example: hda1 or sdc3)"
-msgstr "(por ejemplo: hda1 o sdc3)"
-
-#: tmp/system-config-kickstart.glade.h:4
-msgid "0"
-msgstr "0"
-
-#: tmp/system-config-kickstart.glade.h:5
-msgid "1"
-msgstr "1"
-
-#: tmp/system-config-kickstart.glade.h:6
-msgid "5"
-msgstr "5"
-
-#: tmp/system-config-kickstart.glade.h:7
-msgid "Active"
-msgstr "Activo"
-
-# ksconfig.gladestrings:190
-#: tmp/system-config-kickstart.glade.h:8
-msgid "Additional Size Options"
-msgstr "Opciones adicionales de tamaño"
+#, fuzzy
+msgid "<b>Advanced Configuration</b>"
+msgstr "Configuración básica"
 
 # ksconfig.gladestrings:103
-#: tmp/system-config-kickstart.glade.h:9
-msgid "Authentication Configuration"
+#: tmp/system-config-kickstart.glade.h:2
+#, fuzzy
+msgid "<b>Authentication Configuration</b>"
 msgstr "Configuración de la autenticación"
 
+# ../src/ksconfig_gui.py:116
+#: tmp/system-config-kickstart.glade.h:3
+#, fuzzy
+msgid "<b>Basic Configuration</b>"
+msgstr "Configuración básica"
+
+#: tmp/system-config-kickstart.glade.h:4
+msgid "<b>Disk label</b>"
+msgstr ""
+
+# ../src/ksconfig_gui.py:123 ksconfig.gladestrings:147
+#: tmp/system-config-kickstart.glade.h:5
+#, fuzzy
+msgid "<b>Display Configuration</b>"
+msgstr "Configuración de pantalla"
+
+# ../src/ksconfig_gui.py:122 ksconfig.gladestrings:138
+#: tmp/system-config-kickstart.glade.h:6
+#, fuzzy
+msgid "<b>Firewall Configuration</b>"
+msgstr "Configuración del cortafuegos"
+
+# ksconfig.gladestrings:36
+#: tmp/system-config-kickstart.glade.h:7
+#, fuzzy
+msgid "<b>GRUB Options</b>"
+msgstr "Opciones de GRUB:"
+
+# ksconfig.gladestrings:124
+#: tmp/system-config-kickstart.glade.h:8
+#, fuzzy
+msgid "<b>Hesiod Authentication</b>"
+msgstr "Autenticación Hesiod"
+
+#: tmp/system-config-kickstart.glade.h:9
+msgid "<b>Install Options</b>"
+msgstr ""
+
 #: tmp/system-config-kickstart.glade.h:10
+msgid "<b>Install Type</b>"
+msgstr ""
+
+# ../src/ksconfig_gui.py:118
+#: tmp/system-config-kickstart.glade.h:11
+#, fuzzy
+msgid "<b>Installation Method</b>"
+msgstr "Método de instalación"
+
+# ../src/ksconfig_gui.py:118
+#: tmp/system-config-kickstart.glade.h:12
+#, fuzzy
+msgid "<b>Installation source</b>"
+msgstr "Método de instalación"
+
+# ksconfig.gladestrings:118
+#: tmp/system-config-kickstart.glade.h:13
+#, fuzzy
+msgid "<b>Kerberos 5 Authentication</b>"
+msgstr "Autenticación Kerberos 5"
+
+# ksconfig.gladestrings:113
+#: tmp/system-config-kickstart.glade.h:14
+#, fuzzy
+msgid "<b>LDAP Authentication</b>"
+msgstr "Autenticación LDAP"
+
+#: tmp/system-config-kickstart.glade.h:15
+msgid "<b>Layout</b>"
+msgstr ""
+
+# ksconfig.gladestrings:63
+#: tmp/system-config-kickstart.glade.h:16
+#, fuzzy
+msgid "<b>Master Boot Record</b>"
+msgstr "Borrar el Master Boot Record"
+
+# ksconfig.gladestrings:107
+#: tmp/system-config-kickstart.glade.h:17
+#, fuzzy
+msgid "<b>NIS Authentication</b>"
+msgstr "Autenticación NIS"
+
+# ksconfig.gladestrings:134
+#: tmp/system-config-kickstart.glade.h:18
+#, fuzzy
+msgid "<b>Name Switch Cache Daemon (nscd) Authentication</b>"
+msgstr "Autenticación con el demonio Name Switch Cache (nscd)"
+
+# ../src/ksconfig_gui.py:120 ksconfig.gladestrings:81
+#: tmp/system-config-kickstart.glade.h:19
+#, fuzzy
+msgid "<b>Network Configuration</b>"
+msgstr "Configuración de red"
+
+# ../src/ksconfig_gui.py:124
+#: tmp/system-config-kickstart.glade.h:20
+#, fuzzy
+msgid "<b>Package Selection</b>"
+msgstr "Selección de paquetes"
+
+# ksconfig.gladestrings:186
+#: tmp/system-config-kickstart.glade.h:21
+#, fuzzy
+msgid "<b>Partition options</b>"
+msgstr "Opciones de partición"
+
+# ksconfig.gladestrings:207
+#: tmp/system-config-kickstart.glade.h:22
+#, fuzzy
+msgid "<b>Partitions</b>"
+msgstr "Partición:"
+
+# ../src/ksconfig_gui.py:126 ksconfig.gladestrings:173
+#: tmp/system-config-kickstart.glade.h:23
+#, fuzzy
+msgid "<b>Post-Installation Script</b>"
+msgstr "Script de post-instalación"
+
+# ../src/ksconfig_gui.py:125 ksconfig.gladestrings:169
+#: tmp/system-config-kickstart.glade.h:24
+#, fuzzy
+msgid "<b>Pre-Installation Script</b>"
+msgstr "Script de pre-instalación"
+
+# ksconfig.gladestrings:129
+#: tmp/system-config-kickstart.glade.h:25
+#, fuzzy
+msgid "<b>SMB Authentication</b>"
+msgstr "Autenticación SMB"
+
+#: tmp/system-config-kickstart.glade.h:26
+msgid "<b>Size Options</b>"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:27
+msgid "<b>Special options</b>"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:28
+msgid "<b>label28</b>"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:29
+msgid ""
+"Active\n"
+"Warn\n"
+"Disabled"
+msgstr ""
+
+# ksconfig.gladestrings:174
+#: tmp/system-config-kickstart.glade.h:33
+#, fuzzy, no-c-format
+msgid ""
+"An error in this script might cause your kickstart installation to fail. Do "
+"not include the %post command at the beginning."
+msgstr ""
+"Atención: un error en este script puede provocar que falle su instalación "
+"con kickstart. No incluya el comando %post al principio."
+
+# ksconfig.gladestrings:170
+#: tmp/system-config-kickstart.glade.h:35
+#, fuzzy, no-c-format
+msgid ""
+"An error in this script might cause your kickstart installation to fail. Do "
+"not include the %pre command at the beginning."
+msgstr ""
+"Atención: un error en este script puede provocar que falle su instalación "
+"con kickstart. No incluya el comando %pre al principio."
+
+#: tmp/system-config-kickstart.glade.h:36
 msgid "Authentication options are not applicable on upgrades."
 msgstr "Las opciones de autenticación no son aplicables en actualizaciones."
 
-# ksconfig.gladestrings:104
-#: tmp/system-config-kickstart.glade.h:11
-msgid "Authentication:"
-msgstr "Autenticación:"
-
-# ksconfig.gladestrings:11
-#: tmp/system-config-kickstart.glade.h:12
-msgid "Basic Configuration (required)"
-msgstr "Configuración básica (necesario)"
-
-# ../src/ksconfig_gui.py:117 ksconfig.gladestrings:24
-#: tmp/system-config-kickstart.glade.h:13
-msgid "Boot Loader Options (required)"
-msgstr "Opciones del gestor de arranque (necesarias)"
-
-#: tmp/system-config-kickstart.glade.h:14
+#: tmp/system-config-kickstart.glade.h:37
 msgid "CA Cert URL:"
 msgstr "URL del certificado de CA:"
 
 # ksconfig.gladestrings:43 ksconfig.gladestrings:48
-#: tmp/system-config-kickstart.glade.h:15
+#: tmp/system-config-kickstart.glade.h:38
 msgid "CD-ROM"
 msgstr "CD-ROM"
 
-#: tmp/system-config-kickstart.glade.h:16
+#: tmp/system-config-kickstart.glade.h:39
 msgid "Choose one of the following options:"
 msgstr "Escoja una de las siguientes opciones:"
 
-# ksconfig.gladestrings:42
-#: tmp/system-config-kickstart.glade.h:17
-msgid "Choose the Installation Method:"
-msgstr "Escoja el método de instalación:"
-
 # ksconfig.gladestrings:63
-#: tmp/system-config-kickstart.glade.h:18
+#: tmp/system-config-kickstart.glade.h:40
 msgid "Clear Master Boot Record"
 msgstr "Borrar el Master Boot Record"
 
-# ksconfig.gladestrings:148
-#: tmp/system-config-kickstart.glade.h:19
-msgid "Configure the X Window System"
-msgstr "Configurar el Sistema X Window"
-
 # ksconfig.gladestrings:17
-#: tmp/system-config-kickstart.glade.h:20
+#: tmp/system-config-kickstart.glade.h:41
 msgid "Confirm Password:"
 msgstr "Confirmar contraseña:"
 
-#: tmp/system-config-kickstart.glade.h:21
+#: tmp/system-config-kickstart.glade.h:42
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "Crear un dispositivo RAID [default = /dev/md0]"
 
 # ksconfig.gladestrings:58
-#: tmp/system-config-kickstart.glade.h:22
+#: tmp/system-config-kickstart.glade.h:43
 msgid "Create a software RAID partition"
 msgstr "Crear una partición de software RAID"
 
 # ksconfig.gladestrings:12
-#: tmp/system-config-kickstart.glade.h:23
+#: tmp/system-config-kickstart.glade.h:44
 msgid "Default Language:"
 msgstr "Idioma predeterminado:"
 
-#: tmp/system-config-kickstart.glade.h:24
-msgid "Disable firewall"
-msgstr "Deshabilitar cortafuego"
+#: tmp/system-config-kickstart.glade.h:45
+#, fuzzy
+msgid ""
+"Disabled\n"
+"Enabled\n"
+"Enabled in reconfiguration mode"
+msgstr "Habilitado en modo de reconfiguración"
 
-# ksconfig.gladestrings:142
-#: tmp/system-config-kickstart.glade.h:25
-msgid "Disabled"
-msgstr "Desactivado"
-
-#: tmp/system-config-kickstart.glade.h:27
+#: tmp/system-config-kickstart.glade.h:48
 msgid "Display configuration is not applicable on upgrades."
 msgstr "La configuración de pantalla no es aplicable en actualizaciones."
 
 # ksconfig.gladestrings:63
-#: tmp/system-config-kickstart.glade.h:28
+#: tmp/system-config-kickstart.glade.h:49
 msgid "Do not clear Master Boot Record"
 msgstr "No borrar el Master Boot Record"
 
 # ksconfig.gladestrings:70
-#: tmp/system-config-kickstart.glade.h:29
+#: tmp/system-config-kickstart.glade.h:50
 msgid "Do not initialize the disk label"
 msgstr "No inicializar la etiqueta del disco"
 
 # ksconfig.gladestrings:25
-#: tmp/system-config-kickstart.glade.h:30
+#: tmp/system-config-kickstart.glade.h:51
 msgid "Do not install a boot loader"
 msgstr "No instalar un gestor de arranque"
 
-# ksconfig.gladestrings:204
-#: tmp/system-config-kickstart.glade.h:31
-msgid "Drive :"
-msgstr "Unidad:"
-
 # ksconfig.gladestrings:125
-#: tmp/system-config-kickstart.glade.h:32
+#: tmp/system-config-kickstart.glade.h:52
 msgid "Enable Hesiod Support"
 msgstr "Activar soporte Hesiod"
 
 # ksconfig.gladestrings:119
-#: tmp/system-config-kickstart.glade.h:33
+#: tmp/system-config-kickstart.glade.h:53
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Activar autenticación Kerberos 5"
 
 # ksconfig.gladestrings:114
-#: tmp/system-config-kickstart.glade.h:34
+#: tmp/system-config-kickstart.glade.h:54
 msgid "Enable LDAP"
 msgstr "Activar LDAP"
 
 # ksconfig.gladestrings:108
-#: tmp/system-config-kickstart.glade.h:35
+#: tmp/system-config-kickstart.glade.h:55
 msgid "Enable NIS"
 msgstr "Activar NIS"
 
 # ksconfig.gladestrings:130
-#: tmp/system-config-kickstart.glade.h:36
+#: tmp/system-config-kickstart.glade.h:56
 msgid "Enable SMB Authentication"
 msgstr "Activar autenticación SMB"
 
-#: tmp/system-config-kickstart.glade.h:37
-msgid "Enable firewall"
-msgstr "Habilitar cortafuego"
+#: tmp/system-config-kickstart.glade.h:57
+#, fuzzy
+msgid ""
+"Enable firewall\n"
+"Disable firewall"
+msgstr "Deshabilitar cortafuego"
 
 # ksconfig.gladestrings:135
-#: tmp/system-config-kickstart.glade.h:38
+#: tmp/system-config-kickstart.glade.h:59
 msgid "Enable nscd"
 msgstr "Activar nscd"
 
-# ksconfig.gladestrings:135
-#: tmp/system-config-kickstart.glade.h:39
-msgid "Enabled"
-msgstr "Habilitado"
-
-#: tmp/system-config-kickstart.glade.h:40
-msgid "Enabled in reconfiguration mode"
-msgstr "Habilitado en modo de reconfiguración"
-
 # ksconfig.gladestrings:19
-#: tmp/system-config-kickstart.glade.h:41
+#: tmp/system-config-kickstart.glade.h:60
 msgid "Encrypt GRUB password"
 msgstr "Encriptar la contraseña de GRUB"
 
 # ksconfig.gladestrings:19
-#: tmp/system-config-kickstart.glade.h:42
+#: tmp/system-config-kickstart.glade.h:61
 msgid "Encrypt root password"
 msgstr "Encriptar contraseña de root"
 
 # ksconfig.gladestrings:45 ksconfig.gladestrings:54
-#: tmp/system-config-kickstart.glade.h:43
+#: tmp/system-config-kickstart.glade.h:62
 msgid "FTP"
 msgstr "FTP"
 
 # ksconfig.gladestrings:53
-#: tmp/system-config-kickstart.glade.h:44
+#: tmp/system-config-kickstart.glade.h:63
 msgid "FTP Directory:"
 msgstr "Directorio FTP:"
 
 # ksconfig.gladestrings:17
-#: tmp/system-config-kickstart.glade.h:45
-msgid "FTP Password"
+#: tmp/system-config-kickstart.glade.h:64
+#, fuzzy
+msgid "FTP Password:"
 msgstr "Contraseña FTP"
 
 # ksconfig.gladestrings:52
-#: tmp/system-config-kickstart.glade.h:46
+#: tmp/system-config-kickstart.glade.h:65
 msgid "FTP Server:"
 msgstr "Servidor FTP:"
 
 # ksconfig.gladestrings:52
-#: tmp/system-config-kickstart.glade.h:47
-msgid "FTP Username"
+#: tmp/system-config-kickstart.glade.h:66
+#, fuzzy
+msgid "FTP Username:"
 msgstr "Nombre de usuario FTP"
 
 # ksconfig.gladestrings:188 ksconfig.gladestrings:212
-#: tmp/system-config-kickstart.glade.h:48
+#: tmp/system-config-kickstart.glade.h:67
 msgid "File System Type:"
 msgstr "Tipo de sistema de archivos:"
 
 # ksconfig.gladestrings:192
-#: tmp/system-config-kickstart.glade.h:49
+#: tmp/system-config-kickstart.glade.h:68
 msgid "Fill all unused space on disk"
 msgstr "Rellenar todo el espacio del disco"
 
-#: tmp/system-config-kickstart.glade.h:51
+#: tmp/system-config-kickstart.glade.h:69
 msgid "Firewall configuration is not applicable on upgrades."
 msgstr "La configuración del cortafuegos no es aplicable en actualizaciones."
 
 # ksconfig.gladestrings:193
-#: tmp/system-config-kickstart.glade.h:52
-msgid "Fixed size"
+#: tmp/system-config-kickstart.glade.h:70
+#, fuzzy
+msgid "Fixed size (MB):"
 msgstr "Tamaño fijo"
 
 # ksconfig.gladestrings:194
-#: tmp/system-config-kickstart.glade.h:53
+#: tmp/system-config-kickstart.glade.h:71
 msgid "Force to be a primary partition (asprimary)"
 msgstr "Forzar que sea una partición primaria (asprimary)"
 
 # ksconfig.gladestrings:209
-#: tmp/system-config-kickstart.glade.h:54
+#: tmp/system-config-kickstart.glade.h:72
 msgid "Format RAID device"
 msgstr "Formatear dispositivo RAID"
 
 # ksconfig.gladestrings:208
-#: tmp/system-config-kickstart.glade.h:55
+#: tmp/system-config-kickstart.glade.h:73
 msgid "Format partition"
 msgstr "Formatear partición"
 
-# ksconfig.gladestrings:36
-#: tmp/system-config-kickstart.glade.h:56
-msgid "GRUB Options:"
-msgstr "Opciones de GRUB:"
-
 # ksconfig.gladestrings:100
-#: tmp/system-config-kickstart.glade.h:57
+#: tmp/system-config-kickstart.glade.h:74
 msgid "Gateway:"
 msgstr "Gateway:"
 
-#: tmp/system-config-kickstart.glade.h:58
+#: tmp/system-config-kickstart.glade.h:75
 msgid "Grow to maximum of (MB):"
 msgstr "Aumentar hasta un máximo de (MB):"
 
 # ksconfig.gladestrings:46 ksconfig.gladestrings:57
-#: tmp/system-config-kickstart.glade.h:59
+#: tmp/system-config-kickstart.glade.h:76
 msgid "HTTP"
 msgstr "HTTP"
 
 # ksconfig.gladestrings:56
-#: tmp/system-config-kickstart.glade.h:60
+#: tmp/system-config-kickstart.glade.h:77
 msgid "HTTP Directory:"
 msgstr "Directorio HTTP:"
 
 # ksconfig.gladestrings:55
-#: tmp/system-config-kickstart.glade.h:61
+#: tmp/system-config-kickstart.glade.h:78
 msgid "HTTP Server:"
 msgstr "Servidor HTTP:"
 
 # ksconfig.gladestrings:47 ksconfig.gladestrings:60
-#: tmp/system-config-kickstart.glade.h:62
+#: tmp/system-config-kickstart.glade.h:79
 msgid "Hard Drive"
 msgstr "Disco duro"
 
 # ksconfig.gladestrings:59
-#: tmp/system-config-kickstart.glade.h:63
+#: tmp/system-config-kickstart.glade.h:80
 msgid "Hard Drive Directory:"
 msgstr "Directorio en el disco duro:"
 
 # ksconfig.gladestrings:58
-#: tmp/system-config-kickstart.glade.h:64
+#: tmp/system-config-kickstart.glade.h:81
 msgid "Hard Drive Partition:"
 msgstr "Partición de un disco duro:"
 
 # ksconfig.gladestrings:128
-#: tmp/system-config-kickstart.glade.h:65
+#: tmp/system-config-kickstart.glade.h:82
 msgid "Hesiod"
 msgstr "Hesiod"
 
-# ksconfig.gladestrings:124
-#: tmp/system-config-kickstart.glade.h:66
-msgid "Hesiod Authentication"
-msgstr "Autenticación Hesiod"
-
 # ksconfig.gladestrings:126
-#: tmp/system-config-kickstart.glade.h:67
+#: tmp/system-config-kickstart.glade.h:83
 msgid "Hesiod LHS:"
 msgstr "LHS Hesiod:"
 
 # ksconfig.gladestrings:127
-#: tmp/system-config-kickstart.glade.h:68
+#: tmp/system-config-kickstart.glade.h:84
 msgid "Hesiod RHS:"
 msgstr "RHS Hesiod:"
 
 # ksconfig.gladestrings:98
-#: tmp/system-config-kickstart.glade.h:69
+#: tmp/system-config-kickstart.glade.h:85
 msgid "IP Address:"
 msgstr "Dirección IP:"
 
 # ksconfig.gladestrings:70
-#: tmp/system-config-kickstart.glade.h:70
+#: tmp/system-config-kickstart.glade.h:86
 msgid "Initialize the disk label"
 msgstr "Inicializar la etiqueta del disco:"
 
+#: tmp/system-config-kickstart.glade.h:87
+msgid "Install a graphical environment"
+msgstr ""
+
 # ksconfig.gladestrings:31
-#: tmp/system-config-kickstart.glade.h:71
+#: tmp/system-config-kickstart.glade.h:88
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "Instalar el gestor de arranque en el Master Boot Record (MBR)"
 
 # ksconfig.gladestrings:29
-#: tmp/system-config-kickstart.glade.h:72
+#: tmp/system-config-kickstart.glade.h:89
 msgid "Install boot loader on first sector of the boot partition"
-msgstr "Instale el gestor de arranque en el primer sector de la partición de arranque"
+msgstr ""
+"Instale el gestor de arranque en el primer sector de la partición de arranque"
 
 # ksconfig.gladestrings:25
-#: tmp/system-config-kickstart.glade.h:73
+#: tmp/system-config-kickstart.glade.h:90
 msgid "Install new boot loader"
 msgstr "Instalar el nuevo gestor de arranque"
 
-# ksconfig.gladestrings:39
-#: tmp/system-config-kickstart.glade.h:74
-msgid "Installation Method (required)"
-msgstr "Método de instalación (necesario)"
-
 # ksconfig.gladestrings:123
-#: tmp/system-config-kickstart.glade.h:75
+#: tmp/system-config-kickstart.glade.h:91
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-# ksconfig.gladestrings:118
-#: tmp/system-config-kickstart.glade.h:76
-msgid "Kerberos 5 Authentication"
-msgstr "Autenticación Kerberos 5"
-
 # ksconfig.gladestrings:121
-#: tmp/system-config-kickstart.glade.h:77
+#: tmp/system-config-kickstart.glade.h:92
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Controlador de dominio de Kerberos (KDC):"
 
 # ksconfig.gladestrings:122
-#: tmp/system-config-kickstart.glade.h:78
+#: tmp/system-config-kickstart.glade.h:93
 msgid "Kerberos Master Server:"
 msgstr "Servidor maestro de Kerberos:"
 
 # ksconfig.gladestrings:120
-#: tmp/system-config-kickstart.glade.h:79
+#: tmp/system-config-kickstart.glade.h:94
 msgid "Kerberos Realm:"
 msgstr "Dominio de Kerberos:"
 
 # ksconfig.gladestrings:32
-#: tmp/system-config-kickstart.glade.h:80
+#: tmp/system-config-kickstart.glade.h:95
 msgid "Kernel parameters:"
 msgstr "Parámetros del kernel:"
 
 # ksconfig.gladestrings:14
-#: tmp/system-config-kickstart.glade.h:81
+#: tmp/system-config-kickstart.glade.h:96
 msgid "Keyboard:"
 msgstr "Teclado:"
 
 # ../src/ksconfig_gui.py:135 ksconfig.gladestrings:7
-#: tmp/system-config-kickstart.glade.h:82
+#: tmp/system-config-kickstart.glade.h:97
 msgid "Kickstart Configurator"
 msgstr "Configurador de Kickstart"
 
 # ksconfig.gladestrings:117
-#: tmp/system-config-kickstart.glade.h:83
+#: tmp/system-config-kickstart.glade.h:98
 msgid "LDAP "
 msgstr "LDAP "
 
-# ksconfig.gladestrings:113
-#: tmp/system-config-kickstart.glade.h:84
-msgid "LDAP Authentication"
-msgstr "Autenticación LDAP"
-
 # ksconfig.gladestrings:116
-#: tmp/system-config-kickstart.glade.h:85
+#: tmp/system-config-kickstart.glade.h:99
 msgid "LDAP Base Name: "
 msgstr "Nombre base LDAP: "
 
 # ksconfig.gladestrings:115
-#: tmp/system-config-kickstart.glade.h:86
+#: tmp/system-config-kickstart.glade.h:100
 msgid "LDAP Server: "
 msgstr "Servidor LDAP: "
 
-#: tmp/system-config-kickstart.glade.h:87
+#: tmp/system-config-kickstart.glade.h:101
 msgid "Load CA certificate"
 msgstr "Cargar certificado CA:"
 
 # ksconfig.gladestrings:209
-#: tmp/system-config-kickstart.glade.h:88
+#: tmp/system-config-kickstart.glade.h:102
 msgid "Make RAID Device"
 msgstr "Crear dispositivo RAID"
 
 # ksconfig.gladestrings:202
-#: tmp/system-config-kickstart.glade.h:89
-msgid "Make partition on specific drive (ondisk)"
+#: tmp/system-config-kickstart.glade.h:103
+#, fuzzy
+msgid "Make partition on specific drive (ondisk, e.g. hda or sdc):"
 msgstr "Hacer una partición en un disco específico (ondisk)"
 
 # ksconfig.gladestrings:187 ksconfig.gladestrings:211
-#: tmp/system-config-kickstart.glade.h:90
+#: tmp/system-config-kickstart.glade.h:104
 msgid "Mount Point:"
 msgstr "Punto de montaje:"
 
 # ksconfig.gladestrings:44 ksconfig.gladestrings:51
-#: tmp/system-config-kickstart.glade.h:91
+#: tmp/system-config-kickstart.glade.h:105
 msgid "NFS"
 msgstr "NFS"
 
 # ksconfig.gladestrings:50
-#: tmp/system-config-kickstart.glade.h:92
+#: tmp/system-config-kickstart.glade.h:106
 msgid "NFS Directory:"
 msgstr "Directorio NFS:"
 
 # ksconfig.gladestrings:49
-#: tmp/system-config-kickstart.glade.h:93
+#: tmp/system-config-kickstart.glade.h:107
 msgid "NFS Server:"
 msgstr "Servidor NFS:"
 
 # ksconfig.gladestrings:112
-#: tmp/system-config-kickstart.glade.h:94
+#: tmp/system-config-kickstart.glade.h:108
 msgid "NIS"
 msgstr "NIS"
 
-# ksconfig.gladestrings:107
-#: tmp/system-config-kickstart.glade.h:95
-msgid "NIS Authentication"
-msgstr "Autenticación NIS"
-
 # ksconfig.gladestrings:109
-#: tmp/system-config-kickstart.glade.h:96
+#: tmp/system-config-kickstart.glade.h:109
 msgid "NIS Domain:"
 msgstr "Dominio NIS:"
 
 # ksconfig.gladestrings:111
-#: tmp/system-config-kickstart.glade.h:97
+#: tmp/system-config-kickstart.glade.h:110
 msgid "NIS Server:"
 msgstr "Servidor NIS:"
 
 # ksconfig.gladestrings:101
-#: tmp/system-config-kickstart.glade.h:98
+#: tmp/system-config-kickstart.glade.h:111
 msgid "Name Server:"
 msgstr "Servidor de nombres:"
 
 # ksconfig.gladestrings:136
-#: tmp/system-config-kickstart.glade.h:99
+#: tmp/system-config-kickstart.glade.h:112
 msgid "Name Switch Cache"
 msgstr "Name Switch Cache"
 
-# ksconfig.gladestrings:134
-#: tmp/system-config-kickstart.glade.h:100
-msgid "Name Switch Cache Daemon (nscd) Authentication"
-msgstr "Autenticación con el demonio Name Switch Cache (nscd)"
-
 # ksconfig.gladestrings:99
-#: tmp/system-config-kickstart.glade.h:101
+#: tmp/system-config-kickstart.glade.h:113
 msgid "Netmask: "
 msgstr "Máscara de red: "
 
 # ../src/ksconfig_gui.py:120 ksconfig.gladestrings:81
-#: tmp/system-config-kickstart.glade.h:103
+#: tmp/system-config-kickstart.glade.h:114
 msgid "Network Device Information"
 msgstr "Información de dispositivo de red"
 
 # ksconfig.gladestrings:82
-#: tmp/system-config-kickstart.glade.h:104
+#: tmp/system-config-kickstart.glade.h:115
 msgid "Network Device:"
 msgstr "Dispositivo de red:"
 
 # ksconfig.gladestrings:82
-#: tmp/system-config-kickstart.glade.h:105
+#: tmp/system-config-kickstart.glade.h:116
 msgid "Network Type:"
 msgstr "Tipo de red:"
 
 # ksconfig.gladestrings:215
-#: tmp/system-config-kickstart.glade.h:106
+#: tmp/system-config-kickstart.glade.h:117
 msgid "Number of spares:"
 msgstr "Número de recambios:"
 
-#: tmp/system-config-kickstart.glade.h:107
+#: tmp/system-config-kickstart.glade.h:118
 msgid "On first boot, Setup Agent is: "
 msgstr "En el primer arranque, el Agente de configuración es:"
 
-# ksconfig.gladestrings:207
-#: tmp/system-config-kickstart.glade.h:109
-msgid "Partition :"
-msgstr "Partición:"
-
-# ksconfig.gladestrings:62
-#: tmp/system-config-kickstart.glade.h:110
-msgid "Partition Information (required)"
-msgstr "Información de las particiones (necesario)"
-
 # ksconfig.gladestrings:186
-#: tmp/system-config-kickstart.glade.h:111
+#: tmp/system-config-kickstart.glade.h:119
 msgid "Partition Options"
 msgstr "Opciones de partición"
 
-#: tmp/system-config-kickstart.glade.h:112
+#: tmp/system-config-kickstart.glade.h:120
 msgid "Partition options are not applicable on upgrades."
 msgstr "Las opciones de partición no son aplicables en actualizaciones."
 
 # ksconfig.gladestrings:17
-#: tmp/system-config-kickstart.glade.h:113
+#: tmp/system-config-kickstart.glade.h:121
 msgid "Password:"
 msgstr "Contraseña:"
 
 # ksconfig.gladestrings:22
-#: tmp/system-config-kickstart.glade.h:114
+#: tmp/system-config-kickstart.glade.h:122
 msgid "Perform installation in interactive mode"
 msgstr "Realizar la instalación en modo interactivo"
 
 # ksconfig.gladestrings:21
-#: tmp/system-config-kickstart.glade.h:115
+#: tmp/system-config-kickstart.glade.h:123
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "Instalación en modo texto (por defecto se hace gráfica)"
 
 # ksconfig.gladestrings:20
-#: tmp/system-config-kickstart.glade.h:116
+#: tmp/system-config-kickstart.glade.h:124
 msgid "Perform new installation"
 msgstr "Realizar una nueva instalación"
 
 # ksconfig.gladestrings:69
-#: tmp/system-config-kickstart.glade.h:119
+#: tmp/system-config-kickstart.glade.h:125
 msgid "Preserve existing partitions"
 msgstr "Conservar las particiones existentes"
 
 # ksconfig.gladestrings:186
-#: tmp/system-config-kickstart.glade.h:120
+#: tmp/system-config-kickstart.glade.h:126
 msgid "Preview Options"
 msgstr "Opciones de vista preliminar"
 
-#: tmp/system-config-kickstart.glade.h:121
+#: tmp/system-config-kickstart.glade.h:127
 msgid "RAID"
 msgstr "RAID"
 
 # ksconfig.gladestrings:209
-#: tmp/system-config-kickstart.glade.h:122
+#: tmp/system-config-kickstart.glade.h:128
 msgid "RAID Device:"
 msgstr "Dispositivo RAID:"
 
 # ksconfig.gladestrings:213
-#: tmp/system-config-kickstart.glade.h:123
+#: tmp/system-config-kickstart.glade.h:129
 msgid "RAID Level:"
 msgstr "Nivel RAID:"
 
 # ksconfig.gladestrings:33
-#: tmp/system-config-kickstart.glade.h:124
+#: tmp/system-config-kickstart.glade.h:130
 msgid "RAID Options"
 msgstr "Opciones de RAID:"
 
 # ksconfig.gladestrings:214
-#: tmp/system-config-kickstart.glade.h:125
-msgid "Raid Members"
+#: tmp/system-config-kickstart.glade.h:131
+#, fuzzy
+msgid "Raid Members:"
 msgstr "Mienbros Raid"
 
 # ksconfig.gladestrings:20
-#: tmp/system-config-kickstart.glade.h:126
+#: tmp/system-config-kickstart.glade.h:132
 msgid "Reboot system after installation"
 msgstr "Reiniciar el sistema tras la instalación"
 
 # ksconfig.gladestrings:69
-#: tmp/system-config-kickstart.glade.h:127
+#: tmp/system-config-kickstart.glade.h:133
 msgid "Remove all existing partitions"
 msgstr "Borrar todas las particiones existentes"
 
 # ksconfig.gladestrings:69
-#: tmp/system-config-kickstart.glade.h:128
+#: tmp/system-config-kickstart.glade.h:134
 msgid "Remove existing Linux partitions"
 msgstr "Borrar las particiones Linux existentes"
 
 # ksconfig.gladestrings:17
-#: tmp/system-config-kickstart.glade.h:129
+#: tmp/system-config-kickstart.glade.h:135
 msgid "Root Password:"
 msgstr "Contraseña de root:"
 
 # ksconfig.gladestrings:175
-#: tmp/system-config-kickstart.glade.h:130
+#: tmp/system-config-kickstart.glade.h:136
 msgid "Run outside of the chroot environment"
 msgstr "Ejecutar fuera del entorno chroot"
 
-#: tmp/system-config-kickstart.glade.h:131
+#: tmp/system-config-kickstart.glade.h:137
 msgid "SELinux:"
 msgstr "SELinux:"
 
 # ksconfig.gladestrings:133
-#: tmp/system-config-kickstart.glade.h:132
+#: tmp/system-config-kickstart.glade.h:138
 msgid "SMB"
 msgstr "SMB"
 
-# ksconfig.gladestrings:129
-#: tmp/system-config-kickstart.glade.h:133
-msgid "SMB Authentication"
-msgstr "Autenticación SMB"
-
 # ksconfig.gladestrings:131
-#: tmp/system-config-kickstart.glade.h:134
+#: tmp/system-config-kickstart.glade.h:139
 msgid "SMB Servers:"
 msgstr "Servidores SMB:"
 
 # ksconfig.gladestrings:132
-#: tmp/system-config-kickstart.glade.h:135
+#: tmp/system-config-kickstart.glade.h:140
 msgid "SMB Workgroup:"
 msgstr "Grupo de trabajo SMB:"
 
-#: tmp/system-config-kickstart.glade.h:136
+#: tmp/system-config-kickstart.glade.h:141
 msgid "Security level:"
 msgstr "Nivel de seguridad:"
 
-# ksconfig.gladestrings:189
-#: tmp/system-config-kickstart.glade.h:137
-msgid "Size (MB):"
-msgstr "Tamaño (MB):"
+#: tmp/system-config-kickstart.glade.h:142
+msgid ""
+"Software RAID allows you to combine several disks into a larger RAID "
+"device.  A RAID device can be configured to provide additional speed and "
+"reliability compared to using an individual drive.  For more information on "
+"using RAID devices please consult the kickstart documentation."
+msgstr ""
+"El RAID de software le permite combinar diversos discos en un dispositivo "
+"RAID. Un dispositivo RAID puede ser configurado para proporcionar velocidad "
+"adicional y fiabilidad comparado al uso de una unidad individual. Para "
+"obtener más información sobre el uso de dispositivos RAID consulte la "
+"documentación kickstart."
 
-#: tmp/system-config-kickstart.glade.h:138
-msgid "Software RAID allows you to combine several disks into a larger RAID device.  A RAID device can be configured to provide additional speed and reliability compared to using an individual drive.  For more information on using RAID devices please consult the kickstart documentation."
-msgstr "El RAID de software le permite combinar diversos discos en un dispositivo RAID. Un dispositivo RAID puede ser configurado para proporcionar velocidad adicional y fiabilidad comparado al uso de una unidad individual. Para obtener más información sobre el uso de dispositivos RAID consulte la documentación kickstart."
-
-#: tmp/system-config-kickstart.glade.h:139
+#: tmp/system-config-kickstart.glade.h:143
 msgid "Specify an FTP username and password"
 msgstr "Especificar un nombre de usuario FTP y una contraseña"
 
 # ksconfig.gladestrings:20
-#: tmp/system-config-kickstart.glade.h:140
+#: tmp/system-config-kickstart.glade.h:144
 msgid "Specify installation key:"
 msgstr "Especificar llave de instalación:"
 
-#: tmp/system-config-kickstart.glade.h:141
+#: tmp/system-config-kickstart.glade.h:145
 msgid "Target Architecture:"
 msgstr "Arquitectura destino:"
 
 # ksconfig.gladestrings:16
-#: tmp/system-config-kickstart.glade.h:142
+#: tmp/system-config-kickstart.glade.h:146
 msgid "Time Zone:"
 msgstr "Zona horaria:"
 
-#: tmp/system-config-kickstart.glade.h:143
-msgid "To use RAID you must first create at least two partitions of type 'software RAID'.  Then you can create a RAID device which can be formatted and mounted."
-msgstr "Para usar RAID debería crear al menos dos particiones del tipo 'RAID de software'. A continuación puede crear un dispositivo RAID que podrá ser formateado y montado. ."
+#: tmp/system-config-kickstart.glade.h:147
+msgid ""
+"To use RAID you must first create at least two partitions of type 'software "
+"RAID'.  Then you can create a RAID device which can be formatted and mounted."
+msgstr ""
+"Para usar RAID debería crear al menos dos particiones del tipo 'RAID de "
+"software'. A continuación puede crear un dispositivo RAID que podrá ser "
+"formateado y montado. ."
 
 # ksconfig.gladestrings:177
-#: tmp/system-config-kickstart.glade.h:145
+#: tmp/system-config-kickstart.glade.h:149
 #, no-c-format
 msgid "Type your %post script below:"
 msgstr "Teclee su script %post aquí:"
 
 # ksconfig.gladestrings:171
-#: tmp/system-config-kickstart.glade.h:147
+#: tmp/system-config-kickstart.glade.h:151
 #, no-c-format
 msgid "Type your %pre script below:"
 msgstr "Teclee su script %pre aquí:"
 
-#: tmp/system-config-kickstart.glade.h:148
+#: tmp/system-config-kickstart.glade.h:152
 msgid "Upgrade an existing installation"
 msgstr "Actualizar una instalación existente"
 
-#: tmp/system-config-kickstart.glade.h:149
+#: tmp/system-config-kickstart.glade.h:153
 msgid "Upgrade existing boot loader"
 msgstr "Actualizar el gestor de arranque existente"
 
 # ksconfig.gladestrings:37
-#: tmp/system-config-kickstart.glade.h:150
+#: tmp/system-config-kickstart.glade.h:154
 msgid "Use GRUB password"
 msgstr "Utilizar contraseña GRUB"
 
 # ksconfig.gladestrings:105
-#: tmp/system-config-kickstart.glade.h:151
+#: tmp/system-config-kickstart.glade.h:155
 msgid "Use Shadow Passwords"
 msgstr "Utilizar contraseñas shadow"
 
-#: tmp/system-config-kickstart.glade.h:152
+#: tmp/system-config-kickstart.glade.h:156
 msgid "Use UTC clock"
 msgstr "Use el reloj UTC"
 
 # ksconfig.gladestrings:176
-#: tmp/system-config-kickstart.glade.h:153
+#: tmp/system-config-kickstart.glade.h:157
 msgid "Use an interpreter:"
 msgstr "Utilizar un intérprete:"
 
 # ksconfig.gladestrings:110
-#: tmp/system-config-kickstart.glade.h:154
+#: tmp/system-config-kickstart.glade.h:158
 msgid "Use broadcast to find NIS server"
 msgstr "Utilizar broadcast para encontrar un servidor NIS"
 
 # ksconfig.gladestrings:205
-#: tmp/system-config-kickstart.glade.h:155
-msgid "Use existing partition (onpart)"
+#: tmp/system-config-kickstart.glade.h:159
+#, fuzzy
+msgid "Use existing partition (onpart, e.g. hda1 or sdc3):"
 msgstr "Utilizar partición existente (onpart)"
 
-#: tmp/system-config-kickstart.glade.h:156
+#: tmp/system-config-kickstart.glade.h:160
 msgid "Use recommended swap size"
 msgstr "Utilice el tamaño recomendado para swap"
 
-#: tmp/system-config-kickstart.glade.h:157
-msgid "Warn"
-msgstr "Advertencia"
-
-# ksconfig.gladestrings:174
-#: tmp/system-config-kickstart.glade.h:159
-#, no-c-format
-msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %post command at the beginning."
-msgstr "Atención: un error en este script puede provocar que falle su instalación con kickstart. No incluya el comando %post al principio."
-
-# ksconfig.gladestrings:170
-#: tmp/system-config-kickstart.glade.h:161
-#, no-c-format
-msgid "Warning: An error in this script might cause your kickstart installation to fail. Do not include the %pre command at the beginning."
-msgstr "Atención: un error en este script puede provocar que falle su instalación con kickstart. No incluya el comando %pre al principio."
-
 # ksconfig.gladestrings:182
-#: tmp/system-config-kickstart.glade.h:162
-msgid "You have choosen the following configuration. Click Save File to save the kickstart file. "
-msgstr "Ha elegido la siguiente configuración. Pulse en Guardar archivo para guardar el archivo kickstart. "
-
-#: tmp/system-config-kickstart.glade.h:163
-msgid "_About"
-msgstr "_Acerca"
+#: tmp/system-config-kickstart.glade.h:161
+msgid ""
+"You have choosen the following configuration. Click Save File to save the "
+"kickstart file. "
+msgstr ""
+"Ha elegido la siguiente configuración. Pulse en Guardar archivo para guardar "
+"el archivo kickstart. "
 
 # ksconfig.gladestrings:77
-#: tmp/system-config-kickstart.glade.h:164
+#: tmp/system-config-kickstart.glade.h:162
 msgid "_Add"
 msgstr "_Añadir"
 
-#: tmp/system-config-kickstart.glade.h:165
+#: tmp/system-config-kickstart.glade.h:163
 msgid "_Add Network Device"
 msgstr "_Añadir dispositivo de red"
 
-#: tmp/system-config-kickstart.glade.h:166
-msgid "_Contents"
-msgstr "_Contenido"
-
 # ksconfig.gladestrings:79
-#: tmp/system-config-kickstart.glade.h:167
+#: tmp/system-config-kickstart.glade.h:164
 msgid "_Delete"
 msgstr "_Borrar"
 
-#: tmp/system-config-kickstart.glade.h:168
+#: tmp/system-config-kickstart.glade.h:165
 msgid "_Delete Network Device"
 msgstr "_Eliminar dispositivo de red"
 
 # ksconfig.gladestrings:78
-#: tmp/system-config-kickstart.glade.h:169
+#: tmp/system-config-kickstart.glade.h:166
 msgid "_Edit"
 msgstr "_Editar"
 
-#: tmp/system-config-kickstart.glade.h:170
+#: tmp/system-config-kickstart.glade.h:167
 msgid "_Edit Network Device"
 msgstr "_Modificar dispositivo de red"
 
-#: tmp/system-config-kickstart.glade.h:171
+#: tmp/system-config-kickstart.glade.h:168
 msgid "_File"
 msgstr "_Archivo"
 
-#: tmp/system-config-kickstart.glade.h:172
+#: tmp/system-config-kickstart.glade.h:169
 msgid "_Help"
 msgstr "_Ayuda"
 
 # ksconfig.gladestrings:181 ksconfig.gladestrings:183
-#: tmp/system-config-kickstart.glade.h:173
+#: tmp/system-config-kickstart.glade.h:170
 msgid "_Open File"
 msgstr "_Abrir archivo "
 
-#: tmp/system-config-kickstart.glade.h:174
+#: tmp/system-config-kickstart.glade.h:171
 msgid "_Preview"
 msgstr "_Vista preliminar"
 
-# ksconfig.gladestrings:78
-#: tmp/system-config-kickstart.glade.h:175
-msgid "_Quit"
-msgstr "_Salir"
-
 # ksconfig.gladestrings:181 ksconfig.gladestrings:183
-#: tmp/system-config-kickstart.glade.h:176
-msgid "_Save File"
-msgstr "_Guardar archivo"
-
-# ksconfig.gladestrings:181 ksconfig.gladestrings:183
-#: tmp/system-config-kickstart.glade.h:177
+#: tmp/system-config-kickstart.glade.h:172
 msgid "_Save to File"
 msgstr "_Guardar en archivo"
 
-#: tmp/system-config-kickstart.glade.h:180
-msgid "md0"
-msgstr "md0"
+#~ msgid ""
+#~ "Kickstart Configurator @VERSION@\n"
+#~ " Copyright (c) 2000-2002 Red Hat, Inc.\n"
+#~ " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
+#~ " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
+#~ " A graphical interface for creating a kickstart file"
+#~ msgstr ""
+#~ "Kickstart Configurator @VERSION@\n"
+#~ " Copyright (c) 2000-2002 Red Hat, Inc.\n"
+#~ " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
+#~ " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
+#~ "Interfaz gráfica para la creación de un archivo kickstart"
 
-#: tmp/system-config-kickstart.glade.h:181
-msgid "md1"
-msgstr "md1"
+# ksconfig.gladestrings:195 ksconfig.gladestrings:203
+# ksconfig.gladestrings:206
+#~ msgid "         "
+#~ msgstr "          "
 
-#: tmp/system-config-kickstart.glade.h:182
-msgid "md10"
-msgstr "md10"
+#~ msgid "(for example: hda or sdc)"
+#~ msgstr "(por ejemplo: hda o sdc)"
 
-#: tmp/system-config-kickstart.glade.h:183
-msgid "md11"
-msgstr "md11"
+#~ msgid "(for example: hda1 or sdc3)"
+#~ msgstr "(por ejemplo: hda1 o sdc3)"
 
-#: tmp/system-config-kickstart.glade.h:184
-msgid "md12"
-msgstr "md12"
+#~ msgid "0"
+#~ msgstr "0"
 
-#: tmp/system-config-kickstart.glade.h:185
-msgid "md13"
-msgstr "md13"
+#~ msgid "1"
+#~ msgstr "1"
 
-#: tmp/system-config-kickstart.glade.h:186
-msgid "md14"
-msgstr "md14"
+#~ msgid "5"
+#~ msgstr "5"
 
-#: tmp/system-config-kickstart.glade.h:187
-msgid "md15"
-msgstr "md15"
+#~ msgid "Active"
+#~ msgstr "Activo"
 
-#: tmp/system-config-kickstart.glade.h:188
-msgid "md2"
-msgstr "md2"
+# ksconfig.gladestrings:190
+#~ msgid "Additional Size Options"
+#~ msgstr "Opciones adicionales de tamaño"
 
-#: tmp/system-config-kickstart.glade.h:189
-msgid "md3"
-msgstr "md3"
+# ksconfig.gladestrings:104
+#~ msgid "Authentication:"
+#~ msgstr "Autenticación:"
 
-#: tmp/system-config-kickstart.glade.h:190
-msgid "md4"
-msgstr "md4"
+# ksconfig.gladestrings:11
+#~ msgid "Basic Configuration (required)"
+#~ msgstr "Configuración básica (necesario)"
 
-#: tmp/system-config-kickstart.glade.h:191
-msgid "md5"
-msgstr "md5"
+# ../src/ksconfig_gui.py:117 ksconfig.gladestrings:24
+#~ msgid "Boot Loader Options (required)"
+#~ msgstr "Opciones del gestor de arranque (necesarias)"
 
-#: tmp/system-config-kickstart.glade.h:192
-msgid "md6"
-msgstr "md6"
+# ksconfig.gladestrings:42
+#~ msgid "Choose the Installation Method:"
+#~ msgstr "Escoja el método de instalación:"
 
-#: tmp/system-config-kickstart.glade.h:193
-msgid "md7"
-msgstr "md7"
+# ksconfig.gladestrings:148
+#~ msgid "Configure the X Window System"
+#~ msgstr "Configurar el Sistema X Window"
 
-#: tmp/system-config-kickstart.glade.h:194
-msgid "md8"
-msgstr "md8"
+# ksconfig.gladestrings:142
+#~ msgid "Disabled"
+#~ msgstr "Desactivado"
 
-#: tmp/system-config-kickstart.glade.h:195
-msgid "md9"
-msgstr "md9"
+# ksconfig.gladestrings:204
+#~ msgid "Drive :"
+#~ msgstr "Unidad:"
+
+#~ msgid "Enable firewall"
+#~ msgstr "Habilitar cortafuego"
+
+# ksconfig.gladestrings:135
+#~ msgid "Enabled"
+#~ msgstr "Habilitado"
+
+# ksconfig.gladestrings:39
+#~ msgid "Installation Method (required)"
+#~ msgstr "Método de instalación (necesario)"
+
+# ksconfig.gladestrings:62
+#~ msgid "Partition Information (required)"
+#~ msgstr "Información de las particiones (necesario)"
+
+# ksconfig.gladestrings:189
+#~ msgid "Size (MB):"
+#~ msgstr "Tamaño (MB):"
+
+#~ msgid "Warn"
+#~ msgstr "Advertencia"
+
+#~ msgid "_About"
+#~ msgstr "_Acerca"
+
+#~ msgid "_Contents"
+#~ msgstr "_Contenido"
+
+# ksconfig.gladestrings:78
+#~ msgid "_Quit"
+#~ msgstr "_Salir"
+
+# ksconfig.gladestrings:181 ksconfig.gladestrings:183
+#~ msgid "_Save File"
+#~ msgstr "_Guardar archivo"
+
+#~ msgid "md0"
+#~ msgstr "md0"
+
+#~ msgid "md1"
+#~ msgstr "md1"
+
+#~ msgid "md10"
+#~ msgstr "md10"
+
+#~ msgid "md11"
+#~ msgstr "md11"
+
+#~ msgid "md12"
+#~ msgstr "md12"
+
+#~ msgid "md13"
+#~ msgstr "md13"
+
+#~ msgid "md14"
+#~ msgstr "md14"
+
+#~ msgid "md15"
+#~ msgstr "md15"
+
+#~ msgid "md2"
+#~ msgstr "md2"
+
+#~ msgid "md3"
+#~ msgstr "md3"
+
+#~ msgid "md4"
+#~ msgstr "md4"
+
+#~ msgid "md5"
+#~ msgstr "md5"
+
+#~ msgid "md6"
+#~ msgstr "md6"
+
+#~ msgid "md7"
+#~ msgstr "md7"
+
+#~ msgid "md8"
+#~ msgstr "md8"
+
+#~ msgid "md9"
+#~ msgstr "md9"
 
 #~ msgid "Could not read video driver database"
 #~ msgstr "No ha podido leer la base de datos de dispositivos de vídeo"
+
 #~ msgid "Please select an X driver."
 #~ msgstr "Por favor seleccione un controlador de X."
-

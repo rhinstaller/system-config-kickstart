@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-config-kickstart.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-12 17:02-0400\n"
+"POT-Creation-Date: 2009-09-22 11:01-0400\n"
 "PO-Revision-Date: 2008-09-18 22:57GMT\n"
 "Last-Translator: Oron Peled <oron@actcom.co.il>\n"
 "Language-Team: Hebrew\n"
@@ -57,7 +57,7 @@ msgstr "IBM zSeries/s390"
 
 #
 # File: ../src/basic.py, line: 152
-#: ../src/basic.py:149
+#: ../src/basic.py:151
 msgid "Root passwords do not match."
 msgstr "אין התאמה בססמת root."
 
@@ -67,34 +67,35 @@ msgstr "אין התאמה בססמת root."
 # File: ../src/partWindow.py, line: 550
 # File: ../src/partition.py, line: 255
 # File: ../src/raidWindow.py, line: 252
-#: ../src/basic.py:150 ../src/install.py:217 ../src/partWindow.py:554
-#: ../src/partition.py:256 ../src/raidWindow.py:250
+#: ../src/basic.py:152 ../src/install.py:217 ../src/partWindow.py:576
+#: ../src/partition.py:256 ../src/raidWindow.py:276
 msgid "Error"
 msgstr "שגיאה"
 
 #
 # File: ../src/bootloader.py, line: 124
-#: ../src/bootloader.py:147
+#: ../src/bootloader.py:150
 msgid "Grub passwords do not match.  Please try again."
 msgstr "ססמאות Grub לא תואמות. נסו שנית."
 
 #
 # File: ../src/bootloader.py, line: 84
-#: ../src/bootloader.py:198
+#: ../src/bootloader.py:197
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
 msgstr "אפשרויות מנהל האתחול אינן ישימות עבור הפלטפורמה %s"
 
 #
 # File: ../src/firewall.py, line: 60
-#: ../src/firewall.py:58
+#: ../src/firewall.py:60
 msgid "Trusted services:"
 msgstr "על איזה שירותים אנו סומכים:"
 
 #
 # File: ../src/firewall.py, line: 92
-#: ../src/firewall.py:90
-msgid "Other ports: (1029:tcp)"
+#: ../src/firewall.py:92
+#, fuzzy
+msgid "Other ports (1029:tcp):"
 msgstr "מספרי יציאות אחרים: (1029:tcp)"
 
 #
@@ -157,10 +158,35 @@ msgstr "יש להזין תיקייה על גבי הדיסק הקשיח."
 msgid "Please enter a hard drive partition."
 msgstr "יש להזין מחיצה של הדיסק הקשיח."
 
+#: ../src/kickstartGui.py:81
+msgid ""
+"This program is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
+"Ave, Cambridge, MA 02139, USA."
+msgstr ""
+
+#
+# File: ../src/kickstartGui.py, line: 310
+#: ../src/kickstartGui.py:125 ../src/kickstartGui.py:130
+#: ../src/kickstartGui.py:330 ../src/kickstartGui.py:335
+#, fuzzy, python-format
+msgid "The kickstart file %s could not be opened."
+msgstr "לא ניתן לגשת לקובץ \"%s\"."
+
 #
 # File: ../src/kickstartGui.py, line: 94
 # File: ../src/kickstartGui.py, line: 286
-#: ../src/kickstartGui.py:92 ../src/kickstartGui.py:290
+#: ../src/kickstartGui.py:127 ../src/kickstartGui.py:332
 #, python-format
 msgid ""
 "The following error was found while parsing your kickstart configuration:\n"
@@ -172,153 +198,137 @@ msgstr ""
 "%s"
 
 #
-# File: ../src/kickstartGui.py, line: 310
-#: ../src/kickstartGui.py:95 ../src/kickstartGui.py:293
-#, fuzzy, python-format
-msgid "The kickstart file %s could not be opened."
-msgstr "לא ניתן לגשת לקובץ \"%s\"."
-
-#
 # File: ../src/kickstartGui.py, line: 97
 # File: ../src/kickstartGui.py, line: 289
-#: ../src/kickstartGui.py:100 ../src/kickstartGui.py:298
+#: ../src/kickstartGui.py:135 ../src/kickstartGui.py:340
 msgid "Error Parsing Kickstart Config"
 msgstr "שגיאה בפענוח קובץ Kickstart"
 
 #
 # File: ../src/kickstartGui.py, line: 105
-#: ../src/kickstartGui.py:108
+#: ../src/kickstartGui.py:143
 msgid "Kickstart"
 msgstr "Kickstart"
 
 #
 # File: ../src/kickstartGui.py, line: 106
-#: ../src/kickstartGui.py:109
+#: ../src/kickstartGui.py:144
 msgid "Create a kickstart file"
 msgstr "יצירת קובץ Kickstart"
 
 #
 # File: ../src/kickstartGui.py, line: 128
-#: ../src/kickstartGui.py:131
+#: ../src/kickstartGui.py:166
 msgid "Subsection"
 msgstr "תת-סעיף"
 
 #
 # File: ../src/kickstartGui.py, line: 132
-#: ../src/kickstartGui.py:135
+#: ../src/kickstartGui.py:170
 msgid "Basic Configuration"
 msgstr "הגדרות בסיסיות"
 
 #
 # File: ../src/kickstartGui.py, line: 133
-#: ../src/kickstartGui.py:136
+#: ../src/kickstartGui.py:171
 msgid "Installation Method"
 msgstr "שיטת התקנה"
 
 #
 # File: ../src/kickstartGui.py, line: 134
-#: ../src/kickstartGui.py:137
+#: ../src/kickstartGui.py:172
 msgid "Boot Loader Options"
 msgstr "אפשרויות מנהל האתחול"
 
 #
 # File: ../src/kickstartGui.py, line: 135
-#: ../src/kickstartGui.py:138
+#: ../src/kickstartGui.py:173
 msgid "Partition Information"
 msgstr "פרטי מחיצה"
 
 #
 # File: ../src/kickstartGui.py, line: 136
 # File: tmp/system-config-kickstart.glade.h, line: 110
-#: ../src/kickstartGui.py:139 tmp/system-config-kickstart.glade.h:102
+#: ../src/kickstartGui.py:174
 msgid "Network Configuration"
 msgstr "הגדרות רשת"
 
 #
 # File: ../src/kickstartGui.py, line: 137
-#: ../src/kickstartGui.py:140
+#: ../src/kickstartGui.py:175
 msgid "Authentication"
 msgstr "הזדהות"
 
 #
 # File: ../src/kickstartGui.py, line: 138
 # File: tmp/system-config-kickstart.glade.h, line: 52
-#: ../src/kickstartGui.py:141 tmp/system-config-kickstart.glade.h:50
+#: ../src/kickstartGui.py:176
 msgid "Firewall Configuration"
 msgstr "הגדרות חומת אש"
 
 #
 # File: ../src/kickstartGui.py, line: 139
 # File: tmp/system-config-kickstart.glade.h, line: 28
-#: ../src/kickstartGui.py:142 tmp/system-config-kickstart.glade.h:26
+#: ../src/kickstartGui.py:177
 msgid "Display Configuration"
 msgstr "הגדרות תצוגה"
 
 #
 # File: ../src/kickstartGui.py, line: 140
 # File: tmp/system-config-kickstart.glade.h, line: 116
-#: ../src/kickstartGui.py:143 tmp/system-config-kickstart.glade.h:108
+#: ../src/kickstartGui.py:178
 msgid "Package Selection"
 msgstr "בחירת חבילות"
 
 #
 # File: ../src/kickstartGui.py, line: 141
 # File: tmp/system-config-kickstart.glade.h, line: 126
-#: ../src/kickstartGui.py:144 tmp/system-config-kickstart.glade.h:118
+#: ../src/kickstartGui.py:179
 msgid "Pre-Installation Script"
 msgstr "תסריט קדם-התקנה"
 
 #
 # File: ../src/kickstartGui.py, line: 142
 # File: tmp/system-config-kickstart.glade.h, line: 125
-#: ../src/kickstartGui.py:145 tmp/system-config-kickstart.glade.h:117
+#: ../src/kickstartGui.py:180
 msgid "Post-Installation Script"
 msgstr "תסריט לסיום התקנה"
 
 #
-# File: ../src/kickstartGui.py, line: 207
-#: ../src/kickstartGui.py:210
-msgid ""
-"Kickstart Configurator @VERSION@\n"
-" Copyright (c) 2000-2002 Red Hat, Inc.\n"
-" Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-" Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-" A graphical interface for creating a kickstart file"
-msgstr ""
-"Kickstart Configurator @VERSION@\n"
-" Copyright (c) 2000-2002 Red Hat, Inc.\n"
-" Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-" Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-"ממשק גרפי ליצירת קובץ kickstart"
-
-#
 # File: ../src/kickstartGui.py, line: 208
-#: ../src/kickstartGui.py:211
+#: ../src/kickstartGui.py:246
 msgid "About Kickstart Configurator"
 msgstr "אודות Kickstart Configurator"
 
 #
 # File: ../src/kickstartGui.py, line: 230
-#: ../src/kickstartGui.py:233
+#: ../src/kickstartGui.py:270
 msgid "Help is not available."
 msgstr "אין עזרה זמינה"
 
 #
 # File: ../src/kickstartGui.py, line: 310
-#: ../src/kickstartGui.py:319
+#: ../src/kickstartGui.py:361
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "לא ניתן לגשת לקובץ \"%s\"."
 
 #
+# File: ../src/packages.py, line: 177
+#: ../src/kickstartGui.py:371 ../src/kickstartGui.py:380
+#: ../src/packages.py:209
+msgid "Retrieving package information"
+msgstr "מוריד מידע אודות חבילות תכנה"
+
+#
 # File: ../src/network.py, line: 76
-#: ../src/network.py:74
+#: ../src/network.py:73
 msgid "Device"
 msgstr "התקן"
 
 #
 # File: ../src/network.py, line: 79
-#: ../src/network.py:77
+#: ../src/network.py:76
 msgid "Network Type"
 msgstr "סוג רשת"
 
@@ -328,35 +338,35 @@ msgstr "סוג רשת"
 # File: ../src/network.py, line: 225
 # File: ../src/network.py, line: 281
 # File: ../src/network.py, line: 376
-#: ../src/network.py:95 ../src/network.py:144 ../src/network.py:226
-#: ../src/network.py:282 ../src/network.py:377
+#: ../src/network.py:79 ../src/network.py:114 ../src/network.py:196
+#: ../src/network.py:251 ../src/network.py:347
 msgid "Static IP"
 msgstr "כתובת IP סטטית"
 
 #
 # File: ../src/network.py, line: 190
 # File: ../src/network.py, line: 249
-#: ../src/network.py:191 ../src/network.py:250
+#: ../src/network.py:161 ../src/network.py:219
 msgid "Please fill in the network information"
 msgstr "יש למלא את פרטי הרשת"
 
 #
 # File: ../src/network.py, line: 202
 # File: ../src/network.py, line: 261
-#: ../src/network.py:203 ../src/network.py:262
+#: ../src/network.py:173 ../src/network.py:231
 msgid "Please enter a valid gateway address."
 msgstr "יש להזין כתובת נתב חוקית."
 
 #
 # File: ../src/network.py, line: 214
 # File: ../src/network.py, line: 273
-#: ../src/network.py:215 ../src/network.py:274
+#: ../src/network.py:185 ../src/network.py:243
 msgid "Please enter a valid nameserver address."
 msgstr "יש להקליד שם משתמש FTP."
 
 #
 # File: ../src/network.py, line: 301
-#: ../src/network.py:302
+#: ../src/network.py:271
 #, python-format
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
@@ -373,20 +383,14 @@ msgid ""
 msgstr ""
 
 #
-# File: ../src/packages.py, line: 177
-#: ../src/packages.py:199
-msgid "Retrieving package information"
-msgstr "מוריד מידע אודות חבילות תכנה"
-
-#
 # File: ../src/packages.py, line: 171
-#: ../src/packages.py:227
+#: ../src/packages.py:203
 msgid "Package configuration is not applicable on upgrades."
 msgstr "בחירת חבילות אינה ישימה בשדרוגים."
 
 #
 # File: ../src/packages.py, line: 186
-#: ../src/packages.py:239
+#: ../src/packages.py:216
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
@@ -395,14 +399,14 @@ msgstr "בחירת חבילות מבוטלת עקב בעיות בהורדת המ
 #
 # File: ../src/partWindow.py, line: 87
 # File: tmp/system-config-kickstart.glade.h, line: 195
-#: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:178
+#: ../src/partWindow.py:97
 msgid "ext2"
 msgstr "ext2"
 
 #
 # File: ../src/partWindow.py, line: 87
 # File: tmp/system-config-kickstart.glade.h, line: 196
-#: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:179
+#: ../src/partWindow.py:97
 msgid "ext3"
 msgstr "ext3"
 
@@ -410,27 +414,27 @@ msgstr "ext3"
 # File: ../src/partWindow.py, line: 89
 # File: ../src/partWindow.py, line: 152
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:87 ../src/partWindow.py:156
+#: ../src/partWindow.py:99 ../src/partWindow.py:174
 msgid "software RAID"
 msgstr "מערך דיסקים (RAID) מיושם בתכנה"
 
 #
 # File: ../src/partWindow.py, line: 90
 # File: tmp/system-config-kickstart.glade.h, line: 214
-#: ../src/partWindow.py:88 tmp/system-config-kickstart.glade.h:196
+#: ../src/partWindow.py:100
 msgid "swap"
 msgstr "שטח דפדוף (swap)"
 
 #
 # File: ../src/partWindow.py, line: 90
 # File: tmp/system-config-kickstart.glade.h, line: 215
-#: ../src/partWindow.py:88 tmp/system-config-kickstart.glade.h:197
+#: ../src/partWindow.py:100
 msgid "vfat"
 msgstr "vfat"
 
 #
 # File: ../src/partWindow.py, line: 91
-#: ../src/partWindow.py:89
+#: ../src/partWindow.py:101
 msgid "PPC PReP Boot"
 msgstr "מנגנון אתחול PReP עבור מעבדי PPC"
 
@@ -438,7 +442,7 @@ msgstr "מנגנון אתחול PReP עבור מעבדי PPC"
 # File: ../src/partWindow.py, line: 291
 # File: ../src/partWindow.py, line: 572
 # File: ../src/raidWindow.py, line: 217
-#: ../src/partWindow.py:295 ../src/partWindow.py:576 ../src/raidWindow.py:215
+#: ../src/partWindow.py:316 ../src/partWindow.py:598 ../src/raidWindow.py:241
 msgid "Yes"
 msgstr "כן"
 
@@ -446,7 +450,7 @@ msgstr "כן"
 # File: ../src/partWindow.py, line: 293
 # File: ../src/partWindow.py, line: 574
 # File: ../src/raidWindow.py, line: 219
-#: ../src/partWindow.py:297 ../src/partWindow.py:578 ../src/raidWindow.py:217
+#: ../src/partWindow.py:318 ../src/partWindow.py:600 ../src/raidWindow.py:243
 msgid "No"
 msgstr "לא"
 
@@ -455,27 +459,27 @@ msgstr "לא"
 # File: ../src/partWindow.py, line: 331
 # File: ../src/partWindow.py, line: 350
 # File: ../src/partWindow.py, line: 364
-#: ../src/partWindow.py:320 ../src/partWindow.py:335 ../src/partWindow.py:354
-#: ../src/partWindow.py:368
+#: ../src/partWindow.py:341 ../src/partWindow.py:356 ../src/partWindow.py:375
+#: ../src/partWindow.py:389
 msgid "Auto"
 msgstr "אוטומטי"
 
 #
 # File: ../src/partWindow.py, line: 325
-#: ../src/partWindow.py:329
+#: ../src/partWindow.py:350
 msgid "Hard Drives"
 msgstr "דיסקים קשיחים"
 
 #
 # File: ../src/partWindow.py, line: 468
-#: ../src/partWindow.py:472
+#: ../src/partWindow.py:494
 msgid "Specify a mount point for the partition."
 msgstr "יש לקבוע נקודת עיגון עבור המחיצה."
 
 #
 # File: ../src/partWindow.py, line: 477
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:481
+#: ../src/partWindow.py:503
 #, python-format
 msgid ""
 "The mount point \"%s\" is already in use.  Please select another mount point."
@@ -483,7 +487,7 @@ msgstr "נקודת העיגון \"%s\" כבר נמצאת בשימוש.  יש ל�
 
 #
 # File: ../src/partWindow.py, line: 497
-#: ../src/partWindow.py:501
+#: ../src/partWindow.py:523
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -491,13 +495,13 @@ msgstr "כדי ליצור מחיצת RAID חדשה, יש להגדיר שם הת�
 
 #
 # File: ../src/partWindow.py, line: 534
-#: ../src/partWindow.py:538
+#: ../src/partWindow.py:560
 msgid "Specify a device on which to create the partition."
 msgstr "יש לציין התקן שעליו תיווצר המחיצה."
 
 #
 # File: ../src/partWindow.py, line: 543
-#: ../src/partWindow.py:547
+#: ../src/partWindow.py:569
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -559,14 +563,14 @@ msgstr "ברשותך כעת %d מחיצות פנויות ליישום RAID בת�
 
 #
 # File: ../src/raidWindow.py, line: 177
-#: ../src/raidWindow.py:175
+#: ../src/raidWindow.py:201
 #, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
 msgstr "יש לבחור לפחות שתי מחיצות כדי להשתמש ב-RAID %s"
 
 #
 # File: ../src/raidWindow.py, line: 183
-#: ../src/raidWindow.py:181
+#: ../src/raidWindow.py:207
 #, python-format
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "יש לבחור לפחות שלוש מחיצות כדי להשתמש ב-RAID %s"
@@ -574,14 +578,14 @@ msgstr "יש לבחור לפחות שלוש מחיצות כדי להשתמש ב-
 #
 # File: ../src/raidWindow.py, line: 197
 # File: ../src/raidWindow.py, line: 223
-#: ../src/raidWindow.py:195 ../src/raidWindow.py:221
+#: ../src/raidWindow.py:221 ../src/raidWindow.py:247
 msgid "Raid Devices"
 msgstr "התקני RAID"
 
 #
 # File: ../src/kickstartGui.py, line: 94
 # File: ../src/kickstartGui.py, line: 286
-#: ../src/savedialog.py:72
+#: ../src/savedialog.py:75
 #, fuzzy, python-format
 msgid "The following error occurred while saving the kickstart config %s: %s"
 msgstr ""
@@ -592,800 +596,852 @@ msgstr ""
 #
 # File: ../src/kickstartGui.py, line: 97
 # File: ../src/kickstartGui.py, line: 289
-#: ../src/savedialog.py:76
+#: ../src/savedialog.py:79
 #, fuzzy
 msgid "Error Saving Kickstart Config"
 msgstr "שגיאה בפענוח קובץ Kickstart"
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 1
+# File: ../src/kickstartGui.py, line: 132
 #: tmp/system-config-kickstart.glade.h:1
-msgid "         "
-msgstr "         "
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 2
-#: tmp/system-config-kickstart.glade.h:2
-msgid "(for example: hda or sdc)"
-msgstr "(לדוגמה: hda או sdc)"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 3
-#: tmp/system-config-kickstart.glade.h:3
-msgid "(for example: hda1 or sdc3)"
-msgstr "(לדוגמה: hda1 או sdc3)"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 4
-#: tmp/system-config-kickstart.glade.h:4
-msgid "0"
-msgstr "0"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 5
-#: tmp/system-config-kickstart.glade.h:5
-msgid "1"
-msgstr "1"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 6
-#: tmp/system-config-kickstart.glade.h:6
-msgid "5"
-msgstr "5"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 7
-#: tmp/system-config-kickstart.glade.h:7
-msgid "Active"
-msgstr "פעיל"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 8
-#: tmp/system-config-kickstart.glade.h:8
-msgid "Additional Size Options"
-msgstr "אפשרויות נוספול לגודל"
+#, fuzzy
+msgid "<b>Advanced Configuration</b>"
+msgstr "הגדרות בסיסיות"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 9
-#: tmp/system-config-kickstart.glade.h:9
-msgid "Authentication Configuration"
+#: tmp/system-config-kickstart.glade.h:2
+#, fuzzy
+msgid "<b>Authentication Configuration</b>"
 msgstr "תצורת מנגנוני האימות"
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 10
+# File: ../src/kickstartGui.py, line: 132
+#: tmp/system-config-kickstart.glade.h:3
+#, fuzzy
+msgid "<b>Basic Configuration</b>"
+msgstr "הגדרות בסיסיות"
+
+#: tmp/system-config-kickstart.glade.h:4
+msgid "<b>Disk label</b>"
+msgstr ""
+
+#
+# File: ../src/kickstartGui.py, line: 139
+# File: tmp/system-config-kickstart.glade.h, line: 28
+#: tmp/system-config-kickstart.glade.h:5
+#, fuzzy
+msgid "<b>Display Configuration</b>"
+msgstr "הגדרות תצוגה"
+
+#
+# File: ../src/kickstartGui.py, line: 138
+# File: tmp/system-config-kickstart.glade.h, line: 52
+#: tmp/system-config-kickstart.glade.h:6
+#, fuzzy
+msgid "<b>Firewall Configuration</b>"
+msgstr "הגדרות חומת אש"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 59
+#: tmp/system-config-kickstart.glade.h:7
+#, fuzzy
+msgid "<b>GRUB Options</b>"
+msgstr "אפשרויות מנהל האתחול (GRUB):"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 70
+#: tmp/system-config-kickstart.glade.h:8
+#, fuzzy
+msgid "<b>Hesiod Authentication</b>"
+msgstr "אימות בעזרת Hesiod"
+
+#: tmp/system-config-kickstart.glade.h:9
+msgid "<b>Install Options</b>"
+msgstr ""
+
 #: tmp/system-config-kickstart.glade.h:10
+msgid "<b>Install Type</b>"
+msgstr ""
+
+#
+# File: ../src/kickstartGui.py, line: 133
+#: tmp/system-config-kickstart.glade.h:11
+#, fuzzy
+msgid "<b>Installation Method</b>"
+msgstr "שיטת התקנה"
+
+#
+# File: ../src/kickstartGui.py, line: 133
+#: tmp/system-config-kickstart.glade.h:12
+#, fuzzy
+msgid "<b>Installation source</b>"
+msgstr "שיטת התקנה"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 83
+#: tmp/system-config-kickstart.glade.h:13
+#, fuzzy
+msgid "<b>Kerberos 5 Authentication</b>"
+msgstr "אימות בעזרת Kerberos 5"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 91
+#: tmp/system-config-kickstart.glade.h:14
+#, fuzzy
+msgid "<b>LDAP Authentication</b>"
+msgstr "אימות בעזרת LDAP"
+
+#: tmp/system-config-kickstart.glade.h:15
+msgid "<b>Layout</b>"
+msgstr ""
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 18
+#: tmp/system-config-kickstart.glade.h:16
+#, fuzzy
+msgid "<b>Master Boot Record</b>"
+msgstr "נקה את רשומת האתחול הראשית של הדיסק (MBR)"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 103
+#: tmp/system-config-kickstart.glade.h:17
+#, fuzzy
+msgid "<b>NIS Authentication</b>"
+msgstr "אימות בעזרת NIS"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 108
+#: tmp/system-config-kickstart.glade.h:18
+#, fuzzy
+msgid "<b>Name Switch Cache Daemon (nscd) Authentication</b>"
+msgstr "הפעלת שירות nscd להאצת הגישה לנתוני האימות"
+
+#
+# File: ../src/kickstartGui.py, line: 136
+# File: tmp/system-config-kickstart.glade.h, line: 110
+#: tmp/system-config-kickstart.glade.h:19
+#, fuzzy
+msgid "<b>Network Configuration</b>"
+msgstr "הגדרות רשת"
+
+#
+# File: ../src/kickstartGui.py, line: 140
+# File: tmp/system-config-kickstart.glade.h, line: 116
+#: tmp/system-config-kickstart.glade.h:20
+#, fuzzy
+msgid "<b>Package Selection</b>"
+msgstr "בחירת חבילות"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 119
+#: tmp/system-config-kickstart.glade.h:21
+#, fuzzy
+msgid "<b>Partition options</b>"
+msgstr "אפשרויות מחיצה"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 117
+#: tmp/system-config-kickstart.glade.h:22
+#, fuzzy
+msgid "<b>Partitions</b>"
+msgstr "מחיצה :"
+
+#
+# File: ../src/kickstartGui.py, line: 142
+# File: tmp/system-config-kickstart.glade.h, line: 125
+#: tmp/system-config-kickstart.glade.h:23
+#, fuzzy
+msgid "<b>Post-Installation Script</b>"
+msgstr "תסריט לסיום התקנה"
+
+#
+# File: ../src/kickstartGui.py, line: 141
+# File: tmp/system-config-kickstart.glade.h, line: 126
+#: tmp/system-config-kickstart.glade.h:24
+#, fuzzy
+msgid "<b>Pre-Installation Script</b>"
+msgstr "תסריט קדם-התקנה"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 144
+#: tmp/system-config-kickstart.glade.h:25
+#, fuzzy
+msgid "<b>SMB Authentication</b>"
+msgstr "אימות בעזרת SMB"
+
+#: tmp/system-config-kickstart.glade.h:26
+msgid "<b>Size Options</b>"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:27
+msgid "<b>Special options</b>"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:28
+msgid "<b>label28</b>"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:29
+msgid ""
+"Active\n"
+"Warn\n"
+"Disabled"
+msgstr ""
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 176
+#: tmp/system-config-kickstart.glade.h:33
+#, fuzzy, no-c-format
+msgid ""
+"An error in this script might cause your kickstart installation to fail. Do "
+"not include the %post command at the beginning."
+msgstr ""
+"אזהרה: שגיאה בתסריט זה עלולה לגרום להתקנת kickstart להיכשל. רצוי לא לכלול את "
+"תסריט סיום התקנה בשלב ראשון."
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 178
+#: tmp/system-config-kickstart.glade.h:35
+#, fuzzy, no-c-format
+msgid ""
+"An error in this script might cause your kickstart installation to fail. Do "
+"not include the %pre command at the beginning."
+msgstr ""
+"אזהרה: שגיאה בתסריט זה עלולה לגרום להתקנת kickstart להיכשל. רצוי לא לכלול את "
+"תסריט קדם התקנה בשלב ראשון."
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 10
+#: tmp/system-config-kickstart.glade.h:36
 msgid "Authentication options are not applicable on upgrades."
 msgstr "אפשרויות אימות אינן ניתנות לשינוי במהלך שדרוגים."
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 11
-#: tmp/system-config-kickstart.glade.h:11
-msgid "Authentication:"
-msgstr "אימות:"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 12
-#: tmp/system-config-kickstart.glade.h:12
-msgid "Basic Configuration (required)"
-msgstr "תצורה בסיסית (חובה)"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 13
-#: tmp/system-config-kickstart.glade.h:13
-msgid "Boot Loader Options (required)"
-msgstr "אפשרויות מנהל אתחול (חובה)"
-
-#
 # File: tmp/system-config-kickstart.glade.h, line: 14
-#: tmp/system-config-kickstart.glade.h:14
+#: tmp/system-config-kickstart.glade.h:37
 msgid "CA Cert URL:"
 msgstr "כתובת (URL)  תעודת הרשות המאשרת (CA):"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 15
-#: tmp/system-config-kickstart.glade.h:15
+#: tmp/system-config-kickstart.glade.h:38
 msgid "CD-ROM"
 msgstr "תקליטור"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 16
-#: tmp/system-config-kickstart.glade.h:16
+#: tmp/system-config-kickstart.glade.h:39
 msgid "Choose one of the following options:"
 msgstr "יש לבחור אחת מהאפשרויות הבאות:"
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 17
-#: tmp/system-config-kickstart.glade.h:17
-msgid "Choose the Installation Method:"
-msgstr "בחרו את שיטת ההתקנה:"
-
-#
 # File: tmp/system-config-kickstart.glade.h, line: 18
-#: tmp/system-config-kickstart.glade.h:18
+#: tmp/system-config-kickstart.glade.h:40
 msgid "Clear Master Boot Record"
 msgstr "נקה את רשומת האתחול הראשית של הדיסק (MBR)"
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 20
-#: tmp/system-config-kickstart.glade.h:19
-msgid "Configure the X Window System"
-msgstr "קביעת תצורת מערכת התצוגה (X Window System)"
-
-#
 # File: tmp/system-config-kickstart.glade.h, line: 21
-#: tmp/system-config-kickstart.glade.h:20
+#: tmp/system-config-kickstart.glade.h:41
 msgid "Confirm Password:"
 msgstr "אישור ססמה:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 22
-#: tmp/system-config-kickstart.glade.h:21
+#: tmp/system-config-kickstart.glade.h:42
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "יצירת התקן RAID [ברירת מחדל = ‎/dev/md0]"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 23
-#: tmp/system-config-kickstart.glade.h:22
+#: tmp/system-config-kickstart.glade.h:43
 msgid "Create a software RAID partition"
 msgstr "יצירת מחיצת RAID מיושם בתכנה"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 25
-#: tmp/system-config-kickstart.glade.h:23
+#: tmp/system-config-kickstart.glade.h:44
 msgid "Default Language:"
 msgstr "שפת ברירת מחדל:"
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 26
-#: tmp/system-config-kickstart.glade.h:24
-msgid "Disable firewall"
-msgstr "בטל חומת אש"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 27
-#: tmp/system-config-kickstart.glade.h:25
-msgid "Disabled"
-msgstr "מבוטל"
+# File: tmp/system-config-kickstart.glade.h, line: 42
+#: tmp/system-config-kickstart.glade.h:45
+#, fuzzy
+msgid ""
+"Disabled\n"
+"Enabled\n"
+"Enabled in reconfiguration mode"
+msgstr "מופעל במצב \"חידוש הגדרות\""
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 29
-#: tmp/system-config-kickstart.glade.h:27
+#: tmp/system-config-kickstart.glade.h:48
 msgid "Display configuration is not applicable on upgrades."
 msgstr "תצורת מערכת התצוגה אינה ניתנת לשינוי במהלך שדרוגים."
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 30
-#: tmp/system-config-kickstart.glade.h:28
+#: tmp/system-config-kickstart.glade.h:49
 msgid "Do not clear Master Boot Record"
 msgstr "אל תנקה את רשומת האתחול הראשית של הדיסק (MBR)"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 31
-#: tmp/system-config-kickstart.glade.h:29
+#: tmp/system-config-kickstart.glade.h:50
 msgid "Do not initialize the disk label"
 msgstr "לא לאתחל את תווית הדיסק"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 32
-#: tmp/system-config-kickstart.glade.h:30
+#: tmp/system-config-kickstart.glade.h:51
 msgid "Do not install a boot loader"
 msgstr "לא להתקין מנהל אתחול"
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 33
-#: tmp/system-config-kickstart.glade.h:31
-msgid "Drive :"
-msgstr "כונן :"
-
-#
 # File: tmp/system-config-kickstart.glade.h, line: 34
-#: tmp/system-config-kickstart.glade.h:32
+#: tmp/system-config-kickstart.glade.h:52
 msgid "Enable Hesiod Support"
 msgstr "אפשר שימוש ב-Hesiod"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 35
-#: tmp/system-config-kickstart.glade.h:33
+#: tmp/system-config-kickstart.glade.h:53
 msgid "Enable Kerberos 5 Authentication"
 msgstr "אפשר אימות בעזרת Kerberos 5"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 36
-#: tmp/system-config-kickstart.glade.h:34
+#: tmp/system-config-kickstart.glade.h:54
 msgid "Enable LDAP"
 msgstr "אפשר שימוש ב-LDAP"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 37
-#: tmp/system-config-kickstart.glade.h:35
+#: tmp/system-config-kickstart.glade.h:55
 msgid "Enable NIS"
 msgstr "אפשר שימוש ב-NIS"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 38
-#: tmp/system-config-kickstart.glade.h:36
+#: tmp/system-config-kickstart.glade.h:56
 msgid "Enable SMB Authentication"
 msgstr "אפשר אימות בעזרת SMB"
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 39
-#: tmp/system-config-kickstart.glade.h:37
-msgid "Enable firewall"
-msgstr "אפשר חומת אש"
+# File: tmp/system-config-kickstart.glade.h, line: 26
+#: tmp/system-config-kickstart.glade.h:57
+#, fuzzy
+msgid ""
+"Enable firewall\n"
+"Disable firewall"
+msgstr "בטל חומת אש"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 40
-#: tmp/system-config-kickstart.glade.h:38
+#: tmp/system-config-kickstart.glade.h:59
 msgid "Enable nscd"
 msgstr "הפעל את nscd"
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 41
-#: tmp/system-config-kickstart.glade.h:39
-msgid "Enabled"
-msgstr "מופעל"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 42
-#: tmp/system-config-kickstart.glade.h:40
-msgid "Enabled in reconfiguration mode"
-msgstr "מופעל במצב \"חידוש הגדרות\""
-
-#
 # File: tmp/system-config-kickstart.glade.h, line: 43
-#: tmp/system-config-kickstart.glade.h:41
+#: tmp/system-config-kickstart.glade.h:60
 msgid "Encrypt GRUB password"
 msgstr "הצפן ססמת GRUB"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 44
-#: tmp/system-config-kickstart.glade.h:42
+#: tmp/system-config-kickstart.glade.h:61
 msgid "Encrypt root password"
 msgstr "הצפן ססמת root"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 45
-#: tmp/system-config-kickstart.glade.h:43
+#: tmp/system-config-kickstart.glade.h:62
 msgid "FTP"
 msgstr "FTP"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 46
-#: tmp/system-config-kickstart.glade.h:44
+#: tmp/system-config-kickstart.glade.h:63
 msgid "FTP Directory:"
 msgstr "תיקיית FTP:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 47
-#: tmp/system-config-kickstart.glade.h:45
-msgid "FTP Password"
+#: tmp/system-config-kickstart.glade.h:64
+#, fuzzy
+msgid "FTP Password:"
 msgstr "ססמת FTP"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 48
-#: tmp/system-config-kickstart.glade.h:46
+#: tmp/system-config-kickstart.glade.h:65
 msgid "FTP Server:"
 msgstr "שרת FTP:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 49
-#: tmp/system-config-kickstart.glade.h:47
-msgid "FTP Username"
+#: tmp/system-config-kickstart.glade.h:66
+#, fuzzy
+msgid "FTP Username:"
 msgstr "שם משתמש FTP"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 50
-#: tmp/system-config-kickstart.glade.h:48
+#: tmp/system-config-kickstart.glade.h:67
 msgid "File System Type:"
 msgstr "סוג מערכת קבצים:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 51
-#: tmp/system-config-kickstart.glade.h:49
+#: tmp/system-config-kickstart.glade.h:68
 msgid "Fill all unused space on disk"
 msgstr "מילוי כל השטח הבלתי מנוצל בדיסק"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 53
-#: tmp/system-config-kickstart.glade.h:51
+#: tmp/system-config-kickstart.glade.h:69
 msgid "Firewall configuration is not applicable on upgrades."
 msgstr "הגדרת חומת אש אינה ישימה בשדרוגים."
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 54
-#: tmp/system-config-kickstart.glade.h:52
-msgid "Fixed size"
+#: tmp/system-config-kickstart.glade.h:70
+#, fuzzy
+msgid "Fixed size (MB):"
 msgstr "גודל קבוע"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 55
-#: tmp/system-config-kickstart.glade.h:53
+#: tmp/system-config-kickstart.glade.h:71
 msgid "Force to be a primary partition (asprimary)"
 msgstr "אילוץ בחירת מחיצה ראשית (asprimary)"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 56
-#: tmp/system-config-kickstart.glade.h:54
+#: tmp/system-config-kickstart.glade.h:72
 msgid "Format RAID device"
 msgstr "בצע פורמט להתקן RAID"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 57
-#: tmp/system-config-kickstart.glade.h:55
+#: tmp/system-config-kickstart.glade.h:73
 msgid "Format partition"
 msgstr "בצע פורמט למחיצה"
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 59
-#: tmp/system-config-kickstart.glade.h:56
-msgid "GRUB Options:"
-msgstr "אפשרויות מנהל האתחול (GRUB):"
-
-#
 # File: tmp/system-config-kickstart.glade.h, line: 60
-#: tmp/system-config-kickstart.glade.h:57
+#: tmp/system-config-kickstart.glade.h:74
 msgid "Gateway:"
 msgstr "נתב:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 62
-#: tmp/system-config-kickstart.glade.h:58
+#: tmp/system-config-kickstart.glade.h:75
 msgid "Grow to maximum of (MB):"
 msgstr "לכל היותר (MB):"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 63
-#: tmp/system-config-kickstart.glade.h:59
+#: tmp/system-config-kickstart.glade.h:76
 msgid "HTTP"
 msgstr "HTTP"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 64
-#: tmp/system-config-kickstart.glade.h:60
+#: tmp/system-config-kickstart.glade.h:77
 msgid "HTTP Directory:"
 msgstr "תיקיית HTTP:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 65
-#: tmp/system-config-kickstart.glade.h:61
+#: tmp/system-config-kickstart.glade.h:78
 msgid "HTTP Server:"
 msgstr "שרת HTTP:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 66
-#: tmp/system-config-kickstart.glade.h:62
+#: tmp/system-config-kickstart.glade.h:79
 msgid "Hard Drive"
 msgstr "דיסק קשיח"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 67
-#: tmp/system-config-kickstart.glade.h:63
+#: tmp/system-config-kickstart.glade.h:80
 msgid "Hard Drive Directory:"
 msgstr "תיקייה בדיסק הקשיח:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 68
-#: tmp/system-config-kickstart.glade.h:64
+#: tmp/system-config-kickstart.glade.h:81
 msgid "Hard Drive Partition:"
 msgstr "מחיצה בדיסק הקשיח:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 69
-#: tmp/system-config-kickstart.glade.h:65
+#: tmp/system-config-kickstart.glade.h:82
 msgid "Hesiod"
 msgstr "Hesiod"
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 70
-#: tmp/system-config-kickstart.glade.h:66
-msgid "Hesiod Authentication"
-msgstr "אימות בעזרת Hesiod"
-
-#
 # File: tmp/system-config-kickstart.glade.h, line: 71
-#: tmp/system-config-kickstart.glade.h:67
+#: tmp/system-config-kickstart.glade.h:83
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 72
-#: tmp/system-config-kickstart.glade.h:68
+#: tmp/system-config-kickstart.glade.h:84
 msgid "Hesiod RHS:"
 msgstr "Hesiod RHS:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 75
-#: tmp/system-config-kickstart.glade.h:69
+#: tmp/system-config-kickstart.glade.h:85
 msgid "IP Address:"
 msgstr "כתובת IP:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 76
-#: tmp/system-config-kickstart.glade.h:70
+#: tmp/system-config-kickstart.glade.h:86
 msgid "Initialize the disk label"
 msgstr "לאתחל את תווית הדיסק"
 
+#: tmp/system-config-kickstart.glade.h:87
+msgid "Install a graphical environment"
+msgstr ""
+
 #
 # File: tmp/system-config-kickstart.glade.h, line: 77
-#: tmp/system-config-kickstart.glade.h:71
+#: tmp/system-config-kickstart.glade.h:88
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "התקנת מנהל האתחול על גבי רשומת האתחול הראשית של הדיסק (MBR)"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 78
-#: tmp/system-config-kickstart.glade.h:72
+#: tmp/system-config-kickstart.glade.h:89
 msgid "Install boot loader on first sector of the boot partition"
 msgstr "התקנת מנהל האתחול בתחילת מחיצת האתחול"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 79
-#: tmp/system-config-kickstart.glade.h:73
+#: tmp/system-config-kickstart.glade.h:90
 msgid "Install new boot loader"
 msgstr "התקנת מנהל אתחול חדש"
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 80
-#: tmp/system-config-kickstart.glade.h:74
-msgid "Installation Method (required)"
-msgstr "שיטת התקנה (חובה)"
-
-#
 # File: tmp/system-config-kickstart.glade.h, line: 82
-#: tmp/system-config-kickstart.glade.h:75
+#: tmp/system-config-kickstart.glade.h:91
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 83
-#: tmp/system-config-kickstart.glade.h:76
-msgid "Kerberos 5 Authentication"
-msgstr "אימות בעזרת Kerberos 5"
-
-#
 # File: tmp/system-config-kickstart.glade.h, line: 84
-#: tmp/system-config-kickstart.glade.h:77
+#: tmp/system-config-kickstart.glade.h:92
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "בקר תחום Kerberos ‏(KDC):"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 85
-#: tmp/system-config-kickstart.glade.h:78
+#: tmp/system-config-kickstart.glade.h:93
 msgid "Kerberos Master Server:"
 msgstr "שרת ראשי Kerberos:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 86
-#: tmp/system-config-kickstart.glade.h:79
+#: tmp/system-config-kickstart.glade.h:94
 msgid "Kerberos Realm:"
 msgstr "הממלכה של Kerberos ‏(Realm):"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 87
-#: tmp/system-config-kickstart.glade.h:80
+#: tmp/system-config-kickstart.glade.h:95
 msgid "Kernel parameters:"
 msgstr "פרמטרים ל-kernel:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 88
-#: tmp/system-config-kickstart.glade.h:81
+#: tmp/system-config-kickstart.glade.h:96
 msgid "Keyboard:"
 msgstr "מקלדת:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 89
-#: tmp/system-config-kickstart.glade.h:82
+#: tmp/system-config-kickstart.glade.h:97
 msgid "Kickstart Configurator"
 msgstr "Kickstart Configurator"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 90
-#: tmp/system-config-kickstart.glade.h:83
+#: tmp/system-config-kickstart.glade.h:98
 msgid "LDAP "
 msgstr "LDAP "
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 91
-#: tmp/system-config-kickstart.glade.h:84
-msgid "LDAP Authentication"
-msgstr "אימות בעזרת LDAP"
-
-#
 # File: tmp/system-config-kickstart.glade.h, line: 92
-#: tmp/system-config-kickstart.glade.h:85
+#: tmp/system-config-kickstart.glade.h:99
 msgid "LDAP Base Name: "
 msgstr "שם בסיס (base name) של LDAP: "
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 93
-#: tmp/system-config-kickstart.glade.h:86
+#: tmp/system-config-kickstart.glade.h:100
 msgid "LDAP Server: "
 msgstr "שרת LDAP: "
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 94
-#: tmp/system-config-kickstart.glade.h:87
+#: tmp/system-config-kickstart.glade.h:101
 msgid "Load CA certificate"
 msgstr "טען את תעודת הרשות המאשרת (CA)"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 95
-#: tmp/system-config-kickstart.glade.h:88
+#: tmp/system-config-kickstart.glade.h:102
 msgid "Make RAID Device"
 msgstr "יצירת התקן RAID"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 96
-#: tmp/system-config-kickstart.glade.h:89
-msgid "Make partition on specific drive (ondisk)"
+#: tmp/system-config-kickstart.glade.h:103
+#, fuzzy
+msgid "Make partition on specific drive (ondisk, e.g. hda or sdc):"
 msgstr "יצירת מחיצה על דיסק מסויים (ondisk)"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 98
-#: tmp/system-config-kickstart.glade.h:90
+#: tmp/system-config-kickstart.glade.h:104
 msgid "Mount Point:"
 msgstr "נקודת עיגון:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 99
-#: tmp/system-config-kickstart.glade.h:91
+#: tmp/system-config-kickstart.glade.h:105
 msgid "NFS"
 msgstr "NFS"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 100
-#: tmp/system-config-kickstart.glade.h:92
+#: tmp/system-config-kickstart.glade.h:106
 msgid "NFS Directory:"
 msgstr "תיקיית NFS:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 101
-#: tmp/system-config-kickstart.glade.h:93
+#: tmp/system-config-kickstart.glade.h:107
 msgid "NFS Server:"
 msgstr "שרת NFS:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 102
-#: tmp/system-config-kickstart.glade.h:94
+#: tmp/system-config-kickstart.glade.h:108
 msgid "NIS"
 msgstr "NIS"
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 103
-#: tmp/system-config-kickstart.glade.h:95
-msgid "NIS Authentication"
-msgstr "אימות בעזרת NIS"
-
-#
 # File: tmp/system-config-kickstart.glade.h, line: 104
-#: tmp/system-config-kickstart.glade.h:96
+#: tmp/system-config-kickstart.glade.h:109
 msgid "NIS Domain:"
 msgstr "שם מתחם NIS:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 105
-#: tmp/system-config-kickstart.glade.h:97
+#: tmp/system-config-kickstart.glade.h:110
 msgid "NIS Server:"
 msgstr "שרת NIS:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 106
-#: tmp/system-config-kickstart.glade.h:98
+#: tmp/system-config-kickstart.glade.h:111
 msgid "Name Server:"
 msgstr "שרת שמות (DNS):"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 107
-#: tmp/system-config-kickstart.glade.h:99
+#: tmp/system-config-kickstart.glade.h:112
 msgid "Name Switch Cache"
 msgstr "מטמון לנתוני האימות (nscd)"
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 108
-#: tmp/system-config-kickstart.glade.h:100
-msgid "Name Switch Cache Daemon (nscd) Authentication"
-msgstr "הפעלת שירות nscd להאצת הגישה לנתוני האימות"
-
-#
 # File: tmp/system-config-kickstart.glade.h, line: 109
-#: tmp/system-config-kickstart.glade.h:101
+#: tmp/system-config-kickstart.glade.h:113
 msgid "Netmask: "
 msgstr "מסכת רשת (netmask):"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 111
-#: tmp/system-config-kickstart.glade.h:103
+#: tmp/system-config-kickstart.glade.h:114
 msgid "Network Device Information"
 msgstr "מידע התקן רשת"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 112
-#: tmp/system-config-kickstart.glade.h:104
+#: tmp/system-config-kickstart.glade.h:115
 msgid "Network Device:"
 msgstr "התקן רשת:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 113
-#: tmp/system-config-kickstart.glade.h:105
+#: tmp/system-config-kickstart.glade.h:116
 msgid "Network Type:"
 msgstr "סוג רשת:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 114
-#: tmp/system-config-kickstart.glade.h:106
+#: tmp/system-config-kickstart.glade.h:117
 msgid "Number of spares:"
 msgstr "מספר המחיצות הרזרוויות:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 115
-#: tmp/system-config-kickstart.glade.h:107
+#: tmp/system-config-kickstart.glade.h:118
 msgid "On first boot, Setup Agent is: "
 msgstr "באתחול ראשון, קביעת התצורה הגרפית: "
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 117
-#: tmp/system-config-kickstart.glade.h:109
-msgid "Partition :"
-msgstr "מחיצה :"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 118
-#: tmp/system-config-kickstart.glade.h:110
-msgid "Partition Information (required)"
-msgstr "פרטי מחיצה (חובה)"
-
-#
 # File: tmp/system-config-kickstart.glade.h, line: 119
-#: tmp/system-config-kickstart.glade.h:111
+#: tmp/system-config-kickstart.glade.h:119
 msgid "Partition Options"
 msgstr "אפשרויות מחיצה"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 120
-#: tmp/system-config-kickstart.glade.h:112
+#: tmp/system-config-kickstart.glade.h:120
 msgid "Partition options are not applicable on upgrades."
 msgstr "אפשרויות מחיצה אינן ישימות בשדרוגים."
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 121
-#: tmp/system-config-kickstart.glade.h:113
+#: tmp/system-config-kickstart.glade.h:121
 msgid "Password:"
 msgstr "ססמה:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 122
-#: tmp/system-config-kickstart.glade.h:114
+#: tmp/system-config-kickstart.glade.h:122
 msgid "Perform installation in interactive mode"
 msgstr "ביצוע התקנה באופן אינטראקטיבי"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 123
-#: tmp/system-config-kickstart.glade.h:115
+#: tmp/system-config-kickstart.glade.h:123
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "ביצוע ההתקנה בסביבת טקסט (ברירת המחדל היא סביבה גרפית)"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 124
-#: tmp/system-config-kickstart.glade.h:116
+#: tmp/system-config-kickstart.glade.h:124
 msgid "Perform new installation"
 msgstr "ביצוע התקנה חדשה"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 127
-#: tmp/system-config-kickstart.glade.h:119
+#: tmp/system-config-kickstart.glade.h:125
 msgid "Preserve existing partitions"
 msgstr "שמירה על המחיצות הקיימות"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 128
-#: tmp/system-config-kickstart.glade.h:120
+#: tmp/system-config-kickstart.glade.h:126
 msgid "Preview Options"
 msgstr "תצוגה מקדימה של האפשרויות"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 131
-#: tmp/system-config-kickstart.glade.h:121
+#: tmp/system-config-kickstart.glade.h:127
 msgid "RAID"
 msgstr "RAID"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 132
-#: tmp/system-config-kickstart.glade.h:122
+#: tmp/system-config-kickstart.glade.h:128
 msgid "RAID Device:"
 msgstr "התקן RAID:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 133
-#: tmp/system-config-kickstart.glade.h:123
+#: tmp/system-config-kickstart.glade.h:129
 msgid "RAID Level:"
 msgstr "סוג RAID:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 134
-#: tmp/system-config-kickstart.glade.h:124
+#: tmp/system-config-kickstart.glade.h:130
 msgid "RAID Options"
 msgstr "אפשרויות RAID"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 135
-#: tmp/system-config-kickstart.glade.h:125
-msgid "Raid Members"
+#: tmp/system-config-kickstart.glade.h:131
+#, fuzzy
+msgid "Raid Members:"
 msgstr "מרכיבי ה-Raid"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 136
-#: tmp/system-config-kickstart.glade.h:126
+#: tmp/system-config-kickstart.glade.h:132
 msgid "Reboot system after installation"
 msgstr "איתחול המחשב מחדש לאחר התקנה"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 137
-#: tmp/system-config-kickstart.glade.h:127
+#: tmp/system-config-kickstart.glade.h:133
 msgid "Remove all existing partitions"
 msgstr "הסרת כל המחיצות הקיימות"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 138
-#: tmp/system-config-kickstart.glade.h:128
+#: tmp/system-config-kickstart.glade.h:134
 msgid "Remove existing Linux partitions"
 msgstr "הסרת כל מחיצות Linux קיימות"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 140
-#: tmp/system-config-kickstart.glade.h:129
+#: tmp/system-config-kickstart.glade.h:135
 msgid "Root Password:"
 msgstr "ססמת root:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 141
-#: tmp/system-config-kickstart.glade.h:130
+#: tmp/system-config-kickstart.glade.h:136
 msgid "Run outside of the chroot environment"
 msgstr "הרץ את התסריט מחוץ לסביבת chroot"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 142
-#: tmp/system-config-kickstart.glade.h:131
+#: tmp/system-config-kickstart.glade.h:137
 msgid "SELinux:"
 msgstr "SELinux:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 143
-#: tmp/system-config-kickstart.glade.h:132
+#: tmp/system-config-kickstart.glade.h:138
 msgid "SMB"
 msgstr "SMB"
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 144
-#: tmp/system-config-kickstart.glade.h:133
-msgid "SMB Authentication"
-msgstr "אימות בעזרת SMB"
-
-#
 # File: tmp/system-config-kickstart.glade.h, line: 145
-#: tmp/system-config-kickstart.glade.h:134
+#: tmp/system-config-kickstart.glade.h:139
 msgid "SMB Servers:"
 msgstr "שרתי SMB:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 146
-#: tmp/system-config-kickstart.glade.h:135
+#: tmp/system-config-kickstart.glade.h:140
 msgid "SMB Workgroup:"
 msgstr "קבוצת עבודה SMB:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 147
-#: tmp/system-config-kickstart.glade.h:136
+#: tmp/system-config-kickstart.glade.h:141
 msgid "Security level:"
 msgstr "רמת אבטחה:"
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 148
-#: tmp/system-config-kickstart.glade.h:137
-msgid "Size (MB):"
-msgstr "גודל (MB):"
-
-#
 # File: tmp/system-config-kickstart.glade.h, line: 149
-#: tmp/system-config-kickstart.glade.h:138
+#: tmp/system-config-kickstart.glade.h:142
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -1398,31 +1454,31 @@ msgstr ""
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 150
-#: tmp/system-config-kickstart.glade.h:139
+#: tmp/system-config-kickstart.glade.h:143
 msgid "Specify an FTP username and password"
 msgstr "יש להזין שם וססמת משתמש עבור FTP"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 151
-#: tmp/system-config-kickstart.glade.h:140
+#: tmp/system-config-kickstart.glade.h:144
 msgid "Specify installation key:"
 msgstr "יש לציין מפתח התקנה:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 153
-#: tmp/system-config-kickstart.glade.h:141
+#: tmp/system-config-kickstart.glade.h:145
 msgid "Target Architecture:"
 msgstr "ארכיטקטורת המערכת:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 154
-#: tmp/system-config-kickstart.glade.h:142
+#: tmp/system-config-kickstart.glade.h:146
 msgid "Time Zone:"
 msgstr "אזור זמן:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 155
-#: tmp/system-config-kickstart.glade.h:143
+#: tmp/system-config-kickstart.glade.h:147
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -1432,103 +1488,76 @@ msgstr ""
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 157
-#: tmp/system-config-kickstart.glade.h:145
+#: tmp/system-config-kickstart.glade.h:149
 #, no-c-format
 msgid "Type your %post script below:"
 msgstr "יש להקליד את תסריט סיום התקנה להלן:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 159
-#: tmp/system-config-kickstart.glade.h:147
+#: tmp/system-config-kickstart.glade.h:151
 #, no-c-format
 msgid "Type your %pre script below:"
 msgstr "יש להקליד את תסריט קדם התקנה להלן:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 160
-#: tmp/system-config-kickstart.glade.h:148
+#: tmp/system-config-kickstart.glade.h:152
 msgid "Upgrade an existing installation"
 msgstr "שדרוג התקנה קיימת"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 161
-#: tmp/system-config-kickstart.glade.h:149
+#: tmp/system-config-kickstart.glade.h:153
 msgid "Upgrade existing boot loader"
 msgstr "שדרג מנהל אתחול קיים"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 162
-#: tmp/system-config-kickstart.glade.h:150
+#: tmp/system-config-kickstart.glade.h:154
 msgid "Use GRUB password"
 msgstr "השתמש בססמת GRUB"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 164
-#: tmp/system-config-kickstart.glade.h:151
+#: tmp/system-config-kickstart.glade.h:155
 msgid "Use Shadow Passwords"
 msgstr "השתמש בססמאות נסתרות (Shadow)"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 165
-#: tmp/system-config-kickstart.glade.h:152
+#: tmp/system-config-kickstart.glade.h:156
 msgid "Use UTC clock"
 msgstr "שימוש בשעון גריניץ' (UTC)"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 166
-#: tmp/system-config-kickstart.glade.h:153
+#: tmp/system-config-kickstart.glade.h:157
 msgid "Use an interpreter:"
 msgstr "הרץ את התסריט באמצעות:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 167
-#: tmp/system-config-kickstart.glade.h:154
+#: tmp/system-config-kickstart.glade.h:158
 msgid "Use broadcast to find NIS server"
 msgstr "השתמש ב-broadcast לאיתור שרת NIS"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 169
-#: tmp/system-config-kickstart.glade.h:155
-msgid "Use existing partition (onpart)"
+#: tmp/system-config-kickstart.glade.h:159
+#, fuzzy
+msgid "Use existing partition (onpart, e.g. hda1 or sdc3):"
 msgstr "השתמש במחיצה קיימת (onpart)"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 170
-#: tmp/system-config-kickstart.glade.h:156
+#: tmp/system-config-kickstart.glade.h:160
 msgid "Use recommended swap size"
 msgstr "השתמש בגודל מומלץ לשטח דפדוף"
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 174
-#: tmp/system-config-kickstart.glade.h:157
-msgid "Warn"
-msgstr "אזהרה"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 176
-#: tmp/system-config-kickstart.glade.h:159
-#, no-c-format
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %post command at the beginning."
-msgstr ""
-"אזהרה: שגיאה בתסריט זה עלולה לגרום להתקנת kickstart להיכשל. רצוי לא לכלול את "
-"תסריט סיום התקנה בשלב ראשון."
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 178
-#: tmp/system-config-kickstart.glade.h:161
-#, no-c-format
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %pre command at the beginning."
-msgstr ""
-"אזהרה: שגיאה בתסריט זה עלולה לגרום להתקנת kickstart להיכשל. רצוי לא לכלול את "
-"תסריט קדם התקנה בשלב ראשון."
-
-#
 # File: tmp/system-config-kickstart.glade.h, line: 179
-#: tmp/system-config-kickstart.glade.h:162
+#: tmp/system-config-kickstart.glade.h:161
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
@@ -1536,187 +1565,287 @@ msgstr ""
 "ההגדרות הבאות נבחרו. יש ללחוץ על 'שמירת קובץ' כדי לשמור לקובץ kickstart. "
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 180
-#: tmp/system-config-kickstart.glade.h:163
-msgid "_About"
-msgstr "_אודות"
-
-#
 # File: tmp/system-config-kickstart.glade.h, line: 181
-#: tmp/system-config-kickstart.glade.h:164
+#: tmp/system-config-kickstart.glade.h:162
 msgid "_Add"
 msgstr "_הוספה"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 182
-#: tmp/system-config-kickstart.glade.h:165
+#: tmp/system-config-kickstart.glade.h:163
 msgid "_Add Network Device"
 msgstr "_הוספת התקן רשת"
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 183
-#: tmp/system-config-kickstart.glade.h:166
-msgid "_Contents"
-msgstr "_תכולה"
-
-#
 # File: tmp/system-config-kickstart.glade.h, line: 184
-#: tmp/system-config-kickstart.glade.h:167
+#: tmp/system-config-kickstart.glade.h:164
 msgid "_Delete"
 msgstr "_מחיקה"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 185
-#: tmp/system-config-kickstart.glade.h:168
+#: tmp/system-config-kickstart.glade.h:165
 msgid "_Delete Network Device"
 msgstr "_מחיקת התקן רשת"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 186
-#: tmp/system-config-kickstart.glade.h:169
+#: tmp/system-config-kickstart.glade.h:166
 msgid "_Edit"
 msgstr "_עריכה"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 187
-#: tmp/system-config-kickstart.glade.h:170
+#: tmp/system-config-kickstart.glade.h:167
 msgid "_Edit Network Device"
 msgstr "_עריכת התקן רשת"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 188
-#: tmp/system-config-kickstart.glade.h:171
+#: tmp/system-config-kickstart.glade.h:168
 msgid "_File"
 msgstr "_קובץ"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 189
-#: tmp/system-config-kickstart.glade.h:172
+#: tmp/system-config-kickstart.glade.h:169
 msgid "_Help"
 msgstr "_עזרה"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 190
-#: tmp/system-config-kickstart.glade.h:173
+#: tmp/system-config-kickstart.glade.h:170
 msgid "_Open File"
 msgstr "_פתיחת קובץ"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 191
-#: tmp/system-config-kickstart.glade.h:174
+#: tmp/system-config-kickstart.glade.h:171
 msgid "_Preview"
 msgstr "_תצוגה מקדימה"
 
 #
-# File: tmp/system-config-kickstart.glade.h, line: 192
-#: tmp/system-config-kickstart.glade.h:175
-msgid "_Quit"
-msgstr "_יציאה"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 193
-#: tmp/system-config-kickstart.glade.h:176
-msgid "_Save File"
-msgstr "_שמירת קובץ"
-
-#
 # File: tmp/system-config-kickstart.glade.h, line: 194
-#: tmp/system-config-kickstart.glade.h:177
+#: tmp/system-config-kickstart.glade.h:172
 msgid "_Save to File"
 msgstr "_שמירה לקובץ"
 
 #
+# File: ../src/kickstartGui.py, line: 207
+#~ msgid ""
+#~ "Kickstart Configurator @VERSION@\n"
+#~ " Copyright (c) 2000-2002 Red Hat, Inc.\n"
+#~ " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
+#~ " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
+#~ " A graphical interface for creating a kickstart file"
+#~ msgstr ""
+#~ "Kickstart Configurator @VERSION@\n"
+#~ " Copyright (c) 2000-2002 Red Hat, Inc.\n"
+#~ " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
+#~ " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
+#~ "ממשק גרפי ליצירת קובץ kickstart"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 1
+#~ msgid "         "
+#~ msgstr "         "
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 2
+#~ msgid "(for example: hda or sdc)"
+#~ msgstr "(לדוגמה: hda או sdc)"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 3
+#~ msgid "(for example: hda1 or sdc3)"
+#~ msgstr "(לדוגמה: hda1 או sdc3)"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 4
+#~ msgid "0"
+#~ msgstr "0"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 5
+#~ msgid "1"
+#~ msgstr "1"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 6
+#~ msgid "5"
+#~ msgstr "5"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 7
+#~ msgid "Active"
+#~ msgstr "פעיל"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 8
+#~ msgid "Additional Size Options"
+#~ msgstr "אפשרויות נוספול לגודל"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 11
+#~ msgid "Authentication:"
+#~ msgstr "אימות:"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 12
+#~ msgid "Basic Configuration (required)"
+#~ msgstr "תצורה בסיסית (חובה)"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 13
+#~ msgid "Boot Loader Options (required)"
+#~ msgstr "אפשרויות מנהל אתחול (חובה)"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 17
+#~ msgid "Choose the Installation Method:"
+#~ msgstr "בחרו את שיטת ההתקנה:"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 20
+#~ msgid "Configure the X Window System"
+#~ msgstr "קביעת תצורת מערכת התצוגה (X Window System)"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 27
+#~ msgid "Disabled"
+#~ msgstr "מבוטל"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 33
+#~ msgid "Drive :"
+#~ msgstr "כונן :"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 39
+#~ msgid "Enable firewall"
+#~ msgstr "אפשר חומת אש"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 41
+#~ msgid "Enabled"
+#~ msgstr "מופעל"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 80
+#~ msgid "Installation Method (required)"
+#~ msgstr "שיטת התקנה (חובה)"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 118
+#~ msgid "Partition Information (required)"
+#~ msgstr "פרטי מחיצה (חובה)"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 148
+#~ msgid "Size (MB):"
+#~ msgstr "גודל (MB):"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 174
+#~ msgid "Warn"
+#~ msgstr "אזהרה"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 180
+#~ msgid "_About"
+#~ msgstr "_אודות"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 183
+#~ msgid "_Contents"
+#~ msgstr "_תכולה"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 192
+#~ msgid "_Quit"
+#~ msgstr "_יציאה"
+
+#
+# File: tmp/system-config-kickstart.glade.h, line: 193
+#~ msgid "_Save File"
+#~ msgstr "_שמירת קובץ"
+
+#
 # File: tmp/system-config-kickstart.glade.h, line: 198
-#: tmp/system-config-kickstart.glade.h:180
-msgid "md0"
-msgstr "md0"
+#~ msgid "md0"
+#~ msgstr "md0"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 199
-#: tmp/system-config-kickstart.glade.h:181
-msgid "md1"
-msgstr "md1"
+#~ msgid "md1"
+#~ msgstr "md1"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 200
-#: tmp/system-config-kickstart.glade.h:182
-msgid "md10"
-msgstr "md10"
+#~ msgid "md10"
+#~ msgstr "md10"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 201
-#: tmp/system-config-kickstart.glade.h:183
-msgid "md11"
-msgstr "md11"
+#~ msgid "md11"
+#~ msgstr "md11"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 202
-#: tmp/system-config-kickstart.glade.h:184
-msgid "md12"
-msgstr "md12"
+#~ msgid "md12"
+#~ msgstr "md12"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 203
-#: tmp/system-config-kickstart.glade.h:185
-msgid "md13"
-msgstr "md13"
+#~ msgid "md13"
+#~ msgstr "md13"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 204
-#: tmp/system-config-kickstart.glade.h:186
-msgid "md14"
-msgstr "md14"
+#~ msgid "md14"
+#~ msgstr "md14"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 205
-#: tmp/system-config-kickstart.glade.h:187
-msgid "md15"
-msgstr "md15"
+#~ msgid "md15"
+#~ msgstr "md15"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 206
-#: tmp/system-config-kickstart.glade.h:188
-msgid "md2"
-msgstr "md2"
+#~ msgid "md2"
+#~ msgstr "md2"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 207
-#: tmp/system-config-kickstart.glade.h:189
-msgid "md3"
-msgstr "md3"
+#~ msgid "md3"
+#~ msgstr "md3"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 208
-#: tmp/system-config-kickstart.glade.h:190
-msgid "md4"
-msgstr "md4"
+#~ msgid "md4"
+#~ msgstr "md4"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 209
-#: tmp/system-config-kickstart.glade.h:191
-msgid "md5"
-msgstr "md5"
+#~ msgid "md5"
+#~ msgstr "md5"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 210
-#: tmp/system-config-kickstart.glade.h:192
-msgid "md6"
-msgstr "md6"
+#~ msgid "md6"
+#~ msgstr "md6"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 211
-#: tmp/system-config-kickstart.glade.h:193
-msgid "md7"
-msgstr "md7"
+#~ msgid "md7"
+#~ msgstr "md7"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 212
-#: tmp/system-config-kickstart.glade.h:194
-msgid "md8"
-msgstr "md8"
+#~ msgid "md8"
+#~ msgstr "md8"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 213
-#: tmp/system-config-kickstart.glade.h:195
-msgid "md9"
-msgstr "md9"
+#~ msgid "md9"
+#~ msgstr "md9"

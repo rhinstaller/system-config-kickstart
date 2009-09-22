@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-config-kickstart.master.bn_IN\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-12 17:02-0400\n"
+"POT-Creation-Date: 2009-09-22 11:01-0400\n"
 "PO-Revision-Date: 2009-03-31 15:27+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <fedora-trans-bn_in@redhat.com>\n"
@@ -82,30 +82,31 @@ msgstr "IBM pSeries"
 msgid "IBM zSeries/s390"
 msgstr "IBM zSeries/s390"
 
-#: ../src/basic.py:149
+#: ../src/basic.py:151
 msgid "Root passwords do not match."
 msgstr "root-র পাসওয়ার্ডে গরমিল।"
 
-#: ../src/basic.py:150 ../src/install.py:217 ../src/partWindow.py:554
-#: ../src/partition.py:256 ../src/raidWindow.py:250
+#: ../src/basic.py:152 ../src/install.py:217 ../src/partWindow.py:576
+#: ../src/partition.py:256 ../src/raidWindow.py:276
 msgid "Error"
 msgstr "সমস্যা"
 
-#: ../src/bootloader.py:147
+#: ../src/bootloader.py:150
 msgid "Grub passwords do not match.  Please try again."
 msgstr "Grub-র পাসওয়ার্ড মেলেনি।  অনুগ্রহ করে পুনরায় চেষ্টা করুন।"
 
-#: ../src/bootloader.py:198
+#: ../src/bootloader.py:197
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
 msgstr "'%s' প্ল্যাটফর্মের ক্ষেত্রে বুট-লোডারের অপশন প্রযোজ্য নয়"
 
-#: ../src/firewall.py:58
+#: ../src/firewall.py:60
 msgid "Trusted services:"
 msgstr "বিশ্বস্ত পরিসেবা:"
 
-#: ../src/firewall.py:90
-msgid "Other ports: (1029:tcp)"
+#: ../src/firewall.py:92
+#, fuzzy
+msgid "Other ports (1029:tcp):"
 msgstr "অন্যান্য পোর্ট: (1029:tcp)"
 
 #: ../src/install.py:132
@@ -148,7 +149,30 @@ msgstr "অনুগ্রহ করে হার্ড-ড্রাইভের
 msgid "Please enter a hard drive partition."
 msgstr "অনুগ্রহ করে হার্ড-ড্রাইভের একটি পার্টিশন উল্লেখ করুন।"
 
-#: ../src/kickstartGui.py:92 ../src/kickstartGui.py:290
+#: ../src/kickstartGui.py:81
+msgid ""
+"This program is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
+"Ave, Cambridge, MA 02139, USA."
+msgstr ""
+
+#: ../src/kickstartGui.py:125 ../src/kickstartGui.py:130
+#: ../src/kickstartGui.py:330 ../src/kickstartGui.py:335
+#, python-format
+msgid "The kickstart file %s could not be opened."
+msgstr "%s kickstart ফাইল খোলা যায়নি।"
+
+#: ../src/kickstartGui.py:127 ../src/kickstartGui.py:332
 #, python-format
 msgid ""
 "The following error was found while parsing your kickstart configuration:\n"
@@ -159,124 +183,110 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../src/kickstartGui.py:95 ../src/kickstartGui.py:293
-#, python-format
-msgid "The kickstart file %s could not be opened."
-msgstr "%s kickstart ফাইল খোলা যায়নি।"
-
-#: ../src/kickstartGui.py:100 ../src/kickstartGui.py:298
+#: ../src/kickstartGui.py:135 ../src/kickstartGui.py:340
 msgid "Error Parsing Kickstart Config"
 msgstr "Kickstart কনফিগ পার্স করতে সমস্যা"
 
-#: ../src/kickstartGui.py:108
+#: ../src/kickstartGui.py:143
 msgid "Kickstart"
 msgstr "Kickstart"
 
-#: ../src/kickstartGui.py:109
+#: ../src/kickstartGui.py:144
 msgid "Create a kickstart file"
 msgstr "একটি kickstart ফাইল তৈরি করুন।"
 
-#: ../src/kickstartGui.py:131
+#: ../src/kickstartGui.py:166
 msgid "Subsection"
 msgstr "উপবিভাগ"
 
-#: ../src/kickstartGui.py:135
+#: ../src/kickstartGui.py:170
 msgid "Basic Configuration"
 msgstr "মৌলিক কনফিগারেশন"
 
-#: ../src/kickstartGui.py:136
+#: ../src/kickstartGui.py:171
 msgid "Installation Method"
 msgstr "ইনস্টলেশন পদ্ধতি"
 
-#: ../src/kickstartGui.py:137
+#: ../src/kickstartGui.py:172
 msgid "Boot Loader Options"
 msgstr "বুট-লোডার সংক্রান্ত অপশন"
 
-#: ../src/kickstartGui.py:138
+#: ../src/kickstartGui.py:173
 msgid "Partition Information"
 msgstr "পার্টিশন সংক্রান্ত তথ্য"
 
-#: ../src/kickstartGui.py:139 tmp/system-config-kickstart.glade.h:102
+#: ../src/kickstartGui.py:174
 msgid "Network Configuration"
 msgstr "নেটওয়ার্ক কনফিগারেশন"
 
-#: ../src/kickstartGui.py:140
+#: ../src/kickstartGui.py:175
 msgid "Authentication"
 msgstr "অনুমোদন ব্যবস্থা"
 
-#: ../src/kickstartGui.py:141 tmp/system-config-kickstart.glade.h:50
+#: ../src/kickstartGui.py:176
 msgid "Firewall Configuration"
 msgstr "ফায়ারওয়াল কনফিগারেশন"
 
-#: ../src/kickstartGui.py:142 tmp/system-config-kickstart.glade.h:26
+#: ../src/kickstartGui.py:177
 msgid "Display Configuration"
 msgstr "প্রদর্শন কনফিগারেশন"
 
-#: ../src/kickstartGui.py:143 tmp/system-config-kickstart.glade.h:108
+#: ../src/kickstartGui.py:178
 msgid "Package Selection"
 msgstr "প্যাকেজ নির্বাচন"
 
-#: ../src/kickstartGui.py:144 tmp/system-config-kickstart.glade.h:118
+#: ../src/kickstartGui.py:179
 msgid "Pre-Installation Script"
 msgstr "প্রাক-ইনস্টলেশন স্ক্রিপ্ট"
 
-#: ../src/kickstartGui.py:145 tmp/system-config-kickstart.glade.h:117
+#: ../src/kickstartGui.py:180
 msgid "Post-Installation Script"
 msgstr "ইনস্টলেশনোত্তর স্ক্রিপ্ট"
 
-#: ../src/kickstartGui.py:210
-msgid ""
-"Kickstart Configurator @VERSION@\n"
-" Copyright (c) 2000-2002 Red Hat, Inc.\n"
-" Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-" Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-" A graphical interface for creating a kickstart file"
-msgstr ""
-"Kickstart Configurator @VERSION@\n"
-" Copyright (c) 2000-2002 Red Hat, Inc.\n"
-" Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-" Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-" kickstart ফাইল নির্মাণের গ্রাফিকাল ইন্টারফেস"
-
-#: ../src/kickstartGui.py:211
+#: ../src/kickstartGui.py:246
 msgid "About Kickstart Configurator"
 msgstr "Kickstart Configurator পরিচিতি"
 
-#: ../src/kickstartGui.py:233
+#: ../src/kickstartGui.py:270
 msgid "Help is not available."
 msgstr "সহায়িকা উপস্থিত নেই।"
 
-#: ../src/kickstartGui.py:319
+#: ../src/kickstartGui.py:361
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
 msgstr "\"%s\" ফাইলটি ব্যবহার করা সম্ভব নয়।"
 
-#: ../src/network.py:74
+#: ../src/kickstartGui.py:371 ../src/kickstartGui.py:380
+#: ../src/packages.py:209
+msgid "Retrieving package information"
+msgstr "প্যাকেজ সংক্রান্ত তথ্য আহরণ করা হচ্ছে"
+
+#: ../src/network.py:73
 msgid "Device"
 msgstr "ডিভাইস"
 
-#: ../src/network.py:77
+#: ../src/network.py:76
 msgid "Network Type"
 msgstr "নেটওয়ার্কের ধরন"
 
-#: ../src/network.py:95 ../src/network.py:144 ../src/network.py:226
-#: ../src/network.py:282 ../src/network.py:377
+#: ../src/network.py:79 ../src/network.py:114 ../src/network.py:196
+#: ../src/network.py:251 ../src/network.py:347
 msgid "Static IP"
 msgstr "স্থায়ী IP"
 
-#: ../src/network.py:191 ../src/network.py:250
+#: ../src/network.py:161 ../src/network.py:219
 msgid "Please fill in the network information"
 msgstr "অনুগ্রহ করে নেটওয়ার্ক সম্বন্ধীয় তথ্য পুরণ করুন।"
 
-#: ../src/network.py:203 ../src/network.py:262
+#: ../src/network.py:173 ../src/network.py:231
 msgid "Please enter a valid gateway address."
 msgstr "অনুগ্রহ করে বৈধ গেটওয়ে ঠিকানা লিখুন।"
 
-#: ../src/network.py:215 ../src/network.py:274
+#: ../src/network.py:185 ../src/network.py:243
 msgid "Please enter a valid nameserver address."
 msgstr "অনুগ্রহ করে একটি বৈধ নেম-সার্ভারের ঠিকানা লিখুন।"
 
-#: ../src/network.py:302
+#: ../src/network.py:271
 #, python-format
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
@@ -293,82 +303,82 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"সেট-আপের মধ্যে উপস্থিত একটি সমস্যার কারণে প্যাকেজ নির্বাচন ব্যবস্থা বর্তমানে নিষ্ক্রিয় করা হয়েছে।  অনুগ্রহ করে সংগ্রহস্থল সংক্রান্ত কনফিগারেশনের ত্রুটি সংশোধন করে পুনরায় প্রচেষ্টা করুন।\n"
+"সেট-আপের মধ্যে উপস্থিত একটি সমস্যার কারণে প্যাকেজ নির্বাচন ব্যবস্থা বর্তমানে নিষ্ক্রিয় "
+"করা হয়েছে।  অনুগ্রহ করে সংগ্রহস্থল সংক্রান্ত কনফিগারেশনের ত্রুটি সংশোধন করে পুনরায় "
+"প্রচেষ্টা করুন।\n"
 "\n"
 "%s"
 
-#: ../src/packages.py:199
-msgid "Retrieving package information"
-msgstr "প্যাকেজ সংক্রান্ত তথ্য আহরণ করা হচ্ছে"
-
-#: ../src/packages.py:227
+#: ../src/packages.py:203
 msgid "Package configuration is not applicable on upgrades."
 msgstr "আপগ্রেডের ক্ষেত্রে প্যাকেজ কনফিগারেশন প্রযোজ্য নয়।"
 
-#: ../src/packages.py:239
+#: ../src/packages.py:216
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
-msgstr "প্যাকেজ সংক্রান্ত তথ্য ডাউনলোডের সমস্যার দরুণ প্যাকেজ নির্বাচন নিষ্ক্রিয় করা হয়েছে।"
+msgstr ""
+"প্যাকেজ সংক্রান্ত তথ্য ডাউনলোডের সমস্যার দরুণ প্যাকেজ নির্বাচন নিষ্ক্রিয় করা হয়েছে।"
 
-#: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:178
+#: ../src/partWindow.py:97
 msgid "ext2"
 msgstr "ext2"
 
-#: ../src/partWindow.py:85 tmp/system-config-kickstart.glade.h:179
+#: ../src/partWindow.py:97
 msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:87 ../src/partWindow.py:156
+#: ../src/partWindow.py:99 ../src/partWindow.py:174
 msgid "software RAID"
 msgstr "সফ্টওয়্যার RAID"
 
-#: ../src/partWindow.py:88 tmp/system-config-kickstart.glade.h:196
+#: ../src/partWindow.py:100
 msgid "swap"
 msgstr "swap"
 
-#: ../src/partWindow.py:88 tmp/system-config-kickstart.glade.h:197
+#: ../src/partWindow.py:100
 msgid "vfat"
 msgstr "vfat"
 
-#: ../src/partWindow.py:89
+#: ../src/partWindow.py:101
 msgid "PPC PReP Boot"
 msgstr "PPC PReP Boot"
 
 #  XXX - have to do this after the show_all due to a bug in gtkSpinButton, I suspect
 #  If the current iter is the only child, delete the parent and the child
 #  If there are other children, just delete this child
-#: ../src/partWindow.py:295 ../src/partWindow.py:576 ../src/raidWindow.py:215
+#: ../src/partWindow.py:316 ../src/partWindow.py:598 ../src/raidWindow.py:241
 msgid "Yes"
 msgstr "হ্যাঁ"
 
-#: ../src/partWindow.py:297 ../src/partWindow.py:578 ../src/raidWindow.py:217
+#: ../src/partWindow.py:318 ../src/partWindow.py:600 ../src/raidWindow.py:243
 msgid "No"
 msgstr "না"
 
-#: ../src/partWindow.py:320 ../src/partWindow.py:335 ../src/partWindow.py:354
-#: ../src/partWindow.py:368
+#: ../src/partWindow.py:341 ../src/partWindow.py:356 ../src/partWindow.py:375
+#: ../src/partWindow.py:389
 msgid "Auto"
 msgstr "স্বয়ংক্রিয়"
 
-#: ../src/partWindow.py:329
+#: ../src/partWindow.py:350
 msgid "Hard Drives"
 msgstr "হার্ড-ড্রাইভ"
 
-#: ../src/partWindow.py:472
+#: ../src/partWindow.py:494
 msgid "Specify a mount point for the partition."
 msgstr "পার্টিশনের জন্য একটি মাউন্ট-পয়েন্ট নির্ধারণ করুন।"
 
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:481
+#: ../src/partWindow.py:503
 #, python-format
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "\"%s\" মাউন্ট-পয়েন্ট বর্তমানে ব্যবহৃত হচ্ছে। অনুগ্রহ করে একটি পৃথক মাউন্ট-পয়েন্ট "
 "নির্বাচন করুন।"
 
-#: ../src/partWindow.py:501
+#: ../src/partWindow.py:523
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -376,11 +386,11 @@ msgstr ""
 "নতুন RAID পার্টিশন তৈরি করার জন্য, একটি হার্ড-ড্রাইভ ডিভাইসের নাম অথবা একটি "
 "উপস্থিত পার্টিশন নির্দিষ্ট করা আবশ্যক।"
 
-#: ../src/partWindow.py:538
+#: ../src/partWindow.py:560
 msgid "Specify a device on which to create the partition."
 msgstr "পার্টিশন নির্মাণের জন্য একটি ডিভাইস নির্দিষ্ট করুন।"
 
-#: ../src/partWindow.py:547
+#: ../src/partWindow.py:569
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -425,556 +435,613 @@ msgstr "অনুগ্রহ করে তালিকা থেকে এক�
 msgid "You currently have %d software RAID partition(s) free to use."
 msgstr "বর্তমানে %d-টি সফ্টওয়্যার RAID পার্টিশন ব্যবহারের জন্য উপলব্ধ রয়েছে।"
 
-#: ../src/raidWindow.py:175
+#: ../src/raidWindow.py:201
 #, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
 msgstr "RAID %s ব্যবহারের জন্য অন্তত ২টি পার্টিশন নির্বাচন করা আবশ্যক"
 
-#: ../src/raidWindow.py:181
+#: ../src/raidWindow.py:207
 #, python-format
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "RAID %s ব্যবহারের জন্য অন্তত ৩টি পার্টিশন নির্বাচন করা আবশ্যক"
 
-#: ../src/raidWindow.py:195 ../src/raidWindow.py:221
+#: ../src/raidWindow.py:221 ../src/raidWindow.py:247
 msgid "Raid Devices"
 msgstr "Raid ডিভাইস"
 
-#: ../src/savedialog.py:72
+#: ../src/savedialog.py:75
 #, python-format
 msgid "The following error occurred while saving the kickstart config %s: %s"
 msgstr "kickstart কনফিগ %s সংরক্ষণ করার সময় নিম্নলিখিত সমস্যা দেখা দিয়েছে: %s"
 
-#: ../src/savedialog.py:76
+#: ../src/savedialog.py:79
 msgid "Error Saving Kickstart Config"
 msgstr "Kickstart কনফিগ সংরক্ষণ করতে সমস্যা"
 
 #: tmp/system-config-kickstart.glade.h:1
-msgid "         "
-msgstr "         "
+#, fuzzy
+msgid "<b>Advanced Configuration</b>"
+msgstr "মৌলিক কনফিগারেশন"
 
 #: tmp/system-config-kickstart.glade.h:2
-msgid "(for example: hda or sdc)"
-msgstr "(উদাহরণ: hda অথবা sdc)"
-
-#: tmp/system-config-kickstart.glade.h:3
-msgid "(for example: hda1 or sdc3)"
-msgstr "(উদাহরণ: hda1 অথবা sdc3)"
-
-#: tmp/system-config-kickstart.glade.h:4
-msgid "0"
-msgstr "0"
-
-#: tmp/system-config-kickstart.glade.h:5
-msgid "1"
-msgstr "1"
-
-#: tmp/system-config-kickstart.glade.h:6
-msgid "5"
-msgstr "5"
-
-#: tmp/system-config-kickstart.glade.h:7
-msgid "Active"
-msgstr "সক্রিয়"
-
-#: tmp/system-config-kickstart.glade.h:8
-msgid "Additional Size Options"
-msgstr "মাপ সম্বন্ধীয় অতিরিক্ত অপশন"
-
-#: tmp/system-config-kickstart.glade.h:9
-msgid "Authentication Configuration"
+#, fuzzy
+msgid "<b>Authentication Configuration</b>"
 msgstr "অনুমোদন ব্যবস্থা সংক্রান্ত কনফিগারেশন"
 
+#: tmp/system-config-kickstart.glade.h:3
+#, fuzzy
+msgid "<b>Basic Configuration</b>"
+msgstr "মৌলিক কনফিগারেশন"
+
+#: tmp/system-config-kickstart.glade.h:4
+msgid "<b>Disk label</b>"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:5
+#, fuzzy
+msgid "<b>Display Configuration</b>"
+msgstr "প্রদর্শন কনফিগারেশন"
+
+#: tmp/system-config-kickstart.glade.h:6
+#, fuzzy
+msgid "<b>Firewall Configuration</b>"
+msgstr "ফায়ারওয়াল কনফিগারেশন"
+
+#: tmp/system-config-kickstart.glade.h:7
+#, fuzzy
+msgid "<b>GRUB Options</b>"
+msgstr "GRUB সংক্রান্ত অপশন:"
+
+#: tmp/system-config-kickstart.glade.h:8
+#, fuzzy
+msgid "<b>Hesiod Authentication</b>"
+msgstr "Hesiod অনুমোদন ব্যবস্থা"
+
+#: tmp/system-config-kickstart.glade.h:9
+msgid "<b>Install Options</b>"
+msgstr ""
+
 #: tmp/system-config-kickstart.glade.h:10
+msgid "<b>Install Type</b>"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:11
+#, fuzzy
+msgid "<b>Installation Method</b>"
+msgstr "ইনস্টলেশন পদ্ধতি"
+
+#: tmp/system-config-kickstart.glade.h:12
+#, fuzzy
+msgid "<b>Installation source</b>"
+msgstr "ইনস্টলেশন পদ্ধতি"
+
+#: tmp/system-config-kickstart.glade.h:13
+#, fuzzy
+msgid "<b>Kerberos 5 Authentication</b>"
+msgstr "Kerberos 5 অনুমোদন ব্যবস্থা"
+
+#: tmp/system-config-kickstart.glade.h:14
+#, fuzzy
+msgid "<b>LDAP Authentication</b>"
+msgstr "LDAP অনুমোদন ব্যবস্থা"
+
+#: tmp/system-config-kickstart.glade.h:15
+msgid "<b>Layout</b>"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:16
+#, fuzzy
+msgid "<b>Master Boot Record</b>"
+msgstr "মাস্টার বুট রেকর্ডের তথ্য মুছে ফেলা হবে"
+
+#: tmp/system-config-kickstart.glade.h:17
+#, fuzzy
+msgid "<b>NIS Authentication</b>"
+msgstr "NIS অনুমোদন ব্যবস্থা"
+
+#: tmp/system-config-kickstart.glade.h:18
+#, fuzzy
+msgid "<b>Name Switch Cache Daemon (nscd) Authentication</b>"
+msgstr "Name Switch Cache Daemon (nscd) অনুমোদন ব্যবস্থা"
+
+#: tmp/system-config-kickstart.glade.h:19
+#, fuzzy
+msgid "<b>Network Configuration</b>"
+msgstr "নেটওয়ার্ক কনফিগারেশন"
+
+#: tmp/system-config-kickstart.glade.h:20
+#, fuzzy
+msgid "<b>Package Selection</b>"
+msgstr "প্যাকেজ নির্বাচন"
+
+#: tmp/system-config-kickstart.glade.h:21
+#, fuzzy
+msgid "<b>Partition options</b>"
+msgstr "পার্টিশন সংক্রান্ত অপশন"
+
+#: tmp/system-config-kickstart.glade.h:22
+#, fuzzy
+msgid "<b>Partitions</b>"
+msgstr "পার্টিশন :"
+
+#: tmp/system-config-kickstart.glade.h:23
+#, fuzzy
+msgid "<b>Post-Installation Script</b>"
+msgstr "ইনস্টলেশনোত্তর স্ক্রিপ্ট"
+
+#: tmp/system-config-kickstart.glade.h:24
+#, fuzzy
+msgid "<b>Pre-Installation Script</b>"
+msgstr "প্রাক-ইনস্টলেশন স্ক্রিপ্ট"
+
+#: tmp/system-config-kickstart.glade.h:25
+#, fuzzy
+msgid "<b>SMB Authentication</b>"
+msgstr "SMB অনুমোদন ব্যবস্থা"
+
+#: tmp/system-config-kickstart.glade.h:26
+msgid "<b>Size Options</b>"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:27
+msgid "<b>Special options</b>"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:28
+msgid "<b>label28</b>"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:29
+msgid ""
+"Active\n"
+"Warn\n"
+"Disabled"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:33
+#, fuzzy, no-c-format
+msgid ""
+"An error in this script might cause your kickstart installation to fail. Do "
+"not include the %post command at the beginning."
+msgstr ""
+"সতর্কবাণী: এই স্ক্রিপ্টের মধ্যে উপস্থিত কোনো ত্রুটির দরুণ আপনার kickstart ইনস্টলেশন "
+"ব্যর্থ হতে পারে। %post কমান্ডটি আরম্ভে অন্তর্ভুক্ত করবেন না।"
+
+#: tmp/system-config-kickstart.glade.h:35
+#, fuzzy, no-c-format
+msgid ""
+"An error in this script might cause your kickstart installation to fail. Do "
+"not include the %pre command at the beginning."
+msgstr ""
+"সতর্কবাণী: এই স্ক্রিপ্টের মধ্যে উপস্থিত কোনো ত্রুটির দরুণ আপনার kickstart ইনস্টলেশন "
+"ব্যর্থ হতে পারে। %pre কমান্ডটি আরম্ভে অন্তর্ভুক্ত করবেন না।"
+
+#: tmp/system-config-kickstart.glade.h:36
 msgid "Authentication options are not applicable on upgrades."
 msgstr "আপগ্রেডের ক্ষেত্রে অনুমোদন ব্যবস্থা সংক্রান্ত অপশনগুলি প্রযোজ্য নয়।"
 
-#: tmp/system-config-kickstart.glade.h:11
-msgid "Authentication:"
-msgstr "অনুমোদন ব্যবস্থা:"
-
-# not sure
-#: tmp/system-config-kickstart.glade.h:12
-msgid "Basic Configuration (required)"
-msgstr "মৌলিক কনফিগারেশন (আবশ্যক)"
-
-#: tmp/system-config-kickstart.glade.h:13
-msgid "Boot Loader Options (required)"
-msgstr "বুট-লোডার সংক্রান্ত অপশন (আবশ্যক)"
-
-#: tmp/system-config-kickstart.glade.h:14
+#: tmp/system-config-kickstart.glade.h:37
 msgid "CA Cert URL:"
 msgstr "URL-র জন্য CA Cert:"
 
-#: tmp/system-config-kickstart.glade.h:15
+#: tmp/system-config-kickstart.glade.h:38
 msgid "CD-ROM"
 msgstr "CD-ROM"
 
-#: tmp/system-config-kickstart.glade.h:16
+#: tmp/system-config-kickstart.glade.h:39
 msgid "Choose one of the following options:"
 msgstr "নিম্নোক্ত অপশনের মধ্যে একটি নির্বাচন করুন:"
 
-#: tmp/system-config-kickstart.glade.h:17
-msgid "Choose the Installation Method:"
-msgstr "ইনস্টলেশন প্রক্রিয়া নির্বাচন করুন:"
-
-#: tmp/system-config-kickstart.glade.h:18
+#: tmp/system-config-kickstart.glade.h:40
 msgid "Clear Master Boot Record"
 msgstr "মাস্টার বুট রেকর্ডের তথ্য মুছে ফেলা হবে"
 
-#: tmp/system-config-kickstart.glade.h:19
-msgid "Configure the X Window System"
-msgstr "X উইন্ডো সিস্টেম কনফিগার করুন"
-
-#: tmp/system-config-kickstart.glade.h:20
+#: tmp/system-config-kickstart.glade.h:41
 msgid "Confirm Password:"
 msgstr "পাসওয়ার্ড নিশ্চায়ণ:"
 
-#: tmp/system-config-kickstart.glade.h:21
+#: tmp/system-config-kickstart.glade.h:42
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr "একটি RAID ডিভাইস তৈরি করুন [default = /dev/md0]"
 
-#: tmp/system-config-kickstart.glade.h:22
+#: tmp/system-config-kickstart.glade.h:43
 msgid "Create a software RAID partition"
 msgstr "একটি সফ্টওয়্যার RAID পার্টিশন তৈরি করুন"
 
-#: tmp/system-config-kickstart.glade.h:23
+#: tmp/system-config-kickstart.glade.h:44
 msgid "Default Language:"
 msgstr "ডিফল্ট ভাষা:"
 
-#: tmp/system-config-kickstart.glade.h:24
-msgid "Disable firewall"
-msgstr "ফায়ারওয়াল নিষ্ক্রিয়"
+#: tmp/system-config-kickstart.glade.h:45
+#, fuzzy
+msgid ""
+"Disabled\n"
+"Enabled\n"
+"Enabled in reconfiguration mode"
+msgstr "রি-কনফিগারেশন মোডে স্বক্রিয় করা থাকবে"
 
-#: tmp/system-config-kickstart.glade.h:25
-msgid "Disabled"
-msgstr "নিষ্ক্রিয়"
-
-#: tmp/system-config-kickstart.glade.h:27
+#: tmp/system-config-kickstart.glade.h:48
 msgid "Display configuration is not applicable on upgrades."
 msgstr "আপগ্রেডের ক্ষেত্রে ডিসপ্লে কনফিগারেশন প্রযোজ্য নয়।"
 
-#: tmp/system-config-kickstart.glade.h:28
+#: tmp/system-config-kickstart.glade.h:49
 msgid "Do not clear Master Boot Record"
 msgstr "মাস্টার বুট রেকর্ডের তথ্য মুছে ফেলা হবে না"
 
-#: tmp/system-config-kickstart.glade.h:29
+#: tmp/system-config-kickstart.glade.h:50
 msgid "Do not initialize the disk label"
 msgstr "ডিস্ক লেবেল আরম্ভ করা হবে না"
 
-#: tmp/system-config-kickstart.glade.h:30
+#: tmp/system-config-kickstart.glade.h:51
 msgid "Do not install a boot loader"
 msgstr "বুট-লোডার ইনস্টল করা হবে না"
 
-#: tmp/system-config-kickstart.glade.h:31
-msgid "Drive :"
-msgstr "ড্রাইভ :"
-
-#: tmp/system-config-kickstart.glade.h:32
+#: tmp/system-config-kickstart.glade.h:52
 msgid "Enable Hesiod Support"
 msgstr "Hesiod সমর্থন সক্রিয় করুন"
 
-#: tmp/system-config-kickstart.glade.h:33
+#: tmp/system-config-kickstart.glade.h:53
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Kerberos 5 অনুমোদন ব্যবস্থা ব্যবহার করুন"
 
-#: tmp/system-config-kickstart.glade.h:34
+#: tmp/system-config-kickstart.glade.h:54
 msgid "Enable LDAP"
 msgstr "LDAP সক্রিয় করুন"
 
-#: tmp/system-config-kickstart.glade.h:35
+#: tmp/system-config-kickstart.glade.h:55
 msgid "Enable NIS"
 msgstr "NIS সক্রিয় করা হবে"
 
-#: tmp/system-config-kickstart.glade.h:36
+#: tmp/system-config-kickstart.glade.h:56
 msgid "Enable SMB Authentication"
 msgstr "SMB অনুমোদন ব্যবস্থা সক্রিয় করা হবে"
 
-#: tmp/system-config-kickstart.glade.h:37
-msgid "Enable firewall"
-msgstr "ফায়ারওয়াল সক্রিয় করুন"
+#: tmp/system-config-kickstart.glade.h:57
+#, fuzzy
+msgid ""
+"Enable firewall\n"
+"Disable firewall"
+msgstr "ফায়ারওয়াল নিষ্ক্রিয়"
 
-#: tmp/system-config-kickstart.glade.h:38
+#: tmp/system-config-kickstart.glade.h:59
 msgid "Enable nscd"
 msgstr "nscd সক্রিয় করুন"
 
-#: tmp/system-config-kickstart.glade.h:39
-msgid "Enabled"
-msgstr "সক্রিয় অবস্থায় থাকবে"
-
-#: tmp/system-config-kickstart.glade.h:40
-msgid "Enabled in reconfiguration mode"
-msgstr "রি-কনফিগারেশন মোডে স্বক্রিয় করা থাকবে"
-
-#: tmp/system-config-kickstart.glade.h:41
+#: tmp/system-config-kickstart.glade.h:60
 msgid "Encrypt GRUB password"
 msgstr "GRUB-র পাসওয়ার্ড এনক্রিপ্ট করুন"
 
-#: tmp/system-config-kickstart.glade.h:42
+#: tmp/system-config-kickstart.glade.h:61
 msgid "Encrypt root password"
 msgstr "root পাসওয়ার্ড এনক্রিপ্ট করা হবে"
 
-#: tmp/system-config-kickstart.glade.h:43
+#: tmp/system-config-kickstart.glade.h:62
 msgid "FTP"
 msgstr "FTP"
 
-#: tmp/system-config-kickstart.glade.h:44
+#: tmp/system-config-kickstart.glade.h:63
 msgid "FTP Directory:"
 msgstr "FTP ডিরেক্টরি:"
 
-#: tmp/system-config-kickstart.glade.h:45
-msgid "FTP Password"
+#: tmp/system-config-kickstart.glade.h:64
+#, fuzzy
+msgid "FTP Password:"
 msgstr "FTP পাসওয়ার্ড"
 
-#: tmp/system-config-kickstart.glade.h:46
+#: tmp/system-config-kickstart.glade.h:65
 msgid "FTP Server:"
 msgstr "FTP সার্ভার:"
 
-#: tmp/system-config-kickstart.glade.h:47
-msgid "FTP Username"
+#: tmp/system-config-kickstart.glade.h:66
+#, fuzzy
+msgid "FTP Username:"
 msgstr "FTP ব্যবহারকারীর নাম"
 
-#: tmp/system-config-kickstart.glade.h:48
+#: tmp/system-config-kickstart.glade.h:67
 msgid "File System Type:"
 msgstr "ফাইল-সিস্টেমের ধরন:"
 
-#: tmp/system-config-kickstart.glade.h:49
+#: tmp/system-config-kickstart.glade.h:68
 msgid "Fill all unused space on disk"
 msgstr "ডিস্কের অবশিষ্ট সমস্ত স্থান পূরণ করা হবে"
 
-#: tmp/system-config-kickstart.glade.h:51
+#: tmp/system-config-kickstart.glade.h:69
 msgid "Firewall configuration is not applicable on upgrades."
 msgstr "আপগ্রেডের ক্ষেত্রে ফায়ারওয়াল সংক্রান্ত কনফিগারেশন প্রযোজ্য নয়।"
 
-#: tmp/system-config-kickstart.glade.h:52
-msgid "Fixed size"
+#: tmp/system-config-kickstart.glade.h:70
+#, fuzzy
+msgid "Fixed size (MB):"
 msgstr "সীমিত পরিমাপ"
 
-#: tmp/system-config-kickstart.glade.h:53
+#: tmp/system-config-kickstart.glade.h:71
 msgid "Force to be a primary partition (asprimary)"
 msgstr "প্রধান পার্টিশন হিসাবে বাধ্যতামূলকভাবে চিহ্নিত করা হবে (asprimary)"
 
-#: tmp/system-config-kickstart.glade.h:54
+#: tmp/system-config-kickstart.glade.h:72
 msgid "Format RAID device"
 msgstr "RAID ডিভাইস ফরম্যাট করুন"
 
-#: tmp/system-config-kickstart.glade.h:55
+#: tmp/system-config-kickstart.glade.h:73
 msgid "Format partition"
 msgstr "পার্টিশন ফরম্যাট করুন"
 
-#: tmp/system-config-kickstart.glade.h:56
-msgid "GRUB Options:"
-msgstr "GRUB সংক্রান্ত অপশন:"
-
-#: tmp/system-config-kickstart.glade.h:57
+#: tmp/system-config-kickstart.glade.h:74
 msgid "Gateway:"
 msgstr "গেটওয়ে:"
 
-#: tmp/system-config-kickstart.glade.h:58
+#: tmp/system-config-kickstart.glade.h:75
 msgid "Grow to maximum of (MB):"
 msgstr "সর্বাধিক মাপ পর্যন্ত বিস্তার করা হবে (মেগাবাইট):"
 
-#: tmp/system-config-kickstart.glade.h:59
+#: tmp/system-config-kickstart.glade.h:76
 msgid "HTTP"
 msgstr "HTTP"
 
-#: tmp/system-config-kickstart.glade.h:60
+#: tmp/system-config-kickstart.glade.h:77
 msgid "HTTP Directory:"
 msgstr "HTTP ডিরেক্টরি:"
 
-#: tmp/system-config-kickstart.glade.h:61
+#: tmp/system-config-kickstart.glade.h:78
 msgid "HTTP Server:"
 msgstr "HTTP সার্ভার:"
 
-#: tmp/system-config-kickstart.glade.h:62
+#: tmp/system-config-kickstart.glade.h:79
 msgid "Hard Drive"
 msgstr "হার্ড-ড্রাইভ"
 
-#: tmp/system-config-kickstart.glade.h:63
+#: tmp/system-config-kickstart.glade.h:80
 msgid "Hard Drive Directory:"
 msgstr "হার্ড-ড্রাইভের ডিরেক্টরি:"
 
-#: tmp/system-config-kickstart.glade.h:64
+#: tmp/system-config-kickstart.glade.h:81
 msgid "Hard Drive Partition:"
 msgstr "হার্ড-ড্রাইভ পার্টিশন:"
 
-#: tmp/system-config-kickstart.glade.h:65
+#: tmp/system-config-kickstart.glade.h:82
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: tmp/system-config-kickstart.glade.h:66
-msgid "Hesiod Authentication"
-msgstr "Hesiod অনুমোদন ব্যবস্থা"
-
-#: tmp/system-config-kickstart.glade.h:67
+#: tmp/system-config-kickstart.glade.h:83
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS:"
 
-#: tmp/system-config-kickstart.glade.h:68
+#: tmp/system-config-kickstart.glade.h:84
 msgid "Hesiod RHS:"
 msgstr "Hesiod RHS:"
 
-#: tmp/system-config-kickstart.glade.h:69
+#: tmp/system-config-kickstart.glade.h:85
 msgid "IP Address:"
 msgstr "IP অ্যাড্রেস:"
 
-#: tmp/system-config-kickstart.glade.h:70
+#: tmp/system-config-kickstart.glade.h:86
 msgid "Initialize the disk label"
 msgstr "ডিস্ক লেবেল আরম্ভ করা হবে"
 
-#: tmp/system-config-kickstart.glade.h:71
+#: tmp/system-config-kickstart.glade.h:87
+msgid "Install a graphical environment"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:88
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "মাস্টার বুট রেকর্ড (MBR)-এ বুট-লোডার ইনস্টল করুন"
 
-#: tmp/system-config-kickstart.glade.h:72
+#: tmp/system-config-kickstart.glade.h:89
 msgid "Install boot loader on first sector of the boot partition"
 msgstr "boot পার্টিশনের প্রথম সেক্টরে বুট-লোডার ইনস্টল করুন"
 
-#: tmp/system-config-kickstart.glade.h:73
+#: tmp/system-config-kickstart.glade.h:90
 msgid "Install new boot loader"
 msgstr "নতুন বুট-লোডার ইনস্টল করুন"
 
-#: tmp/system-config-kickstart.glade.h:74
-msgid "Installation Method (required)"
-msgstr "ইনস্টলেশন পদ্ধতি (আবশ্যক)"
-
-#: tmp/system-config-kickstart.glade.h:75
+#: tmp/system-config-kickstart.glade.h:91
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: tmp/system-config-kickstart.glade.h:76
-msgid "Kerberos 5 Authentication"
-msgstr "Kerberos 5 অনুমোদন ব্যবস্থা"
-
-#: tmp/system-config-kickstart.glade.h:77
+#: tmp/system-config-kickstart.glade.h:92
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Kerberos ডোমেইন কন্ট্রলার (KDC):"
 
-#: tmp/system-config-kickstart.glade.h:78
+#: tmp/system-config-kickstart.glade.h:93
 msgid "Kerberos Master Server:"
 msgstr "Kerberos মাস্টার সার্ভার:"
 
 # FIXME
-#: tmp/system-config-kickstart.glade.h:79
+#: tmp/system-config-kickstart.glade.h:94
 msgid "Kerberos Realm:"
 msgstr "Kerberos Realm:"
 
-#: tmp/system-config-kickstart.glade.h:80
+#: tmp/system-config-kickstart.glade.h:95
 msgid "Kernel parameters:"
 msgstr "কার্নেল সংক্রান্ত পরামিতি:"
 
-#: tmp/system-config-kickstart.glade.h:81
+#: tmp/system-config-kickstart.glade.h:96
 msgid "Keyboard:"
 msgstr "কি-বোর্ড:"
 
-#: tmp/system-config-kickstart.glade.h:82
+#: tmp/system-config-kickstart.glade.h:97
 msgid "Kickstart Configurator"
 msgstr "Kickstart Configurator"
 
-#: tmp/system-config-kickstart.glade.h:83
+#: tmp/system-config-kickstart.glade.h:98
 msgid "LDAP "
 msgstr "LDAP "
 
-#: tmp/system-config-kickstart.glade.h:84
-msgid "LDAP Authentication"
-msgstr "LDAP অনুমোদন ব্যবস্থা"
-
-#: tmp/system-config-kickstart.glade.h:85
+#: tmp/system-config-kickstart.glade.h:99
 msgid "LDAP Base Name: "
 msgstr "LDAP Base Name: "
 
-#: tmp/system-config-kickstart.glade.h:86
+#: tmp/system-config-kickstart.glade.h:100
 msgid "LDAP Server: "
 msgstr "LDAP সার্ভার: "
 
-#: tmp/system-config-kickstart.glade.h:87
+#: tmp/system-config-kickstart.glade.h:101
 msgid "Load CA certificate"
 msgstr "CA সার্টিফিকেট লোড করুন"
 
-#: tmp/system-config-kickstart.glade.h:88
+#: tmp/system-config-kickstart.glade.h:102
 msgid "Make RAID Device"
 msgstr "RAID ডিভাইস নির্মাণ করুন"
 
-#: tmp/system-config-kickstart.glade.h:89
-msgid "Make partition on specific drive (ondisk)"
+#: tmp/system-config-kickstart.glade.h:103
+#, fuzzy
+msgid "Make partition on specific drive (ondisk, e.g. hda or sdc):"
 msgstr "নির্ধারিত ড্রাইভে পার্টিশন তৈরি করা হবে (ondisk)"
 
-#: tmp/system-config-kickstart.glade.h:90
+#: tmp/system-config-kickstart.glade.h:104
 msgid "Mount Point:"
 msgstr "মাউন্ট-পয়েন্ট:"
 
-#: tmp/system-config-kickstart.glade.h:91
+#: tmp/system-config-kickstart.glade.h:105
 msgid "NFS"
 msgstr "NFS"
 
-#: tmp/system-config-kickstart.glade.h:92
+#: tmp/system-config-kickstart.glade.h:106
 msgid "NFS Directory:"
 msgstr "NFS ডিরেক্টরি:"
 
-#: tmp/system-config-kickstart.glade.h:93
+#: tmp/system-config-kickstart.glade.h:107
 msgid "NFS Server:"
 msgstr "NFS সার্ভার:"
 
-#: tmp/system-config-kickstart.glade.h:94
+#: tmp/system-config-kickstart.glade.h:108
 msgid "NIS"
 msgstr "NIS"
 
-#: tmp/system-config-kickstart.glade.h:95
-msgid "NIS Authentication"
-msgstr "NIS অনুমোদন ব্যবস্থা"
-
-#: tmp/system-config-kickstart.glade.h:96
+#: tmp/system-config-kickstart.glade.h:109
 msgid "NIS Domain:"
 msgstr "NIS ডোমেইন:"
 
-#: tmp/system-config-kickstart.glade.h:97
+#: tmp/system-config-kickstart.glade.h:110
 msgid "NIS Server:"
 msgstr "NIS সার্ভার:"
 
-#: tmp/system-config-kickstart.glade.h:98
+#: tmp/system-config-kickstart.glade.h:111
 msgid "Name Server:"
 msgstr "Name সার্ভার:"
 
-#: tmp/system-config-kickstart.glade.h:99
+#: tmp/system-config-kickstart.glade.h:112
 msgid "Name Switch Cache"
 msgstr "Name Switch Cache"
 
-#: tmp/system-config-kickstart.glade.h:100
-msgid "Name Switch Cache Daemon (nscd) Authentication"
-msgstr "Name Switch Cache Daemon (nscd) অনুমোদন ব্যবস্থা"
-
-#: tmp/system-config-kickstart.glade.h:101
+#: tmp/system-config-kickstart.glade.h:113
 msgid "Netmask: "
 msgstr "নেটমাস্ক:"
 
-#: tmp/system-config-kickstart.glade.h:103
+#: tmp/system-config-kickstart.glade.h:114
 msgid "Network Device Information"
 msgstr "নেটওয়ার্ক ডিভাইস সংক্রান্ত তথ্য"
 
-#: tmp/system-config-kickstart.glade.h:104
+#: tmp/system-config-kickstart.glade.h:115
 msgid "Network Device:"
 msgstr "নেটওয়ার্কের ডিভাইস:"
 
-#: tmp/system-config-kickstart.glade.h:105
+#: tmp/system-config-kickstart.glade.h:116
 msgid "Network Type:"
 msgstr "নেটওয়ার্কের ধরন:"
 
-#: tmp/system-config-kickstart.glade.h:106
+#: tmp/system-config-kickstart.glade.h:117
 msgid "Number of spares:"
 msgstr "বাড়তি ড্রাইভের সংখ্যা:"
 
-#: tmp/system-config-kickstart.glade.h:107
+#: tmp/system-config-kickstart.glade.h:118
 msgid "On first boot, Setup Agent is: "
 msgstr "প্রথমবার বুট করার সময়, Setup Agent: "
 
-#: tmp/system-config-kickstart.glade.h:109
-msgid "Partition :"
-msgstr "পার্টিশন :"
-
-#: tmp/system-config-kickstart.glade.h:110
-msgid "Partition Information (required)"
-msgstr "পার্টিশন সম্বন্ধীয় তথ্য (আবশ্যক)"
-
-#: tmp/system-config-kickstart.glade.h:111
+#: tmp/system-config-kickstart.glade.h:119
 msgid "Partition Options"
 msgstr "পার্টিশন সংক্রান্ত অপশন"
 
-#: tmp/system-config-kickstart.glade.h:112
+#: tmp/system-config-kickstart.glade.h:120
 msgid "Partition options are not applicable on upgrades."
 msgstr "আপগ্রেডের ক্ষেত্রে পার্টিশন সংক্রান্ত অপশনগুলি প্রযোজ্য নয়।"
 
-#: tmp/system-config-kickstart.glade.h:113
+#: tmp/system-config-kickstart.glade.h:121
 msgid "Password:"
 msgstr "পাসওয়ার্ড:"
 
-#: tmp/system-config-kickstart.glade.h:114
+#: tmp/system-config-kickstart.glade.h:122
 msgid "Perform installation in interactive mode"
 msgstr "ইন্টারেকটিভ মোডে ইনস্টলেশন করা হবে"
 
-#: tmp/system-config-kickstart.glade.h:115
+#: tmp/system-config-kickstart.glade.h:123
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "টেক্সট মোডে ইনস্টলেশন করা হবে (ডিফল্ট পদ্ধতি হল গ্রাফিকাল)"
 
-#: tmp/system-config-kickstart.glade.h:116
+#: tmp/system-config-kickstart.glade.h:124
 msgid "Perform new installation"
 msgstr "নতুন ইনস্টলেশন করুন"
 
-#: tmp/system-config-kickstart.glade.h:119
+#: tmp/system-config-kickstart.glade.h:125
 msgid "Preserve existing partitions"
 msgstr "বর্তমান পার্টিশনগুলি অক্ষত রাখা হবে"
 
-#: tmp/system-config-kickstart.glade.h:120
+#: tmp/system-config-kickstart.glade.h:126
 msgid "Preview Options"
 msgstr "পূর্বরূপ প্রদর্শন সংক্রান্ত অপশন"
 
-#: tmp/system-config-kickstart.glade.h:121
+#: tmp/system-config-kickstart.glade.h:127
 msgid "RAID"
 msgstr "RAID"
 
-#: tmp/system-config-kickstart.glade.h:122
+#: tmp/system-config-kickstart.glade.h:128
 msgid "RAID Device:"
 msgstr "RAID ডিভাইস:"
 
-#: tmp/system-config-kickstart.glade.h:123
+#: tmp/system-config-kickstart.glade.h:129
 msgid "RAID Level:"
 msgstr "RAID-র লেভেল:"
 
-#: tmp/system-config-kickstart.glade.h:124
+#: tmp/system-config-kickstart.glade.h:130
 msgid "RAID Options"
 msgstr "RAID সংক্রান্ত অপশন"
 
-#: tmp/system-config-kickstart.glade.h:125
-msgid "Raid Members"
+#: tmp/system-config-kickstart.glade.h:131
+#, fuzzy
+msgid "Raid Members:"
 msgstr "RAID-র সদস্য"
 
-#: tmp/system-config-kickstart.glade.h:126
+#: tmp/system-config-kickstart.glade.h:132
 msgid "Reboot system after installation"
 msgstr "ইনস্টলেশনের পরে সিস্টেম পুনরায় বুট করা হবে"
 
-#: tmp/system-config-kickstart.glade.h:127
+#: tmp/system-config-kickstart.glade.h:133
 msgid "Remove all existing partitions"
 msgstr "উপস্থিত সব পার্টিশন মুছে ফেলা হবে"
 
-#: tmp/system-config-kickstart.glade.h:128
+#: tmp/system-config-kickstart.glade.h:134
 msgid "Remove existing Linux partitions"
 msgstr "উপস্থিত Linux পার্টিশনগুলি মুছে ফেলা হবে"
 
-#: tmp/system-config-kickstart.glade.h:129
+#: tmp/system-config-kickstart.glade.h:135
 msgid "Root Password:"
 msgstr "root পাসওয়ার্ড:"
 
-#: tmp/system-config-kickstart.glade.h:130
+#: tmp/system-config-kickstart.glade.h:136
 msgid "Run outside of the chroot environment"
 msgstr "chroot এনভায়রনমেন্টের বাইরে চালানো হবে"
 
-#: tmp/system-config-kickstart.glade.h:131
+#: tmp/system-config-kickstart.glade.h:137
 msgid "SELinux:"
 msgstr "SELinux:"
 
-#: tmp/system-config-kickstart.glade.h:132
+#: tmp/system-config-kickstart.glade.h:138
 msgid "SMB"
 msgstr "SMB"
 
-#: tmp/system-config-kickstart.glade.h:133
-msgid "SMB Authentication"
-msgstr "SMB অনুমোদন ব্যবস্থা"
-
-#: tmp/system-config-kickstart.glade.h:134
+#: tmp/system-config-kickstart.glade.h:139
 msgid "SMB Servers:"
 msgstr "SMB সার্ভার:"
 
-#: tmp/system-config-kickstart.glade.h:135
+#: tmp/system-config-kickstart.glade.h:140
 msgid "SMB Workgroup:"
 msgstr "SMB ওয়ার্কগ্রুপ:"
 
-#: tmp/system-config-kickstart.glade.h:136
+#: tmp/system-config-kickstart.glade.h:141
 msgid "Security level:"
 msgstr "নিরাপত্তার মাত্রা:"
 
-#: tmp/system-config-kickstart.glade.h:137
-msgid "Size (MB):"
-msgstr "মাপ (মেগাবাইট):"
-
-#: tmp/system-config-kickstart.glade.h:138
+#: tmp/system-config-kickstart.glade.h:142
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -986,23 +1053,23 @@ msgstr ""
 "পরিসেবার জন্য কনফিগার করা সম্ভব। RAID ডিভাইস সম্বন্ধে অধিক তথ্যের জন্য kickstart "
 "সহায়িকা পড়ুন।"
 
-#: tmp/system-config-kickstart.glade.h:139
+#: tmp/system-config-kickstart.glade.h:143
 msgid "Specify an FTP username and password"
 msgstr "FTP ব্যবহারকরীর নাম এবং পাসওয়ার্ড নির্ধারণ করুন"
 
-#: tmp/system-config-kickstart.glade.h:140
+#: tmp/system-config-kickstart.glade.h:144
 msgid "Specify installation key:"
 msgstr "ইনস্টলেশন-কি নির্ধারণ করুন"
 
-#: tmp/system-config-kickstart.glade.h:141
+#: tmp/system-config-kickstart.glade.h:145
 msgid "Target Architecture:"
 msgstr "উদ্দিষ্ট আর্কিটেকচার:"
 
-#: tmp/system-config-kickstart.glade.h:142
+#: tmp/system-config-kickstart.glade.h:146
 msgid "Time Zone:"
 msgstr "সময়ের অঞ্চল:"
 
-#: tmp/system-config-kickstart.glade.h:143
+#: tmp/system-config-kickstart.glade.h:147
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -1011,75 +1078,54 @@ msgstr ""
 "আবশ্যক।  তারপর আপনি একটি RAID ডিভাইস নির্মাণ করে সেটি ফরম্যাট এবং মাউন্ট করতে "
 "পারবেন।"
 
-#: tmp/system-config-kickstart.glade.h:145
+#: tmp/system-config-kickstart.glade.h:149
 #, no-c-format
 msgid "Type your %post script below:"
 msgstr "ব্যবহারের উদ্দেশ্যে নির্বাচিত %post স্ক্রিপ্ট নীচে টাইপ করুন:"
 
-#: tmp/system-config-kickstart.glade.h:147
+#: tmp/system-config-kickstart.glade.h:151
 #, no-c-format
 msgid "Type your %pre script below:"
 msgstr "ব্যবহারের উদ্দেশ্যে নির্বাচিত %pre স্ক্রিপ্ট নীচে টাইপ করুন:"
 
-#: tmp/system-config-kickstart.glade.h:148
+#: tmp/system-config-kickstart.glade.h:152
 msgid "Upgrade an existing installation"
 msgstr "বর্তমান ইনস্টলেশন আপগ্রেড করুন"
 
-#: tmp/system-config-kickstart.glade.h:149
+#: tmp/system-config-kickstart.glade.h:153
 msgid "Upgrade existing boot loader"
 msgstr "উপস্থিত বুট-লোডার আপগ্রেড করুন"
 
-#: tmp/system-config-kickstart.glade.h:150
+#: tmp/system-config-kickstart.glade.h:154
 msgid "Use GRUB password"
 msgstr "GRUB-এ পাসওয়ার্ড ব্যবহার করা হবে"
 
-#: tmp/system-config-kickstart.glade.h:151
+#: tmp/system-config-kickstart.glade.h:155
 msgid "Use Shadow Passwords"
 msgstr "শেডো পাসওয়ার্ড ব্যবহার করা হবে"
 
-#: tmp/system-config-kickstart.glade.h:152
+#: tmp/system-config-kickstart.glade.h:156
 msgid "Use UTC clock"
 msgstr "UTC ঘড়ি ব্যবহার করা হবে"
 
-#: tmp/system-config-kickstart.glade.h:153
+#: tmp/system-config-kickstart.glade.h:157
 msgid "Use an interpreter:"
 msgstr "একটি ইন্টারপ্রেটার ব্যবহার করা হবে:"
 
-#: tmp/system-config-kickstart.glade.h:154
+#: tmp/system-config-kickstart.glade.h:158
 msgid "Use broadcast to find NIS server"
 msgstr "NIS সার্ভার অনুসন্ধান করতে ব্রডকাস্ট ব্যবহার করুন"
 
-#: tmp/system-config-kickstart.glade.h:155
-msgid "Use existing partition (onpart)"
+#: tmp/system-config-kickstart.glade.h:159
+#, fuzzy
+msgid "Use existing partition (onpart, e.g. hda1 or sdc3):"
 msgstr "উপস্থিত পার্টিশন ব্যবহার করা হবে (onpart)"
 
-#: tmp/system-config-kickstart.glade.h:156
+#: tmp/system-config-kickstart.glade.h:160
 msgid "Use recommended swap size"
 msgstr "swap-র ক্ষেত্রে উল্লিখিত মাপ ব্যবহার করা হবে"
 
-#: tmp/system-config-kickstart.glade.h:157
-msgid "Warn"
-msgstr "সতর্কবার্তা"
-
-#: tmp/system-config-kickstart.glade.h:159
-#, no-c-format
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %post command at the beginning."
-msgstr ""
-"সতর্কবাণী: এই স্ক্রিপ্টের মধ্যে উপস্থিত কোনো ত্রুটির দরুণ আপনার kickstart ইনস্টলেশন "
-"ব্যর্থ হতে পারে। %post কমান্ডটি আরম্ভে অন্তর্ভুক্ত করবেন না।"
-
 #: tmp/system-config-kickstart.glade.h:161
-#, no-c-format
-msgid ""
-"Warning: An error in this script might cause your kickstart installation to "
-"fail. Do not include the %pre command at the beginning."
-msgstr ""
-"সতর্কবাণী: এই স্ক্রিপ্টের মধ্যে উপস্থিত কোনো ত্রুটির দরুণ আপনার kickstart ইনস্টলেশন "
-"ব্যর্থ হতে পারে। %pre কমান্ডটি আরম্ভে অন্তর্ভুক্ত করবেন না।"
-
-#: tmp/system-config-kickstart.glade.h:162
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
@@ -1087,127 +1133,183 @@ msgstr ""
 "আপনি নিম্নোক্ত কনফিগারেশন নির্বাচন করেছেন। ফাইল সংরক্ষণ-এ ক্লিক করে kickstart "
 "ফাইলটি সংরক্ষণ করুন।"
 
-#: tmp/system-config-kickstart.glade.h:163
-msgid "_About"
-msgstr "পরিচিতি (_A)"
-
-#: tmp/system-config-kickstart.glade.h:164
+#: tmp/system-config-kickstart.glade.h:162
 msgid "_Add"
 msgstr "যোগ করুন (_A)"
 
-#: tmp/system-config-kickstart.glade.h:165
+#: tmp/system-config-kickstart.glade.h:163
 msgid "_Add Network Device"
 msgstr "নেটওয়ার্ক ডিভাইস যোগ করুন (_A)"
 
-#: tmp/system-config-kickstart.glade.h:166
-msgid "_Contents"
-msgstr "সূচি (_C)"
-
-#: tmp/system-config-kickstart.glade.h:167
+#: tmp/system-config-kickstart.glade.h:164
 msgid "_Delete"
 msgstr "মুছে ফেলুন (_D)"
 
-#: tmp/system-config-kickstart.glade.h:168
+#: tmp/system-config-kickstart.glade.h:165
 msgid "_Delete Network Device"
 msgstr "নেটওয়ার্ক ডিভাইস মুছে ফেলুন (_D)"
 
-#: tmp/system-config-kickstart.glade.h:169
+#: tmp/system-config-kickstart.glade.h:166
 msgid "_Edit"
 msgstr "সম্পাদনা (_E)"
 
-#: tmp/system-config-kickstart.glade.h:170
+#: tmp/system-config-kickstart.glade.h:167
 msgid "_Edit Network Device"
 msgstr "নেটওয়ার্ক ডিভাইস সম্পাদন করুন (_E)"
 
-#: tmp/system-config-kickstart.glade.h:171
+#: tmp/system-config-kickstart.glade.h:168
 msgid "_File"
 msgstr "ফাইল (_F)"
 
-#: tmp/system-config-kickstart.glade.h:172
+#: tmp/system-config-kickstart.glade.h:169
 msgid "_Help"
 msgstr "সাহায্য (_H)"
 
-#: tmp/system-config-kickstart.glade.h:173
+#: tmp/system-config-kickstart.glade.h:170
 msgid "_Open File"
 msgstr "ফাইল খুলুন (_O)"
 
-#: tmp/system-config-kickstart.glade.h:174
+#: tmp/system-config-kickstart.glade.h:171
 msgid "_Preview"
 msgstr "পূর্বরূপ (_P)"
 
-#: tmp/system-config-kickstart.glade.h:175
-msgid "_Quit"
-msgstr "প্রস্থান (_Q)"
-
-#: tmp/system-config-kickstart.glade.h:176
-msgid "_Save File"
-msgstr "ফাইল সংরক্ষণ (_S)"
-
-#: tmp/system-config-kickstart.glade.h:177
+#: tmp/system-config-kickstart.glade.h:172
 msgid "_Save to File"
 msgstr "ফাইলে সংরক্ষণ (_S)"
 
-#: tmp/system-config-kickstart.glade.h:180
-msgid "md0"
-msgstr "md0"
+#~ msgid ""
+#~ "Kickstart Configurator @VERSION@\n"
+#~ " Copyright (c) 2000-2002 Red Hat, Inc.\n"
+#~ " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
+#~ " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
+#~ " A graphical interface for creating a kickstart file"
+#~ msgstr ""
+#~ "Kickstart Configurator @VERSION@\n"
+#~ " Copyright (c) 2000-2002 Red Hat, Inc.\n"
+#~ " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
+#~ " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
+#~ " kickstart ফাইল নির্মাণের গ্রাফিকাল ইন্টারফেস"
 
-#: tmp/system-config-kickstart.glade.h:181
-msgid "md1"
-msgstr "md1"
+#~ msgid "         "
+#~ msgstr "         "
 
-#: tmp/system-config-kickstart.glade.h:182
-msgid "md10"
-msgstr "md10"
+#~ msgid "(for example: hda or sdc)"
+#~ msgstr "(উদাহরণ: hda অথবা sdc)"
 
-#: tmp/system-config-kickstart.glade.h:183
-msgid "md11"
-msgstr "md11"
+#~ msgid "(for example: hda1 or sdc3)"
+#~ msgstr "(উদাহরণ: hda1 অথবা sdc3)"
 
-#: tmp/system-config-kickstart.glade.h:184
-msgid "md12"
-msgstr "md12"
+#~ msgid "0"
+#~ msgstr "0"
 
-#: tmp/system-config-kickstart.glade.h:185
-msgid "md13"
-msgstr "md13"
+#~ msgid "1"
+#~ msgstr "1"
 
-#: tmp/system-config-kickstart.glade.h:186
-msgid "md14"
-msgstr "md14"
+#~ msgid "5"
+#~ msgstr "5"
 
-#: tmp/system-config-kickstart.glade.h:187
-msgid "md15"
-msgstr "md15"
+#~ msgid "Active"
+#~ msgstr "সক্রিয়"
 
-#: tmp/system-config-kickstart.glade.h:188
-msgid "md2"
-msgstr "md2"
+#~ msgid "Additional Size Options"
+#~ msgstr "মাপ সম্বন্ধীয় অতিরিক্ত অপশন"
 
-#: tmp/system-config-kickstart.glade.h:189
-msgid "md3"
-msgstr "md3"
+#~ msgid "Authentication:"
+#~ msgstr "অনুমোদন ব্যবস্থা:"
 
-#: tmp/system-config-kickstart.glade.h:190
-msgid "md4"
-msgstr "md4"
+# not sure
+#~ msgid "Basic Configuration (required)"
+#~ msgstr "মৌলিক কনফিগারেশন (আবশ্যক)"
 
-#: tmp/system-config-kickstart.glade.h:191
-msgid "md5"
-msgstr "md5"
+#~ msgid "Boot Loader Options (required)"
+#~ msgstr "বুট-লোডার সংক্রান্ত অপশন (আবশ্যক)"
 
-#: tmp/system-config-kickstart.glade.h:192
-msgid "md6"
-msgstr "md6"
+#~ msgid "Choose the Installation Method:"
+#~ msgstr "ইনস্টলেশন প্রক্রিয়া নির্বাচন করুন:"
 
-#: tmp/system-config-kickstart.glade.h:193
-msgid "md7"
-msgstr "md7"
+#~ msgid "Configure the X Window System"
+#~ msgstr "X উইন্ডো সিস্টেম কনফিগার করুন"
 
-#: tmp/system-config-kickstart.glade.h:194
-msgid "md8"
-msgstr "md8"
+#~ msgid "Disabled"
+#~ msgstr "নিষ্ক্রিয়"
 
-#: tmp/system-config-kickstart.glade.h:195
-msgid "md9"
-msgstr "md9"
+#~ msgid "Drive :"
+#~ msgstr "ড্রাইভ :"
 
+#~ msgid "Enable firewall"
+#~ msgstr "ফায়ারওয়াল সক্রিয় করুন"
+
+#~ msgid "Enabled"
+#~ msgstr "সক্রিয় অবস্থায় থাকবে"
+
+#~ msgid "Installation Method (required)"
+#~ msgstr "ইনস্টলেশন পদ্ধতি (আবশ্যক)"
+
+#~ msgid "Partition Information (required)"
+#~ msgstr "পার্টিশন সম্বন্ধীয় তথ্য (আবশ্যক)"
+
+#~ msgid "Size (MB):"
+#~ msgstr "মাপ (মেগাবাইট):"
+
+#~ msgid "Warn"
+#~ msgstr "সতর্কবার্তা"
+
+#~ msgid "_About"
+#~ msgstr "পরিচিতি (_A)"
+
+#~ msgid "_Contents"
+#~ msgstr "সূচি (_C)"
+
+#~ msgid "_Quit"
+#~ msgstr "প্রস্থান (_Q)"
+
+#~ msgid "_Save File"
+#~ msgstr "ফাইল সংরক্ষণ (_S)"
+
+#~ msgid "md0"
+#~ msgstr "md0"
+
+#~ msgid "md1"
+#~ msgstr "md1"
+
+#~ msgid "md10"
+#~ msgstr "md10"
+
+#~ msgid "md11"
+#~ msgstr "md11"
+
+#~ msgid "md12"
+#~ msgstr "md12"
+
+#~ msgid "md13"
+#~ msgstr "md13"
+
+#~ msgid "md14"
+#~ msgstr "md14"
+
+#~ msgid "md15"
+#~ msgstr "md15"
+
+#~ msgid "md2"
+#~ msgstr "md2"
+
+#~ msgid "md3"
+#~ msgstr "md3"
+
+#~ msgid "md4"
+#~ msgstr "md4"
+
+#~ msgid "md5"
+#~ msgstr "md5"
+
+#~ msgid "md6"
+#~ msgstr "md6"
+
+#~ msgid "md7"
+#~ msgstr "md7"
+
+#~ msgid "md8"
+#~ msgstr "md8"
+
+#~ msgid "md9"
+#~ msgstr "md9"
