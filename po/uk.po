@@ -1,13 +1,13 @@
 # Ukrainian translation to redhat-config-kickstart.
 # Copyright (C) Free Software Foundation
-# Maxim Dziumanenko <dziumanenko@gmail.com>, 2003-2007.
+# Maxim Dziumanenko <dziumanenko@gmail.com>, 2003-2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: redhat-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-09-22 11:01-0400\n"
-"PO-Revision-Date: 2007-01-24 13:04+0200 2003\n"
+"PO-Revision-Date: 2009-09-22 13:04+0200 2003\n"
 "Last-Translator: Maxim Dziumanenko <dziumanenko@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -59,11 +59,11 @@ msgstr "Параметри завантажувача не застосовні 
 
 #: ../src/firewall.py:60
 msgid "Trusted services:"
-msgstr ""
+msgstr "Довірені служби:"
 
 #: ../src/firewall.py:92
 msgid "Other ports (1029:tcp):"
-msgstr ""
+msgstr "Інші порти: (1029:tcp)"
 
 #: ../src/install.py:132
 msgid "Please enter an NFS server."
@@ -121,12 +121,23 @@ msgid ""
 "this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
 "Ave, Cambridge, MA 02139, USA."
 msgstr ""
+"Ця програма є вільною; ви можете поширювати її та/або змінити її "
+"на умовах GNU General Public License що видана Free "
+"Software Foundation; версії 2 цієї ліцензії або (на ваш розсуд) "
+"будь-якої старшої версії.\n"
+"\n"
+"Програма поширюється зі сподіванням, що буде корисною але БЕЗ "
+"БУДЬ-ЯКИХ ГАРАНТІЙ; навіть без неявної гарантії КОМЕРЦІЙНОЇ ЦІННОСТІ чи "
+"ПРИДАТНОСТІ ДО ПЕВНОЇ МЕТИ.  Докладніше дивіться GNU General Public License.\n"
+"\n"
+"Разом з програмою ви мали б отримати копію GNU General Public License; якщо це на тае зверніться до  Free Software Foundation, Inc., 675 Mass "
+"Ave, Cambridge, MA 02139, USA."
 
 #: ../src/kickstartGui.py:125 ../src/kickstartGui.py:130
 #: ../src/kickstartGui.py:330 ../src/kickstartGui.py:335
-#, fuzzy, python-format
+#, python-format
 msgid "The kickstart file %s could not be opened."
-msgstr "Не вдається отримати доступ до файлу \"%s\"."
+msgstr "Не вдається відкрити файл kickstart \"%s\"."
 
 #: ../src/kickstartGui.py:127 ../src/kickstartGui.py:332
 #, python-format
@@ -235,14 +246,12 @@ msgid "Please fill in the network information"
 msgstr "Вкажіть параметри мережі"
 
 #: ../src/network.py:173 ../src/network.py:231
-#, fuzzy
 msgid "Please enter a valid gateway address."
-msgstr "Введіть каталог жорсткого диску."
+msgstr "Введіть адресу шлюзу."
 
 #: ../src/network.py:185 ../src/network.py:243
-#, fuzzy
 msgid "Please enter a valid nameserver address."
-msgstr "Введіть каталогу на HTTP сервері."
+msgstr "Введіть адресу сервера імен."
 
 #: ../src/network.py:271
 #, python-format
@@ -259,6 +268,10 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Можливість вибору пакетів вимкнена через помилки у параметрах. Виправте "
+"параметри репозиторію та повторіть спробу.\n"
+"\n"
+"%s"
 
 #: ../src/packages.py:203
 msgid "Package configuration is not applicable on upgrades."
@@ -399,150 +412,126 @@ msgid "Raid Devices"
 msgstr "Пристрої Raid"
 
 #: ../src/savedialog.py:75
-#, fuzzy, python-format
+#, python-format
 msgid "The following error occurred while saving the kickstart config %s: %s"
 msgstr ""
-"При читанні конфігурації kickstart виникла наступна помилка:\n"
-"\n"
-"%s"
+"При збереженні конфігурації kickstart виникла наступна помилка  %s: %s"
 
 #: ../src/savedialog.py:79
-#, fuzzy
 msgid "Error Saving Kickstart Config"
-msgstr "Помилка розбору файлів Kickstart"
+msgstr "Помилка при збереженні конфігурації Kickstart"
 
 #: tmp/system-config-kickstart.glade.h:1
-#, fuzzy
 msgid "<b>Advanced Configuration</b>"
-msgstr "Основні параметри"
+msgstr "<b>Розширені параметри</b>"
 
 #: tmp/system-config-kickstart.glade.h:2
-#, fuzzy
 msgid "<b>Authentication Configuration</b>"
-msgstr "Параметри автентифікації"
+msgstr "<b>Параметри автентифікації</b>"
 
 #: tmp/system-config-kickstart.glade.h:3
-#, fuzzy
 msgid "<b>Basic Configuration</b>"
-msgstr "Основні параметри"
+msgstr "<b>Основні параметри</b>"
 
 #: tmp/system-config-kickstart.glade.h:4
 msgid "<b>Disk label</b>"
-msgstr ""
+msgstr "<b>Позначка диска</b>"
 
 #: tmp/system-config-kickstart.glade.h:5
-#, fuzzy
 msgid "<b>Display Configuration</b>"
-msgstr "Конфігурація дисплею"
+msgstr "<b>Конфігурація дисплею</b>"
 
 #: tmp/system-config-kickstart.glade.h:6
-#, fuzzy
 msgid "<b>Firewall Configuration</b>"
-msgstr "Конфігурація брандмауера"
+msgstr "<b>Конфігурація брандмауера</b>"
 
 #: tmp/system-config-kickstart.glade.h:7
-#, fuzzy
 msgid "<b>GRUB Options</b>"
-msgstr "Параметри GRUB:"
+msgstr "<b>Параметри GRUB:</b>"
 
 #: tmp/system-config-kickstart.glade.h:8
-#, fuzzy
 msgid "<b>Hesiod Authentication</b>"
-msgstr "Автентифікація Hesiod"
+msgstr "<b>Автентифікація Hesiod</b>"
 
 #: tmp/system-config-kickstart.glade.h:9
 msgid "<b>Install Options</b>"
-msgstr ""
+msgstr "<b>Параметри встановлення</b>"
 
 #: tmp/system-config-kickstart.glade.h:10
 msgid "<b>Install Type</b>"
-msgstr ""
+msgstr "<b>Тип встановлення</b>"
 
 #: tmp/system-config-kickstart.glade.h:11
-#, fuzzy
 msgid "<b>Installation Method</b>"
-msgstr "Метод встановлення"
+msgstr "<b>Метод встановлення</b>"
 
 #: tmp/system-config-kickstart.glade.h:12
-#, fuzzy
 msgid "<b>Installation source</b>"
-msgstr "Метод встановлення"
+msgstr "<b>Метод встановлення</b>"
 
 #: tmp/system-config-kickstart.glade.h:13
-#, fuzzy
 msgid "<b>Kerberos 5 Authentication</b>"
-msgstr "Автентифікація Kerberos 5"
+msgstr "<b>Автентифікація Kerberos 5</b>"
 
 #: tmp/system-config-kickstart.glade.h:14
-#, fuzzy
 msgid "<b>LDAP Authentication</b>"
-msgstr "Автентифікація LDAP"
+msgstr "<b>Автентифікація LDAP</b>"
 
 #: tmp/system-config-kickstart.glade.h:15
 msgid "<b>Layout</b>"
-msgstr ""
+msgstr "<b>Розмітка</b>"
 
 #: tmp/system-config-kickstart.glade.h:16
-#, fuzzy
 msgid "<b>Master Boot Record</b>"
-msgstr "Очищати головний завантажувальний запис (MBR)"
+msgstr "<b>Головний завантажувальний запис (MBR)</b>"
 
 #: tmp/system-config-kickstart.glade.h:17
-#, fuzzy
 msgid "<b>NIS Authentication</b>"
-msgstr "Автентифікація NIS"
+msgstr "<b>Автентифікація NIS</b>"
 
 #: tmp/system-config-kickstart.glade.h:18
-#, fuzzy
 msgid "<b>Name Switch Cache Daemon (nscd) Authentication</b>"
-msgstr "Автентифікація Name Switch Cache Daemon (nscd)"
+msgstr "<b>Автентифікація Name Switch Cache Daemon (nscd)</b>"
 
 #: tmp/system-config-kickstart.glade.h:19
-#, fuzzy
 msgid "<b>Network Configuration</b>"
-msgstr "Конфігурація мережі"
+msgstr "<b>Конфігурація мережі</b>"
 
 #: tmp/system-config-kickstart.glade.h:20
-#, fuzzy
 msgid "<b>Package Selection</b>"
-msgstr "Вибір пакетів"
+msgstr "<b>Вибір пакетів"
 
 #: tmp/system-config-kickstart.glade.h:21
-#, fuzzy
 msgid "<b>Partition options</b>"
-msgstr "Параметри розділу"
+msgstr "<b>Параметри розділу"
 
 #: tmp/system-config-kickstart.glade.h:22
-#, fuzzy
 msgid "<b>Partitions</b>"
-msgstr "Розділ:"
+msgstr "<b>Розділи</b>"
 
 #: tmp/system-config-kickstart.glade.h:23
-#, fuzzy
 msgid "<b>Post-Installation Script</b>"
-msgstr "Сценарій після встановлення"
+msgstr "<b>Сценарій після встановлення</b>"
 
 #: tmp/system-config-kickstart.glade.h:24
-#, fuzzy
 msgid "<b>Pre-Installation Script</b>"
-msgstr "Сценарій перед встановленням"
+msgstr "<b>Сценарій перед встановленням</b>"
 
 #: tmp/system-config-kickstart.glade.h:25
-#, fuzzy
 msgid "<b>SMB Authentication</b>"
-msgstr "Автентифікація SMB"
+msgstr "<b>Автентифікація SMB</b>"
 
 #: tmp/system-config-kickstart.glade.h:26
 msgid "<b>Size Options</b>"
-msgstr ""
+msgstr "<b>Параметри розміру</b>"
 
 #: tmp/system-config-kickstart.glade.h:27
 msgid "<b>Special options</b>"
-msgstr ""
+msgstr "<b>Спеціальні пароаметри</b>"
 
 #: tmp/system-config-kickstart.glade.h:28
 msgid "<b>label28</b>"
-msgstr ""
+msgstr "<b>label28</b>"
 
 #: tmp/system-config-kickstart.glade.h:29
 msgid ""
@@ -550,9 +539,12 @@ msgid ""
 "Warn\n"
 "Disabled"
 msgstr ""
+"Активно\n"
+"Попереджувати\n"
+"Вимкнути"
 
 #: tmp/system-config-kickstart.glade.h:33
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "An error in this script might cause your kickstart installation to fail. Do "
 "not include the %post command at the beginning."
@@ -561,7 +553,7 @@ msgstr ""
 "kickstart. Не вставляйте команду %post на початку."
 
 #: tmp/system-config-kickstart.glade.h:35
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "An error in this script might cause your kickstart installation to fail. Do "
 "not include the %pre command at the beginning."
@@ -606,12 +598,14 @@ msgid "Default Language:"
 msgstr "Типова мова:"
 
 #: tmp/system-config-kickstart.glade.h:45
-#, fuzzy
 msgid ""
 "Disabled\n"
 "Enabled\n"
 "Enabled in reconfiguration mode"
-msgstr "Увімкнений у режимі переконфігурації"
+msgstr ""
+"Вимкнено\n"
+"Увімкнено\n"
+"Увімкнено у режимі переконфігурації"
 
 #: tmp/system-config-kickstart.glade.h:48
 msgid "Display configuration is not applicable on upgrades."
@@ -654,6 +648,8 @@ msgid ""
 "Enable firewall\n"
 "Disable firewall"
 msgstr ""
+"Увімкнути мережний екран\n"
+"Вимкнути мережний екран"
 
 #: tmp/system-config-kickstart.glade.h:59
 msgid "Enable nscd"
@@ -676,18 +672,16 @@ msgid "FTP Directory:"
 msgstr "Каталог FTP:"
 
 #: tmp/system-config-kickstart.glade.h:64
-#, fuzzy
 msgid "FTP Password:"
-msgstr "Пароль FTP"
+msgstr "Пароль FTP:"
 
 #: tmp/system-config-kickstart.glade.h:65
 msgid "FTP Server:"
 msgstr "Сервер FTP:"
 
 #: tmp/system-config-kickstart.glade.h:66
-#, fuzzy
 msgid "FTP Username:"
-msgstr "Користувач FTP"
+msgstr "Користувач FTP:"
 
 #: tmp/system-config-kickstart.glade.h:67
 msgid "File System Type:"
@@ -702,9 +696,8 @@ msgid "Firewall configuration is not applicable on upgrades."
 msgstr "Параметри брандмауера не застосовні при оновленнях."
 
 #: tmp/system-config-kickstart.glade.h:70
-#, fuzzy
 msgid "Fixed size (MB):"
-msgstr "Фіксований розмір"
+msgstr "Фіксований розмір:"
 
 #: tmp/system-config-kickstart.glade.h:71
 msgid "Force to be a primary partition (asprimary)"
@@ -772,7 +765,7 @@ msgstr "Ініціалізувати мітку диску"
 
 #: tmp/system-config-kickstart.glade.h:87
 msgid "Install a graphical environment"
-msgstr ""
+msgstr "Встановити графічне оточення"
 
 #: tmp/system-config-kickstart.glade.h:88
 msgid "Install boot loader on Master Boot Record (MBR)"
@@ -835,9 +828,8 @@ msgid "Make RAID Device"
 msgstr "Створити пристрій RAID"
 
 #: tmp/system-config-kickstart.glade.h:103
-#, fuzzy
 msgid "Make partition on specific drive (ondisk, e.g. hda or sdc):"
-msgstr "Зробити розділ на вказаному пристрої (ondisk)"
+msgstr "Зробити розділ на вказаному пристрої (ondisk, наприклад hda чи sdc):"
 
 #: tmp/system-config-kickstart.glade.h:104
 msgid "Mount Point:"
@@ -948,9 +940,8 @@ msgid "RAID Options"
 msgstr "Параметри RAID"
 
 #: tmp/system-config-kickstart.glade.h:131
-#, fuzzy
 msgid "Raid Members:"
-msgstr "Частини RAID"
+msgstr "Учасники RAID:"
 
 #: tmp/system-config-kickstart.glade.h:132
 msgid "Reboot system after installation"
@@ -974,7 +965,7 @@ msgstr "Запускати поза chroot оточенням"
 
 #: tmp/system-config-kickstart.glade.h:137
 msgid "SELinux:"
-msgstr ""
+msgstr "SELinux:"
 
 #: tmp/system-config-kickstart.glade.h:138
 msgid "SMB"
@@ -990,7 +981,7 @@ msgstr "Робоча група SMB:"
 
 #: tmp/system-config-kickstart.glade.h:141
 msgid "Security level:"
-msgstr ""
+msgstr "Рівень безпеки:"
 
 #: tmp/system-config-kickstart.glade.h:142
 msgid ""
@@ -1068,9 +1059,8 @@ msgid "Use broadcast to find NIS server"
 msgstr "Використовувати широкомовні запити для пошуку NIS"
 
 #: tmp/system-config-kickstart.glade.h:159
-#, fuzzy
 msgid "Use existing partition (onpart, e.g. hda1 or sdc3):"
-msgstr "Використовувати існуючий розділ (onpart)"
+msgstr "Використовувати існуючий розділ (onpart, наприклад hda1 чи sdc3):"
 
 #: tmp/system-config-kickstart.glade.h:160
 msgid "Use recommended swap size"
@@ -1128,195 +1118,4 @@ msgstr "_Перегляд"
 msgid "_Save to File"
 msgstr "З_берегти файл"
 
-#~ msgid ""
-#~ "Kickstart Configurator @VERSION@\n"
-#~ " Copyright (c) 2000-2002 Red Hat, Inc.\n"
-#~ " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-#~ " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-#~ " A graphical interface for creating a kickstart file"
-#~ msgstr ""
-#~ "Kickstart Configurator @VERSION@\n"
-#~ " Copyright (c) 2000-2002 Red Hat, Inc.\n"
-#~ " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-#~ " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-#~ "Графічний інтерфейс для створення kickstart файлу."
 
-#~ msgid "         "
-#~ msgstr "         "
-
-#~ msgid "(for example: hda or sdc)"
-#~ msgstr "(наприклад: hda чи sdc)"
-
-#~ msgid "(for example: hda1 or sdc3)"
-#~ msgstr "(наприклад: hda1 чи sdc3)"
-
-#~ msgid "0"
-#~ msgstr "0"
-
-#~ msgid "1"
-#~ msgstr "1"
-
-#~ msgid "5"
-#~ msgstr "5"
-
-#~ msgid "Additional Size Options"
-#~ msgstr "Додаткові параметри розміру"
-
-#~ msgid "Authentication:"
-#~ msgstr "Автентифікація:"
-
-#~ msgid "Basic Configuration (required)"
-#~ msgstr "Основні параметри (обов'язково)"
-
-#~ msgid "Boot Loader Options (required)"
-#~ msgstr "Параметри завантажувача (обов'язково)"
-
-#~ msgid "Choose the Installation Method:"
-#~ msgstr "Виберіть метод встановлення:"
-
-#~ msgid "Configure the X Window System"
-#~ msgstr "Налаштувати X Window"
-
-#~ msgid "Disabled"
-#~ msgstr "Вимкнений"
-
-#~ msgid "Drive :"
-#~ msgstr "Пристрій:"
-
-#~ msgid "Enabled"
-#~ msgstr "Увімкнений"
-
-#~ msgid "Installation Method (required)"
-#~ msgstr "Метод встановлення (обов'язково)"
-
-#~ msgid "Partition Information (required)"
-#~ msgstr "Інформація про розділи (обов'язково)"
-
-#~ msgid "Size (MB):"
-#~ msgstr "Розмір (Мб):"
-
-#~ msgid "_About"
-#~ msgstr "_Про програму"
-
-#~ msgid "_Contents"
-#~ msgstr "_Зміст"
-
-#~ msgid "_Quit"
-#~ msgstr "Ви_йти"
-
-#~ msgid "_Save File"
-#~ msgstr "З_берегти файл"
-
-#~ msgid "md0"
-#~ msgstr "md0"
-
-#~ msgid "md1"
-#~ msgstr "md1"
-
-#~ msgid "md10"
-#~ msgstr "md10"
-
-#~ msgid "md11"
-#~ msgstr "md11"
-
-#~ msgid "md12"
-#~ msgstr "md12"
-
-#~ msgid "md13"
-#~ msgstr "md13"
-
-#~ msgid "md14"
-#~ msgstr "md14"
-
-#~ msgid "md15"
-#~ msgstr "md15"
-
-#~ msgid "md2"
-#~ msgstr "md2"
-
-#~ msgid "md3"
-#~ msgstr "md3"
-
-#~ msgid "md4"
-#~ msgstr "md4"
-
-#~ msgid "md5"
-#~ msgstr "md5"
-
-#~ msgid "md6"
-#~ msgstr "md6"
-
-#~ msgid "md7"
-#~ msgstr "md7"
-
-#~ msgid "md8"
-#~ msgstr "md8"
-
-#~ msgid "md9"
-#~ msgstr "md9"
-
-#~ msgid "Could not read video driver database"
-#~ msgstr "Неможливо прочитати базу даних відеокарток"
-
-#~ msgid "Please select an X driver."
-#~ msgstr "Виберіть драйвер X-Window."
-
-#~ msgid "Please select a monitor."
-#~ msgstr "Виберіть дзеркало."
-
-#~ msgid "Color Depth"
-#~ msgstr "Якість передачі кольору"
-
-#~ msgid "Default Desktop:"
-#~ msgstr "Типове середовище:"
-
-#~ msgid "GNOME"
-#~ msgstr "GNOME"
-
-#~ msgid "General"
-#~ msgstr "Загальні"
-
-#~ msgid "Horizontal Sync:"
-#~ msgstr "Частота рядків:"
-
-#~ msgid "Hz"
-#~ msgstr "Гц"
-
-#~ msgid "KDE"
-#~ msgstr "KDE"
-
-#~ msgid "Monitor"
-#~ msgstr "Монітор"
-
-#~ msgid "Probe for monitor"
-#~ msgstr "Визначати монітор автоматично"
-
-#~ msgid "Probe for video card driver"
-#~ msgstr "Визначати драйвер відеокарту автоматично"
-
-#~ msgid "Resolution"
-#~ msgstr "Роздільна здатність"
-
-#~ msgid "Start the X Window System on boot"
-#~ msgstr "Запускати X Window при завантаженні"
-
-#~ msgid "Use MD5"
-#~ msgstr "Використовувати MD5"
-
-#~ msgid "Use custom monitor sync rates"
-#~ msgstr "Власний діапазон розгорток монітора"
-
-#~ msgid "Vertical Sync:"
-#~ msgstr "Частота кадрів:"
-
-#~ msgid "Video Card"
-#~ msgstr "Відеокарта"
-
-#~ msgid "Video Card RAM: "
-#~ msgstr "Обсяг пам'яті відеокарти:"
-
-#~ msgid "kHz"
-#~ msgstr "кГц"
-
-#~ msgid "."
-#~ msgstr "."
