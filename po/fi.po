@@ -1,6 +1,5 @@
 # translation of system-config-kickstart.po to Finnish
 # This file is distributed under the same license as the system-config-kickstart package.
-#
 # Mikko Ikola <ikola@iki.fi>, 2004.
 # Lauri Nurmi <lanurmi@iki.fi>, 2004.
 # Ville-Pekka Vainio <vpivaini@cs.helsinki.fi>, 2007, 2009.
@@ -9,9 +8,9 @@ msgstr ""
 "Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-09-22 11:01-0400\n"
-"PO-Revision-Date: 2009-03-23 11:26+0200\n"
+"PO-Revision-Date: 2009-09-23 17:31+0300\n"
 "Last-Translator: Ville-Pekka Vainio <vpivaini@cs.helsinki.fi>\n"
-"Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
+"Language-Team: Finnish <laatu@lokalisointi.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -64,9 +63,8 @@ msgid "Trusted services:"
 msgstr "Luotetut palvelut:"
 
 #: ../src/firewall.py:92
-#, fuzzy
 msgid "Other ports (1029:tcp):"
-msgstr "Muut portit: (1029:tcp)"
+msgstr "Muut portit (1029:tcp)"
 
 #: ../src/install.py:132
 msgid "Please enter an NFS server."
@@ -124,6 +122,19 @@ msgid ""
 "this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
 "Ave, Cambridge, MA 02139, USA."
 msgstr ""
+"Tämä ohjelma on vapaa; tätä ohjelmaa on sallittu levittää edelleen ja "
+"muuttaa GNU yleisen lisenssin (GPL-lisenssin) ehtojen mukaan sellaisina kuin "
+"Free Software Foundation on ne julkaissut; joko Lisenssin version 2, tai "
+"(valinnan mukaan) minkä tahansa myöhemmän version mukaisesti.\n"
+"\n"
+"Tätä ohjelmaa levitetään siinä toivossa, että se olisi hyödyllinen, mutta "
+"ilman mitään takuuta; ilman edes hiljaista takuuta kaupallisesti "
+"hyväksyttävästä laadusta tai soveltuvuudesta tiettyyn tarkoitukseen. Katso "
+"GPL-lisenssistä lisää yksityiskohtia.\n"
+"\n"
+"Tämän ohjelman mukana pitäisi tulla kopio GPL-lisenssistä; jos näin ei ole, "
+"kirjoita osoitteeseen  Free Software Foundation, Inc., 675 Mass Ave, "
+"Cambridge, MA 02139, USA."
 
 #: ../src/kickstartGui.py:125 ../src/kickstartGui.py:130
 #: ../src/kickstartGui.py:330 ../src/kickstartGui.py:335
@@ -413,137 +424,116 @@ msgid "Error Saving Kickstart Config"
 msgstr "Virhe tallennettaessa kickstart-asetuksia"
 
 #: tmp/system-config-kickstart.glade.h:1
-#, fuzzy
 msgid "<b>Advanced Configuration</b>"
-msgstr "Perusasetukset"
+msgstr "<b>Lisäasetukset</b>"
 
 #: tmp/system-config-kickstart.glade.h:2
-#, fuzzy
 msgid "<b>Authentication Configuration</b>"
-msgstr "Todennusasetukset"
+msgstr "<b>Todennusasetukset</b>"
 
 #: tmp/system-config-kickstart.glade.h:3
-#, fuzzy
 msgid "<b>Basic Configuration</b>"
-msgstr "Perusasetukset"
+msgstr "<b>Perusasetukset</b>"
 
 #: tmp/system-config-kickstart.glade.h:4
 msgid "<b>Disk label</b>"
-msgstr ""
+msgstr "<b>Levynimiö</b>"
 
 #: tmp/system-config-kickstart.glade.h:5
-#, fuzzy
 msgid "<b>Display Configuration</b>"
-msgstr "Näyttöasetukset"
+msgstr "<b>Näyttöasetukset</b>"
 
 #: tmp/system-config-kickstart.glade.h:6
-#, fuzzy
 msgid "<b>Firewall Configuration</b>"
-msgstr "Palomuuriasetukset"
+msgstr "<b>Palomuuriasetukset</b>"
 
 #: tmp/system-config-kickstart.glade.h:7
-#, fuzzy
 msgid "<b>GRUB Options</b>"
-msgstr "GRUB:n valinnat:"
+msgstr "<b>GRUB-valinnat</b>"
 
 #: tmp/system-config-kickstart.glade.h:8
-#, fuzzy
 msgid "<b>Hesiod Authentication</b>"
-msgstr "Hesiod-todennus"
+msgstr "<b>Hesiod-todennus</b>"
 
 #: tmp/system-config-kickstart.glade.h:9
 msgid "<b>Install Options</b>"
-msgstr ""
+msgstr "<b>Asennusvalinnat</b>"
 
 #: tmp/system-config-kickstart.glade.h:10
 msgid "<b>Install Type</b>"
-msgstr ""
+msgstr "<b>Asennustyyppi</b>"
 
 #: tmp/system-config-kickstart.glade.h:11
-#, fuzzy
 msgid "<b>Installation Method</b>"
-msgstr "Asennustapa"
+msgstr "<b>Asennustapa</b>"
 
 #: tmp/system-config-kickstart.glade.h:12
-#, fuzzy
 msgid "<b>Installation source</b>"
-msgstr "Asennustapa"
+msgstr "<b>Asennuslähde</b>"
 
 #: tmp/system-config-kickstart.glade.h:13
-#, fuzzy
 msgid "<b>Kerberos 5 Authentication</b>"
-msgstr "Kerberos 5 -todennus"
+msgstr "<b>Kerberos 5 -todennus</b>"
 
 #: tmp/system-config-kickstart.glade.h:14
-#, fuzzy
 msgid "<b>LDAP Authentication</b>"
-msgstr "LDAP-todennus"
+msgstr "<b>LDAP-todennus</b>"
 
 #: tmp/system-config-kickstart.glade.h:15
 msgid "<b>Layout</b>"
-msgstr ""
+msgstr "<b>Asettelu</b>"
 
 #: tmp/system-config-kickstart.glade.h:16
-#, fuzzy
 msgid "<b>Master Boot Record</b>"
-msgstr "Tyhjää pääkäynnistyslohko (MBR)"
+msgstr "<b>Pääkäynnistyslohko</b>"
 
 #: tmp/system-config-kickstart.glade.h:17
-#, fuzzy
 msgid "<b>NIS Authentication</b>"
-msgstr "NIS-todennus"
+msgstr "<b>NIS-todennus</b>"
 
 #: tmp/system-config-kickstart.glade.h:18
-#, fuzzy
 msgid "<b>Name Switch Cache Daemon (nscd) Authentication</b>"
-msgstr "Name Switch Cache Daemon (nscd) -todennus"
+msgstr "<b>Name Switch Cache Daemon (nscd) -todennus</b>"
 
 #: tmp/system-config-kickstart.glade.h:19
-#, fuzzy
 msgid "<b>Network Configuration</b>"
-msgstr "Verkkoasetukset"
+msgstr "<b>Verkkoasetukset</b>"
 
 #: tmp/system-config-kickstart.glade.h:20
-#, fuzzy
 msgid "<b>Package Selection</b>"
-msgstr "Paketin valinta"
+msgstr "<b>Pakettien valinta</b>"
 
 #: tmp/system-config-kickstart.glade.h:21
-#, fuzzy
 msgid "<b>Partition options</b>"
-msgstr "Osiovalinnat"
+msgstr "<b>Osiovalinnat</b>"
 
 #: tmp/system-config-kickstart.glade.h:22
-#, fuzzy
 msgid "<b>Partitions</b>"
-msgstr "Osio: "
+msgstr "<b>Osiot</b>"
 
 #: tmp/system-config-kickstart.glade.h:23
-#, fuzzy
 msgid "<b>Post-Installation Script</b>"
-msgstr "Jälkiasennusskripti"
+msgstr "<b>Jälkiasennusskripti</b>"
 
 #: tmp/system-config-kickstart.glade.h:24
-#, fuzzy
 msgid "<b>Pre-Installation Script</b>"
-msgstr "Esiasennusskripti"
+msgstr "<b>Esiasennusskripti</b>"
 
 #: tmp/system-config-kickstart.glade.h:25
-#, fuzzy
 msgid "<b>SMB Authentication</b>"
-msgstr "SMB-todennus"
+msgstr "<b>SMB-todennus</b>"
 
 #: tmp/system-config-kickstart.glade.h:26
 msgid "<b>Size Options</b>"
-msgstr ""
+msgstr "<b>Kokovalinnat</b>"
 
 #: tmp/system-config-kickstart.glade.h:27
 msgid "<b>Special options</b>"
-msgstr ""
+msgstr "<b>Erityiset valinnat</b>"
 
 #: tmp/system-config-kickstart.glade.h:28
 msgid "<b>label28</b>"
-msgstr ""
+msgstr "<b>label28</b>"
 
 #: tmp/system-config-kickstart.glade.h:29
 msgid ""
@@ -551,24 +541,27 @@ msgid ""
 "Warn\n"
 "Disabled"
 msgstr ""
+"Aktiivinen\n"
+"Varoita\n"
+"Poissa käytöstä"
 
 #: tmp/system-config-kickstart.glade.h:33
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "An error in this script might cause your kickstart installation to fail. Do "
 "not include the %post command at the beginning."
 msgstr ""
-"Varoitus: Virhe tässä skriptissä saattaa tehdä kickstart-asennuksen "
-"toimimattomaksi. Älä sisällytä %post-komentoa alkuun."
+"Virhe tässä skriptissä saattaa tehdä kickstart-asennuksen toimimattomaksi. "
+"Älä sisällytä %post-komentoa alkuun."
 
 #: tmp/system-config-kickstart.glade.h:35
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "An error in this script might cause your kickstart installation to fail. Do "
 "not include the %pre command at the beginning."
 msgstr ""
-"Varoitus: Virhe tässä skriptissä saattaa tehdä kickstart-asennuksen "
-"toimimattomaksi. Älä sisällytä %pre-komentoa alkuun."
+"Virhe tässä skriptissä saattaa tehdä kickstart-asennuksen toimimattomaksi. "
+"Älä sisällytä %pre-komentoa alkuun."
 
 #: tmp/system-config-kickstart.glade.h:36
 msgid "Authentication options are not applicable on upgrades."
@@ -607,12 +600,14 @@ msgid "Default Language:"
 msgstr "Oletuskieli:"
 
 #: tmp/system-config-kickstart.glade.h:45
-#, fuzzy
 msgid ""
 "Disabled\n"
 "Enabled\n"
 "Enabled in reconfiguration mode"
-msgstr "Käytössä uudelleenasetustilassa"
+msgstr ""
+"Poissa käytöstä\n"
+"Käytössä\n"
+"Käytössä uudelleenasetustilassa"
 
 #: tmp/system-config-kickstart.glade.h:48
 msgid "Display configuration is not applicable on upgrades."
@@ -651,11 +646,12 @@ msgid "Enable SMB Authentication"
 msgstr "Käytä SMB-todennusta"
 
 #: tmp/system-config-kickstart.glade.h:57
-#, fuzzy
 msgid ""
 "Enable firewall\n"
 "Disable firewall"
-msgstr "Ota palomuuri pois käytöstä"
+msgstr ""
+"Ota palomuuri käyttöön\n"
+"Ota palomuuri pois käytöstä"
 
 #: tmp/system-config-kickstart.glade.h:59
 msgid "Enable nscd"
@@ -678,18 +674,16 @@ msgid "FTP Directory:"
 msgstr "FTP-hakemisto:"
 
 #: tmp/system-config-kickstart.glade.h:64
-#, fuzzy
 msgid "FTP Password:"
-msgstr "FTP-salasana"
+msgstr "FTP-salasana:"
 
 #: tmp/system-config-kickstart.glade.h:65
 msgid "FTP Server:"
 msgstr "FTP-palvelin:"
 
 #: tmp/system-config-kickstart.glade.h:66
-#, fuzzy
 msgid "FTP Username:"
-msgstr "FTP-käyttäjänimi"
+msgstr "FTP-käyttäjätunnus:"
 
 #: tmp/system-config-kickstart.glade.h:67
 msgid "File System Type:"
@@ -704,9 +698,8 @@ msgid "Firewall configuration is not applicable on upgrades."
 msgstr "Palomuuriasetukset eivät ole käyttökelpoisia päivityksissä."
 
 #: tmp/system-config-kickstart.glade.h:70
-#, fuzzy
 msgid "Fixed size (MB):"
-msgstr "Kiinteä koko"
+msgstr "Kiinteä koko (Mt):"
 
 #: tmp/system-config-kickstart.glade.h:71
 msgid "Force to be a primary partition (asprimary)"
@@ -774,7 +767,7 @@ msgstr "Alusta levynimiö"
 
 #: tmp/system-config-kickstart.glade.h:87
 msgid "Install a graphical environment"
-msgstr ""
+msgstr "Asenna graafinen ympäristö"
 
 #: tmp/system-config-kickstart.glade.h:88
 msgid "Install boot loader on Master Boot Record (MBR)"
@@ -837,9 +830,8 @@ msgid "Make RAID Device"
 msgstr "Luo RAID-laite"
 
 #: tmp/system-config-kickstart.glade.h:103
-#, fuzzy
 msgid "Make partition on specific drive (ondisk, e.g. hda or sdc):"
-msgstr "Luo osio tietylle levylle (ondisk)"
+msgstr "Luo osio tietylle levylle (ondisk, esim. hda tai sdc):"
 
 #: tmp/system-config-kickstart.glade.h:104
 msgid "Mount Point:"
@@ -950,9 +942,8 @@ msgid "RAID Options"
 msgstr "RAID-valinnat"
 
 #: tmp/system-config-kickstart.glade.h:131
-#, fuzzy
 msgid "Raid Members:"
-msgstr "Raid-jäsenet"
+msgstr "Raid-jäsenet:"
 
 #: tmp/system-config-kickstart.glade.h:132
 msgid "Reboot system after installation"
@@ -1070,9 +1061,8 @@ msgid "Use broadcast to find NIS server"
 msgstr "Käytä yleislähetystä NIS-palvelimen löytämiseksi"
 
 #: tmp/system-config-kickstart.glade.h:159
-#, fuzzy
 msgid "Use existing partition (onpart, e.g. hda1 or sdc3):"
-msgstr "Käytä olemassa olevaa osiota (onpart)"
+msgstr "Käytä olemassa olevaa osiota (onpart, esim. hda1 tai sdc3)"
 
 #: tmp/system-config-kickstart.glade.h:160
 msgid "Use recommended swap size"
