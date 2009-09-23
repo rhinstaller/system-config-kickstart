@@ -1,3 +1,4 @@
+# translation of system-config-kickstart.master.po to Traditional Chinese
 # translation of system-config-kickstart.master.po to
 # translation of zh_TW.po to
 # Translation of zh_TW.po to Traditional Chinese
@@ -14,9 +15,9 @@ msgstr ""
 "Project-Id-Version: system-config-kickstart.master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-09-22 11:01-0400\n"
-"PO-Revision-Date: 2009-03-31 15:43+1000\n"
+"PO-Revision-Date: 2009-09-23 11:35+1000\n"
 "Last-Translator: Terry Chuang <tchuang@redhat.com>\n"
-"Language-Team:  <zh@li.org>\n"
+"Language-Team: Traditional Chinese <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -70,9 +71,8 @@ msgid "Trusted services:"
 msgstr "信任的服務："
 
 #: ../src/firewall.py:92
-#, fuzzy
 msgid "Other ports (1029:tcp):"
-msgstr "其他埠：（1029:tcp）"
+msgstr "其他連接埠（1029:tcp）："
 
 #: ../src/install.py:132
 msgid "Please enter an NFS server."
@@ -130,6 +130,12 @@ msgid ""
 "this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
 "Ave, Cambridge, MA 02139, USA."
 msgstr ""
+"本程式為自由軟體；您可依據自由軟體基金會所發表的 GNU 通用公共許可證就本程式再為發佈與／或修改；無論您依據的是本授權的第二版或（您自行選擇的）任一日後發行的版本。\n"
+"\n"
+"本程式是基於使用目的而加以發佈，然而不負任何擔保責任；亦無對適售性或特定目的適用性所為的默示性擔保。詳情請參照 GNU 通用公共許可證。\n"
+"\n"
+"您應已收到附隨於本程式的 GNU 通用公共授權的副本；如果沒有，請寫信至自由軟體基金會：675 Mass "
+"Ave, Cambridge, MA 02139, USA。"
 
 #: ../src/kickstartGui.py:125 ../src/kickstartGui.py:130
 #: ../src/kickstartGui.py:330 ../src/kickstartGui.py:335
@@ -329,16 +335,14 @@ msgstr "請指定這個分割區的掛載點。"
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:503
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "掛載點「%s」已經被使用。請選擇另一個掛載點。"
 
 #: ../src/partWindow.py:523
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
-msgstr ""
-"要建立一個新的 RAID 分割區，您必須指定一個硬碟裝置名稱或一個現有的分割區。"
+msgstr "要建立一個新的 RAID 分割區，您必須指定一個硬碟裝置名稱或一個現有的分割區。"
 
 #: ../src/partWindow.py:560
 msgid "Specify a device on which to create the partition."
@@ -413,137 +417,116 @@ msgid "Error Saving Kickstart Config"
 msgstr "儲存 Kickstart 配置時發生了錯誤"
 
 #: tmp/system-config-kickstart.glade.h:1
-#, fuzzy
 msgid "<b>Advanced Configuration</b>"
-msgstr "基本組態設定"
+msgstr "<b>進階組態設定</b>"
 
 #: tmp/system-config-kickstart.glade.h:2
-#, fuzzy
 msgid "<b>Authentication Configuration</b>"
-msgstr "認證組態設定"
+msgstr "<b>認證組態設定</b>"
 
 #: tmp/system-config-kickstart.glade.h:3
-#, fuzzy
 msgid "<b>Basic Configuration</b>"
-msgstr "基本組態設定"
+msgstr "<b>基本組態設定</b>"
 
 #: tmp/system-config-kickstart.glade.h:4
 msgid "<b>Disk label</b>"
-msgstr ""
+msgstr "<b>磁碟標籤</b>"
 
 #: tmp/system-config-kickstart.glade.h:5
-#, fuzzy
 msgid "<b>Display Configuration</b>"
-msgstr "顯示卡設定"
+msgstr "<b>顯示卡組態設定</b>"
 
 #: tmp/system-config-kickstart.glade.h:6
-#, fuzzy
 msgid "<b>Firewall Configuration</b>"
-msgstr "防火牆組態設定"
+msgstr "<b>防火牆組態設定</b>"
 
 #: tmp/system-config-kickstart.glade.h:7
-#, fuzzy
 msgid "<b>GRUB Options</b>"
-msgstr "GRUB 選項："
+msgstr "<b>GRUB 選項</b>"
 
 #: tmp/system-config-kickstart.glade.h:8
-#, fuzzy
 msgid "<b>Hesiod Authentication</b>"
-msgstr "Hesiod 認證"
+msgstr "<b>Hesiod 認證</b>"
 
 #: tmp/system-config-kickstart.glade.h:9
 msgid "<b>Install Options</b>"
-msgstr ""
+msgstr "<b>安裝選項</b>"
 
 #: tmp/system-config-kickstart.glade.h:10
 msgid "<b>Install Type</b>"
-msgstr ""
+msgstr "<b>安裝類型</b>"
 
 #: tmp/system-config-kickstart.glade.h:11
-#, fuzzy
 msgid "<b>Installation Method</b>"
-msgstr "安裝方式"
+msgstr "<b>安裝方式</b>"
 
 #: tmp/system-config-kickstart.glade.h:12
-#, fuzzy
 msgid "<b>Installation source</b>"
-msgstr "安裝方式"
+msgstr "<b>安裝來源</b>"
 
 #: tmp/system-config-kickstart.glade.h:13
-#, fuzzy
 msgid "<b>Kerberos 5 Authentication</b>"
-msgstr "Kerberos 5 認證"
+msgstr "<b>Kerberos 5 認證</b>"
 
 #: tmp/system-config-kickstart.glade.h:14
-#, fuzzy
 msgid "<b>LDAP Authentication</b>"
-msgstr "LDAP 認證"
+msgstr "<b>LDAP 認證</b>"
 
 #: tmp/system-config-kickstart.glade.h:15
 msgid "<b>Layout</b>"
-msgstr ""
+msgstr "<b>格式</b>"
 
 #: tmp/system-config-kickstart.glade.h:16
-#, fuzzy
 msgid "<b>Master Boot Record</b>"
-msgstr "清除 MBR"
+msgstr "<b>MBR</b>"
 
 #: tmp/system-config-kickstart.glade.h:17
-#, fuzzy
 msgid "<b>NIS Authentication</b>"
-msgstr "NIS 認證"
+msgstr "<b>NIS 認證</b>"
 
 #: tmp/system-config-kickstart.glade.h:18
-#, fuzzy
 msgid "<b>Name Switch Cache Daemon (nscd) Authentication</b>"
-msgstr "Name Switch Cache Daemon（nscd） 認證"
+msgstr "<b>Name Switch Cache Daemon（nscd）認證</b>"
 
 #: tmp/system-config-kickstart.glade.h:19
-#, fuzzy
 msgid "<b>Network Configuration</b>"
-msgstr "網路組態設定"
+msgstr "<b>網路組態設定</b>"
 
 #: tmp/system-config-kickstart.glade.h:20
-#, fuzzy
 msgid "<b>Package Selection</b>"
-msgstr "選取套件"
+msgstr "<b>選取套件</b>"
 
 #: tmp/system-config-kickstart.glade.h:21
-#, fuzzy
 msgid "<b>Partition options</b>"
-msgstr "分割區選項"
+msgstr "<b>分割區選項</b>"
 
 #: tmp/system-config-kickstart.glade.h:22
-#, fuzzy
 msgid "<b>Partitions</b>"
-msgstr "分割區："
+msgstr "<b>分割區</b>"
 
 #: tmp/system-config-kickstart.glade.h:23
-#, fuzzy
 msgid "<b>Post-Installation Script</b>"
-msgstr "後續安裝程式碼"
+msgstr "<b>後續安裝程式碼</b>"
 
 #: tmp/system-config-kickstart.glade.h:24
-#, fuzzy
 msgid "<b>Pre-Installation Script</b>"
-msgstr "前置安裝程式碼"
+msgstr "<b>前置安裝程式碼</b>"
 
 #: tmp/system-config-kickstart.glade.h:25
-#, fuzzy
 msgid "<b>SMB Authentication</b>"
-msgstr "SMB 認證"
+msgstr "<b>SMB 認證</b>"
 
 #: tmp/system-config-kickstart.glade.h:26
 msgid "<b>Size Options</b>"
-msgstr ""
+msgstr "<b>大小選項</b>"
 
 #: tmp/system-config-kickstart.glade.h:27
 msgid "<b>Special options</b>"
-msgstr ""
+msgstr "<b>特殊選項</b>"
 
 #: tmp/system-config-kickstart.glade.h:28
 msgid "<b>label28</b>"
-msgstr ""
+msgstr "<b>label28</b>"
 
 #: tmp/system-config-kickstart.glade.h:29
 msgid ""
@@ -551,24 +534,23 @@ msgid ""
 "Warn\n"
 "Disabled"
 msgstr ""
+"啟用\n"
+"警告\n"
+"停用"
 
 #: tmp/system-config-kickstart.glade.h:33
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "An error in this script might cause your kickstart installation to fail. Do "
 "not include the %post command at the beginning."
-msgstr ""
-"警告：程式碼中的錯誤也許會導致 kickstart 安裝程式失敗。開始時不要使用 %post "
-"指令。"
+msgstr "程式碼中的錯誤也許會導致 kickstart 安裝程式失敗。開始時請勿使用 %post 指令。"
 
 #: tmp/system-config-kickstart.glade.h:35
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "An error in this script might cause your kickstart installation to fail. Do "
 "not include the %pre command at the beginning."
-msgstr ""
-"警告：程式碼中的錯誤也許會導致 kickstart 安裝程式失敗。在開始時請勿使用 %pre "
-"指令。"
+msgstr "程式碼中的錯誤也許會導致 kickstart 安裝程式失敗。開始時請勿使用 %pre 指令。"
 
 #: tmp/system-config-kickstart.glade.h:36
 msgid "Authentication options are not applicable on upgrades."
@@ -607,12 +589,14 @@ msgid "Default Language:"
 msgstr "預設語言："
 
 #: tmp/system-config-kickstart.glade.h:45
-#, fuzzy
 msgid ""
 "Disabled\n"
 "Enabled\n"
 "Enabled in reconfiguration mode"
-msgstr "在重新設定模式已啟用"
+msgstr ""
+"已停用\n"
+"已啟用\n"
+"已啟用為重設定模式"
 
 #: tmp/system-config-kickstart.glade.h:48
 msgid "Display configuration is not applicable on upgrades."
@@ -651,11 +635,12 @@ msgid "Enable SMB Authentication"
 msgstr "啟用 SMB 認證"
 
 #: tmp/system-config-kickstart.glade.h:57
-#, fuzzy
 msgid ""
 "Enable firewall\n"
 "Disable firewall"
-msgstr "停用防火牆"
+msgstr ""
+"啟用防火牆\n"
+"停用防火牆"
 
 #: tmp/system-config-kickstart.glade.h:59
 msgid "Enable nscd"
@@ -678,18 +663,16 @@ msgid "FTP Directory:"
 msgstr "FTP 目錄："
 
 #: tmp/system-config-kickstart.glade.h:64
-#, fuzzy
 msgid "FTP Password:"
-msgstr "FTP 密碼"
+msgstr "FTP 密碼："
 
 #: tmp/system-config-kickstart.glade.h:65
 msgid "FTP Server:"
-msgstr "FTP 伺服器"
+msgstr "FTP 伺服器："
 
 #: tmp/system-config-kickstart.glade.h:66
-#, fuzzy
 msgid "FTP Username:"
-msgstr "FTP 使用者名稱"
+msgstr "FTP 使用者名稱："
 
 #: tmp/system-config-kickstart.glade.h:67
 msgid "File System Type:"
@@ -704,9 +687,8 @@ msgid "Firewall configuration is not applicable on upgrades."
 msgstr "防火牆設定不適用於系統升級。"
 
 #: tmp/system-config-kickstart.glade.h:70
-#, fuzzy
 msgid "Fixed size (MB):"
-msgstr "固定大小"
+msgstr "固定大小（MB）："
 
 #: tmp/system-config-kickstart.glade.h:71
 msgid "Force to be a primary partition (asprimary)"
@@ -774,7 +756,7 @@ msgstr "初始化磁碟標籤"
 
 #: tmp/system-config-kickstart.glade.h:87
 msgid "Install a graphical environment"
-msgstr ""
+msgstr "安裝圖形化環境"
 
 #: tmp/system-config-kickstart.glade.h:88
 msgid "Install boot loader on Master Boot Record (MBR)"
@@ -837,9 +819,8 @@ msgid "Make RAID Device"
 msgstr "建立磁碟陣列（RAID）裝置"
 
 #: tmp/system-config-kickstart.glade.h:103
-#, fuzzy
 msgid "Make partition on specific drive (ondisk, e.g. hda or sdc):"
-msgstr "在特定磁碟機上建立分割區（ondisk）"
+msgstr "在特定磁碟機上建立分割區（ondisk，例如 hda 或 sdc）："
 
 #: tmp/system-config-kickstart.glade.h:104
 msgid "Mount Point:"
@@ -950,9 +931,8 @@ msgid "RAID Options"
 msgstr "RAID 選項"
 
 #: tmp/system-config-kickstart.glade.h:131
-#, fuzzy
 msgid "Raid Members:"
-msgstr "Raid 的成員"
+msgstr "Raid 成員："
 
 #: tmp/system-config-kickstart.glade.h:132
 msgid "Reboot system after installation"
@@ -1068,9 +1048,8 @@ msgid "Use broadcast to find NIS server"
 msgstr "使用廣播方式搜尋 NIS 伺服器"
 
 #: tmp/system-config-kickstart.glade.h:159
-#, fuzzy
 msgid "Use existing partition (onpart, e.g. hda1 or sdc3):"
-msgstr "使用現有的分割區（onpart）"
+msgstr "使用現有的分割區（onpart，例如 hda1 或 sdc3）："
 
 #: tmp/system-config-kickstart.glade.h:160
 msgid "Use recommended swap size"
@@ -1084,180 +1063,45 @@ msgstr "您已選取下列的組態設定。請按下「儲存檔案」來儲存
 
 #: tmp/system-config-kickstart.glade.h:162
 msgid "_Add"
-msgstr "新增（_A）"
+msgstr "新增(_A)"
 
 #: tmp/system-config-kickstart.glade.h:163
 msgid "_Add Network Device"
-msgstr "新增網路裝置（_A）"
+msgstr "新增網路裝置(_A)"
 
 #: tmp/system-config-kickstart.glade.h:164
 msgid "_Delete"
-msgstr "刪除（_D）"
+msgstr "刪除(_D)"
 
 #: tmp/system-config-kickstart.glade.h:165
 msgid "_Delete Network Device"
-msgstr "刪除網路裝置（_D）"
+msgstr "刪除網路裝置(_D)"
 
 #: tmp/system-config-kickstart.glade.h:166
 msgid "_Edit"
-msgstr "編輯（_E）"
+msgstr "編輯(_E)"
 
 #: tmp/system-config-kickstart.glade.h:167
 msgid "_Edit Network Device"
-msgstr "編輯網路裝置（_E）"
+msgstr "編輯網路裝置(_E)"
 
 #: tmp/system-config-kickstart.glade.h:168
 msgid "_File"
-msgstr "檔案（_F）"
+msgstr "檔案(_F)"
 
 #: tmp/system-config-kickstart.glade.h:169
 msgid "_Help"
-msgstr "說明（_H）"
+msgstr "說明(_H)"
 
 #: tmp/system-config-kickstart.glade.h:170
 msgid "_Open File"
-msgstr "開啟檔案（_O）"
+msgstr "開啟檔案(_O)"
 
 #: tmp/system-config-kickstart.glade.h:171
 msgid "_Preview"
-msgstr "預覽（_P）"
+msgstr "預覽(_P)"
 
 #: tmp/system-config-kickstart.glade.h:172
 msgid "_Save to File"
-msgstr "儲存到檔案（_S）"
+msgstr "儲存到檔案(_S)"
 
-#~ msgid ""
-#~ "Kickstart Configurator @VERSION@\n"
-#~ " Copyright (c) 2000-2002 Red Hat, Inc.\n"
-#~ " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-#~ " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-#~ " A graphical interface for creating a kickstart file"
-#~ msgstr ""
-#~ "Kickstart 設定程式 @VERSION@\n"
-#~ " Copyright (c) 2000-2002 Red Hat, Inc.\n"
-#~ " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-#~ " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-#~ " 一個用來建立 kickstart 檔案的圖形介面"
-
-#~ msgid "         "
-#~ msgstr "         "
-
-#~ msgid "(for example: hda or sdc)"
-#~ msgstr "（例如：hda 或 sdc）"
-
-#~ msgid "(for example: hda1 or sdc3)"
-#~ msgstr "（例如：hda1 或 sdc3）"
-
-#~ msgid "0"
-#~ msgstr "0"
-
-#~ msgid "1"
-#~ msgstr "1"
-
-#~ msgid "5"
-#~ msgstr "5"
-
-#~ msgid "Active"
-#~ msgstr "啟用"
-
-#~ msgid "Additional Size Options"
-#~ msgstr "其他的磁區大小選項"
-
-#~ msgid "Authentication:"
-#~ msgstr "認證："
-
-#~ msgid "Basic Configuration (required)"
-#~ msgstr "基本組態設定（必要的）"
-
-#~ msgid "Boot Loader Options (required)"
-#~ msgstr "開機管理程式選項（必要的）"
-
-#~ msgid "Choose the Installation Method:"
-#~ msgstr "選取安裝方式："
-
-#~ msgid "Configure the X Window System"
-#~ msgstr "設定 X 視窗系統"
-
-#~ msgid "Disabled"
-#~ msgstr "已停用"
-
-#~ msgid "Drive :"
-#~ msgstr "磁碟機："
-
-#~ msgid "Enable firewall"
-#~ msgstr "啟用防火牆"
-
-#~ msgid "Enabled"
-#~ msgstr "已啟用"
-
-#~ msgid "Installation Method (required)"
-#~ msgstr "安裝方式（必要的）"
-
-#~ msgid "Partition Information (required)"
-#~ msgstr "分割區資訊（必要的）"
-
-#~ msgid "Size (MB):"
-#~ msgstr "大小（MB）："
-
-#~ msgid "Warn"
-#~ msgstr "警告"
-
-#~ msgid "_About"
-#~ msgstr "關於（_A）"
-
-#~ msgid "_Contents"
-#~ msgstr "內容（_C）"
-
-#~ msgid "_Quit"
-#~ msgstr "離開（_Q）"
-
-#~ msgid "_Save File"
-#~ msgstr "儲存檔案（_S）"
-
-#~ msgid "md0"
-#~ msgstr "md0"
-
-#~ msgid "md1"
-#~ msgstr "md1"
-
-#~ msgid "md10"
-#~ msgstr "md10"
-
-#~ msgid "md11"
-#~ msgstr "md11"
-
-#~ msgid "md12"
-#~ msgstr "md12"
-
-#~ msgid "md13"
-#~ msgstr "md13"
-
-#~ msgid "md14"
-#~ msgstr "md14"
-
-#~ msgid "md15"
-#~ msgstr "md15"
-
-#~ msgid "md2"
-#~ msgstr "md2"
-
-#~ msgid "md3"
-#~ msgstr "md3"
-
-#~ msgid "md4"
-#~ msgstr "md4"
-
-#~ msgid "md5"
-#~ msgstr "md5"
-
-#~ msgid "md6"
-#~ msgstr "md6"
-
-#~ msgid "md7"
-#~ msgstr "md7"
-
-#~ msgid "md8"
-#~ msgstr "md8"
-
-#~ msgid "md9"
-#~ msgstr "md9"
