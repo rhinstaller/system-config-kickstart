@@ -1,20 +1,21 @@
-# translation of system-config-kickstart.master.hi.po to Hindi
+# translation of system-config-kickstart.master.po to Hindi
 # Rajesh Ranjan <rranjan@redhat.com>, 2004, 2005, 2006, 2009.
 # hi <rranjan@redhat.com>, 2007.
 # Nizam<786.nizam@gmail.com>,2007-09-21 13:19+0530.
+# Rajesh Ranjan <rajesh672@gmail.com>, 2009.
 # Copyright (C) YEAR ORGANIZATION.
 msgid ""
 msgstr ""
-"Project-Id-Version: system-config-kickstart.master.hi\n"
+"Project-Id-Version: system-config-kickstart.master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-09-22 11:01-0400\n"
-"PO-Revision-Date: 2009-04-01 13:21+0530\n"
-"Last-Translator: Rajesh Ranjan <rranjan@redhat.com>\n"
+"PO-Revision-Date: 2009-09-23 17:18+0530\n"
+"Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Hindi <hindi.sf.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
 "\n"
 "X-Generator: KBabel 1.11.4\n"
 
@@ -44,7 +45,7 @@ msgstr "IBM zSeries/s390"
 
 #: ../src/basic.py:151
 msgid "Root passwords do not match."
-msgstr "रूट शब्दकूटों का मिलान नहीं हुआ."
+msgstr "रूट कूटशब्दों का मिलान नहीं हुआ."
 
 #: ../src/basic.py:152 ../src/install.py:217 ../src/partWindow.py:576
 #: ../src/partition.py:256 ../src/raidWindow.py:276
@@ -53,7 +54,7 @@ msgstr "त्रुटि"
 
 #: ../src/bootloader.py:150
 msgid "Grub passwords do not match.  Please try again."
-msgstr "ग्रब शब्दकूटों का मिलान नहीं हुआ. कृपया पुनःप्रयास करें."
+msgstr "ग्रब कूटशब्दों का मिलान नहीं हुआ. कृपया पुनःप्रयास करें."
 
 #: ../src/bootloader.py:197
 #, python-format
@@ -67,9 +68,8 @@ msgstr "भरोसेमंद सेवाए:"
 
 # Done by Nizam
 #: ../src/firewall.py:92
-#, fuzzy
 msgid "Other ports (1029:tcp):"
-msgstr "अन्य पोर्ट्स: (1029:tcp)"
+msgstr "अन्य पोर्ट्स (1029:tcp):"
 
 #: ../src/install.py:132
 msgid "Please enter an NFS server."
@@ -93,7 +93,7 @@ msgstr "कृपया एक FTP उपयोक्ता नाम को द
 
 #: ../src/install.py:162
 msgid "Please enter an FTP password."
-msgstr "कृपया एक FTP शब्दकूट को दाखिल करें:"
+msgstr "कृपया एक FTP कूटशब्द को दाखिल करें:"
 
 #: ../src/install.py:178
 msgid "Please enter an HTTP server."
@@ -127,6 +127,19 @@ msgid ""
 "this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
 "Ave, Cambridge, MA 02139, USA."
 msgstr ""
+"This program is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
+"Ave, Cambridge, MA 02139, USA."
 
 #: ../src/kickstartGui.py:125 ../src/kickstartGui.py:130
 #: ../src/kickstartGui.py:330 ../src/kickstartGui.py:335
@@ -167,7 +180,7 @@ msgstr "मौलिक विन्यासन"
 
 #: ../src/kickstartGui.py:171
 msgid "Installation Method"
-msgstr "अधिष्ठापन प्रक्रिया"
+msgstr "संस्थापन प्रक्रिया"
 
 #: ../src/kickstartGui.py:172
 msgid "Boot Loader Options"
@@ -199,11 +212,11 @@ msgstr "संकुल चुनाव"
 
 #: ../src/kickstartGui.py:179
 msgid "Pre-Installation Script"
-msgstr "पूर्व-अधिष्ठापन स्क्रिप्ट"
+msgstr "पूर्व-संस्थापन स्क्रिप्ट"
 
 #: ../src/kickstartGui.py:180
 msgid "Post-Installation Script"
-msgstr "अगली-अधिष्ठापन स्क्रिप्ट"
+msgstr "अगली-संस्थापन स्क्रिप्ट"
 
 #: ../src/kickstartGui.py:246
 msgid "About Kickstart Configurator"
@@ -328,8 +341,7 @@ msgstr "विभाजन के लिए एक आरोह बिंदु 
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:503
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "\"%s\" आरोह बिंदु पहले से उपयोग में हैं. कृपया कोई अन्य आरोह बिंदु को चुनें."
 
 #: ../src/partWindow.py:523
@@ -387,8 +399,7 @@ msgstr "कृपया सूची से एक विभाजन को च
 #: ../src/raidOptionsWindow.py:72
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
-msgstr ""
-"वर्तमान में स्वतंत्रापूर्वक प्रयोग करने के लिए आपके पास %d सॉफ्टवेयर RAID विभाजन मुफ्त में है."
+msgstr "वर्तमान में स्वतंत्रापूर्वक प्रयोग करने के लिए आपके पास %d सॉफ्टवेयर RAID विभाजन मुफ्त में है."
 
 #: ../src/raidWindow.py:201
 #, python-format
@@ -414,137 +425,116 @@ msgid "Error Saving Kickstart Config"
 msgstr "किकस्टार्ट कॉन्फिग सहेजने में त्रुटि"
 
 #: tmp/system-config-kickstart.glade.h:1
-#, fuzzy
 msgid "<b>Advanced Configuration</b>"
-msgstr "मौलिक विन्यासन"
+msgstr "<b>उन्नत विन्यासन</b>"
 
 #: tmp/system-config-kickstart.glade.h:2
-#, fuzzy
 msgid "<b>Authentication Configuration</b>"
-msgstr "सत्यापन विन्यास"
+msgstr "<b>सत्यापन विन्यास</b>"
 
 #: tmp/system-config-kickstart.glade.h:3
-#, fuzzy
 msgid "<b>Basic Configuration</b>"
-msgstr "मौलिक विन्यासन"
+msgstr "<b>मौलिक विन्यासन</b>"
 
 #: tmp/system-config-kickstart.glade.h:4
 msgid "<b>Disk label</b>"
-msgstr ""
+msgstr "<b>डिस्क लेबल</b>"
 
 #: tmp/system-config-kickstart.glade.h:5
-#, fuzzy
 msgid "<b>Display Configuration</b>"
-msgstr "विन्यास प्रदर्शित करें"
+msgstr "<b>विन्यास प्रदर्शित करें</b>"
 
 #: tmp/system-config-kickstart.glade.h:6
-#, fuzzy
 msgid "<b>Firewall Configuration</b>"
-msgstr "फायरवाल विन्यास"
+msgstr "<b>फायरवाल विन्यास</b>"
 
 #: tmp/system-config-kickstart.glade.h:7
-#, fuzzy
 msgid "<b>GRUB Options</b>"
-msgstr "GRUB विकल्पः"
+msgstr "<b>GRUB विकल्प</b>"
 
 #: tmp/system-config-kickstart.glade.h:8
-#, fuzzy
 msgid "<b>Hesiod Authentication</b>"
-msgstr "हेसियड़ सत्यापन"
+msgstr "<b>हेसियड सत्यापन</b>"
 
 #: tmp/system-config-kickstart.glade.h:9
 msgid "<b>Install Options</b>"
-msgstr ""
+msgstr "<b>संस्थापन विकल्प</b>"
 
 #: tmp/system-config-kickstart.glade.h:10
 msgid "<b>Install Type</b>"
-msgstr ""
+msgstr "<b>संस्थापना प्रकार</b>"
 
 #: tmp/system-config-kickstart.glade.h:11
-#, fuzzy
 msgid "<b>Installation Method</b>"
-msgstr "अधिष्ठापन प्रक्रिया"
+msgstr "<b>संस्थापन प्रक्रिया</b>"
 
 #: tmp/system-config-kickstart.glade.h:12
-#, fuzzy
 msgid "<b>Installation source</b>"
-msgstr "अधिष्ठापन प्रक्रिया"
+msgstr "<b>संस्थापन स्रोत</b>"
 
 #: tmp/system-config-kickstart.glade.h:13
-#, fuzzy
 msgid "<b>Kerberos 5 Authentication</b>"
-msgstr "करबरोस 5 सत्यापन"
+msgstr "<b>करबरोस 5 सत्यापन</b>"
 
 #: tmp/system-config-kickstart.glade.h:14
-#, fuzzy
 msgid "<b>LDAP Authentication</b>"
-msgstr "LDAP सत्यापन"
+msgstr "<b>LDAP सत्यापन</b>"
 
 #: tmp/system-config-kickstart.glade.h:15
 msgid "<b>Layout</b>"
-msgstr ""
+msgstr "<b>ख़ाका</b>"
 
 #: tmp/system-config-kickstart.glade.h:16
-#, fuzzy
 msgid "<b>Master Boot Record</b>"
-msgstr "मास्टर बूट रिकार्डर को साफ करें"
+msgstr "<b>मास्टर बूट रिकार्ड</b>"
 
 #: tmp/system-config-kickstart.glade.h:17
-#, fuzzy
 msgid "<b>NIS Authentication</b>"
-msgstr "NIS सत्यापन"
+msgstr "<b>NIS सत्यापन</b>"
 
 #: tmp/system-config-kickstart.glade.h:18
-#, fuzzy
 msgid "<b>Name Switch Cache Daemon (nscd) Authentication</b>"
-msgstr "नेम स्विच कैश डेमॉन (nscd) सत्यापन"
+msgstr "<b>नेम स्विच कैश डेमॉन (nscd) सत्यापन</b>"
 
 #: tmp/system-config-kickstart.glade.h:19
-#, fuzzy
 msgid "<b>Network Configuration</b>"
-msgstr "संजाल विन्यास"
+msgstr "<b>संजाल विन्यास</b>"
 
 #: tmp/system-config-kickstart.glade.h:20
-#, fuzzy
 msgid "<b>Package Selection</b>"
-msgstr "संकुल चुनाव"
+msgstr "<b>संकुल चुनाव</b>"
 
 #: tmp/system-config-kickstart.glade.h:21
-#, fuzzy
 msgid "<b>Partition options</b>"
-msgstr "विभाजन विकल्प"
+msgstr "<b>विभाजन विकल्प</b>"
 
 #: tmp/system-config-kickstart.glade.h:22
-#, fuzzy
 msgid "<b>Partitions</b>"
-msgstr "विभाजनः"
+msgstr "<b>विभाजन</b>"
 
 #: tmp/system-config-kickstart.glade.h:23
-#, fuzzy
 msgid "<b>Post-Installation Script</b>"
-msgstr "अगली-अधिष्ठापन स्क्रिप्ट"
+msgstr "<b>उत्तर-संस्थापन स्क्रिप्ट</b>"
 
 #: tmp/system-config-kickstart.glade.h:24
-#, fuzzy
 msgid "<b>Pre-Installation Script</b>"
-msgstr "पूर्व-अधिष्ठापन स्क्रिप्ट"
+msgstr "<b>पूर्व-संस्थापन स्क्रिप्ट</b>"
 
 #: tmp/system-config-kickstart.glade.h:25
-#, fuzzy
 msgid "<b>SMB Authentication</b>"
-msgstr "SMB सत्यापन"
+msgstr "<b>SMB सत्यापन</b>"
 
 #: tmp/system-config-kickstart.glade.h:26
 msgid "<b>Size Options</b>"
-msgstr ""
+msgstr "<b>आकार विकल्प</b>"
 
 #: tmp/system-config-kickstart.glade.h:27
 msgid "<b>Special options</b>"
-msgstr ""
+msgstr "<b>विशेष विकल्प</b>"
 
 #: tmp/system-config-kickstart.glade.h:28
 msgid "<b>label28</b>"
-msgstr ""
+msgstr "<b>label28</b>"
 
 #: tmp/system-config-kickstart.glade.h:29
 msgid ""
@@ -552,24 +542,23 @@ msgid ""
 "Warn\n"
 "Disabled"
 msgstr ""
+"सक्रिय\n"
+"चेतावनी\n"
+"निष्क्रिय"
 
 #: tmp/system-config-kickstart.glade.h:33
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "An error in this script might cause your kickstart installation to fail. Do "
 "not include the %post command at the beginning."
-msgstr ""
-"चेतावनीः इस स्क्रिप्ट में एक त्रुटि है जो आपके किकस्टार्ट अधिष्ठापन को असफल कर सकता है.%"
-"post समादेश को शुरू में शामिल न करें."
+msgstr "इस स्क्रिप्ट में एक त्रुटि है जो आपके किकस्टार्ट संस्थापन को असफल कर सकता है. %post कमांड को शुरू में शामिल न करें."
 
 #: tmp/system-config-kickstart.glade.h:35
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "An error in this script might cause your kickstart installation to fail. Do "
 "not include the %pre command at the beginning."
-msgstr ""
-"चेतावनीःइस स्क्रिपट में एक त्रुटि आपके किकस्टार्ट अधिष्ठापन को असफल कर सकता है.%pre "
-"निर्देश को शुरू में शामिल न करें."
+msgstr "इस स्क्रिपट में एक त्रुटि आपके किकस्टार्ट संस्थापन को असफल कर सकता है.%pre कमांड को शुरू में शामिल न करें."
 
 #: tmp/system-config-kickstart.glade.h:36
 msgid "Authentication options are not applicable on upgrades."
@@ -593,7 +582,7 @@ msgstr "मास्टर बूट रिकार्डर को साफ �
 
 #: tmp/system-config-kickstart.glade.h:41
 msgid "Confirm Password:"
-msgstr "शब्दकूट को निश्चित करें:"
+msgstr "कूटशब्द को निश्चित करें:"
 
 #: tmp/system-config-kickstart.glade.h:42
 msgid "Create a RAID device [default = /dev/md0]"
@@ -608,12 +597,14 @@ msgid "Default Language:"
 msgstr "मूलभूत भाषाः"
 
 #: tmp/system-config-kickstart.glade.h:45
-#, fuzzy
 msgid ""
 "Disabled\n"
 "Enabled\n"
 "Enabled in reconfiguration mode"
-msgstr "पुनःविन्यासन प्रकार में समर्थ किया गया"
+msgstr ""
+"निष्क्रिय\n"
+"सक्रिय\n"
+"पुनर्विन्यासन मोड में सक्रिय किया"
 
 #: tmp/system-config-kickstart.glade.h:48
 msgid "Display configuration is not applicable on upgrades."
@@ -629,7 +620,7 @@ msgstr "डिस्क लेबल का प्रारंभिकीकर
 
 #: tmp/system-config-kickstart.glade.h:51
 msgid "Do not install a boot loader"
-msgstr "एक बूट लोडर को अधिष्ठापन न करें"
+msgstr "एक बूट लोडर को संस्थापन न करें"
 
 #: tmp/system-config-kickstart.glade.h:52
 msgid "Enable Hesiod Support"
@@ -653,11 +644,12 @@ msgstr "SMB सत्यापन समर्थ करें"
 
 # Done by Nizam
 #: tmp/system-config-kickstart.glade.h:57
-#, fuzzy
 msgid ""
 "Enable firewall\n"
 "Disable firewall"
-msgstr "असमर्थ फायरवाल"
+msgstr ""
+"फायरवॉल सक्रिय करें\n"
+"फायरवॉल निष्क्रिय करें"
 
 #: tmp/system-config-kickstart.glade.h:59
 msgid "Enable nscd"
@@ -665,11 +657,11 @@ msgstr "nscd समर्थ करें"
 
 #: tmp/system-config-kickstart.glade.h:60
 msgid "Encrypt GRUB password"
-msgstr "GRUB शब्दकूट को गोपित करें"
+msgstr "GRUB कूटशब्द को गोपित करें"
 
 #: tmp/system-config-kickstart.glade.h:61
 msgid "Encrypt root password"
-msgstr "रूट शब्दकूट गोपित करें"
+msgstr "रूट कूटशब्द गोपित करें"
 
 #: tmp/system-config-kickstart.glade.h:62
 msgid "FTP"
@@ -680,18 +672,16 @@ msgid "FTP Directory:"
 msgstr "FTP निर्देशिकाः"
 
 #: tmp/system-config-kickstart.glade.h:64
-#, fuzzy
 msgid "FTP Password:"
-msgstr "FTP शब्दकूट"
+msgstr "FTP कूटशब्द: "
 
 #: tmp/system-config-kickstart.glade.h:65
 msgid "FTP Server:"
 msgstr "FTP सर्वरः"
 
 #: tmp/system-config-kickstart.glade.h:66
-#, fuzzy
 msgid "FTP Username:"
-msgstr "FTP उपयोक्तानाम"
+msgstr "FTP उपयोक्तानाम:"
 
 #: tmp/system-config-kickstart.glade.h:67
 msgid "File System Type:"
@@ -706,9 +696,8 @@ msgid "Firewall configuration is not applicable on upgrades."
 msgstr "फायरवाल विन्यास उन्नयन पर लागू नहीं है."
 
 #: tmp/system-config-kickstart.glade.h:70
-#, fuzzy
 msgid "Fixed size (MB):"
-msgstr "निश्चित आकार"
+msgstr "निश्चित आकार (MB):"
 
 #: tmp/system-config-kickstart.glade.h:71
 msgid "Force to be a primary partition (asprimary)"
@@ -776,7 +765,7 @@ msgstr "डिस्क लेबल का प्रारंभिकीकर
 
 #: tmp/system-config-kickstart.glade.h:87
 msgid "Install a graphical environment"
-msgstr ""
+msgstr "किसी आलेखी वातावरण संस्थापित करें"
 
 #: tmp/system-config-kickstart.glade.h:88
 msgid "Install boot loader on Master Boot Record (MBR)"
@@ -788,7 +777,7 @@ msgstr "बूट लोडर को विभाजन के प्रथम 
 
 #: tmp/system-config-kickstart.glade.h:90
 msgid "Install new boot loader"
-msgstr "नये बूट लोडर का अधिष्ठापन करें"
+msgstr "नये बूट लोडर का संस्थापन करें"
 
 #: tmp/system-config-kickstart.glade.h:91
 msgid "Kerberos 5"
@@ -839,9 +828,8 @@ msgid "Make RAID Device"
 msgstr "RAID युक्ति बनाएँ"
 
 #: tmp/system-config-kickstart.glade.h:103
-#, fuzzy
 msgid "Make partition on specific drive (ondisk, e.g. hda or sdc):"
-msgstr "निर्दिष्ट ड्राइव पर विभाजन बनाएँ (डिस्क पर)"
+msgstr "निर्दिष्ट ड्राइव पर विभाजन बनाएँ (ondisk, उदा. hda या sdc):"
 
 #: tmp/system-config-kickstart.glade.h:104
 msgid "Mount Point:"
@@ -913,19 +901,19 @@ msgstr "उन्नयन पर विभाजन विकल्प नह�
 
 #: tmp/system-config-kickstart.glade.h:121
 msgid "Password:"
-msgstr "शब्दकूटः"
+msgstr "कूटशब्दः"
 
 #: tmp/system-config-kickstart.glade.h:122
 msgid "Perform installation in interactive mode"
-msgstr "अंतःक्रियात्मक प्रकार में अधिष्ठापन करें"
+msgstr "अंतःक्रियात्मक प्रकार में संस्थापन करें"
 
 #: tmp/system-config-kickstart.glade.h:123
 msgid "Perform installation in text mode (graphical is default)"
-msgstr "पाठ्यांश प्रकार में अधिष्ठापन करें (आलेखीय मूलभूत है)"
+msgstr "पाठ्यांश प्रकार में संस्थापन करें (आलेखीय मूलभूत है)"
 
 #: tmp/system-config-kickstart.glade.h:124
 msgid "Perform new installation"
-msgstr "नया अधिष्ठापन करें"
+msgstr "नया संस्थापन करें"
 
 #: tmp/system-config-kickstart.glade.h:125
 msgid "Preserve existing partitions"
@@ -952,13 +940,12 @@ msgid "RAID Options"
 msgstr "RAID विकल्प"
 
 #: tmp/system-config-kickstart.glade.h:131
-#, fuzzy
 msgid "Raid Members:"
-msgstr "रेड सदस्य"
+msgstr "Raid सदस्य:"
 
 #: tmp/system-config-kickstart.glade.h:132
 msgid "Reboot system after installation"
-msgstr "अधिष्ठापन के बाद सिस्टम को पुनःबूट करें"
+msgstr "संस्थापन के बाद सिस्टम को पुनःबूट करें"
 
 #: tmp/system-config-kickstart.glade.h:133
 msgid "Remove all existing partitions"
@@ -970,7 +957,7 @@ msgstr "मौजूदा लिनक्स विभाजन हटाएँ
 
 #: tmp/system-config-kickstart.glade.h:135
 msgid "Root Password:"
-msgstr "रूट शब्दकूटः"
+msgstr "रूट कूटशब्दः"
 
 #: tmp/system-config-kickstart.glade.h:136
 msgid "Run outside of the chroot environment"
@@ -1012,11 +999,11 @@ msgstr ""
 
 #: tmp/system-config-kickstart.glade.h:143
 msgid "Specify an FTP username and password"
-msgstr "एक FTP उपयोक्ता नाम और शब्दकूट निर्दिष्ट करें"
+msgstr "एक FTP उपयोक्ता नाम और कूटशब्द निर्दिष्ट करें"
 
 #: tmp/system-config-kickstart.glade.h:144
 msgid "Specify installation key:"
-msgstr "अधिष्ठापन कुंजी निर्दिष्ट करें:"
+msgstr "संस्थापन कुंजी निर्दिष्ट करें:"
 
 #: tmp/system-config-kickstart.glade.h:145
 msgid "Target Architecture:"
@@ -1046,7 +1033,7 @@ msgstr "अपना %pre लिपि को नीचे टंकित क�
 
 #: tmp/system-config-kickstart.glade.h:152
 msgid "Upgrade an existing installation"
-msgstr "एक जीवंत अधिष्ठापन का अद्यतन करें"
+msgstr "एक जीवंत संस्थापन का अद्यतन करें"
 
 #: tmp/system-config-kickstart.glade.h:153
 msgid "Upgrade existing boot loader"
@@ -1054,11 +1041,11 @@ msgstr "मौजूदा बूट लोडर का अद्यतन क�
 
 #: tmp/system-config-kickstart.glade.h:154
 msgid "Use GRUB password"
-msgstr "GRUB शब्दकूट का प्रयोग करें"
+msgstr "GRUB कूटशब्द का प्रयोग करें"
 
 #: tmp/system-config-kickstart.glade.h:155
 msgid "Use Shadow Passwords"
-msgstr "छाया शब्दकूटों का प्रयोग करें"
+msgstr "छाया कूटशब्दों का प्रयोग करें"
 
 #: tmp/system-config-kickstart.glade.h:156
 msgid "Use UTC clock"
@@ -1073,9 +1060,8 @@ msgid "Use broadcast to find NIS server"
 msgstr "NIS सर्वर को खोजने के लिए प्रसारण का प्रयोग करें"
 
 #: tmp/system-config-kickstart.glade.h:159
-#, fuzzy
 msgid "Use existing partition (onpart, e.g. hda1 or sdc3):"
-msgstr "मौजूदा विभाजन का प्रयोग करें (भाग पर)"
+msgstr "मौजूदा विभाजन का प्रयोग करें (onpart, उदा. hda1 या sdc3):"
 
 #: tmp/system-config-kickstart.glade.h:160
 msgid "Use recommended swap size"
@@ -1085,8 +1071,7 @@ msgstr "अनुशंसित स्वेप आकार का प्र�
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
-msgstr ""
-"आपने निम्न विन्यास को चुना था. किकस्टार्ट फाइल को सुरक्षित करने के लिए 'फाइल सहेजें' दबाएँ."
+msgstr "आपने निम्न विन्यास को चुना था. किकस्टार्ट फाइल को सुरक्षित करने के लिए 'फाइल सहेजें' दबाएँ."
 
 #: tmp/system-config-kickstart.glade.h:162
 msgid "_Add"
@@ -1132,141 +1117,3 @@ msgstr "पूर्वावलोकन (_P)"
 msgid "_Save to File"
 msgstr "फाइल में सहेजें (_S)"
 
-#~ msgid ""
-#~ "Kickstart Configurator @VERSION@\n"
-#~ " Copyright (c) 2000-2002 Red Hat, Inc.\n"
-#~ " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-#~ " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-#~ " A graphical interface for creating a kickstart file"
-#~ msgstr ""
-#~ "किकस्टार्ट विन्यासक @संस्करण@\n"
-#~ " कॉपीराइट (c) 2000-2002 Red Hat, Inc.\n"
-#~ " कॉपीराइट (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-#~ " कॉपीराइट (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-#~ " किकस्टार्ट फाइल को बनाने के लिए एक आलेखीय अंतरफलक"
-
-#~ msgid "         "
-#~ msgstr "         "
-
-#~ msgid "(for example: hda or sdc)"
-#~ msgstr "(उदाहरण के लिएःhda या sdc)"
-
-#~ msgid "(for example: hda1 or sdc3)"
-#~ msgstr "(उदाहरण के लिएःhda1 या sdc3)"
-
-#~ msgid "0"
-#~ msgstr "0"
-
-#~ msgid "1"
-#~ msgstr "1"
-
-#~ msgid "5"
-#~ msgstr "5"
-
-# Done by Nizam
-#~ msgid "Active"
-#~ msgstr "सक्रिय"
-
-#~ msgid "Additional Size Options"
-#~ msgstr "अतिरिक्त आकार विकल्प"
-
-#~ msgid "Authentication:"
-#~ msgstr "सत्यापनः"
-
-#~ msgid "Basic Configuration (required)"
-#~ msgstr "मौलिक विन्यास (आवश्यक)"
-
-#~ msgid "Boot Loader Options (required)"
-#~ msgstr "बूट लोडर विकल्प (आवश्यक)"
-
-#~ msgid "Choose the Installation Method:"
-#~ msgstr "अधिष्ठापन प्रक्रिया चुनें:"
-
-#~ msgid "Configure the X Window System"
-#~ msgstr "X विन्डो सिस्टम को विन्यस्त करें"
-
-#~ msgid "Disabled"
-#~ msgstr "असमर्थ किया गया"
-
-#~ msgid "Drive :"
-#~ msgstr "चालन :"
-
-# Done by Nizam
-#~ msgid "Enable firewall"
-#~ msgstr "फायरवाल को समर्थ करे"
-
-#~ msgid "Enabled"
-#~ msgstr "समर्थ किया गया"
-
-#~ msgid "Installation Method (required)"
-#~ msgstr "अधिष्ठापन प्रक्रिया (आवश्यक)"
-
-#~ msgid "Partition Information (required)"
-#~ msgstr "विभाजन जानकारी (आवश्यक)"
-
-#~ msgid "Size (MB):"
-#~ msgstr "आकार(MB):"
-
-# Done by Nizam
-#~ msgid "Warn"
-#~ msgstr "चेतावनी"
-
-#~ msgid "_About"
-#~ msgstr "के बारे में (_A)"
-
-#~ msgid "_Contents"
-#~ msgstr "सामग्री (_C)"
-
-#~ msgid "_Quit"
-#~ msgstr "छोड़ें (_Q)"
-
-#~ msgid "_Save File"
-#~ msgstr "फाइल सहेजें (_S)"
-
-#~ msgid "md0"
-#~ msgstr "md0"
-
-#~ msgid "md1"
-#~ msgstr "md1"
-
-#~ msgid "md10"
-#~ msgstr "md10"
-
-#~ msgid "md11"
-#~ msgstr "md11"
-
-#~ msgid "md12"
-#~ msgstr "md12"
-
-#~ msgid "md13"
-#~ msgstr "md13"
-
-#~ msgid "md14"
-#~ msgstr "md14"
-
-#~ msgid "md15"
-#~ msgstr "md15"
-
-#~ msgid "md2"
-#~ msgstr "md2"
-
-#~ msgid "md3"
-#~ msgstr "md3"
-
-#~ msgid "md4"
-#~ msgstr "md4"
-
-#~ msgid "md5"
-#~ msgstr "md5"
-
-#~ msgid "md6"
-#~ msgstr "md6"
-
-#~ msgid "md7"
-#~ msgstr "md7"
-
-#~ msgid "md8"
-#~ msgstr "md8"
-
-#~ msgid "md9"
-#~ msgstr "md9"
