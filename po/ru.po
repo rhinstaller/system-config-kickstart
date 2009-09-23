@@ -1,4 +1,4 @@
-# translation of ru.po to
+# translation of ru.po to Russian
 # Leon Kanter <leon@blackcatlinux.com>, 2003.
 # Victor Ashik <vashik@inventa.ru>, 2004.
 # Andrew Martynov <andrewm@inventa.ru>, 2005.
@@ -6,15 +6,16 @@
 # Yulia Poyarkova <ypoyarko@redhat.com>, 2006.
 # Nikolay Sivov <bunglehead@gmail.com>, 2007.
 # Yulia Poyarkova <yulia.poyarkova@redhat.com>, 2009.
+# translation of ru.po to
 # Copyright (C) YEAR ORGANIZATION.
 msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-09-22 11:01-0400\n"
-"PO-Revision-Date: 2009-04-01 17:04+1100\n"
+"PO-Revision-Date: 2009-09-23 13:44+1000\n"
 "Last-Translator: Yulia Poyarkova <yulia.poyarkova@redhat.com>\n"
-"Language-Team: \n"
+"Language-Team: Russian <fedora-trans-ru@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -68,9 +69,8 @@ msgid "Trusted services:"
 msgstr "Доверенные службы:"
 
 #: ../src/firewall.py:92
-#, fuzzy
 msgid "Other ports (1029:tcp):"
-msgstr "Другие порты: (1029:tcp)"
+msgstr "Другие порты (1029:tcp):"
 
 #: ../src/install.py:132
 msgid "Please enter an NFS server."
@@ -128,6 +128,21 @@ msgid ""
 "this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
 "Ave, Cambridge, MA 02139, USA."
 msgstr ""
+"Эта программа — свободное программное обеспечение; её можно распространять "
+"или изменять в соответствии с условиями лицензии GNU General Public License, "
+"опубликованной Фондом свободного программного обеспечения, версии 2 или (по "
+"вашему выбору) любой более поздней версии.\n"
+"\n"
+"Эта программа распространяется в надежде, что она может быть полезной, но "
+"БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ, ВЫРАЖЕННЫХ ЯВНО ИЛИ ПОДРАЗУМЕВАЕМЫХ, ВКЛЮЧАЯ (НО НЕ "
+"ОГРАНИЧИВАЯСЬ) ПОДРАЗУМЕВАЕМЫЕ ГАРАНТИИ КОММЕРЧЕСКОЙ ЦЕННОСТИ И ПРИГОДНОСТИ "
+"ДЛЯ КОНКРЕТНОЙ ЦЕЛИ. Для получения дополнительных сведений обратитесь к "
+"лицензии GNU General Public License.\n"
+"\n"
+"Копия лицензии GNU предоставляется вместе с этой программой. \n"
+"Если вы её не получили, обратитесь напрямую в Free Software Foundation по адресу: 675 Mass "
+"Ave, Cambridge, MA 02139, USA."
+"Её также можно найти на сайте <http://www.gnu.org/licenses/>."
 
 #: ../src/kickstartGui.py:125 ../src/kickstartGui.py:130
 #: ../src/kickstartGui.py:330 ../src/kickstartGui.py:335
@@ -164,7 +179,7 @@ msgstr "Подраздел"
 
 #: ../src/kickstartGui.py:170
 msgid "Basic Configuration"
-msgstr "Базовая конфигурация"
+msgstr "Основные настройки"
 
 #: ../src/kickstartGui.py:171
 msgid "Installation Method"
@@ -332,8 +347,7 @@ msgstr "Укажите точку монтирования для раздела
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:503
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "Точка монтирования \"%s\" уже используется. Выберите другую точку "
 "монтирования."
@@ -384,7 +398,7 @@ msgstr "Формат"
 
 #: ../src/partition.py:80
 msgid "Size (MB)"
-msgstr "Размер (MB)"
+msgstr "Размер (Мбайт)"
 
 #: ../src/partition.py:98 ../src/partition.py:138
 msgid "Please select a partition from the list."
@@ -393,8 +407,7 @@ msgstr "Выберите раздел из списка."
 #: ../src/raidOptionsWindow.py:72
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
-msgstr ""
-"Сейчас для использования доступно %d свободных разделов программного RAID."
+msgstr "Сейчас для использования доступно %d свободных разделов программного RAID."
 
 #: ../src/raidWindow.py:201
 #, python-format
@@ -420,137 +433,116 @@ msgid "Error Saving Kickstart Config"
 msgstr "Ошибка сохранения конфигурации кикстарта"
 
 #: tmp/system-config-kickstart.glade.h:1
-#, fuzzy
 msgid "<b>Advanced Configuration</b>"
-msgstr "Базовая конфигурация"
+msgstr "<b>Расширенные настройки</b>"
 
 #: tmp/system-config-kickstart.glade.h:2
-#, fuzzy
 msgid "<b>Authentication Configuration</b>"
-msgstr "Настройка аутентификации"
+msgstr "<b>Настройка аутентификации</b>"
 
 #: tmp/system-config-kickstart.glade.h:3
-#, fuzzy
 msgid "<b>Basic Configuration</b>"
-msgstr "Базовая конфигурация"
+msgstr "<b>Основные настройки</b>"
 
 #: tmp/system-config-kickstart.glade.h:4
 msgid "<b>Disk label</b>"
-msgstr ""
+msgstr "<b>Метка диска</b>"
 
 #: tmp/system-config-kickstart.glade.h:5
-#, fuzzy
 msgid "<b>Display Configuration</b>"
-msgstr "Настройка дисплея"
+msgstr "<b>Настройка дисплея</b>"
 
 #: tmp/system-config-kickstart.glade.h:6
-#, fuzzy
 msgid "<b>Firewall Configuration</b>"
-msgstr "Настройка брандмауэра"
+msgstr "<b>Настройка брандмауэра</b>"
 
 #: tmp/system-config-kickstart.glade.h:7
-#, fuzzy
 msgid "<b>GRUB Options</b>"
-msgstr "Параметры GRUB:"
+msgstr "<b>Параметры GRUB</b>"
 
 #: tmp/system-config-kickstart.glade.h:8
-#, fuzzy
 msgid "<b>Hesiod Authentication</b>"
-msgstr "Аутентификация Hesiod"
+msgstr "<b>Аутентификация Hesiod</b>"
 
 #: tmp/system-config-kickstart.glade.h:9
 msgid "<b>Install Options</b>"
-msgstr ""
+msgstr "<b>Параметры установки</b>"
 
 #: tmp/system-config-kickstart.glade.h:10
 msgid "<b>Install Type</b>"
-msgstr ""
+msgstr "<b>Тип установки</b>"
 
 #: tmp/system-config-kickstart.glade.h:11
-#, fuzzy
 msgid "<b>Installation Method</b>"
-msgstr "Метод установки"
+msgstr "<b>Метод установки</b>"
 
 #: tmp/system-config-kickstart.glade.h:12
-#, fuzzy
 msgid "<b>Installation source</b>"
-msgstr "Метод установки"
+msgstr "<b>Установочный носитель</b>"
 
 #: tmp/system-config-kickstart.glade.h:13
-#, fuzzy
 msgid "<b>Kerberos 5 Authentication</b>"
-msgstr "Аутентификация Kerberos 5"
+msgstr "<b>Аутентификация Kerberos 5</b>"
 
 #: tmp/system-config-kickstart.glade.h:14
-#, fuzzy
 msgid "<b>LDAP Authentication</b>"
-msgstr "Аутентификация LDAP"
+msgstr "<b>Аутентификация LDAP</b>"
 
 #: tmp/system-config-kickstart.glade.h:15
 msgid "<b>Layout</b>"
-msgstr ""
+msgstr "<b>Структура</b>"
 
 #: tmp/system-config-kickstart.glade.h:16
-#, fuzzy
 msgid "<b>Master Boot Record</b>"
-msgstr "Очистить Master Boot Record"
+msgstr "<b>Master Boot Record</b>"
 
 #: tmp/system-config-kickstart.glade.h:17
-#, fuzzy
 msgid "<b>NIS Authentication</b>"
-msgstr "Аутентификация NIS"
+msgstr "<b>Аутентификация NIS</b>"
 
 #: tmp/system-config-kickstart.glade.h:18
-#, fuzzy
 msgid "<b>Name Switch Cache Daemon (nscd) Authentication</b>"
-msgstr "Аутентификация Name Switch Cache Daemon (nscd)"
+msgstr "<b>Аутентификация ncsd</b>"
 
 #: tmp/system-config-kickstart.glade.h:19
-#, fuzzy
 msgid "<b>Network Configuration</b>"
-msgstr "Настройка сети"
+msgstr "<b>Настройка сети</b>"
 
 #: tmp/system-config-kickstart.glade.h:20
-#, fuzzy
 msgid "<b>Package Selection</b>"
-msgstr "Выбор пакетов"
+msgstr "<b>Выбор пакетов</b>"
 
 #: tmp/system-config-kickstart.glade.h:21
-#, fuzzy
 msgid "<b>Partition options</b>"
-msgstr "Параметры раздела"
+msgstr "<b>Параметры раздела</b>"
 
 #: tmp/system-config-kickstart.glade.h:22
-#, fuzzy
 msgid "<b>Partitions</b>"
-msgstr "Раздел :"
+msgstr "<b>Разделы</b>"
 
 #: tmp/system-config-kickstart.glade.h:23
-#, fuzzy
 msgid "<b>Post-Installation Script</b>"
-msgstr "Сценарий после установки"
+msgstr "<b>Сценарий после установки</b>"
 
 #: tmp/system-config-kickstart.glade.h:24
-#, fuzzy
 msgid "<b>Pre-Installation Script</b>"
-msgstr "Сценарий до установки"
+msgstr "<b>Сценарий до установки</b>"
 
 #: tmp/system-config-kickstart.glade.h:25
-#, fuzzy
 msgid "<b>SMB Authentication</b>"
-msgstr "Аутентификация SMB"
+msgstr "<b>Аутентификация SMB</b>"
 
 #: tmp/system-config-kickstart.glade.h:26
 msgid "<b>Size Options</b>"
-msgstr ""
+msgstr "<b>Размер</b>"
 
 #: tmp/system-config-kickstart.glade.h:27
 msgid "<b>Special options</b>"
-msgstr ""
+msgstr "<b>Специальные настройки</b>"
 
 #: tmp/system-config-kickstart.glade.h:28
 msgid "<b>label28</b>"
-msgstr ""
+msgstr "<b>label28</b>"
 
 #: tmp/system-config-kickstart.glade.h:29
 msgid ""
@@ -558,23 +550,26 @@ msgid ""
 "Warn\n"
 "Disabled"
 msgstr ""
+"Активно\n"
+"Режим предупреждений\n"
+"Отключено"
 
 #: tmp/system-config-kickstart.glade.h:33
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "An error in this script might cause your kickstart installation to fail. Do "
 "not include the %post command at the beginning."
 msgstr ""
-"Внимание: ошибка в этом скрипте может привести к сбою установки. Не "
-"включайте команду %post в начале."
+"Ошибка в этом сценарии может привести к сбою установки. Не "
+"добавляйте команду %post в начале."
 
 #: tmp/system-config-kickstart.glade.h:35
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "An error in this script might cause your kickstart installation to fail. Do "
 "not include the %pre command at the beginning."
 msgstr ""
-"Внимание: ошибка в скрипте может привести к сбою установки. Не включайте "
+"Ошибка в этом сценарии может привести к сбою установки. Не добавляйте "
 "команду %pre в начале."
 
 #: tmp/system-config-kickstart.glade.h:36
@@ -614,12 +609,14 @@ msgid "Default Language:"
 msgstr "Основной язык"
 
 #: tmp/system-config-kickstart.glade.h:45
-#, fuzzy
 msgid ""
 "Disabled\n"
 "Enabled\n"
 "Enabled in reconfiguration mode"
-msgstr "Включен в режиме перенастройки"
+msgstr ""
+"Отключен\n"
+"Включен\n"
+"Включен в режиме перенастройки"
 
 #: tmp/system-config-kickstart.glade.h:48
 msgid "Display configuration is not applicable on upgrades."
@@ -658,11 +655,12 @@ msgid "Enable SMB Authentication"
 msgstr "Включить аутентификацию SMB"
 
 #: tmp/system-config-kickstart.glade.h:57
-#, fuzzy
 msgid ""
 "Enable firewall\n"
 "Disable firewall"
-msgstr "Отключить брандмауэр"
+msgstr ""
+"Включить брандмауэр\n"
+"Отключить брандмауэр"
 
 #: tmp/system-config-kickstart.glade.h:59
 msgid "Enable nscd"
@@ -685,18 +683,16 @@ msgid "FTP Directory:"
 msgstr "Каталог FTP:"
 
 #: tmp/system-config-kickstart.glade.h:64
-#, fuzzy
 msgid "FTP Password:"
-msgstr "Пароль FTP"
+msgstr "Пароль FTP:"
 
 #: tmp/system-config-kickstart.glade.h:65
 msgid "FTP Server:"
 msgstr "Сервер FTP:"
 
 #: tmp/system-config-kickstart.glade.h:66
-#, fuzzy
 msgid "FTP Username:"
-msgstr "Имя пользователя FTP"
+msgstr "Имя пользователя FTP:"
 
 #: tmp/system-config-kickstart.glade.h:67
 msgid "File System Type:"
@@ -711,9 +707,8 @@ msgid "Firewall configuration is not applicable on upgrades."
 msgstr "Настройка брандмауэра не применима при обновлении системы."
 
 #: tmp/system-config-kickstart.glade.h:70
-#, fuzzy
 msgid "Fixed size (MB):"
-msgstr "Фиксированный размер"
+msgstr "Фиксированный размер (Мбайт):"
 
 #: tmp/system-config-kickstart.glade.h:71
 msgid "Force to be a primary partition (asprimary)"
@@ -733,7 +728,7 @@ msgstr "Шлюз:"
 
 #: tmp/system-config-kickstart.glade.h:75
 msgid "Grow to maximum of (MB):"
-msgstr "Увеличивать максимум до (MB):"
+msgstr "Увеличивать максимум до (Мбайт):"
 
 #: tmp/system-config-kickstart.glade.h:76
 msgid "HTTP"
@@ -781,7 +776,7 @@ msgstr "Инициализировать метку диска"
 
 #: tmp/system-config-kickstart.glade.h:87
 msgid "Install a graphical environment"
-msgstr ""
+msgstr "Установить графическое окружение"
 
 #: tmp/system-config-kickstart.glade.h:88
 msgid "Install boot loader on Master Boot Record (MBR)"
@@ -805,11 +800,11 @@ msgstr "Kerberos Domain Controller (KDC):"
 
 #: tmp/system-config-kickstart.glade.h:93
 msgid "Kerberos Master Server:"
-msgstr "Kerberos Master Server:"
+msgstr "Мастер-сервер Kerberos:"
 
 #: tmp/system-config-kickstart.glade.h:94
 msgid "Kerberos Realm:"
-msgstr "Kerberos Realm:"
+msgstr "Область Kerberos:"
 
 #: tmp/system-config-kickstart.glade.h:95
 msgid "Kernel parameters:"
@@ -829,7 +824,7 @@ msgstr "LDAP "
 
 #: tmp/system-config-kickstart.glade.h:99
 msgid "LDAP Base Name: "
-msgstr "LDAP Base Name: "
+msgstr "Базовое имя LDAP: "
 
 #: tmp/system-config-kickstart.glade.h:100
 msgid "LDAP Server: "
@@ -844,9 +839,8 @@ msgid "Make RAID Device"
 msgstr "Создать устройство RAID"
 
 #: tmp/system-config-kickstart.glade.h:103
-#, fuzzy
 msgid "Make partition on specific drive (ondisk, e.g. hda or sdc):"
-msgstr "Создать раздел на указанном диске (ondisk)"
+msgstr "Создать раздел на указанном диске (ondisk, например, hda или sdc)"
 
 #: tmp/system-config-kickstart.glade.h:104
 msgid "Mount Point:"
@@ -959,9 +953,8 @@ msgid "RAID Options"
 msgstr "Параметры RAID"
 
 #: tmp/system-config-kickstart.glade.h:131
-#, fuzzy
 msgid "Raid Members:"
-msgstr "Члены RAID"
+msgstr "Составляющие RAID:"
 
 #: tmp/system-config-kickstart.glade.h:132
 msgid "Reboot system after installation"
@@ -1044,12 +1037,12 @@ msgstr ""
 #: tmp/system-config-kickstart.glade.h:149
 #, no-c-format
 msgid "Type your %post script below:"
-msgstr "Введите ваш скрипт %post ниже:"
+msgstr "Введите сценарий %post ниже:"
 
 #: tmp/system-config-kickstart.glade.h:151
 #, no-c-format
 msgid "Type your %pre script below:"
-msgstr "Введите ваш скрипт %pre ниже:"
+msgstr "Введите сценарий %pre ниже:"
 
 #: tmp/system-config-kickstart.glade.h:152
 msgid "Upgrade an existing installation"
@@ -1080,9 +1073,8 @@ msgid "Use broadcast to find NIS server"
 msgstr "Широковещательный поиск сервера NIS"
 
 #: tmp/system-config-kickstart.glade.h:159
-#, fuzzy
 msgid "Use existing partition (onpart, e.g. hda1 or sdc3):"
-msgstr "Использовать существующий раздел (onpart)"
+msgstr "Использовать существующий раздел (onpart, например, hda1 или sdc3):"
 
 #: tmp/system-config-kickstart.glade.h:160
 msgid "Use recommended swap size"
@@ -1140,138 +1132,3 @@ msgstr "_Предварительный просмотр"
 msgid "_Save to File"
 msgstr "_Сохранить в файл"
 
-#~ msgid ""
-#~ "Kickstart Configurator @VERSION@\n"
-#~ " Copyright (c) 2000-2002 Red Hat, Inc.\n"
-#~ " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-#~ " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-#~ " A graphical interface for creating a kickstart file"
-#~ msgstr ""
-#~ "Kickstart Configurator @VERSION@\n"
-#~ " Copyright (c) 2000-2002 Red Hat, Inc.\n"
-#~ " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-#~ " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-#~ "Графический интерфейс для создания файла kickstart"
-
-#~ msgid "         "
-#~ msgstr "         "
-
-#~ msgid "(for example: hda or sdc)"
-#~ msgstr "(например, hda или sdc)"
-
-#~ msgid "(for example: hda1 or sdc3)"
-#~ msgstr "(например: hda1 или sdc3)"
-
-#~ msgid "0"
-#~ msgstr "0"
-
-#~ msgid "1"
-#~ msgstr "1"
-
-#~ msgid "5"
-#~ msgstr "5"
-
-#~ msgid "Active"
-#~ msgstr "Включен"
-
-#~ msgid "Additional Size Options"
-#~ msgstr "Дополнительные параметры размера"
-
-#~ msgid "Authentication:"
-#~ msgstr "Аутентификация:"
-
-#~ msgid "Basic Configuration (required)"
-#~ msgstr "Базовая конфигурация (требуется)"
-
-#~ msgid "Boot Loader Options (required)"
-#~ msgstr "Параметры загрузчика (требуются)"
-
-#~ msgid "Choose the Installation Method:"
-#~ msgstr "Выберите метод установки:"
-
-#~ msgid "Configure the X Window System"
-#~ msgstr "Настройка системы X Window"
-
-#~ msgid "Disabled"
-#~ msgstr "Выключен"
-
-#~ msgid "Drive :"
-#~ msgstr "Устройство:"
-
-#~ msgid "Enable firewall"
-#~ msgstr "Включить брандмауэр"
-
-#~ msgid "Enabled"
-#~ msgstr "Включен"
-
-#~ msgid "Installation Method (required)"
-#~ msgstr "Метод установки (требуется)"
-
-#~ msgid "Partition Information (required)"
-#~ msgstr "Информация о разделе (обязательна)"
-
-#~ msgid "Size (MB):"
-#~ msgstr "Размер (MB):"
-
-#~ msgid "Warn"
-#~ msgstr "Предупреждения"
-
-#~ msgid "_About"
-#~ msgstr "_О программе..."
-
-#~ msgid "_Contents"
-#~ msgstr "_Содержание"
-
-#~ msgid "_Quit"
-#~ msgstr "_Выход"
-
-#~ msgid "_Save File"
-#~ msgstr "Сохранить файл"
-
-#~ msgid "md0"
-#~ msgstr "md0"
-
-#~ msgid "md1"
-#~ msgstr "md1"
-
-#~ msgid "md10"
-#~ msgstr "md10"
-
-#~ msgid "md11"
-#~ msgstr "md11"
-
-#~ msgid "md12"
-#~ msgstr "md12"
-
-#~ msgid "md13"
-#~ msgstr "md13"
-
-#~ msgid "md14"
-#~ msgstr "md14"
-
-#~ msgid "md15"
-#~ msgstr "md15"
-
-#~ msgid "md2"
-#~ msgstr "md2"
-
-#~ msgid "md3"
-#~ msgstr "md3"
-
-#~ msgid "md4"
-#~ msgstr "md4"
-
-#~ msgid "md5"
-#~ msgstr "md5"
-
-#~ msgid "md6"
-#~ msgstr "md6"
-
-#~ msgid "md7"
-#~ msgstr "md7"
-
-#~ msgid "md8"
-#~ msgstr "md8"
-
-#~ msgid "md9"
-#~ msgstr "md9"
