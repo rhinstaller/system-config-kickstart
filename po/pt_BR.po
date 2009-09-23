@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: pt_BR\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-09-22 11:01-0400\n"
-"PO-Revision-Date: 2009-03-22 17:14-0300\n"
+"PO-Revision-Date: 2009-09-22 23:28-0300\n"
 "Last-Translator: Igor Pires Soares <igor@projetofedora.org>\n"
 "Language-Team: Brazilian Portuguese <fedora-trans-pt_br@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -53,8 +53,11 @@ msgstr "IBM zSeries/s390"
 msgid "Root passwords do not match."
 msgstr "As senhas de root não coincidem."
 
-#: ../src/basic.py:152 ../src/install.py:217 ../src/partWindow.py:576
-#: ../src/partition.py:256 ../src/raidWindow.py:276
+#: ../src/basic.py:152
+#: ../src/install.py:217
+#: ../src/partWindow.py:576
+#: ../src/partition.py:256
+#: ../src/raidWindow.py:276
 msgid "Error"
 msgstr "Erro"
 
@@ -65,17 +68,15 @@ msgstr "As senhas do grub não coincidem. Por favor tente novamente."
 #: ../src/bootloader.py:197
 #, python-format
 msgid "Bootloader options are not applicable to the %s platform"
-msgstr ""
-"As opções do gerenciador de inicialização não se aplicam à plataforma %s."
+msgstr "As opções do gerenciador de inicialização não se aplicam à plataforma %s."
 
 #: ../src/firewall.py:60
 msgid "Trusted services:"
 msgstr "Serviços confiáveis:"
 
 #: ../src/firewall.py:92
-#, fuzzy
 msgid "Other ports (1029:tcp):"
-msgstr "Outras portas: (1029:tcp)"
+msgstr "Outras portas (1029:tcp):"
 
 #: ../src/install.py:132
 msgid "Please enter an NFS server."
@@ -119,28 +120,28 @@ msgstr "Por favor, insira uma partição do disco rígido."
 
 #: ../src/kickstartGui.py:81
 msgid ""
-"This program is free software; you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation; either version 2 of the License, or (at your option) "
-"any later version.\n"
+"This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n"
 "\n"
-"This program is distributed in the hope that it will be useful, but WITHOUT "
-"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
-"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details.\n"
+"This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.\n"
 "\n"
-"You should have received a copy of the GNU General Public License along with "
-"this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
-"Ave, Cambridge, MA 02139, USA."
+"You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
 msgstr ""
+"Este programa é um software livre; você pode redistribui-lo e/ou modificá-lo sob os termos da GNU General Public License (GPL) como publicada pela Free Software Foundation; tanto na versão 2 da Licença ou (caso queira) qualquer versão posterior.\n"
+"\n"
+"Este programa é distribuído na esperança de que será útil, mas SEM NENHUMA GARANTIA; até sem a garantia implícita de COMERCIALIZAÇÃO ou de ADAPTAÇÃO A UM PROPÓSITO EM PARTICULAR. Veja a GNU General Public License (GPL) para mais detalhes.\n"
+"\n"
+"Você deve ter recebido uma cópia da GNU General Public License (GPL) junto com este programa. Caso contrário, escreva para a Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
 
-#: ../src/kickstartGui.py:125 ../src/kickstartGui.py:130
-#: ../src/kickstartGui.py:330 ../src/kickstartGui.py:335
+#: ../src/kickstartGui.py:125
+#: ../src/kickstartGui.py:130
+#: ../src/kickstartGui.py:330
+#: ../src/kickstartGui.py:335
 #, python-format
 msgid "The kickstart file %s could not be opened."
 msgstr "O arquivo kickstart %s não pôde ser aberto."
 
-#: ../src/kickstartGui.py:127 ../src/kickstartGui.py:332
+#: ../src/kickstartGui.py:127
+#: ../src/kickstartGui.py:332
 #, python-format
 msgid ""
 "The following error was found while parsing your kickstart configuration:\n"
@@ -151,7 +152,8 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../src/kickstartGui.py:135 ../src/kickstartGui.py:340
+#: ../src/kickstartGui.py:135
+#: ../src/kickstartGui.py:340
 msgid "Error Parsing Kickstart Config"
 msgstr "Erro ao analisar a configuração do kickstart"
 
@@ -224,7 +226,8 @@ msgstr "A ajuda não está disponível."
 msgid "The file \"%s\" cannot be accessed."
 msgstr "Não foi possível acessar o arquivo \"%s\""
 
-#: ../src/kickstartGui.py:371 ../src/kickstartGui.py:380
+#: ../src/kickstartGui.py:371
+#: ../src/kickstartGui.py:380
 #: ../src/packages.py:209
 msgid "Retrieving package information"
 msgstr "Obtendo informações de pacotes"
@@ -237,42 +240,42 @@ msgstr "Dispositivo"
 msgid "Network Type"
 msgstr "Tipo de rede"
 
-#: ../src/network.py:79 ../src/network.py:114 ../src/network.py:196
-#: ../src/network.py:251 ../src/network.py:347
+#: ../src/network.py:79
+#: ../src/network.py:114
+#: ../src/network.py:196
+#: ../src/network.py:251
+#: ../src/network.py:347
 msgid "Static IP"
 msgstr "IP estático"
 
-#: ../src/network.py:161 ../src/network.py:219
+#: ../src/network.py:161
+#: ../src/network.py:219
 msgid "Please fill in the network information"
 msgstr "Por favor, preencha as informações da rede"
 
-#: ../src/network.py:173 ../src/network.py:231
+#: ../src/network.py:173
+#: ../src/network.py:231
 msgid "Please enter a valid gateway address."
 msgstr "Por favor, insira um endereço de gateway válido."
 
-#: ../src/network.py:185 ../src/network.py:243
+#: ../src/network.py:185
+#: ../src/network.py:243
 msgid "Please enter a valid nameserver address."
 msgstr "Por favor, insira um endereço válido de um servidor de nomes."
 
 #: ../src/network.py:271
 #, python-format
-msgid ""
-"A network device with the name %s already exists.  Please choose another "
-"device name"
-msgstr ""
-"O dispositivo de rede de nome %s já existe. Por favor, escolha outro nome "
-"para o dispositivo"
+msgid "A network device with the name %s already exists.  Please choose another device name"
+msgstr "O dispositivo de rede de nome %s já existe. Por favor, escolha outro nome para o dispositivo"
 
 #: ../src/packages.py:146
 #, python-format
 msgid ""
-"Package selection is disabled due to an error in setup.  Please fix your "
-"repository configuration and try again.\n"
+"Package selection is disabled due to an error in setup.  Please fix your repository configuration and try again.\n"
 "\n"
 "%s"
 msgstr ""
-"A seleção de pacotes está desabilitada devido a um erro na configuração. Por "
-"favor, corrija a sua configuração do repositório e tente novamente.\n"
+"A seleção de pacotes está desabilitada devido a um erro na configuração. Por favor, corrija a sua configuração do repositório e tente novamente.\n"
 "\n"
 "%s"
 
@@ -281,12 +284,8 @@ msgid "Package configuration is not applicable on upgrades."
 msgstr "A configuração de pacotes não se aplica às atualizações."
 
 #: ../src/packages.py:216
-msgid ""
-"Package selection is disabled due to problems downloading package "
-"information."
-msgstr ""
-"A seleção de pacotes está desabilitada devido a problemas ao baixar as "
-"informações dos pacotes."
+msgid "Package selection is disabled due to problems downloading package information."
+msgstr "A seleção de pacotes está desabilitada devido a problemas ao baixar as informações dos pacotes."
 
 #: ../src/partWindow.py:97
 msgid "ext2"
@@ -297,7 +296,8 @@ msgid "ext3"
 msgstr "ext3"
 
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:99 ../src/partWindow.py:174
+#: ../src/partWindow.py:99
+#: ../src/partWindow.py:174
 msgid "software RAID"
 msgstr "RAID por software"
 
@@ -313,15 +313,21 @@ msgstr "vfat"
 msgid "PPC PReP Boot"
 msgstr "PPC PReP Boot"
 
-#: ../src/partWindow.py:316 ../src/partWindow.py:598 ../src/raidWindow.py:241
+#: ../src/partWindow.py:316
+#: ../src/partWindow.py:598
+#: ../src/raidWindow.py:241
 msgid "Yes"
 msgstr "Sim"
 
-#: ../src/partWindow.py:318 ../src/partWindow.py:600 ../src/raidWindow.py:243
+#: ../src/partWindow.py:318
+#: ../src/partWindow.py:600
+#: ../src/raidWindow.py:243
 msgid "No"
 msgstr "Não"
 
-#: ../src/partWindow.py:341 ../src/partWindow.py:356 ../src/partWindow.py:375
+#: ../src/partWindow.py:341
+#: ../src/partWindow.py:356
+#: ../src/partWindow.py:375
 #: ../src/partWindow.py:389
 msgid "Auto"
 msgstr "Auto"
@@ -337,31 +343,20 @@ msgstr "Especifique um ponto de montagem para a partição."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:503
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr ""
-"O ponto de montagem \"%s\" já está sendo utilizado. Por favor, escolha outro "
-"ponto de montagem."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr "O ponto de montagem \"%s\" já está sendo utilizado. Por favor, escolha outro ponto de montagem."
 
 #: ../src/partWindow.py:523
-msgid ""
-"To create a new RAID partition, you must specify either a hard drive device "
-"name or an existing partition."
-msgstr ""
-"Para criar uma nova partição RAID, você deve especificar o nome do "
-"dispositivo do disco rígido ou uma partição existente."
+msgid "To create a new RAID partition, you must specify either a hard drive device name or an existing partition."
+msgstr "Para criar uma nova partição RAID, você deve especificar o nome do dispositivo do disco rígido ou uma partição existente."
 
 #: ../src/partWindow.py:560
 msgid "Specify a device on which to create the partition."
 msgstr "Especifique o dispositivo onde criar a partição."
 
 #: ../src/partWindow.py:569
-msgid ""
-"The partition you specified does not end in a number.  Partitions must have "
-"a partition number such as \"hda1\" or \"sda3\"."
-msgstr ""
-"A partição que você escolheu não acaba com um número. As partições devem ter "
-"um número, como por exemplo \"hda1\" ou \"sda3\"."
+msgid "The partition you specified does not end in a number.  Partitions must have a partition number such as \"hda1\" or \"sda3\"."
+msgstr "A partição que você escolheu não acaba com um número. As partições devem ter um número, como por exemplo \"hda1\" ou \"sda3\"."
 
 #: ../src/partition.py:72
 msgid ""
@@ -391,7 +386,8 @@ msgstr "Formatar"
 msgid "Size (MB)"
 msgstr "Tamanho (MB)"
 
-#: ../src/partition.py:98 ../src/partition.py:138
+#: ../src/partition.py:98
+#: ../src/partition.py:138
 msgid "Please select a partition from the list."
 msgstr "Por favor, selecione uma partição da lista."
 
@@ -410,7 +406,8 @@ msgstr "Você deve selecionar pelo menos 2 partições para utilizar o RAID %s"
 msgid "You must select at least 3 partitions in order to use RAID %s"
 msgstr "Você deve selecionar pelo menos 3 partições para utilizar RAID %s"
 
-#: ../src/raidWindow.py:221 ../src/raidWindow.py:247
+#: ../src/raidWindow.py:221
+#: ../src/raidWindow.py:247
 msgid "Raid Devices"
 msgstr "Dispositivos RAID"
 
@@ -424,137 +421,116 @@ msgid "Error Saving Kickstart Config"
 msgstr "Erro ao salvar a configuração do kickstart"
 
 #: tmp/system-config-kickstart.glade.h:1
-#, fuzzy
 msgid "<b>Advanced Configuration</b>"
-msgstr "Configuração básica"
+msgstr "<b>Configurações avançadas</b>"
 
 #: tmp/system-config-kickstart.glade.h:2
-#, fuzzy
 msgid "<b>Authentication Configuration</b>"
-msgstr "Configuração da autenticação"
+msgstr "<b>Configurações de autenticação</b>"
 
 #: tmp/system-config-kickstart.glade.h:3
-#, fuzzy
 msgid "<b>Basic Configuration</b>"
-msgstr "Configuração básica"
+msgstr "<b>Configurações básicas</b>"
 
 #: tmp/system-config-kickstart.glade.h:4
 msgid "<b>Disk label</b>"
-msgstr ""
+msgstr "<b>Rótulo do disco</b>"
 
 #: tmp/system-config-kickstart.glade.h:5
-#, fuzzy
 msgid "<b>Display Configuration</b>"
-msgstr "Configuração da aparência (display)"
+msgstr "<b>Configurações de exibição</b>"
 
 #: tmp/system-config-kickstart.glade.h:6
-#, fuzzy
 msgid "<b>Firewall Configuration</b>"
-msgstr "Configuração do firewall"
+msgstr "<b>Configurações do Firewall</b>"
 
 #: tmp/system-config-kickstart.glade.h:7
-#, fuzzy
 msgid "<b>GRUB Options</b>"
-msgstr "Opções do GRUB:"
+msgstr "<b>Opções do GRUB</b>"
 
 #: tmp/system-config-kickstart.glade.h:8
-#, fuzzy
 msgid "<b>Hesiod Authentication</b>"
-msgstr "Autenticação Hesiod"
+msgstr "<b>Autenticação Hesiod</b>"
 
 #: tmp/system-config-kickstart.glade.h:9
 msgid "<b>Install Options</b>"
-msgstr ""
+msgstr "<b>Opções de instalação</b>"
 
 #: tmp/system-config-kickstart.glade.h:10
 msgid "<b>Install Type</b>"
-msgstr ""
+msgstr "<b>Tipo de instalação</b>"
 
 #: tmp/system-config-kickstart.glade.h:11
-#, fuzzy
 msgid "<b>Installation Method</b>"
-msgstr "Método de instalação"
+msgstr "<b>Método de instalação</b>"
 
 #: tmp/system-config-kickstart.glade.h:12
-#, fuzzy
 msgid "<b>Installation source</b>"
-msgstr "Método de instalação"
+msgstr "<b>Origem da instalação</b>"
 
 #: tmp/system-config-kickstart.glade.h:13
-#, fuzzy
 msgid "<b>Kerberos 5 Authentication</b>"
-msgstr "Autenticação do Kerberos 5"
+msgstr "<b>Autenticação do Kerberos 5</b>"
 
 #: tmp/system-config-kickstart.glade.h:14
-#, fuzzy
 msgid "<b>LDAP Authentication</b>"
-msgstr "Autenticação LDAP"
+msgstr "<b>Autenticação LDAP</b>"
 
 #: tmp/system-config-kickstart.glade.h:15
 msgid "<b>Layout</b>"
-msgstr ""
+msgstr "<b>Layout</b>"
 
 #: tmp/system-config-kickstart.glade.h:16
-#, fuzzy
 msgid "<b>Master Boot Record</b>"
-msgstr "Limpar o Master Boot Record"
+msgstr "<b>Master Boot Record</b>"
 
 #: tmp/system-config-kickstart.glade.h:17
-#, fuzzy
 msgid "<b>NIS Authentication</b>"
-msgstr "Autenticação NIS"
+msgstr "<b>Autenticação NIS</b>"
 
 #: tmp/system-config-kickstart.glade.h:18
-#, fuzzy
 msgid "<b>Name Switch Cache Daemon (nscd) Authentication</b>"
-msgstr "Autenticação Name Switch Cache Daemon (nscd)"
+msgstr "<b>Autenticação do Name Switch Cache Daemon (nscd)</b>"
 
 #: tmp/system-config-kickstart.glade.h:19
-#, fuzzy
 msgid "<b>Network Configuration</b>"
-msgstr "Configuração da rede"
+msgstr "<b>Configurações da rede</b>"
 
 #: tmp/system-config-kickstart.glade.h:20
-#, fuzzy
 msgid "<b>Package Selection</b>"
-msgstr "Seleção de pacotes"
+msgstr "<b>Seleção de pacotes</b>"
 
 #: tmp/system-config-kickstart.glade.h:21
-#, fuzzy
 msgid "<b>Partition options</b>"
-msgstr "Opções de particionamento"
+msgstr "<b>Opções de particionamento</b>"
 
 #: tmp/system-config-kickstart.glade.h:22
-#, fuzzy
 msgid "<b>Partitions</b>"
-msgstr "Partição:"
+msgstr "<b>Partições</b>"
 
 #: tmp/system-config-kickstart.glade.h:23
-#, fuzzy
 msgid "<b>Post-Installation Script</b>"
-msgstr "Script de pós-instalação"
+msgstr "<b>Script de pós-instalação</b>"
 
 #: tmp/system-config-kickstart.glade.h:24
-#, fuzzy
 msgid "<b>Pre-Installation Script</b>"
-msgstr "Script de pré-instalação"
+msgstr "<b>Script de pré-instalação</b>"
 
 #: tmp/system-config-kickstart.glade.h:25
-#, fuzzy
 msgid "<b>SMB Authentication</b>"
-msgstr "Autenticação SMB"
+msgstr "<b>Autenticação SMB</b>"
 
 #: tmp/system-config-kickstart.glade.h:26
 msgid "<b>Size Options</b>"
-msgstr ""
+msgstr "<b>Opções de tamanho</b>"
 
 #: tmp/system-config-kickstart.glade.h:27
 msgid "<b>Special options</b>"
-msgstr ""
+msgstr "<b>Opções especiais</b>"
 
 #: tmp/system-config-kickstart.glade.h:28
 msgid "<b>label28</b>"
-msgstr ""
+msgstr "<b>label28</b>"
 
 #: tmp/system-config-kickstart.glade.h:29
 msgid ""
@@ -562,24 +538,19 @@ msgid ""
 "Warn\n"
 "Disabled"
 msgstr ""
+"Ativo\n"
+"Avisar\n"
+"Desabilitado"
 
 #: tmp/system-config-kickstart.glade.h:33
-#, fuzzy, no-c-format
-msgid ""
-"An error in this script might cause your kickstart installation to fail. Do "
-"not include the %post command at the beginning."
-msgstr ""
-"Aviso: Um erro neste \"script\" pode causar a falha da sua instalação do "
-"kickstart. Não inclua o comando %post no início."
+#, no-c-format
+msgid "An error in this script might cause your kickstart installation to fail. Do not include the %post command at the beginning."
+msgstr "Um erro neste \"script\" pode causar a falha da sua instalação pelo kickstart. Não inclua o comando %post no início."
 
 #: tmp/system-config-kickstart.glade.h:35
-#, fuzzy, no-c-format
-msgid ""
-"An error in this script might cause your kickstart installation to fail. Do "
-"not include the %pre command at the beginning."
-msgstr ""
-"Aviso: Um erro neste \"script\" pode causar a falha da sua instalação do "
-"kickstart. Não inclua o comando %pre no início."
+#, no-c-format
+msgid "An error in this script might cause your kickstart installation to fail. Do not include the %pre command at the beginning."
+msgstr "Um erro neste \"script\" pode causar a falha da sua instalação pelo kickstart. Não inclua o comando %pre no início."
 
 #: tmp/system-config-kickstart.glade.h:36
 msgid "Authentication options are not applicable on upgrades."
@@ -618,12 +589,14 @@ msgid "Default Language:"
 msgstr "Idioma padrão:"
 
 #: tmp/system-config-kickstart.glade.h:45
-#, fuzzy
 msgid ""
 "Disabled\n"
 "Enabled\n"
 "Enabled in reconfiguration mode"
-msgstr "Habilitado no modo de reconfiguração"
+msgstr ""
+"Desabilitado\n"
+"Habilitado\n"
+"Habilitado no modo de reconfiguração"
 
 #: tmp/system-config-kickstart.glade.h:48
 msgid "Display configuration is not applicable on upgrades."
@@ -662,11 +635,12 @@ msgid "Enable SMB Authentication"
 msgstr "Habilitar Autenticação SMB"
 
 #: tmp/system-config-kickstart.glade.h:57
-#, fuzzy
 msgid ""
 "Enable firewall\n"
 "Disable firewall"
-msgstr "Desabilitar firewall"
+msgstr ""
+"Habilitar firewall\n"
+"Desabilitar firewall"
 
 #: tmp/system-config-kickstart.glade.h:59
 msgid "Enable nscd"
@@ -689,18 +663,16 @@ msgid "FTP Directory:"
 msgstr "Diretório FTP:"
 
 #: tmp/system-config-kickstart.glade.h:64
-#, fuzzy
 msgid "FTP Password:"
-msgstr "Senha do FTP"
+msgstr "Senha do FTP:"
 
 #: tmp/system-config-kickstart.glade.h:65
 msgid "FTP Server:"
 msgstr "Servidor FTP:"
 
 #: tmp/system-config-kickstart.glade.h:66
-#, fuzzy
 msgid "FTP Username:"
-msgstr "Nome do usuário FTP"
+msgstr "Nome do usuário FTP:"
 
 #: tmp/system-config-kickstart.glade.h:67
 msgid "File System Type:"
@@ -715,9 +687,8 @@ msgid "Firewall configuration is not applicable on upgrades."
 msgstr "A configuração do firewall não se aplica às atualizações."
 
 #: tmp/system-config-kickstart.glade.h:70
-#, fuzzy
 msgid "Fixed size (MB):"
-msgstr "Tamanho fixo"
+msgstr "Tamanho fixo (MB):"
 
 #: tmp/system-config-kickstart.glade.h:71
 msgid "Force to be a primary partition (asprimary)"
@@ -785,7 +756,7 @@ msgstr "Inicializar o rótulo do disco"
 
 #: tmp/system-config-kickstart.glade.h:87
 msgid "Install a graphical environment"
-msgstr ""
+msgstr "Instalar um ambiente gráfico"
 
 #: tmp/system-config-kickstart.glade.h:88
 msgid "Install boot loader on Master Boot Record (MBR)"
@@ -793,8 +764,7 @@ msgstr "Instalar o gerenciador de inicialização no Master Boot Record (MBR)"
 
 #: tmp/system-config-kickstart.glade.h:89
 msgid "Install boot loader on first sector of the boot partition"
-msgstr ""
-"Instalar o gerenciador de inicialização no primeiro setor da partição boot"
+msgstr "Instalar o gerenciador de inicialização no primeiro setor da partição boot"
 
 #: tmp/system-config-kickstart.glade.h:90
 msgid "Install new boot loader"
@@ -849,9 +819,8 @@ msgid "Make RAID Device"
 msgstr "Criar um dispositivo RAID"
 
 #: tmp/system-config-kickstart.glade.h:103
-#, fuzzy
 msgid "Make partition on specific drive (ondisk, e.g. hda or sdc):"
-msgstr "Criar partição em um disco específico (ondisk)"
+msgstr "Criar partição em um disco específico (ondisk, p. ex. hda ou sdc):"
 
 #: tmp/system-config-kickstart.glade.h:104
 msgid "Mount Point:"
@@ -962,9 +931,8 @@ msgid "RAID Options"
 msgstr "Opções RAID"
 
 #: tmp/system-config-kickstart.glade.h:131
-#, fuzzy
 msgid "Raid Members:"
-msgstr "Membros do Raid"
+msgstr "Membros do Raid:"
 
 #: tmp/system-config-kickstart.glade.h:132
 msgid "Reboot system after installation"
@@ -1007,17 +975,8 @@ msgid "Security level:"
 msgstr "Nível de segurança:"
 
 #: tmp/system-config-kickstart.glade.h:142
-msgid ""
-"Software RAID allows you to combine several disks into a larger RAID "
-"device.  A RAID device can be configured to provide additional speed and "
-"reliability compared to using an individual drive.  For more information on "
-"using RAID devices please consult the kickstart documentation."
-msgstr ""
-"O RAID por software permite combinar vários discos num dispositivo RAID "
-"maior. Um dispositivo RAID pode ser configurado para prover velocidade e "
-"confiabilidade adicionais se comparado ao uso de um disco individual. Para "
-"mais informações sobre o uso de dispositivos RAID, consulte a documentação "
-"do kickstart."
+msgid "Software RAID allows you to combine several disks into a larger RAID device.  A RAID device can be configured to provide additional speed and reliability compared to using an individual drive.  For more information on using RAID devices please consult the kickstart documentation."
+msgstr "O RAID por software permite combinar vários discos num dispositivo RAID maior. Um dispositivo RAID pode ser configurado para prover velocidade e confiabilidade adicionais se comparado ao uso de um disco individual. Para mais informações sobre o uso de dispositivos RAID, consulte a documentação do kickstart."
 
 #: tmp/system-config-kickstart.glade.h:143
 msgid "Specify an FTP username and password"
@@ -1036,13 +995,8 @@ msgid "Time Zone:"
 msgstr "Fuso horário:"
 
 #: tmp/system-config-kickstart.glade.h:147
-msgid ""
-"To use RAID you must first create at least two partitions of type 'software "
-"RAID'.  Then you can create a RAID device which can be formatted and mounted."
-msgstr ""
-"Para utilizar o RAID você deve criar primeiro pelo menos duas partições do "
-"tipo \"RAID por software\".  E então você pode criar um dispositivo RAID que "
-"pode ser formatado e montado."
+msgid "To use RAID you must first create at least two partitions of type 'software RAID'.  Then you can create a RAID device which can be formatted and mounted."
+msgstr "Para utilizar o RAID você deve criar primeiro pelo menos duas partições do tipo \"RAID por software\".  E então você pode criar um dispositivo RAID que pode ser formatado e montado."
 
 #: tmp/system-config-kickstart.glade.h:149
 #, no-c-format
@@ -1083,21 +1037,16 @@ msgid "Use broadcast to find NIS server"
 msgstr "Utilizar broadcast para localizar o servidor NIS"
 
 #: tmp/system-config-kickstart.glade.h:159
-#, fuzzy
 msgid "Use existing partition (onpart, e.g. hda1 or sdc3):"
-msgstr "Utilizar partição existente (onpart)"
+msgstr "Usar partição existente (onpart, p. ex. hda1 ou sdc3):"
 
 #: tmp/system-config-kickstart.glade.h:160
 msgid "Use recommended swap size"
 msgstr "Utilizar tamanho de troca (\"swap\") recomendado"
 
 #: tmp/system-config-kickstart.glade.h:161
-msgid ""
-"You have choosen the following configuration. Click Save File to save the "
-"kickstart file. "
-msgstr ""
-"Você escolheu a seguinte configuração. Clique em Salvar arquivo para gravar "
-"o arquivo kickstart."
+msgid "You have choosen the following configuration. Click Save File to save the kickstart file. "
+msgstr "Você escolheu a seguinte configuração. Clique em Salvar arquivo para gravar o arquivo kickstart."
 
 #: tmp/system-config-kickstart.glade.h:162
 msgid "_Add"
@@ -1155,192 +1104,130 @@ msgstr "_Salvar em arquivo"
 #~ " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
 #~ " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
 #~ " Uma interface gráfica para criar um arquivo kickstart"
-
 #~ msgid "         "
 #~ msgstr "         "
-
 #~ msgid "(for example: hda or sdc)"
 #~ msgstr "(por exemplo: hda ou sdc)"
-
 #~ msgid "(for example: hda1 or sdc3)"
 #~ msgstr "(por exemplo: hda1 ou sdc3)"
-
 #~ msgid "0"
 #~ msgstr "0"
-
 #~ msgid "1"
 #~ msgstr "1"
-
 #~ msgid "5"
 #~ msgstr "5"
-
 #~ msgid "Active"
 #~ msgstr "Ativo"
-
 #~ msgid "Additional Size Options"
 #~ msgstr "Opções adicionais de tamanho"
-
 #~ msgid "Authentication:"
 #~ msgstr "Autenticação:"
-
 #~ msgid "Basic Configuration (required)"
 #~ msgstr "Configuração básica (requerido)"
-
 #~ msgid "Boot Loader Options (required)"
 #~ msgstr "Opções do gerenciador de inicialização (requerido)"
-
 #~ msgid "Choose the Installation Method:"
 #~ msgstr "Escolha o método de instalação:"
-
 #~ msgid "Configure the X Window System"
 #~ msgstr "Configurar o X Window System"
-
 #~ msgid "Disabled"
 #~ msgstr "Desabilitado"
-
 #~ msgid "Drive :"
 #~ msgstr "Disco:"
-
 #~ msgid "Enable firewall"
 #~ msgstr "Habilitar firewall"
-
 #~ msgid "Enabled"
 #~ msgstr "Habilitado"
-
 #~ msgid "Installation Method (required)"
 #~ msgstr "Método de instalação (requerido)"
-
 #~ msgid "Partition Information (required)"
 #~ msgstr "Informações de particionamento (requerido)"
-
 #~ msgid "Size (MB):"
 #~ msgstr "Tamanho (MB):"
-
 #~ msgid "Warn"
 #~ msgstr "Avisar"
-
 #~ msgid "_About"
 #~ msgstr "_Sobre"
-
 #~ msgid "_Contents"
 #~ msgstr "S_umário"
-
 #~ msgid "_Quit"
 #~ msgstr "_Sair"
-
 #~ msgid "_Save File"
 #~ msgstr "_Salvar arquivo"
-
 #~ msgid "md0"
 #~ msgstr "md0"
-
 #~ msgid "md1"
 #~ msgstr "md1"
-
 #~ msgid "md10"
 #~ msgstr "md10"
-
 #~ msgid "md11"
 #~ msgstr "md11"
-
 #~ msgid "md12"
 #~ msgstr "md12"
-
 #~ msgid "md13"
 #~ msgstr "md13"
-
 #~ msgid "md14"
 #~ msgstr "md14"
-
 #~ msgid "md15"
 #~ msgstr "md15"
-
 #~ msgid "md2"
 #~ msgstr "md2"
-
 #~ msgid "md3"
 #~ msgstr "md3"
-
 #~ msgid "md4"
 #~ msgstr "md4"
-
 #~ msgid "md5"
 #~ msgstr "md5"
-
 #~ msgid "md6"
 #~ msgstr "md6"
-
 #~ msgid "md7"
 #~ msgstr "md7"
-
 #~ msgid "md8"
 #~ msgstr "md8"
-
 #~ msgid "md9"
 #~ msgstr "md9"
-
 #~ msgid "Could not read video driver database"
 #~ msgstr "Não foi possível ler a base de dados de drivers de vídeo"
-
 #~ msgid "Please select an X driver."
 #~ msgstr "Por favor, selecione um driver para o X."
-
 #~ msgid "Please select a monitor."
 #~ msgstr "Por favor, selecione um monitor."
-
 #~ msgid "Color Depth"
 #~ msgstr "Resolução de cores"
-
 #~ msgid "Default Desktop:"
 #~ msgstr "Ambiente de trabalho padrão:"
-
 #~ msgid "GNOME"
 #~ msgstr "GNOME"
-
 #~ msgid "General"
 #~ msgstr "Geral"
-
 #~ msgid "Horizontal Sync:"
 #~ msgstr "Sincronismo horizontal:"
-
 #~ msgid "Hz"
 #~ msgstr "Hz"
-
 #~ msgid "KDE"
 #~ msgstr "KDE"
-
 #~ msgid "Monitor"
 #~ msgstr "Monitor"
-
 #~ msgid "Probe for monitor"
 #~ msgstr "Detectar monitor"
-
 #~ msgid "Probe for video card driver"
 #~ msgstr "Detectar driver da placa de vídeo"
-
 #~ msgid "Resolution"
 #~ msgstr "Resolução"
-
 #~ msgid "Start the X Window System on boot"
 #~ msgstr "Iniciar o X Window System ao iniciar"
-
 #~ msgid "Use MD5"
 #~ msgstr "Utilizar o MD5"
-
 #~ msgid "Use custom monitor sync rates"
 #~ msgstr "Usar taxas de sincronização do monitor personalizadas"
-
 #~ msgid "Vertical Sync:"
 #~ msgstr "Sincronismo vertical:"
-
 #~ msgid "Video Card"
 #~ msgstr "Placa de vídeo"
-
 #~ msgid "Video Card RAM: "
 #~ msgstr "Memória RAM da placa de vídeo: "
-
 #~ msgid "kHz"
 #~ msgstr "kHz"
-
 #~ msgid "."
 #~ msgstr "."
+
