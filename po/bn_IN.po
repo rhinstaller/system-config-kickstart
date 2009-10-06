@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: system-config-kickstart.master.bn_IN\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-09-22 11:01-0400\n"
-"PO-Revision-Date: 2009-03-31 15:27+0530\n"
+"PO-Revision-Date: 2009-10-06 14:29+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
-"Language-Team: Bengali INDIA <fedora-trans-bn_in@redhat.com>\n"
+"Language-Team: Bengali INDIA <anubad@lists.ankur.org.in>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -105,9 +105,8 @@ msgid "Trusted services:"
 msgstr "বিশ্বস্ত পরিসেবা:"
 
 #: ../src/firewall.py:92
-#, fuzzy
 msgid "Other ports (1029:tcp):"
-msgstr "অন্যান্য পোর্ট: (1029:tcp)"
+msgstr "অন্যান্য পোর্ট (1029:tcp)"
 
 #: ../src/install.py:132
 msgid "Please enter an NFS server."
@@ -165,6 +164,17 @@ msgid ""
 "this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
 "Ave, Cambridge, MA 02139, USA."
 msgstr ""
+"এটি একটি মুক্ত সফ্টওয়্যার; Free Software Foundation দ্বারা প্রকাশিত GNU "
+"General Public License-র শর্তানুযায়ী এটি বিতরণ ও পরিবর্তন করা যাবে; লাইসেন্সের "
+"সংস্করণ ২ অথবা (আপনার সুবিধানুযায়ী) ঊর্ধ্বতন কোনো সংস্করণের অধীন।\n"
+"\n"
+"এই প্রোগ্রামটি বিতরণ করার মূল উদ্দেশ্য যে ব্যবহারকারীরা এর দ্বারা উপকৃত হবেন, কিন্তু "
+"এটির জন্য কোনো সুস্পষ্ট ওয়ারেন্টি উপস্থিত নেই; বাণিজ্যিক ও কোনো সুনির্দিষ্ট কর্ম সাধনের "
+"জন্য অন্তর্নিহীত ওয়ারেন্টিও অনুপস্থিত। অধিক জানতে GNU General Public License পড়ুন।\n"
+"\n"
+"এই প্রোগ্রামের সাথে GNU General Public License-র একটি প্রতিলিপি উপলব্ধ হওয়া"
+"উচিত; না থাকলে নিম্নলিখিত ঠিকানায় লিখে তা সংগ্রহ করুন Free Software Foundation, Inc., 675 Mass "
+"Ave, Cambridge, MA 02139, USA"
 
 #: ../src/kickstartGui.py:125 ../src/kickstartGui.py:130
 #: ../src/kickstartGui.py:330 ../src/kickstartGui.py:335
@@ -317,8 +327,7 @@ msgstr "আপগ্রেডের ক্ষেত্রে প্যাকে�
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
-msgstr ""
-"প্যাকেজ সংক্রান্ত তথ্য ডাউনলোডের সমস্যার দরুণ প্যাকেজ নির্বাচন নিষ্ক্রিয় করা হয়েছে।"
+msgstr "প্যাকেজ সংক্রান্ত তথ্য ডাউনলোডের সমস্যার দরুণ প্যাকেজ নির্বাচন নিষ্ক্রিয় করা হয়েছে।"
 
 #: ../src/partWindow.py:97
 msgid "ext2"
@@ -372,8 +381,7 @@ msgstr "পার্টিশনের জন্য একটি মাউন্
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:503
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "\"%s\" মাউন্ট-পয়েন্ট বর্তমানে ব্যবহৃত হচ্ছে। অনুগ্রহ করে একটি পৃথক মাউন্ট-পয়েন্ট "
 "নির্বাচন করুন।"
@@ -459,137 +467,116 @@ msgid "Error Saving Kickstart Config"
 msgstr "Kickstart কনফিগ সংরক্ষণ করতে সমস্যা"
 
 #: tmp/system-config-kickstart.glade.h:1
-#, fuzzy
 msgid "<b>Advanced Configuration</b>"
-msgstr "মৌলিক কনফিগারেশন"
+msgstr "<b>উন্নত কনফিগারেশন</b>"
 
 #: tmp/system-config-kickstart.glade.h:2
-#, fuzzy
 msgid "<b>Authentication Configuration</b>"
-msgstr "অনুমোদন ব্যবস্থা সংক্রান্ত কনফিগারেশন"
+msgstr "<b>অনুমোদন ব্যবস্থা সংক্রান্ত কনফিগারেশন</b>"
 
 #: tmp/system-config-kickstart.glade.h:3
-#, fuzzy
 msgid "<b>Basic Configuration</b>"
-msgstr "মৌলিক কনফিগারেশন"
+msgstr "<b>মৌলিক কনফিগারেশন</b>"
 
 #: tmp/system-config-kickstart.glade.h:4
 msgid "<b>Disk label</b>"
-msgstr ""
+msgstr "<b>ডিস্কের লেবেল</b>"
 
 #: tmp/system-config-kickstart.glade.h:5
-#, fuzzy
 msgid "<b>Display Configuration</b>"
-msgstr "প্রদর্শন কনফিগারেশন"
+msgstr "<b>প্রদর্শন সংক্রান্ত কনফিগারেশন</b>"
 
 #: tmp/system-config-kickstart.glade.h:6
-#, fuzzy
 msgid "<b>Firewall Configuration</b>"
-msgstr "ফায়ারওয়াল কনফিগারেশন"
+msgstr "<b>ফায়ারওয়াল কনফিগারেশন</b>"
 
 #: tmp/system-config-kickstart.glade.h:7
-#, fuzzy
 msgid "<b>GRUB Options</b>"
-msgstr "GRUB সংক্রান্ত অপশন:"
+msgstr "<b>GRUB সংক্রান্ত বিকল্প</b>"
 
 #: tmp/system-config-kickstart.glade.h:8
-#, fuzzy
 msgid "<b>Hesiod Authentication</b>"
-msgstr "Hesiod অনুমোদন ব্যবস্থা"
+msgstr "<b>Hesiod অনুমোদন ব্যবস্থা</b>"
 
 #: tmp/system-config-kickstart.glade.h:9
 msgid "<b>Install Options</b>"
-msgstr ""
+msgstr "<b>ইনস্টলেশন সংক্রান্ত বিকল্প</b>"
 
 #: tmp/system-config-kickstart.glade.h:10
 msgid "<b>Install Type</b>"
-msgstr ""
+msgstr "<b>ইনস্টলেশনের ধরন</b>"
 
 #: tmp/system-config-kickstart.glade.h:11
-#, fuzzy
 msgid "<b>Installation Method</b>"
-msgstr "ইনস্টলেশন পদ্ধতি"
+msgstr "<b>ইনস্টলেশন পদ্ধতি</b>"
 
 #: tmp/system-config-kickstart.glade.h:12
-#, fuzzy
 msgid "<b>Installation source</b>"
-msgstr "ইনস্টলেশন পদ্ধতি"
+msgstr "<b>ইনস্টলেশনর উৎস</b>"
 
 #: tmp/system-config-kickstart.glade.h:13
-#, fuzzy
 msgid "<b>Kerberos 5 Authentication</b>"
-msgstr "Kerberos 5 অনুমোদন ব্যবস্থা"
+msgstr "<b>Kerberos 5 অনুমোদন ব্যবস্থা</b>"
 
 #: tmp/system-config-kickstart.glade.h:14
-#, fuzzy
 msgid "<b>LDAP Authentication</b>"
-msgstr "LDAP অনুমোদন ব্যবস্থা"
+msgstr "<b>LDAP অনুমোদন ব্যবস্থা</b>"
 
 #: tmp/system-config-kickstart.glade.h:15
 msgid "<b>Layout</b>"
-msgstr ""
+msgstr "<b>বিন্যাস</b>"
 
 #: tmp/system-config-kickstart.glade.h:16
-#, fuzzy
 msgid "<b>Master Boot Record</b>"
-msgstr "মাস্টার বুট রেকর্ডের তথ্য মুছে ফেলা হবে"
+msgstr "<b>মাস্টার বুট রেকর্ড</b>"
 
 #: tmp/system-config-kickstart.glade.h:17
-#, fuzzy
 msgid "<b>NIS Authentication</b>"
-msgstr "NIS অনুমোদন ব্যবস্থা"
+msgstr "<b>NIS অনুমোদন ব্যবস্থা</b>"
 
 #: tmp/system-config-kickstart.glade.h:18
-#, fuzzy
 msgid "<b>Name Switch Cache Daemon (nscd) Authentication</b>"
-msgstr "Name Switch Cache Daemon (nscd) অনুমোদন ব্যবস্থা"
+msgstr "<b>Name Switch Cache Daemon (nscd) অনুমোদন ব্যবস্থা</b>"
 
 #: tmp/system-config-kickstart.glade.h:19
-#, fuzzy
 msgid "<b>Network Configuration</b>"
-msgstr "নেটওয়ার্ক কনফিগারেশন"
+msgstr "<b>নেটওয়ার্ক কনফিগারেশন</b>"
 
 #: tmp/system-config-kickstart.glade.h:20
-#, fuzzy
 msgid "<b>Package Selection</b>"
-msgstr "প্যাকেজ নির্বাচন"
+msgstr "<b>প্যাকেজ নির্বাচন</b>"
 
 #: tmp/system-config-kickstart.glade.h:21
-#, fuzzy
 msgid "<b>Partition options</b>"
-msgstr "পার্টিশন সংক্রান্ত অপশন"
+msgstr "<b>পার্টিশন সংক্রান্ত বিকল্প</b>"
 
 #: tmp/system-config-kickstart.glade.h:22
-#, fuzzy
 msgid "<b>Partitions</b>"
-msgstr "পার্টিশন :"
+msgstr "<b>পার্টিশন</b>"
 
 #: tmp/system-config-kickstart.glade.h:23
-#, fuzzy
 msgid "<b>Post-Installation Script</b>"
-msgstr "ইনস্টলেশনোত্তর স্ক্রিপ্ট"
+msgstr "<b>ইনস্টলেশনের পরে চালিত স্ক্রিপ্ট</b>"
 
 #: tmp/system-config-kickstart.glade.h:24
-#, fuzzy
 msgid "<b>Pre-Installation Script</b>"
-msgstr "প্রাক-ইনস্টলেশন স্ক্রিপ্ট"
+msgstr "<b>প্রাক-ইনস্টলেশন চালিত স্ক্রিপ্ট</b>"
 
 #: tmp/system-config-kickstart.glade.h:25
-#, fuzzy
 msgid "<b>SMB Authentication</b>"
-msgstr "SMB অনুমোদন ব্যবস্থা"
+msgstr "<b>SMB অনুমোদন ব্যবস্থা</b>"
 
 #: tmp/system-config-kickstart.glade.h:26
 msgid "<b>Size Options</b>"
-msgstr ""
+msgstr "<b>মাপ সংক্রান্ত বিকল্প</b>"
 
 #: tmp/system-config-kickstart.glade.h:27
 msgid "<b>Special options</b>"
-msgstr ""
+msgstr "<b>বিশেষ বিকল্প</b>"
 
 #: tmp/system-config-kickstart.glade.h:28
 msgid "<b>label28</b>"
-msgstr ""
+msgstr "<b>label28</b>"
 
 #: tmp/system-config-kickstart.glade.h:29
 msgid ""
@@ -597,23 +584,26 @@ msgid ""
 "Warn\n"
 "Disabled"
 msgstr ""
+"Active (সক্রিয়)\n"
+"Warn (সতর্কতামূলক)\n"
+"Disabled (নিষ্ক্রিয়)"
 
 #: tmp/system-config-kickstart.glade.h:33
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "An error in this script might cause your kickstart installation to fail. Do "
 "not include the %post command at the beginning."
 msgstr ""
-"সতর্কবাণী: এই স্ক্রিপ্টের মধ্যে উপস্থিত কোনো ত্রুটির দরুণ আপনার kickstart ইনস্টলেশন "
+"এই স্ক্রিপ্টের মধ্যে উপস্থিত কোনো ত্রুটির দরুণ আপনার kickstart ইনস্টলেশন "
 "ব্যর্থ হতে পারে। %post কমান্ডটি আরম্ভে অন্তর্ভুক্ত করবেন না।"
 
 #: tmp/system-config-kickstart.glade.h:35
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "An error in this script might cause your kickstart installation to fail. Do "
 "not include the %pre command at the beginning."
 msgstr ""
-"সতর্কবাণী: এই স্ক্রিপ্টের মধ্যে উপস্থিত কোনো ত্রুটির দরুণ আপনার kickstart ইনস্টলেশন "
+"এই স্ক্রিপ্টের মধ্যে উপস্থিত কোনো ত্রুটির দরুণ আপনার kickstart ইনস্টলেশন "
 "ব্যর্থ হতে পারে। %pre কমান্ডটি আরম্ভে অন্তর্ভুক্ত করবেন না।"
 
 #: tmp/system-config-kickstart.glade.h:36
@@ -653,12 +643,14 @@ msgid "Default Language:"
 msgstr "ডিফল্ট ভাষা:"
 
 #: tmp/system-config-kickstart.glade.h:45
-#, fuzzy
 msgid ""
 "Disabled\n"
 "Enabled\n"
 "Enabled in reconfiguration mode"
-msgstr "রি-কনফিগারেশন মোডে স্বক্রিয় করা থাকবে"
+msgstr ""
+"Disabled (নিষ্ক্রিয়)\n"
+"Enabled (সক্রিয়)\n"
+"রি-কনফিগারেশন মোডে সক্রিয় করা থাকবে"
 
 #: tmp/system-config-kickstart.glade.h:48
 msgid "Display configuration is not applicable on upgrades."
@@ -697,11 +689,12 @@ msgid "Enable SMB Authentication"
 msgstr "SMB অনুমোদন ব্যবস্থা সক্রিয় করা হবে"
 
 #: tmp/system-config-kickstart.glade.h:57
-#, fuzzy
 msgid ""
 "Enable firewall\n"
 "Disable firewall"
-msgstr "ফায়ারওয়াল নিষ্ক্রিয়"
+msgstr ""
+"ফায়ারওয়াল সক্রিয়\n"
+"ফায়ারওয়াল নিষ্ক্রিয়"
 
 #: tmp/system-config-kickstart.glade.h:59
 msgid "Enable nscd"
@@ -724,18 +717,16 @@ msgid "FTP Directory:"
 msgstr "FTP ডিরেক্টরি:"
 
 #: tmp/system-config-kickstart.glade.h:64
-#, fuzzy
 msgid "FTP Password:"
-msgstr "FTP পাসওয়ার্ড"
+msgstr "FTP পাসওয়ার্ড:"
 
 #: tmp/system-config-kickstart.glade.h:65
 msgid "FTP Server:"
 msgstr "FTP সার্ভার:"
 
 #: tmp/system-config-kickstart.glade.h:66
-#, fuzzy
 msgid "FTP Username:"
-msgstr "FTP ব্যবহারকারীর নাম"
+msgstr "FTP ব্যবহারকারীর নাম:"
 
 #: tmp/system-config-kickstart.glade.h:67
 msgid "File System Type:"
@@ -750,9 +741,8 @@ msgid "Firewall configuration is not applicable on upgrades."
 msgstr "আপগ্রেডের ক্ষেত্রে ফায়ারওয়াল সংক্রান্ত কনফিগারেশন প্রযোজ্য নয়।"
 
 #: tmp/system-config-kickstart.glade.h:70
-#, fuzzy
 msgid "Fixed size (MB):"
-msgstr "সীমিত পরিমাপ"
+msgstr "সুনির্দিষ্ট মাপ (MB):"
 
 #: tmp/system-config-kickstart.glade.h:71
 msgid "Force to be a primary partition (asprimary)"
@@ -820,7 +810,7 @@ msgstr "ডিস্ক লেবেল আরম্ভ করা হবে"
 
 #: tmp/system-config-kickstart.glade.h:87
 msgid "Install a graphical environment"
-msgstr ""
+msgstr "গ্রাফিক্যাল পরিবেশ ইনস্টল করুন"
 
 #: tmp/system-config-kickstart.glade.h:88
 msgid "Install boot loader on Master Boot Record (MBR)"
@@ -884,9 +874,8 @@ msgid "Make RAID Device"
 msgstr "RAID ডিভাইস নির্মাণ করুন"
 
 #: tmp/system-config-kickstart.glade.h:103
-#, fuzzy
 msgid "Make partition on specific drive (ondisk, e.g. hda or sdc):"
-msgstr "নির্ধারিত ড্রাইভে পার্টিশন তৈরি করা হবে (ondisk)"
+msgstr "নির্ধারিত ড্রাইভে পার্টিশন তৈরি করা হবে (ondisk, যেমন hda অথবা sdc):"
 
 #: tmp/system-config-kickstart.glade.h:104
 msgid "Mount Point:"
@@ -997,9 +986,8 @@ msgid "RAID Options"
 msgstr "RAID সংক্রান্ত অপশন"
 
 #: tmp/system-config-kickstart.glade.h:131
-#, fuzzy
 msgid "Raid Members:"
-msgstr "RAID-র সদস্য"
+msgstr "RAID-র সদস্য:"
 
 #: tmp/system-config-kickstart.glade.h:132
 msgid "Reboot system after installation"
@@ -1117,9 +1105,8 @@ msgid "Use broadcast to find NIS server"
 msgstr "NIS সার্ভার অনুসন্ধান করতে ব্রডকাস্ট ব্যবহার করুন"
 
 #: tmp/system-config-kickstart.glade.h:159
-#, fuzzy
 msgid "Use existing partition (onpart, e.g. hda1 or sdc3):"
-msgstr "উপস্থিত পার্টিশন ব্যবহার করা হবে (onpart)"
+msgstr "উপস্থিত পার্টিশন ব্যবহার করা হবে (onpart, যেমন hda1 অথবা sdc3):"
 
 #: tmp/system-config-kickstart.glade.h:160
 msgid "Use recommended swap size"
@@ -1177,139 +1164,3 @@ msgstr "পূর্বরূপ (_P)"
 msgid "_Save to File"
 msgstr "ফাইলে সংরক্ষণ (_S)"
 
-#~ msgid ""
-#~ "Kickstart Configurator @VERSION@\n"
-#~ " Copyright (c) 2000-2002 Red Hat, Inc.\n"
-#~ " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-#~ " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-#~ " A graphical interface for creating a kickstart file"
-#~ msgstr ""
-#~ "Kickstart Configurator @VERSION@\n"
-#~ " Copyright (c) 2000-2002 Red Hat, Inc.\n"
-#~ " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-#~ " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-#~ " kickstart ফাইল নির্মাণের গ্রাফিকাল ইন্টারফেস"
-
-#~ msgid "         "
-#~ msgstr "         "
-
-#~ msgid "(for example: hda or sdc)"
-#~ msgstr "(উদাহরণ: hda অথবা sdc)"
-
-#~ msgid "(for example: hda1 or sdc3)"
-#~ msgstr "(উদাহরণ: hda1 অথবা sdc3)"
-
-#~ msgid "0"
-#~ msgstr "0"
-
-#~ msgid "1"
-#~ msgstr "1"
-
-#~ msgid "5"
-#~ msgstr "5"
-
-#~ msgid "Active"
-#~ msgstr "সক্রিয়"
-
-#~ msgid "Additional Size Options"
-#~ msgstr "মাপ সম্বন্ধীয় অতিরিক্ত অপশন"
-
-#~ msgid "Authentication:"
-#~ msgstr "অনুমোদন ব্যবস্থা:"
-
-# not sure
-#~ msgid "Basic Configuration (required)"
-#~ msgstr "মৌলিক কনফিগারেশন (আবশ্যক)"
-
-#~ msgid "Boot Loader Options (required)"
-#~ msgstr "বুট-লোডার সংক্রান্ত অপশন (আবশ্যক)"
-
-#~ msgid "Choose the Installation Method:"
-#~ msgstr "ইনস্টলেশন প্রক্রিয়া নির্বাচন করুন:"
-
-#~ msgid "Configure the X Window System"
-#~ msgstr "X উইন্ডো সিস্টেম কনফিগার করুন"
-
-#~ msgid "Disabled"
-#~ msgstr "নিষ্ক্রিয়"
-
-#~ msgid "Drive :"
-#~ msgstr "ড্রাইভ :"
-
-#~ msgid "Enable firewall"
-#~ msgstr "ফায়ারওয়াল সক্রিয় করুন"
-
-#~ msgid "Enabled"
-#~ msgstr "সক্রিয় অবস্থায় থাকবে"
-
-#~ msgid "Installation Method (required)"
-#~ msgstr "ইনস্টলেশন পদ্ধতি (আবশ্যক)"
-
-#~ msgid "Partition Information (required)"
-#~ msgstr "পার্টিশন সম্বন্ধীয় তথ্য (আবশ্যক)"
-
-#~ msgid "Size (MB):"
-#~ msgstr "মাপ (মেগাবাইট):"
-
-#~ msgid "Warn"
-#~ msgstr "সতর্কবার্তা"
-
-#~ msgid "_About"
-#~ msgstr "পরিচিতি (_A)"
-
-#~ msgid "_Contents"
-#~ msgstr "সূচি (_C)"
-
-#~ msgid "_Quit"
-#~ msgstr "প্রস্থান (_Q)"
-
-#~ msgid "_Save File"
-#~ msgstr "ফাইল সংরক্ষণ (_S)"
-
-#~ msgid "md0"
-#~ msgstr "md0"
-
-#~ msgid "md1"
-#~ msgstr "md1"
-
-#~ msgid "md10"
-#~ msgstr "md10"
-
-#~ msgid "md11"
-#~ msgstr "md11"
-
-#~ msgid "md12"
-#~ msgstr "md12"
-
-#~ msgid "md13"
-#~ msgstr "md13"
-
-#~ msgid "md14"
-#~ msgstr "md14"
-
-#~ msgid "md15"
-#~ msgstr "md15"
-
-#~ msgid "md2"
-#~ msgstr "md2"
-
-#~ msgid "md3"
-#~ msgstr "md3"
-
-#~ msgid "md4"
-#~ msgstr "md4"
-
-#~ msgid "md5"
-#~ msgstr "md5"
-
-#~ msgid "md6"
-#~ msgstr "md6"
-
-#~ msgid "md7"
-#~ msgstr "md7"
-
-#~ msgid "md8"
-#~ msgstr "md8"
-
-#~ msgid "md9"
-#~ msgstr "md9"
