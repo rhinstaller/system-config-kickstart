@@ -3,7 +3,7 @@
 # Brent Fox <bfox@redhat.com>
 # Tammy Fox <tfox@redhat.com>
 #
-# Copyright (C) 2000-2008 Red Hat, Inc.
+# Copyright (C) 2000-2009 Red Hat, Inc.
 #
 # This copyrighted material is made available to anyone wishing to use, modify,
 # copy, or redistribute it subject to the terms and conditions of the GNU
@@ -274,6 +274,9 @@ class auth:
         elif self.authCombobox.get_active() == 2:
             buf += " --passalgo=sha512"
 
+        if self.fingerprint_checkbutton.get_active():
+            buf += " --enablefingerprint"
+
         buf = buf + self.myNisClass.return_data()
         buf = buf + self.myLDAPClass.return_data()
         buf = buf + self.myKerberosClass.return_data()
@@ -332,6 +335,7 @@ class auth:
         self.sambaWorkgroupEntry = xml.get_widget("sambaWorkgroupEntry")
         self.nscd_checkbutton = xml.get_widget("nscd_checkbutton")
         self.shadow_passwd_checkbutton = xml.get_widget("shadow_passwd_checkbutton")
+        self.fingerprint_checkbutton = xml.get_widget("fingerprint_checkbutton")
 
         self.nisCheck.connect("toggled", self.enableNIS)
         self.nisBroadcastCheck.connect("toggled", self.enableBroadcast)
@@ -429,7 +433,7 @@ class auth:
                                        "ldaploadcacert=", "enableldaptls",
                                        "enablekrb5", "krb5realm=", "krb5kdc=", "krb5adminserver=",
                                        "enablehesiod", "hesiodlhs=", "hesiodrhs=", "enablesmbauth",
-                                       "smbservers=", "smbworkgroup=", "enablecache"])
+                                       "smbservers=", "smbworkgroup=", "enablecache", "enablefingerprint"])
 
             for opt, value in opts:
                 if opt == "--enablemd5":
@@ -515,3 +519,6 @@ class auth:
 
                 if opt == "--enablecache":
                     self.nscd_checkbutton.set_active(True)
+
+                if opt == "--enablefingerprint":
+                    self.fingerprint_checkbutton.set_active(True)
