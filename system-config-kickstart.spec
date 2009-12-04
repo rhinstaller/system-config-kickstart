@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.8.2
+Version: 2.8.3
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -69,6 +69,12 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Fri Dec 04 2009 Chris Lumens <clumens@redhat.com> - 2.8.3-1
+- Add ext4, make it the default (#544079).
+- Add support for authconfig --enablefingerprint (#539371).
+- Fix an import error (#530739, nelsoninva AT gmail.com).
+- Update lots of translations.
+
 * Mon Sep 14 2009 Ville Skyttä <ville.skytta@iki.fi> - 2.8.2-2
 - Convert specfile to UTF-8.
 
