@@ -69,6 +69,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Mon Sep 14 2009 Ville Skyttä <ville.skytta@iki.fi> - 2.8.2-2
+- Convert specfile to UTF-8.
+
 * Tue Jul 28 2009 Chris Lumens <clumens@redhat.com> - 2.8.1-1
 - Change the skipx blurb to make more sense (#493835).
 - Update to using python-meh for exception handling instead of rhpl.
