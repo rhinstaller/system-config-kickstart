@@ -21,7 +21,6 @@
 # subject to the GNU General Public License and may only be used or replicated
 # with the express permission of Red Hat, Inc. 
 
-import getopt
 import signal
 import sys, os
 
@@ -54,31 +53,38 @@ def useCliMode(value):
     fd.close()
 
 if __name__ == "__main__":
+    import optparse
+
     signal.signal (signal.SIGINT, signal.SIG_DFL)
 
     file = None
-    opts, file = getopt.getopt(sys.argv[1:], "g:h", ["generate=", "help", "display="])
+    op = optparse.OptionParser(add_help_option=False)
+    op.add_option("-g", "--generate", nargs=1, type="string")
+    op.add_option("-d", "--display", nargs=1, type="string")
+    op.add_option("-h", "--help")
 
-    for (opt, value) in opts:
-        if opt == "--display":
-            os.environ["DISPLAY"] = value
-        if opt == "--generate" or opt == "-g":
-            useCliMode(value)
-            sys.exit(1)
-        if opt == "--help" or opt == "-h":
-            print _("""Usage: system-config-kickstart [--help] [--generate <filename>] [--display=<display#>] [<kickstart_filename>]
+    (opts, extra) = op.parse_args()
 
-    --help                  Print out this message
-    --generate <filename>   Generate a kickstart file from the current machine and write
-                            it to <filename>.  This option runs on the console, so it is
-                            useful for servers that do not have X currently running.
-    <kickstart_filename>    This option will cause the GUI to launch with the values from
-                            the kickstart file already filled in.""")
-            sys.exit(1)
+    if opts.generate:
+        useCliMode(opts.generate)
+        sys.exit(1)
 
+    if opts.display:
+        os.environ["DISPLAY"] = opts.display
 
-    if file:
-        file = file[0]
+    if opts.help:
+        print _("""Usage: system-config-kickstart [--help] [--generate <filename>] [--display=<display#>] [<kickstart_filename>]
+
+--help                  Print out this message
+--generate <filename>   Generate a kickstart file from the current machine and write
+                        it to <filename>.  This option runs on the console, so it is
+                        useful for servers that do not have X currently running.
+<kickstart_filename>    This option will cause the GUI to launch with the values from
+                        the kickstart file already filled in.""")
+        sys.exit(1)
+
+    if extra:
+        file = extra[0]
 
     try:
         import kickstartGui
