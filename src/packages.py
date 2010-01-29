@@ -271,7 +271,6 @@ class Packages:
             return
 
         selectedGroups = map (lambda grp: grp.name, self.ks.packages.groupList)
-        self.y.tsInfo = self.y._transactionDataFactory()
 
         for grp in self.y.comps.groups:
             if grp.groupid in selectedGroups:
