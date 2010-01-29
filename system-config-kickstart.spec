@@ -664,7 +664,7 @@ fi
 - Added preview menu item
 - Added bootloader --upgrade
 - Added swap --recommended
-- Added %packages -- resolvedeps and %packages --ignoredeps
+- Added %%packages -- resolvedeps and %%packages --ignoredeps
 
 * Wed May 22 2002 Brent Fox <bfox@redhat.com> 2.0-9
 - Fixed bug #65323 to handle partition minimum size better
@@ -739,7 +739,7 @@ fi
 - added more info to man page
 
 * Wed Mar  7 2001 Bill Nottingham <notting@redhat.com>
-- put the GPL in %doc
+- put the GPL in %%doc
 
 * Thu Mar 01 2001 Tammy Fox <tfox@redhat.com>
 - fixed end of line between auth and firewall lines
