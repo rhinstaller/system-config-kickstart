@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.8.3
+Version: 2.8.4
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -69,6 +69,11 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Fri Jan 29 2010 Chris Lumens <clumens@redhat.com> - 2.8.4-1
+- Don't overwrite tsInfo with a new instance (#541052). (clumens)
+- Correct rpmlint errors found with the .spec file. (clumens)
+- Use OptionParser instead of the old getopt module (#553045). (clumens)
+
 * Fri Dec 04 2009 Chris Lumens <clumens@redhat.com> - 2.8.3-1
 - Add ext4, make it the default (#544079).
 - Add support for authconfig --enablefingerprint (#539371).
