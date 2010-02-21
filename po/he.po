@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: system-config-kickstart.master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-09-22 11:01-0400\n"
-"PO-Revision-Date: 2008-09-18 22:57GMT\n"
-"Last-Translator: Oron Peled <oron@actcom.co.il>\n"
+"PO-Revision-Date: 2010-02-21 16:33+0200\n"
+"Last-Translator: Elad <el.il@doom.co.il>\n"
 "Language-Team: Hebrew\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +19,6 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#
 # File: ../src/auth.py, line: 343
 #: ../src/auth.py:350
 msgid "Please fill in the authentication information"
@@ -67,8 +66,11 @@ msgstr "אין התאמה בססמת root."
 # File: ../src/partWindow.py, line: 550
 # File: ../src/partition.py, line: 255
 # File: ../src/raidWindow.py, line: 252
-#: ../src/basic.py:152 ../src/install.py:217 ../src/partWindow.py:576
-#: ../src/partition.py:256 ../src/raidWindow.py:276
+#: ../src/basic.py:152
+#: ../src/install.py:217
+#: ../src/partWindow.py:576
+#: ../src/partition.py:256
+#: ../src/raidWindow.py:276
 msgid "Error"
 msgstr "שגיאה"
 
@@ -91,14 +93,11 @@ msgstr "אפשרויות מנהל האתחול אינן ישימות עבור ה
 msgid "Trusted services:"
 msgstr "על איזה שירותים אנו סומכים:"
 
-#
 # File: ../src/firewall.py, line: 92
 #: ../src/firewall.py:92
-#, fuzzy
 msgid "Other ports (1029:tcp):"
-msgstr "מספרי יציאות אחרים: (1029:tcp)"
+msgstr "יציאות אחרות: (1029:tcp)"
 
-#
 # File: ../src/install.py, line: 131
 #: ../src/install.py:132
 msgid "Please enter an NFS server."
@@ -160,33 +159,32 @@ msgstr "יש להזין מחיצה של הדיסק הקשיח."
 
 #: ../src/kickstartGui.py:81
 msgid ""
-"This program is free software; you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation; either version 2 of the License, or (at your option) "
-"any later version.\n"
+"This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n"
 "\n"
-"This program is distributed in the hope that it will be useful, but WITHOUT "
-"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
-"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details.\n"
+"This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.\n"
 "\n"
-"You should have received a copy of the GNU General Public License along with "
-"this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
-"Ave, Cambridge, MA 02139, USA."
+"You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
 msgstr ""
+"This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
 
-#
 # File: ../src/kickstartGui.py, line: 310
-#: ../src/kickstartGui.py:125 ../src/kickstartGui.py:130
-#: ../src/kickstartGui.py:330 ../src/kickstartGui.py:335
-#, fuzzy, python-format
+#: ../src/kickstartGui.py:125
+#: ../src/kickstartGui.py:130
+#: ../src/kickstartGui.py:330
+#: ../src/kickstartGui.py:335
+#, python-format
 msgid "The kickstart file %s could not be opened."
-msgstr "לא ניתן לגשת לקובץ \"%s\"."
+msgstr "לא ניתן לפתוח את קובץ ה‏kickstart ‏%s."
 
 #
 # File: ../src/kickstartGui.py, line: 94
 # File: ../src/kickstartGui.py, line: 286
-#: ../src/kickstartGui.py:127 ../src/kickstartGui.py:332
+#: ../src/kickstartGui.py:127
+#: ../src/kickstartGui.py:332
 #, python-format
 msgid ""
 "The following error was found while parsing your kickstart configuration:\n"
@@ -200,7 +198,8 @@ msgstr ""
 #
 # File: ../src/kickstartGui.py, line: 97
 # File: ../src/kickstartGui.py, line: 289
-#: ../src/kickstartGui.py:135 ../src/kickstartGui.py:340
+#: ../src/kickstartGui.py:135
+#: ../src/kickstartGui.py:340
 msgid "Error Parsing Kickstart Config"
 msgstr "שגיאה בפענוח קובץ Kickstart"
 
@@ -315,7 +314,8 @@ msgstr "לא ניתן לגשת לקובץ \"%s\"."
 
 #
 # File: ../src/packages.py, line: 177
-#: ../src/kickstartGui.py:371 ../src/kickstartGui.py:380
+#: ../src/kickstartGui.py:371
+#: ../src/kickstartGui.py:380
 #: ../src/packages.py:209
 msgid "Retrieving package information"
 msgstr "מוריד מידע אודות חבילות תכנה"
@@ -338,29 +338,35 @@ msgstr "סוג רשת"
 # File: ../src/network.py, line: 225
 # File: ../src/network.py, line: 281
 # File: ../src/network.py, line: 376
-#: ../src/network.py:79 ../src/network.py:114 ../src/network.py:196
-#: ../src/network.py:251 ../src/network.py:347
+#: ../src/network.py:79
+#: ../src/network.py:114
+#: ../src/network.py:196
+#: ../src/network.py:251
+#: ../src/network.py:347
 msgid "Static IP"
 msgstr "כתובת IP סטטית"
 
 #
 # File: ../src/network.py, line: 190
 # File: ../src/network.py, line: 249
-#: ../src/network.py:161 ../src/network.py:219
+#: ../src/network.py:161
+#: ../src/network.py:219
 msgid "Please fill in the network information"
 msgstr "יש למלא את פרטי הרשת"
 
 #
 # File: ../src/network.py, line: 202
 # File: ../src/network.py, line: 261
-#: ../src/network.py:173 ../src/network.py:231
+#: ../src/network.py:173
+#: ../src/network.py:231
 msgid "Please enter a valid gateway address."
 msgstr "יש להזין כתובת נתב חוקית."
 
 #
 # File: ../src/network.py, line: 214
 # File: ../src/network.py, line: 273
-#: ../src/network.py:185 ../src/network.py:243
+#: ../src/network.py:185
+#: ../src/network.py:243
 msgid "Please enter a valid nameserver address."
 msgstr "יש להקליד שם משתמש FTP."
 
@@ -368,19 +374,19 @@ msgstr "יש להקליד שם משתמש FTP."
 # File: ../src/network.py, line: 301
 #: ../src/network.py:271
 #, python-format
-msgid ""
-"A network device with the name %s already exists.  Please choose another "
-"device name"
+msgid "A network device with the name %s already exists.  Please choose another device name"
 msgstr "התן רשת בשם %s קיים כבר. יש לבחור שם התקן אחר"
 
 #: ../src/packages.py:146
 #, python-format
 msgid ""
-"Package selection is disabled due to an error in setup.  Please fix your "
-"repository configuration and try again.\n"
+"Package selection is disabled due to an error in setup.  Please fix your repository configuration and try again.\n"
 "\n"
 "%s"
 msgstr ""
+"בחירת החבילות מנוטרלת עקב שגיאה בתצורה. אנא תקן את הגדרות המאגרים ונסה שוב.\n"
+"\n"
+"%s"
 
 #
 # File: ../src/packages.py, line: 171
@@ -391,9 +397,7 @@ msgstr "בחירת חבילות אינה ישימה בשדרוגים."
 #
 # File: ../src/packages.py, line: 186
 #: ../src/packages.py:216
-msgid ""
-"Package selection is disabled due to problems downloading package "
-"information."
+msgid "Package selection is disabled due to problems downloading package information."
 msgstr "בחירת חבילות מבוטלת עקב בעיות בהורדת המידע אודותיהן."
 
 #
@@ -414,7 +418,8 @@ msgstr "ext3"
 # File: ../src/partWindow.py, line: 89
 # File: ../src/partWindow.py, line: 152
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:99 ../src/partWindow.py:174
+#: ../src/partWindow.py:99
+#: ../src/partWindow.py:174
 msgid "software RAID"
 msgstr "מערך דיסקים (RAID) מיושם בתכנה"
 
@@ -442,7 +447,9 @@ msgstr "מנגנון אתחול PReP עבור מעבדי PPC"
 # File: ../src/partWindow.py, line: 291
 # File: ../src/partWindow.py, line: 572
 # File: ../src/raidWindow.py, line: 217
-#: ../src/partWindow.py:316 ../src/partWindow.py:598 ../src/raidWindow.py:241
+#: ../src/partWindow.py:316
+#: ../src/partWindow.py:598
+#: ../src/raidWindow.py:241
 msgid "Yes"
 msgstr "כן"
 
@@ -450,7 +457,9 @@ msgstr "כן"
 # File: ../src/partWindow.py, line: 293
 # File: ../src/partWindow.py, line: 574
 # File: ../src/raidWindow.py, line: 219
-#: ../src/partWindow.py:318 ../src/partWindow.py:600 ../src/raidWindow.py:243
+#: ../src/partWindow.py:318
+#: ../src/partWindow.py:600
+#: ../src/raidWindow.py:243
 msgid "No"
 msgstr "לא"
 
@@ -459,7 +468,9 @@ msgstr "לא"
 # File: ../src/partWindow.py, line: 331
 # File: ../src/partWindow.py, line: 350
 # File: ../src/partWindow.py, line: 364
-#: ../src/partWindow.py:341 ../src/partWindow.py:356 ../src/partWindow.py:375
+#: ../src/partWindow.py:341
+#: ../src/partWindow.py:356
+#: ../src/partWindow.py:375
 #: ../src/partWindow.py:389
 msgid "Auto"
 msgstr "אוטומטי"
@@ -481,16 +492,13 @@ msgstr "יש לקבוע נקודת עיגון עבור המחיצה."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:503
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "נקודת העיגון \"%s\" כבר נמצאת בשימוש.  יש לבחור נקודת עיגון שונה."
 
 #
 # File: ../src/partWindow.py, line: 497
 #: ../src/partWindow.py:523
-msgid ""
-"To create a new RAID partition, you must specify either a hard drive device "
-"name or an existing partition."
+msgid "To create a new RAID partition, you must specify either a hard drive device name or an existing partition."
 msgstr "כדי ליצור מחיצת RAID חדשה, יש להגדיר שם התקן דיסק קשיח או מחיצה קיימת."
 
 #
@@ -502,12 +510,8 @@ msgstr "יש לציין התקן שעליו תיווצר המחיצה."
 #
 # File: ../src/partWindow.py, line: 543
 #: ../src/partWindow.py:569
-msgid ""
-"The partition you specified does not end in a number.  Partitions must have "
-"a partition number such as \"hda1\" or \"sda3\"."
-msgstr ""
-"שם המחיצה שציינת אינו מסתיים במספר. שם מחיצה חייב להסתיים במספר, למשל \"hda1"
-"\" או \"sda3\"."
+msgid "The partition you specified does not end in a number.  Partitions must have a partition number such as \"hda1\" or \"sda3\"."
+msgstr "שם המחיצה שציינת אינו מסתיים במספר. שם מחיצה חייב להסתיים במספר, למשל \"hda1\" או \"sda3\"."
 
 #
 # File: ../src/partition.py, line: 74
@@ -550,7 +554,8 @@ msgstr "גודל (MB)"
 #
 # File: ../src/partition.py, line: 97
 # File: ../src/partition.py, line: 137
-#: ../src/partition.py:98 ../src/partition.py:138
+#: ../src/partition.py:98
+#: ../src/partition.py:138
 msgid "Please select a partition from the list."
 msgstr "יש לבחור מחיצה מהרשימה להלן."
 
@@ -578,209 +583,162 @@ msgstr "יש לבחור לפחות שלוש מחיצות כדי להשתמש ב-
 #
 # File: ../src/raidWindow.py, line: 197
 # File: ../src/raidWindow.py, line: 223
-#: ../src/raidWindow.py:221 ../src/raidWindow.py:247
+#: ../src/raidWindow.py:221
+#: ../src/raidWindow.py:247
 msgid "Raid Devices"
 msgstr "התקני RAID"
 
-#
 # File: ../src/kickstartGui.py, line: 94
 # File: ../src/kickstartGui.py, line: 286
 #: ../src/savedialog.py:75
-#, fuzzy, python-format
+#, python-format
 msgid "The following error occurred while saving the kickstart config %s: %s"
-msgstr ""
-"השגיאה הבאה נמצאה במהלך קריאת קובץ kickstart:\n"
-"\n"
-"%s"
+msgstr "השגיאה הבאה התרחשה בעת שמירת הגדרות הkickstart ‏%s: ‏%s"
 
-#
 # File: ../src/kickstartGui.py, line: 97
 # File: ../src/kickstartGui.py, line: 289
 #: ../src/savedialog.py:79
-#, fuzzy
 msgid "Error Saving Kickstart Config"
-msgstr "שגיאה בפענוח קובץ Kickstart"
+msgstr "שגיאה בשמירת הגדרות Kickstart"
 
-#
 # File: ../src/kickstartGui.py, line: 132
 #: tmp/system-config-kickstart.glade.h:1
-#, fuzzy
 msgid "<b>Advanced Configuration</b>"
-msgstr "הגדרות בסיסיות"
+msgstr "<b>הגדרות מתקדמות</b>"
 
-#
 # File: tmp/system-config-kickstart.glade.h, line: 9
 #: tmp/system-config-kickstart.glade.h:2
-#, fuzzy
 msgid "<b>Authentication Configuration</b>"
-msgstr "תצורת מנגנוני האימות"
+msgstr "<b>תצורת מנגנוני האימות</b>"
 
-#
 # File: ../src/kickstartGui.py, line: 132
 #: tmp/system-config-kickstart.glade.h:3
-#, fuzzy
 msgid "<b>Basic Configuration</b>"
-msgstr "הגדרות בסיסיות"
+msgstr "<b>הגדרות בסיסיות</b>"
 
 #: tmp/system-config-kickstart.glade.h:4
 msgid "<b>Disk label</b>"
-msgstr ""
+msgstr "<b>תווית הדיסק</b>"
 
-#
 # File: ../src/kickstartGui.py, line: 139
 # File: tmp/system-config-kickstart.glade.h, line: 28
 #: tmp/system-config-kickstart.glade.h:5
-#, fuzzy
 msgid "<b>Display Configuration</b>"
-msgstr "הגדרות תצוגה"
+msgstr "<b>הגדרות תצוגה</b>"
 
-#
 # File: ../src/kickstartGui.py, line: 138
 # File: tmp/system-config-kickstart.glade.h, line: 52
 #: tmp/system-config-kickstart.glade.h:6
-#, fuzzy
 msgid "<b>Firewall Configuration</b>"
-msgstr "הגדרות חומת אש"
+msgstr "<b>הגדרות חומת אש</b>"
 
-#
 # File: tmp/system-config-kickstart.glade.h, line: 59
 #: tmp/system-config-kickstart.glade.h:7
-#, fuzzy
 msgid "<b>GRUB Options</b>"
-msgstr "אפשרויות מנהל האתחול (GRUB):"
+msgstr "<b>אפשרויות מנהל האתחול (GRUB):</b>"
 
-#
 # File: tmp/system-config-kickstart.glade.h, line: 70
 #: tmp/system-config-kickstart.glade.h:8
-#, fuzzy
 msgid "<b>Hesiod Authentication</b>"
-msgstr "אימות בעזרת Hesiod"
+msgstr "<b>אימות בעזרת Hesiod</b>"
 
 #: tmp/system-config-kickstart.glade.h:9
 msgid "<b>Install Options</b>"
-msgstr ""
+msgstr "<b>אפשרויות התקנה</b>"
 
 #: tmp/system-config-kickstart.glade.h:10
 msgid "<b>Install Type</b>"
-msgstr ""
+msgstr "<b>סוג התקנה</b>"
 
-#
 # File: ../src/kickstartGui.py, line: 133
 #: tmp/system-config-kickstart.glade.h:11
-#, fuzzy
 msgid "<b>Installation Method</b>"
-msgstr "שיטת התקנה"
+msgstr "<b>שיטת התקנה</b>"
 
-#
 # File: ../src/kickstartGui.py, line: 133
 #: tmp/system-config-kickstart.glade.h:12
-#, fuzzy
 msgid "<b>Installation source</b>"
-msgstr "שיטת התקנה"
+msgstr "<b>מקור התקנה</b>"
 
-#
 # File: tmp/system-config-kickstart.glade.h, line: 83
 #: tmp/system-config-kickstart.glade.h:13
-#, fuzzy
 msgid "<b>Kerberos 5 Authentication</b>"
-msgstr "אימות בעזרת Kerberos 5"
+msgstr "<b>אימות בעזרת Kerberos 5</b>"
 
-#
 # File: tmp/system-config-kickstart.glade.h, line: 91
 #: tmp/system-config-kickstart.glade.h:14
-#, fuzzy
 msgid "<b>LDAP Authentication</b>"
-msgstr "אימות בעזרת LDAP"
+msgstr "<b>אימות בעזרת LDAP</b>"
 
 #: tmp/system-config-kickstart.glade.h:15
 msgid "<b>Layout</b>"
-msgstr ""
+msgstr "<b>פריסה</b>"
 
-#
 # File: tmp/system-config-kickstart.glade.h, line: 18
 #: tmp/system-config-kickstart.glade.h:16
-#, fuzzy
 msgid "<b>Master Boot Record</b>"
-msgstr "נקה את רשומת האתחול הראשית של הדיסק (MBR)"
+msgstr "<b>רשומת איתחול ראשית (MBR)</b>"
 
-#
 # File: tmp/system-config-kickstart.glade.h, line: 103
 #: tmp/system-config-kickstart.glade.h:17
-#, fuzzy
 msgid "<b>NIS Authentication</b>"
-msgstr "אימות בעזרת NIS"
+msgstr "<b>אימות בעזרת NIS</b>"
 
-#
 # File: tmp/system-config-kickstart.glade.h, line: 108
 #: tmp/system-config-kickstart.glade.h:18
-#, fuzzy
 msgid "<b>Name Switch Cache Daemon (nscd) Authentication</b>"
-msgstr "הפעלת שירות nscd להאצת הגישה לנתוני האימות"
+msgstr "<b>אימות בעזרת שירות מטמון נתוני האימות (nscd)</b>"
 
-#
 # File: ../src/kickstartGui.py, line: 136
 # File: tmp/system-config-kickstart.glade.h, line: 110
 #: tmp/system-config-kickstart.glade.h:19
-#, fuzzy
 msgid "<b>Network Configuration</b>"
-msgstr "הגדרות רשת"
+msgstr "<b>הגדרות רשת</b>"
 
-#
 # File: ../src/kickstartGui.py, line: 140
 # File: tmp/system-config-kickstart.glade.h, line: 116
 #: tmp/system-config-kickstart.glade.h:20
-#, fuzzy
 msgid "<b>Package Selection</b>"
-msgstr "בחירת חבילות"
+msgstr "<b>בחירת חבילות</b>"
 
-#
 # File: tmp/system-config-kickstart.glade.h, line: 119
 #: tmp/system-config-kickstart.glade.h:21
-#, fuzzy
 msgid "<b>Partition options</b>"
-msgstr "אפשרויות מחיצה"
+msgstr "<b>אפשרויות מחיצה</b>"
 
-#
 # File: tmp/system-config-kickstart.glade.h, line: 117
 #: tmp/system-config-kickstart.glade.h:22
-#, fuzzy
 msgid "<b>Partitions</b>"
-msgstr "מחיצה :"
+msgstr "<b>מחיצות</b>"
 
-#
 # File: ../src/kickstartGui.py, line: 142
 # File: tmp/system-config-kickstart.glade.h, line: 125
 #: tmp/system-config-kickstart.glade.h:23
-#, fuzzy
 msgid "<b>Post-Installation Script</b>"
-msgstr "תסריט לסיום התקנה"
+msgstr "<b>תסריט לסיום התקנה</b>"
 
-#
 # File: ../src/kickstartGui.py, line: 141
 # File: tmp/system-config-kickstart.glade.h, line: 126
 #: tmp/system-config-kickstart.glade.h:24
-#, fuzzy
 msgid "<b>Pre-Installation Script</b>"
-msgstr "תסריט קדם-התקנה"
+msgstr "<b>תסריט קדם-התקנה</b>"
 
-#
 # File: tmp/system-config-kickstart.glade.h, line: 144
 #: tmp/system-config-kickstart.glade.h:25
-#, fuzzy
 msgid "<b>SMB Authentication</b>"
-msgstr "אימות בעזרת SMB"
+msgstr "<b>אימות SMB</b>"
 
 #: tmp/system-config-kickstart.glade.h:26
 msgid "<b>Size Options</b>"
-msgstr ""
+msgstr "<b>אפשרויות גודל</b>"
 
 #: tmp/system-config-kickstart.glade.h:27
 msgid "<b>Special options</b>"
-msgstr ""
+msgstr "<b>אפשרויות מיוחדות</b>"
 
 #: tmp/system-config-kickstart.glade.h:28
 msgid "<b>label28</b>"
-msgstr ""
+msgstr "<b>label28</b>"
 
 #: tmp/system-config-kickstart.glade.h:29
 msgid ""
@@ -788,28 +746,21 @@ msgid ""
 "Warn\n"
 "Disabled"
 msgstr ""
+"פעיל\n"
+"אזהרות בלבד\n"
+"מנוטרל"
 
-#
 # File: tmp/system-config-kickstart.glade.h, line: 176
 #: tmp/system-config-kickstart.glade.h:33
-#, fuzzy, no-c-format
-msgid ""
-"An error in this script might cause your kickstart installation to fail. Do "
-"not include the %post command at the beginning."
-msgstr ""
-"אזהרה: שגיאה בתסריט זה עלולה לגרום להתקנת kickstart להיכשל. רצוי לא לכלול את "
-"תסריט סיום התקנה בשלב ראשון."
+#, no-c-format
+msgid "An error in this script might cause your kickstart installation to fail. Do not include the %post command at the beginning."
+msgstr "אזהרה: שגיאה בתסריט זה עלולה לגרום להתקנת kickstart להיכשל. אל תכלול את הפקודה %post בהתחלה."
 
-#
 # File: tmp/system-config-kickstart.glade.h, line: 178
 #: tmp/system-config-kickstart.glade.h:35
-#, fuzzy, no-c-format
-msgid ""
-"An error in this script might cause your kickstart installation to fail. Do "
-"not include the %pre command at the beginning."
-msgstr ""
-"אזהרה: שגיאה בתסריט זה עלולה לגרום להתקנת kickstart להיכשל. רצוי לא לכלול את "
-"תסריט קדם התקנה בשלב ראשון."
+#, no-c-format
+msgid "An error in this script might cause your kickstart installation to fail. Do not include the %pre command at the beginning."
+msgstr "אזהרה: שגיאה בתסריט זה עלולה לגרום להתקנת kickstart להיכשל. אל תכלול את הפקודה %pre בהתחלה."
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 10
@@ -865,15 +816,16 @@ msgstr "יצירת מחיצת RAID מיושם בתכנה"
 msgid "Default Language:"
 msgstr "שפת ברירת מחדל:"
 
-#
 # File: tmp/system-config-kickstart.glade.h, line: 42
 #: tmp/system-config-kickstart.glade.h:45
-#, fuzzy
 msgid ""
 "Disabled\n"
 "Enabled\n"
 "Enabled in reconfiguration mode"
-msgstr "מופעל במצב \"חידוש הגדרות\""
+msgstr ""
+"מנוטרל\n"
+"מופעל\n"
+"מופעל במצב הגדרה מחדש"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 29
@@ -929,14 +881,14 @@ msgstr "אפשר שימוש ב-NIS"
 msgid "Enable SMB Authentication"
 msgstr "אפשר אימות בעזרת SMB"
 
-#
 # File: tmp/system-config-kickstart.glade.h, line: 26
 #: tmp/system-config-kickstart.glade.h:57
-#, fuzzy
 msgid ""
 "Enable firewall\n"
 "Disable firewall"
-msgstr "בטל חומת אש"
+msgstr ""
+"אפשר חומת אש\n"
+"נטרל חומת אש"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 40
@@ -968,12 +920,10 @@ msgstr "FTP"
 msgid "FTP Directory:"
 msgstr "תיקיית FTP:"
 
-#
 # File: tmp/system-config-kickstart.glade.h, line: 47
 #: tmp/system-config-kickstart.glade.h:64
-#, fuzzy
 msgid "FTP Password:"
-msgstr "ססמת FTP"
+msgstr "ססמת FTP:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 48
@@ -981,12 +931,10 @@ msgstr "ססמת FTP"
 msgid "FTP Server:"
 msgstr "שרת FTP:"
 
-#
 # File: tmp/system-config-kickstart.glade.h, line: 49
 #: tmp/system-config-kickstart.glade.h:66
-#, fuzzy
 msgid "FTP Username:"
-msgstr "שם משתמש FTP"
+msgstr "שם משתמש FTP:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 50
@@ -1006,12 +954,10 @@ msgstr "מילוי כל השטח הבלתי מנוצל בדיסק"
 msgid "Firewall configuration is not applicable on upgrades."
 msgstr "הגדרת חומת אש אינה ישימה בשדרוגים."
 
-#
 # File: tmp/system-config-kickstart.glade.h, line: 54
 #: tmp/system-config-kickstart.glade.h:70
-#, fuzzy
 msgid "Fixed size (MB):"
-msgstr "גודל קבוע"
+msgstr "גודל קבוע (MB):"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 55
@@ -1111,7 +1057,7 @@ msgstr "לאתחל את תווית הדיסק"
 
 #: tmp/system-config-kickstart.glade.h:87
 msgid "Install a graphical environment"
-msgstr ""
+msgstr "התקן סביבה גרפית"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 77
@@ -1203,12 +1149,10 @@ msgstr "טען את תעודת הרשות המאשרת (CA)"
 msgid "Make RAID Device"
 msgstr "יצירת התקן RAID"
 
-#
 # File: tmp/system-config-kickstart.glade.h, line: 96
 #: tmp/system-config-kickstart.glade.h:103
-#, fuzzy
 msgid "Make partition on specific drive (ondisk, e.g. hda or sdc):"
-msgstr "יצירת מחיצה על דיסק מסויים (ondisk)"
+msgstr "יצירת מחיצה על דיסק מסויים (ondisk, לדוגמה hda או sdc)"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 98
@@ -1372,12 +1316,10 @@ msgstr "סוג RAID:"
 msgid "RAID Options"
 msgstr "אפשרויות RAID"
 
-#
 # File: tmp/system-config-kickstart.glade.h, line: 135
 #: tmp/system-config-kickstart.glade.h:131
-#, fuzzy
 msgid "Raid Members:"
-msgstr "מרכיבי ה-Raid"
+msgstr "חברי Raid:"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 136
@@ -1442,15 +1384,8 @@ msgstr "רמת אבטחה:"
 #
 # File: tmp/system-config-kickstart.glade.h, line: 149
 #: tmp/system-config-kickstart.glade.h:142
-msgid ""
-"Software RAID allows you to combine several disks into a larger RAID "
-"device.  A RAID device can be configured to provide additional speed and "
-"reliability compared to using an individual drive.  For more information on "
-"using RAID devices please consult the kickstart documentation."
-msgstr ""
-"יישום RAID בתכנה מאפשר צירוף מספר דיסקים להתקן RAID אחד גדול. ניתן להגדיר "
-"התקן RAID כך שיספק מהירות ואמינות משופרים לעומת דיסק בודד. למידע נוסף אודות "
-"השימוש בהתקני RAID יש לפנות לתיעוד של kickstart."
+msgid "Software RAID allows you to combine several disks into a larger RAID device.  A RAID device can be configured to provide additional speed and reliability compared to using an individual drive.  For more information on using RAID devices please consult the kickstart documentation."
+msgstr "יישום RAID בתכנה מאפשר צירוף מספר דיסקים להתקן RAID אחד גדול. ניתן להגדיר התקן RAID כך שיספק מהירות ואמינות משופרים לעומת דיסק בודד. למידע נוסף אודות השימוש בהתקני RAID יש לפנות לתיעוד של kickstart."
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 150
@@ -1479,12 +1414,8 @@ msgstr "אזור זמן:"
 #
 # File: tmp/system-config-kickstart.glade.h, line: 155
 #: tmp/system-config-kickstart.glade.h:147
-msgid ""
-"To use RAID you must first create at least two partitions of type 'software "
-"RAID'.  Then you can create a RAID device which can be formatted and mounted."
-msgstr ""
-"לפני השימוש ב-RAID, יש ליצור לפחות שתי מחיצות מסוג 'יישום RAID בתכנה'. אחר "
-"כך, ניתן ליצור את התקן ה-RAID שאותו אפשר לפרמט ולעגן."
+msgid "To use RAID you must first create at least two partitions of type 'software RAID'.  Then you can create a RAID device which can be formatted and mounted."
+msgstr "לפני השימוש ב-RAID, יש ליצור לפחות שתי מחיצות מסוג 'יישום RAID בתכנה'. אחר כך, ניתן ליצור את התקן ה-RAID שאותו אפשר לפרמט ולעגן."
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 157
@@ -1542,12 +1473,10 @@ msgstr "הרץ את התסריט באמצעות:"
 msgid "Use broadcast to find NIS server"
 msgstr "השתמש ב-broadcast לאיתור שרת NIS"
 
-#
 # File: tmp/system-config-kickstart.glade.h, line: 169
 #: tmp/system-config-kickstart.glade.h:159
-#, fuzzy
 msgid "Use existing partition (onpart, e.g. hda1 or sdc3):"
-msgstr "השתמש במחיצה קיימת (onpart)"
+msgstr "השתמש במחיצה קיימת (onpart, לדוגמה hda1 או sdc3)"
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 170
@@ -1558,11 +1487,8 @@ msgstr "השתמש בגודל מומלץ לשטח דפדוף"
 #
 # File: tmp/system-config-kickstart.glade.h, line: 179
 #: tmp/system-config-kickstart.glade.h:161
-msgid ""
-"You have choosen the following configuration. Click Save File to save the "
-"kickstart file. "
-msgstr ""
-"ההגדרות הבאות נבחרו. יש ללחוץ על 'שמירת קובץ' כדי לשמור לקובץ kickstart. "
+msgid "You have choosen the following configuration. Click Save File to save the kickstart file. "
+msgstr "ההגדרות הבאות נבחרו. יש ללחוץ על 'שמירת קובץ' כדי לשמור לקובץ kickstart. "
 
 #
 # File: tmp/system-config-kickstart.glade.h, line: 181
@@ -1630,222 +1556,3 @@ msgstr "_תצוגה מקדימה"
 msgid "_Save to File"
 msgstr "_שמירה לקובץ"
 
-#
-# File: ../src/kickstartGui.py, line: 207
-#~ msgid ""
-#~ "Kickstart Configurator @VERSION@\n"
-#~ " Copyright (c) 2000-2002 Red Hat, Inc.\n"
-#~ " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-#~ " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-#~ " A graphical interface for creating a kickstart file"
-#~ msgstr ""
-#~ "Kickstart Configurator @VERSION@\n"
-#~ " Copyright (c) 2000-2002 Red Hat, Inc.\n"
-#~ " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-#~ " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-#~ "ממשק גרפי ליצירת קובץ kickstart"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 1
-#~ msgid "         "
-#~ msgstr "         "
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 2
-#~ msgid "(for example: hda or sdc)"
-#~ msgstr "(לדוגמה: hda או sdc)"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 3
-#~ msgid "(for example: hda1 or sdc3)"
-#~ msgstr "(לדוגמה: hda1 או sdc3)"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 4
-#~ msgid "0"
-#~ msgstr "0"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 5
-#~ msgid "1"
-#~ msgstr "1"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 6
-#~ msgid "5"
-#~ msgstr "5"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 7
-#~ msgid "Active"
-#~ msgstr "פעיל"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 8
-#~ msgid "Additional Size Options"
-#~ msgstr "אפשרויות נוספול לגודל"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 11
-#~ msgid "Authentication:"
-#~ msgstr "אימות:"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 12
-#~ msgid "Basic Configuration (required)"
-#~ msgstr "תצורה בסיסית (חובה)"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 13
-#~ msgid "Boot Loader Options (required)"
-#~ msgstr "אפשרויות מנהל אתחול (חובה)"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 17
-#~ msgid "Choose the Installation Method:"
-#~ msgstr "בחרו את שיטת ההתקנה:"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 20
-#~ msgid "Configure the X Window System"
-#~ msgstr "קביעת תצורת מערכת התצוגה (X Window System)"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 27
-#~ msgid "Disabled"
-#~ msgstr "מבוטל"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 33
-#~ msgid "Drive :"
-#~ msgstr "כונן :"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 39
-#~ msgid "Enable firewall"
-#~ msgstr "אפשר חומת אש"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 41
-#~ msgid "Enabled"
-#~ msgstr "מופעל"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 80
-#~ msgid "Installation Method (required)"
-#~ msgstr "שיטת התקנה (חובה)"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 118
-#~ msgid "Partition Information (required)"
-#~ msgstr "פרטי מחיצה (חובה)"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 148
-#~ msgid "Size (MB):"
-#~ msgstr "גודל (MB):"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 174
-#~ msgid "Warn"
-#~ msgstr "אזהרה"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 180
-#~ msgid "_About"
-#~ msgstr "_אודות"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 183
-#~ msgid "_Contents"
-#~ msgstr "_תכולה"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 192
-#~ msgid "_Quit"
-#~ msgstr "_יציאה"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 193
-#~ msgid "_Save File"
-#~ msgstr "_שמירת קובץ"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 198
-#~ msgid "md0"
-#~ msgstr "md0"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 199
-#~ msgid "md1"
-#~ msgstr "md1"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 200
-#~ msgid "md10"
-#~ msgstr "md10"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 201
-#~ msgid "md11"
-#~ msgstr "md11"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 202
-#~ msgid "md12"
-#~ msgstr "md12"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 203
-#~ msgid "md13"
-#~ msgstr "md13"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 204
-#~ msgid "md14"
-#~ msgstr "md14"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 205
-#~ msgid "md15"
-#~ msgstr "md15"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 206
-#~ msgid "md2"
-#~ msgstr "md2"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 207
-#~ msgid "md3"
-#~ msgstr "md3"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 208
-#~ msgid "md4"
-#~ msgstr "md4"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 209
-#~ msgid "md5"
-#~ msgstr "md5"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 210
-#~ msgid "md6"
-#~ msgstr "md6"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 211
-#~ msgid "md7"
-#~ msgstr "md7"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 212
-#~ msgid "md8"
-#~ msgstr "md8"
-
-#
-# File: tmp/system-config-kickstart.glade.h, line: 213
-#~ msgid "md9"
-#~ msgstr "md9"
