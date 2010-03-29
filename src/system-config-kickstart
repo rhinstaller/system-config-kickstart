@@ -24,7 +24,9 @@
 import signal
 import sys, os
 
-import meh
+from meh.dump import *
+from meh.ui.gui import GraphicalIntf
+from meh.handler import *
 
 sys.path.append("/usr/share/system-config-kickstart")
 
@@ -94,5 +96,10 @@ if __name__ == "__main__":
         sys.exit(0)
 
     ksGui = kickstartGui.kickstartGui(file)
-    meh.makeRHHandler("system-config-kickstart", "@VERSION@", ksGui)
+
+    config = Config(programName="system-config-kickstart", 
+                    programVersion="@VERSION@")
+    handler = ExceptionHandler(config, GraphicalIntf(), ExceptionDump)
+    handler.install(ksGui)
+
     ksGui.run()
