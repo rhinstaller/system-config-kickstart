@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.8.4
+Version: 2.8.5
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -69,6 +69,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Mon May 03 2010 Chris Lumens <clumens@redhat.com> - 2.8.5-1
+- Update to work with the new python-meh, which now uses report. (clumens)
+
 * Fri Jan 29 2010 Chris Lumens <clumens@redhat.com> - 2.8.4-1
 - Don't overwrite tsInfo with a new instance (#541052). (clumens)
 - Correct rpmlint errors found with the .spec file. (clumens)
