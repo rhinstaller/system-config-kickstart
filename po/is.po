@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-config-kickstart.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-22 11:01-0400\n"
+"POT-Creation-Date: 2010-05-12 10:02-0400\n"
 "PO-Revision-Date: 2010-04-20 09:09+0000\n"
 "Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
 "Language-Team: Icelandic <rglug@rglug.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Generated-By: pygettext.py 1.1\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/auth.py:350
+#: ../src/auth.py:354
 msgid "Please fill in the authentication information"
 msgstr "Vinsamlegast gefðu upp auðkenningaupplýsingarnar"
 
@@ -46,7 +46,7 @@ msgstr "IBM zSeries/s390"
 msgid "Root passwords do not match."
 msgstr "Rótarlykilorðin er ekki eins."
 
-#: ../src/basic.py:152 ../src/install.py:217 ../src/partWindow.py:576
+#: ../src/basic.py:152 ../src/install.py:217 ../src/partWindow.py:577
 #: ../src/partition.py:256 ../src/raidWindow.py:276
 msgid "Error"
 msgstr "Villa"
@@ -124,11 +124,20 @@ msgid ""
 "this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
 "Ave, Cambridge, MA 02139, USA."
 msgstr ""
-"Þetta er frjáls hugbúnaður; þú mátt dreifa honum og/eða breyta samkvæmt skilmálum í almenna GNU GPL notkunarleyfinu eins og það er gefið út af Frjálsu hugbúnaðarstofnuninni; annaðhvort útgáfu 2 af GPL-leyfinu, eða (ef þér sýnist svo) einhverja nýrri útgáfu leyfisins.\n"
+"Þetta er frjáls hugbúnaður; þú mátt dreifa honum og/eða breyta samkvæmt "
+"skilmálum í almenna GNU GPL notkunarleyfinu eins og það er gefið út af "
+"Frjálsu hugbúnaðarstofnuninni; annaðhvort útgáfu 2 af GPL-leyfinu, eða (ef "
+"þér sýnist svo) einhverja nýrri útgáfu leyfisins.\n"
 "\n"
-"Hugbúnaðnum er dreift í þeirri von að hann geti verið gagnlegur, en ÁN ALLRAR ÁBYRGÐAR; einnig án þeirrar ábyrgðar sem gefin er í skyn með SELJANLEIKA eða EIGINLEIKUM TIL TILTEKINNA NOTA. Sjá almenna GNU GPL notkunarleyfið fyrir nánari upplýsingar.\n"
+"Hugbúnaðnum er dreift í þeirri von að hann geti verið gagnlegur, en ÁN "
+"ALLRAR ÁBYRGÐAR; einnig án þeirrar ábyrgðar sem gefin er í skyn með "
+"SELJANLEIKA eða EIGINLEIKUM TIL TILTEKINNA NOTA. Sjá almenna GNU GPL "
+"notkunarleyfið fyrir nánari upplýsingar.\n"
 "\n"
-"Það ætti að hafa fylgt afrit af almenna GNU GPL notkunarleyfinu með forritinu; ef ekki skrifið þá Fjálsu hugbúnarstofnuninni: Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
+"Það ætti að hafa fylgt afrit af almenna GNU GPL notkunarleyfinu með "
+"forritinu; ef ekki skrifið þá Fjálsu hugbúnarstofnuninni: Free Software "
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, "
+"USA."
 
 #: ../src/kickstartGui.py:125 ../src/kickstartGui.py:130
 #: ../src/kickstartGui.py:330 ../src/kickstartGui.py:335
@@ -290,53 +299,59 @@ msgstr "ext2"
 msgid "ext3"
 msgstr "ext3"
 
+#: ../src/partWindow.py:98
+#, fuzzy
+msgid "ext4"
+msgstr "ext2"
+
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:99 ../src/partWindow.py:174
+#: ../src/partWindow.py:100 ../src/partWindow.py:175
 msgid "software RAID"
 msgstr "RAID í hugbúnaði"
 
-#: ../src/partWindow.py:100
+#: ../src/partWindow.py:101
 msgid "swap"
 msgstr "diskminni"
 
-#: ../src/partWindow.py:100
+#: ../src/partWindow.py:101
 msgid "vfat"
 msgstr "vfat"
 
-#: ../src/partWindow.py:101
+#: ../src/partWindow.py:102
 msgid "PPC PReP Boot"
 msgstr "PPC PReP ræsing"
 
-#: ../src/partWindow.py:316 ../src/partWindow.py:598 ../src/raidWindow.py:241
+#: ../src/partWindow.py:317 ../src/partWindow.py:599 ../src/raidWindow.py:241
 msgid "Yes"
 msgstr "Já"
 
-#: ../src/partWindow.py:318 ../src/partWindow.py:600 ../src/raidWindow.py:243
+#: ../src/partWindow.py:319 ../src/partWindow.py:601 ../src/raidWindow.py:243
 msgid "No"
 msgstr "Nei"
 
-#: ../src/partWindow.py:341 ../src/partWindow.py:356 ../src/partWindow.py:375
-#: ../src/partWindow.py:389
+#: ../src/partWindow.py:342 ../src/partWindow.py:357 ../src/partWindow.py:376
+#: ../src/partWindow.py:390
 msgid "Auto"
 msgstr "Sjálfvirkt"
 
-#: ../src/partWindow.py:350
+#: ../src/partWindow.py:351
 msgid "Hard Drives"
 msgstr "Harðir diskar"
 
-#: ../src/partWindow.py:494
+#: ../src/partWindow.py:495
 msgid "Specify a mount point for the partition."
 msgstr "Veldu tengipunkt fyrir sneiðina."
 
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:503
+#: ../src/partWindow.py:504
 #, python-format
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "Tengipunkturinn \"%s\" er þegar í notkun. Vinsamlegast veldu annan "
 "tengipunkt."
 
-#: ../src/partWindow.py:523
+#: ../src/partWindow.py:524
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -344,11 +359,11 @@ msgstr ""
 "Þú þarft að tiltaka harðann disk eða disksneið sem þegar er til staðar til "
 "að búa til nýja RAID sneið"
 
-#: ../src/partWindow.py:560
+#: ../src/partWindow.py:561
 msgid "Specify a device on which to create the partition."
 msgstr "Veldu disk til þess að búa til sneiðina á."
 
-#: ../src/partWindow.py:569
+#: ../src/partWindow.py:570
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -396,12 +411,14 @@ msgstr "Þú ert núna með %d RAID disksneiðar sem eru ekki í notkun."
 #: ../src/raidWindow.py:201
 #, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr "Þú verður að velja að minnsta kosti 2 disksneiðar til að búa til RAID %s"
+msgstr ""
+"Þú verður að velja að minnsta kosti 2 disksneiðar til að búa til RAID %s"
 
 #: ../src/raidWindow.py:207
 #, python-format
 msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr "Þú verður að velja að minnsta kosti 3 disksneiðar til að búa til RAID %s"
+msgstr ""
+"Þú verður að velja að minnsta kosti 3 disksneiðar til að búa til RAID %s"
 
 #: ../src/raidWindow.py:221 ../src/raidWindow.py:247
 msgid "Raid Devices"
@@ -544,8 +561,8 @@ msgid ""
 "An error in this script might cause your kickstart installation to fail. Do "
 "not include the %post command at the beginning."
 msgstr ""
-"Villa í þessari skriftu getur valdið því að hraðræsing bregðist. "
-"Ekki nota %post skipunina í byrjun."
+"Villa í þessari skriftu getur valdið því að hraðræsing bregðist. Ekki nota %"
+"post skipunina í byrjun."
 
 #: tmp/system-config-kickstart.glade.h:35
 #, no-c-format
@@ -553,8 +570,8 @@ msgid ""
 "An error in this script might cause your kickstart installation to fail. Do "
 "not include the %pre command at the beginning."
 msgstr ""
-"Villa í þessari skriftu getur valdið því að hraðræsing bregðist. "
-"Ekki nota %pre skipunina í byrjun."
+"Villa í þessari skriftu getur valdið því að hraðræsing bregðist. Ekki nota %"
+"pre skipunina í byrjun."
 
 #: tmp/system-config-kickstart.glade.h:36
 msgid "Authentication options are not applicable on upgrades."
@@ -619,26 +636,30 @@ msgid "Do not install a boot loader"
 msgstr "Setja ekki upp ræsistjórann"
 
 #: tmp/system-config-kickstart.glade.h:52
+msgid "Enable Fingerprint Reader"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:53
 msgid "Enable Hesiod Support"
 msgstr "Nota Hesiod stuðning"
 
-#: tmp/system-config-kickstart.glade.h:53
+#: tmp/system-config-kickstart.glade.h:54
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Nota Kerberos 5 auðkenningu"
 
-#: tmp/system-config-kickstart.glade.h:54
+#: tmp/system-config-kickstart.glade.h:55
 msgid "Enable LDAP"
 msgstr "Nota LDAP"
 
-#: tmp/system-config-kickstart.glade.h:55
+#: tmp/system-config-kickstart.glade.h:56
 msgid "Enable NIS"
 msgstr "Nota NIS"
 
-#: tmp/system-config-kickstart.glade.h:56
+#: tmp/system-config-kickstart.glade.h:57
 msgid "Enable SMB Authentication"
 msgstr "Nota SMB auðkenningu"
 
-#: tmp/system-config-kickstart.glade.h:57
+#: tmp/system-config-kickstart.glade.h:58
 msgid ""
 "Enable firewall\n"
 "Disable firewall"
@@ -646,339 +667,339 @@ msgstr ""
 "Kveikja á eldveggnum\n"
 "Slökkva á eldveggnum"
 
-#: tmp/system-config-kickstart.glade.h:59
+#: tmp/system-config-kickstart.glade.h:60
 msgid "Enable nscd"
 msgstr "Nota nscd"
 
-#: tmp/system-config-kickstart.glade.h:60
+#: tmp/system-config-kickstart.glade.h:61
 msgid "Encrypt GRUB password"
 msgstr "Dulrita GRUB lykilorðið"
 
-#: tmp/system-config-kickstart.glade.h:61
+#: tmp/system-config-kickstart.glade.h:62
 msgid "Encrypt root password"
 msgstr "Dulrita rótarlykilorðið"
 
-#: tmp/system-config-kickstart.glade.h:62
+#: tmp/system-config-kickstart.glade.h:63
 msgid "FTP"
 msgstr "FTP"
 
-#: tmp/system-config-kickstart.glade.h:63
+#: tmp/system-config-kickstart.glade.h:64
 msgid "FTP Directory:"
 msgstr "FTP mappa:"
 
-#: tmp/system-config-kickstart.glade.h:64
+#: tmp/system-config-kickstart.glade.h:65
 msgid "FTP Password:"
 msgstr "FTP lykilorð:"
 
-#: tmp/system-config-kickstart.glade.h:65
+#: tmp/system-config-kickstart.glade.h:66
 msgid "FTP Server:"
 msgstr "FTP þjónn:"
 
-#: tmp/system-config-kickstart.glade.h:66
+#: tmp/system-config-kickstart.glade.h:67
 msgid "FTP Username:"
 msgstr "FTP notandanafn:"
 
-#: tmp/system-config-kickstart.glade.h:67
+#: tmp/system-config-kickstart.glade.h:68
 msgid "File System Type:"
 msgstr "Tegund skráarkerfis:"
 
-#: tmp/system-config-kickstart.glade.h:68
+#: tmp/system-config-kickstart.glade.h:69
 msgid "Fill all unused space on disk"
 msgstr "Nota allt laust pláss á disknum"
 
-#: tmp/system-config-kickstart.glade.h:69
+#: tmp/system-config-kickstart.glade.h:70
 msgid "Firewall configuration is not applicable on upgrades."
 msgstr "Stillingar eldveggs eiga eki við í uppfærslum."
 
-#: tmp/system-config-kickstart.glade.h:70
+#: tmp/system-config-kickstart.glade.h:71
 msgid "Fixed size (MB):"
 msgstr "Föst stærð (MB):"
 
-#: tmp/system-config-kickstart.glade.h:71
+#: tmp/system-config-kickstart.glade.h:72
 msgid "Force to be a primary partition (asprimary)"
 msgstr "Búa til sem \"primary\" disksneið (asprimary)"
 
-#: tmp/system-config-kickstart.glade.h:72
+#: tmp/system-config-kickstart.glade.h:73
 msgid "Format RAID device"
 msgstr "Forsníða RAID tæki"
 
-#: tmp/system-config-kickstart.glade.h:73
+#: tmp/system-config-kickstart.glade.h:74
 msgid "Format partition"
 msgstr "Forsníða disksneið"
 
-#: tmp/system-config-kickstart.glade.h:74
+#: tmp/system-config-kickstart.glade.h:75
 msgid "Gateway:"
 msgstr "Netgátt:"
 
-#: tmp/system-config-kickstart.glade.h:75
+#: tmp/system-config-kickstart.glade.h:76
 msgid "Grow to maximum of (MB):"
 msgstr "Stækka upp að hámarksstærðinni (MB):"
 
-#: tmp/system-config-kickstart.glade.h:76
+#: tmp/system-config-kickstart.glade.h:77
 msgid "HTTP"
 msgstr "HTTP"
 
-#: tmp/system-config-kickstart.glade.h:77
+#: tmp/system-config-kickstart.glade.h:78
 msgid "HTTP Directory:"
 msgstr "HTTP mappa:"
 
-#: tmp/system-config-kickstart.glade.h:78
+#: tmp/system-config-kickstart.glade.h:79
 msgid "HTTP Server:"
 msgstr "HTTP þjónn:"
 
-#: tmp/system-config-kickstart.glade.h:79
+#: tmp/system-config-kickstart.glade.h:80
 msgid "Hard Drive"
 msgstr "Harður diskur"
 
-#: tmp/system-config-kickstart.glade.h:80
+#: tmp/system-config-kickstart.glade.h:81
 msgid "Hard Drive Directory:"
 msgstr "Mappa á hörðum diski:"
 
-#: tmp/system-config-kickstart.glade.h:81
+#: tmp/system-config-kickstart.glade.h:82
 msgid "Hard Drive Partition:"
 msgstr "Disksneið:"
 
-#: tmp/system-config-kickstart.glade.h:82
+#: tmp/system-config-kickstart.glade.h:83
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: tmp/system-config-kickstart.glade.h:83
+#: tmp/system-config-kickstart.glade.h:84
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS:"
 
-#: tmp/system-config-kickstart.glade.h:84
+#: tmp/system-config-kickstart.glade.h:85
 msgid "Hesiod RHS:"
 msgstr "Hesiod RHS:"
 
-#: tmp/system-config-kickstart.glade.h:85
+#: tmp/system-config-kickstart.glade.h:86
 msgid "IP Address:"
 msgstr "IP vistfang:"
 
-#: tmp/system-config-kickstart.glade.h:86
+#: tmp/system-config-kickstart.glade.h:87
 msgid "Initialize the disk label"
 msgstr "Frumstilla diskmerkinguna"
 
-#: tmp/system-config-kickstart.glade.h:87
+#: tmp/system-config-kickstart.glade.h:88
 msgid "Install a graphical environment"
 msgstr "Setja upp grafískt skjáumhverfi"
 
-#: tmp/system-config-kickstart.glade.h:88
+#: tmp/system-config-kickstart.glade.h:89
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "Setja ræsistjórann á aðalræsifærsluna (MBR)"
 
-#: tmp/system-config-kickstart.glade.h:89
+#: tmp/system-config-kickstart.glade.h:90
 msgid "Install boot loader on first sector of the boot partition"
 msgstr "Setja ræsistjórann á fyrsta geira ræsidisksneiðar"
 
-#: tmp/system-config-kickstart.glade.h:90
+#: tmp/system-config-kickstart.glade.h:91
 msgid "Install new boot loader"
 msgstr "Setja upp nýjann ræsistjóra"
 
-#: tmp/system-config-kickstart.glade.h:91
+#: tmp/system-config-kickstart.glade.h:92
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: tmp/system-config-kickstart.glade.h:92
+#: tmp/system-config-kickstart.glade.h:93
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Kerberos lénsstjóri (KDC):"
 
-#: tmp/system-config-kickstart.glade.h:93
+#: tmp/system-config-kickstart.glade.h:94
 msgid "Kerberos Master Server:"
 msgstr "Kerberos aðalþjónn:"
 
-#: tmp/system-config-kickstart.glade.h:94
+#: tmp/system-config-kickstart.glade.h:95
 msgid "Kerberos Realm:"
 msgstr "Kerberos svæði:"
 
-#: tmp/system-config-kickstart.glade.h:95
+#: tmp/system-config-kickstart.glade.h:96
 msgid "Kernel parameters:"
 msgstr "Kjarnaviðföng:"
 
-#: tmp/system-config-kickstart.glade.h:96
+#: tmp/system-config-kickstart.glade.h:97
 msgid "Keyboard:"
 msgstr "Lyklaborð:"
 
-#: tmp/system-config-kickstart.glade.h:97
+#: tmp/system-config-kickstart.glade.h:98
 msgid "Kickstart Configurator"
 msgstr "Hraðræsingarstillingatól"
 
-#: tmp/system-config-kickstart.glade.h:98
+#: tmp/system-config-kickstart.glade.h:99
 msgid "LDAP "
 msgstr "LDAP "
 
-#: tmp/system-config-kickstart.glade.h:99
+#: tmp/system-config-kickstart.glade.h:100
 msgid "LDAP Base Name: "
 msgstr "LDAP grunnnafn: "
 
-#: tmp/system-config-kickstart.glade.h:100
+#: tmp/system-config-kickstart.glade.h:101
 msgid "LDAP Server: "
 msgstr "LDAP þjónn: "
 
-#: tmp/system-config-kickstart.glade.h:101
+#: tmp/system-config-kickstart.glade.h:102
 msgid "Load CA certificate"
 msgstr "Lesa CA skilríki"
 
-#: tmp/system-config-kickstart.glade.h:102
+#: tmp/system-config-kickstart.glade.h:103
 msgid "Make RAID Device"
 msgstr "Búa til RAID tæki"
 
-#: tmp/system-config-kickstart.glade.h:103
+#: tmp/system-config-kickstart.glade.h:104
 msgid "Make partition on specific drive (ondisk, e.g. hda or sdc):"
 msgstr "Búa disksneiðina til á tilteknum diski (ondisk, t.d. hda eða sdc)"
 
-#: tmp/system-config-kickstart.glade.h:104
+#: tmp/system-config-kickstart.glade.h:105
 msgid "Mount Point:"
 msgstr "Tengipunktur:"
 
-#: tmp/system-config-kickstart.glade.h:105
+#: tmp/system-config-kickstart.glade.h:106
 msgid "NFS"
 msgstr "NFS"
 
-#: tmp/system-config-kickstart.glade.h:106
+#: tmp/system-config-kickstart.glade.h:107
 msgid "NFS Directory:"
 msgstr "NFS mappa:"
 
-#: tmp/system-config-kickstart.glade.h:107
+#: tmp/system-config-kickstart.glade.h:108
 msgid "NFS Server:"
 msgstr "NFS þjónn:"
 
-#: tmp/system-config-kickstart.glade.h:108
+#: tmp/system-config-kickstart.glade.h:109
 msgid "NIS"
 msgstr "NIS"
 
-#: tmp/system-config-kickstart.glade.h:109
+#: tmp/system-config-kickstart.glade.h:110
 msgid "NIS Domain:"
 msgstr "NIS lén:"
 
-#: tmp/system-config-kickstart.glade.h:110
+#: tmp/system-config-kickstart.glade.h:111
 msgid "NIS Server:"
 msgstr "NIS þjónn:"
 
-#: tmp/system-config-kickstart.glade.h:111
+#: tmp/system-config-kickstart.glade.h:112
 msgid "Name Server:"
 msgstr "Nafnaþjónn:"
 
-#: tmp/system-config-kickstart.glade.h:112
+#: tmp/system-config-kickstart.glade.h:113
 msgid "Name Switch Cache"
 msgstr "Biðminni nafnaþjónsrofa"
 
-#: tmp/system-config-kickstart.glade.h:113
+#: tmp/system-config-kickstart.glade.h:114
 msgid "Netmask: "
 msgstr "Netmöskvi: "
 
-#: tmp/system-config-kickstart.glade.h:114
+#: tmp/system-config-kickstart.glade.h:115
 msgid "Network Device Information"
 msgstr "Upplýsingar um netkort"
 
-#: tmp/system-config-kickstart.glade.h:115
+#: tmp/system-config-kickstart.glade.h:116
 msgid "Network Device:"
 msgstr "Netkort:"
 
-#: tmp/system-config-kickstart.glade.h:116
+#: tmp/system-config-kickstart.glade.h:117
 msgid "Network Type:"
 msgstr "Tegund nets:"
 
-#: tmp/system-config-kickstart.glade.h:117
+#: tmp/system-config-kickstart.glade.h:118
 msgid "Number of spares:"
 msgstr "Fjöldi varadrifa:"
 
-#: tmp/system-config-kickstart.glade.h:118
+#: tmp/system-config-kickstart.glade.h:119
 msgid "On first boot, Setup Agent is: "
 msgstr "Í fyrstu ræsingu er uppsetningarálfurinn: "
 
-#: tmp/system-config-kickstart.glade.h:119
+#: tmp/system-config-kickstart.glade.h:120
 msgid "Partition Options"
 msgstr "Stillingar disksneiða"
 
-#: tmp/system-config-kickstart.glade.h:120
+#: tmp/system-config-kickstart.glade.h:121
 msgid "Partition options are not applicable on upgrades."
 msgstr "Disksneiðingar eiga ekki við í uppfærslum."
 
-#: tmp/system-config-kickstart.glade.h:121
+#: tmp/system-config-kickstart.glade.h:122
 msgid "Password:"
 msgstr "Lykilorð:"
 
-#: tmp/system-config-kickstart.glade.h:122
+#: tmp/system-config-kickstart.glade.h:123
 msgid "Perform installation in interactive mode"
 msgstr "Framkvæma gagnvirka uppsetningu"
 
-#: tmp/system-config-kickstart.glade.h:123
+#: tmp/system-config-kickstart.glade.h:124
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "Framkvæma uppsetningu í textaham (myndrænt er sjálfgefið)"
 
-#: tmp/system-config-kickstart.glade.h:124
+#: tmp/system-config-kickstart.glade.h:125
 msgid "Perform new installation"
 msgstr "Setja upp aftur"
 
-#: tmp/system-config-kickstart.glade.h:125
+#: tmp/system-config-kickstart.glade.h:126
 msgid "Preserve existing partitions"
 msgstr "Varðveita disksneiðar"
 
-#: tmp/system-config-kickstart.glade.h:126
+#: tmp/system-config-kickstart.glade.h:127
 msgid "Preview Options"
 msgstr "Rofar forsýningar"
 
-#: tmp/system-config-kickstart.glade.h:127
+#: tmp/system-config-kickstart.glade.h:128
 msgid "RAID"
 msgstr "RAID"
 
-#: tmp/system-config-kickstart.glade.h:128
+#: tmp/system-config-kickstart.glade.h:129
 msgid "RAID Device:"
 msgstr "RAID tæki:"
 
-#: tmp/system-config-kickstart.glade.h:129
+#: tmp/system-config-kickstart.glade.h:130
 msgid "RAID Level:"
 msgstr "RAID-stig:"
 
-#: tmp/system-config-kickstart.glade.h:130
+#: tmp/system-config-kickstart.glade.h:131
 msgid "RAID Options"
 msgstr "Stillingar RAID"
 
-#: tmp/system-config-kickstart.glade.h:131
+#: tmp/system-config-kickstart.glade.h:132
 msgid "Raid Members:"
 msgstr "RAID drif:"
 
-#: tmp/system-config-kickstart.glade.h:132
+#: tmp/system-config-kickstart.glade.h:133
 msgid "Reboot system after installation"
 msgstr "Endurræsa vélina eftir uppsetningu"
 
-#: tmp/system-config-kickstart.glade.h:133
+#: tmp/system-config-kickstart.glade.h:134
 msgid "Remove all existing partitions"
 msgstr "Fjarlægja allar disksneiðar"
 
-#: tmp/system-config-kickstart.glade.h:134
+#: tmp/system-config-kickstart.glade.h:135
 msgid "Remove existing Linux partitions"
 msgstr "Fjarlægja Linux disksneiðar"
 
-#: tmp/system-config-kickstart.glade.h:135
+#: tmp/system-config-kickstart.glade.h:136
 msgid "Root Password:"
 msgstr "Rótarlykilorð:"
 
-#: tmp/system-config-kickstart.glade.h:136
+#: tmp/system-config-kickstart.glade.h:137
 msgid "Run outside of the chroot environment"
 msgstr "Keyra utan chroot umhverfissins"
 
-#: tmp/system-config-kickstart.glade.h:137
+#: tmp/system-config-kickstart.glade.h:138
 msgid "SELinux:"
 msgstr "SELinux:"
 
-#: tmp/system-config-kickstart.glade.h:138
+#: tmp/system-config-kickstart.glade.h:139
 msgid "SMB"
 msgstr "SMB"
 
-#: tmp/system-config-kickstart.glade.h:139
+#: tmp/system-config-kickstart.glade.h:140
 msgid "SMB Servers:"
 msgstr "SMB þjónar:"
 
-#: tmp/system-config-kickstart.glade.h:140
+#: tmp/system-config-kickstart.glade.h:141
 msgid "SMB Workgroup:"
 msgstr "SMB vinnuhópur:"
 
-#: tmp/system-config-kickstart.glade.h:141
+#: tmp/system-config-kickstart.glade.h:142
 msgid "Security level:"
 msgstr "Öryggisstig:"
 
-#: tmp/system-config-kickstart.glade.h:142
+#: tmp/system-config-kickstart.glade.h:143
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -990,23 +1011,23 @@ msgstr ""
 "eitt stakt drif. Eg þig langar að lesa meira um RAID tæki getur þú lesið "
 "kickstart handbókina."
 
-#: tmp/system-config-kickstart.glade.h:143
+#: tmp/system-config-kickstart.glade.h:144
 msgid "Specify an FTP username and password"
 msgstr "Nota notandanafn og lykilorð í FTP"
 
-#: tmp/system-config-kickstart.glade.h:144
+#: tmp/system-config-kickstart.glade.h:145
 msgid "Specify installation key:"
 msgstr "Gefa upp uppsetningarlykil:"
 
-#: tmp/system-config-kickstart.glade.h:145
+#: tmp/system-config-kickstart.glade.h:146
 msgid "Target Architecture:"
 msgstr "Vélbúnaður:"
 
-#: tmp/system-config-kickstart.glade.h:146
+#: tmp/system-config-kickstart.glade.h:147
 msgid "Time Zone:"
 msgstr "Tímabelti:"
 
-#: tmp/system-config-kickstart.glade.h:147
+#: tmp/system-config-kickstart.glade.h:148
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -1015,53 +1036,53 @@ msgstr ""
 "gerðinni 'software RAID'. Þá býrðu til RAID tæki sem hægt er að forsníða og "
 "tengja inn í skráarkerfið."
 
-#: tmp/system-config-kickstart.glade.h:149
+#: tmp/system-config-kickstart.glade.h:150
 #, no-c-format
 msgid "Type your %post script below:"
 msgstr "Sláðu inn %post skriftuna hér:"
 
-#: tmp/system-config-kickstart.glade.h:151
+#: tmp/system-config-kickstart.glade.h:152
 #, no-c-format
 msgid "Type your %pre script below:"
 msgstr "Sláðu inn %pre skriftuna hér:"
 
-#: tmp/system-config-kickstart.glade.h:152
+#: tmp/system-config-kickstart.glade.h:153
 msgid "Upgrade an existing installation"
 msgstr "Uppfæra núverandi kerfi"
 
-#: tmp/system-config-kickstart.glade.h:153
+#: tmp/system-config-kickstart.glade.h:154
 msgid "Upgrade existing boot loader"
 msgstr "Uppfæra núverandi ræsistjóra"
 
-#: tmp/system-config-kickstart.glade.h:154
+#: tmp/system-config-kickstart.glade.h:155
 msgid "Use GRUB password"
 msgstr "Nota GRUB lykilorð"
 
-#: tmp/system-config-kickstart.glade.h:155
+#: tmp/system-config-kickstart.glade.h:156
 msgid "Use Shadow Passwords"
 msgstr "Nota falin lykilorð"
 
-#: tmp/system-config-kickstart.glade.h:156
+#: tmp/system-config-kickstart.glade.h:157
 msgid "Use UTC clock"
 msgstr "Nota UTC klukku"
 
-#: tmp/system-config-kickstart.glade.h:157
+#: tmp/system-config-kickstart.glade.h:158
 msgid "Use an interpreter:"
 msgstr "Nota túlk:"
 
-#: tmp/system-config-kickstart.glade.h:158
+#: tmp/system-config-kickstart.glade.h:159
 msgid "Use broadcast to find NIS server"
 msgstr "Kalla eftir NIS þjóni"
 
-#: tmp/system-config-kickstart.glade.h:159
+#: tmp/system-config-kickstart.glade.h:160
 msgid "Use existing partition (onpart, e.g. hda1 or sdc3):"
 msgstr "Nota disksneiðar sem þergar eru til (onpart, t.d. hda1 eða sdc3):"
 
-#: tmp/system-config-kickstart.glade.h:160
+#: tmp/system-config-kickstart.glade.h:161
 msgid "Use recommended swap size"
 msgstr "Nota bestu diskminnisstærð"
 
-#: tmp/system-config-kickstart.glade.h:161
+#: tmp/system-config-kickstart.glade.h:162
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
@@ -1069,47 +1090,46 @@ msgstr ""
 "Þú hefur kosið eftirfarandi stillingar. Veldu Vista í skrá til að vista "
 "hraðræsistillingum."
 
-#: tmp/system-config-kickstart.glade.h:162
+#: tmp/system-config-kickstart.glade.h:163
 msgid "_Add"
 msgstr "_Bæta við"
 
-#: tmp/system-config-kickstart.glade.h:163
+#: tmp/system-config-kickstart.glade.h:164
 msgid "_Add Network Device"
 msgstr "_Bæta við netkorti"
 
-#: tmp/system-config-kickstart.glade.h:164
+#: tmp/system-config-kickstart.glade.h:165
 msgid "_Delete"
 msgstr "_Eyða"
 
-#: tmp/system-config-kickstart.glade.h:165
+#: tmp/system-config-kickstart.glade.h:166
 msgid "_Delete Network Device"
 msgstr "_Eyða netkorti"
 
-#: tmp/system-config-kickstart.glade.h:166
+#: tmp/system-config-kickstart.glade.h:167
 msgid "_Edit"
 msgstr "_Sýsla"
 
-#: tmp/system-config-kickstart.glade.h:167
+#: tmp/system-config-kickstart.glade.h:168
 msgid "_Edit Network Device"
 msgstr "_Breyta netkorti"
 
-#: tmp/system-config-kickstart.glade.h:168
+#: tmp/system-config-kickstart.glade.h:169
 msgid "_File"
 msgstr "_Skrá"
 
-#: tmp/system-config-kickstart.glade.h:169
+#: tmp/system-config-kickstart.glade.h:170
 msgid "_Help"
 msgstr "_Hjálp"
 
-#: tmp/system-config-kickstart.glade.h:170
+#: tmp/system-config-kickstart.glade.h:171
 msgid "_Open File"
 msgstr "_Opna skrá"
 
-#: tmp/system-config-kickstart.glade.h:171
+#: tmp/system-config-kickstart.glade.h:172
 msgid "_Preview"
 msgstr "_Forsýn"
 
-#: tmp/system-config-kickstart.glade.h:172
+#: tmp/system-config-kickstart.glade.h:173
 msgid "_Save to File"
 msgstr "_Vista í skrá"
-

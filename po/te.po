@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-config-kickstart.master.te\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-22 11:01-0400\n"
+"POT-Creation-Date: 2010-05-12 10:02-0400\n"
 "PO-Revision-Date: 2009-09-23 12:53+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -18,10 +18,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"\n"
 "\n"
 
-#: ../src/auth.py:350
+#: ../src/auth.py:354
 msgid "Please fill in the authentication information"
 msgstr "దయచేసి అధికార పూర్వక సమాచారంలో నింపండి"
 
@@ -49,7 +50,7 @@ msgstr "IBM zసీరిస్/s390"
 msgid "Root passwords do not match."
 msgstr "రూటు అనుమతిపదం సరిపోలలేదు."
 
-#: ../src/basic.py:152 ../src/install.py:217 ../src/partWindow.py:576
+#: ../src/basic.py:152 ../src/install.py:217 ../src/partWindow.py:577
 #: ../src/partition.py:256 ../src/raidWindow.py:276
 msgid "Error"
 msgstr "దోషం"
@@ -127,17 +128,15 @@ msgid ""
 "this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
 "Ave, Cambridge, MA 02139, USA."
 msgstr ""
-"ఈ ప్రోగ్రామ్ ఉచిత సాఫ్ట్‌వేర్; నీవు దానిని మరలపంచవచ్చు స్వతంత్ర సాఫ్ట్‌వేర్ సంస్థ "
-"వెలువరిచిన GNU సర్వసామన్యమైన ప్రజా లైసెన్సు వివరణం 2 లైసెన్సు లేదా వేరే "
-"(మీ ఐచ్చికం వద్ద) వివరణల ప్రకారం మార్చవచ్చు.\n"
+"ఈ ప్రోగ్రామ్ ఉచిత సాఫ్ట్‌వేర్; నీవు దానిని మరలపంచవచ్చు స్వతంత్ర సాఫ్ట్‌వేర్ సంస్థ వెలువరిచిన GNU "
+"సర్వసామన్యమైన ప్రజా లైసెన్సు వివరణం 2 లైసెన్సు లేదా వేరే (మీ ఐచ్చికం వద్ద) వివరణల ప్రకారం మార్చవచ్చు.\n"
 "\n"
-"ఈ ప్రోగ్రామ్ ఉపయోగపడుతుందనే నమ్మకంతో పంపిణీచేయబడుతోంది, అయితే ఏ హామీ లేకుండా; "
-"వ్యాపారసంబందంగా కాని లేదా ఒక నిర్దిష్ట అవసరానికిచెందినదని కాని హామీ లేదు. ఎక్కువ సమాచారం "
-"కొరకు GNU జనరల్ పబ్లిక్ లైసెన్స్  ను చూడండి.\n"
+"ఈ ప్రోగ్రామ్ ఉపయోగపడుతుందనే నమ్మకంతో పంపిణీచేయబడుతోంది, అయితే ఏ హామీ లేకుండా; వ్యాపారసంబందంగా కాని లేదా "
+"ఒక నిర్దిష్ట అవసరానికిచెందినదని కాని హామీ లేదు. ఎక్కువ సమాచారం కొరకు GNU జనరల్ పబ్లిక్ లైసెన్స్  ను "
+"చూడండి.\n"
 "\n"
 "మీరు ఈ ప్రోగ్రామ్ తోటి ఒక GNU జనరల్ పబ్లిక్ లైసెన్స్  నకలుగూడా పొందిఉంటారు; పొందక పోతే, Free "
-"Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA కి "
-"వ్రాయండి."
+"Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA కి వ్రాయండి."
 
 #: ../src/kickstartGui.py:125 ../src/kickstartGui.py:130
 #: ../src/kickstartGui.py:330 ../src/kickstartGui.py:335
@@ -297,51 +296,57 @@ msgstr "ext2"
 msgid "ext3"
 msgstr "ext3"
 
+#: ../src/partWindow.py:98
+#, fuzzy
+msgid "ext4"
+msgstr "ext2"
+
 #. _("physical volume (LVM)"):"lvm",
-#: ../src/partWindow.py:99 ../src/partWindow.py:174
+#: ../src/partWindow.py:100 ../src/partWindow.py:175
 msgid "software RAID"
 msgstr "సాఫ్టువేరు RAID"
 
-#: ../src/partWindow.py:100
+#: ../src/partWindow.py:101
 msgid "swap"
 msgstr "స్వాప్"
 
-#: ../src/partWindow.py:100
+#: ../src/partWindow.py:101
 msgid "vfat"
 msgstr "vfat"
 
-#: ../src/partWindow.py:101
+#: ../src/partWindow.py:102
 msgid "PPC PReP Boot"
 msgstr "PPC PReP బూట్"
 
-#: ../src/partWindow.py:316 ../src/partWindow.py:598 ../src/raidWindow.py:241
+#: ../src/partWindow.py:317 ../src/partWindow.py:599 ../src/raidWindow.py:241
 msgid "Yes"
 msgstr "అవును"
 
-#: ../src/partWindow.py:318 ../src/partWindow.py:600 ../src/raidWindow.py:243
+#: ../src/partWindow.py:319 ../src/partWindow.py:601 ../src/raidWindow.py:243
 msgid "No"
 msgstr "కాదు"
 
-#: ../src/partWindow.py:341 ../src/partWindow.py:356 ../src/partWindow.py:375
-#: ../src/partWindow.py:389
+#: ../src/partWindow.py:342 ../src/partWindow.py:357 ../src/partWindow.py:376
+#: ../src/partWindow.py:390
 msgid "Auto"
 msgstr "స్వీయ"
 
-#: ../src/partWindow.py:350
+#: ../src/partWindow.py:351
 msgid "Hard Drives"
 msgstr "హార్డు డ్రైవులు"
 
-#: ../src/partWindow.py:494
+#: ../src/partWindow.py:495
 msgid "Specify a mount point for the partition."
 msgstr "విభజనకోసం ఒక మరల్పు కేంద్రాన్ని తెల్పండి."
 
 #. They are trying to use a mount point already in use.  Let's complain
-#: ../src/partWindow.py:503
+#: ../src/partWindow.py:504
 #, python-format
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr "ఈ \"%s\" మరల్పు కేంద్రం ఇప్పటికే ఉపయోగంలో ఉంది.  దయచేసి వేరే మరల్పు కేంద్రాన్ని ఎన్నుకోండి."
 
-#: ../src/partWindow.py:523
+#: ../src/partWindow.py:524
 msgid ""
 "To create a new RAID partition, you must specify either a hard drive device "
 "name or an existing partition."
@@ -349,11 +354,11 @@ msgstr ""
 "కొత్త RAID విభజనను సృష్టించటానికి, మీరు తప్పక ఒక హార్డుడ్రైవు పరికరము నామమును కానీ లేదా ఉన్న "
 "విభజనను తెలపాలి."
 
-#: ../src/partWindow.py:560
+#: ../src/partWindow.py:561
 msgid "Specify a device on which to create the partition."
 msgstr "దేనికి విభజనను సృష్టించాలో దానికి ఒక పరికరాన్ని తెలపండి."
 
-#: ../src/partWindow.py:569
+#: ../src/partWindow.py:570
 msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
@@ -549,8 +554,8 @@ msgid ""
 "An error in this script might cause your kickstart installation to fail. Do "
 "not include the %post command at the beginning."
 msgstr ""
-"ఈ స్క్రిప్టులో దోషం మీ కిక్ స్టార్టు సంస్థాపన విఫలం అవ్వటానికి కారణంకావచ్చు. %post "
-"commandను ప్రారంభంలో చేర్చకండి."
+"ఈ స్క్రిప్టులో దోషం మీ కిక్ స్టార్టు సంస్థాపన విఫలం అవ్వటానికి కారణంకావచ్చు. %post commandను "
+"ప్రారంభంలో చేర్చకండి."
 
 #: tmp/system-config-kickstart.glade.h:35
 #, no-c-format
@@ -558,8 +563,8 @@ msgid ""
 "An error in this script might cause your kickstart installation to fail. Do "
 "not include the %pre command at the beginning."
 msgstr ""
-"ఈ స్క్రిప్టులో దోషం మీ కిక్ స్టార్టు సంస్థాపన విఫలం అవ్వటానికి కారణంకావచ్చు. ఈ %pre "
-"commandను ప్రారంభంలో చేర్చకండి."
+"ఈ స్క్రిప్టులో దోషం మీ కిక్ స్టార్టు సంస్థాపన విఫలం అవ్వటానికి కారణంకావచ్చు. ఈ %pre commandను "
+"ప్రారంభంలో చేర్చకండి."
 
 #: tmp/system-config-kickstart.glade.h:36
 msgid "Authentication options are not applicable on upgrades."
@@ -624,26 +629,30 @@ msgid "Do not install a boot loader"
 msgstr "బూట్ లోడరును సంస్థాపించకు"
 
 #: tmp/system-config-kickstart.glade.h:52
+msgid "Enable Fingerprint Reader"
+msgstr ""
+
+#: tmp/system-config-kickstart.glade.h:53
 msgid "Enable Hesiod Support"
 msgstr "Hesiod మద్దతును సాధ్యంచేయి"
 
-#: tmp/system-config-kickstart.glade.h:53
+#: tmp/system-config-kickstart.glade.h:54
 msgid "Enable Kerberos 5 Authentication"
 msgstr "Kerberos 5 ధృవీకరణను సాధ్యం చేయి"
 
-#: tmp/system-config-kickstart.glade.h:54
+#: tmp/system-config-kickstart.glade.h:55
 msgid "Enable LDAP"
 msgstr "LDAP సాధ్యం చేయి"
 
-#: tmp/system-config-kickstart.glade.h:55
+#: tmp/system-config-kickstart.glade.h:56
 msgid "Enable NIS"
 msgstr "NIS సాధ్యంచేయి"
 
-#: tmp/system-config-kickstart.glade.h:56
+#: tmp/system-config-kickstart.glade.h:57
 msgid "Enable SMB Authentication"
 msgstr "SMB ధృవీకరణను సాధ్యం చేయి"
 
-#: tmp/system-config-kickstart.glade.h:57
+#: tmp/system-config-kickstart.glade.h:58
 msgid ""
 "Enable firewall\n"
 "Disable firewall"
@@ -651,339 +660,339 @@ msgstr ""
 "firewall చేతనంచేయి\n"
 "firewall అచేతనంచేయి"
 
-#: tmp/system-config-kickstart.glade.h:59
+#: tmp/system-config-kickstart.glade.h:60
 msgid "Enable nscd"
 msgstr "nscdని సాధ్యం చేయి"
 
-#: tmp/system-config-kickstart.glade.h:60
+#: tmp/system-config-kickstart.glade.h:61
 msgid "Encrypt GRUB password"
 msgstr "Encrypt GRUB అనుమతిపదం"
 
-#: tmp/system-config-kickstart.glade.h:61
+#: tmp/system-config-kickstart.glade.h:62
 msgid "Encrypt root password"
 msgstr "ఎన్స్క్రిప్టు రూటు అనుమతిపదం"
 
-#: tmp/system-config-kickstart.glade.h:62
+#: tmp/system-config-kickstart.glade.h:63
 msgid "FTP"
 msgstr "FTP"
 
-#: tmp/system-config-kickstart.glade.h:63
+#: tmp/system-config-kickstart.glade.h:64
 msgid "FTP Directory:"
 msgstr "FTP డైరెక్టరీ:"
 
-#: tmp/system-config-kickstart.glade.h:64
+#: tmp/system-config-kickstart.glade.h:65
 msgid "FTP Password:"
 msgstr "FTP అనుమతిపదం:"
 
-#: tmp/system-config-kickstart.glade.h:65
+#: tmp/system-config-kickstart.glade.h:66
 msgid "FTP Server:"
 msgstr "FTP సర్వరు:"
 
-#: tmp/system-config-kickstart.glade.h:66
+#: tmp/system-config-kickstart.glade.h:67
 msgid "FTP Username:"
 msgstr "FTP వినియోగదారుని నామము:"
 
-#: tmp/system-config-kickstart.glade.h:67
+#: tmp/system-config-kickstart.glade.h:68
 msgid "File System Type:"
 msgstr "దస్త్ర వ్యవస్థ రకం:"
 
-#: tmp/system-config-kickstart.glade.h:68
+#: tmp/system-config-kickstart.glade.h:69
 msgid "Fill all unused space on disk"
 msgstr "డిస్కులో అన్ని ఉపయోగించని ఖాళీలనూ నింపు"
 
-#: tmp/system-config-kickstart.glade.h:69
+#: tmp/system-config-kickstart.glade.h:70
 msgid "Firewall configuration is not applicable on upgrades."
 msgstr "నవీకరణలలో ఫైర్ వాల్ ఆకృతీకరణ అనువర్తించదగ్గది కాదు."
 
-#: tmp/system-config-kickstart.glade.h:70
+#: tmp/system-config-kickstart.glade.h:71
 msgid "Fixed size (MB):"
 msgstr "నిర్ధారిత పరిమాణం (MB):"
 
-#: tmp/system-config-kickstart.glade.h:71
+#: tmp/system-config-kickstart.glade.h:72
 msgid "Force to be a primary partition (asprimary)"
 msgstr "ప్రాధమిక విభజనకు వత్తిడి (ప్రాధమికందానిగా)"
 
-#: tmp/system-config-kickstart.glade.h:72
+#: tmp/system-config-kickstart.glade.h:73
 msgid "Format RAID device"
 msgstr "RAID పరికరాన్ని ఆకృతీకరించు"
 
-#: tmp/system-config-kickstart.glade.h:73
+#: tmp/system-config-kickstart.glade.h:74
 msgid "Format partition"
 msgstr "ఆకృతీకరణ విభజన"
 
-#: tmp/system-config-kickstart.glade.h:74
+#: tmp/system-config-kickstart.glade.h:75
 msgid "Gateway:"
 msgstr "గేట్వే:"
 
-#: tmp/system-config-kickstart.glade.h:75
+#: tmp/system-config-kickstart.glade.h:76
 msgid "Grow to maximum of (MB):"
 msgstr "గరిష్ట (MB)కి పెంచు:"
 
-#: tmp/system-config-kickstart.glade.h:76
+#: tmp/system-config-kickstart.glade.h:77
 msgid "HTTP"
 msgstr "HTTP"
 
-#: tmp/system-config-kickstart.glade.h:77
+#: tmp/system-config-kickstart.glade.h:78
 msgid "HTTP Directory:"
 msgstr "HTTP డైరెక్టరీ:"
 
-#: tmp/system-config-kickstart.glade.h:78
+#: tmp/system-config-kickstart.glade.h:79
 msgid "HTTP Server:"
 msgstr "HTTP సర్వరు:"
 
-#: tmp/system-config-kickstart.glade.h:79
+#: tmp/system-config-kickstart.glade.h:80
 msgid "Hard Drive"
 msgstr "హార్డు డ్రైవు"
 
-#: tmp/system-config-kickstart.glade.h:80
+#: tmp/system-config-kickstart.glade.h:81
 msgid "Hard Drive Directory:"
 msgstr "హార్డు డ్రైవు డైరెక్టరీ:"
 
-#: tmp/system-config-kickstart.glade.h:81
+#: tmp/system-config-kickstart.glade.h:82
 msgid "Hard Drive Partition:"
 msgstr "హార్డుడ్రైవు విభజన:"
 
-#: tmp/system-config-kickstart.glade.h:82
+#: tmp/system-config-kickstart.glade.h:83
 msgid "Hesiod"
 msgstr "Hesiod"
 
-#: tmp/system-config-kickstart.glade.h:83
+#: tmp/system-config-kickstart.glade.h:84
 msgid "Hesiod LHS:"
 msgstr "Hesiod LHS:"
 
-#: tmp/system-config-kickstart.glade.h:84
+#: tmp/system-config-kickstart.glade.h:85
 msgid "Hesiod RHS:"
 msgstr "Hesiod RHS:"
 
-#: tmp/system-config-kickstart.glade.h:85
+#: tmp/system-config-kickstart.glade.h:86
 msgid "IP Address:"
 msgstr "ఐపి చిరునామాలు:"
 
-#: tmp/system-config-kickstart.glade.h:86
+#: tmp/system-config-kickstart.glade.h:87
 msgid "Initialize the disk label"
 msgstr "డిస్కు లేబుల్ను ప్రారంభించు"
 
-#: tmp/system-config-kickstart.glade.h:87
+#: tmp/system-config-kickstart.glade.h:88
 msgid "Install a graphical environment"
 msgstr "గ్రాఫికల్ ఎన్విరాన్మెంట్ సంస్థాపించుము"
 
-#: tmp/system-config-kickstart.glade.h:88
+#: tmp/system-config-kickstart.glade.h:89
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr "మాస్టర్ బూట్ రికార్డులో బూట్ లోడరును సంస్థాపించు (MBR)"
 
-#: tmp/system-config-kickstart.glade.h:89
+#: tmp/system-config-kickstart.glade.h:90
 msgid "Install boot loader on first sector of the boot partition"
 msgstr "బూట్ విభజన మొదటి విభాగంలో బూట్ లోడరును సంస్థాపించు"
 
-#: tmp/system-config-kickstart.glade.h:90
+#: tmp/system-config-kickstart.glade.h:91
 msgid "Install new boot loader"
 msgstr "కొత్త బూట్ లోడరును సంస్థాపించు"
 
-#: tmp/system-config-kickstart.glade.h:91
+#: tmp/system-config-kickstart.glade.h:92
 msgid "Kerberos 5"
 msgstr "Kerberos 5"
 
-#: tmp/system-config-kickstart.glade.h:92
+#: tmp/system-config-kickstart.glade.h:93
 msgid "Kerberos Domain Controller (KDC):"
 msgstr "Kerberos క్షేత్ర నియంత్రణి (KDC):"
 
-#: tmp/system-config-kickstart.glade.h:93
+#: tmp/system-config-kickstart.glade.h:94
 msgid "Kerberos Master Server:"
 msgstr "Kerberos మాస్టరు సర్వరు:"
 
-#: tmp/system-config-kickstart.glade.h:94
+#: tmp/system-config-kickstart.glade.h:95
 msgid "Kerberos Realm:"
 msgstr "Kerberos రేలం:"
 
-#: tmp/system-config-kickstart.glade.h:95
+#: tmp/system-config-kickstart.glade.h:96
 msgid "Kernel parameters:"
 msgstr "కెర్నలు పారామితులు:"
 
-#: tmp/system-config-kickstart.glade.h:96
+#: tmp/system-config-kickstart.glade.h:97
 msgid "Keyboard:"
 msgstr "కీబోర్డు:"
 
-#: tmp/system-config-kickstart.glade.h:97
+#: tmp/system-config-kickstart.glade.h:98
 msgid "Kickstart Configurator"
 msgstr "కిక్ స్టార్టు ఆకృతీకరణ"
 
-#: tmp/system-config-kickstart.glade.h:98
+#: tmp/system-config-kickstart.glade.h:99
 msgid "LDAP "
 msgstr "LDAP "
 
-#: tmp/system-config-kickstart.glade.h:99
+#: tmp/system-config-kickstart.glade.h:100
 msgid "LDAP Base Name: "
 msgstr "LDAP ఆధారిత నామము: "
 
-#: tmp/system-config-kickstart.glade.h:100
+#: tmp/system-config-kickstart.glade.h:101
 msgid "LDAP Server: "
 msgstr "LDAP సర్వరు: "
 
-#: tmp/system-config-kickstart.glade.h:101
+#: tmp/system-config-kickstart.glade.h:102
 msgid "Load CA certificate"
 msgstr "CA సర్టిఫికేట్ ను లోడ్ చేయండి"
 
-#: tmp/system-config-kickstart.glade.h:102
+#: tmp/system-config-kickstart.glade.h:103
 msgid "Make RAID Device"
 msgstr "RAID పరికరాన్ని చేయి"
 
-#: tmp/system-config-kickstart.glade.h:103
+#: tmp/system-config-kickstart.glade.h:104
 msgid "Make partition on specific drive (ondisk, e.g. hda or sdc):"
 msgstr "నిర్ధిష్ట డ్రైవునందు విభజనను చేయుము (డిస్కుపైన, ఉ.దా. hda లేదా sdc):"
 
-#: tmp/system-config-kickstart.glade.h:104
+#: tmp/system-config-kickstart.glade.h:105
 msgid "Mount Point:"
 msgstr "మరల్పు కేంద్రం:"
 
-#: tmp/system-config-kickstart.glade.h:105
+#: tmp/system-config-kickstart.glade.h:106
 msgid "NFS"
 msgstr "NFS"
 
-#: tmp/system-config-kickstart.glade.h:106
+#: tmp/system-config-kickstart.glade.h:107
 msgid "NFS Directory:"
 msgstr "NFS డైరెక్టరీ:"
 
-#: tmp/system-config-kickstart.glade.h:107
+#: tmp/system-config-kickstart.glade.h:108
 msgid "NFS Server:"
 msgstr "NFS సర్వరు:"
 
-#: tmp/system-config-kickstart.glade.h:108
+#: tmp/system-config-kickstart.glade.h:109
 msgid "NIS"
 msgstr "NIS"
 
-#: tmp/system-config-kickstart.glade.h:109
+#: tmp/system-config-kickstart.glade.h:110
 msgid "NIS Domain:"
 msgstr "NIS క్షేత్రం:"
 
-#: tmp/system-config-kickstart.glade.h:110
+#: tmp/system-config-kickstart.glade.h:111
 msgid "NIS Server:"
 msgstr "NIS సర్వరు:"
 
-#: tmp/system-config-kickstart.glade.h:111
+#: tmp/system-config-kickstart.glade.h:112
 msgid "Name Server:"
 msgstr "నామపు సేవిక:"
 
-#: tmp/system-config-kickstart.glade.h:112
+#: tmp/system-config-kickstart.glade.h:113
 msgid "Name Switch Cache"
 msgstr "నామము మార్చు క్యాచీ"
 
-#: tmp/system-config-kickstart.glade.h:113
+#: tmp/system-config-kickstart.glade.h:114
 msgid "Netmask: "
 msgstr "నెట్ మాస్కు: "
 
-#: tmp/system-config-kickstart.glade.h:114
+#: tmp/system-config-kickstart.glade.h:115
 msgid "Network Device Information"
 msgstr "నెట్వర్కు పరికరము సమాచారం"
 
-#: tmp/system-config-kickstart.glade.h:115
+#: tmp/system-config-kickstart.glade.h:116
 msgid "Network Device:"
 msgstr "నెట్వర్కు పరికరము:"
 
-#: tmp/system-config-kickstart.glade.h:116
+#: tmp/system-config-kickstart.glade.h:117
 msgid "Network Type:"
 msgstr "నెట్వర్కు రకం:"
 
-#: tmp/system-config-kickstart.glade.h:117
+#: tmp/system-config-kickstart.glade.h:118
 msgid "Number of spares:"
 msgstr "నిల్వల సంఖ్య:"
 
-#: tmp/system-config-kickstart.glade.h:118
+#: tmp/system-config-kickstart.glade.h:119
 msgid "On first boot, Setup Agent is: "
 msgstr "మొదటి బూటులో, అమర్పు ప్రతినిధి: "
 
-#: tmp/system-config-kickstart.glade.h:119
+#: tmp/system-config-kickstart.glade.h:120
 msgid "Partition Options"
 msgstr "విభజనా ఐచ్ఛికాలు"
 
-#: tmp/system-config-kickstart.glade.h:120
+#: tmp/system-config-kickstart.glade.h:121
 msgid "Partition options are not applicable on upgrades."
 msgstr "నవీకరణలయందు విభ్జనల ఐచ్ఛికాలు అనువర్తించదగ్గవికావు."
 
-#: tmp/system-config-kickstart.glade.h:121
+#: tmp/system-config-kickstart.glade.h:122
 msgid "Password:"
 msgstr "అనుమతిపదం:"
 
-#: tmp/system-config-kickstart.glade.h:122
+#: tmp/system-config-kickstart.glade.h:123
 msgid "Perform installation in interactive mode"
 msgstr "సంస్థాపనను ప్రభావశీల రీతిలో చేయి"
 
-#: tmp/system-config-kickstart.glade.h:123
+#: tmp/system-config-kickstart.glade.h:124
 msgid "Perform installation in text mode (graphical is default)"
 msgstr "పాఠ రీతిలో సంస్థాపనను చేయి (గ్రాఫిక్ విధానం సిద్ధం)"
 
-#: tmp/system-config-kickstart.glade.h:124
+#: tmp/system-config-kickstart.glade.h:125
 msgid "Perform new installation"
 msgstr "కొత్త సంస్థాపనను ప్రదర్శించు"
 
-#: tmp/system-config-kickstart.glade.h:125
+#: tmp/system-config-kickstart.glade.h:126
 msgid "Preserve existing partitions"
 msgstr "ఉన్న విభ్జనలను భద్రపరువు"
 
-#: tmp/system-config-kickstart.glade.h:126
+#: tmp/system-config-kickstart.glade.h:127
 msgid "Preview Options"
 msgstr "పరిదృశ్య ఐచ్ఛికాలు"
 
-#: tmp/system-config-kickstart.glade.h:127
+#: tmp/system-config-kickstart.glade.h:128
 msgid "RAID"
 msgstr "RAID"
 
-#: tmp/system-config-kickstart.glade.h:128
+#: tmp/system-config-kickstart.glade.h:129
 msgid "RAID Device:"
 msgstr "RAID పరికరము:"
 
-#: tmp/system-config-kickstart.glade.h:129
+#: tmp/system-config-kickstart.glade.h:130
 msgid "RAID Level:"
 msgstr "RAID స్థాయి:"
 
-#: tmp/system-config-kickstart.glade.h:130
+#: tmp/system-config-kickstart.glade.h:131
 msgid "RAID Options"
 msgstr "RAID ఐచ్ఛికాలు"
 
-#: tmp/system-config-kickstart.glade.h:131
+#: tmp/system-config-kickstart.glade.h:132
 msgid "Raid Members:"
 msgstr "Raid సభ్యులు:"
 
-#: tmp/system-config-kickstart.glade.h:132
+#: tmp/system-config-kickstart.glade.h:133
 msgid "Reboot system after installation"
 msgstr "సంస్థాపన తరువాత కంప్యూటరును పునఃప్రారంభించు"
 
-#: tmp/system-config-kickstart.glade.h:133
+#: tmp/system-config-kickstart.glade.h:134
 msgid "Remove all existing partitions"
 msgstr "ఉన్న అన్ని విభజనలనూ తొలగించు"
 
-#: tmp/system-config-kickstart.glade.h:134
+#: tmp/system-config-kickstart.glade.h:135
 msgid "Remove existing Linux partitions"
 msgstr "ఉన్న లైనక్సు విభ్జనలను తొలగించు"
 
-#: tmp/system-config-kickstart.glade.h:135
+#: tmp/system-config-kickstart.glade.h:136
 msgid "Root Password:"
 msgstr "రూట్ అనుమతిపదం:"
 
-#: tmp/system-config-kickstart.glade.h:136
+#: tmp/system-config-kickstart.glade.h:137
 msgid "Run outside of the chroot environment"
 msgstr "chroot వాతావరణానికి బయటగా ఉపయోగించు"
 
-#: tmp/system-config-kickstart.glade.h:137
+#: tmp/system-config-kickstart.glade.h:138
 msgid "SELinux:"
 msgstr "SELinux:"
 
-#: tmp/system-config-kickstart.glade.h:138
+#: tmp/system-config-kickstart.glade.h:139
 msgid "SMB"
 msgstr "SMB"
 
-#: tmp/system-config-kickstart.glade.h:139
+#: tmp/system-config-kickstart.glade.h:140
 msgid "SMB Servers:"
 msgstr "SMB సర్వర్లు:"
 
-#: tmp/system-config-kickstart.glade.h:140
+#: tmp/system-config-kickstart.glade.h:141
 msgid "SMB Workgroup:"
 msgstr "SMB కార్యసమూహం:"
 
-#: tmp/system-config-kickstart.glade.h:141
+#: tmp/system-config-kickstart.glade.h:142
 msgid "Security level:"
 msgstr "రక్షణ స్థాయి:"
 
-#: tmp/system-config-kickstart.glade.h:142
+#: tmp/system-config-kickstart.glade.h:143
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -994,23 +1003,23 @@ msgstr ""
 "పరికరము అదనపు వేగాన్ని మరియూ విశ్వాసాన్ని విడి డ్రైవులు ఉపయోగించటం కంటే బాగా ఆకృతీకరించగలుగుతుంది.  "
 "RAID పరికరాన్ని ఉపయోగించటంలో అదనపు సమాచారానికి దయచేసి కిక్ స్టార్టు పత్రాన్ని సంప్రదించండి."
 
-#: tmp/system-config-kickstart.glade.h:143
+#: tmp/system-config-kickstart.glade.h:144
 msgid "Specify an FTP username and password"
 msgstr "ఒక FTP వినియోగదారుని నామమును మరియూ అనుమతిపదాన్ని తెల్పండి"
 
-#: tmp/system-config-kickstart.glade.h:144
+#: tmp/system-config-kickstart.glade.h:145
 msgid "Specify installation key:"
 msgstr "కొత్త సంస్థాపన కీను తెలుపండి:"
 
-#: tmp/system-config-kickstart.glade.h:145
+#: tmp/system-config-kickstart.glade.h:146
 msgid "Target Architecture:"
 msgstr "లక్ష్య నిర్మాణం:"
 
-#: tmp/system-config-kickstart.glade.h:146
+#: tmp/system-config-kickstart.glade.h:147
 msgid "Time Zone:"
 msgstr "సమయ క్షేత్రం:"
 
-#: tmp/system-config-kickstart.glade.h:147
+#: tmp/system-config-kickstart.glade.h:148
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -1018,53 +1027,53 @@ msgstr ""
 "RAIDను ఉపయోగించటానికి మీరు తప్పక 'సాఫ్టువేరు RAID' యొక్క రెండు విభజనలను సృష్టించాలి.  తరువాత "
 "మీరు ఆకృతీకరించదగ్గ మరియూ మరల్చదగ్గ ఒక RAID పరికరాన్ని సృష్టించగలుగుతారు."
 
-#: tmp/system-config-kickstart.glade.h:149
+#: tmp/system-config-kickstart.glade.h:150
 #, no-c-format
 msgid "Type your %post script below:"
 msgstr "మీ %post scriptను కింద టైపు చేయండి:"
 
-#: tmp/system-config-kickstart.glade.h:151
+#: tmp/system-config-kickstart.glade.h:152
 #, no-c-format
 msgid "Type your %pre script below:"
 msgstr "మీ %pre scriptని కింద టైపు చేయండి:"
 
-#: tmp/system-config-kickstart.glade.h:152
+#: tmp/system-config-kickstart.glade.h:153
 msgid "Upgrade an existing installation"
 msgstr "ఉన్న సంస్థాపనను నవీకరించు"
 
-#: tmp/system-config-kickstart.glade.h:153
+#: tmp/system-config-kickstart.glade.h:154
 msgid "Upgrade existing boot loader"
 msgstr "ఉన్న బూట్ లోడరును నవీకరించు"
 
-#: tmp/system-config-kickstart.glade.h:154
+#: tmp/system-config-kickstart.glade.h:155
 msgid "Use GRUB password"
 msgstr "GRUB అనుమతిపదాన్ని ఉపయోగించు"
 
-#: tmp/system-config-kickstart.glade.h:155
+#: tmp/system-config-kickstart.glade.h:156
 msgid "Use Shadow Passwords"
 msgstr "షాడో అనుమతిపదాలను ఉపయోగించు"
 
-#: tmp/system-config-kickstart.glade.h:156
+#: tmp/system-config-kickstart.glade.h:157
 msgid "Use UTC clock"
 msgstr "UTC గడియారాన్ని ఉపయోగించు"
 
-#: tmp/system-config-kickstart.glade.h:157
+#: tmp/system-config-kickstart.glade.h:158
 msgid "Use an interpreter:"
 msgstr "వ్యాఖ్యాతని ఉపయోగించు:"
 
-#: tmp/system-config-kickstart.glade.h:158
+#: tmp/system-config-kickstart.glade.h:159
 msgid "Use broadcast to find NIS server"
 msgstr "NIS సర్వరును కనుగొనటానికి ప్రసారాన్ని ఉపయోగించు"
 
-#: tmp/system-config-kickstart.glade.h:159
+#: tmp/system-config-kickstart.glade.h:160
 msgid "Use existing partition (onpart, e.g. hda1 or sdc3):"
 msgstr "ఉన్న విభజనను వుపయోగించుము (onpart, ఉ.దా. hda1 లేదా sdc3):"
 
-#: tmp/system-config-kickstart.glade.h:160
+#: tmp/system-config-kickstart.glade.h:161
 msgid "Use recommended swap size"
 msgstr "మద్దతిచ్చిన swap పరిమాణాన్ని ఉపయోగించు"
 
-#: tmp/system-config-kickstart.glade.h:161
+#: tmp/system-config-kickstart.glade.h:162
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
@@ -1072,47 +1081,46 @@ msgstr ""
 "మీరు ఈ కింది ఆకృతీకరణను ఎన్నుకున్నారు. కిక్ స్టార్టు దస్త్రమును భద్రపరచటానికి దస్త్రమును "
 "భద్రపరువును నొక్కండి. "
 
-#: tmp/system-config-kickstart.glade.h:162
+#: tmp/system-config-kickstart.glade.h:163
 msgid "_Add"
 msgstr "కలుపు (_A)"
 
-#: tmp/system-config-kickstart.glade.h:163
+#: tmp/system-config-kickstart.glade.h:164
 msgid "_Add Network Device"
 msgstr "నెట్వర్కు పరికరాన్ని కలుపు (_A)"
 
-#: tmp/system-config-kickstart.glade.h:164
+#: tmp/system-config-kickstart.glade.h:165
 msgid "_Delete"
 msgstr "తొలగించు(_D)"
 
-#: tmp/system-config-kickstart.glade.h:165
+#: tmp/system-config-kickstart.glade.h:166
 msgid "_Delete Network Device"
 msgstr "నెట్వర్కు పరికరాన్ని తొలగించు (_D)"
 
-#: tmp/system-config-kickstart.glade.h:166
+#: tmp/system-config-kickstart.glade.h:167
 msgid "_Edit"
 msgstr "కూర్చు (_E)"
 
-#: tmp/system-config-kickstart.glade.h:167
+#: tmp/system-config-kickstart.glade.h:168
 msgid "_Edit Network Device"
 msgstr "నెట్వర్కు పరికరాన్ని కూర్చు (_E)"
 
-#: tmp/system-config-kickstart.glade.h:168
+#: tmp/system-config-kickstart.glade.h:169
 msgid "_File"
 msgstr "దస్త్రము (_F)"
 
-#: tmp/system-config-kickstart.glade.h:169
+#: tmp/system-config-kickstart.glade.h:170
 msgid "_Help"
 msgstr "సహాయం (_H)"
 
-#: tmp/system-config-kickstart.glade.h:170
+#: tmp/system-config-kickstart.glade.h:171
 msgid "_Open File"
 msgstr "దస్త్రమును తెరువు (_O)"
 
-#: tmp/system-config-kickstart.glade.h:171
+#: tmp/system-config-kickstart.glade.h:172
 msgid "_Preview"
 msgstr "పరిదృశ్యం (_P)"
 
-#: tmp/system-config-kickstart.glade.h:172
+#: tmp/system-config-kickstart.glade.h:173
 msgid "_Save to File"
 msgstr "దస్త్రముకి భద్రపరువు (_S)"
-
