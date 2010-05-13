@@ -13,20 +13,19 @@ msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-05-12 10:02-0400\n"
-"PO-Revision-Date: 2010-01-22 16:32+1100\n"
+"PO-Revision-Date: 2010-05-14 08:52\n"
 "Last-Translator: Yulia <ypoyarko@redhat.com>\n"
-"Language-Team: Russian <fedora-trans-ru@redhat.com>\n"
+"Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: pygettext.py 1.1\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../src/auth.py:354
 msgid "Please fill in the authentication information"
-msgstr "Укажите параметры проверки подлинности"
+msgstr "Укажите данные аутентификации"
 
 #: ../src/basic.py:72
 msgid "x86, AMD64, or Intel EM64T"
@@ -159,13 +158,13 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"При чтении конфигурации kickstart произошла следующая ошибка:\n"
+"Найдена ошибка при разборе конфигурации кикстарта:\n"
 "\n"
 "%s"
 
 #: ../src/kickstartGui.py:135 ../src/kickstartGui.py:340
 msgid "Error Parsing Kickstart Config"
-msgstr "Ошибка разбора файла Kickstart"
+msgstr "Ошибка разбора файла кикстарта"
 
 #: ../src/kickstartGui.py:143
 msgid "Kickstart"
@@ -309,9 +308,8 @@ msgid "ext3"
 msgstr "ext3"
 
 #: ../src/partWindow.py:98
-#, fuzzy
 msgid "ext4"
-msgstr "ext2"
+msgstr "ext4"
 
 #. _("physical volume (LVM)"):"lvm",
 #: ../src/partWindow.py:100 ../src/partWindow.py:175
@@ -354,8 +352,7 @@ msgstr "Укажите точку монтирования для раздела
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:504
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "Точка монтирования \"%s\" уже используется. Выберите другую точку "
 "монтирования."
@@ -415,8 +412,7 @@ msgstr "Выберите раздел из списка."
 #: ../src/raidOptionsWindow.py:72
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
-msgstr ""
-"Сейчас для использования доступно %d свободных разделов программного RAID."
+msgstr "Сейчас для использования доступно %d свободных разделов программного RAID."
 
 #: ../src/raidWindow.py:201
 #, python-format
@@ -641,11 +637,11 @@ msgstr "Не инициализировать метку диска"
 
 #: tmp/system-config-kickstart.glade.h:51
 msgid "Do not install a boot loader"
-msgstr "Не устанавливать начальный загрузчик"
+msgstr "Не устанавливать загрузчик"
 
 #: tmp/system-config-kickstart.glade.h:52
 msgid "Enable Fingerprint Reader"
-msgstr ""
+msgstr "Включить сканер отпечатков"
 
 #: tmp/system-config-kickstart.glade.h:53
 msgid "Enable Hesiod Support"
@@ -1144,3 +1140,4 @@ msgstr "_Просмотр"
 #: tmp/system-config-kickstart.glade.h:173
 msgid "_Save to File"
 msgstr "_Сохранить в файл"
+
