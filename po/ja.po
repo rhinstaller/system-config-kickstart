@@ -1,6 +1,6 @@
 # translation of ja.po to Japanese
 # Japanese translation of ksconfig
-# Copyright (C) 2001,2002,2003, 2004, 2006, 2007, 2009 Free Software Foundation, Inc.
+# Copyright (C) 2001,2002,2003, 2004, 2006, 2007, 2009, 2010 Free Software Foundation, Inc.
 #
 # Yukihiro Nakai <ynakai@redhat.com>, 2001.
 # James Hashida <khashida@redhat.com>, 2002,2003.
@@ -9,19 +9,20 @@
 # Hirofumi Saito <hi_saito@yk.rim.or.jp>, 2005.
 # Kiyoto James Hashida <khashida@redhat.com>, 2007.
 # Hyu_gabaru Ryu_ichi <hyu_gabaru@yahoo.co.jp>, 2007, 2009.
-# Kiyoto Hashida <khashida@redhat.com>, 2009.
+# Kiyoto Hashida <khashida@redhat.com>, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: ja\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-05-12 10:02-0400\n"
-"PO-Revision-Date: 2009-09-23 13:59+0900\n"
-"Last-Translator: Hyu_gabaru Ryu_ichi <hyu_gabaru@yahoo.co.jp>\n"
+"PO-Revision-Date: 2010-05-14 08:24+0900\n"
+"Last-Translator: Kiyoto Hashida <khashida@redhat.com>\n"
 "Language-Team: Japanese <jp@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
 
 #: ../src/auth.py:354
 msgid "Please fill in the authentication information"
@@ -305,9 +306,8 @@ msgid "ext3"
 msgstr "ext3"
 
 #: ../src/partWindow.py:98
-#, fuzzy
 msgid "ext4"
-msgstr "ext2"
+msgstr "ext4"
 
 #. _("physical volume (LVM)"):"lvm",
 #: ../src/partWindow.py:100 ../src/partWindow.py:175
@@ -350,8 +350,7 @@ msgstr "パーティション用のマウントポイントを指定して下さ
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:504
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "マウントポイント\"%s\"は既に使用中です。他のマウントポイントを使用して下さ"
 "い。"
@@ -416,14 +415,12 @@ msgstr "現在使用出来るソフトウェア RAID パーティションが %d
 #: ../src/raidWindow.py:201
 #, python-format
 msgid "You must select at least 2 partitions in order to use RAID %s"
-msgstr ""
-"RAID %sを使用するには、最低 2 つのパーティションを選択する必要があります。"
+msgstr "RAID %sを使用するには、最低 2 つのパーティションを選択する必要があります。"
 
 #: ../src/raidWindow.py:207
 #, python-format
 msgid "You must select at least 3 partitions in order to use RAID %s"
-msgstr ""
-"RAID %s を使用するには最低3つのパーティションを選択する必要があります。"
+msgstr "RAID %s を使用するには最低3つのパーティションを選択する必要があります。"
 
 #: ../src/raidWindow.py:221 ../src/raidWindow.py:247
 msgid "Raid Devices"
@@ -642,7 +639,7 @@ msgstr "ブートローダーをインストールしない"
 
 #: tmp/system-config-kickstart.glade.h:52
 msgid "Enable Fingerprint Reader"
-msgstr ""
+msgstr "指紋読み取りを有効にする"
 
 #: tmp/system-config-kickstart.glade.h:53
 msgid "Enable Hesiod Support"
@@ -1139,138 +1136,3 @@ msgstr "プレビュー(_P)"
 msgid "_Save to File"
 msgstr "ファイルへ保存(_S)"
 
-#~ msgid ""
-#~ "Kickstart Configurator @VERSION@\n"
-#~ " Copyright (c) 2000-2002 Red Hat, Inc.\n"
-#~ " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-#~ " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-#~ " A graphical interface for creating a kickstart file"
-#~ msgstr ""
-#~ "Kickstart Configurator @VERSION@\n"
-#~ " Copyright (c) 2000-2002 Red Hat, Inc.\n"
-#~ " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-#~ " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-#~ "キックスタートファイル作成用のグラフィカルなインターフェース"
-
-#~ msgid "         "
-#~ msgstr "         "
-
-#~ msgid "(for example: hda or sdc)"
-#~ msgstr "(例えば、hda 又は sdc)"
-
-#~ msgid "(for example: hda1 or sdc3)"
-#~ msgstr "(例えば: hda1 又は sdc3)"
-
-#~ msgid "0"
-#~ msgstr "0"
-
-#~ msgid "1"
-#~ msgstr "1"
-
-#~ msgid "5"
-#~ msgstr "5"
-
-#~ msgid "Active"
-#~ msgstr "アクティブ"
-
-#~ msgid "Additional Size Options"
-#~ msgstr "追加サイズオプション"
-
-#~ msgid "Authentication:"
-#~ msgstr "認証:"
-
-#~ msgid "Basic Configuration (required)"
-#~ msgstr "基本設定(必須)"
-
-#~ msgid "Boot Loader Options (required)"
-#~ msgstr "ブートローダーオプション(必須)"
-
-#~ msgid "Choose the Installation Method:"
-#~ msgstr "インストール方法の選択"
-
-#~ msgid "Configure the X Window System"
-#~ msgstr "X ウィンドウシステムの設定"
-
-#~ msgid "Disabled"
-#~ msgstr "無効"
-
-#~ msgid "Drive :"
-#~ msgstr "ドライブ :"
-
-#~ msgid "Enable firewall"
-#~ msgstr "ファイアーウォールを有効にする"
-
-#~ msgid "Enabled"
-#~ msgstr "有効にしました"
-
-#~ msgid "Installation Method (required)"
-#~ msgstr "インストール方法(必須)"
-
-#~ msgid "Partition Information (required)"
-#~ msgstr "パーティション情報(必須)"
-
-#~ msgid "Size (MB):"
-#~ msgstr "サイズ(MB):"
-
-#~ msgid "Warn"
-#~ msgstr "注意"
-
-#~ msgid "_About"
-#~ msgstr "情報(_A)"
-
-#~ msgid "_Contents"
-#~ msgstr "目次(_C)"
-
-#~ msgid "_Quit"
-#~ msgstr "終了(_Q)"
-
-#~ msgid "_Save File"
-#~ msgstr "ファイルの保存(_S)"
-
-#~ msgid "md0"
-#~ msgstr "md0"
-
-#~ msgid "md1"
-#~ msgstr "md1"
-
-#~ msgid "md10"
-#~ msgstr "md10"
-
-#~ msgid "md11"
-#~ msgstr "md11"
-
-#~ msgid "md12"
-#~ msgstr "md12"
-
-#~ msgid "md13"
-#~ msgstr "md13"
-
-#~ msgid "md14"
-#~ msgstr "md14"
-
-#~ msgid "md15"
-#~ msgstr "md15"
-
-#~ msgid "md2"
-#~ msgstr "md2"
-
-#~ msgid "md3"
-#~ msgstr "md3"
-
-#~ msgid "md4"
-#~ msgstr "md4"
-
-#~ msgid "md5"
-#~ msgstr "md5"
-
-#~ msgid "md6"
-#~ msgstr "md6"
-
-#~ msgid "md7"
-#~ msgstr "md7"
-
-#~ msgid "md8"
-#~ msgstr "md8"
-
-#~ msgid "md9"
-#~ msgstr "md9"
