@@ -61,7 +61,7 @@ _ = lambda x: gettext.ldgettext("system-config-kickstart", x)
 ##
 iconPixbuf = None
 try:
-    iconPixbuf = gtk.gdk.pixbuf_new_from_file("/usr/share/system-config-kickstart/pixmaps/system-config-kickstart.png")
+    iconPixbuf = gtk.gdk.pixbuf_new_from_file("/usr/share/icons/hicolor/48x48/apps/system-config-kickstart.png")
 
 except:
     pass
