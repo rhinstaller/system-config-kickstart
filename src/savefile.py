@@ -21,45 +21,68 @@
 # with the express permission of Red Hat, Inc. 
 
 import gtk
-import gtk.glade
 import string
 import savedialog
 import signal
 import kickstartGui
 
+##
+## I18N
+##
+import gettext
+gtk.glade.bindtextdomain("system-config-kickstart")
+_ = lambda x: gettext.ldgettext("system-config-kickstart", x)
+
+class PreviewDialog:
+    def __init__(self, buf):
+        self.buf = buf
+        self.rc = 0
+
+        self.dialog = gtk.Dialog(_("Preview Options"),
+                                 flags=gtk.DIALOG_MODAL | gtk.DIALOG_DESTROY_WITH_PARENT,
+                                 buttons=(gtk.STOCK_CANCEL, gtk.RESPONSE_REJECT,
+                                          gtk.STOCK_SAVE, gtk.RESPONSE_ACCEPT))
+        self.dialog.set_size_request(400, 550)
+        self.dialog.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
+        self.dialog.vbox.set_spacing(6)
+
+        label = gtk.Label(_("You have choosen the following configuration. Click Save File to save the kickstart file."))
+        label.set_line_wrap(True)
+
+        self.dialog.vbox.pack_start(label, expand=False, fill=False)
+
+        view = gtk.TextView(gtk.TextBuffer())
+        view.get_buffer().set_text(unicode(self.buf))
+        view.set_editable(False)
+
+        scroll = gtk.ScrolledWindow()
+        scroll.set_policy(gtk.POLICY_AUTOMATIC, gtk.POLICY_AUTOMATIC)
+        scroll.set_shadow_type(gtk.SHADOW_IN)
+        scroll.add_with_viewport(view)
+
+        self.dialog.vbox.pack_start(scroll, expand=True, fill=True)
+        self.dialog.show_all()
+
+    def getrc(self):
+        return self.rc
+
+    def run(self):
+        self.rc = self.dialog.run()
+        self.dialog.hide()
+
 class saveFile:
-	
-	def destroy(self, args):
-		self.dialog.destroy()
+    def __init__(self, buf, xml):
+        self.buf = buf
+        self.dialog = PreviewDialog(buf)
+        self.xml = xml
 
-        def __init__ (self, buf, xml):
-		self.xml = xml
-		self.buf = buf
+    def run(self):
+        self.dialog.run()
+        rc = self.dialog.getrc()
 
-		self.dialog = self.xml.get_widget("preview_options_dialog")
-		self.dialog.connect("delete-event", self.on_confirm_options_cancel_button)
-		toplevel = self.xml.get_widget("main_window")
-		self.dialog.set_transient_for(toplevel)
-		self.textview = self.xml.get_widget("confirm_options_textview")
-		self.confirm_options_ok_button = xml.get_widget("confirm_options_ok_button")
-		self.confirm_options_cancel_button = xml.get_widget("confirm_options_cancel_button")
-
-		self.dialog.connect ("destroy", self.destroy)
-		self.confirm_options_ok_button.connect("clicked", self.saveFile_cb)
-		self.confirm_options_cancel_button.connect("clicked", self.on_confirm_options_cancel_button)
-		
-		#display choosen options in textview
-		self.confirm_buffer = gtk.TextBuffer(None)
-		self.confirm_buffer.set_text(self.buf)
-		self.textview.set_buffer(self.confirm_buffer)
-				
-		self.dialog.show_all()
-
-        def on_confirm_options_cancel_button(self, *args):
-		#using hide because destroy crashes application after second instance
-		self.dialog.hide()
-		return True
-
-	def saveFile_cb(self, *args):
-		self.dialog.hide()
- 		fileDialog = savedialog.saveDialog(self.buf, self.xml)
+        if rc == gtk.RESPONSE_REJECT:
+            del self.dialog
+            return
+        elif rc == gtk.RESPONSE_ACCEPT:
+            del self.dialog
+            fileDialog = savedialog.saveDialog(self.buf, self.xml)
