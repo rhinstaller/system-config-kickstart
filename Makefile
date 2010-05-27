@@ -28,7 +28,6 @@ subdirs:
 
 install: ${PKGNAME}.desktop
 	mkdir -p $(INSTROOT)$(PKGDATADIR)
-	mkdir -p $(INSTROOT)$(PKGDATADIR)/pixmaps
 	mkdir -p $(INSTROOT)/usr/bin
 	mkdir -p $(INSTROOT)/usr/share/applications
 	mkdir -p $(INSTROOT)/usr/share/icons/hicolor/48x48/apps
@@ -38,7 +37,6 @@ install: ${PKGNAME}.desktop
 		sed -e s,@VERSION@,$(VERSION),g $${py} > $(INSTROOT)$(PKGDATADIR)/`basename $${py}` ; \
 	done
 	install src/${PKGNAME}.glade $(INSTROOT)$(PKGDATADIR)
-	install pixmaps/*.png $(INSTROOT)$(PKGDATADIR)/pixmaps
 	install pixmaps/${PKGNAME}.png $(INSTROOT)/usr/share/icons/hicolor/48x48/apps
 	install ${PKGNAME}.desktop $(INSTROOT)/usr/share/applications/${PKGNAME}.desktop
 	for d in $(SUBDIRS); do \
