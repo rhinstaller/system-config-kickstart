@@ -371,19 +371,22 @@ class kickstartGui:
         self.progress_window.set_label(_("Retrieving package information"))
         self.progress_window.show()
         self.progress_window.next_task()
-        if self.getAllData() != None:
-            previewDialog = savefile.saveFile (self.ksHandler.__str__(),
-                                               self.xml)
         self.progress_window.hide()
+
+        if self.getAllData() != None:
+            previewDialog = savefile.saveFile(self.ksHandler.__str__(),
+                                              self.xml)
+            previewDialog.run()
 
     def on_activate_save_options (self, *args):
         self.progress_window.set_label(_("Retrieving package information"))
         self.progress_window.show()
         self.progress_window.next_task()
+        self.progress_window.hide()
+
         if self.getAllData() != None:
             fileDialog = savedialog.saveDialog(self.ksHandler.__str__(),
                                                self.xml)
-        self.progress_window.hide()
 
     def applyKickstart(self):
         self.basic_class.applyKickstart()
