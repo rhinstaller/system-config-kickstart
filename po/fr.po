@@ -1,5 +1,5 @@
-# translation of fr.po to Français
-# Copyright (C) 2003,2004, 2005, 2006, 2007 Free Software Foundation, Inc.
+# translation of system-config-kickstart.master.fr.po to French
+# Copyright (C) 2003,2004, 2005, 2006, 2007, 2010 Free Software Foundation, Inc.
 #
 # Audrey Simons <asimons@redhat.com>, 2003,2004, 2005.
 # Jean-Paul Aubry <jpaubry@redhat.com>, 2003,2004.
@@ -8,18 +8,19 @@
 # Gauthier Ancelin <gauthier.ancelin@laposte.net>, 2007.
 # Charles-Antoine Couret <cacouret@wanadoo.fr>, 2009.
 # Thomas Canniot <mrtom@fedoraproject.org>, 2009.
+# Sam Friedmann <sam.friedmann@redhat.com>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: fr\n"
+"Project-Id-Version: system-config-kickstart.master.fr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-05-12 10:02-0400\n"
-"PO-Revision-Date: 2009-10-04 15:49+0200\n"
-"Last-Translator: Thomas Canniot <mrtom@fedoraproject.org>\n"
-"Language-Team: French <fedora-trans-fr@redhat.com>\n"
+"PO-Revision-Date: 2010-05-24 17:20+1000\n"
+"Last-Translator: Sam Friedmann <sam.friedmann@redhat.com>\n"
+"Language-Team: French <French fedora-trans-fr@fedoraproject.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../src/auth.py:354
@@ -231,7 +232,7 @@ msgstr "L'aide n'est pas disponible."
 #: ../src/kickstartGui.py:361
 #, python-format
 msgid "The file \"%s\" cannot be accessed."
-msgstr "Le fichier \"%s\" n'est pas accessible."
+msgstr "Le fichier « %s » n'est pas accessible."
 
 #: ../src/kickstartGui.py:371 ../src/kickstartGui.py:380
 #: ../src/packages.py:209
@@ -307,9 +308,8 @@ msgid "ext3"
 msgstr "ext3"
 
 #: ../src/partWindow.py:98
-#, fuzzy
 msgid "ext4"
-msgstr "ext2"
+msgstr "ext4"
 
 #. _("physical volume (LVM)"):"lvm",
 #: ../src/partWindow.py:100 ../src/partWindow.py:175
@@ -352,10 +352,9 @@ msgstr "Spécifier un point de montage pour la partition."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:504
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
-"Le point de montage \"%s\" est déjà utilisé. Veuillez sélectionner un autre "
+"Le point de montage « %s » est déjà utilisé. Veuillez sélectionner un autre "
 "point de montage."
 
 #: ../src/partWindow.py:524
@@ -377,7 +376,7 @@ msgid ""
 msgstr ""
 "Le nom de la partition que vous avez spécifiée ne se termine pas par un "
 "chiffre. Les noms de partitions doivent comporter un numéro de partition "
-"comme \"hda1\" ou \"sda3\"."
+"comme « hda1 » ou « sda3 »."
 
 #: ../src/partition.py:72
 msgid ""
@@ -645,7 +644,7 @@ msgstr "Ne pas installer le chargeur de démarrage"
 
 #: tmp/system-config-kickstart.glade.h:52
 msgid "Enable Fingerprint Reader"
-msgstr ""
+msgstr "Activer le lecteur d'empreintes digitales"
 
 #: tmp/system-config-kickstart.glade.h:53
 msgid "Enable Hesiod Support"
@@ -857,8 +856,7 @@ msgstr "Créer le périphérique RAID"
 
 #: tmp/system-config-kickstart.glade.h:104
 msgid "Make partition on specific drive (ondisk, e.g. hda or sdc):"
-msgstr ""
-"Créer la partition sur un disque spécifique (ondisk, par ex. hda ou sdc) :"
+msgstr "Créer la partition sur un disque spécifique (ondisk, par ex. hda ou sdc) :"
 
 #: tmp/system-config-kickstart.glade.h:105
 msgid "Mount Point:"
@@ -1047,8 +1045,7 @@ msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
 msgstr ""
-"Pour utiliser RAID, vous devez avant tout créer deux partitions de type « "
-"RAID logiciel». Vous pourrez ensuite créer un périphérique RAID qui pourra "
+"Pour utiliser RAID, vous devez avant tout créer deux partitions de type « RAID logiciel ». Vous pourrez ensuite créer un périphérique RAID qui pourra "
 "être formaté et monté."
 
 #: tmp/system-config-kickstart.glade.h:150
@@ -1101,9 +1098,7 @@ msgstr "Utiliser la taille swap recommandée"
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file. "
-msgstr ""
-"Vous avez choisi la configuration suivante. Cliquez sur « Enregistrer le "
-"fichier » pour enregistrer le fichier Kickstart. "
+msgstr "Vous avez choisi la configuration suivante. Cliquez sur « Enregistrer le fichier » pour enregistrer le fichier Kickstart."
 
 #: tmp/system-config-kickstart.glade.h:163
 msgid "_Add"
@@ -1149,201 +1144,3 @@ msgstr "A_perçu"
 msgid "_Save to File"
 msgstr "Enregi_strer dans le fichier"
 
-#~ msgid ""
-#~ "Kickstart Configurator @VERSION@\n"
-#~ " Copyright (c) 2000-2002 Red Hat, Inc.\n"
-#~ " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-#~ " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-#~ " A graphical interface for creating a kickstart file"
-#~ msgstr ""
-#~ "Kickstart Configurator @VERSION@\n"
-#~ " Copyright (c) 2000-2002 Red Hat, Inc.\n"
-#~ " Copyright (c) 2000-2002 Brent Fox <bfox@redhat.com>\n"
-#~ " Copyright (c) 2000-2002 Tammy Fox <tfox@redhat.com>\n"
-#~ "Interface graphique pour la création d'un fichier kickstart"
-
-#~ msgid "         "
-#~ msgstr "         "
-
-#~ msgid "(for example: hda or sdc)"
-#~ msgstr "(par exemple : hda ou sdc)"
-
-#~ msgid "(for example: hda1 or sdc3)"
-#~ msgstr "(par exemple : hda1 ou sdc3)"
-
-#~ msgid "0"
-#~ msgstr "0"
-
-#~ msgid "1"
-#~ msgstr "1"
-
-#~ msgid "5"
-#~ msgstr "5"
-
-#~ msgid "Active"
-#~ msgstr "Actif"
-
-#~ msgid "Additional Size Options"
-#~ msgstr "Options de taille supplémentaires"
-
-#~ msgid "Authentication:"
-#~ msgstr "Authentification :"
-
-#~ msgid "Basic Configuration (required)"
-#~ msgstr "Configuration de base (requise)"
-
-#~ msgid "Boot Loader Options (required)"
-#~ msgstr "Options du chargeur de démarrage (requises)"
-
-#~ msgid "Choose the Installation Method:"
-#~ msgstr "Choisissez la méthode d'installation :"
-
-#~ msgid "Configure the X Window System"
-#~ msgstr "Configurer le système X Window"
-
-#~ msgid "Disabled"
-#~ msgstr "Désactivé"
-
-#~ msgid "Drive :"
-#~ msgstr "Disque :"
-
-#~ msgid "Enable firewall"
-#~ msgstr "Activer le pare-feu"
-
-#~ msgid "Enabled"
-#~ msgstr "Activé"
-
-#~ msgid "Installation Method (required)"
-#~ msgstr "Méthode d'installation (requise)"
-
-#~ msgid "Partition Information (required)"
-#~ msgstr "Informations sur la partition (requises)"
-
-#~ msgid "Size (MB):"
-#~ msgstr "Taille (Mo) :"
-
-#~ msgid "Warn"
-#~ msgstr "Avertir"
-
-#~ msgid "_About"
-#~ msgstr "_À propos"
-
-#~ msgid "_Contents"
-#~ msgstr "_Contenus"
-
-#~ msgid "_Quit"
-#~ msgstr "_Quitter"
-
-#~ msgid "_Save File"
-#~ msgstr "Enregi_strer le fichier"
-
-#~ msgid "md0"
-#~ msgstr "md0"
-
-#~ msgid "md1"
-#~ msgstr "md1"
-
-#~ msgid "md10"
-#~ msgstr "md10"
-
-#~ msgid "md11"
-#~ msgstr "md11"
-
-#~ msgid "md12"
-#~ msgstr "md12"
-
-#~ msgid "md13"
-#~ msgstr "md13"
-
-#~ msgid "md14"
-#~ msgstr "md14"
-
-#~ msgid "md15"
-#~ msgstr "md15"
-
-#~ msgid "md2"
-#~ msgstr "md2"
-
-#~ msgid "md3"
-#~ msgstr "md3"
-
-#~ msgid "md4"
-#~ msgstr "md4"
-
-#~ msgid "md5"
-#~ msgstr "md5"
-
-#~ msgid "md6"
-#~ msgstr "md6"
-
-#~ msgid "md7"
-#~ msgstr "md7"
-
-#~ msgid "md8"
-#~ msgstr "md8"
-
-#~ msgid "md9"
-#~ msgstr "md9"
-
-#~ msgid "Could not read video driver database"
-#~ msgstr "Impossible de lire la base de données du pilote vidéo"
-
-#~ msgid "Please select an X driver."
-#~ msgstr "Veuillez sélectionner un pilote pour X."
-
-#~ msgid "Please select a monitor."
-#~ msgstr "Veuillez sélectionner un moniteur."
-
-#~ msgid "Color Depth"
-#~ msgstr "Profondeur des couleurs"
-
-#~ msgid "Default Desktop:"
-#~ msgstr "Bureau par défaut :"
-
-#~ msgid "GNOME"
-#~ msgstr "GNOME"
-
-#~ msgid "General"
-#~ msgstr "Général"
-
-#~ msgid "Horizontal Sync:"
-#~ msgstr "Rafraîchissement horizontal :"
-
-#~ msgid "Hz"
-#~ msgstr "Hz"
-
-#~ msgid "KDE"
-#~ msgstr "KDE"
-
-#~ msgid "Monitor"
-#~ msgstr "Moniteur"
-
-#~ msgid "Probe for monitor"
-#~ msgstr "Détection du moniteur"
-
-#~ msgid "Probe for video card driver"
-#~ msgstr "Détection du pilote de la carte vidéo"
-
-#~ msgid "Resolution"
-#~ msgstr "Résolution"
-
-#~ msgid "Start the X Window System on boot"
-#~ msgstr "Lancer le système X Window au démarrage"
-
-#~ msgid "Use MD5"
-#~ msgstr "Utiliser MD5"
-
-#~ msgid "Use custom monitor sync rates"
-#~ msgstr "Utiliser les taux de synchronisation du moniteur personnalisé"
-
-#~ msgid "Vertical Sync:"
-#~ msgstr "Rafraîchissement vertical :"
-
-#~ msgid "Video Card"
-#~ msgstr "Carte vidéo"
-
-#~ msgid "Video Card RAM: "
-#~ msgstr "RAM carte vidéo :"
-
-#~ msgid "kHz"
-#~ msgstr "kHz"
