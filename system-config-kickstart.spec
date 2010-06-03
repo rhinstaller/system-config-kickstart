@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.8.5
+Version: 2.8.6
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -69,6 +69,11 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Thu Jun 03 2010 Chris Lumens <clumens@redhat.com> - 2.8.6-1
+- Don't traceback when loading the Preview dialog a second time (#593259). (clumens)
+- Don't install the icon to /usr/share/system-config-kickstart too (#594361). (clumens)
+- Update translations.
+
 * Mon May 03 2010 Chris Lumens <clumens@redhat.com> - 2.8.5-1
 - Update to work with the new python-meh, which now uses report. (clumens)
 
