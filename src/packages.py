@@ -116,6 +116,7 @@ class sckYumBase(yum.YumBase):
 
     def __init__ (self, callback=None):
         import tempfile
+        self.packagesEnabled = True
 
         yum.YumBase.__init__(self)
 
@@ -155,26 +156,8 @@ class sckYumBase(yum.YumBase):
 
         if callback: callback.next_task()
 
-        # If we're on a release, we want to try the base repo first.  Otherwise,
-        # try development.  If neither of those works, we have a problem.
-        if "fedora" in map(lambda repo: repo.id, self.repos.listEnabled()):
-            repoorder = ["fedora", "rawhide", "development"]
-        else:
-            repoorder = ["rawhide", "development", "fedora"]
-
-        self.repos.disableRepo("*")
-        if callback: callback.next_task()
-
-        self.packagesEnabled = False
-        for repo in repoorder:
-            try:
-                self.repos.enableRepo(repo)
-                self.packagesEnabled = True
-                break
-            except yum.Errors.RepoError:
-                pass
-
-        if not self.packagesEnabled:
+        if len(self.repos.listEnabled()) == 0:
+            self.packagesEnabled = False
             return
 
         try:
