@@ -7,10 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-config-kickstart.master.ml\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-12 10:02-0400\n"
+"POT-Creation-Date: 2010-07-22 10:09-0400\n"
 "PO-Revision-Date: 2010-05-13 14:06+0530\n"
 "Last-Translator: \n"
 "Language-Team:  <en@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -227,7 +228,7 @@ msgstr "സഹായം ലഭ്യമല്ല."
 msgid "The file \"%s\" cannot be accessed."
 msgstr "\"%s\" എന്ന ഫൈല്‍ അക്സസ്സ് ചെയ്യുവാന്‍ സാധ്യമല്ല."
 
-#: ../src/kickstartGui.py:371 ../src/kickstartGui.py:380
+#: ../src/kickstartGui.py:371 ../src/kickstartGui.py:382
 #: ../src/packages.py:209
 msgid "Retrieving package information"
 msgstr "പാക്കേജ് വിവരം ലഭ്യമാക്കുന്നു"
@@ -262,7 +263,8 @@ msgstr "ദയവായി ശരിയായ നെയിം സര്‍വറ
 msgid ""
 "A network device with the name %s already exists.  Please choose another "
 "device name"
-msgstr "%s എന്ന പേരില്‍ നിലവില്‍ ഒരു നെറ്റ്വര്‍ക്ക് ഡിവൈസ് ഉണ്ട്.  ദയവായി മറ്റൊരു പേര് തിരഞ്ഞെടുക്കുക"
+msgstr ""
+"%s എന്ന പേരില്‍ നിലവില്‍ ഒരു നെറ്റ്വര്‍ക്ക് ഡിവൈസ് ഉണ്ട്.  ദയവായി മറ്റൊരു പേര് തിരഞ്ഞെടുക്കുക"
 
 #: ../src/packages.py:146
 #, python-format
@@ -342,7 +344,8 @@ msgstr "പാര്‍ട്ടീഷനായുളള മൌണ്ട് പ�
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:504
 #, python-format
-msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgid ""
+"The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "\"%s\" എന്ന മൌണ്ട് പോയിന്റ് നിലവില്‍ ഉപയോഗത്തിലുണ്ട്.  ദയവായി മറ്റൊരു മൌണ്ട് പോയിന്റ് "
 "തെരഞ്ഞെടുക്കുക."
@@ -364,8 +367,8 @@ msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
 msgstr ""
-"നിങ്ങള്‍ പറഞ്ഞിരിക്കുന്ന പാര്‍ട്ടീഷന്‍ ഒരു അക്കത്തില്‍ അല്ല അവസാനിക്കുന്നത്.  പാര്‍ട്ടീഷനുകള്‍ക്ക് \"hda1"
-"\" അല്ലെങ്കില്‍ \"sda3\" എന്നിവ പോലെയുളള പാര്‍ട്ടീഷന്‍ നംബര്‍ ഉണ്ടാവണം."
+"നിങ്ങള്‍ പറഞ്ഞിരിക്കുന്ന പാര്‍ട്ടീഷന്‍ ഒരു അക്കത്തില്‍ അല്ല അവസാനിക്കുന്നത്.  പാര്‍ട്ടീഷനുകള്‍ക്ക് "
+"\"hda1\" അല്ലെങ്കില്‍ \"sda3\" എന്നിവ പോലെയുളള പാര്‍ട്ടീഷന്‍ നംബര്‍ ഉണ്ടാവണം."
 
 #: ../src/partition.py:72
 msgid ""
@@ -426,6 +429,19 @@ msgstr "നിങ്ങളുടെ കിക്ക്സ്റ്റാര്�
 #: ../src/savedialog.py:79
 msgid "Error Saving Kickstart Config"
 msgstr "Kickstart Config സൂക്ഷിക്കുന്നതില്‍ പിശക്"
+
+#: ../src/savefile.py:41
+msgid "Preview Options"
+msgstr "ഉപാധികള്‍ പ്രീവ്യൂ ചെയ്യുക"
+
+#: ../src/savefile.py:49
+#, fuzzy
+msgid ""
+"You have choosen the following configuration. Click Save File to save the "
+"kickstart file."
+msgstr ""
+"നിങ്ങള്‍ താഴെ കാണിക്കുന്ന കോണ്‍ഫിഗറേഷന്‍ ആണ് തിരഞ്ഞെടുത്തിരിക്കുന്നത്. കിക്ക് സ്റ്റാര്‍ട്ട് ഫയല്‍ "
+"സൂക്ഷിക്കുന്നതിനായി ഫയല്‍ സൂക്ഷിക്കുക എന്ന ഉപാധിയില്‍ ക്ളിക്ക് ചെയ്യുക."
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "<b>Advanced Configuration</b>"
@@ -847,7 +863,8 @@ msgstr "RAID ഡിവൈസ് നിര്‍മ്മിക്കുക"
 
 #: tmp/system-config-kickstart.glade.h:104
 msgid "Make partition on specific drive (ondisk, e.g. hda or sdc):"
-msgstr "വ്യക്തമാക്കിയിട്ടുളള ഡ്രൈവില്‍ പാര്‍ട്ടീഷന്‍ ഉണ്ടാക്കുക (ondisk, ഉദാ. hda അല്ലെങ്കില്‍ sdc):"
+msgstr ""
+"വ്യക്തമാക്കിയിട്ടുളള ഡ്രൈവില്‍ പാര്‍ട്ടീഷന്‍ ഉണ്ടാക്കുക (ondisk, ഉദാ. hda അല്ലെങ്കില്‍ sdc):"
 
 #: tmp/system-config-kickstart.glade.h:105
 msgid "Mount Point:"
@@ -938,70 +955,66 @@ msgid "Preserve existing partitions"
 msgstr "നിലവിലുളള പാര്‍ട്ടീഷനുകള്‍ സംരക്ഷിക്കുക"
 
 #: tmp/system-config-kickstart.glade.h:127
-msgid "Preview Options"
-msgstr "ഉപാധികള്‍ പ്രീവ്യൂ ചെയ്യുക"
-
-#: tmp/system-config-kickstart.glade.h:128
 msgid "RAID"
 msgstr "RAID"
 
-#: tmp/system-config-kickstart.glade.h:129
+#: tmp/system-config-kickstart.glade.h:128
 msgid "RAID Device:"
 msgstr "RAID ഡിവൈസ്:"
 
-#: tmp/system-config-kickstart.glade.h:130
+#: tmp/system-config-kickstart.glade.h:129
 msgid "RAID Level:"
 msgstr "RAID ലവല്‍:"
 
-#: tmp/system-config-kickstart.glade.h:131
+#: tmp/system-config-kickstart.glade.h:130
 msgid "RAID Options"
 msgstr "RAID ഉപാധികള്‍"
 
-#: tmp/system-config-kickstart.glade.h:132
+#: tmp/system-config-kickstart.glade.h:131
 msgid "Raid Members:"
 msgstr "Raid അംഗങ്ങള്‍:"
 
-#: tmp/system-config-kickstart.glade.h:133
+#: tmp/system-config-kickstart.glade.h:132
 msgid "Reboot system after installation"
 msgstr "ഇന്‍സ്റ്റലേഷന് ശേഷം സിസ്റ്റം റീബൂട്ട് ചെയ്യുക"
 
-#: tmp/system-config-kickstart.glade.h:134
+#: tmp/system-config-kickstart.glade.h:133
 msgid "Remove all existing partitions"
 msgstr "നിലവിലുളള പാര്‍ട്ടീഷനുകളെല്ലാം നീക്കം ചെയ്യുക"
 
-#: tmp/system-config-kickstart.glade.h:135
+#: tmp/system-config-kickstart.glade.h:134
 msgid "Remove existing Linux partitions"
 msgstr "നിലവിലുളള ലിനക്സ് പാര്‍ട്ടീഷനുകളെല്ലാം നീക്കം ചെയ്യുക"
 
-#: tmp/system-config-kickstart.glade.h:136
+#: tmp/system-config-kickstart.glade.h:135
 msgid "Root Password:"
 msgstr "റൂട്ട് രഹസ്യവാക്ക്:"
 
-#: tmp/system-config-kickstart.glade.h:137
+#: tmp/system-config-kickstart.glade.h:136
 msgid "Run outside of the chroot environment"
 msgstr "chroot എന്‍വിറോണ്‍മെന്റിന് പുറത്ത് പ്രവര്‍ത്തിക്കുക"
 
-#: tmp/system-config-kickstart.glade.h:138
+#: tmp/system-config-kickstart.glade.h:137
 msgid "SELinux:"
 msgstr "SELinux:"
 
-#: tmp/system-config-kickstart.glade.h:139
+#: tmp/system-config-kickstart.glade.h:138
 msgid "SMB"
 msgstr "SMB"
 
-#: tmp/system-config-kickstart.glade.h:140
+#: tmp/system-config-kickstart.glade.h:139
 msgid "SMB Servers:"
 msgstr "SMB സര്‍വറുകള്‍:"
 
-#: tmp/system-config-kickstart.glade.h:141
+#: tmp/system-config-kickstart.glade.h:140
 msgid "SMB Workgroup:"
 msgstr "SMB വര്‍ക്ക് ഗ്രൂപ്പ്:"
 
-#: tmp/system-config-kickstart.glade.h:142
+#: tmp/system-config-kickstart.glade.h:141
 msgid "Security level:"
 msgstr "സെക്യൂരിറ്റി ലവല്‍:"
 
-#: tmp/system-config-kickstart.glade.h:143
+#: tmp/system-config-kickstart.glade.h:142
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -1013,23 +1026,23 @@ msgstr ""
 "നിന്നും നിങ്ങള്‍ക്ക് ലഭ്യമാകുന്നു. RAID ഡിവൈസ് സംബന്ധിച്ചുളള കൂടുതല്‍ വിവരങ്ങള്‍ക്ക് കിക്ക് സ്റ്റാര്‍ട്ട് "
 "വിവരണങ്ങള്‍ പരിശോധിക്കുക."
 
-#: tmp/system-config-kickstart.glade.h:144
+#: tmp/system-config-kickstart.glade.h:143
 msgid "Specify an FTP username and password"
 msgstr "ഒരു FTP ഉപയോക്തൃനാമവും രഹസ്യവാക്കും വ്യക്തമാക്കുക"
 
-#: tmp/system-config-kickstart.glade.h:145
+#: tmp/system-config-kickstart.glade.h:144
 msgid "Specify installation key:"
 msgstr "ഇന്‍സ്റ്റലേഷന്‍ കീ നല്‍കുക:"
 
-#: tmp/system-config-kickstart.glade.h:146
+#: tmp/system-config-kickstart.glade.h:145
 msgid "Target Architecture:"
 msgstr "റ്റാര്‍ഗറ്റ് ആര്‍ക്കിറ്റെക്ക്ച്ചര്‍:"
 
-#: tmp/system-config-kickstart.glade.h:147
+#: tmp/system-config-kickstart.glade.h:146
 msgid "Time Zone:"
 msgstr "ടൈം സോണ്‍:"
 
-#: tmp/system-config-kickstart.glade.h:148
+#: tmp/system-config-kickstart.glade.h:147
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -1038,101 +1051,91 @@ msgstr ""
 "കുറഞ്ഞത് നിങ്ങള്‍ ആദ്യം ഉണ്ടാക്കേണ്ടതാണ്.  പിന്നീട് ഫോര്‍മാറ്റും മൌണ്ടും ചെയ്യുവാന്‍ സാധിക്കുന്നഒരു "
 "RAID ഡിവൈസ് നിങ്ങള്‍ക്ക് ഉണ്ടാക്കാവുന്നതാണ്."
 
-#: tmp/system-config-kickstart.glade.h:150
+#: tmp/system-config-kickstart.glade.h:149
 #, no-c-format
 msgid "Type your %post script below:"
 msgstr "നിങ്ങളുടെ %p പോസ്റ്റ് സ്ക്രിപ്റ്റ് താഴെ ടൈപ്പ് ചെയ്യുക:"
 
-#: tmp/system-config-kickstart.glade.h:152
+#: tmp/system-config-kickstart.glade.h:151
 #, no-c-format
 msgid "Type your %pre script below:"
 msgstr "നിങ്ങളുടെ %p സ്ക്രിപ്റ്റ് താഴെ ടൈപ്പ് ചെയ്യുക:"
 
-#: tmp/system-config-kickstart.glade.h:153
+#: tmp/system-config-kickstart.glade.h:152
 msgid "Upgrade an existing installation"
 msgstr "നിലവിലുളള ഇന്‍സ്റ്റലേഷന്‍ അപ്ഗ്രേഡ് ചെയ്യുക"
 
-#: tmp/system-config-kickstart.glade.h:154
+#: tmp/system-config-kickstart.glade.h:153
 msgid "Upgrade existing boot loader"
 msgstr "നിലവിലുളള ബൂട്ട് ലോഡര്‍ അപ്ഗ്രേഡ് ചെയ്യുന്നു"
 
-#: tmp/system-config-kickstart.glade.h:155
+#: tmp/system-config-kickstart.glade.h:154
 msgid "Use GRUB password"
 msgstr "GRUB രഹസ്യവാക്ക് ഉപയോഗിക്കുക"
 
-#: tmp/system-config-kickstart.glade.h:156
+#: tmp/system-config-kickstart.glade.h:155
 msgid "Use Shadow Passwords"
 msgstr "ഷാഡോ രഹസ്യവാക്കുകള്‍ ഉപയോഗിക്കുക"
 
-#: tmp/system-config-kickstart.glade.h:157
+#: tmp/system-config-kickstart.glade.h:156
 msgid "Use UTC clock"
 msgstr "UTC ക്ളോക്ക് ഉപയോഗിക്കുക"
 
-#: tmp/system-config-kickstart.glade.h:158
+#: tmp/system-config-kickstart.glade.h:157
 msgid "Use an interpreter:"
 msgstr "ഒരു ഇന്റര്‍പ്രറ്റര്‍ ഉപയോഗിക്കുക:"
 
-#: tmp/system-config-kickstart.glade.h:159
+#: tmp/system-config-kickstart.glade.h:158
 msgid "Use broadcast to find NIS server"
 msgstr "സംപ്രേക്ഷണം വഴി NIS സര്‍വര്‍ കണ്ടുപിടിക്കുക"
 
-#: tmp/system-config-kickstart.glade.h:160
+#: tmp/system-config-kickstart.glade.h:159
 msgid "Use existing partition (onpart, e.g. hda1 or sdc3):"
 msgstr "നിലവിലുളള പാര്‍ട്ടീഷന്‍ ഉപയോഗിക്കുക (onpart, ഉദാ. hda1 അല്ലെങ്കില്‍ sdc3):"
 
-#: tmp/system-config-kickstart.glade.h:161
+#: tmp/system-config-kickstart.glade.h:160
 msgid "Use recommended swap size"
 msgstr "അനുവദനീയമായ swap വലിപ്പം ഉപയോഗിക്കുക"
 
-#: tmp/system-config-kickstart.glade.h:162
-msgid ""
-"You have choosen the following configuration. Click Save File to save the "
-"kickstart file. "
-msgstr ""
-"നിങ്ങള്‍ താഴെ കാണിക്കുന്ന കോണ്‍ഫിഗറേഷന്‍ ആണ് തിരഞ്ഞെടുത്തിരിക്കുന്നത്. കിക്ക് സ്റ്റാര്‍ട്ട് ഫയല്‍ "
-"സൂക്ഷിക്കുന്നതിനായി ഫയല്‍ സൂക്ഷിക്കുക എന്ന ഉപാധിയില്‍ ക്ളിക്ക് ചെയ്യുക."
-
-#: tmp/system-config-kickstart.glade.h:163
+#: tmp/system-config-kickstart.glade.h:161
 msgid "_Add"
 msgstr "ചേര്‍ക്കുക(_A)"
 
-#: tmp/system-config-kickstart.glade.h:164
+#: tmp/system-config-kickstart.glade.h:162
 msgid "_Add Network Device"
 msgstr "നെറ്റ്വര്‍ക്ക് ഡിവൈസ് ചേര്‍ക്കുക (_A)"
 
-#: tmp/system-config-kickstart.glade.h:165
+#: tmp/system-config-kickstart.glade.h:163
 msgid "_Delete"
 msgstr "നീക്കം ചെയ്യുക(_D)"
 
-#: tmp/system-config-kickstart.glade.h:166
+#: tmp/system-config-kickstart.glade.h:164
 msgid "_Delete Network Device"
 msgstr "നെറ്റ്വര്‍ക്ക് ഡിവൈസ് നീക്കം ചെയ്യുക (_D)"
 
-#: tmp/system-config-kickstart.glade.h:167
+#: tmp/system-config-kickstart.glade.h:165
 msgid "_Edit"
 msgstr "മാറ്റം വരുത്തുക(_E)"
 
-#: tmp/system-config-kickstart.glade.h:168
+#: tmp/system-config-kickstart.glade.h:166
 msgid "_Edit Network Device"
 msgstr "നെറ്റ്വര്‍ക്ക് ഡിവൈസില്‍ മാറ്റം വരുത്തുക (_E)"
 
-#: tmp/system-config-kickstart.glade.h:169
+#: tmp/system-config-kickstart.glade.h:167
 msgid "_File"
 msgstr "ഫൈല്‍(_F)"
 
-#: tmp/system-config-kickstart.glade.h:170
+#: tmp/system-config-kickstart.glade.h:168
 msgid "_Help"
 msgstr "സഹായം(_H)"
 
-#: tmp/system-config-kickstart.glade.h:171
+#: tmp/system-config-kickstart.glade.h:169
 msgid "_Open File"
 msgstr "ഫൈല്‍ തുറക്കുക(_O)"
 
-#: tmp/system-config-kickstart.glade.h:172
+#: tmp/system-config-kickstart.glade.h:170
 msgid "_Preview"
 msgstr "പ്രിവ്യൂ(_P)"
 
-#: tmp/system-config-kickstart.glade.h:173
-msgid "_Save to File"
-msgstr "_ഫയലിലേക്ക് സൂക്ഷിക്കുക "
-
+#~ msgid "_Save to File"
+#~ msgstr "_ഫയലിലേക്ക് സൂക്ഷിക്കുക "
