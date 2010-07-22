@@ -14,10 +14,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-config-kickstart.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-12 10:02-0400\n"
+"POT-Creation-Date: 2010-07-22 10:02-0400\n"
 "PO-Revision-Date: 2009-09-23 11:35+1000\n"
 "Last-Translator: Terry Chuang <tchuang@redhat.com>\n"
 "Language-Team: Traditional Chinese <en@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -230,8 +231,8 @@ msgstr "無法取得輔助說明。"
 msgid "The file \"%s\" cannot be accessed."
 msgstr "無法存取「%s」檔案。"
 
-#: ../src/kickstartGui.py:371 ../src/kickstartGui.py:380
-#: ../src/packages.py:209
+#: ../src/kickstartGui.py:371 ../src/kickstartGui.py:382
+#: ../src/packages.py:192
 msgid "Retrieving package information"
 msgstr "讀取套件資訊"
 
@@ -267,7 +268,7 @@ msgid ""
 "device name"
 msgstr "命名為 %s 名稱的網路裝置已經存在，請選擇另一個裝置名稱"
 
-#: ../src/packages.py:146
+#: ../src/packages.py:147
 #, python-format
 msgid ""
 "Package selection is disabled due to an error in setup.  Please fix your "
@@ -279,11 +280,11 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../src/packages.py:203
+#: ../src/packages.py:186
 msgid "Package configuration is not applicable on upgrades."
 msgstr "套件設定不適用於系統升級。"
 
-#: ../src/packages.py:216
+#: ../src/packages.py:199
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
@@ -425,6 +426,17 @@ msgstr "當儲存 kickstart 配置 %s 時發生了下列錯誤：%s"
 #: ../src/savedialog.py:79
 msgid "Error Saving Kickstart Config"
 msgstr "儲存 Kickstart 配置時發生了錯誤"
+
+#: ../src/savefile.py:41
+msgid "Preview Options"
+msgstr "預視選項"
+
+#: ../src/savefile.py:49
+#, fuzzy
+msgid ""
+"You have choosen the following configuration. Click Save File to save the "
+"kickstart file."
+msgstr "您已選取下列的組態設定。請按下「儲存檔案」來儲存 kickstart 檔案。"
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "<b>Advanced Configuration</b>"
@@ -927,70 +939,66 @@ msgid "Preserve existing partitions"
 msgstr "保留既有的分割區"
 
 #: tmp/system-config-kickstart.glade.h:127
-msgid "Preview Options"
-msgstr "預視選項"
-
-#: tmp/system-config-kickstart.glade.h:128
 msgid "RAID"
 msgstr "RAID"
 
-#: tmp/system-config-kickstart.glade.h:129
+#: tmp/system-config-kickstart.glade.h:128
 msgid "RAID Device:"
 msgstr "RAID 裝置："
 
-#: tmp/system-config-kickstart.glade.h:130
+#: tmp/system-config-kickstart.glade.h:129
 msgid "RAID Level:"
 msgstr "RAID 等級："
 
-#: tmp/system-config-kickstart.glade.h:131
+#: tmp/system-config-kickstart.glade.h:130
 msgid "RAID Options"
 msgstr "RAID 選項"
 
-#: tmp/system-config-kickstart.glade.h:132
+#: tmp/system-config-kickstart.glade.h:131
 msgid "Raid Members:"
 msgstr "Raid 成員："
 
-#: tmp/system-config-kickstart.glade.h:133
+#: tmp/system-config-kickstart.glade.h:132
 msgid "Reboot system after installation"
 msgstr "安裝完後系統將重新啟動"
 
-#: tmp/system-config-kickstart.glade.h:134
+#: tmp/system-config-kickstart.glade.h:133
 msgid "Remove all existing partitions"
 msgstr "移除所有既有的分割區"
 
-#: tmp/system-config-kickstart.glade.h:135
+#: tmp/system-config-kickstart.glade.h:134
 msgid "Remove existing Linux partitions"
 msgstr "移除既有的 Linux 分割區"
 
-#: tmp/system-config-kickstart.glade.h:136
+#: tmp/system-config-kickstart.glade.h:135
 msgid "Root Password:"
 msgstr "系統管理者（root）密碼"
 
-#: tmp/system-config-kickstart.glade.h:137
+#: tmp/system-config-kickstart.glade.h:136
 msgid "Run outside of the chroot environment"
 msgstr "在 chroot 環境之外執行"
 
-#: tmp/system-config-kickstart.glade.h:138
+#: tmp/system-config-kickstart.glade.h:137
 msgid "SELinux:"
 msgstr "SELinux："
 
-#: tmp/system-config-kickstart.glade.h:139
+#: tmp/system-config-kickstart.glade.h:138
 msgid "SMB"
 msgstr "SMB"
 
-#: tmp/system-config-kickstart.glade.h:140
+#: tmp/system-config-kickstart.glade.h:139
 msgid "SMB Servers:"
 msgstr "SMB 伺服器："
 
-#: tmp/system-config-kickstart.glade.h:141
+#: tmp/system-config-kickstart.glade.h:140
 msgid "SMB Workgroup:"
 msgstr "SMB 群組："
 
-#: tmp/system-config-kickstart.glade.h:142
+#: tmp/system-config-kickstart.glade.h:141
 msgid "Security level:"
 msgstr "安全等級："
 
-#: tmp/system-config-kickstart.glade.h:143
+#: tmp/system-config-kickstart.glade.h:142
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -1001,23 +1009,23 @@ msgstr ""
 "設定為提供比使用單一磁碟更快的速度與較佳的可靠性。如需關於使用 RAID 裝置的更"
 "多資訊，請參閱 kickstart 的說明文件。"
 
-#: tmp/system-config-kickstart.glade.h:144
+#: tmp/system-config-kickstart.glade.h:143
 msgid "Specify an FTP username and password"
 msgstr "請指定一個 FTP 使用者名稱與密碼"
 
-#: tmp/system-config-kickstart.glade.h:145
+#: tmp/system-config-kickstart.glade.h:144
 msgid "Specify installation key:"
 msgstr "指定安裝金鑰："
 
-#: tmp/system-config-kickstart.glade.h:146
+#: tmp/system-config-kickstart.glade.h:145
 msgid "Target Architecture:"
 msgstr "目標的主機架構："
 
-#: tmp/system-config-kickstart.glade.h:147
+#: tmp/system-config-kickstart.glade.h:146
 msgid "Time Zone:"
 msgstr "時區："
 
-#: tmp/system-config-kickstart.glade.h:148
+#: tmp/system-config-kickstart.glade.h:147
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -1025,98 +1033,91 @@ msgstr ""
 "如要使用 RAID，您必須建立至少兩個 '軟體 RAID' 類型的分割區。然後您可以建立一"
 "個可格式化與可掛載的 RAID 裝置。"
 
-#: tmp/system-config-kickstart.glade.h:150
+#: tmp/system-config-kickstart.glade.h:149
 #, no-c-format
 msgid "Type your %post script below:"
 msgstr "在以下輸入您的 %post 程式碼："
 
-#: tmp/system-config-kickstart.glade.h:152
+#: tmp/system-config-kickstart.glade.h:151
 #, no-c-format
 msgid "Type your %pre script below:"
 msgstr "在以下輸入 %pre 程式碼："
 
-#: tmp/system-config-kickstart.glade.h:153
+#: tmp/system-config-kickstart.glade.h:152
 msgid "Upgrade an existing installation"
 msgstr "升級目前的安裝"
 
-#: tmp/system-config-kickstart.glade.h:154
+#: tmp/system-config-kickstart.glade.h:153
 msgid "Upgrade existing boot loader"
 msgstr "升級目前的開機管理程式"
 
-#: tmp/system-config-kickstart.glade.h:155
+#: tmp/system-config-kickstart.glade.h:154
 msgid "Use GRUB password"
 msgstr "使用 GRUB 密碼"
 
-#: tmp/system-config-kickstart.glade.h:156
+#: tmp/system-config-kickstart.glade.h:155
 msgid "Use Shadow Passwords"
 msgstr "使用 Shadow 密碼"
 
-#: tmp/system-config-kickstart.glade.h:157
+#: tmp/system-config-kickstart.glade.h:156
 msgid "Use UTC clock"
 msgstr "使用 UTC 時鐘"
 
-#: tmp/system-config-kickstart.glade.h:158
+#: tmp/system-config-kickstart.glade.h:157
 msgid "Use an interpreter:"
 msgstr "使用編譯器："
 
-#: tmp/system-config-kickstart.glade.h:159
+#: tmp/system-config-kickstart.glade.h:158
 msgid "Use broadcast to find NIS server"
 msgstr "使用廣播方式搜尋 NIS 伺服器"
 
-#: tmp/system-config-kickstart.glade.h:160
+#: tmp/system-config-kickstart.glade.h:159
 msgid "Use existing partition (onpart, e.g. hda1 or sdc3):"
 msgstr "使用現有的分割區（onpart，例如 hda1 或 sdc3）："
 
-#: tmp/system-config-kickstart.glade.h:161
+#: tmp/system-config-kickstart.glade.h:160
 msgid "Use recommended swap size"
 msgstr "使用建議的 swap 大小"
 
-#: tmp/system-config-kickstart.glade.h:162
-msgid ""
-"You have choosen the following configuration. Click Save File to save the "
-"kickstart file. "
-msgstr "您已選取下列的組態設定。請按下「儲存檔案」來儲存 kickstart 檔案。"
-
-#: tmp/system-config-kickstart.glade.h:163
+#: tmp/system-config-kickstart.glade.h:161
 msgid "_Add"
 msgstr "新增(_A)"
 
-#: tmp/system-config-kickstart.glade.h:164
+#: tmp/system-config-kickstart.glade.h:162
 msgid "_Add Network Device"
 msgstr "新增網路裝置(_A)"
 
-#: tmp/system-config-kickstart.glade.h:165
+#: tmp/system-config-kickstart.glade.h:163
 msgid "_Delete"
 msgstr "刪除(_D)"
 
-#: tmp/system-config-kickstart.glade.h:166
+#: tmp/system-config-kickstart.glade.h:164
 msgid "_Delete Network Device"
 msgstr "刪除網路裝置(_D)"
 
-#: tmp/system-config-kickstart.glade.h:167
+#: tmp/system-config-kickstart.glade.h:165
 msgid "_Edit"
 msgstr "編輯(_E)"
 
-#: tmp/system-config-kickstart.glade.h:168
+#: tmp/system-config-kickstart.glade.h:166
 msgid "_Edit Network Device"
 msgstr "編輯網路裝置(_E)"
 
-#: tmp/system-config-kickstart.glade.h:169
+#: tmp/system-config-kickstart.glade.h:167
 msgid "_File"
 msgstr "檔案(_F)"
 
-#: tmp/system-config-kickstart.glade.h:170
+#: tmp/system-config-kickstart.glade.h:168
 msgid "_Help"
 msgstr "說明(_H)"
 
-#: tmp/system-config-kickstart.glade.h:171
+#: tmp/system-config-kickstart.glade.h:169
 msgid "_Open File"
 msgstr "開啟檔案(_O)"
 
-#: tmp/system-config-kickstart.glade.h:172
+#: tmp/system-config-kickstart.glade.h:170
 msgid "_Preview"
 msgstr "預覽(_P)"
 
-#: tmp/system-config-kickstart.glade.h:173
-msgid "_Save to File"
-msgstr "儲存到檔案(_S)"
+#~ msgid "_Save to File"
+#~ msgstr "儲存到檔案(_S)"
