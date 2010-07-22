@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-12 10:02-0400\n"
+"POT-Creation-Date: 2010-07-22 10:02-0400\n"
 "PO-Revision-Date: 2004-01-08 19:32+0330\n"
 "Last-Translator: Abbas Izad <abbasizad@hotmail.com>\n"
 "Language-Team: Persian <fa@li.org>\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -217,8 +218,8 @@ msgstr "راهنما در دسترس نیست."
 msgid "The file \"%s\" cannot be accessed."
 msgstr "به پرونده‌ی \"%s\" نمی‌تواند دستیابی یافت."
 
-#: ../src/kickstartGui.py:371 ../src/kickstartGui.py:380
-#: ../src/packages.py:209
+#: ../src/kickstartGui.py:371 ../src/kickstartGui.py:382
+#: ../src/packages.py:192
 #, fuzzy
 msgid "Retrieving package information"
 msgstr "اطلاعات دستگاه شبکه"
@@ -259,7 +260,7 @@ msgstr ""
 "یک دستگاه شبکه با نام %s از قبل وجود دارد.  لطفا نام دستگاه دیگری را انتخاب "
 "کنید"
 
-#: ../src/packages.py:146
+#: ../src/packages.py:147
 #, python-format
 msgid ""
 "Package selection is disabled due to an error in setup.  Please fix your "
@@ -268,11 +269,11 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../src/packages.py:203
+#: ../src/packages.py:186
 msgid "Package configuration is not applicable on upgrades."
 msgstr ""
 
-#: ../src/packages.py:216
+#: ../src/packages.py:199
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
@@ -420,6 +421,19 @@ msgstr ""
 #, fuzzy
 msgid "Error Saving Kickstart Config"
 msgstr "درباره‌ی پیکربند راه‌انداز شروعی"
+
+#: ../src/savefile.py:41
+msgid "Preview Options"
+msgstr "گزینه‌های پیش‌نما"
+
+#: ../src/savefile.py:49
+#, fuzzy
+msgid ""
+"You have choosen the following configuration. Click Save File to save the "
+"kickstart file."
+msgstr ""
+"شما پیکربندی بدنبال آمده را انتخاب کرده‌اید. ذخیره کردن پرونده را برای ذخیره‌ی "
+"پرونده‌ی راه‌اندازی شروعی کلیک کنید."
 
 #: tmp/system-config-kickstart.glade.h:1
 #, fuzzy
@@ -943,71 +957,67 @@ msgid "Preserve existing partitions"
 msgstr "نگهداشتن قسمت‌بندی‌های موجود"
 
 #: tmp/system-config-kickstart.glade.h:127
-msgid "Preview Options"
-msgstr "گزینه‌های پیش‌نما"
-
-#: tmp/system-config-kickstart.glade.h:128
 msgid "RAID"
 msgstr "RAID"
 
-#: tmp/system-config-kickstart.glade.h:129
+#: tmp/system-config-kickstart.glade.h:128
 msgid "RAID Device:"
 msgstr "دستگاه RAID:"
 
-#: tmp/system-config-kickstart.glade.h:130
+#: tmp/system-config-kickstart.glade.h:129
 msgid "RAID Level:"
 msgstr "سطح RAID:"
 
-#: tmp/system-config-kickstart.glade.h:131
+#: tmp/system-config-kickstart.glade.h:130
 msgid "RAID Options"
 msgstr "گزینه‌های RAID"
 
-#: tmp/system-config-kickstart.glade.h:132
+#: tmp/system-config-kickstart.glade.h:131
 #, fuzzy
 msgid "Raid Members:"
 msgstr "اعضای Raid"
 
-#: tmp/system-config-kickstart.glade.h:133
+#: tmp/system-config-kickstart.glade.h:132
 msgid "Reboot system after installation"
 msgstr "آغازگری مجدد سیستم بعد از نصب"
 
-#: tmp/system-config-kickstart.glade.h:134
+#: tmp/system-config-kickstart.glade.h:133
 msgid "Remove all existing partitions"
 msgstr "برداشتن تمام قسمت‌بندی‌های موجود"
 
-#: tmp/system-config-kickstart.glade.h:135
+#: tmp/system-config-kickstart.glade.h:134
 msgid "Remove existing Linux partitions"
 msgstr "برداشتن قسمت‌بندی‌های موجود لینوکس"
 
-#: tmp/system-config-kickstart.glade.h:136
+#: tmp/system-config-kickstart.glade.h:135
 msgid "Root Password:"
 msgstr "گذرواژه‌ی مدیر:"
 
-#: tmp/system-config-kickstart.glade.h:137
+#: tmp/system-config-kickstart.glade.h:136
 msgid "Run outside of the chroot environment"
 msgstr "اجرا کردن در خارج از محیط chroot"
 
-#: tmp/system-config-kickstart.glade.h:138
+#: tmp/system-config-kickstart.glade.h:137
 msgid "SELinux:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:139
+#: tmp/system-config-kickstart.glade.h:138
 msgid "SMB"
 msgstr "SMB"
 
-#: tmp/system-config-kickstart.glade.h:140
+#: tmp/system-config-kickstart.glade.h:139
 msgid "SMB Servers:"
 msgstr "کارگزارهای SMB:"
 
-#: tmp/system-config-kickstart.glade.h:141
+#: tmp/system-config-kickstart.glade.h:140
 msgid "SMB Workgroup:"
 msgstr "گروه‌کاری SMB:"
 
-#: tmp/system-config-kickstart.glade.h:142
+#: tmp/system-config-kickstart.glade.h:141
 msgid "Security level:"
 msgstr "سطح امنیت:"
 
-#: tmp/system-config-kickstart.glade.h:143
+#: tmp/system-config-kickstart.glade.h:142
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -1020,24 +1030,24 @@ msgstr ""
 "اطلاعات بیشتر در استفاده از دستگاه‌های RAID لطفا به نوشتارهای راه‌انداز شروعی "
 "مراجعه کنید."
 
-#: tmp/system-config-kickstart.glade.h:144
+#: tmp/system-config-kickstart.glade.h:143
 msgid "Specify an FTP username and password"
 msgstr "نام کاربری و گذرواژه‌ی اف‌تی‌پی را مشخص کنید"
 
-#: tmp/system-config-kickstart.glade.h:145
+#: tmp/system-config-kickstart.glade.h:144
 #, fuzzy
 msgid "Specify installation key:"
 msgstr "انجام دادن نصب جدید"
 
-#: tmp/system-config-kickstart.glade.h:146
+#: tmp/system-config-kickstart.glade.h:145
 msgid "Target Architecture:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:147
+#: tmp/system-config-kickstart.glade.h:146
 msgid "Time Zone:"
 msgstr "منطقه زمانی:"
 
-#: tmp/system-config-kickstart.glade.h:148
+#: tmp/system-config-kickstart.glade.h:147
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
@@ -1046,105 +1056,96 @@ msgstr ""
 "کنید. سپس می‌توانید یک دستگاه RAID که بتواند قالب‌بندی و سوار شود را ایجاد "
 "کنید."
 
-#: tmp/system-config-kickstart.glade.h:150
+#: tmp/system-config-kickstart.glade.h:149
 #, no-c-format
 msgid "Type your %post script below:"
 msgstr "پس‌دست‌نویس %p خود را در زیر تایپ کنید:"
 
-#: tmp/system-config-kickstart.glade.h:152
+#: tmp/system-config-kickstart.glade.h:151
 #, no-c-format
 msgid "Type your %pre script below:"
 msgstr "پیش دست‌نویس %p خود را در زیر تایپ کنید:"
 
-#: tmp/system-config-kickstart.glade.h:153
+#: tmp/system-config-kickstart.glade.h:152
 msgid "Upgrade an existing installation"
 msgstr "ارتقا دادن یک نصب موجود"
 
-#: tmp/system-config-kickstart.glade.h:154
+#: tmp/system-config-kickstart.glade.h:153
 msgid "Upgrade existing boot loader"
 msgstr "ارتقا دادن بارگذار آغازگر موجود"
 
-#: tmp/system-config-kickstart.glade.h:155
+#: tmp/system-config-kickstart.glade.h:154
 msgid "Use GRUB password"
 msgstr "استفاده از گذرواژه‌ی گروب"
 
-#: tmp/system-config-kickstart.glade.h:156
+#: tmp/system-config-kickstart.glade.h:155
 msgid "Use Shadow Passwords"
 msgstr "استفاده از گذرواژه‌های سایه"
 
-#: tmp/system-config-kickstart.glade.h:157
+#: tmp/system-config-kickstart.glade.h:156
 msgid "Use UTC clock"
 msgstr "استفاده از ساعت UTC"
 
-#: tmp/system-config-kickstart.glade.h:158
+#: tmp/system-config-kickstart.glade.h:157
 msgid "Use an interpreter:"
 msgstr "استفاده از یک مؤلف:"
 
-#: tmp/system-config-kickstart.glade.h:159
+#: tmp/system-config-kickstart.glade.h:158
 msgid "Use broadcast to find NIS server"
 msgstr "استفاده از پخش همگانی برای یافتن کارگزار NIS"
 
-#: tmp/system-config-kickstart.glade.h:160
+#: tmp/system-config-kickstart.glade.h:159
 #, fuzzy
 msgid "Use existing partition (onpart, e.g. hda1 or sdc3):"
 msgstr "استفاده از قسمت‌بندی موجود (onpart)"
 
-#: tmp/system-config-kickstart.glade.h:161
+#: tmp/system-config-kickstart.glade.h:160
 msgid "Use recommended swap size"
 msgstr "استفاده از اندازه‌ی حافظه‌ی مبادله‌ی سفارش شده"
 
-#: tmp/system-config-kickstart.glade.h:162
-msgid ""
-"You have choosen the following configuration. Click Save File to save the "
-"kickstart file. "
-msgstr ""
-"شما پیکربندی بدنبال آمده را انتخاب کرده‌اید. ذخیره کردن پرونده را برای ذخیره‌ی "
-"پرونده‌ی راه‌اندازی شروعی کلیک کنید."
-
-#: tmp/system-config-kickstart.glade.h:163
+#: tmp/system-config-kickstart.glade.h:161
 msgid "_Add"
 msgstr "ـافزودن"
 
-#: tmp/system-config-kickstart.glade.h:164
+#: tmp/system-config-kickstart.glade.h:162
 msgid "_Add Network Device"
 msgstr "ـافزودن دستگاه شبکه"
 
-#: tmp/system-config-kickstart.glade.h:165
+#: tmp/system-config-kickstart.glade.h:163
 msgid "_Delete"
 msgstr "ـحذف کردن"
 
-#: tmp/system-config-kickstart.glade.h:166
+#: tmp/system-config-kickstart.glade.h:164
 msgid "_Delete Network Device"
 msgstr "ـحذف کردن دستگاه شبکه"
 
-#: tmp/system-config-kickstart.glade.h:167
+#: tmp/system-config-kickstart.glade.h:165
 msgid "_Edit"
 msgstr "ـویرایش کردن"
 
-#: tmp/system-config-kickstart.glade.h:168
+#: tmp/system-config-kickstart.glade.h:166
 msgid "_Edit Network Device"
 msgstr "ـویرایش کردن دستگاه شبکه"
 
-#: tmp/system-config-kickstart.glade.h:169
+#: tmp/system-config-kickstart.glade.h:167
 msgid "_File"
 msgstr "ـپرونده"
 
-#: tmp/system-config-kickstart.glade.h:170
+#: tmp/system-config-kickstart.glade.h:168
 msgid "_Help"
 msgstr "ـراهنما"
 
-#: tmp/system-config-kickstart.glade.h:171
+#: tmp/system-config-kickstart.glade.h:169
 msgid "_Open File"
 msgstr "ـباز کردن پرونده"
 
-#: tmp/system-config-kickstart.glade.h:172
+#: tmp/system-config-kickstart.glade.h:170
 msgid "_Preview"
 msgstr "پیش‌ـنما"
 
-#: tmp/system-config-kickstart.glade.h:173
 #, fuzzy
-msgid "_Save to File"
-msgstr "ذخیره کردن به پرونده"
+#~ msgid "_Save to File"
+#~ msgstr "ذخیره کردن به پرونده"
 
 #~ msgid ""
 #~ "Kickstart Configurator @VERSION@\n"
