@@ -13,17 +13,16 @@ msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-07-22 10:09-0400\n"
-"PO-Revision-Date: 2010-05-14 08:52\n"
+"PO-Revision-Date: 2010-07-30 10:41\n"
 "Last-Translator: Yulia <ypoyarko@redhat.com>\n"
 "Language-Team: Russian\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "Generated-By: pygettext.py 1.1\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../src/auth.py:354
 msgid "Please fill in the authentication information"
@@ -174,7 +173,7 @@ msgstr "Kickstart"
 
 #: ../src/kickstartGui.py:144
 msgid "Create a kickstart file"
-msgstr "Создать файл kickstart"
+msgstr "Создать файл кикстарта"
 
 #: ../src/kickstartGui.py:166
 msgid "Subsection"
@@ -354,8 +353,7 @@ msgstr "Укажите точку монтирования для раздела
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:504
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "Точка монтирования \"%s\" уже используется. Выберите другую точку "
 "монтирования."
@@ -415,8 +413,7 @@ msgstr "Выберите раздел из списка."
 #: ../src/raidOptionsWindow.py:72
 #, python-format
 msgid "You currently have %d software RAID partition(s) free to use."
-msgstr ""
-"Сейчас для использования доступно %d свободных разделов программного RAID."
+msgstr "Сейчас для использования доступно %d свободных разделов программного RAID."
 
 #: ../src/raidWindow.py:201
 #, python-format
@@ -446,17 +443,16 @@ msgid "Preview Options"
 msgstr "Просмотреть опции"
 
 #: ../src/savefile.py:49
-#, fuzzy
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file."
 msgstr ""
-"Вы выбрали следующую конфигурацию. Нажмите \"Сохранить\" для сохранения "
-"файла kickstart."
+"Вы выбрали следующую конфигурацию. Нажмите «Сохранить» для сохранения "
+"файла."
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "<b>Advanced Configuration</b>"
-msgstr "<b>Расширенные настройки</b>"
+msgstr "<b>Дополнительные настройки</b>"
 
 #: tmp/system-config-kickstart.glade.h:2
 msgid "<b>Authentication Configuration</b>"
@@ -516,7 +512,7 @@ msgstr "<b>Структура</b>"
 
 #: tmp/system-config-kickstart.glade.h:16
 msgid "<b>Master Boot Record</b>"
-msgstr "<b>Master Boot Record</b>"
+msgstr "<b>MBR</b>"
 
 #: tmp/system-config-kickstart.glade.h:17
 msgid "<b>NIS Authentication</b>"
@@ -1025,11 +1021,11 @@ msgid ""
 "reliability compared to using an individual drive.  For more information on "
 "using RAID devices please consult the kickstart documentation."
 msgstr ""
-"Программный RAID позволяет вам объединять несколько дисков в устройство RAID "
+"Программный RAID позволяет объединить несколько дисков в устройство RAID "
 "большего размера. Устройство RAID может быть настроено для повышения "
-"производительности и надежности по сравнению с отдельным диском. За "
-"дополнительной информацией по использованию устройств RAID обратитесь к "
-"документации kickstart."
+"производительности и надёжности по сравнению с отдельным диском. За "
+"дополнительной информацией об устройствах RAID обратитесь к "
+"документации кикстарта."
 
 #: tmp/system-config-kickstart.glade.h:143
 msgid "Specify an FTP username and password"
@@ -1052,8 +1048,8 @@ msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
 msgstr ""
-"Для использования RAID вы должны сперва создать не меньше двух разделов типа "
-"'программный RAID'. После этого вы можете создать устройство RAID, которое "
+"Для использования RAID необходимо создать не меньше двух разделов типа "
+"«программный RAID». После этого можно создать устройство RAID, которое "
 "может быть отформатировано и смонтировано."
 
 #: tmp/system-config-kickstart.glade.h:149
@@ -1072,7 +1068,7 @@ msgstr "Обновить существующую систему"
 
 #: tmp/system-config-kickstart.glade.h:153
 msgid "Upgrade existing boot loader"
-msgstr "Обновить установленный начальный загрузчик"
+msgstr "Обновить установленный загрузчик"
 
 #: tmp/system-config-kickstart.glade.h:154
 msgid "Use GRUB password"
@@ -1096,7 +1092,7 @@ msgstr "Широковещательный поиск сервера NIS"
 
 #: tmp/system-config-kickstart.glade.h:159
 msgid "Use existing partition (onpart, e.g. hda1 or sdc3):"
-msgstr "Использовать существующий раздел (onpart, например, hda1 или sdc3):"
+msgstr "Использовать существующий раздел (onpart, например hda1 или sdc3):"
 
 #: tmp/system-config-kickstart.glade.h:160
 msgid "Use recommended swap size"
@@ -1142,5 +1138,3 @@ msgstr "Открыть файл"
 msgid "_Preview"
 msgstr "_Просмотр"
 
-#~ msgid "_Save to File"
-#~ msgstr "_Сохранить в файл"
