@@ -1,4 +1,4 @@
-# translation of system-config-kickstart.master.po to Korean
+# translation of system-config-kickstart.master.ko.po to Korean
 # Copyright (C) 2002 Red Hat, Inc
 #
 # Michelle Kim <mkim@redhat.com>, 2002.
@@ -7,16 +7,16 @@
 # Eunju Kim <eukim@redhat.com>, 2006, 2007, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: system-config-kickstart.master\n"
+"Project-Id-Version: system-config-kickstart.master.ko\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-22 10:02-0400\n"
-"PO-Revision-Date: 2009-09-23 15:12+1000\n"
-"Last-Translator: Eunju Kim <eukim@redhat.com>\n"
-"Language-Team: Korean <ko@li.org>\n"
-"Language: ko\n"
+"POT-Creation-Date: 2010-07-22 10:09-0400\n"
+"PO-Revision-Date: 2010-08-03 15:07+1000\n"
+"Last-Translator: \n"
+"Language-Team: Korean <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=1; plural=0;\n"
 "\n"
@@ -302,9 +302,8 @@ msgid "ext3"
 msgstr "ext3"
 
 #: ../src/partWindow.py:98
-#, fuzzy
 msgid "ext4"
-msgstr "ext2"
+msgstr "ext4"
 
 #. _("physical volume (LVM)"):"lvm",
 #: ../src/partWindow.py:100 ../src/partWindow.py:175
@@ -347,10 +346,8 @@ msgstr "해당 파티션에 대한 마운트 지점을 지정해 주십시오."
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:504
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
-msgstr ""
-"\"%s\" 마운트 지점은 이미 사용중입니다.  다른 마운트 지점을 선택해 주십시오."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
+msgstr "\"%s\" 마운트 지점은 이미 사용중입니다.  다른 마운트 지점을 선택해 주십시오."
 
 #: ../src/partWindow.py:524
 msgid ""
@@ -369,8 +366,8 @@ msgid ""
 "The partition you specified does not end in a number.  Partitions must have "
 "a partition number such as \"hda1\" or \"sda3\"."
 msgstr ""
-"지정하신 파티션명이 숫자로 끝나지 않습니다.  파티션명에는 \"hda1\"나 "
-"\"sda3\"와 같은 파티션 번호가 포함되어야 합니다."
+"지정하신 파티션명이 숫자로 끝나지 않습니다.  파티션명에는 \"hda1\"나 \"sda3"
+"\"와 같은 파티션 번호가 포함되어야 합니다."
 
 #: ../src/partition.py:72
 msgid ""
@@ -437,7 +434,6 @@ msgid "Preview Options"
 msgstr "미리보기 옵션"
 
 #: ../src/savefile.py:49
-#, fuzzy
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file."
@@ -649,7 +645,7 @@ msgstr "부트로더를 설치하지 않음"
 
 #: tmp/system-config-kickstart.glade.h:52
 msgid "Enable Fingerprint Reader"
-msgstr ""
+msgstr "지문인식기 활성화"
 
 #: tmp/system-config-kickstart.glade.h:53
 msgid "Enable Hesiod Support"
@@ -1129,5 +1125,3 @@ msgstr "파일 열기(_O)"
 msgid "_Preview"
 msgstr "미리보기(_P)"
 
-#~ msgid "_Save to File"
-#~ msgstr "파일로 저장(_S)"
