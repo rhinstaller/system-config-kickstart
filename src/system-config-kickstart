@@ -63,7 +63,7 @@ if __name__ == "__main__":
     op = optparse.OptionParser(add_help_option=False)
     op.add_option("-g", "--generate", nargs=1, type="string")
     op.add_option("-d", "--display", nargs=1, type="string")
-    op.add_option("-h", "--help")
+    op.add_option("-h", "--help", action="store_true", default=False)
 
     (opts, extra) = op.parse_args()
 
