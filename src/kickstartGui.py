@@ -120,13 +120,10 @@ class kickstartGui:
 
             try:
                 self.parser.readKickstart(self.file)
-            except KickstartError, e:
-                if e.value.find("\x00") != -1:
-                    msg = _("The kickstart file %s could not be opened.") % self.file
-                else:
-                    msg = _("The following error was found while parsing your "
-                            "kickstart configuration:\n\n%s" % e.value)
-            except IOError, e:
+            except (KickstartParseError, KickstartValueError) as e:
+                msg = _("The following error was found while parsing your "
+                        "kickstart configuration:\n\n%s" % e)
+            except KickstartError:
                 msg = _("The kickstart file %s could not be opened.") % self.file
 
             if msg:
@@ -325,13 +322,10 @@ class kickstartGui:
 
                 try:
                     self.parser.readKickstart(file)
-                except KickstartError, e:
-                    if e.value.find("\x00") != -1:
-                        msg = _("The kickstart file %s could not be opened.") % file
-                    else:
-                        msg = _("The following error was found while parsing your "
-                                "kickstart configuration:\n\n%s" % e.value)
-                except IOError, e:
+                except (KickstartParseError, KickstartValueError) as e:
+                    msg = _("The following error was found while parsing your "
+                            "kickstart configuration:\n\n%s" % e)
+                except KickstartError:
                     msg = _("The kickstart file %s could not be opened.") % file
 
                 if msg:
