@@ -75,10 +75,6 @@ class basic:
         self.platform_combo.set_active(0)
         self.platform_combo.connect("changed", self.platformChanged)
 
-        self.key_checkbutton = xml.get_widget("key_checkbutton")
-        self.key_entry = xml.get_widget("key_entry")
-        self.key_checkbutton.connect("toggled", self.keyChanged)
-
         self.langDict = langDict
 
         # set a default platform
@@ -197,14 +193,6 @@ class basic:
         else:
             self.ks.displaymode(displayMode=DISPLAY_MODE_GRAPHICAL)
 
-        if self.key_checkbutton.get_active():
-            if self.key_entry.get_text() == "":
-                self.ks.key(key=KS_INSTKEY_SKIP)
-            else:
-                self.ks.key(key=self.key_entry.get_text())
-        else:
-            self.ks.key(key="")
-
         return 0
 
     def languageLookup(self, args):
@@ -214,9 +202,6 @@ class basic:
         platform = entry.get_active_text()
         if platform:
             self.parent_class.platformTypeChanged(entry.get_active_text())
-
-    def keyChanged(self, args):
-        self.key_entry.set_sensitive(self.key_checkbutton.get_active())
 
     def applyKickstart(self):
         if self.ks.platform in self.platform_list:
@@ -260,13 +245,3 @@ class basic:
             self.root_passwd_entry.set_text(self.ks.rootpw.password)
             self.root_passwd_confirm_entry.set_text(self.ks.rootpw.password)
             self.encrypt_root_pw_checkbutton.set_active(self.ks.rootpw.isCrypted)
-
-        if self.ks.key.key == "":
-            self.key_checkbutton.set_active(False)
-            self.key_entry.set_text("")
-        elif self.ks.key.key == KS_INSTKEY_SKIP:
-            self.key_checkbutton.set_active(True)
-            self.key_entry.set_text("")
-        else:
-            self.key_checkbutton.set_active(True)
-            self.key_entry.set_text(self.ks.key.key)
