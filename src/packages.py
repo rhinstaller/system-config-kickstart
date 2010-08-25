@@ -32,9 +32,7 @@ import yum
 import yum.Errors
 from yum.constants import *
 from yum.misc import getCacheDir
-sys.path.append('/usr/lib/anaconda')
-sys.path.append('/usr/lib/anaconda/iw')
-import GroupSelector
+from pyanaconda.iw import GroupSelector
 
 from pykickstart.parser import Group
 
