@@ -64,7 +64,6 @@ class basic:
         self.reboot_checkbutton = xml.get_widget("reboot_checkbutton")
         self.text_install_checkbutton = xml.get_widget("text_install_checkbutton")
         self.ks.bootloader(md5pass="", password="")
-        self.interactive_checkbutton = xml.get_widget("interactive_checkbutton")
         self.encrypt_root_pw_checkbutton = xml.get_widget("encrypt_root_pw_checkbutton")
         self.lang_support_list = xml.get_widget("lang_support_list")
         self.platform_combo = xml.get_widget("platform_combo")
@@ -198,8 +197,6 @@ class basic:
         else:
             self.ks.displaymode(displayMode=DISPLAY_MODE_GRAPHICAL)
 
-        self.ks.interactive(interactive=self.interactive_checkbutton.get_active())
-
         if self.key_checkbutton.get_active():
             if self.key_entry.get_text() == "":
                 self.ks.key(key=KS_INSTKEY_SKIP)
@@ -258,9 +255,6 @@ class basic:
 
         if self.ks.displaymode.displayMode == DISPLAY_MODE_TEXT:
             self.text_install_checkbutton.set_active(True)
-
-        if self.ks.interactive.interactive == True:
-            self.interactive_checkbutton.set_active(True)
 
         if self.ks.rootpw.password != "":
             self.root_passwd_entry.set_text(self.ks.rootpw.password)
