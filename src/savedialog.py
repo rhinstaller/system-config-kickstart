@@ -71,9 +71,9 @@ class saveDialog:
 
                 try:
                     ksFile = open(self.dialog.filePath, "w")
-                except IOError, e:
+                except KickstartError, e:
                     msg = _("The following error occurred while saving the "
-                            "kickstart config %s: %s") % (e.filename, e.strerror)
+                            "kickstart config %s: %s") % (self.dialog.filePath, e)
                     dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_ERROR,
                                              gtk.BUTTONS_OK, msg)
                     dlg.set_title(_("Error Saving Kickstart Config"))
