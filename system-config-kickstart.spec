@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.8.6
+Version: 2.8.7
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -17,7 +17,7 @@ Obsoletes: ksconfig, redhat-config-kickstart, mkkickstart
 BuildRequires: desktop-file-utils, intltool, gettext
 Requires: pygtk2 >= 1.99.11, pygtk2-libglade, python >= 2.3.3, hwdata
 Requires: system-config-language, system-config-date, python-meh
-Requires: pykickstart >= 0.96, yum, anaconda >= 11.4.0.42-1, hicolor-icon-theme
+Requires: pykickstart >= 1.78, yum, anaconda >= 14.0, hicolor-icon-theme
 Requires: system-config-keyboard >= 1.3.1
 Requires(post): gtk2 >= 2.6
 Requires(postun): gtk2 >= 2.6
@@ -69,10 +69,25 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Fri Sep 10 2010 Chris Lumens <clumens@redhat.com> - 2.8.7-1
+- pykickstart raises KickstartError instead of IOError now. (clumens)
+- Clear the partition store whenever a file is loaded (#610740). (clumens)
+- Remove the key entry as well, since that command no longer exists. (clumens)
+- Remove the deprecated interactive mode. (clumens)
+- anaconda has changed all around, so fix the GroupSelector import. (clumens)
+- Fix --help argument handling (#621379). (clumens)
+- Update translation files (#617075). (clumens)
+
+* Wed Aug 11 2010 David Malcolm <dmalcolm@redhat.com> - 2.8.6-2
+- recompiling .py files against Python 2.7 (rhbz#623400)
+
 * Thu Jun 03 2010 Chris Lumens <clumens@redhat.com> - 2.8.6-1
 - Don't traceback when loading the Preview dialog a second time (#593259). (clumens)
 - Don't install the icon to /usr/share/system-config-kickstart too (#594361). (clumens)
 - Update translations.
+
+* Mon May 31 2010 Ville Skyttä <ville.skytta@iki.fi> - 2.8.5-2
+- Re-convert specfile to UTF-8.
 
 * Mon May 03 2010 Chris Lumens <clumens@redhat.com> - 2.8.5-1
 - Update to work with the new python-meh, which now uses report. (clumens)
