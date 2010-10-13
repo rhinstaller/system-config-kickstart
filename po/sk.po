@@ -6,19 +6,19 @@
 #
 # Mike Karas <zoliqe@gmail.com>, 2006.
 # Ján ONDREJ (SAL) <ondrejj(at)salstar.sk>, 2008.
-# Ondrej Šulek <feonsu@gmail.com>, 2009.
+# Ondrej Šulek <feonsu@gmail.com>, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: system-config-kickstart\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-07-22 10:09-0400\n"
-"PO-Revision-Date: 2009-09-22 21:58+0200\n"
+"PO-Revision-Date: 2010-10-11 16:27+0200\n"
 "Last-Translator: Ondrej Šulek <feonsu@gmail.com>\n"
 "Language-Team: Slovak <fedora-trans-sk@redhat.com>\n"
-"Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: sk\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 1.0\n"
 
@@ -302,9 +302,8 @@ msgid "ext3"
 msgstr "ext3"
 
 #: ../src/partWindow.py:98
-#, fuzzy
 msgid "ext4"
-msgstr "ext2"
+msgstr "ext4"
 
 #. _("physical volume (LVM)"):"lvm",
 #: ../src/partWindow.py:100 ../src/partWindow.py:175
@@ -427,8 +426,8 @@ msgstr "Zariadenia RAID"
 #, python-format
 msgid "The following error occurred while saving the kickstart config %s: %s"
 msgstr ""
-"Následovné chyby sa vyskytli pri ukladaní kickstart konfiguračného súboru "
-"%s: %s"
+"Následovné chyby sa vyskytli pri ukladaní kickstart konfiguračného súboru %"
+"s: %s"
 
 #: ../src/savedialog.py:79
 msgid "Error Saving Kickstart Config"
@@ -439,13 +438,12 @@ msgid "Preview Options"
 msgstr "Voľby náhľadu"
 
 #: ../src/savefile.py:49
-#, fuzzy
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file."
 msgstr ""
-"Zvolili ste následujúcu konfiguráciu. Kliknite na 'Uložiť súbor' pre "
-"uloženie súboru rýchleho štartu."
+"Vybrali ste následujúcu konfiguráciu. Kickstart súbor uložíte kliknutím na "
+"'Uložiť súbor'."
 
 #: tmp/system-config-kickstart.glade.h:1
 msgid "<b>Advanced Configuration</b>"
@@ -651,7 +649,7 @@ msgstr "Neinštalovať systémový zavádzač"
 
 #: tmp/system-config-kickstart.glade.h:52
 msgid "Enable Fingerprint Reader"
-msgstr ""
+msgstr "Povoliť snímač odtlačkov prstov"
 
 #: tmp/system-config-kickstart.glade.h:53
 msgid "Enable Hesiod Support"
@@ -1071,7 +1069,7 @@ msgstr "Použiť heslo pre GRUB"
 
 #: tmp/system-config-kickstart.glade.h:155
 msgid "Use Shadow Passwords"
-msgstr "Použiť shadow heslá"
+msgstr "Použiť tieňové heslá"
 
 #: tmp/system-config-kickstart.glade.h:156
 msgid "Use UTC clock"
