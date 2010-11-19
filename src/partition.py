@@ -293,9 +293,10 @@ class partition:
                 self.initlabel_yes_radiobutton.set_active(True)
             else:
                 self.initlabel_no_radiobutton.set_active(True)
-
         else:
             self.remove_parts_none_radiobutton.set_active(True)
+
+        self.part_store.clear()
 
         for part in self.ks.partition.partitions:
              self.partWindow.populateList(part)
