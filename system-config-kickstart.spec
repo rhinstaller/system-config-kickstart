@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.8.6.2
+Version: 2.8.6.3
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -69,6 +69,12 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Thu Jan 06 2011 Chris Lumens <clumens@redhat.com> 2.8.6.3-1
+- Clear out the partitioning store when opening a new file.
+  Resolves: rhbz#610740
+- Default to SHA512 for passwords.
+  Resolves: rhbz#633202
+
 * Mon Aug 09 2010 Chris Lumens <clumens@redhat.com> - 2.8.6.2-1
 - Update translation files (#588775). (clumens)
 
