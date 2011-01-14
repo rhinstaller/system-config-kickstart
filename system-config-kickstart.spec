@@ -86,7 +86,7 @@ fi
 - Don't install the icon to /usr/share/system-config-kickstart too (#594361). (clumens)
 - Update translations.
 
-* Mon May 31 2010 Ville Skytt‰ <ville.skytta@iki.fi> - 2.8.5-2
+* Mon May 31 2010 Ville Skytt√§ <ville.skytta@iki.fi> - 2.8.5-2
 - Re-convert specfile to UTF-8.
 
 * Mon May 03 2010 Chris Lumens <clumens@redhat.com> - 2.8.5-1
@@ -103,7 +103,7 @@ fi
 - Fix an import error (#530739, nelsoninva AT gmail.com).
 - Update lots of translations.
 
-* Mon Sep 14 2009 Ville Skytt‰ <ville.skytta@iki.fi> - 2.8.2-2
+* Mon Sep 14 2009 Ville Skytt√§ <ville.skytta@iki.fi> - 2.8.2-2
 - Convert specfile to UTF-8.
 
 * Tue Jul 28 2009 Chris Lumens <clumens@redhat.com> - 2.8.1-1
@@ -700,7 +700,7 @@ fi
 * Mon May 13 2002 Brent Fox <bfox@redhat.com> 2.0-8
 - Fixed bug #64835 to make UK keyboard 'uk' not 'gb'
 
-* Mon Apr 15 2002 Trond Eivind Glomsr¯d <teg@redhat.com> 2.0-7
+* Mon Apr 15 2002 Trond Eivind Glomsr√∏d <teg@redhat.com> 2.0-7
 - Update translations
 
 * Thu Apr 11 2002 Brent Fox <bfox@redhat.com>
