@@ -24,9 +24,8 @@
 import signal
 import sys, os
 
-from meh.dump import *
-from meh.ui.gui import GraphicalIntf
-from meh.handler import *
+from meh.dump import ExceptionDump
+from meh.handler import ExceptionHandler, Config
 
 sys.path.append("/usr/share/system-config-kickstart")
 
@@ -90,7 +89,8 @@ if __name__ == "__main__":
 
     try:
         import kickstartGui
-    except:
+        from meh.ui.gui import GraphicalIntf
+    except RuntimeError:
         print (_("Could not open display because no X server is running."))
         print (_("Try running 'system-config-kickstart --help' for a list of options."))
         sys.exit(0)
