@@ -80,6 +80,46 @@ class kickstartGui:
         gtk.main_quit()
         self.packages_class.cleanup()
 
+    def _readFile(self, f):
+        msg = None
+
+        try:
+            self.parser.readKickstart(f)
+            return True
+        except IOError, e:
+            msg = _("The file \"%s\" cannot be accessed.") % f
+        except KickstartError, e:
+            msg = _("The following error was found "
+                    "while parsing your kickstart "
+                    "configuration:\n\n%s") % e
+
+        if msg:
+            dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_ERROR,
+                                     gtk.BUTTONS_OK, msg)
+            dlg.set_title(_("Error Parsing Kickstart Config"))
+            dlg.set_position(gtk.WIN_POS_CENTER)
+            dlg.set_modal(True)
+            dlg.run()
+            dlg.destroy()
+            return False
+
+    def _apply(self):
+        try:
+            self.applyKsdata()
+            return True
+        except (getopt.GetoptError, KickstartError), e:
+            dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_ERROR,
+                                     gtk.BUTTONS_OK,
+                                     _("The following error was found "
+                                       "while parsing your kickstart "
+                                       "configuration:\n\n%s" % e))
+            dlg.set_title(_("Error Parsing Kickstart Config"))
+            dlg.set_position(gtk.WIN_POS_CENTER)
+            dlg.set_modal(True)
+            dlg.run()
+            dlg.destroy()
+            return False
+
     def __init__ (self, file):
         self.kickstartData = KickstartData()
 
@@ -87,19 +127,8 @@ class kickstartGui:
             self.kickstartHandlers = KickstartHandlers(self.kickstartData)
             self.parser = KickstartParser (self.kickstartData,
                                            self.kickstartHandlers)
-            try:
-                self.parser.readKickstart(file)
-            except KickstartError, e:
-                dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_ERROR,
-                                         gtk.BUTTONS_OK,
-                                         _("The following error was found "
-                                           "while parsing your kickstart "
-                                           "configuration:\n\n%s" % e))
-                dlg.set_title(_("Error Parsing Kickstart Config"))
-                dlg.set_position(gtk.WIN_POS_CENTER)
-                dlg.set_modal(True)
-                dlg.run()
-                dlg.destroy()
+
+            if not self._readFile(file):
                 sys.exit(0)
 
         self.xml = xml
@@ -182,19 +211,7 @@ class kickstartGui:
 	self.options_notebook.connect("switch-page", self.on_notebook_changed)
 
 	#show gui
-        try:
-            self.applyKsdata()
-        except (getopt.GetoptError, KickstartError), e:
-            dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_ERROR,
-                                     gtk.BUTTONS_OK,
-                                     _("The following error was found "
-                                       "while parsing your kickstart "
-                                       "configuration:\n\n%s" % e))
-            dlg.set_title(_("Error Parsing Kickstart Config"))
-            dlg.set_position(gtk.WIN_POS_CENTER)
-            dlg.set_modal(True)
-            dlg.run()
-            dlg.destroy()
+        if not self._apply():
             sys.exit(0)
 
 	self.toplevel.show()
@@ -299,19 +316,7 @@ class kickstartGui:
                 self.parser = KickstartParser (self.kickstartData,
                                                self.kickstartHandlers)
 
-                try:
-                    self.parser.readKickstart(file)
-                except KickstartError, e:
-                    dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_ERROR,
-                                             gtk.BUTTONS_OK,
-                                             _("The following error was found "
-                                               "while parsing your kickstart "
-                                               "configuration:\n\n%s" % e))
-                    dlg.set_title(_("Error Parsing Kickstart Config"))
-                    dlg.set_position(gtk.WIN_POS_CENTER)
-                    dlg.set_modal(True)
-                    dlg.run()
-                    dlg.destroy()
+                if not self._readFile(file):
                     fs.destroy()
                     return
 
@@ -324,19 +329,7 @@ class kickstartGui:
                            self.scripts_class]:
                     cl.ksdata = self.kickstartData
 
-                try:
-                    self.applyKsdata()
-                except (getopt.GetoptError, KickstartError), e:
-                    dlg = gtk.MessageDialog (None, 0, gtk.MESSAGE_ERROR,
-                                             gtk.BUTTONS_OK,
-                                             _("The following error was found "
-                                               "while parsing your kickstart "
-                                               "configuration:\n\n%s" % e))
-                    dlg.set_title(_("Error Parsing Kickstart Config"))
-                    dlg.set_position(gtk.WIN_POS_CENTER)
-                    dlg.set_modal(True)
-                    dlg.run()
-                    dlg.destroy()
+                if not self._apply():
                     fs.destroy()
                     return
 
