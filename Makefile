@@ -45,7 +45,7 @@ install: ${PKGNAME}.desktop
 	done && test -z "$$fail"
 
 archive: tag
-	git-archive --format=tar --prefix=$(PKGNAME)-$(VERSION)/ $(TAG) | gzip -9c > $(PKGNAME)-$(VERSION).tar.gz
+	git archive --format=tar --prefix=$(PKGNAME)-$(VERSION)/ $(TAG) | gzip -9c > $(PKGNAME)-$(VERSION).tar.gz
 	@echo "The archive is in $(PKGNAME)-$(VERSION).tar.gz"
 
 snapsrc: archive
