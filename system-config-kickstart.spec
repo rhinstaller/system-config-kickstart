@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files.
 Name: system-config-kickstart
 Version: 2.6.19.9
-Release: 1%{?dist}
+Release: 2%{?dist}
 URL: http://fedora.redhat.com/projects/config-tools/
 License: GPL
 ExclusiveOS: Linux
@@ -73,6 +73,9 @@ fi
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 
 %changelog
+* Thu Apr 07 2011 Chris Lumens <clumens@redhat.com> 2.6.19.9-2
+- Fix the Makefile so it'll build.
+
 * Thu Apr 07 2011 Chris Lumens <clumens@redhat.com> 2.6.19.9-1
 - Catch more places where we can crash on a nonexistent file.
   Resolves: rhbz#431950
