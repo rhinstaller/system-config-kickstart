@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.8.7
+Version: 2.8.8
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -69,6 +69,14 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Wed Jun 08 2011 Chris Lumens <clumens@redhat.com> - 2.8.8-1
+- Fix an importing bug caused by the previous patch. (clumens)
+- Don't traceback when starting up outside of X (#676338). (clumens)
+- Convert spec to UTF-8. (notting)
+
+* Wed Feb 09 2011 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.8.7-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_15_Mass_Rebuild
+
 * Fri Sep 10 2010 Chris Lumens <clumens@redhat.com> - 2.8.7-1
 - pykickstart raises KickstartError instead of IOError now. (clumens)
 - Clear the partition store whenever a file is loaded (#610740). (clumens)
