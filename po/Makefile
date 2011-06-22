@@ -1,8 +1,3 @@
-#
-# Makefile for the PO files (translation) catalog
-#
-# $Id$
-
 TOP	 = ../..
 
 # What is this package?
@@ -26,8 +21,6 @@ GLADEFILES = ../src/*.glade
 POFILES		= $(wildcard *.po)
 MOFILES		= $(patsubst %.po,%.mo,$(POFILES))
 SRCFILES	= $(wildcard ../src/*.py)
-
-#default:: clean
 
 all::  update-po $(MOFILES)
 
