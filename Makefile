@@ -1,11 +1,11 @@
-#License: GPL
-#Copyright Red Hat Inc.  Jan 2001
-
 PKGNAME=system-config-kickstart
 VERSION=$(shell awk '/Version:/ { print $$2 }' ${PKGNAME}.spec)
 RELEASE=$(shell awk '/Release:/ { print $$2 }' ${PKGNAME}.spec | sed -e 's|%.*$$||g')
 TAG=r$(VERSION)-$(RELEASE)
 SUBDIRS=man po
+
+TX_PULL_ARGS = -a --disable-overwrite
+TX_PUSH_ARGS = -s
 
 PREFIX=/usr
 
@@ -14,7 +14,8 @@ DATADIR=${PREFIX}/share
 
 PKGDATADIR=${DATADIR}/${PKGNAME}
 
-default: subdirs
+po-pull:
+	tx pull $(TX_PULL_ARGS)
 
 tag:
 	git tag -a -m "Tag as $(TAG)" -f $(TAG)
@@ -26,7 +27,7 @@ subdirs:
 	|| case "$(MFLAGS)" in *k*) fail=yes;; *) exit 1;; esac; \
 	done && test -z "$$fail"
 
-install: ${PKGNAME}.desktop
+install: ${PKGNAME}.desktop po-pull
 	mkdir -p $(INSTROOT)$(PKGDATADIR)
 	mkdir -p $(INSTROOT)/usr/bin
 	mkdir -p $(INSTROOT)/usr/share/applications
@@ -43,6 +44,7 @@ install: ${PKGNAME}.desktop
 	(cd $$d; $(MAKE) INSTROOT=$(INSTROOT) MANDIR=$(MANDIR) install) \
 		|| case "$(MFLAGS)" in *k*) fail=yes;; *) exit 1;; esac; \
 	done && test -z "$$fail"
+	git checkout -- po/$(PKGNAME).pot
 
 archive: tag
 	git archive --format=tar --prefix=$(PKGNAME)-$(VERSION)/ $(TAG) | gzip -9c > $(PKGNAME)-$(VERSION).tar.gz
@@ -51,7 +53,7 @@ archive: tag
 snapsrc: archive
 	@rpmbuild -ta $(PKGNAME)-$(VERSION).tar.gz
 
-local:
+local: po-pull
 	@rm -rf ${PKGNAME}-$(VERSION).tar.gz
 	@rm -rf /tmp/${PKGNAME}-$(VERSION) /tmp/${PKGNAME}
 	@dir=$$PWD; cp -a $$dir /tmp/${PKGNAME}-$(VERSION)
@@ -63,7 +65,7 @@ rpmlog:
 	@git log --pretty="format:- %s (%ae)" $(TAG).. |sed -e 's/@.*)/)/'
 	@echo
 
-bumpver:
+bumpver: po-pull
 	@NEWSUBVER=$$((`echo $(VERSION) |cut -d . -f 3` + 1)) ; \
 	NEWVERSION=`echo $(VERSION).$$NEWSUBVER |cut -d . -f 1-2,4` ; \
 	DATELINE="* `date "+%a %b %d %Y"` `git config user.name` <`git config user.email`> - $$NEWVERSION-1"  ; \
@@ -72,6 +74,8 @@ bumpver:
 	(head -n $$cl system-config-kickstart.spec ; echo "$$DATELINE" ; make --quiet rpmlog 2>/dev/null ; echo ""; cat speclog) > system-config-kickstart.spec.new ; \
 	mv system-config-kickstart.spec.new system-config-kickstart.spec ; rm -f speclog ; \
 	sed -i "s/Version: $(VERSION)/Version: $$NEWVERSION/" system-config-kickstart.spec ; \
+	@make -C po $(PKGNAME).pot-update ; \
+	tx push $(TX_PUSH_ARGS)
 
 clean:
 	@rm -f *~
