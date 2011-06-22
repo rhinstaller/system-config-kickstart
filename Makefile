@@ -57,7 +57,7 @@ local: po-pull
 	@rm -rf ${PKGNAME}-$(VERSION).tar.gz
 	@rm -rf /tmp/${PKGNAME}-$(VERSION) /tmp/${PKGNAME}
 	@dir=$$PWD; cp -a $$dir /tmp/${PKGNAME}-$(VERSION)
-	@dir=$$PWD; cd /tmp; tar -czSpf $$dir/${PKGNAME}-$(VERSION).tar.gz ${PKGNAME}-$(VERSION)
+	@dir=$$PWD; cd /tmp; tar --exclude=.git/* -czSpf $$dir/${PKGNAME}-$(VERSION).tar.gz ${PKGNAME}-$(VERSION)
 	@rm -rf /tmp/${PKGNAME}-$(VERSION)	
 	@echo "The archive is in ${PKGNAME}-$(VERSION).tar.gz"
 
