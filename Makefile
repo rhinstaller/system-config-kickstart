@@ -27,7 +27,7 @@ subdirs:
 	|| case "$(MFLAGS)" in *k*) fail=yes;; *) exit 1;; esac; \
 	done && test -z "$$fail"
 
-install: ${PKGNAME}.desktop po-pull
+install: ${PKGNAME}.desktop
 	mkdir -p $(INSTROOT)$(PKGDATADIR)
 	mkdir -p $(INSTROOT)/usr/bin
 	mkdir -p $(INSTROOT)/usr/share/applications
@@ -44,10 +44,15 @@ install: ${PKGNAME}.desktop po-pull
 	(cd $$d; $(MAKE) INSTROOT=$(INSTROOT) MANDIR=$(MANDIR) install) \
 		|| case "$(MFLAGS)" in *k*) fail=yes;; *) exit 1;; esac; \
 	done && test -z "$$fail"
-	git checkout -- po/$(PKGNAME).pot
 
 archive: tag
-	git archive --format=tar --prefix=$(PKGNAME)-$(VERSION)/ $(TAG) | gzip -9c > $(PKGNAME)-$(VERSION).tar.gz
+	git archive --format=tar --prefix=$(PKGNAME)-$(VERSION)/ $(TAG) > $(PKGNAME)-$(VERSION).tar
+	mkdir $(PKGNAME)-$(VERSION)
+	cp -r po $(PKGNAME)-$(VERSION)
+	tar -rf $(PKGNAME)-$(VERSION).tar $(PKGNAME)-$(VERSION)
+	gzip -9 $(PKGNAME)-$(VERSION).tar
+	rm -rf $(PKGNAME)-$(VERSION)
+	git checkout -- po/$(PKGNAME).pot
 	@echo "The archive is in $(PKGNAME)-$(VERSION).tar.gz"
 
 snapsrc: archive
