@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.8.8
+Version: 2.8.9
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -70,6 +70,16 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Mon May 14 2012 Chris Lumens <clumens@redhat.com> - 2.8.9-1
+- Put /usr/share/system-config-kickstart at the front of the path (#820748). (clumens)
+- Fix "make local" to not pack up .git/ as well. (clumens)
+- Update Makefiles to work with new translation system. (clumens)
+- BuildRequires transifex-client. (clumens)
+- Ignore po/*.po files. (clumens)
+- Remove translation files. (clumens)
+- Fix translation files so "msgfmt -c " passes and they'll upload to transifex. (clumens)
+- Add transifex configuration file. (clumens)
+
 * Wed Jun 08 2011 Chris Lumens <clumens@redhat.com> - 2.8.8-1
 - Fix an importing bug caused by the previous patch. (clumens)
 - Don't traceback when starting up outside of X (#676338). (clumens)
