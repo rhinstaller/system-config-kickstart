@@ -27,7 +27,7 @@ import sys, os
 from meh.dump import ExceptionDump
 from meh.handler import ExceptionHandler, Config
 
-sys.path.append("/usr/share/system-config-kickstart")
+sys.path.insert(0, "/usr/share/system-config-kickstart")
 
 ##
 ## I18N

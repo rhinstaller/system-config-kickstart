@@ -23,7 +23,7 @@
 import string
 import sys
 import os
-sys.path.append("/usr/share/system-config-language")
+sys.path.insert(0, "/usr/share/system-config-language")
 import language_backend
 from system_config_keyboard import keyboard
 
