@@ -4,15 +4,15 @@
 #
 # Amitakhya Phukan <aphukan@redhat.com>, 2008, 2010.
 # Amitakhya Phukan <aphukan@fedoraproject.org>, 2008, 2009.
+# Nilamdyuti Goswami <ngoswami@redhat.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: system-config-kickstart.as\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-22 10:02-0400\n"
-"PO-Revision-Date: 2010-05-13 13:05+0530\n"
-"Last-Translator: Amitakhya Phukan <aphukan@redhat.com>\n"
-"Language-Team: Assamese <fedora-trans-as@redhat.com>\n"
-"Language: as\n"
+"POT-Creation-Date: 2010-07-15 16:09+0530\n"
+"PO-Revision-Date: 2011-04-06 14:56+0000\n"
+"Last-Translator: Nilamdyuti Goswami <ngoswami@redhat.com>\n"
+"Language-Team: Assamese <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -47,8 +47,8 @@ msgstr "IBM zSeries/s390"
 msgid "Root passwords do not match."
 msgstr "root ৰ গুপ্তশব্দ নিমিলে ।"
 
-#: ../src/basic.py:152 ../src/install.py:217 ../src/partWindow.py:577
-#: ../src/partition.py:256 ../src/raidWindow.py:276
+#: ../src/basic.py:152 ../src/install.py:217 ../src/partition.py:256
+#: ../src/partWindow.py:577 ../src/raidWindow.py:276
 msgid "Error"
 msgstr "ত্ৰুটি"
 
@@ -281,8 +281,39 @@ msgstr "উন্নয়নৰ ক্ষেত্ৰত সৰঞ্জাম ব
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
+msgstr "সৰঞ্জাম সংক্ৰান্ত তথ্য ডাউনলোডৰ সমস্যাৰ কাৰণে সৰঞ্জাম নিৰ্ব্বাচন নিষ্ক্ৰিয় কৰা হৈছে ।"
+
+#: ../src/partition.py:72
+msgid ""
+"Device/\n"
+"Partition Number"
 msgstr ""
-"সৰঞ্জাম সংক্ৰান্ত তথ্য ডাউনলোডৰ সমস্যাৰ কাৰণে সৰঞ্জাম নিৰ্ব্বাচন নিষ্ক্ৰিয় কৰা হৈছে ।"
+"যন্ত্ৰ/\n"
+"বিভাজন সংখ্যা"
+
+#: ../src/partition.py:74
+msgid ""
+"Mount Point/\n"
+"RAID"
+msgstr ""
+"মাউন্ট-পইন্ট/\n"
+"RAID"
+
+#: ../src/partition.py:76
+msgid "Type"
+msgstr "ধৰন"
+
+#: ../src/partition.py:78
+msgid "Format"
+msgstr "পুনৰাকৃত"
+
+#: ../src/partition.py:80
+msgid "Size (MB)"
+msgstr "আকাৰ (MB)"
+
+#: ../src/partition.py:98 ../src/partition.py:138
+msgid "Please select a partition from the list."
+msgstr "অনুগ্ৰহ কৰি তালিকাৰ পৰা এটা বিভাজন নিৰ্ব্বাচন কৰক ।"
 
 #: ../src/partWindow.py:97
 msgid "ext2"
@@ -337,8 +368,7 @@ msgstr "বিভাজনৰ বাবে এটা মাউন্ট-পই�
 #. They are trying to use a mount point already in use.  Let's complain
 #: ../src/partWindow.py:504
 #, python-format
-msgid ""
-"The mount point \"%s\" is already in use.  Please select another mount point."
+msgid "The mount point \"%s\" is already in use.  Please select another mount point."
 msgstr ""
 "\"%s\" মাউন্ট-পইন্ট বৰ্তমানে ব্যৱহৃত হৈছে । অনুগ্ৰহ কৰি এটা পৃথক মাউন্ট-পইন্ট নিৰ্ব্বাচন "
 "কৰক ।"
@@ -362,38 +392,6 @@ msgid ""
 msgstr ""
 "আপোনাৰ দ্বাৰা উল্লিখিত বিভাজনৰ নামৰ শেষে কোনো সংখ্যা উপস্থিত নাই । বিভাজনৰ নামে "
 "এটা সংখ্যা উপস্থিত থাকা আৱশ্যক যেনে \"hda1\" বা \"sda3\""
-
-#: ../src/partition.py:72
-msgid ""
-"Device/\n"
-"Partition Number"
-msgstr ""
-"যন্ত্ৰ/\n"
-"বিভাজন সংখ্যা"
-
-#: ../src/partition.py:74
-msgid ""
-"Mount Point/\n"
-"RAID"
-msgstr ""
-"মাউন্ট-পইন্ট/\n"
-"RAID"
-
-#: ../src/partition.py:76
-msgid "Type"
-msgstr "ধৰন"
-
-#: ../src/partition.py:78
-msgid "Format"
-msgstr "পুনৰাকৃত"
-
-#: ../src/partition.py:80
-msgid "Size (MB)"
-msgstr "আকাৰ (MB)"
-
-#: ../src/partition.py:98 ../src/partition.py:138
-msgid "Please select a partition from the list."
-msgstr "অনুগ্ৰহ কৰি তালিকাৰ পৰা এটা বিভাজন নিৰ্ব্বাচন কৰক ।"
 
 #: ../src/raidOptionsWindow.py:72
 #, python-format
@@ -428,12 +426,11 @@ msgid "Preview Options"
 msgstr "পূৰ্বৰূপ প্ৰদৰ্শন সংক্ৰান্ত বিকল্প"
 
 #: ../src/savefile.py:49
-#, fuzzy
 msgid ""
 "You have choosen the following configuration. Click Save File to save the "
 "kickstart file."
 msgstr ""
-"আপুনি নিম্নোক্ত বিন্যাস নিৰ্ব্বাচন কৰেছেন । নথিপত্ৰ সংৰক্ষণত ক্লিক কৰি kickstart "
+"আপুনি নিম্নোক্ত বিন্যাস নিৰ্ব্বাচন কৰিছে । নথিপত্ৰ সংৰক্ষণত ক্লিক কৰি kickstart "
 "নথিপত্ৰ সংৰক্ষণ কৰক ।"
 
 #: tmp/system-config-kickstart.glade.h:1
@@ -564,8 +561,8 @@ msgid ""
 "An error in this script might cause your kickstart installation to fail. Do "
 "not include the %post command at the beginning."
 msgstr ""
-"এই স্ক্ৰিপ্টত উপস্থিত কোনো ত্ৰুটিৰ কাৰণে আপোনাৰ kickstart সংস্থাপন ব্যৰ্থ হ'ব পাৰে । "
-"%post আদেশৰ আৰম্ভত অন্তৰ্ভুক্ত নকৰিব ।"
+"এই স্ক্ৰিপ্টত উপস্থিত কোনো ত্ৰুটিৰ কাৰণে আপোনাৰ kickstart সংস্থাপন ব্যৰ্থ হ'ব পাৰে । %"
+"post আদেশৰ আৰম্ভত অন্তৰ্ভুক্ত নকৰিব ।"
 
 #: tmp/system-config-kickstart.glade.h:35
 #, no-c-format
@@ -573,8 +570,8 @@ msgid ""
 "An error in this script might cause your kickstart installation to fail. Do "
 "not include the %pre command at the beginning."
 msgstr ""
-"এই স্ক্ৰিপ্টত উপস্থিত কোনো ত্ৰুটিৰ কাৰণে আপোনাৰ kickstart সংস্থাপন ব্যৰ্থ হ'ব পাৰে । "
-"%pre আদেশ আৰম্ভত অন্তৰ্ভুক্ত নকৰিব ।"
+"এই স্ক্ৰিপ্টত উপস্থিত কোনো ত্ৰুটিৰ কাৰণে আপোনাৰ kickstart সংস্থাপন ব্যৰ্থ হ'ব পাৰে । %"
+"pre আদেশ আৰম্ভত অন্তৰ্ভুক্ত নকৰিব ।"
 
 #: tmp/system-config-kickstart.glade.h:36
 msgid "Authentication options are not applicable on upgrades."
