@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.8.6.4
+Version: 2.8.6.5
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -69,6 +69,10 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Mon Oct 15 2012 Chris Lumens <clumens@redhat.com> - 2.8.6.5-1
+- Update Assamese translation.
+  Resolves: rhbz#819813
+
 * Fri Aug 05 2011 Chris Lumens <clumens@redhat.com> 2.8.6.4-1
 - Don't traceback when starting up outside of X.
   Resolves: rhbz#676338
