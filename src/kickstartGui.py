@@ -40,6 +40,7 @@ import packages
 import scripts
 import os
 import progressWindow
+from pykickstart.errors import *
 from pykickstart.parser import *
 from pykickstart.version import makeVersion
 

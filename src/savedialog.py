@@ -26,6 +26,8 @@ import savefile
 import signal
 import kickstartGui
 
+from pykickstart.errors import *
+
 ##
 ## I18N
 ##
