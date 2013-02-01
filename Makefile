@@ -38,7 +38,7 @@ install: ${PKGNAME}.desktop
 	for py in src/*py ; do \
 		sed -e s,@VERSION@,$(VERSION),g $${py} > $(INSTROOT)$(PKGDATADIR)/`basename $${py}` ; \
 	done
-	install src/${PKGNAME}.glade $(INSTROOT)$(PKGDATADIR)
+	install src/*glade $(INSTROOT)$(PKGDATADIR)
 	install pixmaps/${PKGNAME}.png $(INSTROOT)/usr/share/icons/hicolor/48x48/apps
 	install ${PKGNAME}.desktop $(INSTROOT)/usr/share/applications/${PKGNAME}.desktop
 	for d in $(SUBDIRS); do \

@@ -32,7 +32,7 @@ import yum
 import yum.Errors
 from yum.constants import *
 from yum.misc import getCacheDir
-from pyanaconda.iw import GroupSelector
+import GroupSelector
 
 from pykickstart.parser import Group
 
@@ -216,10 +216,10 @@ class Packages:
             self.package_frame.add(disabledLabel)
             self.package_frame.show_all()
             progress_window.hide()
-            
+
             return
 
-        self.gs = GroupSelector.GroupSelector(self.y, lambda fn: "/usr/share/anaconda/ui/" + fn)
+        self.gs = GroupSelector.GroupSelector(self.y)
         self.gs.doRefresh()
 
         self.package_frame.add(self.gs.vbox)
