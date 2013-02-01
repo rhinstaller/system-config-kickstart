@@ -80,7 +80,7 @@ bumpver: po-pull
 	(head -n $$cl system-config-kickstart.spec ; echo "$$DATELINE" ; make --quiet rpmlog 2>/dev/null ; echo ""; cat speclog) > system-config-kickstart.spec.new ; \
 	mv system-config-kickstart.spec.new system-config-kickstart.spec ; rm -f speclog ; \
 	sed -i "s/Version: $(VERSION)/Version: $$NEWVERSION/" system-config-kickstart.spec ; \
-	@make -C po $(PKGNAME).pot-update ; \
+	make -C po update-po ; \
 	tx push $(TX_PUSH_ARGS)
 
 clean:
