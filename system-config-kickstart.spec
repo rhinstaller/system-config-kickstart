@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.8.10
+Version: 2.9.0
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -69,6 +69,13 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Fri Feb 01 2013 Chris Lumens <clumens@redhat.com> - 2.9.0-1
+- Fix another problem updating the .po file.
+- Remove support for python-meh.  It requires gtk3.
+- Add the old anaconda GroupSelector.py to system-config-kickstart (#859928).
+- It helps to import the exceptions I want to catch (#893282).
+- Do @VERSION@ substitution on the main program, too (#866563).
+
 * Mon May 14 2012 Chris Lumens <clumens@redhat.com> - 2.8.10-1
 - Update glade file to fix translation building. (clumens)
 - Fix various problems when packaging up translations. (clumens)

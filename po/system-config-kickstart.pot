@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-14 15:46-0400\n"
+"POT-Creation-Date: 2013-02-01 16:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,9 +41,181 @@ msgstr ""
 msgid "Root passwords do not match."
 msgstr ""
 
-#: ../src/basic.py:147 ../src/partition.py:256 ../src/partWindow.py:577
-#: ../src/raidWindow.py:276 ../src/install.py:217
+#: ../src/basic.py:147 ../src/install.py:217 ../src/partition.py:256
+#: ../src/partWindow.py:577 ../src/raidWindow.py:276
 msgid "Error"
+msgstr ""
+
+#: ../src/GroupSelector.py:147
+#, python-format
+msgid "Packages in %s"
+msgstr ""
+
+#: ../src/GroupSelector.py:433
+#, python-format
+msgid "Optional packages selected: %(inst)d of %(cnt)d"
+msgstr ""
+
+#: ../src/GroupSelector.py:435
+#, python-format
+msgid "<i>%s</i>"
+msgstr ""
+
+#: ../src/GroupSelector.py:495
+msgid "Uncategorized"
+msgstr ""
+
+#: ../src/install.py:132
+msgid "Please enter an NFS server."
+msgstr ""
+
+#: ../src/install.py:135
+msgid "Please enter an NFS directory."
+msgstr ""
+
+#: ../src/install.py:146
+msgid "Please enter an FTP server."
+msgstr ""
+
+#: ../src/install.py:153
+msgid "Please enter an FTP directory."
+msgstr ""
+
+#: ../src/install.py:159
+msgid "Please enter an FTP user name."
+msgstr ""
+
+#: ../src/install.py:162
+msgid "Please enter an FTP password."
+msgstr ""
+
+#: ../src/install.py:178
+msgid "Please enter an HTTP server."
+msgstr ""
+
+#: ../src/install.py:181
+msgid "Please enter an HTTP server directory."
+msgstr ""
+
+#: ../src/install.py:203
+msgid "Please enter a hard drive directory."
+msgstr ""
+
+#: ../src/install.py:206
+msgid "Please enter a hard drive partition."
+msgstr ""
+
+#: ../src/kickstartGui.py:82
+msgid ""
+"This program is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
+"Ave, Cambridge, MA 02139, USA."
+msgstr ""
+
+#: ../src/kickstartGui.py:125 ../src/kickstartGui.py:327
+#, python-format
+msgid ""
+"The following error was found while parsing your kickstart configuration:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: ../src/kickstartGui.py:128 ../src/kickstartGui.py:330
+#, python-format
+msgid "The kickstart file %s could not be opened."
+msgstr ""
+
+#: ../src/kickstartGui.py:133 ../src/kickstartGui.py:335
+msgid "Error Parsing Kickstart Config"
+msgstr ""
+
+#: ../src/kickstartGui.py:141
+msgid "Kickstart"
+msgstr ""
+
+#: ../src/kickstartGui.py:142
+msgid "Create a kickstart file"
+msgstr ""
+
+#: ../src/kickstartGui.py:164
+msgid "Subsection"
+msgstr ""
+
+#: ../src/kickstartGui.py:168
+msgid "Basic Configuration"
+msgstr ""
+
+#: ../src/kickstartGui.py:169
+msgid "Installation Method"
+msgstr ""
+
+#: ../src/kickstartGui.py:170
+msgid "Boot Loader Options"
+msgstr ""
+
+#: ../src/kickstartGui.py:171
+msgid "Partition Information"
+msgstr ""
+
+#: ../src/kickstartGui.py:172
+msgid "Network Configuration"
+msgstr ""
+
+#: ../src/kickstartGui.py:173
+msgid "Authentication"
+msgstr ""
+
+#: ../src/kickstartGui.py:174
+msgid "Firewall Configuration"
+msgstr ""
+
+#: ../src/kickstartGui.py:175
+msgid "Display Configuration"
+msgstr ""
+
+#: ../src/kickstartGui.py:176
+msgid "Package Selection"
+msgstr ""
+
+#: ../src/kickstartGui.py:177
+msgid "Pre-Installation Script"
+msgstr ""
+
+#: ../src/kickstartGui.py:178
+msgid "Post-Installation Script"
+msgstr ""
+
+#: ../src/kickstartGui.py:244
+msgid "About Kickstart Configurator"
+msgstr ""
+
+#: ../src/kickstartGui.py:268
+msgid "Help is not available."
+msgstr ""
+
+#: ../src/kickstartGui.py:356
+#, python-format
+msgid "The file \"%s\" cannot be accessed."
+msgstr ""
+
+#: ../src/kickstartGui.py:366 ../src/kickstartGui.py:377
+#: ../src/packages.py:207
+msgid "Retrieving package information"
+msgstr ""
+
+#: ../src/raidOptionsWindow.py:72
+#, python-format
+msgid "You currently have %d software RAID partition(s) free to use."
 msgstr ""
 
 #: ../src/partition.py:72
@@ -72,6 +244,25 @@ msgstr ""
 
 #: ../src/partition.py:98 ../src/partition.py:138
 msgid "Please select a partition from the list."
+msgstr ""
+
+#: ../src/packages.py:144
+#, python-format
+msgid ""
+"Package selection is disabled due to an error in setup.  Please fix your "
+"repository configuration and try again.\n"
+"\n"
+"%s"
+msgstr ""
+
+#: ../src/packages.py:201
+msgid "Package configuration is not applicable on upgrades."
+msgstr ""
+
+#: ../src/packages.py:214
+msgid ""
+"Package selection is disabled due to problems downloading package "
+"information."
 msgstr ""
 
 #: ../src/network.py:73
@@ -106,12 +297,12 @@ msgid ""
 "device name"
 msgstr ""
 
-#: ../src/savedialog.py:75
+#: ../src/savedialog.py:77
 #, python-format
 msgid "The following error occurred while saving the kickstart config %s: %s"
 msgstr ""
 
-#: ../src/savedialog.py:79
+#: ../src/savedialog.py:81
 msgid "Error Saving Kickstart Config"
 msgstr ""
 
@@ -133,136 +324,13 @@ msgid ""
 "kickstart file."
 msgstr ""
 
-#: ../src/kickstartGui.py:81
-msgid ""
-"This program is free software; you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation; either version 2 of the License, or (at your option) "
-"any later version.\n"
-"\n"
-"This program is distributed in the hope that it will be useful, but WITHOUT "
-"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
-"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details.\n"
-"\n"
-"You should have received a copy of the GNU General Public License along with "
-"this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
-"Ave, Cambridge, MA 02139, USA."
+#: ../src/bootloader.py:150
+msgid "Grub passwords do not match.  Please try again."
 msgstr ""
 
-#: ../src/kickstartGui.py:124 ../src/kickstartGui.py:326
+#: ../src/bootloader.py:197
 #, python-format
-msgid ""
-"The following error was found while parsing your kickstart configuration:\n"
-"\n"
-"%s"
-msgstr ""
-
-#: ../src/kickstartGui.py:127 ../src/kickstartGui.py:329
-#, python-format
-msgid "The kickstart file %s could not be opened."
-msgstr ""
-
-#: ../src/kickstartGui.py:132 ../src/kickstartGui.py:334
-msgid "Error Parsing Kickstart Config"
-msgstr ""
-
-#: ../src/kickstartGui.py:140
-msgid "Kickstart"
-msgstr ""
-
-#: ../src/kickstartGui.py:141
-msgid "Create a kickstart file"
-msgstr ""
-
-#: ../src/kickstartGui.py:163
-msgid "Subsection"
-msgstr ""
-
-#: ../src/kickstartGui.py:167
-msgid "Basic Configuration"
-msgstr ""
-
-#: ../src/kickstartGui.py:168
-msgid "Installation Method"
-msgstr ""
-
-#: ../src/kickstartGui.py:169
-msgid "Boot Loader Options"
-msgstr ""
-
-#: ../src/kickstartGui.py:170
-msgid "Partition Information"
-msgstr ""
-
-#: ../src/kickstartGui.py:171
-msgid "Network Configuration"
-msgstr ""
-
-#: ../src/kickstartGui.py:172
-msgid "Authentication"
-msgstr ""
-
-#: ../src/kickstartGui.py:173
-msgid "Firewall Configuration"
-msgstr ""
-
-#: ../src/kickstartGui.py:174
-msgid "Display Configuration"
-msgstr ""
-
-#: ../src/kickstartGui.py:175
-msgid "Package Selection"
-msgstr ""
-
-#: ../src/kickstartGui.py:176
-msgid "Pre-Installation Script"
-msgstr ""
-
-#: ../src/kickstartGui.py:177
-msgid "Post-Installation Script"
-msgstr ""
-
-#: ../src/kickstartGui.py:243
-msgid "About Kickstart Configurator"
-msgstr ""
-
-#: ../src/kickstartGui.py:267
-msgid "Help is not available."
-msgstr ""
-
-#: ../src/kickstartGui.py:355
-#, python-format
-msgid "The file \"%s\" cannot be accessed."
-msgstr ""
-
-#: ../src/kickstartGui.py:365 ../src/kickstartGui.py:376
-#: ../src/packages.py:207
-msgid "Retrieving package information"
-msgstr ""
-
-#: ../src/raidOptionsWindow.py:72
-#, python-format
-msgid "You currently have %d software RAID partition(s) free to use."
-msgstr ""
-
-#: ../src/packages.py:144
-#, python-format
-msgid ""
-"Package selection is disabled due to an error in setup.  Please fix your "
-"repository configuration and try again.\n"
-"\n"
-"%s"
-msgstr ""
-
-#: ../src/packages.py:201
-msgid "Package configuration is not applicable on upgrades."
-msgstr ""
-
-#: ../src/packages.py:214
-msgid ""
-"Package selection is disabled due to problems downloading package "
-"information."
+msgid "Bootloader options are not applicable to the %s platform"
 msgstr ""
 
 #: ../src/partWindow.py:97
@@ -352,57 +420,39 @@ msgstr ""
 msgid "Raid Devices"
 msgstr ""
 
-#: ../src/install.py:132
-msgid "Please enter an NFS server."
-msgstr ""
-
-#: ../src/install.py:135
-msgid "Please enter an NFS directory."
-msgstr ""
-
-#: ../src/install.py:146
-msgid "Please enter an FTP server."
-msgstr ""
-
-#: ../src/install.py:153
-msgid "Please enter an FTP directory."
-msgstr ""
-
-#: ../src/install.py:159
-msgid "Please enter an FTP user name."
-msgstr ""
-
-#: ../src/install.py:162
-msgid "Please enter an FTP password."
-msgstr ""
-
-#: ../src/install.py:178
-msgid "Please enter an HTTP server."
-msgstr ""
-
-#: ../src/install.py:181
-msgid "Please enter an HTTP server directory."
-msgstr ""
-
-#: ../src/install.py:203
-msgid "Please enter a hard drive directory."
-msgstr ""
-
-#: ../src/install.py:206
-msgid "Please enter a hard drive partition."
-msgstr ""
-
-#: ../src/bootloader.py:150
-msgid "Grub passwords do not match.  Please try again."
-msgstr ""
-
-#: ../src/bootloader.py:197
-#, python-format
-msgid "Bootloader options are not applicable to the %s platform"
-msgstr ""
-
 #: ../src/auth.py:354
 msgid "Please fill in the authentication information"
+msgstr ""
+
+#: tmp/GroupSelector.glade.h:1
+msgid "_Optional packages"
+msgstr ""
+
+#: tmp/GroupSelector.glade.h:2
+msgid "dialog1"
+msgstr ""
+
+#: tmp/GroupSelector.glade.h:3
+msgid ""
+"Some packages associated with this group are not required to be installed "
+"but may provide additional functionality.  Please choose the packages which "
+"you would like to have installed."
+msgstr ""
+
+#: tmp/GroupSelector.glade.h:4
+msgid "_Select"
+msgstr ""
+
+#: tmp/GroupSelector.glade.h:5
+msgid "_Select all optional packages"
+msgstr ""
+
+#: tmp/GroupSelector.glade.h:6
+msgid "_Deselect"
+msgstr ""
+
+#: tmp/GroupSelector.glade.h:7
+msgid "_Deselect all optional packages"
 msgstr ""
 
 #: tmp/system-config-kickstart.glade.h:1
