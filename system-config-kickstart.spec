@@ -18,7 +18,7 @@ BuildRequires: desktop-file-utils, intltool, gettext
 BuildRequires: transifex-client
 Requires: pygtk2 >= 1.99.11, pygtk2-libglade, python >= 2.3.3, hwdata
 Requires: system-config-language, system-config-date, python-meh
-Requires: pykickstart >= 1.78, yum, anaconda >= 14.0, hicolor-icon-theme
+Requires: pykickstart >= 1.78, yum, hicolor-icon-theme
 Requires: system-config-keyboard >= 1.3.1
 Requires(post): gtk2 >= 2.6
 Requires(postun): gtk2 >= 2.6
