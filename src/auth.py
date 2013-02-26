@@ -345,7 +345,7 @@ class auth:
         self.hesiodCheck.connect("toggled", self.enableHesiod)
         self.sambaCheck.connect("toggled", self.enableSamba)
 
-        self.authCombobox.set_active(0)
+        self.authCombobox.set_active(2)
 
     def updateKS(self, ksHandler):
         self.ks = ksHandler
