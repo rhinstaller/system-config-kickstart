@@ -481,7 +481,7 @@ class GroupSelector:
         # conceivably should be handled by yum
         grps = {}
         for g in self.ayum.comps.groups:
-            if g.user_visible and self.ayum._groupHasPackages(g):
+            if self.ayum._groupHasPackages(g):
                 grps[g.groupid] = g
 
         for cat in self.ayum.comps.categories:
