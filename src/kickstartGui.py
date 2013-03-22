@@ -153,7 +153,6 @@ class kickstartGui:
 	self.preview_menu = xml.get_widget("preview_menu")
 	self.save_menu = xml.get_widget("save_menu")
 	self.quit_menu = xml.get_widget("quit_menu")
-	self.help_menu = xml.get_widget("help_menu")
 	self.about_menu = xml.get_widget("about_menu")
 
 	#populate category list
@@ -208,7 +207,6 @@ class kickstartGui:
 	self.preview_menu.connect("activate", self.on_activate_preview_options)
 	self.save_menu.connect("activate", self.on_activate_save_options)
 	self.quit_menu.connect("activate", gtk.main_quit)
-	self.help_menu.connect("activate", self.on_help_button_clicked)
 	self.about_menu.connect("activate", self.on_about_activate)
 	self.category_view.connect("cursor_changed", self.on_list_view_row_activated)
 	self.options_notebook.connect("switch-page", self.on_notebook_changed)
@@ -252,29 +250,6 @@ class kickstartGui:
         dlg.set_copyright(COPYRIGHT)
 	rc = dlg.run()
         dlg.destroy()
-
-    #display help manual
-    def on_help_button_clicked (self, args):
-        help_pages = map (lambda str: "file:///usr/share/doc/system-config-kickstart-" + "@VERSION@" + "/system-config-kickstart-" + str + ".html",
-                          ["basic", "bootloader", "install", "partitions",
-                          "network", "auth", "firewall", "xconfig",
-                          "pkgs", "prescript", "postinstall"])
-	page = (help_pages [self.options_notebook.get_current_page ()])
-
-	path = "/usr/bin/htmlview"
-
-	if path == None:
-	    dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_WARNING, gtk.BUTTONS_OK,
-				    (_("Help is not available.")))
-	    dlg.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
-	    dlg.set_icon(iconPixbuf)
-	    dlg.run()
-	    dlg.destroy()
-	    return
-
-	pid = os.fork()
-	if not pid:
-	    os.execv(path, [path, page])
 
     # Copy possible UI changes back to the kickstartData object.
     def getAllData(self, *args):
