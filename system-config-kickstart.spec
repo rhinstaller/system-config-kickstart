@@ -60,7 +60,7 @@ fi
 
 %files -f %{name}.lang
 %defattr(-,root,root,-)
-%doc COPYING doc/*
+%doc COPYING
 %{_bindir}/%{name}
 %dir %{_datadir}/%{name}
 %{_datadir}/%{name}/*
