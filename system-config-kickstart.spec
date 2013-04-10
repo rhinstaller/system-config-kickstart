@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.9.0
+Version: 2.9.1
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -70,6 +70,13 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Wed Apr 10 2013 Chris Lumens <clumens@redhat.com> - 2.9.1-1
+- Fix an error reading the timezone in generate mode (#916346, #924764). (clumens)
+- Remove the documentation (#915737). (clumens)
+- Display hidden groups in the package selection UI (#915029). (clumens)
+- Default to SHA512, same as anaconda (#915013). (clumens)
+- Add the system-config-keyboard dep back in (#909355). (clumens)
+
 * Fri Feb 01 2013 Chris Lumens <clumens@redhat.com> - 2.9.0-1
 - Fix another problem updating the .po file.
 - Remove support for python-meh.  It requires gtk3.

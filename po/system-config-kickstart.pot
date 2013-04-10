@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-01 16:24+0000\n"
+"POT-Creation-Date: 2013-04-10 16:55-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,7 +41,7 @@ msgstr ""
 msgid "Root passwords do not match."
 msgstr ""
 
-#: ../src/basic.py:147 ../src/install.py:217 ../src/partition.py:256
+#: ../src/basic.py:147 ../src/partition.py:256 ../src/install.py:217
 #: ../src/partWindow.py:577 ../src/raidWindow.py:276
 msgid "Error"
 msgstr ""
@@ -63,6 +63,175 @@ msgstr ""
 
 #: ../src/GroupSelector.py:495
 msgid "Uncategorized"
+msgstr ""
+
+#: ../src/network.py:73
+msgid "Device"
+msgstr ""
+
+#: ../src/network.py:76
+msgid "Network Type"
+msgstr ""
+
+#: ../src/network.py:79 ../src/network.py:114 ../src/network.py:196
+#: ../src/network.py:251 ../src/network.py:347
+msgid "Static IP"
+msgstr ""
+
+#: ../src/network.py:161 ../src/network.py:219
+msgid "Please fill in the network information"
+msgstr ""
+
+#: ../src/network.py:173 ../src/network.py:231
+msgid "Please enter a valid gateway address."
+msgstr ""
+
+#: ../src/network.py:185 ../src/network.py:243
+msgid "Please enter a valid nameserver address."
+msgstr ""
+
+#: ../src/network.py:271
+#, python-format
+msgid ""
+"A network device with the name %s already exists.  Please choose another "
+"device name"
+msgstr ""
+
+#: ../src/partition.py:72
+msgid ""
+"Device/\n"
+"Partition Number"
+msgstr ""
+
+#: ../src/partition.py:74
+msgid ""
+"Mount Point/\n"
+"RAID"
+msgstr ""
+
+#: ../src/partition.py:76
+msgid "Type"
+msgstr ""
+
+#: ../src/partition.py:78
+msgid "Format"
+msgstr ""
+
+#: ../src/partition.py:80
+msgid "Size (MB)"
+msgstr ""
+
+#: ../src/partition.py:98 ../src/partition.py:138
+msgid "Please select a partition from the list."
+msgstr ""
+
+#: ../src/kickstartGui.py:82
+msgid ""
+"This program is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
+"Ave, Cambridge, MA 02139, USA."
+msgstr ""
+
+#: ../src/kickstartGui.py:125 ../src/kickstartGui.py:302
+#, python-format
+msgid ""
+"The following error was found while parsing your kickstart configuration:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: ../src/kickstartGui.py:128 ../src/kickstartGui.py:305
+#, python-format
+msgid "The kickstart file %s could not be opened."
+msgstr ""
+
+#: ../src/kickstartGui.py:133 ../src/kickstartGui.py:310
+msgid "Error Parsing Kickstart Config"
+msgstr ""
+
+#: ../src/kickstartGui.py:141
+msgid "Kickstart"
+msgstr ""
+
+#: ../src/kickstartGui.py:142
+msgid "Create a kickstart file"
+msgstr ""
+
+#: ../src/kickstartGui.py:163
+msgid "Subsection"
+msgstr ""
+
+#: ../src/kickstartGui.py:167
+msgid "Basic Configuration"
+msgstr ""
+
+#: ../src/kickstartGui.py:168
+msgid "Installation Method"
+msgstr ""
+
+#: ../src/kickstartGui.py:169
+msgid "Boot Loader Options"
+msgstr ""
+
+#: ../src/kickstartGui.py:170
+msgid "Partition Information"
+msgstr ""
+
+#: ../src/kickstartGui.py:171
+msgid "Network Configuration"
+msgstr ""
+
+#: ../src/kickstartGui.py:172
+msgid "Authentication"
+msgstr ""
+
+#: ../src/kickstartGui.py:173
+msgid "Firewall Configuration"
+msgstr ""
+
+#: ../src/kickstartGui.py:174
+msgid "Display Configuration"
+msgstr ""
+
+#: ../src/kickstartGui.py:175
+msgid "Package Selection"
+msgstr ""
+
+#: ../src/kickstartGui.py:176
+msgid "Pre-Installation Script"
+msgstr ""
+
+#: ../src/kickstartGui.py:177
+msgid "Post-Installation Script"
+msgstr ""
+
+#: ../src/kickstartGui.py:242
+msgid "About Kickstart Configurator"
+msgstr ""
+
+#: ../src/kickstartGui.py:331
+#, python-format
+msgid "The file \"%s\" cannot be accessed."
+msgstr ""
+
+#: ../src/kickstartGui.py:341 ../src/kickstartGui.py:352
+#: ../src/packages.py:207
+msgid "Retrieving package information"
+msgstr ""
+
+#: ../src/raidOptionsWindow.py:72
+#, python-format
+msgid "You currently have %d software RAID partition(s) free to use."
 msgstr ""
 
 #: ../src/install.py:132
@@ -105,147 +274,6 @@ msgstr ""
 msgid "Please enter a hard drive partition."
 msgstr ""
 
-#: ../src/kickstartGui.py:82
-msgid ""
-"This program is free software; you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation; either version 2 of the License, or (at your option) "
-"any later version.\n"
-"\n"
-"This program is distributed in the hope that it will be useful, but WITHOUT "
-"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
-"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details.\n"
-"\n"
-"You should have received a copy of the GNU General Public License along with "
-"this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
-"Ave, Cambridge, MA 02139, USA."
-msgstr ""
-
-#: ../src/kickstartGui.py:125 ../src/kickstartGui.py:327
-#, python-format
-msgid ""
-"The following error was found while parsing your kickstart configuration:\n"
-"\n"
-"%s"
-msgstr ""
-
-#: ../src/kickstartGui.py:128 ../src/kickstartGui.py:330
-#, python-format
-msgid "The kickstart file %s could not be opened."
-msgstr ""
-
-#: ../src/kickstartGui.py:133 ../src/kickstartGui.py:335
-msgid "Error Parsing Kickstart Config"
-msgstr ""
-
-#: ../src/kickstartGui.py:141
-msgid "Kickstart"
-msgstr ""
-
-#: ../src/kickstartGui.py:142
-msgid "Create a kickstart file"
-msgstr ""
-
-#: ../src/kickstartGui.py:164
-msgid "Subsection"
-msgstr ""
-
-#: ../src/kickstartGui.py:168
-msgid "Basic Configuration"
-msgstr ""
-
-#: ../src/kickstartGui.py:169
-msgid "Installation Method"
-msgstr ""
-
-#: ../src/kickstartGui.py:170
-msgid "Boot Loader Options"
-msgstr ""
-
-#: ../src/kickstartGui.py:171
-msgid "Partition Information"
-msgstr ""
-
-#: ../src/kickstartGui.py:172
-msgid "Network Configuration"
-msgstr ""
-
-#: ../src/kickstartGui.py:173
-msgid "Authentication"
-msgstr ""
-
-#: ../src/kickstartGui.py:174
-msgid "Firewall Configuration"
-msgstr ""
-
-#: ../src/kickstartGui.py:175
-msgid "Display Configuration"
-msgstr ""
-
-#: ../src/kickstartGui.py:176
-msgid "Package Selection"
-msgstr ""
-
-#: ../src/kickstartGui.py:177
-msgid "Pre-Installation Script"
-msgstr ""
-
-#: ../src/kickstartGui.py:178
-msgid "Post-Installation Script"
-msgstr ""
-
-#: ../src/kickstartGui.py:244
-msgid "About Kickstart Configurator"
-msgstr ""
-
-#: ../src/kickstartGui.py:268
-msgid "Help is not available."
-msgstr ""
-
-#: ../src/kickstartGui.py:356
-#, python-format
-msgid "The file \"%s\" cannot be accessed."
-msgstr ""
-
-#: ../src/kickstartGui.py:366 ../src/kickstartGui.py:377
-#: ../src/packages.py:207
-msgid "Retrieving package information"
-msgstr ""
-
-#: ../src/raidOptionsWindow.py:72
-#, python-format
-msgid "You currently have %d software RAID partition(s) free to use."
-msgstr ""
-
-#: ../src/partition.py:72
-msgid ""
-"Device/\n"
-"Partition Number"
-msgstr ""
-
-#: ../src/partition.py:74
-msgid ""
-"Mount Point/\n"
-"RAID"
-msgstr ""
-
-#: ../src/partition.py:76
-msgid "Type"
-msgstr ""
-
-#: ../src/partition.py:78
-msgid "Format"
-msgstr ""
-
-#: ../src/partition.py:80
-msgid "Size (MB)"
-msgstr ""
-
-#: ../src/partition.py:98 ../src/partition.py:138
-msgid "Please select a partition from the list."
-msgstr ""
-
 #: ../src/packages.py:144
 #, python-format
 msgid ""
@@ -263,38 +291,6 @@ msgstr ""
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
-msgstr ""
-
-#: ../src/network.py:73
-msgid "Device"
-msgstr ""
-
-#: ../src/network.py:76
-msgid "Network Type"
-msgstr ""
-
-#: ../src/network.py:79 ../src/network.py:114 ../src/network.py:196
-#: ../src/network.py:251 ../src/network.py:347
-msgid "Static IP"
-msgstr ""
-
-#: ../src/network.py:161 ../src/network.py:219
-msgid "Please fill in the network information"
-msgstr ""
-
-#: ../src/network.py:173 ../src/network.py:231
-msgid "Please enter a valid gateway address."
-msgstr ""
-
-#: ../src/network.py:185 ../src/network.py:243
-msgid "Please enter a valid nameserver address."
-msgstr ""
-
-#: ../src/network.py:271
-#, python-format
-msgid ""
-"A network device with the name %s already exists.  Please choose another "
-"device name"
 msgstr ""
 
 #: ../src/savedialog.py:77
