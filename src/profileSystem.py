@@ -56,17 +56,10 @@ class ProfileSystem:
         self.ks.keyboard(keyboard=kbd.get())
 
     def getTimezone(self):
-        lines = open('/etc/sysconfig/clock', 'r').readlines()
+        zone = os.path.realpath("/etc/localtime")
+        zone = zone.replace("/usr/share/zoneinfo/", "")
 
-        for line in lines:
-            if line[:4] == "ZONE":
-                tag, zone = string.split(line, '=')
-
-        zone = string.replace(zone, '"', "")
-        zone = string.replace(zone, "'", "")
-        zone = string.strip(zone)
-
-        self.ks.timezone(timezone=zone, isUtc=False)
+        self.ks.timezone(timezone=zone.strip(), isUtc=False)
 
     def getRootPassword(self):
         if os.access('/etc/shadow', os.R_OK) == 1:
