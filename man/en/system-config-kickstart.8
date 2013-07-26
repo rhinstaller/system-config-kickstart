@@ -1,19 +1,30 @@
-.TH SYSTEM-CONFIG-KICKSTART 8 "Wed 13 June 2001" "Linux" "Kickstart Configurator"
-.UC 4
+.TH SYSTEM-CONFIG-KICKSTART 8 "Fri 26 June 2013" "Linux" "Kickstart Configurator"
 .SH NAME
 system-config-kickstart \- graphical interface for creating kickstart files
 .SH SYNOPSIS
-\fBsystem-config-kickstart\fR 
+\fBsystem-config-kickstart\fR [KSFILE]
 .SH DESCRIPTION
-\fBsystem-config-kickstart\fR provides a simple method of creating a kickstart file that can be used to automate the installation process on Red Hat Linux.
+\fBsystem-config-kickstart\fR provides a simple method of creating a kickstart file
+that can be used to automate the installation process on Red Hat Enterprise Linux,
+Fedora, and derived distributions.
+.PP
+If given, the program will take its initial settings from the KSFILE provided on
+the command line.  This allows editing of existing kickstart files.
+.PP
+Currently, this program has some serious limitations.  For example, it cannot work
+with LVM nor do advanced RAID and BTRFS configurations.  These are supported by
+kickstart, but the graphical program does not provide a way to set them up nor
+manipulate them in existing kickstart files.
 
-.SH OPTIONS 
-None
-.SH FILES
-\fI/usr/bin/system-config-kickstart\fP
-.br
-\fI/usr/share/system-config-kickstart/*\fP
-.br
+.SH OPTIONS
+.IP "\fB\-\-help\fP" 10
+Print out program usage.
+.IP "\fB\-\-generate FILENAME\fP" 10
+Examine the system and create a kickstart file that more or less matches, writing
+the output to FILENAME.
+.IP "\fB\-\-display DISPLAY#\fP" 10
+Specify the X display to use.
+
 .SH EXAMPLES
 To run the program type:
 .LP
@@ -25,12 +36,7 @@ Report bugs to <http://bugzilla.redhat.com>.
 
 .SH AUTHORS
 .nf
+Chris Lumens <clumens@redhat.com>
 Brent Fox <bfox@redhat.com>
 Tammy Fox <tfox@redhat.com>
 .fi
-
-
-
-
-
-
