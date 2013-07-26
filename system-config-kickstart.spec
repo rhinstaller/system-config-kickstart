@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.9.1
+Version: 2.9.2
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -69,6 +69,12 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Fri Jul 26 2013 Chris Lumens <clumens@redhat.com> - 2.9.2-1
+- Transifex has moved, so update the config. (clumens)
+- Remove the Japanese-specific man page. (clumens)
+- Update the system-config-kickstart man page to something useful (#948447). (clumens)
+- Fix a typo. (clumens)
+
 * Wed Apr 10 2013 Chris Lumens <clumens@redhat.com> - 2.9.1-1
 - Fix an error reading the timezone in generate mode (#916346, #924764). (clumens)
 - Remove the documentation (#915737). (clumens)
