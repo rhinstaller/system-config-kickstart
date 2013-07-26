@@ -65,7 +65,6 @@ fi
 %dir %{_datadir}/%{name}
 %{_datadir}/%{name}/*
 %{_mandir}/man8/%{name}*
-%lang(ja) %{_mandir}/ja/man8/%{name}*
 %attr(0644,root,root) %{_datadir}/applications/%{name}.desktop
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
