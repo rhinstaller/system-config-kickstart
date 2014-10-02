@@ -47,7 +47,7 @@ class ProfileSystem:
         self.ks.clearpart(type=CLEARPART_TYPE_LINUX)
 
     def getLang(self):
-        default, langs = self.languageBackend.getInstalledLangs()
+        default, langs = self.languageBackend.get_installed_langs()
         self.ks.lang(lang=default)
 
     def getKeyboard(self):
