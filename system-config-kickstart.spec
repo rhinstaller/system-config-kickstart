@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.9.2
+Version: 2.9.3
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -69,6 +69,9 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Mon Jan 05 2015 Chris Lumens <clumens@redhat.com> - 2.9.3-1
+- Fix name of getInstalledLangs (#1135813). (clumens)
+
 * Fri Jul 26 2013 Chris Lumens <clumens@redhat.com> - 2.9.2-1
 - Transifex has moved, so update the config. (clumens)
 - Remove the Japanese-specific man page. (clumens)
