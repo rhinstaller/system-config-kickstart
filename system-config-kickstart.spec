@@ -1,6 +1,6 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.9.3
+Version: 2.9.4
 Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
@@ -68,7 +68,11 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
-* Tue May 10 2016 David Cantrell <david.l.cantrell@gmail.com> - 2.9.3-1
+* Tue May 10 2016 David Cantrell <dcantrell@redhat.com> - 2.9.4-1
+- New version.
+  Related: rhbz#1303020
+
+* Tue May 10 2016 David Cantrell <dcantrell@redhat.com> - 2.9.3-1
 - Fetch latest translations from Zanata
   Resolves: rhbz#1303020
 
