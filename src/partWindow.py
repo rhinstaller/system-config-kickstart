@@ -95,7 +95,7 @@ class partWindow:
             self.mountPointCombo.append_text(i)
 
         self.fsTypesDict = { _("ext2"):"ext2", _("ext3"):"ext3",
-                             _("ext4"): "ext4",
+                             _("ext4"): "ext4", _("xfs"):"xfs",
 #                               _("physical volume (LVM)"):"lvm",
                              _("software RAID"):"raid",
                              _("swap"):"swap", _("vfat"):"vfat",
@@ -107,7 +107,7 @@ class partWindow:
             self.fsTypeCombo.append_text(i)
 
         try:
-            fsTypeSelect = self.fsTypes.index("ext4")
+            fsTypeSelect = self.fsTypes.index("xfs")
         except:
             fsTypeSelect = 0
 
@@ -230,7 +230,7 @@ class partWindow:
         self.mountPointCombo.entry.set_text("")
         self.mountPointCombo.set_sensitive(True)
         try:
-            fsTypeSelect = self.fsTypes.index("ext4")
+            fsTypeSelect = self.fsTypes.index("xfs")
         except:
             fsTypeSelect = 0
         self.fsTypeCombo.set_active(fsTypeSelect)

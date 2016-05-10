@@ -61,7 +61,7 @@ class raidWindow:
         self.raid_cancel_button = xml.get_widget("raid_cancel_button")
 
         mountPoints = ["/", "/boot", "/home", "/var", "/tmp", "/usr", "/opt"]
-        self.fsTypesList = [ "ext2", "ext3", "ext4", "raid", "swap", "vfat" ]
+        self.fsTypesList = [ "ext2", "ext3", "ext4", "raid", "swap", "vfat", "xfs" ]
         self.raidDeviceList = ['md0', 'md1', 'md2', 'md3', 'md4', 'md5',
                                'md6', 'md7', 'md8', 'md9', 'md10', 'md11',
                                'md12', 'md13', 'md14', 'md15']
