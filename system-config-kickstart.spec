@@ -15,7 +15,6 @@ Source0: %{name}-%{version}.tar.gz
 
 Obsoletes: ksconfig, redhat-config-kickstart, mkkickstart
 BuildRequires: desktop-file-utils, intltool, gettext
-BuildRequires: transifex-client
 Requires: pygtk2 >= 1.99.11, pygtk2-libglade, python >= 2.3.3
 Requires: system-config-language, system-config-date
 Requires: pykickstart >= 1.78, yum, hicolor-icon-theme
@@ -70,7 +69,19 @@ fi
 
 %changelog
 * Tue May 10 2016 David Cantrell <david.l.cantrell@gmail.com> - 2.9.3-1
-- Fetch latest translations from Zanata (#1303020)
+- Fetch latest translations from Zanata
+  Resolves: rhbz#1303020
+
+* Tue Jan 21 2014 David Cantrell <dcantrell@redhat.com> - 2.9.2-4
+- Add 'xfs' as a valid filesystem option
+  Resolves: rhbz#1037494
+
+* Tue Jan 21 2014 David Cantrell <dcantrell@redhat.com> - 2.9.2-3
+- Update translations
+  Resolves: rhbz#1030380
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 2.9.2-2
+- Mass rebuild 2013-12-27
 
 * Fri Jul 26 2013 Chris Lumens <clumens@redhat.com> - 2.9.2-1
 - Transifex has moved, so update the config. (clumens)
