@@ -631,7 +631,7 @@ fi
 - present an error message if run in console mode (bug #78737)
 * Tue Dec 10 2002 Brent Fox <bfox@redhat.com> 2.3.5-1
 - Rebuild for completeness
-* Tue Dec 02 2002 Brent Fox <bfox@redhat.com> 2.3.4-3
+* Mon Dec 02 2002 Brent Fox <bfox@redhat.com> 2.3.4-3
 - more work on the profiling.  exposed it with a command line option.  I think that's good enough.
 * Mon Dec 02 2002 Brent Fox <bfox@redhat.com> 2.3.4-2
 - rebuild for completeness
@@ -659,7 +659,7 @@ fi
 * Tue Aug 27 2002 Brent Fox <bfox@redhat.com> 2.3.3-1
 - Make customizing the firewall settings work again
 
-* Thu Aug 23 2002 Brent Fox <bfox@redhat.com> 2.3.2-17
+* Fri Aug 23 2002 Brent Fox <bfox@redhat.com> 2.3.2-17
 - bump release num
 
 * Sat Aug 17 2002 Brent Fox <bfox@redhat.com> 2.3.2-16
