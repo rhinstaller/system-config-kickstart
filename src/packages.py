@@ -153,9 +153,12 @@ class sckYumBase(yum.YumBase):
 
         if callback: callback.next_task()
 
-        # If we're on a release, we want to try the base repo first.  Otherwise,
-        # try development.  If neither of those works, we have a problem.
-        if "fedora" in map(lambda repo: repo.id, self.repos.listEnabled()):
+        repoids = map(lambda repo: repo.id, self.repos.listEnabled())
+        rhelRepos = filter(lambda repoid: "rhel-7" in repoid, repoids)
+
+        if rhelRepos:
+            repoorder = rhelRepos
+        elif "fedora" in repoids:
             repoorder = ["fedora", "rawhide", "development"]
         else:
             repoorder = ["rawhide", "development", "fedora"]
