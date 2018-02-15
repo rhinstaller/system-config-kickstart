@@ -17,7 +17,8 @@ Obsoletes: ksconfig, redhat-config-kickstart, mkkickstart
 BuildRequires: desktop-file-utils, intltool, gettext
 BuildRequires: transifex-client
 Requires: pygtk2 >= 1.99.11, pygtk2-libglade, python2 >= 2.3.3
-Requires: system-config-language, system-config-date
+Requires: system-config-language
+Requires: python2-pytz
 Requires: python2-kickstart, yum, hicolor-icon-theme
 Requires: system-config-keyboard >= 1.3.1
 Requires(post): gtk2 >= 2.6

@@ -30,7 +30,7 @@ import crypt
 import getopt
 
 from system_config_keyboard import keyboard, keyboard_models
-from scdate.core import zonetab
+import pytz
 from hardwareLists import langDict
 
 import kickstartGui
@@ -44,8 +44,6 @@ from pykickstart.constants import *
 import gettext
 gtk.glade.bindtextdomain("system-config-kickstart")
 _ = lambda x: gettext.ldgettext("system-config-kickstart", x)
-
-sys.path.append("/usr/share/system-config-date")
 
 
 class basic:
@@ -113,8 +111,16 @@ class basic:
         except:
             self.keyboard_combo.set_active(self.keyboard_list.index(self.keyboard_dict["us"][0]))
 
-        zt = zonetab.ZoneTab()
-        self.timezone_list = [ x.tz for x in zt.getEntries() ]
+        # For the timezones, use common_timezones plus some of the Etc/ zones in all_timezones
+        # We want Etc/UTC, Etc/GMT, and Etc/GMT(+|-)x *except* the repeat GMT zones, like GMT0,
+        # GMT+0, GMT-0.
+        # Note that the pytz lists are lazy lists that don't actually do anything until iterated over.
+        etc_zones = [ t for t in pytz.all_timezones
+                        if t.startswith('Etc/') and
+                            (t == "Etc/UTC" or t == "Etc/GMT" or
+                                t.startswith("Etc/GMT-") or t.startswith("Etc/GMT+"))]
+        etc_zones_filtered = filter(lambda t: t != "Etc/GMT-0" and t != "Etc/GMT+0", etc_zones)
+        self.timezone_list = etc_zones_filtered + [ t for t in pytz.common_timezones ]
         self.timezone_list.sort()
 
         try:
