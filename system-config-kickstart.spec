@@ -1,12 +1,11 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
 Version: 2.9.3
-Release: 1%{?dist}
+Release: 7%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
 ExclusiveOS: Linux
 Group: System Environment/Base
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 # This is a Red Hat maintained package which is specific to
 # our distribution.  Thus the source is only available from
@@ -44,21 +43,6 @@ desktop-file-install --vendor "" --delete-original \
 
 %find_lang %name
 
-%clean
-rm -rf %{buildroot}
-
-%post
-touch --no-create %{_datadir}/icons/hicolor
-if [ -x /usr/bin/gtk-update-icon-cache ]; then
-  gtk-update-icon-cache -q %{_datadir}/icons/hicolor
-fi
-
-%postun
-touch --no-create %{_datadir}/icons/hicolor
-if [ -x /usr/bin/gtk-update-icon-cache ]; then
-  gtk-update-icon-cache -q %{_datadir}/icons/hicolor
-fi
-
 %files -f %{name}.lang
 %defattr(-,root,root,-)
 %doc COPYING
@@ -70,6 +54,24 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Fri Feb 09 2018 Fedora Release Engineering <releng@fedoraproject.org> - 2.9.3-7
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
+
+* Thu Jan 18 2018 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 2.9.3-6
+- Remove obsolete scriptlets
+
+* Thu Jul 27 2017 Fedora Release Engineering <releng@fedoraproject.org> - 2.9.3-5
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Mass_Rebuild
+
+* Sat Feb 11 2017 Fedora Release Engineering <releng@fedoraproject.org> - 2.9.3-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
+
+* Fri Feb 05 2016 Fedora Release Engineering <releng@fedoraproject.org> - 2.9.3-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
+
+* Fri Jun 19 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.9.3-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
+
 * Mon Jan 05 2015 Chris Lumens <clumens@redhat.com> - 2.9.3-1
 - Fix name of getInstalledLangs (#1135813). (clumens)
 
