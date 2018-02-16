@@ -42,7 +42,6 @@ class ProfileSystem:
         self.getPackages()
 
         self.ks.method(method="cdrom")
-        self.ks.upgrade(upgrade=False)
         self.ks.zerombr(zerombr=True)
         self.ks.clearpart(type=CLEARPART_TYPE_LINUX)
 

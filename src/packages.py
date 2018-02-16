@@ -197,13 +197,6 @@ class Packages:
         self.package_frame = xml.get_widget("package_frame")
         self.ks = ksHandler
 
-        if self.ks.upgrade.upgrade:
-            disabledLabel = gtk.Label(_("Package configuration is not applicable on upgrades."))
-            disabledLabel.set_line_wrap(True)
-            self.package_frame.add(disabledLabel)
-            self.package_frame.show_all()
-            return
-
         progress_window.set_label(_("Retrieving package information"))
         progress_window.show()
         self.y = sckYumBase(progress_window)

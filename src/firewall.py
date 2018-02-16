@@ -128,9 +128,6 @@ class Firewall:
             self.firewall_label_box.hide()
 
     def formToKickstart(self):
-        if self.ks.upgrade.upgrade == True:
-            return
-
         self.ks.firewall(trusts=[], ports=[],
                          enabled=self.securityOptionMenu.get_active() == 0)
 

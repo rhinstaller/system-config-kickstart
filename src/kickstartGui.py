@@ -147,7 +147,6 @@ class kickstartGui:
 
 	#bring in widgets from glade file
 	self.options_notebook = xml.get_widget("options_notebook")
-	self.install_radiobutton = xml.get_widget("install_radiobutton")
 	self.category_clist = xml.get_widget("category_clist")
         self.open_menu = xml.get_widget("open_menu")
 	self.preview_menu = xml.get_widget("preview_menu")
@@ -259,9 +258,7 @@ class kickstartGui:
         if self.bootloader_class.formToKickstart() is None:
             return None
 
-        doInstall = self.install_radiobutton.get_active()
-
-        if self.basic_class.formToKickstart(doInstall) is None:
+        if self.basic_class.formToKickstart() is None:
             return None
 
         if self.auth_class.formToKickstart() is None:
@@ -270,11 +267,8 @@ class kickstartGui:
 	self.network_class.formToKickstart()
 	self.firewall_class.formToKickstart()
         self.X_class.formToKickstart()
-
-        #only do these things in installs, not upgrades
-	if doInstall:
-            self.partition_class.formToKickstart()
-            self.packages_class.formToKickstart()
+        self.partition_class.formToKickstart()
+        self.packages_class.formToKickstart()
 
 	self.scripts_class.formToKickstart()
         return 0

@@ -55,10 +55,6 @@ class xconfig:
             self.x_config_inner_frame.show()
 
     def formToKickstart(self):
-        if self.ks.upgrade.upgrade == True:
-            self.ks.firstboot.firstboot = FIRSTBOOT_SKIP
-            return
-
         if self.config_x_button.get_active():
             if self.firstboot_optionmenu.get_active() == 0:
                 self.ks.firstboot.firstboot = FIRSTBOOT_SKIP

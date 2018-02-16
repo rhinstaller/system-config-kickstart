@@ -135,7 +135,7 @@ class basic:
     def updateKS(self, ksHandler):
         self.ks = ksHandler
 
-    def formToKickstart(self, doInstall):
+    def formToKickstart(self):
         self.ks.lang(lang=self.languageLookup(self.lang_combo.get_active_text()))
 
         keys = self.keyboard_dict.keys()

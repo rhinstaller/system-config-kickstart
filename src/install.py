@@ -41,8 +41,6 @@ class install:
         self.view = view
         self.notebook = notebook
         self.ks = ksHandler
-        self.install_radiobutton = xml.get_widget("install_radiobutton")
-        self.upgrade_radiobutton = xml.get_widget("upgrade_radiobutton")
         self.partitioning_frame = xml.get_widget("partitioning_frame")
         self.pkg_selection_frame = xml.get_widget("pkg_selection_frame")
         self.install_option_vbox = xml.get_widget("install_option_vbox")
@@ -79,7 +77,6 @@ class install:
 
         self.install_notebook = xml.get_widget("install_notebook")
 
-        self.install_radiobutton.connect("toggled", self.toggleInstall)
         self.cdrom_radiobutton.connect("toggled", self.setState)
         self.nfs_radiobutton.connect("toggled", self.setState)
         self.ftp_radiobutton.connect("toggled", self.setState)
@@ -98,11 +95,6 @@ class install:
         self.ftpuser_entry.set_sensitive(userpass)
         self.ftppasswd_entry.set_sensitive(userpass)
 
-    def toggleInstall (self, args):
-        #gray out package selection and partitions if upgrade
-        install = self.install_radiobutton.get_active()
-        self.parent_class.installTypeChanged(install)
-
     def setState (self, args):
         if self.cdrom_radiobutton.get_active():
             self.install_notebook.set_current_page(0)
@@ -120,8 +112,6 @@ class install:
             self.install_notebook.set_current_page(4)
 
     def formToKickstart(self):
-        self.ks.upgrade(upgrade=self.upgrade_radiobutton.get_active())
-
         if self.cdrom_radiobutton.get_active():
             self.ks.method.method = "cdrom"
         elif self.nfs_radiobutton.get_active():
@@ -241,11 +231,6 @@ class install:
         return host, dir
 
     def applyKickstart(self):
-        if not self.ks.upgrade.upgrade:
-            self.install_radiobutton.set_active(True)
-        else:
-            self.upgrade_radiobutton.set_active(True)
-
         if self.ks.method.method == "cdrom":
             self.cdrom_radiobutton.set_active(True)
 
