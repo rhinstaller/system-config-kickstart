@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-26 11:16-0400\n"
+"POT-Creation-Date: 2018-02-16 14:13-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,52 +17,178 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/basic.py:71
+#: ../src/basic.py:69
 msgid "x86, AMD64, or Intel EM64T"
 msgstr ""
 
-#: ../src/basic.py:71
+#: ../src/basic.py:69
 msgid "Intel Itanium"
 msgstr ""
 
-#: ../src/basic.py:71
+#: ../src/basic.py:69
 msgid "IBM iSeries"
 msgstr ""
 
-#: ../src/basic.py:72
+#: ../src/basic.py:70
 msgid "IBM pSeries"
 msgstr ""
 
-#: ../src/basic.py:72
+#: ../src/basic.py:70
 msgid "IBM zSeries/s390"
 msgstr ""
 
-#: ../src/basic.py:146
+#: ../src/basic.py:152
 msgid "Root passwords do not match."
 msgstr ""
 
-#: ../src/basic.py:147 ../src/partition.py:256 ../src/install.py:217
+#: ../src/basic.py:153 ../src/partition.py:256 ../src/install.py:207
 #: ../src/partWindow.py:577 ../src/raidWindow.py:276
 msgid "Error"
 msgstr ""
 
-#: ../src/GroupSelector.py:147
-#, python-format
-msgid "Packages in %s"
+#: ../src/partition.py:72
+msgid ""
+"Device/\n"
+"Partition Number"
 msgstr ""
 
-#: ../src/GroupSelector.py:433
-#, python-format
-msgid "Optional packages selected: %(inst)d of %(cnt)d"
+#: ../src/partition.py:74
+msgid ""
+"Mount Point/\n"
+"RAID"
 msgstr ""
 
-#: ../src/GroupSelector.py:435
-#, python-format
-msgid "<i>%s</i>"
+#: ../src/partition.py:76
+msgid "Type"
 msgstr ""
 
-#: ../src/GroupSelector.py:495
-msgid "Uncategorized"
+#: ../src/partition.py:78
+msgid "Format"
+msgstr ""
+
+#: ../src/partition.py:80
+msgid "Size (MB)"
+msgstr ""
+
+#: ../src/partition.py:98 ../src/partition.py:138
+msgid "Please select a partition from the list."
+msgstr ""
+
+#: ../src/savedialog.py:77
+#, python-format
+msgid "The following error occurred while saving the kickstart config %s: %s"
+msgstr ""
+
+#: ../src/savedialog.py:81
+msgid "Error Saving Kickstart Config"
+msgstr ""
+
+#: ../src/kickstartGui.py:82
+msgid ""
+"This program is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
+"Ave, Cambridge, MA 02139, USA."
+msgstr ""
+
+#: ../src/kickstartGui.py:125 ../src/kickstartGui.py:296
+#, python-format
+msgid ""
+"The following error was found while parsing your kickstart configuration:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: ../src/kickstartGui.py:128 ../src/kickstartGui.py:299
+#, python-format
+msgid "The kickstart file %s could not be opened."
+msgstr ""
+
+#: ../src/kickstartGui.py:133 ../src/kickstartGui.py:304
+msgid "Error Parsing Kickstart Config"
+msgstr ""
+
+#: ../src/kickstartGui.py:141
+msgid "Kickstart"
+msgstr ""
+
+#: ../src/kickstartGui.py:142
+msgid "Create a kickstart file"
+msgstr ""
+
+#: ../src/kickstartGui.py:162
+msgid "Subsection"
+msgstr ""
+
+#: ../src/kickstartGui.py:166
+msgid "Basic Configuration"
+msgstr ""
+
+#: ../src/kickstartGui.py:167
+msgid "Installation Method"
+msgstr ""
+
+#: ../src/kickstartGui.py:168
+msgid "Boot Loader Options"
+msgstr ""
+
+#: ../src/kickstartGui.py:169
+msgid "Partition Information"
+msgstr ""
+
+#: ../src/kickstartGui.py:170
+msgid "Network Configuration"
+msgstr ""
+
+#: ../src/kickstartGui.py:171
+msgid "Authentication"
+msgstr ""
+
+#: ../src/kickstartGui.py:172
+msgid "Firewall Configuration"
+msgstr ""
+
+#: ../src/kickstartGui.py:173
+msgid "Display Configuration"
+msgstr ""
+
+#: ../src/kickstartGui.py:174
+msgid "Package Selection"
+msgstr ""
+
+#: ../src/kickstartGui.py:175
+msgid "Pre-Installation Script"
+msgstr ""
+
+#: ../src/kickstartGui.py:176
+msgid "Post-Installation Script"
+msgstr ""
+
+#: ../src/kickstartGui.py:241
+msgid "About Kickstart Configurator"
+msgstr ""
+
+#: ../src/kickstartGui.py:325
+#, python-format
+msgid "The file \"%s\" cannot be accessed."
+msgstr ""
+
+#: ../src/kickstartGui.py:335 ../src/kickstartGui.py:346 ../src/packages.py:200
+msgid "Retrieving package information"
+msgstr ""
+
+#: ../src/raidOptionsWindow.py:72
+#, python-format
+msgid "You currently have %d software RAID partition(s) free to use."
 msgstr ""
 
 #: ../src/network.py:73
@@ -97,181 +223,71 @@ msgid ""
 "device name"
 msgstr ""
 
-#: ../src/partition.py:72
-msgid ""
-"Device/\n"
-"Partition Number"
-msgstr ""
-
-#: ../src/partition.py:74
-msgid ""
-"Mount Point/\n"
-"RAID"
-msgstr ""
-
-#: ../src/partition.py:76
-msgid "Type"
-msgstr ""
-
-#: ../src/partition.py:78
-msgid "Format"
-msgstr ""
-
-#: ../src/partition.py:80
-msgid "Size (MB)"
-msgstr ""
-
-#: ../src/partition.py:98 ../src/partition.py:138
-msgid "Please select a partition from the list."
-msgstr ""
-
-#: ../src/kickstartGui.py:82
-msgid ""
-"This program is free software; you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation; either version 2 of the License, or (at your option) "
-"any later version.\n"
-"\n"
-"This program is distributed in the hope that it will be useful, but WITHOUT "
-"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
-"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details.\n"
-"\n"
-"You should have received a copy of the GNU General Public License along with "
-"this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
-"Ave, Cambridge, MA 02139, USA."
-msgstr ""
-
-#: ../src/kickstartGui.py:125 ../src/kickstartGui.py:302
-#, python-format
-msgid ""
-"The following error was found while parsing your kickstart configuration:\n"
-"\n"
-"%s"
-msgstr ""
-
-#: ../src/kickstartGui.py:128 ../src/kickstartGui.py:305
-#, python-format
-msgid "The kickstart file %s could not be opened."
-msgstr ""
-
-#: ../src/kickstartGui.py:133 ../src/kickstartGui.py:310
-msgid "Error Parsing Kickstart Config"
-msgstr ""
-
-#: ../src/kickstartGui.py:141
-msgid "Kickstart"
-msgstr ""
-
-#: ../src/kickstartGui.py:142
-msgid "Create a kickstart file"
-msgstr ""
-
-#: ../src/kickstartGui.py:163
-msgid "Subsection"
-msgstr ""
-
-#: ../src/kickstartGui.py:167
-msgid "Basic Configuration"
-msgstr ""
-
-#: ../src/kickstartGui.py:168
-msgid "Installation Method"
-msgstr ""
-
-#: ../src/kickstartGui.py:169
-msgid "Boot Loader Options"
-msgstr ""
-
-#: ../src/kickstartGui.py:170
-msgid "Partition Information"
-msgstr ""
-
-#: ../src/kickstartGui.py:171
-msgid "Network Configuration"
-msgstr ""
-
-#: ../src/kickstartGui.py:172
-msgid "Authentication"
-msgstr ""
-
-#: ../src/kickstartGui.py:173
-msgid "Firewall Configuration"
-msgstr ""
-
-#: ../src/kickstartGui.py:174
-msgid "Display Configuration"
-msgstr ""
-
-#: ../src/kickstartGui.py:175
-msgid "Package Selection"
-msgstr ""
-
-#: ../src/kickstartGui.py:176
-msgid "Pre-Installation Script"
-msgstr ""
-
-#: ../src/kickstartGui.py:177
-msgid "Post-Installation Script"
-msgstr ""
-
-#: ../src/kickstartGui.py:242
-msgid "About Kickstart Configurator"
-msgstr ""
-
-#: ../src/kickstartGui.py:331
-#, python-format
-msgid "The file \"%s\" cannot be accessed."
-msgstr ""
-
-#: ../src/kickstartGui.py:341 ../src/kickstartGui.py:352
-#: ../src/packages.py:207
-msgid "Retrieving package information"
-msgstr ""
-
-#: ../src/raidOptionsWindow.py:72
-#, python-format
-msgid "You currently have %d software RAID partition(s) free to use."
-msgstr ""
-
-#: ../src/install.py:132
+#: ../src/install.py:122
 msgid "Please enter an NFS server."
 msgstr ""
 
-#: ../src/install.py:135
+#: ../src/install.py:125
 msgid "Please enter an NFS directory."
 msgstr ""
 
-#: ../src/install.py:146
+#: ../src/install.py:136
 msgid "Please enter an FTP server."
 msgstr ""
 
-#: ../src/install.py:153
+#: ../src/install.py:143
 msgid "Please enter an FTP directory."
 msgstr ""
 
-#: ../src/install.py:159
+#: ../src/install.py:149
 msgid "Please enter an FTP user name."
 msgstr ""
 
-#: ../src/install.py:162
+#: ../src/install.py:152
 msgid "Please enter an FTP password."
 msgstr ""
 
-#: ../src/install.py:178
+#: ../src/install.py:168
 msgid "Please enter an HTTP server."
 msgstr ""
 
-#: ../src/install.py:181
+#: ../src/install.py:171
 msgid "Please enter an HTTP server directory."
 msgstr ""
 
-#: ../src/install.py:203
+#: ../src/install.py:193
 msgid "Please enter a hard drive directory."
 msgstr ""
 
-#: ../src/install.py:206
+#: ../src/install.py:196
 msgid "Please enter a hard drive partition."
+msgstr ""
+
+#: ../src/firewall.py:60
+msgid "Trusted services:"
+msgstr ""
+
+#: ../src/firewall.py:92
+msgid "Other ports (1029:tcp):"
+msgstr ""
+
+#: ../src/GroupSelector.py:147
+#, python-format
+msgid "Packages in %s"
+msgstr ""
+
+#: ../src/GroupSelector.py:433
+#, python-format
+msgid "Optional packages selected: %(inst)d of %(cnt)d"
+msgstr ""
+
+#: ../src/GroupSelector.py:435
+#, python-format
+msgid "<i>%s</i>"
+msgstr ""
+
+#: ../src/GroupSelector.py:495
+msgid "Uncategorized"
 msgstr ""
 
 #: ../src/packages.py:144
@@ -283,50 +299,10 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../src/packages.py:201
-msgid "Package configuration is not applicable on upgrades."
-msgstr ""
-
-#: ../src/packages.py:214
+#: ../src/packages.py:207
 msgid ""
 "Package selection is disabled due to problems downloading package "
 "information."
-msgstr ""
-
-#: ../src/savedialog.py:77
-#, python-format
-msgid "The following error occurred while saving the kickstart config %s: %s"
-msgstr ""
-
-#: ../src/savedialog.py:81
-msgid "Error Saving Kickstart Config"
-msgstr ""
-
-#: ../src/firewall.py:60
-msgid "Trusted services:"
-msgstr ""
-
-#: ../src/firewall.py:92
-msgid "Other ports (1029:tcp):"
-msgstr ""
-
-#: ../src/savefile.py:41
-msgid "Preview Options"
-msgstr ""
-
-#: ../src/savefile.py:49
-msgid ""
-"You have choosen the following configuration. Click Save File to save the "
-"kickstart file."
-msgstr ""
-
-#: ../src/bootloader.py:150
-msgid "Grub passwords do not match.  Please try again."
-msgstr ""
-
-#: ../src/bootloader.py:197
-#, python-format
-msgid "Bootloader options are not applicable to the %s platform"
 msgstr ""
 
 #: ../src/partWindow.py:97
@@ -416,8 +392,27 @@ msgstr ""
 msgid "Raid Devices"
 msgstr ""
 
+#: ../src/bootloader.py:150
+msgid "Grub passwords do not match.  Please try again."
+msgstr ""
+
+#: ../src/bootloader.py:197
+#, python-format
+msgid "Bootloader options are not applicable to the %s platform"
+msgstr ""
+
 #: ../src/auth.py:354
 msgid "Please fill in the authentication information"
+msgstr ""
+
+#: ../src/savefile.py:41
+msgid "Preview Options"
+msgstr ""
+
+#: ../src/savefile.py:49
+msgid ""
+"You have choosen the following configuration. Click Save File to save the "
+"kickstart file."
 msgstr ""
 
 #: tmp/GroupSelector.glade.h:1
@@ -604,458 +599,446 @@ msgid "<b>label28</b>"
 msgstr ""
 
 #: tmp/system-config-kickstart.glade.h:39
-msgid "Perform new installation"
-msgstr ""
-
-#: tmp/system-config-kickstart.glade.h:40
-msgid "Upgrade an existing installation"
-msgstr ""
-
-#: tmp/system-config-kickstart.glade.h:41
-msgid "<b>Installation Method</b>"
-msgstr ""
-
-#: tmp/system-config-kickstart.glade.h:42
 msgid "CD-ROM"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:43
+#: tmp/system-config-kickstart.glade.h:40
 msgid "NFS"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:44
+#: tmp/system-config-kickstart.glade.h:41
 msgid "FTP"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:45
+#: tmp/system-config-kickstart.glade.h:42
 msgid "HTTP"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:46
+#: tmp/system-config-kickstart.glade.h:43
 msgid "Hard Drive"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:47
+#: tmp/system-config-kickstart.glade.h:44
 msgid "NFS Server:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:48
+#: tmp/system-config-kickstart.glade.h:45
 msgid "NFS Directory:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:49
+#: tmp/system-config-kickstart.glade.h:46
 msgid "FTP Server:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:50
+#: tmp/system-config-kickstart.glade.h:47
 msgid "FTP Directory:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:51
+#: tmp/system-config-kickstart.glade.h:48
 msgid "Specify an FTP username and password"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:52
+#: tmp/system-config-kickstart.glade.h:49
 msgid "FTP Username:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:53
+#: tmp/system-config-kickstart.glade.h:50
 msgid "FTP Password:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:54
+#: tmp/system-config-kickstart.glade.h:51
 msgid "HTTP Server:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:55
+#: tmp/system-config-kickstart.glade.h:52
 msgid "HTTP Directory:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:56
+#: tmp/system-config-kickstart.glade.h:53
 msgid "Hard Drive Partition:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:57
+#: tmp/system-config-kickstart.glade.h:54
 msgid "Hard Drive Directory:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:58
+#: tmp/system-config-kickstart.glade.h:55
 msgid "<b>Installation source</b>"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:59
+#: tmp/system-config-kickstart.glade.h:56
 msgid "Install new boot loader"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:60
+#: tmp/system-config-kickstart.glade.h:57
 msgid "Do not install a boot loader"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:61
+#: tmp/system-config-kickstart.glade.h:58
 msgid "Upgrade existing boot loader"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:62
+#: tmp/system-config-kickstart.glade.h:59
 msgid "<b>Install Type</b>"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:63
+#: tmp/system-config-kickstart.glade.h:60
 msgid "Use GRUB password"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:64
+#: tmp/system-config-kickstart.glade.h:61
 msgid "Password:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:65
+#: tmp/system-config-kickstart.glade.h:62
 msgid "Encrypt GRUB password"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:66
+#: tmp/system-config-kickstart.glade.h:63
 msgid "<b>GRUB Options</b>"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:67
+#: tmp/system-config-kickstart.glade.h:64
 msgid "Install boot loader on Master Boot Record (MBR)"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:68
+#: tmp/system-config-kickstart.glade.h:65
 msgid "Install boot loader on first sector of the boot partition"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:69
+#: tmp/system-config-kickstart.glade.h:66
 msgid "<b>Install Options</b>"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:70
+#: tmp/system-config-kickstart.glade.h:67
 msgid "Kernel parameters:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:71
+#: tmp/system-config-kickstart.glade.h:68
 msgid "Clear Master Boot Record"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:72
+#: tmp/system-config-kickstart.glade.h:69
 msgid "Do not clear Master Boot Record"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:73
+#: tmp/system-config-kickstart.glade.h:70
 msgid "<b>Master Boot Record</b>"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:74
+#: tmp/system-config-kickstart.glade.h:71
 msgid "Remove all existing partitions"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:75
+#: tmp/system-config-kickstart.glade.h:72
 msgid "Remove existing Linux partitions"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:76
+#: tmp/system-config-kickstart.glade.h:73
 msgid "Preserve existing partitions"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:77
+#: tmp/system-config-kickstart.glade.h:74
 msgid "<b>Partitions</b>"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:78
+#: tmp/system-config-kickstart.glade.h:75
 msgid "Initialize the disk label"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:79
+#: tmp/system-config-kickstart.glade.h:76
 msgid "Do not initialize the disk label"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:80
+#: tmp/system-config-kickstart.glade.h:77
 msgid "<b>Disk label</b>"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:81
+#: tmp/system-config-kickstart.glade.h:78
 msgid "_Add"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:82
+#: tmp/system-config-kickstart.glade.h:79
 msgid "_Edit"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:83
+#: tmp/system-config-kickstart.glade.h:80
 msgid "_Delete"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:84
+#: tmp/system-config-kickstart.glade.h:81
 msgid "RAID"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:85
+#: tmp/system-config-kickstart.glade.h:82
 msgid "<b>Layout</b>"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:86
+#: tmp/system-config-kickstart.glade.h:83
 msgid "Partition options are not applicable on upgrades."
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:87
+#: tmp/system-config-kickstart.glade.h:84
 msgid "_Add Network Device"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:88
+#: tmp/system-config-kickstart.glade.h:85
 msgid "_Edit Network Device"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:89
+#: tmp/system-config-kickstart.glade.h:86
 msgid "_Delete Network Device"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:90
+#: tmp/system-config-kickstart.glade.h:87
 msgid "<b>Network Configuration</b>"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:91
+#: tmp/system-config-kickstart.glade.h:88
 msgid "Use Shadow Passwords"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:92
+#: tmp/system-config-kickstart.glade.h:89
 msgid "Enable Fingerprint Reader"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:93
+#: tmp/system-config-kickstart.glade.h:90
 msgid "NIS Domain:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:94
+#: tmp/system-config-kickstart.glade.h:91
 msgid "Use broadcast to find NIS server"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:95
+#: tmp/system-config-kickstart.glade.h:92
 msgid "NIS Server:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:96
+#: tmp/system-config-kickstart.glade.h:93
 msgid "Enable NIS"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:97
+#: tmp/system-config-kickstart.glade.h:94
 msgid "<b>NIS Authentication</b>"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:98
+#: tmp/system-config-kickstart.glade.h:95
 msgid "NIS"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:99
+#: tmp/system-config-kickstart.glade.h:96
 msgid "LDAP Server: "
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:100
+#: tmp/system-config-kickstart.glade.h:97
 msgid "LDAP Base Name: "
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:101
+#: tmp/system-config-kickstart.glade.h:98
 msgid "Enable LDAP"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:102
+#: tmp/system-config-kickstart.glade.h:99
 msgid "Load CA certificate"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:103
+#: tmp/system-config-kickstart.glade.h:100
 msgid "CA Cert URL:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:104
+#: tmp/system-config-kickstart.glade.h:101
 msgid "<b>LDAP Authentication</b>"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:105
+#: tmp/system-config-kickstart.glade.h:102
 msgid "LDAP "
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:106
+#: tmp/system-config-kickstart.glade.h:103
 msgid "Kerberos Master Server:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:107
+#: tmp/system-config-kickstart.glade.h:104
 msgid "Kerberos Domain Controller (KDC):"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:108
+#: tmp/system-config-kickstart.glade.h:105
 msgid "Kerberos Realm:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:109
+#: tmp/system-config-kickstart.glade.h:106
 msgid "Enable Kerberos 5 Authentication"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:110
+#: tmp/system-config-kickstart.glade.h:107
 msgid "<b>Kerberos 5 Authentication</b>"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:111
+#: tmp/system-config-kickstart.glade.h:108
 msgid "Kerberos 5"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:112
+#: tmp/system-config-kickstart.glade.h:109
 msgid "Hesiod RHS:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:113
+#: tmp/system-config-kickstart.glade.h:110
 msgid "Hesiod LHS:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:114
+#: tmp/system-config-kickstart.glade.h:111
 msgid "Enable Hesiod Support"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:115
+#: tmp/system-config-kickstart.glade.h:112
 msgid "<b>Hesiod Authentication</b>"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:116
+#: tmp/system-config-kickstart.glade.h:113
 msgid "Hesiod"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:117
+#: tmp/system-config-kickstart.glade.h:114
 msgid "SMB Servers:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:118
+#: tmp/system-config-kickstart.glade.h:115
 msgid "SMB Workgroup:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:119
+#: tmp/system-config-kickstart.glade.h:116
 msgid "Enable SMB Authentication"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:120
+#: tmp/system-config-kickstart.glade.h:117
 msgid "<b>SMB Authentication</b>"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:121
+#: tmp/system-config-kickstart.glade.h:118
 msgid "SMB"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:122
+#: tmp/system-config-kickstart.glade.h:119
 msgid "Enable nscd"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:123
+#: tmp/system-config-kickstart.glade.h:120
 msgid "<b>Name Switch Cache Daemon (nscd) Authentication</b>"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:124
+#: tmp/system-config-kickstart.glade.h:121
 msgid "Name Switch Cache"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:125
+#: tmp/system-config-kickstart.glade.h:122
 msgid "<b>Authentication Configuration</b>"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:126
+#: tmp/system-config-kickstart.glade.h:123
 msgid "Authentication options are not applicable on upgrades."
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:127
+#: tmp/system-config-kickstart.glade.h:124
 msgid "SELinux:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:128
+#: tmp/system-config-kickstart.glade.h:125
 msgid ""
 "Active\n"
 "Warn\n"
 "Disabled\n"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:132
+#: tmp/system-config-kickstart.glade.h:129
 msgid "Security level:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:133
+#: tmp/system-config-kickstart.glade.h:130
 msgid ""
 "Enable firewall\n"
 "Disable firewall\n"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:136
+#: tmp/system-config-kickstart.glade.h:133
 msgid "<b>Firewall Configuration</b>"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:137
+#: tmp/system-config-kickstart.glade.h:134
 msgid "Firewall configuration is not applicable on upgrades."
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:138
+#: tmp/system-config-kickstart.glade.h:135
 msgid "Install a graphical environment"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:139
+#: tmp/system-config-kickstart.glade.h:136
 msgid "On first boot, Setup Agent is: "
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:140
+#: tmp/system-config-kickstart.glade.h:137
 msgid ""
 "Disabled\n"
 "Enabled\n"
 "Enabled in reconfiguration mode\n"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:144
+#: tmp/system-config-kickstart.glade.h:141
 msgid "<b>Display Configuration</b>"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:145
+#: tmp/system-config-kickstart.glade.h:142
 msgid "Display configuration is not applicable on upgrades."
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:146
+#: tmp/system-config-kickstart.glade.h:143
 msgid "<b>Package Selection</b>"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:148
+#: tmp/system-config-kickstart.glade.h:145
 #, no-c-format
 msgid ""
 "An error in this script might cause your kickstart installation to fail. Do "
 "not include the %pre command at the beginning."
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:149
+#: tmp/system-config-kickstart.glade.h:146
 msgid "Use an interpreter:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:151
+#: tmp/system-config-kickstart.glade.h:148
 #, no-c-format
 msgid "Type your %pre script below:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:152
+#: tmp/system-config-kickstart.glade.h:149
 msgid "<b>Pre-Installation Script</b>"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:154
+#: tmp/system-config-kickstart.glade.h:151
 #, no-c-format
 msgid ""
 "An error in this script might cause your kickstart installation to fail. Do "
 "not include the %post command at the beginning."
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:155
+#: tmp/system-config-kickstart.glade.h:152
 msgid "Run outside of the chroot environment"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:157
+#: tmp/system-config-kickstart.glade.h:154
 #, no-c-format
 msgid "Type your %post script below:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:158
+#: tmp/system-config-kickstart.glade.h:155
 msgid "<b>Post-Installation Script</b>"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:159
+#: tmp/system-config-kickstart.glade.h:156
 msgid "RAID Options"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:160
+#: tmp/system-config-kickstart.glade.h:157
 msgid ""
 "Software RAID allows you to combine several disks into a larger RAID "
 "device.  A RAID device can be configured to provide additional speed and "
@@ -1063,48 +1046,48 @@ msgid ""
 "using RAID devices please consult the kickstart documentation."
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:161
+#: tmp/system-config-kickstart.glade.h:158
 msgid ""
 "To use RAID you must first create at least two partitions of type 'software "
 "RAID'.  Then you can create a RAID device which can be formatted and mounted."
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:162
+#: tmp/system-config-kickstart.glade.h:159
 msgid "Choose one of the following options:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:163
+#: tmp/system-config-kickstart.glade.h:160
 msgid "Create a software RAID partition"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:164
+#: tmp/system-config-kickstart.glade.h:161
 msgid "Create a RAID device [default = /dev/md0]"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:165
+#: tmp/system-config-kickstart.glade.h:162
 msgid "Network Device Information"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:166
+#: tmp/system-config-kickstart.glade.h:163
 msgid "Network Type:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:167
+#: tmp/system-config-kickstart.glade.h:164
 msgid "Network Device:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:168
+#: tmp/system-config-kickstart.glade.h:165
 msgid "IP Address:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:169
+#: tmp/system-config-kickstart.glade.h:166
 msgid "Netmask: "
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:170
+#: tmp/system-config-kickstart.glade.h:167
 msgid "Gateway:"
 msgstr ""
 
-#: tmp/system-config-kickstart.glade.h:171
+#: tmp/system-config-kickstart.glade.h:168
 msgid "Name Server:"
 msgstr ""

@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.9.3
-Release: 7%{?dist}
+Version: 2.10.0
+Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
 ExclusiveOS: Linux
@@ -54,6 +54,14 @@ desktop-file-install --vendor "" --delete-original \
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Fri Feb 16 2018 Chris Lumens <clumens@redhat.com> - 2.10.0-1
+- Upgrade is not supported by kickstart, so remove it.
+- Use pytz instead of system-config-date. (dshea)
+- Make sure we require python2 packages. (dshea)
+- Remove locales block from zanata.xml, not needed anymore. (dcantrell)
+- s-c-ks requires python-kickstart, the python2 version of that package.
+- Switch from transifex to zanata.
+
 * Fri Feb 09 2018 Fedora Release Engineering <releng@fedoraproject.org> - 2.9.3-7
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
 
